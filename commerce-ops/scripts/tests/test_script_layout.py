@@ -19,35 +19,31 @@ class ScriptLayoutTests(unittest.TestCase):
         return subprocess.run(command, cwd=cwd, capture_output=True, text=True,
                               timeout=30, **kwargs)
 
-    def test_help_from_outside_checkout_preserves_cli_and_sibling_imports(self):
-        names = ('check-documentation.py', 'check_api_documentation.py',
-                 'inventory-outputs.py', 'shopping-evals.py', 'agent-evals.py',
-                 'commerce-release.py', 'seed-demo-storefront.py')
+    def test_canonical_commands_have_help_from_outside_checkout(self):
+        names = ('checks/check-documentation.py', 'checks/check_api_documentation.py',
+                 'maintenance/inventory-outputs.py', 'evaluation/shopping-evals.py',
+                 'evaluation/agent-evals.py', 'release/commerce-release.py',
+                 'demo/seed-demo-storefront.py')
         with tempfile.TemporaryDirectory() as outside:
             for name in names:
-                old = 'commerce-ops/scripts/' + name
+                path = ROOT / 'commerce-ops/scripts' / name
                 with self.subTest(command=name):
-                    results = [self.run_command([sys.executable, '-B', str(ROOT / path), '--help'], outside)
-                               for path in (old, MANIFEST['commands'][old])]
-                    for result in results:
-                        self.assertEqual(result.returncode, 0, result.stderr)
-                        self.assertIn('usage:', result.stdout.lower())
-                    self.assertEqual(results[0].stdout, results[1].stdout)
+                    result = self.run_command([sys.executable, '-B', str(path), '--help'], outside)
+                    self.assertEqual(result.returncode, 0, result.stderr)
+                    self.assertIn('usage:', result.stdout.lower())
 
-    def test_registered_commands_and_data_have_owners(self):
-        for old, owner in MANIFEST['commands'].items():
-            with self.subTest(command=old):
-                self.assertTrue((ROOT / old).is_file())
-                self.assertTrue((ROOT / owner).is_file())
-        for owner in MANIFEST['data'].values():
-            self.assertTrue((ROOT / owner).is_file())
+    def test_registered_commands_and_data_exist(self):
+        for relative in MANIFEST['commands']:
+            with self.subTest(command=relative):
+                self.assertTrue((ROOT / relative).is_file())
+        for relative in MANIFEST['data']:
+            self.assertTrue((ROOT / relative).is_file())
 
     def test_compose_routes_same_project_and_arguments_from_outside_checkout(self):
         with tempfile.TemporaryDirectory() as directory:
             outside = Path(directory)
             root = outside / 'checkout with spaces'
-            for relative in ('commerce-ops/scripts/local-compose.sh', 'commerce-ops/scripts/local-demo-compose.sh',
-                             'commerce-ops/scripts/local/local-compose.sh', 'commerce-ops/scripts/local/local-demo-compose.sh'):
+            for relative in ('commerce-ops/scripts/local/local-compose.sh', 'commerce-ops/scripts/local/local-demo-compose.sh'):
                 target = root / relative
                 target.parent.mkdir(parents=True, exist_ok=True)
                 shutil.copyfile(ROOT / relative, target)
@@ -66,13 +62,10 @@ class ScriptLayoutTests(unittest.TestCase):
                 ('local-demo-compose.sh', ['grocery', 'config'], 'commerce-ai'),
                 ('local-demo-compose.sh', ['jewelry', 'config'], 'commerce-jewelry'),
             ):
-                outputs = []
-                for relative in ('commerce-ops/scripts/' + name, 'commerce-ops/scripts/local/' + name):
-                    result = self.run_command(['bash', str(root / relative), *args], outside, env=env)
-                    self.assertEqual(result.returncode, 0, result.stderr)
-                    outputs.append(result.stdout)
-                self.assertEqual(*outputs)
-                lines = outputs[0].splitlines()
+                relative = 'commerce-ops/scripts/local/' + name
+                result = self.run_command(['bash', str(root / relative), *args], outside, env=env)
+                self.assertEqual(result.returncode, 0, result.stderr)
+                lines = result.stdout.splitlines()
                 self.assertEqual(Path(lines[0]).resolve(), root.resolve())
                 self.assertEqual(lines[lines.index('-p') + 1], project)
                 self.assertEqual(lines[-1], args[-1])
@@ -116,28 +109,23 @@ class ScriptLayoutTests(unittest.TestCase):
     def test_javascript_imports_and_trace_cli_preserve_behavior(self):
         with tempfile.TemporaryDirectory() as directory:
             outside = Path(directory)
-            old = ROOT / 'commerce-ops/scripts/check-trace-rollout.mjs'
-            owner = ROOT / MANIFEST['commands']['commerce-ops/scripts/check-trace-rollout.mjs']
-            code = f'import {{checkTraceRollout as a}} from {json.dumps(old.as_uri())};\n'
-            code += f'import {{checkTraceRollout as b}} from {json.dumps(owner.as_uri())};\n'
-            code += "if (a !== b || a({}).ok) process.exit(3);"
+            owner = ROOT / 'commerce-ops/scripts/checks/check-trace-rollout.mjs'
+            code = f'import {{checkTraceRollout}} from {json.dumps(owner.as_uri())};\n'
+            code += "if (checkTraceRollout({}).ok) process.exit(3);"
             result = self.run_command(['node', '--input-type=module', '-e', code], outside)
             self.assertEqual(result.returncode, 0, result.stderr)
             self.assertEqual(result.stdout, '')
             invalid = outside / 'invalid.json'
             invalid.write_text('{}')
-            results = [self.run_command(['node', str(path), str(invalid)], outside) for path in (old, owner)]
-            self.assertEqual(results[0].returncode, 1)
-            self.assertEqual(results[1].returncode, 1)
-            self.assertEqual(results[0].stdout, results[1].stdout)
-            old_cjs = str(ROOT / 'commerce-ops/scripts/mobile-demo-layouts.cjs')
+            result = self.run_command(['node', str(owner), str(invalid)], outside)
+            self.assertEqual(result.returncode, 1)
             owner_cjs = str(ROOT / 'commerce-ops/scripts/demo/mobile-demo-layouts.cjs')
-            code = f'if(require({json.dumps(old_cjs)}) !== require({json.dumps(owner_cjs)})) process.exit(3);'
+            code = f'if(!require({json.dumps(owner_cjs)})) process.exit(3);'
             result = self.run_command(['node', '-e', code], outside)
             self.assertEqual(result.returncode, 0, result.stderr)
 
     def test_release_fingerprint_tracks_canonical_implementation_changes(self):
-        path = ROOT / 'commerce-ops/scripts/commerce_reliability.py'
+        path = ROOT / 'commerce-ops/scripts/release/commerce_reliability.py'
         spec = importlib.util.spec_from_file_location('layout_reliability', path)
         module = importlib.util.module_from_spec(spec)
         old_path = sys.path.copy()
@@ -168,24 +156,21 @@ class ScriptLayoutTests(unittest.TestCase):
                 ('sync-interface-messages.mjs', 'commerce-api/interface-messages.json',
                  'commerce-web/apps/storefront/src/interface-messages.json'),
             ):
-                old = 'commerce-ops/scripts/' + name
-                owner = MANIFEST['commands'][old]
-                for relative in (old, owner):
-                    path = root / relative
-                    path.parent.mkdir(parents=True, exist_ok=True)
-                    shutil.copyfile(ROOT / relative, path)
+                owner = next(path for path in MANIFEST['commands'] if path.endswith('/contracts/' + name))
+                path = root / owner
+                path.parent.mkdir(parents=True, exist_ok=True)
+                shutil.copyfile(ROOT / owner, path)
                 for relative in (source, target):
                     (root / relative).parent.mkdir(parents=True, exist_ok=True)
                 (root / source).write_text('{"fixture":true}\n')
-                for relative in (old, owner):
-                    command = ['node', str(root / relative)]
-                    generated = self.run_command(command, outside)
-                    self.assertEqual(generated.returncode, 0, generated.stderr)
-                    self.assertEqual((root / target).read_bytes(), (root / source).read_bytes())
-                    self.assertEqual(self.run_command([*command, '--check'], outside).returncode, 0)
-                    (root / target).write_text('{}\n')
-                    self.assertNotEqual(self.run_command([*command, '--check'], outside).returncode, 0)
-                    self.assertEqual((root / target).read_text(), '{}\n')
+                command = ['node', str(path)]
+                generated = self.run_command(command, outside)
+                self.assertEqual(generated.returncode, 0, generated.stderr)
+                self.assertEqual((root / target).read_bytes(), (root / source).read_bytes())
+                self.assertEqual(self.run_command([*command, '--check'], outside).returncode, 0)
+                (root / target).write_text('{}\n')
+                self.assertNotEqual(self.run_command([*command, '--check'], outside).returncode, 0)
+                self.assertEqual((root / target).read_text(), '{}\n')
 
 
 if __name__ == '__main__':

@@ -12,7 +12,7 @@
 | `commerce-assistant-platform/` | Python assistant and Node language runtime; meaning, planning and language-resolution assets live in its `contracts/` folder |
 | [commerce-docs](../../README.md) | Consolidated AI, frontend, admin UI and backend service guides |
 | [Mobile documentation](../../mobile/README.md) | Canonical native development, App Studio, capabilities, plans and dated history |
-| `commerce-ops/scripts/` | Agent guide, [entry-point manifest](../../../commerce-ops/scripts/entrypoints.json), grouped implementations and compatibility wrappers |
+| `commerce-ops/scripts/` | Agent guide, [entry-point manifest](../../../commerce-ops/scripts/entrypoints.json), canonical grouped implementations |
 | `commerce-ops/scripts/contracts/`, `commerce-ops/scripts/generation/` | Contract generation/adapters and capability/asset generation |
 | `commerce-ops/scripts/local/` | Local setup and Compose launchers |
 | `commerce-ops/scripts/checks/`, `commerce-ops/scripts/evaluation/`, `commerce-ops/scripts/release/` | Repository checks, assistant evaluations and release/durability tooling |

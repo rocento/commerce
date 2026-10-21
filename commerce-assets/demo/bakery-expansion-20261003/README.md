@@ -11,7 +11,7 @@ five Arabic text fields per product, saved with source/revision concurrency
 checks and marked reviewed. Existing shared attribute labels/options already
 have reviewed Arabic translations.
 
-Run `scripts/add-bakery-products-20261003.py --assets <uploaded-assets>` from
+Run `commerce-ops/scripts/demo/history/add-bakery-products-20261003.py --assets <uploaded-assets>` from
 `/opt/rocento` to preview; add `--apply` to create and translate. Uses server-side
 credentials, verified origin HTTPS, deployment lock, conflict and attribute-option
 preflight, a catalog snapshot, and English/Arabic public API and inventory checks.

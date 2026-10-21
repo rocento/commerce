@@ -21,5 +21,5 @@ if index_path.is_file():
             assert hashlib.sha256(bundle.read(name)).hexdigest() == digest, name
         archive_count = len(index['sha256'])
 
-runpy.run_path(str(root / 'scripts/check-documentation.py'), run_name='__main__')
+runpy.run_path(str(root / 'commerce-ops/scripts/checks/check-documentation.py'), run_name='__main__')
 print(f'Verified 2 current publication guides and {archive_count} compressed archive entries.')

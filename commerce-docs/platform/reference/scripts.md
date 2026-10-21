@@ -3,7 +3,7 @@
 Use this guide to find the canonical implementation of a repository command.
 Commands run from the repository root unless the owning guide says otherwise.
 [Agent instructions](../../../commerce-ops/scripts/AGENTS.md) cover changes to commands and
-their compatibility entry points.
+command ownership and changes.
 
 ## Find the implementation
 
@@ -20,11 +20,9 @@ their compatibility entry points.
 | `commerce-ops/scripts/maintenance/` | Output inventory, cleanup, repair and maintenance SQL |
 | `commerce-ops/scripts/tests/` | Command and deployment regression tests |
 
-[The entry-point manifest](../../../commerce-ops/scripts/entrypoints.json) maps retained root
-commands to their implementations. Old commands still forward arguments, exit
-codes and Python imports; edit the grouped owner. Moved SQL/JSON inputs use their
-new paths, listed separately in the manifest. New commands belong in their
-purpose folder.
+[The command manifest](../../../commerce-ops/scripts/entrypoints.json) lists canonical
+command and data paths. Run commands from their purpose folders; there are no
+root-level forwarding scripts. New commands belong in their purpose folder.
 
 Existing `commerce-ops/scripts/knowledge-baseline/`, `commerce-ops/scripts/shopping_eval/`
 and `commerce-ops/scripts/recommendation_eval/` keep their focused tools and
@@ -39,10 +37,8 @@ required checks, packet metadata, review and promotion boundaries.
 
 ## Contract generation
 
-Canonical generators live in `commerce-ops/scripts/contracts/`. The original
-`commerce-ops/scripts/generate_*.py` paths forward to the same implementations, preserving
-existing command and import callers. Use the AI virtual environment where a
-generator imports Python service models.
+Canonical generators live in `commerce-ops/scripts/contracts/`. Run generators from `commerce-ops/scripts/contracts/`. Use the AI virtual
+environment where a generator imports Python service models.
 
 | Generator | Owning source or generated destination |
 | --- | --- |

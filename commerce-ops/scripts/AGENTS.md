@@ -20,10 +20,9 @@ to find its service owner. Commands normally start at the repository root.
   in `../deploy/ec2/server/`. Call server commands directly; no `ec2-*` wrappers remain here.
 - `knowledge-baseline/`, `shopping_eval/` and `recommendation_eval/` retain
   focused evaluation tools and fixtures. There is no `staging/` command folder.
-- [entrypoints.json](entrypoints.json) inventories legacy root command paths and
-  maps them to canonical owners. Keep compatibility wrappers only while callers
-  still need them; use canonical paths in all maintained code, CI and runbooks.
-  Add new commands to their purpose folder.
+- [entrypoints.json](entrypoints.json) inventories canonical command and data
+  paths. Use those paths in code, CI and runbooks. Add new commands to their
+  purpose folder; do not add root-level forwarding scripts.
 - `tests/` contains command and deployment regression tests. Service tests remain
   with their owning service.
 
