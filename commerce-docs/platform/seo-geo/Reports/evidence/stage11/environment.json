@@ -1,0 +1,12 @@
+{
+  "os": "macOS-26.6.2-arm64-arm-64bit-Mach-O",
+  "machine": "arm64",
+  "node": "v25.9.0",
+  "rust": "rustc 1.89.0 (29483883e 2025-08-04)",
+  "postgres": "16-bookworm Docker on localhost",
+  "rust_profile": "test dev",
+  "frontend": "Vite production client/SSR build",
+  "network": "loopback unthrottled",
+  "cpu": "Apple M4 Pro",
+  "memory_bytes": 25769803776
+}

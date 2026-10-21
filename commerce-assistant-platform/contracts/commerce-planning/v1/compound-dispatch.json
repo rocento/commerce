@@ -1,0 +1,37 @@
+{
+  "schema_version": "1.0",
+  "command": {
+    "schema_version": "1.0",
+    "scope": {
+      "schema_version": "1.0",
+      "tenant_id": "00000000-0000-0000-0000-000000000001",
+      "customer_id": "00000000-0000-0000-0000-000000000002",
+      "conversation_id": "00000000-0000-0000-0000-000000000003"
+    },
+    "request_id": "00000000-0000-0000-0000-000000000004",
+    "revision": "00000000-0000-0000-0000-000000000005",
+    "actions": [
+      {
+        "schema_version": "1.0",
+        "action_id": "f11a6703-2fb1-5ac8-aace-8cb1120fe71c",
+        "operation_id": "70665571-d548-5e51-a013-7ff116dd02b5",
+        "product_id": "00000000-0000-0000-0000-00000000000b",
+        "quantity": 2,
+        "destination": "cart",
+        "observed_at": 1790726400,
+        "expires_at": 1790726430
+      },
+      {
+        "schema_version": "1.0",
+        "action_id": "40b44069-8b31-5030-a89b-290169755c5c",
+        "operation_id": "31dfe218-5cff-542a-9177-214497168302",
+        "product_id": "00000000-0000-0000-0000-00000000000c",
+        "quantity": 1,
+        "destination": "wishlist",
+        "observed_at": 1790726400,
+        "expires_at": 1790726430
+      }
+    ]
+  },
+  "action_id": "f11a6703-2fb1-5ac8-aace-8cb1120fe71c"
+}

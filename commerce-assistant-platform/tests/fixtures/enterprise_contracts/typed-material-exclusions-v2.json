@@ -1,0 +1,98 @@
+{
+  "schemaVersion": 1,
+  "sourceFixture": "app/commerce_language_engine/tests/fixtures/understanding-v1/development.jsonl",
+  "sourceSha256": "279e27ab08420cdade9daa3040ff5cbd063444147977d3fa2158d2ed46128a56",
+  "review": {
+    "method": "ai_assisted_semantic_contract_review",
+    "humanPerCaseReview": false,
+    "reason": "User authorized benchmark corrections; typed material exclusion is now published and Python requires an authoritative catalog field before search results."
+  },
+  "cases": [
+    {
+      "id": "exclusions-17",
+      "messages": [
+        "find bags excluding leather"
+      ],
+      "originalExpected": {
+        "status": "NEEDS_CONTEXT",
+        "constraintKind": "EXCLUSION",
+        "route": "clarify"
+      },
+      "requiresKnowledge": {
+        "concept": {
+          "id": "material.leather",
+          "kind": "material",
+          "canonical": "leather"
+        },
+        "rule": {
+          "id": "material.exclude.excluding",
+          "marker": "excluding",
+          "targetKind": "material",
+          "relation": "material",
+          "scope": "product",
+          "negated": true
+        }
+      },
+      "expected": {
+        "status": "RESOLVED",
+        "intent": "PRODUCT_SEARCH",
+        "route": "search",
+        "productText": "bags",
+        "relation": {
+          "relation": "material",
+          "value": "leather",
+          "text": "excluding leather",
+          "start": 10,
+          "end": 27,
+          "negated": true,
+          "conceptId": "material.leather",
+          "ruleId": "material.exclude.excluding"
+        }
+      },
+      "reason": "The old fixture predates the governed material/leather vocabulary and excluding rule. A preserved typed exclusion may enter search planning, but grounding must create a mandatory material != leather filter or request clarification if the catalog cannot express it."
+    },
+    {
+      "id": "exclusions-32",
+      "messages": [
+        "find gloves without latex"
+      ],
+      "originalExpected": {
+        "status": "NEEDS_CONTEXT",
+        "constraintKind": "EXCLUSION",
+        "route": "clarify"
+      },
+      "requiresKnowledge": {
+        "concept": {
+          "id": "material.latex",
+          "kind": "material",
+          "canonical": "latex"
+        },
+        "rule": {
+          "id": "material.exclude.without",
+          "marker": "without",
+          "targetKind": "material",
+          "relation": "material",
+          "scope": "product",
+          "negated": true
+        }
+      },
+      "expected": {
+        "status": "RESOLVED",
+        "intent": "PRODUCT_SEARCH",
+        "route": "search",
+        "productText": "gloves",
+        "relation": {
+          "relation": "material",
+          "value": "latex",
+          "text": "without latex",
+          "start": 12,
+          "end": 25,
+          "negated": true,
+          "conceptId": "material.latex",
+          "ruleId": "material.exclude.without"
+        }
+      },
+      "reason": "The old fixture predates the governed material/latex vocabulary and without rule. This is a literal material exclusion only; a mandatory material != latex filter requires catalog evidence, and makes no allergy, medical-suitability or safety claim."
+    }
+  ]
+}

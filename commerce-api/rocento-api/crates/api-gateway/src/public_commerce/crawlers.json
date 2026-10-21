@@ -1,0 +1,5 @@
+[
+ {"agent":"*","purpose":"traditional_search","source":"https://developers.google.com/crawling/docs/robots-txt/robots-txt-spec","verified":"2026-09-21","control":"effective_indexing"},
+ {"agent":"OAI-SearchBot","purpose":"ai_search","source":"https://developers.openai.com/api/docs/bots","verified":"2026-09-21","control":"openai_search"},
+ {"agent":"GPTBot","purpose":"training","source":"https://developers.openai.com/api/docs/bots","verified":"2026-09-21","control":"openai_training"}
+]

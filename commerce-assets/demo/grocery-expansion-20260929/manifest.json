@@ -1,0 +1,383 @@
+{
+  "id": "grocery-expansion-20260929",
+  "attribute_code": "grocery-pack-size",
+  "families": [
+    {
+      "source_slug": "demo-grocery-white-mangoes",
+      "extra_sku": "GRO-EXTRA-20260929-001",
+      "parent_sku": "GRO-SIZE-FAMILY-001",
+      "parent_slug": "grocery-mangoes",
+      "name": "Mangoes",
+      "original_size": "1kg",
+      "extra_size": "500g"
+    },
+    {
+      "source_slug": "demo-grocery-white-red-grapes",
+      "extra_sku": "GRO-EXTRA-20260929-002",
+      "parent_sku": "GRO-SIZE-FAMILY-002",
+      "parent_slug": "grocery-red-grapes",
+      "name": "Red Grapes",
+      "original_size": "500g",
+      "extra_size": "1kg"
+    },
+    {
+      "source_slug": "demo-grocery-white-pears",
+      "extra_sku": "GRO-EXTRA-20260929-003",
+      "parent_sku": "GRO-SIZE-FAMILY-003",
+      "parent_slug": "grocery-pears",
+      "name": "Pears",
+      "original_size": "1kg",
+      "extra_size": "500g"
+    },
+    {
+      "source_slug": "demo-grocery-white-mushrooms",
+      "extra_sku": "GRO-EXTRA-20260929-004",
+      "parent_sku": "GRO-SIZE-FAMILY-004",
+      "parent_slug": "grocery-mushrooms",
+      "name": "White Mushrooms",
+      "original_size": "250g",
+      "extra_size": "500g"
+    },
+    {
+      "source_slug": "demo-grocery-white-zucchini",
+      "extra_sku": "GRO-EXTRA-20260929-005",
+      "parent_sku": "GRO-SIZE-FAMILY-005",
+      "parent_slug": "grocery-zucchini",
+      "name": "Zucchini",
+      "original_size": "1kg",
+      "extra_size": "500g"
+    },
+    {
+      "source_slug": "demo-grocery-white-cheddar-cheese",
+      "extra_sku": "GRO-EXTRA-20260929-006",
+      "parent_sku": "GRO-SIZE-FAMILY-006",
+      "parent_slug": "grocery-cheddar-cheese",
+      "name": "Cheddar Cheese",
+      "original_size": "250g",
+      "extra_size": "500g"
+    },
+    {
+      "source_slug": "demo-grocery-white-feta-cheese",
+      "extra_sku": "GRO-EXTRA-20260929-007",
+      "parent_sku": "GRO-SIZE-FAMILY-007",
+      "parent_slug": "grocery-feta-cheese",
+      "name": "Feta Cheese",
+      "original_size": "250g",
+      "extra_size": "500g"
+    },
+    {
+      "source_slug": "demo-grocery-white-croissants",
+      "extra_sku": "GRO-EXTRA-20260929-008",
+      "parent_sku": "GRO-SIZE-FAMILY-008",
+      "parent_slug": "grocery-croissants",
+      "name": "Butter Croissants",
+      "original_size": "3 Pack",
+      "extra_size": "6 Pack"
+    },
+    {
+      "source_slug": "demo-grocery-white-basmati-rice",
+      "extra_sku": "GRO-EXTRA-20260929-009",
+      "parent_sku": "GRO-SIZE-FAMILY-009",
+      "parent_slug": "grocery-basmati-rice",
+      "name": "Basmati Rice",
+      "original_size": "1kg",
+      "extra_size": "2kg"
+    },
+    {
+      "source_slug": "demo-grocery-white-chickpeas",
+      "extra_sku": "GRO-EXTRA-20260929-010",
+      "parent_sku": "GRO-SIZE-FAMILY-010",
+      "parent_slug": "grocery-chickpeas",
+      "name": "Chickpeas",
+      "original_size": "500g",
+      "extra_size": "1kg"
+    },
+    {
+      "source_slug": "demo-grocery-white-chicken-breast",
+      "extra_sku": "GRO-EXTRA-20260929-011",
+      "parent_sku": "GRO-SIZE-FAMILY-011",
+      "parent_slug": "grocery-chicken-breast",
+      "name": "Chicken Breast",
+      "original_size": "500g",
+      "extra_size": "1kg"
+    },
+    {
+      "source_slug": "demo-grocery-white-beef-steak",
+      "extra_sku": "GRO-EXTRA-20260929-012",
+      "parent_sku": "GRO-SIZE-FAMILY-012",
+      "parent_slug": "grocery-beef-steak",
+      "name": "Beef Steak",
+      "original_size": "500g",
+      "extra_size": "1kg"
+    },
+    {
+      "source_slug": "demo-grocery-white-salmon-fillet",
+      "extra_sku": "GRO-EXTRA-20260929-013",
+      "parent_sku": "GRO-SIZE-FAMILY-013",
+      "parent_slug": "grocery-salmon-fillet",
+      "name": "Salmon Fillet",
+      "original_size": "300g",
+      "extra_size": "600g"
+    },
+    {
+      "source_slug": "demo-grocery-white-cashews",
+      "extra_sku": "GRO-EXTRA-20260929-014",
+      "parent_sku": "GRO-SIZE-FAMILY-014",
+      "parent_slug": "grocery-cashews",
+      "name": "Cashews",
+      "original_size": "250g",
+      "extra_size": "500g"
+    },
+    {
+      "source_slug": "demo-grocery-white-pistachios",
+      "extra_sku": "GRO-EXTRA-20260929-015",
+      "parent_sku": "GRO-SIZE-FAMILY-015",
+      "parent_slug": "grocery-pistachios",
+      "name": "Pistachios",
+      "original_size": "250g",
+      "extra_size": "500g"
+    }
+  ],
+  "products": [
+    {
+      "sku": "GRO-NEW-20260929-001",
+      "slug": "grocery-blueberries",
+      "name": "Blueberries 125g",
+      "category": "grocery-fruit",
+      "price": "3.25",
+      "currency": "USD",
+      "unit": "pack",
+      "description": "Fresh blueberries for fruit bowls, breakfast toppings, and baking. Keep refrigerated. Illustrative demo product photography.",
+      "image": "blueberries.png",
+      "initial_quantity": 30
+    },
+    {
+      "sku": "GRO-NEW-20260929-002",
+      "slug": "grocery-kiwi",
+      "name": "Kiwi 4 Pack",
+      "category": "grocery-fruit",
+      "price": "2.75",
+      "currency": "USD",
+      "unit": "pack",
+      "description": "Four kiwi fruits with green flesh. Enjoy fresh or add to fruit salads. Illustrative demo product photography.",
+      "image": "kiwi.png",
+      "initial_quantity": 30
+    },
+    {
+      "sku": "GRO-NEW-20260929-003",
+      "slug": "grocery-pomegranate",
+      "name": "Pomegranates 2 Pack",
+      "category": "grocery-fruit",
+      "price": "3.50",
+      "currency": "USD",
+      "unit": "pack",
+      "description": "Two whole pomegranates. Scatter the seeds over salads, yogurt, or desserts. Illustrative demo product photography.",
+      "image": "pomegranate.png",
+      "initial_quantity": 30
+    },
+    {
+      "sku": "GRO-NEW-20260929-004",
+      "slug": "grocery-peaches",
+      "name": "Peaches 500g",
+      "category": "grocery-fruit",
+      "price": "2.50",
+      "currency": "USD",
+      "unit": "pack",
+      "description": "Peaches for snacking, fruit salads, or baking. Allow firm fruit to ripen before eating. Illustrative demo product photography.",
+      "image": "peaches.png",
+      "initial_quantity": 30
+    },
+    {
+      "sku": "GRO-NEW-20260929-005",
+      "slug": "grocery-spinach",
+      "name": "Fresh Spinach 250g",
+      "category": "grocery-vegetables",
+      "price": "1.25",
+      "currency": "USD",
+      "unit": "pack",
+      "description": "Fresh spinach leaves for salads, soups, and cooked dishes. Wash before use. Illustrative demo product photography.",
+      "image": "spinach.png",
+      "initial_quantity": 30
+    },
+    {
+      "sku": "GRO-NEW-20260929-006",
+      "slug": "grocery-green-beans",
+      "name": "Green Beans 500g",
+      "category": "grocery-vegetables",
+      "price": "1.75",
+      "currency": "USD",
+      "unit": "pack",
+      "description": "Fresh green beans for steaming, stir-fries, and tomato-based stews. Trim before cooking. Illustrative demo product photography.",
+      "image": "green-beans.png",
+      "initial_quantity": 30
+    },
+    {
+      "sku": "GRO-NEW-20260929-007",
+      "slug": "grocery-sweet-potatoes",
+      "name": "Sweet Potatoes 1kg",
+      "category": "grocery-vegetables",
+      "price": "2.25",
+      "currency": "USD",
+      "unit": "pack",
+      "description": "Whole sweet potatoes for roasting, mash, and soups. Store in a cool, dry place. Illustrative demo product photography.",
+      "image": "sweet-potatoes.png",
+      "initial_quantity": 30
+    },
+    {
+      "sku": "GRO-NEW-20260929-008",
+      "slug": "grocery-lettuce",
+      "name": "Romaine Lettuce 1 Head",
+      "category": "grocery-vegetables",
+      "price": "1.25",
+      "currency": "USD",
+      "unit": "pack",
+      "description": "One crisp romaine lettuce head for salads and sandwiches. Wash leaves before use. Illustrative demo product photography.",
+      "image": "lettuce.png",
+      "initial_quantity": 30
+    },
+    {
+      "sku": "GRO-NEW-20260929-009",
+      "slug": "grocery-mozzarella",
+      "name": "Fresh Mozzarella 125g",
+      "category": "grocery-dairy-eggs",
+      "price": "2.75",
+      "currency": "USD",
+      "unit": "pack",
+      "description": "Fresh mozzarella for salads, pizza, and sandwiches. Contains milk. Keep refrigerated. Illustrative demo product photography.",
+      "image": "mozzarella.png",
+      "initial_quantity": 30
+    },
+    {
+      "sku": "GRO-NEW-20260929-010",
+      "slug": "grocery-cream-cheese",
+      "name": "Cream Cheese 200g",
+      "category": "grocery-dairy-eggs",
+      "price": "2.50",
+      "currency": "USD",
+      "unit": "pack",
+      "description": "Plain cream cheese for spreading, dips, and baking. Contains milk. Keep refrigerated. Illustrative demo product photography.",
+      "image": "cream-cheese.png",
+      "initial_quantity": 30
+    },
+    {
+      "sku": "GRO-NEW-20260929-011",
+      "slug": "grocery-bagels",
+      "name": "Sesame Bagels 4 Pack",
+      "category": "grocery-bakery",
+      "price": "3.25",
+      "currency": "USD",
+      "unit": "pack",
+      "description": "Four sesame-topped bagels for breakfast and sandwiches. Contains wheat and sesame. Illustrative demo product photography.",
+      "image": "bagels.png",
+      "initial_quantity": 30
+    },
+    {
+      "sku": "GRO-NEW-20260929-012",
+      "slug": "grocery-oat-bread",
+      "name": "Oat Bread 1 Loaf",
+      "category": "grocery-bakery",
+      "price": "2.50",
+      "currency": "USD",
+      "unit": "pack",
+      "description": "One sliced loaf topped with oats, for toast and sandwiches. Contains wheat and oats. Illustrative demo product photography.",
+      "image": "oat-bread.png",
+      "initial_quantity": 30
+    },
+    {
+      "sku": "GRO-NEW-20260929-013",
+      "slug": "grocery-rolled-oats",
+      "name": "Rolled Oats 500g",
+      "category": "grocery-pantry",
+      "price": "2.00",
+      "currency": "USD",
+      "unit": "pack",
+      "description": "Rolled oats for porridge, overnight oats, and baking. Store sealed in a cool, dry place. Illustrative demo product photography.",
+      "image": "rolled-oats.png",
+      "initial_quantity": 30
+    },
+    {
+      "sku": "GRO-NEW-20260929-014",
+      "slug": "grocery-couscous",
+      "name": "Couscous 500g",
+      "category": "grocery-pantry",
+      "price": "2.25",
+      "currency": "USD",
+      "unit": "pack",
+      "description": "Dry couscous for quick sides, salads, and vegetable dishes. Contains wheat. Illustrative demo product photography.",
+      "image": "couscous.png",
+      "initial_quantity": 30
+    },
+    {
+      "sku": "GRO-NEW-20260929-015",
+      "slug": "grocery-tuna",
+      "name": "Tuna in Olive Oil 160g",
+      "category": "grocery-pantry",
+      "price": "2.75",
+      "currency": "USD",
+      "unit": "pack",
+      "description": "Tinned tuna in olive oil for salads, sandwiches, and pasta. Contains fish. Refrigerate after opening. Illustrative demo product photography.",
+      "image": "tuna.png",
+      "initial_quantity": 30
+    },
+    {
+      "sku": "GRO-NEW-20260929-016",
+      "slug": "grocery-chicken-drumsticks",
+      "name": "Chicken Drumsticks 1kg",
+      "category": "grocery-meat-poultry",
+      "price": "5.50",
+      "currency": "USD",
+      "unit": "pack",
+      "description": "Raw chicken drumsticks for roasting, grilling, or stews. Keep refrigerated and cook thoroughly. Illustrative demo product photography.",
+      "image": "chicken-drumsticks.png",
+      "initial_quantity": 30
+    },
+    {
+      "sku": "GRO-NEW-20260929-017",
+      "slug": "grocery-ground-beef",
+      "name": "Ground Beef 500g",
+      "category": "grocery-meat-poultry",
+      "price": "5.00",
+      "currency": "USD",
+      "unit": "pack",
+      "description": "Raw ground beef for kofta, burgers, and sauces. Keep refrigerated and cook thoroughly. Illustrative demo product photography.",
+      "image": "ground-beef.png",
+      "initial_quantity": 30
+    },
+    {
+      "sku": "GRO-NEW-20260929-018",
+      "slug": "grocery-shrimp",
+      "name": "Peeled Shrimp 500g",
+      "category": "grocery-fish-seafood",
+      "price": "7.50",
+      "currency": "USD",
+      "unit": "pack",
+      "description": "Raw peeled shrimp for pasta, stir-fries, and seafood dishes. Contains crustaceans. Keep refrigerated and cook thoroughly. Illustrative demo product photography.",
+      "image": "shrimp.png",
+      "initial_quantity": 30
+    },
+    {
+      "sku": "GRO-NEW-20260929-019",
+      "slug": "grocery-dried-apricots",
+      "name": "Dried Apricots 250g",
+      "category": "grocery-dates-nuts",
+      "price": "3.00",
+      "currency": "USD",
+      "unit": "pack",
+      "description": "Dried apricots for snacking, baking, and adding to breakfast bowls. Store sealed in a cool, dry place. Illustrative demo product photography.",
+      "image": "dried-apricots.png",
+      "initial_quantity": 30
+    },
+    {
+      "sku": "GRO-NEW-20260929-020",
+      "slug": "grocery-hazelnuts",
+      "name": "Hazelnuts 250g",
+      "category": "grocery-dates-nuts",
+      "price": "4.25",
+      "currency": "USD",
+      "unit": "pack",
+      "description": "Shelled hazelnuts for snacking, baking, and desserts. Contains tree nuts. Store sealed in a cool, dry place. Illustrative demo product photography.",
+      "image": "hazelnuts.png",
+      "initial_quantity": 30
+    }
+  ]
+}

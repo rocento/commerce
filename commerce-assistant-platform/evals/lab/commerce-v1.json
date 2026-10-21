@@ -1,0 +1,5916 @@
+{
+  "version": "1",
+  "revision": "commerce-lab-2026-09-21-v1",
+  "snapshots": [
+    {
+      "version": "1",
+      "id": "grocery-patterns-v1",
+      "store": "grocery",
+      "tenant_id": "00000000-0000-0000-0000-0000000003e8",
+      "source": "reviewed_synthetic_pattern",
+      "source_revision": "m02-curated-patterns-v1",
+      "observed_at": "2026-09-21T00:00:00Z",
+      "catalog_schema": {
+        "industry": "grocery",
+        "version": "m02-pattern-1",
+        "attributes": [
+          {
+            "code": "roast",
+            "label": "roast",
+            "data_type": "select",
+            "options": [
+              {
+                "code": "dark",
+                "label": "dark",
+                "labels": {}
+              },
+              {
+                "code": "light",
+                "label": "light",
+                "labels": {}
+              }
+            ],
+            "filterable": true,
+            "searchable": true,
+            "facetable": true,
+            "sortable": false,
+            "comparable": true,
+            "variant_axis": false,
+            "source_policy": "factual",
+            "semantic_role": null,
+            "unit": null,
+            "min": null,
+            "max": null
+          }
+        ]
+      },
+      "products": [
+        {
+          "id": "00000000-0000-0000-0000-0000000003e9",
+          "image_id": null,
+          "name": "Coffee 1",
+          "price": "20",
+          "currency": "USD",
+          "category_id": "00000000-0000-0000-0000-00000000044c",
+          "category_name": "coffee",
+          "product_type": "simple",
+          "attributes": [
+            {
+              "name": "roast",
+              "value": "\"dark\"",
+              "label": "",
+              "source": "VERIFIED",
+              "confidence": null,
+              "comparable": true
+            }
+          ],
+          "in_stock": true,
+          "route": "/products/00000000-0000-0000-0000-0000000003e9"
+        },
+        {
+          "id": "00000000-0000-0000-0000-0000000003ea",
+          "image_id": null,
+          "name": "Coffee 2",
+          "price": "30",
+          "currency": "USD",
+          "category_id": "00000000-0000-0000-0000-00000000044c",
+          "category_name": "coffee",
+          "product_type": "simple",
+          "attributes": [
+            {
+              "name": "roast",
+              "value": "\"light\"",
+              "label": "",
+              "source": "MERCHANT",
+              "confidence": null,
+              "comparable": true
+            }
+          ],
+          "in_stock": true,
+          "route": "/products/00000000-0000-0000-0000-0000000003ea"
+        },
+        {
+          "id": "00000000-0000-0000-0000-0000000003eb",
+          "image_id": null,
+          "name": "Coffee 3",
+          "price": "10",
+          "currency": "USD",
+          "category_id": "00000000-0000-0000-0000-00000000044c",
+          "category_name": "coffee",
+          "product_type": "simple",
+          "attributes": [
+            {
+              "name": "roast",
+              "value": "\"dark\"",
+              "label": "",
+              "source": "VERIFIED",
+              "confidence": null,
+              "comparable": true
+            }
+          ],
+          "in_stock": false,
+          "route": "/products/00000000-0000-0000-0000-0000000003eb"
+        },
+        {
+          "id": "00000000-0000-0000-0000-0000000003ec",
+          "image_id": null,
+          "name": "Coffee 4",
+          "price": "25",
+          "currency": "USD",
+          "category_id": "00000000-0000-0000-0000-00000000044c",
+          "category_name": "coffee",
+          "product_type": "simple",
+          "attributes": [
+            {
+              "name": "roast",
+              "value": "\"dark\"",
+              "label": "",
+              "source": "VERIFIED",
+              "confidence": null,
+              "comparable": true
+            }
+          ],
+          "in_stock": null,
+          "route": "/products/00000000-0000-0000-0000-0000000003ec"
+        },
+        {
+          "id": "00000000-0000-0000-0000-0000000003ed",
+          "image_id": null,
+          "name": "Coffee 5",
+          "price": "15",
+          "currency": "USD",
+          "category_id": "00000000-0000-0000-0000-00000000044c",
+          "category_name": "coffee",
+          "product_type": "simple",
+          "attributes": [
+            {
+              "name": "roast",
+              "value": "\"dark\"",
+              "label": "",
+              "source": "AI_INFERRED",
+              "confidence": null,
+              "comparable": true
+            }
+          ],
+          "in_stock": true,
+          "route": "/products/00000000-0000-0000-0000-0000000003ed"
+        }
+      ],
+      "policies": {
+        "schema_version": "2",
+        "tenant_id": "00000000-0000-0000-0000-0000000003e8",
+        "answers": [
+          {
+            "phrases": [
+              "How do I check my order?"
+            ],
+            "answer": "Sign in to view your own order status. A basket proposal is not a placed order.",
+            "source": {
+              "id": "guide:order-status",
+              "title": "Synthetic evaluation guide",
+              "revision": 1,
+              "approved_at": "2026-09-01T00:00:00Z",
+              "valid_until": "2026-10-01T00:00:00Z"
+            }
+          }
+        ],
+        "unknown_phrases": [
+          "Do you guarantee delivery today?",
+          "Can I return any item after 90 days?"
+        ]
+      }
+    },
+    {
+      "version": "1",
+      "id": "jewelry-patterns-v1",
+      "store": "jewelry",
+      "tenant_id": "00000000-0000-0000-0000-0000000007d0",
+      "source": "reviewed_synthetic_pattern",
+      "source_revision": "m02-curated-patterns-v1",
+      "observed_at": "2026-09-21T00:00:00Z",
+      "catalog_schema": {
+        "industry": "jewelry",
+        "version": "m02-pattern-1",
+        "attributes": [
+          {
+            "code": "metal",
+            "label": "metal",
+            "data_type": "select",
+            "options": [
+              {
+                "code": "silver",
+                "label": "silver",
+                "labels": {}
+              },
+              {
+                "code": "gold",
+                "label": "gold",
+                "labels": {}
+              }
+            ],
+            "filterable": true,
+            "searchable": true,
+            "facetable": true,
+            "sortable": false,
+            "comparable": true,
+            "variant_axis": false,
+            "source_policy": "factual",
+            "semantic_role": null,
+            "unit": null,
+            "min": null,
+            "max": null
+          }
+        ]
+      },
+      "products": [
+        {
+          "id": "00000000-0000-0000-0000-0000000007d1",
+          "image_id": null,
+          "name": "Ring 1",
+          "price": "20",
+          "currency": "USD",
+          "category_id": "00000000-0000-0000-0000-000000000834",
+          "category_name": "ring",
+          "product_type": "simple",
+          "attributes": [
+            {
+              "name": "metal",
+              "value": "\"silver\"",
+              "label": "",
+              "source": "VERIFIED",
+              "confidence": null,
+              "comparable": true
+            }
+          ],
+          "in_stock": true,
+          "route": "/products/00000000-0000-0000-0000-0000000007d1"
+        },
+        {
+          "id": "00000000-0000-0000-0000-0000000007d2",
+          "image_id": null,
+          "name": "Ring 2",
+          "price": "30",
+          "currency": "USD",
+          "category_id": "00000000-0000-0000-0000-000000000834",
+          "category_name": "ring",
+          "product_type": "simple",
+          "attributes": [
+            {
+              "name": "metal",
+              "value": "\"gold\"",
+              "label": "",
+              "source": "MERCHANT",
+              "confidence": null,
+              "comparable": true
+            }
+          ],
+          "in_stock": true,
+          "route": "/products/00000000-0000-0000-0000-0000000007d2"
+        },
+        {
+          "id": "00000000-0000-0000-0000-0000000007d3",
+          "image_id": null,
+          "name": "Ring 3",
+          "price": "10",
+          "currency": "USD",
+          "category_id": "00000000-0000-0000-0000-000000000834",
+          "category_name": "ring",
+          "product_type": "simple",
+          "attributes": [
+            {
+              "name": "metal",
+              "value": "\"silver\"",
+              "label": "",
+              "source": "VERIFIED",
+              "confidence": null,
+              "comparable": true
+            }
+          ],
+          "in_stock": false,
+          "route": "/products/00000000-0000-0000-0000-0000000007d3"
+        },
+        {
+          "id": "00000000-0000-0000-0000-0000000007d4",
+          "image_id": null,
+          "name": "Ring 4",
+          "price": "25",
+          "currency": "USD",
+          "category_id": "00000000-0000-0000-0000-000000000834",
+          "category_name": "ring",
+          "product_type": "simple",
+          "attributes": [
+            {
+              "name": "metal",
+              "value": "\"silver\"",
+              "label": "",
+              "source": "VERIFIED",
+              "confidence": null,
+              "comparable": true
+            }
+          ],
+          "in_stock": null,
+          "route": "/products/00000000-0000-0000-0000-0000000007d4"
+        },
+        {
+          "id": "00000000-0000-0000-0000-0000000007d5",
+          "image_id": null,
+          "name": "Ring 5",
+          "price": "15",
+          "currency": "USD",
+          "category_id": "00000000-0000-0000-0000-000000000834",
+          "category_name": "ring",
+          "product_type": "simple",
+          "attributes": [
+            {
+              "name": "metal",
+              "value": "\"silver\"",
+              "label": "",
+              "source": "AI_INFERRED",
+              "confidence": null,
+              "comparable": true
+            }
+          ],
+          "in_stock": true,
+          "route": "/products/00000000-0000-0000-0000-0000000007d5"
+        }
+      ],
+      "policies": {
+        "schema_version": "2",
+        "tenant_id": "00000000-0000-0000-0000-0000000007d0",
+        "answers": [
+          {
+            "phrases": [
+              "How do I check my order?"
+            ],
+            "answer": "Sign in to view your own order status. A basket proposal is not a placed order.",
+            "source": {
+              "id": "guide:order-status",
+              "title": "Synthetic evaluation guide",
+              "revision": 1,
+              "approved_at": "2026-09-01T00:00:00Z",
+              "valid_until": "2026-10-01T00:00:00Z"
+            }
+          }
+        ],
+        "unknown_phrases": [
+          "Do you guarantee delivery today?",
+          "Can I return any item after 90 days?"
+        ]
+      }
+    },
+    {
+      "version": "1",
+      "id": "electronics-patterns-v1",
+      "store": "electronics",
+      "tenant_id": "00000000-0000-0000-0000-000000000bb8",
+      "source": "reviewed_synthetic_pattern",
+      "source_revision": "m02-curated-patterns-v1",
+      "observed_at": "2026-09-21T00:00:00Z",
+      "catalog_schema": {
+        "industry": "electronics",
+        "version": "m02-pattern-1",
+        "attributes": [
+          {
+            "code": "connector",
+            "label": "connector",
+            "data_type": "select",
+            "options": [
+              {
+                "code": "usb-c",
+                "label": "usb-c",
+                "labels": {}
+              },
+              {
+                "code": "lightning",
+                "label": "lightning",
+                "labels": {}
+              }
+            ],
+            "filterable": true,
+            "searchable": true,
+            "facetable": true,
+            "sortable": false,
+            "comparable": true,
+            "variant_axis": false,
+            "source_policy": "factual",
+            "semantic_role": null,
+            "unit": null,
+            "min": null,
+            "max": null
+          }
+        ]
+      },
+      "products": [
+        {
+          "id": "00000000-0000-0000-0000-000000000bb9",
+          "image_id": null,
+          "name": "Charger 1",
+          "price": "20",
+          "currency": "USD",
+          "category_id": "00000000-0000-0000-0000-000000000c1c",
+          "category_name": "charger",
+          "product_type": "simple",
+          "attributes": [
+            {
+              "name": "connector",
+              "value": "\"usb-c\"",
+              "label": "",
+              "source": "VERIFIED",
+              "confidence": null,
+              "comparable": true
+            }
+          ],
+          "in_stock": true,
+          "route": "/products/00000000-0000-0000-0000-000000000bb9"
+        },
+        {
+          "id": "00000000-0000-0000-0000-000000000bba",
+          "image_id": null,
+          "name": "Charger 2",
+          "price": "30",
+          "currency": "USD",
+          "category_id": "00000000-0000-0000-0000-000000000c1c",
+          "category_name": "charger",
+          "product_type": "simple",
+          "attributes": [
+            {
+              "name": "connector",
+              "value": "\"lightning\"",
+              "label": "",
+              "source": "MERCHANT",
+              "confidence": null,
+              "comparable": true
+            }
+          ],
+          "in_stock": true,
+          "route": "/products/00000000-0000-0000-0000-000000000bba"
+        },
+        {
+          "id": "00000000-0000-0000-0000-000000000bbb",
+          "image_id": null,
+          "name": "Charger 3",
+          "price": "10",
+          "currency": "USD",
+          "category_id": "00000000-0000-0000-0000-000000000c1c",
+          "category_name": "charger",
+          "product_type": "simple",
+          "attributes": [
+            {
+              "name": "connector",
+              "value": "\"usb-c\"",
+              "label": "",
+              "source": "VERIFIED",
+              "confidence": null,
+              "comparable": true
+            }
+          ],
+          "in_stock": false,
+          "route": "/products/00000000-0000-0000-0000-000000000bbb"
+        },
+        {
+          "id": "00000000-0000-0000-0000-000000000bbc",
+          "image_id": null,
+          "name": "Charger 4",
+          "price": "25",
+          "currency": "USD",
+          "category_id": "00000000-0000-0000-0000-000000000c1c",
+          "category_name": "charger",
+          "product_type": "simple",
+          "attributes": [
+            {
+              "name": "connector",
+              "value": "\"usb-c\"",
+              "label": "",
+              "source": "VERIFIED",
+              "confidence": null,
+              "comparable": true
+            }
+          ],
+          "in_stock": null,
+          "route": "/products/00000000-0000-0000-0000-000000000bbc"
+        },
+        {
+          "id": "00000000-0000-0000-0000-000000000bbd",
+          "image_id": null,
+          "name": "Charger 5",
+          "price": "15",
+          "currency": "USD",
+          "category_id": "00000000-0000-0000-0000-000000000c1c",
+          "category_name": "charger",
+          "product_type": "simple",
+          "attributes": [
+            {
+              "name": "connector",
+              "value": "\"usb-c\"",
+              "label": "",
+              "source": "AI_INFERRED",
+              "confidence": null,
+              "comparable": true
+            }
+          ],
+          "in_stock": true,
+          "route": "/products/00000000-0000-0000-0000-000000000bbd"
+        }
+      ],
+      "policies": {
+        "schema_version": "2",
+        "tenant_id": "00000000-0000-0000-0000-000000000bb8",
+        "answers": [
+          {
+            "phrases": [
+              "How do I check my order?"
+            ],
+            "answer": "Sign in to view your own order status. A basket proposal is not a placed order.",
+            "source": {
+              "id": "guide:order-status",
+              "title": "Synthetic evaluation guide",
+              "revision": 1,
+              "approved_at": "2026-09-01T00:00:00Z",
+              "valid_until": "2026-10-01T00:00:00Z"
+            }
+          }
+        ],
+        "unknown_phrases": [
+          "Do you guarantee delivery today?",
+          "Can I return any item after 90 days?"
+        ]
+      }
+    },
+    {
+      "version": "1",
+      "id": "grocery-isolated-2026-09-21",
+      "store": "grocery",
+      "tenant_id": "0b597bc4-8eab-4e21-99b3-0c610a9ef7ba",
+      "source": "isolated_store",
+      "source_revision": "rocento-shopping-stage-9535d4d7",
+      "observed_at": "2026-09-21T10:06:41.205090Z",
+      "catalog_schema": {
+        "industry": null,
+        "version": "0:0",
+        "attributes": []
+      },
+      "products": [
+        {
+          "id": "44aedd09-dc2b-4f25-a636-e855e730112a",
+          "image_id": null,
+          "name": "Staging Coffee 1 kg",
+          "price": "10.00",
+          "currency": "USD",
+          "category_id": "dc789adc-0f2b-44d9-8a2a-301f48c39336",
+          "category_name": "Staging groceries",
+          "product_type": "simple",
+          "attributes": [],
+          "in_stock": true,
+          "route": "/products/44aedd09-dc2b-4f25-a636-e855e730112a"
+        },
+        {
+          "id": "22e94f06-b83d-41b4-ba3c-002d7a4afbc4",
+          "image_id": null,
+          "name": "Staging Coffee 1 kg",
+          "price": "6.00",
+          "currency": "USD",
+          "category_id": "dc789adc-0f2b-44d9-8a2a-301f48c39336",
+          "category_name": "Staging groceries",
+          "product_type": "simple",
+          "attributes": [],
+          "in_stock": true,
+          "route": "/products/22e94f06-b83d-41b4-ba3c-002d7a4afbc4"
+        }
+      ],
+      "policies": {
+        "schema_version": "2",
+        "tenant_id": "0b597bc4-8eab-4e21-99b3-0c610a9ef7ba",
+        "answers": [
+          {
+            "phrases": [
+              "How does Shop for Me work?",
+              "Does a proposal change my cart?"
+            ],
+            "answer": "Describe what you need, then review the proposed products, quantities and quote. Your cart changes only after you approve and apply the proposal. Basket approval does not place an order.",
+            "source": {
+              "id": "guide:basket-review",
+              "title": "Reviewing a proposed basket",
+              "revision": 1,
+              "approved_at": "2026-09-21T09:10:19.515737Z",
+              "valid_until": "2026-10-21T09:10:19.515737Z"
+            }
+          },
+          {
+            "phrases": [
+              "Does approving a basket place an order?",
+              "How do I confirm my order?"
+            ],
+            "answer": "After applying a basket, continue to checkout, review the current total and delivery address, and explicitly confirm the order. The current checkout supports cash on delivery. Do not assume a saved proposal is a completed order.",
+            "source": {
+              "id": "guide:checkout-confirmation",
+              "title": "Confirming an order",
+              "revision": 1,
+              "approved_at": "2026-09-21T09:10:19.515737Z",
+              "valid_until": "2026-10-21T09:10:19.515737Z"
+            }
+          },
+          {
+            "phrases": [
+              "Why do I need to refresh my proposal?",
+              "How long is a basket quote valid?"
+            ],
+            "answer": "Basket quotes expire after five minutes. Prices, stock and other checkout conditions are checked again when you apply the proposal. If conditions change, refresh the quote and review it again before approving.",
+            "source": {
+              "id": "guide:quote-freshness",
+              "title": "Refreshing a quote",
+              "revision": 1,
+              "approved_at": "2026-09-21T09:10:19.515737Z",
+              "valid_until": "2026-10-21T09:10:19.515737Z"
+            }
+          },
+          {
+            "phrases": [
+              "Can you guarantee delivery tomorrow?",
+              "Does in stock mean next day delivery?"
+            ],
+            "answer": "Check availability for your selected delivery location. Availability does not promise a delivery date or time slot. The current shopping assistant cannot reserve a scheduled delivery slot.",
+            "source": {
+              "id": "guide:availability",
+              "title": "Checking delivery and availability",
+              "revision": 1,
+              "approved_at": "2026-09-21T09:10:19.515737Z",
+              "valid_until": "2026-10-21T09:10:19.515737Z"
+            }
+          },
+          {
+            "phrases": [
+              "How do I track my order?"
+            ],
+            "answer": "Sign in to the account used for the order. Open your orders or ask the assistant about your order, then select it to see its recorded status and available shipment information.",
+            "source": {
+              "id": "guide:order-tracking",
+              "title": "Finding an existing order",
+              "revision": 1,
+              "approved_at": "2026-09-21T09:10:19.515737Z",
+              "valid_until": "2026-10-21T09:10:19.515737Z"
+            }
+          },
+          {
+            "phrases": [
+              "Which currency and quantities does checkout support?"
+            ],
+            "answer": "The current shopping checkout uses USD and whole selling-unit quantities. Check the displayed product selling unit and quantity before approving. The assistant does not convert currencies or promise fractional quantities.",
+            "source": {
+              "id": "guide:quantity-currency",
+              "title": "Reviewing currency and quantities",
+              "revision": 1,
+              "approved_at": "2026-09-21T09:10:19.515737Z",
+              "valid_until": "2026-10-21T09:10:19.515737Z"
+            }
+          }
+        ],
+        "unknown_phrases": [
+          "What is your return policy?",
+          "What is your refund policy?",
+          "Is delivery free?",
+          "ما هي سياسة الاسترجاع؟",
+          "هل التوصيل مجاني؟"
+        ]
+      }
+    }
+  ],
+  "cases": [
+    {
+      "id": "grocery-verified-hard-constraints",
+      "snapshot": "grocery-patterns-v1",
+      "store": "grocery",
+      "language": "en",
+      "journey": "discovery",
+      "kind": "catalog",
+      "suite": "golden",
+      "turns": [
+        {
+          "message": "Find dark coffee in stock up to $30",
+          "model_output": {
+            "shopping": true,
+            "query": "coffee",
+            "attributes": [
+              {
+                "name": "roast",
+                "value": "dark"
+              }
+            ],
+            "in_stock": true,
+            "max_price": "30",
+            "currency": "USD"
+          },
+          "expected": {
+            "ids": [
+              "00000000-0000-0000-0000-0000000003e9"
+            ],
+            "min_results": 1,
+            "max_price": "30",
+            "exclusive_max": false,
+            "currency": "USD",
+            "in_stock": true,
+            "attributes": {
+              "roast": "dark"
+            },
+            "extracted": {},
+            "text_all": [],
+            "text_none": [],
+            "locked_products": null,
+            "unresolved": null,
+            "error": null,
+            "max_calls": 1
+          }
+        }
+      ],
+      "candidates": [
+        "00000000-0000-0000-0000-0000000003e9",
+        "00000000-0000-0000-0000-0000000003ea",
+        "00000000-0000-0000-0000-0000000003eb",
+        "00000000-0000-0000-0000-0000000003ec",
+        "00000000-0000-0000-0000-0000000003ed"
+      ],
+      "cart_items": [],
+      "previous_goal": null,
+      "provider_fault": null,
+      "tool_fault": null,
+      "live": false
+    },
+    {
+      "id": "grocery-ar-budget",
+      "snapshot": "grocery-patterns-v1",
+      "store": "grocery",
+      "language": "ar",
+      "journey": "discovery",
+      "kind": "catalog",
+      "suite": "catalog_grounded",
+      "turns": [
+        {
+          "message": "أريد coffee بسعر أقل من 30 دولار ومتاح الآن",
+          "model_output": {
+            "shopping": true,
+            "query": "coffee",
+            "max_price": "30",
+            "exclusive_max": true,
+            "currency": "USD",
+            "in_stock": true
+          },
+          "expected": {
+            "ids": [
+              "00000000-0000-0000-0000-0000000003ed",
+              "00000000-0000-0000-0000-0000000003e9"
+            ],
+            "min_results": 1,
+            "max_price": "30",
+            "exclusive_max": true,
+            "currency": "USD",
+            "in_stock": true,
+            "attributes": {},
+            "extracted": {},
+            "text_all": [],
+            "text_none": [],
+            "locked_products": null,
+            "unresolved": null,
+            "error": null,
+            "max_calls": 1
+          }
+        }
+      ],
+      "candidates": [
+        "00000000-0000-0000-0000-0000000003e9",
+        "00000000-0000-0000-0000-0000000003ea",
+        "00000000-0000-0000-0000-0000000003eb",
+        "00000000-0000-0000-0000-0000000003ec",
+        "00000000-0000-0000-0000-0000000003ed"
+      ],
+      "cart_items": [],
+      "previous_goal": null,
+      "provider_fault": null,
+      "tool_fault": null,
+      "live": false
+    },
+    {
+      "id": "grocery-ar-eg-budget",
+      "snapshot": "grocery-patterns-v1",
+      "store": "grocery",
+      "language": "ar-eg",
+      "journey": "discovery",
+      "kind": "catalog",
+      "suite": "catalog_grounded",
+      "turns": [
+        {
+          "message": "عايز coffee أقل من 30 دولار وموجود دلوقتي",
+          "model_output": {
+            "shopping": true,
+            "query": "coffee",
+            "max_price": "30",
+            "exclusive_max": true,
+            "currency": "USD",
+            "in_stock": true
+          },
+          "expected": {
+            "ids": [
+              "00000000-0000-0000-0000-0000000003ed",
+              "00000000-0000-0000-0000-0000000003e9"
+            ],
+            "min_results": 1,
+            "max_price": "30",
+            "exclusive_max": true,
+            "currency": "USD",
+            "in_stock": true,
+            "attributes": {},
+            "extracted": {},
+            "text_all": [],
+            "text_none": [],
+            "locked_products": null,
+            "unresolved": null,
+            "error": null,
+            "max_calls": 1
+          }
+        }
+      ],
+      "candidates": [
+        "00000000-0000-0000-0000-0000000003e9",
+        "00000000-0000-0000-0000-0000000003ea",
+        "00000000-0000-0000-0000-0000000003eb",
+        "00000000-0000-0000-0000-0000000003ec",
+        "00000000-0000-0000-0000-0000000003ed"
+      ],
+      "cart_items": [],
+      "previous_goal": null,
+      "provider_fault": null,
+      "tool_fault": null,
+      "live": false
+    },
+    {
+      "id": "grocery-mixed-budget",
+      "snapshot": "grocery-patterns-v1",
+      "store": "grocery",
+      "language": "mixed",
+      "journey": "discovery",
+      "kind": "catalog",
+      "suite": "catalog_grounded",
+      "turns": [
+        {
+          "message": "عايز coffee in stock under $30",
+          "model_output": {
+            "shopping": true,
+            "query": "coffee",
+            "max_price": "30",
+            "exclusive_max": true,
+            "currency": "USD",
+            "in_stock": true
+          },
+          "expected": {
+            "ids": [
+              "00000000-0000-0000-0000-0000000003ed",
+              "00000000-0000-0000-0000-0000000003e9"
+            ],
+            "min_results": 1,
+            "max_price": "30",
+            "exclusive_max": true,
+            "currency": "USD",
+            "in_stock": true,
+            "attributes": {},
+            "extracted": {},
+            "text_all": [],
+            "text_none": [],
+            "locked_products": null,
+            "unresolved": null,
+            "error": null,
+            "max_calls": 1
+          }
+        }
+      ],
+      "candidates": [
+        "00000000-0000-0000-0000-0000000003e9",
+        "00000000-0000-0000-0000-0000000003ea",
+        "00000000-0000-0000-0000-0000000003eb",
+        "00000000-0000-0000-0000-0000000003ec",
+        "00000000-0000-0000-0000-0000000003ed"
+      ],
+      "cart_items": [],
+      "previous_goal": null,
+      "provider_fault": null,
+      "tool_fault": null,
+      "live": false
+    },
+    {
+      "id": "grocery-typo-budget",
+      "snapshot": "grocery-patterns-v1",
+      "store": "grocery",
+      "language": "typo",
+      "journey": "discovery",
+      "kind": "catalog",
+      "suite": "catalog_grounded",
+      "turns": [
+        {
+          "message": "coffee in stok undr 30 USD",
+          "model_output": {
+            "shopping": true,
+            "query": "coffee",
+            "max_price": "30",
+            "exclusive_max": true,
+            "currency": "USD",
+            "in_stock": true
+          },
+          "expected": {
+            "ids": [
+              "00000000-0000-0000-0000-0000000003ed",
+              "00000000-0000-0000-0000-0000000003e9"
+            ],
+            "min_results": 1,
+            "max_price": "30",
+            "exclusive_max": true,
+            "currency": "USD",
+            "in_stock": true,
+            "attributes": {},
+            "extracted": {},
+            "text_all": [],
+            "text_none": [],
+            "locked_products": null,
+            "unresolved": null,
+            "error": null,
+            "max_calls": 1
+          }
+        }
+      ],
+      "candidates": [
+        "00000000-0000-0000-0000-0000000003e9",
+        "00000000-0000-0000-0000-0000000003ea",
+        "00000000-0000-0000-0000-0000000003eb",
+        "00000000-0000-0000-0000-0000000003ec",
+        "00000000-0000-0000-0000-0000000003ed"
+      ],
+      "cart_items": [],
+      "previous_goal": null,
+      "provider_fault": null,
+      "tool_fault": null,
+      "live": false
+    },
+    {
+      "id": "grocery-no-valid-match",
+      "snapshot": "grocery-patterns-v1",
+      "store": "grocery",
+      "language": "en",
+      "journey": "discovery",
+      "kind": "catalog",
+      "suite": "catalog_grounded",
+      "turns": [
+        {
+          "message": "dark coffee in stock under $20",
+          "model_output": {
+            "shopping": true,
+            "query": "coffee",
+            "attributes": [
+              {
+                "name": "roast",
+                "value": "dark"
+              }
+            ],
+            "in_stock": true,
+            "max_price": "20",
+            "currency": "USD",
+            "exclusive_max": true
+          },
+          "expected": {
+            "ids": [],
+            "min_results": 0,
+            "max_price": null,
+            "exclusive_max": false,
+            "currency": null,
+            "in_stock": false,
+            "attributes": {},
+            "extracted": {},
+            "text_all": [
+              "No verified matches"
+            ],
+            "text_none": [],
+            "locked_products": null,
+            "unresolved": null,
+            "error": null,
+            "max_calls": 1
+          }
+        }
+      ],
+      "candidates": [
+        "00000000-0000-0000-0000-0000000003e9",
+        "00000000-0000-0000-0000-0000000003ea",
+        "00000000-0000-0000-0000-0000000003eb",
+        "00000000-0000-0000-0000-0000000003ec",
+        "00000000-0000-0000-0000-0000000003ed"
+      ],
+      "cart_items": [],
+      "previous_goal": null,
+      "provider_fault": null,
+      "tool_fault": null,
+      "live": false
+    },
+    {
+      "id": "grocery-missing-currency",
+      "snapshot": "grocery-patterns-v1",
+      "store": "grocery",
+      "language": "en",
+      "journey": "discovery",
+      "kind": "catalog",
+      "suite": "conversation",
+      "turns": [
+        {
+          "message": "Find coffee under 25",
+          "model_output": {
+            "shopping": true,
+            "query": "coffee",
+            "max_price": "25"
+          },
+          "expected": {
+            "ids": [],
+            "min_results": 0,
+            "max_price": null,
+            "exclusive_max": false,
+            "currency": null,
+            "in_stock": false,
+            "attributes": {},
+            "extracted": {},
+            "text_all": [
+              "currency"
+            ],
+            "text_none": [],
+            "locked_products": null,
+            "unresolved": null,
+            "error": null,
+            "max_calls": 1
+          }
+        }
+      ],
+      "candidates": [
+        "00000000-0000-0000-0000-0000000003e9",
+        "00000000-0000-0000-0000-0000000003ea",
+        "00000000-0000-0000-0000-0000000003eb",
+        "00000000-0000-0000-0000-0000000003ec",
+        "00000000-0000-0000-0000-0000000003ed"
+      ],
+      "cart_items": [],
+      "previous_goal": null,
+      "provider_fault": null,
+      "tool_fault": null,
+      "live": false
+    },
+    {
+      "id": "grocery-unknown-requirement",
+      "snapshot": "grocery-patterns-v1",
+      "store": "grocery",
+      "language": "en",
+      "journey": "compatibility",
+      "kind": "catalog",
+      "suite": "journey",
+      "turns": [
+        {
+          "message": "I need certified allergy-safe coffee",
+          "model_output": {
+            "shopping": true,
+            "query": "coffee",
+            "clarification": "Certification is not in the catalog schema"
+          },
+          "expected": {
+            "ids": [],
+            "min_results": 0,
+            "max_price": null,
+            "exclusive_max": false,
+            "currency": null,
+            "in_stock": false,
+            "attributes": {},
+            "extracted": {},
+            "text_all": [
+              "Please specify"
+            ],
+            "text_none": [],
+            "locked_products": null,
+            "unresolved": null,
+            "error": null,
+            "max_calls": 1
+          }
+        }
+      ],
+      "candidates": [
+        "00000000-0000-0000-0000-0000000003e9",
+        "00000000-0000-0000-0000-0000000003ea",
+        "00000000-0000-0000-0000-0000000003eb",
+        "00000000-0000-0000-0000-0000000003ec",
+        "00000000-0000-0000-0000-0000000003ed"
+      ],
+      "cart_items": [],
+      "previous_goal": null,
+      "provider_fault": null,
+      "tool_fault": null,
+      "live": false
+    },
+    {
+      "id": "grocery-gift-budget",
+      "snapshot": "grocery-patterns-v1",
+      "store": "grocery",
+      "language": "en",
+      "journey": "gift",
+      "kind": "catalog",
+      "suite": "journey",
+      "turns": [
+        {
+          "message": "A dark coffee gift in stock up to $30",
+          "model_output": {
+            "shopping": true,
+            "query": "coffee",
+            "attributes": [
+              {
+                "name": "roast",
+                "value": "dark"
+              }
+            ],
+            "in_stock": true,
+            "max_price": "30",
+            "currency": "USD"
+          },
+          "expected": {
+            "ids": [
+              "00000000-0000-0000-0000-0000000003e9"
+            ],
+            "min_results": 1,
+            "max_price": "30",
+            "exclusive_max": false,
+            "currency": "USD",
+            "in_stock": true,
+            "attributes": {
+              "roast": "dark"
+            },
+            "extracted": {},
+            "text_all": [],
+            "text_none": [],
+            "locked_products": null,
+            "unresolved": null,
+            "error": null,
+            "max_calls": 1
+          }
+        }
+      ],
+      "candidates": [
+        "00000000-0000-0000-0000-0000000003e9",
+        "00000000-0000-0000-0000-0000000003ea",
+        "00000000-0000-0000-0000-0000000003eb",
+        "00000000-0000-0000-0000-0000000003ec",
+        "00000000-0000-0000-0000-0000000003ed"
+      ],
+      "cart_items": [],
+      "previous_goal": null,
+      "provider_fault": null,
+      "tool_fault": null,
+      "live": false
+    },
+    {
+      "id": "grocery-comparison-order",
+      "snapshot": "grocery-patterns-v1",
+      "store": "grocery",
+      "language": "en",
+      "journey": "comparison",
+      "kind": "catalog",
+      "suite": "journey",
+      "turns": [
+        {
+          "message": "Compare /products/00000000-0000-0000-0000-0000000003ea /products/00000000-0000-0000-0000-0000000003e9",
+          "model_output": {
+            "shopping": true,
+            "query": "*",
+            "presentation": "compare"
+          },
+          "expected": {
+            "ids": [
+              "00000000-0000-0000-0000-0000000003ea",
+              "00000000-0000-0000-0000-0000000003e9"
+            ],
+            "min_results": 0,
+            "max_price": null,
+            "exclusive_max": false,
+            "currency": null,
+            "in_stock": false,
+            "attributes": {},
+            "extracted": {},
+            "text_all": [
+              "Current price"
+            ],
+            "text_none": [],
+            "locked_products": null,
+            "unresolved": null,
+            "error": null,
+            "max_calls": 1
+          }
+        }
+      ],
+      "candidates": [
+        "00000000-0000-0000-0000-0000000003e9",
+        "00000000-0000-0000-0000-0000000003ea",
+        "00000000-0000-0000-0000-0000000003eb",
+        "00000000-0000-0000-0000-0000000003ec",
+        "00000000-0000-0000-0000-0000000003ed"
+      ],
+      "cart_items": [],
+      "previous_goal": null,
+      "provider_fault": null,
+      "tool_fault": null,
+      "live": false
+    },
+    {
+      "id": "grocery-ambiguous-comparison",
+      "snapshot": "grocery-patterns-v1",
+      "store": "grocery",
+      "language": "en",
+      "journey": "comparison",
+      "kind": "catalog",
+      "suite": "conversation",
+      "turns": [
+        {
+          "message": "Compare it with the other one",
+          "model_output": {
+            "shopping": true,
+            "query": "*",
+            "presentation": "compare"
+          },
+          "expected": {
+            "ids": [],
+            "min_results": 0,
+            "max_price": null,
+            "exclusive_max": false,
+            "currency": null,
+            "in_stock": false,
+            "attributes": {},
+            "extracted": {},
+            "text_all": [
+              "two to five product links"
+            ],
+            "text_none": [],
+            "locked_products": null,
+            "unresolved": null,
+            "error": null,
+            "max_calls": 1
+          }
+        }
+      ],
+      "candidates": [
+        "00000000-0000-0000-0000-0000000003e9",
+        "00000000-0000-0000-0000-0000000003ea",
+        "00000000-0000-0000-0000-0000000003eb",
+        "00000000-0000-0000-0000-0000000003ec",
+        "00000000-0000-0000-0000-0000000003ed"
+      ],
+      "cart_items": [],
+      "previous_goal": null,
+      "provider_fault": null,
+      "tool_fault": null,
+      "live": false
+    },
+    {
+      "id": "grocery-changed-budget",
+      "snapshot": "grocery-patterns-v1",
+      "store": "grocery",
+      "language": "en",
+      "journey": "discovery",
+      "kind": "catalog",
+      "suite": "conversation",
+      "turns": [
+        {
+          "message": "Find coffee in stock up to $30",
+          "model_output": {
+            "shopping": true,
+            "query": "coffee",
+            "in_stock": true,
+            "currency": "USD",
+            "max_price": "30"
+          },
+          "expected": {
+            "ids": [
+              "00000000-0000-0000-0000-0000000003ed",
+              "00000000-0000-0000-0000-0000000003e9",
+              "00000000-0000-0000-0000-0000000003ea"
+            ],
+            "min_results": 0,
+            "max_price": null,
+            "exclusive_max": false,
+            "currency": null,
+            "in_stock": false,
+            "attributes": {},
+            "extracted": {},
+            "text_all": [],
+            "text_none": [],
+            "locked_products": null,
+            "unresolved": null,
+            "error": null,
+            "max_calls": 1
+          }
+        },
+        {
+          "message": "Actually, keep it under $20",
+          "model_output": {
+            "shopping": true,
+            "query": "coffee",
+            "in_stock": true,
+            "max_price": "20",
+            "currency": "USD",
+            "exclusive_max": true
+          },
+          "expected": {
+            "ids": [
+              "00000000-0000-0000-0000-0000000003ed"
+            ],
+            "min_results": 0,
+            "max_price": "20",
+            "exclusive_max": true,
+            "currency": null,
+            "in_stock": false,
+            "attributes": {},
+            "extracted": {},
+            "text_all": [],
+            "text_none": [],
+            "locked_products": null,
+            "unresolved": null,
+            "error": null,
+            "max_calls": 1
+          }
+        }
+      ],
+      "candidates": [
+        "00000000-0000-0000-0000-0000000003e9",
+        "00000000-0000-0000-0000-0000000003ea",
+        "00000000-0000-0000-0000-0000000003eb",
+        "00000000-0000-0000-0000-0000000003ec",
+        "00000000-0000-0000-0000-0000000003ed"
+      ],
+      "cart_items": [],
+      "previous_goal": null,
+      "provider_fault": null,
+      "tool_fault": null,
+      "live": false
+    },
+    {
+      "id": "grocery-cheaper-current-reference",
+      "snapshot": "grocery-patterns-v1",
+      "store": "grocery",
+      "language": "en",
+      "journey": "discovery",
+      "kind": "catalog",
+      "suite": "conversation",
+      "turns": [
+        {
+          "message": "Cheaper than /products/00000000-0000-0000-0000-0000000003ea",
+          "model_output": {
+            "shopping": true,
+            "query": "coffee",
+            "cheaper": true,
+            "in_stock": true
+          },
+          "expected": {
+            "ids": [
+              "00000000-0000-0000-0000-0000000003ed",
+              "00000000-0000-0000-0000-0000000003e9"
+            ],
+            "min_results": 0,
+            "max_price": "30",
+            "exclusive_max": true,
+            "currency": null,
+            "in_stock": false,
+            "attributes": {},
+            "extracted": {},
+            "text_all": [],
+            "text_none": [],
+            "locked_products": null,
+            "unresolved": null,
+            "error": null,
+            "max_calls": 1
+          }
+        }
+      ],
+      "candidates": [
+        "00000000-0000-0000-0000-0000000003e9",
+        "00000000-0000-0000-0000-0000000003ea",
+        "00000000-0000-0000-0000-0000000003eb",
+        "00000000-0000-0000-0000-0000000003ec",
+        "00000000-0000-0000-0000-0000000003ed"
+      ],
+      "cart_items": [],
+      "previous_goal": null,
+      "provider_fault": null,
+      "tool_fault": null,
+      "live": false
+    },
+    {
+      "id": "grocery-silent-relaxation-denied",
+      "snapshot": "grocery-patterns-v1",
+      "store": "grocery",
+      "language": "en",
+      "journey": "discovery",
+      "kind": "catalog",
+      "suite": "adversarial",
+      "turns": [
+        {
+          "message": "dark coffee in stock under $20, never relax budget",
+          "model_output": {
+            "shopping": true,
+            "query": "coffee",
+            "attributes": [
+              {
+                "name": "roast",
+                "value": "dark"
+              }
+            ],
+            "in_stock": true,
+            "max_price": "100",
+            "currency": "USD",
+            "alternatives": true
+          },
+          "expected": {
+            "ids": [],
+            "min_results": 0,
+            "max_price": null,
+            "exclusive_max": false,
+            "currency": null,
+            "in_stock": false,
+            "attributes": {},
+            "extracted": {},
+            "text_all": [],
+            "text_none": [],
+            "locked_products": null,
+            "unresolved": null,
+            "error": null,
+            "max_calls": 1
+          }
+        }
+      ],
+      "candidates": [
+        "00000000-0000-0000-0000-0000000003e9",
+        "00000000-0000-0000-0000-0000000003ea",
+        "00000000-0000-0000-0000-0000000003eb",
+        "00000000-0000-0000-0000-0000000003ec",
+        "00000000-0000-0000-0000-0000000003ed"
+      ],
+      "cart_items": [],
+      "previous_goal": null,
+      "provider_fault": null,
+      "tool_fault": null,
+      "live": false
+    },
+    {
+      "id": "grocery-cross-store-reference",
+      "snapshot": "grocery-patterns-v1",
+      "store": "grocery",
+      "language": "en",
+      "journey": "discovery",
+      "kind": "catalog",
+      "suite": "adversarial",
+      "turns": [
+        {
+          "message": "Details /products/00000000-0000-0000-0000-0000000f423f",
+          "model_output": {
+            "shopping": true,
+            "query": "*",
+            "presentation": "detail"
+          },
+          "expected": {
+            "ids": null,
+            "min_results": 0,
+            "max_price": null,
+            "exclusive_max": false,
+            "currency": null,
+            "in_stock": false,
+            "attributes": {},
+            "extracted": {},
+            "text_all": [],
+            "text_none": [],
+            "locked_products": null,
+            "unresolved": null,
+            "error": "invalid_reference",
+            "max_calls": 1
+          }
+        }
+      ],
+      "candidates": [
+        "00000000-0000-0000-0000-0000000003e9",
+        "00000000-0000-0000-0000-0000000003ea",
+        "00000000-0000-0000-0000-0000000003eb",
+        "00000000-0000-0000-0000-0000000003ec",
+        "00000000-0000-0000-0000-0000000003ed"
+      ],
+      "cart_items": [],
+      "previous_goal": null,
+      "provider_fault": null,
+      "tool_fault": null,
+      "live": false
+    },
+    {
+      "id": "grocery-provider-timeout",
+      "snapshot": "grocery-patterns-v1",
+      "store": "grocery",
+      "language": "en",
+      "journey": "discovery",
+      "kind": "catalog",
+      "suite": "adversarial",
+      "turns": [
+        {
+          "message": "Find coffee",
+          "model_output": {
+            "shopping": true,
+            "query": "*"
+          },
+          "expected": {
+            "ids": null,
+            "min_results": 0,
+            "max_price": null,
+            "exclusive_max": false,
+            "currency": null,
+            "in_stock": false,
+            "attributes": {},
+            "extracted": {},
+            "text_all": [],
+            "text_none": [],
+            "locked_products": null,
+            "unresolved": null,
+            "error": "timeout",
+            "max_calls": 1
+          }
+        }
+      ],
+      "candidates": [
+        "00000000-0000-0000-0000-0000000003e9",
+        "00000000-0000-0000-0000-0000000003ea",
+        "00000000-0000-0000-0000-0000000003eb",
+        "00000000-0000-0000-0000-0000000003ec",
+        "00000000-0000-0000-0000-0000000003ed"
+      ],
+      "cart_items": [],
+      "previous_goal": null,
+      "provider_fault": "timeout",
+      "tool_fault": null,
+      "live": false
+    },
+    {
+      "id": "grocery-provider-rate-limit",
+      "snapshot": "grocery-patterns-v1",
+      "store": "grocery",
+      "language": "en",
+      "journey": "discovery",
+      "kind": "catalog",
+      "suite": "adversarial",
+      "turns": [
+        {
+          "message": "Find coffee",
+          "model_output": {
+            "shopping": true,
+            "query": "*"
+          },
+          "expected": {
+            "ids": null,
+            "min_results": 0,
+            "max_price": null,
+            "exclusive_max": false,
+            "currency": null,
+            "in_stock": false,
+            "attributes": {},
+            "extracted": {},
+            "text_all": [],
+            "text_none": [],
+            "locked_products": null,
+            "unresolved": null,
+            "error": "rate_limit",
+            "max_calls": 1
+          }
+        }
+      ],
+      "candidates": [
+        "00000000-0000-0000-0000-0000000003e9",
+        "00000000-0000-0000-0000-0000000003ea",
+        "00000000-0000-0000-0000-0000000003eb",
+        "00000000-0000-0000-0000-0000000003ec",
+        "00000000-0000-0000-0000-0000000003ed"
+      ],
+      "cart_items": [],
+      "previous_goal": null,
+      "provider_fault": "rate_limit",
+      "tool_fault": null,
+      "live": false
+    },
+    {
+      "id": "grocery-provider-invalid-response",
+      "snapshot": "grocery-patterns-v1",
+      "store": "grocery",
+      "language": "en",
+      "journey": "discovery",
+      "kind": "catalog",
+      "suite": "adversarial",
+      "turns": [
+        {
+          "message": "Find coffee",
+          "model_output": {
+            "shopping": true,
+            "query": "*"
+          },
+          "expected": {
+            "ids": null,
+            "min_results": 0,
+            "max_price": null,
+            "exclusive_max": false,
+            "currency": null,
+            "in_stock": false,
+            "attributes": {},
+            "extracted": {},
+            "text_all": [],
+            "text_none": [],
+            "locked_products": null,
+            "unresolved": null,
+            "error": "invalid_response",
+            "max_calls": 1
+          }
+        }
+      ],
+      "candidates": [
+        "00000000-0000-0000-0000-0000000003e9",
+        "00000000-0000-0000-0000-0000000003ea",
+        "00000000-0000-0000-0000-0000000003eb",
+        "00000000-0000-0000-0000-0000000003ec",
+        "00000000-0000-0000-0000-0000000003ed"
+      ],
+      "cart_items": [],
+      "previous_goal": null,
+      "provider_fault": "invalid_response",
+      "tool_fault": null,
+      "live": false
+    },
+    {
+      "id": "grocery-provider-unauthorized-tool",
+      "snapshot": "grocery-patterns-v1",
+      "store": "grocery",
+      "language": "en",
+      "journey": "discovery",
+      "kind": "catalog",
+      "suite": "adversarial",
+      "turns": [
+        {
+          "message": "Find coffee",
+          "model_output": {
+            "shopping": true,
+            "query": "*"
+          },
+          "expected": {
+            "ids": null,
+            "min_results": 0,
+            "max_price": null,
+            "exclusive_max": false,
+            "currency": null,
+            "in_stock": false,
+            "attributes": {},
+            "extracted": {},
+            "text_all": [],
+            "text_none": [],
+            "locked_products": null,
+            "unresolved": null,
+            "error": "invalid_shopping_plan",
+            "max_calls": 1
+          }
+        }
+      ],
+      "candidates": [
+        "00000000-0000-0000-0000-0000000003e9",
+        "00000000-0000-0000-0000-0000000003ea",
+        "00000000-0000-0000-0000-0000000003eb",
+        "00000000-0000-0000-0000-0000000003ec",
+        "00000000-0000-0000-0000-0000000003ed"
+      ],
+      "cart_items": [],
+      "previous_goal": null,
+      "provider_fault": "unauthorized_tool",
+      "tool_fault": null,
+      "live": false
+    },
+    {
+      "id": "grocery-malformed-tool",
+      "snapshot": "grocery-patterns-v1",
+      "store": "grocery",
+      "language": "en",
+      "journey": "discovery",
+      "kind": "catalog",
+      "suite": "adversarial",
+      "turns": [
+        {
+          "message": "Find coffee",
+          "model_output": {
+            "shopping": true,
+            "query": "*"
+          },
+          "expected": {
+            "ids": null,
+            "min_results": 0,
+            "max_price": null,
+            "exclusive_max": false,
+            "currency": null,
+            "in_stock": false,
+            "attributes": {},
+            "extracted": {},
+            "text_all": [],
+            "text_none": [],
+            "locked_products": null,
+            "unresolved": null,
+            "error": "tool_unavailable",
+            "max_calls": 0
+          }
+        }
+      ],
+      "candidates": [
+        "00000000-0000-0000-0000-0000000003e9",
+        "00000000-0000-0000-0000-0000000003ea",
+        "00000000-0000-0000-0000-0000000003eb",
+        "00000000-0000-0000-0000-0000000003ec",
+        "00000000-0000-0000-0000-0000000003ed"
+      ],
+      "cart_items": [],
+      "previous_goal": null,
+      "provider_fault": null,
+      "tool_fault": "malformed",
+      "live": false
+    },
+    {
+      "id": "grocery-unavailable-tool",
+      "snapshot": "grocery-patterns-v1",
+      "store": "grocery",
+      "language": "en",
+      "journey": "discovery",
+      "kind": "catalog",
+      "suite": "adversarial",
+      "turns": [
+        {
+          "message": "Find coffee",
+          "model_output": {
+            "shopping": true,
+            "query": "*"
+          },
+          "expected": {
+            "ids": null,
+            "min_results": 0,
+            "max_price": null,
+            "exclusive_max": false,
+            "currency": null,
+            "in_stock": false,
+            "attributes": {},
+            "extracted": {},
+            "text_all": [],
+            "text_none": [],
+            "locked_products": null,
+            "unresolved": null,
+            "error": "tool_unavailable",
+            "max_calls": 0
+          }
+        }
+      ],
+      "candidates": [
+        "00000000-0000-0000-0000-0000000003e9",
+        "00000000-0000-0000-0000-0000000003ea",
+        "00000000-0000-0000-0000-0000000003eb",
+        "00000000-0000-0000-0000-0000000003ec",
+        "00000000-0000-0000-0000-0000000003ed"
+      ],
+      "cart_items": [],
+      "previous_goal": null,
+      "provider_fault": null,
+      "tool_fault": "unavailable",
+      "live": false
+    },
+    {
+      "id": "grocery-order-guide",
+      "snapshot": "grocery-patterns-v1",
+      "store": "grocery",
+      "language": "en",
+      "journey": "order_status",
+      "kind": "policy",
+      "suite": "journey",
+      "turns": [
+        {
+          "message": "How do I check my order?",
+          "model_output": {
+            "shopping": true,
+            "query": "*"
+          },
+          "expected": {
+            "ids": null,
+            "min_results": 0,
+            "max_price": null,
+            "exclusive_max": false,
+            "currency": null,
+            "in_stock": false,
+            "attributes": {},
+            "extracted": {},
+            "text_all": [
+              "your own order"
+            ],
+            "text_none": [],
+            "locked_products": null,
+            "unresolved": null,
+            "error": null,
+            "max_calls": 0
+          }
+        }
+      ],
+      "candidates": [
+        "00000000-0000-0000-0000-0000000003e9",
+        "00000000-0000-0000-0000-0000000003ea",
+        "00000000-0000-0000-0000-0000000003eb",
+        "00000000-0000-0000-0000-0000000003ec",
+        "00000000-0000-0000-0000-0000000003ed"
+      ],
+      "cart_items": [],
+      "previous_goal": null,
+      "provider_fault": null,
+      "tool_fault": null,
+      "live": false
+    },
+    {
+      "id": "grocery-unsupported-policy",
+      "snapshot": "grocery-patterns-v1",
+      "store": "grocery",
+      "language": "en",
+      "journey": "policy",
+      "kind": "policy",
+      "suite": "journey",
+      "turns": [
+        {
+          "message": "Do you guarantee delivery today?",
+          "model_output": {
+            "shopping": true,
+            "query": "*"
+          },
+          "expected": {
+            "ids": null,
+            "min_results": 0,
+            "max_price": null,
+            "exclusive_max": false,
+            "currency": null,
+            "in_stock": false,
+            "attributes": {},
+            "extracted": {},
+            "text_all": [
+              "do not have an approved answer"
+            ],
+            "text_none": [],
+            "locked_products": null,
+            "unresolved": null,
+            "error": null,
+            "max_calls": 0
+          }
+        }
+      ],
+      "candidates": [
+        "00000000-0000-0000-0000-0000000003e9",
+        "00000000-0000-0000-0000-0000000003ea",
+        "00000000-0000-0000-0000-0000000003eb",
+        "00000000-0000-0000-0000-0000000003ec",
+        "00000000-0000-0000-0000-0000000003ed"
+      ],
+      "cart_items": [],
+      "previous_goal": null,
+      "provider_fault": null,
+      "tool_fault": null,
+      "live": false
+    },
+    {
+      "id": "grocery-support-policy",
+      "snapshot": "grocery-patterns-v1",
+      "store": "grocery",
+      "language": "en",
+      "journey": "support",
+      "kind": "policy",
+      "suite": "journey",
+      "turns": [
+        {
+          "message": "Can I return any item after 90 days?",
+          "model_output": {
+            "shopping": true,
+            "query": "*"
+          },
+          "expected": {
+            "ids": null,
+            "min_results": 0,
+            "max_price": null,
+            "exclusive_max": false,
+            "currency": null,
+            "in_stock": false,
+            "attributes": {},
+            "extracted": {},
+            "text_all": [
+              "contact the store"
+            ],
+            "text_none": [],
+            "locked_products": null,
+            "unresolved": null,
+            "error": null,
+            "max_calls": 0
+          }
+        }
+      ],
+      "candidates": [
+        "00000000-0000-0000-0000-0000000003e9",
+        "00000000-0000-0000-0000-0000000003ea",
+        "00000000-0000-0000-0000-0000000003eb",
+        "00000000-0000-0000-0000-0000000003ec",
+        "00000000-0000-0000-0000-0000000003ed"
+      ],
+      "cart_items": [],
+      "previous_goal": null,
+      "provider_fault": null,
+      "tool_fault": null,
+      "live": false
+    },
+    {
+      "id": "grocery-shop",
+      "snapshot": "grocery-patterns-v1",
+      "store": "grocery",
+      "language": "en",
+      "journey": "shop",
+      "kind": "basket",
+      "suite": "journey",
+      "turns": [
+        {
+          "message": "Find one coffee",
+          "model_output": {
+            "goal": {},
+            "searches": [
+              {
+                "intent": {
+                  "shopping": true,
+                  "query": "coffee",
+                  "in_stock": true
+                },
+                "quantity": 1
+              }
+            ]
+          },
+          "expected": {
+            "ids": null,
+            "min_results": 0,
+            "max_price": null,
+            "exclusive_max": false,
+            "currency": null,
+            "in_stock": false,
+            "attributes": {},
+            "extracted": {},
+            "text_all": [
+              "live cart has not changed"
+            ],
+            "text_none": [],
+            "locked_products": null,
+            "unresolved": null,
+            "error": null,
+            "max_calls": 1
+          }
+        }
+      ],
+      "candidates": [
+        "00000000-0000-0000-0000-0000000003e9",
+        "00000000-0000-0000-0000-0000000003ea",
+        "00000000-0000-0000-0000-0000000003eb",
+        "00000000-0000-0000-0000-0000000003ec",
+        "00000000-0000-0000-0000-0000000003ed"
+      ],
+      "cart_items": [
+        {
+          "product_id": "00000000-0000-0000-0000-0000000003e9",
+          "name": "coffee",
+          "unit": "each",
+          "quantity": 2,
+          "price": "20",
+          "currency": "USD"
+        }
+      ],
+      "previous_goal": null,
+      "provider_fault": null,
+      "tool_fault": null,
+      "live": false
+    },
+    {
+      "id": "grocery-optimize-quantities",
+      "snapshot": "grocery-patterns-v1",
+      "store": "grocery",
+      "language": "en",
+      "journey": "optimize",
+      "kind": "basket",
+      "suite": "journey",
+      "turns": [
+        {
+          "message": "Find cheaper alternatives, preserve quantities",
+          "model_output": {
+            "goal": {
+              "allow_substitutions": true,
+              "locked_products": [
+                "00000000-0000-0000-0000-0000000003e9"
+              ]
+            },
+            "lock_evidence": [
+              {
+                "product_id": "00000000-0000-0000-0000-0000000003e9",
+                "customer_quote": "preserve quantities"
+              }
+            ]
+          },
+          "expected": {
+            "ids": null,
+            "min_results": 0,
+            "max_price": null,
+            "exclusive_max": false,
+            "currency": null,
+            "in_stock": false,
+            "attributes": {},
+            "extracted": {},
+            "text_all": [],
+            "text_none": [],
+            "locked_products": [],
+            "unresolved": false,
+            "error": null,
+            "max_calls": 1
+          }
+        }
+      ],
+      "candidates": [
+        "00000000-0000-0000-0000-0000000003e9",
+        "00000000-0000-0000-0000-0000000003ea",
+        "00000000-0000-0000-0000-0000000003eb",
+        "00000000-0000-0000-0000-0000000003ec",
+        "00000000-0000-0000-0000-0000000003ed"
+      ],
+      "cart_items": [
+        {
+          "product_id": "00000000-0000-0000-0000-0000000003e9",
+          "name": "coffee",
+          "unit": "each",
+          "quantity": 2,
+          "price": "20",
+          "currency": "USD"
+        }
+      ],
+      "previous_goal": null,
+      "provider_fault": null,
+      "tool_fault": null,
+      "live": false
+    },
+    {
+      "id": "grocery-optimize-existing-lock",
+      "snapshot": "grocery-patterns-v1",
+      "store": "grocery",
+      "language": "en",
+      "journey": "optimize",
+      "kind": "basket",
+      "suite": "journey",
+      "turns": [
+        {
+          "message": "Find cheaper alternatives",
+          "model_output": {
+            "goal": {
+              "allow_substitutions": true
+            }
+          },
+          "expected": {
+            "ids": null,
+            "min_results": 0,
+            "max_price": null,
+            "exclusive_max": false,
+            "currency": null,
+            "in_stock": false,
+            "attributes": {},
+            "extracted": {},
+            "text_all": [],
+            "text_none": [],
+            "locked_products": [
+              "00000000-0000-0000-0000-0000000003e9"
+            ],
+            "unresolved": false,
+            "error": null,
+            "max_calls": 1
+          }
+        }
+      ],
+      "candidates": [
+        "00000000-0000-0000-0000-0000000003e9",
+        "00000000-0000-0000-0000-0000000003ea",
+        "00000000-0000-0000-0000-0000000003eb",
+        "00000000-0000-0000-0000-0000000003ec",
+        "00000000-0000-0000-0000-0000000003ed"
+      ],
+      "cart_items": [
+        {
+          "product_id": "00000000-0000-0000-0000-0000000003e9",
+          "name": "coffee",
+          "unit": "each",
+          "quantity": 2,
+          "price": "20",
+          "currency": "USD"
+        }
+      ],
+      "previous_goal": {
+        "purpose": "",
+        "budget": null,
+        "currency": null,
+        "all_inclusive": false,
+        "budget_exclusive": false,
+        "people": null,
+        "locked_products": [
+          "00000000-0000-0000-0000-0000000003e9"
+        ],
+        "excluded_products": [],
+        "locked_brands": [],
+        "allow_substitutions": false,
+        "delivery_date": null,
+        "assumptions": [],
+        "unresolved": [],
+        "saving_target": null
+      },
+      "provider_fault": null,
+      "tool_fault": null,
+      "live": false
+    },
+    {
+      "id": "grocery-buy-again-owned-order",
+      "snapshot": "grocery-patterns-v1",
+      "store": "grocery",
+      "language": "en",
+      "journey": "buy_again",
+      "kind": "basket",
+      "suite": "journey",
+      "turns": [
+        {
+          "message": "Buy my usual order again",
+          "model_output": {
+            "goal": {}
+          },
+          "expected": {
+            "ids": null,
+            "min_results": 0,
+            "max_price": null,
+            "exclusive_max": false,
+            "currency": null,
+            "in_stock": false,
+            "attributes": {},
+            "extracted": {},
+            "text_all": [
+              "Choose an order"
+            ],
+            "text_none": [],
+            "locked_products": null,
+            "unresolved": null,
+            "error": null,
+            "max_calls": 0
+          }
+        }
+      ],
+      "candidates": [
+        "00000000-0000-0000-0000-0000000003e9",
+        "00000000-0000-0000-0000-0000000003ea",
+        "00000000-0000-0000-0000-0000000003eb",
+        "00000000-0000-0000-0000-0000000003ec",
+        "00000000-0000-0000-0000-0000000003ed"
+      ],
+      "cart_items": [
+        {
+          "product_id": "00000000-0000-0000-0000-0000000003e9",
+          "name": "coffee",
+          "unit": "each",
+          "quantity": 2,
+          "price": "20",
+          "currency": "USD"
+        }
+      ],
+      "previous_goal": null,
+      "provider_fault": null,
+      "tool_fault": null,
+      "live": false
+    },
+    {
+      "id": "grocery-meal-uncertainty",
+      "snapshot": "grocery-patterns-v1",
+      "store": "grocery",
+      "language": "en",
+      "journey": "meal",
+      "kind": "catalog",
+      "suite": "journey",
+      "turns": [
+        {
+          "message": "A meal for four; must be allergen-free",
+          "model_output": {
+            "shopping": true,
+            "query": "coffee",
+            "clarification": "No verified allergen or serving facts"
+          },
+          "expected": {
+            "ids": [],
+            "min_results": 0,
+            "max_price": null,
+            "exclusive_max": false,
+            "currency": null,
+            "in_stock": false,
+            "attributes": {},
+            "extracted": {},
+            "text_all": [
+              "Please specify"
+            ],
+            "text_none": [],
+            "locked_products": null,
+            "unresolved": null,
+            "error": null,
+            "max_calls": 1
+          }
+        }
+      ],
+      "candidates": [
+        "00000000-0000-0000-0000-0000000003e9",
+        "00000000-0000-0000-0000-0000000003ea",
+        "00000000-0000-0000-0000-0000000003eb",
+        "00000000-0000-0000-0000-0000000003ec",
+        "00000000-0000-0000-0000-0000000003ed"
+      ],
+      "cart_items": [],
+      "previous_goal": null,
+      "provider_fault": null,
+      "tool_fault": null,
+      "live": false
+    },
+    {
+      "id": "jewelry-verified-hard-constraints",
+      "snapshot": "jewelry-patterns-v1",
+      "store": "jewelry",
+      "language": "en",
+      "journey": "discovery",
+      "kind": "catalog",
+      "suite": "golden",
+      "turns": [
+        {
+          "message": "Find silver ring in stock up to $30",
+          "model_output": {
+            "shopping": true,
+            "query": "ring",
+            "attributes": [
+              {
+                "name": "metal",
+                "value": "silver"
+              }
+            ],
+            "in_stock": true,
+            "max_price": "30",
+            "currency": "USD"
+          },
+          "expected": {
+            "ids": [
+              "00000000-0000-0000-0000-0000000007d1"
+            ],
+            "min_results": 1,
+            "max_price": "30",
+            "exclusive_max": false,
+            "currency": "USD",
+            "in_stock": true,
+            "attributes": {
+              "metal": "silver"
+            },
+            "extracted": {},
+            "text_all": [],
+            "text_none": [],
+            "locked_products": null,
+            "unresolved": null,
+            "error": null,
+            "max_calls": 1
+          }
+        }
+      ],
+      "candidates": [
+        "00000000-0000-0000-0000-0000000007d1",
+        "00000000-0000-0000-0000-0000000007d2",
+        "00000000-0000-0000-0000-0000000007d3",
+        "00000000-0000-0000-0000-0000000007d4",
+        "00000000-0000-0000-0000-0000000007d5"
+      ],
+      "cart_items": [],
+      "previous_goal": null,
+      "provider_fault": null,
+      "tool_fault": null,
+      "live": false
+    },
+    {
+      "id": "jewelry-ar-budget",
+      "snapshot": "jewelry-patterns-v1",
+      "store": "jewelry",
+      "language": "ar",
+      "journey": "discovery",
+      "kind": "catalog",
+      "suite": "catalog_grounded",
+      "turns": [
+        {
+          "message": "أريد ring بسعر أقل من 30 دولار ومتاح الآن",
+          "model_output": {
+            "shopping": true,
+            "query": "ring",
+            "max_price": "30",
+            "exclusive_max": true,
+            "currency": "USD",
+            "in_stock": true
+          },
+          "expected": {
+            "ids": [
+              "00000000-0000-0000-0000-0000000007d5",
+              "00000000-0000-0000-0000-0000000007d1"
+            ],
+            "min_results": 1,
+            "max_price": "30",
+            "exclusive_max": true,
+            "currency": "USD",
+            "in_stock": true,
+            "attributes": {},
+            "extracted": {},
+            "text_all": [],
+            "text_none": [],
+            "locked_products": null,
+            "unresolved": null,
+            "error": null,
+            "max_calls": 1
+          }
+        }
+      ],
+      "candidates": [
+        "00000000-0000-0000-0000-0000000007d1",
+        "00000000-0000-0000-0000-0000000007d2",
+        "00000000-0000-0000-0000-0000000007d3",
+        "00000000-0000-0000-0000-0000000007d4",
+        "00000000-0000-0000-0000-0000000007d5"
+      ],
+      "cart_items": [],
+      "previous_goal": null,
+      "provider_fault": null,
+      "tool_fault": null,
+      "live": false
+    },
+    {
+      "id": "jewelry-ar-eg-budget",
+      "snapshot": "jewelry-patterns-v1",
+      "store": "jewelry",
+      "language": "ar-eg",
+      "journey": "discovery",
+      "kind": "catalog",
+      "suite": "catalog_grounded",
+      "turns": [
+        {
+          "message": "عايز ring أقل من 30 دولار وموجود دلوقتي",
+          "model_output": {
+            "shopping": true,
+            "query": "ring",
+            "max_price": "30",
+            "exclusive_max": true,
+            "currency": "USD",
+            "in_stock": true
+          },
+          "expected": {
+            "ids": [
+              "00000000-0000-0000-0000-0000000007d5",
+              "00000000-0000-0000-0000-0000000007d1"
+            ],
+            "min_results": 1,
+            "max_price": "30",
+            "exclusive_max": true,
+            "currency": "USD",
+            "in_stock": true,
+            "attributes": {},
+            "extracted": {},
+            "text_all": [],
+            "text_none": [],
+            "locked_products": null,
+            "unresolved": null,
+            "error": null,
+            "max_calls": 1
+          }
+        }
+      ],
+      "candidates": [
+        "00000000-0000-0000-0000-0000000007d1",
+        "00000000-0000-0000-0000-0000000007d2",
+        "00000000-0000-0000-0000-0000000007d3",
+        "00000000-0000-0000-0000-0000000007d4",
+        "00000000-0000-0000-0000-0000000007d5"
+      ],
+      "cart_items": [],
+      "previous_goal": null,
+      "provider_fault": null,
+      "tool_fault": null,
+      "live": false
+    },
+    {
+      "id": "jewelry-mixed-budget",
+      "snapshot": "jewelry-patterns-v1",
+      "store": "jewelry",
+      "language": "mixed",
+      "journey": "discovery",
+      "kind": "catalog",
+      "suite": "catalog_grounded",
+      "turns": [
+        {
+          "message": "عايز ring in stock under $30",
+          "model_output": {
+            "shopping": true,
+            "query": "ring",
+            "max_price": "30",
+            "exclusive_max": true,
+            "currency": "USD",
+            "in_stock": true
+          },
+          "expected": {
+            "ids": [
+              "00000000-0000-0000-0000-0000000007d5",
+              "00000000-0000-0000-0000-0000000007d1"
+            ],
+            "min_results": 1,
+            "max_price": "30",
+            "exclusive_max": true,
+            "currency": "USD",
+            "in_stock": true,
+            "attributes": {},
+            "extracted": {},
+            "text_all": [],
+            "text_none": [],
+            "locked_products": null,
+            "unresolved": null,
+            "error": null,
+            "max_calls": 1
+          }
+        }
+      ],
+      "candidates": [
+        "00000000-0000-0000-0000-0000000007d1",
+        "00000000-0000-0000-0000-0000000007d2",
+        "00000000-0000-0000-0000-0000000007d3",
+        "00000000-0000-0000-0000-0000000007d4",
+        "00000000-0000-0000-0000-0000000007d5"
+      ],
+      "cart_items": [],
+      "previous_goal": null,
+      "provider_fault": null,
+      "tool_fault": null,
+      "live": false
+    },
+    {
+      "id": "jewelry-typo-budget",
+      "snapshot": "jewelry-patterns-v1",
+      "store": "jewelry",
+      "language": "typo",
+      "journey": "discovery",
+      "kind": "catalog",
+      "suite": "catalog_grounded",
+      "turns": [
+        {
+          "message": "ring in stok undr 30 USD",
+          "model_output": {
+            "shopping": true,
+            "query": "ring",
+            "max_price": "30",
+            "exclusive_max": true,
+            "currency": "USD",
+            "in_stock": true
+          },
+          "expected": {
+            "ids": [
+              "00000000-0000-0000-0000-0000000007d5",
+              "00000000-0000-0000-0000-0000000007d1"
+            ],
+            "min_results": 1,
+            "max_price": "30",
+            "exclusive_max": true,
+            "currency": "USD",
+            "in_stock": true,
+            "attributes": {},
+            "extracted": {},
+            "text_all": [],
+            "text_none": [],
+            "locked_products": null,
+            "unresolved": null,
+            "error": null,
+            "max_calls": 1
+          }
+        }
+      ],
+      "candidates": [
+        "00000000-0000-0000-0000-0000000007d1",
+        "00000000-0000-0000-0000-0000000007d2",
+        "00000000-0000-0000-0000-0000000007d3",
+        "00000000-0000-0000-0000-0000000007d4",
+        "00000000-0000-0000-0000-0000000007d5"
+      ],
+      "cart_items": [],
+      "previous_goal": null,
+      "provider_fault": null,
+      "tool_fault": null,
+      "live": false
+    },
+    {
+      "id": "jewelry-no-valid-match",
+      "snapshot": "jewelry-patterns-v1",
+      "store": "jewelry",
+      "language": "en",
+      "journey": "discovery",
+      "kind": "catalog",
+      "suite": "catalog_grounded",
+      "turns": [
+        {
+          "message": "silver ring in stock under $20",
+          "model_output": {
+            "shopping": true,
+            "query": "ring",
+            "attributes": [
+              {
+                "name": "metal",
+                "value": "silver"
+              }
+            ],
+            "in_stock": true,
+            "max_price": "20",
+            "currency": "USD",
+            "exclusive_max": true
+          },
+          "expected": {
+            "ids": [],
+            "min_results": 0,
+            "max_price": null,
+            "exclusive_max": false,
+            "currency": null,
+            "in_stock": false,
+            "attributes": {},
+            "extracted": {},
+            "text_all": [
+              "No verified matches"
+            ],
+            "text_none": [],
+            "locked_products": null,
+            "unresolved": null,
+            "error": null,
+            "max_calls": 1
+          }
+        }
+      ],
+      "candidates": [
+        "00000000-0000-0000-0000-0000000007d1",
+        "00000000-0000-0000-0000-0000000007d2",
+        "00000000-0000-0000-0000-0000000007d3",
+        "00000000-0000-0000-0000-0000000007d4",
+        "00000000-0000-0000-0000-0000000007d5"
+      ],
+      "cart_items": [],
+      "previous_goal": null,
+      "provider_fault": null,
+      "tool_fault": null,
+      "live": false
+    },
+    {
+      "id": "jewelry-missing-currency",
+      "snapshot": "jewelry-patterns-v1",
+      "store": "jewelry",
+      "language": "en",
+      "journey": "discovery",
+      "kind": "catalog",
+      "suite": "conversation",
+      "turns": [
+        {
+          "message": "Find ring under 25",
+          "model_output": {
+            "shopping": true,
+            "query": "ring",
+            "max_price": "25"
+          },
+          "expected": {
+            "ids": [],
+            "min_results": 0,
+            "max_price": null,
+            "exclusive_max": false,
+            "currency": null,
+            "in_stock": false,
+            "attributes": {},
+            "extracted": {},
+            "text_all": [
+              "currency"
+            ],
+            "text_none": [],
+            "locked_products": null,
+            "unresolved": null,
+            "error": null,
+            "max_calls": 1
+          }
+        }
+      ],
+      "candidates": [
+        "00000000-0000-0000-0000-0000000007d1",
+        "00000000-0000-0000-0000-0000000007d2",
+        "00000000-0000-0000-0000-0000000007d3",
+        "00000000-0000-0000-0000-0000000007d4",
+        "00000000-0000-0000-0000-0000000007d5"
+      ],
+      "cart_items": [],
+      "previous_goal": null,
+      "provider_fault": null,
+      "tool_fault": null,
+      "live": false
+    },
+    {
+      "id": "jewelry-unknown-requirement",
+      "snapshot": "jewelry-patterns-v1",
+      "store": "jewelry",
+      "language": "en",
+      "journey": "compatibility",
+      "kind": "catalog",
+      "suite": "journey",
+      "turns": [
+        {
+          "message": "I need certified allergy-safe ring",
+          "model_output": {
+            "shopping": true,
+            "query": "ring",
+            "clarification": "Certification is not in the catalog schema"
+          },
+          "expected": {
+            "ids": [],
+            "min_results": 0,
+            "max_price": null,
+            "exclusive_max": false,
+            "currency": null,
+            "in_stock": false,
+            "attributes": {},
+            "extracted": {},
+            "text_all": [
+              "Please specify"
+            ],
+            "text_none": [],
+            "locked_products": null,
+            "unresolved": null,
+            "error": null,
+            "max_calls": 1
+          }
+        }
+      ],
+      "candidates": [
+        "00000000-0000-0000-0000-0000000007d1",
+        "00000000-0000-0000-0000-0000000007d2",
+        "00000000-0000-0000-0000-0000000007d3",
+        "00000000-0000-0000-0000-0000000007d4",
+        "00000000-0000-0000-0000-0000000007d5"
+      ],
+      "cart_items": [],
+      "previous_goal": null,
+      "provider_fault": null,
+      "tool_fault": null,
+      "live": false
+    },
+    {
+      "id": "jewelry-gift-budget",
+      "snapshot": "jewelry-patterns-v1",
+      "store": "jewelry",
+      "language": "en",
+      "journey": "gift",
+      "kind": "catalog",
+      "suite": "journey",
+      "turns": [
+        {
+          "message": "A silver ring gift in stock up to $30",
+          "model_output": {
+            "shopping": true,
+            "query": "ring",
+            "attributes": [
+              {
+                "name": "metal",
+                "value": "silver"
+              }
+            ],
+            "in_stock": true,
+            "max_price": "30",
+            "currency": "USD"
+          },
+          "expected": {
+            "ids": [
+              "00000000-0000-0000-0000-0000000007d1"
+            ],
+            "min_results": 1,
+            "max_price": "30",
+            "exclusive_max": false,
+            "currency": "USD",
+            "in_stock": true,
+            "attributes": {
+              "metal": "silver"
+            },
+            "extracted": {},
+            "text_all": [],
+            "text_none": [],
+            "locked_products": null,
+            "unresolved": null,
+            "error": null,
+            "max_calls": 1
+          }
+        }
+      ],
+      "candidates": [
+        "00000000-0000-0000-0000-0000000007d1",
+        "00000000-0000-0000-0000-0000000007d2",
+        "00000000-0000-0000-0000-0000000007d3",
+        "00000000-0000-0000-0000-0000000007d4",
+        "00000000-0000-0000-0000-0000000007d5"
+      ],
+      "cart_items": [],
+      "previous_goal": null,
+      "provider_fault": null,
+      "tool_fault": null,
+      "live": false
+    },
+    {
+      "id": "jewelry-comparison-order",
+      "snapshot": "jewelry-patterns-v1",
+      "store": "jewelry",
+      "language": "en",
+      "journey": "comparison",
+      "kind": "catalog",
+      "suite": "journey",
+      "turns": [
+        {
+          "message": "Compare /products/00000000-0000-0000-0000-0000000007d2 /products/00000000-0000-0000-0000-0000000007d1",
+          "model_output": {
+            "shopping": true,
+            "query": "*",
+            "presentation": "compare"
+          },
+          "expected": {
+            "ids": [
+              "00000000-0000-0000-0000-0000000007d2",
+              "00000000-0000-0000-0000-0000000007d1"
+            ],
+            "min_results": 0,
+            "max_price": null,
+            "exclusive_max": false,
+            "currency": null,
+            "in_stock": false,
+            "attributes": {},
+            "extracted": {},
+            "text_all": [
+              "Current price"
+            ],
+            "text_none": [],
+            "locked_products": null,
+            "unresolved": null,
+            "error": null,
+            "max_calls": 1
+          }
+        }
+      ],
+      "candidates": [
+        "00000000-0000-0000-0000-0000000007d1",
+        "00000000-0000-0000-0000-0000000007d2",
+        "00000000-0000-0000-0000-0000000007d3",
+        "00000000-0000-0000-0000-0000000007d4",
+        "00000000-0000-0000-0000-0000000007d5"
+      ],
+      "cart_items": [],
+      "previous_goal": null,
+      "provider_fault": null,
+      "tool_fault": null,
+      "live": false
+    },
+    {
+      "id": "jewelry-ambiguous-comparison",
+      "snapshot": "jewelry-patterns-v1",
+      "store": "jewelry",
+      "language": "en",
+      "journey": "comparison",
+      "kind": "catalog",
+      "suite": "conversation",
+      "turns": [
+        {
+          "message": "Compare it with the other one",
+          "model_output": {
+            "shopping": true,
+            "query": "*",
+            "presentation": "compare"
+          },
+          "expected": {
+            "ids": [],
+            "min_results": 0,
+            "max_price": null,
+            "exclusive_max": false,
+            "currency": null,
+            "in_stock": false,
+            "attributes": {},
+            "extracted": {},
+            "text_all": [
+              "two to five product links"
+            ],
+            "text_none": [],
+            "locked_products": null,
+            "unresolved": null,
+            "error": null,
+            "max_calls": 1
+          }
+        }
+      ],
+      "candidates": [
+        "00000000-0000-0000-0000-0000000007d1",
+        "00000000-0000-0000-0000-0000000007d2",
+        "00000000-0000-0000-0000-0000000007d3",
+        "00000000-0000-0000-0000-0000000007d4",
+        "00000000-0000-0000-0000-0000000007d5"
+      ],
+      "cart_items": [],
+      "previous_goal": null,
+      "provider_fault": null,
+      "tool_fault": null,
+      "live": false
+    },
+    {
+      "id": "jewelry-changed-budget",
+      "snapshot": "jewelry-patterns-v1",
+      "store": "jewelry",
+      "language": "en",
+      "journey": "discovery",
+      "kind": "catalog",
+      "suite": "conversation",
+      "turns": [
+        {
+          "message": "Find ring in stock up to $30",
+          "model_output": {
+            "shopping": true,
+            "query": "ring",
+            "in_stock": true,
+            "currency": "USD",
+            "max_price": "30"
+          },
+          "expected": {
+            "ids": [
+              "00000000-0000-0000-0000-0000000007d5",
+              "00000000-0000-0000-0000-0000000007d1",
+              "00000000-0000-0000-0000-0000000007d2"
+            ],
+            "min_results": 0,
+            "max_price": null,
+            "exclusive_max": false,
+            "currency": null,
+            "in_stock": false,
+            "attributes": {},
+            "extracted": {},
+            "text_all": [],
+            "text_none": [],
+            "locked_products": null,
+            "unresolved": null,
+            "error": null,
+            "max_calls": 1
+          }
+        },
+        {
+          "message": "Actually, keep it under $20",
+          "model_output": {
+            "shopping": true,
+            "query": "ring",
+            "in_stock": true,
+            "max_price": "20",
+            "currency": "USD",
+            "exclusive_max": true
+          },
+          "expected": {
+            "ids": [
+              "00000000-0000-0000-0000-0000000007d5"
+            ],
+            "min_results": 0,
+            "max_price": "20",
+            "exclusive_max": true,
+            "currency": null,
+            "in_stock": false,
+            "attributes": {},
+            "extracted": {},
+            "text_all": [],
+            "text_none": [],
+            "locked_products": null,
+            "unresolved": null,
+            "error": null,
+            "max_calls": 1
+          }
+        }
+      ],
+      "candidates": [
+        "00000000-0000-0000-0000-0000000007d1",
+        "00000000-0000-0000-0000-0000000007d2",
+        "00000000-0000-0000-0000-0000000007d3",
+        "00000000-0000-0000-0000-0000000007d4",
+        "00000000-0000-0000-0000-0000000007d5"
+      ],
+      "cart_items": [],
+      "previous_goal": null,
+      "provider_fault": null,
+      "tool_fault": null,
+      "live": false
+    },
+    {
+      "id": "jewelry-cheaper-current-reference",
+      "snapshot": "jewelry-patterns-v1",
+      "store": "jewelry",
+      "language": "en",
+      "journey": "discovery",
+      "kind": "catalog",
+      "suite": "conversation",
+      "turns": [
+        {
+          "message": "Cheaper than /products/00000000-0000-0000-0000-0000000007d2",
+          "model_output": {
+            "shopping": true,
+            "query": "ring",
+            "cheaper": true,
+            "in_stock": true
+          },
+          "expected": {
+            "ids": [
+              "00000000-0000-0000-0000-0000000007d5",
+              "00000000-0000-0000-0000-0000000007d1"
+            ],
+            "min_results": 0,
+            "max_price": "30",
+            "exclusive_max": true,
+            "currency": null,
+            "in_stock": false,
+            "attributes": {},
+            "extracted": {},
+            "text_all": [],
+            "text_none": [],
+            "locked_products": null,
+            "unresolved": null,
+            "error": null,
+            "max_calls": 1
+          }
+        }
+      ],
+      "candidates": [
+        "00000000-0000-0000-0000-0000000007d1",
+        "00000000-0000-0000-0000-0000000007d2",
+        "00000000-0000-0000-0000-0000000007d3",
+        "00000000-0000-0000-0000-0000000007d4",
+        "00000000-0000-0000-0000-0000000007d5"
+      ],
+      "cart_items": [],
+      "previous_goal": null,
+      "provider_fault": null,
+      "tool_fault": null,
+      "live": false
+    },
+    {
+      "id": "jewelry-silent-relaxation-denied",
+      "snapshot": "jewelry-patterns-v1",
+      "store": "jewelry",
+      "language": "en",
+      "journey": "discovery",
+      "kind": "catalog",
+      "suite": "adversarial",
+      "turns": [
+        {
+          "message": "silver ring in stock under $20, never relax budget",
+          "model_output": {
+            "shopping": true,
+            "query": "ring",
+            "attributes": [
+              {
+                "name": "metal",
+                "value": "silver"
+              }
+            ],
+            "in_stock": true,
+            "max_price": "100",
+            "currency": "USD",
+            "alternatives": true
+          },
+          "expected": {
+            "ids": [],
+            "min_results": 0,
+            "max_price": null,
+            "exclusive_max": false,
+            "currency": null,
+            "in_stock": false,
+            "attributes": {},
+            "extracted": {},
+            "text_all": [],
+            "text_none": [],
+            "locked_products": null,
+            "unresolved": null,
+            "error": null,
+            "max_calls": 1
+          }
+        }
+      ],
+      "candidates": [
+        "00000000-0000-0000-0000-0000000007d1",
+        "00000000-0000-0000-0000-0000000007d2",
+        "00000000-0000-0000-0000-0000000007d3",
+        "00000000-0000-0000-0000-0000000007d4",
+        "00000000-0000-0000-0000-0000000007d5"
+      ],
+      "cart_items": [],
+      "previous_goal": null,
+      "provider_fault": null,
+      "tool_fault": null,
+      "live": false
+    },
+    {
+      "id": "jewelry-cross-store-reference",
+      "snapshot": "jewelry-patterns-v1",
+      "store": "jewelry",
+      "language": "en",
+      "journey": "discovery",
+      "kind": "catalog",
+      "suite": "adversarial",
+      "turns": [
+        {
+          "message": "Details /products/00000000-0000-0000-0000-0000000f423f",
+          "model_output": {
+            "shopping": true,
+            "query": "*",
+            "presentation": "detail"
+          },
+          "expected": {
+            "ids": null,
+            "min_results": 0,
+            "max_price": null,
+            "exclusive_max": false,
+            "currency": null,
+            "in_stock": false,
+            "attributes": {},
+            "extracted": {},
+            "text_all": [],
+            "text_none": [],
+            "locked_products": null,
+            "unresolved": null,
+            "error": "invalid_reference",
+            "max_calls": 1
+          }
+        }
+      ],
+      "candidates": [
+        "00000000-0000-0000-0000-0000000007d1",
+        "00000000-0000-0000-0000-0000000007d2",
+        "00000000-0000-0000-0000-0000000007d3",
+        "00000000-0000-0000-0000-0000000007d4",
+        "00000000-0000-0000-0000-0000000007d5"
+      ],
+      "cart_items": [],
+      "previous_goal": null,
+      "provider_fault": null,
+      "tool_fault": null,
+      "live": false
+    },
+    {
+      "id": "jewelry-provider-timeout",
+      "snapshot": "jewelry-patterns-v1",
+      "store": "jewelry",
+      "language": "en",
+      "journey": "discovery",
+      "kind": "catalog",
+      "suite": "adversarial",
+      "turns": [
+        {
+          "message": "Find ring",
+          "model_output": {
+            "shopping": true,
+            "query": "*"
+          },
+          "expected": {
+            "ids": null,
+            "min_results": 0,
+            "max_price": null,
+            "exclusive_max": false,
+            "currency": null,
+            "in_stock": false,
+            "attributes": {},
+            "extracted": {},
+            "text_all": [],
+            "text_none": [],
+            "locked_products": null,
+            "unresolved": null,
+            "error": "timeout",
+            "max_calls": 1
+          }
+        }
+      ],
+      "candidates": [
+        "00000000-0000-0000-0000-0000000007d1",
+        "00000000-0000-0000-0000-0000000007d2",
+        "00000000-0000-0000-0000-0000000007d3",
+        "00000000-0000-0000-0000-0000000007d4",
+        "00000000-0000-0000-0000-0000000007d5"
+      ],
+      "cart_items": [],
+      "previous_goal": null,
+      "provider_fault": "timeout",
+      "tool_fault": null,
+      "live": false
+    },
+    {
+      "id": "jewelry-provider-rate-limit",
+      "snapshot": "jewelry-patterns-v1",
+      "store": "jewelry",
+      "language": "en",
+      "journey": "discovery",
+      "kind": "catalog",
+      "suite": "adversarial",
+      "turns": [
+        {
+          "message": "Find ring",
+          "model_output": {
+            "shopping": true,
+            "query": "*"
+          },
+          "expected": {
+            "ids": null,
+            "min_results": 0,
+            "max_price": null,
+            "exclusive_max": false,
+            "currency": null,
+            "in_stock": false,
+            "attributes": {},
+            "extracted": {},
+            "text_all": [],
+            "text_none": [],
+            "locked_products": null,
+            "unresolved": null,
+            "error": "rate_limit",
+            "max_calls": 1
+          }
+        }
+      ],
+      "candidates": [
+        "00000000-0000-0000-0000-0000000007d1",
+        "00000000-0000-0000-0000-0000000007d2",
+        "00000000-0000-0000-0000-0000000007d3",
+        "00000000-0000-0000-0000-0000000007d4",
+        "00000000-0000-0000-0000-0000000007d5"
+      ],
+      "cart_items": [],
+      "previous_goal": null,
+      "provider_fault": "rate_limit",
+      "tool_fault": null,
+      "live": false
+    },
+    {
+      "id": "jewelry-provider-invalid-response",
+      "snapshot": "jewelry-patterns-v1",
+      "store": "jewelry",
+      "language": "en",
+      "journey": "discovery",
+      "kind": "catalog",
+      "suite": "adversarial",
+      "turns": [
+        {
+          "message": "Find ring",
+          "model_output": {
+            "shopping": true,
+            "query": "*"
+          },
+          "expected": {
+            "ids": null,
+            "min_results": 0,
+            "max_price": null,
+            "exclusive_max": false,
+            "currency": null,
+            "in_stock": false,
+            "attributes": {},
+            "extracted": {},
+            "text_all": [],
+            "text_none": [],
+            "locked_products": null,
+            "unresolved": null,
+            "error": "invalid_response",
+            "max_calls": 1
+          }
+        }
+      ],
+      "candidates": [
+        "00000000-0000-0000-0000-0000000007d1",
+        "00000000-0000-0000-0000-0000000007d2",
+        "00000000-0000-0000-0000-0000000007d3",
+        "00000000-0000-0000-0000-0000000007d4",
+        "00000000-0000-0000-0000-0000000007d5"
+      ],
+      "cart_items": [],
+      "previous_goal": null,
+      "provider_fault": "invalid_response",
+      "tool_fault": null,
+      "live": false
+    },
+    {
+      "id": "jewelry-provider-unauthorized-tool",
+      "snapshot": "jewelry-patterns-v1",
+      "store": "jewelry",
+      "language": "en",
+      "journey": "discovery",
+      "kind": "catalog",
+      "suite": "adversarial",
+      "turns": [
+        {
+          "message": "Find ring",
+          "model_output": {
+            "shopping": true,
+            "query": "*"
+          },
+          "expected": {
+            "ids": null,
+            "min_results": 0,
+            "max_price": null,
+            "exclusive_max": false,
+            "currency": null,
+            "in_stock": false,
+            "attributes": {},
+            "extracted": {},
+            "text_all": [],
+            "text_none": [],
+            "locked_products": null,
+            "unresolved": null,
+            "error": "invalid_shopping_plan",
+            "max_calls": 1
+          }
+        }
+      ],
+      "candidates": [
+        "00000000-0000-0000-0000-0000000007d1",
+        "00000000-0000-0000-0000-0000000007d2",
+        "00000000-0000-0000-0000-0000000007d3",
+        "00000000-0000-0000-0000-0000000007d4",
+        "00000000-0000-0000-0000-0000000007d5"
+      ],
+      "cart_items": [],
+      "previous_goal": null,
+      "provider_fault": "unauthorized_tool",
+      "tool_fault": null,
+      "live": false
+    },
+    {
+      "id": "jewelry-malformed-tool",
+      "snapshot": "jewelry-patterns-v1",
+      "store": "jewelry",
+      "language": "en",
+      "journey": "discovery",
+      "kind": "catalog",
+      "suite": "adversarial",
+      "turns": [
+        {
+          "message": "Find ring",
+          "model_output": {
+            "shopping": true,
+            "query": "*"
+          },
+          "expected": {
+            "ids": null,
+            "min_results": 0,
+            "max_price": null,
+            "exclusive_max": false,
+            "currency": null,
+            "in_stock": false,
+            "attributes": {},
+            "extracted": {},
+            "text_all": [],
+            "text_none": [],
+            "locked_products": null,
+            "unresolved": null,
+            "error": "tool_unavailable",
+            "max_calls": 0
+          }
+        }
+      ],
+      "candidates": [
+        "00000000-0000-0000-0000-0000000007d1",
+        "00000000-0000-0000-0000-0000000007d2",
+        "00000000-0000-0000-0000-0000000007d3",
+        "00000000-0000-0000-0000-0000000007d4",
+        "00000000-0000-0000-0000-0000000007d5"
+      ],
+      "cart_items": [],
+      "previous_goal": null,
+      "provider_fault": null,
+      "tool_fault": "malformed",
+      "live": false
+    },
+    {
+      "id": "jewelry-unavailable-tool",
+      "snapshot": "jewelry-patterns-v1",
+      "store": "jewelry",
+      "language": "en",
+      "journey": "discovery",
+      "kind": "catalog",
+      "suite": "adversarial",
+      "turns": [
+        {
+          "message": "Find ring",
+          "model_output": {
+            "shopping": true,
+            "query": "*"
+          },
+          "expected": {
+            "ids": null,
+            "min_results": 0,
+            "max_price": null,
+            "exclusive_max": false,
+            "currency": null,
+            "in_stock": false,
+            "attributes": {},
+            "extracted": {},
+            "text_all": [],
+            "text_none": [],
+            "locked_products": null,
+            "unresolved": null,
+            "error": "tool_unavailable",
+            "max_calls": 0
+          }
+        }
+      ],
+      "candidates": [
+        "00000000-0000-0000-0000-0000000007d1",
+        "00000000-0000-0000-0000-0000000007d2",
+        "00000000-0000-0000-0000-0000000007d3",
+        "00000000-0000-0000-0000-0000000007d4",
+        "00000000-0000-0000-0000-0000000007d5"
+      ],
+      "cart_items": [],
+      "previous_goal": null,
+      "provider_fault": null,
+      "tool_fault": "unavailable",
+      "live": false
+    },
+    {
+      "id": "jewelry-order-guide",
+      "snapshot": "jewelry-patterns-v1",
+      "store": "jewelry",
+      "language": "en",
+      "journey": "order_status",
+      "kind": "policy",
+      "suite": "journey",
+      "turns": [
+        {
+          "message": "How do I check my order?",
+          "model_output": {
+            "shopping": true,
+            "query": "*"
+          },
+          "expected": {
+            "ids": null,
+            "min_results": 0,
+            "max_price": null,
+            "exclusive_max": false,
+            "currency": null,
+            "in_stock": false,
+            "attributes": {},
+            "extracted": {},
+            "text_all": [
+              "your own order"
+            ],
+            "text_none": [],
+            "locked_products": null,
+            "unresolved": null,
+            "error": null,
+            "max_calls": 0
+          }
+        }
+      ],
+      "candidates": [
+        "00000000-0000-0000-0000-0000000007d1",
+        "00000000-0000-0000-0000-0000000007d2",
+        "00000000-0000-0000-0000-0000000007d3",
+        "00000000-0000-0000-0000-0000000007d4",
+        "00000000-0000-0000-0000-0000000007d5"
+      ],
+      "cart_items": [],
+      "previous_goal": null,
+      "provider_fault": null,
+      "tool_fault": null,
+      "live": false
+    },
+    {
+      "id": "jewelry-unsupported-policy",
+      "snapshot": "jewelry-patterns-v1",
+      "store": "jewelry",
+      "language": "en",
+      "journey": "policy",
+      "kind": "policy",
+      "suite": "journey",
+      "turns": [
+        {
+          "message": "Do you guarantee delivery today?",
+          "model_output": {
+            "shopping": true,
+            "query": "*"
+          },
+          "expected": {
+            "ids": null,
+            "min_results": 0,
+            "max_price": null,
+            "exclusive_max": false,
+            "currency": null,
+            "in_stock": false,
+            "attributes": {},
+            "extracted": {},
+            "text_all": [
+              "do not have an approved answer"
+            ],
+            "text_none": [],
+            "locked_products": null,
+            "unresolved": null,
+            "error": null,
+            "max_calls": 0
+          }
+        }
+      ],
+      "candidates": [
+        "00000000-0000-0000-0000-0000000007d1",
+        "00000000-0000-0000-0000-0000000007d2",
+        "00000000-0000-0000-0000-0000000007d3",
+        "00000000-0000-0000-0000-0000000007d4",
+        "00000000-0000-0000-0000-0000000007d5"
+      ],
+      "cart_items": [],
+      "previous_goal": null,
+      "provider_fault": null,
+      "tool_fault": null,
+      "live": false
+    },
+    {
+      "id": "jewelry-support-policy",
+      "snapshot": "jewelry-patterns-v1",
+      "store": "jewelry",
+      "language": "en",
+      "journey": "support",
+      "kind": "policy",
+      "suite": "journey",
+      "turns": [
+        {
+          "message": "Can I return any item after 90 days?",
+          "model_output": {
+            "shopping": true,
+            "query": "*"
+          },
+          "expected": {
+            "ids": null,
+            "min_results": 0,
+            "max_price": null,
+            "exclusive_max": false,
+            "currency": null,
+            "in_stock": false,
+            "attributes": {},
+            "extracted": {},
+            "text_all": [
+              "contact the store"
+            ],
+            "text_none": [],
+            "locked_products": null,
+            "unresolved": null,
+            "error": null,
+            "max_calls": 0
+          }
+        }
+      ],
+      "candidates": [
+        "00000000-0000-0000-0000-0000000007d1",
+        "00000000-0000-0000-0000-0000000007d2",
+        "00000000-0000-0000-0000-0000000007d3",
+        "00000000-0000-0000-0000-0000000007d4",
+        "00000000-0000-0000-0000-0000000007d5"
+      ],
+      "cart_items": [],
+      "previous_goal": null,
+      "provider_fault": null,
+      "tool_fault": null,
+      "live": false
+    },
+    {
+      "id": "jewelry-shop",
+      "snapshot": "jewelry-patterns-v1",
+      "store": "jewelry",
+      "language": "en",
+      "journey": "shop",
+      "kind": "basket",
+      "suite": "journey",
+      "turns": [
+        {
+          "message": "Find one ring",
+          "model_output": {
+            "goal": {},
+            "searches": [
+              {
+                "intent": {
+                  "shopping": true,
+                  "query": "ring",
+                  "in_stock": true
+                },
+                "quantity": 1
+              }
+            ]
+          },
+          "expected": {
+            "ids": null,
+            "min_results": 0,
+            "max_price": null,
+            "exclusive_max": false,
+            "currency": null,
+            "in_stock": false,
+            "attributes": {},
+            "extracted": {},
+            "text_all": [
+              "live cart has not changed"
+            ],
+            "text_none": [],
+            "locked_products": null,
+            "unresolved": null,
+            "error": null,
+            "max_calls": 1
+          }
+        }
+      ],
+      "candidates": [
+        "00000000-0000-0000-0000-0000000007d1",
+        "00000000-0000-0000-0000-0000000007d2",
+        "00000000-0000-0000-0000-0000000007d3",
+        "00000000-0000-0000-0000-0000000007d4",
+        "00000000-0000-0000-0000-0000000007d5"
+      ],
+      "cart_items": [
+        {
+          "product_id": "00000000-0000-0000-0000-0000000007d1",
+          "name": "ring",
+          "unit": "each",
+          "quantity": 2,
+          "price": "20",
+          "currency": "USD"
+        }
+      ],
+      "previous_goal": null,
+      "provider_fault": null,
+      "tool_fault": null,
+      "live": false
+    },
+    {
+      "id": "jewelry-optimize-quantities",
+      "snapshot": "jewelry-patterns-v1",
+      "store": "jewelry",
+      "language": "en",
+      "journey": "optimize",
+      "kind": "basket",
+      "suite": "journey",
+      "turns": [
+        {
+          "message": "Find cheaper alternatives, preserve quantities",
+          "model_output": {
+            "goal": {
+              "allow_substitutions": true,
+              "locked_products": [
+                "00000000-0000-0000-0000-0000000007d1"
+              ]
+            },
+            "lock_evidence": [
+              {
+                "product_id": "00000000-0000-0000-0000-0000000007d1",
+                "customer_quote": "preserve quantities"
+              }
+            ]
+          },
+          "expected": {
+            "ids": null,
+            "min_results": 0,
+            "max_price": null,
+            "exclusive_max": false,
+            "currency": null,
+            "in_stock": false,
+            "attributes": {},
+            "extracted": {},
+            "text_all": [],
+            "text_none": [],
+            "locked_products": [],
+            "unresolved": false,
+            "error": null,
+            "max_calls": 1
+          }
+        }
+      ],
+      "candidates": [
+        "00000000-0000-0000-0000-0000000007d1",
+        "00000000-0000-0000-0000-0000000007d2",
+        "00000000-0000-0000-0000-0000000007d3",
+        "00000000-0000-0000-0000-0000000007d4",
+        "00000000-0000-0000-0000-0000000007d5"
+      ],
+      "cart_items": [
+        {
+          "product_id": "00000000-0000-0000-0000-0000000007d1",
+          "name": "ring",
+          "unit": "each",
+          "quantity": 2,
+          "price": "20",
+          "currency": "USD"
+        }
+      ],
+      "previous_goal": null,
+      "provider_fault": null,
+      "tool_fault": null,
+      "live": false
+    },
+    {
+      "id": "jewelry-optimize-existing-lock",
+      "snapshot": "jewelry-patterns-v1",
+      "store": "jewelry",
+      "language": "en",
+      "journey": "optimize",
+      "kind": "basket",
+      "suite": "journey",
+      "turns": [
+        {
+          "message": "Find cheaper alternatives",
+          "model_output": {
+            "goal": {
+              "allow_substitutions": true
+            }
+          },
+          "expected": {
+            "ids": null,
+            "min_results": 0,
+            "max_price": null,
+            "exclusive_max": false,
+            "currency": null,
+            "in_stock": false,
+            "attributes": {},
+            "extracted": {},
+            "text_all": [],
+            "text_none": [],
+            "locked_products": [
+              "00000000-0000-0000-0000-0000000007d1"
+            ],
+            "unresolved": false,
+            "error": null,
+            "max_calls": 1
+          }
+        }
+      ],
+      "candidates": [
+        "00000000-0000-0000-0000-0000000007d1",
+        "00000000-0000-0000-0000-0000000007d2",
+        "00000000-0000-0000-0000-0000000007d3",
+        "00000000-0000-0000-0000-0000000007d4",
+        "00000000-0000-0000-0000-0000000007d5"
+      ],
+      "cart_items": [
+        {
+          "product_id": "00000000-0000-0000-0000-0000000007d1",
+          "name": "ring",
+          "unit": "each",
+          "quantity": 2,
+          "price": "20",
+          "currency": "USD"
+        }
+      ],
+      "previous_goal": {
+        "purpose": "",
+        "budget": null,
+        "currency": null,
+        "all_inclusive": false,
+        "budget_exclusive": false,
+        "people": null,
+        "locked_products": [
+          "00000000-0000-0000-0000-0000000007d1"
+        ],
+        "excluded_products": [],
+        "locked_brands": [],
+        "allow_substitutions": false,
+        "delivery_date": null,
+        "assumptions": [],
+        "unresolved": [],
+        "saving_target": null
+      },
+      "provider_fault": null,
+      "tool_fault": null,
+      "live": false
+    },
+    {
+      "id": "jewelry-buy-again-owned-order",
+      "snapshot": "jewelry-patterns-v1",
+      "store": "jewelry",
+      "language": "en",
+      "journey": "buy_again",
+      "kind": "basket",
+      "suite": "journey",
+      "turns": [
+        {
+          "message": "Buy my usual order again",
+          "model_output": {
+            "goal": {}
+          },
+          "expected": {
+            "ids": null,
+            "min_results": 0,
+            "max_price": null,
+            "exclusive_max": false,
+            "currency": null,
+            "in_stock": false,
+            "attributes": {},
+            "extracted": {},
+            "text_all": [
+              "Choose an order"
+            ],
+            "text_none": [],
+            "locked_products": null,
+            "unresolved": null,
+            "error": null,
+            "max_calls": 0
+          }
+        }
+      ],
+      "candidates": [
+        "00000000-0000-0000-0000-0000000007d1",
+        "00000000-0000-0000-0000-0000000007d2",
+        "00000000-0000-0000-0000-0000000007d3",
+        "00000000-0000-0000-0000-0000000007d4",
+        "00000000-0000-0000-0000-0000000007d5"
+      ],
+      "cart_items": [
+        {
+          "product_id": "00000000-0000-0000-0000-0000000007d1",
+          "name": "ring",
+          "unit": "each",
+          "quantity": 2,
+          "price": "20",
+          "currency": "USD"
+        }
+      ],
+      "previous_goal": null,
+      "provider_fault": null,
+      "tool_fault": null,
+      "live": false
+    },
+    {
+      "id": "jewelry-meal-uncertainty",
+      "snapshot": "jewelry-patterns-v1",
+      "store": "jewelry",
+      "language": "en",
+      "journey": "meal",
+      "kind": "catalog",
+      "suite": "journey",
+      "turns": [
+        {
+          "message": "A meal for four; must be allergen-free",
+          "model_output": {
+            "shopping": true,
+            "query": "ring",
+            "clarification": "No verified allergen or serving facts"
+          },
+          "expected": {
+            "ids": [],
+            "min_results": 0,
+            "max_price": null,
+            "exclusive_max": false,
+            "currency": null,
+            "in_stock": false,
+            "attributes": {},
+            "extracted": {},
+            "text_all": [
+              "Please specify"
+            ],
+            "text_none": [],
+            "locked_products": null,
+            "unresolved": null,
+            "error": null,
+            "max_calls": 1
+          }
+        }
+      ],
+      "candidates": [
+        "00000000-0000-0000-0000-0000000007d1",
+        "00000000-0000-0000-0000-0000000007d2",
+        "00000000-0000-0000-0000-0000000007d3",
+        "00000000-0000-0000-0000-0000000007d4",
+        "00000000-0000-0000-0000-0000000007d5"
+      ],
+      "cart_items": [],
+      "previous_goal": null,
+      "provider_fault": null,
+      "tool_fault": null,
+      "live": false
+    },
+    {
+      "id": "electronics-verified-hard-constraints",
+      "snapshot": "electronics-patterns-v1",
+      "store": "electronics",
+      "language": "en",
+      "journey": "discovery",
+      "kind": "catalog",
+      "suite": "golden",
+      "turns": [
+        {
+          "message": "Find usb-c charger in stock up to $30",
+          "model_output": {
+            "shopping": true,
+            "query": "charger",
+            "attributes": [
+              {
+                "name": "connector",
+                "value": "usb-c"
+              }
+            ],
+            "in_stock": true,
+            "max_price": "30",
+            "currency": "USD"
+          },
+          "expected": {
+            "ids": [
+              "00000000-0000-0000-0000-000000000bb9"
+            ],
+            "min_results": 1,
+            "max_price": "30",
+            "exclusive_max": false,
+            "currency": "USD",
+            "in_stock": true,
+            "attributes": {
+              "connector": "usb-c"
+            },
+            "extracted": {},
+            "text_all": [],
+            "text_none": [],
+            "locked_products": null,
+            "unresolved": null,
+            "error": null,
+            "max_calls": 1
+          }
+        }
+      ],
+      "candidates": [
+        "00000000-0000-0000-0000-000000000bb9",
+        "00000000-0000-0000-0000-000000000bba",
+        "00000000-0000-0000-0000-000000000bbb",
+        "00000000-0000-0000-0000-000000000bbc",
+        "00000000-0000-0000-0000-000000000bbd"
+      ],
+      "cart_items": [],
+      "previous_goal": null,
+      "provider_fault": null,
+      "tool_fault": null,
+      "live": false
+    },
+    {
+      "id": "electronics-ar-budget",
+      "snapshot": "electronics-patterns-v1",
+      "store": "electronics",
+      "language": "ar",
+      "journey": "discovery",
+      "kind": "catalog",
+      "suite": "catalog_grounded",
+      "turns": [
+        {
+          "message": "أريد charger بسعر أقل من 30 دولار ومتاح الآن",
+          "model_output": {
+            "shopping": true,
+            "query": "charger",
+            "max_price": "30",
+            "exclusive_max": true,
+            "currency": "USD",
+            "in_stock": true
+          },
+          "expected": {
+            "ids": [
+              "00000000-0000-0000-0000-000000000bbd",
+              "00000000-0000-0000-0000-000000000bb9"
+            ],
+            "min_results": 1,
+            "max_price": "30",
+            "exclusive_max": true,
+            "currency": "USD",
+            "in_stock": true,
+            "attributes": {},
+            "extracted": {},
+            "text_all": [],
+            "text_none": [],
+            "locked_products": null,
+            "unresolved": null,
+            "error": null,
+            "max_calls": 1
+          }
+        }
+      ],
+      "candidates": [
+        "00000000-0000-0000-0000-000000000bb9",
+        "00000000-0000-0000-0000-000000000bba",
+        "00000000-0000-0000-0000-000000000bbb",
+        "00000000-0000-0000-0000-000000000bbc",
+        "00000000-0000-0000-0000-000000000bbd"
+      ],
+      "cart_items": [],
+      "previous_goal": null,
+      "provider_fault": null,
+      "tool_fault": null,
+      "live": false
+    },
+    {
+      "id": "electronics-ar-eg-budget",
+      "snapshot": "electronics-patterns-v1",
+      "store": "electronics",
+      "language": "ar-eg",
+      "journey": "discovery",
+      "kind": "catalog",
+      "suite": "catalog_grounded",
+      "turns": [
+        {
+          "message": "عايز charger أقل من 30 دولار وموجود دلوقتي",
+          "model_output": {
+            "shopping": true,
+            "query": "charger",
+            "max_price": "30",
+            "exclusive_max": true,
+            "currency": "USD",
+            "in_stock": true
+          },
+          "expected": {
+            "ids": [
+              "00000000-0000-0000-0000-000000000bbd",
+              "00000000-0000-0000-0000-000000000bb9"
+            ],
+            "min_results": 1,
+            "max_price": "30",
+            "exclusive_max": true,
+            "currency": "USD",
+            "in_stock": true,
+            "attributes": {},
+            "extracted": {},
+            "text_all": [],
+            "text_none": [],
+            "locked_products": null,
+            "unresolved": null,
+            "error": null,
+            "max_calls": 1
+          }
+        }
+      ],
+      "candidates": [
+        "00000000-0000-0000-0000-000000000bb9",
+        "00000000-0000-0000-0000-000000000bba",
+        "00000000-0000-0000-0000-000000000bbb",
+        "00000000-0000-0000-0000-000000000bbc",
+        "00000000-0000-0000-0000-000000000bbd"
+      ],
+      "cart_items": [],
+      "previous_goal": null,
+      "provider_fault": null,
+      "tool_fault": null,
+      "live": false
+    },
+    {
+      "id": "electronics-mixed-budget",
+      "snapshot": "electronics-patterns-v1",
+      "store": "electronics",
+      "language": "mixed",
+      "journey": "discovery",
+      "kind": "catalog",
+      "suite": "catalog_grounded",
+      "turns": [
+        {
+          "message": "عايز charger in stock under $30",
+          "model_output": {
+            "shopping": true,
+            "query": "charger",
+            "max_price": "30",
+            "exclusive_max": true,
+            "currency": "USD",
+            "in_stock": true
+          },
+          "expected": {
+            "ids": [
+              "00000000-0000-0000-0000-000000000bbd",
+              "00000000-0000-0000-0000-000000000bb9"
+            ],
+            "min_results": 1,
+            "max_price": "30",
+            "exclusive_max": true,
+            "currency": "USD",
+            "in_stock": true,
+            "attributes": {},
+            "extracted": {},
+            "text_all": [],
+            "text_none": [],
+            "locked_products": null,
+            "unresolved": null,
+            "error": null,
+            "max_calls": 1
+          }
+        }
+      ],
+      "candidates": [
+        "00000000-0000-0000-0000-000000000bb9",
+        "00000000-0000-0000-0000-000000000bba",
+        "00000000-0000-0000-0000-000000000bbb",
+        "00000000-0000-0000-0000-000000000bbc",
+        "00000000-0000-0000-0000-000000000bbd"
+      ],
+      "cart_items": [],
+      "previous_goal": null,
+      "provider_fault": null,
+      "tool_fault": null,
+      "live": false
+    },
+    {
+      "id": "electronics-typo-budget",
+      "snapshot": "electronics-patterns-v1",
+      "store": "electronics",
+      "language": "typo",
+      "journey": "discovery",
+      "kind": "catalog",
+      "suite": "catalog_grounded",
+      "turns": [
+        {
+          "message": "charger in stok undr 30 USD",
+          "model_output": {
+            "shopping": true,
+            "query": "charger",
+            "max_price": "30",
+            "exclusive_max": true,
+            "currency": "USD",
+            "in_stock": true
+          },
+          "expected": {
+            "ids": [
+              "00000000-0000-0000-0000-000000000bbd",
+              "00000000-0000-0000-0000-000000000bb9"
+            ],
+            "min_results": 1,
+            "max_price": "30",
+            "exclusive_max": true,
+            "currency": "USD",
+            "in_stock": true,
+            "attributes": {},
+            "extracted": {},
+            "text_all": [],
+            "text_none": [],
+            "locked_products": null,
+            "unresolved": null,
+            "error": null,
+            "max_calls": 1
+          }
+        }
+      ],
+      "candidates": [
+        "00000000-0000-0000-0000-000000000bb9",
+        "00000000-0000-0000-0000-000000000bba",
+        "00000000-0000-0000-0000-000000000bbb",
+        "00000000-0000-0000-0000-000000000bbc",
+        "00000000-0000-0000-0000-000000000bbd"
+      ],
+      "cart_items": [],
+      "previous_goal": null,
+      "provider_fault": null,
+      "tool_fault": null,
+      "live": false
+    },
+    {
+      "id": "electronics-no-valid-match",
+      "snapshot": "electronics-patterns-v1",
+      "store": "electronics",
+      "language": "en",
+      "journey": "discovery",
+      "kind": "catalog",
+      "suite": "catalog_grounded",
+      "turns": [
+        {
+          "message": "usb-c charger in stock under $20",
+          "model_output": {
+            "shopping": true,
+            "query": "charger",
+            "attributes": [
+              {
+                "name": "connector",
+                "value": "usb-c"
+              }
+            ],
+            "in_stock": true,
+            "max_price": "20",
+            "currency": "USD",
+            "exclusive_max": true
+          },
+          "expected": {
+            "ids": [],
+            "min_results": 0,
+            "max_price": null,
+            "exclusive_max": false,
+            "currency": null,
+            "in_stock": false,
+            "attributes": {},
+            "extracted": {},
+            "text_all": [
+              "No verified matches"
+            ],
+            "text_none": [],
+            "locked_products": null,
+            "unresolved": null,
+            "error": null,
+            "max_calls": 1
+          }
+        }
+      ],
+      "candidates": [
+        "00000000-0000-0000-0000-000000000bb9",
+        "00000000-0000-0000-0000-000000000bba",
+        "00000000-0000-0000-0000-000000000bbb",
+        "00000000-0000-0000-0000-000000000bbc",
+        "00000000-0000-0000-0000-000000000bbd"
+      ],
+      "cart_items": [],
+      "previous_goal": null,
+      "provider_fault": null,
+      "tool_fault": null,
+      "live": false
+    },
+    {
+      "id": "electronics-missing-currency",
+      "snapshot": "electronics-patterns-v1",
+      "store": "electronics",
+      "language": "en",
+      "journey": "discovery",
+      "kind": "catalog",
+      "suite": "conversation",
+      "turns": [
+        {
+          "message": "Find charger under 25",
+          "model_output": {
+            "shopping": true,
+            "query": "charger",
+            "max_price": "25"
+          },
+          "expected": {
+            "ids": [],
+            "min_results": 0,
+            "max_price": null,
+            "exclusive_max": false,
+            "currency": null,
+            "in_stock": false,
+            "attributes": {},
+            "extracted": {},
+            "text_all": [
+              "currency"
+            ],
+            "text_none": [],
+            "locked_products": null,
+            "unresolved": null,
+            "error": null,
+            "max_calls": 1
+          }
+        }
+      ],
+      "candidates": [
+        "00000000-0000-0000-0000-000000000bb9",
+        "00000000-0000-0000-0000-000000000bba",
+        "00000000-0000-0000-0000-000000000bbb",
+        "00000000-0000-0000-0000-000000000bbc",
+        "00000000-0000-0000-0000-000000000bbd"
+      ],
+      "cart_items": [],
+      "previous_goal": null,
+      "provider_fault": null,
+      "tool_fault": null,
+      "live": false
+    },
+    {
+      "id": "electronics-unknown-requirement",
+      "snapshot": "electronics-patterns-v1",
+      "store": "electronics",
+      "language": "en",
+      "journey": "compatibility",
+      "kind": "catalog",
+      "suite": "journey",
+      "turns": [
+        {
+          "message": "I need certified allergy-safe charger",
+          "model_output": {
+            "shopping": true,
+            "query": "charger",
+            "clarification": "Certification is not in the catalog schema"
+          },
+          "expected": {
+            "ids": [],
+            "min_results": 0,
+            "max_price": null,
+            "exclusive_max": false,
+            "currency": null,
+            "in_stock": false,
+            "attributes": {},
+            "extracted": {},
+            "text_all": [
+              "Please specify"
+            ],
+            "text_none": [],
+            "locked_products": null,
+            "unresolved": null,
+            "error": null,
+            "max_calls": 1
+          }
+        }
+      ],
+      "candidates": [
+        "00000000-0000-0000-0000-000000000bb9",
+        "00000000-0000-0000-0000-000000000bba",
+        "00000000-0000-0000-0000-000000000bbb",
+        "00000000-0000-0000-0000-000000000bbc",
+        "00000000-0000-0000-0000-000000000bbd"
+      ],
+      "cart_items": [],
+      "previous_goal": null,
+      "provider_fault": null,
+      "tool_fault": null,
+      "live": false
+    },
+    {
+      "id": "electronics-gift-budget",
+      "snapshot": "electronics-patterns-v1",
+      "store": "electronics",
+      "language": "en",
+      "journey": "gift",
+      "kind": "catalog",
+      "suite": "journey",
+      "turns": [
+        {
+          "message": "A usb-c charger gift in stock up to $30",
+          "model_output": {
+            "shopping": true,
+            "query": "charger",
+            "attributes": [
+              {
+                "name": "connector",
+                "value": "usb-c"
+              }
+            ],
+            "in_stock": true,
+            "max_price": "30",
+            "currency": "USD"
+          },
+          "expected": {
+            "ids": [
+              "00000000-0000-0000-0000-000000000bb9"
+            ],
+            "min_results": 1,
+            "max_price": "30",
+            "exclusive_max": false,
+            "currency": "USD",
+            "in_stock": true,
+            "attributes": {
+              "connector": "usb-c"
+            },
+            "extracted": {},
+            "text_all": [],
+            "text_none": [],
+            "locked_products": null,
+            "unresolved": null,
+            "error": null,
+            "max_calls": 1
+          }
+        }
+      ],
+      "candidates": [
+        "00000000-0000-0000-0000-000000000bb9",
+        "00000000-0000-0000-0000-000000000bba",
+        "00000000-0000-0000-0000-000000000bbb",
+        "00000000-0000-0000-0000-000000000bbc",
+        "00000000-0000-0000-0000-000000000bbd"
+      ],
+      "cart_items": [],
+      "previous_goal": null,
+      "provider_fault": null,
+      "tool_fault": null,
+      "live": false
+    },
+    {
+      "id": "electronics-comparison-order",
+      "snapshot": "electronics-patterns-v1",
+      "store": "electronics",
+      "language": "en",
+      "journey": "comparison",
+      "kind": "catalog",
+      "suite": "journey",
+      "turns": [
+        {
+          "message": "Compare /products/00000000-0000-0000-0000-000000000bba /products/00000000-0000-0000-0000-000000000bb9",
+          "model_output": {
+            "shopping": true,
+            "query": "*",
+            "presentation": "compare"
+          },
+          "expected": {
+            "ids": [
+              "00000000-0000-0000-0000-000000000bba",
+              "00000000-0000-0000-0000-000000000bb9"
+            ],
+            "min_results": 0,
+            "max_price": null,
+            "exclusive_max": false,
+            "currency": null,
+            "in_stock": false,
+            "attributes": {},
+            "extracted": {},
+            "text_all": [
+              "Current price"
+            ],
+            "text_none": [],
+            "locked_products": null,
+            "unresolved": null,
+            "error": null,
+            "max_calls": 1
+          }
+        }
+      ],
+      "candidates": [
+        "00000000-0000-0000-0000-000000000bb9",
+        "00000000-0000-0000-0000-000000000bba",
+        "00000000-0000-0000-0000-000000000bbb",
+        "00000000-0000-0000-0000-000000000bbc",
+        "00000000-0000-0000-0000-000000000bbd"
+      ],
+      "cart_items": [],
+      "previous_goal": null,
+      "provider_fault": null,
+      "tool_fault": null,
+      "live": false
+    },
+    {
+      "id": "electronics-ambiguous-comparison",
+      "snapshot": "electronics-patterns-v1",
+      "store": "electronics",
+      "language": "en",
+      "journey": "comparison",
+      "kind": "catalog",
+      "suite": "conversation",
+      "turns": [
+        {
+          "message": "Compare it with the other one",
+          "model_output": {
+            "shopping": true,
+            "query": "*",
+            "presentation": "compare"
+          },
+          "expected": {
+            "ids": [],
+            "min_results": 0,
+            "max_price": null,
+            "exclusive_max": false,
+            "currency": null,
+            "in_stock": false,
+            "attributes": {},
+            "extracted": {},
+            "text_all": [
+              "two to five product links"
+            ],
+            "text_none": [],
+            "locked_products": null,
+            "unresolved": null,
+            "error": null,
+            "max_calls": 1
+          }
+        }
+      ],
+      "candidates": [
+        "00000000-0000-0000-0000-000000000bb9",
+        "00000000-0000-0000-0000-000000000bba",
+        "00000000-0000-0000-0000-000000000bbb",
+        "00000000-0000-0000-0000-000000000bbc",
+        "00000000-0000-0000-0000-000000000bbd"
+      ],
+      "cart_items": [],
+      "previous_goal": null,
+      "provider_fault": null,
+      "tool_fault": null,
+      "live": false
+    },
+    {
+      "id": "electronics-changed-budget",
+      "snapshot": "electronics-patterns-v1",
+      "store": "electronics",
+      "language": "en",
+      "journey": "discovery",
+      "kind": "catalog",
+      "suite": "conversation",
+      "turns": [
+        {
+          "message": "Find charger in stock up to $30",
+          "model_output": {
+            "shopping": true,
+            "query": "charger",
+            "in_stock": true,
+            "currency": "USD",
+            "max_price": "30"
+          },
+          "expected": {
+            "ids": [
+              "00000000-0000-0000-0000-000000000bbd",
+              "00000000-0000-0000-0000-000000000bb9",
+              "00000000-0000-0000-0000-000000000bba"
+            ],
+            "min_results": 0,
+            "max_price": null,
+            "exclusive_max": false,
+            "currency": null,
+            "in_stock": false,
+            "attributes": {},
+            "extracted": {},
+            "text_all": [],
+            "text_none": [],
+            "locked_products": null,
+            "unresolved": null,
+            "error": null,
+            "max_calls": 1
+          }
+        },
+        {
+          "message": "Actually, keep it under $20",
+          "model_output": {
+            "shopping": true,
+            "query": "charger",
+            "in_stock": true,
+            "max_price": "20",
+            "currency": "USD",
+            "exclusive_max": true
+          },
+          "expected": {
+            "ids": [
+              "00000000-0000-0000-0000-000000000bbd"
+            ],
+            "min_results": 0,
+            "max_price": "20",
+            "exclusive_max": true,
+            "currency": null,
+            "in_stock": false,
+            "attributes": {},
+            "extracted": {},
+            "text_all": [],
+            "text_none": [],
+            "locked_products": null,
+            "unresolved": null,
+            "error": null,
+            "max_calls": 1
+          }
+        }
+      ],
+      "candidates": [
+        "00000000-0000-0000-0000-000000000bb9",
+        "00000000-0000-0000-0000-000000000bba",
+        "00000000-0000-0000-0000-000000000bbb",
+        "00000000-0000-0000-0000-000000000bbc",
+        "00000000-0000-0000-0000-000000000bbd"
+      ],
+      "cart_items": [],
+      "previous_goal": null,
+      "provider_fault": null,
+      "tool_fault": null,
+      "live": false
+    },
+    {
+      "id": "electronics-cheaper-current-reference",
+      "snapshot": "electronics-patterns-v1",
+      "store": "electronics",
+      "language": "en",
+      "journey": "discovery",
+      "kind": "catalog",
+      "suite": "conversation",
+      "turns": [
+        {
+          "message": "Cheaper than /products/00000000-0000-0000-0000-000000000bba",
+          "model_output": {
+            "shopping": true,
+            "query": "charger",
+            "cheaper": true,
+            "in_stock": true
+          },
+          "expected": {
+            "ids": [
+              "00000000-0000-0000-0000-000000000bbd",
+              "00000000-0000-0000-0000-000000000bb9"
+            ],
+            "min_results": 0,
+            "max_price": "30",
+            "exclusive_max": true,
+            "currency": null,
+            "in_stock": false,
+            "attributes": {},
+            "extracted": {},
+            "text_all": [],
+            "text_none": [],
+            "locked_products": null,
+            "unresolved": null,
+            "error": null,
+            "max_calls": 1
+          }
+        }
+      ],
+      "candidates": [
+        "00000000-0000-0000-0000-000000000bb9",
+        "00000000-0000-0000-0000-000000000bba",
+        "00000000-0000-0000-0000-000000000bbb",
+        "00000000-0000-0000-0000-000000000bbc",
+        "00000000-0000-0000-0000-000000000bbd"
+      ],
+      "cart_items": [],
+      "previous_goal": null,
+      "provider_fault": null,
+      "tool_fault": null,
+      "live": false
+    },
+    {
+      "id": "electronics-silent-relaxation-denied",
+      "snapshot": "electronics-patterns-v1",
+      "store": "electronics",
+      "language": "en",
+      "journey": "discovery",
+      "kind": "catalog",
+      "suite": "adversarial",
+      "turns": [
+        {
+          "message": "usb-c charger in stock under $20, never relax budget",
+          "model_output": {
+            "shopping": true,
+            "query": "charger",
+            "attributes": [
+              {
+                "name": "connector",
+                "value": "usb-c"
+              }
+            ],
+            "in_stock": true,
+            "max_price": "100",
+            "currency": "USD",
+            "alternatives": true
+          },
+          "expected": {
+            "ids": [],
+            "min_results": 0,
+            "max_price": null,
+            "exclusive_max": false,
+            "currency": null,
+            "in_stock": false,
+            "attributes": {},
+            "extracted": {},
+            "text_all": [],
+            "text_none": [],
+            "locked_products": null,
+            "unresolved": null,
+            "error": null,
+            "max_calls": 1
+          }
+        }
+      ],
+      "candidates": [
+        "00000000-0000-0000-0000-000000000bb9",
+        "00000000-0000-0000-0000-000000000bba",
+        "00000000-0000-0000-0000-000000000bbb",
+        "00000000-0000-0000-0000-000000000bbc",
+        "00000000-0000-0000-0000-000000000bbd"
+      ],
+      "cart_items": [],
+      "previous_goal": null,
+      "provider_fault": null,
+      "tool_fault": null,
+      "live": false
+    },
+    {
+      "id": "electronics-cross-store-reference",
+      "snapshot": "electronics-patterns-v1",
+      "store": "electronics",
+      "language": "en",
+      "journey": "discovery",
+      "kind": "catalog",
+      "suite": "adversarial",
+      "turns": [
+        {
+          "message": "Details /products/00000000-0000-0000-0000-0000000f423f",
+          "model_output": {
+            "shopping": true,
+            "query": "*",
+            "presentation": "detail"
+          },
+          "expected": {
+            "ids": null,
+            "min_results": 0,
+            "max_price": null,
+            "exclusive_max": false,
+            "currency": null,
+            "in_stock": false,
+            "attributes": {},
+            "extracted": {},
+            "text_all": [],
+            "text_none": [],
+            "locked_products": null,
+            "unresolved": null,
+            "error": "invalid_reference",
+            "max_calls": 1
+          }
+        }
+      ],
+      "candidates": [
+        "00000000-0000-0000-0000-000000000bb9",
+        "00000000-0000-0000-0000-000000000bba",
+        "00000000-0000-0000-0000-000000000bbb",
+        "00000000-0000-0000-0000-000000000bbc",
+        "00000000-0000-0000-0000-000000000bbd"
+      ],
+      "cart_items": [],
+      "previous_goal": null,
+      "provider_fault": null,
+      "tool_fault": null,
+      "live": false
+    },
+    {
+      "id": "electronics-provider-timeout",
+      "snapshot": "electronics-patterns-v1",
+      "store": "electronics",
+      "language": "en",
+      "journey": "discovery",
+      "kind": "catalog",
+      "suite": "adversarial",
+      "turns": [
+        {
+          "message": "Find charger",
+          "model_output": {
+            "shopping": true,
+            "query": "*"
+          },
+          "expected": {
+            "ids": null,
+            "min_results": 0,
+            "max_price": null,
+            "exclusive_max": false,
+            "currency": null,
+            "in_stock": false,
+            "attributes": {},
+            "extracted": {},
+            "text_all": [],
+            "text_none": [],
+            "locked_products": null,
+            "unresolved": null,
+            "error": "timeout",
+            "max_calls": 1
+          }
+        }
+      ],
+      "candidates": [
+        "00000000-0000-0000-0000-000000000bb9",
+        "00000000-0000-0000-0000-000000000bba",
+        "00000000-0000-0000-0000-000000000bbb",
+        "00000000-0000-0000-0000-000000000bbc",
+        "00000000-0000-0000-0000-000000000bbd"
+      ],
+      "cart_items": [],
+      "previous_goal": null,
+      "provider_fault": "timeout",
+      "tool_fault": null,
+      "live": false
+    },
+    {
+      "id": "electronics-provider-rate-limit",
+      "snapshot": "electronics-patterns-v1",
+      "store": "electronics",
+      "language": "en",
+      "journey": "discovery",
+      "kind": "catalog",
+      "suite": "adversarial",
+      "turns": [
+        {
+          "message": "Find charger",
+          "model_output": {
+            "shopping": true,
+            "query": "*"
+          },
+          "expected": {
+            "ids": null,
+            "min_results": 0,
+            "max_price": null,
+            "exclusive_max": false,
+            "currency": null,
+            "in_stock": false,
+            "attributes": {},
+            "extracted": {},
+            "text_all": [],
+            "text_none": [],
+            "locked_products": null,
+            "unresolved": null,
+            "error": "rate_limit",
+            "max_calls": 1
+          }
+        }
+      ],
+      "candidates": [
+        "00000000-0000-0000-0000-000000000bb9",
+        "00000000-0000-0000-0000-000000000bba",
+        "00000000-0000-0000-0000-000000000bbb",
+        "00000000-0000-0000-0000-000000000bbc",
+        "00000000-0000-0000-0000-000000000bbd"
+      ],
+      "cart_items": [],
+      "previous_goal": null,
+      "provider_fault": "rate_limit",
+      "tool_fault": null,
+      "live": false
+    },
+    {
+      "id": "electronics-provider-invalid-response",
+      "snapshot": "electronics-patterns-v1",
+      "store": "electronics",
+      "language": "en",
+      "journey": "discovery",
+      "kind": "catalog",
+      "suite": "adversarial",
+      "turns": [
+        {
+          "message": "Find charger",
+          "model_output": {
+            "shopping": true,
+            "query": "*"
+          },
+          "expected": {
+            "ids": null,
+            "min_results": 0,
+            "max_price": null,
+            "exclusive_max": false,
+            "currency": null,
+            "in_stock": false,
+            "attributes": {},
+            "extracted": {},
+            "text_all": [],
+            "text_none": [],
+            "locked_products": null,
+            "unresolved": null,
+            "error": "invalid_response",
+            "max_calls": 1
+          }
+        }
+      ],
+      "candidates": [
+        "00000000-0000-0000-0000-000000000bb9",
+        "00000000-0000-0000-0000-000000000bba",
+        "00000000-0000-0000-0000-000000000bbb",
+        "00000000-0000-0000-0000-000000000bbc",
+        "00000000-0000-0000-0000-000000000bbd"
+      ],
+      "cart_items": [],
+      "previous_goal": null,
+      "provider_fault": "invalid_response",
+      "tool_fault": null,
+      "live": false
+    },
+    {
+      "id": "electronics-provider-unauthorized-tool",
+      "snapshot": "electronics-patterns-v1",
+      "store": "electronics",
+      "language": "en",
+      "journey": "discovery",
+      "kind": "catalog",
+      "suite": "adversarial",
+      "turns": [
+        {
+          "message": "Find charger",
+          "model_output": {
+            "shopping": true,
+            "query": "*"
+          },
+          "expected": {
+            "ids": null,
+            "min_results": 0,
+            "max_price": null,
+            "exclusive_max": false,
+            "currency": null,
+            "in_stock": false,
+            "attributes": {},
+            "extracted": {},
+            "text_all": [],
+            "text_none": [],
+            "locked_products": null,
+            "unresolved": null,
+            "error": "invalid_shopping_plan",
+            "max_calls": 1
+          }
+        }
+      ],
+      "candidates": [
+        "00000000-0000-0000-0000-000000000bb9",
+        "00000000-0000-0000-0000-000000000bba",
+        "00000000-0000-0000-0000-000000000bbb",
+        "00000000-0000-0000-0000-000000000bbc",
+        "00000000-0000-0000-0000-000000000bbd"
+      ],
+      "cart_items": [],
+      "previous_goal": null,
+      "provider_fault": "unauthorized_tool",
+      "tool_fault": null,
+      "live": false
+    },
+    {
+      "id": "electronics-malformed-tool",
+      "snapshot": "electronics-patterns-v1",
+      "store": "electronics",
+      "language": "en",
+      "journey": "discovery",
+      "kind": "catalog",
+      "suite": "adversarial",
+      "turns": [
+        {
+          "message": "Find charger",
+          "model_output": {
+            "shopping": true,
+            "query": "*"
+          },
+          "expected": {
+            "ids": null,
+            "min_results": 0,
+            "max_price": null,
+            "exclusive_max": false,
+            "currency": null,
+            "in_stock": false,
+            "attributes": {},
+            "extracted": {},
+            "text_all": [],
+            "text_none": [],
+            "locked_products": null,
+            "unresolved": null,
+            "error": "tool_unavailable",
+            "max_calls": 0
+          }
+        }
+      ],
+      "candidates": [
+        "00000000-0000-0000-0000-000000000bb9",
+        "00000000-0000-0000-0000-000000000bba",
+        "00000000-0000-0000-0000-000000000bbb",
+        "00000000-0000-0000-0000-000000000bbc",
+        "00000000-0000-0000-0000-000000000bbd"
+      ],
+      "cart_items": [],
+      "previous_goal": null,
+      "provider_fault": null,
+      "tool_fault": "malformed",
+      "live": false
+    },
+    {
+      "id": "electronics-unavailable-tool",
+      "snapshot": "electronics-patterns-v1",
+      "store": "electronics",
+      "language": "en",
+      "journey": "discovery",
+      "kind": "catalog",
+      "suite": "adversarial",
+      "turns": [
+        {
+          "message": "Find charger",
+          "model_output": {
+            "shopping": true,
+            "query": "*"
+          },
+          "expected": {
+            "ids": null,
+            "min_results": 0,
+            "max_price": null,
+            "exclusive_max": false,
+            "currency": null,
+            "in_stock": false,
+            "attributes": {},
+            "extracted": {},
+            "text_all": [],
+            "text_none": [],
+            "locked_products": null,
+            "unresolved": null,
+            "error": "tool_unavailable",
+            "max_calls": 0
+          }
+        }
+      ],
+      "candidates": [
+        "00000000-0000-0000-0000-000000000bb9",
+        "00000000-0000-0000-0000-000000000bba",
+        "00000000-0000-0000-0000-000000000bbb",
+        "00000000-0000-0000-0000-000000000bbc",
+        "00000000-0000-0000-0000-000000000bbd"
+      ],
+      "cart_items": [],
+      "previous_goal": null,
+      "provider_fault": null,
+      "tool_fault": "unavailable",
+      "live": false
+    },
+    {
+      "id": "electronics-order-guide",
+      "snapshot": "electronics-patterns-v1",
+      "store": "electronics",
+      "language": "en",
+      "journey": "order_status",
+      "kind": "policy",
+      "suite": "journey",
+      "turns": [
+        {
+          "message": "How do I check my order?",
+          "model_output": {
+            "shopping": true,
+            "query": "*"
+          },
+          "expected": {
+            "ids": null,
+            "min_results": 0,
+            "max_price": null,
+            "exclusive_max": false,
+            "currency": null,
+            "in_stock": false,
+            "attributes": {},
+            "extracted": {},
+            "text_all": [
+              "your own order"
+            ],
+            "text_none": [],
+            "locked_products": null,
+            "unresolved": null,
+            "error": null,
+            "max_calls": 0
+          }
+        }
+      ],
+      "candidates": [
+        "00000000-0000-0000-0000-000000000bb9",
+        "00000000-0000-0000-0000-000000000bba",
+        "00000000-0000-0000-0000-000000000bbb",
+        "00000000-0000-0000-0000-000000000bbc",
+        "00000000-0000-0000-0000-000000000bbd"
+      ],
+      "cart_items": [],
+      "previous_goal": null,
+      "provider_fault": null,
+      "tool_fault": null,
+      "live": false
+    },
+    {
+      "id": "electronics-unsupported-policy",
+      "snapshot": "electronics-patterns-v1",
+      "store": "electronics",
+      "language": "en",
+      "journey": "policy",
+      "kind": "policy",
+      "suite": "journey",
+      "turns": [
+        {
+          "message": "Do you guarantee delivery today?",
+          "model_output": {
+            "shopping": true,
+            "query": "*"
+          },
+          "expected": {
+            "ids": null,
+            "min_results": 0,
+            "max_price": null,
+            "exclusive_max": false,
+            "currency": null,
+            "in_stock": false,
+            "attributes": {},
+            "extracted": {},
+            "text_all": [
+              "do not have an approved answer"
+            ],
+            "text_none": [],
+            "locked_products": null,
+            "unresolved": null,
+            "error": null,
+            "max_calls": 0
+          }
+        }
+      ],
+      "candidates": [
+        "00000000-0000-0000-0000-000000000bb9",
+        "00000000-0000-0000-0000-000000000bba",
+        "00000000-0000-0000-0000-000000000bbb",
+        "00000000-0000-0000-0000-000000000bbc",
+        "00000000-0000-0000-0000-000000000bbd"
+      ],
+      "cart_items": [],
+      "previous_goal": null,
+      "provider_fault": null,
+      "tool_fault": null,
+      "live": false
+    },
+    {
+      "id": "electronics-support-policy",
+      "snapshot": "electronics-patterns-v1",
+      "store": "electronics",
+      "language": "en",
+      "journey": "support",
+      "kind": "policy",
+      "suite": "journey",
+      "turns": [
+        {
+          "message": "Can I return any item after 90 days?",
+          "model_output": {
+            "shopping": true,
+            "query": "*"
+          },
+          "expected": {
+            "ids": null,
+            "min_results": 0,
+            "max_price": null,
+            "exclusive_max": false,
+            "currency": null,
+            "in_stock": false,
+            "attributes": {},
+            "extracted": {},
+            "text_all": [
+              "contact the store"
+            ],
+            "text_none": [],
+            "locked_products": null,
+            "unresolved": null,
+            "error": null,
+            "max_calls": 0
+          }
+        }
+      ],
+      "candidates": [
+        "00000000-0000-0000-0000-000000000bb9",
+        "00000000-0000-0000-0000-000000000bba",
+        "00000000-0000-0000-0000-000000000bbb",
+        "00000000-0000-0000-0000-000000000bbc",
+        "00000000-0000-0000-0000-000000000bbd"
+      ],
+      "cart_items": [],
+      "previous_goal": null,
+      "provider_fault": null,
+      "tool_fault": null,
+      "live": false
+    },
+    {
+      "id": "electronics-shop",
+      "snapshot": "electronics-patterns-v1",
+      "store": "electronics",
+      "language": "en",
+      "journey": "shop",
+      "kind": "basket",
+      "suite": "journey",
+      "turns": [
+        {
+          "message": "Find one charger",
+          "model_output": {
+            "goal": {},
+            "searches": [
+              {
+                "intent": {
+                  "shopping": true,
+                  "query": "charger",
+                  "in_stock": true
+                },
+                "quantity": 1
+              }
+            ]
+          },
+          "expected": {
+            "ids": null,
+            "min_results": 0,
+            "max_price": null,
+            "exclusive_max": false,
+            "currency": null,
+            "in_stock": false,
+            "attributes": {},
+            "extracted": {},
+            "text_all": [
+              "live cart has not changed"
+            ],
+            "text_none": [],
+            "locked_products": null,
+            "unresolved": null,
+            "error": null,
+            "max_calls": 1
+          }
+        }
+      ],
+      "candidates": [
+        "00000000-0000-0000-0000-000000000bb9",
+        "00000000-0000-0000-0000-000000000bba",
+        "00000000-0000-0000-0000-000000000bbb",
+        "00000000-0000-0000-0000-000000000bbc",
+        "00000000-0000-0000-0000-000000000bbd"
+      ],
+      "cart_items": [
+        {
+          "product_id": "00000000-0000-0000-0000-000000000bb9",
+          "name": "charger",
+          "unit": "each",
+          "quantity": 2,
+          "price": "20",
+          "currency": "USD"
+        }
+      ],
+      "previous_goal": null,
+      "provider_fault": null,
+      "tool_fault": null,
+      "live": false
+    },
+    {
+      "id": "electronics-optimize-quantities",
+      "snapshot": "electronics-patterns-v1",
+      "store": "electronics",
+      "language": "en",
+      "journey": "optimize",
+      "kind": "basket",
+      "suite": "journey",
+      "turns": [
+        {
+          "message": "Find cheaper alternatives, preserve quantities",
+          "model_output": {
+            "goal": {
+              "allow_substitutions": true,
+              "locked_products": [
+                "00000000-0000-0000-0000-000000000bb9"
+              ]
+            },
+            "lock_evidence": [
+              {
+                "product_id": "00000000-0000-0000-0000-000000000bb9",
+                "customer_quote": "preserve quantities"
+              }
+            ]
+          },
+          "expected": {
+            "ids": null,
+            "min_results": 0,
+            "max_price": null,
+            "exclusive_max": false,
+            "currency": null,
+            "in_stock": false,
+            "attributes": {},
+            "extracted": {},
+            "text_all": [],
+            "text_none": [],
+            "locked_products": [],
+            "unresolved": false,
+            "error": null,
+            "max_calls": 1
+          }
+        }
+      ],
+      "candidates": [
+        "00000000-0000-0000-0000-000000000bb9",
+        "00000000-0000-0000-0000-000000000bba",
+        "00000000-0000-0000-0000-000000000bbb",
+        "00000000-0000-0000-0000-000000000bbc",
+        "00000000-0000-0000-0000-000000000bbd"
+      ],
+      "cart_items": [
+        {
+          "product_id": "00000000-0000-0000-0000-000000000bb9",
+          "name": "charger",
+          "unit": "each",
+          "quantity": 2,
+          "price": "20",
+          "currency": "USD"
+        }
+      ],
+      "previous_goal": null,
+      "provider_fault": null,
+      "tool_fault": null,
+      "live": false
+    },
+    {
+      "id": "electronics-optimize-existing-lock",
+      "snapshot": "electronics-patterns-v1",
+      "store": "electronics",
+      "language": "en",
+      "journey": "optimize",
+      "kind": "basket",
+      "suite": "journey",
+      "turns": [
+        {
+          "message": "Find cheaper alternatives",
+          "model_output": {
+            "goal": {
+              "allow_substitutions": true
+            }
+          },
+          "expected": {
+            "ids": null,
+            "min_results": 0,
+            "max_price": null,
+            "exclusive_max": false,
+            "currency": null,
+            "in_stock": false,
+            "attributes": {},
+            "extracted": {},
+            "text_all": [],
+            "text_none": [],
+            "locked_products": [
+              "00000000-0000-0000-0000-000000000bb9"
+            ],
+            "unresolved": false,
+            "error": null,
+            "max_calls": 1
+          }
+        }
+      ],
+      "candidates": [
+        "00000000-0000-0000-0000-000000000bb9",
+        "00000000-0000-0000-0000-000000000bba",
+        "00000000-0000-0000-0000-000000000bbb",
+        "00000000-0000-0000-0000-000000000bbc",
+        "00000000-0000-0000-0000-000000000bbd"
+      ],
+      "cart_items": [
+        {
+          "product_id": "00000000-0000-0000-0000-000000000bb9",
+          "name": "charger",
+          "unit": "each",
+          "quantity": 2,
+          "price": "20",
+          "currency": "USD"
+        }
+      ],
+      "previous_goal": {
+        "purpose": "",
+        "budget": null,
+        "currency": null,
+        "all_inclusive": false,
+        "budget_exclusive": false,
+        "people": null,
+        "locked_products": [
+          "00000000-0000-0000-0000-000000000bb9"
+        ],
+        "excluded_products": [],
+        "locked_brands": [],
+        "allow_substitutions": false,
+        "delivery_date": null,
+        "assumptions": [],
+        "unresolved": [],
+        "saving_target": null
+      },
+      "provider_fault": null,
+      "tool_fault": null,
+      "live": false
+    },
+    {
+      "id": "electronics-buy-again-owned-order",
+      "snapshot": "electronics-patterns-v1",
+      "store": "electronics",
+      "language": "en",
+      "journey": "buy_again",
+      "kind": "basket",
+      "suite": "journey",
+      "turns": [
+        {
+          "message": "Buy my usual order again",
+          "model_output": {
+            "goal": {}
+          },
+          "expected": {
+            "ids": null,
+            "min_results": 0,
+            "max_price": null,
+            "exclusive_max": false,
+            "currency": null,
+            "in_stock": false,
+            "attributes": {},
+            "extracted": {},
+            "text_all": [
+              "Choose an order"
+            ],
+            "text_none": [],
+            "locked_products": null,
+            "unresolved": null,
+            "error": null,
+            "max_calls": 0
+          }
+        }
+      ],
+      "candidates": [
+        "00000000-0000-0000-0000-000000000bb9",
+        "00000000-0000-0000-0000-000000000bba",
+        "00000000-0000-0000-0000-000000000bbb",
+        "00000000-0000-0000-0000-000000000bbc",
+        "00000000-0000-0000-0000-000000000bbd"
+      ],
+      "cart_items": [
+        {
+          "product_id": "00000000-0000-0000-0000-000000000bb9",
+          "name": "charger",
+          "unit": "each",
+          "quantity": 2,
+          "price": "20",
+          "currency": "USD"
+        }
+      ],
+      "previous_goal": null,
+      "provider_fault": null,
+      "tool_fault": null,
+      "live": false
+    },
+    {
+      "id": "electronics-meal-uncertainty",
+      "snapshot": "electronics-patterns-v1",
+      "store": "electronics",
+      "language": "en",
+      "journey": "meal",
+      "kind": "catalog",
+      "suite": "journey",
+      "turns": [
+        {
+          "message": "A meal for four; must be allergen-free",
+          "model_output": {
+            "shopping": true,
+            "query": "charger",
+            "clarification": "No verified allergen or serving facts"
+          },
+          "expected": {
+            "ids": [],
+            "min_results": 0,
+            "max_price": null,
+            "exclusive_max": false,
+            "currency": null,
+            "in_stock": false,
+            "attributes": {},
+            "extracted": {},
+            "text_all": [
+              "Please specify"
+            ],
+            "text_none": [],
+            "locked_products": null,
+            "unresolved": null,
+            "error": null,
+            "max_calls": 1
+          }
+        }
+      ],
+      "candidates": [
+        "00000000-0000-0000-0000-000000000bb9",
+        "00000000-0000-0000-0000-000000000bba",
+        "00000000-0000-0000-0000-000000000bbb",
+        "00000000-0000-0000-0000-000000000bbc",
+        "00000000-0000-0000-0000-000000000bbd"
+      ],
+      "cart_items": [],
+      "previous_goal": null,
+      "provider_fault": null,
+      "tool_fault": null,
+      "live": false
+    },
+    {
+      "id": "grocery-live-budget-en",
+      "snapshot": "grocery-isolated-2026-09-21",
+      "store": "grocery",
+      "language": "en",
+      "journey": "discovery",
+      "kind": "catalog",
+      "suite": "catalog_grounded",
+      "turns": [
+        {
+          "message": "Find Staging Coffee in stock under $10",
+          "model_output": {
+            "shopping": true,
+            "query": "Staging Coffee",
+            "currency": "USD",
+            "max_price": "10",
+            "exclusive_max": true,
+            "in_stock": true
+          },
+          "expected": {
+            "ids": [
+              "22e94f06-b83d-41b4-ba3c-002d7a4afbc4"
+            ],
+            "min_results": 0,
+            "max_price": "10",
+            "exclusive_max": true,
+            "currency": "USD",
+            "in_stock": true,
+            "attributes": {},
+            "extracted": {
+              "currency": "USD",
+              "exclusive_max": true
+            },
+            "text_all": [],
+            "text_none": [],
+            "locked_products": null,
+            "unresolved": null,
+            "error": null,
+            "max_calls": 1
+          }
+        }
+      ],
+      "candidates": [
+        "44aedd09-dc2b-4f25-a636-e855e730112a",
+        "22e94f06-b83d-41b4-ba3c-002d7a4afbc4"
+      ],
+      "cart_items": [],
+      "previous_goal": null,
+      "provider_fault": null,
+      "tool_fault": null,
+      "live": true
+    },
+    {
+      "id": "grocery-live-budget-ar",
+      "snapshot": "grocery-isolated-2026-09-21",
+      "store": "grocery",
+      "language": "ar",
+      "journey": "discovery",
+      "kind": "catalog",
+      "suite": "catalog_grounded",
+      "turns": [
+        {
+          "message": "عايز Staging Coffee متاحة بسعر أقل من 10 دولار أمريكي",
+          "model_output": {
+            "shopping": true,
+            "query": "Staging Coffee",
+            "currency": "USD",
+            "max_price": "10",
+            "exclusive_max": true,
+            "in_stock": true
+          },
+          "expected": {
+            "ids": [
+              "22e94f06-b83d-41b4-ba3c-002d7a4afbc4"
+            ],
+            "min_results": 0,
+            "max_price": "10",
+            "exclusive_max": true,
+            "currency": "USD",
+            "in_stock": true,
+            "attributes": {},
+            "extracted": {
+              "currency": "USD",
+              "exclusive_max": true
+            },
+            "text_all": [],
+            "text_none": [],
+            "locked_products": null,
+            "unresolved": null,
+            "error": null,
+            "max_calls": 1
+          }
+        }
+      ],
+      "candidates": [
+        "44aedd09-dc2b-4f25-a636-e855e730112a",
+        "22e94f06-b83d-41b4-ba3c-002d7a4afbc4"
+      ],
+      "cart_items": [],
+      "previous_goal": null,
+      "provider_fault": null,
+      "tool_fault": null,
+      "live": true
+    },
+    {
+      "id": "grocery-live-budget-mixed",
+      "snapshot": "grocery-isolated-2026-09-21",
+      "store": "grocery",
+      "language": "mixed",
+      "journey": "discovery",
+      "kind": "catalog",
+      "suite": "catalog_grounded",
+      "turns": [
+        {
+          "message": "عايز Staging Coffee in stock under $10",
+          "model_output": {
+            "shopping": true,
+            "query": "Staging Coffee",
+            "currency": "USD",
+            "max_price": "10",
+            "exclusive_max": true,
+            "in_stock": true
+          },
+          "expected": {
+            "ids": [
+              "22e94f06-b83d-41b4-ba3c-002d7a4afbc4"
+            ],
+            "min_results": 0,
+            "max_price": "10",
+            "exclusive_max": true,
+            "currency": "USD",
+            "in_stock": true,
+            "attributes": {},
+            "extracted": {
+              "currency": "USD",
+              "exclusive_max": true
+            },
+            "text_all": [],
+            "text_none": [],
+            "locked_products": null,
+            "unresolved": null,
+            "error": null,
+            "max_calls": 1
+          }
+        }
+      ],
+      "candidates": [
+        "44aedd09-dc2b-4f25-a636-e855e730112a",
+        "22e94f06-b83d-41b4-ba3c-002d7a4afbc4"
+      ],
+      "cart_items": [],
+      "previous_goal": null,
+      "provider_fault": null,
+      "tool_fault": null,
+      "live": true
+    },
+    {
+      "id": "grocery-live-comparison",
+      "snapshot": "grocery-isolated-2026-09-21",
+      "store": "grocery",
+      "language": "en",
+      "journey": "comparison",
+      "kind": "catalog",
+      "suite": "journey",
+      "turns": [
+        {
+          "message": "Compare /products/44aedd09-dc2b-4f25-a636-e855e730112a and /products/22e94f06-b83d-41b4-ba3c-002d7a4afbc4",
+          "model_output": {
+            "shopping": true,
+            "query": "*",
+            "presentation": "compare"
+          },
+          "expected": {
+            "ids": [
+              "44aedd09-dc2b-4f25-a636-e855e730112a",
+              "22e94f06-b83d-41b4-ba3c-002d7a4afbc4"
+            ],
+            "min_results": 0,
+            "max_price": null,
+            "exclusive_max": false,
+            "currency": null,
+            "in_stock": false,
+            "attributes": {},
+            "extracted": {
+              "presentation": "compare"
+            },
+            "text_all": [],
+            "text_none": [],
+            "locked_products": null,
+            "unresolved": null,
+            "error": null,
+            "max_calls": 1
+          }
+        }
+      ],
+      "candidates": [
+        "44aedd09-dc2b-4f25-a636-e855e730112a",
+        "22e94f06-b83d-41b4-ba3c-002d7a4afbc4"
+      ],
+      "cart_items": [],
+      "previous_goal": null,
+      "provider_fault": null,
+      "tool_fault": null,
+      "live": true
+    },
+    {
+      "id": "grocery-live-clarification",
+      "snapshot": "grocery-isolated-2026-09-21",
+      "store": "grocery",
+      "language": "en",
+      "journey": "discovery",
+      "kind": "catalog",
+      "suite": "conversation",
+      "turns": [
+        {
+          "message": "Find Staging Coffee under 5",
+          "model_output": {
+            "shopping": true,
+            "query": "Staging Coffee",
+            "max_price": "5"
+          },
+          "expected": {
+            "ids": [],
+            "min_results": 0,
+            "max_price": null,
+            "exclusive_max": false,
+            "currency": null,
+            "in_stock": false,
+            "attributes": {},
+            "extracted": {},
+            "text_all": [
+              "currency"
+            ],
+            "text_none": [],
+            "locked_products": null,
+            "unresolved": null,
+            "error": null,
+            "max_calls": 1
+          }
+        }
+      ],
+      "candidates": [
+        "44aedd09-dc2b-4f25-a636-e855e730112a",
+        "22e94f06-b83d-41b4-ba3c-002d7a4afbc4"
+      ],
+      "cart_items": [],
+      "previous_goal": null,
+      "provider_fault": null,
+      "tool_fault": null,
+      "live": true
+    },
+    {
+      "id": "grocery-live-gift",
+      "snapshot": "grocery-isolated-2026-09-21",
+      "store": "grocery",
+      "language": "en",
+      "journey": "gift",
+      "kind": "catalog",
+      "suite": "journey",
+      "turns": [
+        {
+          "message": "Recommend a Staging Coffee gift in stock up to $6",
+          "model_output": {
+            "shopping": true,
+            "query": "Staging Coffee",
+            "currency": "USD",
+            "max_price": "6",
+            "in_stock": true
+          },
+          "expected": {
+            "ids": [
+              "22e94f06-b83d-41b4-ba3c-002d7a4afbc4"
+            ],
+            "min_results": 0,
+            "max_price": "6",
+            "exclusive_max": false,
+            "currency": "USD",
+            "in_stock": true,
+            "attributes": {},
+            "extracted": {},
+            "text_all": [],
+            "text_none": [],
+            "locked_products": null,
+            "unresolved": null,
+            "error": null,
+            "max_calls": 1
+          }
+        }
+      ],
+      "candidates": [
+        "44aedd09-dc2b-4f25-a636-e855e730112a",
+        "22e94f06-b83d-41b4-ba3c-002d7a4afbc4"
+      ],
+      "cart_items": [],
+      "previous_goal": null,
+      "provider_fault": null,
+      "tool_fault": null,
+      "live": true
+    },
+    {
+      "id": "grocery-captured-guide-1",
+      "snapshot": "grocery-isolated-2026-09-21",
+      "store": "grocery",
+      "language": "en",
+      "journey": "policy",
+      "kind": "policy",
+      "suite": "catalog_grounded",
+      "turns": [
+        {
+          "message": "Does a proposal change my cart?",
+          "model_output": {
+            "shopping": true,
+            "query": "*"
+          },
+          "expected": {
+            "ids": null,
+            "min_results": 0,
+            "max_price": null,
+            "exclusive_max": false,
+            "currency": null,
+            "in_stock": false,
+            "attributes": {},
+            "extracted": {},
+            "text_all": [
+              "Describe what you need, then review the proposed products, quantities and quote. Your cart changes only after you approve and apply the proposal. Basket approval does not place an order.",
+              "Source:"
+            ],
+            "text_none": [],
+            "locked_products": null,
+            "unresolved": null,
+            "error": null,
+            "max_calls": 0
+          }
+        }
+      ],
+      "candidates": [
+        "44aedd09-dc2b-4f25-a636-e855e730112a",
+        "22e94f06-b83d-41b4-ba3c-002d7a4afbc4"
+      ],
+      "cart_items": [],
+      "previous_goal": null,
+      "provider_fault": null,
+      "tool_fault": null,
+      "live": false
+    },
+    {
+      "id": "grocery-captured-guide-2",
+      "snapshot": "grocery-isolated-2026-09-21",
+      "store": "grocery",
+      "language": "en",
+      "journey": "policy",
+      "kind": "policy",
+      "suite": "catalog_grounded",
+      "turns": [
+        {
+          "message": "Does approving a basket place an order?",
+          "model_output": {
+            "shopping": true,
+            "query": "*"
+          },
+          "expected": {
+            "ids": null,
+            "min_results": 0,
+            "max_price": null,
+            "exclusive_max": false,
+            "currency": null,
+            "in_stock": false,
+            "attributes": {},
+            "extracted": {},
+            "text_all": [
+              "After applying a basket, continue to checkout, review the current total and delivery address, and explicitly confirm the order. The current checkout supports cash on delivery. Do not assume a saved proposal is a completed order.",
+              "Source:"
+            ],
+            "text_none": [],
+            "locked_products": null,
+            "unresolved": null,
+            "error": null,
+            "max_calls": 0
+          }
+        }
+      ],
+      "candidates": [
+        "44aedd09-dc2b-4f25-a636-e855e730112a",
+        "22e94f06-b83d-41b4-ba3c-002d7a4afbc4"
+      ],
+      "cart_items": [],
+      "previous_goal": null,
+      "provider_fault": null,
+      "tool_fault": null,
+      "live": false
+    },
+    {
+      "id": "grocery-captured-guide-3",
+      "snapshot": "grocery-isolated-2026-09-21",
+      "store": "grocery",
+      "language": "en",
+      "journey": "policy",
+      "kind": "policy",
+      "suite": "catalog_grounded",
+      "turns": [
+        {
+          "message": "How long is a basket quote valid?",
+          "model_output": {
+            "shopping": true,
+            "query": "*"
+          },
+          "expected": {
+            "ids": null,
+            "min_results": 0,
+            "max_price": null,
+            "exclusive_max": false,
+            "currency": null,
+            "in_stock": false,
+            "attributes": {},
+            "extracted": {},
+            "text_all": [
+              "Basket quotes expire after five minutes. Prices, stock and other checkout conditions are checked again when you apply the proposal. If conditions change, refresh the quote and review it again before approving.",
+              "Source:"
+            ],
+            "text_none": [],
+            "locked_products": null,
+            "unresolved": null,
+            "error": null,
+            "max_calls": 0
+          }
+        }
+      ],
+      "candidates": [
+        "44aedd09-dc2b-4f25-a636-e855e730112a",
+        "22e94f06-b83d-41b4-ba3c-002d7a4afbc4"
+      ],
+      "cart_items": [],
+      "previous_goal": null,
+      "provider_fault": null,
+      "tool_fault": null,
+      "live": false
+    },
+    {
+      "id": "grocery-captured-guide-4",
+      "snapshot": "grocery-isolated-2026-09-21",
+      "store": "grocery",
+      "language": "en",
+      "journey": "policy",
+      "kind": "policy",
+      "suite": "catalog_grounded",
+      "turns": [
+        {
+          "message": "Can you guarantee delivery tomorrow?",
+          "model_output": {
+            "shopping": true,
+            "query": "*"
+          },
+          "expected": {
+            "ids": null,
+            "min_results": 0,
+            "max_price": null,
+            "exclusive_max": false,
+            "currency": null,
+            "in_stock": false,
+            "attributes": {},
+            "extracted": {},
+            "text_all": [
+              "Check availability for your selected delivery location. Availability does not promise a delivery date or time slot. The current shopping assistant cannot reserve a scheduled delivery slot.",
+              "Source:"
+            ],
+            "text_none": [],
+            "locked_products": null,
+            "unresolved": null,
+            "error": null,
+            "max_calls": 0
+          }
+        }
+      ],
+      "candidates": [
+        "44aedd09-dc2b-4f25-a636-e855e730112a",
+        "22e94f06-b83d-41b4-ba3c-002d7a4afbc4"
+      ],
+      "cart_items": [],
+      "previous_goal": null,
+      "provider_fault": null,
+      "tool_fault": null,
+      "live": false
+    },
+    {
+      "id": "grocery-captured-guide-5",
+      "snapshot": "grocery-isolated-2026-09-21",
+      "store": "grocery",
+      "language": "en",
+      "journey": "policy",
+      "kind": "policy",
+      "suite": "catalog_grounded",
+      "turns": [
+        {
+          "message": "How do I track my order?",
+          "model_output": {
+            "shopping": true,
+            "query": "*"
+          },
+          "expected": {
+            "ids": null,
+            "min_results": 0,
+            "max_price": null,
+            "exclusive_max": false,
+            "currency": null,
+            "in_stock": false,
+            "attributes": {},
+            "extracted": {},
+            "text_all": [
+              "Sign in to the account used for the order. Open your orders or ask the assistant about your order, then select it to see its recorded status and available shipment information.",
+              "Source:"
+            ],
+            "text_none": [],
+            "locked_products": null,
+            "unresolved": null,
+            "error": null,
+            "max_calls": 0
+          }
+        }
+      ],
+      "candidates": [
+        "44aedd09-dc2b-4f25-a636-e855e730112a",
+        "22e94f06-b83d-41b4-ba3c-002d7a4afbc4"
+      ],
+      "cart_items": [],
+      "previous_goal": null,
+      "provider_fault": null,
+      "tool_fault": null,
+      "live": false
+    },
+    {
+      "id": "grocery-captured-guide-6",
+      "snapshot": "grocery-isolated-2026-09-21",
+      "store": "grocery",
+      "language": "en",
+      "journey": "policy",
+      "kind": "policy",
+      "suite": "catalog_grounded",
+      "turns": [
+        {
+          "message": "Which currency and quantities does checkout support?",
+          "model_output": {
+            "shopping": true,
+            "query": "*"
+          },
+          "expected": {
+            "ids": null,
+            "min_results": 0,
+            "max_price": null,
+            "exclusive_max": false,
+            "currency": null,
+            "in_stock": false,
+            "attributes": {},
+            "extracted": {},
+            "text_all": [
+              "The current shopping checkout uses USD and whole selling-unit quantities. Check the displayed product selling unit and quantity before approving. The assistant does not convert currencies or promise fractional quantities.",
+              "Source:"
+            ],
+            "text_none": [],
+            "locked_products": null,
+            "unresolved": null,
+            "error": null,
+            "max_calls": 0
+          }
+        }
+      ],
+      "candidates": [
+        "44aedd09-dc2b-4f25-a636-e855e730112a",
+        "22e94f06-b83d-41b4-ba3c-002d7a4afbc4"
+      ],
+      "cart_items": [],
+      "previous_goal": null,
+      "provider_fault": null,
+      "tool_fault": null,
+      "live": false
+    }
+  ]
+}

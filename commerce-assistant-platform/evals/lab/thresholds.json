@@ -1,0 +1,437 @@
+{
+  "version": "1",
+  "dataset_sha256": "db49ec7326c12a0fcb49f9ec9234a840b638c47c86056300d3c7cb9cd3ea685b",
+  "mode": "replay",
+  "basis": "Observed baseline, zero loss on paired passing cases; Wilson intervals describe this finite case sample, not production prevalence.",
+  "segments": {
+    "journey:buy_again": {
+      "baseline": 1.0,
+      "target": 1.0,
+      "wilson_95": [
+        0.4385029682449546,
+        1
+      ],
+      "maximum_regression": 0,
+      "minimum_cases": 3,
+      "status": "measured"
+    },
+    "journey:comparison": {
+      "baseline": 1.0,
+      "target": 1.0,
+      "wilson_95": [
+        0.6456695649333126,
+        1
+      ],
+      "maximum_regression": 0,
+      "minimum_cases": 7,
+      "status": "measured"
+    },
+    "journey:compatibility": {
+      "baseline": 1.0,
+      "target": 1.0,
+      "wilson_95": [
+        0.4385029682449546,
+        1
+      ],
+      "maximum_regression": 0,
+      "minimum_cases": 3,
+      "status": "measured"
+    },
+    "journey:discovery": {
+      "baseline": 1.0,
+      "target": 1.0,
+      "wilson_95": [
+        0.9347150988829137,
+        1
+      ],
+      "maximum_regression": 0,
+      "minimum_cases": 55,
+      "status": "measured"
+    },
+    "journey:gift": {
+      "baseline": 1.0,
+      "target": 1.0,
+      "wilson_95": [
+        0.5101091635454027,
+        1
+      ],
+      "maximum_regression": 0,
+      "minimum_cases": 4,
+      "status": "measured"
+    },
+    "journey:meal": {
+      "baseline": 1.0,
+      "target": 1.0,
+      "wilson_95": [
+        0.4385029682449546,
+        1
+      ],
+      "maximum_regression": 0,
+      "minimum_cases": 3,
+      "status": "measured"
+    },
+    "journey:optimize": {
+      "baseline": 1.0,
+      "target": 1.0,
+      "wilson_95": [
+        0.6096657120978346,
+        1
+      ],
+      "maximum_regression": 0,
+      "minimum_cases": 6,
+      "status": "measured"
+    },
+    "journey:order_status": {
+      "baseline": 1.0,
+      "target": 1.0,
+      "wilson_95": [
+        0.4385029682449546,
+        1
+      ],
+      "maximum_regression": 0,
+      "minimum_cases": 3,
+      "status": "measured"
+    },
+    "journey:policy": {
+      "baseline": 1.0,
+      "target": 1.0,
+      "wilson_95": [
+        0.7008549515804559,
+        1
+      ],
+      "maximum_regression": 0,
+      "minimum_cases": 9,
+      "status": "measured"
+    },
+    "journey:shop": {
+      "baseline": 1.0,
+      "target": 1.0,
+      "wilson_95": [
+        0.4385029682449546,
+        1
+      ],
+      "maximum_regression": 0,
+      "minimum_cases": 3,
+      "status": "measured"
+    },
+    "journey:support": {
+      "baseline": 1.0,
+      "target": 1.0,
+      "wilson_95": [
+        0.4385029682449546,
+        1
+      ],
+      "maximum_regression": 0,
+      "minimum_cases": 3,
+      "status": "measured"
+    },
+    "language:ar": {
+      "baseline": 1.0,
+      "target": 1.0,
+      "wilson_95": [
+        0.5101091635454027,
+        1
+      ],
+      "maximum_regression": 0,
+      "minimum_cases": 4,
+      "status": "measured"
+    },
+    "language:ar-eg": {
+      "baseline": 1.0,
+      "target": 1.0,
+      "wilson_95": [
+        0.4385029682449546,
+        1
+      ],
+      "maximum_regression": 0,
+      "minimum_cases": 3,
+      "status": "measured"
+    },
+    "language:en": {
+      "baseline": 1.0,
+      "target": 1.0,
+      "wilson_95": [
+        0.9567605161859486,
+        1
+      ],
+      "maximum_regression": 0,
+      "minimum_cases": 85,
+      "status": "measured"
+    },
+    "language:mixed": {
+      "baseline": 1.0,
+      "target": 1.0,
+      "wilson_95": [
+        0.5101091635454027,
+        1
+      ],
+      "maximum_regression": 0,
+      "minimum_cases": 4,
+      "status": "measured"
+    },
+    "language:typo": {
+      "baseline": 1.0,
+      "target": 1.0,
+      "wilson_95": [
+        0.4385029682449546,
+        1
+      ],
+      "maximum_regression": 0,
+      "minimum_cases": 3,
+      "status": "measured"
+    },
+    "store:electronics": {
+      "baseline": 1.0,
+      "target": 1.0,
+      "wilson_95": [
+        0.8830302015002593,
+        1
+      ],
+      "maximum_regression": 0,
+      "minimum_cases": 29,
+      "status": "measured"
+    },
+    "store:grocery": {
+      "baseline": 1.0,
+      "target": 1.0,
+      "wilson_95": [
+        0.9143324298155681,
+        0.9999999999999999
+      ],
+      "maximum_regression": 0,
+      "minimum_cases": 41,
+      "status": "measured"
+    },
+    "store:jewelry": {
+      "baseline": 1.0,
+      "target": 1.0,
+      "wilson_95": [
+        0.8830302015002593,
+        1
+      ],
+      "maximum_regression": 0,
+      "minimum_cases": 29,
+      "status": "measured"
+    },
+    "store_language:electronics:ar": {
+      "baseline": 1.0,
+      "target": 1.0,
+      "wilson_95": [
+        0.20654931437723745,
+        1
+      ],
+      "maximum_regression": 0,
+      "minimum_cases": 1,
+      "status": "measured"
+    },
+    "store_language:electronics:ar-eg": {
+      "baseline": 1.0,
+      "target": 1.0,
+      "wilson_95": [
+        0.20654931437723745,
+        1
+      ],
+      "maximum_regression": 0,
+      "minimum_cases": 1,
+      "status": "measured"
+    },
+    "store_language:electronics:en": {
+      "baseline": 1.0,
+      "target": 1.0,
+      "wilson_95": [
+        0.8668077490609515,
+        0.9999999999999999
+      ],
+      "maximum_regression": 0,
+      "minimum_cases": 25,
+      "status": "measured"
+    },
+    "store_language:electronics:mixed": {
+      "baseline": 1.0,
+      "target": 1.0,
+      "wilson_95": [
+        0.20654931437723745,
+        1
+      ],
+      "maximum_regression": 0,
+      "minimum_cases": 1,
+      "status": "measured"
+    },
+    "store_language:electronics:typo": {
+      "baseline": 1.0,
+      "target": 1.0,
+      "wilson_95": [
+        0.20654931437723745,
+        1
+      ],
+      "maximum_regression": 0,
+      "minimum_cases": 1,
+      "status": "measured"
+    },
+    "store_language:grocery:ar": {
+      "baseline": 1.0,
+      "target": 1.0,
+      "wilson_95": [
+        0.34238022750665303,
+        1
+      ],
+      "maximum_regression": 0,
+      "minimum_cases": 2,
+      "status": "measured"
+    },
+    "store_language:grocery:ar-eg": {
+      "baseline": 1.0,
+      "target": 1.0,
+      "wilson_95": [
+        0.20654931437723745,
+        1
+      ],
+      "maximum_regression": 0,
+      "minimum_cases": 1,
+      "status": "measured"
+    },
+    "store_language:grocery:en": {
+      "baseline": 1.0,
+      "target": 1.0,
+      "wilson_95": [
+        0.9010990076755959,
+        0.9999999999999999
+      ],
+      "maximum_regression": 0,
+      "minimum_cases": 35,
+      "status": "measured"
+    },
+    "store_language:grocery:mixed": {
+      "baseline": 1.0,
+      "target": 1.0,
+      "wilson_95": [
+        0.34238022750665303,
+        1
+      ],
+      "maximum_regression": 0,
+      "minimum_cases": 2,
+      "status": "measured"
+    },
+    "store_language:grocery:typo": {
+      "baseline": 1.0,
+      "target": 1.0,
+      "wilson_95": [
+        0.20654931437723745,
+        1
+      ],
+      "maximum_regression": 0,
+      "minimum_cases": 1,
+      "status": "measured"
+    },
+    "store_language:jewelry:ar": {
+      "baseline": 1.0,
+      "target": 1.0,
+      "wilson_95": [
+        0.20654931437723745,
+        1
+      ],
+      "maximum_regression": 0,
+      "minimum_cases": 1,
+      "status": "measured"
+    },
+    "store_language:jewelry:ar-eg": {
+      "baseline": 1.0,
+      "target": 1.0,
+      "wilson_95": [
+        0.20654931437723745,
+        1
+      ],
+      "maximum_regression": 0,
+      "minimum_cases": 1,
+      "status": "measured"
+    },
+    "store_language:jewelry:en": {
+      "baseline": 1.0,
+      "target": 1.0,
+      "wilson_95": [
+        0.8668077490609515,
+        0.9999999999999999
+      ],
+      "maximum_regression": 0,
+      "minimum_cases": 25,
+      "status": "measured"
+    },
+    "store_language:jewelry:mixed": {
+      "baseline": 1.0,
+      "target": 1.0,
+      "wilson_95": [
+        0.20654931437723745,
+        1
+      ],
+      "maximum_regression": 0,
+      "minimum_cases": 1,
+      "status": "measured"
+    },
+    "store_language:jewelry:typo": {
+      "baseline": 1.0,
+      "target": 1.0,
+      "wilson_95": [
+        0.20654931437723745,
+        1
+      ],
+      "maximum_regression": 0,
+      "minimum_cases": 1,
+      "status": "measured"
+    },
+    "suite:adversarial": {
+      "baseline": 1.0,
+      "target": 1.0,
+      "wilson_95": [
+        0.8620237953250198,
+        1
+      ],
+      "maximum_regression": 0,
+      "minimum_cases": 24,
+      "status": "measured"
+    },
+    "suite:catalog_grounded": {
+      "baseline": 1.0,
+      "target": 1.0,
+      "wilson_95": [
+        0.8620237953250198,
+        1
+      ],
+      "maximum_regression": 0,
+      "minimum_cases": 24,
+      "status": "measured"
+    },
+    "suite:conversation": {
+      "baseline": 1.0,
+      "target": 1.0,
+      "wilson_95": [
+        0.7719046276458016,
+        0.9999999999999999
+      ],
+      "maximum_regression": 0,
+      "minimum_cases": 13,
+      "status": "measured"
+    },
+    "suite:golden": {
+      "baseline": 1.0,
+      "target": 1.0,
+      "wilson_95": [
+        0.4385029682449546,
+        1
+      ],
+      "maximum_regression": 0,
+      "minimum_cases": 3,
+      "status": "measured"
+    },
+    "suite:journey": {
+      "baseline": 1.0,
+      "target": 1.0,
+      "wilson_95": [
+        0.9010990076755959,
+        0.9999999999999999
+      ],
+      "maximum_regression": 0,
+      "minimum_cases": 35,
+      "status": "measured"
+    }
+  }
+}

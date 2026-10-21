@@ -1,0 +1,12 @@
+   Compiling api-gateway v0.1.0 (/Users/momar/Documents/commerce-ai/backend/crates/api-gateway)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 8.97s
+     Running tests/publication_measurement.rs (backend/target/debug/deps/publication_measurement-b0a5f1ae250c4e99)
+
+running 5 tests
+test classifications_precedence_spoofs_and_unknown_providers ... ok
+test persistence_first_last_touch_dedup_and_privacy ... ok
+test health_policy_feeds_loops_missing_probe_and_recovery ... ok
+test verified_revenue_linkage_no_double_count_refunds_and_permissions ... ok
+test retention_binding_and_cross_installation_sessions ... ok
+
+test result: ok. 5 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 2.84s

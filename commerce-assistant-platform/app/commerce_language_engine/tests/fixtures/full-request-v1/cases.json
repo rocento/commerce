@@ -1,0 +1,413 @@
+{
+  "schemaVersion": 1,
+  "language": "en",
+  "provenance": "Agent-authored contract regression labels reviewed against current resolver output. No independent holdout or customer-traffic accuracy claim.",
+  "cases": [
+    {
+      "id": "cart-read",
+      "family": "reads",
+      "messages": [
+        "show my cart"
+      ],
+      "expected": {
+        "status": "RESOLVED",
+        "intent": "VIEW_CART",
+        "entities": {},
+        "requestedActions": [
+          {
+            "id": "request1",
+            "intent": "VIEW_CART",
+            "items": [],
+            "after": null
+          }
+        ],
+        "operations": [],
+        "references": [],
+        "issues": []
+      }
+    },
+    {
+      "id": "quoted-product",
+      "family": "search",
+      "messages": [
+        "find \"red apple\""
+      ],
+      "expected": {
+        "status": "RESOLVED",
+        "intent": "PRODUCT_SEARCH",
+        "entities": {
+          "productText": "red apple"
+        },
+        "requestedActions": [
+          {
+            "id": "request1",
+            "intent": "PRODUCT_SEARCH",
+            "items": [],
+            "after": null
+          }
+        ],
+        "operations": [],
+        "references": [],
+        "issues": []
+      }
+    },
+    {
+      "id": "price-bound",
+      "family": "search",
+      "messages": [
+        "find shoes up to $50"
+      ],
+      "expected": {
+        "status": "RESOLVED",
+        "intent": "PRODUCT_SEARCH",
+        "entities": {
+          "category": "shoes",
+          "price": {
+            "operator": "<=",
+            "value": 50,
+            "currency": "USD"
+          },
+          "productText": "shoes"
+        },
+        "requestedActions": [
+          {
+            "id": "request1",
+            "intent": "PRODUCT_SEARCH",
+            "items": [],
+            "after": null
+          }
+        ],
+        "operations": [],
+        "references": [],
+        "issues": []
+      }
+    },
+    {
+      "id": "price-correction",
+      "family": "context",
+      "messages": [
+        "find shoes up to $50",
+        "budget $40"
+      ],
+      "expected": {
+        "status": "RESOLVED",
+        "intent": "PRODUCT_SEARCH",
+        "entities": {
+          "category": "shoes",
+          "price": {
+            "operator": "<=",
+            "value": 40,
+            "currency": "USD"
+          },
+          "productText": "shoes"
+        },
+        "requestedActions": [
+          {
+            "id": "request1",
+            "intent": "PRODUCT_SEARCH",
+            "items": [],
+            "after": null
+          }
+        ],
+        "operations": [],
+        "references": [],
+        "issues": []
+      }
+    },
+    {
+      "id": "quantity",
+      "family": "writes",
+      "messages": [
+        "add 2 apples to cart"
+      ],
+      "expected": {
+        "status": "RESOLVED",
+        "intent": "ADD_TO_CART",
+        "entities": {
+          "category": "apple",
+          "quantity": 2,
+          "destination": "cart",
+          "productText": "apples"
+        },
+        "requestedActions": [
+          {
+            "id": "request1",
+            "intent": "ADD_TO_CART",
+            "items": [
+              {
+                "productText": "apples",
+                "quantity": 2
+              }
+            ],
+            "after": null
+          }
+        ],
+        "operations": [],
+        "references": [],
+        "issues": []
+      }
+    },
+    {
+      "id": "negation",
+      "family": "negation",
+      "messages": [
+        "do not add apples to cart"
+      ],
+      "expected": {
+        "status": "UNKNOWN",
+        "intent": null,
+        "entities": {
+          "category": "apple"
+        },
+        "requestedActions": [],
+        "operations": [],
+        "references": [],
+        "issues": []
+      }
+    },
+    {
+      "id": "unrelated",
+      "family": "unknown",
+      "messages": [
+        "write a poem"
+      ],
+      "expected": {
+        "status": "UNKNOWN",
+        "intent": null,
+        "entities": {},
+        "requestedActions": [],
+        "operations": [],
+        "references": [],
+        "issues": [
+          "UNRESOLVED_REQUEST"
+        ]
+      }
+    },
+    {
+      "id": "condition",
+      "family": "conditions",
+      "messages": [
+        "add apples to cart only if delivery is free"
+      ],
+      "expected": {
+        "status": "NEEDS_CONTEXT",
+        "intent": "ADD_TO_CART",
+        "entities": {
+          "category": "apple",
+          "destination": "cart",
+          "productText": "apples",
+          "requestConstraints": [
+            {
+              "kind": "CONDITION",
+              "scope": "DELIVERY",
+              "operator": "IF",
+              "text": "only if delivery is free",
+              "value": "delivery is free",
+              "start": 19,
+              "end": 43,
+              "state": "UNSUPPORTED"
+            }
+          ]
+        },
+        "requestedActions": [
+          {
+            "id": "request1",
+            "intent": "ADD_TO_CART",
+            "items": [
+              {
+                "productText": "apples"
+              }
+            ],
+            "after": null
+          }
+        ],
+        "operations": [],
+        "references": [],
+        "issues": [
+          "CONDITIONAL_REQUEST"
+        ]
+      }
+    },
+    {
+      "id": "alternatives",
+      "family": "ambiguity",
+      "messages": [
+        "add apples to cart or save milk to wishlist"
+      ],
+      "expected": {
+        "status": "AMBIGUOUS",
+        "intent": null,
+        "entities": {
+          "category": "apple"
+        },
+        "requestedActions": [
+          {
+            "id": "request1",
+            "intent": "ADD_TO_CART",
+            "items": [
+              {
+                "productText": "apples"
+              }
+            ],
+            "after": null
+          },
+          {
+            "id": "request2",
+            "intent": "ADD_TO_WISHLIST",
+            "items": [
+              {
+                "productText": "milk"
+              }
+            ],
+            "after": null
+          }
+        ],
+        "operations": [],
+        "references": [],
+        "issues": [
+          "ALTERNATIVE_ACTIONS"
+        ]
+      }
+    },
+    {
+      "id": "ordered-pair",
+      "family": "compound",
+      "messages": [
+        "add two apples to cart then save milk to wishlist"
+      ],
+      "expected": {
+        "status": "RESOLVED",
+        "intent": null,
+        "entities": {
+          "items": [
+            {
+              "productText": "apples",
+              "quantity": 2
+            },
+            {
+              "productText": "milk"
+            }
+          ]
+        },
+        "requestedActions": [
+          {
+            "id": "request1",
+            "intent": "ADD_TO_CART",
+            "items": [
+              {
+                "productText": "apples",
+                "quantity": 2
+              }
+            ],
+            "after": null
+          },
+          {
+            "id": "request2",
+            "intent": "ADD_TO_WISHLIST",
+            "items": [
+              {
+                "productText": "milk"
+              }
+            ],
+            "after": "request1"
+          }
+        ],
+        "operations": [
+          "ADD_ITEM",
+          "SAVE_TO_WISHLIST"
+        ],
+        "references": [],
+        "issues": []
+      }
+    },
+    {
+      "id": "reversed-destinations",
+      "family": "compound",
+      "messages": [
+        "add apples to wishlist then add milk to cart"
+      ],
+      "expected": {
+        "status": "RESOLVED",
+        "intent": null,
+        "entities": {
+          "items": [
+            {
+              "productText": "apples"
+            },
+            {
+              "productText": "milk"
+            }
+          ]
+        },
+        "requestedActions": [
+          {
+            "id": "request1",
+            "intent": "ADD_TO_WISHLIST",
+            "items": [
+              {
+                "productText": "apples"
+              }
+            ],
+            "after": null
+          },
+          {
+            "id": "request2",
+            "intent": "ADD_TO_CART",
+            "items": [
+              {
+                "productText": "milk"
+              }
+            ],
+            "after": "request1"
+          }
+        ],
+        "operations": [
+          "SAVE_TO_WISHLIST",
+          "ADD_ITEM"
+        ],
+        "references": [],
+        "issues": []
+      }
+    },
+    {
+      "id": "order-reference",
+      "family": "references",
+      "messages": [
+        "track order 123"
+      ],
+      "expected": {
+        "status": "RESOLVED",
+        "intent": "TRACK_ORDER",
+        "entities": {
+          "order_reference": "123",
+          "items": [],
+          "order": {
+            "reference": "123",
+            "resolvedReference": "123"
+          }
+        },
+        "requestedActions": [
+          {
+            "id": "request1",
+            "intent": "TRACK_ORDER",
+            "items": [],
+            "after": null
+          }
+        ],
+        "operations": [
+          "TRACK_ORDER"
+        ],
+        "references": [
+          {
+            "expression": "123",
+            "kind": "order",
+            "resolved": true,
+            "state": "AUTHORITY_LOOKUP_REQUIRED",
+            "target": "123"
+          }
+        ],
+        "issues": []
+      }
+    }
+  ]
+}

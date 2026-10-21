@@ -1,0 +1,27 @@
+✔ social metadata escapes Unicode without truncating and shares canonical identity (0.825625ms)
+✔ missing image and language-only locale do not invent a card image or country (0.120459ms)
+✔ error pages have no social claims or canonical (0.070458ms)
+✔ anonymous content, no-store and identical robots; credentials never forwarded (15.62375ms)
+✔ unknown URLs, invalid pagination, methods and spoofed hosts fail closed (4.26425ms)
+✔ mismatched installation/origin and unavailable backend produce 503, never empty success (3.899208ms)
+✔ 404, approved 410 and single-hop 301 preserve status and noindex (2.171125ms)
+✔ query variants noindex and HEAD has no body (1.687875ms)
+✔ embedded state cannot close its script element (0.077958ms)
+✔ startup rejects mismatched client/server artifacts before listening (84.4225ms)
+✔ canonical metadata and discovery placeholders share only the approved origin (4.573ms)
+✔ raw encoded dot segments cannot normalize into a private 200 shell (1.4405ms)
+✔ discovery artifacts require the installation binding and preserve XML and HEAD (4.864833ms)
+✔ JSON-LD survives hostile Unicode text without creating script elements (1.411667ms)
+✔ material price currency seller URL name and availability contradictions fail closed (0.231541ms)
+✔ missing and error structured data do not create fictitious product claims (0.067708ms)
+✔ case, encoded ASCII, slash and tracking normalize before final resource redirect (1.547ms)
+✔ ambiguous and unsupported paths/parameters fail closed (0.195375ms)
+✔ only bounded normalized relative destinations are allowed (0.100375ms)
+ℹ tests 19
+ℹ suites 0
+ℹ pass 19
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 221.319458

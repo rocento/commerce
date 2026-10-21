@@ -1,0 +1,1 @@
+Architecture boundaries passed: deterministic core, canonical engine imports, read domains, action adapter/presentation boundaries, resolution ownership, orchestration boundaries, and one canonical package tree.

@@ -1,0 +1,8 @@
+# Root context is used only by assistant database images.
+**
+!commerce-ops/deploy/
+!commerce-ops/deploy/assistant/
+!commerce-ops/deploy/assistant/init-store.sh
+!commerce-assistant-platform/
+!commerce-assistant-platform/migrations/
+!commerce-assistant-platform/migrations/**

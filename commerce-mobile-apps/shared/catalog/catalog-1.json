@@ -1,0 +1,49 @@
+{
+  "merchantId": "00000000-0000-0000-0000-000000000001",
+  "categories": [
+    {
+      "id": "40000000-0000-0000-0000-000000000001",
+      "name": "Fresh picks",
+      "nameAr": "اختيارات طازجة",
+      "slug": "featured"
+    }
+  ],
+  "products": [
+    {
+      "id": "50000000-0000-0000-0000-000000000011",
+      "name": "Fresh apples",
+      "nameAr": "تفاح طازج",
+      "description": "Thoughtfully selected for your everyday. Explore the details of this demo product.",
+      "descriptionAr": "منتج مختار بعناية لاحتياجاتك اليومية. استكشف تفاصيل هذا المنتج التجريبي.",
+      "price": "3.50",
+      "currency": "USD",
+      "in_stock": true,
+      "category_id": "40000000-0000-0000-0000-000000000001",
+      "symbol": "apple"
+    },
+    {
+      "id": "50000000-0000-0000-0000-000000000012",
+      "name": "Organic avocado",
+      "nameAr": "أفوكادو عضوي",
+      "description": "Thoughtfully selected for your everyday. Explore the details of this demo product.",
+      "descriptionAr": "منتج مختار بعناية لاحتياجاتك اليومية. استكشف تفاصيل هذا المنتج التجريبي.",
+      "price": "4.20",
+      "currency": "USD",
+      "in_stock": true,
+      "category_id": "40000000-0000-0000-0000-000000000001",
+      "symbol": "avocado"
+    },
+    {
+      "id": "50000000-0000-0000-0000-000000000013",
+      "name": "Wholegrain bread",
+      "nameAr": "خبز الحبوب الكاملة",
+      "description": "Thoughtfully selected for your everyday. Explore the details of this demo product.",
+      "descriptionAr": "منتج مختار بعناية لاحتياجاتك اليومية. استكشف تفاصيل هذا المنتج التجريبي.",
+      "price": "2.80",
+      "currency": "USD",
+      "in_stock": true,
+      "category_id": "40000000-0000-0000-0000-000000000001",
+      "symbol": "bread"
+    }
+  ]
+}

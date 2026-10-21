@@ -1,0 +1,288 @@
+[
+  {
+    "classification": {
+      "campaign": "",
+      "channel": "direct",
+      "evidence": "no_external_evidence",
+      "landing": "/",
+      "medium": "",
+      "referrer_host": "",
+      "source": ""
+    },
+    "expected": "direct",
+    "synthetic_input": {}
+  },
+  {
+    "classification": {
+      "campaign": "",
+      "channel": "organic_search",
+      "evidence": "referrer_host",
+      "landing": "/",
+      "medium": "",
+      "referrer_host": "www.google.com",
+      "source": ""
+    },
+    "expected": "organic_search",
+    "synthetic_input": {
+      "referrer": "https://www.google.com/search?q=private"
+    }
+  },
+  {
+    "classification": {
+      "campaign": "",
+      "channel": "paid_search",
+      "evidence": "campaign",
+      "landing": "/",
+      "medium": "cpc",
+      "referrer_host": "chatgpt.com",
+      "source": ""
+    },
+    "expected": "paid_search",
+    "synthetic_input": {
+      "medium": "cpc",
+      "referrer": "https://chatgpt.com/c/private"
+    }
+  },
+  {
+    "classification": {
+      "campaign": "",
+      "channel": "email",
+      "evidence": "campaign",
+      "landing": "/",
+      "medium": "email",
+      "referrer_host": "",
+      "source": ""
+    },
+    "expected": "email",
+    "synthetic_input": {
+      "medium": "email"
+    }
+  },
+  {
+    "classification": {
+      "campaign": "",
+      "channel": "social",
+      "evidence": "referrer_host",
+      "landing": "/",
+      "medium": "",
+      "referrer_host": "www.instagram.com",
+      "source": ""
+    },
+    "expected": "social",
+    "synthetic_input": {
+      "referrer": "https://www.instagram.com/"
+    }
+  },
+  {
+    "classification": {
+      "campaign": "",
+      "channel": "referral",
+      "evidence": "referrer_host",
+      "landing": "/",
+      "medium": "",
+      "referrer_host": "publisher.example",
+      "source": ""
+    },
+    "expected": "referral",
+    "synthetic_input": {
+      "referrer": "https://publisher.example/"
+    }
+  },
+  {
+    "classification": {
+      "campaign": "",
+      "channel": "unknown",
+      "evidence": "unrecognized",
+      "landing": "/",
+      "medium": "",
+      "referrer_host": "",
+      "source": "unrecognized"
+    },
+    "expected": "unknown",
+    "synthetic_input": {
+      "source": "unrecognized"
+    }
+  },
+  {
+    "classification": {
+      "campaign": "",
+      "channel": "ai_chatgpt",
+      "evidence": "referrer_host",
+      "landing": "/",
+      "medium": "",
+      "referrer_host": "chatgpt.com",
+      "source": ""
+    },
+    "expected": "ai_chatgpt",
+    "synthetic_input": {
+      "referrer": "https://chatgpt.com/"
+    }
+  },
+  {
+    "classification": {
+      "campaign": "",
+      "channel": "ai_chatgpt",
+      "evidence": "utm_claim",
+      "landing": "/",
+      "medium": "",
+      "referrer_host": "",
+      "source": "chatgpt.com"
+    },
+    "expected": "ai_chatgpt",
+    "synthetic_input": {
+      "source": "chatgpt.com"
+    }
+  },
+  {
+    "classification": {
+      "campaign": "",
+      "channel": "ai_google",
+      "evidence": "referrer_host",
+      "landing": "/",
+      "medium": "",
+      "referrer_host": "gemini.google.com",
+      "source": ""
+    },
+    "expected": "ai_google",
+    "synthetic_input": {
+      "referrer": "https://gemini.google.com/app"
+    }
+  },
+  {
+    "classification": {
+      "campaign": "",
+      "channel": "ai_perplexity",
+      "evidence": "referrer_host",
+      "landing": "/",
+      "medium": "",
+      "referrer_host": "www.perplexity.ai",
+      "source": ""
+    },
+    "expected": "ai_perplexity",
+    "synthetic_input": {
+      "referrer": "https://www.perplexity.ai/"
+    }
+  },
+  {
+    "classification": {
+      "campaign": "",
+      "channel": "ai_claude",
+      "evidence": "referrer_host",
+      "landing": "/",
+      "medium": "",
+      "referrer_host": "claude.ai",
+      "source": ""
+    },
+    "expected": "ai_claude",
+    "synthetic_input": {
+      "referrer": "https://claude.ai/"
+    }
+  },
+  {
+    "classification": {
+      "campaign": "",
+      "channel": "ai_other",
+      "evidence": "utm_claim",
+      "landing": "/",
+      "medium": "ai",
+      "referrer_host": "",
+      "source": "new-provider"
+    },
+    "expected": "ai_other",
+    "synthetic_input": {
+      "medium": "ai",
+      "source": "new-provider"
+    }
+  },
+  {
+    "classification": {
+      "campaign": "",
+      "channel": "unknown",
+      "evidence": "unrecognized",
+      "landing": "/",
+      "medium": "",
+      "referrer_host": "",
+      "source": "claude.ai"
+    },
+    "expected": "unknown",
+    "synthetic_input": {
+      "source": "claude.ai"
+    }
+  },
+  {
+    "classification": {
+      "campaign": "",
+      "channel": "referral",
+      "evidence": "referrer_host",
+      "landing": "/",
+      "medium": "",
+      "referrer_host": "chatgpt.com.attacker.test",
+      "source": ""
+    },
+    "expected": "referral",
+    "synthetic_input": {
+      "referrer": "https://chatgpt.com.attacker.test/"
+    }
+  },
+  {
+    "classification": {
+      "campaign": "",
+      "channel": "unknown",
+      "evidence": "unrecognized",
+      "landing": "/",
+      "medium": "",
+      "referrer_host": "",
+      "source": ""
+    },
+    "expected": "unknown",
+    "synthetic_input": {
+      "referrer": "https://chatgpt.com@attacker.test/"
+    }
+  },
+  {
+    "classification": {
+      "campaign": "",
+      "channel": "unknown",
+      "evidence": "unrecognized",
+      "landing": "/",
+      "medium": "",
+      "referrer_host": "",
+      "source": ""
+    },
+    "expected": "unknown",
+    "synthetic_input": {
+      "referrer": "javascript:secret"
+    }
+  },
+  {
+    "classification": {
+      "campaign": "",
+      "channel": "organic_search",
+      "evidence": "referrer_host",
+      "landing": "/",
+      "medium": "",
+      "referrer_host": "www.google.com",
+      "source": "chatgpt.com"
+    },
+    "expected": "organic_search",
+    "synthetic_input": {
+      "referrer": "https://www.google.com/",
+      "source": "chatgpt.com"
+    }
+  },
+  {
+    "classification": {
+      "campaign": "",
+      "channel": "direct",
+      "evidence": "no_external_evidence",
+      "landing": "/",
+      "medium": "",
+      "referrer_host": "",
+      "source": ""
+    },
+    "expected": "direct",
+    "synthetic_input": {
+      "referrer": "https://shop.example.test/products/apple"
+    }
+  }
+]

@@ -1,0 +1,36 @@
+ Container rocento-publication-stage12a-postgres-1 Running
+ Container rocento-publication-stage12a-postgres-1 Waiting
+ Container rocento-publication-stage12a-postgres-1 Healthy
+ Container rocento-publication-stage12a-verify-run-fbaabca0f4fd Creating
+ Container rocento-publication-stage12a-verify-run-fbaabca0f4fd Created
+    Finished `release` profile [optimized] target(s) in 0.17s
+     Running tests/publication_rendering.rs (/target/release/deps/publication_rendering-2f5975df4a4f56e4)
+
+running 1 test
+
+thread 'built_renderer_real_http_status_content_freshness_and_isolation' (17) panicked at crates/api-gateway/tests/publication_rendering.rs:274:9:
+
+Pending browser requests: ["http://127.0.0.1:38391/api/v1/discovery/attribution"]
+node:internal/modules/run_main:123
+    triggerUncaughtException(
+    ^
+
+page.waitForLoadState: Timeout 30000ms exceeded.
+    at /workspace/frontend/e2e/publication-check.mjs:15:63 {
+  log: [],
+  name: 'TimeoutError'
+}
+
+Node.js v22.23.2
+
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+test built_renderer_real_http_status_content_freshness_and_isolation ... FAILED
+
+failures:
+
+failures:
+    built_renderer_real_http_status_content_freshness_and_isolation
+
+test result: FAILED. 0 passed; 1 failed; 0 ignored; 0 measured; 8 filtered out; finished in 30.85s
+
+error: test failed, to rerun pass `-p api-gateway --test publication_rendering`

@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "count": 200,
+  "development": 160,
+  "holdout": 40,
+  "provenance": "Agent-authored and agent-reviewed expectations, not independently human-reviewed customer traffic.",
+  "splitPolicy": "Eight final cases in each of five families reserved before implementation. Do not tune to holdout failures.",
+  "sha256": {
+    "development.jsonl": "279e27ab08420cdade9daa3040ff5cbd063444147977d3fa2158d2ed46128a56",
+    "holdout.jsonl": "7f5413d833f63d235d67cac8e37cfe1a1c5899c97cd2f8ca83f22afc7b6096e9"
+  },
+  "annotationRevision": 2,
+  "annotationChanges": [
+    {
+      "case": "literals-32",
+      "field": "expected.entities.productText",
+      "before": "coffee, tea and me",
+      "after": "coffee tea and me",
+      "reason": "Corrected development annotation to the existing punctuation-normalization contract; runtime behavior unchanged.",
+      "previousDevelopmentSha256": "5df7d80a42dfa08706b00976ed6c07d9546de331efd7fc8a25805f37e817b8cd"
+    }
+  ]
+}

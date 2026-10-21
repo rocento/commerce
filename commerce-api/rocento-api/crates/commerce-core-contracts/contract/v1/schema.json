@@ -1,0 +1,2050 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:rocento:commerce-core:1.0",
+  "$defs": {
+    "ActionEnvelope": {
+      "additionalProperties": false,
+      "properties": {
+        "schema_version": {
+          "const": "1.0",
+          "default": "1.0",
+          "title": "Schema Version",
+          "type": "string"
+        },
+        "context": {
+          "$ref": "#/$defs/ActorContext"
+        },
+        "risk": {
+          "$ref": "#/$defs/Risk"
+        },
+        "confirmation": {
+          "$ref": "#/$defs/Confirmation"
+        },
+        "idempotency_key": {
+          "anyOf": [
+            {
+              "pattern": "^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Idempotency Key"
+        },
+        "expected_revision": {
+          "anyOf": [
+            {
+              "minimum": 0,
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Expected Revision"
+        },
+        "expires_at": {
+          "maximum": 253402300799,
+          "minimum": 0,
+          "title": "Expires At",
+          "type": "integer"
+        }
+      },
+      "required": [
+        "context",
+        "risk",
+        "confirmation",
+        "expires_at"
+      ],
+      "title": "ActionEnvelope",
+      "type": "object"
+    },
+    "ActorContext": {
+      "additionalProperties": false,
+      "description": "Only the trusted gateway/composition root may construct this context.",
+      "properties": {
+        "schema_version": {
+          "const": "1.0",
+          "default": "1.0",
+          "title": "Schema Version",
+          "type": "string"
+        },
+        "tenant_id": {
+          "pattern": "^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$",
+          "title": "Tenant Id",
+          "type": "string"
+        },
+        "store_id": {
+          "pattern": "^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$",
+          "title": "Store Id",
+          "type": "string"
+        },
+        "actor_id": {
+          "anyOf": [
+            {
+              "pattern": "^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Actor Id"
+        },
+        "principal_id": {
+          "anyOf": [
+            {
+              "pattern": "^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Principal Id"
+        },
+        "session_id": {
+          "pattern": "^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$",
+          "title": "Session Id",
+          "type": "string"
+        },
+        "request_id": {
+          "pattern": "^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$",
+          "title": "Request Id",
+          "type": "string"
+        },
+        "channel": {
+          "enum": [
+            "storefront",
+            "admin",
+            "evaluation"
+          ],
+          "title": "Channel",
+          "type": "string"
+        },
+        "scopes": {
+          "default": [],
+          "items": {
+            "pattern": "^[a-z][a-z0-9_.:/-]{0,119}$",
+            "type": "string"
+          },
+          "maxItems": 32,
+          "title": "Scopes",
+          "type": "array"
+        }
+      },
+      "required": [
+        "tenant_id",
+        "store_id",
+        "session_id",
+        "request_id",
+        "channel"
+      ],
+      "title": "ActorContext",
+      "type": "object"
+    },
+    "Budget": {
+      "additionalProperties": false,
+      "properties": {
+        "schema_version": {
+          "const": "1.0",
+          "default": "1.0",
+          "title": "Schema Version",
+          "type": "string"
+        },
+        "max_steps": {
+          "default": 8,
+          "maximum": 16,
+          "minimum": 1,
+          "title": "Max Steps",
+          "type": "integer"
+        },
+        "max_model_calls": {
+          "default": 2,
+          "maximum": 4,
+          "minimum": 0,
+          "title": "Max Model Calls",
+          "type": "integer"
+        },
+        "max_tool_calls": {
+          "default": 6,
+          "maximum": 16,
+          "minimum": 0,
+          "title": "Max Tool Calls",
+          "type": "integer"
+        },
+        "max_tokens": {
+          "default": 16384,
+          "maximum": 1000000,
+          "minimum": 0,
+          "title": "Max Tokens",
+          "type": "integer"
+        },
+        "max_cost_micros": {
+          "default": 0,
+          "maximum": 1000000000,
+          "minimum": 0,
+          "title": "Max Cost Micros",
+          "type": "integer"
+        },
+        "timeout_ms": {
+          "default": 25000,
+          "maximum": 120000,
+          "minimum": 1,
+          "title": "Timeout Ms",
+          "type": "integer"
+        }
+      },
+      "title": "Budget",
+      "type": "object"
+    },
+    "CommerceSnapshot": {
+      "additionalProperties": false,
+      "description": "Reference to authoritative data; future milestones add domain-specific payloads.",
+      "properties": {
+        "schema_version": {
+          "const": "1.0",
+          "default": "1.0",
+          "title": "Schema Version",
+          "type": "string"
+        },
+        "id": {
+          "pattern": "^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$",
+          "title": "Id",
+          "type": "string"
+        },
+        "revision": {
+          "minimum": 0,
+          "title": "Revision",
+          "type": "integer"
+        },
+        "evidence": {
+          "default": [],
+          "items": {
+            "$ref": "#/$defs/EvidenceRef"
+          },
+          "maxItems": 20,
+          "title": "Evidence",
+          "type": "array"
+        }
+      },
+      "required": [
+        "id",
+        "revision"
+      ],
+      "title": "CommerceSnapshot",
+      "type": "object"
+    },
+    "Confirmation": {
+      "enum": [
+        "none",
+        "undo",
+        "explicit_intent",
+        "fresh_confirmation",
+        "step_up"
+      ],
+      "title": "Confirmation",
+      "type": "string"
+    },
+    "Constraint": {
+      "additionalProperties": false,
+      "properties": {
+        "schema_version": {
+          "const": "1.0",
+          "default": "1.0",
+          "title": "Schema Version",
+          "type": "string"
+        },
+        "field": {
+          "pattern": "^[a-z][a-z0-9_.:/-]{0,119}$",
+          "title": "Field",
+          "type": "string"
+        },
+        "operator": {
+          "enum": [
+            "eq",
+            "neq",
+            "lt",
+            "lte",
+            "gt",
+            "gte",
+            "in",
+            "contains"
+          ],
+          "title": "Operator",
+          "type": "string"
+        },
+        "values": {
+          "items": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "integer"
+              },
+              {
+                "type": "boolean"
+              }
+            ]
+          },
+          "maxItems": 20,
+          "minItems": 1,
+          "title": "Values",
+          "type": "array"
+        },
+        "strength": {
+          "enum": [
+            "hard",
+            "soft",
+            "inferred"
+          ],
+          "title": "Strength",
+          "type": "string"
+        },
+        "source": {
+          "enum": [
+            "platform",
+            "merchant",
+            "customer",
+            "catalog",
+            "model"
+          ],
+          "title": "Source",
+          "type": "string"
+        },
+        "scope": {
+          "enum": [
+            "goal",
+            "product",
+            "basket",
+            "action"
+          ],
+          "title": "Scope",
+          "type": "string"
+        },
+        "evidence": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/EvidenceRef"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        }
+      },
+      "required": [
+        "field",
+        "operator",
+        "values",
+        "strength",
+        "source",
+        "scope"
+      ],
+      "title": "Constraint",
+      "type": "object"
+    },
+    "ConstraintSet": {
+      "additionalProperties": false,
+      "properties": {
+        "schema_version": {
+          "const": "1.0",
+          "default": "1.0",
+          "title": "Schema Version",
+          "type": "string"
+        },
+        "constraints": {
+          "default": [],
+          "items": {
+            "$ref": "#/$defs/Constraint"
+          },
+          "maxItems": 40,
+          "title": "Constraints",
+          "type": "array"
+        },
+        "conflict": {
+          "default": "none",
+          "enum": [
+            "none",
+            "clarify",
+            "deny"
+          ],
+          "title": "Conflict",
+          "type": "string"
+        }
+      },
+      "title": "ConstraintSet",
+      "type": "object"
+    },
+    "DecisionTrace": {
+      "additionalProperties": false,
+      "properties": {
+        "schema_version": {
+          "const": "1.0",
+          "default": "1.0",
+          "title": "Schema Version",
+          "type": "string"
+        },
+        "request_id": {
+          "pattern": "^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$",
+          "title": "Request Id",
+          "type": "string"
+        },
+        "tenant_id": {
+          "pattern": "^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$",
+          "title": "Tenant Id",
+          "type": "string"
+        },
+        "store_id": {
+          "pattern": "^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$",
+          "title": "Store Id",
+          "type": "string"
+        },
+        "journey": {
+          "enum": [
+            "discovery",
+            "shop",
+            "optimize",
+            "buy_again",
+            "cart",
+            "order",
+            "general"
+          ],
+          "title": "Journey",
+          "type": "string"
+        },
+        "path": {
+          "enum": [
+            "legacy",
+            "core",
+            "deterministic"
+          ],
+          "title": "Path",
+          "type": "string"
+        },
+        "reason": {
+          "enum": [
+            "flag_off",
+            "journey_disabled",
+            "core_selected",
+            "core_unavailable",
+            "provider_unavailable",
+            "existing_deterministic"
+          ],
+          "title": "Reason",
+          "type": "string"
+        },
+        "versions": {
+          "default": [],
+          "items": {
+            "$ref": "#/$defs/DefinitionRef"
+          },
+          "maxItems": 40,
+          "title": "Versions",
+          "type": "array"
+        },
+        "deprecated": {
+          "default": [],
+          "items": {
+            "$ref": "#/$defs/DefinitionRef"
+          },
+          "maxItems": 40,
+          "title": "Deprecated",
+          "type": "array"
+        }
+      },
+      "required": [
+        "request_id",
+        "tenant_id",
+        "store_id",
+        "journey",
+        "path",
+        "reason"
+      ],
+      "title": "DecisionTrace",
+      "type": "object"
+    },
+    "DefinitionRef": {
+      "additionalProperties": false,
+      "properties": {
+        "schema_version": {
+          "const": "1.0",
+          "default": "1.0",
+          "title": "Schema Version",
+          "type": "string"
+        },
+        "id": {
+          "pattern": "^[a-z][a-z0-9_.:/-]{0,119}$",
+          "title": "Id",
+          "type": "string"
+        },
+        "version": {
+          "pattern": "^(0|[1-9][0-9]*)\\.(0|[1-9][0-9]*)\\.(0|[1-9][0-9]*)$",
+          "title": "Version",
+          "type": "string"
+        },
+        "schema_major": {
+          "const": 1,
+          "default": 1,
+          "title": "Schema Major",
+          "type": "integer"
+        }
+      },
+      "required": [
+        "id",
+        "version"
+      ],
+      "title": "DefinitionRef",
+      "type": "object"
+    },
+    "EvidenceRef": {
+      "additionalProperties": false,
+      "properties": {
+        "schema_version": {
+          "const": "1.0",
+          "default": "1.0",
+          "title": "Schema Version",
+          "type": "string"
+        },
+        "source_kind": {
+          "enum": [
+            "catalog",
+            "commerce",
+            "approved_knowledge",
+            "customer",
+            "inference"
+          ],
+          "title": "Source Kind",
+          "type": "string"
+        },
+        "source_id": {
+          "pattern": "^[a-z][a-z0-9_.:/-]{0,119}$",
+          "title": "Source Id",
+          "type": "string"
+        },
+        "source_version": {
+          "pattern": "^[a-z][a-z0-9_.:/-]{0,119}$",
+          "title": "Source Version",
+          "type": "string"
+        },
+        "freshness": {
+          "$ref": "#/$defs/Freshness"
+        },
+        "display": {
+          "enum": [
+            "cite",
+            "saved_snapshot",
+            "inference",
+            "internal"
+          ],
+          "title": "Display",
+          "type": "string"
+        }
+      },
+      "required": [
+        "source_kind",
+        "source_id",
+        "source_version",
+        "freshness",
+        "display"
+      ],
+      "title": "EvidenceRef",
+      "type": "object"
+    },
+    "ExecutionPlan": {
+      "additionalProperties": false,
+      "properties": {
+        "schema_version": {
+          "const": "1.0",
+          "default": "1.0",
+          "title": "Schema Version",
+          "type": "string"
+        },
+        "goal_id": {
+          "pattern": "^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$",
+          "title": "Goal Id",
+          "type": "string"
+        },
+        "playbook": {
+          "$ref": "#/$defs/DefinitionRef"
+        },
+        "steps": {
+          "items": {
+            "$ref": "#/$defs/PlanStep"
+          },
+          "maxItems": 16,
+          "minItems": 1,
+          "title": "Steps",
+          "type": "array"
+        },
+        "budget": {
+          "$ref": "#/$defs/Budget",
+          "default": {
+            "schema_version": "1.0",
+            "max_steps": 8,
+            "max_model_calls": 2,
+            "max_tool_calls": 6,
+            "max_tokens": 16384,
+            "max_cost_micros": 0,
+            "timeout_ms": 25000
+          }
+        }
+      },
+      "required": [
+        "goal_id",
+        "playbook",
+        "steps"
+      ],
+      "title": "ExecutionPlan",
+      "type": "object"
+    },
+    "ExecutionState": {
+      "additionalProperties": false,
+      "properties": {
+        "schema_version": {
+          "const": "1.0",
+          "default": "1.0",
+          "title": "Schema Version",
+          "type": "string"
+        },
+        "step_id": {
+          "pattern": "^[a-z][a-z0-9_.:/-]{0,119}$",
+          "title": "Step Id",
+          "type": "string"
+        },
+        "status": {
+          "$ref": "#/$defs/ExecutionStatus",
+          "default": "pending"
+        },
+        "attempts": {
+          "default": 0,
+          "maximum": 4,
+          "minimum": 0,
+          "title": "Attempts",
+          "type": "integer"
+        },
+        "failure": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/TypedFailure"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        }
+      },
+      "required": [
+        "step_id"
+      ],
+      "title": "ExecutionState",
+      "type": "object"
+    },
+    "ExecutionStatus": {
+      "enum": [
+        "pending",
+        "running",
+        "succeeded",
+        "failed",
+        "cancelled"
+      ],
+      "title": "ExecutionStatus",
+      "type": "string"
+    },
+    "FailureCategory": {
+      "enum": [
+        "retryable",
+        "replannable",
+        "user_action_required",
+        "terminal"
+      ],
+      "title": "FailureCategory",
+      "type": "string"
+    },
+    "Freshness": {
+      "additionalProperties": false,
+      "properties": {
+        "schema_version": {
+          "const": "1.0",
+          "default": "1.0",
+          "title": "Schema Version",
+          "type": "string"
+        },
+        "observed_at": {
+          "maximum": 253402300799,
+          "minimum": 0,
+          "title": "Observed At",
+          "type": "integer"
+        },
+        "expires_at": {
+          "maximum": 253402300799,
+          "minimum": 0,
+          "title": "Expires At",
+          "type": "integer"
+        },
+        "revalidate_before_action": {
+          "default": true,
+          "title": "Revalidate Before Action",
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "observed_at",
+        "expires_at"
+      ],
+      "title": "Freshness",
+      "type": "object"
+    },
+    "GoalState": {
+      "additionalProperties": false,
+      "properties": {
+        "schema_version": {
+          "const": "1.0",
+          "default": "1.0",
+          "title": "Schema Version",
+          "type": "string"
+        },
+        "id": {
+          "pattern": "^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$",
+          "title": "Id",
+          "type": "string"
+        },
+        "context": {
+          "$ref": "#/$defs/ActorContext"
+        },
+        "status": {
+          "$ref": "#/$defs/GoalStatus",
+          "default": "created"
+        },
+        "revision": {
+          "default": 0,
+          "minimum": 0,
+          "title": "Revision",
+          "type": "integer"
+        },
+        "budget": {
+          "$ref": "#/$defs/Budget",
+          "default": {
+            "schema_version": "1.0",
+            "max_steps": 8,
+            "max_model_calls": 2,
+            "max_tool_calls": 6,
+            "max_tokens": 16384,
+            "max_cost_micros": 0,
+            "timeout_ms": 25000
+          }
+        },
+        "executions": {
+          "default": [],
+          "items": {
+            "$ref": "#/$defs/ExecutionState"
+          },
+          "maxItems": 16,
+          "title": "Executions",
+          "type": "array"
+        },
+        "versions": {
+          "default": [],
+          "items": {
+            "$ref": "#/$defs/DefinitionRef"
+          },
+          "maxItems": 40,
+          "title": "Versions",
+          "type": "array"
+        }
+      },
+      "required": [
+        "id",
+        "context"
+      ],
+      "title": "GoalState",
+      "type": "object"
+    },
+    "GoalStatus": {
+      "enum": [
+        "created",
+        "planned",
+        "running",
+        "waiting_for_user",
+        "succeeded",
+        "failed",
+        "cancelled"
+      ],
+      "title": "GoalStatus",
+      "type": "string"
+    },
+    "IndustryPack": {
+      "additionalProperties": false,
+      "properties": {
+        "schema_version": {
+          "const": "1.0",
+          "default": "1.0",
+          "title": "Schema Version",
+          "type": "string"
+        },
+        "id": {
+          "pattern": "^[a-z][a-z0-9_.:/-]{0,119}$",
+          "title": "Id",
+          "type": "string"
+        },
+        "version": {
+          "pattern": "^(0|[1-9][0-9]*)\\.(0|[1-9][0-9]*)\\.(0|[1-9][0-9]*)$",
+          "title": "Version",
+          "type": "string"
+        },
+        "visibility": {
+          "$ref": "#/$defs/Visibility",
+          "default": {
+            "schema_version": "1.0",
+            "tenants": [],
+            "channels": [
+              "storefront",
+              "evaluation"
+            ],
+            "required_scopes": []
+          }
+        },
+        "dependencies": {
+          "default": [],
+          "items": {
+            "$ref": "#/$defs/DefinitionRef"
+          },
+          "maxItems": 32,
+          "title": "Dependencies",
+          "type": "array"
+        },
+        "deprecated_after": {
+          "anyOf": [
+            {
+              "maximum": 253402300799,
+              "minimum": 0,
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Deprecated After"
+        },
+        "disabled_after": {
+          "anyOf": [
+            {
+              "maximum": 253402300799,
+              "minimum": 0,
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Disabled After"
+        },
+        "kind": {
+          "const": "industry",
+          "default": "industry",
+          "title": "Kind",
+          "type": "string"
+        },
+        "attributes": {
+          "default": [],
+          "items": {
+            "pattern": "^[a-z][a-z0-9_.:/-]{0,119}$",
+            "type": "string"
+          },
+          "maxItems": 100,
+          "title": "Attributes",
+          "type": "array"
+        }
+      },
+      "required": [
+        "id",
+        "version"
+      ],
+      "title": "IndustryPack",
+      "type": "object"
+    },
+    "Intent": {
+      "additionalProperties": false,
+      "properties": {
+        "schema_version": {
+          "const": "1.0",
+          "default": "1.0",
+          "title": "Schema Version",
+          "type": "string"
+        },
+        "goal": {
+          "maxLength": 1000,
+          "minLength": 1,
+          "title": "Goal",
+          "type": "string"
+        },
+        "selected": {
+          "$ref": "#/$defs/IntentCandidate"
+        },
+        "alternatives": {
+          "default": [],
+          "items": {
+            "$ref": "#/$defs/IntentCandidate"
+          },
+          "maxItems": 5,
+          "title": "Alternatives",
+          "type": "array"
+        }
+      },
+      "required": [
+        "goal",
+        "selected"
+      ],
+      "title": "Intent",
+      "type": "object"
+    },
+    "IntentCandidate": {
+      "additionalProperties": false,
+      "properties": {
+        "schema_version": {
+          "const": "1.0",
+          "default": "1.0",
+          "title": "Schema Version",
+          "type": "string"
+        },
+        "name": {
+          "pattern": "^[a-z][a-z0-9_.:/-]{0,119}$",
+          "title": "Name",
+          "type": "string"
+        },
+        "confidence": {
+          "maximum": 1,
+          "minimum": 0,
+          "title": "Confidence",
+          "type": "number"
+        },
+        "provenance": {
+          "enum": [
+            "explicit",
+            "model",
+            "rule"
+          ],
+          "title": "Provenance",
+          "type": "string"
+        },
+        "evidence": {
+          "default": [],
+          "items": {
+            "$ref": "#/$defs/EvidenceRef"
+          },
+          "maxItems": 8,
+          "title": "Evidence",
+          "type": "array"
+        }
+      },
+      "required": [
+        "name",
+        "confidence",
+        "provenance"
+      ],
+      "title": "IntentCandidate",
+      "type": "object"
+    },
+    "Metadata": {
+      "additionalProperties": false,
+      "properties": {
+        "schema_version": {
+          "const": "1.0",
+          "default": "1.0",
+          "title": "Schema Version",
+          "type": "string"
+        },
+        "id": {
+          "pattern": "^[a-z][a-z0-9_.:/-]{0,119}$",
+          "title": "Id",
+          "type": "string"
+        },
+        "version": {
+          "pattern": "^(0|[1-9][0-9]*)\\.(0|[1-9][0-9]*)\\.(0|[1-9][0-9]*)$",
+          "title": "Version",
+          "type": "string"
+        },
+        "visibility": {
+          "$ref": "#/$defs/Visibility",
+          "default": {
+            "schema_version": "1.0",
+            "tenants": [],
+            "channels": [
+              "storefront",
+              "evaluation"
+            ],
+            "required_scopes": []
+          }
+        },
+        "dependencies": {
+          "default": [],
+          "items": {
+            "$ref": "#/$defs/DefinitionRef"
+          },
+          "maxItems": 32,
+          "title": "Dependencies",
+          "type": "array"
+        },
+        "deprecated_after": {
+          "anyOf": [
+            {
+              "maximum": 253402300799,
+              "minimum": 0,
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Deprecated After"
+        },
+        "disabled_after": {
+          "anyOf": [
+            {
+              "maximum": 253402300799,
+              "minimum": 0,
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Disabled After"
+        }
+      },
+      "required": [
+        "id",
+        "version"
+      ],
+      "title": "Metadata",
+      "type": "object"
+    },
+    "ModelRequirements": {
+      "additionalProperties": false,
+      "properties": {
+        "schema_version": {
+          "const": "1.0",
+          "default": "1.0",
+          "title": "Schema Version",
+          "type": "string"
+        },
+        "structured_output": {
+          "default": false,
+          "title": "Structured Output",
+          "type": "boolean"
+        },
+        "tool_calling": {
+          "default": false,
+          "title": "Tool Calling",
+          "type": "boolean"
+        },
+        "streaming": {
+          "default": false,
+          "title": "Streaming",
+          "type": "boolean"
+        },
+        "vision": {
+          "default": false,
+          "title": "Vision",
+          "type": "boolean"
+        },
+        "context_tokens": {
+          "default": 1,
+          "maximum": 10000000,
+          "minimum": 1,
+          "title": "Context Tokens",
+          "type": "integer"
+        },
+        "usage_reporting": {
+          "default": true,
+          "title": "Usage Reporting",
+          "type": "boolean"
+        }
+      },
+      "title": "ModelRequirements",
+      "type": "object"
+    },
+    "Observation": {
+      "additionalProperties": false,
+      "properties": {
+        "schema_version": {
+          "const": "1.0",
+          "default": "1.0",
+          "title": "Schema Version",
+          "type": "string"
+        },
+        "step_id": {
+          "pattern": "^[a-z][a-z0-9_.:/-]{0,119}$",
+          "title": "Step Id",
+          "type": "string"
+        },
+        "result": {
+          "$ref": "#/$defs/SkillResult"
+        },
+        "observed_at": {
+          "maximum": 253402300799,
+          "minimum": 0,
+          "title": "Observed At",
+          "type": "integer"
+        }
+      },
+      "required": [
+        "step_id",
+        "result",
+        "observed_at"
+      ],
+      "title": "Observation",
+      "type": "object"
+    },
+    "PlanStep": {
+      "additionalProperties": false,
+      "properties": {
+        "schema_version": {
+          "const": "1.0",
+          "default": "1.0",
+          "title": "Schema Version",
+          "type": "string"
+        },
+        "id": {
+          "pattern": "^[a-z][a-z0-9_.:/-]{0,119}$",
+          "title": "Id",
+          "type": "string"
+        },
+        "skill": {
+          "$ref": "#/$defs/DefinitionRef"
+        },
+        "depends_on": {
+          "default": [],
+          "items": {
+            "pattern": "^[a-z][a-z0-9_.:/-]{0,119}$",
+            "type": "string"
+          },
+          "maxItems": 16,
+          "title": "Depends On",
+          "type": "array"
+        },
+        "preconditions": {
+          "default": [],
+          "items": {
+            "pattern": "^[a-z][a-z0-9_.:/-]{0,119}$",
+            "type": "string"
+          },
+          "maxItems": 16,
+          "title": "Preconditions",
+          "type": "array"
+        }
+      },
+      "required": [
+        "id",
+        "skill"
+      ],
+      "title": "PlanStep",
+      "type": "object"
+    },
+    "PlaybookDefinition": {
+      "additionalProperties": false,
+      "properties": {
+        "schema_version": {
+          "const": "1.0",
+          "default": "1.0",
+          "title": "Schema Version",
+          "type": "string"
+        },
+        "id": {
+          "pattern": "^[a-z][a-z0-9_.:/-]{0,119}$",
+          "title": "Id",
+          "type": "string"
+        },
+        "version": {
+          "pattern": "^(0|[1-9][0-9]*)\\.(0|[1-9][0-9]*)\\.(0|[1-9][0-9]*)$",
+          "title": "Version",
+          "type": "string"
+        },
+        "visibility": {
+          "$ref": "#/$defs/Visibility",
+          "default": {
+            "schema_version": "1.0",
+            "tenants": [],
+            "channels": [
+              "storefront",
+              "evaluation"
+            ],
+            "required_scopes": []
+          }
+        },
+        "dependencies": {
+          "default": [],
+          "items": {
+            "$ref": "#/$defs/DefinitionRef"
+          },
+          "maxItems": 32,
+          "title": "Dependencies",
+          "type": "array"
+        },
+        "deprecated_after": {
+          "anyOf": [
+            {
+              "maximum": 253402300799,
+              "minimum": 0,
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Deprecated After"
+        },
+        "disabled_after": {
+          "anyOf": [
+            {
+              "maximum": 253402300799,
+              "minimum": 0,
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Disabled After"
+        },
+        "kind": {
+          "const": "playbook",
+          "default": "playbook",
+          "title": "Kind",
+          "type": "string"
+        },
+        "journey": {
+          "enum": [
+            "discovery",
+            "shop",
+            "optimize",
+            "buy_again",
+            "cart",
+            "order",
+            "general"
+          ],
+          "title": "Journey",
+          "type": "string"
+        },
+        "steps": {
+          "items": {
+            "$ref": "#/$defs/DefinitionRef"
+          },
+          "maxItems": 16,
+          "minItems": 1,
+          "title": "Steps",
+          "type": "array"
+        }
+      },
+      "required": [
+        "id",
+        "version",
+        "journey",
+        "steps"
+      ],
+      "title": "PlaybookDefinition",
+      "type": "object"
+    },
+    "PolicyDecision": {
+      "additionalProperties": false,
+      "properties": {
+        "schema_version": {
+          "const": "1.0",
+          "default": "1.0",
+          "title": "Schema Version",
+          "type": "string"
+        },
+        "policy": {
+          "$ref": "#/$defs/DefinitionRef"
+        },
+        "outcome": {
+          "enum": [
+            "allow",
+            "deny",
+            "require_confirmation",
+            "require_step_up"
+          ],
+          "title": "Outcome",
+          "type": "string"
+        },
+        "reasons": {
+          "items": {
+            "pattern": "^[a-z][a-z0-9_.:/-]{0,119}$",
+            "type": "string"
+          },
+          "maxItems": 10,
+          "minItems": 1,
+          "title": "Reasons",
+          "type": "array"
+        }
+      },
+      "required": [
+        "policy",
+        "outcome",
+        "reasons"
+      ],
+      "title": "PolicyDecision",
+      "type": "object"
+    },
+    "PolicyDefinition": {
+      "additionalProperties": false,
+      "properties": {
+        "schema_version": {
+          "const": "1.0",
+          "default": "1.0",
+          "title": "Schema Version",
+          "type": "string"
+        },
+        "id": {
+          "pattern": "^[a-z][a-z0-9_.:/-]{0,119}$",
+          "title": "Id",
+          "type": "string"
+        },
+        "version": {
+          "pattern": "^(0|[1-9][0-9]*)\\.(0|[1-9][0-9]*)\\.(0|[1-9][0-9]*)$",
+          "title": "Version",
+          "type": "string"
+        },
+        "visibility": {
+          "$ref": "#/$defs/Visibility",
+          "default": {
+            "schema_version": "1.0",
+            "tenants": [],
+            "channels": [
+              "storefront",
+              "evaluation"
+            ],
+            "required_scopes": []
+          }
+        },
+        "dependencies": {
+          "default": [],
+          "items": {
+            "$ref": "#/$defs/DefinitionRef"
+          },
+          "maxItems": 32,
+          "title": "Dependencies",
+          "type": "array"
+        },
+        "deprecated_after": {
+          "anyOf": [
+            {
+              "maximum": 253402300799,
+              "minimum": 0,
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Deprecated After"
+        },
+        "disabled_after": {
+          "anyOf": [
+            {
+              "maximum": 253402300799,
+              "minimum": 0,
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Disabled After"
+        },
+        "kind": {
+          "const": "policy",
+          "default": "policy",
+          "title": "Kind",
+          "type": "string"
+        },
+        "reason_codes": {
+          "items": {
+            "pattern": "^[a-z][a-z0-9_.:/-]{0,119}$",
+            "type": "string"
+          },
+          "maxItems": 20,
+          "minItems": 1,
+          "title": "Reason Codes",
+          "type": "array"
+        }
+      },
+      "required": [
+        "id",
+        "version",
+        "reason_codes"
+      ],
+      "title": "PolicyDefinition",
+      "type": "object"
+    },
+    "PolicyInput": {
+      "additionalProperties": false,
+      "properties": {
+        "schema_version": {
+          "const": "1.0",
+          "default": "1.0",
+          "title": "Schema Version",
+          "type": "string"
+        },
+        "action": {
+          "$ref": "#/$defs/ActionEnvelope"
+        },
+        "constraints": {
+          "$ref": "#/$defs/ConstraintSet"
+        },
+        "evidence": {
+          "default": [],
+          "items": {
+            "$ref": "#/$defs/EvidenceRef"
+          },
+          "maxItems": 20,
+          "title": "Evidence",
+          "type": "array"
+        }
+      },
+      "required": [
+        "action",
+        "constraints"
+      ],
+      "title": "PolicyInput",
+      "type": "object"
+    },
+    "ProductFact": {
+      "additionalProperties": false,
+      "properties": {
+        "schema_version": {
+          "const": "1.0",
+          "default": "1.0",
+          "title": "Schema Version",
+          "type": "string"
+        },
+        "product_id": {
+          "pattern": "^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$",
+          "title": "Product Id",
+          "type": "string"
+        },
+        "name": {
+          "maxLength": 1000,
+          "minLength": 1,
+          "title": "Name",
+          "type": "string"
+        },
+        "price": {
+          "pattern": "^\\d{1,12}(\\.\\d{1,6})?$",
+          "title": "Price",
+          "type": "string"
+        },
+        "currency": {
+          "pattern": "^[A-Z]{3}$",
+          "title": "Currency",
+          "type": "string"
+        },
+        "in_stock": {
+          "anyOf": [
+            {
+              "type": "boolean"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "In Stock"
+        },
+        "evidence": {
+          "$ref": "#/$defs/EvidenceRef"
+        }
+      },
+      "required": [
+        "product_id",
+        "name",
+        "price",
+        "currency",
+        "in_stock",
+        "evidence"
+      ],
+      "title": "ProductFact",
+      "type": "object"
+    },
+    "ProviderCapabilities": {
+      "additionalProperties": false,
+      "properties": {
+        "schema_version": {
+          "const": "1.0",
+          "default": "1.0",
+          "title": "Schema Version",
+          "type": "string"
+        },
+        "id": {
+          "pattern": "^[a-z][a-z0-9_.:/-]{0,119}$",
+          "title": "Id",
+          "type": "string"
+        },
+        "version": {
+          "pattern": "^(0|[1-9][0-9]*)\\.(0|[1-9][0-9]*)\\.(0|[1-9][0-9]*)$",
+          "title": "Version",
+          "type": "string"
+        },
+        "visibility": {
+          "$ref": "#/$defs/Visibility",
+          "default": {
+            "schema_version": "1.0",
+            "tenants": [],
+            "channels": [
+              "storefront",
+              "evaluation"
+            ],
+            "required_scopes": []
+          }
+        },
+        "dependencies": {
+          "default": [],
+          "items": {
+            "$ref": "#/$defs/DefinitionRef"
+          },
+          "maxItems": 32,
+          "title": "Dependencies",
+          "type": "array"
+        },
+        "deprecated_after": {
+          "anyOf": [
+            {
+              "maximum": 253402300799,
+              "minimum": 0,
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Deprecated After"
+        },
+        "disabled_after": {
+          "anyOf": [
+            {
+              "maximum": 253402300799,
+              "minimum": 0,
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Disabled After"
+        },
+        "kind": {
+          "const": "provider",
+          "default": "provider",
+          "title": "Kind",
+          "type": "string"
+        },
+        "profile": {
+          "pattern": "^[a-z][a-z0-9_.:/-]{0,119}$",
+          "title": "Profile",
+          "type": "string"
+        },
+        "structured_output": {
+          "title": "Structured Output",
+          "type": "boolean"
+        },
+        "tool_calling": {
+          "title": "Tool Calling",
+          "type": "boolean"
+        },
+        "streaming": {
+          "title": "Streaming",
+          "type": "boolean"
+        },
+        "vision": {
+          "title": "Vision",
+          "type": "boolean"
+        },
+        "max_context_tokens": {
+          "maximum": 10000000,
+          "minimum": 1,
+          "title": "Max Context Tokens",
+          "type": "integer"
+        },
+        "usage_reporting": {
+          "title": "Usage Reporting",
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "id",
+        "version",
+        "profile",
+        "structured_output",
+        "tool_calling",
+        "streaming",
+        "vision",
+        "max_context_tokens",
+        "usage_reporting"
+      ],
+      "title": "ProviderCapabilities",
+      "type": "object"
+    },
+    "Risk": {
+      "enum": [
+        "R0",
+        "R1",
+        "R2",
+        "R3",
+        "R4"
+      ],
+      "title": "Risk",
+      "type": "string"
+    },
+    "SearchQuery": {
+      "additionalProperties": false,
+      "properties": {
+        "schema_version": {
+          "const": "1.0",
+          "default": "1.0",
+          "title": "Schema Version",
+          "type": "string"
+        },
+        "text": {
+          "maxLength": 200,
+          "minLength": 1,
+          "title": "Text",
+          "type": "string"
+        },
+        "constraints": {
+          "$ref": "#/$defs/ConstraintSet",
+          "default": {
+            "schema_version": "1.0",
+            "constraints": [],
+            "conflict": "none"
+          }
+        },
+        "limit": {
+          "default": 5,
+          "maximum": 5,
+          "minimum": 1,
+          "title": "Limit",
+          "type": "integer"
+        }
+      },
+      "required": [
+        "text"
+      ],
+      "title": "SearchQuery",
+      "type": "object"
+    },
+    "SearchResult": {
+      "additionalProperties": false,
+      "properties": {
+        "schema_version": {
+          "const": "1.0",
+          "default": "1.0",
+          "title": "Schema Version",
+          "type": "string"
+        },
+        "products": {
+          "default": [],
+          "items": {
+            "$ref": "#/$defs/ProductFact"
+          },
+          "maxItems": 5,
+          "title": "Products",
+          "type": "array"
+        },
+        "exhaustive": {
+          "default": false,
+          "title": "Exhaustive",
+          "type": "boolean"
+        }
+      },
+      "title": "SearchResult",
+      "type": "object"
+    },
+    "SkillDefinition": {
+      "additionalProperties": false,
+      "properties": {
+        "schema_version": {
+          "const": "1.0",
+          "default": "1.0",
+          "title": "Schema Version",
+          "type": "string"
+        },
+        "id": {
+          "pattern": "^[a-z][a-z0-9_.:/-]{0,119}$",
+          "title": "Id",
+          "type": "string"
+        },
+        "version": {
+          "pattern": "^(0|[1-9][0-9]*)\\.(0|[1-9][0-9]*)\\.(0|[1-9][0-9]*)$",
+          "title": "Version",
+          "type": "string"
+        },
+        "visibility": {
+          "$ref": "#/$defs/Visibility",
+          "default": {
+            "schema_version": "1.0",
+            "tenants": [],
+            "channels": [
+              "storefront",
+              "evaluation"
+            ],
+            "required_scopes": []
+          }
+        },
+        "dependencies": {
+          "default": [],
+          "items": {
+            "$ref": "#/$defs/DefinitionRef"
+          },
+          "maxItems": 32,
+          "title": "Dependencies",
+          "type": "array"
+        },
+        "deprecated_after": {
+          "anyOf": [
+            {
+              "maximum": 253402300799,
+              "minimum": 0,
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Deprecated After"
+        },
+        "disabled_after": {
+          "anyOf": [
+            {
+              "maximum": 253402300799,
+              "minimum": 0,
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Disabled After"
+        },
+        "kind": {
+          "const": "skill",
+          "default": "skill",
+          "title": "Kind",
+          "type": "string"
+        },
+        "input_contract": {
+          "pattern": "^[a-z][a-z0-9_.:/-]{0,119}$",
+          "title": "Input Contract",
+          "type": "string"
+        },
+        "output_contract": {
+          "pattern": "^[a-z][a-z0-9_.:/-]{0,119}$",
+          "title": "Output Contract",
+          "type": "string"
+        },
+        "risk": {
+          "$ref": "#/$defs/Risk",
+          "default": "R0"
+        },
+        "confirmation": {
+          "$ref": "#/$defs/Confirmation",
+          "default": "none"
+        },
+        "idempotency": {
+          "default": "none",
+          "enum": [
+            "none",
+            "required"
+          ],
+          "title": "Idempotency",
+          "type": "string"
+        },
+        "freshness_seconds": {
+          "default": 0,
+          "maximum": 86400,
+          "minimum": 0,
+          "title": "Freshness Seconds",
+          "type": "integer"
+        },
+        "timeout_ms": {
+          "default": 20000,
+          "maximum": 120000,
+          "minimum": 1,
+          "title": "Timeout Ms",
+          "type": "integer"
+        },
+        "max_calls": {
+          "default": 1,
+          "maximum": 16,
+          "minimum": 0,
+          "title": "Max Calls",
+          "type": "integer"
+        }
+      },
+      "required": [
+        "id",
+        "version",
+        "input_contract",
+        "output_contract"
+      ],
+      "title": "SkillDefinition",
+      "type": "object"
+    },
+    "SkillInput": {
+      "additionalProperties": false,
+      "properties": {
+        "schema_version": {
+          "const": "1.0",
+          "default": "1.0",
+          "title": "Schema Version",
+          "type": "string"
+        },
+        "skill": {
+          "$ref": "#/$defs/DefinitionRef"
+        },
+        "action": {
+          "$ref": "#/$defs/ActionEnvelope"
+        },
+        "intent": {
+          "$ref": "#/$defs/Intent"
+        },
+        "constraints": {
+          "$ref": "#/$defs/ConstraintSet",
+          "default": {
+            "schema_version": "1.0",
+            "constraints": [],
+            "conflict": "none"
+          }
+        }
+      },
+      "required": [
+        "skill",
+        "action",
+        "intent"
+      ],
+      "title": "SkillInput",
+      "type": "object"
+    },
+    "SkillResult": {
+      "additionalProperties": false,
+      "properties": {
+        "schema_version": {
+          "const": "1.0",
+          "default": "1.0",
+          "title": "Schema Version",
+          "type": "string"
+        },
+        "skill": {
+          "$ref": "#/$defs/DefinitionRef"
+        },
+        "status": {
+          "enum": [
+            "succeeded",
+            "failed",
+            "requires_action"
+          ],
+          "title": "Status",
+          "type": "string"
+        },
+        "evidence": {
+          "default": [],
+          "items": {
+            "$ref": "#/$defs/EvidenceRef"
+          },
+          "maxItems": 20,
+          "title": "Evidence",
+          "type": "array"
+        },
+        "failure": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/TypedFailure"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        }
+      },
+      "required": [
+        "skill",
+        "status"
+      ],
+      "title": "SkillResult",
+      "type": "object"
+    },
+    "TypedFailure": {
+      "additionalProperties": false,
+      "properties": {
+        "schema_version": {
+          "const": "1.0",
+          "default": "1.0",
+          "title": "Schema Version",
+          "type": "string"
+        },
+        "category": {
+          "$ref": "#/$defs/FailureCategory"
+        },
+        "code": {
+          "pattern": "^[a-z][a-z0-9_.:/-]{0,119}$",
+          "title": "Code",
+          "type": "string"
+        },
+        "request_id": {
+          "pattern": "^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$",
+          "title": "Request Id",
+          "type": "string"
+        },
+        "recovery": {
+          "enum": [
+            "retry",
+            "refresh",
+            "clarify",
+            "authenticate",
+            "browse",
+            "stop"
+          ],
+          "title": "Recovery",
+          "type": "string"
+        }
+      },
+      "required": [
+        "category",
+        "code",
+        "request_id",
+        "recovery"
+      ],
+      "title": "TypedFailure",
+      "type": "object"
+    },
+    "VerificationReport": {
+      "additionalProperties": false,
+      "properties": {
+        "schema_version": {
+          "const": "1.0",
+          "default": "1.0",
+          "title": "Schema Version",
+          "type": "string"
+        },
+        "goal_id": {
+          "pattern": "^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$",
+          "title": "Goal Id",
+          "type": "string"
+        },
+        "status": {
+          "enum": [
+            "verified",
+            "rejected",
+            "unknown"
+          ],
+          "title": "Status",
+          "type": "string"
+        },
+        "constraints_satisfied": {
+          "title": "Constraints Satisfied",
+          "type": "boolean"
+        },
+        "policies_satisfied": {
+          "title": "Policies Satisfied",
+          "type": "boolean"
+        },
+        "evidence_fresh": {
+          "title": "Evidence Fresh",
+          "type": "boolean"
+        },
+        "action_ready": {
+          "title": "Action Ready",
+          "type": "boolean"
+        },
+        "reasons": {
+          "default": [],
+          "items": {
+            "pattern": "^[a-z][a-z0-9_.:/-]{0,119}$",
+            "type": "string"
+          },
+          "maxItems": 20,
+          "title": "Reasons",
+          "type": "array"
+        }
+      },
+      "required": [
+        "goal_id",
+        "status",
+        "constraints_satisfied",
+        "policies_satisfied",
+        "evidence_fresh",
+        "action_ready"
+      ],
+      "title": "VerificationReport",
+      "type": "object"
+    },
+    "Visibility": {
+      "additionalProperties": false,
+      "properties": {
+        "schema_version": {
+          "const": "1.0",
+          "default": "1.0",
+          "title": "Schema Version",
+          "type": "string"
+        },
+        "tenants": {
+          "default": [],
+          "items": {
+            "pattern": "^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$",
+            "type": "string"
+          },
+          "maxItems": 100,
+          "title": "Tenants",
+          "type": "array"
+        },
+        "channels": {
+          "default": [
+            "storefront",
+            "evaluation"
+          ],
+          "items": {
+            "enum": [
+              "storefront",
+              "admin",
+              "evaluation"
+            ],
+            "type": "string"
+          },
+          "title": "Channels",
+          "type": "array"
+        },
+        "required_scopes": {
+          "default": [],
+          "items": {
+            "pattern": "^[a-z][a-z0-9_.:/-]{0,119}$",
+            "type": "string"
+          },
+          "maxItems": 32,
+          "title": "Required Scopes",
+          "type": "array"
+        }
+      },
+      "title": "Visibility",
+      "type": "object"
+    }
+  }
+}

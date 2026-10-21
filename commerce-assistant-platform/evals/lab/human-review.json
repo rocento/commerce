@@ -1,0 +1,156 @@
+{
+  "version": "1",
+  "dataset_sha256": "db49ec7326c12a0fcb49f9ec9234a840b638c47c86056300d3c7cb9cd3ea685b",
+  "runtime_sha256": "d0347212bbe1f731f522758143e6648ee4e7e03127826bbcd0218c8e6e190b2c",
+  "status": "pending_human_review",
+  "judge": {
+    "enabled": false,
+    "provider": null,
+    "model": null,
+    "rubric_version": "1",
+    "repetitions": 0,
+    "variance": null,
+    "calibration": "No human labels yet; automated judging is disabled."
+  },
+  "rubric": {
+    "helpfulness": "0: no usable next step; 1: partly usable; 2: completes the stated goal or gives a necessary actionable clarification.",
+    "tradeoffs": "0: misleading/hidden constraint trade-off; 1: incomplete; 2: explains budget, fit, missing facts and alternatives when relevant.",
+    "over_questioning": "0: unnecessary/repeated questions; 1: partly redundant; 2: asks only for information required for a safe useful next step.",
+    "trust": "0: unsupported facts/promises or hidden action; 1: incomplete uncertainty/sources; 2: grounded, scoped, explicit uncertainty and customer control."
+  },
+  "promotion_rule": "A reviewer must verify the scoped observation, independently write expected assertions, add a regression case, and review the dataset diff. Never copy an answer to gold solely because the model produced it.",
+  "items": [
+    {
+      "case_id": "grocery-verified-hard-constraints",
+      "status": "passed",
+      "failure_layers": [],
+      "assertions": [],
+      "trace_sha256": "d8ce9f49559e40c152bcda9619aa7643617223e8148424d2e86ee28c5d189671",
+      "reviewer": null,
+      "reviewed_at": null,
+      "scores": null,
+      "evidence": null,
+      "resolution": null
+    },
+    {
+      "case_id": "grocery-unknown-requirement",
+      "status": "passed",
+      "failure_layers": [],
+      "assertions": [],
+      "trace_sha256": "f2c55afad78b8db9dc18e65da0a1cb51febc3bb85706296eb07b7f66819475a5",
+      "reviewer": null,
+      "reviewed_at": null,
+      "scores": null,
+      "evidence": null,
+      "resolution": null
+    },
+    {
+      "case_id": "grocery-gift-budget",
+      "status": "passed",
+      "failure_layers": [],
+      "assertions": [],
+      "trace_sha256": "d8ce9f49559e40c152bcda9619aa7643617223e8148424d2e86ee28c5d189671",
+      "reviewer": null,
+      "reviewed_at": null,
+      "scores": null,
+      "evidence": null,
+      "resolution": null
+    },
+    {
+      "case_id": "grocery-comparison-order",
+      "status": "passed",
+      "failure_layers": [],
+      "assertions": [],
+      "trace_sha256": "02b3167eb604b1d3fc5cdb8f67ed1d6a6c27f46df1dd93d0d9f6cb941133ec67",
+      "reviewer": null,
+      "reviewed_at": null,
+      "scores": null,
+      "evidence": null,
+      "resolution": null
+    },
+    {
+      "case_id": "grocery-order-guide",
+      "status": "passed",
+      "failure_layers": [],
+      "assertions": [],
+      "trace_sha256": "c58110fc67a6d448260fc77847c30d4d44510fdce14a9fc39500bd1d726270e3",
+      "reviewer": null,
+      "reviewed_at": null,
+      "scores": null,
+      "evidence": null,
+      "resolution": null
+    },
+    {
+      "case_id": "grocery-unsupported-policy",
+      "status": "passed",
+      "failure_layers": [],
+      "assertions": [],
+      "trace_sha256": "29c537fa7eaf71c84b505c2faa2bb770ee097d7a389627a577791056fdedd042",
+      "reviewer": null,
+      "reviewed_at": null,
+      "scores": null,
+      "evidence": null,
+      "resolution": null
+    },
+    {
+      "case_id": "grocery-support-policy",
+      "status": "passed",
+      "failure_layers": [],
+      "assertions": [],
+      "trace_sha256": "29c537fa7eaf71c84b505c2faa2bb770ee097d7a389627a577791056fdedd042",
+      "reviewer": null,
+      "reviewed_at": null,
+      "scores": null,
+      "evidence": null,
+      "resolution": null
+    },
+    {
+      "case_id": "grocery-shop",
+      "status": "passed",
+      "failure_layers": [],
+      "assertions": [],
+      "trace_sha256": "3273b06f2ac52d65fc6c313f8554ff773c45a15955dc36a83961815f35f369a8",
+      "reviewer": null,
+      "reviewed_at": null,
+      "scores": null,
+      "evidence": null,
+      "resolution": null
+    },
+    {
+      "case_id": "grocery-optimize-quantities",
+      "status": "passed",
+      "failure_layers": [],
+      "assertions": [],
+      "trace_sha256": "696f290dd5f934074f6dc028ecdb24908aee7fcab340eb8beb7c58c085d636b2",
+      "reviewer": null,
+      "reviewed_at": null,
+      "scores": null,
+      "evidence": null,
+      "resolution": null
+    },
+    {
+      "case_id": "grocery-buy-again-owned-order",
+      "status": "passed",
+      "failure_layers": [],
+      "assertions": [],
+      "trace_sha256": "9cc5992cb9878fc67168f5eefc0e222023b892855e013a4c803cc896c9d88d66",
+      "reviewer": null,
+      "reviewed_at": null,
+      "scores": null,
+      "evidence": null,
+      "resolution": null
+    },
+    {
+      "case_id": "grocery-meal-uncertainty",
+      "status": "passed",
+      "failure_layers": [],
+      "assertions": [],
+      "trace_sha256": "f3e5bf59731c675cded4d3d596f8f06b6ae3cdd8d01646819757493cf4a5228e",
+      "reviewer": null,
+      "reviewed_at": null,
+      "scores": null,
+      "evidence": null,
+      "resolution": null
+    }
+  ]
+}

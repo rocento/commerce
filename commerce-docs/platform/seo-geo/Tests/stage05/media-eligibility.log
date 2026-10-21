@@ -1,0 +1,71 @@
+   Compiling num-traits v0.2.19
+   Compiling rust_decimal v1.43.0
+   Compiling chrono v0.4.45
+   Compiling atoi v2.0.0
+   Compiling simd-adler32 v0.3.10
+   Compiling adler2 v2.0.1
+   Compiling zune-core v0.5.3
+   Compiling byteorder-lite v0.1.0
+   Compiling pxfm v0.1.30
+   Compiling quick-error v2.0.1
+   Compiling infra-db v0.1.0 (/Users/momar/Documents/commerce-ai/backend/crates/infra-db)
+   Compiling bytemuck v1.25.2
+   Compiling miniz_oxide v0.9.1
+   Compiling miniz_oxide v0.8.9
+   Compiling fdeflate v0.3.7
+   Compiling image-webp v0.2.4
+   Compiling zune-jpeg v0.5.15
+   Compiling num-integer v0.1.47
+   Compiling flate2 v1.1.10
+   Compiling sqlx-core v0.8.6
+   Compiling num-bigint v0.4.8
+   Compiling png v0.18.1
+   Compiling moxcms v0.8.1
+   Compiling simple_asn1 v0.6.4
+   Compiling jsonwebtoken v9.3.1
+   Compiling sqlx-postgres v0.8.6
+   Compiling image v0.25.10
+   Compiling sqlx-macros-core v0.8.6
+   Compiling sqlx-macros v0.8.6
+   Compiling sqlx v0.8.6
+   Compiling infra-events v0.1.0 (/Users/momar/Documents/commerce-ai/backend/crates/infra-events)
+   Compiling infra-auth v0.1.0 (/Users/momar/Documents/commerce-ai/backend/crates/infra-auth)
+   Compiling domain-admin-iam v0.1.0 (/Users/momar/Documents/commerce-ai/backend/crates/domain-admin-iam)
+   Compiling domain-inventory v0.1.0 (/Users/momar/Documents/commerce-ai/backend/crates/domain-inventory)
+   Compiling domain-attributes v0.1.0 (/Users/momar/Documents/commerce-ai/backend/crates/domain-attributes)
+   Compiling domain-payments v0.1.0 (/Users/momar/Documents/commerce-ai/backend/crates/domain-payments)
+   Compiling domain-theme v0.1.0 (/Users/momar/Documents/commerce-ai/backend/crates/domain-theme)
+   Compiling domain-fulfillment v0.1.0 (/Users/momar/Documents/commerce-ai/backend/crates/domain-fulfillment)
+   Compiling domain-tax v0.1.0 (/Users/momar/Documents/commerce-ai/backend/crates/domain-tax)
+   Compiling domain-reviews v0.1.0 (/Users/momar/Documents/commerce-ai/backend/crates/domain-reviews)
+   Compiling domain-cms v0.1.0 (/Users/momar/Documents/commerce-ai/backend/crates/domain-cms)
+   Compiling domain-catalog v0.1.0 (/Users/momar/Documents/commerce-ai/backend/crates/domain-catalog)
+   Compiling domain-customers v0.1.0 (/Users/momar/Documents/commerce-ai/backend/crates/domain-customers)
+   Compiling domain-pricing-promotions v0.1.0 (/Users/momar/Documents/commerce-ai/backend/crates/domain-pricing-promotions)
+   Compiling domain-orders v0.1.0 (/Users/momar/Documents/commerce-ai/backend/crates/domain-orders)
+   Compiling domain-support v0.1.0 (/Users/momar/Documents/commerce-ai/backend/crates/domain-support)
+   Compiling domain-cart-checkout v0.1.0 (/Users/momar/Documents/commerce-ai/backend/crates/domain-cart-checkout)
+   Compiling domain-search-client v0.1.0 (/Users/momar/Documents/commerce-ai/backend/crates/domain-search-client)
+   Compiling domain-admin-operations v0.1.0 (/Users/momar/Documents/commerce-ai/backend/crates/domain-admin-operations)
+   Compiling api-gateway v0.1.0 (/Users/momar/Documents/commerce-ai/backend/crates/api-gateway)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 23.73s
+     Running tests/publication_metadata.rs (backend/target/debug/deps/publication_metadata-e23d8be9a5e19d5f)
+
+running 1 test
+test image_eligibility_is_reference_based_and_revocable ... FAILED
+
+failures:
+
+---- image_eligibility_is_reference_based_and_revocable stdout ----
+
+thread 'image_eligibility_is_reference_based_and_revocable' panicked at crates/api-gateway/tests/publication_metadata.rs:17:233:
+called `Result::unwrap()` on an `Err` value: Database(PgDatabaseError { severity: Error, code: "23502", message: "null value in column \"description\" of relation \"products\" violates not-null constraint", detail: Some("Failing row contains (00b87a33-6571-4bd8-ad7a-192f5641b6b4, fruit, fruit, Fruit, null, 1.00, USD, kg, 14fcceab-4685-4810-97a7-78a03c99fda5, {}, {6f7986aa-e57f-4ca8-b259-5024d7eca5c1}, t, t, 2026-09-21 07:08:55.713968+00, simple, null, {}, null)."), hint: None, position: None, where: None, schema: Some("catalog"), table: Some("products"), column: Some("description"), data_type: None, constraint: None, file: Some("execMain.c"), line: Some(2057), routine: Some("ExecConstraints") })
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+
+
+failures:
+    image_eligibility_is_reference_based_and_revocable
+
+test result: FAILED. 0 passed; 1 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.48s
+
+error: test failed, to rerun pass `-p api-gateway --test publication_metadata`

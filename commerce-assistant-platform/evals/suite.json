@@ -1,0 +1,66 @@
+{
+  "version": 2,
+  "python_files": [
+    "tests",
+    "../scripts/tests/test_agent_evals.py"
+  ],
+  "python_live_files": ["tests/test_baskets_live.py"],
+  "rust_suites": [
+    "merchant",
+    "assistant",
+    "shopping",
+    "trust",
+    "market",
+    "orders",
+    "assistant_settings",
+    "customer_journey"
+  ],
+  "separate_browser_acceptance": ["customer_journey.customer_profile_opens_real_customer_journey_in_browser"],
+  "dimensions": {
+    "factual_correctness": [
+      "test_gold_discovery",
+      "test_gold_comparison",
+      "test_gold_followup_refreshes",
+      "merchant_answers_match_order",
+      "merchant_inventory_uses",
+      "category_decline_compares"
+    ],
+    "constraint_satisfaction": [
+      "test_gold_discovery",
+      "test_gold_preference"
+    ],
+    "tool_selection": [
+      "test_gold_discovery",
+      "test_gold_comparison",
+      "test_gold_followup_refreshes"
+    ],
+    "retrieval_relevance": [
+      "test_retrieval_filters_threshold",
+      "test_runtime_context_provenance",
+      "test_runtime_rechecks_retriever"
+    ],
+    "hallucination_scenario_failure_rate": [
+      "test_gold_discovery",
+      "test_gold_comparison",
+      "test_gold_followup_refreshes"
+    ],
+    "permission_scenario_failure_rate": [
+      "ownership",
+      "idempotent",
+      "rolls_back",
+      "stale",
+      "test_tool_authorization_cannot",
+      "test_injected_content_cannot",
+      "test_malicious_product_tool",
+      "m10_order_tool_enforces",
+      "merchant_permissions_revocation",
+      "merchant_history_feedback"
+    ],
+    "structured_response_validity": [
+      "test_gold_discovery",
+      "test_gold_comparison",
+      "test_invalid_provider_stream",
+      "test_invalid_batches"
+    ]
+  }
+}

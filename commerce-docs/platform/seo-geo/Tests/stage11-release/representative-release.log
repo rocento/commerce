@@ -1,0 +1,37 @@
+ Container rocento-publication-release-postgres-1 Running
+ Container rocento-publication-release-postgres-1 Waiting
+ Container rocento-publication-release-postgres-1 Healthy
+ Container rocento-publication-release-verify-run-b1276510a423 Creating
+ Container rocento-publication-release-verify-run-b1276510a423 Created
+   Compiling api-gateway v0.1.0 (/workspace/backend/crates/api-gateway)
+    Finished `release` profile [optimized] target(s) in 4.62s
+     Running tests/publication_release.rs (/target/release/deps/publication_release-69d2e60f3e78287e)
+
+running 1 test
+test release_catalog_concurrency_and_full_feed has been running for over 60 seconds
+Recorded 18 throttled, image-bearing browser samples
+feed progress: 100 resources, 10 bounded batches
+feed progress: 200 resources, 20 bounded batches
+feed progress: 300 resources, 30 bounded batches
+feed progress: 400 resources, 40 bounded batches
+feed progress: 500 resources, 50 bounded batches
+feed progress: 600 resources, 60 bounded batches
+feed progress: 700 resources, 70 bounded batches
+feed progress: 800 resources, 80 bounded batches
+feed progress: 900 resources, 90 bounded batches
+feed progress: 1000 resources, 100 bounded batches
+feed progress: 1100 resources, 110 bounded batches
+feed progress: 1200 resources, 120 bounded batches
+feed progress: 1300 resources, 130 bounded batches
+feed progress: 1400 resources, 140 bounded batches
+feed progress: 1500 resources, 150 bounded batches
+feed progress: 1600 resources, 160 bounded batches
+feed progress: 1700 resources, 170 bounded batches
+feed progress: 1800 resources, 180 bounded batches
+feed progress: 1900 resources, 190 bounded batches
+feed progress: 2000 resources, 200 bounded batches
+feed progress: 2100 resources, 210 bounded batches
+feed progress: 2200 resources, 220 bounded batches
+test release_catalog_concurrency_and_full_feed ... ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 343.45s

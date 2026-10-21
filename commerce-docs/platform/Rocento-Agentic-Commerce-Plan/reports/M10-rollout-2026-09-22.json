@@ -1,0 +1,22 @@
+{
+  "status": "passed",
+  "checks": [
+    "scoped_currency_and_bounded_selling_units",
+    "authoritative_physical_measure",
+    "invalid_fraction_number_and_unknown_fields_rejected",
+    "egp_budget_and_confirmation",
+    "cross_cart_proposal_isolation",
+    "confirmation_survives_restart_without_execution",
+    "currency_switch_requires_reviewed_catalog",
+    "disable_blocks_measured_apply_without_relabeling_egp",
+    "six_commerce_fingerprints_unchanged"
+  ],
+  "project": "rocento-shopping-stage-97710b3c",
+  "origin": "http://127.0.0.1:62354",
+  "images": {
+    "api-gateway": "sha256:e25a039b4c5833bbb0e90d3b018e17b63c74b4967dabeef30b984834a4b9981a",
+    "ai-service": "sha256:1572ffda9f1818567027e21a8fc7fbfb34533b2666f4753370c3bb056d056b24"
+  },
+  "production_changed": false,
+  "arabic_in_scope": false
+}

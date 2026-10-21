@@ -1,0 +1,44 @@
+[
+  {
+    "id": "rustle-search-v1",
+    "intent": "PRODUCT_SEARCH",
+    "utterance": "could ya rustle up two bananas under 20 EGP",
+    "canonical_text": "find two bananas under 20 EGP",
+    "review": {
+      "version": 2,
+      "label": "positive",
+      "expected_status": "RESOLVED",
+      "slots": {},
+      "context_requirements": [],
+      "family": "rustle-search-v1",
+      "split": "train",
+      "provenance": "synthetic",
+      "review_status": "approved",
+      "recovery": {
+        "from_prefix": "could ya rustle up",
+        "to_prefix": "find"
+      }
+    }
+  },
+  {
+    "id": "hunt-search-v1",
+    "intent": "PRODUCT_SEARCH",
+    "utterance": "i am hunting for organic milk up to 100 EGP",
+    "canonical_text": "find organic milk up to 100 EGP",
+    "review": {
+      "version": 2,
+      "label": "positive",
+      "expected_status": "RESOLVED",
+      "slots": {},
+      "context_requirements": [],
+      "family": "hunt-search-v1",
+      "split": "train",
+      "provenance": "synthetic",
+      "review_status": "approved",
+      "recovery": {
+        "from_prefix": "i am hunting for",
+        "to_prefix": "find"
+      }
+    }
+  }
+]

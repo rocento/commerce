@@ -1,0 +1,14 @@
+/* The native account list and OrderDetailView show compact text history. */
+.ms-native-phone .ms-order-history-list { display:grid; gap:12px; }
+.ms-native-phone .ms-order-history-list button.ms-native-order-link { display:flex; flex-direction:column; align-items:flex-start; gap:5px; padding:8px 0; border:0; border-radius:0; background:transparent; color:var(--phone-primary); font-size:16px; text-align:start; }
+.ms-native-phone .ms-order-history-list button.ms-native-order-link small { font-size:12px; }
+.ms-native-phone.ms-android .ms-order-history-list button.ms-native-order-link { padding:8px 12px; font-size:14px; }
+.ms-native-phone .ms-native-order.ms-native-order-matched { padding:0; border:0; border-radius:0; background:transparent; gap:10px; }
+.ms-native-phone .ms-native-order-matched > h4 { margin:0; font-size:17px; }
+.ms-native-phone.ms-android .ms-native-order-matched > h4 { font-size:16px; }
+.ms-native-phone .ms-native-order-matched > .ms-native-order-status { padding:0; margin:0; border:0; border-radius:0; background:transparent; font-size:16px; font-weight:400; }
+.ms-native-phone .ms-native-order-matched .ms-native-order-history { list-style:none; padding:0; margin:0; display:flex; flex-direction:column; gap:10px; font-size:12px; overflow-wrap:anywhere; }
+.ms-native-phone .ms-native-order-matched .ms-refresh-order-status { align-self:flex-start; width:auto; min-height:44px; padding:8px 0; border:0; border-radius:0; color:var(--phone-primary); background:transparent; font:inherit; }
+.ms-native-phone.ms-android .ms-native-order-matched .ms-refresh-order-status { padding:8px 12px; font-size:14px; }
+.ms-order-preview-tools { border-top:1px dashed color-mix(in srgb,var(--phone-text) 25%,transparent); margin-top:14px; min-width:0; }
+.ms-order-preview-tools > summary { cursor:pointer; padding:14px 0; font-size:14px; color:var(--phone-primary); }

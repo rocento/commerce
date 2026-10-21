@@ -1,0 +1,13 @@
+{
+  "version": 1,
+  "count": 1000,
+  "selection": 700,
+  "clarification": 300,
+  "language": "English, including local product names and typos",
+  "provenance": "Synthetic, assistant-authored 100 language frames crossed with 10 independently labeled baskets/products. Not production conversations.",
+  "split": "800 development / 200 template-held-out. Frozen before engine changes; shared vocabulary means this is not an independent real-world benchmark.",
+  "sha256": {
+    "development.jsonl": "673bb7ba3287fdb207a5f7724aaaa959aed512878eedf71fbb8f2238a29db39c",
+    "holdout.jsonl": "d1209542c364a45be22a786d0fc19411db725885d47c693b7177870f4fb9b00f"
+  }
+}

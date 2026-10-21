@@ -1,0 +1,10 @@
+{
+  "feed": "https://shop.example.test/products/orchard-selection",
+  "html": "https://shop.example.test/products/orchard-selection",
+  "installation_id": "20af1bc0-c0cf-4bd6-909d-ae2e8460e3aa",
+  "json_ld": "https://shop.example.test/products/orchard-selection",
+  "locale": "en",
+  "path": "/products/orchard-selection",
+  "sitemap": "https://shop.example.test/products/orchard-selection",
+  "url": "https://shop.example.test/products/orchard-selection"
+}

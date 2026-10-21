@@ -1,0 +1,17 @@
+{
+  "date": "2026-09-21",
+  "publication_integration": 18,
+  "shared_regressions": 42,
+  "public_commerce_units": 13,
+  "node_checks": 19,
+  "frontend_vitest": {
+    "files": 22,
+    "passed": 117
+  },
+  "client_ssr_seal": "exit 0",
+  "typescript_admin_storefront": "exit 0",
+  "changed_tsx_eslint": "exit 0",
+  "gateway_clippy": "exit 0",
+  "admin_browser_walkthrough": "not run",
+  "production_deployment": "not implemented"
+}

@@ -1,0 +1,6 @@
+ Container rocento-publication-stage12a-postgres-1 Running
+ Container rocento-publication-stage12a-postgres-1 Waiting
+ Container rocento-publication-stage12a-postgres-1 Healthy
+ Container rocento-publication-stage12a-verify-run-02625735b4d0 Creating
+ Container rocento-publication-stage12a-verify-run-02625735b4d0 Created
+    Finished `release` profile [optimized] target(s) in 0.16s

@@ -1,0 +1,2120 @@
+{
+  "untracked_count": 4563,
+  "deleted_count": 600,
+  "exact_relocations": {
+    "Rocento-Agentic-Commerce-Plan/architecture/M03-ADRs.md": [
+      "docs/Rocento-Agentic-Commerce-Plan/architecture/M03-ADRs.md"
+    ],
+    "Rocento-Agentic-Commerce-Plan/reports/M01-acceptance-2026-09-21.json": [
+      "docs/Rocento-Agentic-Commerce-Plan/reports/M01-acceptance-2026-09-21.json"
+    ],
+    "Rocento-Agentic-Commerce-Plan/reports/M01-acceptance-initial-2026-09-21.json": [
+      "docs/Rocento-Agentic-Commerce-Plan/reports/M01-acceptance-initial-2026-09-21.json"
+    ],
+    "Rocento-Agentic-Commerce-Plan/reports/M01-completion-2026-09-21.md": [
+      "docs/Rocento-Agentic-Commerce-Plan/reports/M01-completion-2026-09-21.md"
+    ],
+    "Rocento-Agentic-Commerce-Plan/reports/M01-discovery-2026-09-21.md": [
+      "docs/Rocento-Agentic-Commerce-Plan/reports/M01-discovery-2026-09-21.md"
+    ],
+    "Rocento-Agentic-Commerce-Plan/reports/M01-implementation-2026-09-21.md": [
+      "docs/Rocento-Agentic-Commerce-Plan/reports/M01-implementation-2026-09-21.md"
+    ],
+    "Rocento-Agentic-Commerce-Plan/reports/M01-manifest-2026-09-21.json": [
+      "docs/Rocento-Agentic-Commerce-Plan/reports/M01-manifest-2026-09-21.json"
+    ],
+    "Rocento-Agentic-Commerce-Plan/reports/M02-commerce-unchanged-2026-09-21.json": [
+      "artifacts/evaluation-lab/live/commerce-unchanged.json",
+      "docs/Rocento-Agentic-Commerce-Plan/reports/M02-commerce-unchanged-2026-09-21.json"
+    ],
+    "Rocento-Agentic-Commerce-Plan/reports/M02-discovery-2026-09-21.md": [
+      "docs/Rocento-Agentic-Commerce-Plan/reports/M02-discovery-2026-09-21.md"
+    ],
+    "Rocento-Agentic-Commerce-Plan/reports/M02-english-fixes-2026-09-21.md": [
+      "docs/Rocento-Agentic-Commerce-Plan/reports/M02-english-fixes-2026-09-21.md"
+    ],
+    "Rocento-Agentic-Commerce-Plan/reports/M02-english-gift-variant-failure-2026-09-21.json": [
+      "artifacts/evaluation-lab/english-live-gift-variant/report.json",
+      "docs/Rocento-Agentic-Commerce-Plan/reports/M02-english-gift-variant-failure-2026-09-21.json"
+    ],
+    "Rocento-Agentic-Commerce-Plan/reports/M02-english-initial-live-batch-2026-09-21.json": [
+      "artifacts/evaluation-lab/english-live-batch.json",
+      "docs/Rocento-Agentic-Commerce-Plan/reports/M02-english-initial-live-batch-2026-09-21.json"
+    ],
+    "Rocento-Agentic-Commerce-Plan/reports/M02-english-live-comparison-2026-09-21.json": [
+      "artifacts/evaluation-lab/english-final-comparison.json",
+      "docs/Rocento-Agentic-Commerce-Plan/reports/M02-english-live-comparison-2026-09-21.json"
+    ],
+    "Rocento-Agentic-Commerce-Plan/reports/M02-english-original-scoped-live-2026-09-21.json": [
+      "artifacts/evaluation-lab/english-original-live/report.json",
+      "docs/Rocento-Agentic-Commerce-Plan/reports/M02-english-original-scoped-live-2026-09-21.json"
+    ],
+    "Rocento-Agentic-Commerce-Plan/reports/M02-english-regression-2026-09-21.json": [
+      "artifacts/evaluation-lab/english-fix-regression/report.json",
+      "docs/Rocento-Agentic-Commerce-Plan/reports/M02-english-regression-2026-09-21.json"
+    ],
+    "Rocento-Agentic-Commerce-Plan/reports/M02-english-resolutions-2026-09-21.json": [
+      "docs/Rocento-Agentic-Commerce-Plan/reports/M02-english-resolutions-2026-09-21.json"
+    ],
+    "Rocento-Agentic-Commerce-Plan/reports/M02-english-rollout-2026-09-21.json": [
+      "docs/Rocento-Agentic-Commerce-Plan/reports/M02-english-rollout-2026-09-21.json"
+    ],
+    "Rocento-Agentic-Commerce-Plan/reports/M02-english-version-manifest-2026-09-21.json": [
+      "docs/Rocento-Agentic-Commerce-Plan/reports/M02-english-version-manifest-2026-09-21.json"
+    ],
+    "Rocento-Agentic-Commerce-Plan/reports/M02-live-baseline-2026-09-21.md": [
+      "artifacts/evaluation-lab/live/report.md",
+      "docs/Rocento-Agentic-Commerce-Plan/reports/M02-live-baseline-2026-09-21.md"
+    ],
+    "Rocento-Agentic-Commerce-Plan/reports/M02-live-evidence-normalization-2026-09-21.json": [
+      "artifacts/evaluation-lab/live/identity-normalization.json",
+      "docs/Rocento-Agentic-Commerce-Plan/reports/M02-live-evidence-normalization-2026-09-21.json"
+    ],
+    "Rocento-Agentic-Commerce-Plan/reports/M02-live-original-2026-09-21.json": [
+      "artifacts/evaluation-lab/live/original-report.json",
+      "docs/Rocento-Agentic-Commerce-Plan/reports/M02-live-original-2026-09-21.json"
+    ],
+    "Rocento-Agentic-Commerce-Plan/reports/M02-outcomes-2026-09-21.json": [
+      "artifacts/evaluation-lab/outcomes.json",
+      "docs/Rocento-Agentic-Commerce-Plan/reports/M02-outcomes-2026-09-21.json"
+    ],
+    "Rocento-Agentic-Commerce-Plan/reports/M02-performance-2026-09-21.json": [
+      "docs/Rocento-Agentic-Commerce-Plan/reports/M02-performance-2026-09-21.json"
+    ],
+    "Rocento-Agentic-Commerce-Plan/reports/M02-regression-2026-09-21.json": [
+      "artifacts/evaluation-lab/regression/report.json",
+      "docs/Rocento-Agentic-Commerce-Plan/reports/M02-regression-2026-09-21.json"
+    ],
+    "Rocento-Agentic-Commerce-Plan/reports/M02-replay-baseline-2026-09-21.md": [
+      "artifacts/evaluation-lab/baseline/report.md",
+      "docs/Rocento-Agentic-Commerce-Plan/reports/M02-replay-baseline-2026-09-21.md"
+    ],
+    "Rocento-Agentic-Commerce-Plan/reports/M02-version-manifest-2026-09-21.json": [
+      "docs/Rocento-Agentic-Commerce-Plan/reports/M02-version-manifest-2026-09-21.json"
+    ],
+    "Rocento-Agentic-Commerce-Plan/reports/M03-core-replay-2026-09-22.json": [
+      "artifacts/evaluation-lab/m03-core-accepted/report.json",
+      "docs/Rocento-Agentic-Commerce-Plan/reports/M03-core-replay-2026-09-22.json"
+    ],
+    "Rocento-Agentic-Commerce-Plan/reports/M03-discovery-2026-09-21.md": [
+      "docs/Rocento-Agentic-Commerce-Plan/reports/M03-discovery-2026-09-21.md"
+    ],
+    "Rocento-Agentic-Commerce-Plan/reports/M03-implementation-2026-09-22.md": [
+      "docs/Rocento-Agentic-Commerce-Plan/reports/M03-implementation-2026-09-22.md"
+    ],
+    "Rocento-Agentic-Commerce-Plan/reports/M03-initial-live-2026-09-22.json": [
+      "artifacts/evaluation-lab/m03-live/report.json",
+      "docs/Rocento-Agentic-Commerce-Plan/reports/M03-initial-live-2026-09-22.json"
+    ],
+    "Rocento-Agentic-Commerce-Plan/reports/M03-live-2026-09-22.json": [
+      "artifacts/evaluation-lab/m03-live-accepted/report.json",
+      "docs/Rocento-Agentic-Commerce-Plan/reports/M03-live-2026-09-22.json"
+    ],
+    "Rocento-Agentic-Commerce-Plan/reports/M03-live-comparison-2026-09-22.json": [
+      "artifacts/evaluation-lab/m03-live-accepted-comparison.json",
+      "docs/Rocento-Agentic-Commerce-Plan/reports/M03-live-comparison-2026-09-22.json"
+    ],
+    "Rocento-Agentic-Commerce-Plan/reports/M03-parity-2026-09-22.json": [
+      "docs/Rocento-Agentic-Commerce-Plan/reports/M03-parity-2026-09-22.json"
+    ],
+    "Rocento-Agentic-Commerce-Plan/reports/M03-regression-2026-09-22.json": [
+      "artifacts/evaluation-lab/m03-regression-accepted/report.json",
+      "docs/Rocento-Agentic-Commerce-Plan/reports/M03-regression-2026-09-22.json"
+    ],
+    "Rocento-Agentic-Commerce-Plan/reports/M03-replay-comparison-2026-09-22.json": [
+      "artifacts/evaluation-lab/m03-core-accepted-comparison.json",
+      "docs/Rocento-Agentic-Commerce-Plan/reports/M03-replay-comparison-2026-09-22.json"
+    ],
+    "Rocento-Agentic-Commerce-Plan/reports/M03-rollout-2026-09-22.json": [
+      "docs/Rocento-Agentic-Commerce-Plan/reports/M03-rollout-2026-09-22.json"
+    ],
+    "Rocento-Agentic-Commerce-Plan/reports/M03-version-manifest-2026-09-22.json": [
+      "docs/Rocento-Agentic-Commerce-Plan/reports/M03-version-manifest-2026-09-22.json"
+    ],
+    "Rocento-Agentic-Commerce-Plan/reports/M04-discovery-2026-09-22.md": [
+      "docs/Rocento-Agentic-Commerce-Plan/reports/M04-discovery-2026-09-22.md"
+    ],
+    "Rocento-Agentic-Commerce-Plan/reports/M04-rollout-2026-09-22.json": [
+      "docs/Rocento-Agentic-Commerce-Plan/reports/M04-rollout-2026-09-22.json"
+    ],
+    "Rocento-Agentic-Commerce-Plan/reports/M05-discovery-2026-09-22.md": [
+      "docs/Rocento-Agentic-Commerce-Plan/reports/M05-discovery-2026-09-22.md"
+    ],
+    "Rocento-Agentic-Commerce-Plan/reports/M05-implementation-2026-09-22.md": [
+      "docs/Rocento-Agentic-Commerce-Plan/reports/M05-implementation-2026-09-22.md"
+    ],
+    "Rocento-Agentic-Commerce-Plan/reports/M05-rollout-2026-09-22.json": [
+      "docs/Rocento-Agentic-Commerce-Plan/reports/M05-rollout-2026-09-22.json"
+    ],
+    "Rocento-Agentic-Commerce-Plan/reports/M06-discovery-2026-09-22.md": [
+      "docs/Rocento-Agentic-Commerce-Plan/reports/M06-discovery-2026-09-22.md"
+    ],
+    "Rocento-Agentic-Commerce-Plan/reports/M06-implementation-2026-09-22.md": [
+      "docs/Rocento-Agentic-Commerce-Plan/reports/M06-implementation-2026-09-22.md"
+    ],
+    "Rocento-Agentic-Commerce-Plan/reports/M06-rollout-2026-09-22.json": [
+      "docs/Rocento-Agentic-Commerce-Plan/reports/M06-rollout-2026-09-22.json"
+    ],
+    "Rocento-Agentic-Commerce-Plan/reports/M07-discovery-2026-09-22.md": [
+      "docs/Rocento-Agentic-Commerce-Plan/reports/M07-discovery-2026-09-22.md"
+    ],
+    "Rocento-Agentic-Commerce-Plan/reports/M07-implementation-2026-09-22.md": [
+      "docs/Rocento-Agentic-Commerce-Plan/reports/M07-implementation-2026-09-22.md"
+    ],
+    "Rocento-Agentic-Commerce-Plan/reports/M07-rollout-2026-09-22.json": [
+      "docs/Rocento-Agentic-Commerce-Plan/reports/M07-rollout-2026-09-22.json"
+    ],
+    "Rocento-Agentic-Commerce-Plan/reports/M08-data-inventory-2026-09-22.md": [
+      "docs/Rocento-Agentic-Commerce-Plan/reports/M08-data-inventory-2026-09-22.md"
+    ],
+    "Rocento-Agentic-Commerce-Plan/reports/M08-discovery-2026-09-22.md": [
+      "docs/Rocento-Agentic-Commerce-Plan/reports/M08-discovery-2026-09-22.md"
+    ],
+    "Rocento-Agentic-Commerce-Plan/reports/M08-implementation-2026-09-22.md": [
+      "docs/Rocento-Agentic-Commerce-Plan/reports/M08-implementation-2026-09-22.md"
+    ],
+    "Rocento-Agentic-Commerce-Plan/reports/M08-rollout-2026-09-22.json": [
+      "docs/Rocento-Agentic-Commerce-Plan/reports/M08-rollout-2026-09-22.json"
+    ],
+    "Rocento-Agentic-Commerce-Plan/reports/M09-data-inventory-2026-09-22.md": [
+      "docs/Rocento-Agentic-Commerce-Plan/reports/M09-data-inventory-2026-09-22.md"
+    ],
+    "Rocento-Agentic-Commerce-Plan/reports/M09-discovery-2026-09-22.md": [
+      "docs/Rocento-Agentic-Commerce-Plan/reports/M09-discovery-2026-09-22.md"
+    ],
+    "Rocento-Agentic-Commerce-Plan/reports/M09-http-acceptance-2026-09-22.json": [
+      "docs/Rocento-Agentic-Commerce-Plan/reports/M09-http-acceptance-2026-09-22.json"
+    ],
+    "Rocento-Agentic-Commerce-Plan/reports/M09-implementation-2026-09-22.md": [
+      "docs/Rocento-Agentic-Commerce-Plan/reports/M09-implementation-2026-09-22.md"
+    ],
+    "Rocento-Agentic-Commerce-Plan/reports/M09-rollout-2026-09-22.json": [
+      "docs/Rocento-Agentic-Commerce-Plan/reports/M09-rollout-2026-09-22.json"
+    ],
+    "Rocento-Agentic-Commerce-Plan/reports/M09-trust-protocol-2026-09-22.md": [
+      "docs/Rocento-Agentic-Commerce-Plan/reports/M09-trust-protocol-2026-09-22.md"
+    ],
+    "SEO-GEO/Archive/documentation-before-2026-09-22-cleanup.zip": [
+      "docs/seo-geo/Archive/documentation-before-2026-09-22-cleanup.zip"
+    ],
+    "SEO-GEO/Archive/original-files.json": [
+      "docs/seo-geo/Archive/original-files.json"
+    ],
+    "SEO-GEO/Archive/relocation-map.json": [
+      "docs/seo-geo/Archive/relocation-map.json"
+    ],
+    "SEO-GEO/Docs/content.md": [
+      "docs/seo-geo/Docs/content.md"
+    ],
+    "SEO-GEO/Docs/feeds.md": [
+      "docs/seo-geo/Docs/feeds.md"
+    ],
+    "SEO-GEO/Docs/security.md": [
+      "docs/seo-geo/Docs/security.md"
+    ],
+    "SEO-GEO/Docs/validation.md": [
+      "docs/seo-geo/Docs/validation.md"
+    ],
+    "SEO-GEO/PLAN.md": [
+      "docs/seo-geo/PLAN.md"
+    ],
+    "SEO-GEO/README.md": [
+      "docs/seo-geo/README.md"
+    ],
+    "SEO-GEO/Reports/00-program-contract.md": [
+      "docs/seo-geo/Reports/00-program-contract.md"
+    ],
+    "SEO-GEO/Reports/01-assessment-and-target-architecture.md": [
+      "docs/seo-geo/Reports/01-assessment-and-target-architecture.md"
+    ],
+    "SEO-GEO/Reports/01-source-manifest.json": [
+      "docs/seo-geo/Reports/01-source-manifest.json"
+    ],
+    "SEO-GEO/Reports/02-effective-indexing-and-domain-policy.md": [
+      "docs/seo-geo/Reports/02-effective-indexing-and-domain-policy.md"
+    ],
+    "SEO-GEO/Reports/02-existing-source-delta.patch": [
+      "docs/seo-geo/Reports/02-existing-source-delta.patch"
+    ],
+    "SEO-GEO/Reports/02-source-manifest.json": [
+      "docs/seo-geo/Reports/02-source-manifest.json"
+    ],
+    "SEO-GEO/Reports/02-validation-follow-up.md": [
+      "docs/seo-geo/Reports/02-validation-follow-up.md"
+    ],
+    "SEO-GEO/Reports/03-existing-source-delta.patch": [
+      "docs/seo-geo/Reports/03-existing-source-delta.patch"
+    ],
+    "SEO-GEO/Reports/03-server-visible-rendering-and-http-status.md": [
+      "docs/seo-geo/Reports/03-server-visible-rendering-and-http-status.md"
+    ],
+    "SEO-GEO/Reports/03-source-manifest.json": [
+      "docs/seo-geo/Reports/03-source-manifest.json"
+    ],
+    "SEO-GEO/Reports/04-canonical-urls-slugs-and-redirects.md": [
+      "docs/seo-geo/Reports/04-canonical-urls-slugs-and-redirects.md"
+    ],
+    "SEO-GEO/Reports/04-existing-source-delta.patch": [
+      "docs/seo-geo/Reports/04-existing-source-delta.patch"
+    ],
+    "SEO-GEO/Reports/04-source-manifest.json": [
+      "docs/seo-geo/Reports/04-source-manifest.json"
+    ],
+    "SEO-GEO/Reports/05-existing-source-delta.patch": [
+      "docs/seo-geo/Reports/05-existing-source-delta.patch"
+    ],
+    "SEO-GEO/Reports/05-metadata-on-page-links-and-images.md": [
+      "docs/seo-geo/Reports/05-metadata-on-page-links-and-images.md"
+    ],
+    "SEO-GEO/Reports/05-source-manifest.json": [
+      "docs/seo-geo/Reports/05-source-manifest.json"
+    ],
+    "SEO-GEO/Reports/06-source-manifest.json": [
+      "docs/seo-geo/Reports/06-source-manifest.json"
+    ],
+    "SEO-GEO/Reports/06-structured-data-and-product-facts.md": [
+      "docs/seo-geo/Reports/06-structured-data-and-product-facts.md"
+    ],
+    "SEO-GEO/Reports/07-robots-sitemaps-and-crawler-policy.md": [
+      "docs/seo-geo/Reports/07-robots-sitemaps-and-crawler-policy.md"
+    ],
+    "SEO-GEO/Reports/07-source-manifest.json": [
+      "docs/seo-geo/Reports/07-source-manifest.json"
+    ],
+    "SEO-GEO/Reports/08-merchant-entity-content-and-geo.md": [
+      "docs/seo-geo/Reports/08-merchant-entity-content-and-geo.md"
+    ],
+    "SEO-GEO/Reports/08-source-manifest.json": [
+      "docs/seo-geo/Reports/08-source-manifest.json"
+    ],
+    "SEO-GEO/Reports/09-product-feeds-and-freshness.md": [
+      "docs/seo-geo/Reports/09-product-feeds-and-freshness.md"
+    ],
+    "SEO-GEO/Reports/09-source-manifest.json": [
+      "docs/seo-geo/Reports/09-source-manifest.json"
+    ],
+    "SEO-GEO/Reports/10-attribution-health-and-observability.md": [
+      "docs/seo-geo/Reports/10-attribution-health-and-observability.md"
+    ],
+    "SEO-GEO/Reports/10-source-manifest.json": [
+      "docs/seo-geo/Reports/10-source-manifest.json"
+    ],
+    "SEO-GEO/Reports/11-performance-security-and-tenant-isolation.md": [
+      "docs/seo-geo/Reports/11-performance-security-and-tenant-isolation.md"
+    ],
+    "SEO-GEO/Reports/11-release-blocker-resolution.md": [
+      "docs/seo-geo/Reports/11-release-blocker-resolution.md"
+    ],
+    "SEO-GEO/Reports/11-release-source-manifest.json": [
+      "docs/seo-geo/Reports/11-release-source-manifest.json"
+    ],
+    "SEO-GEO/Reports/11-resume-checkpoint.md": [
+      "docs/seo-geo/Reports/11-resume-checkpoint.md"
+    ],
+    "SEO-GEO/Reports/11-source-manifest.json": [
+      "docs/seo-geo/Reports/11-source-manifest.json"
+    ],
+    "SEO-GEO/Reports/12a-final-validation-preparation.md": [
+      "docs/seo-geo/Reports/12a-final-validation-preparation.md"
+    ],
+    "SEO-GEO/Reports/12a-source-manifest.json": [
+      "docs/seo-geo/Reports/12a-source-manifest.json"
+    ],
+    "SEO-GEO/Reports/README.md": [
+      "docs/seo-geo/Reports/README.md"
+    ],
+    "SEO-GEO/Reports/SEO-GEO-final-report.md": [
+      "docs/seo-geo/Reports/SEO-GEO-final-report.md"
+    ],
+    "SEO-GEO/Reports/evidence/stage07/.gitattributes": [
+      "docs/seo-geo/Reports/evidence/stage07/.gitattributes",
+      "docs/seo-geo/Reports/evidence/stage08/.gitattributes",
+      "docs/seo-geo/Tests/stage03/.gitattributes",
+      "docs/seo-geo/Tests/stage04/.gitattributes",
+      "docs/seo-geo/Tests/stage05/.gitattributes",
+      "docs/seo-geo/Tests/stage06/.gitattributes"
+    ],
+    "SEO-GEO/Reports/evidence/stage07/canonical-identities.json": [
+      "docs/seo-geo/Reports/evidence/stage07/canonical-identities.json"
+    ],
+    "SEO-GEO/Reports/evidence/stage07/canonical-pagination-200.http": [
+      "docs/seo-geo/Reports/evidence/stage07/canonical-pagination-200.http"
+    ],
+    "SEO-GEO/Reports/evidence/stage07/canonical-product-200.http": [
+      "docs/seo-geo/Reports/evidence/stage07/canonical-product-200.http"
+    ],
+    "SEO-GEO/Reports/evidence/stage07/categories-fruit.http": [
+      "docs/seo-geo/Reports/evidence/stage07/categories-fruit.http"
+    ],
+    "SEO-GEO/Reports/evidence/stage07/history-first-301.http": [
+      "docs/seo-geo/Reports/evidence/stage07/history-first-301.http",
+      "docs/seo-geo/Reports/evidence/stage07/history-previous-301.http",
+      "docs/seo-geo/Reports/evidence/stage07/legacy-id-301.http",
+      "docs/seo-geo/Reports/evidence/stage07/normalized-history-301.http"
+    ],
+    "SEO-GEO/Reports/evidence/stage07/history-previous-301.http": [
+      "docs/seo-geo/Reports/evidence/stage07/history-first-301.http",
+      "docs/seo-geo/Reports/evidence/stage07/history-previous-301.http",
+      "docs/seo-geo/Reports/evidence/stage07/legacy-id-301.http",
+      "docs/seo-geo/Reports/evidence/stage07/normalized-history-301.http"
+    ],
+    "SEO-GEO/Reports/evidence/stage07/home.http": [
+      "docs/seo-geo/Reports/evidence/stage07/home.http"
+    ],
+    "SEO-GEO/Reports/evidence/stage07/legacy-id-301.http": [
+      "docs/seo-geo/Reports/evidence/stage07/history-first-301.http",
+      "docs/seo-geo/Reports/evidence/stage07/history-previous-301.http",
+      "docs/seo-geo/Reports/evidence/stage07/legacy-id-301.http",
+      "docs/seo-geo/Reports/evidence/stage07/normalized-history-301.http"
+    ],
+    "SEO-GEO/Reports/evidence/stage07/metadata-.html": [
+      "docs/seo-geo/Reports/evidence/stage07/metadata-.html"
+    ],
+    "SEO-GEO/Reports/evidence/stage07/metadata-categories_fruit.html": [
+      "docs/seo-geo/Reports/evidence/stage07/metadata-categories_fruit.html"
+    ],
+    "SEO-GEO/Reports/evidence/stage07/metadata-pages_about.html": [
+      "docs/seo-geo/Reports/evidence/stage07/metadata-pages_about.html"
+    ],
+    "SEO-GEO/Reports/evidence/stage07/metadata-products_apples.html": [
+      "docs/seo-geo/Reports/evidence/stage07/metadata-products_apples.html"
+    ],
+    "SEO-GEO/Reports/evidence/stage07/normalized-history-301.http": [
+      "docs/seo-geo/Reports/evidence/stage07/history-first-301.http",
+      "docs/seo-geo/Reports/evidence/stage07/history-previous-301.http",
+      "docs/seo-geo/Reports/evidence/stage07/legacy-id-301.http",
+      "docs/seo-geo/Reports/evidence/stage07/normalized-history-301.http"
+    ],
+    "SEO-GEO/Reports/evidence/stage07/pages-about.http": [
+      "docs/seo-geo/Reports/evidence/stage07/pages-about.http"
+    ],
+    "SEO-GEO/Reports/evidence/stage07/products-apples.http": [
+      "docs/seo-geo/Reports/evidence/stage07/products-apples.http"
+    ],
+    "SEO-GEO/Reports/evidence/stage07/renamed-301.http": [
+      "docs/seo-geo/Reports/evidence/stage07/renamed-301.http"
+    ],
+    "SEO-GEO/Reports/evidence/stage07/retired-410.http": [
+      "docs/seo-geo/Reports/evidence/stage07/retired-410.http"
+    ],
+    "SEO-GEO/Reports/evidence/stage07/robots-admin.txt": [
+      "docs/seo-geo/Reports/evidence/stage07/robots-admin.txt",
+      "docs/seo-geo/Reports/evidence/stage07/robots-demo.txt",
+      "docs/seo-geo/Reports/evidence/stage07/robots-development.txt",
+      "docs/seo-geo/Reports/evidence/stage07/robots-staging.txt",
+      "docs/seo-geo/Reports/evidence/stage08/robots-admin.txt",
+      "docs/seo-geo/Reports/evidence/stage08/robots-demo.txt",
+      "docs/seo-geo/Reports/evidence/stage08/robots-development.txt",
+      "docs/seo-geo/Reports/evidence/stage08/robots-staging.txt",
+      "docs/seo-geo/Reports/evidence/stage11-release/robots-admin.txt",
+      "docs/seo-geo/Reports/evidence/stage11-release/robots-demo.txt",
+      "docs/seo-geo/Reports/evidence/stage11-release/robots-development.txt",
+      "docs/seo-geo/Reports/evidence/stage11-release/robots-staging.txt",
+      "docs/seo-geo/Reports/evidence/stage12a/robots-admin.txt",
+      "docs/seo-geo/Reports/evidence/stage12a/robots-demo.txt",
+      "docs/seo-geo/Reports/evidence/stage12a/robots-development.txt",
+      "docs/seo-geo/Reports/evidence/stage12a/robots-staging.txt"
+    ],
+    "SEO-GEO/Reports/evidence/stage07/robots-demo.txt": [
+      "docs/seo-geo/Reports/evidence/stage07/robots-admin.txt",
+      "docs/seo-geo/Reports/evidence/stage07/robots-demo.txt",
+      "docs/seo-geo/Reports/evidence/stage07/robots-development.txt",
+      "docs/seo-geo/Reports/evidence/stage07/robots-staging.txt",
+      "docs/seo-geo/Reports/evidence/stage08/robots-admin.txt",
+      "docs/seo-geo/Reports/evidence/stage08/robots-demo.txt",
+      "docs/seo-geo/Reports/evidence/stage08/robots-development.txt",
+      "docs/seo-geo/Reports/evidence/stage08/robots-staging.txt",
+      "docs/seo-geo/Reports/evidence/stage11-release/robots-admin.txt",
+      "docs/seo-geo/Reports/evidence/stage11-release/robots-demo.txt",
+      "docs/seo-geo/Reports/evidence/stage11-release/robots-development.txt",
+      "docs/seo-geo/Reports/evidence/stage11-release/robots-staging.txt",
+      "docs/seo-geo/Reports/evidence/stage12a/robots-admin.txt",
+      "docs/seo-geo/Reports/evidence/stage12a/robots-demo.txt",
+      "docs/seo-geo/Reports/evidence/stage12a/robots-development.txt",
+      "docs/seo-geo/Reports/evidence/stage12a/robots-staging.txt"
+    ],
+    "SEO-GEO/Reports/evidence/stage07/robots-development.txt": [
+      "docs/seo-geo/Reports/evidence/stage07/robots-admin.txt",
+      "docs/seo-geo/Reports/evidence/stage07/robots-demo.txt",
+      "docs/seo-geo/Reports/evidence/stage07/robots-development.txt",
+      "docs/seo-geo/Reports/evidence/stage07/robots-staging.txt",
+      "docs/seo-geo/Reports/evidence/stage08/robots-admin.txt",
+      "docs/seo-geo/Reports/evidence/stage08/robots-demo.txt",
+      "docs/seo-geo/Reports/evidence/stage08/robots-development.txt",
+      "docs/seo-geo/Reports/evidence/stage08/robots-staging.txt",
+      "docs/seo-geo/Reports/evidence/stage11-release/robots-admin.txt",
+      "docs/seo-geo/Reports/evidence/stage11-release/robots-demo.txt",
+      "docs/seo-geo/Reports/evidence/stage11-release/robots-development.txt",
+      "docs/seo-geo/Reports/evidence/stage11-release/robots-staging.txt",
+      "docs/seo-geo/Reports/evidence/stage12a/robots-admin.txt",
+      "docs/seo-geo/Reports/evidence/stage12a/robots-demo.txt",
+      "docs/seo-geo/Reports/evidence/stage12a/robots-development.txt",
+      "docs/seo-geo/Reports/evidence/stage12a/robots-staging.txt"
+    ],
+    "SEO-GEO/Reports/evidence/stage07/robots-production.txt": [
+      "docs/seo-geo/Reports/evidence/stage07/robots-production.txt",
+      "docs/seo-geo/Reports/evidence/stage08/robots-production.txt",
+      "docs/seo-geo/Reports/evidence/stage11-release/robots-production.txt",
+      "docs/seo-geo/Reports/evidence/stage12a/robots-production.txt"
+    ],
+    "SEO-GEO/Reports/evidence/stage07/robots-staging.txt": [
+      "docs/seo-geo/Reports/evidence/stage07/robots-admin.txt",
+      "docs/seo-geo/Reports/evidence/stage07/robots-demo.txt",
+      "docs/seo-geo/Reports/evidence/stage07/robots-development.txt",
+      "docs/seo-geo/Reports/evidence/stage07/robots-staging.txt",
+      "docs/seo-geo/Reports/evidence/stage08/robots-admin.txt",
+      "docs/seo-geo/Reports/evidence/stage08/robots-demo.txt",
+      "docs/seo-geo/Reports/evidence/stage08/robots-development.txt",
+      "docs/seo-geo/Reports/evidence/stage08/robots-staging.txt",
+      "docs/seo-geo/Reports/evidence/stage11-release/robots-admin.txt",
+      "docs/seo-geo/Reports/evidence/stage11-release/robots-demo.txt",
+      "docs/seo-geo/Reports/evidence/stage11-release/robots-development.txt",
+      "docs/seo-geo/Reports/evidence/stage11-release/robots-staging.txt",
+      "docs/seo-geo/Reports/evidence/stage12a/robots-admin.txt",
+      "docs/seo-geo/Reports/evidence/stage12a/robots-demo.txt",
+      "docs/seo-geo/Reports/evidence/stage12a/robots-development.txt",
+      "docs/seo-geo/Reports/evidence/stage12a/robots-staging.txt"
+    ],
+    "SEO-GEO/Reports/evidence/stage07/scale.json": [
+      "docs/seo-geo/Reports/evidence/stage07/scale.json"
+    ],
+    "SEO-GEO/Reports/evidence/stage07/sitemap-samples.json": [
+      "docs/seo-geo/Reports/evidence/stage07/sitemap-samples.json",
+      "docs/seo-geo/Reports/evidence/stage08/sitemap-samples.json",
+      "docs/seo-geo/Reports/evidence/stage11-release/sitemap-samples.json",
+      "docs/seo-geo/Reports/evidence/stage12a/sitemap-samples.json"
+    ],
+    "SEO-GEO/Reports/evidence/stage07/structured-discounted.html": [
+      "docs/seo-geo/Reports/evidence/stage07/structured-discounted.html"
+    ],
+    "SEO-GEO/Reports/evidence/stage07/structured-electronics.html": [
+      "docs/seo-geo/Reports/evidence/stage07/structured-electronics.html"
+    ],
+    "SEO-GEO/Reports/evidence/stage07/structured-fashion.html": [
+      "docs/seo-geo/Reports/evidence/stage07/structured-fashion.html"
+    ],
+    "SEO-GEO/Reports/evidence/stage07/structured-grocery.html": [
+      "docs/seo-geo/Reports/evidence/stage07/structured-grocery.html"
+    ],
+    "SEO-GEO/Reports/evidence/stage07/structured-jewelry.html": [
+      "docs/seo-geo/Reports/evidence/stage07/structured-jewelry.html"
+    ],
+    "SEO-GEO/Reports/evidence/stage07/structured-retail.html": [
+      "docs/seo-geo/Reports/evidence/stage07/structured-retail.html"
+    ],
+    "SEO-GEO/Reports/evidence/stage07/structured-skincare.html": [
+      "docs/seo-geo/Reports/evidence/stage07/structured-skincare.html"
+    ],
+    "SEO-GEO/Reports/evidence/stage07/structured-variants.html": [
+      "docs/seo-geo/Reports/evidence/stage07/structured-variants.html"
+    ],
+    "SEO-GEO/Reports/evidence/stage07/tenant-b-canonical-200.http": [
+      "docs/seo-geo/Reports/evidence/stage07/tenant-b-canonical-200.http"
+    ],
+    "SEO-GEO/Reports/evidence/stage07/unknown-404.http": [
+      "docs/seo-geo/Reports/evidence/stage07/unknown-404.http"
+    ],
+    "SEO-GEO/Reports/evidence/stage07/unsupported-sort-404.http": [
+      "docs/seo-geo/Reports/evidence/stage07/unsupported-sort-404.http"
+    ],
+    "SEO-GEO/Reports/evidence/stage08/.gitattributes": [
+      "docs/seo-geo/Reports/evidence/stage07/.gitattributes",
+      "docs/seo-geo/Reports/evidence/stage08/.gitattributes",
+      "docs/seo-geo/Tests/stage03/.gitattributes",
+      "docs/seo-geo/Tests/stage04/.gitattributes",
+      "docs/seo-geo/Tests/stage05/.gitattributes",
+      "docs/seo-geo/Tests/stage06/.gitattributes"
+    ],
+    "SEO-GEO/Reports/evidence/stage08/canonical-identities.json": [
+      "docs/seo-geo/Reports/evidence/stage08/canonical-identities.json"
+    ],
+    "SEO-GEO/Reports/evidence/stage08/canonical-pagination-200.http": [
+      "docs/seo-geo/Reports/evidence/stage08/canonical-pagination-200.http"
+    ],
+    "SEO-GEO/Reports/evidence/stage08/canonical-product-200.http": [
+      "docs/seo-geo/Reports/evidence/stage08/canonical-product-200.http"
+    ],
+    "SEO-GEO/Reports/evidence/stage08/categories-fruit.http": [
+      "docs/seo-geo/Reports/evidence/stage08/categories-fruit.http"
+    ],
+    "SEO-GEO/Reports/evidence/stage08/entity-.html": [
+      "docs/seo-geo/Reports/evidence/stage08/entity-.html"
+    ],
+    "SEO-GEO/Reports/evidence/stage08/entity-pages_buying-guide.html": [
+      "docs/seo-geo/Reports/evidence/stage08/entity-pages_buying-guide.html"
+    ],
+    "SEO-GEO/Reports/evidence/stage08/entity-pages_comparison.html": [
+      "docs/seo-geo/Reports/evidence/stage08/entity-pages_comparison.html"
+    ],
+    "SEO-GEO/Reports/evidence/stage08/entity-pages_shipping.html": [
+      "docs/seo-geo/Reports/evidence/stage08/entity-pages_shipping.html"
+    ],
+    "SEO-GEO/Reports/evidence/stage08/entity-products_apples.html": [
+      "docs/seo-geo/Reports/evidence/stage08/entity-products_apples.html"
+    ],
+    "SEO-GEO/Reports/evidence/stage08/entity-products_silver-ring.html": [
+      "docs/seo-geo/Reports/evidence/stage08/entity-products_silver-ring.html"
+    ],
+    "SEO-GEO/Reports/evidence/stage08/history-first-301.http": [
+      "docs/seo-geo/Reports/evidence/stage08/history-first-301.http",
+      "docs/seo-geo/Reports/evidence/stage08/history-previous-301.http",
+      "docs/seo-geo/Reports/evidence/stage08/legacy-id-301.http",
+      "docs/seo-geo/Reports/evidence/stage08/normalized-history-301.http"
+    ],
+    "SEO-GEO/Reports/evidence/stage08/history-previous-301.http": [
+      "docs/seo-geo/Reports/evidence/stage08/history-first-301.http",
+      "docs/seo-geo/Reports/evidence/stage08/history-previous-301.http",
+      "docs/seo-geo/Reports/evidence/stage08/legacy-id-301.http",
+      "docs/seo-geo/Reports/evidence/stage08/normalized-history-301.http"
+    ],
+    "SEO-GEO/Reports/evidence/stage08/home.http": [
+      "docs/seo-geo/Reports/evidence/stage08/home.http"
+    ],
+    "SEO-GEO/Reports/evidence/stage08/legacy-id-301.http": [
+      "docs/seo-geo/Reports/evidence/stage08/history-first-301.http",
+      "docs/seo-geo/Reports/evidence/stage08/history-previous-301.http",
+      "docs/seo-geo/Reports/evidence/stage08/legacy-id-301.http",
+      "docs/seo-geo/Reports/evidence/stage08/normalized-history-301.http"
+    ],
+    "SEO-GEO/Reports/evidence/stage08/metadata-.html": [
+      "docs/seo-geo/Reports/evidence/stage08/metadata-.html"
+    ],
+    "SEO-GEO/Reports/evidence/stage08/metadata-categories_fruit.html": [
+      "docs/seo-geo/Reports/evidence/stage08/metadata-categories_fruit.html"
+    ],
+    "SEO-GEO/Reports/evidence/stage08/metadata-pages_about.html": [
+      "docs/seo-geo/Reports/evidence/stage08/metadata-pages_about.html"
+    ],
+    "SEO-GEO/Reports/evidence/stage08/metadata-products_apples.html": [
+      "docs/seo-geo/Reports/evidence/stage08/metadata-products_apples.html"
+    ],
+    "SEO-GEO/Reports/evidence/stage08/normalized-history-301.http": [
+      "docs/seo-geo/Reports/evidence/stage08/history-first-301.http",
+      "docs/seo-geo/Reports/evidence/stage08/history-previous-301.http",
+      "docs/seo-geo/Reports/evidence/stage08/legacy-id-301.http",
+      "docs/seo-geo/Reports/evidence/stage08/normalized-history-301.http"
+    ],
+    "SEO-GEO/Reports/evidence/stage08/pages-about.http": [
+      "docs/seo-geo/Reports/evidence/stage08/pages-about.http"
+    ],
+    "SEO-GEO/Reports/evidence/stage08/products-apples.http": [
+      "docs/seo-geo/Reports/evidence/stage08/products-apples.http"
+    ],
+    "SEO-GEO/Reports/evidence/stage08/renamed-301.http": [
+      "docs/seo-geo/Reports/evidence/stage08/renamed-301.http"
+    ],
+    "SEO-GEO/Reports/evidence/stage08/retired-410.http": [
+      "docs/seo-geo/Reports/evidence/stage08/retired-410.http"
+    ],
+    "SEO-GEO/Reports/evidence/stage08/robots-admin.txt": [
+      "docs/seo-geo/Reports/evidence/stage07/robots-admin.txt",
+      "docs/seo-geo/Reports/evidence/stage07/robots-demo.txt",
+      "docs/seo-geo/Reports/evidence/stage07/robots-development.txt",
+      "docs/seo-geo/Reports/evidence/stage07/robots-staging.txt",
+      "docs/seo-geo/Reports/evidence/stage08/robots-admin.txt",
+      "docs/seo-geo/Reports/evidence/stage08/robots-demo.txt",
+      "docs/seo-geo/Reports/evidence/stage08/robots-development.txt",
+      "docs/seo-geo/Reports/evidence/stage08/robots-staging.txt",
+      "docs/seo-geo/Reports/evidence/stage11-release/robots-admin.txt",
+      "docs/seo-geo/Reports/evidence/stage11-release/robots-demo.txt",
+      "docs/seo-geo/Reports/evidence/stage11-release/robots-development.txt",
+      "docs/seo-geo/Reports/evidence/stage11-release/robots-staging.txt",
+      "docs/seo-geo/Reports/evidence/stage12a/robots-admin.txt",
+      "docs/seo-geo/Reports/evidence/stage12a/robots-demo.txt",
+      "docs/seo-geo/Reports/evidence/stage12a/robots-development.txt",
+      "docs/seo-geo/Reports/evidence/stage12a/robots-staging.txt"
+    ],
+    "SEO-GEO/Reports/evidence/stage08/robots-demo.txt": [
+      "docs/seo-geo/Reports/evidence/stage07/robots-admin.txt",
+      "docs/seo-geo/Reports/evidence/stage07/robots-demo.txt",
+      "docs/seo-geo/Reports/evidence/stage07/robots-development.txt",
+      "docs/seo-geo/Reports/evidence/stage07/robots-staging.txt",
+      "docs/seo-geo/Reports/evidence/stage08/robots-admin.txt",
+      "docs/seo-geo/Reports/evidence/stage08/robots-demo.txt",
+      "docs/seo-geo/Reports/evidence/stage08/robots-development.txt",
+      "docs/seo-geo/Reports/evidence/stage08/robots-staging.txt",
+      "docs/seo-geo/Reports/evidence/stage11-release/robots-admin.txt",
+      "docs/seo-geo/Reports/evidence/stage11-release/robots-demo.txt",
+      "docs/seo-geo/Reports/evidence/stage11-release/robots-development.txt",
+      "docs/seo-geo/Reports/evidence/stage11-release/robots-staging.txt",
+      "docs/seo-geo/Reports/evidence/stage12a/robots-admin.txt",
+      "docs/seo-geo/Reports/evidence/stage12a/robots-demo.txt",
+      "docs/seo-geo/Reports/evidence/stage12a/robots-development.txt",
+      "docs/seo-geo/Reports/evidence/stage12a/robots-staging.txt"
+    ],
+    "SEO-GEO/Reports/evidence/stage08/robots-development.txt": [
+      "docs/seo-geo/Reports/evidence/stage07/robots-admin.txt",
+      "docs/seo-geo/Reports/evidence/stage07/robots-demo.txt",
+      "docs/seo-geo/Reports/evidence/stage07/robots-development.txt",
+      "docs/seo-geo/Reports/evidence/stage07/robots-staging.txt",
+      "docs/seo-geo/Reports/evidence/stage08/robots-admin.txt",
+      "docs/seo-geo/Reports/evidence/stage08/robots-demo.txt",
+      "docs/seo-geo/Reports/evidence/stage08/robots-development.txt",
+      "docs/seo-geo/Reports/evidence/stage08/robots-staging.txt",
+      "docs/seo-geo/Reports/evidence/stage11-release/robots-admin.txt",
+      "docs/seo-geo/Reports/evidence/stage11-release/robots-demo.txt",
+      "docs/seo-geo/Reports/evidence/stage11-release/robots-development.txt",
+      "docs/seo-geo/Reports/evidence/stage11-release/robots-staging.txt",
+      "docs/seo-geo/Reports/evidence/stage12a/robots-admin.txt",
+      "docs/seo-geo/Reports/evidence/stage12a/robots-demo.txt",
+      "docs/seo-geo/Reports/evidence/stage12a/robots-development.txt",
+      "docs/seo-geo/Reports/evidence/stage12a/robots-staging.txt"
+    ],
+    "SEO-GEO/Reports/evidence/stage08/robots-production.txt": [
+      "docs/seo-geo/Reports/evidence/stage07/robots-production.txt",
+      "docs/seo-geo/Reports/evidence/stage08/robots-production.txt",
+      "docs/seo-geo/Reports/evidence/stage11-release/robots-production.txt",
+      "docs/seo-geo/Reports/evidence/stage12a/robots-production.txt"
+    ],
+    "SEO-GEO/Reports/evidence/stage08/robots-staging.txt": [
+      "docs/seo-geo/Reports/evidence/stage07/robots-admin.txt",
+      "docs/seo-geo/Reports/evidence/stage07/robots-demo.txt",
+      "docs/seo-geo/Reports/evidence/stage07/robots-development.txt",
+      "docs/seo-geo/Reports/evidence/stage07/robots-staging.txt",
+      "docs/seo-geo/Reports/evidence/stage08/robots-admin.txt",
+      "docs/seo-geo/Reports/evidence/stage08/robots-demo.txt",
+      "docs/seo-geo/Reports/evidence/stage08/robots-development.txt",
+      "docs/seo-geo/Reports/evidence/stage08/robots-staging.txt",
+      "docs/seo-geo/Reports/evidence/stage11-release/robots-admin.txt",
+      "docs/seo-geo/Reports/evidence/stage11-release/robots-demo.txt",
+      "docs/seo-geo/Reports/evidence/stage11-release/robots-development.txt",
+      "docs/seo-geo/Reports/evidence/stage11-release/robots-staging.txt",
+      "docs/seo-geo/Reports/evidence/stage12a/robots-admin.txt",
+      "docs/seo-geo/Reports/evidence/stage12a/robots-demo.txt",
+      "docs/seo-geo/Reports/evidence/stage12a/robots-development.txt",
+      "docs/seo-geo/Reports/evidence/stage12a/robots-staging.txt"
+    ],
+    "SEO-GEO/Reports/evidence/stage08/sitemap-samples.json": [
+      "docs/seo-geo/Reports/evidence/stage07/sitemap-samples.json",
+      "docs/seo-geo/Reports/evidence/stage08/sitemap-samples.json",
+      "docs/seo-geo/Reports/evidence/stage11-release/sitemap-samples.json",
+      "docs/seo-geo/Reports/evidence/stage12a/sitemap-samples.json"
+    ],
+    "SEO-GEO/Reports/evidence/stage08/structured-discounted.html": [
+      "docs/seo-geo/Reports/evidence/stage08/structured-discounted.html"
+    ],
+    "SEO-GEO/Reports/evidence/stage08/structured-electronics.html": [
+      "docs/seo-geo/Reports/evidence/stage08/structured-electronics.html"
+    ],
+    "SEO-GEO/Reports/evidence/stage08/structured-fashion.html": [
+      "docs/seo-geo/Reports/evidence/stage08/structured-fashion.html"
+    ],
+    "SEO-GEO/Reports/evidence/stage08/structured-grocery.html": [
+      "docs/seo-geo/Reports/evidence/stage08/structured-grocery.html"
+    ],
+    "SEO-GEO/Reports/evidence/stage08/structured-jewelry.html": [
+      "docs/seo-geo/Reports/evidence/stage08/structured-jewelry.html"
+    ],
+    "SEO-GEO/Reports/evidence/stage08/structured-retail.html": [
+      "docs/seo-geo/Reports/evidence/stage08/structured-retail.html"
+    ],
+    "SEO-GEO/Reports/evidence/stage08/structured-skincare.html": [
+      "docs/seo-geo/Reports/evidence/stage08/structured-skincare.html"
+    ],
+    "SEO-GEO/Reports/evidence/stage08/structured-variants.html": [
+      "docs/seo-geo/Reports/evidence/stage08/structured-variants.html"
+    ],
+    "SEO-GEO/Reports/evidence/stage08/tenant-b-canonical-200.http": [
+      "docs/seo-geo/Reports/evidence/stage08/tenant-b-canonical-200.http"
+    ],
+    "SEO-GEO/Reports/evidence/stage08/unknown-404.http": [
+      "docs/seo-geo/Reports/evidence/stage08/unknown-404.http"
+    ],
+    "SEO-GEO/Reports/evidence/stage08/unsupported-sort-404.http": [
+      "docs/seo-geo/Reports/evidence/stage08/unsupported-sort-404.http"
+    ],
+    "SEO-GEO/Reports/evidence/stage09/availability-changed.json": [
+      "docs/seo-geo/Reports/evidence/stage09/availability-changed.json"
+    ],
+    "SEO-GEO/Reports/evidence/stage09/created.json": [
+      "docs/seo-geo/Reports/evidence/stage09/created.json"
+    ],
+    "SEO-GEO/Reports/evidence/stage09/image-changed.json": [
+      "docs/seo-geo/Reports/evidence/stage09/image-changed.json"
+    ],
+    "SEO-GEO/Reports/evidence/stage09/pipeline-availability-feed.json": [
+      "docs/seo-geo/Reports/evidence/stage09/pipeline-availability-feed.json"
+    ],
+    "SEO-GEO/Reports/evidence/stage09/pipeline-availability-sitemap.xml": [
+      "docs/seo-geo/Reports/evidence/stage09/pipeline-availability-sitemap.xml"
+    ],
+    "SEO-GEO/Reports/evidence/stage09/pipeline-availability.html": [
+      "docs/seo-geo/Reports/evidence/stage09/pipeline-availability.html"
+    ],
+    "SEO-GEO/Reports/evidence/stage09/pipeline-create-feed.json": [
+      "docs/seo-geo/Reports/evidence/stage09/pipeline-create-feed.json"
+    ],
+    "SEO-GEO/Reports/evidence/stage09/pipeline-create-sitemap.xml": [
+      "docs/seo-geo/Reports/evidence/stage09/pipeline-create-sitemap.xml"
+    ],
+    "SEO-GEO/Reports/evidence/stage09/pipeline-create.html": [
+      "docs/seo-geo/Reports/evidence/stage09/pipeline-create.html"
+    ],
+    "SEO-GEO/Reports/evidence/stage09/pipeline-delete-feed.json": [
+      "docs/seo-geo/Reports/evidence/stage09/pipeline-delete-feed.json"
+    ],
+    "SEO-GEO/Reports/evidence/stage09/pipeline-delete-sitemap.xml": [
+      "docs/seo-geo/Reports/evidence/stage09/pipeline-delete-sitemap.xml",
+      "docs/seo-geo/Reports/evidence/stage11-release/pipeline-delete-sitemap.xml",
+      "docs/seo-geo/Reports/evidence/stage12a/pipeline-delete-sitemap.xml"
+    ],
+    "SEO-GEO/Reports/evidence/stage09/pipeline-delete.html": [
+      "docs/seo-geo/Reports/evidence/stage09/pipeline-delete.html"
+    ],
+    "SEO-GEO/Reports/evidence/stage09/pipeline-image-feed.json": [
+      "docs/seo-geo/Reports/evidence/stage09/pipeline-image-feed.json"
+    ],
+    "SEO-GEO/Reports/evidence/stage09/pipeline-image-sitemap.xml": [
+      "docs/seo-geo/Reports/evidence/stage09/pipeline-image-sitemap.xml"
+    ],
+    "SEO-GEO/Reports/evidence/stage09/pipeline-image.html": [
+      "docs/seo-geo/Reports/evidence/stage09/pipeline-image.html"
+    ],
+    "SEO-GEO/Reports/evidence/stage09/pipeline-price-feed.json": [
+      "docs/seo-geo/Reports/evidence/stage09/pipeline-price-feed.json"
+    ],
+    "SEO-GEO/Reports/evidence/stage09/pipeline-price-sitemap.xml": [
+      "docs/seo-geo/Reports/evidence/stage09/pipeline-price-sitemap.xml"
+    ],
+    "SEO-GEO/Reports/evidence/stage09/pipeline-price.html": [
+      "docs/seo-geo/Reports/evidence/stage09/pipeline-price.html"
+    ],
+    "SEO-GEO/Reports/evidence/stage09/price-changed.json": [
+      "docs/seo-geo/Reports/evidence/stage09/price-changed.json"
+    ],
+    "SEO-GEO/Reports/evidence/stage09/scale.json": [
+      "docs/seo-geo/Reports/evidence/stage09/scale.json"
+    ],
+    "SEO-GEO/Reports/evidence/stage10/admin-browser.json": [
+      "docs/seo-geo/Reports/evidence/stage10/admin-browser.json"
+    ],
+    "SEO-GEO/Reports/evidence/stage10/admin-health-desktop.png": [
+      "docs/seo-geo/Reports/evidence/stage10/admin-health-desktop.png"
+    ],
+    "SEO-GEO/Reports/evidence/stage10/admin-health-mobile.png": [
+      "docs/seo-geo/Reports/evidence/stage10/admin-health-mobile.png"
+    ],
+    "SEO-GEO/Reports/evidence/stage10/health-failed.json": [
+      "docs/seo-geo/Reports/evidence/stage10/health-failed.json"
+    ],
+    "SEO-GEO/Reports/evidence/stage10/health-recovered.json": [
+      "docs/seo-geo/Reports/evidence/stage10/health-recovered.json"
+    ],
+    "SEO-GEO/Reports/evidence/stage10/renderer-health-recovered.json": [
+      "docs/seo-geo/Reports/evidence/stage10/renderer-health-recovered.json"
+    ],
+    "SEO-GEO/Reports/evidence/stage10/renderer-health-timeout.json": [
+      "docs/seo-geo/Reports/evidence/stage10/renderer-health-timeout.json"
+    ],
+    "SEO-GEO/Reports/evidence/stage10/revenue-redacted.json": [
+      "docs/seo-geo/Reports/evidence/stage10/revenue-redacted.json"
+    ],
+    "SEO-GEO/Reports/evidence/stage10/synthetic-classification.json": [
+      "docs/seo-geo/Reports/evidence/stage10/synthetic-classification.json",
+      "docs/seo-geo/Reports/evidence/stage11-release/synthetic-classification.json",
+      "docs/seo-geo/Reports/evidence/stage12a/synthetic-classification.json"
+    ],
+    "SEO-GEO/Reports/evidence/stage11-release/availability-changed.json": [
+      "docs/seo-geo/Reports/evidence/stage11-release/availability-changed.json"
+    ],
+    "SEO-GEO/Reports/evidence/stage11-release/canonical-identities.json": [
+      "docs/seo-geo/Reports/evidence/stage11-release/canonical-identities.json"
+    ],
+    "SEO-GEO/Reports/evidence/stage11-release/created.json": [
+      "docs/seo-geo/Reports/evidence/stage11-release/created.json"
+    ],
+    "SEO-GEO/Reports/evidence/stage11-release/database-timeout.json": [
+      "docs/seo-geo/Reports/evidence/stage11-release/database-timeout.json"
+    ],
+    "SEO-GEO/Reports/evidence/stage11-release/engineering-gate.json": [
+      "docs/seo-geo/Reports/evidence/stage11-release/engineering-gate.json",
+      "docs/seo-geo/Tests/stage11-release/engineering-gate.log"
+    ],
+    "SEO-GEO/Reports/evidence/stage11-release/health-failed.json": [
+      "docs/seo-geo/Reports/evidence/stage11-release/health-failed.json"
+    ],
+    "SEO-GEO/Reports/evidence/stage11-release/health-recovered.json": [
+      "docs/seo-geo/Reports/evidence/stage11-release/health-recovered.json"
+    ],
+    "SEO-GEO/Reports/evidence/stage11-release/image-changed.json": [
+      "docs/seo-geo/Reports/evidence/stage11-release/image-changed.json"
+    ],
+    "SEO-GEO/Reports/evidence/stage11-release/image-encoding.json": [
+      "docs/seo-geo/Reports/evidence/stage11-release/image-encoding.json",
+      "docs/seo-geo/Reports/evidence/stage12a/image-encoding.json"
+    ],
+    "SEO-GEO/Reports/evidence/stage11-release/linux-release.json": [
+      "docs/seo-geo/Reports/evidence/stage11-release/linux-release.json"
+    ],
+    "SEO-GEO/Reports/evidence/stage11-release/local-deployment-gate.json": [
+      "docs/seo-geo/Reports/evidence/stage11-release/local-deployment-gate.json"
+    ],
+    "SEO-GEO/Reports/evidence/stage11-release/pipeline-availability-feed.json": [
+      "docs/seo-geo/Reports/evidence/stage11-release/pipeline-availability-feed.json"
+    ],
+    "SEO-GEO/Reports/evidence/stage11-release/pipeline-create-feed.json": [
+      "docs/seo-geo/Reports/evidence/stage11-release/pipeline-create-feed.json"
+    ],
+    "SEO-GEO/Reports/evidence/stage11-release/pipeline-delete-feed.json": [
+      "docs/seo-geo/Reports/evidence/stage11-release/pipeline-delete-feed.json"
+    ],
+    "SEO-GEO/Reports/evidence/stage11-release/pipeline-image-feed.json": [
+      "docs/seo-geo/Reports/evidence/stage11-release/pipeline-image-feed.json"
+    ],
+    "SEO-GEO/Reports/evidence/stage11-release/pipeline-price-feed.json": [
+      "docs/seo-geo/Reports/evidence/stage11-release/pipeline-price-feed.json"
+    ],
+    "SEO-GEO/Reports/evidence/stage11-release/price-changed.json": [
+      "docs/seo-geo/Reports/evidence/stage11-release/price-changed.json"
+    ],
+    "SEO-GEO/Reports/evidence/stage11-release/proxy-rehearsal.json": [
+      "docs/seo-geo/Reports/evidence/stage11-release/proxy-rehearsal.json"
+    ],
+    "SEO-GEO/Reports/evidence/stage11-release/release-workload-before.json": [
+      "docs/seo-geo/Reports/evidence/stage11-release/release-workload-before.json"
+    ],
+    "SEO-GEO/Reports/evidence/stage11-release/release-workload.json": [
+      "docs/seo-geo/Reports/evidence/stage11-release/release-workload.json"
+    ],
+    "SEO-GEO/Reports/evidence/stage11-release/revenue-redacted.json": [
+      "docs/seo-geo/Reports/evidence/stage11-release/revenue-redacted.json"
+    ],
+    "SEO-GEO/Reports/evidence/stage11-release/sitemap-samples.json": [
+      "docs/seo-geo/Reports/evidence/stage07/sitemap-samples.json",
+      "docs/seo-geo/Reports/evidence/stage08/sitemap-samples.json",
+      "docs/seo-geo/Reports/evidence/stage11-release/sitemap-samples.json",
+      "docs/seo-geo/Reports/evidence/stage12a/sitemap-samples.json"
+    ],
+    "SEO-GEO/Reports/evidence/stage11-release/synthetic-classification.json": [
+      "docs/seo-geo/Reports/evidence/stage10/synthetic-classification.json",
+      "docs/seo-geo/Reports/evidence/stage11-release/synthetic-classification.json",
+      "docs/seo-geo/Reports/evidence/stage12a/synthetic-classification.json"
+    ],
+    "SEO-GEO/Reports/evidence/stage11-release/tenant-A-snapshot.json": [
+      "docs/seo-geo/Reports/evidence/stage11-release/tenant-A-snapshot.json"
+    ],
+    "SEO-GEO/Reports/evidence/stage11-release/tenant-B-snapshot.json": [
+      "docs/seo-geo/Reports/evidence/stage11-release/tenant-B-snapshot.json"
+    ],
+    "SEO-GEO/Reports/evidence/stage11-release/tenant-matrix.json": [
+      "docs/seo-geo/Reports/evidence/stage11-release/tenant-matrix.json",
+      "docs/seo-geo/Reports/evidence/stage11/tenant-matrix.json",
+      "docs/seo-geo/Reports/evidence/stage12a/tenant-matrix.json"
+    ],
+    "SEO-GEO/Reports/evidence/stage11-release/throttled-browser-before.json": [
+      "docs/seo-geo/Reports/evidence/stage11-release/throttled-browser-before.json"
+    ],
+    "SEO-GEO/Reports/evidence/stage11-release/throttled-browser.json": [
+      "docs/seo-geo/Reports/evidence/stage11-release/throttled-browser.json"
+    ],
+    "SEO-GEO/Reports/evidence/stage11-resume/integrity-audit.json": [
+      "docs/seo-geo/Reports/evidence/stage11-resume/integrity-audit.json"
+    ],
+    "SEO-GEO/Reports/evidence/stage11/admission-after.json": [
+      "docs/seo-geo/Reports/evidence/stage11/admission-after.json"
+    ],
+    "SEO-GEO/Reports/evidence/stage11/admission-before.json": [
+      "docs/seo-geo/Reports/evidence/stage11/admission-before.json"
+    ],
+    "SEO-GEO/Reports/evidence/stage11/after-repeat.json": [
+      "docs/seo-geo/Reports/evidence/stage11/after-repeat.json"
+    ],
+    "SEO-GEO/Reports/evidence/stage11/after.json": [
+      "docs/seo-geo/Reports/evidence/stage11/after.json"
+    ],
+    "SEO-GEO/Reports/evidence/stage11/before.json": [
+      "docs/seo-geo/Reports/evidence/stage11/before.json"
+    ],
+    "SEO-GEO/Reports/evidence/stage11/browser-after.json": [
+      "docs/seo-geo/Reports/evidence/stage11/browser-after.json"
+    ],
+    "SEO-GEO/Reports/evidence/stage11/browser-xss.json": [
+      "docs/seo-geo/Reports/evidence/stage11/browser-xss.json"
+    ],
+    "SEO-GEO/Reports/evidence/stage11/database-timeout.json": [
+      "docs/seo-geo/Reports/evidence/stage11/database-timeout.json"
+    ],
+    "SEO-GEO/Reports/evidence/stage11/environment.json": [
+      "docs/seo-geo/Reports/evidence/stage11/environment.json"
+    ],
+    "SEO-GEO/Reports/evidence/stage11/tenant-A-snapshot.json": [
+      "docs/seo-geo/Reports/evidence/stage11/tenant-A-snapshot.json"
+    ],
+    "SEO-GEO/Reports/evidence/stage11/tenant-B-snapshot.json": [
+      "docs/seo-geo/Reports/evidence/stage11/tenant-B-snapshot.json"
+    ],
+    "SEO-GEO/Reports/evidence/stage11/tenant-matrix.json": [
+      "docs/seo-geo/Reports/evidence/stage11-release/tenant-matrix.json",
+      "docs/seo-geo/Reports/evidence/stage11/tenant-matrix.json",
+      "docs/seo-geo/Reports/evidence/stage12a/tenant-matrix.json"
+    ],
+    "SEO-GEO/Reports/evidence/stage12a/availability-changed.json": [
+      "docs/seo-geo/Reports/evidence/stage12a/availability-changed.json"
+    ],
+    "SEO-GEO/Reports/evidence/stage12a/candidate-source.json": [
+      "docs/seo-geo/Reports/evidence/stage12a/candidate-source.json"
+    ],
+    "SEO-GEO/Reports/evidence/stage12a/canonical-identities.json": [
+      "docs/seo-geo/Reports/evidence/stage12a/canonical-identities.json"
+    ],
+    "SEO-GEO/Reports/evidence/stage12a/canonical-pagination-200.http": [
+      "docs/seo-geo/Reports/evidence/stage12a/canonical-pagination-200.http"
+    ],
+    "SEO-GEO/Reports/evidence/stage12a/canonical-product-200.http": [
+      "docs/seo-geo/Reports/evidence/stage12a/canonical-product-200.http"
+    ],
+    "SEO-GEO/Reports/evidence/stage12a/categories-fruit.http": [
+      "docs/seo-geo/Reports/evidence/stage12a/categories-fruit.http"
+    ],
+    "SEO-GEO/Reports/evidence/stage12a/created.json": [
+      "docs/seo-geo/Reports/evidence/stage12a/created.json"
+    ],
+    "SEO-GEO/Reports/evidence/stage12a/database-timeout.json": [
+      "docs/seo-geo/Reports/evidence/stage12a/database-timeout.json"
+    ],
+    "SEO-GEO/Reports/evidence/stage12a/entity-.html": [
+      "docs/seo-geo/Reports/evidence/stage12a/entity-.html"
+    ],
+    "SEO-GEO/Reports/evidence/stage12a/entity-pages_buying-guide.html": [
+      "docs/seo-geo/Reports/evidence/stage12a/entity-pages_buying-guide.html"
+    ],
+    "SEO-GEO/Reports/evidence/stage12a/entity-pages_comparison.html": [
+      "docs/seo-geo/Reports/evidence/stage12a/entity-pages_comparison.html"
+    ],
+    "SEO-GEO/Reports/evidence/stage12a/entity-pages_shipping.html": [
+      "docs/seo-geo/Reports/evidence/stage12a/entity-pages_shipping.html"
+    ],
+    "SEO-GEO/Reports/evidence/stage12a/entity-products_apples.html": [
+      "docs/seo-geo/Reports/evidence/stage12a/entity-products_apples.html"
+    ],
+    "SEO-GEO/Reports/evidence/stage12a/entity-products_silver-ring.html": [
+      "docs/seo-geo/Reports/evidence/stage12a/entity-products_silver-ring.html"
+    ],
+    "SEO-GEO/Reports/evidence/stage12a/health-failed.json": [
+      "docs/seo-geo/Reports/evidence/stage12a/health-failed.json"
+    ],
+    "SEO-GEO/Reports/evidence/stage12a/health-recovered.json": [
+      "docs/seo-geo/Reports/evidence/stage12a/health-recovered.json"
+    ],
+    "SEO-GEO/Reports/evidence/stage12a/history-first-301.http": [
+      "docs/seo-geo/Reports/evidence/stage12a/history-first-301.http",
+      "docs/seo-geo/Reports/evidence/stage12a/history-previous-301.http",
+      "docs/seo-geo/Reports/evidence/stage12a/legacy-id-301.http"
+    ],
+    "SEO-GEO/Reports/evidence/stage12a/history-previous-301.http": [
+      "docs/seo-geo/Reports/evidence/stage12a/history-first-301.http",
+      "docs/seo-geo/Reports/evidence/stage12a/history-previous-301.http",
+      "docs/seo-geo/Reports/evidence/stage12a/legacy-id-301.http"
+    ],
+    "SEO-GEO/Reports/evidence/stage12a/home.http": [
+      "docs/seo-geo/Reports/evidence/stage12a/home.http"
+    ],
+    "SEO-GEO/Reports/evidence/stage12a/image-changed.json": [
+      "docs/seo-geo/Reports/evidence/stage12a/image-changed.json"
+    ],
+    "SEO-GEO/Reports/evidence/stage12a/image-encoding.json": [
+      "docs/seo-geo/Reports/evidence/stage11-release/image-encoding.json",
+      "docs/seo-geo/Reports/evidence/stage12a/image-encoding.json"
+    ],
+    "SEO-GEO/Reports/evidence/stage12a/legacy-id-301.http": [
+      "docs/seo-geo/Reports/evidence/stage12a/history-first-301.http",
+      "docs/seo-geo/Reports/evidence/stage12a/history-previous-301.http",
+      "docs/seo-geo/Reports/evidence/stage12a/legacy-id-301.http"
+    ],
+    "SEO-GEO/Reports/evidence/stage12a/metadata-.html": [
+      "docs/seo-geo/Reports/evidence/stage12a/metadata-.html"
+    ],
+    "SEO-GEO/Reports/evidence/stage12a/metadata-categories_fruit.html": [
+      "docs/seo-geo/Reports/evidence/stage12a/metadata-categories_fruit.html"
+    ],
+    "SEO-GEO/Reports/evidence/stage12a/metadata-pages_about.html": [
+      "docs/seo-geo/Reports/evidence/stage12a/metadata-pages_about.html"
+    ],
+    "SEO-GEO/Reports/evidence/stage12a/metadata-products_apples.html": [
+      "docs/seo-geo/Reports/evidence/stage12a/metadata-products_apples.html"
+    ],
+    "SEO-GEO/Reports/evidence/stage12a/normalized-history-301.http": [
+      "docs/seo-geo/Reports/evidence/stage12a/normalized-history-301.http"
+    ],
+    "SEO-GEO/Reports/evidence/stage12a/pages-about.http": [
+      "docs/seo-geo/Reports/evidence/stage12a/pages-about.http"
+    ],
+    "SEO-GEO/Reports/evidence/stage12a/pipeline-availability-feed.json": [
+      "docs/seo-geo/Reports/evidence/stage12a/pipeline-availability-feed.json"
+    ],
+    "SEO-GEO/Reports/evidence/stage12a/pipeline-availability.html": [
+      "docs/seo-geo/Reports/evidence/stage12a/pipeline-availability.html"
+    ],
+    "SEO-GEO/Reports/evidence/stage12a/pipeline-create-feed.json": [
+      "docs/seo-geo/Reports/evidence/stage12a/pipeline-create-feed.json"
+    ],
+    "SEO-GEO/Reports/evidence/stage12a/pipeline-create.html": [
+      "docs/seo-geo/Reports/evidence/stage12a/pipeline-create.html"
+    ],
+    "SEO-GEO/Reports/evidence/stage12a/pipeline-delete-feed.json": [
+      "docs/seo-geo/Reports/evidence/stage12a/pipeline-delete-feed.json"
+    ],
+    "SEO-GEO/Reports/evidence/stage12a/pipeline-delete.html": [
+      "docs/seo-geo/Reports/evidence/stage12a/pipeline-delete.html"
+    ],
+    "SEO-GEO/Reports/evidence/stage12a/pipeline-image-feed.json": [
+      "docs/seo-geo/Reports/evidence/stage12a/pipeline-image-feed.json"
+    ],
+    "SEO-GEO/Reports/evidence/stage12a/pipeline-image.html": [
+      "docs/seo-geo/Reports/evidence/stage12a/pipeline-image.html"
+    ],
+    "SEO-GEO/Reports/evidence/stage12a/pipeline-price-feed.json": [
+      "docs/seo-geo/Reports/evidence/stage12a/pipeline-price-feed.json"
+    ],
+    "SEO-GEO/Reports/evidence/stage12a/pipeline-price.html": [
+      "docs/seo-geo/Reports/evidence/stage12a/pipeline-price.html"
+    ],
+    "SEO-GEO/Reports/evidence/stage12a/price-changed.json": [
+      "docs/seo-geo/Reports/evidence/stage12a/price-changed.json"
+    ],
+    "SEO-GEO/Reports/evidence/stage12a/product-desktop.png": [
+      "docs/seo-geo/Reports/evidence/stage12a/product-desktop.png"
+    ],
+    "SEO-GEO/Reports/evidence/stage12a/product-mobile.png": [
+      "docs/seo-geo/Reports/evidence/stage12a/product-mobile.png"
+    ],
+    "SEO-GEO/Reports/evidence/stage12a/products-apples.http": [
+      "docs/seo-geo/Reports/evidence/stage12a/products-apples.http"
+    ],
+    "SEO-GEO/Reports/evidence/stage12a/reconciliation.json": [
+      "docs/seo-geo/Reports/evidence/stage12a/reconciliation.json"
+    ],
+    "SEO-GEO/Reports/evidence/stage12a/renamed-301.http": [
+      "docs/seo-geo/Reports/evidence/stage12a/renamed-301.http"
+    ],
+    "SEO-GEO/Reports/evidence/stage12a/renderer-health-recovered.json": [
+      "docs/seo-geo/Reports/evidence/stage12a/renderer-health-recovered.json"
+    ],
+    "SEO-GEO/Reports/evidence/stage12a/renderer-health-timeout.json": [
+      "docs/seo-geo/Reports/evidence/stage12a/renderer-health-timeout.json"
+    ],
+    "SEO-GEO/Reports/evidence/stage12a/retired-410.http": [
+      "docs/seo-geo/Reports/evidence/stage12a/retired-410.http"
+    ],
+    "SEO-GEO/Reports/evidence/stage12a/revenue-redacted.json": [
+      "docs/seo-geo/Reports/evidence/stage12a/revenue-redacted.json"
+    ],
+    "SEO-GEO/Reports/evidence/stage12a/sitemap-samples.json": [
+      "docs/seo-geo/Reports/evidence/stage07/sitemap-samples.json",
+      "docs/seo-geo/Reports/evidence/stage08/sitemap-samples.json",
+      "docs/seo-geo/Reports/evidence/stage11-release/sitemap-samples.json",
+      "docs/seo-geo/Reports/evidence/stage12a/sitemap-samples.json"
+    ],
+    "SEO-GEO/Reports/evidence/stage12a/structured-discounted.html": [
+      "docs/seo-geo/Reports/evidence/stage12a/structured-discounted.html"
+    ],
+    "SEO-GEO/Reports/evidence/stage12a/structured-electronics.html": [
+      "docs/seo-geo/Reports/evidence/stage12a/structured-electronics.html"
+    ],
+    "SEO-GEO/Reports/evidence/stage12a/structured-fashion.html": [
+      "docs/seo-geo/Reports/evidence/stage12a/structured-fashion.html"
+    ],
+    "SEO-GEO/Reports/evidence/stage12a/structured-grocery.html": [
+      "docs/seo-geo/Reports/evidence/stage12a/structured-grocery.html"
+    ],
+    "SEO-GEO/Reports/evidence/stage12a/structured-jewelry.html": [
+      "docs/seo-geo/Reports/evidence/stage12a/structured-jewelry.html"
+    ],
+    "SEO-GEO/Reports/evidence/stage12a/structured-retail.html": [
+      "docs/seo-geo/Reports/evidence/stage12a/structured-retail.html"
+    ],
+    "SEO-GEO/Reports/evidence/stage12a/structured-skincare.html": [
+      "docs/seo-geo/Reports/evidence/stage12a/structured-skincare.html"
+    ],
+    "SEO-GEO/Reports/evidence/stage12a/structured-variants.html": [
+      "docs/seo-geo/Reports/evidence/stage12a/structured-variants.html"
+    ],
+    "SEO-GEO/Reports/evidence/stage12a/synthetic-classification.json": [
+      "docs/seo-geo/Reports/evidence/stage10/synthetic-classification.json",
+      "docs/seo-geo/Reports/evidence/stage11-release/synthetic-classification.json",
+      "docs/seo-geo/Reports/evidence/stage12a/synthetic-classification.json"
+    ],
+    "SEO-GEO/Reports/evidence/stage12a/tenant-A-snapshot.json": [
+      "docs/seo-geo/Reports/evidence/stage12a/tenant-A-snapshot.json"
+    ],
+    "SEO-GEO/Reports/evidence/stage12a/tenant-B-snapshot.json": [
+      "docs/seo-geo/Reports/evidence/stage12a/tenant-B-snapshot.json"
+    ],
+    "SEO-GEO/Reports/evidence/stage12a/tenant-b-canonical-200.http": [
+      "docs/seo-geo/Reports/evidence/stage12a/tenant-b-canonical-200.http"
+    ],
+    "SEO-GEO/Reports/evidence/stage12a/tenant-matrix.json": [
+      "docs/seo-geo/Reports/evidence/stage11-release/tenant-matrix.json",
+      "docs/seo-geo/Reports/evidence/stage11/tenant-matrix.json",
+      "docs/seo-geo/Reports/evidence/stage12a/tenant-matrix.json"
+    ],
+    "SEO-GEO/Reports/evidence/stage12a/unknown-404.http": [
+      "docs/seo-geo/Reports/evidence/stage12a/unknown-404.http"
+    ],
+    "SEO-GEO/Reports/evidence/stage12a/unsupported-sort-404.http": [
+      "docs/seo-geo/Reports/evidence/stage12a/unsupported-sort-404.http"
+    ],
+    "SEO-GEO/Tests/README.md": [
+      "docs/seo-geo/Tests/README.md"
+    ],
+    "SEO-GEO/Tests/stage03/.gitattributes": [
+      "docs/seo-geo/Reports/evidence/stage07/.gitattributes",
+      "docs/seo-geo/Reports/evidence/stage08/.gitattributes",
+      "docs/seo-geo/Tests/stage03/.gitattributes",
+      "docs/seo-geo/Tests/stage04/.gitattributes",
+      "docs/seo-geo/Tests/stage05/.gitattributes",
+      "docs/seo-geo/Tests/stage06/.gitattributes"
+    ],
+    "SEO-GEO/Tests/stage03/README.md": [
+      "docs/seo-geo/Tests/stage03/README.md"
+    ],
+    "SEO-GEO/Tests/stage03/api-regression-validation.log": [
+      "docs/seo-geo/Tests/stage03/api-regression-validation.log"
+    ],
+    "SEO-GEO/Tests/stage03/categories-fruit.http": [
+      "docs/seo-geo/Tests/stage03/categories-fruit.http"
+    ],
+    "SEO-GEO/Tests/stage03/frontend-validation.log": [
+      "docs/seo-geo/Tests/stage03/frontend-validation.log"
+    ],
+    "SEO-GEO/Tests/stage03/home.http": [
+      "docs/seo-geo/Tests/stage03/home.http"
+    ],
+    "SEO-GEO/Tests/stage03/http-validation.log": [
+      "docs/seo-geo/Tests/stage03/http-validation.log"
+    ],
+    "SEO-GEO/Tests/stage03/pages-about.http": [
+      "docs/seo-geo/Tests/stage03/pages-about.http"
+    ],
+    "SEO-GEO/Tests/stage03/product-desktop.png": [
+      "docs/seo-geo/Tests/stage03/product-desktop.png",
+      "docs/seo-geo/Tests/stage04/product-desktop.png"
+    ],
+    "SEO-GEO/Tests/stage03/product-mobile.png": [
+      "docs/seo-geo/Tests/stage03/product-mobile.png",
+      "docs/seo-geo/Tests/stage04/product-mobile.png"
+    ],
+    "SEO-GEO/Tests/stage03/products-apples.http": [
+      "docs/seo-geo/Tests/stage03/products-apples.http"
+    ],
+    "SEO-GEO/Tests/stage03/renamed-301.http": [
+      "docs/seo-geo/Tests/stage03/renamed-301.http"
+    ],
+    "SEO-GEO/Tests/stage03/retired-410.http": [
+      "docs/seo-geo/Tests/stage03/retired-410.http"
+    ],
+    "SEO-GEO/Tests/stage03/unknown-404.http": [
+      "docs/seo-geo/Tests/stage03/unknown-404.http"
+    ],
+    "SEO-GEO/Tests/stage04/.gitattributes": [
+      "docs/seo-geo/Reports/evidence/stage07/.gitattributes",
+      "docs/seo-geo/Reports/evidence/stage08/.gitattributes",
+      "docs/seo-geo/Tests/stage03/.gitattributes",
+      "docs/seo-geo/Tests/stage04/.gitattributes",
+      "docs/seo-geo/Tests/stage05/.gitattributes",
+      "docs/seo-geo/Tests/stage06/.gitattributes"
+    ],
+    "SEO-GEO/Tests/stage04/api-regression-validation.log": [
+      "docs/seo-geo/Tests/stage04/api-regression-validation.log"
+    ],
+    "SEO-GEO/Tests/stage04/canonical-identities.json": [
+      "docs/seo-geo/Tests/stage04/canonical-identities.json"
+    ],
+    "SEO-GEO/Tests/stage04/canonical-pagination-200.http": [
+      "docs/seo-geo/Tests/stage04/canonical-pagination-200.http"
+    ],
+    "SEO-GEO/Tests/stage04/canonical-product-200.http": [
+      "docs/seo-geo/Tests/stage04/canonical-product-200.http"
+    ],
+    "SEO-GEO/Tests/stage04/categories-fruit.http": [
+      "docs/seo-geo/Tests/stage04/categories-fruit.http"
+    ],
+    "SEO-GEO/Tests/stage04/clippy-validation.log": [
+      "docs/seo-geo/Tests/stage04/clippy-validation.log"
+    ],
+    "SEO-GEO/Tests/stage04/frontend-validation.log": [
+      "docs/seo-geo/Tests/stage04/frontend-validation.log"
+    ],
+    "SEO-GEO/Tests/stage04/history-first-301.http": [
+      "docs/seo-geo/Tests/stage04/history-first-301.http",
+      "docs/seo-geo/Tests/stage04/history-previous-301.http",
+      "docs/seo-geo/Tests/stage04/legacy-id-301.http",
+      "docs/seo-geo/Tests/stage04/normalized-history-301.http"
+    ],
+    "SEO-GEO/Tests/stage04/history-previous-301.http": [
+      "docs/seo-geo/Tests/stage04/history-first-301.http",
+      "docs/seo-geo/Tests/stage04/history-previous-301.http",
+      "docs/seo-geo/Tests/stage04/legacy-id-301.http",
+      "docs/seo-geo/Tests/stage04/normalized-history-301.http"
+    ],
+    "SEO-GEO/Tests/stage04/home.http": [
+      "docs/seo-geo/Tests/stage04/home.http"
+    ],
+    "SEO-GEO/Tests/stage04/http-validation.log": [
+      "docs/seo-geo/Tests/stage04/http-validation.log"
+    ],
+    "SEO-GEO/Tests/stage04/legacy-id-301.http": [
+      "docs/seo-geo/Tests/stage04/history-first-301.http",
+      "docs/seo-geo/Tests/stage04/history-previous-301.http",
+      "docs/seo-geo/Tests/stage04/legacy-id-301.http",
+      "docs/seo-geo/Tests/stage04/normalized-history-301.http"
+    ],
+    "SEO-GEO/Tests/stage04/node-validation.log": [
+      "docs/seo-geo/Tests/stage04/node-validation.log"
+    ],
+    "SEO-GEO/Tests/stage04/normalized-history-301.http": [
+      "docs/seo-geo/Tests/stage04/history-first-301.http",
+      "docs/seo-geo/Tests/stage04/history-previous-301.http",
+      "docs/seo-geo/Tests/stage04/legacy-id-301.http",
+      "docs/seo-geo/Tests/stage04/normalized-history-301.http"
+    ],
+    "SEO-GEO/Tests/stage04/pages-about.http": [
+      "docs/seo-geo/Tests/stage04/pages-about.http"
+    ],
+    "SEO-GEO/Tests/stage04/product-desktop.png": [
+      "docs/seo-geo/Tests/stage03/product-desktop.png",
+      "docs/seo-geo/Tests/stage04/product-desktop.png"
+    ],
+    "SEO-GEO/Tests/stage04/product-mobile.png": [
+      "docs/seo-geo/Tests/stage03/product-mobile.png",
+      "docs/seo-geo/Tests/stage04/product-mobile.png"
+    ],
+    "SEO-GEO/Tests/stage04/products-apples.http": [
+      "docs/seo-geo/Tests/stage04/products-apples.http"
+    ],
+    "SEO-GEO/Tests/stage04/renamed-301.http": [
+      "docs/seo-geo/Tests/stage04/renamed-301.http"
+    ],
+    "SEO-GEO/Tests/stage04/retired-410.http": [
+      "docs/seo-geo/Tests/stage04/retired-410.http"
+    ],
+    "SEO-GEO/Tests/stage04/tenant-b-canonical-200.http": [
+      "docs/seo-geo/Tests/stage04/tenant-b-canonical-200.http"
+    ],
+    "SEO-GEO/Tests/stage04/unknown-404.http": [
+      "docs/seo-geo/Tests/stage04/unknown-404.http"
+    ],
+    "SEO-GEO/Tests/stage04/unsupported-sort-404.http": [
+      "docs/seo-geo/Tests/stage04/unsupported-sort-404.http"
+    ],
+    "SEO-GEO/Tests/stage05/.gitattributes": [
+      "docs/seo-geo/Reports/evidence/stage07/.gitattributes",
+      "docs/seo-geo/Reports/evidence/stage08/.gitattributes",
+      "docs/seo-geo/Tests/stage03/.gitattributes",
+      "docs/seo-geo/Tests/stage04/.gitattributes",
+      "docs/seo-geo/Tests/stage05/.gitattributes",
+      "docs/seo-geo/Tests/stage06/.gitattributes"
+    ],
+    "SEO-GEO/Tests/stage05/build.log": [
+      "docs/seo-geo/Tests/stage05/build.log"
+    ],
+    "SEO-GEO/Tests/stage05/canonical-identities.json": [
+      "docs/seo-geo/Tests/stage05/canonical-identities.json"
+    ],
+    "SEO-GEO/Tests/stage05/canonical-pagination-200.http": [
+      "docs/seo-geo/Tests/stage05/canonical-pagination-200.http"
+    ],
+    "SEO-GEO/Tests/stage05/canonical-product-200.http": [
+      "docs/seo-geo/Tests/stage05/canonical-product-200.http"
+    ],
+    "SEO-GEO/Tests/stage05/cargo-check.log": [
+      "docs/seo-geo/Tests/stage05/cargo-check.log"
+    ],
+    "SEO-GEO/Tests/stage05/categories-fruit.http": [
+      "docs/seo-geo/Tests/stage05/categories-fruit.http"
+    ],
+    "SEO-GEO/Tests/stage05/clippy.log": [
+      "docs/seo-geo/Tests/stage05/clippy.log"
+    ],
+    "SEO-GEO/Tests/stage05/frontend-static.log": [
+      "ai-service/app/__init__.py",
+      "ai-service/app/commerce_language_engine/data/.gitkeep",
+      "artifacts/evaluation-lab/m10-frontend-types-final.log",
+      "artifacts/evaluation-lab/m10-frontend-types.log",
+      "docs/seo-geo/Tests/stage05/frontend-static.log",
+      "docs/seo-geo/Tests/stage06/frontend-static.log",
+      "docs/seo-geo/Tests/stage12a/admin-types.log",
+      "docs/seo-geo/Tests/stage12a/storefront-types.log",
+      "tmp/fulfillment-production-baseline-20261001/ai-service/app/__init__.py",
+      "tmp/fulfillment-production-baseline-20261001/ai-service/app/commerce_language_engine/data/.gitkeep"
+    ],
+    "SEO-GEO/Tests/stage05/frontend-tests.log": [
+      "docs/seo-geo/Tests/stage05/frontend-tests.log"
+    ],
+    "SEO-GEO/Tests/stage05/history-first-301.http": [
+      "docs/seo-geo/Tests/stage05/history-first-301.http",
+      "docs/seo-geo/Tests/stage05/history-previous-301.http",
+      "docs/seo-geo/Tests/stage05/legacy-id-301.http",
+      "docs/seo-geo/Tests/stage05/normalized-history-301.http"
+    ],
+    "SEO-GEO/Tests/stage05/history-previous-301.http": [
+      "docs/seo-geo/Tests/stage05/history-first-301.http",
+      "docs/seo-geo/Tests/stage05/history-previous-301.http",
+      "docs/seo-geo/Tests/stage05/legacy-id-301.http",
+      "docs/seo-geo/Tests/stage05/normalized-history-301.http"
+    ],
+    "SEO-GEO/Tests/stage05/home.http": [
+      "docs/seo-geo/Tests/stage05/home.http"
+    ],
+    "SEO-GEO/Tests/stage05/integration.log": [
+      "docs/seo-geo/Tests/stage05/integration.log"
+    ],
+    "SEO-GEO/Tests/stage05/legacy-id-301.http": [
+      "docs/seo-geo/Tests/stage05/history-first-301.http",
+      "docs/seo-geo/Tests/stage05/history-previous-301.http",
+      "docs/seo-geo/Tests/stage05/legacy-id-301.http",
+      "docs/seo-geo/Tests/stage05/normalized-history-301.http"
+    ],
+    "SEO-GEO/Tests/stage05/media-eligibility.log": [
+      "docs/seo-geo/Tests/stage05/media-eligibility.log"
+    ],
+    "SEO-GEO/Tests/stage05/media-http.log": [
+      "docs/seo-geo/Tests/stage05/media-http.log"
+    ],
+    "SEO-GEO/Tests/stage05/metadata-.html": [
+      "docs/seo-geo/Tests/stage05/metadata-.html"
+    ],
+    "SEO-GEO/Tests/stage05/metadata-categories_fruit.html": [
+      "docs/seo-geo/Tests/stage05/metadata-categories_fruit.html"
+    ],
+    "SEO-GEO/Tests/stage05/metadata-pages_about.html": [
+      "docs/seo-geo/Tests/stage05/metadata-pages_about.html"
+    ],
+    "SEO-GEO/Tests/stage05/metadata-products_apples.html": [
+      "docs/seo-geo/Tests/stage05/metadata-products_apples.html"
+    ],
+    "SEO-GEO/Tests/stage05/node-tests.log": [
+      "docs/seo-geo/Tests/stage05/node-tests.log"
+    ],
+    "SEO-GEO/Tests/stage05/node22-tests.log": [
+      "docs/seo-geo/Tests/stage05/node22-tests.log"
+    ],
+    "SEO-GEO/Tests/stage05/normalized-history-301.http": [
+      "docs/seo-geo/Tests/stage05/history-first-301.http",
+      "docs/seo-geo/Tests/stage05/history-previous-301.http",
+      "docs/seo-geo/Tests/stage05/legacy-id-301.http",
+      "docs/seo-geo/Tests/stage05/normalized-history-301.http"
+    ],
+    "SEO-GEO/Tests/stage05/pages-about.http": [
+      "docs/seo-geo/Tests/stage05/pages-about.http"
+    ],
+    "SEO-GEO/Tests/stage05/product-desktop.png": [
+      "docs/seo-geo/Tests/stage05/product-desktop.png"
+    ],
+    "SEO-GEO/Tests/stage05/product-mobile.png": [
+      "docs/seo-geo/Tests/stage05/product-mobile.png"
+    ],
+    "SEO-GEO/Tests/stage05/products-apples.http": [
+      "docs/seo-geo/Tests/stage05/products-apples.http"
+    ],
+    "SEO-GEO/Tests/stage05/regressions.log": [
+      "docs/seo-geo/Tests/stage05/regressions.log"
+    ],
+    "SEO-GEO/Tests/stage05/renamed-301.http": [
+      "docs/seo-geo/Tests/stage05/renamed-301.http"
+    ],
+    "SEO-GEO/Tests/stage05/reproduce.md": [
+      "docs/seo-geo/Tests/stage05/reproduce.md"
+    ],
+    "SEO-GEO/Tests/stage05/retired-410.http": [
+      "docs/seo-geo/Tests/stage05/retired-410.http"
+    ],
+    "SEO-GEO/Tests/stage05/rust-unit.log": [
+      "docs/seo-geo/Tests/stage05/rust-unit.log"
+    ],
+    "SEO-GEO/Tests/stage05/tenant-b-canonical-200.http": [
+      "docs/seo-geo/Tests/stage05/tenant-b-canonical-200.http"
+    ],
+    "SEO-GEO/Tests/stage05/unknown-404.http": [
+      "docs/seo-geo/Tests/stage05/unknown-404.http"
+    ],
+    "SEO-GEO/Tests/stage05/unsupported-sort-404.http": [
+      "docs/seo-geo/Tests/stage05/unsupported-sort-404.http"
+    ],
+    "SEO-GEO/Tests/stage06/.gitattributes": [
+      "docs/seo-geo/Reports/evidence/stage07/.gitattributes",
+      "docs/seo-geo/Reports/evidence/stage08/.gitattributes",
+      "docs/seo-geo/Tests/stage03/.gitattributes",
+      "docs/seo-geo/Tests/stage04/.gitattributes",
+      "docs/seo-geo/Tests/stage05/.gitattributes",
+      "docs/seo-geo/Tests/stage06/.gitattributes"
+    ],
+    "SEO-GEO/Tests/stage06/build.log": [
+      "docs/seo-geo/Tests/stage06/build.log"
+    ],
+    "SEO-GEO/Tests/stage06/canonical-identities.json": [
+      "docs/seo-geo/Tests/stage06/canonical-identities.json"
+    ],
+    "SEO-GEO/Tests/stage06/canonical-pagination-200.http": [
+      "docs/seo-geo/Tests/stage06/canonical-pagination-200.http"
+    ],
+    "SEO-GEO/Tests/stage06/canonical-product-200.http": [
+      "docs/seo-geo/Tests/stage06/canonical-product-200.http"
+    ],
+    "SEO-GEO/Tests/stage06/categories-fruit.http": [
+      "docs/seo-geo/Tests/stage06/categories-fruit.http"
+    ],
+    "SEO-GEO/Tests/stage06/check.log": [
+      "docs/seo-geo/Tests/stage06/check.log"
+    ],
+    "SEO-GEO/Tests/stage06/clippy.log": [
+      "docs/seo-geo/Tests/stage06/clippy.log"
+    ],
+    "SEO-GEO/Tests/stage06/frontend-static.log": [
+      "ai-service/app/__init__.py",
+      "ai-service/app/commerce_language_engine/data/.gitkeep",
+      "artifacts/evaluation-lab/m10-frontend-types-final.log",
+      "artifacts/evaluation-lab/m10-frontend-types.log",
+      "docs/seo-geo/Tests/stage05/frontend-static.log",
+      "docs/seo-geo/Tests/stage06/frontend-static.log",
+      "docs/seo-geo/Tests/stage12a/admin-types.log",
+      "docs/seo-geo/Tests/stage12a/storefront-types.log",
+      "tmp/fulfillment-production-baseline-20261001/ai-service/app/__init__.py",
+      "tmp/fulfillment-production-baseline-20261001/ai-service/app/commerce_language_engine/data/.gitkeep"
+    ],
+    "SEO-GEO/Tests/stage06/frontend-tests.log": [
+      "docs/seo-geo/Tests/stage06/frontend-tests.log"
+    ],
+    "SEO-GEO/Tests/stage06/history-first-301.http": [
+      "docs/seo-geo/Tests/stage06/history-first-301.http",
+      "docs/seo-geo/Tests/stage06/history-previous-301.http",
+      "docs/seo-geo/Tests/stage06/legacy-id-301.http",
+      "docs/seo-geo/Tests/stage06/normalized-history-301.http"
+    ],
+    "SEO-GEO/Tests/stage06/history-previous-301.http": [
+      "docs/seo-geo/Tests/stage06/history-first-301.http",
+      "docs/seo-geo/Tests/stage06/history-previous-301.http",
+      "docs/seo-geo/Tests/stage06/legacy-id-301.http",
+      "docs/seo-geo/Tests/stage06/normalized-history-301.http"
+    ],
+    "SEO-GEO/Tests/stage06/home.http": [
+      "docs/seo-geo/Tests/stage06/home.http"
+    ],
+    "SEO-GEO/Tests/stage06/integration.log": [
+      "docs/seo-geo/Tests/stage06/integration.log"
+    ],
+    "SEO-GEO/Tests/stage06/legacy-id-301.http": [
+      "docs/seo-geo/Tests/stage06/history-first-301.http",
+      "docs/seo-geo/Tests/stage06/history-previous-301.http",
+      "docs/seo-geo/Tests/stage06/legacy-id-301.http",
+      "docs/seo-geo/Tests/stage06/normalized-history-301.http"
+    ],
+    "SEO-GEO/Tests/stage06/metadata-.html": [
+      "docs/seo-geo/Tests/stage06/metadata-.html"
+    ],
+    "SEO-GEO/Tests/stage06/metadata-categories_fruit.html": [
+      "docs/seo-geo/Tests/stage06/metadata-categories_fruit.html"
+    ],
+    "SEO-GEO/Tests/stage06/metadata-pages_about.html": [
+      "docs/seo-geo/Tests/stage06/metadata-pages_about.html"
+    ],
+    "SEO-GEO/Tests/stage06/metadata-products_apples.html": [
+      "docs/seo-geo/Tests/stage06/metadata-products_apples.html"
+    ],
+    "SEO-GEO/Tests/stage06/node22-tests.log": [
+      "docs/seo-geo/Tests/stage06/node22-tests.log"
+    ],
+    "SEO-GEO/Tests/stage06/normalized-history-301.http": [
+      "docs/seo-geo/Tests/stage06/history-first-301.http",
+      "docs/seo-geo/Tests/stage06/history-previous-301.http",
+      "docs/seo-geo/Tests/stage06/legacy-id-301.http",
+      "docs/seo-geo/Tests/stage06/normalized-history-301.http"
+    ],
+    "SEO-GEO/Tests/stage06/pages-about.http": [
+      "docs/seo-geo/Tests/stage06/pages-about.http"
+    ],
+    "SEO-GEO/Tests/stage06/product-desktop.png": [
+      "docs/seo-geo/Tests/stage06/product-desktop.png"
+    ],
+    "SEO-GEO/Tests/stage06/product-mobile.png": [
+      "docs/seo-geo/Tests/stage06/product-mobile.png"
+    ],
+    "SEO-GEO/Tests/stage06/products-apples.http": [
+      "docs/seo-geo/Tests/stage06/products-apples.http"
+    ],
+    "SEO-GEO/Tests/stage06/regressions.log": [
+      "docs/seo-geo/Tests/stage06/regressions.log"
+    ],
+    "SEO-GEO/Tests/stage06/renamed-301.http": [
+      "docs/seo-geo/Tests/stage06/renamed-301.http"
+    ],
+    "SEO-GEO/Tests/stage06/reproduce.md": [
+      "docs/seo-geo/Tests/stage06/reproduce.md"
+    ],
+    "SEO-GEO/Tests/stage06/retired-410.http": [
+      "docs/seo-geo/Tests/stage06/retired-410.http"
+    ],
+    "SEO-GEO/Tests/stage06/structured-discounted.html": [
+      "docs/seo-geo/Tests/stage06/structured-discounted.html"
+    ],
+    "SEO-GEO/Tests/stage06/structured-electronics.html": [
+      "docs/seo-geo/Tests/stage06/structured-electronics.html"
+    ],
+    "SEO-GEO/Tests/stage06/structured-fashion.html": [
+      "docs/seo-geo/Tests/stage06/structured-fashion.html"
+    ],
+    "SEO-GEO/Tests/stage06/structured-final.log": [
+      "docs/seo-geo/Tests/stage06/structured-final.log"
+    ],
+    "SEO-GEO/Tests/stage06/structured-grocery.html": [
+      "docs/seo-geo/Tests/stage06/structured-grocery.html"
+    ],
+    "SEO-GEO/Tests/stage06/structured-jewelry.html": [
+      "docs/seo-geo/Tests/stage06/structured-jewelry.html"
+    ],
+    "SEO-GEO/Tests/stage06/structured-retail.html": [
+      "docs/seo-geo/Tests/stage06/structured-retail.html"
+    ],
+    "SEO-GEO/Tests/stage06/structured-skincare.html": [
+      "docs/seo-geo/Tests/stage06/structured-skincare.html"
+    ],
+    "SEO-GEO/Tests/stage06/structured-variants.html": [
+      "docs/seo-geo/Tests/stage06/structured-variants.html"
+    ],
+    "SEO-GEO/Tests/stage06/tenant-b-canonical-200.http": [
+      "docs/seo-geo/Tests/stage06/tenant-b-canonical-200.http"
+    ],
+    "SEO-GEO/Tests/stage06/unit.log": [
+      "docs/seo-geo/Tests/stage06/unit.log"
+    ],
+    "SEO-GEO/Tests/stage06/unknown-404.http": [
+      "docs/seo-geo/Tests/stage06/unknown-404.http"
+    ],
+    "SEO-GEO/Tests/stage06/unsupported-sort-404.http": [
+      "docs/seo-geo/Tests/stage06/unsupported-sort-404.http"
+    ],
+    "SEO-GEO/Tests/stage07/.gitattributes": [
+      "docs/seo-geo/Tests/stage07/.gitattributes"
+    ],
+    "SEO-GEO/Tests/stage07/capacity-test.log": [
+      "docs/seo-geo/Tests/stage07/capacity-test.log"
+    ],
+    "SEO-GEO/Tests/stage07/clippy.log": [
+      "docs/seo-geo/Tests/stage07/clippy.log"
+    ],
+    "SEO-GEO/Tests/stage07/discovery-tests.log": [
+      "docs/seo-geo/Tests/stage07/discovery-tests.log"
+    ],
+    "SEO-GEO/Tests/stage07/integration-tests.log": [
+      "docs/seo-geo/Tests/stage07/integration-tests.log"
+    ],
+    "SEO-GEO/Tests/stage07/node-tests.log": [
+      "docs/seo-geo/Tests/stage07/node-tests.log"
+    ],
+    "SEO-GEO/Tests/stage07/siteindex.xsd": [
+      "docs/seo-geo/Tests/stage07/siteindex.xsd"
+    ],
+    "SEO-GEO/Tests/stage07/sitemap.xsd": [
+      "docs/seo-geo/Tests/stage07/sitemap.xsd"
+    ],
+    "SEO-GEO/Tests/stage07/validate_xml.py": [
+      "docs/seo-geo/Tests/stage07/validate_xml.py"
+    ],
+    "SEO-GEO/Tests/stage07/verification.json": [
+      "docs/seo-geo/Tests/stage07/verification.json"
+    ],
+    "SEO-GEO/Tests/stage07/xsd-validation.log": [
+      "docs/seo-geo/Tests/stage07/xsd-validation.log"
+    ],
+    "SEO-GEO/Tests/stage08/clippy.log": [
+      "docs/seo-geo/Tests/stage08/clippy.log"
+    ],
+    "SEO-GEO/Tests/stage08/entity-tests.log": [
+      "docs/seo-geo/Tests/stage08/entity-tests.log"
+    ],
+    "SEO-GEO/Tests/stage08/node-tests.log": [
+      "docs/seo-geo/Tests/stage08/node-tests.log"
+    ],
+    "SEO-GEO/Tests/stage08/profile-api-tests.log": [
+      "docs/seo-geo/Tests/stage08/profile-api-tests.log"
+    ],
+    "SEO-GEO/Tests/stage08/publication-tests.log": [
+      "docs/seo-geo/Tests/stage08/publication-tests.log"
+    ],
+    "SEO-GEO/Tests/stage08/shared-regressions.log": [
+      "docs/seo-geo/Tests/stage08/shared-regressions.log"
+    ],
+    "SEO-GEO/Tests/stage08/unit-tests.log": [
+      "docs/seo-geo/Tests/stage08/unit-tests.log"
+    ],
+    "SEO-GEO/Tests/stage08/verification.json": [
+      "docs/seo-geo/Tests/stage08/verification.json"
+    ],
+    "SEO-GEO/Tests/stage09/admin-types.log": [
+      "docs/seo-geo/Tests/stage09/admin-types.log",
+      "docs/seo-geo/Tests/stage09/storefront-types.log"
+    ],
+    "SEO-GEO/Tests/stage09/client-build.log": [
+      "docs/seo-geo/Tests/stage09/client-build.log"
+    ],
+    "SEO-GEO/Tests/stage09/clippy.log": [
+      "docs/seo-geo/Tests/stage09/clippy.log"
+    ],
+    "SEO-GEO/Tests/stage09/frontend-tests.log": [
+      "docs/seo-geo/Tests/stage09/frontend-tests.log"
+    ],
+    "SEO-GEO/Tests/stage09/http-pipeline.log": [
+      "docs/seo-geo/Tests/stage09/http-pipeline.log"
+    ],
+    "SEO-GEO/Tests/stage09/node-checks.log": [
+      "docs/seo-geo/Tests/stage09/node-checks.log"
+    ],
+    "SEO-GEO/Tests/stage09/publication-tests.log": [
+      "docs/seo-geo/Tests/stage09/publication-tests.log"
+    ],
+    "SEO-GEO/Tests/stage09/publication-unit.log": [
+      "docs/seo-geo/Tests/stage09/publication-unit.log"
+    ],
+    "SEO-GEO/Tests/stage09/retry-check.log": [
+      "docs/seo-geo/Tests/stage09/retry-check.log"
+    ],
+    "SEO-GEO/Tests/stage09/shared-regression.log": [
+      "docs/seo-geo/Tests/stage09/shared-regression.log"
+    ],
+    "SEO-GEO/Tests/stage09/sitemap-capacity.log": [
+      "docs/seo-geo/Tests/stage09/sitemap-capacity.log"
+    ],
+    "SEO-GEO/Tests/stage09/ssr-build.log": [
+      "docs/seo-geo/Tests/stage09/ssr-build.log"
+    ],
+    "SEO-GEO/Tests/stage09/storefront-types.log": [
+      "docs/seo-geo/Tests/stage09/admin-types.log",
+      "docs/seo-geo/Tests/stage09/storefront-types.log"
+    ],
+    "SEO-GEO/Tests/stage10/admin-browser.log": [
+      "docs/seo-geo/Tests/stage10/admin-browser.log"
+    ],
+    "SEO-GEO/Tests/stage10/admin-build.log": [
+      "docs/seo-geo/Tests/stage10/admin-build.log"
+    ],
+    "SEO-GEO/Tests/stage10/admin-types.log": [
+      "docs/seo-geo/Tests/stage10/admin-types.log",
+      "docs/seo-geo/Tests/stage10/lint.log",
+      "docs/seo-geo/Tests/stage10/storefront-types.log"
+    ],
+    "SEO-GEO/Tests/stage10/check.log": [
+      "docs/seo-geo/Tests/stage10/check.log"
+    ],
+    "SEO-GEO/Tests/stage10/client-build.log": [
+      "docs/seo-geo/Tests/stage10/client-build.log"
+    ],
+    "SEO-GEO/Tests/stage10/clippy.log": [
+      "docs/seo-geo/Tests/stage10/clippy.log"
+    ],
+    "SEO-GEO/Tests/stage10/lint.log": [
+      "docs/seo-geo/Tests/stage10/admin-types.log",
+      "docs/seo-geo/Tests/stage10/lint.log",
+      "docs/seo-geo/Tests/stage10/storefront-types.log"
+    ],
+    "SEO-GEO/Tests/stage10/measurement-tests.log": [
+      "docs/seo-geo/Tests/stage10/measurement-tests.log"
+    ],
+    "SEO-GEO/Tests/stage10/node-checks.log": [
+      "docs/seo-geo/Tests/stage10/node-checks.log"
+    ],
+    "SEO-GEO/Tests/stage10/publication-tests.log": [
+      "docs/seo-geo/Tests/stage10/publication-tests.log"
+    ],
+    "SEO-GEO/Tests/stage10/publication-unit.log": [
+      "docs/seo-geo/Tests/stage10/publication-unit.log"
+    ],
+    "SEO-GEO/Tests/stage10/shared-regressions.log": [
+      "docs/seo-geo/Tests/stage10/shared-regressions.log"
+    ],
+    "SEO-GEO/Tests/stage10/ssr-build.log": [
+      "docs/seo-geo/Tests/stage10/ssr-build.log"
+    ],
+    "SEO-GEO/Tests/stage10/storefront-types.log": [
+      "docs/seo-geo/Tests/stage10/admin-types.log",
+      "docs/seo-geo/Tests/stage10/lint.log",
+      "docs/seo-geo/Tests/stage10/storefront-types.log"
+    ],
+    "SEO-GEO/Tests/stage10/vitest.log": [
+      "docs/seo-geo/Tests/stage10/vitest.log"
+    ],
+    "SEO-GEO/Tests/stage11-release/Dockerfile": [
+      "docs/seo-geo/Tests/stage11-release/Dockerfile"
+    ],
+    "SEO-GEO/Tests/stage11-release/browser-image-build.log": [
+      "docs/seo-geo/Tests/stage11-release/browser-image-build.log"
+    ],
+    "SEO-GEO/Tests/stage11-release/cleanup.log": [
+      "docs/seo-geo/Tests/stage11-release/cleanup.log"
+    ],
+    "SEO-GEO/Tests/stage11-release/clippy-host.log": [
+      "docs/seo-geo/Tests/stage11-release/clippy-host.log"
+    ],
+    "SEO-GEO/Tests/stage11-release/clippy.log": [
+      "docs/seo-geo/Tests/stage11-release/clippy.log"
+    ],
+    "SEO-GEO/Tests/stage11-release/deployment_gate.py": [
+      "docs/seo-geo/Tests/stage11-release/deployment_gate.py"
+    ],
+    "SEO-GEO/Tests/stage11-release/engineering-gate.log": [
+      "docs/seo-geo/Reports/evidence/stage11-release/engineering-gate.json",
+      "docs/seo-geo/Tests/stage11-release/engineering-gate.log"
+    ],
+    "SEO-GEO/Tests/stage11-release/gateway-build.log": [
+      "docs/seo-geo/Tests/stage11-release/gateway-build.log"
+    ],
+    "SEO-GEO/Tests/stage11-release/image-check.log": [
+      "docs/seo-geo/Tests/stage11-release/image-check.log"
+    ],
+    "SEO-GEO/Tests/stage11-release/image-tests.log": [
+      "docs/seo-geo/Tests/stage11-release/image-tests.log"
+    ],
+    "SEO-GEO/Tests/stage11-release/linux-release.log": [
+      "docs/seo-geo/Tests/stage11-release/linux-release.log"
+    ],
+    "SEO-GEO/Tests/stage11-release/node22-tests.log": [
+      "docs/seo-geo/Tests/stage11-release/node22-tests.log"
+    ],
+    "SEO-GEO/Tests/stage11-release/preflight-tests.log": [
+      "docs/seo-geo/Tests/stage11-release/preflight-tests.log"
+    ],
+    "SEO-GEO/Tests/stage11-release/publication-unit.log": [
+      "docs/seo-geo/Tests/stage11-release/publication-unit.log"
+    ],
+    "SEO-GEO/Tests/stage11-release/regressions.log": [
+      "docs/seo-geo/Tests/stage11-release/regressions.log"
+    ],
+    "SEO-GEO/Tests/stage11-release/representative-release-after.log": [
+      "docs/seo-geo/Tests/stage11-release/representative-release-after.log"
+    ],
+    "SEO-GEO/Tests/stage11-release/representative-release.log": [
+      "docs/seo-geo/Tests/stage11-release/representative-release.log"
+    ],
+    "SEO-GEO/Tests/stage11-release/runtime-versions.log": [
+      "docs/seo-geo/Tests/stage11-release/runtime-versions.log"
+    ],
+    "SEO-GEO/Tests/stage11-release/verify_evidence.py": [
+      "docs/seo-geo/Tests/stage11-release/verify_evidence.py"
+    ],
+    "SEO-GEO/Tests/stage11/admin-types.log": [
+      "docs/seo-geo/Tests/stage11/admin-types.log",
+      "docs/seo-geo/Tests/stage11/storefront-types.log"
+    ],
+    "SEO-GEO/Tests/stage11/baseline-after.log": [
+      "docs/seo-geo/Tests/stage11/baseline-after.log"
+    ],
+    "SEO-GEO/Tests/stage11/baseline-before.log": [
+      "docs/seo-geo/Tests/stage11/baseline-before.log"
+    ],
+    "SEO-GEO/Tests/stage11/baseline-repeat.log": [
+      "docs/seo-geo/Tests/stage11/baseline-repeat.log"
+    ],
+    "SEO-GEO/Tests/stage11/browser-security.log": [
+      "docs/seo-geo/Tests/stage11/browser-security.log"
+    ],
+    "SEO-GEO/Tests/stage11/client-build.log": [
+      "docs/seo-geo/Tests/stage11/client-build.log"
+    ],
+    "SEO-GEO/Tests/stage11/clippy.log": [
+      "docs/seo-geo/Tests/stage11/clippy.log"
+    ],
+    "SEO-GEO/Tests/stage11/frontend-tests.log": [
+      "docs/seo-geo/Tests/stage11/frontend-tests.log"
+    ],
+    "SEO-GEO/Tests/stage11/hardening-tests.log": [
+      "docs/seo-geo/Tests/stage11/hardening-tests.log"
+    ],
+    "SEO-GEO/Tests/stage11/hardware.log": [
+      "docs/seo-geo/Tests/stage11/hardware.log"
+    ],
+    "SEO-GEO/Tests/stage11/node-checks.log": [
+      "docs/seo-geo/Tests/stage11/node-checks.log"
+    ],
+    "SEO-GEO/Tests/stage11/publication-unit.log": [
+      "docs/seo-geo/Tests/stage11/publication-unit.log"
+    ],
+    "SEO-GEO/Tests/stage11/regressions.log": [
+      "docs/seo-geo/Tests/stage11/regressions.log"
+    ],
+    "SEO-GEO/Tests/stage11/renderer.mjs": [
+      "docs/seo-geo/Tests/stage11/renderer.mjs"
+    ],
+    "SEO-GEO/Tests/stage11/ssr-build.log": [
+      "docs/seo-geo/Tests/stage11/ssr-build.log"
+    ],
+    "SEO-GEO/Tests/stage11/storefront-types.log": [
+      "docs/seo-geo/Tests/stage11/admin-types.log",
+      "docs/seo-geo/Tests/stage11/storefront-types.log"
+    ],
+    "SEO-GEO/Tests/stage12a/admin-build.log": [
+      "docs/seo-geo/Tests/stage12a/admin-build.log"
+    ],
+    "SEO-GEO/Tests/stage12a/admin-types.log": [
+      "ai-service/app/__init__.py",
+      "ai-service/app/commerce_language_engine/data/.gitkeep",
+      "artifacts/evaluation-lab/m10-frontend-types-final.log",
+      "artifacts/evaluation-lab/m10-frontend-types.log",
+      "docs/seo-geo/Tests/stage05/frontend-static.log",
+      "docs/seo-geo/Tests/stage06/frontend-static.log",
+      "docs/seo-geo/Tests/stage12a/admin-types.log",
+      "docs/seo-geo/Tests/stage12a/storefront-types.log",
+      "tmp/fulfillment-production-baseline-20261001/ai-service/app/__init__.py",
+      "tmp/fulfillment-production-baseline-20261001/ai-service/app/commerce_language_engine/data/.gitkeep"
+    ],
+    "SEO-GEO/Tests/stage12a/backend-initial-missing-fixtures.log": [
+      "docs/seo-geo/Tests/stage12a/backend-initial-missing-fixtures.log"
+    ],
+    "SEO-GEO/Tests/stage12a/backend-regressions.log": [
+      "docs/seo-geo/Tests/stage12a/backend-regressions.log"
+    ],
+    "SEO-GEO/Tests/stage12a/browser-api-diagnostic.log": [
+      "docs/seo-geo/Tests/stage12a/browser-api-diagnostic.log"
+    ],
+    "SEO-GEO/Tests/stage12a/browser-before-log-drain.log": [
+      "docs/seo-geo/Tests/stage12a/browser-before-log-drain.log"
+    ],
+    "SEO-GEO/Tests/stage12a/browser-diagnostic.log": [
+      "docs/seo-geo/Tests/stage12a/browser-diagnostic.log"
+    ],
+    "SEO-GEO/Tests/stage12a/browser-initial-timeout.log": [
+      "docs/seo-geo/Tests/stage12a/browser-initial-timeout.log"
+    ],
+    "SEO-GEO/Tests/stage12a/browser-proxy-timeout.log": [
+      "docs/seo-geo/Tests/stage12a/browser-proxy-timeout.log"
+    ],
+    "SEO-GEO/Tests/stage12a/browser-rendering.log": [
+      "docs/seo-geo/Tests/stage12a/browser-rendering.log"
+    ],
+    "SEO-GEO/Tests/stage12a/cleanup.log": [
+      "docs/seo-geo/Tests/stage12a/cleanup.log"
+    ],
+    "SEO-GEO/Tests/stage12a/client-build.log": [
+      "docs/seo-geo/Tests/stage12a/client-build.log"
+    ],
+    "SEO-GEO/Tests/stage12a/clippy.log": [
+      "docs/seo-geo/Tests/stage12a/clippy.log"
+    ],
+    "SEO-GEO/Tests/stage12a/dependency-resolution.log": [
+      "docs/seo-geo/Tests/stage12a/dependency-resolution.log"
+    ],
+    "SEO-GEO/Tests/stage12a/deployment-initial-missing-fixtures.log": [
+      "docs/seo-geo/Tests/stage12a/deployment-initial-missing-fixtures.log"
+    ],
+    "SEO-GEO/Tests/stage12a/deployment-missing-seed-fixture.log": [
+      "docs/seo-geo/Tests/stage12a/deployment-missing-seed-fixture.log"
+    ],
+    "SEO-GEO/Tests/stage12a/deployment-tests.log": [
+      "docs/seo-geo/Tests/stage12a/deployment-tests.log"
+    ],
+    "SEO-GEO/Tests/stage12a/frontend-initial-missing-fixtures.log": [
+      "docs/seo-geo/Tests/stage12a/frontend-initial-missing-fixtures.log"
+    ],
+    "SEO-GEO/Tests/stage12a/frontend-tests.log": [
+      "docs/seo-geo/Tests/stage12a/frontend-tests.log"
+    ],
+    "SEO-GEO/Tests/stage12a/gateway-build.log": [
+      "docs/seo-geo/Tests/stage12a/gateway-build.log"
+    ],
+    "SEO-GEO/Tests/stage12a/node22-tests.log": [
+      "docs/seo-geo/Tests/stage12a/node22-tests.log"
+    ],
+    "SEO-GEO/Tests/stage12a/preflight-tests.log": [
+      "docs/seo-geo/Tests/stage12a/preflight-tests.log"
+    ],
+    "SEO-GEO/Tests/stage12a/runtime-and-binary.log": [
+      "docs/seo-geo/Tests/stage12a/runtime-and-binary.log"
+    ],
+    "SEO-GEO/Tests/stage12a/ssr-build.log": [
+      "docs/seo-geo/Tests/stage12a/ssr-build.log"
+    ],
+    "SEO-GEO/Tests/stage12a/storefront-types.log": [
+      "ai-service/app/__init__.py",
+      "ai-service/app/commerce_language_engine/data/.gitkeep",
+      "artifacts/evaluation-lab/m10-frontend-types-final.log",
+      "artifacts/evaluation-lab/m10-frontend-types.log",
+      "docs/seo-geo/Tests/stage05/frontend-static.log",
+      "docs/seo-geo/Tests/stage06/frontend-static.log",
+      "docs/seo-geo/Tests/stage12a/admin-types.log",
+      "docs/seo-geo/Tests/stage12a/storefront-types.log",
+      "tmp/fulfillment-production-baseline-20261001/ai-service/app/__init__.py",
+      "tmp/fulfillment-production-baseline-20261001/ai-service/app/commerce_language_engine/data/.gitkeep"
+    ],
+    "ai-service/app/core/contracts.py": [
+      "ai-service/app/commerce_action_engine/contracts/action.py",
+      "tmp/fulfillment-production-baseline-20261001/ai-service/app/commerce_action_engine/contracts/action.py"
+    ],
+    "ai-service/app/core/reasoning.py": [
+      "ai-service/app/commerce_resolution_engine/contracts.py",
+      "tmp/fulfillment-production-baseline-20261001/ai-service/app/commerce_resolution_engine/contracts.py"
+    ],
+    "ai-service/app/discovery.py": [
+      "ai-service/app/commerce_action_engine/actions/catalog/discovery.py",
+      "tmp/fulfillment-production-baseline-20261001/ai-service/app/commerce_action_engine/actions/catalog/discovery.py"
+    ]
+  },
+  "nonidentical_deletions": [
+    "Rocento-Agentic-Commerce-Plan/README.md",
+    "Rocento-Agentic-Commerce-Plan/reports/M02-implementation-2026-09-21.md",
+    "Rocento-Agentic-Commerce-Plan/reports/M04-implementation-2026-09-22.md",
+    "SEO-GEO/Archive/README.md",
+    "SEO-GEO/Docs/architecture.md",
+    "SEO-GEO/Docs/discovery.md",
+    "SEO-GEO/Docs/first-client.md",
+    "SEO-GEO/Docs/measurement.md",
+    "SEO-GEO/Docs/operations.md",
+    "SEO-GEO/Docs/publication.md",
+    "SEO-GEO/Tests/check_documentation.py",
+    "SEO-GEO/Tests/stage04/README.md",
+    "SEO-GEO/Tests/stage07/reproduce.md",
+    "SEO-GEO/Tests/stage08/reproduce.md",
+    "SEO-GEO/Tests/stage10/admin-browser.mjs",
+    "SEO-GEO/Tests/stage11-release/README.md",
+    "SEO-GEO/Tests/stage11-release/browser-workload.mjs",
+    "SEO-GEO/Tests/stage11-release/compose.yaml",
+    "SEO-GEO/Tests/stage11-release/proxy-rehearsal.mjs",
+    "SEO-GEO/Tests/stage11-release/test_deployment_gate.py",
+    "SEO-GEO/Tests/stage11/README.md",
+    "SEO-GEO/Tests/stage11/admission-probe.mjs",
+    "SEO-GEO/Tests/stage11/browser-performance.mjs",
+    "SEO-GEO/Tests/stage11/browser-security.mjs",
+    "SEO-GEO/Tests/stage12a/README.md",
+    "SEO-GEO/Tests/stage12a/assemble.py",
+    "SEO-GEO/Tests/stage12a/compose.yaml",
+    "SEO-GEO/Tests/stage12a/reconcile.py",
+    "ai-service/app/adapters/core.py",
+    "ai-service/app/baseline.py",
+    "ai-service/app/baskets.py",
+    "ai-service/app/catalog_tools.py",
+    "ai-service/app/commerce_meaning.py",
+    "ai-service/app/core/__init__.py",
+    "ai-service/app/core/intents.py",
+    "ai-service/app/core/meaning.py",
+    "ai-service/app/core/planning.py",
+    "ai-service/app/core/policy.py",
+    "ai-service/app/core/ports.py",
+    "ai-service/app/core/registry.py",
+    "ai-service/app/core/state.py",
+    "ai-service/app/core_facade.py",
+    "ai-service/app/core_library.py",
+    "ai-service/app/execution.py",
+    "ai-service/app/model.py",
+    "ai-service/app/personalization.py",
+    "ai-service/app/planning_commerce.py",
+    "ai-service/app/planning_library.json",
+    "ai-service/app/planning_library.py",
+    "ai-service/app/planning_runtime.py",
+    "ai-service/app/rich_responses.py",
+    "ai-service/app/runtime.py",
+    "ai-service/app/settings.py",
+    "ai-service/app/shopping.py",
+    "ai-service/app/shopping_intent.py",
+    "ai-service/app/telemetry.py",
+    "contracts/commerce-core/v1/goal-v0.9.json"
+  ],
+  "untracked_top_level": {
+    ".env.example": 1,
+    ".github": 2,
+    ".gitignore": 1,
+    "README.md": 1,
+    "ai-service": 715,
+    "artifacts": 197,
+    "assets": 242,
+    "deploy/aws-deploy": 25,
+    "backend": 217,
+    "compose.assistant-admin.yaml": 1,
+    "compose.assistant-provider.yaml": 1,
+    "compose.assistant.yaml": 1,
+    "compose.durability.yaml": 1,
+    "compose.electronics.yaml": 1,
+    "compose.jewelry.yaml": 1,
+    "compose.language-engine.yaml": 1,
+    "compose.notifications.yaml": 1,
+    "compose.observability.yaml": 1,
+    "compose.yaml": 1,
+    "contracts": 1,
+    "demo-presets": 7,
+    "deploy": 37,
+    "docs": 873,
+    "frontend": 544,
+    "output": 20,
+    "rocento-english-understanding": 15,
+    "scripts": 125,
+    "tmp": 1530
+  },
+  "largest_untracked": [
+    [
+      6081046,
+      "artifacts/agent-evals/strategy-python.xml"
+    ],
+    [
+      4488214,
+      "tmp/fulfillment-production-baseline-20261001/frontend/apps/storefront/public/data/delivery/gb/ENG.json"
+    ],
+    [
+      4488214,
+      "frontend/apps/storefront/public/data/delivery/gb/ENG.json"
+    ],
+    [
+      2540092,
+      "assets/demo/categories/baladi-bakery-icon.png"
+    ],
+    [
+      2390796,
+      "assets/demo/categories/baladi-bakery-banner.png"
+    ],
+    [
+      2332816,
+      "assets/demo/categories/jewelry-gifts-banner.png"
+    ],
+    [
+      2331508,
+      "assets/demo/categories/dates-nuts-sweets-banner.png"
+    ],
+    [
+      2316271,
+      "assets/demo/categories/pantry-staples-banner.png"
+    ],
+    [
+      2255885,
+      "assets/demo/categories/egyptian-breakfast-banner.png"
+    ],
+    [
+      2150413,
+      "assets/demo/categories/dates-nuts-sweets-icon.png"
+    ],
+    [
+      2147944,
+      "assets/demo/categories/tea-cold-drinks-banner.png"
+    ],
+    [
+      2146577,
+      "assets/demo/categories/jewelry-necklaces-banner.png"
+    ],
+    [
+      2143871,
+      "assets/demo/categories/egyptian-breakfast-icon.png"
+    ],
+    [
+      2132646,
+      "assets/demo/categories/jewelry-accessories-banner.png"
+    ],
+    [
+      2129834,
+      "assets/demo/categories/jewelry-new-arrivals-banner.png"
+    ],
+    [
+      2119221,
+      "assets/demo/categories/pantry-staples-icon.png"
+    ],
+    [
+      2056282,
+      "assets/demo/categories/fresh-produce-banner.png"
+    ],
+    [
+      2043643,
+      "assets/demo/categories/jewelry-gifts-icon.png"
+    ],
+    [
+      2041871,
+      "assets/demo/categories/fresh-produce-icon.png"
+    ],
+    [
+      1935100,
+      "assets/demo/categories/jewelry-collections-banner.png"
+    ]
+  ]
+}

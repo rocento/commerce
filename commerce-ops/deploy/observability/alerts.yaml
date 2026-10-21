@@ -1,0 +1,53 @@
+groups:
+  - name: commerce
+    rules:
+      - alert: CommerceGatewayDown
+        expr: up{job="commerce-gateway"} == 0
+        for: 1m
+        labels: {severity: critical}
+        annotations: {summary: "Commerce gateway scrape is failing"}
+      - alert: CommerceErrorRate
+        expr: sum(rate(commerce_http_errors_total[5m])) / clamp_min(sum(rate(commerce_http_requests_total[5m])), 0.001) > 0.05 and sum(increase(commerce_http_requests_total[5m])) >= 100
+        for: 2m
+        labels: {severity: warning}
+        annotations: {summary: "Gateway error rate exceeds 5% (at least 100 requests)"}
+      - alert: CommerceAvailabilityBudgetBurn
+        expr: sum(rate(commerce_http_errors_total[15m])) / clamp_min(sum(rate(commerce_http_requests_total[15m])), 0.001) > 0.005 and sum(increase(commerce_http_requests_total[15m])) >= 100
+        for: 5m
+        labels: {severity: warning}
+        annotations: {summary: "5xx rate exceeds the 0.5% availability error budget (at least 100 requests)"}
+      - alert: CommerceRequestLatencySlo
+        expr: histogram_quantile(0.95,sum by (le)(rate(commerce_http_duration_seconds_bucket[5m]))) > 1 and sum(increase(commerce_http_requests_total[5m])) >= 100
+        for: 10m
+        labels: {severity: warning}
+        annotations: {summary: "Gateway p95 latency exceeds the 1 second operational target (at least 100 requests)"}
+      - alert: CommerceConversionLow
+        expr: commerce_reporting_purchases / clamp_min(commerce_reporting_visitors, 1) < 0.01 and commerce_reporting_visitors >= 100
+        for: 15m
+        labels: {severity: warning}
+        annotations: {summary: "Yesterday's tracked conversion is below 1% (at least 100 daily sessions)"}
+      - alert: CommerceAnalyticsStale
+        expr: time() - commerce_reporting_last_success_seconds{job="commerce-analytics"} > 3600
+        for: 5m
+        labels: {severity: warning}
+        annotations: {summary: "Reporting snapshot has not advanced within one hour"}
+      - alert: CommerceAnalyticsWorkerDown
+        expr: up{job="commerce-analytics"} == 0 or commerce_analytics_worker_ready{job="commerce-analytics"} == 0
+        for: 1m
+        labels: {severity: warning}
+        annotations: {summary: "Analytics worker scrape is failing; commerce readiness is independent"}
+      - alert: CommerceReliabilitySamplingUnavailable
+        expr: (commerce_reliability_sample_success == 0 or time() - commerce_reliability_last_success_seconds > 60) and on (instance, job) (up{job="commerce-gateway"} == 1)
+        for: 2m
+        labels: {severity: warning}
+        annotations: {summary: "Commerce queue diagnostics are unavailable or stale; queue health is unknown"}
+      - alert: CommerceOutboxBacklog
+        expr: commerce_queue_oldest_pending_seconds{queue="outbox",job="commerce-gateway"} > 120 and on(instance,job) (commerce_reliability_sample_success == 1)
+        for: 2m
+        labels: {severity: warning}
+        annotations: {summary: "Committed commerce events have waited over two minutes for publication"}
+      - alert: CommerceNotificationFailures
+        expr: commerce_notifications_failed{job="commerce-gateway"} > 0 and on(instance,job) (commerce_reliability_sample_success == 1)
+        for: 2m
+        labels: {severity: warning}
+        annotations: {summary: "Terminal notification jobs require operator review; payloads are scrubbed"}

@@ -1,0 +1,9 @@
+vite v7.3.6 building ssr environment for production...
+transforming...
+✓ 360 modules transformed.
+rendering chunks...
+.stage10-dist-server/assets/search-widget-B3Id1F7W.js    9.62 kB
+.stage10-dist-server/entry-public-server.js            183.05 kB
+✓ built in 451ms
+
+Exit status: 0

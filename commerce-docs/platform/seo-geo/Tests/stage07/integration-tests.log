@@ -1,0 +1,42 @@
+   Compiling api-gateway v0.1.0 (/Users/momar/Documents/commerce-ai/backend/crates/api-gateway)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 3.53s
+     Running tests/publication_discovery.rs (backend/target/debug/deps/publication_discovery-9b8ae3d1122f540b)
+
+running 5 tests
+test two_million_product_capacity ... ignored, explicit two-million-product capacity check
+test partitions_eligibility_freshness_and_xml ... ok
+test crawler_permissions_revision_and_audit ... ok
+test stale_partition_growth_fails_instead_of_truncating ... ok
+test policy_matrix_binding_and_provider_controls ... ok
+
+test result: ok. 4 passed; 0 failed; 1 ignored; 0 measured; 0 filtered out; finished in 3.04s
+
+     Running tests/publication_metadata.rs (backend/target/debug/deps/publication_metadata-c3c6ab3b7aadb5ba)
+
+running 2 tests
+test image_eligibility_is_reference_based_and_revocable ... ok
+test real_media_bytes_variants_and_private_authorization ... ok
+
+test result: ok. 2 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 2.18s
+
+     Running tests/publication_policy.rs (backend/target/debug/deps/publication_policy-b3dfa342833babf2)
+
+running 3 tests
+test real_http_policy_preferences_override_hosts_and_permissions ... ok
+test two_installations_cannot_change_each_others_policy ... ok
+test protected_environments_and_header_override_win_on_real_http ... ok
+
+test result: ok. 3 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 2.39s
+
+     Running tests/publication_rendering.rs (backend/target/debug/deps/publication_rendering-6d47f1b25fd40fa2)
+
+running 7 tests
+test migration_backfills_legacy_rows_and_rejects_ambiguous_ownership ... ok
+test generated_slugs_unicode_collisions_and_deleted_categories ... ok
+test structured_data_matches_public_facts_across_industries_and_pricing ... ok
+test structured_variants_are_visible_independently_canonical_and_parent_scoped ... ok
+test metadata_raw_html_semantics_and_revisioned_admin_preview ... ok
+test canonical_lifecycle_single_hop_and_query_policy ... ok
+test built_renderer_real_http_status_content_freshness_and_isolation ... ok
+
+test result: ok. 7 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 4.09s

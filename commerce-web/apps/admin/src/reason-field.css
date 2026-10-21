@@ -1,0 +1,4 @@
+.reason-field { min-width: 0; }
+.reason-field select, .reason-field textarea { width: 100%; box-sizing: border-box; }
+.reason-field textarea { border: 1px solid #ccd3de; border-radius: 6px; padding: 12px; background: #fff; color: #202731; font: inherit; font-size: 14px; line-height: 1.5; resize: vertical; }
+.reason-field textarea:focus { outline: 2px solid #9ab1ff; outline-offset: 1px; }

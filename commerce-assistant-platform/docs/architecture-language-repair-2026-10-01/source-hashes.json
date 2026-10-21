@@ -1,0 +1,19 @@
+{
+  "ai-service/app/commerce_language_engine/src/engine.ts": "d76b3f7a934bc8ee6def5e317bec1db8b98c0f1388ea7bad3892c5f3ec300e1f",
+  "ai-service/app/commerce_language_engine/src/read-language.ts": "cae1955fa0c66883c5451e694bd7a2eacf80ab0ea81aeac8af1c5761a7630d54",
+  "ai-service/app/commerce_language_engine/src/order-product-language.ts": "b47939f29670083ca1c8db1c9a123278a4c03c5e32ea48ed740d48b794396463",
+  "ai-service/app/commerce_language_engine/src/product-guidance.ts": "9eed77c6ac0f436f44b25e5a0ec5282fe7f4ee86876512cf094cad906ca41169",
+  "ai-service/app/commerce_language_engine/src/semantic-clauses.ts": "466246f26217a090c1e7b461253b1e704903134a98fe6828883827e1869df344",
+  "ai-service/app/commerce_language_engine/src/knowledge.ts": "853df8fb3a69076cd495d0816ce6aae3d1aef3604d8d212f4f3ae01b4f2ae5dc",
+  "ai-service/app/commerce_language_engine/src/generation/corpus.ts": "1ebe15dee12c7b9c99b4300caf196048ca6f86e6f48ed12f3f3f3e4836b587fa",
+  "ai-service/app/commerce_language_engine/src/generation/coverage-cases.ts": "971ce985198e3662db8e28be40263cb3ed83e38fd8348ffbf964c0e72bc28546",
+  "ai-service/app/commerce_language_engine/src/generation/scoring-expectations.ts": "764988a6aeb84f4eb06a150df1d3ed9ed3c3f8de84ee6df17bbd822f7ab43ce3",
+  "ai-service/app/commerce_language_engine/tests/semantic-request.test.ts": "58811e3ccd2012bf12d53880e3e3863692e1b8d583db7113100a6a2c5581e76c",
+  "ai-service/app/commerce_language_engine/tests/parser-ownership.test.ts": "43da4b053fd57e3e5fcd5d9b6ab71f89be76e0a261d0d82b4d36ca321f825f40",
+  "ai-service/app/commerce_language_engine/data/generated.json": "f8e05ad52130a450d6e0d4f798f007ab736e3bd0a0932fb87efbff84204775c1",
+  "ai-service/app/commerce_language_engine/data/compiled.json": "ab68d112397879bf3ec8830781ed0865623dd3cdd4d2c45de85082d5dfca50c4",
+  "ai-service/app/commerce_language_engine/data/corpus.jsonl": "f1622d83b063e0ce6474fc73ab493f261c8ed402325f201849cf512d22717e0d",
+  "ai-service/app/commerce_language_engine/data/generation-report.json": "a223cc7b54a62a521c3a32012330249d6cd7c7ae5947f87eb38e846263a08494",
+  "ai-service/app/commerce_language_engine/data/compiler-report.json": "de2fa3dbe2ba52486796f7aae2adcd36c6f3a2aa8b01b1f5d2700de686332103",
+  "ai-service/tests/fixtures/enterprise_contracts/public-assistant-v1.json": "483f898874bbc242605f7fd0a1f4a6c7fe2c5a7a87e33a5fb2049a401a5a5d3b"
+}

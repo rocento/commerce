@@ -1,0 +1,1004 @@
+1,000 synthetic English order requests
+100 authored language frames × 10 baskets/products; 700 selection cases and 300 complex cases.
+Labels specify the original strict expectation; see final.json for reviewed supported plans.
+
+1. [order-01-01 | selection | development] create order 2 banans 3 apples 2 baladi
+2. [order-01-02 | selection | development] create order two bananas and three apples
+3. [order-01-03 | selection | development] create order 1 milk, 2 eggs, 3 rice
+4. [order-01-04 | selection | development] create order 2 green apples and 1 baladi bread
+5. [order-01-05 | selection | development] create order 4 chesse & 2 tomatos
+6. [order-01-06 | selection | development] create order 2x bananas, 3x apples
+7. [order-01-07 | selection | development] create order bananas x2 and apples x3
+8. [order-01-08 | selection | development] create order twelve eggs and twenty apples
+9. [order-01-09 | selection | development] create order 1 olive oil, 2 yogurt, 3 dates, 1 honey, 2 lemons
+10. [order-01-10 | selection | development] create order 2 SKU-GRN-007 and 1 oat milk
+11. [order-02-01 | selection | development] please create an order for 2 banans 3 apples 2 baladi
+12. [order-02-02 | selection | development] please create an order for two bananas and three apples
+13. [order-02-03 | selection | development] please create an order for 1 milk, 2 eggs, 3 rice
+14. [order-02-04 | selection | development] please create an order for 2 green apples and 1 baladi bread
+15. [order-02-05 | selection | development] please create an order for 4 chesse & 2 tomatos
+16. [order-02-06 | selection | development] please create an order for 2x bananas, 3x apples
+17. [order-02-07 | selection | development] please create an order for bananas x2 and apples x3
+18. [order-02-08 | selection | development] please create an order for twelve eggs and twenty apples
+19. [order-02-09 | selection | development] please create an order for 1 olive oil, 2 yogurt, 3 dates, 1 honey, 2 lemons
+20. [order-02-10 | selection | development] please create an order for 2 SKU-GRN-007 and 1 oat milk
+21. [order-03-01 | selection | development] pls make an order with 2 banans 3 apples 2 baladi
+22. [order-03-02 | selection | development] pls make an order with two bananas and three apples
+23. [order-03-03 | selection | development] pls make an order with 1 milk, 2 eggs, 3 rice
+24. [order-03-04 | selection | development] pls make an order with 2 green apples and 1 baladi bread
+25. [order-03-05 | selection | development] pls make an order with 4 chesse & 2 tomatos
+26. [order-03-06 | selection | development] pls make an order with 2x bananas, 3x apples
+27. [order-03-07 | selection | development] pls make an order with bananas x2 and apples x3
+28. [order-03-08 | selection | development] pls make an order with twelve eggs and twenty apples
+29. [order-03-09 | selection | development] pls make an order with 1 olive oil, 2 yogurt, 3 dates, 1 honey, 2 lemons
+30. [order-03-10 | selection | development] pls make an order with 2 SKU-GRN-007 and 1 oat milk
+31. [order-04-01 | selection | development] plz place order: 2 banans 3 apples 2 baladi
+32. [order-04-02 | selection | development] plz place order: two bananas and three apples
+33. [order-04-03 | selection | development] plz place order: 1 milk, 2 eggs, 3 rice
+34. [order-04-04 | selection | development] plz place order: 2 green apples and 1 baladi bread
+35. [order-04-05 | selection | development] plz place order: 4 chesse & 2 tomatos
+36. [order-04-06 | selection | development] plz place order: 2x bananas, 3x apples
+37. [order-04-07 | selection | development] plz place order: bananas x2 and apples x3
+38. [order-04-08 | selection | development] plz place order: twelve eggs and twenty apples
+39. [order-04-09 | selection | development] plz place order: 1 olive oil, 2 yogurt, 3 dates, 1 honey, 2 lemons
+40. [order-04-10 | selection | development] plz place order: 2 SKU-GRN-007 and 1 oat milk
+41. [order-06-01 | selection | development] make me an order for 2 banans 3 apples 2 baladi
+42. [order-06-02 | selection | development] make me an order for two bananas and three apples
+43. [order-06-03 | selection | development] make me an order for 1 milk, 2 eggs, 3 rice
+44. [order-06-04 | selection | development] make me an order for 2 green apples and 1 baladi bread
+45. [order-06-05 | selection | development] make me an order for 4 chesse & 2 tomatos
+46. [order-06-06 | selection | development] make me an order for 2x bananas, 3x apples
+47. [order-06-07 | selection | development] make me an order for bananas x2 and apples x3
+48. [order-06-08 | selection | development] make me an order for twelve eggs and twenty apples
+49. [order-06-09 | selection | development] make me an order for 1 olive oil, 2 yogurt, 3 dates, 1 honey, 2 lemons
+50. [order-06-10 | selection | development] make me an order for 2 SKU-GRN-007 and 1 oat milk
+51. [order-07-01 | selection | development] create a shopping order with 2 banans 3 apples 2 baladi
+52. [order-07-02 | selection | development] create a shopping order with two bananas and three apples
+53. [order-07-03 | selection | development] create a shopping order with 1 milk, 2 eggs, 3 rice
+54. [order-07-04 | selection | development] create a shopping order with 2 green apples and 1 baladi bread
+55. [order-07-05 | selection | development] create a shopping order with 4 chesse & 2 tomatos
+56. [order-07-06 | selection | development] create a shopping order with 2x bananas, 3x apples
+57. [order-07-07 | selection | development] create a shopping order with bananas x2 and apples x3
+58. [order-07-08 | selection | development] create a shopping order with twelve eggs and twenty apples
+59. [order-07-09 | selection | development] create a shopping order with 1 olive oil, 2 yogurt, 3 dates, 1 honey, 2 lemons
+60. [order-07-10 | selection | development] create a shopping order with 2 SKU-GRN-007 and 1 oat milk
+61. [order-08-01 | selection | development] place my order for 2 banans 3 apples 2 baladi
+62. [order-08-02 | selection | development] place my order for two bananas and three apples
+63. [order-08-03 | selection | development] place my order for 1 milk, 2 eggs, 3 rice
+64. [order-08-04 | selection | development] place my order for 2 green apples and 1 baladi bread
+65. [order-08-05 | selection | development] place my order for 4 chesse & 2 tomatos
+66. [order-08-06 | selection | development] place my order for 2x bananas, 3x apples
+67. [order-08-07 | selection | development] place my order for bananas x2 and apples x3
+68. [order-08-08 | selection | development] place my order for twelve eggs and twenty apples
+69. [order-08-09 | selection | development] place my order for 1 olive oil, 2 yogurt, 3 dates, 1 honey, 2 lemons
+70. [order-08-10 | selection | development] place my order for 2 SKU-GRN-007 and 1 oat milk
+71. [order-09-01 | selection | development] can you create an order for 2 banans 3 apples 2 baladi?
+72. [order-09-02 | selection | development] can you create an order for two bananas and three apples?
+73. [order-09-03 | selection | development] can you create an order for 1 milk, 2 eggs, 3 rice?
+74. [order-09-04 | selection | development] can you create an order for 2 green apples and 1 baladi bread?
+75. [order-09-05 | selection | development] can you create an order for 4 chesse & 2 tomatos?
+76. [order-09-06 | selection | development] can you create an order for 2x bananas, 3x apples?
+77. [order-09-07 | selection | development] can you create an order for bananas x2 and apples x3?
+78. [order-09-08 | selection | development] can you create an order for twelve eggs and twenty apples?
+79. [order-09-09 | selection | development] can you create an order for 1 olive oil, 2 yogurt, 3 dates, 1 honey, 2 lemons?
+80. [order-09-10 | selection | development] can you create an order for 2 SKU-GRN-007 and 1 oat milk?
+81. [order-11-01 | selection | development] would you make an order for 2 banans 3 apples 2 baladi, please?
+82. [order-11-02 | selection | development] would you make an order for two bananas and three apples, please?
+83. [order-11-03 | selection | development] would you make an order for 1 milk, 2 eggs, 3 rice, please?
+84. [order-11-04 | selection | development] would you make an order for 2 green apples and 1 baladi bread, please?
+85. [order-11-05 | selection | development] would you make an order for 4 chesse & 2 tomatos, please?
+86. [order-11-06 | selection | development] would you make an order for 2x bananas, 3x apples, please?
+87. [order-11-07 | selection | development] would you make an order for bananas x2 and apples x3, please?
+88. [order-11-08 | selection | development] would you make an order for twelve eggs and twenty apples, please?
+89. [order-11-09 | selection | development] would you make an order for 1 olive oil, 2 yogurt, 3 dates, 1 honey, 2 lemons, please?
+90. [order-11-10 | selection | development] would you make an order for 2 SKU-GRN-007 and 1 oat milk, please?
+91. [order-12-01 | selection | development] please help me order 2 banans 3 apples 2 baladi
+92. [order-12-02 | selection | development] please help me order two bananas and three apples
+93. [order-12-03 | selection | development] please help me order 1 milk, 2 eggs, 3 rice
+94. [order-12-04 | selection | development] please help me order 2 green apples and 1 baladi bread
+95. [order-12-05 | selection | development] please help me order 4 chesse & 2 tomatos
+96. [order-12-06 | selection | development] please help me order 2x bananas, 3x apples
+97. [order-12-07 | selection | development] please help me order bananas x2 and apples x3
+98. [order-12-08 | selection | development] please help me order twelve eggs and twenty apples
+99. [order-12-09 | selection | development] please help me order 1 olive oil, 2 yogurt, 3 dates, 1 honey, 2 lemons
+100. [order-12-10 | selection | development] please help me order 2 SKU-GRN-007 and 1 oat milk
+101. [order-13-01 | selection | development] help me buy 2 banans 3 apples 2 baladi
+102. [order-13-02 | selection | development] help me buy two bananas and three apples
+103. [order-13-03 | selection | development] help me buy 1 milk, 2 eggs, 3 rice
+104. [order-13-04 | selection | development] help me buy 2 green apples and 1 baladi bread
+105. [order-13-05 | selection | development] help me buy 4 chesse & 2 tomatos
+106. [order-13-06 | selection | development] help me buy 2x bananas, 3x apples
+107. [order-13-07 | selection | development] help me buy bananas x2 and apples x3
+108. [order-13-08 | selection | development] help me buy twelve eggs and twenty apples
+109. [order-13-09 | selection | development] help me buy 1 olive oil, 2 yogurt, 3 dates, 1 honey, 2 lemons
+110. [order-13-10 | selection | development] help me buy 2 SKU-GRN-007 and 1 oat milk
+111. [order-14-01 | selection | development] I want to order 2 banans 3 apples 2 baladi
+112. [order-14-02 | selection | development] I want to order two bananas and three apples
+113. [order-14-03 | selection | development] I want to order 1 milk, 2 eggs, 3 rice
+114. [order-14-04 | selection | development] I want to order 2 green apples and 1 baladi bread
+115. [order-14-05 | selection | development] I want to order 4 chesse & 2 tomatos
+116. [order-14-06 | selection | development] I want to order 2x bananas, 3x apples
+117. [order-14-07 | selection | development] I want to order bananas x2 and apples x3
+118. [order-14-08 | selection | development] I want to order twelve eggs and twenty apples
+119. [order-14-09 | selection | development] I want to order 1 olive oil, 2 yogurt, 3 dates, 1 honey, 2 lemons
+120. [order-14-10 | selection | development] I want to order 2 SKU-GRN-007 and 1 oat milk
+121. [order-16-01 | selection | development] I would like to purchase 2 banans 3 apples 2 baladi
+122. [order-16-02 | selection | development] I would like to purchase two bananas and three apples
+123. [order-16-03 | selection | development] I would like to purchase 1 milk, 2 eggs, 3 rice
+124. [order-16-04 | selection | development] I would like to purchase 2 green apples and 1 baladi bread
+125. [order-16-05 | selection | development] I would like to purchase 4 chesse & 2 tomatos
+126. [order-16-06 | selection | development] I would like to purchase 2x bananas, 3x apples
+127. [order-16-07 | selection | development] I would like to purchase bananas x2 and apples x3
+128. [order-16-08 | selection | development] I would like to purchase twelve eggs and twenty apples
+129. [order-16-09 | selection | development] I would like to purchase 1 olive oil, 2 yogurt, 3 dates, 1 honey, 2 lemons
+130. [order-16-10 | selection | development] I would like to purchase 2 SKU-GRN-007 and 1 oat milk
+131. [order-17-01 | selection | development] I'd like to order 2 banans 3 apples 2 baladi
+132. [order-17-02 | selection | development] I'd like to order two bananas and three apples
+133. [order-17-03 | selection | development] I'd like to order 1 milk, 2 eggs, 3 rice
+134. [order-17-04 | selection | development] I'd like to order 2 green apples and 1 baladi bread
+135. [order-17-05 | selection | development] I'd like to order 4 chesse & 2 tomatos
+136. [order-17-06 | selection | development] I'd like to order 2x bananas, 3x apples
+137. [order-17-07 | selection | development] I'd like to order bananas x2 and apples x3
+138. [order-17-08 | selection | development] I'd like to order twelve eggs and twenty apples
+139. [order-17-09 | selection | development] I'd like to order 1 olive oil, 2 yogurt, 3 dates, 1 honey, 2 lemons
+140. [order-17-10 | selection | development] I'd like to order 2 SKU-GRN-007 and 1 oat milk
+141. [order-18-01 | selection | development] we'd like to buy 2 banans 3 apples 2 baladi
+142. [order-18-02 | selection | development] we'd like to buy two bananas and three apples
+143. [order-18-03 | selection | development] we'd like to buy 1 milk, 2 eggs, 3 rice
+144. [order-18-04 | selection | development] we'd like to buy 2 green apples and 1 baladi bread
+145. [order-18-05 | selection | development] we'd like to buy 4 chesse & 2 tomatos
+146. [order-18-06 | selection | development] we'd like to buy 2x bananas, 3x apples
+147. [order-18-07 | selection | development] we'd like to buy bananas x2 and apples x3
+148. [order-18-08 | selection | development] we'd like to buy twelve eggs and twenty apples
+149. [order-18-09 | selection | development] we'd like to buy 1 olive oil, 2 yogurt, 3 dates, 1 honey, 2 lemons
+150. [order-18-10 | selection | development] we'd like to buy 2 SKU-GRN-007 and 1 oat milk
+151. [order-19-01 | selection | development] I need to order 2 banans 3 apples 2 baladi
+152. [order-19-02 | selection | development] I need to order two bananas and three apples
+153. [order-19-03 | selection | development] I need to order 1 milk, 2 eggs, 3 rice
+154. [order-19-04 | selection | development] I need to order 2 green apples and 1 baladi bread
+155. [order-19-05 | selection | development] I need to order 4 chesse & 2 tomatos
+156. [order-19-06 | selection | development] I need to order 2x bananas, 3x apples
+157. [order-19-07 | selection | development] I need to order bananas x2 and apples x3
+158. [order-19-08 | selection | development] I need to order twelve eggs and twenty apples
+159. [order-19-09 | selection | development] I need to order 1 olive oil, 2 yogurt, 3 dates, 1 honey, 2 lemons
+160. [order-19-10 | selection | development] I need to order 2 SKU-GRN-007 and 1 oat milk
+161. [order-21-01 | selection | development] I want 2 banans 3 apples 2 baladi
+162. [order-21-02 | selection | development] I want two bananas and three apples
+163. [order-21-03 | selection | development] I want 1 milk, 2 eggs, 3 rice
+164. [order-21-04 | selection | development] I want 2 green apples and 1 baladi bread
+165. [order-21-05 | selection | development] I want 4 chesse & 2 tomatos
+166. [order-21-06 | selection | development] I want 2x bananas, 3x apples
+167. [order-21-07 | selection | development] I want bananas x2 and apples x3
+168. [order-21-08 | selection | development] I want twelve eggs and twenty apples
+169. [order-21-09 | selection | development] I want 1 olive oil, 2 yogurt, 3 dates, 1 honey, 2 lemons
+170. [order-21-10 | selection | development] I want 2 SKU-GRN-007 and 1 oat milk
+171. [order-22-01 | selection | development] I would like 2 banans 3 apples 2 baladi
+172. [order-22-02 | selection | development] I would like two bananas and three apples
+173. [order-22-03 | selection | development] I would like 1 milk, 2 eggs, 3 rice
+174. [order-22-04 | selection | development] I would like 2 green apples and 1 baladi bread
+175. [order-22-05 | selection | development] I would like 4 chesse & 2 tomatos
+176. [order-22-06 | selection | development] I would like 2x bananas, 3x apples
+177. [order-22-07 | selection | development] I would like bananas x2 and apples x3
+178. [order-22-08 | selection | development] I would like twelve eggs and twenty apples
+179. [order-22-09 | selection | development] I would like 1 olive oil, 2 yogurt, 3 dates, 1 honey, 2 lemons
+180. [order-22-10 | selection | development] I would like 2 SKU-GRN-007 and 1 oat milk
+181. [order-23-01 | selection | development] I'd like 2 banans 3 apples 2 baladi
+182. [order-23-02 | selection | development] I'd like two bananas and three apples
+183. [order-23-03 | selection | development] I'd like 1 milk, 2 eggs, 3 rice
+184. [order-23-04 | selection | development] I'd like 2 green apples and 1 baladi bread
+185. [order-23-05 | selection | development] I'd like 4 chesse & 2 tomatos
+186. [order-23-06 | selection | development] I'd like 2x bananas, 3x apples
+187. [order-23-07 | selection | development] I'd like bananas x2 and apples x3
+188. [order-23-08 | selection | development] I'd like twelve eggs and twenty apples
+189. [order-23-09 | selection | development] I'd like 1 olive oil, 2 yogurt, 3 dates, 1 honey, 2 lemons
+190. [order-23-10 | selection | development] I'd like 2 SKU-GRN-007 and 1 oat milk
+191. [order-24-01 | selection | development] can I get 2 banans 3 apples 2 baladi?
+192. [order-24-02 | selection | development] can I get two bananas and three apples?
+193. [order-24-03 | selection | development] can I get 1 milk, 2 eggs, 3 rice?
+194. [order-24-04 | selection | development] can I get 2 green apples and 1 baladi bread?
+195. [order-24-05 | selection | development] can I get 4 chesse & 2 tomatos?
+196. [order-24-06 | selection | development] can I get 2x bananas, 3x apples?
+197. [order-24-07 | selection | development] can I get bananas x2 and apples x3?
+198. [order-24-08 | selection | development] can I get twelve eggs and twenty apples?
+199. [order-24-09 | selection | development] can I get 1 olive oil, 2 yogurt, 3 dates, 1 honey, 2 lemons?
+200. [order-24-10 | selection | development] can I get 2 SKU-GRN-007 and 1 oat milk?
+201. [order-26-01 | selection | development] may I order 2 banans 3 apples 2 baladi?
+202. [order-26-02 | selection | development] may I order two bananas and three apples?
+203. [order-26-03 | selection | development] may I order 1 milk, 2 eggs, 3 rice?
+204. [order-26-04 | selection | development] may I order 2 green apples and 1 baladi bread?
+205. [order-26-05 | selection | development] may I order 4 chesse & 2 tomatos?
+206. [order-26-06 | selection | development] may I order 2x bananas, 3x apples?
+207. [order-26-07 | selection | development] may I order bananas x2 and apples x3?
+208. [order-26-08 | selection | development] may I order twelve eggs and twenty apples?
+209. [order-26-09 | selection | development] may I order 1 olive oil, 2 yogurt, 3 dates, 1 honey, 2 lemons?
+210. [order-26-10 | selection | development] may I order 2 SKU-GRN-007 and 1 oat milk?
+211. [order-27-01 | selection | development] can I buy 2 banans 3 apples 2 baladi?
+212. [order-27-02 | selection | development] can I buy two bananas and three apples?
+213. [order-27-03 | selection | development] can I buy 1 milk, 2 eggs, 3 rice?
+214. [order-27-04 | selection | development] can I buy 2 green apples and 1 baladi bread?
+215. [order-27-05 | selection | development] can I buy 4 chesse & 2 tomatos?
+216. [order-27-06 | selection | development] can I buy 2x bananas, 3x apples?
+217. [order-27-07 | selection | development] can I buy bananas x2 and apples x3?
+218. [order-27-08 | selection | development] can I buy twelve eggs and twenty apples?
+219. [order-27-09 | selection | development] can I buy 1 olive oil, 2 yogurt, 3 dates, 1 honey, 2 lemons?
+220. [order-27-10 | selection | development] can I buy 2 SKU-GRN-007 and 1 oat milk?
+221. [order-28-01 | selection | development] buy 2 banans 3 apples 2 baladi
+222. [order-28-02 | selection | development] buy two bananas and three apples
+223. [order-28-03 | selection | development] buy 1 milk, 2 eggs, 3 rice
+224. [order-28-04 | selection | development] buy 2 green apples and 1 baladi bread
+225. [order-28-05 | selection | development] buy 4 chesse & 2 tomatos
+226. [order-28-06 | selection | development] buy 2x bananas, 3x apples
+227. [order-28-07 | selection | development] buy bananas x2 and apples x3
+228. [order-28-08 | selection | development] buy twelve eggs and twenty apples
+229. [order-28-09 | selection | development] buy 1 olive oil, 2 yogurt, 3 dates, 1 honey, 2 lemons
+230. [order-28-10 | selection | development] buy 2 SKU-GRN-007 and 1 oat milk
+231. [order-29-01 | selection | development] purchase 2 banans 3 apples 2 baladi
+232. [order-29-02 | selection | development] purchase two bananas and three apples
+233. [order-29-03 | selection | development] purchase 1 milk, 2 eggs, 3 rice
+234. [order-29-04 | selection | development] purchase 2 green apples and 1 baladi bread
+235. [order-29-05 | selection | development] purchase 4 chesse & 2 tomatos
+236. [order-29-06 | selection | development] purchase 2x bananas, 3x apples
+237. [order-29-07 | selection | development] purchase bananas x2 and apples x3
+238. [order-29-08 | selection | development] purchase twelve eggs and twenty apples
+239. [order-29-09 | selection | development] purchase 1 olive oil, 2 yogurt, 3 dates, 1 honey, 2 lemons
+240. [order-29-10 | selection | development] purchase 2 SKU-GRN-007 and 1 oat milk
+241. [order-31-01 | selection | development] please order 2 banans 3 apples 2 baladi for me
+242. [order-31-02 | selection | development] please order two bananas and three apples for me
+243. [order-31-03 | selection | development] please order 1 milk, 2 eggs, 3 rice for me
+244. [order-31-04 | selection | development] please order 2 green apples and 1 baladi bread for me
+245. [order-31-05 | selection | development] please order 4 chesse & 2 tomatos for me
+246. [order-31-06 | selection | development] please order 2x bananas, 3x apples for me
+247. [order-31-07 | selection | development] please order bananas x2 and apples x3 for me
+248. [order-31-08 | selection | development] please order twelve eggs and twenty apples for me
+249. [order-31-09 | selection | development] please order 1 olive oil, 2 yogurt, 3 dates, 1 honey, 2 lemons for me
+250. [order-31-10 | selection | development] please order 2 SKU-GRN-007 and 1 oat milk for me
+251. [order-32-01 | selection | development] buy me 2 banans 3 apples 2 baladi
+252. [order-32-02 | selection | development] buy me two bananas and three apples
+253. [order-32-03 | selection | development] buy me 1 milk, 2 eggs, 3 rice
+254. [order-32-04 | selection | development] buy me 2 green apples and 1 baladi bread
+255. [order-32-05 | selection | development] buy me 4 chesse & 2 tomatos
+256. [order-32-06 | selection | development] buy me 2x bananas, 3x apples
+257. [order-32-07 | selection | development] buy me bananas x2 and apples x3
+258. [order-32-08 | selection | development] buy me twelve eggs and twenty apples
+259. [order-32-09 | selection | development] buy me 1 olive oil, 2 yogurt, 3 dates, 1 honey, 2 lemons
+260. [order-32-10 | selection | development] buy me 2 SKU-GRN-007 and 1 oat milk
+261. [order-33-01 | selection | development] get me 2 banans 3 apples 2 baladi
+262. [order-33-02 | selection | development] get me two bananas and three apples
+263. [order-33-03 | selection | development] get me 1 milk, 2 eggs, 3 rice
+264. [order-33-04 | selection | development] get me 2 green apples and 1 baladi bread
+265. [order-33-05 | selection | development] get me 4 chesse & 2 tomatos
+266. [order-33-06 | selection | development] get me 2x bananas, 3x apples
+267. [order-33-07 | selection | development] get me bananas x2 and apples x3
+268. [order-33-08 | selection | development] get me twelve eggs and twenty apples
+269. [order-33-09 | selection | development] get me 1 olive oil, 2 yogurt, 3 dates, 1 honey, 2 lemons
+270. [order-33-10 | selection | development] get me 2 SKU-GRN-007 and 1 oat milk
+271. [order-34-01 | selection | development] please get me 2 banans 3 apples 2 baladi
+272. [order-34-02 | selection | development] please get me two bananas and three apples
+273. [order-34-03 | selection | development] please get me 1 milk, 2 eggs, 3 rice
+274. [order-34-04 | selection | development] please get me 2 green apples and 1 baladi bread
+275. [order-34-05 | selection | development] please get me 4 chesse & 2 tomatos
+276. [order-34-06 | selection | development] please get me 2x bananas, 3x apples
+277. [order-34-07 | selection | development] please get me bananas x2 and apples x3
+278. [order-34-08 | selection | development] please get me twelve eggs and twenty apples
+279. [order-34-09 | selection | development] please get me 1 olive oil, 2 yogurt, 3 dates, 1 honey, 2 lemons
+280. [order-34-10 | selection | development] please get me 2 SKU-GRN-007 and 1 oat milk
+281. [order-36-01 | selection | development] I'll take 2 banans 3 apples 2 baladi
+282. [order-36-02 | selection | development] I'll take two bananas and three apples
+283. [order-36-03 | selection | development] I'll take 1 milk, 2 eggs, 3 rice
+284. [order-36-04 | selection | development] I'll take 2 green apples and 1 baladi bread
+285. [order-36-05 | selection | development] I'll take 4 chesse & 2 tomatos
+286. [order-36-06 | selection | development] I'll take 2x bananas, 3x apples
+287. [order-36-07 | selection | development] I'll take bananas x2 and apples x3
+288. [order-36-08 | selection | development] I'll take twelve eggs and twenty apples
+289. [order-36-09 | selection | development] I'll take 1 olive oil, 2 yogurt, 3 dates, 1 honey, 2 lemons
+290. [order-36-10 | selection | development] I'll take 2 SKU-GRN-007 and 1 oat milk
+291. [order-37-01 | selection | development] we will take 2 banans 3 apples 2 baladi
+292. [order-37-02 | selection | development] we will take two bananas and three apples
+293. [order-37-03 | selection | development] we will take 1 milk, 2 eggs, 3 rice
+294. [order-37-04 | selection | development] we will take 2 green apples and 1 baladi bread
+295. [order-37-05 | selection | development] we will take 4 chesse & 2 tomatos
+296. [order-37-06 | selection | development] we will take 2x bananas, 3x apples
+297. [order-37-07 | selection | development] we will take bananas x2 and apples x3
+298. [order-37-08 | selection | development] we will take twelve eggs and twenty apples
+299. [order-37-09 | selection | development] we will take 1 olive oil, 2 yogurt, 3 dates, 1 honey, 2 lemons
+300. [order-37-10 | selection | development] we will take 2 SKU-GRN-007 and 1 oat milk
+301. [order-38-01 | selection | development] we'll take 2 banans 3 apples 2 baladi
+302. [order-38-02 | selection | development] we'll take two bananas and three apples
+303. [order-38-03 | selection | development] we'll take 1 milk, 2 eggs, 3 rice
+304. [order-38-04 | selection | development] we'll take 2 green apples and 1 baladi bread
+305. [order-38-05 | selection | development] we'll take 4 chesse & 2 tomatos
+306. [order-38-06 | selection | development] we'll take 2x bananas, 3x apples
+307. [order-38-07 | selection | development] we'll take bananas x2 and apples x3
+308. [order-38-08 | selection | development] we'll take twelve eggs and twenty apples
+309. [order-38-09 | selection | development] we'll take 1 olive oil, 2 yogurt, 3 dates, 1 honey, 2 lemons
+310. [order-38-10 | selection | development] we'll take 2 SKU-GRN-007 and 1 oat milk
+311. [order-39-01 | selection | development] I would like to get 2 banans 3 apples 2 baladi
+312. [order-39-02 | selection | development] I would like to get two bananas and three apples
+313. [order-39-03 | selection | development] I would like to get 1 milk, 2 eggs, 3 rice
+314. [order-39-04 | selection | development] I would like to get 2 green apples and 1 baladi bread
+315. [order-39-05 | selection | development] I would like to get 4 chesse & 2 tomatos
+316. [order-39-06 | selection | development] I would like to get 2x bananas, 3x apples
+317. [order-39-07 | selection | development] I would like to get bananas x2 and apples x3
+318. [order-39-08 | selection | development] I would like to get twelve eggs and twenty apples
+319. [order-39-09 | selection | development] I would like to get 1 olive oil, 2 yogurt, 3 dates, 1 honey, 2 lemons
+320. [order-39-10 | selection | development] I would like to get 2 SKU-GRN-007 and 1 oat milk
+321. [order-41-01 | selection | development] hi, please order 2 banans 3 apples 2 baladi
+322. [order-41-02 | selection | development] hi, please order two bananas and three apples
+323. [order-41-03 | selection | development] hi, please order 1 milk, 2 eggs, 3 rice
+324. [order-41-04 | selection | development] hi, please order 2 green apples and 1 baladi bread
+325. [order-41-05 | selection | development] hi, please order 4 chesse & 2 tomatos
+326. [order-41-06 | selection | development] hi, please order 2x bananas, 3x apples
+327. [order-41-07 | selection | development] hi, please order bananas x2 and apples x3
+328. [order-41-08 | selection | development] hi, please order twelve eggs and twenty apples
+329. [order-41-09 | selection | development] hi, please order 1 olive oil, 2 yogurt, 3 dates, 1 honey, 2 lemons
+330. [order-41-10 | selection | development] hi, please order 2 SKU-GRN-007 and 1 oat milk
+331. [order-42-01 | selection | development] hello! I want to buy 2 banans 3 apples 2 baladi
+332. [order-42-02 | selection | development] hello! I want to buy two bananas and three apples
+333. [order-42-03 | selection | development] hello! I want to buy 1 milk, 2 eggs, 3 rice
+334. [order-42-04 | selection | development] hello! I want to buy 2 green apples and 1 baladi bread
+335. [order-42-05 | selection | development] hello! I want to buy 4 chesse & 2 tomatos
+336. [order-42-06 | selection | development] hello! I want to buy 2x bananas, 3x apples
+337. [order-42-07 | selection | development] hello! I want to buy bananas x2 and apples x3
+338. [order-42-08 | selection | development] hello! I want to buy twelve eggs and twenty apples
+339. [order-42-09 | selection | development] hello! I want to buy 1 olive oil, 2 yogurt, 3 dates, 1 honey, 2 lemons
+340. [order-42-10 | selection | development] hello! I want to buy 2 SKU-GRN-007 and 1 oat milk
+341. [order-43-01 | selection | development] hey, could you order 2 banans 3 apples 2 baladi?
+342. [order-43-02 | selection | development] hey, could you order two bananas and three apples?
+343. [order-43-03 | selection | development] hey, could you order 1 milk, 2 eggs, 3 rice?
+344. [order-43-04 | selection | development] hey, could you order 2 green apples and 1 baladi bread?
+345. [order-43-05 | selection | development] hey, could you order 4 chesse & 2 tomatos?
+346. [order-43-06 | selection | development] hey, could you order 2x bananas, 3x apples?
+347. [order-43-07 | selection | development] hey, could you order bananas x2 and apples x3?
+348. [order-43-08 | selection | development] hey, could you order twelve eggs and twenty apples?
+349. [order-43-09 | selection | development] hey, could you order 1 olive oil, 2 yogurt, 3 dates, 1 honey, 2 lemons?
+350. [order-43-10 | selection | development] hey, could you order 2 SKU-GRN-007 and 1 oat milk?
+351. [order-44-01 | selection | development] good morning, please buy 2 banans 3 apples 2 baladi
+352. [order-44-02 | selection | development] good morning, please buy two bananas and three apples
+353. [order-44-03 | selection | development] good morning, please buy 1 milk, 2 eggs, 3 rice
+354. [order-44-04 | selection | development] good morning, please buy 2 green apples and 1 baladi bread
+355. [order-44-05 | selection | development] good morning, please buy 4 chesse & 2 tomatos
+356. [order-44-06 | selection | development] good morning, please buy 2x bananas, 3x apples
+357. [order-44-07 | selection | development] good morning, please buy bananas x2 and apples x3
+358. [order-44-08 | selection | development] good morning, please buy twelve eggs and twenty apples
+359. [order-44-09 | selection | development] good morning, please buy 1 olive oil, 2 yogurt, 3 dates, 1 honey, 2 lemons
+360. [order-44-10 | selection | development] good morning, please buy 2 SKU-GRN-007 and 1 oat milk
+361. [order-46-01 | selection | development] please place an order for 2 banans 3 apples 2 baladi, thanks
+362. [order-46-02 | selection | development] please place an order for two bananas and three apples, thanks
+363. [order-46-03 | selection | development] please place an order for 1 milk, 2 eggs, 3 rice, thanks
+364. [order-46-04 | selection | development] please place an order for 2 green apples and 1 baladi bread, thanks
+365. [order-46-05 | selection | development] please place an order for 4 chesse & 2 tomatos, thanks
+366. [order-46-06 | selection | development] please place an order for 2x bananas, 3x apples, thanks
+367. [order-46-07 | selection | development] please place an order for bananas x2 and apples x3, thanks
+368. [order-46-08 | selection | development] please place an order for twelve eggs and twenty apples, thanks
+369. [order-46-09 | selection | development] please place an order for 1 olive oil, 2 yogurt, 3 dates, 1 honey, 2 lemons, thanks
+370. [order-46-10 | selection | development] please place an order for 2 SKU-GRN-007 and 1 oat milk, thanks
+371. [order-47-01 | selection | development] order 2 banans 3 apples 2 baladi, thank you
+372. [order-47-02 | selection | development] order two bananas and three apples, thank you
+373. [order-47-03 | selection | development] order 1 milk, 2 eggs, 3 rice, thank you
+374. [order-47-04 | selection | development] order 2 green apples and 1 baladi bread, thank you
+375. [order-47-05 | selection | development] order 4 chesse & 2 tomatos, thank you
+376. [order-47-06 | selection | development] order 2x bananas, 3x apples, thank you
+377. [order-47-07 | selection | development] order bananas x2 and apples x3, thank you
+378. [order-47-08 | selection | development] order twelve eggs and twenty apples, thank you
+379. [order-47-09 | selection | development] order 1 olive oil, 2 yogurt, 3 dates, 1 honey, 2 lemons, thank you
+380. [order-47-10 | selection | development] order 2 SKU-GRN-007 and 1 oat milk, thank you
+381. [order-48-01 | selection | development] I want to place an order for 2 banans 3 apples 2 baladi
+382. [order-48-02 | selection | development] I want to place an order for two bananas and three apples
+383. [order-48-03 | selection | development] I want to place an order for 1 milk, 2 eggs, 3 rice
+384. [order-48-04 | selection | development] I want to place an order for 2 green apples and 1 baladi bread
+385. [order-48-05 | selection | development] I want to place an order for 4 chesse & 2 tomatos
+386. [order-48-06 | selection | development] I want to place an order for 2x bananas, 3x apples
+387. [order-48-07 | selection | development] I want to place an order for bananas x2 and apples x3
+388. [order-48-08 | selection | development] I want to place an order for twelve eggs and twenty apples
+389. [order-48-09 | selection | development] I want to place an order for 1 olive oil, 2 yogurt, 3 dates, 1 honey, 2 lemons
+390. [order-48-10 | selection | development] I want to place an order for 2 SKU-GRN-007 and 1 oat milk
+391. [order-49-01 | selection | development] we would like to create an order with 2 banans 3 apples 2 baladi
+392. [order-49-02 | selection | development] we would like to create an order with two bananas and three apples
+393. [order-49-03 | selection | development] we would like to create an order with 1 milk, 2 eggs, 3 rice
+394. [order-49-04 | selection | development] we would like to create an order with 2 green apples and 1 baladi bread
+395. [order-49-05 | selection | development] we would like to create an order with 4 chesse & 2 tomatos
+396. [order-49-06 | selection | development] we would like to create an order with 2x bananas, 3x apples
+397. [order-49-07 | selection | development] we would like to create an order with bananas x2 and apples x3
+398. [order-49-08 | selection | development] we would like to create an order with twelve eggs and twenty apples
+399. [order-49-09 | selection | development] we would like to create an order with 1 olive oil, 2 yogurt, 3 dates, 1 honey, 2 lemons
+400. [order-49-10 | selection | development] we would like to create an order with 2 SKU-GRN-007 and 1 oat milk
+401. [order-51-01 | selection | development] can you help me buy 2 banans 3 apples 2 baladi?
+402. [order-51-02 | selection | development] can you help me buy two bananas and three apples?
+403. [order-51-03 | selection | development] can you help me buy 1 milk, 2 eggs, 3 rice?
+404. [order-51-04 | selection | development] can you help me buy 2 green apples and 1 baladi bread?
+405. [order-51-05 | selection | development] can you help me buy 4 chesse & 2 tomatos?
+406. [order-51-06 | selection | development] can you help me buy 2x bananas, 3x apples?
+407. [order-51-07 | selection | development] can you help me buy bananas x2 and apples x3?
+408. [order-51-08 | selection | development] can you help me buy twelve eggs and twenty apples?
+409. [order-51-09 | selection | development] can you help me buy 1 olive oil, 2 yogurt, 3 dates, 1 honey, 2 lemons?
+410. [order-51-10 | selection | development] can you help me buy 2 SKU-GRN-007 and 1 oat milk?
+411. [order-52-01 | selection | development] could you help me order 2 banans 3 apples 2 baladi?
+412. [order-52-02 | selection | development] could you help me order two bananas and three apples?
+413. [order-52-03 | selection | development] could you help me order 1 milk, 2 eggs, 3 rice?
+414. [order-52-04 | selection | development] could you help me order 2 green apples and 1 baladi bread?
+415. [order-52-05 | selection | development] could you help me order 4 chesse & 2 tomatos?
+416. [order-52-06 | selection | development] could you help me order 2x bananas, 3x apples?
+417. [order-52-07 | selection | development] could you help me order bananas x2 and apples x3?
+418. [order-52-08 | selection | development] could you help me order twelve eggs and twenty apples?
+419. [order-52-09 | selection | development] could you help me order 1 olive oil, 2 yogurt, 3 dates, 1 honey, 2 lemons?
+420. [order-52-10 | selection | development] could you help me order 2 SKU-GRN-007 and 1 oat milk?
+421. [order-53-01 | selection | development] would you please get me 2 banans 3 apples 2 baladi?
+422. [order-53-02 | selection | development] would you please get me two bananas and three apples?
+423. [order-53-03 | selection | development] would you please get me 1 milk, 2 eggs, 3 rice?
+424. [order-53-04 | selection | development] would you please get me 2 green apples and 1 baladi bread?
+425. [order-53-05 | selection | development] would you please get me 4 chesse & 2 tomatos?
+426. [order-53-06 | selection | development] would you please get me 2x bananas, 3x apples?
+427. [order-53-07 | selection | development] would you please get me bananas x2 and apples x3?
+428. [order-53-08 | selection | development] would you please get me twelve eggs and twenty apples?
+429. [order-53-09 | selection | development] would you please get me 1 olive oil, 2 yogurt, 3 dates, 1 honey, 2 lemons?
+430. [order-53-10 | selection | development] would you please get me 2 SKU-GRN-007 and 1 oat milk?
+431. [order-54-01 | selection | development] please purchase 2 banans 3 apples 2 baladi please
+432. [order-54-02 | selection | development] please purchase two bananas and three apples please
+433. [order-54-03 | selection | development] please purchase 1 milk, 2 eggs, 3 rice please
+434. [order-54-04 | selection | development] please purchase 2 green apples and 1 baladi bread please
+435. [order-54-05 | selection | development] please purchase 4 chesse & 2 tomatos please
+436. [order-54-06 | selection | development] please purchase 2x bananas, 3x apples please
+437. [order-54-07 | selection | development] please purchase bananas x2 and apples x3 please
+438. [order-54-08 | selection | development] please purchase twelve eggs and twenty apples please
+439. [order-54-09 | selection | development] please purchase 1 olive oil, 2 yogurt, 3 dates, 1 honey, 2 lemons please
+440. [order-54-10 | selection | development] please purchase 2 SKU-GRN-007 and 1 oat milk please
+441. [order-56-01 | selection | development] plz buy 2 banans 3 apples 2 baladi
+442. [order-56-02 | selection | development] plz buy two bananas and three apples
+443. [order-56-03 | selection | development] plz buy 1 milk, 2 eggs, 3 rice
+444. [order-56-04 | selection | development] plz buy 2 green apples and 1 baladi bread
+445. [order-56-05 | selection | development] plz buy 4 chesse & 2 tomatos
+446. [order-56-06 | selection | development] plz buy 2x bananas, 3x apples
+447. [order-56-07 | selection | development] plz buy bananas x2 and apples x3
+448. [order-56-08 | selection | development] plz buy twelve eggs and twenty apples
+449. [order-56-09 | selection | development] plz buy 1 olive oil, 2 yogurt, 3 dates, 1 honey, 2 lemons
+450. [order-56-10 | selection | development] plz buy 2 SKU-GRN-007 and 1 oat milk
+451. [order-57-01 | selection | development] kindly order 2 banans 3 apples 2 baladi
+452. [order-57-02 | selection | development] kindly order two bananas and three apples
+453. [order-57-03 | selection | development] kindly order 1 milk, 2 eggs, 3 rice
+454. [order-57-04 | selection | development] kindly order 2 green apples and 1 baladi bread
+455. [order-57-05 | selection | development] kindly order 4 chesse & 2 tomatos
+456. [order-57-06 | selection | development] kindly order 2x bananas, 3x apples
+457. [order-57-07 | selection | development] kindly order bananas x2 and apples x3
+458. [order-57-08 | selection | development] kindly order twelve eggs and twenty apples
+459. [order-57-09 | selection | development] kindly order 1 olive oil, 2 yogurt, 3 dates, 1 honey, 2 lemons
+460. [order-57-10 | selection | development] kindly order 2 SKU-GRN-007 and 1 oat milk
+461. [order-58-01 | selection | development] can u order 2 banans 3 apples 2 baladi?
+462. [order-58-02 | selection | development] can u order two bananas and three apples?
+463. [order-58-03 | selection | development] can u order 1 milk, 2 eggs, 3 rice?
+464. [order-58-04 | selection | development] can u order 2 green apples and 1 baladi bread?
+465. [order-58-05 | selection | development] can u order 4 chesse & 2 tomatos?
+466. [order-58-06 | selection | development] can u order 2x bananas, 3x apples?
+467. [order-58-07 | selection | development] can u order bananas x2 and apples x3?
+468. [order-58-08 | selection | development] can u order twelve eggs and twenty apples?
+469. [order-58-09 | selection | development] can u order 1 olive oil, 2 yogurt, 3 dates, 1 honey, 2 lemons?
+470. [order-58-10 | selection | development] can u order 2 SKU-GRN-007 and 1 oat milk?
+471. [order-59-01 | selection | development] could u please buy 2 banans 3 apples 2 baladi?
+472. [order-59-02 | selection | development] could u please buy two bananas and three apples?
+473. [order-59-03 | selection | development] could u please buy 1 milk, 2 eggs, 3 rice?
+474. [order-59-04 | selection | development] could u please buy 2 green apples and 1 baladi bread?
+475. [order-59-05 | selection | development] could u please buy 4 chesse & 2 tomatos?
+476. [order-59-06 | selection | development] could u please buy 2x bananas, 3x apples?
+477. [order-59-07 | selection | development] could u please buy bananas x2 and apples x3?
+478. [order-59-08 | selection | development] could u please buy twelve eggs and twenty apples?
+479. [order-59-09 | selection | development] could u please buy 1 olive oil, 2 yogurt, 3 dates, 1 honey, 2 lemons?
+480. [order-59-10 | selection | development] could u please buy 2 SKU-GRN-007 and 1 oat milk?
+481. [order-61-01 | selection | development] we wanna buy 2 banans 3 apples 2 baladi
+482. [order-61-02 | selection | development] we wanna buy two bananas and three apples
+483. [order-61-03 | selection | development] we wanna buy 1 milk, 2 eggs, 3 rice
+484. [order-61-04 | selection | development] we wanna buy 2 green apples and 1 baladi bread
+485. [order-61-05 | selection | development] we wanna buy 4 chesse & 2 tomatos
+486. [order-61-06 | selection | development] we wanna buy 2x bananas, 3x apples
+487. [order-61-07 | selection | development] we wanna buy bananas x2 and apples x3
+488. [order-61-08 | selection | development] we wanna buy twelve eggs and twenty apples
+489. [order-61-09 | selection | development] we wanna buy 1 olive oil, 2 yogurt, 3 dates, 1 honey, 2 lemons
+490. [order-61-10 | selection | development] we wanna buy 2 SKU-GRN-007 and 1 oat milk
+491. [order-62-01 | selection | development] i want to ordar 2 banans 3 apples 2 baladi
+492. [order-62-02 | selection | development] i want to ordar two bananas and three apples
+493. [order-62-03 | selection | development] i want to ordar 1 milk, 2 eggs, 3 rice
+494. [order-62-04 | selection | development] i want to ordar 2 green apples and 1 baladi bread
+495. [order-62-05 | selection | development] i want to ordar 4 chesse & 2 tomatos
+496. [order-62-06 | selection | development] i want to ordar 2x bananas, 3x apples
+497. [order-62-07 | selection | development] i want to ordar bananas x2 and apples x3
+498. [order-62-08 | selection | development] i want to ordar twelve eggs and twenty apples
+499. [order-62-09 | selection | development] i want to ordar 1 olive oil, 2 yogurt, 3 dates, 1 honey, 2 lemons
+500. [order-62-10 | selection | development] i want to ordar 2 SKU-GRN-007 and 1 oat milk
+501. [order-63-01 | selection | development] please crete an order for 2 banans 3 apples 2 baladi
+502. [order-63-02 | selection | development] please crete an order for two bananas and three apples
+503. [order-63-03 | selection | development] please crete an order for 1 milk, 2 eggs, 3 rice
+504. [order-63-04 | selection | development] please crete an order for 2 green apples and 1 baladi bread
+505. [order-63-05 | selection | development] please crete an order for 4 chesse & 2 tomatos
+506. [order-63-06 | selection | development] please crete an order for 2x bananas, 3x apples
+507. [order-63-07 | selection | development] please crete an order for bananas x2 and apples x3
+508. [order-63-08 | selection | development] please crete an order for twelve eggs and twenty apples
+509. [order-63-09 | selection | development] please crete an order for 1 olive oil, 2 yogurt, 3 dates, 1 honey, 2 lemons
+510. [order-63-10 | selection | development] please crete an order for 2 SKU-GRN-007 and 1 oat milk
+511. [order-64-01 | selection | development] please craete order 2 banans 3 apples 2 baladi
+512. [order-64-02 | selection | development] please craete order two bananas and three apples
+513. [order-64-03 | selection | development] please craete order 1 milk, 2 eggs, 3 rice
+514. [order-64-04 | selection | development] please craete order 2 green apples and 1 baladi bread
+515. [order-64-05 | selection | development] please craete order 4 chesse & 2 tomatos
+516. [order-64-06 | selection | development] please craete order 2x bananas, 3x apples
+517. [order-64-07 | selection | development] please craete order bananas x2 and apples x3
+518. [order-64-08 | selection | development] please craete order twelve eggs and twenty apples
+519. [order-64-09 | selection | development] please craete order 1 olive oil, 2 yogurt, 3 dates, 1 honey, 2 lemons
+520. [order-64-10 | selection | development] please craete order 2 SKU-GRN-007 and 1 oat milk
+521. [order-66-01 | selection | development] I am looking to buy 2 banans 3 apples 2 baladi
+522. [order-66-02 | selection | development] I am looking to buy two bananas and three apples
+523. [order-66-03 | selection | development] I am looking to buy 1 milk, 2 eggs, 3 rice
+524. [order-66-04 | selection | development] I am looking to buy 2 green apples and 1 baladi bread
+525. [order-66-05 | selection | development] I am looking to buy 4 chesse & 2 tomatos
+526. [order-66-06 | selection | development] I am looking to buy 2x bananas, 3x apples
+527. [order-66-07 | selection | development] I am looking to buy bananas x2 and apples x3
+528. [order-66-08 | selection | development] I am looking to buy twelve eggs and twenty apples
+529. [order-66-09 | selection | development] I am looking to buy 1 olive oil, 2 yogurt, 3 dates, 1 honey, 2 lemons
+530. [order-66-10 | selection | development] I am looking to buy 2 SKU-GRN-007 and 1 oat milk
+531. [order-67-01 | selection | development] I'm looking to order 2 banans 3 apples 2 baladi
+532. [order-67-02 | selection | development] I'm looking to order two bananas and three apples
+533. [order-67-03 | selection | development] I'm looking to order 1 milk, 2 eggs, 3 rice
+534. [order-67-04 | selection | development] I'm looking to order 2 green apples and 1 baladi bread
+535. [order-67-05 | selection | development] I'm looking to order 4 chesse & 2 tomatos
+536. [order-67-06 | selection | development] I'm looking to order 2x bananas, 3x apples
+537. [order-67-07 | selection | development] I'm looking to order bananas x2 and apples x3
+538. [order-67-08 | selection | development] I'm looking to order twelve eggs and twenty apples
+539. [order-67-09 | selection | development] I'm looking to order 1 olive oil, 2 yogurt, 3 dates, 1 honey, 2 lemons
+540. [order-67-10 | selection | development] I'm looking to order 2 SKU-GRN-007 and 1 oat milk
+541. [order-68-01 | selection | development] we are looking to purchase 2 banans 3 apples 2 baladi
+542. [order-68-02 | selection | development] we are looking to purchase two bananas and three apples
+543. [order-68-03 | selection | development] we are looking to purchase 1 milk, 2 eggs, 3 rice
+544. [order-68-04 | selection | development] we are looking to purchase 2 green apples and 1 baladi bread
+545. [order-68-05 | selection | development] we are looking to purchase 4 chesse & 2 tomatos
+546. [order-68-06 | selection | development] we are looking to purchase 2x bananas, 3x apples
+547. [order-68-07 | selection | development] we are looking to purchase bananas x2 and apples x3
+548. [order-68-08 | selection | development] we are looking to purchase twelve eggs and twenty apples
+549. [order-68-09 | selection | development] we are looking to purchase 1 olive oil, 2 yogurt, 3 dates, 1 honey, 2 lemons
+550. [order-68-10 | selection | development] we are looking to purchase 2 SKU-GRN-007 and 1 oat milk
+551. [order-69-01 | selection | development] place a grocery order for 2 banans 3 apples 2 baladi
+552. [order-69-02 | selection | development] place a grocery order for two bananas and three apples
+553. [order-69-03 | selection | development] place a grocery order for 1 milk, 2 eggs, 3 rice
+554. [order-69-04 | selection | development] place a grocery order for 2 green apples and 1 baladi bread
+555. [order-69-05 | selection | development] place a grocery order for 4 chesse & 2 tomatos
+556. [order-69-06 | selection | development] place a grocery order for 2x bananas, 3x apples
+557. [order-69-07 | selection | development] place a grocery order for bananas x2 and apples x3
+558. [order-69-08 | selection | development] place a grocery order for twelve eggs and twenty apples
+559. [order-69-09 | selection | development] place a grocery order for 1 olive oil, 2 yogurt, 3 dates, 1 honey, 2 lemons
+560. [order-69-10 | selection | development] place a grocery order for 2 SKU-GRN-007 and 1 oat milk
+561. [guard-01-01 | clarify | development] do not order 1 bananas
+562. [guard-01-02 | clarify | development] do not order 2 apples
+563. [guard-01-03 | clarify | development] do not order 3 baladi
+564. [guard-01-04 | clarify | development] do not order 1 milk
+565. [guard-01-05 | clarify | development] do not order 2 eggs
+566. [guard-01-06 | clarify | development] do not order 3 chesse
+567. [guard-01-07 | clarify | development] do not order 1 rice
+568. [guard-01-08 | clarify | development] do not order 2 tomatos
+569. [guard-01-09 | clarify | development] do not order 3 yogurt
+570. [guard-01-10 | clarify | development] do not order 1 lemons
+571. [guard-02-01 | clarify | development] please never buy 1 bananas
+572. [guard-02-02 | clarify | development] please never buy 2 apples
+573. [guard-02-03 | clarify | development] please never buy 3 baladi
+574. [guard-02-04 | clarify | development] please never buy 1 milk
+575. [guard-02-05 | clarify | development] please never buy 2 eggs
+576. [guard-02-06 | clarify | development] please never buy 3 chesse
+577. [guard-02-07 | clarify | development] please never buy 1 rice
+578. [guard-02-08 | clarify | development] please never buy 2 tomatos
+579. [guard-02-09 | clarify | development] please never buy 3 yogurt
+580. [guard-02-10 | clarify | development] please never buy 1 lemons
+581. [guard-03-01 | clarify | development] order 1 bananas only if it is in stock
+582. [guard-03-02 | clarify | development] order 2 apples only if it is in stock
+583. [guard-03-03 | clarify | development] order 3 baladi only if it is in stock
+584. [guard-03-04 | clarify | development] order 1 milk only if it is in stock
+585. [guard-03-05 | clarify | development] order 2 eggs only if it is in stock
+586. [guard-03-06 | clarify | development] order 3 chesse only if it is in stock
+587. [guard-03-07 | clarify | development] order 1 rice only if it is in stock
+588. [guard-03-08 | clarify | development] order 2 tomatos only if it is in stock
+589. [guard-03-09 | clarify | development] order 3 yogurt only if it is in stock
+590. [guard-03-10 | clarify | development] order 1 lemons only if it is in stock
+591. [guard-04-01 | clarify | development] buy 1 bananas unless delivery is expensive
+592. [guard-04-02 | clarify | development] buy 2 apples unless delivery is expensive
+593. [guard-04-03 | clarify | development] buy 3 baladi unless delivery is expensive
+594. [guard-04-04 | clarify | development] buy 1 milk unless delivery is expensive
+595. [guard-04-05 | clarify | development] buy 2 eggs unless delivery is expensive
+596. [guard-04-06 | clarify | development] buy 3 chesse unless delivery is expensive
+597. [guard-04-07 | clarify | development] buy 1 rice unless delivery is expensive
+598. [guard-04-08 | clarify | development] buy 2 tomatos unless delivery is expensive
+599. [guard-04-09 | clarify | development] buy 3 yogurt unless delivery is expensive
+600. [guard-04-10 | clarify | development] buy 1 lemons unless delivery is expensive
+601. [guard-06-01 | clarify | development] please order 1 bananas with a total budget of 200 EGP
+602. [guard-06-02 | clarify | development] please order 2 apples with a total budget of 200 EGP
+603. [guard-06-03 | clarify | development] please order 3 baladi with a total budget of 200 EGP
+604. [guard-06-04 | clarify | development] please order 1 milk with a total budget of 200 EGP
+605. [guard-06-05 | clarify | development] please order 2 eggs with a total budget of 200 EGP
+606. [guard-06-06 | clarify | development] please order 3 chesse with a total budget of 200 EGP
+607. [guard-06-07 | clarify | development] please order 1 rice with a total budget of 200 EGP
+608. [guard-06-08 | clarify | development] please order 2 tomatos with a total budget of 200 EGP
+609. [guard-06-09 | clarify | development] please order 3 yogurt with a total budget of 200 EGP
+610. [guard-06-10 | clarify | development] please order 1 lemons with a total budget of 200 EGP
+611. [guard-07-01 | clarify | development] order 1 bananas without sugar
+612. [guard-07-02 | clarify | development] order 2 apples without sugar
+613. [guard-07-03 | clarify | development] order 3 baladi without sugar
+614. [guard-07-04 | clarify | development] order 1 milk without sugar
+615. [guard-07-05 | clarify | development] order 2 eggs without sugar
+616. [guard-07-06 | clarify | development] order 3 chesse without sugar
+617. [guard-07-07 | clarify | development] order 1 rice without sugar
+618. [guard-07-08 | clarify | development] order 2 tomatos without sugar
+619. [guard-07-09 | clarify | development] order 3 yogurt without sugar
+620. [guard-07-10 | clarify | development] order 1 lemons without sugar
+621. [guard-08-01 | clarify | development] order 1 bananas or substitute the cheapest option
+622. [guard-08-02 | clarify | development] order 2 apples or substitute the cheapest option
+623. [guard-08-03 | clarify | development] order 3 baladi or substitute the cheapest option
+624. [guard-08-04 | clarify | development] order 1 milk or substitute the cheapest option
+625. [guard-08-05 | clarify | development] order 2 eggs or substitute the cheapest option
+626. [guard-08-06 | clarify | development] order 3 chesse or substitute the cheapest option
+627. [guard-08-07 | clarify | development] order 1 rice or substitute the cheapest option
+628. [guard-08-08 | clarify | development] order 2 tomatos or substitute the cheapest option
+629. [guard-08-09 | clarify | development] order 3 yogurt or substitute the cheapest option
+630. [guard-08-10 | clarify | development] order 1 lemons or substitute the cheapest option
+631. [guard-09-01 | clarify | development] order 1 bananas and keep my current cart
+632. [guard-09-02 | clarify | development] order 2 apples and keep my current cart
+633. [guard-09-03 | clarify | development] order 3 baladi and keep my current cart
+634. [guard-09-04 | clarify | development] order 1 milk and keep my current cart
+635. [guard-09-05 | clarify | development] order 2 eggs and keep my current cart
+636. [guard-09-06 | clarify | development] order 3 chesse and keep my current cart
+637. [guard-09-07 | clarify | development] order 1 rice and keep my current cart
+638. [guard-09-08 | clarify | development] order 2 tomatos and keep my current cart
+639. [guard-09-09 | clarify | development] order 3 yogurt and keep my current cart
+640. [guard-09-10 | clarify | development] order 1 lemons and keep my current cart
+641. [guard-11-01 | clarify | development] create order 1 bananas instead of the products already in my cart
+642. [guard-11-02 | clarify | development] create order 2 apples instead of the products already in my cart
+643. [guard-11-03 | clarify | development] create order 3 baladi instead of the products already in my cart
+644. [guard-11-04 | clarify | development] create order 1 milk instead of the products already in my cart
+645. [guard-11-05 | clarify | development] create order 2 eggs instead of the products already in my cart
+646. [guard-11-06 | clarify | development] create order 3 chesse instead of the products already in my cart
+647. [guard-11-07 | clarify | development] create order 1 rice instead of the products already in my cart
+648. [guard-11-08 | clarify | development] create order 2 tomatos instead of the products already in my cart
+649. [guard-11-09 | clarify | development] create order 3 yogurt instead of the products already in my cart
+650. [guard-11-10 | clarify | development] create order 1 lemons instead of the products already in my cart
+651. [guard-12-01 | clarify | development] order 1 bananas and deliver tomorrow morning
+652. [guard-12-02 | clarify | development] order 2 apples and deliver tomorrow morning
+653. [guard-12-03 | clarify | development] order 3 baladi and deliver tomorrow morning
+654. [guard-12-04 | clarify | development] order 1 milk and deliver tomorrow morning
+655. [guard-12-05 | clarify | development] order 2 eggs and deliver tomorrow morning
+656. [guard-12-06 | clarify | development] order 3 chesse and deliver tomorrow morning
+657. [guard-12-07 | clarify | development] order 1 rice and deliver tomorrow morning
+658. [guard-12-08 | clarify | development] order 2 tomatos and deliver tomorrow morning
+659. [guard-12-09 | clarify | development] order 3 yogurt and deliver tomorrow morning
+660. [guard-12-10 | clarify | development] order 1 lemons and deliver tomorrow morning
+661. [guard-13-01 | clarify | development] please buy 1 bananas and ship to my office
+662. [guard-13-02 | clarify | development] please buy 2 apples and ship to my office
+663. [guard-13-03 | clarify | development] please buy 3 baladi and ship to my office
+664. [guard-13-04 | clarify | development] please buy 1 milk and ship to my office
+665. [guard-13-05 | clarify | development] please buy 2 eggs and ship to my office
+666. [guard-13-06 | clarify | development] please buy 3 chesse and ship to my office
+667. [guard-13-07 | clarify | development] please buy 1 rice and ship to my office
+668. [guard-13-08 | clarify | development] please buy 2 tomatos and ship to my office
+669. [guard-13-09 | clarify | development] please buy 3 yogurt and ship to my office
+670. [guard-13-10 | clarify | development] please buy 1 lemons and ship to my office
+671. [guard-14-01 | clarify | development] order 1 bananas and pay with my saved card
+672. [guard-14-02 | clarify | development] order 2 apples and pay with my saved card
+673. [guard-14-03 | clarify | development] order 3 baladi and pay with my saved card
+674. [guard-14-04 | clarify | development] order 1 milk and pay with my saved card
+675. [guard-14-05 | clarify | development] order 2 eggs and pay with my saved card
+676. [guard-14-06 | clarify | development] order 3 chesse and pay with my saved card
+677. [guard-14-07 | clarify | development] order 1 rice and pay with my saved card
+678. [guard-14-08 | clarify | development] order 2 tomatos and pay with my saved card
+679. [guard-14-09 | clarify | development] order 3 yogurt and pay with my saved card
+680. [guard-14-10 | clarify | development] order 1 lemons and pay with my saved card
+681. [guard-16-01 | clarify | development] order 1 bananas like my previous order
+682. [guard-16-02 | clarify | development] order 2 apples like my previous order
+683. [guard-16-03 | clarify | development] order 3 baladi like my previous order
+684. [guard-16-04 | clarify | development] order 1 milk like my previous order
+685. [guard-16-05 | clarify | development] order 2 eggs like my previous order
+686. [guard-16-06 | clarify | development] order 3 chesse like my previous order
+687. [guard-16-07 | clarify | development] order 1 rice like my previous order
+688. [guard-16-08 | clarify | development] order 2 tomatos like my previous order
+689. [guard-16-09 | clarify | development] order 3 yogurt like my previous order
+690. [guard-16-10 | clarify | development] order 1 lemons like my previous order
+691. [guard-17-01 | clarify | development] order the same 1 bananas again
+692. [guard-17-02 | clarify | development] order the same 2 apples again
+693. [guard-17-03 | clarify | development] order the same 3 baladi again
+694. [guard-17-04 | clarify | development] order the same 1 milk again
+695. [guard-17-05 | clarify | development] order the same 2 eggs again
+696. [guard-17-06 | clarify | development] order the same 3 chesse again
+697. [guard-17-07 | clarify | development] order the same 1 rice again
+698. [guard-17-08 | clarify | development] order the same 2 tomatos again
+699. [guard-17-09 | clarify | development] order the same 3 yogurt again
+700. [guard-17-10 | clarify | development] order the same 1 lemons again
+701. [guard-18-01 | clarify | development] order 1 bananas but ask me before adding anything
+702. [guard-18-02 | clarify | development] order 2 apples but ask me before adding anything
+703. [guard-18-03 | clarify | development] order 3 baladi but ask me before adding anything
+704. [guard-18-04 | clarify | development] order 1 milk but ask me before adding anything
+705. [guard-18-05 | clarify | development] order 2 eggs but ask me before adding anything
+706. [guard-18-06 | clarify | development] order 3 chesse but ask me before adding anything
+707. [guard-18-07 | clarify | development] order 1 rice but ask me before adding anything
+708. [guard-18-08 | clarify | development] order 2 tomatos but ask me before adding anything
+709. [guard-18-09 | clarify | development] order 3 yogurt but ask me before adding anything
+710. [guard-18-10 | clarify | development] order 1 lemons but ask me before adding anything
+711. [guard-19-01 | clarify | development] create order 0 bananas
+712. [guard-19-02 | clarify | development] create order 0 apples
+713. [guard-19-03 | clarify | development] create order 0 baladi
+714. [guard-19-04 | clarify | development] create order 0 milk
+715. [guard-19-05 | clarify | development] create order 0 eggs
+716. [guard-19-06 | clarify | development] create order 0 chesse
+717. [guard-19-07 | clarify | development] create order 0 rice
+718. [guard-19-08 | clarify | development] create order 0 tomatos
+719. [guard-19-09 | clarify | development] create order 0 yogurt
+720. [guard-19-10 | clarify | development] create order 0 lemons
+721. [guard-21-01 | clarify | development] create order 1.5 bananas
+722. [guard-21-02 | clarify | development] create order 1.5 apples
+723. [guard-21-03 | clarify | development] create order 1.5 baladi
+724. [guard-21-04 | clarify | development] create order 1.5 milk
+725. [guard-21-05 | clarify | development] create order 1.5 eggs
+726. [guard-21-06 | clarify | development] create order 1.5 chesse
+727. [guard-21-07 | clarify | development] create order 1.5 rice
+728. [guard-21-08 | clarify | development] create order 1.5 tomatos
+729. [guard-21-09 | clarify | development] create order 1.5 yogurt
+730. [guard-21-10 | clarify | development] create order 1.5 lemons
+731. [guard-22-01 | clarify | development] create order 2 kg bananas
+732. [guard-22-02 | clarify | development] create order 2 kg apples
+733. [guard-22-03 | clarify | development] create order 2 kg baladi
+734. [guard-22-04 | clarify | development] create order 2 kg milk
+735. [guard-22-05 | clarify | development] create order 2 kg eggs
+736. [guard-22-06 | clarify | development] create order 2 kg chesse
+737. [guard-22-07 | clarify | development] create order 2 kg rice
+738. [guard-22-08 | clarify | development] create order 2 kg tomatos
+739. [guard-22-09 | clarify | development] create order 2 kg yogurt
+740. [guard-22-10 | clarify | development] create order 2 kg lemons
+741. [guard-23-01 | clarify | development] create order half a kilo of bananas
+742. [guard-23-02 | clarify | development] create order half a kilo of apples
+743. [guard-23-03 | clarify | development] create order half a kilo of baladi
+744. [guard-23-04 | clarify | development] create order half a kilo of milk
+745. [guard-23-05 | clarify | development] create order half a kilo of eggs
+746. [guard-23-06 | clarify | development] create order half a kilo of chesse
+747. [guard-23-07 | clarify | development] create order half a kilo of rice
+748. [guard-23-08 | clarify | development] create order half a kilo of tomatos
+749. [guard-23-09 | clarify | development] create order half a kilo of yogurt
+750. [guard-23-10 | clarify | development] create order half a kilo of lemons
+751. [guard-24-01 | clarify | development] buy a dozen bananas
+752. [guard-24-02 | clarify | development] buy a dozen apples
+753. [guard-24-03 | clarify | development] buy a dozen baladi
+754. [guard-24-04 | clarify | development] buy a dozen milk
+755. [guard-24-05 | clarify | development] buy a dozen eggs
+756. [guard-24-06 | clarify | development] buy a dozen chesse
+757. [guard-24-07 | clarify | development] buy a dozen rice
+758. [guard-24-08 | clarify | development] buy a dozen tomatos
+759. [guard-24-09 | clarify | development] buy a dozen yogurt
+760. [guard-24-10 | clarify | development] buy a dozen lemons
+761. [guard-26-01 | clarify | development] order 1 bananas; cancel order 42
+762. [guard-26-02 | clarify | development] order 2 apples; cancel order 42
+763. [guard-26-03 | clarify | development] order 3 baladi; cancel order 42
+764. [guard-26-04 | clarify | development] order 1 milk; cancel order 42
+765. [guard-26-05 | clarify | development] order 2 eggs; cancel order 42
+766. [guard-26-06 | clarify | development] order 3 chesse; cancel order 42
+767. [guard-26-07 | clarify | development] order 1 rice; cancel order 42
+768. [guard-26-08 | clarify | development] order 2 tomatos; cancel order 42
+769. [guard-26-09 | clarify | development] order 3 yogurt; cancel order 42
+770. [guard-26-10 | clarify | development] order 1 lemons; cancel order 42
+771. [guard-27-01 | clarify | development] order 1 bananas, actually make that five
+772. [guard-27-02 | clarify | development] order 2 apples, actually make that five
+773. [guard-27-03 | clarify | development] order 3 baladi, actually make that five
+774. [guard-27-04 | clarify | development] order 1 milk, actually make that five
+775. [guard-27-05 | clarify | development] order 2 eggs, actually make that five
+776. [guard-27-06 | clarify | development] order 3 chesse, actually make that five
+777. [guard-27-07 | clarify | development] order 1 rice, actually make that five
+778. [guard-27-08 | clarify | development] order 2 tomatos, actually make that five
+779. [guard-27-09 | clarify | development] order 3 yogurt, actually make that five
+780. [guard-27-10 | clarify | development] order 1 lemons, actually make that five
+781. [guard-28-01 | clarify | development] order either 1 bananas or milk
+782. [guard-28-02 | clarify | development] order either 2 apples or milk
+783. [guard-28-03 | clarify | development] order either 3 baladi or milk
+784. [guard-28-04 | clarify | development] order either 1 milk or milk
+785. [guard-28-05 | clarify | development] order either 2 eggs or milk
+786. [guard-28-06 | clarify | development] order either 3 chesse or milk
+787. [guard-28-07 | clarify | development] order either 1 rice or milk
+788. [guard-28-08 | clarify | development] order either 2 tomatos or milk
+789. [guard-28-09 | clarify | development] order either 3 yogurt or milk
+790. [guard-28-10 | clarify | development] order either 1 lemons or milk
+791. [guard-29-01 | clarify | development] order 1 bananas and the other one
+792. [guard-29-02 | clarify | development] order 2 apples and the other one
+793. [guard-29-03 | clarify | development] order 3 baladi and the other one
+794. [guard-29-04 | clarify | development] order 1 milk and the other one
+795. [guard-29-05 | clarify | development] order 2 eggs and the other one
+796. [guard-29-06 | clarify | development] order 3 chesse and the other one
+797. [guard-29-07 | clarify | development] order 1 rice and the other one
+798. [guard-29-08 | clarify | development] order 2 tomatos and the other one
+799. [guard-29-09 | clarify | development] order 3 yogurt and the other one
+800. [guard-29-10 | clarify | development] order 1 lemons and the other one
+801. [order-05-01 | selection | holdout] start a new order for 2 banans 3 apples 2 baladi
+802. [order-05-02 | selection | holdout] start a new order for two bananas and three apples
+803. [order-05-03 | selection | holdout] start a new order for 1 milk, 2 eggs, 3 rice
+804. [order-05-04 | selection | holdout] start a new order for 2 green apples and 1 baladi bread
+805. [order-05-05 | selection | holdout] start a new order for 4 chesse & 2 tomatos
+806. [order-05-06 | selection | holdout] start a new order for 2x bananas, 3x apples
+807. [order-05-07 | selection | holdout] start a new order for bananas x2 and apples x3
+808. [order-05-08 | selection | holdout] start a new order for twelve eggs and twenty apples
+809. [order-05-09 | selection | holdout] start a new order for 1 olive oil, 2 yogurt, 3 dates, 1 honey, 2 lemons
+810. [order-05-10 | selection | holdout] start a new order for 2 SKU-GRN-007 and 1 oat milk
+811. [order-10-01 | selection | holdout] could you please place an order with 2 banans 3 apples 2 baladi?
+812. [order-10-02 | selection | holdout] could you please place an order with two bananas and three apples?
+813. [order-10-03 | selection | holdout] could you please place an order with 1 milk, 2 eggs, 3 rice?
+814. [order-10-04 | selection | holdout] could you please place an order with 2 green apples and 1 baladi bread?
+815. [order-10-05 | selection | holdout] could you please place an order with 4 chesse & 2 tomatos?
+816. [order-10-06 | selection | holdout] could you please place an order with 2x bananas, 3x apples?
+817. [order-10-07 | selection | holdout] could you please place an order with bananas x2 and apples x3?
+818. [order-10-08 | selection | holdout] could you please place an order with twelve eggs and twenty apples?
+819. [order-10-09 | selection | holdout] could you please place an order with 1 olive oil, 2 yogurt, 3 dates, 1 honey, 2 lemons?
+820. [order-10-10 | selection | holdout] could you please place an order with 2 SKU-GRN-007 and 1 oat milk?
+821. [order-15-01 | selection | holdout] we want to buy 2 banans 3 apples 2 baladi
+822. [order-15-02 | selection | holdout] we want to buy two bananas and three apples
+823. [order-15-03 | selection | holdout] we want to buy 1 milk, 2 eggs, 3 rice
+824. [order-15-04 | selection | holdout] we want to buy 2 green apples and 1 baladi bread
+825. [order-15-05 | selection | holdout] we want to buy 4 chesse & 2 tomatos
+826. [order-15-06 | selection | holdout] we want to buy 2x bananas, 3x apples
+827. [order-15-07 | selection | holdout] we want to buy bananas x2 and apples x3
+828. [order-15-08 | selection | holdout] we want to buy twelve eggs and twenty apples
+829. [order-15-09 | selection | holdout] we want to buy 1 olive oil, 2 yogurt, 3 dates, 1 honey, 2 lemons
+830. [order-15-10 | selection | holdout] we want to buy 2 SKU-GRN-007 and 1 oat milk
+831. [order-20-01 | selection | holdout] we need to purchase 2 banans 3 apples 2 baladi
+832. [order-20-02 | selection | holdout] we need to purchase two bananas and three apples
+833. [order-20-03 | selection | holdout] we need to purchase 1 milk, 2 eggs, 3 rice
+834. [order-20-04 | selection | holdout] we need to purchase 2 green apples and 1 baladi bread
+835. [order-20-05 | selection | holdout] we need to purchase 4 chesse & 2 tomatos
+836. [order-20-06 | selection | holdout] we need to purchase 2x bananas, 3x apples
+837. [order-20-07 | selection | holdout] we need to purchase bananas x2 and apples x3
+838. [order-20-08 | selection | holdout] we need to purchase twelve eggs and twenty apples
+839. [order-20-09 | selection | holdout] we need to purchase 1 olive oil, 2 yogurt, 3 dates, 1 honey, 2 lemons
+840. [order-20-10 | selection | holdout] we need to purchase 2 SKU-GRN-007 and 1 oat milk
+841. [order-25-01 | selection | holdout] could I have 2 banans 3 apples 2 baladi please?
+842. [order-25-02 | selection | holdout] could I have two bananas and three apples please?
+843. [order-25-03 | selection | holdout] could I have 1 milk, 2 eggs, 3 rice please?
+844. [order-25-04 | selection | holdout] could I have 2 green apples and 1 baladi bread please?
+845. [order-25-05 | selection | holdout] could I have 4 chesse & 2 tomatos please?
+846. [order-25-06 | selection | holdout] could I have 2x bananas, 3x apples please?
+847. [order-25-07 | selection | holdout] could I have bananas x2 and apples x3 please?
+848. [order-25-08 | selection | holdout] could I have twelve eggs and twenty apples please?
+849. [order-25-09 | selection | holdout] could I have 1 olive oil, 2 yogurt, 3 dates, 1 honey, 2 lemons please?
+850. [order-25-10 | selection | holdout] could I have 2 SKU-GRN-007 and 1 oat milk please?
+851. [order-30-01 | selection | holdout] order 2 banans 3 apples 2 baladi
+852. [order-30-02 | selection | holdout] order two bananas and three apples
+853. [order-30-03 | selection | holdout] order 1 milk, 2 eggs, 3 rice
+854. [order-30-04 | selection | holdout] order 2 green apples and 1 baladi bread
+855. [order-30-05 | selection | holdout] order 4 chesse & 2 tomatos
+856. [order-30-06 | selection | holdout] order 2x bananas, 3x apples
+857. [order-30-07 | selection | holdout] order bananas x2 and apples x3
+858. [order-30-08 | selection | holdout] order twelve eggs and twenty apples
+859. [order-30-09 | selection | holdout] order 1 olive oil, 2 yogurt, 3 dates, 1 honey, 2 lemons
+860. [order-30-10 | selection | holdout] order 2 SKU-GRN-007 and 1 oat milk
+861. [order-35-01 | selection | holdout] I will take 2 banans 3 apples 2 baladi
+862. [order-35-02 | selection | holdout] I will take two bananas and three apples
+863. [order-35-03 | selection | holdout] I will take 1 milk, 2 eggs, 3 rice
+864. [order-35-04 | selection | holdout] I will take 2 green apples and 1 baladi bread
+865. [order-35-05 | selection | holdout] I will take 4 chesse & 2 tomatos
+866. [order-35-06 | selection | holdout] I will take 2x bananas, 3x apples
+867. [order-35-07 | selection | holdout] I will take bananas x2 and apples x3
+868. [order-35-08 | selection | holdout] I will take twelve eggs and twenty apples
+869. [order-35-09 | selection | holdout] I will take 1 olive oil, 2 yogurt, 3 dates, 1 honey, 2 lemons
+870. [order-35-10 | selection | holdout] I will take 2 SKU-GRN-007 and 1 oat milk
+871. [order-40-01 | selection | holdout] we would like to have 2 banans 3 apples 2 baladi
+872. [order-40-02 | selection | holdout] we would like to have two bananas and three apples
+873. [order-40-03 | selection | holdout] we would like to have 1 milk, 2 eggs, 3 rice
+874. [order-40-04 | selection | holdout] we would like to have 2 green apples and 1 baladi bread
+875. [order-40-05 | selection | holdout] we would like to have 4 chesse & 2 tomatos
+876. [order-40-06 | selection | holdout] we would like to have 2x bananas, 3x apples
+877. [order-40-07 | selection | holdout] we would like to have bananas x2 and apples x3
+878. [order-40-08 | selection | holdout] we would like to have twelve eggs and twenty apples
+879. [order-40-09 | selection | holdout] we would like to have 1 olive oil, 2 yogurt, 3 dates, 1 honey, 2 lemons
+880. [order-40-10 | selection | holdout] we would like to have 2 SKU-GRN-007 and 1 oat milk
+881. [order-45-01 | selection | holdout] good evening, can I get 2 banans 3 apples 2 baladi?
+882. [order-45-02 | selection | holdout] good evening, can I get two bananas and three apples?
+883. [order-45-03 | selection | holdout] good evening, can I get 1 milk, 2 eggs, 3 rice?
+884. [order-45-04 | selection | holdout] good evening, can I get 2 green apples and 1 baladi bread?
+885. [order-45-05 | selection | holdout] good evening, can I get 4 chesse & 2 tomatos?
+886. [order-45-06 | selection | holdout] good evening, can I get 2x bananas, 3x apples?
+887. [order-45-07 | selection | holdout] good evening, can I get bananas x2 and apples x3?
+888. [order-45-08 | selection | holdout] good evening, can I get twelve eggs and twenty apples?
+889. [order-45-09 | selection | holdout] good evening, can I get 1 olive oil, 2 yogurt, 3 dates, 1 honey, 2 lemons?
+890. [order-45-10 | selection | holdout] good evening, can I get 2 SKU-GRN-007 and 1 oat milk?
+891. [order-50-01 | selection | holdout] I'd like to make an order for 2 banans 3 apples 2 baladi
+892. [order-50-02 | selection | holdout] I'd like to make an order for two bananas and three apples
+893. [order-50-03 | selection | holdout] I'd like to make an order for 1 milk, 2 eggs, 3 rice
+894. [order-50-04 | selection | holdout] I'd like to make an order for 2 green apples and 1 baladi bread
+895. [order-50-05 | selection | holdout] I'd like to make an order for 4 chesse & 2 tomatos
+896. [order-50-06 | selection | holdout] I'd like to make an order for 2x bananas, 3x apples
+897. [order-50-07 | selection | holdout] I'd like to make an order for bananas x2 and apples x3
+898. [order-50-08 | selection | holdout] I'd like to make an order for twelve eggs and twenty apples
+899. [order-50-09 | selection | holdout] I'd like to make an order for 1 olive oil, 2 yogurt, 3 dates, 1 honey, 2 lemons
+900. [order-50-10 | selection | holdout] I'd like to make an order for 2 SKU-GRN-007 and 1 oat milk
+901. [order-55-01 | selection | holdout] pls order 2 banans 3 apples 2 baladi
+902. [order-55-02 | selection | holdout] pls order two bananas and three apples
+903. [order-55-03 | selection | holdout] pls order 1 milk, 2 eggs, 3 rice
+904. [order-55-04 | selection | holdout] pls order 2 green apples and 1 baladi bread
+905. [order-55-05 | selection | holdout] pls order 4 chesse & 2 tomatos
+906. [order-55-06 | selection | holdout] pls order 2x bananas, 3x apples
+907. [order-55-07 | selection | holdout] pls order bananas x2 and apples x3
+908. [order-55-08 | selection | holdout] pls order twelve eggs and twenty apples
+909. [order-55-09 | selection | holdout] pls order 1 olive oil, 2 yogurt, 3 dates, 1 honey, 2 lemons
+910. [order-55-10 | selection | holdout] pls order 2 SKU-GRN-007 and 1 oat milk
+911. [order-60-01 | selection | holdout] i wanna order 2 banans 3 apples 2 baladi
+912. [order-60-02 | selection | holdout] i wanna order two bananas and three apples
+913. [order-60-03 | selection | holdout] i wanna order 1 milk, 2 eggs, 3 rice
+914. [order-60-04 | selection | holdout] i wanna order 2 green apples and 1 baladi bread
+915. [order-60-05 | selection | holdout] i wanna order 4 chesse & 2 tomatos
+916. [order-60-06 | selection | holdout] i wanna order 2x bananas, 3x apples
+917. [order-60-07 | selection | holdout] i wanna order bananas x2 and apples x3
+918. [order-60-08 | selection | holdout] i wanna order twelve eggs and twenty apples
+919. [order-60-09 | selection | holdout] i wanna order 1 olive oil, 2 yogurt, 3 dates, 1 honey, 2 lemons
+920. [order-60-10 | selection | holdout] i wanna order 2 SKU-GRN-007 and 1 oat milk
+921. [order-65-01 | selection | holdout] please oder 2 banans 3 apples 2 baladi
+922. [order-65-02 | selection | holdout] please oder two bananas and three apples
+923. [order-65-03 | selection | holdout] please oder 1 milk, 2 eggs, 3 rice
+924. [order-65-04 | selection | holdout] please oder 2 green apples and 1 baladi bread
+925. [order-65-05 | selection | holdout] please oder 4 chesse & 2 tomatos
+926. [order-65-06 | selection | holdout] please oder 2x bananas, 3x apples
+927. [order-65-07 | selection | holdout] please oder bananas x2 and apples x3
+928. [order-65-08 | selection | holdout] please oder twelve eggs and twenty apples
+929. [order-65-09 | selection | holdout] please oder 1 olive oil, 2 yogurt, 3 dates, 1 honey, 2 lemons
+930. [order-65-10 | selection | holdout] please oder 2 SKU-GRN-007 and 1 oat milk
+931. [order-70-01 | selection | holdout] please start my order with 2 banans 3 apples 2 baladi
+932. [order-70-02 | selection | holdout] please start my order with two bananas and three apples
+933. [order-70-03 | selection | holdout] please start my order with 1 milk, 2 eggs, 3 rice
+934. [order-70-04 | selection | holdout] please start my order with 2 green apples and 1 baladi bread
+935. [order-70-05 | selection | holdout] please start my order with 4 chesse & 2 tomatos
+936. [order-70-06 | selection | holdout] please start my order with 2x bananas, 3x apples
+937. [order-70-07 | selection | holdout] please start my order with bananas x2 and apples x3
+938. [order-70-08 | selection | holdout] please start my order with twelve eggs and twenty apples
+939. [order-70-09 | selection | holdout] please start my order with 1 olive oil, 2 yogurt, 3 dates, 1 honey, 2 lemons
+940. [order-70-10 | selection | holdout] please start my order with 2 SKU-GRN-007 and 1 oat milk
+941. [guard-05-01 | clarify | holdout] create order 1 bananas under 100 EGP
+942. [guard-05-02 | clarify | holdout] create order 2 apples under 100 EGP
+943. [guard-05-03 | clarify | holdout] create order 3 baladi under 100 EGP
+944. [guard-05-04 | clarify | holdout] create order 1 milk under 100 EGP
+945. [guard-05-05 | clarify | holdout] create order 2 eggs under 100 EGP
+946. [guard-05-06 | clarify | holdout] create order 3 chesse under 100 EGP
+947. [guard-05-07 | clarify | holdout] create order 1 rice under 100 EGP
+948. [guard-05-08 | clarify | holdout] create order 2 tomatos under 100 EGP
+949. [guard-05-09 | clarify | holdout] create order 3 yogurt under 100 EGP
+950. [guard-05-10 | clarify | holdout] create order 1 lemons under 100 EGP
+951. [guard-10-01 | clarify | holdout] clear my cart then order 1 bananas
+952. [guard-10-02 | clarify | holdout] clear my cart then order 2 apples
+953. [guard-10-03 | clarify | holdout] clear my cart then order 3 baladi
+954. [guard-10-04 | clarify | holdout] clear my cart then order 1 milk
+955. [guard-10-05 | clarify | holdout] clear my cart then order 2 eggs
+956. [guard-10-06 | clarify | holdout] clear my cart then order 3 chesse
+957. [guard-10-07 | clarify | holdout] clear my cart then order 1 rice
+958. [guard-10-08 | clarify | holdout] clear my cart then order 2 tomatos
+959. [guard-10-09 | clarify | holdout] clear my cart then order 3 yogurt
+960. [guard-10-10 | clarify | holdout] clear my cart then order 1 lemons
+961. [guard-15-01 | clarify | holdout] buy 1 bananas cash on delivery
+962. [guard-15-02 | clarify | holdout] buy 2 apples cash on delivery
+963. [guard-15-03 | clarify | holdout] buy 3 baladi cash on delivery
+964. [guard-15-04 | clarify | holdout] buy 1 milk cash on delivery
+965. [guard-15-05 | clarify | holdout] buy 2 eggs cash on delivery
+966. [guard-15-06 | clarify | holdout] buy 3 chesse cash on delivery
+967. [guard-15-07 | clarify | holdout] buy 1 rice cash on delivery
+968. [guard-15-08 | clarify | holdout] buy 2 tomatos cash on delivery
+969. [guard-15-09 | clarify | holdout] buy 3 yogurt cash on delivery
+970. [guard-15-10 | clarify | holdout] buy 1 lemons cash on delivery
+971. [guard-20-01 | clarify | holdout] create order -2 bananas
+972. [guard-20-02 | clarify | holdout] create order -2 apples
+973. [guard-20-03 | clarify | holdout] create order -2 baladi
+974. [guard-20-04 | clarify | holdout] create order -2 milk
+975. [guard-20-05 | clarify | holdout] create order -2 eggs
+976. [guard-20-06 | clarify | holdout] create order -2 chesse
+977. [guard-20-07 | clarify | holdout] create order -2 rice
+978. [guard-20-08 | clarify | holdout] create order -2 tomatos
+979. [guard-20-09 | clarify | holdout] create order -2 yogurt
+980. [guard-20-10 | clarify | holdout] create order -2 lemons
+981. [guard-25-01 | clarify | holdout] order two 3 bananas
+982. [guard-25-02 | clarify | holdout] order two 3 apples
+983. [guard-25-03 | clarify | holdout] order two 3 baladi
+984. [guard-25-04 | clarify | holdout] order two 3 milk
+985. [guard-25-05 | clarify | holdout] order two 3 eggs
+986. [guard-25-06 | clarify | holdout] order two 3 chesse
+987. [guard-25-07 | clarify | holdout] order two 3 rice
+988. [guard-25-08 | clarify | holdout] order two 3 tomatos
+989. [guard-25-09 | clarify | holdout] order two 3 yogurt
+990. [guard-25-10 | clarify | holdout] order two 3 lemons
+991. [guard-30-01 | clarify | holdout] order 1 bananas with no substitutions
+992. [guard-30-02 | clarify | holdout] order 2 apples with no substitutions
+993. [guard-30-03 | clarify | holdout] order 3 baladi with no substitutions
+994. [guard-30-04 | clarify | holdout] order 1 milk with no substitutions
+995. [guard-30-05 | clarify | holdout] order 2 eggs with no substitutions
+996. [guard-30-06 | clarify | holdout] order 3 chesse with no substitutions
+997. [guard-30-07 | clarify | holdout] order 1 rice with no substitutions
+998. [guard-30-08 | clarify | holdout] order 2 tomatos with no substitutions
+999. [guard-30-09 | clarify | holdout] order 3 yogurt with no substitutions
+1000. [guard-30-10 | clarify | holdout] order 1 lemons with no substitutions

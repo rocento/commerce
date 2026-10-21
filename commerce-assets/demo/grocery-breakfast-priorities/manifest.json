@@ -1,0 +1,681 @@
+{
+  "description": "Merchant-requested breakfast priorities; preserve all existing product state and attributes.",
+  "definitions": [
+    {
+      "id": "d908fc94-b1e1-5175-ac8d-f437b6574da9",
+      "entity_type": "product",
+      "attribute_code": "meal_occasion_breakfast_priority",
+      "label": "Breakfast recommendation group",
+      "input_type": "select",
+      "scope": "global",
+      "is_required": false,
+      "is_unique": false,
+      "is_searchable": true,
+      "is_filterable": true,
+      "is_comparable": true,
+      "is_visible_on_front": true,
+      "used_for_promo_rules": false,
+      "used_for_configurations": false,
+      "swatch_type": "none",
+      "options": [
+        {
+          "value": "bread",
+          "label": "Bread first"
+        },
+        {
+          "value": "cheese",
+          "label": "Cheese next"
+        },
+        {
+          "value": "addition",
+          "label": "Optional additions"
+        }
+      ],
+      "version": 0,
+      "metadata": {
+        "status": "active",
+        "admin_visible": true,
+        "ai_queryable": true,
+        "ai_enrichable": false,
+        "facetable": true,
+        "source_policy": "semantic",
+        "semantic_role": null,
+        "description": "Merchant breakfast merchandising order. Bread and cheese lead; fruit and other additions follow. Not nutritional or dietary evidence."
+      }
+    }
+  ],
+  "products": [
+    {
+      "sku": "DEMO-GRO-50-001",
+      "name": "Bananas 1kg",
+      "slug": "demo-grocery-organic-bananas",
+      "attributes": {
+        "meal_occasion_breakfast_priority": "addition"
+      }
+    },
+    {
+      "sku": "DEMO-GRO-50-002",
+      "name": "Gala Apples 1kg",
+      "slug": "demo-grocery-gala-apples",
+      "attributes": {
+        "meal_occasion_breakfast_priority": "addition"
+      }
+    },
+    {
+      "sku": "DEMO-GRO-50-003",
+      "name": "Whole Milk 1L",
+      "slug": "demo-grocery-whole-milk",
+      "attributes": {
+        "meal_occasion_breakfast_priority": "addition"
+      }
+    },
+    {
+      "sku": "DEMO-GRO-50-004",
+      "name": "Baladi Bread 5 Loaves",
+      "slug": "demo-grocery-baladi-bread",
+      "attributes": {
+        "meal_occasion_breakfast_priority": "bread"
+      }
+    },
+    {
+      "sku": "DEMO-GRO-50-008",
+      "name": "Roumi Cheese 250g",
+      "slug": "demo-grocery-roumi-cheese",
+      "attributes": {
+        "meal_occasion_breakfast_priority": "cheese"
+      }
+    },
+    {
+      "sku": "DEMO-GRO-50-009",
+      "name": "Medjool Dates 400g",
+      "slug": "demo-grocery-medjool-dates",
+      "attributes": {
+        "meal_occasion_breakfast_priority": "addition"
+      }
+    },
+    {
+      "sku": "DEMO-GRO-50-010",
+      "name": "Tahini Jar 350g",
+      "slug": "demo-grocery-tahini-jar",
+      "attributes": {
+        "meal_occasion_breakfast_priority": "addition"
+      }
+    },
+    {
+      "sku": "DEMO-GRO-50-011",
+      "name": "Baladi Ghee 500g",
+      "slug": "demo-grocery-baladi-ghee",
+      "attributes": {
+        "meal_occasion_breakfast_priority": "addition"
+      }
+    },
+    {
+      "sku": "DEMO-GRO-50-012",
+      "name": "Dried Hibiscus 200g",
+      "slug": "demo-grocery-karkadeh-hibiscus",
+      "attributes": {
+        "meal_occasion_breakfast_priority": "addition"
+      }
+    },
+    {
+      "sku": "DEMO-GRO-50-020",
+      "name": "Fresh Oranges 1kg",
+      "slug": "demo-grocery-fresh-oranges",
+      "attributes": {
+        "meal_occasion_breakfast_priority": "addition"
+      }
+    },
+    {
+      "sku": "DEMO-GRO-50-021",
+      "name": "Fresh Strawberries 500g",
+      "slug": "demo-grocery-fresh-strawberries",
+      "attributes": {
+        "meal_occasion_breakfast_priority": "addition"
+      }
+    },
+    {
+      "sku": "DEMO-GRO-50-025",
+      "name": "Farm Eggs 6 Pack",
+      "slug": "demo-grocery-farm-eggs",
+      "attributes": {
+        "meal_occasion_breakfast_priority": "addition"
+      }
+    },
+    {
+      "sku": "DEMO-GRO-50-026",
+      "name": "Plain Yogurt 500g",
+      "slug": "demo-grocery-plain-yogurt",
+      "attributes": {
+        "meal_occasion_breakfast_priority": "addition"
+      }
+    },
+    {
+      "sku": "DEMO-GRO-50-029",
+      "name": "Raw Almonds 250g",
+      "slug": "demo-grocery-raw-almonds",
+      "attributes": {
+        "meal_occasion_breakfast_priority": "addition"
+      }
+    },
+    {
+      "sku": "DEMO-GRO-50-030",
+      "name": "Wildflower Honey 350g",
+      "slug": "demo-grocery-wildflower-honey",
+      "attributes": {
+        "meal_occasion_breakfast_priority": "addition"
+      }
+    },
+    {
+      "sku": "DEMO-GRO-50-031",
+      "name": "Bananas 1kg \u2014 Double Pack",
+      "slug": "demo-grocery-organic-bananas-double-pack",
+      "attributes": {
+        "meal_occasion_breakfast_priority": "addition"
+      }
+    },
+    {
+      "sku": "DEMO-GRO-50-032",
+      "name": "Gala Apples 1kg \u2014 Double Pack",
+      "slug": "demo-grocery-gala-apples-double-pack",
+      "attributes": {
+        "meal_occasion_breakfast_priority": "addition"
+      }
+    },
+    {
+      "sku": "DEMO-GRO-50-033",
+      "name": "Whole Milk 1L \u2014 Double Pack",
+      "slug": "demo-grocery-whole-milk-double-pack",
+      "attributes": {
+        "meal_occasion_breakfast_priority": "addition"
+      }
+    },
+    {
+      "sku": "DEMO-GRO-50-034",
+      "name": "Baladi Bread 5 Loaves \u2014 Double Pack",
+      "slug": "demo-grocery-baladi-bread-double-pack",
+      "attributes": {
+        "meal_occasion_breakfast_priority": "bread"
+      }
+    },
+    {
+      "sku": "DEMO-GRO-50-038",
+      "name": "Roumi Cheese 250g \u2014 Double Pack",
+      "slug": "demo-grocery-roumi-cheese-double-pack",
+      "attributes": {
+        "meal_occasion_breakfast_priority": "cheese"
+      }
+    },
+    {
+      "sku": "DEMO-GRO-50-039",
+      "name": "Medjool Dates 400g \u2014 Double Pack",
+      "slug": "demo-grocery-medjool-dates-double-pack",
+      "attributes": {
+        "meal_occasion_breakfast_priority": "addition"
+      }
+    },
+    {
+      "sku": "DEMO-GRO-50-040",
+      "name": "Tahini Jar 350g \u2014 Double Pack",
+      "slug": "demo-grocery-tahini-jar-double-pack",
+      "attributes": {
+        "meal_occasion_breakfast_priority": "addition"
+      }
+    },
+    {
+      "sku": "DEMO-GRO-50-041",
+      "name": "Baladi Ghee 500g \u2014 Double Pack",
+      "slug": "demo-grocery-baladi-ghee-double-pack",
+      "attributes": {
+        "meal_occasion_breakfast_priority": "addition"
+      }
+    },
+    {
+      "sku": "DEMO-GRO-50-042",
+      "name": "Dried Hibiscus 200g \u2014 Double Pack",
+      "slug": "demo-grocery-karkadeh-hibiscus-double-pack",
+      "attributes": {
+        "meal_occasion_breakfast_priority": "addition"
+      }
+    },
+    {
+      "sku": "DEMO-GRO-50-050",
+      "name": "Fresh Oranges 1kg \u2014 Double Pack",
+      "slug": "demo-grocery-fresh-oranges-double-pack",
+      "attributes": {
+        "meal_occasion_breakfast_priority": "addition"
+      }
+    },
+    {
+      "sku": "DEMO-GRO-WHITE-001",
+      "name": "Bananas 1kg",
+      "slug": "demo-grocery-white-bananas",
+      "attributes": {
+        "meal_occasion_breakfast_priority": "addition"
+      }
+    },
+    {
+      "sku": "DEMO-GRO-WHITE-002",
+      "name": "Gala Apples 1kg",
+      "slug": "demo-grocery-white-gala-apples",
+      "attributes": {
+        "meal_occasion_breakfast_priority": "addition"
+      }
+    },
+    {
+      "sku": "DEMO-GRO-WHITE-003",
+      "name": "Oranges 1kg",
+      "slug": "demo-grocery-white-oranges",
+      "attributes": {
+        "meal_occasion_breakfast_priority": "addition"
+      }
+    },
+    {
+      "sku": "DEMO-GRO-WHITE-005",
+      "name": "Strawberries 500g",
+      "slug": "demo-grocery-white-strawberries",
+      "attributes": {
+        "meal_occasion_breakfast_priority": "addition"
+      }
+    },
+    {
+      "sku": "DEMO-GRO-WHITE-006",
+      "name": "Red Grapes 500g",
+      "slug": "demo-grocery-white-red-grapes",
+      "attributes": {
+        "meal_occasion_breakfast_priority": "addition"
+      }
+    },
+    {
+      "sku": "DEMO-GRO-WHITE-015",
+      "name": "Farm Eggs 6 Pack",
+      "slug": "demo-grocery-white-eggs",
+      "attributes": {
+        "meal_occasion_breakfast_priority": "addition"
+      }
+    },
+    {
+      "sku": "DEMO-GRO-WHITE-016",
+      "name": "Whole Milk 1L",
+      "slug": "demo-grocery-white-whole-milk",
+      "attributes": {
+        "meal_occasion_breakfast_priority": "addition"
+      }
+    },
+    {
+      "sku": "DEMO-GRO-WHITE-017",
+      "name": "Plain Yogurt 500g",
+      "slug": "demo-grocery-white-yogurt",
+      "attributes": {
+        "meal_occasion_breakfast_priority": "addition"
+      }
+    },
+    {
+      "sku": "DEMO-GRO-WHITE-018",
+      "name": "Feta Cheese 250g",
+      "slug": "demo-grocery-white-feta-cheese",
+      "attributes": {
+        "meal_occasion_breakfast_priority": "cheese"
+      }
+    },
+    {
+      "sku": "DEMO-GRO-WHITE-019",
+      "name": "Butter 200g",
+      "slug": "demo-grocery-white-butter",
+      "attributes": {
+        "meal_occasion_breakfast_priority": "addition"
+      }
+    },
+    {
+      "sku": "DEMO-GRO-WHITE-020",
+      "name": "Cheddar Cheese 250g",
+      "slug": "demo-grocery-white-cheddar-cheese",
+      "attributes": {
+        "meal_occasion_breakfast_priority": "cheese"
+      }
+    },
+    {
+      "sku": "DEMO-GRO-WHITE-021",
+      "name": "Baladi Bread 5 Loaves",
+      "slug": "demo-grocery-white-baladi-bread",
+      "attributes": {
+        "meal_occasion_breakfast_priority": "bread"
+      }
+    },
+    {
+      "sku": "DEMO-GRO-WHITE-022",
+      "name": "Sliced Bread 1 Loaf",
+      "slug": "demo-grocery-white-sliced-bread",
+      "attributes": {
+        "meal_occasion_breakfast_priority": "bread"
+      }
+    },
+    {
+      "sku": "DEMO-GRO-WHITE-023",
+      "name": "Butter Croissants 3 Pack",
+      "slug": "demo-grocery-white-croissants",
+      "attributes": {
+        "meal_occasion_breakfast_priority": "bread"
+      }
+    },
+    {
+      "sku": "DEMO-GRO-WHITE-028",
+      "name": "Medjool Dates 400g",
+      "slug": "demo-grocery-white-dates",
+      "attributes": {
+        "meal_occasion_breakfast_priority": "addition"
+      }
+    },
+    {
+      "sku": "DEMO-GRO-WHITE-029",
+      "name": "Raw Almonds 250g",
+      "slug": "demo-grocery-white-almonds",
+      "attributes": {
+        "meal_occasion_breakfast_priority": "addition"
+      }
+    },
+    {
+      "sku": "DEMO-GRO-WHITE-031",
+      "name": "Mangoes 1kg",
+      "slug": "demo-grocery-white-mangoes",
+      "attributes": {
+        "meal_occasion_breakfast_priority": "addition"
+      }
+    },
+    {
+      "sku": "DEMO-GRO-WHITE-032",
+      "name": "Watermelon 1 Whole",
+      "slug": "demo-grocery-white-watermelon",
+      "attributes": {
+        "meal_occasion_breakfast_priority": "addition"
+      }
+    },
+    {
+      "sku": "DEMO-GRO-WHITE-033",
+      "name": "Pineapple 1 Whole",
+      "slug": "demo-grocery-white-pineapple",
+      "attributes": {
+        "meal_occasion_breakfast_priority": "addition"
+      }
+    },
+    {
+      "sku": "DEMO-GRO-WHITE-034",
+      "name": "Avocados 2 Pack",
+      "slug": "demo-grocery-white-avocados",
+      "attributes": {
+        "meal_occasion_breakfast_priority": "addition"
+      }
+    },
+    {
+      "sku": "DEMO-GRO-WHITE-035",
+      "name": "Pears 1kg",
+      "slug": "demo-grocery-white-pears",
+      "attributes": {
+        "meal_occasion_breakfast_priority": "addition"
+      }
+    },
+    {
+      "sku": "DEMO-GRO-WHITE-040",
+      "name": "Honey 350g",
+      "slug": "demo-grocery-white-honey",
+      "attributes": {
+        "meal_occasion_breakfast_priority": "addition"
+      }
+    },
+    {
+      "sku": "DEMO-GRO-WHITE-046",
+      "name": "Sukkari Dates 400g",
+      "slug": "demo-grocery-white-sukkari-dates",
+      "attributes": {
+        "meal_occasion_breakfast_priority": "addition"
+      }
+    },
+    {
+      "sku": "DEMO-GRO-WHITE-047",
+      "name": "Ajwa Dates 400g",
+      "slug": "demo-grocery-white-ajwa-dates",
+      "attributes": {
+        "meal_occasion_breakfast_priority": "addition"
+      }
+    },
+    {
+      "sku": "DEMO-GRO-WHITE-048",
+      "name": "Pistachios 250g",
+      "slug": "demo-grocery-white-pistachios",
+      "attributes": {
+        "meal_occasion_breakfast_priority": "addition"
+      }
+    },
+    {
+      "sku": "DEMO-GRO-WHITE-049",
+      "name": "Cashews 250g",
+      "slug": "demo-grocery-white-cashews",
+      "attributes": {
+        "meal_occasion_breakfast_priority": "addition"
+      }
+    },
+    {
+      "sku": "DEMO-GRO-WHITE-050",
+      "name": "Walnuts 250g",
+      "slug": "demo-grocery-white-walnuts",
+      "attributes": {
+        "meal_occasion_breakfast_priority": "addition"
+      }
+    },
+    {
+      "sku": "GRO-EXTRA-20260929-001",
+      "name": "Mangoes 500g",
+      "slug": "grocery-mangoes-500g",
+      "attributes": {
+        "meal_occasion_breakfast_priority": "addition"
+      }
+    },
+    {
+      "sku": "GRO-EXTRA-20260929-002",
+      "name": "Red Grapes 1kg",
+      "slug": "grocery-red-grapes-1kg",
+      "attributes": {
+        "meal_occasion_breakfast_priority": "addition"
+      }
+    },
+    {
+      "sku": "GRO-EXTRA-20260929-003",
+      "name": "Pears 500g",
+      "slug": "grocery-pears-500g",
+      "attributes": {
+        "meal_occasion_breakfast_priority": "addition"
+      }
+    },
+    {
+      "sku": "GRO-EXTRA-20260929-006",
+      "name": "Cheddar Cheese 500g",
+      "slug": "grocery-cheddar-cheese-500g",
+      "attributes": {
+        "meal_occasion_breakfast_priority": "cheese"
+      }
+    },
+    {
+      "sku": "GRO-EXTRA-20260929-007",
+      "name": "Feta Cheese 500g",
+      "slug": "grocery-feta-cheese-500g",
+      "attributes": {
+        "meal_occasion_breakfast_priority": "cheese"
+      }
+    },
+    {
+      "sku": "GRO-EXTRA-20260929-008",
+      "name": "Butter Croissants 6 Pack",
+      "slug": "grocery-butter-croissants-6-pack",
+      "attributes": {
+        "meal_occasion_breakfast_priority": "bread"
+      }
+    },
+    {
+      "sku": "GRO-EXTRA-20260929-014",
+      "name": "Cashews 500g",
+      "slug": "grocery-cashews-500g",
+      "attributes": {
+        "meal_occasion_breakfast_priority": "addition"
+      }
+    },
+    {
+      "sku": "GRO-EXTRA-20260929-015",
+      "name": "Pistachios 500g",
+      "slug": "grocery-pistachios-500g",
+      "attributes": {
+        "meal_occasion_breakfast_priority": "addition"
+      }
+    },
+    {
+      "sku": "GRO-NEW-20260929-001",
+      "name": "Blueberries 125g",
+      "slug": "grocery-blueberries",
+      "attributes": {
+        "meal_occasion_breakfast_priority": "addition"
+      }
+    },
+    {
+      "sku": "GRO-NEW-20260929-002",
+      "name": "Kiwi 4 Pack",
+      "slug": "grocery-kiwi",
+      "attributes": {
+        "meal_occasion_breakfast_priority": "addition"
+      }
+    },
+    {
+      "sku": "GRO-NEW-20260929-003",
+      "name": "Pomegranates 2 Pack",
+      "slug": "grocery-pomegranate",
+      "attributes": {
+        "meal_occasion_breakfast_priority": "addition"
+      }
+    },
+    {
+      "sku": "GRO-NEW-20260929-004",
+      "name": "Peaches 500g",
+      "slug": "grocery-peaches",
+      "attributes": {
+        "meal_occasion_breakfast_priority": "addition"
+      }
+    },
+    {
+      "sku": "GRO-NEW-20260929-009",
+      "name": "Fresh Mozzarella 125g",
+      "slug": "grocery-mozzarella",
+      "attributes": {
+        "meal_occasion_breakfast_priority": "cheese"
+      }
+    },
+    {
+      "sku": "GRO-NEW-20260929-010",
+      "name": "Cream Cheese 200g",
+      "slug": "grocery-cream-cheese",
+      "attributes": {
+        "meal_occasion_breakfast_priority": "cheese"
+      }
+    },
+    {
+      "sku": "GRO-NEW-20260929-011",
+      "name": "Sesame Bagels 4 Pack",
+      "slug": "grocery-bagels",
+      "attributes": {
+        "meal_occasion_breakfast_priority": "bread"
+      }
+    },
+    {
+      "sku": "GRO-NEW-20260929-012",
+      "name": "Oat Bread 1 Loaf",
+      "slug": "grocery-oat-bread",
+      "attributes": {
+        "meal_occasion_breakfast_priority": "bread"
+      }
+    },
+    {
+      "sku": "GRO-NEW-20260929-013",
+      "name": "Rolled Oats 500g",
+      "slug": "grocery-rolled-oats",
+      "attributes": {
+        "meal_occasion_breakfast_priority": "addition"
+      }
+    },
+    {
+      "sku": "GRO-NEW-20260929-019",
+      "name": "Dried Apricots 250g",
+      "slug": "grocery-dried-apricots",
+      "attributes": {
+        "meal_occasion_breakfast_priority": "addition"
+      }
+    },
+    {
+      "sku": "GRO-NEW-20260929-020",
+      "name": "Hazelnuts 250g",
+      "slug": "grocery-hazelnuts",
+      "attributes": {
+        "meal_occasion_breakfast_priority": "addition"
+      }
+    },
+    {
+      "sku": "GRO-SIZE-FAMILY-001",
+      "name": "Mangoes",
+      "slug": "grocery-mangoes",
+      "attributes": {
+        "meal_occasion_breakfast_priority": "addition"
+      }
+    },
+    {
+      "sku": "GRO-SIZE-FAMILY-002",
+      "name": "Red Grapes",
+      "slug": "grocery-red-grapes",
+      "attributes": {
+        "meal_occasion_breakfast_priority": "addition"
+      }
+    },
+    {
+      "sku": "GRO-SIZE-FAMILY-003",
+      "name": "Pears",
+      "slug": "grocery-pears",
+      "attributes": {
+        "meal_occasion_breakfast_priority": "addition"
+      }
+    },
+    {
+      "sku": "GRO-SIZE-FAMILY-006",
+      "name": "Cheddar Cheese",
+      "slug": "grocery-cheddar-cheese",
+      "attributes": {
+        "meal_occasion_breakfast_priority": "cheese"
+      }
+    },
+    {
+      "sku": "GRO-SIZE-FAMILY-007",
+      "name": "Feta Cheese",
+      "slug": "grocery-feta-cheese",
+      "attributes": {
+        "meal_occasion_breakfast_priority": "cheese"
+      }
+    },
+    {
+      "sku": "GRO-SIZE-FAMILY-008",
+      "name": "Butter Croissants",
+      "slug": "grocery-croissants",
+      "attributes": {
+        "meal_occasion_breakfast_priority": "bread"
+      }
+    },
+    {
+      "sku": "GRO-SIZE-FAMILY-014",
+      "name": "Cashews",
+      "slug": "grocery-cashews",
+      "attributes": {
+        "meal_occasion_breakfast_priority": "addition"
+      }
+    },
+    {
+      "sku": "GRO-SIZE-FAMILY-015",
+      "name": "Pistachios",
+      "slug": "grocery-pistachios",
+      "attributes": {
+        "meal_occasion_breakfast_priority": "addition"
+      }
+    }
+  ]
+}

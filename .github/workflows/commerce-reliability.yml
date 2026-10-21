@@ -1,0 +1,47 @@
+name: Commerce reliability baseline
+on:
+  workflow_dispatch:
+    inputs:
+      profile:
+        type: choice
+        options: [debug, release]
+        default: release
+      concurrency:
+        description: Increasing concurrent shoppers (1–16, up to six levels)
+        default: '1,4,8'
+      iterations:
+        description: Purchases per shopper per stage (1–100)
+        default: '5'
+permissions:
+  contents: read
+jobs:
+  baseline:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+      - uses: dtolnay/rust-toolchain@stable
+        with:
+          toolchain: '1.94.0'
+      - uses: Swatinem/rust-cache@v2
+        with:
+          workspaces: commerce-api/rocento-api
+      - name: Run isolated commerce baseline
+        env:
+          BASELINE_PROFILE: ${{ inputs.profile }}
+          BASELINE_CONCURRENCY: ${{ inputs.concurrency }}
+          BASELINE_ITERATIONS: ${{ inputs.iterations }}
+        run: python3 commerce-ops/scripts/release/commerce-reliability.py --analytics-faults --async-faults --profile "$BASELINE_PROFILE" --concurrency "$BASELINE_CONCURRENCY" --iterations "$BASELINE_ITERATIONS"
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: commerce-reliability-evidence
+          include-hidden-files: true
+          retention-days: 7
+          path: |
+            .local/commerce-reliability/*/async-recovery.json
+            .local/commerce-reliability/*/analytics-isolation.json
+            .local/commerce-reliability/*/report.json
+            .local/commerce-reliability/*/source-manifest.json
+            .local/commerce-reliability/*/*-samples.json
+            .local/commerce-reliability/*/*.prom

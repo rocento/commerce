@@ -1,0 +1,9 @@
+   Compiling api-gateway v0.1.0 (/Users/momar/Documents/commerce-ai/backend/crates/api-gateway)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 13.67s
+     Running tests/publication_metadata.rs (backend/target/debug/deps/publication_metadata-e23d8be9a5e19d5f)
+
+running 2 tests
+test image_eligibility_is_reference_based_and_revocable ... ok
+test real_media_bytes_variants_and_private_authorization ... ok
+
+test result: ok. 2 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 2.06s

@@ -1,0 +1,452 @@
+.store-shell {
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  padding: 0;
+}
+.store-header {
+  min-height: 90px;
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  padding: 0 32px;
+  background: #fff;
+  border-bottom: 1px solid #dfe5d8;
+  position: sticky;
+  top: 0;
+  z-index: 50;
+}
+.store-header nav {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  font-size: 14px;
+  min-width: 0;
+}
+.header-search-zone {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex: 1;
+  min-width: 260px;
+}
+.header-link,
+.cart-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  min-width: 0;
+  white-space: nowrap;
+}
+.header-icon,
+.cart-icon {
+  width: 18px;
+  height: 18px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  flex: 0 0 auto;
+}
+.small-primary,
+.primary-link {
+  display: inline-block;
+  background: #2855dd;
+  color: #fff;
+  padding: 12px 18px;
+  border-radius: 6px;
+}
+.primary-link {
+  margin: 20px 0;
+}
+.welcome {
+  padding-top: 75px;
+}
+.home-cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  margin: 50px 0;
+}
+.auth-layout {
+  min-height: 58vh;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding-top: clamp(44px, 7vw, 92px);
+  padding-bottom: clamp(54px, 8vw, 108px);
+}
+.form-card {
+  background: #fff;
+  border: 1px solid #dce1e8;
+  border-radius: 12px;
+  padding: 32px;
+}
+.form-card h2 {
+  font-size: 24px;
+}
+.form-card > a {
+  display: inline-block;
+  margin-top: 20px;
+  color: #2855dd;
+  font-size: 14px;
+}
+.form-card form > button {
+  width: 100%;
+  margin-top: 10px;
+}
+.auth-card {
+  width: min(100%, 440px);
+  border: 0;
+  border-radius: 0;
+  padding: 0;
+  background: transparent;
+  text-align:start;
+}
+.store-shell .auth-card {
+  background: transparent;
+}
+.auth-card h1 {
+  margin: 0 0 20px;
+  font-size: clamp(32px, 4vw, 44px);
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 1.2;
+}
+.auth-card .muted {
+  margin: 0 0 26px;
+  color: currentColor;
+  font-size: 15px;
+  line-height: 1.7;
+}
+.auth-card .field {
+  margin: 18px 0;
+  gap: 7px;
+  font-size: 13px;
+  font-weight: 400;
+}
+.auth-card .field input {
+  border-color: currentColor;
+  border-radius: 0;
+  min-height: 48px;
+  background: transparent;
+}
+.auth-card form > button {
+  min-height: 48px;
+  margin-top: 20px;
+  border-radius: 0;
+  text-transform: none;
+  font-size: 14px;
+}
+.auth-card > a {
+  margin-top: 18px;
+  color: inherit;
+  font-size: 13px;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.auth-card > p {
+  margin: 24px 0 0;
+  font-size: 14px;
+  line-height: 1.6;
+}
+.auth-card > p a {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.store-shell .signup-card h1 {
+  font-size: 24px;
+  font-weight: 400;
+  text-align: center;
+  text-transform: uppercase;
+}
+.signup-card > p {
+  text-align: center;
+}
+.signup-card .field {
+  position: relative;
+  margin: 16px 0;
+}
+.signup-card .field > span {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+}
+.store-shell .signup-card .field input {
+  border: 1px solid #d9d9d9;
+  border-radius: 0;
+  min-height: 48px;
+  padding: 12px 14px;
+}
+.store-shell .signup-card form > button {
+  border-radius: 0;
+  text-transform: uppercase;
+}
+.narrow {
+  max-width: 570px;
+  margin: auto;
+}
+.narrow h1 {
+  font-size: 30px;
+  letter-spacing: -1px;
+}
+.account-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 26px;
+  background: white;
+  border: 1px solid #dce1e8;
+  border-radius: 10px;
+  margin: 24px 0;
+}
+.account-card h2 {
+  margin-top: 0;
+}
+.account-card p {
+  margin-bottom: 0;
+  color: #727b87;
+}
+.account-card > a {
+  color: #2855dd;
+}
+.account-workspace {
+  width: min(100% - 64px, 1680px);
+  margin: 40px auto 72px;
+  display: grid;
+  grid-template-columns: 240px minmax(0, 1fr);
+  gap: 28px;
+  align-items: start;
+}
+.account-sidebar {
+  position: sticky;
+  top: 110px;
+  border: 1px solid #e5e5e1;
+  border-radius: 8px;
+  background: var(--theme-color-background, #fff);
+  overflow: hidden;
+}
+.account-identity {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 22px;
+  border-bottom: 1px solid #dce1e8;
+}
+.account-avatar {
+  display: grid;
+  place-items: center;
+  flex: 0 0 40px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--theme-color-primary, #2855dd);
+  color: var(--theme-color-on-primary, #fff);
+  font-weight: 700;
+}
+.account-identity div { min-width: 0; }
+.account-identity strong,.account-identity span { display: block; overflow-wrap: anywhere; }
+.account-identity strong { font-size: 13px; }
+.account-identity span { margin-top: 4px; color: var(--theme-color-muted, #727b87); font-size: 12px; }
+.account-navigation { display: grid; padding: 0; gap: 0; }
+.account-navigation a {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  min-height: 44px;
+  padding: 12px 16px;
+  color: var(--theme-color-text, #4d4c48);
+  border-bottom: 1px solid #ecebe8;
+  border-radius: 0;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+}
+.account-navigation a:last-child { border-bottom: 0; }
+.account-navigation a:hover { background: var(--theme-color-surface, #f7f7f5); }
+.account-navigation a[aria-current=page] {
+  background: color-mix(in srgb, var(--theme-color-primary, #2855dd) 9%, white);
+  color: var(--theme-color-primary, #2855dd);
+  box-shadow: inset 4px 0 var(--theme-color-primary, #2855dd);
+}
+.account-navigation a:focus-visible { outline: 2px solid var(--theme-color-primary, #2855dd); outline-offset: -3px; }
+.account-support-link { display: block; margin: 6px 22px 22px; color: inherit; font-size: 13px; text-underline-offset: 4px; }
+.account-content { min-width: 0; }
+.account-content > main { width: 100%; margin: 0; }
+.account-content > main > .eyebrow:first-child { margin-top: 4px; }
+.page-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+  margin: 24px 0;
+}
+.store-shell > main,
+.store-shell .theme-page > main {
+  width: min(100% - 64px, 1680px);
+  margin-inline-start: auto;
+  margin-inline-end: auto;
+}
+.store-shell > footer {
+  width: 100%;
+  border-top: 1px solid #dfe5d8;
+  padding: 28px 0 34px;
+}
+.page-heading h1 {
+  font-size: 38px;
+  letter-spacing: -1px;
+  margin: 14px 0;
+}
+.location-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 22px;
+}
+.location-card {
+  display: flex;
+  flex-direction: column;
+  background: white;
+  border: 1px solid #dce1e8;
+  border-radius: 10px;
+  padding: 24px;
+}
+.location-card-actions {
+  margin-top: auto;
+  padding-top: 16px;
+  min-height: 44px;
+  justify-content: flex-end;
+}
+.location-card-actions:empty { display: flex; }
+.location-card-header { display: flex; align-items: flex-start; justify-content: space-between; gap: 12px; margin-bottom: 14px; }
+.location-card-title { display: flex; align-items: center; flex-wrap: wrap; gap: 8px; min-width: 0; }
+.location-card .location-card-title h2 { margin: 0; padding: 0; line-height: 1.5; }
+.location-card-tools { display: flex; flex: 0 0 auto; gap: 4px; }
+.location-card .location-icon-button { display: inline-flex; align-items: center; justify-content: center; width: 36px; height: 36px; min-height: 36px; padding: 0; border: 1px solid transparent; border-radius: 6px; background: transparent; color: var(--theme-color-muted, #626d79); cursor: pointer; }
+.location-card .location-icon-button:hover { background: transparent; color: var(--theme-color-text, #25332c); }
+.location-card .location-icon-remove:hover { background: transparent; color: #b42332; }
+.location-card .location-icon-button:focus-visible { outline: 2px solid var(--theme-color-primary, #123c2c); outline-offset: 2px; }
+.location-card .location-icon-button:disabled { opacity: .5; cursor: default; }
+.location-icon-button svg { width: 18px; height: 18px; fill: none; stroke: currentColor; stroke-width: 1.7; stroke-linecap: round; stroke-linejoin: round; }
+.location-card .location-card-address { margin: 0; line-height: 1.5; }
+.location-card .location-card-unit { margin: 4px 0 0; line-height: 1.5; }
+.location-card .location-card-unit:empty { display: none; }
+.location-card .location-card-instructions { margin: 10px 0 0; line-height: 1.5; }
+.location-card h2 {
+  margin: 0;
+}
+.location-card p {
+  font-size: 15px;
+}
+.location-form {
+  margin-top: 32px;
+  max-width: 760px;
+}
+.location-editor-page { max-width: 760px; padding-bottom: 64px; }
+.location-editor-heading { margin: 28px 0 30px; text-align: center; }
+.location-editor-heading h1 { margin: 10px 0; font-size: clamp(30px, 4vw, 44px); font-weight: 400; letter-spacing: -.03em; }
+.location-editor-heading > p:last-child { max-width: 460px; margin: 0 auto; color: #667166; line-height: 1.65; }
+.location-editor-card { border-top: 1px solid #1f2d23; padding-top: 26px; }
+.location-editor-card .field { margin: 18px 0; }
+.location-editor-card input, .location-editor-card select { min-height: 48px; border-color: #879187; border-radius: 0; background: transparent; }
+.location-editor-card button { min-height: 48px; border-radius: 0; }
+.location-unit-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+.location-editor-actions { display: flex; gap: 12px; align-items: center; margin-top: 28px; }
+.location-editor-actions > button, .location-editor-actions > a { flex: 1; }
+.empty-state {
+  padding: 40px;
+  background: white;
+  border: 1px dashed #ccd3de;
+  border-radius: 10px;
+  text-align: center;
+}
+@media (max-width: 750px) {
+  .store-shell {
+    padding: 0;
+  }
+  .store-header nav {
+    gap: 12px;
+    width: 100%;
+    overflow-x: auto;
+    scrollbar-width: none;
+  }
+  .store-header nav::-webkit-scrollbar {
+    display: none;
+  }
+  .store-header {
+    height: auto;
+    padding: 18px 20px;
+    flex-wrap: wrap;
+  }
+  .store-shell > main,
+  .store-shell .theme-page > main {
+    width: calc(100% - 40px);
+  }
+  .header-search-zone {
+    order: 3;
+    flex-basis: 100%;
+    flex-wrap: wrap;
+    min-width: 0;
+  }
+  .auth-layout {
+    min-height: 55vh;
+    padding-top: 38px;
+    padding-bottom: 70px;
+  }
+  .home-cards,
+  .location-list {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+  .form-card {
+    padding: 24px;
+  }
+  .page-heading {
+    align-items: flex-start;
+  }
+  .page-heading h1 {
+    font-size: 30px;
+  }
+  .account-card {
+    gap: 20px;
+    align-items: flex-start;
+    flex-direction: column;
+  }
+  .account-workspace {
+    width: calc(100% - 32px);
+    margin: 24px auto 48px;
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+  .account-sidebar { position: static; }
+  .account-identity { padding: 16px; }
+  .account-navigation { grid-auto-flow: column; grid-auto-columns: max-content; overflow-x: auto; padding: 0; }
+  .account-navigation a { padding: 12px 16px; white-space: nowrap; border-bottom: 0; border-inline-end: 1px solid #ecebe8; }
+  .account-navigation a[aria-current=page] { box-shadow: inset 0 -3px var(--theme-color-primary, #2855dd); }
+  .account-support-link { margin: 10px 16px 16px; }
+  .location-unit-row { grid-template-columns: 1fr; gap: 0; }
+  .location-editor-actions { flex-direction: column; }
+  .location-editor-actions > button, .location-editor-actions > a { width: 100%; }
+}
+
+/* Reserve the viewport while a route/session loads so the footer cannot flash
+   into view and jump away when the homepage arrives. */
+.storefront-page-loading{min-height:100vh;min-height:100svh}
+
+/* Keep overflow inside storefront components without creating a new scroll
+   container: sticky headers and intentional horizontal rails still work. */
+.store-shell {
+  min-width: 0;
+  overflow-x: clip;
+}
+.store-shell :is(main, .theme-page, .theme-section, .theme-grid > *, .product-grid > *) {
+  min-width: 0;
+}
+.store-shell :is(.theme-section, .theme-footer, .product-card, .buy-box) {
+  overflow-wrap: anywhere;
+}
+.store-shell :is(.product-card, .theme-section) img {
+  max-width: 100%;
+}

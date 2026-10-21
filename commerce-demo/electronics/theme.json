@@ -1,0 +1,494 @@
+{
+  "schema_version": "theme/v1",
+  "tokens": {
+    "color.primary": "#c8102e",
+    "color.secondary": "#8f0b20",
+    "color.background": "#ffffff",
+    "color.surface": "#f5f5f7",
+    "color.text": "#17181c",
+    "color.muted": "#60616b",
+    "color.success": "#146c43",
+    "color.warning": "#946200",
+    "color.error": "#b42318",
+    "font.body": "system-ui",
+    "font.heading": "system-ui",
+    "spacing.xs": 4,
+    "spacing.sm": 8,
+    "spacing.md": 16,
+    "spacing.lg": 24,
+    "spacing.xl": 56,
+    "radius.default": 8,
+    "border.width": 1,
+    "shadow.default": "none",
+    "container.width": 1600,
+    "breakpoint.mobile": 640,
+    "breakpoint.desktop": 1024,
+    "font.arabic.body": "Tajawal",
+    "font.arabic.heading": "Tajawal"
+  },
+  "global": {
+    "top": [
+      {
+        "id": "presentation",
+        "component": "presentation",
+        "version": 1,
+        "enabled": true,
+        "settings": {
+          "style": "showcase"
+        }
+      },
+      {
+        "id": "announcement",
+        "component": "announcement",
+        "version": 1,
+        "enabled": true,
+        "settings": {
+          "text": "Rocento Electronics · Explore the demo collection"
+        },
+        "translations": {
+          "ar": {
+            "text": {
+              "source": "Rocento Electronics · Explore the demo collection",
+              "value": "روسنتو للإلكترونيات · اكتشف المجموعة التجريبية"
+            }
+          }
+        }
+      },
+      {
+        "id": "header",
+        "component": "header",
+        "version": 1,
+        "enabled": true,
+        "settings": {
+          "brand": "rocento tech"
+        }
+      },
+      {
+        "id": "header-options",
+        "component": "header_options",
+        "version": 1,
+        "enabled": true,
+        "settings": {
+          "sticky": "on",
+          "alt": "Store logo",
+          "logo_width": 160,
+          "show_assistant": "off",
+          "show_location": "on",
+          "image": null,
+          "cart_display": "sidebar_and_page"
+        },
+        "translations": {
+          "ar": {
+            "alt": {
+              "source": "Store logo",
+              "value": "شعار المتجر"
+            }
+          }
+        }
+      },
+      {
+        "id": "navigation",
+        "component": "navigation",
+        "version": 1,
+        "enabled": true,
+        "settings": {}
+      },
+      {
+        "id": "filters",
+        "component": "catalog_filters",
+        "version": 1,
+        "enabled": true,
+        "settings": {
+          "layout": "vertical"
+        }
+      }
+    ],
+    "bottom": [
+      {
+        "id": "footer-options",
+        "component": "footer_options",
+        "version": 1,
+        "enabled": true,
+        "settings": {
+          "style": "standard",
+          "show_services": "on",
+          "service_1": "Find your next upgrade",
+          "service_2": "Real help, one click away",
+          "service_3": "Your favorites, saved",
+          "show_brand": "off",
+          "copyright": "All rights reserved.",
+          "newsletter_title": "Stay in the know",
+          "newsletter_text": "Discover the latest news and collections.",
+          "newsletter_label": "Explore the latest",
+          "newsletter_href": "/search",
+          "show_newsletter": "off",
+          "column_1_heading": "Customer care",
+          "column_1_link_1_label": "Contact & support",
+          "column_1_link_1_href": "/support",
+          "column_1_link_2_label": "Your orders",
+          "column_1_link_2_href": "/account/orders",
+          "column_2_heading": "Your account",
+          "column_2_link_1_label": "My account",
+          "column_2_link_1_href": "/account",
+          "column_2_link_2_label": "Wishlist",
+          "column_2_link_2_href": "/account/wishlist",
+          "column_3_heading": "Explore technology",
+          "column_3_link_1_label": "Shop all",
+          "column_3_link_1_href": "/search",
+          "column_3_link_2_label": "Shopping assistant",
+          "column_3_link_2_href": "/assistant"
+        },
+        "translations": {
+          "ar": {
+            "service_1": {
+              "source": "Find your next upgrade",
+              "value": "اكتشف جهازك القادم"
+            },
+            "service_2": {
+              "source": "Real help, one click away",
+              "value": "مساعدة حقيقية بنقرة واحدة"
+            },
+            "service_3": {
+              "source": "Your favorites, saved",
+              "value": "منتجاتك المفضلة محفوظة"
+            },
+            "copyright": {
+              "source": "All rights reserved.",
+              "value": "جميع الحقوق محفوظة."
+            },
+            "newsletter_title": {
+              "source": "Stay in the know",
+              "value": "تابع كل جديد"
+            },
+            "newsletter_text": {
+              "source": "Discover the latest news and collections.",
+              "value": "اكتشف أحدث الأخبار والمجموعات."
+            },
+            "newsletter_label": {
+              "source": "Explore the latest",
+              "value": "اكتشف الجديد"
+            },
+            "column_1_heading": {
+              "source": "Customer care",
+              "value": "خدمة العملاء"
+            },
+            "column_1_link_1_label": {
+              "source": "Contact & support",
+              "value": "التواصل والدعم"
+            },
+            "column_1_link_2_label": {
+              "source": "Your orders",
+              "value": "طلباتك"
+            },
+            "column_2_heading": {
+              "source": "Your account",
+              "value": "حسابك"
+            },
+            "column_2_link_1_label": {
+              "source": "My account",
+              "value": "حسابي"
+            },
+            "column_2_link_2_label": {
+              "source": "Wishlist",
+              "value": "قائمة المفضلة"
+            },
+            "column_3_heading": {
+              "source": "Explore technology",
+              "value": "اكتشف التقنية"
+            },
+            "column_3_link_1_label": {
+              "source": "Shop all",
+              "value": "تسوّق الكل"
+            },
+            "column_3_link_2_label": {
+              "source": "Shopping assistant",
+              "value": "مساعد التسوق"
+            }
+          }
+        }
+      },
+      {
+        "id": "footer",
+        "component": "footer",
+        "version": 1,
+        "enabled": true,
+        "settings": {
+          "text": "Rocento Electronics. A demonstration store with illustrative products and sample prices."
+        },
+        "translations": {
+          "ar": {
+            "text": {
+              "source": "Rocento Electronics. A demonstration store with illustrative products and sample prices.",
+              "value": "روسنتو للإلكترونيات. متجر تجريبي بمنتجات وأسعار ومخزون للعرض فقط."
+            }
+          }
+        }
+      }
+    ]
+  },
+  "pages": {
+    "home": [
+      {
+        "id": "hero",
+        "component": "editorial_hero",
+        "version": 1,
+        "enabled": true,
+        "settings": {
+          "heading": "Your next upgrade.\nA little more wow.",
+          "text": "Discover phones, computers, audio and gaming from global brands. Explore the demo collection.",
+          "image": "asset:electronics/phone.png",
+          "alt": "Illustrative unbranded phone studio product image",
+          "label": "Explore phones",
+          "href": "category-link:electronics-phones",
+          "eyebrow": "THE NEXT EVERYDAY"
+        },
+        "translations": {
+          "ar": {
+            "heading": {
+              "source": "Your next upgrade.\nA little more wow.",
+              "value": "جهازك القادم.\nتجربة تستحق الاكتشاف."
+            },
+            "text": {
+              "source": "Discover phones, computers, audio and gaming from global brands. Explore the demo collection.",
+              "value": "اكتشف الهواتف والحواسيب والصوتيات وأجهزة الألعاب من علامات عالمية. تصفّح المجموعة التجريبية."
+            },
+            "alt": {
+              "source": "Illustrative unbranded phone studio product image",
+              "value": "صورة توضيحية لهاتف بدون علامة تجارية"
+            },
+            "label": {
+              "source": "Explore phones",
+              "value": "اكتشف الهواتف"
+            },
+            "eyebrow": {
+              "source": "THE NEXT EVERYDAY",
+              "value": "تقنية ليومك القادم"
+            }
+          }
+        }
+      },
+      {
+        "id": "categories",
+        "component": "category_showcase",
+        "version": 1,
+        "enabled": true,
+        "settings": {
+          "heading": "What are you looking for?",
+          "limit": 6
+        },
+        "translations": {
+          "ar": {
+            "heading": {
+              "source": "What are you looking for?",
+              "value": "عمّ تبحث؟"
+            }
+          }
+        }
+      },
+      {
+        "id": "featured",
+        "component": "product_collection",
+        "version": 1,
+        "enabled": true,
+        "settings": {
+          "heading": "Fresh tech. Great finds.",
+          "limit": 6,
+          "query": "",
+          "category": ""
+        },
+        "translations": {
+          "ar": {
+            "heading": {
+              "source": "Fresh tech. Great finds.",
+              "value": "تقنية مميزة. خيارات تستحق الاكتشاف."
+            }
+          }
+        }
+      },
+      {
+        "id": "help",
+        "component": "banner",
+        "version": 1,
+        "enabled": true,
+        "settings": {
+          "heading": "Good tech starts with the right choice.",
+          "text": "Not sure where to start? Tell our shopping assistant what matters to you.",
+          "label": "Help me choose",
+          "href": "/assistant"
+        },
+        "translations": {
+          "ar": {
+            "heading": {
+              "source": "Good tech starts with the right choice.",
+              "value": "التقنية المناسبة تبدأ بالاختيار الصحيح."
+            },
+            "text": {
+              "source": "Not sure where to start? Tell our shopping assistant what matters to you.",
+              "value": "لا تعرف من أين تبدأ؟ أخبر مساعد التسوق بما يهمك."
+            },
+            "label": {
+              "source": "Help me choose",
+              "value": "ساعدني في الاختيار"
+            }
+          }
+        }
+      },
+      {
+        "id": "work",
+        "component": "image_text",
+        "version": 1,
+        "enabled": true,
+        "settings": {
+          "heading": "More space for\nyour big ideas.",
+          "text": "From your first coffee to your last open tab. Explore laptops for work, study and everything in between.",
+          "image": "asset:electronics/laptop.png",
+          "alt": "Illustrative unbranded laptop studio product image",
+          "label": "Explore computers",
+          "href": "category-link:electronics-computers",
+          "eyebrow": "WORK. CREATE. UNWIND.",
+          "image_side": "right"
+        },
+        "translations": {
+          "ar": {
+            "heading": {
+              "source": "More space for\nyour big ideas.",
+              "value": "مساحة أوسع\nلأفكارك الكبيرة."
+            },
+            "text": {
+              "source": "From your first coffee to your last open tab. Explore laptops for work, study and everything in between.",
+              "value": "من بداية يومك حتى آخر مهمة، اكتشف حواسيب للعمل والدراسة وكل ما بينهما."
+            },
+            "alt": {
+              "source": "Illustrative unbranded laptop studio product image",
+              "value": "صورة توضيحية لحاسوب محمول بدون علامة تجارية"
+            },
+            "label": {
+              "source": "Explore computers",
+              "value": "اكتشف الحواسيب"
+            },
+            "eyebrow": {
+              "source": "WORK. CREATE. UNWIND.",
+              "value": "اعمل. ابتكر. استمتع."
+            }
+          }
+        }
+      },
+      {
+        "id": "audio",
+        "component": "product_collection",
+        "version": 1,
+        "enabled": true,
+        "settings": {
+          "heading": "Turn up the everyday.",
+          "limit": 6,
+          "query": "",
+          "category": "category:electronics-audio"
+        },
+        "translations": {
+          "ar": {
+            "heading": {
+              "source": "Turn up the everyday.",
+              "value": "ارتقِ بتجربة الاستماع اليومية."
+            }
+          }
+        }
+      },
+      {
+        "id": "home",
+        "component": "image_text",
+        "version": 1,
+        "enabled": true,
+        "settings": {
+          "heading": "A smarter home.\nA simpler day.",
+          "text": "Everyday essentials, thoughtfully chosen. Explore the home appliance collection.",
+          "image": "asset:electronics/appliance.png",
+          "alt": "Illustrative unbranded appliance studio product image",
+          "label": "Explore appliances",
+          "href": "category-link:electronics-appliances",
+          "eyebrow": "MAKE YOURSELF AT HOME",
+          "image_side": "right"
+        },
+        "translations": {
+          "ar": {
+            "heading": {
+              "source": "A smarter home.\nA simpler day.",
+              "value": "منزل أكثر ذكاءً.\nيوم أكثر سهولة."
+            },
+            "text": {
+              "source": "Everyday essentials, thoughtfully chosen. Explore the home appliance collection.",
+              "value": "أساسيات يومية مختارة بعناية. اكتشف مجموعة الأجهزة المنزلية."
+            },
+            "alt": {
+              "source": "Illustrative unbranded appliance studio product image",
+              "value": "صورة توضيحية لجهاز منزلي بدون علامة تجارية"
+            },
+            "label": {
+              "source": "Explore appliances",
+              "value": "اكتشف الأجهزة المنزلية"
+            },
+            "eyebrow": {
+              "source": "MAKE YOURSELF AT HOME",
+              "value": "كل ما يحتاجه منزلك"
+            }
+          }
+        }
+      }
+    ],
+    "category": [
+      {
+        "id": "section-10",
+        "component": "product_grid",
+        "version": 1,
+        "enabled": true,
+        "settings": {}
+      }
+    ],
+    "search": [
+      {
+        "id": "section-11",
+        "component": "product_grid",
+        "version": 1,
+        "enabled": true,
+        "settings": {}
+      }
+    ],
+    "product": [
+      {
+        "id": "detail",
+        "component": "product_detail",
+        "version": 1,
+        "enabled": true,
+        "settings": {}
+      },
+      {
+        "id": "related",
+        "component": "product_collection",
+        "version": 1,
+        "enabled": true,
+        "settings": {
+          "heading": "More to explore",
+          "limit": 5,
+          "query": "",
+          "category": ""
+        },
+        "translations": {
+          "ar": {
+            "heading": {
+              "source": "More to explore",
+              "value": "المزيد لتكتشفه"
+            }
+          }
+        }
+      }
+    ],
+    "cart": [
+      {
+        "id": "section-14",
+        "component": "cart",
+        "version": 1,
+        "enabled": true,
+        "settings": {}
+      }
+    ]
+  }
+}

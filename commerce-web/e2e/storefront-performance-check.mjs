@@ -1,0 +1,58 @@
+import { chromium } from '@playwright/test';
+import assert from 'node:assert/strict';
+import { readdir, readFile, mkdir } from 'node:fs/promises';
+import { brotliDecompressSync, gunzipSync } from 'node:zlib';
+const assets = new URL('../apps/storefront/dist/assets/', import.meta.url);
+for (const file of (await readdir(assets)).filter(file => /\.(js|css)$/.test(file))) {
+  const original = await readFile(new URL(file, assets));
+  assert.deepEqual(brotliDecompressSync(await readFile(new URL(`${file}.br`, assets))), original, `${file}: Brotli must match final Vite output`);
+  assert.deepEqual(gunzipSync(await readFile(new URL(`${file}.gz`, assets))), original, `${file}: gzip must match final Vite output`);
+}
+await mkdir('/tmp/storefront-performance-reports', { recursive:true });
+const base = process.env.STOREFRONT_PERFORMANCE_URL || 'http://127.0.0.1:4179';
+const browser = await chromium.launch({ headless: true });
+try {
+  const context = await browser.newContext({ viewport: { width: 390, height: 844 } });
+  const page = await context.newPage();
+  const errors = [], scripts = [];
+  page.on('pageerror', error => errors.push(error.message));
+  page.on('request', request => { if(request.resourceType()==='script') scripts.push(request.url()); });
+  await page.route('**/search-widget-*.js', async route => { await new Promise(resolve=>setTimeout(resolve,400)); await route.continue(); });
+  await page.goto(base, { waitUntil: 'networkidle' });
+  assert.equal(scripts.some(url=>/search-widget-|telemetry-tracer-|map-pin-/.test(url)), false, 'optional enhancements must not load at startup');
+  const bytes = await page.evaluate(() => performance.getEntriesByType('resource').filter(entry => entry.initiatorType === 'script').reduce((sum, entry) => ({ decoded:sum.decoded + entry.decodedBodySize, transferred:sum.transferred + entry.transferSize }), {decoded:0,transferred:0}));
+  assert.ok(bytes.decoded < 280 * 1024, `Initial JavaScript exceeds 280 KiB: ${bytes.decoded}`);
+  assert.ok(bytes.transferred < 90 * 1024, `Initial JavaScript transfer exceeds 90 KiB: ${bytes.transferred}`);
+  const before = await page.getByRole('combobox', { name:'Search products' }).boundingBox();
+  await page.getByRole('combobox', { name:'Search products' }).fill('apples');
+  await page.getByRole('option').first().waitFor();
+  const input = page.getByRole('combobox', { name:'Search products' });
+  assert.equal(await input.inputValue(), 'apples', 'typing during chunk download is preserved');
+  assert.equal(await input.evaluate(el=>el===document.activeElement), true);
+  const after = await input.boundingBox();
+  assert.ok(Math.abs(before.y-after.y)<1 && Math.abs(before.height-after.height)<1, 'enhancement preserves search geometry');
+  await input.press('ArrowDown'); await input.press('Enter');
+  await page.waitForURL('**/products/*');
+  await page.getByRole('heading', { name:'Orchard apples', exact:true }).waitFor();
+  await page.goto(`${base}/categories/fruit`, { waitUntil:'networkidle' });
+  await page.getByRole('combobox', { name:'Search products' }).fill('apples');
+  await page.getByRole('link', { name:'Cart', exact:true }).focus();
+  await page.getByRole('option').first().waitFor({state:'hidden'});
+  await page.waitForTimeout(700);
+  assert.equal(await page.getByRole('link', {name:'Cart', exact:true}).evaluate(el=>el===document.activeElement), true, 'download completion must not steal focus');
+  assert.deepEqual(errors, []);
+  await page.screenshot({ path:'/tmp/storefront-performance-reports/mobile-category.png', fullPage:true });
+  const failed = await browser.newPage();
+  await failed.route('**/search-widget-*.js', route=>route.abort());
+  await failed.goto(base);
+  await failed.getByRole('combobox', {name:'Search products'}).fill('fresh apples');
+  await failed.getByRole('combobox', {name:'Search products'}).press('Enter');
+  await failed.waitForURL('**/search?q=fresh+apples');
+  const nojs = await browser.newContext({javaScriptEnabled:false});
+  const raw = await nojs.newPage();
+  await raw.goto(base);
+  await raw.getByRole('combobox', {name:'Search products'}).fill('apples');
+  await raw.getByRole('button', {name:'Search',exact:true}).click();
+  await raw.waitForURL('**/search?q=apples');
+  console.log('Passed: deferred downloads, typing/focus preservation, stable search layout, keyboard suggestions, failed-chunk fallback, no-JavaScript search, hydration.');
+} finally { await browser.close(); }

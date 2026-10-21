@@ -1,0 +1,407 @@
+{
+  "reference_feed": {
+    "attributes": {},
+    "availability": {
+      "description": "Availability varies by delivery location. Choose a delivery location to confirm eligibility and stock.",
+      "status": "unresolved"
+    },
+    "currency": "USD",
+    "description": "Public apples",
+    "id": "00000000-0000-0000-0000-000000000002",
+    "image": {
+      "alt": "Apple photo",
+      "height": 32,
+      "url": "https://shop.example.test/api/v1/catalog/media/00000000-0000-0000-0000-000000000003/content",
+      "width": 32
+    },
+    "installation_id": "567b735c-f5cb-468b-ba72-9eb9ff97250a",
+    "locale": "en",
+    "market": "default",
+    "parent_id": null,
+    "price": "4.75",
+    "price_diagnostic": "public_catalog_price",
+    "product_type": "simple",
+    "representation_version": "1847f96b8ffe94b9478dba58a3794b8611a01fdd05c67eee1f78d5472d929b8a",
+    "schema_version": 1,
+    "sku": "APPLE",
+    "title": "Apples",
+    "url": "https://shop.example.test/products/apples",
+    "variant_dimensions": []
+  },
+  "sitemap_lastmod": "2026-09-22T07:30:18.066433Z",
+  "snapshot": {
+    "availability": "Availability varies by delivery location. Choose a delivery location to confirm eligibility and stock.",
+    "canonical": {
+      "feed": "https://shop.example.test/products/apples",
+      "html": "https://shop.example.test/products/apples",
+      "installation_id": "567b735c-f5cb-468b-ba72-9eb9ff97250a",
+      "json_ld": "https://shop.example.test/products/apples",
+      "locale": "en",
+      "path": "/products/apples",
+      "sitemap": "https://shop.example.test/products/apples",
+      "url": "https://shop.example.test/products/apples"
+    },
+    "categories": [
+      {
+        "description": "",
+        "id": "00000000-0000-0000-0000-000000000001",
+        "name": "Fruit",
+        "parent_id": null,
+        "slug": "fruit",
+        "thumbnail": null
+      }
+    ],
+    "category_id": "00000000-0000-0000-0000-000000000001",
+    "collections": {
+      "section-13": [
+        {
+          "attributes": {},
+          "category_id": "00000000-0000-0000-0000-000000000001",
+          "currency": "USD",
+          "description": "Public apples",
+          "id": "00000000-0000-0000-0000-000000000002",
+          "image_alt": "Apple photo",
+          "image_id": "00000000-0000-0000-0000-000000000003",
+          "name": "Apples",
+          "offer_eligible": true,
+          "parent_id": null,
+          "price": "4.75",
+          "price_diagnostic": "public_catalog_price",
+          "product_type": "simple",
+          "sku": "APPLE",
+          "slug": "apples",
+          "unit": "kg"
+        }
+      ]
+    },
+    "comparisons": [],
+    "content": null,
+    "description": "",
+    "family": [],
+    "guides": [],
+    "has_next": false,
+    "images": {
+      "00000000-0000-0000-0000-000000000003": {
+        "alt": "Apple photo",
+        "height": 32,
+        "id": "00000000-0000-0000-0000-000000000003",
+        "variants": [],
+        "width": 32
+      }
+    },
+    "installation_id": "567b735c-f5cb-468b-ba72-9eb9ff97250a",
+    "kind": "product",
+    "locale": "en",
+    "location": null,
+    "merchant": null,
+    "metadata": {
+      "description": "Public apples",
+      "image": "00000000-0000-0000-0000-000000000003",
+      "title": "Apples | Recento",
+      "warnings": []
+    },
+    "origin": "https://shop.example.test/",
+    "page": 1,
+    "parent_product": null,
+    "path": "/products/apples",
+    "product": {
+      "attributes": {},
+      "category_id": "00000000-0000-0000-0000-000000000001",
+      "currency": "USD",
+      "description": "Public apples",
+      "id": "00000000-0000-0000-0000-000000000002",
+      "image_alt": "Apple photo",
+      "image_id": "00000000-0000-0000-0000-000000000003",
+      "name": "Apples",
+      "offer_eligible": true,
+      "parent_id": null,
+      "price": "4.75",
+      "price_diagnostic": "public_catalog_price",
+      "product_type": "simple",
+      "sku": "APPLE",
+      "slug": "apples",
+      "unit": "kg"
+    },
+    "products": [
+      {
+        "attributes": {},
+        "category_id": "00000000-0000-0000-0000-000000000001",
+        "currency": "USD",
+        "description": "Public apples",
+        "id": "00000000-0000-0000-0000-000000000002",
+        "image_alt": "Apple photo",
+        "image_id": "00000000-0000-0000-0000-000000000003",
+        "name": "Apples",
+        "offer_eligible": true,
+        "parent_id": null,
+        "price": "4.75",
+        "price_diagnostic": "public_catalog_price",
+        "product_type": "simple",
+        "sku": "APPLE",
+        "slug": "apples",
+        "unit": "kg"
+      }
+    ],
+    "related_canonicals": {},
+    "representation_version": "1847f96b8ffe94b9478dba58a3794b8611a01fdd05c67eee1f78d5472d929b8a",
+    "robots": "index, follow",
+    "schema_version": 1,
+    "site_name": "Recento",
+    "status": 200,
+    "structured_data": {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@id": "https://shop.example.test/#merchant",
+          "@type": "Organization",
+          "name": "Recento",
+          "url": "https://shop.example.test/"
+        },
+        {
+          "@id": "https://shop.example.test/#website",
+          "@type": "WebSite",
+          "inLanguage": "en",
+          "name": "Recento",
+          "publisher": {
+            "@id": "https://shop.example.test/#merchant"
+          },
+          "url": "https://shop.example.test/"
+        },
+        {
+          "@id": "https://shop.example.test/products/apples#product",
+          "@type": "Product",
+          "description": "Public apples",
+          "image": {
+            "@type": "ImageObject",
+            "caption": "Apple photo",
+            "contentUrl": "https://shop.example.test/api/v1/catalog/media/00000000-0000-0000-0000-000000000003/content",
+            "height": 32,
+            "width": 32
+          },
+          "name": "Apples",
+          "offers": {
+            "@type": "Offer",
+            "price": "4.75",
+            "priceCurrency": "USD",
+            "seller": {
+              "@id": "https://shop.example.test/#merchant"
+            },
+            "url": "https://shop.example.test/products/apples"
+          },
+          "sku": "APPLE",
+          "url": "https://shop.example.test/products/apples"
+        },
+        {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "item": "https://shop.example.test/",
+              "name": "Recento",
+              "position": 1
+            },
+            {
+              "@type": "ListItem",
+              "item": "https://shop.example.test/categories/fruit",
+              "name": "Fruit",
+              "position": 2
+            },
+            {
+              "@type": "ListItem",
+              "item": "https://shop.example.test/products/apples",
+              "name": "Apples",
+              "position": 3
+            }
+          ]
+        },
+        {
+          "@id": "https://shop.example.test/products/apples#webpage",
+          "@type": "WebPage",
+          "inLanguage": "en",
+          "isPartOf": {
+            "@id": "https://shop.example.test/#website"
+          },
+          "mainEntity": {
+            "@id": "https://shop.example.test/products/apples#product"
+          },
+          "name": "Apples",
+          "url": "https://shop.example.test/products/apples"
+        }
+      ]
+    },
+    "theme": {
+      "global": {
+        "bottom": [
+          {
+            "component": "footer",
+            "enabled": true,
+            "id": "section-4",
+            "settings": {
+              "text": "Commerce"
+            },
+            "version": 1
+          }
+        ],
+        "top": [
+          {
+            "component": "announcement",
+            "enabled": true,
+            "id": "section-1",
+            "settings": {
+              "text": "Fresh choices, delivered to your door"
+            },
+            "version": 1
+          },
+          {
+            "component": "header",
+            "enabled": true,
+            "id": "section-2",
+            "settings": {
+              "brand": "Commerce"
+            },
+            "version": 1
+          },
+          {
+            "component": "navigation",
+            "enabled": true,
+            "id": "section-3",
+            "settings": {},
+            "version": 1
+          }
+        ]
+      },
+      "pages": {
+        "cart": [
+          {
+            "component": "cart",
+            "enabled": true,
+            "id": "section-14",
+            "settings": {},
+            "version": 1
+          }
+        ],
+        "category": [
+          {
+            "component": "product_grid",
+            "enabled": true,
+            "id": "section-10",
+            "settings": {},
+            "version": 1
+          }
+        ],
+        "home": [
+          {
+            "component": "hero",
+            "enabled": true,
+            "id": "section-5",
+            "settings": {
+              "alt": "",
+              "heading": "Good food. Everyday.",
+              "href": "/search",
+              "image": null,
+              "label": "Shop now",
+              "text": "Fresh produce and pantry favourites for your table."
+            },
+            "version": 1
+          },
+          {
+            "component": "category_grid",
+            "enabled": true,
+            "id": "section-6",
+            "settings": {
+              "heading": "Shop by category",
+              "limit": 8
+            },
+            "version": 1
+          },
+          {
+            "component": "featured_products",
+            "enabled": true,
+            "id": "section-7",
+            "settings": {
+              "heading": "Fresh picks",
+              "limit": 8
+            },
+            "version": 1
+          },
+          {
+            "component": "banner",
+            "enabled": true,
+            "id": "section-8",
+            "settings": {
+              "heading": "Make room for something new",
+              "href": "/search",
+              "label": "Shop now",
+              "text": ""
+            },
+            "version": 1
+          },
+          {
+            "component": "recommendations",
+            "enabled": true,
+            "id": "section-9",
+            "settings": {
+              "heading": "More to explore",
+              "limit": 4
+            },
+            "version": 1
+          }
+        ],
+        "product": [
+          {
+            "component": "product_detail",
+            "enabled": true,
+            "id": "section-12",
+            "settings": {},
+            "version": 1
+          },
+          {
+            "component": "recommendations",
+            "enabled": true,
+            "id": "section-13",
+            "settings": {
+              "heading": "More to explore",
+              "limit": 4
+            },
+            "version": 1
+          }
+        ],
+        "search": [
+          {
+            "component": "product_grid",
+            "enabled": true,
+            "id": "section-11",
+            "settings": {},
+            "version": 1
+          }
+        ]
+      },
+      "schema_version": "theme/v1",
+      "tokens": {
+        "border.width": 1,
+        "breakpoint.desktop": 1024,
+        "breakpoint.mobile": 640,
+        "color.background": "#ffffff",
+        "color.error": "#b42318",
+        "color.muted": "#58645d",
+        "color.primary": "#146c43",
+        "color.secondary": "#d93f52",
+        "color.success": "#146c43",
+        "color.surface": "#f3f5f4",
+        "color.text": "#17251d",
+        "color.warning": "#946200",
+        "container.width": 1280,
+        "font.body": "system-ui",
+        "font.heading": "system-ui",
+        "radius.default": 6,
+        "shadow.default": "none",
+        "spacing.lg": 24,
+        "spacing.md": 16,
+        "spacing.sm": 8,
+        "spacing.xl": 48,
+        "spacing.xs": 4
+      }
+    },
+    "variant_dimensions": []
+  }
+}

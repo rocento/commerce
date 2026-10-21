@@ -1,0 +1,18 @@
+{
+  "counts": {
+    "manufacturing_method": 4904,
+    "named_device_compatibility": 4208
+  },
+  "examples": {
+    "manufacturing_method": {
+      "message": "find measuring cups under $1547, excluding anything made in a factory",
+      "clarification": "What manufacturing processes do you want to exclude, and would a maker's documented production method satisfy your requirement? A product name or handmade label alone does not establish where or how it was made."
+    },
+    "named_device_compatibility": {
+      "message": "find jackets under $2959 compatible with my Nova-47446",
+      "clarification": "Which manufacturer's compatibility specification should I use for the model you named, and what connector or version is required? I cannot confirm compatibility from a model name alone."
+    }
+  },
+  "unmapped_turns": 0,
+  "review_labels_preserved": true
+}

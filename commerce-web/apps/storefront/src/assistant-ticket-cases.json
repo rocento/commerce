@@ -1,0 +1,4002 @@
+[
+  {
+    "message": "open a ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "open a support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "open a new customer support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "open a helpdesk ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "create a ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "create a support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "create a new customer support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "create a helpdesk ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "raise a ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "raise a support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "raise a new customer support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "raise a helpdesk ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "submit a ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "submit a support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "submit a new customer support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "submit a helpdesk ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "file a ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "file a support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "file a new customer support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "file a helpdesk ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "start a ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "start a support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "start a new customer support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "start a helpdesk ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "make a ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "make a support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "make a new customer support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "make a helpdesk ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "log a ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "log a support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "log a new customer support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "log a helpdesk ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "lodge a ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "lodge a support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "lodge a new customer support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "lodge a helpdesk ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "send a ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "send a support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "send a new customer support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "send a helpdesk ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Please open a ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Please open a support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Please open a new customer support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Please open a helpdesk ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Please create a ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Please create a support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Please create a new customer support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Please create a helpdesk ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Please raise a ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Please raise a support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Please raise a new customer support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Please raise a helpdesk ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Please submit a ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Please submit a support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Please submit a new customer support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Please submit a helpdesk ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Please file a ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Please file a support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Please file a new customer support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Please file a helpdesk ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Please start a ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Please start a support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Please start a new customer support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Please start a helpdesk ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Please make a ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Please make a support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Please make a new customer support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Please make a helpdesk ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Please log a ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Please log a support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Please log a new customer support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Please log a helpdesk ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Please lodge a ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Please lodge a support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Please lodge a new customer support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Please lodge a helpdesk ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Please send a ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Please send a support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Please send a new customer support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Please send a helpdesk ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Pls open a ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Pls open a support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Pls open a new customer support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Pls open a helpdesk ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Pls create a ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Pls create a support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Pls create a new customer support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Pls create a helpdesk ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Pls raise a ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Pls raise a support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Pls raise a new customer support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Pls raise a helpdesk ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Pls submit a ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Pls submit a support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Pls submit a new customer support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Pls submit a helpdesk ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Pls file a ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Pls file a support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Pls file a new customer support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Pls file a helpdesk ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Pls start a ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Pls start a support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Pls start a new customer support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Pls start a helpdesk ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Pls make a ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Pls make a support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Pls make a new customer support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Pls make a helpdesk ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Pls log a ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Pls log a support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Pls log a new customer support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Pls log a helpdesk ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Pls lodge a ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Pls lodge a support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Pls lodge a new customer support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Pls lodge a helpdesk ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Pls send a ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Pls send a support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Pls send a new customer support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Pls send a helpdesk ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Plz open a ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Plz open a support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Plz open a new customer support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Plz open a helpdesk ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Plz create a ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Plz create a support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Plz create a new customer support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Plz create a helpdesk ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Plz raise a ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Plz raise a support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Plz raise a new customer support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Plz raise a helpdesk ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Plz submit a ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Plz submit a support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Plz submit a new customer support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Plz submit a helpdesk ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Plz file a ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Plz file a support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Plz file a new customer support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Plz file a helpdesk ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Plz start a ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Plz start a support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Plz start a new customer support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Plz start a helpdesk ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Plz make a ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Plz make a support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Plz make a new customer support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Plz make a helpdesk ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Plz log a ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Plz log a support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Plz log a new customer support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Plz log a helpdesk ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Plz lodge a ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Plz lodge a support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Plz lodge a new customer support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Plz lodge a helpdesk ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Plz send a ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Plz send a support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Plz send a new customer support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Plz send a helpdesk ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Kindly open a ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Kindly open a support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Kindly open a new customer support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Kindly open a helpdesk ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Kindly create a ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Kindly create a support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Kindly create a new customer support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Kindly create a helpdesk ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Kindly raise a ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Kindly raise a support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Kindly raise a new customer support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Kindly raise a helpdesk ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Kindly submit a ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Kindly submit a support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Kindly submit a new customer support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Kindly submit a helpdesk ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Kindly file a ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Kindly file a support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Kindly file a new customer support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Kindly file a helpdesk ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Kindly start a ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Kindly start a support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Kindly start a new customer support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Kindly start a helpdesk ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Kindly make a ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Kindly make a support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Kindly make a new customer support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Kindly make a helpdesk ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Kindly log a ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Kindly log a support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Kindly log a new customer support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Kindly log a helpdesk ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Kindly lodge a ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Kindly lodge a support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Kindly lodge a new customer support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Kindly lodge a helpdesk ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Kindly send a ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Kindly send a support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Kindly send a new customer support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Kindly send a helpdesk ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "I need to open a ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "I need to open a support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "I need to open a new customer support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "I need to open a helpdesk ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "I need to create a ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "I need to create a support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "I need to create a new customer support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "I need to create a helpdesk ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "I need to raise a ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "I need to raise a support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "I need to raise a new customer support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "I need to raise a helpdesk ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "I need to submit a ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "I need to submit a support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "I need to submit a new customer support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "I need to submit a helpdesk ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "I need to file a ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "I need to file a support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "I need to file a new customer support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "I need to file a helpdesk ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "I need to start a ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "I need to start a support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "I need to start a new customer support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "I need to start a helpdesk ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "I need to make a ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "I need to make a support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "I need to make a new customer support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "I need to make a helpdesk ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "I need to log a ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "I need to log a support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "I need to log a new customer support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "I need to log a helpdesk ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "I need to lodge a ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "I need to lodge a support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "I need to lodge a new customer support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "I need to lodge a helpdesk ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "I need to send a ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "I need to send a support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "I need to send a new customer support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "I need to send a helpdesk ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "I want to open a ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "I want to open a support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "I want to open a new customer support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "I want to open a helpdesk ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "I want to create a ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "I want to create a support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "I want to create a new customer support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "I want to create a helpdesk ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "I want to raise a ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "I want to raise a support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "I want to raise a new customer support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "I want to raise a helpdesk ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "I want to submit a ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "I want to submit a support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "I want to submit a new customer support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "I want to submit a helpdesk ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "I want to file a ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "I want to file a support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "I want to file a new customer support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "I want to file a helpdesk ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "I want to start a ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "I want to start a support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "I want to start a new customer support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "I want to start a helpdesk ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "I want to make a ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "I want to make a support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "I want to make a new customer support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "I want to make a helpdesk ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "I want to log a ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "I want to log a support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "I want to log a new customer support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "I want to log a helpdesk ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "I want to lodge a ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "I want to lodge a support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "I want to lodge a new customer support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "I want to lodge a helpdesk ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "I want to send a ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "I want to send a support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "I want to send a new customer support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "I want to send a helpdesk ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "I would like to open a ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "I would like to open a support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "I would like to open a new customer support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "I would like to open a helpdesk ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "I would like to create a ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "I would like to create a support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "I would like to create a new customer support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "I would like to create a helpdesk ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "I would like to raise a ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "I would like to raise a support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "I would like to raise a new customer support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "I would like to raise a helpdesk ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "I would like to submit a ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "I would like to submit a support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "I would like to submit a new customer support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "I would like to submit a helpdesk ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "I would like to file a ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "I would like to file a support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "I would like to file a new customer support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "I would like to file a helpdesk ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "I would like to start a ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "I would like to start a support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "I would like to start a new customer support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "I would like to start a helpdesk ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "I would like to make a ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "I would like to make a support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "I would like to make a new customer support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "I would like to make a helpdesk ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "I would like to log a ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "I would like to log a support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "I would like to log a new customer support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "I would like to log a helpdesk ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "I would like to lodge a ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "I would like to lodge a support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "I would like to lodge a new customer support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "I would like to lodge a helpdesk ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "I would like to send a ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "I would like to send a support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "I would like to send a new customer support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "I would like to send a helpdesk ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "I'd like to open a ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "I'd like to open a support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "I'd like to open a new customer support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "I'd like to open a helpdesk ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "I'd like to create a ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "I'd like to create a support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "I'd like to create a new customer support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "I'd like to create a helpdesk ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "I'd like to raise a ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "I'd like to raise a support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "I'd like to raise a new customer support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "I'd like to raise a helpdesk ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "I'd like to submit a ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "I'd like to submit a support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "I'd like to submit a new customer support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "I'd like to submit a helpdesk ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "I'd like to file a ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "I'd like to file a support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "I'd like to file a new customer support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "I'd like to file a helpdesk ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "I'd like to start a ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "I'd like to start a support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "I'd like to start a new customer support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "I'd like to start a helpdesk ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "I'd like to make a ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "I'd like to make a support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "I'd like to make a new customer support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "I'd like to make a helpdesk ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "I'd like to log a ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "I'd like to log a support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "I'd like to log a new customer support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "I'd like to log a helpdesk ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "I'd like to lodge a ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "I'd like to lodge a support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "I'd like to lodge a new customer support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "I'd like to lodge a helpdesk ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "I'd like to send a ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "I'd like to send a support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "I'd like to send a new customer support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "I'd like to send a helpdesk ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Can you open a ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Can you open a support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Can you open a new customer support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Can you open a helpdesk ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Can you create a ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Can you create a support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Can you create a new customer support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Can you create a helpdesk ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Can you raise a ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Can you raise a support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Can you raise a new customer support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Can you raise a helpdesk ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Can you submit a ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Can you submit a support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Can you submit a new customer support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Can you submit a helpdesk ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Can you file a ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Can you file a support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Can you file a new customer support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Can you file a helpdesk ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Can you start a ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Can you start a support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Can you start a new customer support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Can you start a helpdesk ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Can you make a ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Can you make a support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Can you make a new customer support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Can you make a helpdesk ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Can you log a ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Can you log a support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Can you log a new customer support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Can you log a helpdesk ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Can you lodge a ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Can you lodge a support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Can you lodge a new customer support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Can you lodge a helpdesk ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Can you send a ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Can you send a support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Can you send a new customer support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Can you send a helpdesk ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Could you open a ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Could you open a support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Could you open a new customer support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Could you open a helpdesk ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Could you create a ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Could you create a support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Could you create a new customer support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Could you create a helpdesk ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Could you raise a ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Could you raise a support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Could you raise a new customer support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Could you raise a helpdesk ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Could you submit a ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Could you submit a support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Could you submit a new customer support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Could you submit a helpdesk ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Could you file a ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Could you file a support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Could you file a new customer support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Could you file a helpdesk ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Could you start a ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Could you start a support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Could you start a new customer support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Could you start a helpdesk ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Could you make a ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Could you make a support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Could you make a new customer support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Could you make a helpdesk ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Could you log a ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Could you log a support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Could you log a new customer support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Could you log a helpdesk ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Could you lodge a ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Could you lodge a support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Could you lodge a new customer support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Could you lodge a helpdesk ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Could you send a ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Could you send a support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Could you send a new customer support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Could you send a helpdesk ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Would you open a ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Would you open a support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Would you open a new customer support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Would you open a helpdesk ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Would you create a ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Would you create a support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Would you create a new customer support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Would you create a helpdesk ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Would you raise a ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Would you raise a support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Would you raise a new customer support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Would you raise a helpdesk ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Would you submit a ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Would you submit a support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Would you submit a new customer support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Would you submit a helpdesk ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Would you file a ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Would you file a support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Would you file a new customer support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Would you file a helpdesk ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Would you start a ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Would you start a support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Would you start a new customer support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Would you start a helpdesk ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Would you make a ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Would you make a support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Would you make a new customer support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Would you make a helpdesk ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Would you log a ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Would you log a support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Would you log a new customer support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Would you log a helpdesk ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Would you lodge a ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Would you lodge a support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Would you lodge a new customer support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Would you lodge a helpdesk ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Would you send a ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Would you send a support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Would you send a new customer support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Would you send a helpdesk ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Will you open a ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Will you open a support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Will you open a new customer support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Will you open a helpdesk ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Will you create a ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Will you create a support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Will you create a new customer support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Will you create a helpdesk ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Will you raise a ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Will you raise a support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Will you raise a new customer support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Will you raise a helpdesk ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Will you submit a ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Will you submit a support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Will you submit a new customer support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Will you submit a helpdesk ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Will you file a ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Will you file a support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Will you file a new customer support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Will you file a helpdesk ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Will you start a ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Will you start a support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Will you start a new customer support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Will you start a helpdesk ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Will you make a ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Will you make a support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Will you make a new customer support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Will you make a helpdesk ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Will you log a ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Will you log a support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Will you log a new customer support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Will you log a helpdesk ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Will you lodge a ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Will you lodge a support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Will you lodge a new customer support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Will you lodge a helpdesk ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Will you send a ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Will you send a support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Will you send a new customer support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Will you send a helpdesk ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Help me open a ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Help me open a support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Help me open a new customer support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Help me open a helpdesk ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Help me create a ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Help me create a support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Help me create a new customer support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Help me create a helpdesk ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Help me raise a ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Help me raise a support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Help me raise a new customer support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Help me raise a helpdesk ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Help me submit a ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Help me submit a support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Help me submit a new customer support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Help me submit a helpdesk ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Help me file a ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Help me file a support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Help me file a new customer support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Help me file a helpdesk ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Help me start a ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Help me start a support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Help me start a new customer support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Help me start a helpdesk ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Help me make a ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Help me make a support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Help me make a new customer support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Help me make a helpdesk ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Help me log a ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Help me log a support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Help me log a new customer support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Help me log a helpdesk ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Help me lodge a ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Help me lodge a support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Help me lodge a new customer support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Help me lodge a helpdesk ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Help me send a ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Help me send a support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Help me send a new customer support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Help me send a helpdesk ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Can you help me open a ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Can you help me open a support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Can you help me open a new customer support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Can you help me open a helpdesk ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Can you help me create a ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Can you help me create a support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Can you help me create a new customer support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Can you help me create a helpdesk ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Can you help me raise a ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Can you help me raise a support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Can you help me raise a new customer support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Can you help me raise a helpdesk ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Can you help me submit a ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Can you help me submit a support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Can you help me submit a new customer support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Can you help me submit a helpdesk ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Can you help me file a ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Can you help me file a support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Can you help me file a new customer support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Can you help me file a helpdesk ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Can you help me start a ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Can you help me start a support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Can you help me start a new customer support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Can you help me start a helpdesk ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Can you help me make a ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Can you help me make a support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Can you help me make a new customer support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Can you help me make a helpdesk ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Can you help me log a ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Can you help me log a support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Can you help me log a new customer support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Can you help me log a helpdesk ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Can you help me lodge a ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Can you help me lodge a support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Can you help me lodge a new customer support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Can you help me lodge a helpdesk ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Can you help me send a ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Can you help me send a support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Can you help me send a new customer support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Can you help me send a helpdesk ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Could you help me open a ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Could you help me open a support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Could you help me open a new customer support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Could you help me open a helpdesk ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Could you help me create a ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Could you help me create a support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Could you help me create a new customer support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Could you help me create a helpdesk ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Could you help me raise a ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Could you help me raise a support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Could you help me raise a new customer support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Could you help me raise a helpdesk ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Could you help me submit a ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Could you help me submit a support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Could you help me submit a new customer support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Could you help me submit a helpdesk ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Could you help me file a ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Could you help me file a support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Could you help me file a new customer support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Could you help me file a helpdesk ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Could you help me start a ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Could you help me start a support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Could you help me start a new customer support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Could you help me start a helpdesk ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Could you help me make a ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Could you help me make a support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Could you help me make a new customer support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Could you help me make a helpdesk ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Could you help me log a ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Could you help me log a support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Could you help me log a new customer support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Could you help me log a helpdesk ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Could you help me lodge a ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Could you help me lodge a support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Could you help me lodge a new customer support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Could you help me lodge a helpdesk ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Could you help me send a ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Could you help me send a support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Could you help me send a new customer support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Could you help me send a helpdesk ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "I need you to open a ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "I need you to open a support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "I need you to open a new customer support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "I need you to open a helpdesk ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "I need you to create a ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "I need you to create a support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "I need you to create a new customer support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "I need you to create a helpdesk ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "I need you to raise a ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "I need you to raise a support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "I need you to raise a new customer support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "I need you to raise a helpdesk ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "I need you to submit a ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "I need you to submit a support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "I need you to submit a new customer support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "I need you to submit a helpdesk ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "I need you to file a ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "I need you to file a support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "I need you to file a new customer support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "I need you to file a helpdesk ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "I need you to start a ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "I need you to start a support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "I need you to start a new customer support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "I need you to start a helpdesk ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "I need you to make a ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "I need you to make a support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "I need you to make a new customer support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "I need you to make a helpdesk ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "I need you to log a ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "I need you to log a support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "I need you to log a new customer support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "I need you to log a helpdesk ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "I need you to lodge a ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "I need you to lodge a support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "I need you to lodge a new customer support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "I need you to lodge a helpdesk ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "I need you to send a ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "I need you to send a support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "I need you to send a new customer support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "I need you to send a helpdesk ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "I want you to open a ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "I want you to open a support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "I want you to open a new customer support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "I want you to open a helpdesk ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "I want you to create a ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "I want you to create a support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "I want you to create a new customer support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "I want you to create a helpdesk ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "I want you to raise a ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "I want you to raise a support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "I want you to raise a new customer support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "I want you to raise a helpdesk ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "I want you to submit a ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "I want you to submit a support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "I want you to submit a new customer support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "I want you to submit a helpdesk ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "I want you to file a ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "I want you to file a support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "I want you to file a new customer support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "I want you to file a helpdesk ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "I want you to start a ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "I want you to start a support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "I want you to start a new customer support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "I want you to start a helpdesk ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "I want you to make a ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "I want you to make a support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "I want you to make a new customer support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "I want you to make a helpdesk ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "I want you to log a ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "I want you to log a support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "I want you to log a new customer support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "I want you to log a helpdesk ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "I want you to lodge a ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "I want you to lodge a support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "I want you to lodge a new customer support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "I want you to lodge a helpdesk ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "I want you to send a ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "I want you to send a support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "I want you to send a new customer support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "I want you to send a helpdesk ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "I need help to open a ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "I need help to open a support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "I need help to open a new customer support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "I need help to open a helpdesk ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "I need help to create a ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "I need help to create a support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "I need help to create a new customer support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "I need help to create a helpdesk ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "I need help to raise a ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "I need help to raise a support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "I need help to raise a new customer support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "I need help to raise a helpdesk ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "I need help to submit a ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "I need help to submit a support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "I need help to submit a new customer support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "I need help to submit a helpdesk ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "I need help to file a ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "I need help to file a support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "I need help to file a new customer support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "I need help to file a helpdesk ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "I need help to start a ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "I need help to start a support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "I need help to start a new customer support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "I need help to start a helpdesk ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "I need help to make a ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "I need help to make a support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "I need help to make a new customer support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "I need help to make a helpdesk ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "I need help to log a ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "I need help to log a support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "I need help to log a new customer support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "I need help to log a helpdesk ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "I need help to lodge a ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "I need help to lodge a support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "I need help to lodge a new customer support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "I need help to lodge a helpdesk ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "I need help to send a ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "I need help to send a support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "I need help to send a new customer support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "I need help to send a helpdesk ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Hi, please open a ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Hi, please open a support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Hi, please open a new customer support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Hi, please open a helpdesk ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Hi, please create a ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Hi, please create a support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Hi, please create a new customer support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Hi, please create a helpdesk ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Hi, please raise a ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Hi, please raise a support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Hi, please raise a new customer support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Hi, please raise a helpdesk ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Hi, please submit a ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Hi, please submit a support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Hi, please submit a new customer support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Hi, please submit a helpdesk ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Hi, please file a ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Hi, please file a support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Hi, please file a new customer support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Hi, please file a helpdesk ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Hi, please start a ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Hi, please start a support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Hi, please start a new customer support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Hi, please start a helpdesk ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Hi, please make a ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Hi, please make a support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Hi, please make a new customer support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Hi, please make a helpdesk ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Hi, please log a ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Hi, please log a support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Hi, please log a new customer support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Hi, please log a helpdesk ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Hi, please lodge a ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Hi, please lodge a support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Hi, please lodge a new customer support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Hi, please lodge a helpdesk ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Hi, please send a ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Hi, please send a support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Hi, please send a new customer support ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "Hi, please send a helpdesk ticket",
+    "group": "ticket request"
+  },
+  {
+    "message": "open a tiket",
+    "group": "common typo"
+  },
+  {
+    "message": "open a tickt",
+    "group": "common typo"
+  },
+  {
+    "message": "open a tcket",
+    "group": "common typo"
+  },
+  {
+    "message": "open a ticekt",
+    "group": "common typo"
+  },
+  {
+    "message": "open a tikcet",
+    "group": "common typo"
+  },
+  {
+    "message": "opne a ticket",
+    "group": "common typo"
+  },
+  {
+    "message": "opn a ticket",
+    "group": "common typo"
+  },
+  {
+    "message": "oppen a ticket",
+    "group": "common typo"
+  },
+  {
+    "message": "creat a suport ticket",
+    "group": "common typo"
+  },
+  {
+    "message": "craete a suppport ticket",
+    "group": "common typo"
+  },
+  {
+    "message": "Please open a tiket",
+    "group": "common typo"
+  },
+  {
+    "message": "Please open a tickt",
+    "group": "common typo"
+  },
+  {
+    "message": "Please open a tcket",
+    "group": "common typo"
+  },
+  {
+    "message": "Please open a ticekt",
+    "group": "common typo"
+  },
+  {
+    "message": "Please open a tikcet",
+    "group": "common typo"
+  },
+  {
+    "message": "Please opne a ticket",
+    "group": "common typo"
+  },
+  {
+    "message": "Please opn a ticket",
+    "group": "common typo"
+  },
+  {
+    "message": "Please oppen a ticket",
+    "group": "common typo"
+  },
+  {
+    "message": "Please creat a suport ticket",
+    "group": "common typo"
+  },
+  {
+    "message": "Please craete a suppport ticket",
+    "group": "common typo"
+  },
+  {
+    "message": "Pls open a tiket",
+    "group": "common typo"
+  },
+  {
+    "message": "Pls open a tickt",
+    "group": "common typo"
+  },
+  {
+    "message": "Pls open a tcket",
+    "group": "common typo"
+  },
+  {
+    "message": "Pls open a ticekt",
+    "group": "common typo"
+  },
+  {
+    "message": "Pls open a tikcet",
+    "group": "common typo"
+  },
+  {
+    "message": "Pls opne a ticket",
+    "group": "common typo"
+  },
+  {
+    "message": "Pls opn a ticket",
+    "group": "common typo"
+  },
+  {
+    "message": "Pls oppen a ticket",
+    "group": "common typo"
+  },
+  {
+    "message": "Pls creat a suport ticket",
+    "group": "common typo"
+  },
+  {
+    "message": "Pls craete a suppport ticket",
+    "group": "common typo"
+  },
+  {
+    "message": "Plz open a tiket",
+    "group": "common typo"
+  },
+  {
+    "message": "Plz open a tickt",
+    "group": "common typo"
+  },
+  {
+    "message": "Plz open a tcket",
+    "group": "common typo"
+  },
+  {
+    "message": "Plz open a ticekt",
+    "group": "common typo"
+  },
+  {
+    "message": "Plz open a tikcet",
+    "group": "common typo"
+  },
+  {
+    "message": "Plz opne a ticket",
+    "group": "common typo"
+  },
+  {
+    "message": "Plz opn a ticket",
+    "group": "common typo"
+  },
+  {
+    "message": "Plz oppen a ticket",
+    "group": "common typo"
+  },
+  {
+    "message": "Plz creat a suport ticket",
+    "group": "common typo"
+  },
+  {
+    "message": "Plz craete a suppport ticket",
+    "group": "common typo"
+  },
+  {
+    "message": "Kindly open a tiket",
+    "group": "common typo"
+  },
+  {
+    "message": "Kindly open a tickt",
+    "group": "common typo"
+  },
+  {
+    "message": "Kindly open a tcket",
+    "group": "common typo"
+  },
+  {
+    "message": "Kindly open a ticekt",
+    "group": "common typo"
+  },
+  {
+    "message": "Kindly open a tikcet",
+    "group": "common typo"
+  },
+  {
+    "message": "Kindly opne a ticket",
+    "group": "common typo"
+  },
+  {
+    "message": "Kindly opn a ticket",
+    "group": "common typo"
+  },
+  {
+    "message": "Kindly oppen a ticket",
+    "group": "common typo"
+  },
+  {
+    "message": "Kindly creat a suport ticket",
+    "group": "common typo"
+  },
+  {
+    "message": "Kindly craete a suppport ticket",
+    "group": "common typo"
+  },
+  {
+    "message": "I need to open a tiket",
+    "group": "common typo"
+  },
+  {
+    "message": "I need to open a tickt",
+    "group": "common typo"
+  },
+  {
+    "message": "I need to open a tcket",
+    "group": "common typo"
+  },
+  {
+    "message": "I need to open a ticekt",
+    "group": "common typo"
+  },
+  {
+    "message": "I need to open a tikcet",
+    "group": "common typo"
+  },
+  {
+    "message": "I need to opne a ticket",
+    "group": "common typo"
+  },
+  {
+    "message": "I need to opn a ticket",
+    "group": "common typo"
+  },
+  {
+    "message": "I need to oppen a ticket",
+    "group": "common typo"
+  },
+  {
+    "message": "I need to creat a suport ticket",
+    "group": "common typo"
+  },
+  {
+    "message": "I need to craete a suppport ticket",
+    "group": "common typo"
+  },
+  {
+    "message": "I want to open a tiket",
+    "group": "common typo"
+  },
+  {
+    "message": "I want to open a tickt",
+    "group": "common typo"
+  },
+  {
+    "message": "I want to open a tcket",
+    "group": "common typo"
+  },
+  {
+    "message": "I want to open a ticekt",
+    "group": "common typo"
+  },
+  {
+    "message": "I want to open a tikcet",
+    "group": "common typo"
+  },
+  {
+    "message": "I want to opne a ticket",
+    "group": "common typo"
+  },
+  {
+    "message": "I want to opn a ticket",
+    "group": "common typo"
+  },
+  {
+    "message": "I want to oppen a ticket",
+    "group": "common typo"
+  },
+  {
+    "message": "I want to creat a suport ticket",
+    "group": "common typo"
+  },
+  {
+    "message": "I want to craete a suppport ticket",
+    "group": "common typo"
+  },
+  {
+    "message": "I would like to open a tiket",
+    "group": "common typo"
+  },
+  {
+    "message": "I would like to open a tickt",
+    "group": "common typo"
+  },
+  {
+    "message": "I would like to open a tcket",
+    "group": "common typo"
+  },
+  {
+    "message": "I would like to open a ticekt",
+    "group": "common typo"
+  },
+  {
+    "message": "I would like to open a tikcet",
+    "group": "common typo"
+  },
+  {
+    "message": "I would like to opne a ticket",
+    "group": "common typo"
+  },
+  {
+    "message": "I would like to opn a ticket",
+    "group": "common typo"
+  },
+  {
+    "message": "I would like to oppen a ticket",
+    "group": "common typo"
+  },
+  {
+    "message": "I would like to creat a suport ticket",
+    "group": "common typo"
+  },
+  {
+    "message": "I would like to craete a suppport ticket",
+    "group": "common typo"
+  },
+  {
+    "message": "I'd like to open a tiket",
+    "group": "common typo"
+  },
+  {
+    "message": "I'd like to open a tickt",
+    "group": "common typo"
+  },
+  {
+    "message": "I'd like to open a tcket",
+    "group": "common typo"
+  },
+  {
+    "message": "I'd like to open a ticekt",
+    "group": "common typo"
+  },
+  {
+    "message": "I'd like to open a tikcet",
+    "group": "common typo"
+  },
+  {
+    "message": "I'd like to opne a ticket",
+    "group": "common typo"
+  },
+  {
+    "message": "I'd like to opn a ticket",
+    "group": "common typo"
+  },
+  {
+    "message": "I'd like to oppen a ticket",
+    "group": "common typo"
+  },
+  {
+    "message": "I'd like to creat a suport ticket",
+    "group": "common typo"
+  },
+  {
+    "message": "I'd like to craete a suppport ticket",
+    "group": "common typo"
+  },
+  {
+    "message": "Can you open a tiket",
+    "group": "common typo"
+  },
+  {
+    "message": "Can you open a tickt",
+    "group": "common typo"
+  },
+  {
+    "message": "Can you open a tcket",
+    "group": "common typo"
+  },
+  {
+    "message": "Can you open a ticekt",
+    "group": "common typo"
+  },
+  {
+    "message": "Can you open a tikcet",
+    "group": "common typo"
+  },
+  {
+    "message": "Can you opne a ticket",
+    "group": "common typo"
+  },
+  {
+    "message": "Can you opn a ticket",
+    "group": "common typo"
+  },
+  {
+    "message": "Can you oppen a ticket",
+    "group": "common typo"
+  },
+  {
+    "message": "Can you creat a suport ticket",
+    "group": "common typo"
+  },
+  {
+    "message": "Can you craete a suppport ticket",
+    "group": "common typo"
+  },
+  {
+    "message": "Connect me to support",
+    "group": "human support request"
+  },
+  {
+    "message": "Connect me to customer support",
+    "group": "human support request"
+  },
+  {
+    "message": "Connect me to customer service",
+    "group": "human support request"
+  },
+  {
+    "message": "Connect me to the support team",
+    "group": "human support request"
+  },
+  {
+    "message": "Connect me to your support team",
+    "group": "human support request"
+  },
+  {
+    "message": "Connect me to a support agent",
+    "group": "human support request"
+  },
+  {
+    "message": "Connect me to a human agent",
+    "group": "human support request"
+  },
+  {
+    "message": "Connect me to a customer service agent",
+    "group": "human support request"
+  },
+  {
+    "message": "Connect me to a support representative",
+    "group": "human support request"
+  },
+  {
+    "message": "Connect me to someone from support",
+    "group": "human support request"
+  },
+  {
+    "message": "Put me in touch with support",
+    "group": "human support request"
+  },
+  {
+    "message": "Put me in touch with customer support",
+    "group": "human support request"
+  },
+  {
+    "message": "Put me in touch with customer service",
+    "group": "human support request"
+  },
+  {
+    "message": "Put me in touch with the support team",
+    "group": "human support request"
+  },
+  {
+    "message": "Put me in touch with your support team",
+    "group": "human support request"
+  },
+  {
+    "message": "Put me in touch with a support agent",
+    "group": "human support request"
+  },
+  {
+    "message": "Put me in touch with a human agent",
+    "group": "human support request"
+  },
+  {
+    "message": "Put me in touch with a customer service agent",
+    "group": "human support request"
+  },
+  {
+    "message": "Put me in touch with a support representative",
+    "group": "human support request"
+  },
+  {
+    "message": "Put me in touch with someone from support",
+    "group": "human support request"
+  },
+  {
+    "message": "Let me talk to support",
+    "group": "human support request"
+  },
+  {
+    "message": "Let me talk to customer support",
+    "group": "human support request"
+  },
+  {
+    "message": "Let me talk to customer service",
+    "group": "human support request"
+  },
+  {
+    "message": "Let me talk to the support team",
+    "group": "human support request"
+  },
+  {
+    "message": "Let me talk to your support team",
+    "group": "human support request"
+  },
+  {
+    "message": "Let me talk to a support agent",
+    "group": "human support request"
+  },
+  {
+    "message": "Let me talk to a human agent",
+    "group": "human support request"
+  },
+  {
+    "message": "Let me talk to a customer service agent",
+    "group": "human support request"
+  },
+  {
+    "message": "Let me talk to a support representative",
+    "group": "human support request"
+  },
+  {
+    "message": "Let me talk to someone from support",
+    "group": "human support request"
+  },
+  {
+    "message": "Let me speak to support",
+    "group": "human support request"
+  },
+  {
+    "message": "Let me speak to customer support",
+    "group": "human support request"
+  },
+  {
+    "message": "Let me speak to customer service",
+    "group": "human support request"
+  },
+  {
+    "message": "Let me speak to the support team",
+    "group": "human support request"
+  },
+  {
+    "message": "Let me speak to your support team",
+    "group": "human support request"
+  },
+  {
+    "message": "Let me speak to a support agent",
+    "group": "human support request"
+  },
+  {
+    "message": "Let me speak to a human agent",
+    "group": "human support request"
+  },
+  {
+    "message": "Let me speak to a customer service agent",
+    "group": "human support request"
+  },
+  {
+    "message": "Let me speak to a support representative",
+    "group": "human support request"
+  },
+  {
+    "message": "Let me speak to someone from support",
+    "group": "human support request"
+  },
+  {
+    "message": "I need to talk to support",
+    "group": "human support request"
+  },
+  {
+    "message": "I need to talk to customer support",
+    "group": "human support request"
+  },
+  {
+    "message": "I need to talk to customer service",
+    "group": "human support request"
+  },
+  {
+    "message": "I need to talk to the support team",
+    "group": "human support request"
+  },
+  {
+    "message": "I need to talk to your support team",
+    "group": "human support request"
+  },
+  {
+    "message": "I need to talk to a support agent",
+    "group": "human support request"
+  },
+  {
+    "message": "I need to talk to a human agent",
+    "group": "human support request"
+  },
+  {
+    "message": "I need to talk to a customer service agent",
+    "group": "human support request"
+  },
+  {
+    "message": "I need to talk to a support representative",
+    "group": "human support request"
+  },
+  {
+    "message": "I need to talk to someone from support",
+    "group": "human support request"
+  },
+  {
+    "message": "I want to speak to support",
+    "group": "human support request"
+  },
+  {
+    "message": "I want to speak to customer support",
+    "group": "human support request"
+  },
+  {
+    "message": "I want to speak to customer service",
+    "group": "human support request"
+  },
+  {
+    "message": "I want to speak to the support team",
+    "group": "human support request"
+  },
+  {
+    "message": "I want to speak to your support team",
+    "group": "human support request"
+  },
+  {
+    "message": "I want to speak to a support agent",
+    "group": "human support request"
+  },
+  {
+    "message": "I want to speak to a human agent",
+    "group": "human support request"
+  },
+  {
+    "message": "I want to speak to a customer service agent",
+    "group": "human support request"
+  },
+  {
+    "message": "I want to speak to a support representative",
+    "group": "human support request"
+  },
+  {
+    "message": "I want to speak to someone from support",
+    "group": "human support request"
+  },
+  {
+    "message": "I would like to contact support",
+    "group": "human support request"
+  },
+  {
+    "message": "I would like to contact customer support",
+    "group": "human support request"
+  },
+  {
+    "message": "I would like to contact customer service",
+    "group": "human support request"
+  },
+  {
+    "message": "I would like to contact the support team",
+    "group": "human support request"
+  },
+  {
+    "message": "I would like to contact your support team",
+    "group": "human support request"
+  },
+  {
+    "message": "I would like to contact a support agent",
+    "group": "human support request"
+  },
+  {
+    "message": "I would like to contact a human agent",
+    "group": "human support request"
+  },
+  {
+    "message": "I would like to contact a customer service agent",
+    "group": "human support request"
+  },
+  {
+    "message": "I would like to contact a support representative",
+    "group": "human support request"
+  },
+  {
+    "message": "I would like to contact someone from support",
+    "group": "human support request"
+  },
+  {
+    "message": "Can I speak to support",
+    "group": "human support request"
+  },
+  {
+    "message": "Can I speak to customer support",
+    "group": "human support request"
+  },
+  {
+    "message": "Can I speak to customer service",
+    "group": "human support request"
+  },
+  {
+    "message": "Can I speak to the support team",
+    "group": "human support request"
+  },
+  {
+    "message": "Can I speak to your support team",
+    "group": "human support request"
+  },
+  {
+    "message": "Can I speak to a support agent",
+    "group": "human support request"
+  },
+  {
+    "message": "Can I speak to a human agent",
+    "group": "human support request"
+  },
+  {
+    "message": "Can I speak to a customer service agent",
+    "group": "human support request"
+  },
+  {
+    "message": "Can I speak to a support representative",
+    "group": "human support request"
+  },
+  {
+    "message": "Can I speak to someone from support",
+    "group": "human support request"
+  },
+  {
+    "message": "Could I talk to support",
+    "group": "human support request"
+  },
+  {
+    "message": "Could I talk to customer support",
+    "group": "human support request"
+  },
+  {
+    "message": "Could I talk to customer service",
+    "group": "human support request"
+  },
+  {
+    "message": "Could I talk to the support team",
+    "group": "human support request"
+  },
+  {
+    "message": "Could I talk to your support team",
+    "group": "human support request"
+  },
+  {
+    "message": "Could I talk to a support agent",
+    "group": "human support request"
+  },
+  {
+    "message": "Could I talk to a human agent",
+    "group": "human support request"
+  },
+  {
+    "message": "Could I talk to a customer service agent",
+    "group": "human support request"
+  },
+  {
+    "message": "Could I talk to a support representative",
+    "group": "human support request"
+  },
+  {
+    "message": "Could I talk to someone from support",
+    "group": "human support request"
+  },
+  {
+    "message": "Please get me support",
+    "group": "human support request"
+  },
+  {
+    "message": "Please get me customer support",
+    "group": "human support request"
+  },
+  {
+    "message": "Please get me customer service",
+    "group": "human support request"
+  },
+  {
+    "message": "Please get me the support team",
+    "group": "human support request"
+  },
+  {
+    "message": "Please get me your support team",
+    "group": "human support request"
+  },
+  {
+    "message": "Please get me a support agent",
+    "group": "human support request"
+  },
+  {
+    "message": "Please get me a human agent",
+    "group": "human support request"
+  },
+  {
+    "message": "Please get me a customer service agent",
+    "group": "human support request"
+  },
+  {
+    "message": "Please get me a support representative",
+    "group": "human support request"
+  },
+  {
+    "message": "Please get me someone from support",
+    "group": "human support request"
+  }
+]

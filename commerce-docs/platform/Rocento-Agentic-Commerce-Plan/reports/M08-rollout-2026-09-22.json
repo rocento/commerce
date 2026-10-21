@@ -1,0 +1,142 @@
+{
+  "commerce_before": {
+    "catalog.products": "5417a60fa93628d89d87c85b05acaae2",
+    "customers.customers": "0773bb39aef386fb7807a5c5cf38ea42",
+    "cart_checkout.items": "e31a23d88eca81fb7d25fe33a821d85c",
+    "orders.orders": "e20c7197cacd05963ab057bf8d959b73",
+    "orders.order_items": "dee4482522ce7370234dca812f8f0d8b",
+    "payments.payment_transactions": "23f69a412dee626f736e95b1b37f21ae"
+  },
+  "source_sha256": {
+    "backend/crates/domain-customers/src/lib.rs": "7642219436e99f81259b2de5f3d5d71758f30ff6818da4daab66a22a1b3bd332",
+    "backend/crates/domain-customers/src/memory.rs": "5d2070150ef871e00cd6abd7333ed3ccd55c596672dbbe1710aa1895eb2fb303",
+    "backend/crates/domain-customers/Cargo.toml": "585389b68e812a04755ac79a50b2433b769b8cae97c235321ed642d764a74333",
+    "backend/crates/domain-cart-checkout/src/execution.rs": "85ddc182c7fc340e522a8c31a40fc515618111161aeaf4c70d4c0157fcd16b34",
+    "backend/crates/api-gateway/src/assistant.rs": "a71808bc711e0770b95ea99b1de3e45ff8068f2b7704d993417c75cb40006dd2",
+    "backend/crates/api-gateway/src/assistant_memory.rs": "f78a20ccb316b8d8a2a0ec21edf5b9afb8bcc769d187cca2ba58daf220ae672e",
+    "backend/crates/api-gateway/src/shopping.rs": "2ce66ddb9a680c85366325553806408479a2b387dd46f134dcaea856597b8983",
+    "backend/crates/api-gateway/src/identity.rs": "951387db5833d8611ea8d9e0dd353bb8ee4f7d49c91e6e748855299df06f05fe",
+    "backend/migrations/20260922110000_customer_memory.sql": "13e06e96032634e93faf8375105d6ce592fd0c006bd99b63b6bfccd742b26f3c",
+    "ai-service/app/personalization.py": "c23faacbd14cb03b5c138cf7341090a634cbd7ecb946493a7199ab231e6132ec",
+    "ai-service/app/main.py": "35599b13019d71de128b7b9abb9f4ccd041ba0eb6995312ce504ccb710ff5733",
+    "ai-service/app/shopping.py": "3bf58d6e11d80da63de9e9cda233dac607cdf1c35f8c991c2feb27a4db8dc50d",
+    "ai-service/app/rich_responses.py": "927c661ba9455f9251c0ca676ce7db3b4c694e7ad4012336fe6861293394599e",
+    "ai-service/app/baskets.py": "c7ae178426dd257d18560b71fb6bd6b642b0911ead077c2e44fc62097f5a67b1",
+    "deploy/assistant/tools.conf": "42c1b79c1f6a5fa5b1d9f436f9604e8f40b329f168007496ed035da665e92fc3"
+  },
+  "old_images": {
+    "api-gateway": "sha256:60625a4fbeee0986b8f431104793035798c3f803d53d386ce512c9691ebcc112",
+    "ai-service": "sha256:719b392920324a9640912ae382a1ab6ec1a0fd62abef9a32650f5cdc56397437"
+  },
+  "rollback_directory": "/Users/momar/Documents/commerce-ai/.local/shopping-staging/rocento-shopping-stage-9535d4d7/m08-rollback",
+  "production_changed": false,
+  "feature": "customers.memory_configuration.enabled",
+  "openapi_sha256": "f9fe785d8c2b4d8ca740dc5f83bcaadf11882e80f8392ab28d9678697eed6a60",
+  "new_images": {
+    "api-gateway": "sha256:5996802031d24fb95437664c8546af7e7c23924a0063d0a6eb91b2eb4eb0af17",
+    "ai-service": "sha256:d51c32a919dcbe52746826b752e7da5be46d98306d9d8c1f8acabdb08eaefe45"
+  },
+  "source_overrides": {
+    "backend/crates/api-gateway/src/identity.rs": "M07 accepted source plus M08 login revocation only; separate workspace capacity formatting preserved."
+  },
+  "frontend_accepted_sha256": {
+    "frontend/apps/storefront/src/assistant.tsx": "b14abd0b06a1b3062a390e46228caf678fc0d21acdad08d921e7d1dd6de0d1f4",
+    "frontend/apps/storefront/src/assistant-memory.tsx": "d3160dc510984aabf62ac413e7e426f6c375ea704627a61967c3d74127cf7b2f",
+    "frontend/apps/storefront/src/assistant-memory.css": "d115ec4025c437a36bacc901d3b971613d808b88ffbd3ca49567db8671a8aaf0",
+    "frontend/packages/api-client/src/identity.ts": "df09b67c625dc87a8bc296a5633068c5528bcf8e89b209442d47bddf9350ec65",
+    "frontend/packages/api-client/src/assistant.ts": "a8bdd489550e5f23d82717eb506e319c6aa16a3e642d9cfa13814ba2692c3429"
+  },
+  "storefront_index_sha256": "c82ce13e11fe8cbb1c80364403b64540305fdb9c84ff0e16af6cd18b2b742898",
+  "verification": {
+    "restart_recovery": true,
+    "fixed_guest_expiry": true,
+    "expired_capability_rejected": true,
+    "physical_expiry_purge": true,
+    "actual_login_revokes_guest": true,
+    "cross_tenant_rejected": true,
+    "stale_tab_rejected": true,
+    "real_catalog_preference_judgments": [
+      {
+        "budget": "20",
+        "exclusive": false,
+        "baseline_correct": false,
+        "personalized_correct": true
+      },
+      {
+        "budget": "10",
+        "exclusive": true,
+        "baseline_correct": true,
+        "personalized_correct": true
+      },
+      {
+        "budget": "6",
+        "exclusive": false,
+        "baseline_correct": true,
+        "personalized_correct": true
+      }
+    ],
+    "commerce_unchanged": true,
+    "production_changed": false,
+    "flag_rollback": true,
+    "disabled_export_delete": true,
+    "browser_stats": {
+      "startTime": "2026-09-22T11:29:57.400Z",
+      "duration": 31515.639,
+      "expected": 20,
+      "skipped": 0,
+      "unexpected": 0,
+      "flaky": 0
+    },
+    "visual_browser_stats": {
+      "startTime": "2026-09-22T11:32:20.570Z",
+      "duration": 15299.876,
+      "expected": 5,
+      "skipped": 0,
+      "unexpected": 0,
+      "flaky": 0
+    },
+    "source_matches": true,
+    "python_passes": 972,
+    "rust_passes": 68,
+    "english_replay_passes": 88,
+    "live_canary_passes": 4,
+    "screenshots_visually_inspected": true
+  },
+  "live_budget": {
+    "currency": "USD",
+    "cap_micros": 50000,
+    "reserved_micros": 28112,
+    "observed_cost_micros": 1996,
+    "max_calls": 4,
+    "calls": 4,
+    "pricing_reviewed": "2026-09-21",
+    "pricing_source": "https://developers.openai.com/api/docs/models/gpt-4.1-mini",
+    "input_usd_per_million": 0.4,
+    "output_usd_per_million": 1.6,
+    "reservation_basis": "UTF-8 payload byte bound plus 8192 tokens, uncached input and maximum output; no reservation refunds or retries. Provider-side billing is authoritative."
+  },
+  "feature_configuration": {
+    "enabled": true,
+    "allowed_categories": [
+      "dc789adc-0f2b-44d9-8a2a-301f48c39336"
+    ],
+    "view_weight": 3,
+    "purchase_weight": 8,
+    "return_weight": -12,
+    "half_life_days": 14,
+    "retention_days": 30
+  },
+  "limits": [
+    "English synthetic local pilot only; Arabic deferred.",
+    "Views/purchases active; verified return adapter unavailable.",
+    "Three explicit catalog preference judgments, not a population-quality estimate.",
+    "Production unchanged; separate merchant notice/human review and production rollout."
+  ],
+  "evidence_paths": {
+    "regression": "artifacts/evaluation-lab/m08-regression/report.json",
+    "replay": "artifacts/evaluation-lab/m08-replay/report.json",
+    "live": "artifacts/evaluation-lab/m08-live-accepted/report.json",
+    "browser": "/Users/momar/Documents/commerce-ai/.local/shopping-staging/rocento-shopping-stage-9535d4d7/browser-results/m08-acceptance",
+    "visual": "/Users/momar/Documents/commerce-ai/.local/shopping-staging/rocento-shopping-stage-9535d4d7/browser-results/m08-visual"
+  }
+}

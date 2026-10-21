@@ -1,0 +1,20 @@
+{
+  "runtime_sha256": "c7dd97d29b49f77c3969b4e86176ef5a8b656bf82376456321ce69a1592c7043",
+  "dataset_sha256": "db49ec7326c12a0fcb49f9ec9234a840b638c47c86056300d3c7cb9cd3ea685b",
+  "scope_sha256": "84ec9c0c7e275cb39d1fdc5a7cf03f7cabf9f9c0963dfa5f0b96a05dc30acf0c",
+  "cases": 88,
+  "answer_draft_call_parity": true,
+  "excluded_cases": {
+    "grocery-ar-budget": "ar",
+    "grocery-ar-eg-budget": "ar-eg",
+    "grocery-mixed-budget": "mixed",
+    "jewelry-ar-budget": "ar",
+    "jewelry-ar-eg-budget": "ar-eg",
+    "jewelry-mixed-budget": "mixed",
+    "electronics-ar-budget": "ar",
+    "electronics-ar-eg-budget": "ar-eg",
+    "electronics-mixed-budget": "mixed",
+    "grocery-live-budget-ar": "ar",
+    "grocery-live-budget-mixed": "mixed"
+  }
+}

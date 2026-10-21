@@ -1,0 +1,95 @@
+{
+  "schema_version": "2",
+  "tenant_id": null,
+  "answers": [
+    {
+      "phrases": [
+        "How does Shop for Me work?",
+        "Does a proposal change my cart?"
+      ],
+      "answer": "Describe what you need, then review the proposed products, quantities and quote. Your cart changes only after you approve and apply the proposal. Basket approval does not place an order.",
+      "source": {
+        "id": "guide:basket-review",
+        "title": "Reviewing a proposed basket",
+        "revision": 1,
+        "approved_at": null,
+        "valid_until": null
+      }
+    },
+    {
+      "phrases": [
+        "Does approving a basket place an order?",
+        "How do I confirm my order?"
+      ],
+      "answer": "After applying a basket, continue to checkout, review the current total and delivery address, and explicitly confirm the order. The current checkout supports cash on delivery. Do not assume a saved proposal is a completed order.",
+      "source": {
+        "id": "guide:checkout-confirmation",
+        "title": "Confirming an order",
+        "revision": 1,
+        "approved_at": null,
+        "valid_until": null
+      }
+    },
+    {
+      "phrases": [
+        "How long is a basket quote valid?",
+        "Why do I need to refresh my proposal?"
+      ],
+      "answer": "Basket quotes expire after five minutes. Prices, stock and other checkout conditions are checked again when you apply the proposal. If conditions change, refresh the quote and review it again before approving.",
+      "source": {
+        "id": "guide:quote-freshness",
+        "title": "Refreshing a quote",
+        "revision": 1,
+        "approved_at": null,
+        "valid_until": null
+      }
+    },
+    {
+      "phrases": [
+        "Can you guarantee delivery tomorrow?",
+        "Does in stock mean next day delivery?"
+      ],
+      "answer": "Check availability for your selected delivery location. Availability does not promise a delivery date or time slot. The current shopping assistant cannot reserve a scheduled delivery slot.",
+      "source": {
+        "id": "guide:availability",
+        "title": "Checking delivery and availability",
+        "revision": 1,
+        "approved_at": null,
+        "valid_until": null
+      }
+    },
+    {
+      "phrases": [
+        "How do I track my order?"
+      ],
+      "answer": "Sign in to the account used for the order. Open your orders or ask the assistant about your order, then select it to see its recorded status and available shipment information.",
+      "source": {
+        "id": "guide:order-tracking",
+        "title": "Finding an existing order",
+        "revision": 1,
+        "approved_at": null,
+        "valid_until": null
+      }
+    },
+    {
+      "phrases": [
+        "Which currency and quantities does checkout support?"
+      ],
+      "answer": "The current shopping checkout uses USD and whole selling-unit quantities. Check the displayed product selling unit and quantity before approving. The assistant does not convert currencies or promise fractional quantities.",
+      "source": {
+        "id": "guide:quantity-currency",
+        "title": "Reviewing currency and quantities",
+        "revision": 1,
+        "approved_at": null,
+        "valid_until": null
+      }
+    }
+  ],
+  "unknown_phrases": [
+    "What is your return policy?",
+    "What is your refund policy?",
+    "Is delivery free?",
+    "ما هي سياسة الاسترجاع؟",
+    "هل التوصيل مجاني؟"
+  ]
+}

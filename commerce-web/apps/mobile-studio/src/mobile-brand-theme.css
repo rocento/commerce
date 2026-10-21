@@ -1,0 +1,121 @@
+.ms-brand-theme { display: grid; gap: 16px; min-width: 0; }
+.ms-brand-intro { margin: -4px 0 2px; color: var(--muted); font-size: 12px; line-height: 1.65; }
+.ms-brand-theme > fieldset { display: grid; gap: 16px; }
+.ms-brand-card { min-width: 0; padding: 18px; border: 1px solid var(--line); border-radius: 14px; background: var(--paper); }
+.ms-brand-card-heading { display: flex; align-items: flex-start; gap: 10px; margin-bottom: 18px; }
+.ms-brand-card-heading > div { flex: 1; min-width: 0; }
+.ms-brand-card-heading h3 { margin: 0; font-size: 14px; letter-spacing: -.2px; }
+.ms-brand-card-heading p { margin: 5px 0 0; font-size: 11px; line-height: 1.55; color: var(--muted); }
+.ms-brand-step { color: var(--accent); background: var(--coral-soft); border-radius: 7px; padding: 6px; font-size: 10px; font-weight: 700; font-variant-numeric: tabular-nums; }
+.ms-brand-badge { padding: 4px 7px; border: 1px solid var(--line); border-radius: 6px; color: var(--muted); font-size: 10px; }
+.ms-brand-identity-preview { display: flex; align-items: center; gap: 12px; padding: 14px; margin-bottom: 18px; border: 1px solid var(--line); border-radius: 10px; background: var(--surface); }
+.ms-brand-logo { width: 56px; height: 48px; flex-shrink: 0; display: grid; place-items: center; color: #8e817a; border-radius: 8px; background: #fff; border: 1px solid var(--line); overflow: hidden; }
+.ms-brand-logo img { width: 100%; height: 100%; object-fit: contain; padding: 4px; }
+.ms-brand-identity-preview > div:last-child { display: grid; gap: 5px; min-width: 0; }
+.ms-brand-identity-preview strong { font-size: 13px; overflow-wrap: anywhere; }
+.ms-brand-identity-preview span { color: var(--muted); font-size: 10px; overflow-wrap: anywhere; }
+.ms-brand-field { margin-bottom: 14px; gap: 7px; }
+.ms-brand-field > span { display: flex; justify-content: space-between; gap: 8px; font-size: 11px; }
+.ms-brand-field small { color: var(--muted); font-size: 10px; font-weight: 400; }
+.ms-brand-field input, .ms-brand-field select { min-height: 42px; font-size: 12px; }
+.ms-brand-text-button { display: flex; align-items: center; justify-content: space-between; width: 100%; padding: 4px 0; min-height: 32px; border: 0; border-radius: 2px; background: transparent; color: var(--accent); font-size: 11px; text-align: start; }
+.ms-brand-palette { display: flex; height: 26px; overflow: hidden; border-radius: 7px; border: 1px solid var(--line); margin-bottom: 18px; }
+.ms-brand-palette span { flex: 1; }
+.ms-brand-palette span:first-child { flex: 2; }
+.ms-brand-colors { display: grid; }
+.ms-brand-color-row { display: grid; grid-template-columns: minmax(0,1fr) 122px; align-items: center; gap: 8px 10px; padding: 12px 0; border-bottom: 1px solid #f0edeb; }
+.ms-brand-color-row:first-child { padding-top: 0; }
+.ms-brand-color-row:last-child { border-bottom: 0; }
+.ms-brand-color-label { min-width: 0; }
+.ms-brand-color-label label { font-size: 11px; }
+.ms-brand-color-label small { display: block; margin-top: 4px; color: var(--muted); font-size: 10px; line-height: 1.4; }
+.ms-brand-color-input { display: flex; align-items: center; gap: 5px; min-width: 0; padding: 4px; border: 1px solid var(--line); border-radius: 8px; background: #fff; }
+.ms-brand-color-input input[type="color"] { width: 32px; height: 32px; flex-shrink: 0; padding: 1px; border: 0; border-radius: 5px; background: transparent; cursor: pointer; }
+.ms-brand-color-input input[type="color"]::-webkit-color-swatch-wrapper { padding: 2px; }
+.ms-brand-color-input input[type="color"]::-webkit-color-swatch { border: 1px solid #00000015; border-radius: 4px; }
+.ms-brand-color-input input:not([type="color"]) { border: 0; padding: 6px 1px; font-family: ui-monospace, monospace; font-size: 11px; font-weight: 500; }
+.ms-brand-color-input.is-invalid { border-color: #b33b2c; }
+.ms-brand-field-error { grid-column: 1 / -1; margin: 0; color: #a12f20; font-size: 11px; }
+.ms-brand-contrast { margin-top: 14px; padding: 12px; border-radius: 9px; border: 1px solid #edd4ae; background: #fffaf1; }
+.ms-brand-contrast.is-valid { border-color: #d6e4da; background: #f5f9f6; }
+.ms-brand-contrast > div { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 5px; margin-bottom: 10px; }
+.ms-brand-contrast strong { font-size: 11px; }
+.ms-brand-contrast > div > span { font-size: 10px; color: var(--muted); }
+.ms-brand-contrast p { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 4px; margin: 5px 0 0; font-size: 10px; font-variant-numeric: tabular-nums; }
+.ms-brand-contrast p > span:last-child { font-weight: 600; }
+.ms-brand-note { font-size: 10px; line-height: 1.6; color: var(--muted); margin: 12px 0 0; }
+.ms-brand-theme .ms-theme-controls { margin: 0; gap: 20px; }
+.ms-brand-theme .ms-theme-options legend { font-size: 11px; margin-bottom: 10px; }
+.ms-brand-theme .ms-radius-option { gap: 7px; padding: 14px 6px; border-radius: 9px; font-size: 11px; }
+.ms-brand-theme .ms-radius-option small { font-size: 10px; }
+.ms-brand-theme .ms-radius-swatch { width: 42px; height: 28px; border-width: 1.5px; }
+.ms-brand-theme .ms-spacing-options label { padding: 12px; border-radius: 9px; }
+.ms-brand-theme .ms-spacing-options label:has(input:checked) { border-color: var(--accent); background: var(--coral-soft); }
+.ms-brand-theme .ms-spacing-options span { font-size: 11px; }
+.ms-brand-theme .ms-spacing-options small { font-size: 10px; line-height: 1.4; }
+.ms-brand-theme .ms-component-sample { padding: 12px; gap: 10px; font-size: 11px; }
+.ms-brand-theme .ms-component-sample > small { font-size: 10px; }
+.ms-brand-theme .ms-sample-actions span { min-height: 44px; padding: 9px 12px; }
+.ms-brand-type { display: flex; align-items: center; gap: 12px; margin-top: 18px; padding-top: 16px; border-top: 1px solid var(--line); }
+.ms-brand-type > span { font-size: 24px; letter-spacing: -1px; }
+.ms-brand-type strong { font-size: 11px; }
+.ms-brand-type p { margin: 3px 0 0; color: var(--muted); font-size: 10px; line-height: 1.5; }
+.ms-brand-handoff { display: grid; gap: 12px; padding: 16px; border: 1px solid #ead6cb; border-radius: 12px; background: #fff8f4; }
+.ms-brand-handoff strong { font-size: 12px; }
+.ms-brand-handoff p { margin: 4px 0 0; color: var(--muted); font-size: 11px; }
+.ms-brand-handoff button { display: flex; justify-content: space-between; gap: 8px; font-size: 12px; border-color: #dfc4b7; color: var(--accent); }
+.ms-brand-build-details { color: var(--muted); font-size: 11px; }
+.ms-brand-build-details summary { cursor: pointer; padding: 6px 0; }
+.ms-brand-build-details p { margin: 6px 0; font-size: 11px; }
+.ms-brand-theme fieldset:disabled input, .ms-brand-theme fieldset:disabled select { opacity: .65; cursor: not-allowed; }
+@media (max-width: 600px) {
+  .ms-brand-card { padding: 14px; }
+  .ms-brand-color-row { grid-template-columns: minmax(0, 1fr); gap: 8px; }
+  .ms-brand-color-input input:not([type="color"]) { font-size: 13px; }
+  .ms-brand-color-input input[type="color"] { width: 38px; height: 36px; }
+}
+
+/* Only the Native Preview tool owns the device stage. */
+.ms-app-with-sidebar .ms-workbench.is-settings-panel { grid-template-columns: minmax(0, 1fr); }
+.ms-app-with-sidebar .ms-preview-area[hidden] { display: none; }
+.ms-app-with-sidebar .is-brand-panel .ms-editor-section { padding: 24px; margin-top: 0; }
+.ms-app-with-sidebar .is-brand-panel .ms-panel-heading { margin-bottom: 12px; }
+.ms-app-with-sidebar .is-brand-panel .ms-panel-heading h2 { font-size: 23px; letter-spacing: -.5px; }
+.ms-brand-theme > fieldset { grid-template-columns: repeat(3, minmax(0, 1fr)); align-items: start; gap: 20px; }
+.ms-brand-card { padding: 20px; }
+.ms-brand-intro { font-size: 13px; margin-bottom: 8px; }
+.ms-brand-card-heading h3 { font-size: 15px; }
+.ms-brand-card-heading p, .ms-brand-color-label label { font-size: 12px; }
+.ms-brand-card-heading { min-height: 52px; }
+.ms-brand-handoff { grid-template-columns: minmax(0,1fr) auto; align-items: center; background: var(--surface); border-color: var(--line); }
+.ms-brand-handoff button { min-width: 190px; background: var(--paper); }
+.ms-brand-type p, .ms-brand-note { font-size: 11px; }
+@media (max-width: 1200px) {
+  .ms-brand-theme > fieldset { grid-template-columns: repeat(2, minmax(0,1fr)); }
+  .ms-brand-card:last-child { grid-column: 1 / -1; }
+  .ms-brand-theme .ms-theme-controls { grid-template-columns: repeat(2, minmax(0,1fr)); }
+  .ms-brand-theme .ms-theme-controls > p { grid-column: 1 / -1; margin: 0; }
+}
+@media (max-width: 800px) {
+  .ms-brand-theme > fieldset, .ms-brand-theme .ms-theme-controls { grid-template-columns: minmax(0,1fr); }
+  .ms-brand-handoff { grid-template-columns: minmax(0,1fr); }
+  .ms-app-with-sidebar .is-brand-panel .ms-editor-section { padding: 16px; }
+}
+@media (max-width: 600px) {
+  .ms-brand-card { padding: 14px; }
+  .ms-brand-field input, .ms-brand-field select, .ms-brand-color-input input:not([type="color"]) { font-size: 16px; }
+}
+@media (min-width: 900px) {
+  .is-settings-panel .ms-release-bar { flex-direction: row; align-items: center; justify-content: space-between; }
+  .is-settings-panel .ms-release-bar .ms-actions { width: auto; }
+  .is-settings-panel .ms-release-bar .ms-actions button { flex: 0 0 auto; padding-inline: 14px; }
+}
+@media (max-width: 800px) {
+  .ms-brand-handoff button { min-width: 0; width: 100%; }
+}
+@media (max-width: 380px) {
+  .ms-app-with-sidebar .is-brand-panel .ms-editor-section { padding: 10px; }
+  .ms-brand-card { padding: 12px; }
+  .ms-brand-card-heading { gap: 7px; flex-wrap: wrap; }
+  .ms-brand-card-heading .ms-brand-badge { margin-inline-start: 30px; }
+}

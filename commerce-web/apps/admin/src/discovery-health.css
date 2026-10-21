@@ -1,0 +1,115 @@
+/* Search & AI visibility uses the existing admin palette and typography. */
+.admin-body main.visibility-page { max-width: 1440px; }
+.visibility-page [hidden] { display: none !important; }
+.visibility-page { min-width: 0; --visibility-muted: #66645f; }
+.visibility-page .admin-page-heading { border-bottom: 0; padding-bottom: 0; margin-bottom: 24px; }
+.visibility-tabs { display: flex; gap: 28px; border-bottom: 1px solid var(--line); margin-bottom: 24px; }
+.visibility-tabs a { display: inline-flex; align-items: center; color: var(--visibility-muted); text-decoration: none; padding: 0 0 14px; min-height: 44px; border-bottom: 2px solid transparent; font-size: 14px; font-weight: 600; }
+.visibility-tabs a.active { color: #994b33; border-color: var(--coral); }
+.visibility-tabs a:hover { color: var(--ink); }
+.visibility-mobile-nav { display: none; margin-bottom: 20px; font-size: 13px; }
+.visibility-page .visibility-card { max-width: none; margin: 0 0 20px; padding: 24px; border: 1px solid var(--line); border-radius: 10px; background: var(--surface); min-width: 0; }
+.visibility-page h2 { font-size: 18px; line-height: 1.35; margin: 0 0 8px; }
+.visibility-page h3 { font-size: 15px; line-height: 1.4; margin: 0; }
+.visibility-page .visibility-description { color: var(--visibility-muted); font-size: 14px; line-height: 1.6; margin: 0 0 16px; max-width: 85ch; }
+.visibility-page .help { color: var(--visibility-muted); font-size: 13px; }
+.visibility-status-grid { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 16px; margin-bottom: 24px; }
+.visibility-status-card { background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: 20px; min-width: 0; }
+.visibility-page .visibility-status-card h2 { font-size: 14px; margin-bottom: 12px; }
+.visibility-status-card p { color: var(--visibility-muted); font-size: 13px; line-height: 1.55; margin: 12px 0 0; }
+.visibility-badge { display: inline-flex; align-items: center; gap: 6px; font-size: 12px; font-weight: 600; line-height: 1.5; padding: 4px 8px; border-radius: 5px; background: #f0f0ed; color: #5b5954; width: fit-content; }
+.visibility-badge::before { content: ''; flex: 0 0 5px; width: 5px; height: 5px; background: currentColor; border-radius: 50%; }
+.visibility-badge.success { background: #eaf5ed; color: #276940; }
+.visibility-badge.warning { background: #fff5e4; color: #855013; }
+.visibility-badge.danger { background: #fff0ef; color: #a13730; }
+.visibility-section-heading { display: flex; align-items: baseline; justify-content: space-between; gap: 10px 20px; flex-wrap: wrap; margin-bottom: 14px; }
+.visibility-section-heading h2 { margin: 0; }
+.visibility-action-list,.visibility-check-list { list-style: none; margin: 0; padding: 0; }
+.visibility-action-list li { display: flex; justify-content: space-between; align-items: center; gap: 16px 30px; padding: 20px 0; border-top: 1px solid var(--line); }
+.visibility-action-list li:last-child { padding-bottom: 0; }
+.visibility-action-list p { color: var(--visibility-muted); font-size: 13px; line-height: 1.6; margin: 5px 0 0; max-width: 75ch; }
+.visibility-action-list .button-link { flex-shrink: 0; font-size: 13px; }
+.visibility-banner { background: #f0f0ed; color: #5b5954; border-radius: 7px; padding: 14px 18px; margin-bottom: 20px; font-size: 14px; }
+.visibility-banner.warning { background: #fff5e4; color: #855013; }
+.visibility-banner.success { background: #eaf5ed; color: #276940; }
+.visibility-banner.danger { background: #fff0ef; color: #a13730; }
+.visibility-banner p { margin: 4px 0 0; line-height: 1.5; }
+.visibility-banner a { color: inherit; text-decoration: underline; }
+.visibility-page fieldset { min-width: 0; margin: 0; padding: 0; border: 0; }
+.visibility-page .field { margin: 14px 0; min-width: 0; }
+.visibility-page input,.visibility-page select,.visibility-page textarea { max-width: 100%; min-width: 0; }
+.visibility-page .field input,.visibility-page select,.visibility-page textarea { border-color: var(--line); border-radius: 6px; background: var(--surface); }
+.visibility-page textarea { width: 100%; padding: 12px; color: var(--ink); border: 1px solid var(--line); resize: vertical; }
+.visibility-page .check { display: flex; align-items: flex-start; gap: 9px; font-size: 14px; line-height: 1.5; margin: 15px 0; }
+.visibility-page .check input { margin-top: 4px; flex-shrink: 0; accent-color: var(--coral-dark); }
+.visibility-form-section { border-top: 1px solid var(--line); padding-top: 20px; margin-top: 20px; }
+.visibility-savebar { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 14px; border-top: 1px solid var(--line); padding-top: 18px; margin-top: 22px; }
+.visibility-savebar button { margin-left: auto; }
+.visibility-details { border-top: 1px solid var(--line); padding-top: 16px; margin-top: 18px; }
+.visibility-page summary { cursor: pointer; color: var(--ink); font-size: 14px; font-weight: 600; line-height: 1.5; }
+.visibility-page summary:focus-visible,.visibility-tabs a:focus-visible { outline: 2px solid var(--coral-dark); outline-offset: 4px; }
+.visibility-details[open]>summary,.visibility-technical[open]>summary { margin-bottom: 16px; }
+.visibility-technical { scroll-margin-top: 90px; }
+#visibility-technical { scroll-margin-top: 90px; }
+.visibility-facts { display: grid; grid-template-columns: minmax(120px,1fr) minmax(0,1.5fr); gap: 12px 24px; margin: 20px 0; font-size: 13px; }
+.visibility-facts dt { color: var(--visibility-muted); }
+.visibility-facts dd { margin: 0; overflow-wrap: anywhere; }
+.visibility-check-list>li { border-top: 1px solid var(--line); padding: 18px 0; font-size: 13px; }
+.visibility-check-list>li:first-child { border-top: 0; }
+.visibility-check-list .visibility-section-heading { margin-bottom: 8px; }
+.visibility-check-list p { line-height: 1.6; }
+.visibility-page pre,.visibility-page code { white-space: pre-wrap; overflow-wrap: anywhere; font-size: 12px; }
+.visibility-footer-link { text-align: right; font-size: 14px; }
+.visibility-crawler-heading,.visibility-crawler-row { display: grid; grid-template-columns: minmax(0,1fr) 120px 170px; gap: 20px; align-items: center; }
+.visibility-crawler-heading { font-size: 12px; color: var(--visibility-muted); padding: 12px 0; }
+.visibility-crawler-row { padding: 20px 0; border-top: 1px solid var(--line); }
+.visibility-crawler-row p { margin: 5px 0 0; }
+.visibility-crawler-row select { padding: 9px; }
+.visibility-report-switch { display: flex; flex-wrap: wrap; gap: 8px; margin: 20px 0; }
+.visibility-report-switch button { font-size: 13px; }
+.visibility-report-switch button[aria-pressed=true] { background: var(--coral-soft); border-color: #ecc9bc; color: #994b33; }
+.visibility-page .table-wrap { max-width: 100%; overflow-x: auto; margin: 16px 0; }
+.visibility-page td { overflow-wrap: anywhere; }
+.visibility-page th { white-space: normal; }
+.visibility-page td:not(:first-child),.visibility-page th:not(:first-child) { font-variant-numeric: tabular-nums; }
+.visibility-empty { padding: 38px 20px; text-align: center; }
+.visibility-empty p { color: var(--visibility-muted); font-size: 14px; line-height: 1.6; max-width: 55ch; margin: 8px auto 0; }
+.visibility-page-tables { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-top: 24px; }
+.visibility-page-tables>section { min-width: 0; }
+.visibility-readonly,.visibility-refresh-status { font-size: 14px; color: var(--visibility-muted); margin: 0 0 18px; }
+.visibility-policy { border: 1px solid var(--line); background: var(--canvas); border-radius: 7px; padding: 18px; margin: 16px 0; }
+.visibility-policy>button { margin: 8px 8px 0 0; }
+.visibility-template { border-top: 1px solid var(--line); padding-top: 16px; margin-top: 16px; }
+.visibility-search-preview { border: 1px solid var(--line); background: var(--canvas); border-radius: 7px; padding: 20px; margin: 16px 0; overflow-wrap: anywhere; }
+.visibility-search-preview h3 { font-size: 21px; color: #24599b; margin: 6px 0; }
+.visibility-search-preview img { max-width: min(320px,100%); height: auto; margin-top: 14px; }
+.visibility-resource-results { display: grid; gap: 8px; margin: 12px 0; }
+.visibility-resource-results button { text-align: left; display: flex; justify-content: space-between; gap: 12px; align-items: center; }
+.visibility-resource-results button small { font-weight: 400; color: var(--visibility-muted); }
+.visibility-picker-nav { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; margin: 14px 0; }
+.visibility-sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; border: 0; }
+@media(max-width:1050px) { .visibility-crawler-heading,.visibility-crawler-row { grid-template-columns: minmax(0,1fr) 100px 140px; gap: 12px; } }
+@media(max-width:700px) {
+  .visibility-status-grid { grid-template-columns: 1fr; gap: 12px; }
+  .visibility-status-card { display: grid; grid-template-columns: minmax(0,1fr) auto; align-items: start; gap: 10px; padding: 16px; }
+  .visibility-status-card p { grid-column: 1/-1; margin: 0; }
+  .visibility-page .visibility-status-card h2 { margin: 3px 0 0; }
+  .visibility-tabs { gap: 18px; }
+  .visibility-page-tables { grid-template-columns: 1fr; }
+  .visibility-action-list li { align-items: flex-start; flex-direction: column; gap: 12px; }
+}
+@media(max-width:560px) {
+  .visibility-tabs { display: none; }
+  .visibility-mobile-nav { display: block; }
+  .visibility-mobile-nav select { margin-top: 8px; }
+  .visibility-page .visibility-card { padding: 18px; }
+  .visibility-crawler-heading { display: none; }
+  .visibility-crawler-row { grid-template-columns: minmax(0,1fr) 95px; align-items: start; }
+  .visibility-crawler-row>.visibility-badge { grid-column: 1/-1; }
+  .visibility-facts { grid-template-columns: 1fr; gap: 6px; }
+  .visibility-facts dd { margin-bottom: 10px; }
+  .visibility-savebar { align-items: flex-start; flex-direction: column; }
+  .visibility-savebar button { margin-left: 0; }
+  .visibility-page button,.visibility-page .button-link { min-height: 44px; }
+  .visibility-page input,.visibility-page select,.visibility-page textarea { font-size: 16px; }
+}

@@ -1,0 +1,379 @@
+{
+  "products": [
+    {
+      "sku": "GRO-MEAT-20261004-001",
+      "slug": "grocery-chicken-thighs-500g",
+      "name": "Boneless Chicken Thighs 500g",
+      "price": "4.75",
+      "currency": "USD",
+      "unit": "pack",
+      "category": "grocery-meat-poultry",
+      "image": "chicken-thighs.png",
+      "initial_quantity": 1000,
+      "description": "Raw boneless, skinless chicken thigh fillets for grilling, roasting or quick stir-fries. Pack size: 500g. Keep refrigerated and cook thoroughly before serving. Illustrative demo product photography.",
+      "attributes": {
+        "grocery-pack-size": "500g",
+        "weight": 0.5,
+        "grocery_group": [
+          "meat"
+        ],
+        "ingredient_role": [
+          "main_ingredient"
+        ],
+        "meal_occasion": [
+          "lunch",
+          "dinner"
+        ],
+        "preparation_method": [
+          "grilling",
+          "roasting",
+          "sauteing"
+        ],
+        "dish_type": [
+          "stir_fries",
+          "rice_dishes",
+          "roast_dinners"
+        ],
+        "short_description": "Raw boneless, skinless chicken thigh fillets for grilling, roasting or quick stir-fries. Pack size: 500g.",
+        "meta_title": "Boneless Chicken Thighs 500g | Rocento Grocery",
+        "meta_description": "Boneless Chicken Thighs 500g. Raw boneless, skinless chicken thigh fillets for grilling, roasting or quick stir-fries. Shop at Rocento Grocery."
+      }
+    },
+    {
+      "sku": "GRO-MEAT-20261004-002",
+      "slug": "grocery-chicken-wings-1kg",
+      "name": "Chicken Wings 1kg",
+      "price": "5.25",
+      "currency": "USD",
+      "unit": "pack",
+      "category": "grocery-meat-poultry",
+      "image": "chicken-wings.png",
+      "initial_quantity": 1000,
+      "description": "Raw whole chicken wings with skin and bones, ready for roasting or grilling with your choice of seasoning. Pack size: 1kg. Keep refrigerated and cook thoroughly before serving. Illustrative demo product photography.",
+      "attributes": {
+        "grocery-pack-size": "1kg",
+        "weight": 1,
+        "grocery_group": [
+          "meat"
+        ],
+        "ingredient_role": [
+          "main_ingredient"
+        ],
+        "meal_occasion": [
+          "lunch",
+          "dinner"
+        ],
+        "preparation_method": [
+          "roasting",
+          "grilling"
+        ],
+        "dish_type": [
+          "roast_dinners"
+        ],
+        "short_description": "Raw whole chicken wings with skin and bones, ready for roasting or grilling with your choice of seasoning. Pack size: 1kg.",
+        "meta_title": "Chicken Wings 1kg | Rocento Grocery",
+        "meta_description": "Chicken Wings 1kg. Raw whole chicken wings with skin and bones, ready for roasting or grilling with your choice of seasoning. Shop at Rocento Grocery."
+      }
+    },
+    {
+      "sku": "GRO-MEAT-20261004-003",
+      "slug": "grocery-whole-chicken-2kg",
+      "name": "Whole Chicken 2kg",
+      "price": "10.50",
+      "currency": "USD",
+      "unit": "pack",
+      "category": "grocery-meat-poultry",
+      "image": "whole-chicken.png",
+      "initial_quantity": 1000,
+      "description": "A whole raw chicken with skin and bones for family roast dinners, chicken soup or rice dishes. Pack size: 2kg. Keep refrigerated and cook thoroughly before serving. Illustrative demo product photography.",
+      "attributes": {
+        "grocery-pack-size": "2kg",
+        "weight": 2,
+        "grocery_group": [
+          "meat"
+        ],
+        "ingredient_role": [
+          "main_ingredient"
+        ],
+        "meal_occasion": [
+          "lunch",
+          "dinner"
+        ],
+        "preparation_method": [
+          "roasting",
+          "boiling"
+        ],
+        "dish_type": [
+          "roast_dinners",
+          "soups",
+          "rice_dishes"
+        ],
+        "short_description": "A whole raw chicken with skin and bones for family roast dinners, chicken soup or rice dishes. Pack size: 2kg.",
+        "meta_title": "Whole Chicken 2kg | Rocento Grocery",
+        "meta_description": "Whole Chicken 2kg. A whole raw chicken with skin and bones for family roast dinners, chicken soup or rice dishes. Shop at Rocento Grocery."
+      }
+    },
+    {
+      "sku": "GRO-MEAT-20261004-004",
+      "slug": "grocery-turkey-breast-500g",
+      "name": "Turkey Breast Fillets 500g",
+      "price": "6.75",
+      "currency": "USD",
+      "unit": "pack",
+      "category": "grocery-meat-poultry",
+      "image": "turkey-breast.png",
+      "initial_quantity": 1000,
+      "description": "Raw boneless, skinless turkey breast fillets for grilling, pan cooking or slicing into stir-fries. Pack size: 500g. Keep refrigerated and cook thoroughly before serving. Illustrative demo product photography.",
+      "attributes": {
+        "grocery-pack-size": "500g",
+        "weight": 0.5,
+        "grocery_group": [
+          "meat"
+        ],
+        "ingredient_role": [
+          "main_ingredient"
+        ],
+        "meal_occasion": [
+          "lunch",
+          "dinner"
+        ],
+        "preparation_method": [
+          "grilling",
+          "sauteing",
+          "roasting"
+        ],
+        "dish_type": [
+          "stir_fries",
+          "rice_dishes",
+          "sandwiches"
+        ],
+        "short_description": "Raw boneless, skinless turkey breast fillets for grilling, pan cooking or slicing into stir-fries. Pack size: 500g.",
+        "meta_title": "Turkey Breast Fillets 500g | Rocento Grocery",
+        "meta_description": "Turkey Breast Fillets 500g. Raw boneless, skinless turkey breast fillets for grilling, pan cooking or slicing into stir-fries. Shop at Rocento Grocery."
+      }
+    },
+    {
+      "sku": "GRO-MEAT-20261004-005",
+      "slug": "grocery-turkey-mince-500g",
+      "name": "Turkey Mince 500g",
+      "price": "5.75",
+      "currency": "USD",
+      "unit": "pack",
+      "category": "grocery-meat-poultry",
+      "image": "turkey-mince.png",
+      "initial_quantity": 1000,
+      "description": "Plain raw minced turkey for homemade meatballs, pasta sauces or rice dishes. Unseasoned so you can add your own ingredients. Pack size: 500g. Keep refrigerated and cook thoroughly before serving. Illustrative demo product photography.",
+      "attributes": {
+        "grocery-pack-size": "500g",
+        "weight": 0.5,
+        "grocery_group": [
+          "meat"
+        ],
+        "ingredient_role": [
+          "main_ingredient"
+        ],
+        "meal_occasion": [
+          "lunch",
+          "dinner"
+        ],
+        "preparation_method": [
+          "sauteing",
+          "baking"
+        ],
+        "dish_type": [
+          "pasta_dishes",
+          "rice_dishes"
+        ],
+        "short_description": "Plain raw minced turkey for homemade meatballs, pasta sauces or rice dishes. Unseasoned so you can add your own ingredients. Pack size: 500g.",
+        "meta_title": "Turkey Mince 500g | Rocento Grocery",
+        "meta_description": "Turkey Mince 500g. Plain raw minced turkey for homemade meatballs, pasta sauces or rice dishes. Unseasoned so you can add your own ingredients. Shop at Rocento Grocery."
+      }
+    },
+    {
+      "sku": "GRO-MEAT-20261004-006",
+      "slug": "grocery-chicken-tenderloins-500g",
+      "name": "Chicken Tenderloins 500g",
+      "price": "9.75",
+      "currency": "USD",
+      "unit": "pack",
+      "category": "grocery-meat-poultry",
+      "image": "chicken-tenderloins-white.png",
+      "initial_quantity": 1000,
+      "description": "Raw boneless, skinless chicken tenderloins for grilling, pan cooking and stir-fries. Pack size: 500g. Keep refrigerated and cook thoroughly before serving. Illustrative demo product photography.",
+      "attributes": {
+        "grocery-pack-size": "500g",
+        "weight": 0.5,
+        "grocery_group": [
+          "meat"
+        ],
+        "ingredient_role": [
+          "main_ingredient"
+        ],
+        "meal_occasion": [
+          "lunch",
+          "dinner"
+        ],
+        "preparation_method": [
+          "grilling",
+          "sauteing"
+        ],
+        "dish_type": [
+          "stir_fries",
+          "rice_dishes"
+        ],
+        "short_description": "Raw boneless, skinless chicken tenderloins for grilling, pan cooking and stir-fries. Pack size: 500g.",
+        "meta_title": "Chicken Tenderloins 500g | Rocento Grocery",
+        "meta_description": "Chicken Tenderloins 500g. Raw boneless, skinless chicken tenderloins for grilling, pan cooking and stir-fries. Shop at Rocento Grocery."
+      }
+    },
+    {
+      "sku": "GRO-MEAT-20261004-007",
+      "slug": "grocery-beef-stew-cubes-1kg",
+      "name": "Beef Stew Cubes 1kg",
+      "price": "11.50",
+      "currency": "USD",
+      "unit": "pack",
+      "category": "grocery-meat-poultry",
+      "image": "beef-stew-cubes.png",
+      "initial_quantity": 1000,
+      "description": "Raw boneless beef cut into cubes for slow-cooked casseroles, soups and rice dishes. Unseasoned and ready for your recipe. Pack size: 1kg. Keep refrigerated and cook thoroughly before serving. Illustrative demo product photography.",
+      "attributes": {
+        "grocery-pack-size": "1kg",
+        "weight": 1,
+        "grocery_group": [
+          "meat"
+        ],
+        "ingredient_role": [
+          "main_ingredient"
+        ],
+        "meal_occasion": [
+          "lunch",
+          "dinner"
+        ],
+        "preparation_method": [
+          "boiling",
+          "roasting"
+        ],
+        "dish_type": [
+          "soups",
+          "rice_dishes",
+          "roast_dinners"
+        ],
+        "short_description": "Raw boneless beef cut into cubes for slow-cooked casseroles, soups and rice dishes. Unseasoned and ready for your recipe. Pack size: 1kg.",
+        "meta_title": "Beef Stew Cubes 1kg | Rocento Grocery",
+        "meta_description": "Beef Stew Cubes 1kg. Raw boneless beef cut into cubes for slow-cooked casseroles, soups and rice dishes. Unseasoned and ready for your recipe. Shop at Rocento Grocery."
+      }
+    },
+    {
+      "sku": "GRO-MEAT-20261004-008",
+      "slug": "grocery-beef-short-ribs-1kg",
+      "name": "Beef Short Ribs 1kg",
+      "price": "13.50",
+      "currency": "USD",
+      "unit": "pack",
+      "category": "grocery-meat-poultry",
+      "image": "beef-short-ribs.png",
+      "initial_quantity": 1000,
+      "description": "Raw bone-in beef short ribs with thick meat, suited to slow roasting and rich family meals. Pack size: 1kg. Keep refrigerated and cook thoroughly before serving. Illustrative demo product photography.",
+      "attributes": {
+        "grocery-pack-size": "1kg",
+        "weight": 1,
+        "grocery_group": [
+          "meat"
+        ],
+        "ingredient_role": [
+          "main_ingredient"
+        ],
+        "meal_occasion": [
+          "lunch",
+          "dinner"
+        ],
+        "preparation_method": [
+          "roasting"
+        ],
+        "dish_type": [
+          "roast_dinners",
+          "rice_dishes"
+        ],
+        "short_description": "Raw bone-in beef short ribs with thick meat, suited to slow roasting and rich family meals. Pack size: 1kg.",
+        "meta_title": "Beef Short Ribs 1kg | Rocento Grocery",
+        "meta_description": "Beef Short Ribs 1kg. Raw bone-in beef short ribs with thick meat, suited to slow roasting and rich family meals. Shop at Rocento Grocery."
+      }
+    },
+    {
+      "sku": "GRO-MEAT-20261004-009",
+      "slug": "grocery-lamb-shanks-1kg",
+      "name": "Lamb Shanks 1kg",
+      "price": "14.50",
+      "currency": "USD",
+      "unit": "pack",
+      "category": "grocery-meat-poultry",
+      "image": "lamb-shanks.png",
+      "initial_quantity": 1000,
+      "description": "Raw bone-in lamb shanks for slow roasting or simmering until tender, served with rice or vegetables. Pack size: 1kg. Keep refrigerated and cook thoroughly before serving. Illustrative demo product photography.",
+      "attributes": {
+        "grocery-pack-size": "1kg",
+        "weight": 1,
+        "grocery_group": [
+          "meat"
+        ],
+        "ingredient_role": [
+          "main_ingredient"
+        ],
+        "meal_occasion": [
+          "lunch",
+          "dinner"
+        ],
+        "preparation_method": [
+          "roasting",
+          "boiling"
+        ],
+        "dish_type": [
+          "roast_dinners",
+          "rice_dishes"
+        ],
+        "short_description": "Raw bone-in lamb shanks for slow roasting or simmering until tender, served with rice or vegetables. Pack size: 1kg.",
+        "meta_title": "Lamb Shanks 1kg | Rocento Grocery",
+        "meta_description": "Lamb Shanks 1kg. Raw bone-in lamb shanks for slow roasting or simmering until tender, served with rice or vegetables. Shop at Rocento Grocery."
+      }
+    },
+    {
+      "sku": "GRO-MEAT-20261004-010",
+      "slug": "grocery-lamb-mince-500g",
+      "name": "Lamb Mince 500g",
+      "price": "7.25",
+      "currency": "USD",
+      "unit": "pack",
+      "category": "grocery-meat-poultry",
+      "image": "lamb-mince.png",
+      "initial_quantity": 1000,
+      "description": "Plain raw minced lamb for homemade kofta, meatballs and stuffed vegetables. Unseasoned for flexible everyday cooking. Pack size: 500g. Keep refrigerated and cook thoroughly before serving. Illustrative demo product photography.",
+      "attributes": {
+        "grocery-pack-size": "500g",
+        "weight": 0.5,
+        "grocery_group": [
+          "meat"
+        ],
+        "ingredient_role": [
+          "main_ingredient"
+        ],
+        "meal_occasion": [
+          "lunch",
+          "dinner"
+        ],
+        "preparation_method": [
+          "grilling",
+          "sauteing",
+          "baking"
+        ],
+        "dish_type": [
+          "rice_dishes",
+          "pasta_dishes"
+        ],
+        "short_description": "Plain raw minced lamb for homemade kofta, meatballs and stuffed vegetables. Unseasoned for flexible everyday cooking. Pack size: 500g.",
+        "meta_title": "Lamb Mince 500g | Rocento Grocery",
+        "meta_description": "Lamb Mince 500g. Plain raw minced lamb for homemade kofta, meatballs and stuffed vegetables. Unseasoned for flexible everyday cooking. Shop at Rocento Grocery."
+      }
+    }
+  ]
+}

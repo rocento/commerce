@@ -1,0 +1,23 @@
+{
+  "malformed_auth": {
+    "customer": {
+      "id": "70000000-0000-0000-0000-000000000001",
+      "verified": true
+    },
+    "access_token": false
+  },
+  "malformed_cart": {
+    "id": "70000000-0000-0000-0000-000000000002",
+    "items": null,
+    "subtotal": "1.00",
+    "currency": "USD",
+    "fully_reserved": true
+  },
+  "malformed_quote": {
+    "id": "70000000-0000-0000-0000-000000000003",
+    "expires_at": "2030-01-01T00:00:00Z",
+    "snapshot": {
+      "total": {}
+    }
+  }
+}

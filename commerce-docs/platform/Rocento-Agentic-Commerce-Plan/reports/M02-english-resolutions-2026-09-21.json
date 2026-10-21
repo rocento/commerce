@@ -1,0 +1,22 @@
+{
+  "version": "1",
+  "scope": "m02-english-v1",
+  "issues": [
+    {
+      "case_id": "grocery-live-budget-en",
+      "status": "fixed",
+      "evidence": "english-live-baseline.json; exact historical extraction replay; store-flag SSE; real browser card"
+    },
+    {
+      "case_id": "grocery-live-gift",
+      "status": "fixed",
+      "evidence": "english-live-baseline.json; historical coffee gift and later gift set/category variants replayed; real browser card"
+    },
+    {
+      "case_id": "grocery-live-budget-ar",
+      "status": "deferred",
+      "reason": "User excluded Arabic from current stage; no Arabic fix or acceptance claimed."
+    }
+  ],
+  "human_rubric": "pending; no human scores fabricated"
+}

@@ -1,0 +1,1000 @@
+R0001 [product] Recommend milk
+R0002 [product] Please recommend milk
+R0003 [product] pls recommend milk
+R0004 [product] Suggest milk
+R0005 [product] Can you recommend milk?
+R0006 [product] Could you suggest milk?
+R0007 [product] I need recommendations for milk
+R0008 [product] What milk would you recommend?
+R0009 [product] Which milk do you suggest?
+R0010 [product] Help me choose milk
+R0011 [product] I am looking for milk recommendations
+R0012 [product] Any recommendations for milk?
+R0013 [product] What are your recommendations for milk?
+R0014 [product] Show me recommended milk
+R0015 [product] I would like some milk suggestions
+R0016 [product] Can you help me pick milk?
+R0017 [product] Recommend some milk, please
+R0018 [product] I want a recommendation for milk
+R0019 [product] plz recomend milk
+R0020 [product] Could I get suggestions for milk?
+R0021 [product] Recommend bread
+R0022 [product] Please recommend bread
+R0023 [product] pls recommend bread
+R0024 [product] Suggest bread
+R0025 [product] Can you recommend bread?
+R0026 [product] Could you suggest bread?
+R0027 [product] I need recommendations for bread
+R0028 [product] What bread would you recommend?
+R0029 [product] Which bread do you suggest?
+R0030 [product] Help me choose bread
+R0031 [product] I am looking for bread recommendations
+R0032 [product] Any recommendations for bread?
+R0033 [product] What are your recommendations for bread?
+R0034 [product] Show me recommended bread
+R0035 [product] I would like some bread suggestions
+R0036 [product] Can you help me pick bread?
+R0037 [product] Recommend some bread, please
+R0038 [product] I want a recommendation for bread
+R0039 [product] plz recomend bread
+R0040 [product] Could I get suggestions for bread?
+R0041 [product] Recommend rice
+R0042 [product] Please recommend rice
+R0043 [product] pls recommend rice
+R0044 [product] Suggest rice
+R0045 [product] Can you recommend rice?
+R0046 [product] Could you suggest rice?
+R0047 [product] I need recommendations for rice
+R0048 [product] What rice would you recommend?
+R0049 [product] Which rice do you suggest?
+R0050 [product] Help me choose rice
+R0051 [product] I am looking for rice recommendations
+R0052 [product] Any recommendations for rice?
+R0053 [product] What are your recommendations for rice?
+R0054 [product] Show me recommended rice
+R0055 [product] I would like some rice suggestions
+R0056 [product] Can you help me pick rice?
+R0057 [product] Recommend some rice, please
+R0058 [product] I want a recommendation for rice
+R0059 [product] plz recomend rice
+R0060 [product] Could I get suggestions for rice?
+R0061 [product] Recommend pasta
+R0062 [product] Please recommend pasta
+R0063 [product] pls recommend pasta
+R0064 [product] Suggest pasta
+R0065 [product] Can you recommend pasta?
+R0066 [product] Could you suggest pasta?
+R0067 [product] I need recommendations for pasta
+R0068 [product] What pasta would you recommend?
+R0069 [product] Which pasta do you suggest?
+R0070 [product] Help me choose pasta
+R0071 [product] I am looking for pasta recommendations
+R0072 [product] Any recommendations for pasta?
+R0073 [product] What are your recommendations for pasta?
+R0074 [product] Show me recommended pasta
+R0075 [product] I would like some pasta suggestions
+R0076 [product] Can you help me pick pasta?
+R0077 [product] Recommend some pasta, please
+R0078 [product] I want a recommendation for pasta
+R0079 [product] plz recomend pasta
+R0080 [product] Could I get suggestions for pasta?
+R0081 [product] Recommend coffee
+R0082 [product] Please recommend coffee
+R0083 [product] pls recommend coffee
+R0084 [product] Suggest coffee
+R0085 [product] Can you recommend coffee?
+R0086 [product] Could you suggest coffee?
+R0087 [product] I need recommendations for coffee
+R0088 [product] What coffee would you recommend?
+R0089 [product] Which coffee do you suggest?
+R0090 [product] Help me choose coffee
+R0091 [product] I am looking for coffee recommendations
+R0092 [product] Any recommendations for coffee?
+R0093 [product] What are your recommendations for coffee?
+R0094 [product] Show me recommended coffee
+R0095 [product] I would like some coffee suggestions
+R0096 [product] Can you help me pick coffee?
+R0097 [product] Recommend some coffee, please
+R0098 [product] I want a recommendation for coffee
+R0099 [product] plz recomend coffee
+R0100 [product] Could I get suggestions for coffee?
+R0101 [product] Recommend tea
+R0102 [product] Please recommend tea
+R0103 [product] pls recommend tea
+R0104 [product] Suggest tea
+R0105 [product] Can you recommend tea?
+R0106 [product] Could you suggest tea?
+R0107 [product] I need recommendations for tea
+R0108 [product] What tea would you recommend?
+R0109 [product] Which tea do you suggest?
+R0110 [product] Help me choose tea
+R0111 [product] I am looking for tea recommendations
+R0112 [product] Any recommendations for tea?
+R0113 [product] What are your recommendations for tea?
+R0114 [product] Show me recommended tea
+R0115 [product] I would like some tea suggestions
+R0116 [product] Can you help me pick tea?
+R0117 [product] Recommend some tea, please
+R0118 [product] I want a recommendation for tea
+R0119 [product] plz recomend tea
+R0120 [product] Could I get suggestions for tea?
+R0121 [product] Recommend apples
+R0122 [product] Please recommend apples
+R0123 [product] pls recommend apples
+R0124 [product] Suggest apples
+R0125 [product] Can you recommend apples?
+R0126 [product] Could you suggest apples?
+R0127 [product] I need recommendations for apples
+R0128 [product] What apples would you recommend?
+R0129 [product] Which apples do you suggest?
+R0130 [product] Help me choose apples
+R0131 [product] I am looking for apples recommendations
+R0132 [product] Any recommendations for apples?
+R0133 [product] What are your recommendations for apples?
+R0134 [product] Show me recommended apples
+R0135 [product] I would like some apples suggestions
+R0136 [product] Can you help me pick apples?
+R0137 [product] Recommend some apples, please
+R0138 [product] I want a recommendation for apples
+R0139 [product] plz recomend apples
+R0140 [product] Could I get suggestions for apples?
+R0141 [product] Recommend bananas
+R0142 [product] Please recommend bananas
+R0143 [product] pls recommend bananas
+R0144 [product] Suggest bananas
+R0145 [product] Can you recommend bananas?
+R0146 [product] Could you suggest bananas?
+R0147 [product] I need recommendations for bananas
+R0148 [product] What bananas would you recommend?
+R0149 [product] Which bananas do you suggest?
+R0150 [product] Help me choose bananas
+R0151 [product] I am looking for bananas recommendations
+R0152 [product] Any recommendations for bananas?
+R0153 [product] What are your recommendations for bananas?
+R0154 [product] Show me recommended bananas
+R0155 [product] I would like some bananas suggestions
+R0156 [product] Can you help me pick bananas?
+R0157 [product] Recommend some bananas, please
+R0158 [product] I want a recommendation for bananas
+R0159 [product] plz recomend bananas
+R0160 [product] Could I get suggestions for bananas?
+R0161 [product] Recommend eggs
+R0162 [product] Please recommend eggs
+R0163 [product] pls recommend eggs
+R0164 [product] Suggest eggs
+R0165 [product] Can you recommend eggs?
+R0166 [product] Could you suggest eggs?
+R0167 [product] I need recommendations for eggs
+R0168 [product] What eggs would you recommend?
+R0169 [product] Which eggs do you suggest?
+R0170 [product] Help me choose eggs
+R0171 [product] I am looking for eggs recommendations
+R0172 [product] Any recommendations for eggs?
+R0173 [product] What are your recommendations for eggs?
+R0174 [product] Show me recommended eggs
+R0175 [product] I would like some eggs suggestions
+R0176 [product] Can you help me pick eggs?
+R0177 [product] Recommend some eggs, please
+R0178 [product] I want a recommendation for eggs
+R0179 [product] plz recomend eggs
+R0180 [product] Could I get suggestions for eggs?
+R0181 [product] Recommend yogurt
+R0182 [product] Please recommend yogurt
+R0183 [product] pls recommend yogurt
+R0184 [product] Suggest yogurt
+R0185 [product] Can you recommend yogurt?
+R0186 [product] Could you suggest yogurt?
+R0187 [product] I need recommendations for yogurt
+R0188 [product] What yogurt would you recommend?
+R0189 [product] Which yogurt do you suggest?
+R0190 [product] Help me choose yogurt
+R0191 [product] I am looking for yogurt recommendations
+R0192 [product] Any recommendations for yogurt?
+R0193 [product] What are your recommendations for yogurt?
+R0194 [product] Show me recommended yogurt
+R0195 [product] I would like some yogurt suggestions
+R0196 [product] Can you help me pick yogurt?
+R0197 [product] Recommend some yogurt, please
+R0198 [product] I want a recommendation for yogurt
+R0199 [product] plz recomend yogurt
+R0200 [product] Could I get suggestions for yogurt?
+R0201 [product] Recommend rings
+R0202 [product] Please recommend rings
+R0203 [product] pls recommend rings
+R0204 [product] Suggest rings
+R0205 [product] Can you recommend rings?
+R0206 [product] Could you suggest rings?
+R0207 [product] I need recommendations for rings
+R0208 [product] What rings would you recommend?
+R0209 [product] Which rings do you suggest?
+R0210 [product] Help me choose rings
+R0211 [product] I am looking for rings recommendations
+R0212 [product] Any recommendations for rings?
+R0213 [product] What are your recommendations for rings?
+R0214 [product] Show me recommended rings
+R0215 [product] I would like some rings suggestions
+R0216 [product] Can you help me pick rings?
+R0217 [product] Recommend some rings, please
+R0218 [product] I want a recommendation for rings
+R0219 [product] plz recomend rings
+R0220 [product] Could I get suggestions for rings?
+R0221 [product] Recommend necklaces
+R0222 [product] Please recommend necklaces
+R0223 [product] pls recommend necklaces
+R0224 [product] Suggest necklaces
+R0225 [product] Can you recommend necklaces?
+R0226 [product] Could you suggest necklaces?
+R0227 [product] I need recommendations for necklaces
+R0228 [product] What necklaces would you recommend?
+R0229 [product] Which necklaces do you suggest?
+R0230 [product] Help me choose necklaces
+R0231 [product] I am looking for necklaces recommendations
+R0232 [product] Any recommendations for necklaces?
+R0233 [product] What are your recommendations for necklaces?
+R0234 [product] Show me recommended necklaces
+R0235 [product] I would like some necklaces suggestions
+R0236 [product] Can you help me pick necklaces?
+R0237 [product] Recommend some necklaces, please
+R0238 [product] I want a recommendation for necklaces
+R0239 [product] plz recomend necklaces
+R0240 [product] Could I get suggestions for necklaces?
+R0241 [product] Recommend bracelets
+R0242 [product] Please recommend bracelets
+R0243 [product] pls recommend bracelets
+R0244 [product] Suggest bracelets
+R0245 [product] Can you recommend bracelets?
+R0246 [product] Could you suggest bracelets?
+R0247 [product] I need recommendations for bracelets
+R0248 [product] What bracelets would you recommend?
+R0249 [product] Which bracelets do you suggest?
+R0250 [product] Help me choose bracelets
+R0251 [product] I am looking for bracelets recommendations
+R0252 [product] Any recommendations for bracelets?
+R0253 [product] What are your recommendations for bracelets?
+R0254 [product] Show me recommended bracelets
+R0255 [product] I would like some bracelets suggestions
+R0256 [product] Can you help me pick bracelets?
+R0257 [product] Recommend some bracelets, please
+R0258 [product] I want a recommendation for bracelets
+R0259 [product] plz recomend bracelets
+R0260 [product] Could I get suggestions for bracelets?
+R0261 [product] Recommend earrings
+R0262 [product] Please recommend earrings
+R0263 [product] pls recommend earrings
+R0264 [product] Suggest earrings
+R0265 [product] Can you recommend earrings?
+R0266 [product] Could you suggest earrings?
+R0267 [product] I need recommendations for earrings
+R0268 [product] What earrings would you recommend?
+R0269 [product] Which earrings do you suggest?
+R0270 [product] Help me choose earrings
+R0271 [product] I am looking for earrings recommendations
+R0272 [product] Any recommendations for earrings?
+R0273 [product] What are your recommendations for earrings?
+R0274 [product] Show me recommended earrings
+R0275 [product] I would like some earrings suggestions
+R0276 [product] Can you help me pick earrings?
+R0277 [product] Recommend some earrings, please
+R0278 [product] I want a recommendation for earrings
+R0279 [product] plz recomend earrings
+R0280 [product] Could I get suggestions for earrings?
+R0281 [product] Recommend anklets
+R0282 [product] Please recommend anklets
+R0283 [product] pls recommend anklets
+R0284 [product] Suggest anklets
+R0285 [product] Can you recommend anklets?
+R0286 [product] Could you suggest anklets?
+R0287 [product] I need recommendations for anklets
+R0288 [product] What anklets would you recommend?
+R0289 [product] Which anklets do you suggest?
+R0290 [product] Help me choose anklets
+R0291 [product] I am looking for anklets recommendations
+R0292 [product] Any recommendations for anklets?
+R0293 [product] What are your recommendations for anklets?
+R0294 [product] Show me recommended anklets
+R0295 [product] I would like some anklets suggestions
+R0296 [product] Can you help me pick anklets?
+R0297 [product] Recommend some anklets, please
+R0298 [product] I want a recommendation for anklets
+R0299 [product] plz recomend anklets
+R0300 [product] Could I get suggestions for anklets?
+R0301 [product] Recommend brooches
+R0302 [product] Please recommend brooches
+R0303 [product] pls recommend brooches
+R0304 [product] Suggest brooches
+R0305 [product] Can you recommend brooches?
+R0306 [product] Could you suggest brooches?
+R0307 [product] I need recommendations for brooches
+R0308 [product] What brooches would you recommend?
+R0309 [product] Which brooches do you suggest?
+R0310 [product] Help me choose brooches
+R0311 [product] I am looking for brooches recommendations
+R0312 [product] Any recommendations for brooches?
+R0313 [product] What are your recommendations for brooches?
+R0314 [product] Show me recommended brooches
+R0315 [product] I would like some brooches suggestions
+R0316 [product] Can you help me pick brooches?
+R0317 [product] Recommend some brooches, please
+R0318 [product] I want a recommendation for brooches
+R0319 [product] plz recomend brooches
+R0320 [product] Could I get suggestions for brooches?
+R0321 [product] Recommend pendants
+R0322 [product] Please recommend pendants
+R0323 [product] pls recommend pendants
+R0324 [product] Suggest pendants
+R0325 [product] Can you recommend pendants?
+R0326 [product] Could you suggest pendants?
+R0327 [product] I need recommendations for pendants
+R0328 [product] What pendants would you recommend?
+R0329 [product] Which pendants do you suggest?
+R0330 [product] Help me choose pendants
+R0331 [product] I am looking for pendants recommendations
+R0332 [product] Any recommendations for pendants?
+R0333 [product] What are your recommendations for pendants?
+R0334 [product] Show me recommended pendants
+R0335 [product] I would like some pendants suggestions
+R0336 [product] Can you help me pick pendants?
+R0337 [product] Recommend some pendants, please
+R0338 [product] I want a recommendation for pendants
+R0339 [product] plz recomend pendants
+R0340 [product] Could I get suggestions for pendants?
+R0341 [product] Recommend hoop earrings
+R0342 [product] Please recommend hoop earrings
+R0343 [product] pls recommend hoop earrings
+R0344 [product] Suggest hoop earrings
+R0345 [product] Can you recommend hoop earrings?
+R0346 [product] Could you suggest hoop earrings?
+R0347 [product] I need recommendations for hoop earrings
+R0348 [product] What hoop earrings would you recommend?
+R0349 [product] Which hoop earrings do you suggest?
+R0350 [product] Help me choose hoop earrings
+R0351 [product] I am looking for hoop earrings recommendations
+R0352 [product] Any recommendations for hoop earrings?
+R0353 [product] What are your recommendations for hoop earrings?
+R0354 [product] Show me recommended hoop earrings
+R0355 [product] I would like some hoop earrings suggestions
+R0356 [product] Can you help me pick hoop earrings?
+R0357 [product] Recommend some hoop earrings, please
+R0358 [product] I want a recommendation for hoop earrings
+R0359 [product] plz recomend hoop earrings
+R0360 [product] Could I get suggestions for hoop earrings?
+R0361 [product] Recommend stud earrings
+R0362 [product] Please recommend stud earrings
+R0363 [product] pls recommend stud earrings
+R0364 [product] Suggest stud earrings
+R0365 [product] Can you recommend stud earrings?
+R0366 [product] Could you suggest stud earrings?
+R0367 [product] I need recommendations for stud earrings
+R0368 [product] What stud earrings would you recommend?
+R0369 [product] Which stud earrings do you suggest?
+R0370 [product] Help me choose stud earrings
+R0371 [product] I am looking for stud earrings recommendations
+R0372 [product] Any recommendations for stud earrings?
+R0373 [product] What are your recommendations for stud earrings?
+R0374 [product] Show me recommended stud earrings
+R0375 [product] I would like some stud earrings suggestions
+R0376 [product] Can you help me pick stud earrings?
+R0377 [product] Recommend some stud earrings, please
+R0378 [product] I want a recommendation for stud earrings
+R0379 [product] plz recomend stud earrings
+R0380 [product] Could I get suggestions for stud earrings?
+R0381 [product] Recommend charm bracelets
+R0382 [product] Please recommend charm bracelets
+R0383 [product] pls recommend charm bracelets
+R0384 [product] Suggest charm bracelets
+R0385 [product] Can you recommend charm bracelets?
+R0386 [product] Could you suggest charm bracelets?
+R0387 [product] I need recommendations for charm bracelets
+R0388 [product] What charm bracelets would you recommend?
+R0389 [product] Which charm bracelets do you suggest?
+R0390 [product] Help me choose charm bracelets
+R0391 [product] I am looking for charm bracelets recommendations
+R0392 [product] Any recommendations for charm bracelets?
+R0393 [product] What are your recommendations for charm bracelets?
+R0394 [product] Show me recommended charm bracelets
+R0395 [product] I would like some charm bracelets suggestions
+R0396 [product] Can you help me pick charm bracelets?
+R0397 [product] Recommend some charm bracelets, please
+R0398 [product] I want a recommendation for charm bracelets
+R0399 [product] plz recomend charm bracelets
+R0400 [product] Could I get suggestions for charm bracelets?
+R0401 [budget] recommend milk under $10
+R0402 [budget] suggest milk below $20
+R0403 [budget] Can you recommend milk for less than $30?
+R0404 [budget] recommend milk up to $40
+R0405 [budget] Suggest milk for no more than $50
+R0406 [budget] I need milk recommendations under $60
+R0407 [budget] Which milk would you recommend below $70?
+R0408 [budget] please recommend milk at most $80
+R0409 [budget] Show me recommended milk under 90 USD
+R0410 [budget] Any suggestions for milk under $100?
+R0411 [budget] recommend bread under $10
+R0412 [budget] suggest bread below $20
+R0413 [budget] Can you recommend bread for less than $30?
+R0414 [budget] recommend bread up to $40
+R0415 [budget] Suggest bread for no more than $50
+R0416 [budget] I need bread recommendations under $60
+R0417 [budget] Which bread would you recommend below $70?
+R0418 [budget] please recommend bread at most $80
+R0419 [budget] Show me recommended bread under 90 USD
+R0420 [budget] Any suggestions for bread under $100?
+R0421 [budget] recommend rice under $10
+R0422 [budget] suggest rice below $20
+R0423 [budget] Can you recommend rice for less than $30?
+R0424 [budget] recommend rice up to $40
+R0425 [budget] Suggest rice for no more than $50
+R0426 [budget] I need rice recommendations under $60
+R0427 [budget] Which rice would you recommend below $70?
+R0428 [budget] please recommend rice at most $80
+R0429 [budget] Show me recommended rice under 90 USD
+R0430 [budget] Any suggestions for rice under $100?
+R0431 [budget] recommend pasta under $10
+R0432 [budget] suggest pasta below $20
+R0433 [budget] Can you recommend pasta for less than $30?
+R0434 [budget] recommend pasta up to $40
+R0435 [budget] Suggest pasta for no more than $50
+R0436 [budget] I need pasta recommendations under $60
+R0437 [budget] Which pasta would you recommend below $70?
+R0438 [budget] please recommend pasta at most $80
+R0439 [budget] Show me recommended pasta under 90 USD
+R0440 [budget] Any suggestions for pasta under $100?
+R0441 [budget] recommend coffee under $10
+R0442 [budget] suggest coffee below $20
+R0443 [budget] Can you recommend coffee for less than $30?
+R0444 [budget] recommend coffee up to $40
+R0445 [budget] Suggest coffee for no more than $50
+R0446 [budget] I need coffee recommendations under $60
+R0447 [budget] Which coffee would you recommend below $70?
+R0448 [budget] please recommend coffee at most $80
+R0449 [budget] Show me recommended coffee under 90 USD
+R0450 [budget] Any suggestions for coffee under $100?
+R0451 [budget] recommend tea under $10
+R0452 [budget] suggest tea below $20
+R0453 [budget] Can you recommend tea for less than $30?
+R0454 [budget] recommend tea up to $40
+R0455 [budget] Suggest tea for no more than $50
+R0456 [budget] I need tea recommendations under $60
+R0457 [budget] Which tea would you recommend below $70?
+R0458 [budget] please recommend tea at most $80
+R0459 [budget] Show me recommended tea under 90 USD
+R0460 [budget] Any suggestions for tea under $100?
+R0461 [budget] recommend apples under $10
+R0462 [budget] suggest apples below $20
+R0463 [budget] Can you recommend apples for less than $30?
+R0464 [budget] recommend apples up to $40
+R0465 [budget] Suggest apples for no more than $50
+R0466 [budget] I need apples recommendations under $60
+R0467 [budget] Which apples would you recommend below $70?
+R0468 [budget] please recommend apples at most $80
+R0469 [budget] Show me recommended apples under 90 USD
+R0470 [budget] Any suggestions for apples under $100?
+R0471 [budget] recommend bananas under $10
+R0472 [budget] suggest bananas below $20
+R0473 [budget] Can you recommend bananas for less than $30?
+R0474 [budget] recommend bananas up to $40
+R0475 [budget] Suggest bananas for no more than $50
+R0476 [budget] I need bananas recommendations under $60
+R0477 [budget] Which bananas would you recommend below $70?
+R0478 [budget] please recommend bananas at most $80
+R0479 [budget] Show me recommended bananas under 90 USD
+R0480 [budget] Any suggestions for bananas under $100?
+R0481 [budget] recommend eggs under $10
+R0482 [budget] suggest eggs below $20
+R0483 [budget] Can you recommend eggs for less than $30?
+R0484 [budget] recommend eggs up to $40
+R0485 [budget] Suggest eggs for no more than $50
+R0486 [budget] I need eggs recommendations under $60
+R0487 [budget] Which eggs would you recommend below $70?
+R0488 [budget] please recommend eggs at most $80
+R0489 [budget] Show me recommended eggs under 90 USD
+R0490 [budget] Any suggestions for eggs under $100?
+R0491 [budget] recommend yogurt under $10
+R0492 [budget] suggest yogurt below $20
+R0493 [budget] Can you recommend yogurt for less than $30?
+R0494 [budget] recommend yogurt up to $40
+R0495 [budget] Suggest yogurt for no more than $50
+R0496 [budget] I need yogurt recommendations under $60
+R0497 [budget] Which yogurt would you recommend below $70?
+R0498 [budget] please recommend yogurt at most $80
+R0499 [budget] Show me recommended yogurt under 90 USD
+R0500 [budget] Any suggestions for yogurt under $100?
+R0501 [budget] recommend rings under $10
+R0502 [budget] suggest rings below $20
+R0503 [budget] Can you recommend rings for less than $30?
+R0504 [budget] recommend rings up to $40
+R0505 [budget] Suggest rings for no more than $50
+R0506 [budget] I need rings recommendations under $60
+R0507 [budget] Which rings would you recommend below $70?
+R0508 [budget] please recommend rings at most $80
+R0509 [budget] Show me recommended rings under 90 USD
+R0510 [budget] Any suggestions for rings under $100?
+R0511 [budget] recommend necklaces under $10
+R0512 [budget] suggest necklaces below $20
+R0513 [budget] Can you recommend necklaces for less than $30?
+R0514 [budget] recommend necklaces up to $40
+R0515 [budget] Suggest necklaces for no more than $50
+R0516 [budget] I need necklaces recommendations under $60
+R0517 [budget] Which necklaces would you recommend below $70?
+R0518 [budget] please recommend necklaces at most $80
+R0519 [budget] Show me recommended necklaces under 90 USD
+R0520 [budget] Any suggestions for necklaces under $100?
+R0521 [budget] recommend bracelets under $10
+R0522 [budget] suggest bracelets below $20
+R0523 [budget] Can you recommend bracelets for less than $30?
+R0524 [budget] recommend bracelets up to $40
+R0525 [budget] Suggest bracelets for no more than $50
+R0526 [budget] I need bracelets recommendations under $60
+R0527 [budget] Which bracelets would you recommend below $70?
+R0528 [budget] please recommend bracelets at most $80
+R0529 [budget] Show me recommended bracelets under 90 USD
+R0530 [budget] Any suggestions for bracelets under $100?
+R0531 [budget] recommend earrings under $10
+R0532 [budget] suggest earrings below $20
+R0533 [budget] Can you recommend earrings for less than $30?
+R0534 [budget] recommend earrings up to $40
+R0535 [budget] Suggest earrings for no more than $50
+R0536 [budget] I need earrings recommendations under $60
+R0537 [budget] Which earrings would you recommend below $70?
+R0538 [budget] please recommend earrings at most $80
+R0539 [budget] Show me recommended earrings under 90 USD
+R0540 [budget] Any suggestions for earrings under $100?
+R0541 [budget] recommend anklets under $10
+R0542 [budget] suggest anklets below $20
+R0543 [budget] Can you recommend anklets for less than $30?
+R0544 [budget] recommend anklets up to $40
+R0545 [budget] Suggest anklets for no more than $50
+R0546 [budget] I need anklets recommendations under $60
+R0547 [budget] Which anklets would you recommend below $70?
+R0548 [budget] please recommend anklets at most $80
+R0549 [budget] Show me recommended anklets under 90 USD
+R0550 [budget] Any suggestions for anklets under $100?
+R0551 [budget] recommend brooches under $10
+R0552 [budget] suggest brooches below $20
+R0553 [budget] Can you recommend brooches for less than $30?
+R0554 [budget] recommend brooches up to $40
+R0555 [budget] Suggest brooches for no more than $50
+R0556 [budget] I need brooches recommendations under $60
+R0557 [budget] Which brooches would you recommend below $70?
+R0558 [budget] please recommend brooches at most $80
+R0559 [budget] Show me recommended brooches under 90 USD
+R0560 [budget] Any suggestions for brooches under $100?
+R0561 [budget] recommend pendants under $10
+R0562 [budget] suggest pendants below $20
+R0563 [budget] Can you recommend pendants for less than $30?
+R0564 [budget] recommend pendants up to $40
+R0565 [budget] Suggest pendants for no more than $50
+R0566 [budget] I need pendants recommendations under $60
+R0567 [budget] Which pendants would you recommend below $70?
+R0568 [budget] please recommend pendants at most $80
+R0569 [budget] Show me recommended pendants under 90 USD
+R0570 [budget] Any suggestions for pendants under $100?
+R0571 [budget] recommend hoop earrings under $10
+R0572 [budget] suggest hoop earrings below $20
+R0573 [budget] Can you recommend hoop earrings for less than $30?
+R0574 [budget] recommend hoop earrings up to $40
+R0575 [budget] Suggest hoop earrings for no more than $50
+R0576 [budget] I need hoop earrings recommendations under $60
+R0577 [budget] Which hoop earrings would you recommend below $70?
+R0578 [budget] please recommend hoop earrings at most $80
+R0579 [budget] Show me recommended hoop earrings under 90 USD
+R0580 [budget] Any suggestions for hoop earrings under $100?
+R0581 [budget] recommend stud earrings under $10
+R0582 [budget] suggest stud earrings below $20
+R0583 [budget] Can you recommend stud earrings for less than $30?
+R0584 [budget] recommend stud earrings up to $40
+R0585 [budget] Suggest stud earrings for no more than $50
+R0586 [budget] I need stud earrings recommendations under $60
+R0587 [budget] Which stud earrings would you recommend below $70?
+R0588 [budget] please recommend stud earrings at most $80
+R0589 [budget] Show me recommended stud earrings under 90 USD
+R0590 [budget] Any suggestions for stud earrings under $100?
+R0591 [budget] recommend charm bracelets under $10
+R0592 [budget] suggest charm bracelets below $20
+R0593 [budget] Can you recommend charm bracelets for less than $30?
+R0594 [budget] recommend charm bracelets up to $40
+R0595 [budget] Suggest charm bracelets for no more than $50
+R0596 [budget] I need charm bracelets recommendations under $60
+R0597 [budget] Which charm bracelets would you recommend below $70?
+R0598 [budget] please recommend charm bracelets at most $80
+R0599 [budget] Show me recommended charm bracelets under 90 USD
+R0600 [budget] Any suggestions for charm bracelets under $100?
+R0601 [purpose] Recommend something for dinner
+R0602 [purpose] Suggest products for dinner
+R0603 [purpose] Please recommend items for dinner
+R0604 [purpose] pls recommend somehing for dinner
+R0605 [purpose] Can you recommend something for dinner?
+R0606 [purpose] What would you recommend for dinner?
+R0607 [purpose] Any suggestions for dinner?
+R0608 [purpose] I need recommendations for dinner
+R0609 [purpose] Help me find something for dinner
+R0610 [purpose] Show me recommendations for dinner
+R0611 [purpose] Could you suggest something for dinner?
+R0612 [purpose] I would like suggestions for dinner
+R0613 [purpose] What should I buy for dinner?
+R0614 [purpose] Please suggest something for dinner
+R0615 [purpose] Can I get a recommendation for dinner?
+R0616 [purpose] Recommend products for dinner, please
+R0617 [purpose] I am looking for ideas for dinner
+R0618 [purpose] What are your recommendations for dinner?
+R0619 [purpose] plz recomend something for dinner
+R0620 [purpose] Could you help me choose something for dinner?
+R0621 [purpose] Recommend something for breakfast
+R0622 [purpose] Suggest products for breakfast
+R0623 [purpose] Please recommend items for breakfast
+R0624 [purpose] pls recommend somehing for breakfast
+R0625 [purpose] Can you recommend something for breakfast?
+R0626 [purpose] What would you recommend for breakfast?
+R0627 [purpose] Any suggestions for breakfast?
+R0628 [purpose] I need recommendations for breakfast
+R0629 [purpose] Help me find something for breakfast
+R0630 [purpose] Show me recommendations for breakfast
+R0631 [purpose] Could you suggest something for breakfast?
+R0632 [purpose] I would like suggestions for breakfast
+R0633 [purpose] What should I buy for breakfast?
+R0634 [purpose] Please suggest something for breakfast
+R0635 [purpose] Can I get a recommendation for breakfast?
+R0636 [purpose] Recommend products for breakfast, please
+R0637 [purpose] I am looking for ideas for breakfast
+R0638 [purpose] What are your recommendations for breakfast?
+R0639 [purpose] plz recomend something for breakfast
+R0640 [purpose] Could you help me choose something for breakfast?
+R0641 [purpose] Recommend something for lunch
+R0642 [purpose] Suggest products for lunch
+R0643 [purpose] Please recommend items for lunch
+R0644 [purpose] pls recommend somehing for lunch
+R0645 [purpose] Can you recommend something for lunch?
+R0646 [purpose] What would you recommend for lunch?
+R0647 [purpose] Any suggestions for lunch?
+R0648 [purpose] I need recommendations for lunch
+R0649 [purpose] Help me find something for lunch
+R0650 [purpose] Show me recommendations for lunch
+R0651 [purpose] Could you suggest something for lunch?
+R0652 [purpose] I would like suggestions for lunch
+R0653 [purpose] What should I buy for lunch?
+R0654 [purpose] Please suggest something for lunch
+R0655 [purpose] Can I get a recommendation for lunch?
+R0656 [purpose] Recommend products for lunch, please
+R0657 [purpose] I am looking for ideas for lunch
+R0658 [purpose] What are your recommendations for lunch?
+R0659 [purpose] plz recomend something for lunch
+R0660 [purpose] Could you help me choose something for lunch?
+R0661 [purpose] Recommend something for snack
+R0662 [purpose] Suggest products for snack
+R0663 [purpose] Please recommend items for snack
+R0664 [purpose] pls recommend somehing for snack
+R0665 [purpose] Can you recommend something for snack?
+R0666 [purpose] What would you recommend for snack?
+R0667 [purpose] Any suggestions for snack?
+R0668 [purpose] I need recommendations for snack
+R0669 [purpose] Help me find something for snack
+R0670 [purpose] Show me recommendations for snack
+R0671 [purpose] Could you suggest something for snack?
+R0672 [purpose] I would like suggestions for snack
+R0673 [purpose] What should I buy for snack?
+R0674 [purpose] Please suggest something for snack
+R0675 [purpose] Can I get a recommendation for snack?
+R0676 [purpose] Recommend products for snack, please
+R0677 [purpose] I am looking for ideas for snack
+R0678 [purpose] What are your recommendations for snack?
+R0679 [purpose] plz recomend something for snack
+R0680 [purpose] Could you help me choose something for snack?
+R0681 [purpose] Recommend something for birthday
+R0682 [purpose] Suggest products for birthday
+R0683 [purpose] Please recommend items for birthday
+R0684 [purpose] pls recommend somehing for birthday
+R0685 [purpose] Can you recommend something for birthday?
+R0686 [purpose] What would you recommend for birthday?
+R0687 [purpose] Any suggestions for birthday?
+R0688 [purpose] I need recommendations for birthday
+R0689 [purpose] Help me find something for birthday
+R0690 [purpose] Show me recommendations for birthday
+R0691 [purpose] Could you suggest something for birthday?
+R0692 [purpose] I would like suggestions for birthday
+R0693 [purpose] What should I buy for birthday?
+R0694 [purpose] Please suggest something for birthday
+R0695 [purpose] Can I get a recommendation for birthday?
+R0696 [purpose] Recommend products for birthday, please
+R0697 [purpose] I am looking for ideas for birthday
+R0698 [purpose] What are your recommendations for birthday?
+R0699 [purpose] plz recomend something for birthday
+R0700 [purpose] Could you help me choose something for birthday?
+R0701 [purpose] Recommend something for anniversary
+R0702 [purpose] Suggest products for anniversary
+R0703 [purpose] Please recommend items for anniversary
+R0704 [purpose] pls recommend somehing for anniversary
+R0705 [purpose] Can you recommend something for anniversary?
+R0706 [purpose] What would you recommend for anniversary?
+R0707 [purpose] Any suggestions for anniversary?
+R0708 [purpose] I need recommendations for anniversary
+R0709 [purpose] Help me find something for anniversary
+R0710 [purpose] Show me recommendations for anniversary
+R0711 [purpose] Could you suggest something for anniversary?
+R0712 [purpose] I would like suggestions for anniversary
+R0713 [purpose] What should I buy for anniversary?
+R0714 [purpose] Please suggest something for anniversary
+R0715 [purpose] Can I get a recommendation for anniversary?
+R0716 [purpose] Recommend products for anniversary, please
+R0717 [purpose] I am looking for ideas for anniversary
+R0718 [purpose] What are your recommendations for anniversary?
+R0719 [purpose] plz recomend something for anniversary
+R0720 [purpose] Could you help me choose something for anniversary?
+R0721 [purpose] Recommend something for wedding
+R0722 [purpose] Suggest products for wedding
+R0723 [purpose] Please recommend items for wedding
+R0724 [purpose] pls recommend somehing for wedding
+R0725 [purpose] Can you recommend something for wedding?
+R0726 [purpose] What would you recommend for wedding?
+R0727 [purpose] Any suggestions for wedding?
+R0728 [purpose] I need recommendations for wedding
+R0729 [purpose] Help me find something for wedding
+R0730 [purpose] Show me recommendations for wedding
+R0731 [purpose] Could you suggest something for wedding?
+R0732 [purpose] I would like suggestions for wedding
+R0733 [purpose] What should I buy for wedding?
+R0734 [purpose] Please suggest something for wedding
+R0735 [purpose] Can I get a recommendation for wedding?
+R0736 [purpose] Recommend products for wedding, please
+R0737 [purpose] I am looking for ideas for wedding
+R0738 [purpose] What are your recommendations for wedding?
+R0739 [purpose] plz recomend something for wedding
+R0740 [purpose] Could you help me choose something for wedding?
+R0741 [purpose] Recommend something for work
+R0742 [purpose] Suggest products for work
+R0743 [purpose] Please recommend items for work
+R0744 [purpose] pls recommend somehing for work
+R0745 [purpose] Can you recommend something for work?
+R0746 [purpose] What would you recommend for work?
+R0747 [purpose] Any suggestions for work?
+R0748 [purpose] I need recommendations for work
+R0749 [purpose] Help me find something for work
+R0750 [purpose] Show me recommendations for work
+R0751 [purpose] Could you suggest something for work?
+R0752 [purpose] I would like suggestions for work
+R0753 [purpose] What should I buy for work?
+R0754 [purpose] Please suggest something for work
+R0755 [purpose] Can I get a recommendation for work?
+R0756 [purpose] Recommend products for work, please
+R0757 [purpose] I am looking for ideas for work
+R0758 [purpose] What are your recommendations for work?
+R0759 [purpose] plz recomend something for work
+R0760 [purpose] Could you help me choose something for work?
+R0761 [attribute] Recommend products with color red
+R0762 [attribute] Suggest items with color red
+R0763 [attribute] Please recommend products with color red
+R0764 [attribute] pls suggest products with color red
+R0765 [attribute] Can you recommend products with color red?
+R0766 [attribute] Could you suggest items with color red?
+R0767 [attribute] Show me recommended products with color red
+R0768 [attribute] I need recommendations for products with color red
+R0769 [attribute] Any suggestions for items with color red?
+R0770 [attribute] I would like recommendations for products with color red
+R0771 [attribute] Recommend products with color blue
+R0772 [attribute] Suggest items with color blue
+R0773 [attribute] Please recommend products with color blue
+R0774 [attribute] pls suggest products with color blue
+R0775 [attribute] Can you recommend products with color blue?
+R0776 [attribute] Could you suggest items with color blue?
+R0777 [attribute] Show me recommended products with color blue
+R0778 [attribute] I need recommendations for products with color blue
+R0779 [attribute] Any suggestions for items with color blue?
+R0780 [attribute] I would like recommendations for products with color blue
+R0781 [attribute] Recommend products with color green
+R0782 [attribute] Suggest items with color green
+R0783 [attribute] Please recommend products with color green
+R0784 [attribute] pls suggest products with color green
+R0785 [attribute] Can you recommend products with color green?
+R0786 [attribute] Could you suggest items with color green?
+R0787 [attribute] Show me recommended products with color green
+R0788 [attribute] I need recommendations for products with color green
+R0789 [attribute] Any suggestions for items with color green?
+R0790 [attribute] I would like recommendations for products with color green
+R0791 [attribute] Recommend products with color black
+R0792 [attribute] Suggest items with color black
+R0793 [attribute] Please recommend products with color black
+R0794 [attribute] pls suggest products with color black
+R0795 [attribute] Can you recommend products with color black?
+R0796 [attribute] Could you suggest items with color black?
+R0797 [attribute] Show me recommended products with color black
+R0798 [attribute] I need recommendations for products with color black
+R0799 [attribute] Any suggestions for items with color black?
+R0800 [attribute] I would like recommendations for products with color black
+R0801 [attribute] Recommend products with color white
+R0802 [attribute] Suggest items with color white
+R0803 [attribute] Please recommend products with color white
+R0804 [attribute] pls suggest products with color white
+R0805 [attribute] Can you recommend products with color white?
+R0806 [attribute] Could you suggest items with color white?
+R0807 [attribute] Show me recommended products with color white
+R0808 [attribute] I need recommendations for products with color white
+R0809 [attribute] Any suggestions for items with color white?
+R0810 [attribute] I would like recommendations for products with color white
+R0811 [attribute] Recommend products with material silver
+R0812 [attribute] Suggest items with material silver
+R0813 [attribute] Please recommend products with material silver
+R0814 [attribute] pls suggest products with material silver
+R0815 [attribute] Can you recommend products with material silver?
+R0816 [attribute] Could you suggest items with material silver?
+R0817 [attribute] Show me recommended products with material silver
+R0818 [attribute] I need recommendations for products with material silver
+R0819 [attribute] Any suggestions for items with material silver?
+R0820 [attribute] I would like recommendations for products with material silver
+R0821 [attribute] Recommend products with material gold
+R0822 [attribute] Suggest items with material gold
+R0823 [attribute] Please recommend products with material gold
+R0824 [attribute] pls suggest products with material gold
+R0825 [attribute] Can you recommend products with material gold?
+R0826 [attribute] Could you suggest items with material gold?
+R0827 [attribute] Show me recommended products with material gold
+R0828 [attribute] I need recommendations for products with material gold
+R0829 [attribute] Any suggestions for items with material gold?
+R0830 [attribute] I would like recommendations for products with material gold
+R0831 [attribute] Recommend products with material rose gold
+R0832 [attribute] Suggest items with material rose gold
+R0833 [attribute] Please recommend products with material rose gold
+R0834 [attribute] pls suggest products with material rose gold
+R0835 [attribute] Can you recommend products with material rose gold?
+R0836 [attribute] Could you suggest items with material rose gold?
+R0837 [attribute] Show me recommended products with material rose gold
+R0838 [attribute] I need recommendations for products with material rose gold
+R0839 [attribute] Any suggestions for items with material rose gold?
+R0840 [attribute] I would like recommendations for products with material rose gold
+R0841 [attribute] Recommend products with size 7
+R0842 [attribute] Suggest items with size 7
+R0843 [attribute] Please recommend products with size 7
+R0844 [attribute] pls suggest products with size 7
+R0845 [attribute] Can you recommend products with size 7?
+R0846 [attribute] Could you suggest items with size 7?
+R0847 [attribute] Show me recommended products with size 7
+R0848 [attribute] I need recommendations for products with size 7
+R0849 [attribute] Any suggestions for items with size 7?
+R0850 [attribute] I would like recommendations for products with size 7
+R0851 [attribute] Recommend products with flavor vanilla
+R0852 [attribute] Suggest items with flavor vanilla
+R0853 [attribute] Please recommend products with flavor vanilla
+R0854 [attribute] pls suggest products with flavor vanilla
+R0855 [attribute] Can you recommend products with flavor vanilla?
+R0856 [attribute] Could you suggest items with flavor vanilla?
+R0857 [attribute] Show me recommended products with flavor vanilla
+R0858 [attribute] I need recommendations for products with flavor vanilla
+R0859 [attribute] Any suggestions for items with flavor vanilla?
+R0860 [attribute] I would like recommendations for products with flavor vanilla
+R0861 [followup] something else
+R0862 [followup] show me something else
+R0863 [followup] recommend something else
+R0864 [followup] other options
+R0865 [followup] show other options
+R0866 [followup] cheaper options
+R0867 [followup] show cheaper options
+R0868 [followup] show me cheaper options
+R0869 [followup] something cheaper
+R0870 [followup] surprise me
+R0871 [followup] please something else
+R0872 [followup] please show me something else
+R0873 [followup] please recommend something else
+R0874 [followup] please other options
+R0875 [followup] please show other options
+R0876 [followup] please cheaper options
+R0877 [followup] please show cheaper options
+R0878 [followup] please show me cheaper options
+R0879 [followup] please something cheaper
+R0880 [followup] please surprise me
+R0881 [followup] pls something else
+R0882 [followup] pls show me something else
+R0883 [followup] pls recommend something else
+R0884 [followup] pls other options
+R0885 [followup] pls show other options
+R0886 [followup] pls cheaper options
+R0887 [followup] pls show cheaper options
+R0888 [followup] pls show me cheaper options
+R0889 [followup] pls something cheaper
+R0890 [followup] pls surprise me
+R0891 [followup] plz something else
+R0892 [followup] plz show me something else
+R0893 [followup] plz recommend something else
+R0894 [followup] plz other options
+R0895 [followup] plz show other options
+R0896 [followup] plz cheaper options
+R0897 [followup] plz show cheaper options
+R0898 [followup] plz show me cheaper options
+R0899 [followup] plz something cheaper
+R0900 [followup] plz surprise me
+R0901 [discount] any offers today
+R0902 [discount] what is on sale
+R0903 [discount] show me deals
+R0904 [discount] find discounts now
+R0905 [discount] show offers today
+R0906 [discount] recommend products with the best discounts today
+R0907 [discount] show items with the biggest discounts
+R0908 [discount] find products with the highest discount
+R0909 [discount] any deals now
+R0910 [discount] show discounts
+R0911 [discount] please any offers today
+R0912 [discount] please what is on sale
+R0913 [discount] please show me deals
+R0914 [discount] please find discounts now
+R0915 [discount] please show offers today
+R0916 [discount] please recommend products with the best discounts today
+R0917 [discount] please show items with the biggest discounts
+R0918 [discount] please find products with the highest discount
+R0919 [discount] please any deals now
+R0920 [discount] please show discounts
+R0921 [discount] pls any offers today
+R0922 [discount] pls what is on sale
+R0923 [discount] pls show me deals
+R0924 [discount] pls find discounts now
+R0925 [discount] pls show offers today
+R0926 [discount] pls recommend products with the best discounts today
+R0927 [discount] pls show items with the biggest discounts
+R0928 [discount] pls find products with the highest discount
+R0929 [discount] pls any deals now
+R0930 [discount] pls show discounts
+R0931 [value] recommend the best value products
+R0932 [value] suggest best value items
+R0933 [value] show me best-value products
+R0934 [value] recommend best value for money products
+R0935 [value] suggest the best-value items
+R0936 [value] show best value items
+R0937 [value] recommend me best value products
+R0938 [value] suggest me best value products
+R0939 [value] show the best value products
+R0940 [value] recommend best-value items
+R0941 [value] please recommend the best value products
+R0942 [value] please suggest best value items
+R0943 [value] please show me best-value products
+R0944 [value] please recommend best value for money products
+R0945 [value] please suggest the best-value items
+R0946 [value] please show best value items
+R0947 [value] please recommend me best value products
+R0948 [value] please suggest me best value products
+R0949 [value] please show the best value products
+R0950 [value] please recommend best-value items
+R0951 [value] pls recommend the best value products
+R0952 [value] pls suggest best value items
+R0953 [value] pls show me best-value products
+R0954 [value] pls recommend best value for money products
+R0955 [value] pls suggest the best-value items
+R0956 [value] pls show best value items
+R0957 [value] pls recommend me best value products
+R0958 [value] pls suggest me best value products
+R0959 [value] pls show the best value products
+R0960 [value] pls recommend best-value items
+R0961 [evidence_guard] Recommend milk safe for a severe peanut allergy
+R0962 [evidence_guard] Recommend milk suitable during pregnancy
+R0963 [evidence_guard] Recommend milk guaranteed to cure diabetes
+R0964 [evidence_guard] Recommend milk with guaranteed delivery tomorrow before 9am
+R0965 [evidence_guard] Recommend bread safe for a severe peanut allergy
+R0966 [evidence_guard] Recommend bread suitable during pregnancy
+R0967 [evidence_guard] Recommend bread guaranteed to cure diabetes
+R0968 [evidence_guard] Recommend bread with guaranteed delivery tomorrow before 9am
+R0969 [evidence_guard] Recommend rice safe for a severe peanut allergy
+R0970 [evidence_guard] Recommend rice suitable during pregnancy
+R0971 [evidence_guard] Recommend rice guaranteed to cure diabetes
+R0972 [evidence_guard] Recommend rice with guaranteed delivery tomorrow before 9am
+R0973 [evidence_guard] Recommend pasta safe for a severe peanut allergy
+R0974 [evidence_guard] Recommend pasta suitable during pregnancy
+R0975 [evidence_guard] Recommend pasta guaranteed to cure diabetes
+R0976 [evidence_guard] Recommend pasta with guaranteed delivery tomorrow before 9am
+R0977 [evidence_guard] Recommend coffee safe for a severe peanut allergy
+R0978 [evidence_guard] Recommend coffee suitable during pregnancy
+R0979 [evidence_guard] Recommend coffee guaranteed to cure diabetes
+R0980 [evidence_guard] Recommend coffee with guaranteed delivery tomorrow before 9am
+R0981 [evidence_guard] Recommend tea safe for a severe peanut allergy
+R0982 [evidence_guard] Recommend tea suitable during pregnancy
+R0983 [evidence_guard] Recommend tea guaranteed to cure diabetes
+R0984 [evidence_guard] Recommend tea with guaranteed delivery tomorrow before 9am
+R0985 [evidence_guard] Recommend apples safe for a severe peanut allergy
+R0986 [evidence_guard] Recommend apples suitable during pregnancy
+R0987 [evidence_guard] Recommend apples guaranteed to cure diabetes
+R0988 [evidence_guard] Recommend apples with guaranteed delivery tomorrow before 9am
+R0989 [evidence_guard] Recommend bananas safe for a severe peanut allergy
+R0990 [evidence_guard] Recommend bananas suitable during pregnancy
+R0991 [evidence_guard] Recommend bananas guaranteed to cure diabetes
+R0992 [evidence_guard] Recommend bananas with guaranteed delivery tomorrow before 9am
+R0993 [evidence_guard] Recommend eggs safe for a severe peanut allergy
+R0994 [evidence_guard] Recommend eggs suitable during pregnancy
+R0995 [evidence_guard] Recommend eggs guaranteed to cure diabetes
+R0996 [evidence_guard] Recommend eggs with guaranteed delivery tomorrow before 9am
+R0997 [evidence_guard] Recommend yogurt safe for a severe peanut allergy
+R0998 [evidence_guard] Recommend yogurt suitable during pregnancy
+R0999 [evidence_guard] Recommend yogurt guaranteed to cure diabetes
+R1000 [evidence_guard] Recommend yogurt with guaranteed delivery tomorrow before 9am

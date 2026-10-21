@@ -1,0 +1,174 @@
+{
+  "schema_version": "theme/v1",
+  "tokens": {
+    "color.primary": "#054828",
+    "color.secondary": "#d93f52",
+    "color.background": "#ffffff",
+    "color.surface": "#F1F4F0",
+    "color.text": "#17251d",
+    "color.muted": "#58645d",
+    "color.success": "#054828",
+    "color.warning": "#946200",
+    "color.error": "#b42318",
+    "font.body": "system-ui",
+    "font.heading": "system-ui",
+    "spacing.xs": 4,
+    "spacing.sm": 8,
+    "spacing.md": 16,
+    "spacing.lg": 24,
+    "spacing.xl": 48,
+    "radius.default": 6,
+    "border.width": 1,
+    "shadow.default": "none",
+    "container.width": 1280,
+    "breakpoint.mobile": 640,
+    "breakpoint.desktop": 1024,
+    "layout.direction": "ltr"
+  },
+  "global": {
+    "top": [
+      {
+        "id": "section-1",
+        "component": "announcement",
+        "version": 1,
+        "enabled": true,
+        "settings": {
+          "text": "Fresh choices, delivered to your door"
+        }
+      },
+      {
+        "id": "section-2",
+        "component": "header",
+        "version": 1,
+        "enabled": true,
+        "settings": {
+          "brand": "Commerce"
+        }
+      },
+      {
+        "id": "section-3",
+        "component": "navigation",
+        "version": 1,
+        "enabled": true,
+        "settings": {}
+      }
+    ],
+    "bottom": [
+      {
+        "id": "section-4",
+        "component": "footer",
+        "version": 1,
+        "enabled": true,
+        "settings": {
+          "text": "Commerce"
+        }
+      }
+    ]
+  },
+  "pages": {
+    "home": [
+      {
+        "id": "section-5",
+        "component": "hero",
+        "version": 1,
+        "enabled": true,
+        "settings": {
+          "heading": "Good food. Everyday.",
+          "text": "Fresh produce and pantry favourites for your table.",
+          "image": null,
+          "alt": "",
+          "label": "Shop now",
+          "href": "/search"
+        }
+      },
+      {
+        "id": "section-6",
+        "component": "category_grid",
+        "version": 1,
+        "enabled": true,
+        "settings": {
+          "heading": "Shop by category",
+          "limit": 8
+        }
+      },
+      {
+        "id": "section-7",
+        "component": "featured_products",
+        "version": 1,
+        "enabled": true,
+        "settings": {
+          "heading": "Fresh picks",
+          "limit": 8
+        }
+      },
+      {
+        "id": "section-8",
+        "component": "banner",
+        "version": 1,
+        "enabled": true,
+        "settings": {
+          "heading": "Make room for something new",
+          "text": "",
+          "label": "Shop now",
+          "href": "/search"
+        }
+      },
+      {
+        "id": "section-9",
+        "component": "recommendations",
+        "version": 1,
+        "enabled": true,
+        "settings": {
+          "heading": "More to explore",
+          "limit": 4
+        }
+      }
+    ],
+    "category": [
+      {
+        "id": "section-10",
+        "component": "product_grid",
+        "version": 1,
+        "enabled": true,
+        "settings": {}
+      }
+    ],
+    "search": [
+      {
+        "id": "section-11",
+        "component": "product_grid",
+        "version": 1,
+        "enabled": true,
+        "settings": {}
+      }
+    ],
+    "product": [
+      {
+        "id": "section-12",
+        "component": "product_detail",
+        "version": 1,
+        "enabled": true,
+        "settings": {}
+      },
+      {
+        "id": "section-13",
+        "component": "recommendations",
+        "version": 1,
+        "enabled": true,
+        "settings": {
+          "heading": "More to explore",
+          "limit": 4
+        }
+      }
+    ],
+    "cart": [
+      {
+        "id": "section-14",
+        "component": "cart",
+        "version": 1,
+        "enabled": true,
+        "settings": {}
+      }
+    ]
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "version": 1,
+  "amount": "100",
+  "currency": "USD",
+  "prices": ["99.99", "100", "100.01"],
+  "cases": [
+    {"phrase": "under", "operator": "lt", "symbol": "<", "accepted": ["99.99"]},
+    {"phrase": "below", "operator": "lt", "symbol": "<", "accepted": ["99.99"]},
+    {"phrase": "less than", "operator": "lt", "symbol": "<", "accepted": ["99.99"]},
+    {"phrase": "over", "operator": "gt", "symbol": ">", "accepted": ["100.01"]},
+    {"phrase": "above", "operator": "gt", "symbol": ">", "accepted": ["100.01"]},
+    {"phrase": "more than", "operator": "gt", "symbol": ">", "accepted": ["100.01"]},
+    {"phrase": "greater than", "operator": "gt", "symbol": ">", "accepted": ["100.01"]},
+    {"phrase": "up to", "operator": "lte", "symbol": "<=", "accepted": ["99.99", "100"]},
+    {"phrase": "at most", "operator": "lte", "symbol": "<=", "accepted": ["99.99", "100"]},
+    {"phrase": "no more than", "operator": "lte", "symbol": "<=", "accepted": ["99.99", "100"]},
+    {"phrase": "at least", "operator": "gte", "symbol": ">=", "accepted": ["100", "100.01"]},
+    {"phrase": "no less than", "operator": "gte", "symbol": ">=", "accepted": ["100", "100.01"]},
+    {"phrase": "exactly", "operator": "eq", "symbol": "=", "accepted": ["100"]}
+  ]
+}

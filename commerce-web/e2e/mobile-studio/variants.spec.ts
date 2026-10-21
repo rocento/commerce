@@ -1,0 +1,32 @@
+import {fillPreviewAddress} from './address-fixture';
+import {test,expect} from '@playwright/test';
+import {setup} from './parity-fixture';
+const parent={id:'6d1bff50-62ba-40bc-baf2-c9ef685250d1',name:'Fresh apples',description:'Crisp, fresh apples for your everyday table.',price:'20.00',originalPrice:'25.00',currency:'EGP',unit:'kg',inStock:true,imageUrl:null,productType:'configurable',parentId:null};
+const options=[{...parent,id:'60000000-0000-4000-8000-000000000002',name:'Apples — 1 kg',optionLabel:'1 kg',productType:'simple',parentId:parent.id,price:'25.00',originalPrice:null},{...parent,id:'60000000-0000-4000-8000-000000000003',name:'Apples — 2 kg',optionLabel:'2 kg',productType:'simple',parentId:parent.id,price:'45.00',originalPrice:null},{...parent,id:'60000000-0000-4000-8000-000000000004',name:'Apples — 3 kg',optionLabel:'3 kg',productType:'simple',parentId:parent.id,price:'60.00',inStock:false}];
+for(const target of ['ios-swift','android-kotlin','ios-react-native','android-react-native']) test(`variant selection, stock, quantity and reset ${target}`,async({page})=>{
+ const state=await setup(page);for(const draft of Object.values(state.drafts)){draft.config.brand.light={primary:'#063C22',onPrimary:'#FFFFFF',background:'#FFFFFF',surface:'#F1F4F0',text:'#17251D'};draft.config.brand.radiusToken='small';}let fail=false;const pins:string[]=[];
+ await page.route('**/app-preview/catalog?**',async route=>{const u=new URL(route.request().url());await route.fulfill({json:{merchantId:u.pathname.split('/')[4],locale:u.searchParams.get('locale'),source:"https://grocery.rocento.com",categories:[],products:[parent]}});});
+ await page.route('**/app-preview/products/**',async route=>{const u=new URL(route.request().url());pins.push(`${u.searchParams.get('latitude')},${u.searchParams.get('longitude')}`);await route.fulfill({status:fail?503:200,json:fail?{error:'Unavailable'}:{merchantId:u.pathname.split('/')[4],locale:u.searchParams.get('locale'),product:parent,variants:options,requiresDeliveryLocation:false}});});
+ await page.reload();await page.getByLabel('Preview app').selectOption(target);
+ const d=page.getByTestId(target.startsWith('ios')?'preview-iOS':'preview-Android');
+ await d.getByRole('button',{name:'View Fresh apples',exact:true}).click();
+ await expect(d.getByRole('button',{name:'Choose an option',exact:true})).toBeDisabled();expect(pins).toHaveLength(0);
+ await d.getByRole('button',{name:'Choose delivery address',exact:true}).click();
+ await fillPreviewAddress(d);await d.getByRole('button',{name:'Save address',exact:true}).click();
+ await expect(d.getByRole('radio',{name:/3 kg/})).toBeDisabled();expect(pins.at(-1)).toBe('30.0444,31.2357');
+ await d.getByRole('radio',{name:/^1 kg/}).click();await d.getByRole('button',{name:'Increase quantity'}).click();
+ await expect(d.getByLabel('Current quantity')).toHaveText('2');
+ await d.locator('.ms-sheet-content').evaluate(e=>{e.scrollTop=0;});await d.locator('.ms-phone').screenshot({path:`../output/preview-variants-parity-20261013/preview/${target}-variants.png`});
+ await d.getByRole('button',{name:'Add to cart',exact:true}).click();await expect(d.locator('.ms-added-to-cart')).toContainText('In cart: 2');
+ if(!target.endsWith('react-native')){await d.getByRole('button',{name:'Back',exact:true}).click();await d.getByRole('button',{name:'View Fresh apples',exact:true}).click();}
+ await d.getByRole('radio',{name:/^2 kg/}).click();await expect(d.getByLabel('Current quantity')).toHaveText('1');await expect(d.locator('.ms-purchase-row strong')).toContainText('45');
+ await d.getByRole('button',{name:'Add to cart',exact:true}).click();await d.getByRole('button',{name:'View cart',exact:true}).click();
+ await expect(d.getByText('Apples — 1 kg',{exact:true})).toBeVisible();await expect(d.getByText('Apples — 2 kg',{exact:true})).toBeVisible();await expect(d.getByText('Fresh apples',{exact:true})).toHaveCount(0);
+ await d.getByRole('button',{name:'Home',exact:true}).click();fail=true;await d.getByRole('button',{name:'View Fresh apples',exact:true}).click();
+ await expect(d.getByRole('button',{name:'Choose an option',exact:true})).toBeDisabled();await expect(d.getByRole('button',{name:'Retry options'})).toBeVisible();
+ fail=false;await d.getByRole('button',{name:'Retry options'}).click();await expect(d.getByRole('radio',{name:/^1 kg/})).toHaveAttribute('aria-checked','false');
+ await page.getByLabel('Preview language').selectOption('ar');await page.getByLabel('Device width').selectOption('320');
+ await d.getByRole('button',{name:'عرض Fresh apples',exact:true}).click();await d.getByRole('radio',{name:/^2 kg/}).click();
+ await d.locator('.ms-sheet-content').evaluate(e=>{e.scrollTop=0;});await d.locator('.ms-phone').screenshot({path:`../output/preview-variants-parity-20261013/preview/${target}-variants-ar.png`});
+ expect(await d.locator('.ms-sheet-content').evaluate(e=>e.scrollWidth<=e.clientWidth)).toBe(true);expect(state.writes).toBe(0);
+});

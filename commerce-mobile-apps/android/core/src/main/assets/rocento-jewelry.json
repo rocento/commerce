@@ -1,0 +1,252 @@
+{
+  "brand": {
+    "dark": {
+      "background": "#181615",
+      "onPrimary": "#FFFFFF",
+      "primary": "#083057",
+      "surface": "#282320",
+      "text": "#FAF8F7"
+    },
+    "density": "comfortable",
+    "displayName": "Jewelry",
+    "fontToken": "system",
+    "light": {
+      "background": "#ffffff",
+      "onPrimary": "#FFFFFF",
+      "primary": "#083057",
+      "surface": "#efefef",
+      "text": "#1c1c1c"
+    },
+    "logoAssetId": "8715ab7e-f50a-4180-a315-0006027c5f19",
+    "radiusToken": "none"
+  },
+  "compatibility": {
+    "minAndroidRuntime": "1.2.0",
+    "minIosRuntime": "1.2.0"
+  },
+  "configVersion": 0,
+  "features": {
+    "locationPicker": false,
+    "reviews": false,
+    "wishlist": false
+  },
+  "localization": {
+    "defaultLocale": "en",
+    "messages": {
+      "ar": {
+        "categories": "تسوق حسب الفئة",
+        "demo_jewelry_account-invitation_heading": "Make it personal.",
+        "demo_jewelry_account-invitation_label": "Create your account",
+        "demo_jewelry_account-invitation_text": "Your favorites, all in one place.",
+        "demo_jewelry_categories_heading": "Find your everyday signature",
+        "demo_jewelry_collection-intro_heading": "Color, with a little character.",
+        "demo_jewelry_collection-intro_label": "Discover the gemstone edit",
+        "demo_jewelry_collection-intro_text": "Emerald greens, sapphire blues and warm gold tones. Discover the gemstone edit.",
+        "demo_jewelry_featured_heading": "The gemstone edit",
+        "demo_jewelry_gifts": "اكتشف مجموعتنا من المجوهرات",
+        "demo_jewelry_gifts_alt": "Illustrative pearl and gold brooch",
+        "demo_jewelry_gifts_eyebrow": "THOUGHTFULLY CHOSEN",
+        "demo_jewelry_gifts_heading": "For someone\nquite remarkable.",
+        "demo_jewelry_gifts_label": "The gift edit",
+        "demo_jewelry_gifts_text": "A gesture of love. A moment to remember. Discover a gift that says it beautifully.",
+        "demo_jewelry_hero": "اكتشف مجموعتنا من المجوهرات",
+        "demo_jewelry_hero_alt": "Illustrative gold solitaire ring on a warm ivory background",
+        "demo_jewelry_hero_eyebrow": "AURELLE / THE EVERYDAY COLLECTION",
+        "demo_jewelry_hero_heading": "A little beauty.\nA lasting feeling.",
+        "demo_jewelry_hero_label": "Explore the collection",
+        "demo_jewelry_hero_text": "Quietly distinctive pieces to make your own. Discover modern heirlooms and the art of wearing them every day.",
+        "demo_jewelry_new-arrivals_heading": "A new chapter",
+        "demo_jewelry_newsletter_heading": "Letters from Aurelle",
+        "demo_jewelry_newsletter_text": "Our newsletter is coming soon. In the meantime, create an account to save your favorite pieces and keep track of your orders.",
+        "demo_jewelry_story": "اكتشف مجموعتنا من المجوهرات",
+        "demo_jewelry_story_alt": "Illustrative pearl strand necklace arranged on ivory",
+        "demo_jewelry_story_eyebrow": "THE ART OF THE EVERYDAY",
+        "demo_jewelry_story_heading": "Small details.\nLasting impressions.",
+        "demo_jewelry_story_label": "Find your signature",
+        "demo_jewelry_story_text": "Sculptural shapes, delicate settings and the quiet beauty of a considered design. Explore pieces that feel like part of your story.",
+        "products": "اكتشف منتجاتنا",
+        "welcome": "مرحباً بكم في المجوهرات"
+      },
+      "en": {
+        "categories": "Shop by category",
+        "demo_jewelry_account-invitation_heading": "Make it personal.",
+        "demo_jewelry_account-invitation_label": "Create your account",
+        "demo_jewelry_account-invitation_text": "Your favorites, all in one place.",
+        "demo_jewelry_categories_heading": "Find your everyday signature",
+        "demo_jewelry_collection-intro_heading": "Color, with a little character.",
+        "demo_jewelry_collection-intro_label": "Discover the gemstone edit",
+        "demo_jewelry_collection-intro_text": "Emerald greens, sapphire blues and warm gold tones. Discover the gemstone edit.",
+        "demo_jewelry_featured_heading": "The gemstone edit",
+        "demo_jewelry_gifts": "Illustrative pearl and gold brooch",
+        "demo_jewelry_gifts_alt": "Illustrative pearl and gold brooch",
+        "demo_jewelry_gifts_eyebrow": "THOUGHTFULLY CHOSEN",
+        "demo_jewelry_gifts_heading": "For someone\nquite remarkable.",
+        "demo_jewelry_gifts_label": "The gift edit",
+        "demo_jewelry_gifts_text": "A gesture of love. A moment to remember. Discover a gift that says it beautifully.",
+        "demo_jewelry_hero": "Illustrative gold solitaire ring on a warm ivory background",
+        "demo_jewelry_hero_alt": "Illustrative gold solitaire ring on a warm ivory background",
+        "demo_jewelry_hero_eyebrow": "AURELLE / THE EVERYDAY COLLECTION",
+        "demo_jewelry_hero_heading": "A little beauty.\nA lasting feeling.",
+        "demo_jewelry_hero_label": "Explore the collection",
+        "demo_jewelry_hero_text": "Quietly distinctive pieces to make your own. Discover modern heirlooms and the art of wearing them every day.",
+        "demo_jewelry_new-arrivals_heading": "A new chapter",
+        "demo_jewelry_newsletter_heading": "Letters from Aurelle",
+        "demo_jewelry_newsletter_text": "Our newsletter is coming soon. In the meantime, create an account to save your favorite pieces and keep track of your orders.",
+        "demo_jewelry_story": "Illustrative pearl strand necklace arranged on ivory",
+        "demo_jewelry_story_alt": "Illustrative pearl strand necklace arranged on ivory",
+        "demo_jewelry_story_eyebrow": "THE ART OF THE EVERYDAY",
+        "demo_jewelry_story_heading": "Small details.\nLasting impressions.",
+        "demo_jewelry_story_label": "Find your signature",
+        "demo_jewelry_story_text": "Sculptural shapes, delicate settings and the quiet beauty of a considered design. Explore pieces that feel like part of your story.",
+        "products": "Bracelets",
+        "welcome": "Welcome to Jewelry"
+      }
+    },
+    "rtlEnabled": true,
+    "supportedLocales": [
+      "en",
+      "ar"
+    ]
+  },
+  "navigation": {
+    "tabs": [
+      "home",
+      "categories",
+      "deals",
+      "account",
+      "cart"
+    ]
+  },
+  "schemaVersion": "1.0.0",
+  "screens": {
+    "home": {
+      "layout": "storefront",
+      "sections": [
+        {
+          "id": "demo_jewelry_hero",
+          "props": {
+            "accessibilityLabelKey": "demo_jewelry_hero_alt",
+            "action": {
+              "tab": "categories",
+              "type": "openTab"
+            },
+            "appearance": "editorial",
+            "bodyKey": "demo_jewelry_hero_text",
+            "eyebrowKey": "demo_jewelry_hero_eyebrow",
+            "headingKey": "demo_jewelry_hero_heading",
+            "imageAssetId": "c3b7f1e1-f597-40b3-ad8c-788372b0f267",
+            "labelKey": "demo_jewelry_hero_label"
+          },
+          "type": "heroBanner"
+        },
+        {
+          "id": "demo_jewelry_categories",
+          "props": {
+            "appearance": "tiles",
+            "categoryIds": [
+              "0f71a95e-8008-4638-a3cb-c31546943d5f",
+              "0834756e-82d8-445c-9d38-0855ffba077b",
+              "d4e84a5c-b34d-43a4-94c9-d9f998a39e83",
+              "0c85d10e-fd0c-49ad-acd4-4ec9f30be382",
+              "faad28dc-9740-4811-91bf-805d91dc3fd9",
+              "4b63a910-c34a-4856-a41d-cbc0ee330e58",
+              "abd09b2c-4a5b-4f61-96f2-8c2c67a76652",
+              "05972267-6715-4d74-bce8-496eab9e06eb"
+            ],
+            "titleKey": "demo_jewelry_categories_heading"
+          },
+          "type": "categoryGrid"
+        },
+        {
+          "id": "demo_jewelry_collection-intro",
+          "props": {
+            "action": {
+              "categoryId": "4b63a910-c34a-4856-a41d-cbc0ee330e58",
+              "type": "openCategory"
+            },
+            "appearance": "campaign",
+            "headingKey": "demo_jewelry_collection-intro_heading",
+            "labelKey": "demo_jewelry_collection-intro_label",
+            "textKey": "demo_jewelry_collection-intro_text"
+          },
+          "type": "richText"
+        },
+        {
+          "id": "demo_jewelry_featured",
+          "props": {
+            "collectionId": "demo-feed-featured",
+            "columns": 2,
+            "limit": 4,
+            "titleKey": "demo_jewelry_featured_heading"
+          },
+          "type": "productGrid"
+        },
+        {
+          "id": "demo_jewelry_story",
+          "props": {
+            "accessibilityLabelKey": "demo_jewelry_story_alt",
+            "action": {
+              "categoryId": "0834756e-82d8-445c-9d38-0855ffba077b",
+              "type": "openCategory"
+            },
+            "appearance": "editorial",
+            "bodyKey": "demo_jewelry_story_text",
+            "eyebrowKey": "demo_jewelry_story_eyebrow",
+            "headingKey": "demo_jewelry_story_heading",
+            "imageAssetId": "45e12bcf-d612-494e-b6dd-99426409be5e",
+            "labelKey": "demo_jewelry_story_label"
+          },
+          "type": "heroBanner"
+        },
+        {
+          "id": "demo_jewelry_new-arrivals",
+          "props": {
+            "collectionId": "demo-feed-new-arrivals",
+            "columns": 2,
+            "limit": 4,
+            "titleKey": "demo_jewelry_new-arrivals_heading"
+          },
+          "type": "productGrid"
+        },
+        {
+          "id": "demo_jewelry_gifts",
+          "props": {
+            "accessibilityLabelKey": "demo_jewelry_gifts_alt",
+            "action": {
+              "categoryId": "abd09b2c-4a5b-4f61-96f2-8c2c67a76652",
+              "type": "openCategory"
+            },
+            "appearance": "editorial",
+            "bodyKey": "demo_jewelry_gifts_text",
+            "eyebrowKey": "demo_jewelry_gifts_eyebrow",
+            "headingKey": "demo_jewelry_gifts_heading",
+            "imageAssetId": "2faa1ffa-f96d-4bb2-982d-eb96956f0ba4",
+            "labelKey": "demo_jewelry_gifts_label"
+          },
+          "type": "heroBanner"
+        },
+        {
+          "id": "demo_jewelry_newsletter",
+          "props": {
+            "appearance": "editorial",
+            "headingKey": "demo_jewelry_newsletter_heading",
+            "textKey": "demo_jewelry_newsletter_text"
+          },
+          "type": "richText"
+        },
+        {
+          "id": "demo_jewelry_account-invitation",
+          "props": {
+            "appearance": "campaign",
+            "headingKey": "demo_jewelry_account-invitation_heading",
+            "labelKey": "demo_jewelry_account-invitation_label",
+            "storefrontPath": "/register",
+            "textKey": "demo_jewelry_account-invitation_text"
+          },
+          "type": "richText"
+        }
+      ]
+    }
+  },
+  "tenantId": "93182ade-4864-50f7-ac66-ad8a4bc7b5f0"
+}

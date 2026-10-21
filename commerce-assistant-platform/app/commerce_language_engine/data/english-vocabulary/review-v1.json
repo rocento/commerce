@@ -1,0 +1,92 @@
+{
+  "schemaVersion": 1,
+  "provenance": "Authored development targets, not held-out customer accuracy. Whole-request baseline remains separate.",
+  "groups": [
+    {
+      "group": "OBJECT_RETURN_POLICY",
+      "intent": "RETURN_POLICY",
+      "verb": "show",
+      "terms": [
+        "return guidelines",
+        "returns guidelines"
+      ]
+    },
+    {
+      "group": "OBJECT_PAYMENT_METHODS",
+      "intent": "PAYMENT_METHODS",
+      "verb": "show",
+      "terms": [
+        "accepted forms of payment",
+        "supported ways to pay",
+        "payment alternatives"
+      ]
+    },
+    {
+      "group": "OBJECT_DELIVERY_COST",
+      "intent": "DELIVERY_COST",
+      "verb": "check",
+      "terms": [
+        "delivery pricing",
+        "shipping rates",
+        "delivery rates"
+      ]
+    },
+    {
+      "group": "OBJECT_STORE_HOURS",
+      "intent": "STORE_HOURS",
+      "verb": "show",
+      "terms": [
+        "business opening times",
+        "shop trading hours",
+        "store trading hours"
+      ]
+    },
+    {
+      "group": "OBJECT_SIZE_GUIDE",
+      "intent": "PRODUCT_SIZE_GUIDE",
+      "verb": "show",
+      "terms": [
+        "sizing reference",
+        "size conversion chart",
+        "fit measurement guide"
+      ]
+    },
+    {
+      "group": "OBJECT_SAVED_ADDRESSES",
+      "intent": "ACCOUNT_ADDRESS_LIST",
+      "verb": "show",
+      "terms": [
+        "saved postal addresses",
+        "my saved shipping locations",
+        "delivery addresses on my account"
+      ]
+    },
+    {
+      "group": "OBJECT_ORDERS",
+      "intent": "ORDER_HISTORY",
+      "verb": "show",
+      "terms": [
+        "previous order records",
+        "earlier order records",
+        "my past purchase history"
+      ]
+    },
+    {
+      "group": "OBJECT_REFUND",
+      "intent": "REFUND_STATUS",
+      "verb": "check",
+      "terms": [
+        "reimbursement tracking status",
+        "refund payout status",
+        "progress of my refund"
+      ]
+    }
+  ],
+  "held": [
+    {
+      "group": "OBJECT_RETURN_POLICY",
+      "surface": "rules for returning products",
+      "reason": "Bare show request still resolves PRODUCT_SEARCH; vocabulary alone does not fix parser precedence."
+    }
+  ]
+}

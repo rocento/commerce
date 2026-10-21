@@ -1,0 +1,78 @@
+[
+  {
+    "phrase": "Show my addresses",
+    "text": "Here are your saved addresses.",
+    "blocks": [
+      "saved_addresses"
+    ],
+    "codes": [],
+    "done": true
+  },
+  {
+    "phrase": "Show my saved addresses",
+    "text": "Here are your saved addresses.",
+    "blocks": [
+      "saved_addresses"
+    ],
+    "codes": [],
+    "done": true
+  },
+  {
+    "phrase": "my saved adress",
+    "text": "Here are your saved addresses.",
+    "blocks": [
+      "saved_addresses"
+    ],
+    "codes": [],
+    "done": true
+  },
+  {
+    "phrase": "My wishlists",
+    "text": "Your wishlist is empty.",
+    "blocks": [],
+    "codes": [],
+    "done": true
+  },
+  {
+    "phrase": "What is my total?",
+    "text": "I can help you find products, compare options, manage your cart, and check your orders. Tell me what you need, and I'll guide you.",
+    "blocks": [],
+    "codes": [],
+    "done": true
+  },
+  {
+    "phrase": "What payment methods do you accept?",
+    "text": "I can help you find products, compare options, manage your cart, and check your orders. Tell me what you need, and I'll guide you.",
+    "blocks": [],
+    "codes": [],
+    "done": true
+  },
+  {
+    "phrase": "Can I collect in store?",
+    "text": "Please restate the full request so I can understand what you need. You can ask about products, your cart, an order, or a problem with the store.",
+    "blocks": [],
+    "codes": [],
+    "done": true
+  },
+  {
+    "phrase": "Any offers today?",
+    "text": "I can help you find products, compare options, manage your cart, and check your orders. Tell me what you need, and I'll guide you.",
+    "blocks": [],
+    "codes": [],
+    "done": true
+  },
+  {
+    "phrase": "Cancel that",
+    "text": "Understood. Your request has been structured for review; no commerce action has been executed.\n\nChoose the order in [My orders](/account/orders) to review the available actions and confirm your request. No order has been changed.",
+    "blocks": [],
+    "codes": [],
+    "done": true
+  },
+  {
+    "phrase": "Hello",
+    "text": "Hi! I can help you find products, manage your cart, or check an order. What would you like help with?",
+    "blocks": [],
+    "codes": [],
+    "done": true
+  }
+]

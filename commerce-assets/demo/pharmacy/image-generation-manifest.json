@@ -1,0 +1,57 @@
+{
+  "tool": "built-in image_gen",
+  "assets": [
+    {
+      "name": "hero",
+      "prompt": "Use case: product-mockup. Asset type: luxury pharmacy and skincare storefront hero photograph. Create a high-end editorial still life: a matte black skincare dropper bottle, a low black cream jar with brushed rose-gold lid, and one frosted blush pink cleanser bottle arranged on dark charcoal stone plinths, subtle pale rose petals, deep black background with soft dusty rose side light. Extremely elegant, clean, restrained luxury, beautiful realistic glass and cream textures, studio photography, generous space around all products, landscape composition, no text, no logos, no watermark. Black is the dominant color, rose a subtle accent.",
+      "source": "/Users/momar/.codex/generated_images/01a1089b-1b40-77f1-8f8d-0c545824d813/exec-42c1f9d9-f872-4b95-8bcd-6843df27b8de.png",
+      "destination": "assets/demo/pharmacy/hero.webp"
+    },
+    {
+      "name": "serum",
+      "prompt": "Use case: product-mockup. Asset type: luxury pharmacy skincare catalog photograph. Subject: one black glass skincare serum dropper bottle with a narrow brushed rose gold collar. Photorealistic premium studio product photography, centered fully visible on a plain warm ivory background, subtle grounded shadow, restrained black and dusty rose palette. Square composition, generous margins, clean elegant luxury, no text, no logos, no watermark, no extra objects.",
+      "source": "/Users/momar/.codex/generated_images/01a1089b-1b40-77f1-8f8d-0c545824d813/exec-3445f18c-1706-4dfe-af0a-a131bfd06342.png",
+      "destination": "assets/demo/pharmacy/serum.webp"
+    },
+    {
+      "name": "cream",
+      "prompt": "Use case: product-mockup. Asset type: luxury pharmacy skincare catalog photograph. Subject: one low frosted pale rose face cream jar with a matte black lid. Photorealistic premium studio product photography, centered fully visible on a plain warm ivory background, subtle grounded shadow, restrained black and dusty rose palette. Square composition, generous margins, clean elegant luxury, no text, no logos, no watermark, no extra objects.",
+      "source": "/Users/momar/.codex/generated_images/01a1089b-1b40-77f1-8f8d-0c545824d813/exec-8da55059-598c-48fb-846e-08af0b07bc92.png",
+      "destination": "assets/demo/pharmacy/cream.webp"
+    },
+    {
+      "name": "cleanser",
+      "prompt": "Use case: product-mockup. Asset type: luxury pharmacy skincare catalog photograph. Subject: one tall frosted blush pink cleanser bottle with a matte black pump. Photorealistic premium studio product photography, centered fully visible on a plain warm ivory background, subtle grounded shadow, restrained black and dusty rose palette. Square composition, generous margins, clean elegant luxury, no text, no logos, no watermark, no extra objects.",
+      "source": "/Users/momar/.codex/generated_images/01a1089b-1b40-77f1-8f8d-0c545824d813/exec-09259da6-3be0-4325-bbb6-e48e39e92079.png",
+      "destination": "assets/demo/pharmacy/cleanser.webp"
+    },
+    {
+      "name": "essentials",
+      "prompt": "Use case: product-mockup. Asset type: luxury pharmacy skincare catalog photograph. Subject: an elegant pharmacy personal care kit: a neatly rolled ivory cotton bandage, small matte black first aid tin, and sealed ivory gauze packet. Photorealistic premium studio product photography, centered fully visible on a plain warm ivory background, subtle grounded shadow, restrained black and dusty rose palette. Square composition, generous margins, clean elegant luxury, no text, no logos, no watermark, no extra objects.",
+      "source": "/Users/momar/.codex/generated_images/01a1089b-1b40-77f1-8f8d-0c545824d813/exec-46fd2aee-8ba4-4533-8206-57e3279ad5c7.png",
+      "destination": "assets/demo/pharmacy/essentials.webp"
+    },
+    {
+      "name": "hero-clean",
+      "prompt": "Use case: ads-marketing. Asset type: main hero photograph for NOIR ROSÉ luxury pharmacy and skincare storefront. Create a remarkably clean, elegant luxury skincare campaign still life. Only two unbranded objects: one refined matte black serum dropper bottle and one low translucent dusty-rose glass cream jar with a slim satin-black lid, arranged close together in the central 30 percent of the image on a seamless warm ivory surface. Light warm ivory background, subtle architectural daylight gradient, a single soft long shadow, exquisite real glass and matte materials. Generous uncluttered negative space on both sides and above. Quiet luxurious editorial photography, natural proportions, crisp refined details, restrained contrast, subtle rose color. Landscape 16:9 composition; both products entirely inside the central region with generous vertical margins so center cropping on mobile retains them. No text, no logos, no watermark, no flowers, no petals, no rocks, no plinths, no decoration. The image should feel airy, premium and polished.",
+      "source": "/Users/momar/.codex/generated_images/01a1089b-1b40-77f1-8f8d-0c545824d813/exec-c4777606-8e3f-4be1-90d6-ac2dfed6cbdc.png",
+      "destination": "assets/demo/pharmacy/hero-clean.jpg"
+    },
+    {
+      "name": "hero-luxury",
+      "source": "/Users/momar/.codex/generated_images/01a1089b-1b40-77f1-8f8d-0c545824d813/exec-dc5b4cce-6cf1-4ad6-99b9-1cc27cb93f60.png",
+      "destination": "assets/demo/pharmacy/hero-luxury.jpg",
+      "prompt": "Create a photorealistic ultra-luxury skincare campaign hero photograph for NOIR ROSÉ pharmacy and beauty boutique. Wide landscape composition 1536x1024. A magnificent but extremely restrained still life: one tall satin black cylindrical skincare serum bottle with a polished pale rose-gold narrow collar, one squat translucent smoked blush glass cream jar with a black lid, and one small ivory porcelain dish with a sculptural dab of cream. Arrange on a low monolithic honed ivory travertine pedestal. One flowing ivory silk ribbon crosses the stone softly, no flowers. Background seamless warm off-white architectural studio with a large diffuse vertical light gradient, refined shadows, subtle blush reflections. Palette white and ivory dominant with striking deep black objects and restrained luminous rose accents. Luxury fragrance campaign photography, tactile materials, soft directional morning light, exquisite glass reflections, sophisticated minimalist art direction, medium-format camera detail. Group occupies middle 50 percent of the frame with generous breathing room on all sides, every bottle completely visible and centered for mobile crops. Clean expensive quiet elegance. NO text, NO letters, NO logos, NO watermark, NO additional packaging, no clutter, no gold glitter. This is the image only, not a website mockup.",
+      "initial_source": "/Users/momar/.codex/generated_images/01a1089b-1b40-77f1-8f8d-0c545824d813/exec-f5ca87c8-1b02-471a-bfd9-0b736a7ff70e.png",
+      "refinement_prompt": "Refine this exact luxury skincare photograph for a wide website banner. Keep the same black bottle, rose glass cream jar, ivory cream dish, silk ribbon, travertine and lighting, same photorealistic quality. Recompose to a panoramic 1536x768 image with more breathing room above and below. Entire black bottle including its cap must be fully visible with generous headroom. Keep all three products tightly grouped in the central 45 percent of image width and central 50 percent of image height, so the scene survives wide desktop and portrait mobile crops. Extend the ivory studio surroundings smoothly. Quiet high-end elegance. No text, no logos, no additional products."
+    },
+    {
+      "name": "ritual-luxury",
+      "tool": "built-in image_gen",
+      "source": "/Users/momar/.codex/generated_images/01a109ef-bae0-7e83-9394-c4f3bf01e200/exec-359115b0-76e8-4b1c-9606-76a4ec2778f3.png",
+      "destination": "assets/demo/pharmacy/ritual-luxury.jpg",
+      "reference": "assets/demo/pharmacy/brands/estee-lauder-revitalizing-supreme-night-power-bounce-creme.jpg",
+      "prompt": "Create a refined luxury skincare editorial photograph to replace the left image of a website section. Output ONLY the photograph, no website mockup or added text. Landscape 6:5 aspect ratio. Input image is the product identity reference: preserve the exact Estée Lauder deep blue glass jar, champagne gold lid, proportions and authentic front label. Recompose the product as a smaller elegant centered still life, jar occupies about 33% image width and 35% height, centered horizontally with its center at 55% image height. Warm ivory seamless studio background with the faintest blush undertone to harmonize with an adjacent pale pink panel. Place jar on a single low wide ivory limestone plinth with very fine subtle texture. Large soft directional daylight from upper left, delicate long diffused shadow to right, sophisticated gentle gold highlights, crisp realistic product details. Airy restrained premium beauty campaign art direction, generous balanced negative space all around, quiet warm neutral palette. No flowers, no leaves, no cloth, no extra products, no ornaments, no sparkles, no borders. Avoid cold gray background, harsh shadows, oversized product and excessive empty space above."
+    }
+  ]
+}

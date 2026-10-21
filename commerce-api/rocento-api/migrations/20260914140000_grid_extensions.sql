@@ -1,0 +1,11 @@
+CREATE INDEX grid_definitions_entity_id ON attributes.definitions(entity_type,id);
+CREATE INDEX grid_definitions_label ON attributes.definitions(label,id);
+CREATE INDEX grid_definitions_entity_label ON attributes.definitions(entity_type,label,id);
+CREATE INDEX grid_definitions_search ON attributes.definitions USING gin (label gin_trgm_ops);
+CREATE INDEX grid_adjustments_product ON inventory.adjustments(product_id,id);
+CREATE INDEX grid_adjustments_date ON inventory.adjustments(product_id,created_at,id);
+CREATE INDEX grid_adjustments_search ON inventory.adjustments USING gin (reason gin_trgm_ops);
+CREATE INDEX grid_reservations_product_cart ON inventory.reservations(product_id,cart_id);
+CREATE INDEX grid_comments_order ON orders.order_comments(order_id,id);
+CREATE INDEX grid_comments_date ON orders.order_comments(order_id,created_at,id);
+CREATE INDEX grid_comments_search ON orders.order_comments USING gin (body gin_trgm_ops);

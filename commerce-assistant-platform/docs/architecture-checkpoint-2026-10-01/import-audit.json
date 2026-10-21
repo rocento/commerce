@@ -1,0 +1,4588 @@
+{
+  "scope": "Python app files; syntactic module imports, excluding TYPE_CHECKING. Function-local imports are deferred. Does not resolve dynamic import strings, symbol re-exports, or implicit parent-package initialization; cycles are static candidates, not proof of runtime failure.",
+  "modules": 205,
+  "edges": [
+    {
+      "source": "app.commerce_action_engine.actions.catalog.bestsellers",
+      "target": "app.commerce_action_engine.actions.catalog",
+      "line": 9,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.actions.catalog.bindings",
+      "target": "app.commerce_action_engine.actions.catalog",
+      "line": 6,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.actions.catalog.bindings",
+      "target": "app.commerce_action_engine.actions.catalog.references",
+      "line": 7,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.actions.catalog.comparison",
+      "target": "app.commerce_action_engine.actions.catalog",
+      "line": 9,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.actions.catalog.comparison",
+      "target": "app.commerce_action_engine.actions.catalog.references",
+      "line": 10,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.actions.catalog.contracts",
+      "target": "app.commerce_action_engine.actions.catalog.discovery",
+      "line": 17,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.actions.catalog.discounts",
+      "target": "app.commerce_action_engine.actions.catalog",
+      "line": 9,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.actions.catalog.ports",
+      "target": "app.commerce_action_engine.actions.catalog.contracts",
+      "line": 7,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.actions.catalog.ports",
+      "target": "app.commerce_contracts.agents",
+      "line": 8,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.actions.catalog.product_facts",
+      "target": "app.commerce_action_engine.actions.catalog",
+      "line": 11,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.actions.catalog.tools",
+      "target": "app.commerce_action_engine.actions.catalog.contracts",
+      "line": 6,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.actions.catalog.tools",
+      "target": "app.commerce_resolution_engine.contracts",
+      "line": 26,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.actions.catalog.workflow",
+      "target": "app.commerce_action_engine.contracts.interpretation",
+      "line": 10,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.actions.catalog.workflow",
+      "target": "app.commerce_action_engine.actions.shopping.evidence",
+      "line": 177,
+      "deferred": true
+    },
+    {
+      "source": "app.commerce_action_engine.actions.catalog.workflow",
+      "target": "app.commerce_action_engine.actions.shopping.pricing",
+      "line": 325,
+      "deferred": true
+    },
+    {
+      "source": "app.commerce_action_engine.actions.customer",
+      "target": "app.commerce_action_engine.actions.customer.reads",
+      "line": 3,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.actions.customer",
+      "target": "app.commerce_action_engine.actions.customer.transfers",
+      "line": 4,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.actions.customer.reads",
+      "target": "app.commerce_action_engine.contracts",
+      "line": 6,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.actions.customer.reads",
+      "target": "app.commerce_action_engine.shared.errors",
+      "line": 7,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.actions.customer.transfers",
+      "target": "app.commerce_action_engine.contracts",
+      "line": 8,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.actions.orders",
+      "target": "app.commerce_action_engine.actions.orders.reads",
+      "line": 3,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.actions.orders",
+      "target": "app.commerce_action_engine.actions.orders.reorder",
+      "line": 10,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.actions.orders.reads",
+      "target": "app.commerce_action_engine.contracts",
+      "line": 9,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.actions.orders.reorder",
+      "target": "app.commerce_action_engine.contracts",
+      "line": 8,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.actions.orders.reorder",
+      "target": "app.commerce_action_engine.actions.orders.reads",
+      "line": 10,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.actions.registry",
+      "target": "app.commerce_action_engine.actions.catalog",
+      "line": 7,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.actions.registry",
+      "target": "app.commerce_action_engine.contracts.action",
+      "line": 8,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.actions.registry",
+      "target": "app.commerce_action_engine.contracts.commerce_action",
+      "line": 9,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.actions.shopping.basket_workflow",
+      "target": "app.commerce_action_engine.actions.catalog",
+      "line": 8,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.actions.shopping.basket_workflow",
+      "target": "app.commerce_action_engine.actions.catalog",
+      "line": 15,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.actions.shopping.basket_workflow",
+      "target": "app.commerce_action_engine.actions.shopping.basket_ports",
+      "line": 16,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.actions.shopping.basket_workflow",
+      "target": "app.commerce_action_engine.actions.shopping.baskets",
+      "line": 17,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.actions.shopping.basket_workflow",
+      "target": "app.commerce_action_engine.actions.shopping.constraints",
+      "line": 20,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.actions.shopping.basket_workflow",
+      "target": "app.commerce_action_engine.actions.shopping.contracts",
+      "line": 24,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.actions.shopping.basket_workflow",
+      "target": "app.commerce_action_engine.actions.shopping.meaning",
+      "line": 25,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.actions.shopping.basket_workflow",
+      "target": "app.commerce_action_engine.actions.shopping.personalization",
+      "line": 26,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.actions.shopping.basket_workflow",
+      "target": "app.commerce_action_engine.actions.shopping.selection",
+      "line": 29,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.actions.shopping.basket_workflow",
+      "target": "app.commerce_action_engine.contracts",
+      "line": 30,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.actions.shopping.basket_workflow",
+      "target": "app.commerce_action_engine.execution.agents",
+      "line": 31,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.actions.shopping.basket_workflow",
+      "target": "app.commerce_action_engine.execution.core.meaning",
+      "line": 32,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.actions.shopping.basket_workflow",
+      "target": "app.commerce_action_engine.execution.core.policy",
+      "line": 36,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.actions.shopping.basket_workflow",
+      "target": "app.commerce_action_engine.shared.errors",
+      "line": 37,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.actions.shopping.basket_workflow",
+      "target": "app.commerce_resolution_engine.basket",
+      "line": 38,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.actions.shopping.basket_workflow",
+      "target": "app.commerce_resolution_engine.contracts",
+      "line": 39,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.actions.shopping.basket_workflow",
+      "target": "app.commerce_resolution_engine.runtime",
+      "line": 42,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.actions.shopping.basket_workflow",
+      "target": "app.commerce_action_engine.actions.shopping.meaning",
+      "line": 62,
+      "deferred": true
+    },
+    {
+      "source": "app.commerce_action_engine.actions.shopping.basket_workflow",
+      "target": "app.commerce_action_engine.execution.language.shopping",
+      "line": 68,
+      "deferred": true
+    },
+    {
+      "source": "app.commerce_action_engine.actions.shopping.basket_workflow",
+      "target": "app.commerce_action_engine.execution.planning",
+      "line": 76,
+      "deferred": true
+    },
+    {
+      "source": "app.commerce_action_engine.actions.shopping.basket_workflow",
+      "target": "app.commerce_action_engine.execution.planning.library",
+      "line": 80,
+      "deferred": true
+    },
+    {
+      "source": "app.commerce_action_engine.actions.shopping.basket_workflow",
+      "target": "app.commerce_action_engine.actions.shopping.pricing",
+      "line": 281,
+      "deferred": true
+    },
+    {
+      "source": "app.commerce_action_engine.actions.shopping.basket_workflow",
+      "target": "app.commerce_action_engine.execution.planning.execution",
+      "line": 369,
+      "deferred": true
+    },
+    {
+      "source": "app.commerce_action_engine.actions.shopping.baskets",
+      "target": "app.commerce_action_engine.actions.catalog",
+      "line": 7,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.actions.shopping.baskets",
+      "target": "app.commerce_action_engine.actions.shopping.contracts",
+      "line": 12,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.actions.shopping.baskets",
+      "target": "app.commerce_action_engine.shared.errors",
+      "line": 15,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.actions.shopping.baskets",
+      "target": "app.commerce_resolution_engine.prompts",
+      "line": 61,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.actions.shopping.cart",
+      "target": "app.commerce_action_engine.actions.catalog.references",
+      "line": 7,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.actions.shopping.cart",
+      "target": "app.commerce_action_engine.contracts",
+      "line": 11,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.actions.shopping.cart",
+      "target": "app.commerce_action_engine.contracts.interpretation",
+      "line": 12,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.actions.shopping.cart",
+      "target": "app.commerce_action_engine.shared.errors",
+      "line": 13,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.actions.shopping.cart",
+      "target": "app.commerce_action_engine.actions.shopping.cart_removal",
+      "line": 167,
+      "deferred": true
+    },
+    {
+      "source": "app.commerce_action_engine.actions.shopping.cart_removal",
+      "target": "app.commerce_action_engine.actions.catalog.references",
+      "line": 8,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.actions.shopping.cart_removal",
+      "target": "app.commerce_action_engine.contracts",
+      "line": 9,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.actions.shopping.cart_removal",
+      "target": "app.commerce_action_engine.contracts.interpretation",
+      "line": 14,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.actions.shopping.cart_removal",
+      "target": "app.commerce_action_engine.shared.errors",
+      "line": 15,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.actions.shopping.compound",
+      "target": "app.commerce_action_engine.contracts.compound_plan",
+      "line": 6,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.actions.shopping.compound",
+      "target": "app.commerce_action_engine.contracts.compound_write",
+      "line": 7,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.actions.shopping.constraints",
+      "target": "app.commerce_action_engine.actions.catalog",
+      "line": 7,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.actions.shopping.constraints",
+      "target": "app.commerce_action_engine.actions.shopping.contracts",
+      "line": 12,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.actions.shopping.constraints",
+      "target": "app.commerce_action_engine.actions.shopping.evidence",
+      "line": 16,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.actions.shopping.contracts",
+      "target": "app.commerce_action_engine.actions.catalog",
+      "line": 7,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.actions.shopping.contracts",
+      "target": "app.commerce_action_engine.actions.shopping.pricing",
+      "line": 37,
+      "deferred": true
+    },
+    {
+      "source": "app.commerce_action_engine.actions.shopping.evidence",
+      "target": "app.commerce_action_engine.actions.catalog",
+      "line": 7,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.actions.shopping.meaning",
+      "target": "app.commerce_action_engine.actions.catalog",
+      "line": 11,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.actions.shopping.meaning",
+      "target": "app.commerce_action_engine.contracts.action",
+      "line": 12,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.actions.shopping.meaning",
+      "target": "app.commerce_action_engine.execution.agents",
+      "line": 13,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.actions.shopping.meaning",
+      "target": "app.commerce_action_engine.execution.core.meaning",
+      "line": 14,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.actions.shopping.meaning",
+      "target": "app.commerce_action_engine.execution.core.policy",
+      "line": 24,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.actions.shopping.meaning",
+      "target": "app.commerce_resolution_engine.contracts",
+      "line": 30,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.actions.shopping.meaning",
+      "target": "app.commerce_action_engine.actions.shopping.constraints",
+      "line": 86,
+      "deferred": true
+    },
+    {
+      "source": "app.commerce_action_engine.actions.shopping.meaning",
+      "target": "app.commerce_action_engine.actions.shopping",
+      "line": 270,
+      "deferred": true
+    },
+    {
+      "source": "app.commerce_action_engine.actions.shopping.meaning",
+      "target": "app.commerce_action_engine.actions.shopping.constraints",
+      "line": 288,
+      "deferred": true
+    },
+    {
+      "source": "app.commerce_action_engine.actions.shopping.personalization",
+      "target": "app.commerce_resolution_engine.contracts",
+      "line": 16,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.actions.shopping.personalization",
+      "target": "app.commerce_action_engine.actions.shopping.contracts",
+      "line": 320,
+      "deferred": true
+    },
+    {
+      "source": "app.commerce_action_engine.actions.shopping.recommendations",
+      "target": "app.commerce_action_engine.actions.catalog",
+      "line": 5,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.actions.shopping.recommendations",
+      "target": "app.commerce_action_engine.actions.shopping.contracts",
+      "line": 7,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.actions.shopping.recommendations",
+      "target": "app.commerce_action_engine.actions.shopping.constraints",
+      "line": 29,
+      "deferred": true
+    },
+    {
+      "source": "app.commerce_action_engine.actions.shopping.selection",
+      "target": "app.commerce_action_engine.actions.catalog.references",
+      "line": 5,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.actions.shopping.selection",
+      "target": "app.commerce_action_engine.actions.catalog",
+      "line": 7,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.actions.shopping.selection",
+      "target": "app.commerce_action_engine.actions.shopping.constraints",
+      "line": 8,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.actions.shopping.selection",
+      "target": "app.commerce_action_engine.actions.shopping.contracts",
+      "line": 12,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.actions.shopping.selection",
+      "target": "app.commerce_action_engine.actions.shopping.personalization",
+      "line": 16,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.actions.shopping.selection",
+      "target": "app.commerce_action_engine.actions.shopping.personalization",
+      "line": 19,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.actions.support",
+      "target": "app.commerce_action_engine.actions.support.reads",
+      "line": 3,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.actions.support",
+      "target": "app.commerce_action_engine.actions.support.writes",
+      "line": 4,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.actions.support.reads",
+      "target": "app.commerce_action_engine.contracts",
+      "line": 7,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.actions.support.writes",
+      "target": "app.commerce_action_engine.contracts",
+      "line": 5,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.adapters.baskets",
+      "target": "app.commerce_action_engine.contracts",
+      "line": 9,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.adapters.baskets",
+      "target": "app.commerce_action_engine.shared.errors",
+      "line": 10,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.adapters.cart",
+      "target": "app.commerce_action_engine.adapters.http_response",
+      "line": 8,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.adapters.cart",
+      "target": "app.commerce_action_engine.contracts",
+      "line": 9,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.adapters.cart",
+      "target": "app.commerce_action_engine.shared.errors",
+      "line": 10,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.adapters.catalog",
+      "target": "app.commerce_action_engine.actions.catalog.cache",
+      "line": 11,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.adapters.catalog",
+      "target": "app.commerce_action_engine.actions.catalog.contracts",
+      "line": 12,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.adapters.catalog",
+      "target": "app.commerce_action_engine.actions.catalog.discovery",
+      "line": 17,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.adapters.catalog",
+      "target": "app.commerce_action_engine.actions.catalog.tools",
+      "line": 18,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.adapters.catalog",
+      "target": "app.commerce_action_engine.shared.errors",
+      "line": 19,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.adapters.catalog",
+      "target": "app.commerce_contracts.agents",
+      "line": 20,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.adapters.commerce",
+      "target": "app.commerce_action_engine.actions.catalog.bestsellers",
+      "line": 8,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.adapters.commerce",
+      "target": "app.commerce_action_engine.actions.catalog.discounts",
+      "line": 12,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.adapters.commerce",
+      "target": "app.commerce_action_engine.actions.customer.transfers",
+      "line": 13,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.adapters.commerce",
+      "target": "app.commerce_action_engine.adapters.cart",
+      "line": 16,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.adapters.commerce",
+      "target": "app.commerce_action_engine.adapters.delivery",
+      "line": 17,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.adapters.commerce",
+      "target": "app.commerce_action_engine.adapters.orders",
+      "line": 18,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.adapters.commerce",
+      "target": "app.commerce_action_engine.adapters.shopper_catalog",
+      "line": 19,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.adapters.commerce",
+      "target": "app.commerce_action_engine.adapters.support",
+      "line": 20,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.adapters.commerce",
+      "target": "app.commerce_action_engine.adapters.wishlist",
+      "line": 21,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.adapters.commerce",
+      "target": "app.commerce_action_engine.contracts",
+      "line": 22,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.adapters.commerce",
+      "target": "app.commerce_action_engine.shared.errors",
+      "line": 29,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.adapters.commerce",
+      "target": "app.commerce_action_engine.shared.errors",
+      "line": 32,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.adapters.commerce",
+      "target": "app.commerce_action_engine.adapters.compound",
+      "line": 67,
+      "deferred": true
+    },
+    {
+      "source": "app.commerce_action_engine.adapters.compound",
+      "target": "app.commerce_action_engine.contracts.compound_plan",
+      "line": 7,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.adapters.compound",
+      "target": "app.commerce_action_engine.contracts.compound_write",
+      "line": 8,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.adapters.compound",
+      "target": "app.commerce_action_engine.shared.errors",
+      "line": 13,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.adapters.core",
+      "target": "app.commerce_action_engine.actions.catalog",
+      "line": 9,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.adapters.core",
+      "target": "app.commerce_action_engine.contracts.action",
+      "line": 15,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.adapters.core",
+      "target": "app.commerce_action_engine.contracts.ports",
+      "line": 22,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.adapters.core",
+      "target": "app.commerce_action_engine.execution.agents",
+      "line": 27,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.adapters.core",
+      "target": "app.commerce_action_engine.execution.core.registry",
+      "line": 28,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.adapters.core",
+      "target": "app.commerce_action_engine.platform",
+      "line": 32,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.adapters.core",
+      "target": "app.commerce_resolution_engine.adapter",
+      "line": 33,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.adapters.core",
+      "target": "app.commerce_resolution_engine.runtime",
+      "line": 36,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.adapters.core",
+      "target": "app.commerce_action_engine.contracts.action",
+      "line": 188,
+      "deferred": true
+    },
+    {
+      "source": "app.commerce_action_engine.adapters.delivery",
+      "target": "app.commerce_action_engine.adapters.http_response",
+      "line": 8,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.adapters.delivery",
+      "target": "app.commerce_action_engine.contracts",
+      "line": 9,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.adapters.delivery",
+      "target": "app.commerce_action_engine.shared.errors",
+      "line": 10,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.adapters.http_response",
+      "target": "app.commerce_action_engine.shared.errors",
+      "line": 5,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.adapters.intent_examples",
+      "target": "app.commerce_action_engine.execution.language",
+      "line": 3,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.adapters.intent_examples",
+      "target": "app.commerce_action_engine.execution.language.gate",
+      "line": 3,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.adapters.intent_examples",
+      "target": "app.commerce_action_engine.execution.language.proposals",
+      "line": 4,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.adapters.intent_examples",
+      "target": "app.commerce_contracts.intent_example",
+      "line": 7,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.adapters.memory",
+      "target": "app.commerce_action_engine.actions.shopping.personalization",
+      "line": 7,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.adapters.orders",
+      "target": "app.commerce_action_engine.adapters.http_response",
+      "line": 8,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.adapters.orders",
+      "target": "app.commerce_action_engine.contracts",
+      "line": 9,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.adapters.orders",
+      "target": "app.commerce_action_engine.shared.errors",
+      "line": 10,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.adapters.planned_commerce",
+      "target": "app.commerce_action_engine.actions.catalog",
+      "line": 6,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.adapters.planned_commerce",
+      "target": "app.commerce_action_engine.adapters.commerce",
+      "line": 7,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.adapters.planned_commerce",
+      "target": "app.commerce_action_engine.contracts",
+      "line": 8,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.adapters.planned_commerce",
+      "target": "app.commerce_action_engine.execution.agents",
+      "line": 14,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.adapters.planned_commerce",
+      "target": "app.commerce_action_engine.execution.planning.runtime",
+      "line": 15,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.adapters.reorder",
+      "target": "app.commerce_action_engine.actions.shopping.reorder",
+      "line": 9,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.adapters.reorder",
+      "target": "app.commerce_action_engine.contracts",
+      "line": 13,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.adapters.runtime_knowledge",
+      "target": "app.commerce_action_engine.execution.agents",
+      "line": 5,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.adapters.runtime_knowledge",
+      "target": "app.commerce_action_engine.execution.planning.library",
+      "line": 6,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.adapters.runtime_knowledge",
+      "target": "app.commerce_action_engine.execution.planning.runtime",
+      "line": 10,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.adapters.runtime_knowledge",
+      "target": "app.commerce_knowledge_rag",
+      "line": 11,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.adapters.runtime_knowledge",
+      "target": "app.commerce_resolution_engine.runtime",
+      "line": 12,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.adapters.shopper_catalog",
+      "target": "app.commerce_action_engine.actions.catalog.bestsellers",
+      "line": 9,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.adapters.shopper_catalog",
+      "target": "app.commerce_action_engine.actions.catalog.discounts",
+      "line": 13,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.adapters.shopper_catalog",
+      "target": "app.commerce_action_engine.adapters.http_response",
+      "line": 14,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.adapters.shopper_catalog",
+      "target": "app.commerce_action_engine.shared.errors",
+      "line": 15,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.adapters.shopper_catalog",
+      "target": "app.commerce_action_engine.actions.catalog",
+      "line": 86,
+      "deferred": true
+    },
+    {
+      "source": "app.commerce_action_engine.adapters.shopper_catalog",
+      "target": "app.commerce_action_engine.actions.catalog",
+      "line": 130,
+      "deferred": true
+    },
+    {
+      "source": "app.commerce_action_engine.adapters.support",
+      "target": "app.commerce_action_engine.adapters.http_response",
+      "line": 9,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.adapters.support",
+      "target": "app.commerce_action_engine.contracts",
+      "line": 10,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.adapters.support",
+      "target": "app.commerce_action_engine.shared.errors",
+      "line": 15,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.adapters.wishlist",
+      "target": "app.commerce_action_engine.actions.customer.transfers",
+      "line": 8,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.adapters.wishlist",
+      "target": "app.commerce_action_engine.adapters.http_response",
+      "line": 11,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.adapters.wishlist",
+      "target": "app.commerce_action_engine.shared.errors",
+      "line": 12,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.application.api.chat",
+      "target": "app.commerce_action_engine.application.api.events",
+      "line": 9,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.application.api.chat",
+      "target": "app.commerce_action_engine.application.handle_turn",
+      "line": 10,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.application.api.chat",
+      "target": "app.commerce_action_engine.application.resources",
+      "line": 11,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.application.api.chat",
+      "target": "app.commerce_action_engine.contracts",
+      "line": 12,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.application.api.chat",
+      "target": "app.commerce_action_engine.platform",
+      "line": 13,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.application.api.chat",
+      "target": "app.commerce_resolution_engine.contracts",
+      "line": 14,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.application.api.chat",
+      "target": "app.commerce_resolution_engine.providers",
+      "line": 15,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.application.api.events",
+      "target": "app.commerce_action_engine.application.handle_turn",
+      "line": 10,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.application.api.events",
+      "target": "app.commerce_action_engine.contracts",
+      "line": 11,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.application.api.history",
+      "target": "app.commerce_action_engine.contracts",
+      "line": 8,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.application.api.history",
+      "target": "app.commerce_action_engine.platform",
+      "line": 11,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.application.api.system",
+      "target": "app.commerce_action_engine.contracts",
+      "line": 15,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.application.api.system",
+      "target": "app.commerce_action_engine.platform",
+      "line": 20,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.application.api.system",
+      "target": "app.commerce_resolution_engine.baseline",
+      "line": 21,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.application.api.system",
+      "target": "app.commerce_resolution_engine.chat",
+      "line": 22,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.application.api.system",
+      "target": "app.commerce_resolution_engine.contracts",
+      "line": 23,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.application.api.system",
+      "target": "app.commerce_resolution_engine.providers",
+      "line": 24,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.application.baskets",
+      "target": "app.commerce_action_engine.actions.shopping",
+      "line": 8,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.application.baskets",
+      "target": "app.commerce_action_engine.actions.shopping.basket_workflow",
+      "line": 8,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.application.baskets",
+      "target": "app.commerce_action_engine.actions.shopping.basket_ports",
+      "line": 9,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.application.baskets",
+      "target": "app.commerce_action_engine.contracts",
+      "line": 10,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.application.baskets",
+      "target": "app.commerce_action_engine.execution.agents",
+      "line": 11,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.application.baskets",
+      "target": "app.commerce_action_engine.platform",
+      "line": 12,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.application.baskets",
+      "target": "app.commerce_resolution_engine.contracts",
+      "line": 18,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.application.baskets",
+      "target": "app.commerce_resolution_engine.runtime",
+      "line": 19,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.application.bootstrap",
+      "target": "app.commerce_action_engine.actions.catalog",
+      "line": 13,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.application.bootstrap",
+      "target": "app.commerce_action_engine.actions.policy",
+      "line": 17,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.application.bootstrap",
+      "target": "app.commerce_action_engine.actions.policy",
+      "line": 18,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.application.bootstrap",
+      "target": "app.commerce_action_engine.adapters.commerce",
+      "line": 19,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.application.bootstrap",
+      "target": "app.commerce_action_engine.adapters.core",
+      "line": 20,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.application.bootstrap",
+      "target": "app.commerce_action_engine.adapters.intent_examples",
+      "line": 25,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.application.bootstrap",
+      "target": "app.commerce_action_engine.adapters.memory",
+      "line": 26,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.application.bootstrap",
+      "target": "app.commerce_action_engine.adapters.runtime_knowledge",
+      "line": 27,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.application.bootstrap",
+      "target": "app.commerce_action_engine.application.api.chat",
+      "line": 28,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.application.bootstrap",
+      "target": "app.commerce_action_engine.application.api.history",
+      "line": 29,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.application.bootstrap",
+      "target": "app.commerce_action_engine.application.api.system",
+      "line": 30,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.application.bootstrap",
+      "target": "app.commerce_action_engine.application.catalog",
+      "line": 31,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.application.bootstrap",
+      "target": "app.commerce_action_engine.application.context",
+      "line": 32,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.application.bootstrap",
+      "target": "app.commerce_action_engine.application.handle_turn",
+      "line": 33,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.application.bootstrap",
+      "target": "app.commerce_action_engine.application.resources",
+      "line": 34,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.application.bootstrap",
+      "target": "app.commerce_action_engine.application.shopping",
+      "line": 35,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.application.bootstrap",
+      "target": "app.commerce_action_engine.application.turn_dependencies",
+      "line": 36,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.application.bootstrap",
+      "target": "app.commerce_action_engine.contracts",
+      "line": 37,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.application.bootstrap",
+      "target": "app.commerce_action_engine.contracts.action",
+      "line": 40,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.application.bootstrap",
+      "target": "app.commerce_action_engine.execution.agents",
+      "line": 41,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.application.bootstrap",
+      "target": "app.commerce_action_engine.execution.core",
+      "line": 42,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.application.bootstrap",
+      "target": "app.commerce_action_engine.execution.language",
+      "line": 46,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.application.bootstrap",
+      "target": "app.commerce_action_engine.execution.language.readiness",
+      "line": 47,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.application.bootstrap",
+      "target": "app.commerce_action_engine.platform",
+      "line": 48,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.application.bootstrap",
+      "target": "app.commerce_action_engine.platform.security",
+      "line": 56,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.application.bootstrap",
+      "target": "app.commerce_knowledge_rag",
+      "line": 57,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.application.bootstrap",
+      "target": "app.commerce_knowledge_rag.intent_examples",
+      "line": 58,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.application.bootstrap",
+      "target": "app.commerce_resolution_engine.admission",
+      "line": 59,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.application.bootstrap",
+      "target": "app.commerce_resolution_engine.baseline",
+      "line": 63,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.application.bootstrap",
+      "target": "app.commerce_resolution_engine.contracts",
+      "line": 64,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.application.bootstrap",
+      "target": "app.commerce_resolution_engine.providers",
+      "line": 65,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.application.bootstrap",
+      "target": "app.commerce_resolution_engine.providers.embeddings",
+      "line": 77,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.application.bootstrap",
+      "target": "app.commerce_resolution_engine.runtime",
+      "line": 78,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.application.bootstrap",
+      "target": "app.commerce_action_engine.execution.core.intents",
+      "line": 215,
+      "deferred": true
+    },
+    {
+      "source": "app.commerce_action_engine.application.bootstrap",
+      "target": "app.commerce_action_engine.execution.language.shopping",
+      "line": 216,
+      "deferred": true
+    },
+    {
+      "source": "app.commerce_action_engine.application.bootstrap",
+      "target": "app.commerce_action_engine.adapters.planned_commerce",
+      "line": 305,
+      "deferred": true
+    },
+    {
+      "source": "app.commerce_action_engine.application.bootstrap",
+      "target": "app.commerce_action_engine.execution.planning",
+      "line": 359,
+      "deferred": true
+    },
+    {
+      "source": "app.commerce_action_engine.application.bootstrap",
+      "target": "app.commerce_action_engine.actions.shopping",
+      "line": 408,
+      "deferred": true
+    },
+    {
+      "source": "app.commerce_action_engine.application.bootstrap",
+      "target": "app.commerce_action_engine.actions.shopping.personalization",
+      "line": 408,
+      "deferred": true
+    },
+    {
+      "source": "app.commerce_action_engine.application.catalog",
+      "target": "app.commerce_action_engine.actions.catalog.cache",
+      "line": 8,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.application.catalog",
+      "target": "app.commerce_action_engine.actions.catalog.contracts",
+      "line": 9,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.application.catalog",
+      "target": "app.commerce_action_engine.actions.catalog.ports",
+      "line": 10,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.application.catalog",
+      "target": "app.commerce_action_engine.actions.catalog.tools",
+      "line": 11,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.application.catalog",
+      "target": "app.commerce_action_engine.adapters.catalog",
+      "line": 12,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.application.catalog",
+      "target": "app.commerce_action_engine.platform",
+      "line": 13,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.application.catalog",
+      "target": "app.commerce_contracts.agents",
+      "line": 18,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.application.catalog",
+      "target": "app.commerce_resolution_engine.contracts",
+      "line": 19,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.application.catalog",
+      "target": "app.commerce_resolution_engine.runtime",
+      "line": 20,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.application.context",
+      "target": "app.commerce_action_engine.contracts.action",
+      "line": 7,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.application.followups",
+      "target": "app.commerce_action_engine.actions.catalog.followups",
+      "line": 7,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.application.followups",
+      "target": "app.commerce_action_engine.application.context",
+      "line": 8,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.application.followups",
+      "target": "app.commerce_action_engine.application.interpretation",
+      "line": 9,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.application.followups",
+      "target": "app.commerce_action_engine.execution.language",
+      "line": 14,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.application.followups",
+      "target": "app.commerce_action_engine.execution.language.gate",
+      "line": 14,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.application.followups",
+      "target": "app.commerce_action_engine.execution.language.clarification",
+      "line": 15,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.application.followups",
+      "target": "app.commerce_action_engine.execution.language.recommendations",
+      "line": 18,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.application.followups",
+      "target": "app.commerce_action_engine.execution.language.recommendations",
+      "line": 21,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.application.followups",
+      "target": "app.commerce_action_engine.execution.language.compound_clarification",
+      "line": 119,
+      "deferred": true
+    },
+    {
+      "source": "app.commerce_action_engine.application.handle_turn",
+      "target": "app.commerce_action_engine.actions.shopping",
+      "line": 10,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.application.handle_turn",
+      "target": "app.commerce_action_engine.actions.shopping.cart",
+      "line": 10,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.application.handle_turn",
+      "target": "app.commerce_action_engine.application",
+      "line": 11,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.application.handle_turn",
+      "target": "app.commerce_action_engine.application.followups",
+      "line": 11,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.application.handle_turn",
+      "target": "app.commerce_action_engine.application.handlers.cart",
+      "line": 12,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.application.handle_turn",
+      "target": "app.commerce_action_engine.application.handlers.clarification",
+      "line": 17,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.application.handle_turn",
+      "target": "app.commerce_action_engine.application.handlers.customer",
+      "line": 20,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.application.handle_turn",
+      "target": "app.commerce_action_engine.application.handlers.delivery",
+      "line": 26,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.application.handle_turn",
+      "target": "app.commerce_action_engine.application.handlers.guidance",
+      "line": 27,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.application.handle_turn",
+      "target": "app.commerce_action_engine.application.handlers.orders",
+      "line": 28,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.application.handle_turn",
+      "target": "app.commerce_action_engine.application.handlers.product_guidance",
+      "line": 32,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.application.handle_turn",
+      "target": "app.commerce_action_engine.application.handlers.support",
+      "line": 36,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.application.handle_turn",
+      "target": "app.commerce_action_engine.application.handlers.wishlist_transfer",
+      "line": 41,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.application.handle_turn",
+      "target": "app.commerce_action_engine.application.interpretation",
+      "line": 44,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.application.handle_turn",
+      "target": "app.commerce_action_engine.application.interpretation_diagnostics",
+      "line": 50,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.application.handle_turn",
+      "target": "app.commerce_action_engine.application.turn_dependencies",
+      "line": 53,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.application.handle_turn",
+      "target": "app.commerce_action_engine.contracts",
+      "line": 54,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.application.handle_turn",
+      "target": "app.commerce_action_engine.contracts.action",
+      "line": 55,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.application.handle_turn",
+      "target": "app.commerce_action_engine.contracts.interpretation",
+      "line": 56,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.application.handle_turn",
+      "target": "app.commerce_action_engine.execution.core.registry",
+      "line": 57,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.application.handle_turn",
+      "target": "app.commerce_action_engine.platform",
+      "line": 58,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.application.handle_turn",
+      "target": "app.commerce_action_engine.platform.completion",
+      "line": 64,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.application.handle_turn",
+      "target": "app.commerce_action_engine.platform.failures",
+      "line": 65,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.application.handle_turn",
+      "target": "app.commerce_action_engine.shared.errors",
+      "line": 66,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.application.handle_turn",
+      "target": "app.commerce_resolution_engine.admission",
+      "line": 67,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.application.handle_turn",
+      "target": "app.commerce_resolution_engine.chat",
+      "line": 72,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.application.handle_turn",
+      "target": "app.commerce_resolution_engine.contracts",
+      "line": 73,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.application.handle_turn",
+      "target": "app.commerce_resolution_engine.language",
+      "line": 74,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.application.handle_turn",
+      "target": "app.commerce_action_engine.actions.shopping",
+      "line": 182,
+      "deferred": true
+    },
+    {
+      "source": "app.commerce_action_engine.application.handle_turn",
+      "target": "app.commerce_action_engine.actions.shopping.personalization",
+      "line": 182,
+      "deferred": true
+    },
+    {
+      "source": "app.commerce_action_engine.application.handle_turn",
+      "target": "app.commerce_action_engine.application.handlers",
+      "line": 183,
+      "deferred": true
+    },
+    {
+      "source": "app.commerce_action_engine.application.handle_turn",
+      "target": "app.commerce_action_engine.application.handlers.compound",
+      "line": 183,
+      "deferred": true
+    },
+    {
+      "source": "app.commerce_action_engine.application.handle_turn",
+      "target": "app.commerce_action_engine.contracts.compound_plan",
+      "line": 186,
+      "deferred": true
+    },
+    {
+      "source": "app.commerce_action_engine.application.handle_turn",
+      "target": "app.commerce_action_engine.execution.language",
+      "line": 187,
+      "deferred": true
+    },
+    {
+      "source": "app.commerce_action_engine.application.handle_turn",
+      "target": "app.commerce_action_engine.execution.language.gate",
+      "line": 187,
+      "deferred": true
+    },
+    {
+      "source": "app.commerce_action_engine.application.handle_turn",
+      "target": "app.commerce_action_engine.execution.planning",
+      "line": 188,
+      "deferred": true
+    },
+    {
+      "source": "app.commerce_action_engine.application.handle_turn",
+      "target": "app.commerce_action_engine.execution.planning.compound_review",
+      "line": 188,
+      "deferred": true
+    },
+    {
+      "source": "app.commerce_action_engine.application.handle_turn",
+      "target": "app.commerce_action_engine.actions.orders",
+      "line": 379,
+      "deferred": true
+    },
+    {
+      "source": "app.commerce_action_engine.application.handle_turn",
+      "target": "app.commerce_action_engine.execution.language.selection",
+      "line": 388,
+      "deferred": true
+    },
+    {
+      "source": "app.commerce_action_engine.application.handle_turn",
+      "target": "app.commerce_action_engine.application.interpretation",
+      "line": 412,
+      "deferred": true
+    },
+    {
+      "source": "app.commerce_action_engine.application.handle_turn",
+      "target": "app.commerce_action_engine.execution.language.proposals",
+      "line": 468,
+      "deferred": true
+    },
+    {
+      "source": "app.commerce_action_engine.application.handle_turn",
+      "target": "app.commerce_contracts.intent_example",
+      "line": 509,
+      "deferred": true
+    },
+    {
+      "source": "app.commerce_action_engine.application.handle_turn",
+      "target": "app.commerce_action_engine.application.handlers.product_facts",
+      "line": 701,
+      "deferred": true
+    },
+    {
+      "source": "app.commerce_action_engine.application.handle_turn",
+      "target": "app.commerce_action_engine.application.handlers.reorder",
+      "line": 720,
+      "deferred": true
+    },
+    {
+      "source": "app.commerce_action_engine.application.handle_turn",
+      "target": "app.commerce_action_engine.application.handlers.comparison",
+      "line": 742,
+      "deferred": true
+    },
+    {
+      "source": "app.commerce_action_engine.application.handle_turn",
+      "target": "app.commerce_action_engine.application.handlers.discounts",
+      "line": 758,
+      "deferred": true
+    },
+    {
+      "source": "app.commerce_action_engine.application.handle_turn",
+      "target": "app.commerce_action_engine.application.handlers.bestsellers",
+      "line": 776,
+      "deferred": true
+    },
+    {
+      "source": "app.commerce_action_engine.application.handle_turn",
+      "target": "app.commerce_action_engine.application.handlers.conversation",
+      "line": 962,
+      "deferred": true
+    },
+    {
+      "source": "app.commerce_action_engine.application.handle_turn",
+      "target": "app.commerce_action_engine.application.shopping",
+      "line": 1144,
+      "deferred": true
+    },
+    {
+      "source": "app.commerce_action_engine.application.handle_turn",
+      "target": "app.commerce_action_engine.application.responses",
+      "line": 1193,
+      "deferred": true
+    },
+    {
+      "source": "app.commerce_action_engine.application.handlers.bestsellers",
+      "target": "app.commerce_action_engine.actions.catalog.bestsellers",
+      "line": 5,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.application.handlers.bestsellers",
+      "target": "app.commerce_action_engine.application.ports",
+      "line": 9,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.application.handlers.bestsellers",
+      "target": "app.commerce_action_engine.application.responses",
+      "line": 10,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.application.handlers.bestsellers",
+      "target": "app.commerce_action_engine.contracts",
+      "line": 11,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.application.handlers.bestsellers",
+      "target": "app.commerce_action_engine.contracts.interpretation",
+      "line": 12,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.application.handlers.bestsellers",
+      "target": "app.commerce_action_engine.platform",
+      "line": 13,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.application.handlers.cart",
+      "target": "app.commerce_action_engine.actions.catalog",
+      "line": 12,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.application.handlers.cart",
+      "target": "app.commerce_action_engine.actions.customer",
+      "line": 13,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.application.handlers.cart",
+      "target": "app.commerce_action_engine.actions.shopping",
+      "line": 14,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.application.handlers.cart",
+      "target": "app.commerce_action_engine.actions.shopping.cart",
+      "line": 14,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.application.handlers.cart",
+      "target": "app.commerce_action_engine.actions.shopping",
+      "line": 15,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.application.handlers.cart",
+      "target": "app.commerce_action_engine.actions.shopping.cart_removal",
+      "line": 15,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.application.handlers.cart",
+      "target": "app.commerce_action_engine.application.ports",
+      "line": 16,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.application.handlers.cart",
+      "target": "app.commerce_action_engine.application.responses",
+      "line": 17,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.application.handlers.cart",
+      "target": "app.commerce_action_engine.contracts",
+      "line": 23,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.application.handlers.cart",
+      "target": "app.commerce_action_engine.contracts.interpretation",
+      "line": 27,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.application.handlers.cart",
+      "target": "app.commerce_action_engine.platform",
+      "line": 28,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.application.handlers.cart",
+      "target": "app.commerce_action_engine.shared.errors",
+      "line": 29,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.application.handlers.clarification",
+      "target": "app.commerce_action_engine.application.ports",
+      "line": 3,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.application.handlers.clarification",
+      "target": "app.commerce_action_engine.contracts",
+      "line": 4,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.application.handlers.clarification",
+      "target": "app.commerce_action_engine.contracts.interpretation",
+      "line": 5,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.application.handlers.comparison",
+      "target": "app.commerce_action_engine.actions.catalog",
+      "line": 6,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.application.handlers.comparison",
+      "target": "app.commerce_action_engine.actions.catalog.comparison",
+      "line": 7,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.application.handlers.comparison",
+      "target": "app.commerce_action_engine.actions.catalog.references",
+      "line": 12,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.application.handlers.comparison",
+      "target": "app.commerce_action_engine.application.ports",
+      "line": 13,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.application.handlers.comparison",
+      "target": "app.commerce_action_engine.application.responses",
+      "line": 14,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.application.handlers.comparison",
+      "target": "app.commerce_action_engine.contracts",
+      "line": 15,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.application.handlers.comparison",
+      "target": "app.commerce_action_engine.contracts.interpretation",
+      "line": 16,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.application.handlers.comparison",
+      "target": "app.commerce_action_engine.platform",
+      "line": 17,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.application.handlers.compound",
+      "target": "app.commerce_action_engine.actions.catalog.bindings",
+      "line": 7,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.application.handlers.compound",
+      "target": "app.commerce_action_engine.actions.shopping.compound",
+      "line": 8,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.application.handlers.compound",
+      "target": "app.commerce_action_engine.contracts",
+      "line": 9,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.application.handlers.compound",
+      "target": "app.commerce_action_engine.contracts.compound_plan",
+      "line": 10,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.application.handlers.compound",
+      "target": "app.commerce_action_engine.contracts.interpretation",
+      "line": 11,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.application.handlers.compound",
+      "target": "app.commerce_action_engine.execution.agents",
+      "line": 12,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.application.handlers.compound",
+      "target": "app.commerce_action_engine.execution.planning.outcomes",
+      "line": 13,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.application.handlers.compound",
+      "target": "app.commerce_action_engine.platform",
+      "line": 14,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.application.handlers.compound",
+      "target": "app.commerce_orchestration_engine.journeys.compound",
+      "line": 15,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.application.handlers.customer",
+      "target": "app.commerce_action_engine.actions.catalog.references",
+      "line": 7,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.application.handlers.customer",
+      "target": "app.commerce_action_engine.actions.customer",
+      "line": 11,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.application.handlers.customer",
+      "target": "app.commerce_action_engine.actions.customer.reads",
+      "line": 15,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.application.handlers.customer",
+      "target": "app.commerce_action_engine.application.ports",
+      "line": 16,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.application.handlers.customer",
+      "target": "app.commerce_action_engine.contracts",
+      "line": 17,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.application.handlers.customer",
+      "target": "app.commerce_action_engine.contracts.interpretation",
+      "line": 18,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.application.handlers.customer",
+      "target": "app.commerce_action_engine.platform",
+      "line": 19,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.application.handlers.customer",
+      "target": "app.commerce_action_engine.shared.errors",
+      "line": 20,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.application.handlers.delivery",
+      "target": "app.commerce_action_engine.actions.customer",
+      "line": 5,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.application.handlers.delivery",
+      "target": "app.commerce_action_engine.application.ports",
+      "line": 6,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.application.handlers.delivery",
+      "target": "app.commerce_action_engine.contracts",
+      "line": 7,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.application.handlers.delivery",
+      "target": "app.commerce_action_engine.platform",
+      "line": 8,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.application.handlers.discounts",
+      "target": "app.commerce_action_engine.actions.catalog.discounts",
+      "line": 5,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.application.handlers.discounts",
+      "target": "app.commerce_action_engine.application.ports",
+      "line": 6,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.application.handlers.discounts",
+      "target": "app.commerce_action_engine.application.responses",
+      "line": 7,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.application.handlers.discounts",
+      "target": "app.commerce_action_engine.contracts",
+      "line": 8,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.application.handlers.discounts",
+      "target": "app.commerce_action_engine.platform",
+      "line": 9,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.application.handlers.guidance",
+      "target": "app.commerce_action_engine.contracts.interpretation",
+      "line": 3,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.application.handlers.guidance",
+      "target": "app.commerce_action_engine.execution.language.handoffs",
+      "line": 4,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.application.handlers.orders",
+      "target": "app.commerce_action_engine.actions.orders",
+      "line": 11,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.application.handlers.orders",
+      "target": "app.commerce_action_engine.application.ports",
+      "line": 16,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.application.handlers.orders",
+      "target": "app.commerce_action_engine.contracts",
+      "line": 17,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.application.handlers.orders",
+      "target": "app.commerce_action_engine.contracts.interpretation",
+      "line": 18,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.application.handlers.orders",
+      "target": "app.commerce_action_engine.platform",
+      "line": 19,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.application.handlers.orders",
+      "target": "app.commerce_action_engine.shared.errors",
+      "line": 20,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.application.handlers.product_facts",
+      "target": "app.commerce_action_engine.actions.catalog",
+      "line": 7,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.application.handlers.product_facts",
+      "target": "app.commerce_action_engine.actions.catalog.product_facts",
+      "line": 8,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.application.handlers.product_facts",
+      "target": "app.commerce_action_engine.actions.catalog.references",
+      "line": 14,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.application.handlers.product_facts",
+      "target": "app.commerce_action_engine.application.ports",
+      "line": 15,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.application.handlers.product_facts",
+      "target": "app.commerce_action_engine.application.responses",
+      "line": 16,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.application.handlers.product_facts",
+      "target": "app.commerce_action_engine.contracts",
+      "line": 17,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.application.handlers.product_facts",
+      "target": "app.commerce_action_engine.contracts.interpretation",
+      "line": 18,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.application.handlers.product_facts",
+      "target": "app.commerce_action_engine.platform",
+      "line": 19,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.application.handlers.product_facts",
+      "target": "app.commerce_action_engine.shared.errors",
+      "line": 20,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.application.handlers.product_guidance",
+      "target": "app.commerce_action_engine.contracts",
+      "line": 3,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.application.handlers.product_guidance",
+      "target": "app.commerce_action_engine.contracts.interpretation",
+      "line": 4,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.application.handlers.reorder",
+      "target": "app.commerce_action_engine.actions.orders",
+      "line": 6,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.application.handlers.reorder",
+      "target": "app.commerce_action_engine.application.ports",
+      "line": 7,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.application.handlers.reorder",
+      "target": "app.commerce_action_engine.contracts",
+      "line": 8,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.application.handlers.reorder",
+      "target": "app.commerce_action_engine.contracts.interpretation",
+      "line": 9,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.application.handlers.reorder",
+      "target": "app.commerce_action_engine.shared.errors",
+      "line": 10,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.application.handlers.support",
+      "target": "app.commerce_action_engine.actions.support",
+      "line": 5,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.application.handlers.support",
+      "target": "app.commerce_action_engine.application.ports",
+      "line": 10,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.application.handlers.support",
+      "target": "app.commerce_action_engine.contracts",
+      "line": 11,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.application.handlers.support",
+      "target": "app.commerce_action_engine.contracts.interpretation",
+      "line": 12,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.application.handlers.support",
+      "target": "app.commerce_action_engine.platform",
+      "line": 13,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.application.handlers.support",
+      "target": "app.commerce_action_engine.shared.errors",
+      "line": 14,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.application.handlers.wishlist_transfer",
+      "target": "app.commerce_action_engine.actions.customer",
+      "line": 8,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.application.handlers.wishlist_transfer",
+      "target": "app.commerce_action_engine.application.ports",
+      "line": 12,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.application.handlers.wishlist_transfer",
+      "target": "app.commerce_action_engine.application.responses",
+      "line": 13,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.application.handlers.wishlist_transfer",
+      "target": "app.commerce_action_engine.contracts",
+      "line": 14,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.application.handlers.wishlist_transfer",
+      "target": "app.commerce_action_engine.contracts.interpretation",
+      "line": 15,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.application.handlers.wishlist_transfer",
+      "target": "app.commerce_action_engine.shared.errors",
+      "line": 16,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.application.interpretation",
+      "target": "app.commerce_action_engine.actions.shopping.contracts",
+      "line": 13,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.application.interpretation",
+      "target": "app.commerce_action_engine.application.context",
+      "line": 14,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.application.interpretation",
+      "target": "app.commerce_action_engine.contracts.interpretation",
+      "line": 15,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.application.interpretation",
+      "target": "app.commerce_action_engine.execution.language",
+      "line": 19,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.application.interpretation",
+      "target": "app.commerce_action_engine.execution.language.gate",
+      "line": 19,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.application.interpretation",
+      "target": "app.commerce_action_engine.execution.language.compatibility",
+      "line": 20,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.application.interpretation",
+      "target": "app.commerce_action_engine.execution.language.routing",
+      "line": 23,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.application.interpretation",
+      "target": "app.commerce_action_engine.execution.language.search_context",
+      "line": 24,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.application.interpretation",
+      "target": "app.commerce_action_engine.execution.language.search_context",
+      "line": 27,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.application.interpretation",
+      "target": "app.commerce_action_engine.actions.catalog.workflow",
+      "line": 95,
+      "deferred": true
+    },
+    {
+      "source": "app.commerce_action_engine.application.interpretation_diagnostics",
+      "target": "app.commerce_action_engine.contracts.interpretation",
+      "line": 3,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.application.knowledge_cli",
+      "target": "app.commerce_action_engine.adapters.intent_examples",
+      "line": 11,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.application.knowledge_cli",
+      "target": "app.commerce_action_engine.platform",
+      "line": 12,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.application.knowledge_cli",
+      "target": "app.commerce_contracts.agents",
+      "line": 13,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.application.knowledge_cli",
+      "target": "app.commerce_contracts.intent_example",
+      "line": 14,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.application.knowledge_cli",
+      "target": "app.commerce_knowledge_rag",
+      "line": 15,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.application.knowledge_cli",
+      "target": "app.commerce_knowledge_rag.intent_examples",
+      "line": 21,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.application.knowledge_cli",
+      "target": "app.commerce_resolution_engine.contracts",
+      "line": 22,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.application.knowledge_cli",
+      "target": "app.commerce_resolution_engine.providers",
+      "line": 23,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.application.main",
+      "target": "app.commerce_action_engine.application.bootstrap",
+      "line": 3,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.application.ports",
+      "target": "app.commerce_action_engine.contracts",
+      "line": 5,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.application.provider_smoke",
+      "target": "app.commerce_action_engine.platform",
+      "line": 3,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.application.provider_smoke",
+      "target": "app.commerce_resolution_engine.contracts",
+      "line": 4,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.application.provider_smoke",
+      "target": "app.commerce_resolution_engine.providers",
+      "line": 5,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.application.provider_smoke",
+      "target": "app.commerce_resolution_engine.providers.smoke",
+      "line": 6,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.application.responses",
+      "target": "app.commerce_action_engine.actions.catalog",
+      "line": 8,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.application.responses",
+      "target": "app.commerce_action_engine.actions.catalog",
+      "line": 9,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.application.responses",
+      "target": "app.commerce_action_engine.contracts",
+      "line": 10,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.application.responses",
+      "target": "app.commerce_action_engine.actions.shopping.personalization",
+      "line": 104,
+      "deferred": true
+    },
+    {
+      "source": "app.commerce_action_engine.application.runtime_chat",
+      "target": "app.commerce_action_engine.execution.agents",
+      "line": 6,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.application.runtime_chat",
+      "target": "app.commerce_resolution_engine.runtime",
+      "line": 7,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.application.shopping",
+      "target": "app.commerce_action_engine.actions.catalog",
+      "line": 9,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.application.shopping",
+      "target": "app.commerce_action_engine.actions.catalog",
+      "line": 20,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.application.shopping",
+      "target": "app.commerce_action_engine.actions.catalog",
+      "line": 21,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.application.shopping",
+      "target": "app.commerce_action_engine.actions.catalog.workflow",
+      "line": 22,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.application.shopping",
+      "target": "app.commerce_action_engine.actions.shopping.constraints",
+      "line": 23,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.application.shopping",
+      "target": "app.commerce_action_engine.actions.shopping.contracts",
+      "line": 34,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.application.shopping",
+      "target": "app.commerce_action_engine.actions.shopping.evidence",
+      "line": 38,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.application.shopping",
+      "target": "app.commerce_action_engine.actions.shopping.personalization",
+      "line": 39,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.application.shopping",
+      "target": "app.commerce_action_engine.actions.shopping.personalization",
+      "line": 42,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.application.shopping",
+      "target": "app.commerce_action_engine.actions.shopping.personalization",
+      "line": 45,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.application.shopping",
+      "target": "app.commerce_action_engine.actions.shopping.personalization",
+      "line": 48,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.application.shopping",
+      "target": "app.commerce_action_engine.actions.shopping.pricing",
+      "line": 51,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.application.shopping",
+      "target": "app.commerce_action_engine.actions.shopping.recommendations",
+      "line": 55,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.application.shopping",
+      "target": "app.commerce_action_engine.actions.shopping.selection",
+      "line": 60,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.application.shopping",
+      "target": "app.commerce_action_engine.application.interpretation",
+      "line": 61,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.application.shopping",
+      "target": "app.commerce_action_engine.application.responses",
+      "line": 62,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.application.shopping",
+      "target": "app.commerce_action_engine.application.shopping_presentation",
+      "line": 63,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.application.shopping",
+      "target": "app.commerce_action_engine.contracts",
+      "line": 64,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.application.shopping",
+      "target": "app.commerce_action_engine.contracts.interpretation",
+      "line": 65,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.application.shopping",
+      "target": "app.commerce_action_engine.execution.agents",
+      "line": 69,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.application.shopping",
+      "target": "app.commerce_action_engine.execution.language.shopping",
+      "line": 70,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.application.shopping",
+      "target": "app.commerce_action_engine.execution.language.shopping",
+      "line": 73,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.application.shopping",
+      "target": "app.commerce_action_engine.platform",
+      "line": 78,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.application.shopping",
+      "target": "app.commerce_action_engine.shared.errors",
+      "line": 79,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.application.shopping",
+      "target": "app.commerce_resolution_engine.contracts",
+      "line": 80,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.application.shopping",
+      "target": "app.commerce_resolution_engine.runtime",
+      "line": 86,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.application.shopping",
+      "target": "app.commerce_resolution_engine.prompts",
+      "line": 106,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.application.shopping",
+      "target": "app.commerce_resolution_engine.shopping",
+      "line": 138,
+      "deferred": true
+    },
+    {
+      "source": "app.commerce_action_engine.application.shopping",
+      "target": "app.commerce_action_engine.actions.shopping.meaning",
+      "line": 151,
+      "deferred": true
+    },
+    {
+      "source": "app.commerce_action_engine.application.shopping",
+      "target": "app.commerce_action_engine.execution.core.meaning",
+      "line": 159,
+      "deferred": true
+    },
+    {
+      "source": "app.commerce_action_engine.application.shopping",
+      "target": "app.commerce_action_engine.platform",
+      "line": 160,
+      "deferred": true
+    },
+    {
+      "source": "app.commerce_action_engine.application.shopping",
+      "target": "app.commerce_action_engine.execution.planning",
+      "line": 173,
+      "deferred": true
+    },
+    {
+      "source": "app.commerce_action_engine.application.shopping",
+      "target": "app.commerce_action_engine.actions.catalog.workflow",
+      "line": 270,
+      "deferred": true
+    },
+    {
+      "source": "app.commerce_action_engine.application.shopping",
+      "target": "app.commerce_action_engine.execution.core.meaning",
+      "line": 501,
+      "deferred": true
+    },
+    {
+      "source": "app.commerce_action_engine.application.shopping_presentation",
+      "target": "app.commerce_action_engine.actions.catalog",
+      "line": 5,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.application.shopping_presentation",
+      "target": "app.commerce_action_engine.actions.catalog",
+      "line": 6,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.application.shopping_presentation",
+      "target": "app.commerce_action_engine.actions.shopping.constraints",
+      "line": 7,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.application.shopping_presentation",
+      "target": "app.commerce_action_engine.actions.shopping.contracts",
+      "line": 8,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.application.shopping_presentation",
+      "target": "app.commerce_action_engine.actions.shopping.evidence",
+      "line": 12,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.application.shopping_presentation",
+      "target": "app.commerce_action_engine.actions.shopping.personalization",
+      "line": 13,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.application.shopping_presentation",
+      "target": "app.commerce_action_engine.actions.shopping.selection",
+      "line": 16,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.application.turn_dependencies",
+      "target": "app.commerce_action_engine.actions.policy",
+      "line": 9,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.application.turn_dependencies",
+      "target": "app.commerce_action_engine.adapters.commerce",
+      "line": 10,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.application.turn_dependencies",
+      "target": "app.commerce_action_engine.application.context",
+      "line": 11,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.application.turn_dependencies",
+      "target": "app.commerce_action_engine.application.resources",
+      "line": 12,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.application.turn_dependencies",
+      "target": "app.commerce_action_engine.contracts.action",
+      "line": 13,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.application.turn_dependencies",
+      "target": "app.commerce_action_engine.contracts.compound_plan",
+      "line": 14,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.application.turn_dependencies",
+      "target": "app.commerce_action_engine.execution.agents",
+      "line": 17,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.application.turn_dependencies",
+      "target": "app.commerce_action_engine.execution.core",
+      "line": 18,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.application.turn_dependencies",
+      "target": "app.commerce_action_engine.execution.core.meaning",
+      "line": 19,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.application.turn_dependencies",
+      "target": "app.commerce_action_engine.platform",
+      "line": 20,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.application.turn_dependencies",
+      "target": "app.commerce_contracts.intent_example",
+      "line": 21,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.application.turn_dependencies",
+      "target": "app.commerce_orchestration_engine.journeys.compound",
+      "line": 22,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.application.turn_dependencies",
+      "target": "app.commerce_resolution_engine.admission",
+      "line": 23,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.application.turn_dependencies",
+      "target": "app.commerce_resolution_engine.runtime",
+      "line": 27,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.contracts.commerce_action",
+      "target": "app.commerce_action_engine.contracts.action",
+      "line": 8,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.contracts.compound_plan",
+      "target": "app.commerce_action_engine.contracts.action",
+      "line": 8,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.contracts.compound_write",
+      "target": "app.commerce_action_engine.contracts.action",
+      "line": 9,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.contracts.compound_write",
+      "target": "app.commerce_action_engine.contracts.compound_plan",
+      "line": 10,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.contracts.interpretation",
+      "target": "app.commerce_action_engine.contracts.action",
+      "line": 7,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.contracts.interpretation",
+      "target": "app.commerce_action_engine.contracts.requested_actions",
+      "line": 8,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.contracts.ports",
+      "target": "app.commerce_action_engine.contracts.action",
+      "line": 7,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.contracts.ports",
+      "target": "app.commerce_resolution_engine.contracts",
+      "line": 19,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.execution.agents",
+      "target": "app.commerce_contracts.agents",
+      "line": 5,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.execution.core",
+      "target": "app.commerce_action_engine.execution.core.facade",
+      "line": 3,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.execution.core",
+      "target": "app.commerce_action_engine.execution.core.library",
+      "line": 4,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.execution.core.facade",
+      "target": "app.commerce_action_engine.contracts.action",
+      "line": 3,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.execution.core.facade",
+      "target": "app.commerce_action_engine.contracts.ports",
+      "line": 11,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.execution.core.facade",
+      "target": "app.commerce_action_engine.execution.core.library",
+      "line": 12,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.execution.core.facade",
+      "target": "app.commerce_action_engine.execution.core.registry",
+      "line": 13,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.execution.core.intents",
+      "target": "app.commerce_action_engine.execution.core.meaning",
+      "line": 6,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.execution.core.library",
+      "target": "app.commerce_action_engine.contracts.action",
+      "line": 3,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.execution.core.library",
+      "target": "app.commerce_action_engine.execution.core.registry",
+      "line": 13,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.execution.core.meaning",
+      "target": "app.commerce_action_engine.contracts.action",
+      "line": 11,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.execution.core.planning",
+      "target": "app.commerce_action_engine.contracts.action",
+      "line": 9,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.execution.core.planning",
+      "target": "app.commerce_action_engine.execution.core.meaning",
+      "line": 18,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.execution.core.planning",
+      "target": "app.commerce_action_engine.execution.core.policy",
+      "line": 22,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.execution.core.policy",
+      "target": "app.commerce_action_engine.contracts.action",
+      "line": 7,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.execution.core.policy",
+      "target": "app.commerce_action_engine.execution.core.meaning",
+      "line": 13,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.execution.core.registry",
+      "target": "app.commerce_action_engine.contracts.action",
+      "line": 6,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.execution.core.state",
+      "target": "app.commerce_action_engine.contracts.action",
+      "line": 6,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.execution.language.clarification",
+      "target": "app.commerce_action_engine.contracts.interpretation",
+      "line": 5,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.execution.language.clarification",
+      "target": "app.commerce_action_engine.execution.language.followup_ports",
+      "line": 6,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.execution.language.clarification",
+      "target": "app.commerce_action_engine.execution.planning.compound_review",
+      "line": 10,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.execution.language.compatibility",
+      "target": "app.commerce_action_engine.contracts.action",
+      "line": 8,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.execution.language.compatibility",
+      "target": "app.commerce_action_engine.contracts.interpretation",
+      "line": 9,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.execution.language.compound_clarification",
+      "target": "app.commerce_action_engine.contracts.interpretation",
+      "line": 3,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.execution.language.compound_clarification",
+      "target": "app.commerce_action_engine.execution.language.followup_ports",
+      "line": 4,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.execution.language.compound_clarification",
+      "target": "app.commerce_action_engine.execution.planning.compound_review",
+      "line": 8,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.execution.language.compound_review",
+      "target": "app.commerce_action_engine.contracts.interpretation",
+      "line": 8,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.execution.language.compound_review",
+      "target": "app.commerce_action_engine.contracts.requested_actions",
+      "line": 9,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.execution.language.compound_review",
+      "target": "app.commerce_action_engine.execution.planning",
+      "line": 12,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.execution.language.compound_review",
+      "target": "app.commerce_action_engine.execution.planning.compound_review",
+      "line": 12,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.execution.language.compound_review",
+      "target": "app.commerce_action_engine.execution.planning.compound_review",
+      "line": 13,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.execution.language.followup_ports",
+      "target": "app.commerce_action_engine.contracts.interpretation",
+      "line": 7,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.execution.language.gate",
+      "target": "app.commerce_action_engine.actions.catalog",
+      "line": 8,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.execution.language.gate",
+      "target": "app.commerce_action_engine.actions.catalog.product_facts",
+      "line": 9,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.execution.language.gate",
+      "target": "app.commerce_action_engine.contracts.interpretation",
+      "line": 12,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.execution.language.gate",
+      "target": "app.commerce_action_engine.contracts.requested_actions",
+      "line": 13,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.execution.language.gate",
+      "target": "app.commerce_action_engine.execution.language.compound_review",
+      "line": 16,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.execution.language.gate",
+      "target": "app.commerce_action_engine.execution.language.routing",
+      "line": 22,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.execution.language.gate",
+      "target": "app.commerce_action_engine.execution.language.routing",
+      "line": 25,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.execution.language.gate",
+      "target": "app.commerce_action_engine.execution.language.routing",
+      "line": 28,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.execution.language.gate",
+      "target": "app.commerce_action_engine.execution.language.routing",
+      "line": 31,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.execution.language.gate",
+      "target": "app.commerce_action_engine.execution.language.routing",
+      "line": 34,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.execution.language.gate",
+      "target": "app.commerce_action_engine.execution.language.routing",
+      "line": 37,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.execution.language.gate",
+      "target": "app.commerce_action_engine.execution.language.routing",
+      "line": 40,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.execution.language.gate",
+      "target": "app.commerce_action_engine.execution.language.routing",
+      "line": 43,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.execution.language.gate",
+      "target": "app.commerce_action_engine.execution.language.routing",
+      "line": 46,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.execution.language.gate",
+      "target": "app.commerce_action_engine.execution.language.routing",
+      "line": 49,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.execution.language.gate",
+      "target": "app.commerce_action_engine.execution.language.routing",
+      "line": 52,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.execution.language.gate",
+      "target": "app.commerce_action_engine.execution.language.routing",
+      "line": 55,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.execution.language.gate",
+      "target": "app.commerce_action_engine.execution.language.routing",
+      "line": 58,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.execution.language.gate",
+      "target": "app.commerce_action_engine.execution.language.routing",
+      "line": 61,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.execution.language.gate",
+      "target": "app.commerce_action_engine.actions.shopping",
+      "line": 177,
+      "deferred": true
+    },
+    {
+      "source": "app.commerce_action_engine.execution.language.proposal_constraints",
+      "target": "app.commerce_action_engine.actions.shopping.pricing",
+      "line": 7,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.execution.language.proposals",
+      "target": "app.commerce_action_engine.contracts.language_proposal",
+      "line": 8,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.execution.language.proposals",
+      "target": "app.commerce_action_engine.execution.language",
+      "line": 12,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.execution.language.proposals",
+      "target": "app.commerce_action_engine.execution.language.gate",
+      "line": 12,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.execution.language.proposals",
+      "target": "app.commerce_action_engine.execution.language.handoffs",
+      "line": 13,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.execution.language.proposals",
+      "target": "app.commerce_action_engine.execution.language.proposal_constraints",
+      "line": 17,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.execution.language.recommendations",
+      "target": "app.commerce_action_engine.actions.catalog.followups",
+      "line": 8,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.execution.language.recommendations",
+      "target": "app.commerce_action_engine.contracts.interpretation",
+      "line": 13,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.execution.language.recommendations",
+      "target": "app.commerce_action_engine.execution.language.followup_ports",
+      "line": 14,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.execution.language.routing",
+      "target": "app.commerce_action_engine.actions.catalog.product_facts",
+      "line": 3,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.execution.language.routing",
+      "target": "app.commerce_action_engine.contracts.interpretation",
+      "line": 6,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.execution.language.routing",
+      "target": "app.commerce_action_engine.contracts.language_proposal",
+      "line": 7,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.execution.language.routing",
+      "target": "app.commerce_action_engine.execution.language.handoffs",
+      "line": 8,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.execution.language.routing",
+      "target": "app.commerce_action_engine.execution.planning.compound_review",
+      "line": 12,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.execution.language.search_context",
+      "target": "app.commerce_action_engine.contracts.interpretation",
+      "line": 12,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.execution.language.shopping",
+      "target": "app.commerce_action_engine.actions.catalog",
+      "line": 8,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.execution.language.shopping",
+      "target": "app.commerce_resolution_engine.contracts",
+      "line": 9,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.execution.language.shopping",
+      "target": "app.commerce_resolution_engine.prompts",
+      "line": 15,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.execution.planning.compound",
+      "target": "app.commerce_action_engine.actions.catalog",
+      "line": 10,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.execution.planning.compound",
+      "target": "app.commerce_action_engine.actions.catalog.bindings",
+      "line": 16,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.execution.planning.compound",
+      "target": "app.commerce_action_engine.contracts.compound_plan",
+      "line": 21,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.execution.planning.compound",
+      "target": "app.commerce_action_engine.contracts.interpretation",
+      "line": 28,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.execution.planning.compound",
+      "target": "app.commerce_action_engine.execution.agents",
+      "line": 29,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.execution.planning.compound",
+      "target": "app.commerce_action_engine.execution.core.planning",
+      "line": 30,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.execution.planning.compound",
+      "target": "app.commerce_action_engine.execution.planning.compound_review",
+      "line": 31,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.execution.planning.compound",
+      "target": "app.commerce_action_engine.execution.planning.runtime",
+      "line": 36,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.execution.planning.compound",
+      "target": "app.commerce_action_engine.shared.errors",
+      "line": 37,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.execution.planning.compound_execution",
+      "target": "app.commerce_action_engine.actions.catalog",
+      "line": 6,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.execution.planning.compound_execution",
+      "target": "app.commerce_action_engine.contracts.action",
+      "line": 7,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.execution.planning.compound_execution",
+      "target": "app.commerce_action_engine.contracts.compound_plan",
+      "line": 12,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.execution.planning.compound_execution",
+      "target": "app.commerce_action_engine.contracts.compound_write",
+      "line": 13,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.execution.planning.compound_execution",
+      "target": "app.commerce_action_engine.contracts.interpretation",
+      "line": 17,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.execution.planning.compound_execution",
+      "target": "app.commerce_action_engine.execution.agents",
+      "line": 18,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.execution.planning.compound_execution",
+      "target": "app.commerce_action_engine.execution.core.meaning",
+      "line": 19,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.execution.planning.compound_execution",
+      "target": "app.commerce_action_engine.execution.core.planning",
+      "line": 20,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.execution.planning.compound_execution",
+      "target": "app.commerce_action_engine.execution.core.policy",
+      "line": 25,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.execution.planning.compound_execution",
+      "target": "app.commerce_action_engine.execution.planning.compound_review",
+      "line": 30,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.execution.planning.compound_execution",
+      "target": "app.commerce_action_engine.execution.planning.runtime",
+      "line": 31,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.execution.planning.compound_execution",
+      "target": "app.commerce_action_engine.shared.errors",
+      "line": 32,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.execution.planning.compound_review",
+      "target": "app.commerce_action_engine.contracts.interpretation",
+      "line": 8,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.execution.planning.compound_review",
+      "target": "app.commerce_action_engine.contracts.requested_actions",
+      "line": 9,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.execution.planning.execution",
+      "target": "app.commerce_action_engine.shared.errors",
+      "line": 9,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.execution.planning.library",
+      "target": "app.commerce_action_engine.actions.catalog",
+      "line": 9,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.execution.planning.library",
+      "target": "app.commerce_action_engine.contracts",
+      "line": 15,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.execution.planning.library",
+      "target": "app.commerce_action_engine.contracts.action",
+      "line": 21,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.execution.planning.library",
+      "target": "app.commerce_action_engine.contracts.compound_plan",
+      "line": 22,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.execution.planning.library",
+      "target": "app.commerce_action_engine.contracts.compound_write",
+      "line": 23,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.execution.planning.library",
+      "target": "app.commerce_action_engine.execution.core.planning",
+      "line": 24,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.execution.planning.library",
+      "target": "app.commerce_action_engine.actions.shopping",
+      "line": 65,
+      "deferred": true
+    },
+    {
+      "source": "app.commerce_action_engine.execution.planning.outcomes",
+      "target": "app.commerce_action_engine.contracts.compound_plan",
+      "line": 6,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.execution.planning.runtime",
+      "target": "app.commerce_action_engine.contracts.action",
+      "line": 11,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.execution.planning.runtime",
+      "target": "app.commerce_action_engine.execution.agents",
+      "line": 16,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.execution.planning.runtime",
+      "target": "app.commerce_action_engine.execution.core.meaning",
+      "line": 17,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.execution.planning.runtime",
+      "target": "app.commerce_action_engine.execution.core.planning",
+      "line": 18,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.execution.planning.runtime",
+      "target": "app.commerce_action_engine.execution.planning.library",
+      "line": 24,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.execution.planning.runtime",
+      "target": "app.commerce_action_engine.shared.errors",
+      "line": 30,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.execution.planning.runtime",
+      "target": "app.commerce_resolution_engine.contracts",
+      "line": 31,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.execution.planning.runtime",
+      "target": "app.commerce_resolution_engine.planning",
+      "line": 297,
+      "deferred": true
+    },
+    {
+      "source": "app.commerce_action_engine.execution.planning.runtime",
+      "target": "app.commerce_action_engine.execution.planning.library",
+      "line": 340,
+      "deferred": true
+    },
+    {
+      "source": "app.commerce_action_engine.execution.planning.runtime",
+      "target": "app.commerce_action_engine.actions.shopping",
+      "line": 355,
+      "deferred": true
+    },
+    {
+      "source": "app.commerce_action_engine.platform",
+      "target": "app.commerce_action_engine.platform.costs",
+      "line": 3,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.platform",
+      "target": "app.commerce_action_engine.platform.security",
+      "line": 4,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.platform",
+      "target": "app.commerce_action_engine.platform.settings",
+      "line": 5,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.platform",
+      "target": "app.commerce_action_engine.platform.singleflight",
+      "line": 6,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.platform",
+      "target": "app.commerce_action_engine.platform.store",
+      "line": 7,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.platform",
+      "target": "app.commerce_action_engine.platform.telemetry",
+      "line": 8,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.platform.compound_plans",
+      "target": "app.commerce_action_engine.contracts.compound_plan",
+      "line": 14,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.platform.compound_plans",
+      "target": "app.commerce_action_engine.execution.planning.outcomes",
+      "line": 19,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.platform.failures",
+      "target": "app.commerce_action_engine.contracts",
+      "line": 5,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.platform.failures",
+      "target": "app.commerce_action_engine.shared.errors",
+      "line": 6,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.platform.failures",
+      "target": "app.commerce_resolution_engine.contracts",
+      "line": 7,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.platform.security",
+      "target": "app.commerce_action_engine.platform.settings",
+      "line": 10,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.platform.settings",
+      "target": "app.commerce_action_engine.execution.core.library",
+      "line": 106,
+      "deferred": true
+    },
+    {
+      "source": "app.commerce_action_engine.platform.store",
+      "target": "app.commerce_action_engine.contracts.compound_plan",
+      "line": 15,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.platform.store",
+      "target": "app.commerce_action_engine.platform.completion",
+      "line": 17,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.platform.store",
+      "target": "app.commerce_action_engine.platform.compound_plans",
+      "line": 18,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.platform.store",
+      "target": "app.commerce_action_engine.platform.request_revisions",
+      "line": 19,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.platform.telemetry",
+      "target": "app.commerce_action_engine.execution.core.meaning",
+      "line": 125,
+      "deferred": true
+    },
+    {
+      "source": "app.commerce_action_engine.platform.telemetry",
+      "target": "app.commerce_action_engine.execution.core.policy",
+      "line": 142,
+      "deferred": true
+    },
+    {
+      "source": "app.commerce_action_engine.platform.telemetry",
+      "target": "app.commerce_action_engine.actions.catalog.discovery",
+      "line": 174,
+      "deferred": true
+    },
+    {
+      "source": "app.commerce_action_engine.shared",
+      "target": "app.commerce_action_engine.shared.errors",
+      "line": 3,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_action_engine.shared.errors",
+      "target": "app.commerce_contracts.errors",
+      "line": 3,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_knowledge_rag",
+      "target": "app.commerce_knowledge_rag.service",
+      "line": 3,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_knowledge_rag",
+      "target": "app.commerce_knowledge_rag.store",
+      "line": 19,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_knowledge_rag.extract",
+      "target": "app.commerce_knowledge_rag.service",
+      "line": 13,
+      "deferred": true
+    },
+    {
+      "source": "app.commerce_knowledge_rag.intent_examples",
+      "target": "app.commerce_contracts.agents",
+      "line": 10,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_knowledge_rag.intent_examples",
+      "target": "app.commerce_contracts.intent_example",
+      "line": 15,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_knowledge_rag.intent_examples",
+      "target": "app.commerce_knowledge_rag.service",
+      "line": 20,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_knowledge_rag.service",
+      "target": "app.commerce_contracts.agents",
+      "line": 29,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_knowledge_rag.service",
+      "target": "app.commerce_contracts.embeddings",
+      "line": 30,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_knowledge_rag.service",
+      "target": "app.commerce_contracts.embeddings",
+      "line": 31,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_knowledge_rag.store",
+      "target": "app.commerce_contracts.agents",
+      "line": 11,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_knowledge_rag.store",
+      "target": "app.commerce_knowledge_rag.service",
+      "line": 12,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_orchestration_engine.journeys.compound",
+      "target": "app.commerce_orchestration_engine.journeys.compound.execution",
+      "line": 3,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_orchestration_engine.journeys.compound",
+      "target": "app.commerce_orchestration_engine.journeys.compound.ports",
+      "line": 4,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_orchestration_engine.journeys.compound",
+      "target": "app.commerce_orchestration_engine.journeys.compound.ports",
+      "line": 5,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_orchestration_engine.journeys.compound",
+      "target": "app.commerce_orchestration_engine.journeys.compound.ports",
+      "line": 6,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_orchestration_engine.journeys.compound",
+      "target": "app.commerce_orchestration_engine.journeys.compound.recovery",
+      "line": 7,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_orchestration_engine.journeys.compound",
+      "target": "app.commerce_orchestration_engine.journeys.compound.result",
+      "line": 8,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_orchestration_engine.journeys.compound",
+      "target": "app.commerce_orchestration_engine.journeys.compound.service",
+      "line": 9,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_orchestration_engine.journeys.compound.execution",
+      "target": "app.commerce_action_engine.actions.catalog",
+      "line": 6,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_orchestration_engine.journeys.compound.execution",
+      "target": "app.commerce_action_engine.actions.catalog.bindings",
+      "line": 11,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_orchestration_engine.journeys.compound.execution",
+      "target": "app.commerce_action_engine.actions.shopping.compound",
+      "line": 15,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_orchestration_engine.journeys.compound.execution",
+      "target": "app.commerce_action_engine.contracts.compound_plan",
+      "line": 16,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_orchestration_engine.journeys.compound.execution",
+      "target": "app.commerce_action_engine.contracts.compound_write",
+      "line": 20,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_orchestration_engine.journeys.compound.execution",
+      "target": "app.commerce_action_engine.execution.planning",
+      "line": 21,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_orchestration_engine.journeys.compound.execution",
+      "target": "app.commerce_action_engine.execution.planning.outcomes",
+      "line": 21,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_orchestration_engine.journeys.compound.execution",
+      "target": "app.commerce_action_engine.execution.planning.compound_execution",
+      "line": 22,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_orchestration_engine.journeys.compound.execution",
+      "target": "app.commerce_action_engine.shared.errors",
+      "line": 25,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_orchestration_engine.journeys.compound.execution",
+      "target": "app.commerce_orchestration_engine.journeys.compound.ports",
+      "line": 27,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_orchestration_engine.journeys.compound.ports",
+      "target": "app.commerce_action_engine.contracts.compound_plan",
+      "line": 6,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_orchestration_engine.journeys.compound.recovery",
+      "target": "app.commerce_action_engine.actions.shopping.compound",
+      "line": 3,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_orchestration_engine.journeys.compound.recovery",
+      "target": "app.commerce_action_engine.contracts.compound_plan",
+      "line": 4,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_orchestration_engine.journeys.compound.recovery",
+      "target": "app.commerce_action_engine.contracts.compound_write",
+      "line": 5,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_orchestration_engine.journeys.compound.recovery",
+      "target": "app.commerce_action_engine.shared.errors",
+      "line": 6,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_orchestration_engine.journeys.compound.recovery",
+      "target": "app.commerce_orchestration_engine.journeys.compound.ports",
+      "line": 8,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_orchestration_engine.journeys.compound.result",
+      "target": "app.commerce_action_engine.contracts.compound_plan",
+      "line": 6,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_orchestration_engine.journeys.compound.service",
+      "target": "app.commerce_action_engine.actions.catalog.bindings",
+      "line": 8,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_orchestration_engine.journeys.compound.service",
+      "target": "app.commerce_action_engine.actions.shopping.compound",
+      "line": 9,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_orchestration_engine.journeys.compound.service",
+      "target": "app.commerce_action_engine.contracts.interpretation",
+      "line": 12,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_orchestration_engine.journeys.compound.service",
+      "target": "app.commerce_action_engine.execution.agents",
+      "line": 13,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_orchestration_engine.journeys.compound.service",
+      "target": "app.commerce_action_engine.execution.core.planning",
+      "line": 14,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_orchestration_engine.journeys.compound.service",
+      "target": "app.commerce_action_engine.execution.planning.compound",
+      "line": 15,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_orchestration_engine.journeys.compound.service",
+      "target": "app.commerce_action_engine.execution.planning.compound_execution",
+      "line": 16,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_orchestration_engine.journeys.compound.service",
+      "target": "app.commerce_action_engine.execution.planning.compound_review",
+      "line": 20,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_orchestration_engine.journeys.compound.service",
+      "target": "app.commerce_action_engine.shared.errors",
+      "line": 21,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_orchestration_engine.journeys.compound.service",
+      "target": "app.commerce_orchestration_engine.journeys.compound.execution",
+      "line": 23,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_orchestration_engine.journeys.compound.service",
+      "target": "app.commerce_orchestration_engine.journeys.compound.ports",
+      "line": 24,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_orchestration_engine.journeys.compound.service",
+      "target": "app.commerce_orchestration_engine.journeys.compound.result",
+      "line": 25,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_resolution_engine.adapter",
+      "target": "app.commerce_action_engine.contracts.action",
+      "line": 5,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_resolution_engine.adapter",
+      "target": "app.commerce_action_engine.execution.core.registry",
+      "line": 9,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_resolution_engine.adapter",
+      "target": "app.commerce_resolution_engine.contracts",
+      "line": 13,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_resolution_engine.admission",
+      "target": "app.commerce_resolution_engine.contracts",
+      "line": 10,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_resolution_engine.admission",
+      "target": "app.commerce_resolution_engine.providers",
+      "line": 15,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_resolution_engine.baseline",
+      "target": "app.commerce_action_engine.actions.catalog",
+      "line": 16,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_resolution_engine.baseline",
+      "target": "app.commerce_action_engine.actions.policy",
+      "line": 23,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_resolution_engine.baseline",
+      "target": "app.commerce_action_engine.application.responses",
+      "line": 24,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_resolution_engine.baseline",
+      "target": "app.commerce_action_engine.contracts",
+      "line": 29,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_resolution_engine.baseline",
+      "target": "app.commerce_action_engine.platform",
+      "line": 34,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_resolution_engine.baseline",
+      "target": "app.commerce_action_engine.platform.failures",
+      "line": 35,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_resolution_engine.baseline",
+      "target": "app.commerce_contracts.agents",
+      "line": 36,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_resolution_engine.baseline",
+      "target": "app.commerce_resolution_engine.contracts",
+      "line": 37,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_resolution_engine.baseline",
+      "target": "app.commerce_resolution_engine.providers",
+      "line": 38,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_resolution_engine.baseline",
+      "target": "app.commerce_resolution_engine.providers.smoke",
+      "line": 43,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_resolution_engine.basket",
+      "target": "app.commerce_action_engine.actions.catalog",
+      "line": 6,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_resolution_engine.basket",
+      "target": "app.commerce_action_engine.actions.shopping.baskets",
+      "line": 7,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_resolution_engine.basket",
+      "target": "app.commerce_contracts.errors",
+      "line": 8,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_resolution_engine.basket",
+      "target": "app.commerce_resolution_engine.contracts",
+      "line": 9,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_resolution_engine.basket",
+      "target": "app.commerce_resolution_engine.planning",
+      "line": 14,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_resolution_engine.basket",
+      "target": "app.commerce_resolution_engine.prompts",
+      "line": 15,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_resolution_engine.chat",
+      "target": "app.commerce_resolution_engine.contracts",
+      "line": 6,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_resolution_engine.chat",
+      "target": "app.commerce_resolution_engine.providers",
+      "line": 11,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_resolution_engine.language",
+      "target": "app.commerce_action_engine.contracts.language_proposal",
+      "line": 7,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_resolution_engine.language",
+      "target": "app.commerce_contracts.intent_example",
+      "line": 11,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_resolution_engine.language",
+      "target": "app.commerce_resolution_engine.contracts",
+      "line": 12,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_resolution_engine.planning",
+      "target": "app.commerce_contracts.errors",
+      "line": 6,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_resolution_engine.planning",
+      "target": "app.commerce_resolution_engine.contracts",
+      "line": 7,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_resolution_engine.providers.embeddings",
+      "target": "app.commerce_contracts.embeddings",
+      "line": 8,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_resolution_engine.providers.embeddings",
+      "target": "app.commerce_resolution_engine.contracts",
+      "line": 9,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_resolution_engine.providers.embeddings",
+      "target": "app.commerce_resolution_engine.providers.openai",
+      "line": 10,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_resolution_engine.providers.factory",
+      "target": "app.commerce_resolution_engine.contracts",
+      "line": 5,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_resolution_engine.providers.factory",
+      "target": "app.commerce_resolution_engine.providers.config",
+      "line": 6,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_resolution_engine.providers.factory",
+      "target": "app.commerce_resolution_engine.providers.embeddings",
+      "line": 7,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_resolution_engine.providers.factory",
+      "target": "app.commerce_resolution_engine.providers.openai",
+      "line": 8,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_resolution_engine.providers.openai",
+      "target": "app.commerce_resolution_engine.contracts",
+      "line": 12,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_resolution_engine.providers.settings",
+      "target": "app.commerce_resolution_engine.contracts",
+      "line": 12,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_resolution_engine.providers.settings",
+      "target": "app.commerce_resolution_engine.providers.config",
+      "line": 13,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_resolution_engine.providers.settings",
+      "target": "app.commerce_resolution_engine.providers.openai",
+      "line": 17,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_resolution_engine.providers.smoke",
+      "target": "app.commerce_resolution_engine.contracts",
+      "line": 11,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_resolution_engine.providers.smoke",
+      "target": "app.commerce_resolution_engine.providers.config",
+      "line": 18,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_resolution_engine.providers.smoke",
+      "target": "app.commerce_resolution_engine.providers.factory",
+      "line": 19,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_resolution_engine.providers.smoke",
+      "target": "app.commerce_resolution_engine.providers.settings",
+      "line": 20,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_resolution_engine.providers.smoke",
+      "target": "app.commerce_action_engine.application.provider_smoke",
+      "line": 83,
+      "deferred": true
+    },
+    {
+      "source": "app.commerce_resolution_engine.providers.usage",
+      "target": "app.commerce_resolution_engine.contracts",
+      "line": 8,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_resolution_engine.runtime",
+      "target": "app.commerce_contracts.agents",
+      "line": 14,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_resolution_engine.runtime",
+      "target": "app.commerce_contracts.errors",
+      "line": 20,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_resolution_engine.runtime",
+      "target": "app.commerce_resolution_engine.contracts",
+      "line": 21,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_resolution_engine.shopping",
+      "target": "app.commerce_action_engine.actions.catalog",
+      "line": 4,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_resolution_engine.shopping",
+      "target": "app.commerce_action_engine.actions.shopping.contracts",
+      "line": 5,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_resolution_engine.shopping",
+      "target": "app.commerce_action_engine.execution.language.shopping",
+      "line": 6,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_resolution_engine.shopping",
+      "target": "app.commerce_contracts.agents",
+      "line": 7,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_resolution_engine.shopping",
+      "target": "app.commerce_contracts.errors",
+      "line": 8,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_resolution_engine.shopping",
+      "target": "app.commerce_resolution_engine.contracts",
+      "line": 9,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_resolution_engine.shopping",
+      "target": "app.commerce_resolution_engine.planning",
+      "line": 15,
+      "deferred": false
+    },
+    {
+      "source": "app.commerce_resolution_engine.shopping",
+      "target": "app.commerce_resolution_engine.prompts",
+      "line": 16,
+      "deferred": false
+    },
+    {
+      "source": "app.knowledge_cli",
+      "target": "app.commerce_action_engine.application.knowledge_cli",
+      "line": 5,
+      "deferred": false
+    },
+    {
+      "source": "app.knowledge_extract",
+      "target": "app.commerce_knowledge_rag.extract",
+      "line": 3,
+      "deferred": false
+    },
+    {
+      "source": "app.main",
+      "target": "app.commerce_action_engine.application.main",
+      "line": 3,
+      "deferred": false
+    },
+    {
+      "source": "app.provider_smoke",
+      "target": "app.commerce_resolution_engine.contracts",
+      "line": 5,
+      "deferred": false
+    },
+    {
+      "source": "app.provider_smoke",
+      "target": "app.commerce_resolution_engine.providers.smoke",
+      "line": 6,
+      "deferred": false
+    }
+  ],
+  "eager_cycle_candidates": [],
+  "all_cycle_candidates": [
+    [
+      "app.commerce_action_engine.application.provider_smoke",
+      "app.commerce_resolution_engine.providers.smoke"
+    ]
+  ],
+  "source_sha256": {
+    "app/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "app/commerce_action_engine/__init__.py": "0b22cafd53a05b9998c599a29832f1655b49d36220e85e2ff60daf8daeef5571",
+    "app/commerce_action_engine/actions/__init__.py": "1e08980f81a51e51ba4dfd1924c5590a342e5906b305eb157d5f0eeddaf6e0b1",
+    "app/commerce_action_engine/actions/catalog/__init__.py": "a3445cdb1f9722d7ef3e295cde2d5cfb2903895bf93693552bf95e8484ff989a",
+    "app/commerce_action_engine/actions/catalog/bestsellers.py": "f55b24f8c6058852f1d3add22f6c681a96ec3b7328f82df0d3ca08f4d61577d2",
+    "app/commerce_action_engine/actions/catalog/bindings.py": "9a2b1eab7e6170d648b99b39e285baa142b410abad53a3a8db469f62ec9b7eda",
+    "app/commerce_action_engine/actions/catalog/cache.py": "2e685fc93dac63a36427d34cd7df947bc7afa008ee93afffe2ba2295541fabe9",
+    "app/commerce_action_engine/actions/catalog/comparison.py": "9079acdee82a78e4066901f3072efb81f297ac7096a9afc7256793c87441d129",
+    "app/commerce_action_engine/actions/catalog/contracts.py": "e6607d976568383ffd831768d665cc8d34af4f191ac5fa367dc611c3cae5552f",
+    "app/commerce_action_engine/actions/catalog/discounts.py": "9d06ff0754dc89106a584482e86e050355a39378eb990900df128c081f315418",
+    "app/commerce_action_engine/actions/catalog/discovery.py": "138ef53e4242e9bd6bef59b42aafe07d707050c6f8b9c6e7381b8b88048f6326",
+    "app/commerce_action_engine/actions/catalog/followups.py": "7bf67e14d3d54edf3f4c8a5915a318e25400835e375ae70c7beb127b67d2b688",
+    "app/commerce_action_engine/actions/catalog/ports.py": "482e9ab2914d2792be184dcd8c238792fa06924c480e9c07c3ef78685f81d92b",
+    "app/commerce_action_engine/actions/catalog/product_facts.py": "1d494757a32aa975d0e06550c14f519850e1a1baed2fa58feac05df53fcc00a4",
+    "app/commerce_action_engine/actions/catalog/references.py": "8ef184508e8dda21948fff1395025f5b5772881c0ea48a4528a89413b353952e",
+    "app/commerce_action_engine/actions/catalog/tools.py": "71b7e51273f19815f41948a99507e0d662d14602725befe24b931c0ef568a965",
+    "app/commerce_action_engine/actions/catalog/workflow.py": "6c40193cf83529db938042a1537d8abe50aa3b9a495b34f52a9e83f5d697722b",
+    "app/commerce_action_engine/actions/customer/__init__.py": "e899474fa1c46f0c1f622ae394b3956ff6babf7e76b539786d98864c4c0992d5",
+    "app/commerce_action_engine/actions/customer/reads.py": "e0d07cefb279a1e8b37ffcdd88a70cc73505f2a4dc9b8a199870a35fdacaf61f",
+    "app/commerce_action_engine/actions/customer/transfers.py": "5abe16c558a6e7a2edb69103520f2d05c58c39add48313c205ad977414824f50",
+    "app/commerce_action_engine/actions/orders/__init__.py": "090653176e98a39927755c6322509d0b3037aea1585c55229de82d2604fbb611",
+    "app/commerce_action_engine/actions/orders/reads.py": "f5fff7e5da0dcc5daac16a37da8a7c3a051d6d9af5001a3f58509e2f8bd2cf92",
+    "app/commerce_action_engine/actions/orders/reorder.py": "26d6e765f2f8dfe07b32c6fe0b2257a9d81a49479c26a7a92a30e9aab0fe90c5",
+    "app/commerce_action_engine/actions/policy.py": "512854ea0d6635932afc3b19dcc5db5b462b6ee880bf89c140de67acaf592e11",
+    "app/commerce_action_engine/actions/registry.py": "cd2db1a7c8fb1acf887ec4a010a4fcd4160aa1f03700d86052bb70511013de01",
+    "app/commerce_action_engine/actions/shopping/__init__.py": "12165207d48e39c6b9f813ae8e2dea7027960dba96ef08d8719f3dbb3ac5925e",
+    "app/commerce_action_engine/actions/shopping/basket_ports.py": "053403c26965bbb085ac1a660746c50214d3d9ddd60357c8e8707c10c88ff606",
+    "app/commerce_action_engine/actions/shopping/basket_workflow.py": "c467580216e02078a39e98067947240412179941f697bd5ac007a01277955dc8",
+    "app/commerce_action_engine/actions/shopping/baskets.py": "87a4bb13ce168475bdac239125b3ec0ebfc23534036717659f333d167bfb3c10",
+    "app/commerce_action_engine/actions/shopping/cart.py": "2e8469fe10cbf7a5022e49b8e4c111d2c3683ffd264db872416f8f8ed69c3bb9",
+    "app/commerce_action_engine/actions/shopping/cart_removal.py": "19eaeb62288c6ac11303aeb921e82390fea28412681198cb8822784590d23c9c",
+    "app/commerce_action_engine/actions/shopping/compound.py": "7c71174a43ef8eb127c17077d4a6e51aac60e5f0813235245c3f2306dc3390d2",
+    "app/commerce_action_engine/actions/shopping/constraints.py": "b5f99912b7f03e8ebb58006e92aea13c0f6c818294eb904a4f1596a7794ce2b6",
+    "app/commerce_action_engine/actions/shopping/contracts.py": "913f223060bad568f0c9debbbe5ce1fdc7d818e72a47b3e2871b68f84eeb3f09",
+    "app/commerce_action_engine/actions/shopping/evidence.py": "07f983ad8c1fd02cfefe26ca52699f58b8841567f3ff9d7eb986eafc594fbd01",
+    "app/commerce_action_engine/actions/shopping/meaning.py": "c7f70c309d94bee13bdbc13e100f5cc503b8dfe32bc63d837335d145c4f0b4a0",
+    "app/commerce_action_engine/actions/shopping/personalization.py": "8a4ab5ed34d55609716f96a191ac2b3e51da1ca9e4566a4c4657e74886596e32",
+    "app/commerce_action_engine/actions/shopping/pricing.py": "2e60080be7e137fd1a1011bb080fc6a32e0968da17bfb4ce5e38ffb009461aec",
+    "app/commerce_action_engine/actions/shopping/recommendations.py": "2220f8b76eb3649efd882cb4f992723d4393b9a9a69e42deea007032d8d558dc",
+    "app/commerce_action_engine/actions/shopping/reorder.py": "60067a0a75a023adbd54e51b28a02e311765302128e3fee2fa9974fe28e7dc5a",
+    "app/commerce_action_engine/actions/shopping/selection.py": "a17b7c8d8484e4e098427fb5c4e22163a8d52001abb7cbb38e35f69377f7bd67",
+    "app/commerce_action_engine/actions/support/__init__.py": "b4b0b3b846ca8f88ffe96f6ecb9f4baf757cc8484222825c1c31ac220f031efe",
+    "app/commerce_action_engine/actions/support/reads.py": "929a4de0e3f4ede91bba1f0a15a9b2650e55ae2026eda4a46f6aa0cb3e673ade",
+    "app/commerce_action_engine/actions/support/writes.py": "6d446a0c95e6a9532e8b3a23254a7e29e06e38eb7250dfee96b1e3af3d0de44b",
+    "app/commerce_action_engine/adapters/__init__.py": "6b7431a08b1fff4b5c268584f0335c393c2e8f9de308d6eacb3d52f3891fe3fe",
+    "app/commerce_action_engine/adapters/baskets.py": "d48ab4cd5d94c55f131ef1cefb88916b406cc912752a1ac202c11381adfd7bcf",
+    "app/commerce_action_engine/adapters/cart.py": "7d26a5e930650ddc4a1174d7d6ed9b484c0439b1ec14577eebb48c7d257894b0",
+    "app/commerce_action_engine/adapters/catalog.py": "6d00c0e37f0b597c96b6edc35cf2f1f34f1ac5df72267cd1cdf89ff2cb57b5ab",
+    "app/commerce_action_engine/adapters/commerce.py": "eb89944e2a91efa7b9e2d828f6a037e4728d30d5b68f21274931870ba42a2987",
+    "app/commerce_action_engine/adapters/compound.py": "f7ab44fe0002a21ec5bceac2db1b2cb4e97a3cffb36616b9f5a7e1affa95e9ff",
+    "app/commerce_action_engine/adapters/core.py": "c45c49f36d504c7d4ee5239806ae4a571d676e92d403e941b17dc7e0540ed750",
+    "app/commerce_action_engine/adapters/delivery.py": "461ac8617b12e7568e8311e880c7c4ef4e9c4cdeade602aa4b7bcf3cc6399440",
+    "app/commerce_action_engine/adapters/http_response.py": "83aec470e8f32314042a0a6e12ec0a17767539450b1bdc98c1df32c72dcb87e1",
+    "app/commerce_action_engine/adapters/intent_examples.py": "39e33a3e17613fdbc41bf9969d06906a08e10781654a2e550dc354c4e02c4aab",
+    "app/commerce_action_engine/adapters/memory.py": "cdd3ad0ccfff100d8a42304092b0d984b091a97959461147dd57f29c42da51b8",
+    "app/commerce_action_engine/adapters/orders.py": "a6fd714820a06cd327073eb2f8e3acf220f4794ff9db6b2ccde261b887a9ab38",
+    "app/commerce_action_engine/adapters/planned_commerce.py": "278194266f06f2501c35f0711aee5c88547b0ac653673b2579746aa9da2a4a56",
+    "app/commerce_action_engine/adapters/reorder.py": "b9508970fc0d5f8138657b89d9a188d45173878360c81b007f1ffbb862f97583",
+    "app/commerce_action_engine/adapters/runtime_knowledge.py": "7fc200f905891c12d3ffe14ca7dbb68e36605144457f842d343952ff15ddbae1",
+    "app/commerce_action_engine/adapters/shopper_catalog.py": "5fb89415ac046afc0c0b9aba2ffc14dc0a2a798b0102d3627fa7369d61cc5f72",
+    "app/commerce_action_engine/adapters/support.py": "74fdd4a2536c66e18581da320720c5cfb955168ad1bd4f81cedebfd724d36644",
+    "app/commerce_action_engine/adapters/wishlist.py": "121c1ec0ce84cd1fe146de41bba5b1f8055a542db5155c08c5638cae53659cc2",
+    "app/commerce_action_engine/application/__init__.py": "72283652214976ab8f4cd6f65f8ba8dfc0a4dff3c8190dff5b140613538c0a0f",
+    "app/commerce_action_engine/application/api/__init__.py": "688a7136e876807c2088a50a7b752ff852d711350b46001b3ffc890705f5c760",
+    "app/commerce_action_engine/application/api/chat.py": "e98ab72fae556fdbc20fd65915e33765211a097643df92bcebffeb29bd3ae1cd",
+    "app/commerce_action_engine/application/api/events.py": "c98c96742047ffcb8ac162f9067733a2cdb2e484a4c7ad18b81474fd38355dc4",
+    "app/commerce_action_engine/application/api/history.py": "9fa17793a077a306a00a275e8397c302c3acf2ac54fae8d9cda84f4f2583ce20",
+    "app/commerce_action_engine/application/api/system.py": "7a2465c54eb0736a6214e9317b70ef6507fc5de6f19019215d708097848698ba",
+    "app/commerce_action_engine/application/baskets.py": "e23595be335c4d2080ee71f07dcacc0746bb25cbd6ba871e941c30a0cb17166d",
+    "app/commerce_action_engine/application/bootstrap.py": "e15b080c6208e0c402103e6dd4249b340242c61b88d74ab2602e80fe24b21206",
+    "app/commerce_action_engine/application/catalog.py": "7e95e7c152f4657ea6b15968026fefee76802e9bc2dba979b26d21ff265c24cb",
+    "app/commerce_action_engine/application/context.py": "b489c8b272acc5d360ebdf944908280e13c842d38cd6201d58819a4b3ba8f96c",
+    "app/commerce_action_engine/application/followups.py": "d93356f83be3b45c55c0f8e114755c3aadb755a1c749e6e37a04eab6c21f6b99",
+    "app/commerce_action_engine/application/handle_turn.py": "dbda23cb502e4da66c2a4c25f468a7bb30b479a0c513b17326b78a1a5f02ab7d",
+    "app/commerce_action_engine/application/handlers/__init__.py": "3bcea3034df4c7384481c9b743e732b8252b10a1a1c20af9e4753ef8b195dbdf",
+    "app/commerce_action_engine/application/handlers/bestsellers.py": "3238973ead15845b36bbda3a08f0a272b3aac967bac830111d0b076bda60c8f3",
+    "app/commerce_action_engine/application/handlers/cart.py": "5900901e713196780d18c4d9bb8d29a020e64c3d6033072031c2c662386f5e23",
+    "app/commerce_action_engine/application/handlers/clarification.py": "3a58b6eb83950e766a92d2eeb100e30ee5103e6ac1a9fcf676e684a7637f5126",
+    "app/commerce_action_engine/application/handlers/comparison.py": "ecf6e0faf5825f14d3520b347eaba9b80ac457336a92d6bf53f1596d2cce7c1d",
+    "app/commerce_action_engine/application/handlers/compound.py": "fb3052727f6881cb07f68c17ce15aa025d3044a19bae930e888d51ab492bc51f",
+    "app/commerce_action_engine/application/handlers/conversation.py": "b808a5049d86208cd3df299d6dab51fb2ab420190984b7d622c800d1a7a16115",
+    "app/commerce_action_engine/application/handlers/customer.py": "f05b205023c39b383d3d947ec0d0e563f1545cf66672bb5d10d07446f21309a2",
+    "app/commerce_action_engine/application/handlers/delivery.py": "307eafd121fcce067a9782ee6da305619297adffe8569f6e5611e8f1486d9af5",
+    "app/commerce_action_engine/application/handlers/discounts.py": "9f0483d0f023b5aa9635e2f314d298d66aa6d80b402a9c963d2879d3c937cfd1",
+    "app/commerce_action_engine/application/handlers/guidance.py": "6e6c4b51ee1d2052129d7a97c15830fa6ef3acfe5339d7434bee4fd1a9c02af4",
+    "app/commerce_action_engine/application/handlers/orders.py": "5386591f9598a91297cbaad1e1ffb6f82cb2959a1136a278a02e78a6ba3e7fe8",
+    "app/commerce_action_engine/application/handlers/product_facts.py": "f3011c83b889eb2009e79eac4baa5253671bbc512eaa3982085ee95378a6e099",
+    "app/commerce_action_engine/application/handlers/product_guidance.py": "154c83c57a631023f6d2d15cfad28ce3ab69b75ec1416167a08ce78019fc1231",
+    "app/commerce_action_engine/application/handlers/reorder.py": "138b7f67dad4b7fab112b6b6932633eb28ba10b61797f13803e9d80d45947ff8",
+    "app/commerce_action_engine/application/handlers/support.py": "5d152f888b949b0a5b04ff9f220d14572f52d6eb0f3e758fd72da433a2d006d4",
+    "app/commerce_action_engine/application/handlers/wishlist_transfer.py": "f88fae3a347e6f246325ebe6e462fab04693db5d0cd1eaf684036804363b6b08",
+    "app/commerce_action_engine/application/interpretation.py": "3d209a2efc2ed29a3df22a77c2292e1516ff28069665362677736d9c77cdf52c",
+    "app/commerce_action_engine/application/interpretation_diagnostics.py": "de440e56837ab546cea2ead66a66033cd02b200097edbab1699eb053e798bd24",
+    "app/commerce_action_engine/application/knowledge_cli.py": "ac1f1cee1f0bde8dac4069285c028486336fe6af546861eb22dfba8c67b9039a",
+    "app/commerce_action_engine/application/main.py": "78f4756c4655494f2139f97ebcbff609206953c187b14c03080d24c9892fc209",
+    "app/commerce_action_engine/application/ports.py": "dc271593ad27d41f9cbb70c0c4d8dfdc0c57a52b6b28c9c9b1c8ce4fd0d2fcae",
+    "app/commerce_action_engine/application/provider_smoke.py": "03354e6d5e3a4f63b3c3d94b891b3c798829156823e56c66a6940506a4f6a016",
+    "app/commerce_action_engine/application/resources.py": "b0ca024c56fef4ea348b78c51f0f95c4fe190bbaf6d306ad0ac4ac64876e71cb",
+    "app/commerce_action_engine/application/responses.py": "d797e117b42c8c111ff34a791df4bb0381ac102367c413a7e360ced3a54c7c88",
+    "app/commerce_action_engine/application/runtime_chat.py": "6c3638cc5edb71d324dd5492b4de5f1c0d9b9fd306df00f035ea7f9e5e9f6d09",
+    "app/commerce_action_engine/application/shopping.py": "f98e353688bc0233a999dea3c11d5a15ff8f658d181091febcd6c3882355fdfe",
+    "app/commerce_action_engine/application/shopping_presentation.py": "864dfbcc696545ec9a95cd5c3d98e1f5d2974130c7321f39aaf75420bbfb9340",
+    "app/commerce_action_engine/application/turn_dependencies.py": "417b9d130f7e74141fcc839c614de91bfd0c352c54c7b54a74d10bc78ec82e8c",
+    "app/commerce_action_engine/contracts/__init__.py": "e9faec0cd2860780952f1e40c8fe2219bd2e439c41d4d8a18e513bafd7ddc209",
+    "app/commerce_action_engine/contracts/action.py": "e85fe72603efb5a469650b6f8c3abd9cde1af11b55838df6d8e069373791e542",
+    "app/commerce_action_engine/contracts/commerce_action.py": "32874aa8b8e3a43d66f461226dd59c590aba7e55fa90e791be3d52f96d882de0",
+    "app/commerce_action_engine/contracts/compound_plan.py": "950e0513b3556f9161a48d946b43897b56cb88e2f57d8aac8121dab67cb03b6c",
+    "app/commerce_action_engine/contracts/compound_write.py": "64becf1e3aa0ce415aa78176f1bb59c539be69c7f24ccd494f361f7e5631df3e",
+    "app/commerce_action_engine/contracts/interpretation.py": "1e4410fd1d18c64c985f0b4bbc5a4f010a4c15557f12c7d85047ad9025a32880",
+    "app/commerce_action_engine/contracts/language_proposal.py": "2b9907a70d35f5fe4e6f632871eb1dbb43d5604f70df0f81c92219432c815fb2",
+    "app/commerce_action_engine/contracts/ports.py": "004d2d17b185027fb653a45045ccc993ee46f138cb0e816fffd54b36a58af2eb",
+    "app/commerce_action_engine/contracts/requested_actions.py": "f5c0581a8ebb77b8997d184d84404ab14266950e5ec62151f139f0dea8f3e58d",
+    "app/commerce_action_engine/execution/__init__.py": "8f1638c5f72d783c31ebbef36d15f202fae950de306abde3e42da440306fdc5d",
+    "app/commerce_action_engine/execution/agents.py": "f4b3f5dee42b4d9805aba108256596a98ec1ae6a2702322ba69663627fcc420c",
+    "app/commerce_action_engine/execution/core/__init__.py": "e8c94f2e10570bd4023d1ba68af8d804b5c847c094a93ccc5f4af852e2defd46",
+    "app/commerce_action_engine/execution/core/facade.py": "bfda9292e3c9b83f73ec6fa8b97845d80f73b83663281715647ca0358d81aa00",
+    "app/commerce_action_engine/execution/core/intents.py": "d71ca24c1a80dfc195e0e25852f721bde5550538bf5de50ffd78e073654dbb01",
+    "app/commerce_action_engine/execution/core/library.py": "09d78fbb9744c05eaf790bf16f09427fff82a45dc773aec18a3b434a7e8666c9",
+    "app/commerce_action_engine/execution/core/meaning.py": "327da1bd7b70ca7b4d7d6ee90269c1c4a0ad4eb44249ba639e9880c9cde8bb44",
+    "app/commerce_action_engine/execution/core/planning.py": "f0e450341fe72071788c8cdbf1db6759cf036061662a42e5e246fbc9628fa44b",
+    "app/commerce_action_engine/execution/core/policy.py": "b926a6614dac479d34ad4f6ec647a716a9af2c4b764b91bcc140d07ba5be626c",
+    "app/commerce_action_engine/execution/core/registry.py": "bdf79e897df8dea357c1d90aa69642aa10833f5c4ea778cdb8b376cb86aefc74",
+    "app/commerce_action_engine/execution/core/state.py": "03cba987eddb4d3afc0252121f490bbf3fd771c4b8d234730da9caf6e4b14f8e",
+    "app/commerce_action_engine/execution/language/__init__.py": "de7bf618965848c03914d786325eb0b7ecba2dab26742cd5390ce99b3aaf36cc",
+    "app/commerce_action_engine/execution/language/clarification.py": "f349374910c3dad47c86f79e6880671e7945c69be6220714ef266e1b504474dd",
+    "app/commerce_action_engine/execution/language/compatibility.py": "4c598570e3b450838d4342e67b9edf5812d43cfae951d56826d1ae41ea640f02",
+    "app/commerce_action_engine/execution/language/compound_clarification.py": "70faf516a8ba35b50a2efc168501b817077e21b7f2a3eb4422b371ef599d1460",
+    "app/commerce_action_engine/execution/language/compound_review.py": "f317b61aacdf8e8cc085e5dbf7bc9b72471e4fdda6abe0190bc7fde8b9da9dff",
+    "app/commerce_action_engine/execution/language/followup_ports.py": "25a60182a13921363852c2c49c2cedc28e9e8be68ba4d6f32526475f24f7ee77",
+    "app/commerce_action_engine/execution/language/gate.py": "e85e2b35bcd17c264ac9643677839a974f864a8470349cba4c04bff486d5917c",
+    "app/commerce_action_engine/execution/language/handoffs.py": "161ec834584ff3469a3119ec8bac0da3785473398a362c9a43b93ca5440b28ea",
+    "app/commerce_action_engine/execution/language/intents.py": "a528aae20f757e4d7380b203b84e75e7345ce66648481190399945a7efe6d19f",
+    "app/commerce_action_engine/execution/language/proposal_constraints.py": "01ed80e28d35d293f1bac1a1adf2138d14d72d8d0390caab17931c3720841330",
+    "app/commerce_action_engine/execution/language/proposals.py": "8318bb2cdfd06e1c085aa0dc6a23fb6aeb035a95b57e9a08067d606281c39520",
+    "app/commerce_action_engine/execution/language/readiness.py": "e79d7b2bc41e13c28aae56c76eda88628dfea78ba03c4da2aa28641422e23f76",
+    "app/commerce_action_engine/execution/language/recommendations.py": "86ca97283c1aa561bd5bbfc48dc4a24c0ffe1af4415de7ee94f2ec74a53ae940",
+    "app/commerce_action_engine/execution/language/routing.py": "9c26a3d8c888e2c1cd5de6fd579ada4819bb90d32b7f244c5f2589f50c698105",
+    "app/commerce_action_engine/execution/language/search_context.py": "c99ac31570917e61b2fe669bbb14716a489b31051f5658e3dc3c36b856d5600d",
+    "app/commerce_action_engine/execution/language/selection.py": "e8802a797c48a8b08ee6f2e387550dd2d6a2ef0467a56245dc345280e8581b45",
+    "app/commerce_action_engine/execution/language/shopping.py": "4813b5b97b433abe9a0b77e4a1b7fcebd8bdba96c5472cc65fe2b43960586d15",
+    "app/commerce_action_engine/execution/planning/__init__.py": "d9542a634ea44cc82a3b4dfa65c062ac8d2c05605d62c1b48accf9745fd78bc3",
+    "app/commerce_action_engine/execution/planning/compound.py": "6dd58b26ff14e89a4c6d7aa54f75c6d0c5b3b4906ddb7004db08c7a532ed3f3e",
+    "app/commerce_action_engine/execution/planning/compound_execution.py": "f11e3c7fe0108ef37688d4e5b4c36122f0a4a6fd229154628e5da44e0b14ea5a",
+    "app/commerce_action_engine/execution/planning/compound_review.py": "ff99da0a54fc0de249960b962a9cd8df21a2aa3b0f10fe0720ed37df9eb4b3e0",
+    "app/commerce_action_engine/execution/planning/execution.py": "a3cc8dcaa6f35457632b648c9d71fad9a12f5e8bea3816a76a9cd9c010973692",
+    "app/commerce_action_engine/execution/planning/library.py": "b271c962375c4e25df13a8e99672663297ea1f05904684024b6fadc3d0535078",
+    "app/commerce_action_engine/execution/planning/outcomes.py": "de40cddc79f36df137df9af9d406484d8071a24b8f05886c0fb327007a96f876",
+    "app/commerce_action_engine/execution/planning/runtime.py": "cbb73e6dcb46c40ffc28a91ace31c5095293810cd5425762ccd05b289ee64162",
+    "app/commerce_action_engine/platform/__init__.py": "f2e3c5d6cfa220770dd0ea6eb1b9e535f3e9e5367161521fe6c68cd02a49ce63",
+    "app/commerce_action_engine/platform/completion.py": "0646a73c4d63a143449f842442112b13aaa94b11e992268388fc84dd60fea3af",
+    "app/commerce_action_engine/platform/compound_plans.py": "c234154cba7c10560f9df86fcb2eb960853cb5e0a4133a4af47098cdaebd6c15",
+    "app/commerce_action_engine/platform/costs.py": "d6fa108f50c715a7e78c2f8c06f2e49c7d946870449448cbe2484c0abc00b93e",
+    "app/commerce_action_engine/platform/failures.py": "66e0ea121352ffb34cf901efe37cbe36e96d3ce8da339349e3addac13411d1ca",
+    "app/commerce_action_engine/platform/request_revisions.py": "506cc803c9e9467a725605152f1aced999fbd10464f8ca01c49eac70f4dcf042",
+    "app/commerce_action_engine/platform/security.py": "0ed5155a16f4ae90b1e6fedf26140fac38267e443b53cc7e12223286fe38025d",
+    "app/commerce_action_engine/platform/settings.py": "d6cf4a6cacd462bca87dbe4152a73066e74f2416980d553cf141581a163c8bc9",
+    "app/commerce_action_engine/platform/singleflight.py": "608e0b9c7692c418e14e86dfda0e03d8f139a17427a2091b42b0403149351984",
+    "app/commerce_action_engine/platform/store.py": "5f58a7258c6fc8a58adcdcb47d9ff516efaf39d451bbaea879de416a994c6bfd",
+    "app/commerce_action_engine/platform/telemetry.py": "24dc7ae0244af0283d11d7c615a62a7a523cef67f34c36232b90ca71e8fc380c",
+    "app/commerce_action_engine/shared/__init__.py": "533ac1593604a3a9815a60e4299ec5bf08213c3d849d129c7b6df17681e59b41",
+    "app/commerce_action_engine/shared/errors.py": "f005ca38a08dd18c3f44487064a1944488975acaa94919b966bf90671bff7f1f",
+    "app/commerce_contracts/__init__.py": "7f9eaf834c7fb48c971f323aab3913ef6f4b78af65ff751f1c8abead42e206c1",
+    "app/commerce_contracts/agents.py": "e6fd423a948cea5aca9f8b0884c86b68805fc04d89ede763617b01a5dab1a551",
+    "app/commerce_contracts/embeddings.py": "593a0ec5f5ed6397c4083adc884f53e93306624b0f8a12bd28efc6d5752d36a9",
+    "app/commerce_contracts/errors.py": "0aafef759a856d19dd2c158b0ce014da38d69c057bdd7a1f4b25b8a9ed91d981",
+    "app/commerce_contracts/intent_example.py": "e10e9f76c689415fb352d61faa0fcc2866cb1484d04456f9102f89cbfc913472",
+    "app/commerce_knowledge_rag/__init__.py": "88dee67b62da8256fbc02bc1aea024746ba35fc4ce46056c35d65ee3b9d69a9b",
+    "app/commerce_knowledge_rag/extract.py": "58b38a3c131354913fc58d42e7ca1d29ec534929f5113f06e4a2db6163a9f0cb",
+    "app/commerce_knowledge_rag/intent_examples.py": "f7054091aeb33f9a78ddb321697fb9801b46e565436725dbdc7e4f40c662b0dc",
+    "app/commerce_knowledge_rag/service.py": "0bc7da93c003c341cd57d5900ec2592c5c12ae719b7cfe9995f50a6657335062",
+    "app/commerce_knowledge_rag/store.py": "0a841da788920cab202d10900fb9eedc093cbcf1613305d06f420023096184f2",
+    "app/commerce_language_engine/scripts/generate-order-corpus.py": "7ec6cc7fd02b34759431a44da02c7f3262ce61277b985ae1ef451554e146cc69",
+    "app/commerce_orchestration_engine/__init__.py": "8451490c64766f9bdb0542d935cf67a3a49e59cfc676ceffa06abb9d99fc29e8",
+    "app/commerce_orchestration_engine/journeys/__init__.py": "cb9869a4cb9fee53292f15d4295a7f5bb57275c690b6af90389ad823794b370c",
+    "app/commerce_orchestration_engine/journeys/compound/__init__.py": "fbbaa906155afbc030defb13eb4a0c4d0ecf6489cce860d02a15f39f595b490f",
+    "app/commerce_orchestration_engine/journeys/compound/execution.py": "4f48daa6ebeae0f949314acb47dea91297c57f409d34758f4d89063c3d203dc0",
+    "app/commerce_orchestration_engine/journeys/compound/ports.py": "22820e9661404654203998fb93ff8dd25203d72f6e8a3d1a3ea28de7d82790a3",
+    "app/commerce_orchestration_engine/journeys/compound/recovery.py": "d37db5173513b123245764f01c0c386a53612dcff020d409b97f5e91c391fd54",
+    "app/commerce_orchestration_engine/journeys/compound/result.py": "d5bbbea27e503d6f6989e03ba20e0a5099ab3955ae4dbf24636d8de35909fe2c",
+    "app/commerce_orchestration_engine/journeys/compound/service.py": "c4b8d3281ac4960a5d209063c9b0dcd7c29dc663ca8cfe31d3f662a46116b3b8",
+    "app/commerce_resolution_engine/__init__.py": "b00f66742ec82722571e2f2369c0921b1eaddf5b316d3c2297a746e0abef9bf7",
+    "app/commerce_resolution_engine/adapter.py": "9a704ca23d5b075ef7f155d44b383dcdfaca6b1f177a78c0df89f32da74e83b2",
+    "app/commerce_resolution_engine/admission.py": "645877d866837acb924cad4af768e582cedba4c4501dd024732bfdabb505ca60",
+    "app/commerce_resolution_engine/baseline.py": "922117af73f31416436dfe766c1371baa5bf1247cd4b1ef563a490575b790fb6",
+    "app/commerce_resolution_engine/basket.py": "8aface9d26aabbf586cdeb7a9cfaac851481768989e4bbfda840df1d8ff9d406",
+    "app/commerce_resolution_engine/chat.py": "4cba5ea4213ee00e43290530cd3a1df87bd542565f1a5b056bc4484d0316b0b6",
+    "app/commerce_resolution_engine/contracts.py": "d23208ecbb1dad64deac870a2ca650ca4ad29800b339ed183b70da0aad07c6bc",
+    "app/commerce_resolution_engine/language.py": "592fb2eababf75666fa5116a29f2bbf9304c7da43359b399e5b67cf50126b743",
+    "app/commerce_resolution_engine/planning.py": "aa4da0412e15d6e560e505dd1f4f7f1b51eebc26e9848edc5215482e12596455",
+    "app/commerce_resolution_engine/prompts.py": "e887b8d9ef116161d55bfb8208ea965a2b25ed43d58d6b1aa8424bf23e66b4d8",
+    "app/commerce_resolution_engine/providers/__init__.py": "795ccf79a6b3ecf1933f180350aa64483f4f735ea8692ceb79ad1ba1e61ba47c",
+    "app/commerce_resolution_engine/providers/chat.py": "aad456fe991f3c5ec6e69665f0ff267e54b0e22cd6740545fad8f534905eb8e4",
+    "app/commerce_resolution_engine/providers/config.py": "1a66cf3002654314d0e895306772c27fc9fce795de59191487cccc0c0f09d026",
+    "app/commerce_resolution_engine/providers/embeddings.py": "3e0b94b99c54c12d034afcde29a239eb62b5ee15c68747833289d0353f5596eb",
+    "app/commerce_resolution_engine/providers/factory.py": "b63797d91209811b9881b7ff75a01179d26f84f4dea038fdef99fbdc46211c26",
+    "app/commerce_resolution_engine/providers/openai.py": "2dd70ad207f23bcdbd806cd933dd08c83c95f938d024c91c9318dda887920b97",
+    "app/commerce_resolution_engine/providers/settings.py": "c69144837252a14673a83e4ceaffaf76ed30639e2e2abe35dec268132ae8fc0b",
+    "app/commerce_resolution_engine/providers/smoke.py": "6efddb590028fb4d83b4a40a7a3ccf2e55e4b733390fdc18ce5b8442432add12",
+    "app/commerce_resolution_engine/providers/usage.py": "3a421bfcc43827a08a4b49dca21dac51e291d5c58a0a53b7d996e590b8fa66f1",
+    "app/commerce_resolution_engine/runtime.py": "5e73275e524effaf2f4eeeb06b7bf55f3084e811f2025ea500459ecc7d4c5a62",
+    "app/commerce_resolution_engine/shopping.py": "7bab37578a305c28478dbe22c048386058279b5edd05315e6f7a287cd2597755",
+    "app/knowledge_cli.py": "5dca0f3fc5431c37eac17caff30391422e00ac954ac1f50c7b7a8b330ef4c725",
+    "app/knowledge_extract.py": "ed4551cfdcabddc612b568c7038516ee766153176a717993420d0d9d53351655",
+    "app/main.py": "79e9efaedd296856ce1b390d4bb8f08eda479e07e7f796d2abf6104f5fb1bc97",
+    "app/provider_smoke.py": "62e6e75a35d2c7a44224a44ba4f8530597a9c298b70fa847c7d8bee5b4b860cf"
+  }
+}

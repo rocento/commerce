@@ -1,0 +1,14 @@
+.product-price { display: inline-flex; flex-direction: column; align-items: flex-start; gap: 5px; line-height: 1.3; max-width: 100%; font-variant-numeric: tabular-nums; }
+.product-price .product-price-before { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; font-size: 13px; }
+.product-price-before del { color: #68716c; font-weight: 400; text-decoration-thickness: 1px; }
+.product-price .product-price-current { color: inherit; font-size: 1.15em; font-weight: 750; }
+.product-price.product-price-sale .product-price-current { color: #23613e; }
+.product-price .product-price-badge { background: #e3f2e8; color: #245c3b; padding: 3px 7px; border-radius: 6px; font-size: 11px; font-weight: 750; white-space: nowrap; }
+.product-price .product-price-unit { font-size: 12px; font-weight: 400; color: #606a63; }
+.product-price .product-price-saving { color: #346748; font-size: 12px; font-weight: 500; }
+.price-sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
+@media (max-width: 480px) { .product-price .product-price-before { gap: 5px; font-size: 12px; } .product-price .product-price-badge { font-size: 10px; } }
+.grocery-product-footer > .product-price { font-size: 18px; }
+.detail-price .product-price .product-price-current { font-size: 28px; }
+
+.assistant-rich-price .product-price { font-size: 20px; }

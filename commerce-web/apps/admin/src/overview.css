@@ -1,0 +1,123 @@
+/* Overview is scoped to avoid inheriting list-page card and row layouts. */
+.admin-body main.overview-page { max-width: 1560px; padding: 30px 38px 38px; }
+.overview-page { --ov-muted: #686f64; --ov-border: #e4e6e0; --ov-ink: #252d28; color: var(--ov-ink); }
+.overview-page .overview-icon { width: 20px; height: 20px; flex: 0 0 auto; }
+.overview-page .ov-welcome { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-bottom: 10px; color: var(--ov-muted); font-size: 12px; }
+.overview-page .ov-kicker { color: #8b6a5d; font-size: 10px; font-weight: 650; letter-spacing: .12em; }
+.admin-body .overview-page .admin-page-heading { border: 0; padding: 0; margin-bottom: 28px; align-items: center; }
+.admin-body .overview-page .admin-page-heading h1 { font-size: 30px; font-weight: 650; letter-spacing: -.035em; }
+.admin-body .overview-page .admin-page-heading p { color: var(--ov-muted); font-size: 13px; }
+.overview-page .admin-page-heading-actions { gap: 10px; }
+.overview-page .admin-page-heading-actions :is(a, button) { gap: 8px; font-size: 12px; border-radius: 7px; }
+.overview-page .ov-ask-button { background: #edf3fa; border-color: #b9cce0; color: #244867; box-shadow: inset 0 1px 0 #fff; }
+.overview-page .ov-ask-button:hover { background: #dfeaf6; border-color: #9fb7ce; color: #183b59; }
+.overview-page .ov-ask-button:focus-visible { outline-color: #5c83a8; }
+.overview-page .ov-performance-toolbar { display: flex; justify-content: space-between; align-items: center; gap: 16px; margin-bottom: 16px; }
+.overview-page .ov-performance-toolbar h2 { font-size: 15px; margin: 0 0 4px; letter-spacing: -.01em; }
+.overview-page .ov-performance-toolbar > div > span { font-size: 11px; color: var(--ov-muted); }
+.overview-page .ov-separator { margin: 0 7px; color: #c3c6be; }
+.overview-page .ov-performance-controls { display: flex; gap: 8px; }
+.overview-page .ov-performance-controls select { width: auto; min-width: 0; min-height: 36px; padding: 7px 30px 7px 12px; border: 1px solid #dcded7; border-radius: 6px; background: #fff; color: #4c544d; font: inherit; font-size: 12px; }
+.overview-page .ov-refresh { display: grid; place-items: center; min-height: 36px; width: 36px; padding: 7px; }
+.overview-page .ov-refresh .overview-icon { width: 16px; height: 16px; }
+.overview-page button:disabled { opacity: .55; cursor: wait; }
+.overview-page .ov-metrics { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 14px; margin-bottom: 20px; }
+.overview-page .ov-metric { padding: 18px 20px 16px; background: #fff; border: 1px solid var(--ov-border); border-radius: 10px; min-width: 0; }
+.overview-page .ov-metric-primary { background: #fbf7f4; border-color: #e9d9d0; }
+.overview-page .ov-metric > div { display: flex; align-items: center; justify-content: space-between; gap: 10px; font-size: 12px; color: #656e63; }
+.overview-page .ov-metric > div .overview-icon { color: #989e92; width: 18px; height: 18px; }
+.overview-page .ov-metric-primary > div .overview-icon { color: #bc765c; }
+.overview-page .ov-metric > strong { display: block; font-size: clamp(25px, 2.2vw, 32px); letter-spacing: -.035em; line-height: 1.25; font-weight: 650; margin: 12px 0 10px; font-variant-numeric: tabular-nums; overflow-wrap: anywhere; }
+.overview-page .ov-metric > small { display: flex; align-items: center; justify-content: space-between; gap: 8px; color: var(--ov-muted); font-size: 11px; line-height: 1.4; }
+.overview-page .ov-metric small b { font-size: 9px; font-weight: 600; color: #996a58; border: 1px solid #ebddd4; border-radius: 3px; padding: 2px 5px; }
+.overview-page .ov-analysis-grid { display: grid; grid-template-columns: minmax(0, 1.85fr) minmax(285px, 1fr); gap: 20px; align-items: stretch; }
+.overview-page .ov-analysis-full { grid-template-columns: 1fr; }
+.overview-page .ov-panel { min-width: 0; background: #fff; border: 1px solid var(--ov-border); border-radius: 11px; overflow: hidden; }
+.overview-page .ov-panel-heading { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 22px 24px 8px; }
+.overview-page .ov-panel-heading h2 { font-size: 16px; margin: 0; }
+.overview-page .ov-panel-heading p { margin: 3px 0 0; font-size: 11px; color: var(--ov-muted); }
+.overview-page .ov-text-link { display: inline-flex; align-items: center; gap: 7px; font-size: 11px; font-weight: 600; white-space: nowrap; color: #576454; }
+.overview-page .ov-text-link .overview-icon { width: 14px; height: 14px; }
+.overview-page .ov-chart { margin: 2px 20px 20px 8px; }
+.overview-page .ov-chart svg { display: block; width: 100%; height: auto; max-height: 210px; overflow: visible; }
+.overview-page .ov-chart svg text { font-size: 11px; fill: #687260; }
+.overview-page .ov-chart-dates { display: flex; justify-content: space-between; padding: 0 10px 0 50px; font-size: 11px; color: #687260; }
+.overview-page .ov-chart-placeholder { min-height: 215px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 9px; padding: 28px; text-align: center; font-size: 12px; color: var(--ov-muted); }
+.overview-page .ov-chart-placeholder > .overview-icon { width: 30px; height: 30px; color: #a6b09e; }
+.overview-page .ov-chart-placeholder strong { font-size: 17px; font-weight: 600; color: #596751; }
+.overview-page .ov-journey { margin: 0 24px; border-top: 1px solid #eceee7; padding: 16px 0 12px; }
+.overview-page .ov-journey-heading { display: flex; justify-content: space-between; align-items: center; gap: 12px; margin-bottom: 13px; }
+.overview-page .ov-journey h3 { margin: 0; font-size: 12px; font-weight: 600; }
+.overview-page .ov-journey-heading > span { font-size: 11px; color: #596d55; }
+.overview-page .ov-journey ol { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); list-style: none; margin: 0; padding: 0; gap: 14px; }
+.overview-page .ov-journey li { min-width: 0; position: relative; }
+.overview-page .ov-journey li:not(:last-child):after { content: '→'; position: absolute; right: -3px; bottom: 6px; color: #c4c8be; font-size: 14px; }
+.overview-page .ov-journey-label { display: flex; align-items: center; gap: 6px; font-size: 11px; color: #687260; }
+.overview-page .ov-journey-label i { font-style: normal; color: #9ca795; font-size: 9px; }
+.overview-page .ov-journey li strong { display: block; font-size: 22px; font-weight: 600; letter-spacing: -.025em; margin-top: 4px; }
+.overview-page .ov-journey > p { margin: 9px 0 0; color: #737c6c; font-size: 10px; }
+.overview-page .ov-daily-figures { margin: 0; border-top: 1px solid #eff0ec; padding: 10px 24px; }
+.overview-page .ov-daily-figures summary { cursor: pointer; font-size: 11px; color: #687260; }
+.overview-page .ov-table-scroll { max-width: 100%; overflow-x: auto; padding-top: 12px; }
+.overview-page .ov-table-scroll caption { text-align: left; font-size: 11px; padding-bottom: 10px; color: #737c6c; }
+.overview-page .ov-table-scroll :is(th, td) { font-size: 11px; }
+.overview-page .ov-ai-panel { display: flex; flex-direction: column; position: relative; overflow: hidden; border: 1px solid #cbd9e8; border-radius: 11px; padding: 26px; background: linear-gradient(145deg, #f5f8fc 0%, #edf3fa 100%); color: #18324d; box-shadow: inset 0 1px 0 #fff; }
+.overview-page .ov-ai-panel:before { content: ''; pointer-events: none; position: absolute; width: 260px; height: 260px; border: 1px solid #315f8c0d; border-radius: 50%; right: -150px; top: -130px; box-shadow: 0 0 0 32px #315f8c08, 0 0 0 64px #315f8c05; }
+.overview-page .ov-ai-brand { display: flex; align-items: center; gap: 10px; font-size: 9px; font-weight: 650; letter-spacing: .13em; color: #486884; }
+.overview-page .ov-ai-mark { display: grid; place-items: center; width: 30px; height: 30px; border: 1px solid #bdcee0; border-radius: 8px; background: #fff; color: #2c628f; box-shadow: 0 2px 8px #315f8c0a; }
+.admin-body .overview-page .ov-ai-panel h2 { color: #18324d; font-size: clamp(24px, 2vw, 30px); line-height: 1.16; font-weight: 600; letter-spacing: -.025em; margin: 22px 0 12px; }
+.admin-body .overview-page .ov-ai-panel > p { color: #536b82; font-size: 13px; line-height: 1.65; margin: 0 0 24px; max-width: 37ch; }
+.overview-page .ov-ai-questions { display: grid; gap: 8px; margin-top: auto; }
+.overview-page .ov-ai-questions > span { color: #6b8195; font-size: 8px; font-weight: 650; letter-spacing: .11em; margin-bottom: 2px; }
+.overview-page .ov-ai-questions button { display: flex; align-items: center; justify-content: space-between; gap: 12px; text-align: left; min-height: 43px; padding: 11px 12px; border: 1px solid #c8d6e4; border-radius: 6px; background: #fff; color: #233f5a; font-size: 12px; font-weight: 550; line-height: 1.4; box-shadow: 0 1px 2px #315f8c08; }
+.overview-page .ov-ai-questions button:hover { background: #e5eef8; border-color: #9fb7ce; }
+.overview-page .ov-ai-questions button:focus-visible { outline-color: #5c83a8; }
+.overview-page .ov-ai-questions .overview-icon { width: 15px; height: 15px; color: #547895; }
+.overview-page .ov-ai-footer { display: flex; align-items: center; gap: 7px; font-size: 10px; color: #627b91; margin-top: 18px; }
+.overview-page .ov-ai-footer .overview-icon { width: 13px; height: 13px; }
+.overview-page .ov-data-note { display: flex; justify-content: space-between; gap: 12px; margin-top: 10px; font-size: 11px; color: #727b69; }
+.overview-page .ov-data-stale { color: #a9702f; }
+.overview-page .ov-section-heading { display: flex; align-items: end; justify-content: space-between; gap: 18px; margin-bottom: 14px; }
+.overview-page .ov-section-heading h2 { font-size: 17px; margin: 0; }
+.overview-page .ov-section-heading > span { color: #727b69; font-size: 11px; }
+.overview-page .ov-operations { margin-top: 27px; }
+.overview-page .ov-operation-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 1px; border: 1px solid var(--ov-border); background: var(--ov-border); border-radius: 9px; overflow: hidden; }
+.overview-page .ov-operation { min-width: 0; display: flex; align-items: center; gap: 12px; padding: 18px; background: #fff; transition: background .15s; }
+.overview-page .ov-operation:hover { background: #fafbf8; }
+.overview-page .ov-operation-icon { color: #939d8c; }
+.overview-page .ov-operation > span:nth-child(2) { flex: 1; min-width: 0; }
+.overview-page .ov-operation strong { display: block; font-size: 12px; font-weight: 600; }
+.overview-page .ov-operation small { display: block; font-size: 11px; line-height: 1.55; color: #727b69; margin-top: 4px; }
+.overview-page .ov-operation > .overview-icon { width: 14px; height: 14px; color: #a2aa9a; }
+.overview-page .ov-workspaces { margin-top: 30px; }
+.overview-page .ov-workspaces .ov-section-heading h2 { margin-top: 5px; font-size: 21px; letter-spacing: -.025em; }
+.overview-page .ov-workspace-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; }
+.overview-page .ov-workspace-card { background: #fff; border: 1px solid var(--ov-border); border-radius: 10px; padding: 20px; display: flex; flex-direction: column; min-width: 0; transition: border-color .15s, box-shadow .15s; }
+.overview-page .ov-workspace-card:hover { border-color: #c7cdc0; box-shadow: 0 4px 15px #34462b07; }
+.overview-page .ov-workspace-top { display: flex; justify-content: space-between; align-items: center; }
+.overview-page .ov-workspace-top > .overview-icon { width: 16px; height: 16px; color: #afb4a8; }
+.overview-page .ov-capability-icon { display: grid; place-items: center; height: 34px; width: 34px; border-radius: 8px; }
+.overview-page .ov-tone-violet { background: #f0ecf8; color: #8876a8; }
+.overview-page .ov-tone-sage { background: #eaf1e8; color: #738d65; }
+.overview-page .ov-tone-sand { background: #f5efe3; color: #b0975e; }
+.overview-page .ov-tone-blue { background: #eaf0f6; color: #7193af; }
+.overview-page .ov-tone-rose { background: #f7ebef; color: #b38094; }
+.overview-page .ov-tone-peach { background: #fbede5; color: #bd896e; }
+.overview-page .ov-workspace-card h3 { font-size: 15px; font-weight: 600; margin: 16px 0 6px; letter-spacing: -.01em; }
+.admin-body .overview-page .ov-workspace-card p { font-size: 13px; line-height: 1.6; color: #687260; margin: 0 0 20px; max-width: 38ch; }
+.overview-page .ov-workspace-detail { border-top: 1px solid #f0f1eb; padding-top: 12px; margin-top: auto; font-size: 11px; color: #737c6c; }
+.overview-page .ov-governance { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 14px; margin-top: 26px; padding-top: 18px; border-top: 1px solid #e2e5dc; font-size: 11px; color: #687260; }
+.overview-page .ov-governance > span, .overview-page .ov-governance a { display: inline-flex; align-items: center; gap: 7px; }
+.overview-page .ov-governance .overview-icon { width: 14px; height: 14px; }
+.overview-page .ov-governance nav { display: flex; flex-wrap: wrap; gap: 22px; }
+.overview-page .ov-report-error { padding: 13px 16px; border: 1px solid #f1d6c8; border-radius: 8px; background: #fff7f1; font-size: 12px; color: #9a5c39; margin-bottom: 15px; }
+.overview-page .ov-report-error span { display: block; margin-top: 3px; }
+.overview-page .ov-skeleton { display: block; height: 38px; width: 70%; max-width: 140px; border-radius: 5px; background: #eff0eb; }
+.overview-page .ov-no-access { padding: 24px; }
+@media (min-width: 781px) and (max-width: 1180px) { .admin-body main.overview-page { padding: 26px; } .overview-page .ov-analysis-grid { grid-template-columns: minmax(0, 1.5fr) minmax(260px, 1fr); gap: 16px; } .overview-page .ov-ai-panel { padding: 22px; } .overview-page .ov-operation-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 960px) { .overview-page .ov-metrics { grid-template-columns: repeat(2, minmax(0, 1fr)); } .overview-page .ov-analysis-grid { grid-template-columns: 1fr; } .overview-page .ov-ai-panel { min-height: 0; } .overview-page .ov-ai-questions { grid-template-columns: repeat(3, minmax(0, 1fr)); } .overview-page .ov-ai-questions > span { grid-column: 1 / -1; } .overview-page .ov-ai-panel h2 br { display: none; } .admin-body .overview-page .ov-ai-panel > p { max-width: 65ch; } }
+@media (max-width: 780px) { .admin-body main.overview-page { padding: 24px 18px; } .overview-page .ov-welcome { align-items: flex-start; } .admin-body .overview-page .admin-page-heading { align-items: flex-start; } .overview-page .admin-page-heading-actions :is(a, button) { min-height: 44px; } .overview-page .ov-metric { padding: 16px; } .overview-page .ov-metric > strong { font-size: 27px; } .overview-page .ov-workspace-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } .overview-page .ov-performance-controls :is(select, button) { min-height: 44px; } .overview-page .ov-refresh { width: 44px; } .overview-page .ov-panel-heading { padding-inline: 18px; } .overview-page .ov-data-note { flex-direction: column; gap: 4px; } .overview-page .ov-journey { margin-inline: 18px; } .overview-page .ov-journey-label i { display: none; } .overview-page .ov-daily-figures { padding: 14px 18px; } }
+@media (max-width: 540px) { .overview-page .ov-welcome { font-size: 10px; } .overview-page .ov-kicker { font-size: 9px; } .overview-page .ov-performance-toolbar { align-items: flex-start; flex-direction: column; gap: 12px; } .overview-page .ov-performance-controls { width: 100%; } .overview-page .ov-performance-controls select[aria-label="Reporting period"] { flex: 1; } .overview-page .ov-metrics { gap: 10px; } .overview-page .ov-metric { padding: 14px; } .overview-page .ov-metric > div { font-size: 11px; } .overview-page .ov-metric > div .overview-icon { display: none; } .overview-page .ov-metric > small { font-size: 10px; align-items: flex-start; } .overview-page .ov-metric small b { display: none; } .overview-page .ov-chart { margin-right: 10px; margin-left: 0; } .overview-page .ov-chart-dates { font-size: 11px; padding-left: 28px; } .overview-page .ov-journey ol { gap: 10px; } .overview-page .ov-journey-heading > span { font-size: 10px; } .overview-page .ov-journey-label { font-size: 10px; white-space: nowrap; } .overview-page .ov-journey li strong { font-size: 21px; } .overview-page .ov-journey li:not(:last-child):after { display: none; } .overview-page .ov-ai-questions { grid-template-columns: 1fr; } .overview-page .ov-ai-questions button { min-height: 46px; font-size: 12px; } .overview-page .ov-ai-footer { font-size: 10px; } .overview-page .ov-operation-grid, .overview-page .ov-workspace-grid { grid-template-columns: 1fr; } .overview-page .ov-operation { padding: 18px; } .overview-page .ov-operation strong { font-size: 13px; } .overview-page .ov-operation small { font-size: 11px; } .overview-page .ov-section-heading > span { display: none; } .overview-page .ov-workspace-card { padding: 20px; } .overview-page .ov-governance nav { gap: 8px 20px; } .overview-page .ov-governance a { min-height: 44px; } }
+@media (prefers-reduced-motion: reduce) { .overview-page * { transition: none !important; } }
+
+@media (max-width: 540px) { .overview-page .ov-chart svg text { font-size: 20px; } }

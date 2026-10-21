@@ -1,0 +1,1910 @@
+{
+  "definitions": [
+    {
+      "id": "4933f04c-962e-5ee1-9c66-a0422662f68d",
+      "entity_type": "product",
+      "attribute_code": "jewelry_type",
+      "label": "Jewelry type",
+      "input_type": "multi_select",
+      "scope": "global",
+      "is_required": false,
+      "is_unique": false,
+      "is_searchable": true,
+      "is_filterable": true,
+      "is_comparable": true,
+      "is_visible_on_front": true,
+      "used_for_promo_rules": false,
+      "used_for_configurations": false,
+      "swatch_type": "none",
+      "options": [
+        {
+          "value": "anklet",
+          "label": "Anklet"
+        },
+        {
+          "value": "bracelet",
+          "label": "Bracelet"
+        },
+        {
+          "value": "brooch",
+          "label": "Brooch"
+        },
+        {
+          "value": "cufflink",
+          "label": "Cufflink"
+        },
+        {
+          "value": "earring",
+          "label": "Earring"
+        },
+        {
+          "value": "hair_accessory",
+          "label": "Hair Accessory"
+        },
+        {
+          "value": "necklace",
+          "label": "Necklace"
+        },
+        {
+          "value": "ring",
+          "label": "Ring"
+        },
+        {
+          "value": "tie_clip",
+          "label": "Tie Clip"
+        }
+      ],
+      "version": 0,
+      "metadata": {
+        "status": "active",
+        "admin_visible": true,
+        "ai_queryable": true,
+        "facetable": true,
+        "source_policy": "semantic",
+        "semantic_role": "classification",
+        "description": "Merchant-authored design categorization and styling suggestions for illustrative demo jewelry; not certified material, gemstone or allergy-safety specifications."
+      }
+    },
+    {
+      "id": "3ee89b97-7aa3-5b20-a1cd-7524e87efc8a",
+      "entity_type": "product",
+      "attribute_code": "jewelry_style",
+      "label": "Jewelry style",
+      "input_type": "multi_select",
+      "scope": "global",
+      "is_required": false,
+      "is_unique": false,
+      "is_searchable": true,
+      "is_filterable": true,
+      "is_comparable": true,
+      "is_visible_on_front": true,
+      "used_for_promo_rules": false,
+      "used_for_configurations": false,
+      "swatch_type": "none",
+      "options": [
+        {
+          "value": "art_deco",
+          "label": "Art Deco"
+        },
+        {
+          "value": "bohemian",
+          "label": "Bohemian"
+        },
+        {
+          "value": "classic",
+          "label": "Classic"
+        },
+        {
+          "value": "geometric",
+          "label": "Geometric"
+        },
+        {
+          "value": "minimalist",
+          "label": "Minimalist"
+        },
+        {
+          "value": "modern",
+          "label": "Modern"
+        },
+        {
+          "value": "nature",
+          "label": "Nature"
+        },
+        {
+          "value": "playful",
+          "label": "Playful"
+        },
+        {
+          "value": "sculptural",
+          "label": "Sculptural"
+        },
+        {
+          "value": "statement",
+          "label": "Statement"
+        },
+        {
+          "value": "vintage",
+          "label": "Vintage"
+        }
+      ],
+      "version": 0,
+      "metadata": {
+        "status": "active",
+        "admin_visible": true,
+        "ai_queryable": true,
+        "facetable": true,
+        "source_policy": "semantic",
+        "semantic_role": null,
+        "description": "Merchant-authored design categorization and styling suggestions for illustrative demo jewelry; not certified material, gemstone or allergy-safety specifications."
+      }
+    },
+    {
+      "id": "77a28304-5fb0-5103-82ff-620b06540d0e",
+      "entity_type": "product",
+      "attribute_code": "jewelry_occasion",
+      "label": "Suggested occasion",
+      "input_type": "multi_select",
+      "scope": "global",
+      "is_required": false,
+      "is_unique": false,
+      "is_searchable": true,
+      "is_filterable": true,
+      "is_comparable": true,
+      "is_visible_on_front": true,
+      "used_for_promo_rules": false,
+      "used_for_configurations": false,
+      "swatch_type": "none",
+      "options": [
+        {
+          "value": "anniversary",
+          "label": "Anniversary"
+        },
+        {
+          "value": "birthday",
+          "label": "Birthday"
+        },
+        {
+          "value": "evening",
+          "label": "Evening"
+        },
+        {
+          "value": "everyday",
+          "label": "Everyday"
+        },
+        {
+          "value": "graduation",
+          "label": "Graduation"
+        },
+        {
+          "value": "wedding",
+          "label": "Wedding"
+        },
+        {
+          "value": "work",
+          "label": "Work"
+        }
+      ],
+      "version": 0,
+      "metadata": {
+        "status": "active",
+        "admin_visible": true,
+        "ai_queryable": true,
+        "facetable": true,
+        "source_policy": "semantic",
+        "semantic_role": "intended_use",
+        "description": "Merchant-authored design categorization and styling suggestions for illustrative demo jewelry; not certified material, gemstone or allergy-safety specifications."
+      }
+    },
+    {
+      "id": "78a207a0-caef-547b-9d6a-62059324a79e",
+      "entity_type": "product",
+      "attribute_code": "jewelry_color",
+      "label": "Appearance color",
+      "input_type": "multi_select",
+      "scope": "global",
+      "is_required": false,
+      "is_unique": false,
+      "is_searchable": true,
+      "is_filterable": true,
+      "is_comparable": true,
+      "is_visible_on_front": true,
+      "used_for_promo_rules": false,
+      "used_for_configurations": false,
+      "swatch_type": "none",
+      "options": [
+        {
+          "value": "black",
+          "label": "Black"
+        },
+        {
+          "value": "blue",
+          "label": "Blue"
+        },
+        {
+          "value": "gold_tone",
+          "label": "Gold Tone"
+        },
+        {
+          "value": "green",
+          "label": "Green"
+        },
+        {
+          "value": "pink",
+          "label": "Pink"
+        },
+        {
+          "value": "purple",
+          "label": "Purple"
+        },
+        {
+          "value": "red",
+          "label": "Red"
+        },
+        {
+          "value": "rose_gold_tone",
+          "label": "Rose Gold Tone"
+        },
+        {
+          "value": "silver_tone",
+          "label": "Silver Tone"
+        },
+        {
+          "value": "teal",
+          "label": "Teal"
+        },
+        {
+          "value": "white",
+          "label": "White"
+        }
+      ],
+      "version": 0,
+      "metadata": {
+        "status": "active",
+        "admin_visible": true,
+        "ai_queryable": true,
+        "facetable": true,
+        "source_policy": "semantic",
+        "semantic_role": null,
+        "description": "Merchant-authored design categorization and styling suggestions for illustrative demo jewelry; not certified material, gemstone or allergy-safety specifications."
+      }
+    }
+  ],
+  "products": [
+    {
+      "sku": "JWL-NEW-20260929-001",
+      "slug": "jewelry-gold-tone-bypass-ring",
+      "name": "Gold-tone Teardrop Bypass Ring",
+      "category": "jewelry-rings",
+      "price": "89.00",
+      "currency": "USD",
+      "unit": "each",
+      "description": "Gold-tone Teardrop Bypass Ring. Illustrative fashion-jewelry demo design; color and finish describe appearance, not certified metal purity or gemstone identity.",
+      "image": "gold-tone-bypass-ring.png",
+      "initial_quantity": 20,
+      "attributes": {
+        "jewelry_type": [
+          "ring"
+        ],
+        "jewelry_style": [
+          "minimalist",
+          "sculptural"
+        ],
+        "jewelry_occasion": [
+          "everyday",
+          "birthday"
+        ],
+        "jewelry_color": [
+          "gold_tone"
+        ],
+        "color": "gold"
+      },
+      "prompt": "Use case: product-mockup. Square premium jewelry catalog photograph of open bypass ring with two smooth sculptural teardrop ends, polished warm gold-tone finish, no gemstones. Entire product centered with generous margins, warm ivory seamless background, soft studio lighting and subtle grounded shadow, crisp realistic material detail. Physically coherent jewelry. No text, watermark, logo, packaging, hands, props or extra jewelry. Synthetic illustrative demo product. Asset: gold-tone-bypass-ring."
+    },
+    {
+      "sku": "JWL-NEW-20260929-002",
+      "slug": "jewelry-silver-tone-wave-ring",
+      "name": "Silver-tone Wave Ring \u2014 US Size 7",
+      "category": "jewelry-rings",
+      "price": "79.00",
+      "currency": "USD",
+      "unit": "each",
+      "description": "Silver-tone Wave Ring \u2014 US Size 7. Illustrative fashion-jewelry demo design; color and finish describe appearance, not certified metal purity or gemstone identity.",
+      "image": "silver-tone-wave-ring.png",
+      "initial_quantity": 20,
+      "attributes": {
+        "jewelry_type": [
+          "ring"
+        ],
+        "jewelry_style": [
+          "minimalist",
+          "modern"
+        ],
+        "jewelry_occasion": [
+          "everyday",
+          "work"
+        ],
+        "jewelry_color": [
+          "silver_tone"
+        ],
+        "color": "silver"
+      },
+      "prompt": "Use case: product-mockup. Square premium jewelry catalog photograph of single polished silver-tone ring with an undulating ocean-wave band, no gemstones. Entire product centered with generous margins, warm ivory seamless background, soft studio lighting and subtle grounded shadow, crisp realistic material detail. Physically coherent jewelry. No text, watermark, logo, packaging, hands, props or extra jewelry. Synthetic illustrative demo product. Asset: silver-tone-wave-ring."
+    },
+    {
+      "sku": "JWL-NEW-20260929-003",
+      "slug": "jewelry-violet-cushion-ring",
+      "name": "Violet Cushion Cocktail Ring \u2014 US Size 7",
+      "category": "jewelry-rings",
+      "price": "119.00",
+      "currency": "USD",
+      "unit": "each",
+      "description": "Violet Cushion Cocktail Ring \u2014 US Size 7. Illustrative fashion-jewelry demo design; color and finish describe appearance, not certified metal purity or gemstone identity.",
+      "image": "violet-cushion-ring.png",
+      "initial_quantity": 20,
+      "attributes": {
+        "jewelry_type": [
+          "ring"
+        ],
+        "jewelry_style": [
+          "statement",
+          "vintage"
+        ],
+        "jewelry_occasion": [
+          "evening",
+          "anniversary"
+        ],
+        "jewelry_color": [
+          "silver_tone",
+          "purple"
+        ],
+        "color": "purple"
+      },
+      "prompt": "Use case: product-mockup. Square premium jewelry catalog photograph of single silver-tone cocktail ring with one large transparent violet cushion-cut decorative stone and fine beaded setting. Entire product centered with generous margins, warm ivory seamless background, soft studio lighting and subtle grounded shadow, crisp realistic material detail. Physically coherent jewelry. No text, watermark, logo, packaging, hands, props or extra jewelry. Synthetic illustrative demo product. Asset: violet-cushion-ring."
+    },
+    {
+      "sku": "JWL-NEW-20260929-004",
+      "slug": "jewelry-black-geometric-ring",
+      "name": "Black Geometric Ring \u2014 US Size 8",
+      "category": "jewelry-rings",
+      "price": "69.00",
+      "currency": "USD",
+      "unit": "each",
+      "description": "Black Geometric Ring \u2014 US Size 8. Illustrative fashion-jewelry demo design; color and finish describe appearance, not certified metal purity or gemstone identity.",
+      "image": "black-geometric-ring.png",
+      "initial_quantity": 20,
+      "attributes": {
+        "jewelry_type": [
+          "ring"
+        ],
+        "jewelry_style": [
+          "modern",
+          "geometric"
+        ],
+        "jewelry_occasion": [
+          "everyday",
+          "birthday"
+        ],
+        "jewelry_color": [
+          "black"
+        ],
+        "color": "black"
+      },
+      "prompt": "Use case: product-mockup. Square premium jewelry catalog photograph of single matte black wide ring with angular faceted geometric band and no stones. Entire product centered with generous margins, warm ivory seamless background, soft studio lighting and subtle grounded shadow, crisp realistic material detail. Physically coherent jewelry. No text, watermark, logo, packaging, hands, props or extra jewelry. Synthetic illustrative demo product. Asset: black-geometric-ring."
+    },
+    {
+      "sku": "JWL-NEW-20260929-005",
+      "slug": "jewelry-gold-tone-leaf-studs",
+      "name": "Gold-tone Leaf Stud Earrings",
+      "category": "jewelry-earrings",
+      "price": "49.00",
+      "currency": "USD",
+      "unit": "each",
+      "description": "One matching pair of earrings. Gold-tone Leaf Stud Earrings. Illustrative fashion-jewelry demo design; color and finish describe appearance, not certified metal purity or gemstone identity.",
+      "image": "gold-tone-leaf-studs.png",
+      "initial_quantity": 20,
+      "attributes": {
+        "jewelry_type": [
+          "earring"
+        ],
+        "jewelry_style": [
+          "nature",
+          "minimalist"
+        ],
+        "jewelry_occasion": [
+          "everyday",
+          "work"
+        ],
+        "jewelry_color": [
+          "gold_tone"
+        ],
+        "color": "gold"
+      },
+      "prompt": "Use case: product-mockup. Square premium jewelry catalog photograph of matched pair of small gold-tone leaf-shaped stud earrings with delicate engraved veins. Entire product centered with generous margins, warm ivory seamless background, soft studio lighting and subtle grounded shadow, crisp realistic material detail. Physically coherent jewelry. No text, watermark, logo, packaging, hands, props or extra jewelry. Synthetic illustrative demo product. Asset: gold-tone-leaf-studs."
+    },
+    {
+      "sku": "JWL-NEW-20260929-006",
+      "slug": "jewelry-silver-tone-knot-studs",
+      "name": "Silver-tone Knot Stud Earrings",
+      "category": "jewelry-earrings",
+      "price": "45.00",
+      "currency": "USD",
+      "unit": "each",
+      "description": "One matching pair of earrings. Silver-tone Knot Stud Earrings. Illustrative fashion-jewelry demo design; color and finish describe appearance, not certified metal purity or gemstone identity.",
+      "image": "silver-tone-knot-studs.png",
+      "initial_quantity": 20,
+      "attributes": {
+        "jewelry_type": [
+          "earring"
+        ],
+        "jewelry_style": [
+          "classic",
+          "minimalist"
+        ],
+        "jewelry_occasion": [
+          "everyday",
+          "work"
+        ],
+        "jewelry_color": [
+          "silver_tone"
+        ],
+        "color": "silver"
+      },
+      "prompt": "Use case: product-mockup. Square premium jewelry catalog photograph of matched pair of silver-tone stud earrings shaped as small interlocking polished knots. Entire product centered with generous margins, warm ivory seamless background, soft studio lighting and subtle grounded shadow, crisp realistic material detail. Physically coherent jewelry. No text, watermark, logo, packaging, hands, props or extra jewelry. Synthetic illustrative demo product. Asset: silver-tone-knot-studs."
+    },
+    {
+      "sku": "JWL-NEW-20260929-007",
+      "slug": "jewelry-teal-fan-earrings",
+      "name": "Teal Fan Drop Earrings",
+      "category": "jewelry-earrings",
+      "price": "65.00",
+      "currency": "USD",
+      "unit": "each",
+      "description": "One matching pair of earrings. Teal Fan Drop Earrings. Illustrative fashion-jewelry demo design; color and finish describe appearance, not certified metal purity or gemstone identity.",
+      "image": "teal-fan-earrings.png",
+      "initial_quantity": 20,
+      "attributes": {
+        "jewelry_type": [
+          "earring"
+        ],
+        "jewelry_style": [
+          "statement",
+          "art_deco"
+        ],
+        "jewelry_occasion": [
+          "evening",
+          "birthday"
+        ],
+        "jewelry_color": [
+          "gold_tone",
+          "teal"
+        ],
+        "color": "teal"
+      },
+      "prompt": "Use case: product-mockup. Square premium jewelry catalog photograph of matched pair of gold-tone drop earrings with teal enamel fan shapes and fine radial gold ribs. Entire product centered with generous margins, warm ivory seamless background, soft studio lighting and subtle grounded shadow, crisp realistic material detail. Physically coherent jewelry. No text, watermark, logo, packaging, hands, props or extra jewelry. Synthetic illustrative demo product. Asset: teal-fan-earrings."
+    },
+    {
+      "sku": "JWL-NEW-20260929-008",
+      "slug": "jewelry-pink-geometric-earrings",
+      "name": "Pink Geometric Drop Earrings",
+      "category": "jewelry-earrings",
+      "price": "59.00",
+      "currency": "USD",
+      "unit": "each",
+      "description": "One matching pair of earrings. Pink Geometric Drop Earrings. Illustrative fashion-jewelry demo design; color and finish describe appearance, not certified metal purity or gemstone identity.",
+      "image": "pink-geometric-earrings.png",
+      "initial_quantity": 20,
+      "attributes": {
+        "jewelry_type": [
+          "earring"
+        ],
+        "jewelry_style": [
+          "modern",
+          "geometric"
+        ],
+        "jewelry_occasion": [
+          "evening",
+          "birthday"
+        ],
+        "jewelry_color": [
+          "rose_gold_tone",
+          "pink"
+        ],
+        "color": "pink"
+      },
+      "prompt": "Use case: product-mockup. Square premium jewelry catalog photograph of matched pair of rose-gold-tone geometric drop earrings, open rectangular upper links and dusty pink enamel semicircle pendants. Entire product centered with generous margins, warm ivory seamless background, soft studio lighting and subtle grounded shadow, crisp realistic material detail. Physically coherent jewelry. No text, watermark, logo, packaging, hands, props or extra jewelry. Synthetic illustrative demo product. Asset: pink-geometric-earrings."
+    },
+    {
+      "sku": "JWL-NEW-20260929-009",
+      "slug": "jewelry-sunburst-pendant",
+      "name": "Gold-tone Sunburst Pendant Necklace \u2014 45cm",
+      "category": "jewelry-necklaces",
+      "price": "79.00",
+      "currency": "USD",
+      "unit": "each",
+      "description": "Gold-tone Sunburst Pendant Necklace \u2014 45cm. Illustrative fashion-jewelry demo design; color and finish describe appearance, not certified metal purity or gemstone identity.",
+      "image": "sunburst-pendant.png",
+      "initial_quantity": 20,
+      "attributes": {
+        "jewelry_type": [
+          "necklace"
+        ],
+        "jewelry_style": [
+          "nature",
+          "bohemian"
+        ],
+        "jewelry_occasion": [
+          "everyday",
+          "birthday"
+        ],
+        "jewelry_color": [
+          "gold_tone"
+        ],
+        "color": "gold"
+      },
+      "prompt": "Use case: product-mockup. Square premium jewelry catalog photograph of fine gold-tone chain necklace arranged in an oval with a small sunburst medallion pendant, radiating slender rays, no stones. Entire product centered with generous margins, warm ivory seamless background, soft studio lighting and subtle grounded shadow, crisp realistic material detail. Physically coherent jewelry. No text, watermark, logo, packaging, hands, props or extra jewelry. Synthetic illustrative demo product. Asset: sunburst-pendant."
+    },
+    {
+      "sku": "JWL-NEW-20260929-010",
+      "slug": "jewelry-compass-pendant",
+      "name": "Silver-tone Compass Pendant Necklace \u2014 50cm",
+      "category": "jewelry-necklaces",
+      "price": "85.00",
+      "currency": "USD",
+      "unit": "each",
+      "description": "Silver-tone Compass Pendant Necklace \u2014 50cm. Illustrative fashion-jewelry demo design; color and finish describe appearance, not certified metal purity or gemstone identity.",
+      "image": "compass-pendant.png",
+      "initial_quantity": 20,
+      "attributes": {
+        "jewelry_type": [
+          "necklace"
+        ],
+        "jewelry_style": [
+          "classic",
+          "geometric"
+        ],
+        "jewelry_occasion": [
+          "everyday",
+          "graduation"
+        ],
+        "jewelry_color": [
+          "silver_tone"
+        ],
+        "color": "silver"
+      },
+      "prompt": "Use case: product-mockup. Square premium jewelry catalog photograph of silver-tone cable chain necklace arranged in an oval with a round compass-rose engraved pendant, no letters. Entire product centered with generous margins, warm ivory seamless background, soft studio lighting and subtle grounded shadow, crisp realistic material detail. Physically coherent jewelry. No text, watermark, logo, packaging, hands, props or extra jewelry. Synthetic illustrative demo product. Asset: compass-pendant."
+    },
+    {
+      "sku": "JWL-NEW-20260929-011",
+      "slug": "jewelry-blue-bead-necklace",
+      "name": "Blue Bead Necklace \u2014 45cm",
+      "category": "jewelry-necklaces",
+      "price": "69.00",
+      "currency": "USD",
+      "unit": "each",
+      "description": "Blue Bead Necklace \u2014 45cm. Illustrative fashion-jewelry demo design; color and finish describe appearance, not certified metal purity or gemstone identity.",
+      "image": "blue-bead-necklace.png",
+      "initial_quantity": 20,
+      "attributes": {
+        "jewelry_type": [
+          "necklace"
+        ],
+        "jewelry_style": [
+          "bohemian"
+        ],
+        "jewelry_occasion": [
+          "everyday",
+          "birthday"
+        ],
+        "jewelry_color": [
+          "blue",
+          "silver_tone"
+        ],
+        "color": "blue"
+      },
+      "prompt": "Use case: product-mockup. Square premium jewelry catalog photograph of single necklace of small polished deep blue round decorative beads with a simple silver-tone clasp, arranged as a complete oval. Entire product centered with generous margins, warm ivory seamless background, soft studio lighting and subtle grounded shadow, crisp realistic material detail. Physically coherent jewelry. No text, watermark, logo, packaging, hands, props or extra jewelry. Synthetic illustrative demo product. Asset: blue-bead-necklace."
+    },
+    {
+      "sku": "JWL-NEW-20260929-012",
+      "slug": "jewelry-paperclip-lariat",
+      "name": "Gold-tone Paperclip Lariat Necklace \u2014 50cm",
+      "category": "jewelry-necklaces",
+      "price": "99.00",
+      "currency": "USD",
+      "unit": "each",
+      "description": "Gold-tone Paperclip Lariat Necklace \u2014 50cm. Illustrative fashion-jewelry demo design; color and finish describe appearance, not certified metal purity or gemstone identity.",
+      "image": "paperclip-lariat.png",
+      "initial_quantity": 20,
+      "attributes": {
+        "jewelry_type": [
+          "necklace"
+        ],
+        "jewelry_style": [
+          "modern",
+          "minimalist"
+        ],
+        "jewelry_occasion": [
+          "work",
+          "evening"
+        ],
+        "jewelry_color": [
+          "gold_tone"
+        ],
+        "color": "gold"
+      },
+      "prompt": "Use case: product-mockup. Square premium jewelry catalog photograph of gold-tone elongated paperclip-link lariat necklace in a Y arrangement, with a smooth slender bar drop and no stones. Entire product centered with generous margins, warm ivory seamless background, soft studio lighting and subtle grounded shadow, crisp realistic material detail. Physically coherent jewelry. No text, watermark, logo, packaging, hands, props or extra jewelry. Synthetic illustrative demo product. Asset: paperclip-lariat."
+    },
+    {
+      "sku": "JWL-NEW-20260929-013",
+      "slug": "jewelry-silver-tone-rope-bracelet",
+      "name": "Silver-tone Rope Bracelet \u2014 19cm",
+      "category": "jewelry-bracelets",
+      "price": "59.00",
+      "currency": "USD",
+      "unit": "each",
+      "description": "Silver-tone Rope Bracelet \u2014 19cm. Illustrative fashion-jewelry demo design; color and finish describe appearance, not certified metal purity or gemstone identity.",
+      "image": "silver-tone-rope-bracelet.png",
+      "initial_quantity": 20,
+      "attributes": {
+        "jewelry_type": [
+          "bracelet"
+        ],
+        "jewelry_style": [
+          "classic"
+        ],
+        "jewelry_occasion": [
+          "everyday",
+          "graduation"
+        ],
+        "jewelry_color": [
+          "silver_tone"
+        ],
+        "color": "silver"
+      },
+      "prompt": "Use case: product-mockup. Square premium jewelry catalog photograph of single polished silver-tone twisted rope chain bracelet arranged as an oval with a lobster clasp. Entire product centered with generous margins, warm ivory seamless background, soft studio lighting and subtle grounded shadow, crisp realistic material detail. Physically coherent jewelry. No text, watermark, logo, packaging, hands, props or extra jewelry. Synthetic illustrative demo product. Asset: silver-tone-rope-bracelet."
+    },
+    {
+      "sku": "JWL-NEW-20260929-014",
+      "slug": "jewelry-gold-tone-disc-bracelet",
+      "name": "Gold-tone Disc Charm Bracelet \u2014 18cm",
+      "category": "jewelry-bracelets",
+      "price": "65.00",
+      "currency": "USD",
+      "unit": "each",
+      "description": "Gold-tone Disc Charm Bracelet \u2014 18cm. Illustrative fashion-jewelry demo design; color and finish describe appearance, not certified metal purity or gemstone identity.",
+      "image": "gold-tone-disc-bracelet.png",
+      "initial_quantity": 20,
+      "attributes": {
+        "jewelry_type": [
+          "bracelet"
+        ],
+        "jewelry_style": [
+          "minimalist"
+        ],
+        "jewelry_occasion": [
+          "everyday",
+          "birthday"
+        ],
+        "jewelry_color": [
+          "gold_tone"
+        ],
+        "color": "gold"
+      },
+      "prompt": "Use case: product-mockup. Square premium jewelry catalog photograph of delicate gold-tone chain bracelet arranged as an oval with five small flat round polished disc charms and lobster clasp. Entire product centered with generous margins, warm ivory seamless background, soft studio lighting and subtle grounded shadow, crisp realistic material detail. Physically coherent jewelry. No text, watermark, logo, packaging, hands, props or extra jewelry. Synthetic illustrative demo product. Asset: gold-tone-disc-bracelet."
+    },
+    {
+      "sku": "JWL-NEW-20260929-015",
+      "slug": "jewelry-black-cord-bracelet",
+      "name": "Black Cord Slider Bracelet",
+      "category": "jewelry-bracelets",
+      "price": "35.00",
+      "currency": "USD",
+      "unit": "each",
+      "description": "Black Cord Slider Bracelet. Illustrative fashion-jewelry demo design; color and finish describe appearance, not certified metal purity or gemstone identity.",
+      "image": "black-cord-bracelet.png",
+      "initial_quantity": 20,
+      "attributes": {
+        "jewelry_type": [
+          "bracelet"
+        ],
+        "jewelry_style": [
+          "minimalist",
+          "modern"
+        ],
+        "jewelry_occasion": [
+          "everyday",
+          "graduation"
+        ],
+        "jewelry_color": [
+          "black",
+          "silver_tone"
+        ],
+        "color": "black"
+      },
+      "prompt": "Use case: product-mockup. Square premium jewelry catalog photograph of black woven cord bracelet with an adjustable sliding knot and one small brushed silver-tone rectangular centerpiece. Entire product centered with generous margins, warm ivory seamless background, soft studio lighting and subtle grounded shadow, crisp realistic material detail. Physically coherent jewelry. No text, watermark, logo, packaging, hands, props or extra jewelry. Synthetic illustrative demo product. Asset: black-cord-bracelet."
+    },
+    {
+      "sku": "JWL-NEW-20260929-016",
+      "slug": "jewelry-floral-enamel-bangle",
+      "name": "Floral Enamel Bangle",
+      "category": "jewelry-bracelets",
+      "price": "89.00",
+      "currency": "USD",
+      "unit": "each",
+      "description": "Floral Enamel Bangle. Illustrative fashion-jewelry demo design; color and finish describe appearance, not certified metal purity or gemstone identity.",
+      "image": "floral-enamel-bangle.png",
+      "initial_quantity": 20,
+      "attributes": {
+        "jewelry_type": [
+          "bracelet"
+        ],
+        "jewelry_style": [
+          "nature",
+          "vintage"
+        ],
+        "jewelry_occasion": [
+          "birthday",
+          "anniversary"
+        ],
+        "jewelry_color": [
+          "gold_tone",
+          "white"
+        ],
+        "color": "white"
+      },
+      "prompt": "Use case: product-mockup. Square premium jewelry catalog photograph of single narrow gold-tone hinged bangle decorated with small white enamel five-petal flowers, no stones. Entire product centered with generous margins, warm ivory seamless background, soft studio lighting and subtle grounded shadow, crisp realistic material detail. Physically coherent jewelry. No text, watermark, logo, packaging, hands, props or extra jewelry. Synthetic illustrative demo product. Asset: floral-enamel-bangle."
+    },
+    {
+      "sku": "JWL-NEW-20260929-017",
+      "slug": "jewelry-dragonfly-brooch",
+      "name": "Blue Dragonfly Brooch",
+      "category": "jewelry-accessories",
+      "price": "55.00",
+      "currency": "USD",
+      "unit": "each",
+      "description": "Blue Dragonfly Brooch. Illustrative fashion-jewelry demo design; color and finish describe appearance, not certified metal purity or gemstone identity.",
+      "image": "dragonfly-brooch.png",
+      "initial_quantity": 20,
+      "attributes": {
+        "jewelry_type": [
+          "brooch"
+        ],
+        "jewelry_style": [
+          "nature",
+          "statement"
+        ],
+        "jewelry_occasion": [
+          "evening",
+          "birthday"
+        ],
+        "jewelry_color": [
+          "silver_tone",
+          "blue"
+        ],
+        "color": "blue"
+      },
+      "prompt": "Use case: product-mockup. Square premium jewelry catalog photograph of single silver-tone dragonfly brooch with four translucent blue enamel wings and finely detailed segmented body. Entire product centered with generous margins, warm ivory seamless background, soft studio lighting and subtle grounded shadow, crisp realistic material detail. Physically coherent jewelry. No text, watermark, logo, packaging, hands, props or extra jewelry. Synthetic illustrative demo product. Asset: dragonfly-brooch."
+    },
+    {
+      "sku": "JWL-NEW-20260929-018",
+      "slug": "jewelry-crescent-hair-pin",
+      "name": "Gold-tone Crescent Hair Pin",
+      "category": "jewelry-accessories",
+      "price": "39.00",
+      "currency": "USD",
+      "unit": "each",
+      "description": "Gold-tone Crescent Hair Pin. Illustrative fashion-jewelry demo design; color and finish describe appearance, not certified metal purity or gemstone identity.",
+      "image": "crescent-hair-pin.png",
+      "initial_quantity": 20,
+      "attributes": {
+        "jewelry_type": [
+          "hair_accessory"
+        ],
+        "jewelry_style": [
+          "minimalist",
+          "nature"
+        ],
+        "jewelry_occasion": [
+          "evening",
+          "wedding"
+        ],
+        "jewelry_color": [
+          "gold_tone"
+        ],
+        "color": "gold"
+      },
+      "prompt": "Use case: product-mockup. Square premium jewelry catalog photograph of single gold-tone two-prong hair pin with a polished crescent moon ornament at the top, whole pin fully visible. Entire product centered with generous margins, warm ivory seamless background, soft studio lighting and subtle grounded shadow, crisp realistic material detail. Physically coherent jewelry. No text, watermark, logo, packaging, hands, props or extra jewelry. Synthetic illustrative demo product. Asset: crescent-hair-pin."
+    },
+    {
+      "sku": "JWL-NEW-20260929-019",
+      "slug": "jewelry-silver-tone-tie-clip",
+      "name": "Brushed Silver-tone Tie Clip",
+      "category": "jewelry-accessories",
+      "price": "45.00",
+      "currency": "USD",
+      "unit": "each",
+      "description": "Brushed Silver-tone Tie Clip. Illustrative fashion-jewelry demo design; color and finish describe appearance, not certified metal purity or gemstone identity.",
+      "image": "silver-tone-tie-clip.png",
+      "initial_quantity": 20,
+      "attributes": {
+        "jewelry_type": [
+          "tie_clip"
+        ],
+        "jewelry_style": [
+          "classic",
+          "minimalist"
+        ],
+        "jewelry_occasion": [
+          "work",
+          "graduation"
+        ],
+        "jewelry_color": [
+          "silver_tone"
+        ],
+        "color": "silver"
+      },
+      "prompt": "Use case: product-mockup. Square premium jewelry catalog photograph of single brushed silver-tone rectangular tie clip with narrow polished bevel edges, three-quarter view showing spring clip. Entire product centered with generous margins, warm ivory seamless background, soft studio lighting and subtle grounded shadow, crisp realistic material detail. Physically coherent jewelry. No text, watermark, logo, packaging, hands, props or extra jewelry. Synthetic illustrative demo product. Asset: silver-tone-tie-clip."
+    },
+    {
+      "sku": "JWL-NEW-20260929-020",
+      "slug": "jewelry-star-charm-anklet",
+      "name": "Rose-gold-tone Star Charm Anklet \u2014 24cm",
+      "category": "jewelry-accessories",
+      "price": "49.00",
+      "currency": "USD",
+      "unit": "each",
+      "description": "Rose-gold-tone Star Charm Anklet \u2014 24cm. Illustrative fashion-jewelry demo design; color and finish describe appearance, not certified metal purity or gemstone identity.",
+      "image": "star-charm-anklet.png",
+      "initial_quantity": 20,
+      "attributes": {
+        "jewelry_type": [
+          "anklet"
+        ],
+        "jewelry_style": [
+          "minimalist",
+          "playful"
+        ],
+        "jewelry_occasion": [
+          "everyday",
+          "birthday"
+        ],
+        "jewelry_color": [
+          "rose_gold_tone"
+        ],
+        "color": "rose gold"
+      },
+      "prompt": "Use case: product-mockup. Square premium jewelry catalog photograph of delicate rose-gold-tone anklet arranged as an oval with five small flat star charms, lobster clasp and short extension chain. Entire product centered with generous margins, warm ivory seamless background, soft studio lighting and subtle grounded shadow, crisp realistic material detail. Physically coherent jewelry. No text, watermark, logo, packaging, hands, props or extra jewelry. Synthetic illustrative demo product. Asset: star-charm-anklet."
+    }
+  ],
+  "existing_products": [
+    {
+      "sku": "DEMO-JWL-SOLITAIRE",
+      "slug": "demo-jewelry-solitaire",
+      "name": "The Solitaire Ring",
+      "attributes": {
+        "jewelry_type": [
+          "ring"
+        ],
+        "jewelry_style": [
+          "classic"
+        ],
+        "jewelry_occasion": [
+          "evening",
+          "anniversary"
+        ],
+        "jewelry_color": [
+          "gold_tone"
+        ]
+      }
+    },
+    {
+      "sku": "DEMO-JWL-50-050",
+      "slug": "demo-jewelry-emerald-pendant-necklace-50cm",
+      "name": "Emerald Pendant Necklace \u2014 50cm",
+      "attributes": {
+        "jewelry_type": [
+          "necklace"
+        ],
+        "jewelry_style": [
+          "classic"
+        ],
+        "jewelry_occasion": [
+          "evening",
+          "anniversary"
+        ],
+        "jewelry_color": [
+          "green"
+        ]
+      }
+    },
+    {
+      "sku": "DEMO-JWL-50-049",
+      "slug": "demo-jewelry-heart-pendant-necklace-50cm",
+      "name": "Heart Pendant Necklace \u2014 50cm",
+      "attributes": {
+        "jewelry_type": [
+          "necklace"
+        ],
+        "jewelry_style": [
+          "classic"
+        ],
+        "jewelry_occasion": [
+          "evening",
+          "anniversary"
+        ]
+      }
+    },
+    {
+      "sku": "DEMO-JWL-50-048",
+      "slug": "demo-jewelry-pearl-strand-necklace-50cm",
+      "name": "Pearl Strand Necklace \u2014 50cm",
+      "attributes": {
+        "jewelry_type": [
+          "necklace"
+        ],
+        "jewelry_style": [
+          "classic"
+        ],
+        "jewelry_occasion": [
+          "evening",
+          "anniversary"
+        ],
+        "jewelry_color": [
+          "white"
+        ]
+      }
+    },
+    {
+      "sku": "DEMO-JWL-50-047",
+      "slug": "demo-jewelry-gold-chain-necklace-50cm",
+      "name": "Gold Chain Necklace \u2014 50cm",
+      "attributes": {
+        "jewelry_type": [
+          "necklace"
+        ],
+        "jewelry_style": [
+          "minimalist"
+        ],
+        "jewelry_occasion": [
+          "everyday",
+          "birthday"
+        ],
+        "jewelry_color": [
+          "gold_tone"
+        ]
+      }
+    },
+    {
+      "sku": "DEMO-JWL-50-046",
+      "slug": "demo-jewelry-silver-twist-ring-size-8",
+      "name": "Silver Twist Ring \u2014 US Size 8",
+      "attributes": {
+        "jewelry_type": [
+          "ring"
+        ],
+        "jewelry_style": [
+          "minimalist"
+        ],
+        "jewelry_occasion": [
+          "everyday",
+          "birthday"
+        ],
+        "jewelry_color": [
+          "silver_tone"
+        ]
+      }
+    },
+    {
+      "sku": "DEMO-JWL-50-045",
+      "slug": "demo-jewelry-gold-signet-ring-size-8",
+      "name": "Gold Signet Ring \u2014 US Size 8",
+      "attributes": {
+        "jewelry_type": [
+          "ring"
+        ],
+        "jewelry_style": [
+          "classic"
+        ],
+        "jewelry_occasion": [
+          "everyday",
+          "work",
+          "graduation"
+        ],
+        "jewelry_color": [
+          "gold_tone"
+        ]
+      }
+    },
+    {
+      "sku": "DEMO-JWL-50-044",
+      "slug": "demo-jewelry-rose-gold-band-size-8",
+      "name": "Rose Gold Band \u2014 US Size 8",
+      "attributes": {
+        "jewelry_type": [
+          "ring"
+        ],
+        "jewelry_style": [
+          "minimalist"
+        ],
+        "jewelry_occasion": [
+          "everyday",
+          "birthday"
+        ],
+        "jewelry_color": [
+          "rose_gold_tone"
+        ]
+      }
+    },
+    {
+      "sku": "DEMO-JWL-50-043",
+      "slug": "demo-jewelry-ruby-gold-ring-size-8",
+      "name": "Ruby Gold Ring \u2014 US Size 8",
+      "attributes": {
+        "jewelry_type": [
+          "ring"
+        ],
+        "jewelry_style": [
+          "classic"
+        ],
+        "jewelry_occasion": [
+          "evening",
+          "anniversary"
+        ],
+        "jewelry_color": [
+          "gold_tone",
+          "red"
+        ]
+      }
+    },
+    {
+      "sku": "DEMO-JWL-50-042",
+      "slug": "demo-jewelry-sapphire-silver-ring-size-8",
+      "name": "Sapphire Silver Ring \u2014 US Size 8",
+      "attributes": {
+        "jewelry_type": [
+          "ring"
+        ],
+        "jewelry_style": [
+          "classic"
+        ],
+        "jewelry_occasion": [
+          "evening",
+          "anniversary"
+        ],
+        "jewelry_color": [
+          "silver_tone",
+          "blue"
+        ]
+      }
+    },
+    {
+      "sku": "DEMO-JWL-50-041",
+      "slug": "demo-jewelry-emerald-gold-ring-size-8",
+      "name": "Emerald Gold Ring \u2014 US Size 8",
+      "attributes": {
+        "jewelry_type": [
+          "ring"
+        ],
+        "jewelry_style": [
+          "classic"
+        ],
+        "jewelry_occasion": [
+          "evening",
+          "anniversary"
+        ],
+        "jewelry_color": [
+          "gold_tone",
+          "green"
+        ]
+      }
+    },
+    {
+      "sku": "DEMO-JWL-50-040",
+      "slug": "demo-jewelry-silver-halo-ring-size-8",
+      "name": "Silver Halo Ring \u2014 US Size 8",
+      "attributes": {
+        "jewelry_type": [
+          "ring"
+        ],
+        "jewelry_style": [
+          "statement",
+          "classic"
+        ],
+        "jewelry_occasion": [
+          "evening",
+          "wedding"
+        ],
+        "jewelry_color": [
+          "silver_tone"
+        ]
+      }
+    },
+    {
+      "sku": "DEMO-JWL-50-039",
+      "slug": "demo-jewelry-gold-solitaire-ring-size-8",
+      "name": "Gold Solitaire Ring \u2014 US Size 8",
+      "attributes": {
+        "jewelry_type": [
+          "ring"
+        ],
+        "jewelry_style": [
+          "classic"
+        ],
+        "jewelry_occasion": [
+          "evening",
+          "anniversary"
+        ],
+        "jewelry_color": [
+          "gold_tone"
+        ]
+      }
+    },
+    {
+      "sku": "DEMO-JWL-50-038",
+      "slug": "demo-jewelry-silver-twist-ring-size-7",
+      "name": "Silver Twist Ring \u2014 US Size 7",
+      "attributes": {
+        "jewelry_type": [
+          "ring"
+        ],
+        "jewelry_style": [
+          "minimalist"
+        ],
+        "jewelry_occasion": [
+          "everyday",
+          "birthday"
+        ],
+        "jewelry_color": [
+          "silver_tone"
+        ]
+      }
+    },
+    {
+      "sku": "DEMO-JWL-50-037",
+      "slug": "demo-jewelry-gold-signet-ring-size-7",
+      "name": "Gold Signet Ring \u2014 US Size 7",
+      "attributes": {
+        "jewelry_type": [
+          "ring"
+        ],
+        "jewelry_style": [
+          "classic"
+        ],
+        "jewelry_occasion": [
+          "everyday",
+          "work",
+          "graduation"
+        ],
+        "jewelry_color": [
+          "gold_tone"
+        ]
+      }
+    },
+    {
+      "sku": "DEMO-JWL-50-036",
+      "slug": "demo-jewelry-rose-gold-band-size-7",
+      "name": "Rose Gold Band \u2014 US Size 7",
+      "attributes": {
+        "jewelry_type": [
+          "ring"
+        ],
+        "jewelry_style": [
+          "minimalist"
+        ],
+        "jewelry_occasion": [
+          "everyday",
+          "birthday"
+        ],
+        "jewelry_color": [
+          "rose_gold_tone"
+        ]
+      }
+    },
+    {
+      "sku": "DEMO-JWL-50-035",
+      "slug": "demo-jewelry-ruby-gold-ring-size-7",
+      "name": "Ruby Gold Ring \u2014 US Size 7",
+      "attributes": {
+        "jewelry_type": [
+          "ring"
+        ],
+        "jewelry_style": [
+          "classic"
+        ],
+        "jewelry_occasion": [
+          "evening",
+          "anniversary"
+        ],
+        "jewelry_color": [
+          "gold_tone",
+          "red"
+        ]
+      }
+    },
+    {
+      "sku": "DEMO-JWL-50-034",
+      "slug": "demo-jewelry-sapphire-silver-ring-size-7",
+      "name": "Sapphire Silver Ring \u2014 US Size 7",
+      "attributes": {
+        "jewelry_type": [
+          "ring"
+        ],
+        "jewelry_style": [
+          "classic"
+        ],
+        "jewelry_occasion": [
+          "evening",
+          "anniversary"
+        ],
+        "jewelry_color": [
+          "silver_tone",
+          "blue"
+        ]
+      }
+    },
+    {
+      "sku": "DEMO-JWL-50-033",
+      "slug": "demo-jewelry-emerald-gold-ring-size-7",
+      "name": "Emerald Gold Ring \u2014 US Size 7",
+      "attributes": {
+        "jewelry_type": [
+          "ring"
+        ],
+        "jewelry_style": [
+          "classic"
+        ],
+        "jewelry_occasion": [
+          "evening",
+          "anniversary"
+        ],
+        "jewelry_color": [
+          "gold_tone",
+          "green"
+        ]
+      }
+    },
+    {
+      "sku": "DEMO-JWL-50-032",
+      "slug": "demo-jewelry-silver-halo-ring-size-7",
+      "name": "Silver Halo Ring \u2014 US Size 7",
+      "attributes": {
+        "jewelry_type": [
+          "ring"
+        ],
+        "jewelry_style": [
+          "statement",
+          "classic"
+        ],
+        "jewelry_occasion": [
+          "evening",
+          "wedding"
+        ],
+        "jewelry_color": [
+          "silver_tone"
+        ]
+      }
+    },
+    {
+      "sku": "DEMO-JWL-50-031",
+      "slug": "demo-jewelry-gold-solitaire-ring-size-7",
+      "name": "Gold Solitaire Ring \u2014 US Size 7",
+      "attributes": {
+        "jewelry_type": [
+          "ring"
+        ],
+        "jewelry_style": [
+          "classic"
+        ],
+        "jewelry_occasion": [
+          "evening",
+          "anniversary"
+        ],
+        "jewelry_color": [
+          "gold_tone"
+        ]
+      }
+    },
+    {
+      "sku": "DEMO-JWL-50-030",
+      "slug": "demo-jewelry-onyx-silver-cufflinks",
+      "name": "Onyx Silver Cufflinks",
+      "attributes": {
+        "jewelry_type": [
+          "cufflink"
+        ],
+        "jewelry_style": [
+          "classic"
+        ],
+        "jewelry_occasion": [
+          "everyday",
+          "work",
+          "graduation"
+        ],
+        "jewelry_color": [
+          "silver_tone",
+          "black"
+        ]
+      }
+    },
+    {
+      "sku": "DEMO-JWL-50-029",
+      "slug": "demo-jewelry-pearl-gold-brooch",
+      "name": "Pearl Gold Brooch",
+      "attributes": {
+        "jewelry_type": [
+          "brooch"
+        ],
+        "jewelry_style": [
+          "statement",
+          "classic"
+        ],
+        "jewelry_occasion": [
+          "evening",
+          "wedding"
+        ],
+        "jewelry_color": [
+          "gold_tone",
+          "white"
+        ]
+      }
+    },
+    {
+      "sku": "DEMO-JWL-50-028",
+      "slug": "demo-jewelry-gold-anklet",
+      "name": "Gold Anklet",
+      "attributes": {
+        "jewelry_type": [
+          "anklet"
+        ],
+        "jewelry_style": [
+          "minimalist"
+        ],
+        "jewelry_occasion": [
+          "everyday",
+          "birthday"
+        ],
+        "jewelry_color": [
+          "gold_tone"
+        ]
+      }
+    },
+    {
+      "sku": "DEMO-JWL-50-027",
+      "slug": "demo-jewelry-silver-charm-bracelet",
+      "name": "Silver Charm Bracelet",
+      "attributes": {
+        "jewelry_type": [
+          "bracelet"
+        ],
+        "jewelry_style": [
+          "classic"
+        ],
+        "jewelry_occasion": [
+          "evening",
+          "anniversary"
+        ],
+        "jewelry_color": [
+          "silver_tone"
+        ]
+      }
+    },
+    {
+      "sku": "DEMO-JWL-50-026",
+      "slug": "demo-jewelry-rose-gold-link-bracelet",
+      "name": "Rose Gold Link Bracelet",
+      "attributes": {
+        "jewelry_type": [
+          "bracelet"
+        ],
+        "jewelry_style": [
+          "classic"
+        ],
+        "jewelry_occasion": [
+          "evening",
+          "anniversary"
+        ],
+        "jewelry_color": [
+          "rose_gold_tone"
+        ]
+      }
+    },
+    {
+      "sku": "DEMO-JWL-50-025",
+      "slug": "demo-jewelry-pearl-bracelet",
+      "name": "Pearl Bracelet",
+      "attributes": {
+        "jewelry_type": [
+          "bracelet"
+        ],
+        "jewelry_style": [
+          "classic"
+        ],
+        "jewelry_occasion": [
+          "evening",
+          "anniversary"
+        ],
+        "jewelry_color": [
+          "white"
+        ]
+      }
+    },
+    {
+      "sku": "DEMO-JWL-50-024",
+      "slug": "demo-jewelry-gold-bangle-bracelet",
+      "name": "Gold Bangle Bracelet",
+      "attributes": {
+        "jewelry_type": [
+          "bracelet"
+        ],
+        "jewelry_style": [
+          "classic"
+        ],
+        "jewelry_occasion": [
+          "evening",
+          "anniversary"
+        ],
+        "jewelry_color": [
+          "gold_tone"
+        ]
+      }
+    },
+    {
+      "sku": "DEMO-JWL-50-023",
+      "slug": "demo-jewelry-silver-cuff-bracelet",
+      "name": "Silver Cuff Bracelet",
+      "attributes": {
+        "jewelry_type": [
+          "bracelet"
+        ],
+        "jewelry_style": [
+          "minimalist"
+        ],
+        "jewelry_occasion": [
+          "everyday",
+          "birthday"
+        ],
+        "jewelry_color": [
+          "silver_tone"
+        ]
+      }
+    },
+    {
+      "sku": "DEMO-JWL-50-022",
+      "slug": "demo-jewelry-gold-tennis-bracelet",
+      "name": "Gold Tennis Bracelet",
+      "attributes": {
+        "jewelry_type": [
+          "bracelet"
+        ],
+        "jewelry_style": [
+          "classic"
+        ],
+        "jewelry_occasion": [
+          "evening",
+          "anniversary"
+        ],
+        "jewelry_color": [
+          "gold_tone"
+        ]
+      }
+    },
+    {
+      "sku": "DEMO-JWL-50-021",
+      "slug": "demo-jewelry-diamond-pendant-necklace",
+      "name": "Diamond Pendant Necklace \u2014 45cm",
+      "attributes": {
+        "jewelry_type": [
+          "necklace"
+        ],
+        "jewelry_style": [
+          "classic"
+        ],
+        "jewelry_occasion": [
+          "evening",
+          "anniversary"
+        ]
+      }
+    },
+    {
+      "sku": "DEMO-JWL-50-020",
+      "slug": "demo-jewelry-silver-moon-necklace",
+      "name": "Silver Moon Necklace \u2014 45cm",
+      "attributes": {
+        "jewelry_type": [
+          "necklace"
+        ],
+        "jewelry_style": [
+          "classic"
+        ],
+        "jewelry_occasion": [
+          "evening",
+          "anniversary"
+        ],
+        "jewelry_color": [
+          "silver_tone"
+        ]
+      }
+    },
+    {
+      "sku": "DEMO-JWL-50-019",
+      "slug": "demo-jewelry-emerald-pendant-necklace",
+      "name": "Emerald Pendant Necklace \u2014 45cm",
+      "attributes": {
+        "jewelry_type": [
+          "necklace"
+        ],
+        "jewelry_style": [
+          "classic"
+        ],
+        "jewelry_occasion": [
+          "evening",
+          "anniversary"
+        ],
+        "jewelry_color": [
+          "green"
+        ]
+      }
+    },
+    {
+      "sku": "DEMO-JWL-50-018",
+      "slug": "demo-jewelry-heart-pendant-necklace",
+      "name": "Heart Pendant Necklace \u2014 45cm",
+      "attributes": {
+        "jewelry_type": [
+          "necklace"
+        ],
+        "jewelry_style": [
+          "classic"
+        ],
+        "jewelry_occasion": [
+          "evening",
+          "anniversary"
+        ]
+      }
+    },
+    {
+      "sku": "DEMO-JWL-50-017",
+      "slug": "demo-jewelry-pearl-strand-necklace",
+      "name": "Pearl Strand Necklace \u2014 45cm",
+      "attributes": {
+        "jewelry_type": [
+          "necklace"
+        ],
+        "jewelry_style": [
+          "classic"
+        ],
+        "jewelry_occasion": [
+          "evening",
+          "anniversary"
+        ],
+        "jewelry_color": [
+          "white"
+        ]
+      }
+    },
+    {
+      "sku": "DEMO-JWL-50-016",
+      "slug": "demo-jewelry-gold-chain-necklace",
+      "name": "Gold Chain Necklace \u2014 45cm",
+      "attributes": {
+        "jewelry_type": [
+          "necklace"
+        ],
+        "jewelry_style": [
+          "minimalist"
+        ],
+        "jewelry_occasion": [
+          "everyday",
+          "birthday"
+        ],
+        "jewelry_color": [
+          "gold_tone"
+        ]
+      }
+    },
+    {
+      "sku": "DEMO-JWL-50-015",
+      "slug": "demo-jewelry-sapphire-cluster-earrings",
+      "name": "Sapphire Cluster Earrings",
+      "attributes": {
+        "jewelry_type": [
+          "earring"
+        ],
+        "jewelry_style": [
+          "statement",
+          "classic"
+        ],
+        "jewelry_occasion": [
+          "evening",
+          "wedding"
+        ],
+        "jewelry_color": [
+          "blue"
+        ]
+      }
+    },
+    {
+      "sku": "DEMO-JWL-50-014",
+      "slug": "demo-jewelry-rose-gold-chain-earrings",
+      "name": "Rose Gold Chain Earrings",
+      "attributes": {
+        "jewelry_type": [
+          "earring"
+        ],
+        "jewelry_style": [
+          "classic"
+        ],
+        "jewelry_occasion": [
+          "evening",
+          "anniversary"
+        ],
+        "jewelry_color": [
+          "rose_gold_tone"
+        ]
+      }
+    },
+    {
+      "sku": "DEMO-JWL-50-013",
+      "slug": "demo-jewelry-silver-huggie-earrings",
+      "name": "Silver Huggie Earrings",
+      "attributes": {
+        "jewelry_type": [
+          "earring"
+        ],
+        "jewelry_style": [
+          "minimalist"
+        ],
+        "jewelry_occasion": [
+          "everyday",
+          "birthday"
+        ],
+        "jewelry_color": [
+          "silver_tone"
+        ]
+      }
+    },
+    {
+      "sku": "DEMO-JWL-50-012",
+      "slug": "demo-jewelry-emerald-drop-earrings",
+      "name": "Emerald Drop Earrings",
+      "attributes": {
+        "jewelry_type": [
+          "earring"
+        ],
+        "jewelry_style": [
+          "classic"
+        ],
+        "jewelry_occasion": [
+          "evening",
+          "anniversary"
+        ],
+        "jewelry_color": [
+          "green"
+        ]
+      }
+    },
+    {
+      "sku": "DEMO-JWL-50-011",
+      "slug": "demo-jewelry-diamond-stud-earrings",
+      "name": "Diamond Stud Earrings",
+      "attributes": {
+        "jewelry_type": [
+          "earring"
+        ],
+        "jewelry_style": [
+          "classic"
+        ],
+        "jewelry_occasion": [
+          "everyday",
+          "work",
+          "graduation"
+        ]
+      }
+    },
+    {
+      "sku": "DEMO-JWL-50-010",
+      "slug": "demo-jewelry-pearl-stud-earrings",
+      "name": "Pearl Stud Earrings",
+      "attributes": {
+        "jewelry_type": [
+          "earring"
+        ],
+        "jewelry_style": [
+          "classic"
+        ],
+        "jewelry_occasion": [
+          "everyday",
+          "work",
+          "graduation"
+        ],
+        "jewelry_color": [
+          "white"
+        ]
+      }
+    },
+    {
+      "sku": "DEMO-JWL-50-009",
+      "slug": "demo-jewelry-gold-hoop-earrings",
+      "name": "Gold Hoop Earrings",
+      "attributes": {
+        "jewelry_type": [
+          "earring"
+        ],
+        "jewelry_style": [
+          "minimalist"
+        ],
+        "jewelry_occasion": [
+          "everyday",
+          "birthday"
+        ],
+        "jewelry_color": [
+          "gold_tone"
+        ]
+      }
+    },
+    {
+      "sku": "DEMO-JWL-50-008",
+      "slug": "demo-jewelry-silver-twist-ring",
+      "name": "Silver Twist Ring \u2014 US Size 6",
+      "attributes": {
+        "jewelry_type": [
+          "ring"
+        ],
+        "jewelry_style": [
+          "minimalist"
+        ],
+        "jewelry_occasion": [
+          "everyday",
+          "birthday"
+        ],
+        "jewelry_color": [
+          "silver_tone"
+        ]
+      }
+    },
+    {
+      "sku": "DEMO-JWL-50-007",
+      "slug": "demo-jewelry-gold-signet-ring",
+      "name": "Gold Signet Ring \u2014 US Size 6",
+      "attributes": {
+        "jewelry_type": [
+          "ring"
+        ],
+        "jewelry_style": [
+          "classic"
+        ],
+        "jewelry_occasion": [
+          "everyday",
+          "work",
+          "graduation"
+        ],
+        "jewelry_color": [
+          "gold_tone"
+        ]
+      }
+    },
+    {
+      "sku": "DEMO-JWL-50-006",
+      "slug": "demo-jewelry-rose-gold-band",
+      "name": "Rose Gold Band \u2014 US Size 6",
+      "attributes": {
+        "jewelry_type": [
+          "ring"
+        ],
+        "jewelry_style": [
+          "minimalist"
+        ],
+        "jewelry_occasion": [
+          "everyday",
+          "birthday"
+        ],
+        "jewelry_color": [
+          "rose_gold_tone"
+        ]
+      }
+    },
+    {
+      "sku": "DEMO-JWL-50-005",
+      "slug": "demo-jewelry-ruby-gold-ring",
+      "name": "Ruby Gold Ring \u2014 US Size 6",
+      "attributes": {
+        "jewelry_type": [
+          "ring"
+        ],
+        "jewelry_style": [
+          "classic"
+        ],
+        "jewelry_occasion": [
+          "evening",
+          "anniversary"
+        ],
+        "jewelry_color": [
+          "gold_tone",
+          "red"
+        ]
+      }
+    },
+    {
+      "sku": "DEMO-JWL-50-004",
+      "slug": "demo-jewelry-sapphire-silver-ring",
+      "name": "Sapphire Silver Ring \u2014 US Size 6",
+      "attributes": {
+        "jewelry_type": [
+          "ring"
+        ],
+        "jewelry_style": [
+          "classic"
+        ],
+        "jewelry_occasion": [
+          "evening",
+          "anniversary"
+        ],
+        "jewelry_color": [
+          "silver_tone",
+          "blue"
+        ]
+      }
+    },
+    {
+      "sku": "DEMO-JWL-50-003",
+      "slug": "demo-jewelry-emerald-gold-ring",
+      "name": "Emerald Gold Ring \u2014 US Size 6",
+      "attributes": {
+        "jewelry_type": [
+          "ring"
+        ],
+        "jewelry_style": [
+          "classic"
+        ],
+        "jewelry_occasion": [
+          "evening",
+          "anniversary"
+        ],
+        "jewelry_color": [
+          "gold_tone",
+          "green"
+        ]
+      }
+    },
+    {
+      "sku": "DEMO-JWL-50-002",
+      "slug": "demo-jewelry-silver-halo-ring",
+      "name": "Silver Halo Ring \u2014 US Size 6",
+      "attributes": {
+        "jewelry_type": [
+          "ring"
+        ],
+        "jewelry_style": [
+          "statement",
+          "classic"
+        ],
+        "jewelry_occasion": [
+          "evening",
+          "wedding"
+        ],
+        "jewelry_color": [
+          "silver_tone"
+        ]
+      }
+    },
+    {
+      "sku": "DEMO-JWL-50-001",
+      "slug": "demo-jewelry-gold-solitaire-ring",
+      "name": "Gold Solitaire Ring \u2014 US Size 6",
+      "attributes": {
+        "jewelry_type": [
+          "ring"
+        ],
+        "jewelry_style": [
+          "classic"
+        ],
+        "jewelry_occasion": [
+          "evening",
+          "anniversary"
+        ],
+        "jewelry_color": [
+          "gold_tone"
+        ]
+      }
+    }
+  ]
+}

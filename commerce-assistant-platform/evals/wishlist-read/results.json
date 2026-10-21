@@ -1,0 +1,114 @@
+{
+  "corpusSha256": "6b2bc3bcb021d25dc09b91b5ac3f923956715dc479d30595781f6f7bebc8db59",
+  "sourceSha256": {
+    "engine.ts": "0061f98165ef3cd5435a225913b211e6850e5bbba8282daef90683802dab7ea7",
+    "wishlist-language.ts": "362059b639c693eefa70eb7e5ac4767b2f91d9b1f87ccf1fc19fea1679f595ad",
+    "wishlist-read-language.ts": "1ca434780285c2f00f1a094316a59b724ab51193b006050d00679b3953160ada",
+    "saved-collection-language.ts": "47835d0ccd7be123d9ab2c2ed17ab3a3467e067d804e4dd2169f2ef4ac2f4b4f"
+  },
+  "nodeVersion": "v25.9.0",
+  "total": 1000,
+  "runtimes": [
+    {
+      "name": "generated",
+      "dictionaryVersion": 8,
+      "dictionarySha256": "0fa4e11dd5d209bcf2f3bcd0e61f773197d96313fc69f3dc38eb4501c345b9ed",
+      "total": 1000,
+      "passed": 1000,
+      "byFamily": {
+        "location": {
+          "total": 103,
+          "passed": 103
+        },
+        "saved_recall": {
+          "total": 35,
+          "passed": 35
+        },
+        "access": {
+          "total": 103,
+          "passed": 103
+        },
+        "direct_read": {
+          "total": 137,
+          "passed": 137
+        },
+        "polite_read": {
+          "total": 137,
+          "passed": 137
+        },
+        "contents": {
+          "total": 103,
+          "passed": 103
+        },
+        "desire": {
+          "total": 100,
+          "passed": 100
+        },
+        "return": {
+          "total": 103,
+          "passed": 103
+        },
+        "cannot_find": {
+          "total": 94,
+          "passed": 94
+        },
+        "short_request": {
+          "total": 85,
+          "passed": 85
+        }
+      },
+      "failures": []
+    },
+    {
+      "name": "packaged",
+      "dictionaryVersion": 8,
+      "dictionarySha256": "ab68d112397879bf3ec8830781ed0865623dd3cdd4d2c45de85082d5dfca50c4",
+      "total": 1000,
+      "passed": 1000,
+      "byFamily": {
+        "location": {
+          "total": 103,
+          "passed": 103
+        },
+        "saved_recall": {
+          "total": 35,
+          "passed": 35
+        },
+        "access": {
+          "total": 103,
+          "passed": 103
+        },
+        "direct_read": {
+          "total": 137,
+          "passed": 137
+        },
+        "polite_read": {
+          "total": 137,
+          "passed": 137
+        },
+        "contents": {
+          "total": 103,
+          "passed": 103
+        },
+        "desire": {
+          "total": 100,
+          "passed": 100
+        },
+        "return": {
+          "total": 103,
+          "passed": 103
+        },
+        "cannot_find": {
+          "total": 94,
+          "passed": 94
+        },
+        "short_request": {
+          "total": 85,
+          "passed": 85
+        }
+      },
+      "failures": []
+    }
+  ],
+  "limitations": "Synthetic English phrase coverage. Direct SSE response tests use mocked authorized commerce APIs and reject any model call. Production deployment is not verified by this evaluation."
+}

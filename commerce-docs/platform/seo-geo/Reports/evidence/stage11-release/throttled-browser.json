@@ -1,0 +1,1778 @@
+{
+  "synthetic": true,
+  "browser": "153.0.8010.52",
+  "profile": {
+    "latency_ms": 80,
+    "download_bytes_per_second": 200000,
+    "cpu_slowdown": 4
+  },
+  "field_INP": false,
+  "rows": [
+    {
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "path": "/",
+      "sample": 0,
+      "metrics": {
+        "lcp": 1556,
+        "cls": 0.00012143614969135802,
+        "events": [
+          24,
+          24,
+          24,
+          16
+        ],
+        "images": [
+          {
+            "width": 360,
+            "loaded": true
+          },
+          {
+            "width": 360,
+            "loaded": true
+          },
+          {
+            "width": 360,
+            "loaded": true
+          },
+          {
+            "width": 360,
+            "loaded": true
+          },
+          {
+            "width": 360,
+            "loaded": true
+          },
+          {
+            "width": 360,
+            "loaded": true
+          },
+          {
+            "width": 360,
+            "loaded": true
+          },
+          {
+            "width": 360,
+            "loaded": true
+          },
+          {
+            "width": 360,
+            "loaded": false
+          },
+          {
+            "width": 360,
+            "loaded": false
+          },
+          {
+            "width": 360,
+            "loaded": false
+          },
+          {
+            "width": 360,
+            "loaded": false
+          },
+          {
+            "width": 360,
+            "loaded": false
+          },
+          {
+            "width": 360,
+            "loaded": false
+          },
+          {
+            "width": 360,
+            "loaded": false
+          },
+          {
+            "width": 360,
+            "loaded": false
+          },
+          {
+            "width": 360,
+            "loaded": false
+          },
+          {
+            "width": 360,
+            "loaded": false
+          },
+          {
+            "width": 360,
+            "loaded": false
+          },
+          {
+            "width": 360,
+            "loaded": false
+          },
+          {
+            "width": 360,
+            "loaded": false
+          },
+          {
+            "width": 360,
+            "loaded": false
+          },
+          {
+            "width": 360,
+            "loaded": false
+          },
+          {
+            "width": 360,
+            "loaded": false
+          },
+          {
+            "width": 360,
+            "loaded": false
+          },
+          {
+            "width": 360,
+            "loaded": false
+          },
+          {
+            "width": 360,
+            "loaded": false
+          },
+          {
+            "width": 360,
+            "loaded": false
+          },
+          {
+            "width": 360,
+            "loaded": false
+          },
+          {
+            "width": 360,
+            "loaded": false
+          },
+          {
+            "width": 360,
+            "loaded": false
+          },
+          {
+            "width": 360,
+            "loaded": false
+          },
+          {
+            "width": 360,
+            "loaded": false
+          },
+          {
+            "width": 360,
+            "loaded": false
+          },
+          {
+            "width": 360,
+            "loaded": false
+          },
+          {
+            "width": 360,
+            "loaded": false
+          }
+        ],
+        "ttfb_ms": 31.599999997764826
+      }
+    },
+    {
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "path": "/",
+      "sample": 1,
+      "metrics": {
+        "lcp": 1548,
+        "cls": 0.00012143614969135802,
+        "events": [
+          32,
+          32,
+          32,
+          16,
+          16
+        ],
+        "images": [
+          {
+            "width": 360,
+            "loaded": true
+          },
+          {
+            "width": 360,
+            "loaded": true
+          },
+          {
+            "width": 360,
+            "loaded": true
+          },
+          {
+            "width": 360,
+            "loaded": true
+          },
+          {
+            "width": 360,
+            "loaded": true
+          },
+          {
+            "width": 360,
+            "loaded": true
+          },
+          {
+            "width": 360,
+            "loaded": true
+          },
+          {
+            "width": 360,
+            "loaded": true
+          },
+          {
+            "width": 360,
+            "loaded": false
+          },
+          {
+            "width": 360,
+            "loaded": false
+          },
+          {
+            "width": 360,
+            "loaded": false
+          },
+          {
+            "width": 360,
+            "loaded": false
+          },
+          {
+            "width": 360,
+            "loaded": false
+          },
+          {
+            "width": 360,
+            "loaded": false
+          },
+          {
+            "width": 360,
+            "loaded": false
+          },
+          {
+            "width": 360,
+            "loaded": false
+          },
+          {
+            "width": 360,
+            "loaded": false
+          },
+          {
+            "width": 360,
+            "loaded": false
+          },
+          {
+            "width": 360,
+            "loaded": false
+          },
+          {
+            "width": 360,
+            "loaded": false
+          },
+          {
+            "width": 360,
+            "loaded": false
+          },
+          {
+            "width": 360,
+            "loaded": false
+          },
+          {
+            "width": 360,
+            "loaded": false
+          },
+          {
+            "width": 360,
+            "loaded": false
+          },
+          {
+            "width": 360,
+            "loaded": false
+          },
+          {
+            "width": 360,
+            "loaded": false
+          },
+          {
+            "width": 360,
+            "loaded": false
+          },
+          {
+            "width": 360,
+            "loaded": false
+          },
+          {
+            "width": 360,
+            "loaded": false
+          },
+          {
+            "width": 360,
+            "loaded": false
+          },
+          {
+            "width": 360,
+            "loaded": false
+          },
+          {
+            "width": 360,
+            "loaded": false
+          },
+          {
+            "width": 360,
+            "loaded": false
+          },
+          {
+            "width": 360,
+            "loaded": false
+          },
+          {
+            "width": 360,
+            "loaded": false
+          },
+          {
+            "width": 360,
+            "loaded": false
+          }
+        ],
+        "ttfb_ms": 16.699999999254942
+      }
+    },
+    {
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "path": "/",
+      "sample": 2,
+      "metrics": {
+        "lcp": 1540,
+        "cls": 0.00012143614969135802,
+        "events": [
+          32,
+          32,
+          32
+        ],
+        "images": [
+          {
+            "width": 360,
+            "loaded": true
+          },
+          {
+            "width": 360,
+            "loaded": true
+          },
+          {
+            "width": 360,
+            "loaded": true
+          },
+          {
+            "width": 360,
+            "loaded": true
+          },
+          {
+            "width": 360,
+            "loaded": true
+          },
+          {
+            "width": 360,
+            "loaded": true
+          },
+          {
+            "width": 360,
+            "loaded": true
+          },
+          {
+            "width": 360,
+            "loaded": true
+          },
+          {
+            "width": 360,
+            "loaded": false
+          },
+          {
+            "width": 360,
+            "loaded": false
+          },
+          {
+            "width": 360,
+            "loaded": false
+          },
+          {
+            "width": 360,
+            "loaded": false
+          },
+          {
+            "width": 360,
+            "loaded": false
+          },
+          {
+            "width": 360,
+            "loaded": false
+          },
+          {
+            "width": 360,
+            "loaded": false
+          },
+          {
+            "width": 360,
+            "loaded": false
+          },
+          {
+            "width": 360,
+            "loaded": false
+          },
+          {
+            "width": 360,
+            "loaded": false
+          },
+          {
+            "width": 360,
+            "loaded": false
+          },
+          {
+            "width": 360,
+            "loaded": false
+          },
+          {
+            "width": 360,
+            "loaded": false
+          },
+          {
+            "width": 360,
+            "loaded": false
+          },
+          {
+            "width": 360,
+            "loaded": false
+          },
+          {
+            "width": 360,
+            "loaded": false
+          },
+          {
+            "width": 360,
+            "loaded": false
+          },
+          {
+            "width": 360,
+            "loaded": false
+          },
+          {
+            "width": 360,
+            "loaded": false
+          },
+          {
+            "width": 360,
+            "loaded": false
+          },
+          {
+            "width": 360,
+            "loaded": false
+          },
+          {
+            "width": 360,
+            "loaded": false
+          },
+          {
+            "width": 360,
+            "loaded": false
+          },
+          {
+            "width": 360,
+            "loaded": false
+          },
+          {
+            "width": 360,
+            "loaded": false
+          },
+          {
+            "width": 360,
+            "loaded": false
+          },
+          {
+            "width": 360,
+            "loaded": false
+          },
+          {
+            "width": 360,
+            "loaded": false
+          }
+        ],
+        "ttfb_ms": 16.800000000745058
+      }
+    },
+    {
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "path": "/products/apples",
+      "sample": 0,
+      "metrics": {
+        "lcp": 2168,
+        "cls": 0.00012143614969135802,
+        "events": [
+          32,
+          32,
+          32,
+          16
+        ],
+        "images": [
+          {
+            "width": 720,
+            "loaded": true
+          },
+          {
+            "width": 720,
+            "loaded": true
+          },
+          {
+            "width": 720,
+            "loaded": true
+          },
+          {
+            "width": 720,
+            "loaded": false
+          },
+          {
+            "width": 720,
+            "loaded": false
+          },
+          {
+            "width": 720,
+            "loaded": false
+          },
+          {
+            "width": 720,
+            "loaded": false
+          },
+          {
+            "width": 720,
+            "loaded": false
+          },
+          {
+            "width": 720,
+            "loaded": false
+          },
+          {
+            "width": 720,
+            "loaded": false
+          },
+          {
+            "width": 720,
+            "loaded": false
+          },
+          {
+            "width": 720,
+            "loaded": false
+          },
+          {
+            "width": 720,
+            "loaded": false
+          },
+          {
+            "width": 720,
+            "loaded": false
+          },
+          {
+            "width": 720,
+            "loaded": false
+          },
+          {
+            "width": 720,
+            "loaded": false
+          },
+          {
+            "width": 720,
+            "loaded": false
+          },
+          {
+            "width": 720,
+            "loaded": false
+          },
+          {
+            "width": 720,
+            "loaded": false
+          },
+          {
+            "width": 720,
+            "loaded": false
+          },
+          {
+            "width": 720,
+            "loaded": false
+          }
+        ],
+        "ttfb_ms": 17.199999999254942
+      }
+    },
+    {
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "path": "/products/apples",
+      "sample": 1,
+      "metrics": {
+        "lcp": 2152,
+        "cls": 0.00012143614969135802,
+        "events": [
+          32,
+          32,
+          32,
+          16
+        ],
+        "images": [
+          {
+            "width": 720,
+            "loaded": true
+          },
+          {
+            "width": 720,
+            "loaded": true
+          },
+          {
+            "width": 720,
+            "loaded": true
+          },
+          {
+            "width": 720,
+            "loaded": false
+          },
+          {
+            "width": 720,
+            "loaded": false
+          },
+          {
+            "width": 720,
+            "loaded": false
+          },
+          {
+            "width": 720,
+            "loaded": false
+          },
+          {
+            "width": 720,
+            "loaded": false
+          },
+          {
+            "width": 720,
+            "loaded": false
+          },
+          {
+            "width": 720,
+            "loaded": false
+          },
+          {
+            "width": 720,
+            "loaded": false
+          },
+          {
+            "width": 720,
+            "loaded": false
+          },
+          {
+            "width": 720,
+            "loaded": false
+          },
+          {
+            "width": 720,
+            "loaded": false
+          },
+          {
+            "width": 720,
+            "loaded": false
+          },
+          {
+            "width": 720,
+            "loaded": false
+          },
+          {
+            "width": 720,
+            "loaded": false
+          },
+          {
+            "width": 720,
+            "loaded": false
+          },
+          {
+            "width": 720,
+            "loaded": false
+          },
+          {
+            "width": 720,
+            "loaded": false
+          },
+          {
+            "width": 720,
+            "loaded": false
+          }
+        ],
+        "ttfb_ms": 19
+      }
+    },
+    {
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "path": "/products/apples",
+      "sample": 2,
+      "metrics": {
+        "lcp": 2160,
+        "cls": 0.00012143614969135802,
+        "events": [
+          32,
+          32,
+          32
+        ],
+        "images": [
+          {
+            "width": 720,
+            "loaded": true
+          },
+          {
+            "width": 720,
+            "loaded": true
+          },
+          {
+            "width": 720,
+            "loaded": true
+          },
+          {
+            "width": 720,
+            "loaded": false
+          },
+          {
+            "width": 720,
+            "loaded": false
+          },
+          {
+            "width": 720,
+            "loaded": false
+          },
+          {
+            "width": 720,
+            "loaded": false
+          },
+          {
+            "width": 720,
+            "loaded": false
+          },
+          {
+            "width": 720,
+            "loaded": false
+          },
+          {
+            "width": 720,
+            "loaded": false
+          },
+          {
+            "width": 720,
+            "loaded": false
+          },
+          {
+            "width": 720,
+            "loaded": false
+          },
+          {
+            "width": 720,
+            "loaded": false
+          },
+          {
+            "width": 720,
+            "loaded": false
+          },
+          {
+            "width": 720,
+            "loaded": false
+          },
+          {
+            "width": 720,
+            "loaded": false
+          },
+          {
+            "width": 720,
+            "loaded": false
+          },
+          {
+            "width": 720,
+            "loaded": false
+          },
+          {
+            "width": 720,
+            "loaded": false
+          },
+          {
+            "width": 720,
+            "loaded": false
+          },
+          {
+            "width": 720,
+            "loaded": false
+          }
+        ],
+        "ttfb_ms": 22.5
+      }
+    },
+    {
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "path": "/categories/fruit",
+      "sample": 0,
+      "metrics": {
+        "lcp": 1536,
+        "cls": 0.00012143614969135802,
+        "events": [
+          120,
+          120,
+          120
+        ],
+        "images": [
+          {
+            "width": 360,
+            "loaded": true
+          }
+        ],
+        "ttfb_ms": 12.699999999254942
+      }
+    },
+    {
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "path": "/categories/fruit",
+      "sample": 1,
+      "metrics": {
+        "lcp": 1540,
+        "cls": 0.00012143614969135802,
+        "events": [
+          40,
+          40,
+          40
+        ],
+        "images": [
+          {
+            "width": 360,
+            "loaded": true
+          }
+        ],
+        "ttfb_ms": 37.80000000074506
+      }
+    },
+    {
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "path": "/categories/fruit",
+      "sample": 2,
+      "metrics": {
+        "lcp": 1668,
+        "cls": 0.00012143614969135802,
+        "events": [
+          40,
+          40,
+          40
+        ],
+        "images": [
+          {
+            "width": 360,
+            "loaded": true
+          }
+        ],
+        "ttfb_ms": 13.300000000745058
+      }
+    },
+    {
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "path": "/",
+      "sample": 0,
+      "metrics": {
+        "lcp": 1544,
+        "cls": 0.011935378809999774,
+        "events": [
+          32,
+          32,
+          32,
+          16
+        ],
+        "images": [
+          {
+            "width": 194,
+            "loaded": true
+          },
+          {
+            "width": 194,
+            "loaded": true
+          },
+          {
+            "width": 194,
+            "loaded": false
+          },
+          {
+            "width": 194,
+            "loaded": false
+          },
+          {
+            "width": 194,
+            "loaded": false
+          },
+          {
+            "width": 194,
+            "loaded": false
+          },
+          {
+            "width": 194,
+            "loaded": false
+          },
+          {
+            "width": 194,
+            "loaded": false
+          },
+          {
+            "width": 194,
+            "loaded": false
+          },
+          {
+            "width": 194,
+            "loaded": false
+          },
+          {
+            "width": 194,
+            "loaded": false
+          },
+          {
+            "width": 194,
+            "loaded": false
+          },
+          {
+            "width": 194,
+            "loaded": false
+          },
+          {
+            "width": 194,
+            "loaded": false
+          },
+          {
+            "width": 194,
+            "loaded": false
+          },
+          {
+            "width": 194,
+            "loaded": false
+          },
+          {
+            "width": 194,
+            "loaded": false
+          },
+          {
+            "width": 194,
+            "loaded": false
+          },
+          {
+            "width": 194,
+            "loaded": false
+          },
+          {
+            "width": 194,
+            "loaded": false
+          },
+          {
+            "width": 194,
+            "loaded": false
+          },
+          {
+            "width": 194,
+            "loaded": false
+          },
+          {
+            "width": 194,
+            "loaded": false
+          },
+          {
+            "width": 194,
+            "loaded": false
+          },
+          {
+            "width": 194,
+            "loaded": false
+          },
+          {
+            "width": 194,
+            "loaded": false
+          },
+          {
+            "width": 194,
+            "loaded": false
+          },
+          {
+            "width": 194,
+            "loaded": false
+          },
+          {
+            "width": 194,
+            "loaded": false
+          },
+          {
+            "width": 194,
+            "loaded": false
+          },
+          {
+            "width": 194,
+            "loaded": false
+          },
+          {
+            "width": 194,
+            "loaded": false
+          },
+          {
+            "width": 194,
+            "loaded": false
+          },
+          {
+            "width": 194,
+            "loaded": false
+          },
+          {
+            "width": 194,
+            "loaded": false
+          },
+          {
+            "width": 194,
+            "loaded": false
+          }
+        ],
+        "ttfb_ms": 13.399999998509884
+      }
+    },
+    {
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "path": "/",
+      "sample": 1,
+      "metrics": {
+        "lcp": 1540,
+        "cls": 0.011935378809999774,
+        "events": [
+          32,
+          32,
+          32,
+          16
+        ],
+        "images": [
+          {
+            "width": 194,
+            "loaded": true
+          },
+          {
+            "width": 194,
+            "loaded": true
+          },
+          {
+            "width": 194,
+            "loaded": false
+          },
+          {
+            "width": 194,
+            "loaded": false
+          },
+          {
+            "width": 194,
+            "loaded": false
+          },
+          {
+            "width": 194,
+            "loaded": false
+          },
+          {
+            "width": 194,
+            "loaded": false
+          },
+          {
+            "width": 194,
+            "loaded": false
+          },
+          {
+            "width": 194,
+            "loaded": false
+          },
+          {
+            "width": 194,
+            "loaded": false
+          },
+          {
+            "width": 194,
+            "loaded": false
+          },
+          {
+            "width": 194,
+            "loaded": false
+          },
+          {
+            "width": 194,
+            "loaded": false
+          },
+          {
+            "width": 194,
+            "loaded": false
+          },
+          {
+            "width": 194,
+            "loaded": false
+          },
+          {
+            "width": 194,
+            "loaded": false
+          },
+          {
+            "width": 194,
+            "loaded": false
+          },
+          {
+            "width": 194,
+            "loaded": false
+          },
+          {
+            "width": 194,
+            "loaded": false
+          },
+          {
+            "width": 194,
+            "loaded": false
+          },
+          {
+            "width": 194,
+            "loaded": false
+          },
+          {
+            "width": 194,
+            "loaded": false
+          },
+          {
+            "width": 194,
+            "loaded": false
+          },
+          {
+            "width": 194,
+            "loaded": false
+          },
+          {
+            "width": 194,
+            "loaded": false
+          },
+          {
+            "width": 194,
+            "loaded": false
+          },
+          {
+            "width": 194,
+            "loaded": false
+          },
+          {
+            "width": 194,
+            "loaded": false
+          },
+          {
+            "width": 194,
+            "loaded": false
+          },
+          {
+            "width": 194,
+            "loaded": false
+          },
+          {
+            "width": 194,
+            "loaded": false
+          },
+          {
+            "width": 194,
+            "loaded": false
+          },
+          {
+            "width": 194,
+            "loaded": false
+          },
+          {
+            "width": 194,
+            "loaded": false
+          },
+          {
+            "width": 194,
+            "loaded": false
+          },
+          {
+            "width": 194,
+            "loaded": false
+          }
+        ],
+        "ttfb_ms": 12
+      }
+    },
+    {
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "path": "/",
+      "sample": 2,
+      "metrics": {
+        "lcp": 1548,
+        "cls": 0.011935378809999774,
+        "events": [
+          32,
+          32,
+          32,
+          16,
+          16
+        ],
+        "images": [
+          {
+            "width": 194,
+            "loaded": true
+          },
+          {
+            "width": 194,
+            "loaded": true
+          },
+          {
+            "width": 194,
+            "loaded": false
+          },
+          {
+            "width": 194,
+            "loaded": false
+          },
+          {
+            "width": 194,
+            "loaded": false
+          },
+          {
+            "width": 194,
+            "loaded": false
+          },
+          {
+            "width": 194,
+            "loaded": false
+          },
+          {
+            "width": 194,
+            "loaded": false
+          },
+          {
+            "width": 194,
+            "loaded": false
+          },
+          {
+            "width": 194,
+            "loaded": false
+          },
+          {
+            "width": 194,
+            "loaded": false
+          },
+          {
+            "width": 194,
+            "loaded": false
+          },
+          {
+            "width": 194,
+            "loaded": false
+          },
+          {
+            "width": 194,
+            "loaded": false
+          },
+          {
+            "width": 194,
+            "loaded": false
+          },
+          {
+            "width": 194,
+            "loaded": false
+          },
+          {
+            "width": 194,
+            "loaded": false
+          },
+          {
+            "width": 194,
+            "loaded": false
+          },
+          {
+            "width": 194,
+            "loaded": false
+          },
+          {
+            "width": 194,
+            "loaded": false
+          },
+          {
+            "width": 194,
+            "loaded": false
+          },
+          {
+            "width": 194,
+            "loaded": false
+          },
+          {
+            "width": 194,
+            "loaded": false
+          },
+          {
+            "width": 194,
+            "loaded": false
+          },
+          {
+            "width": 194,
+            "loaded": false
+          },
+          {
+            "width": 194,
+            "loaded": false
+          },
+          {
+            "width": 194,
+            "loaded": false
+          },
+          {
+            "width": 194,
+            "loaded": false
+          },
+          {
+            "width": 194,
+            "loaded": false
+          },
+          {
+            "width": 194,
+            "loaded": false
+          },
+          {
+            "width": 194,
+            "loaded": false
+          },
+          {
+            "width": 194,
+            "loaded": false
+          },
+          {
+            "width": 194,
+            "loaded": false
+          },
+          {
+            "width": 194,
+            "loaded": false
+          },
+          {
+            "width": 194,
+            "loaded": false
+          },
+          {
+            "width": 194,
+            "loaded": false
+          }
+        ],
+        "ttfb_ms": 12.700000002980232
+      }
+    },
+    {
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "path": "/products/apples",
+      "sample": 0,
+      "metrics": {
+        "lcp": 1684,
+        "cls": 0.011935378809999774,
+        "events": [
+          32,
+          32,
+          32
+        ],
+        "images": [
+          {
+            "width": 389,
+            "loaded": true
+          },
+          {
+            "width": 389,
+            "loaded": true
+          },
+          {
+            "width": 389,
+            "loaded": false
+          },
+          {
+            "width": 389,
+            "loaded": false
+          },
+          {
+            "width": 389,
+            "loaded": false
+          },
+          {
+            "width": 389,
+            "loaded": false
+          },
+          {
+            "width": 389,
+            "loaded": false
+          },
+          {
+            "width": 389,
+            "loaded": false
+          },
+          {
+            "width": 389,
+            "loaded": false
+          },
+          {
+            "width": 389,
+            "loaded": false
+          },
+          {
+            "width": 389,
+            "loaded": false
+          },
+          {
+            "width": 389,
+            "loaded": false
+          },
+          {
+            "width": 389,
+            "loaded": false
+          },
+          {
+            "width": 389,
+            "loaded": false
+          },
+          {
+            "width": 389,
+            "loaded": false
+          },
+          {
+            "width": 389,
+            "loaded": false
+          },
+          {
+            "width": 389,
+            "loaded": false
+          },
+          {
+            "width": 389,
+            "loaded": false
+          },
+          {
+            "width": 389,
+            "loaded": false
+          },
+          {
+            "width": 389,
+            "loaded": false
+          },
+          {
+            "width": 389,
+            "loaded": false
+          }
+        ],
+        "ttfb_ms": 14.800000000745058
+      }
+    },
+    {
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "path": "/products/apples",
+      "sample": 1,
+      "metrics": {
+        "lcp": 1704,
+        "cls": 0.011935378809999774,
+        "events": [
+          32,
+          32,
+          32,
+          16
+        ],
+        "images": [
+          {
+            "width": 389,
+            "loaded": true
+          },
+          {
+            "width": 389,
+            "loaded": true
+          },
+          {
+            "width": 389,
+            "loaded": false
+          },
+          {
+            "width": 389,
+            "loaded": false
+          },
+          {
+            "width": 389,
+            "loaded": false
+          },
+          {
+            "width": 389,
+            "loaded": false
+          },
+          {
+            "width": 389,
+            "loaded": false
+          },
+          {
+            "width": 389,
+            "loaded": false
+          },
+          {
+            "width": 389,
+            "loaded": false
+          },
+          {
+            "width": 389,
+            "loaded": false
+          },
+          {
+            "width": 389,
+            "loaded": false
+          },
+          {
+            "width": 389,
+            "loaded": false
+          },
+          {
+            "width": 389,
+            "loaded": false
+          },
+          {
+            "width": 389,
+            "loaded": false
+          },
+          {
+            "width": 389,
+            "loaded": false
+          },
+          {
+            "width": 389,
+            "loaded": false
+          },
+          {
+            "width": 389,
+            "loaded": false
+          },
+          {
+            "width": 389,
+            "loaded": false
+          },
+          {
+            "width": 389,
+            "loaded": false
+          },
+          {
+            "width": 389,
+            "loaded": false
+          },
+          {
+            "width": 389,
+            "loaded": false
+          }
+        ],
+        "ttfb_ms": 21.300000000745058
+      }
+    },
+    {
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "path": "/products/apples",
+      "sample": 2,
+      "metrics": {
+        "lcp": 1692,
+        "cls": 0.011935378809999774,
+        "events": [
+          32,
+          32,
+          32
+        ],
+        "images": [
+          {
+            "width": 389,
+            "loaded": true
+          },
+          {
+            "width": 389,
+            "loaded": true
+          },
+          {
+            "width": 389,
+            "loaded": false
+          },
+          {
+            "width": 389,
+            "loaded": false
+          },
+          {
+            "width": 389,
+            "loaded": false
+          },
+          {
+            "width": 389,
+            "loaded": false
+          },
+          {
+            "width": 389,
+            "loaded": false
+          },
+          {
+            "width": 389,
+            "loaded": false
+          },
+          {
+            "width": 389,
+            "loaded": false
+          },
+          {
+            "width": 389,
+            "loaded": false
+          },
+          {
+            "width": 389,
+            "loaded": false
+          },
+          {
+            "width": 389,
+            "loaded": false
+          },
+          {
+            "width": 389,
+            "loaded": false
+          },
+          {
+            "width": 389,
+            "loaded": false
+          },
+          {
+            "width": 389,
+            "loaded": false
+          },
+          {
+            "width": 389,
+            "loaded": false
+          },
+          {
+            "width": 389,
+            "loaded": false
+          },
+          {
+            "width": 389,
+            "loaded": false
+          },
+          {
+            "width": 389,
+            "loaded": false
+          },
+          {
+            "width": 389,
+            "loaded": false
+          },
+          {
+            "width": 389,
+            "loaded": false
+          }
+        ],
+        "ttfb_ms": 15.600000001490116
+      }
+    },
+    {
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "path": "/categories/fruit",
+      "sample": 0,
+      "metrics": {
+        "lcp": 1340,
+        "cls": 0.011935378809999774,
+        "events": [
+          32,
+          32,
+          32,
+          16
+        ],
+        "images": [
+          {
+            "width": 194,
+            "loaded": true
+          }
+        ],
+        "ttfb_ms": 11
+      }
+    },
+    {
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "path": "/categories/fruit",
+      "sample": 1,
+      "metrics": {
+        "lcp": 1340,
+        "cls": 0.011935378809999774,
+        "events": [
+          32,
+          32,
+          32,
+          16,
+          16
+        ],
+        "images": [
+          {
+            "width": 194,
+            "loaded": true
+          }
+        ],
+        "ttfb_ms": 9.699999999254942
+      }
+    },
+    {
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "path": "/categories/fruit",
+      "sample": 2,
+      "metrics": {
+        "lcp": 1340,
+        "cls": 0.011935378809999774,
+        "events": [
+          32,
+          32,
+          32,
+          16
+        ],
+        "images": [
+          {
+            "width": 194,
+            "loaded": true
+          }
+        ],
+        "ttfb_ms": 10.600000001490116
+      }
+    }
+  ]
+}

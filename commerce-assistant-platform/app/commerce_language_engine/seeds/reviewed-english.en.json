@@ -1,0 +1,139 @@
+{
+  "englishVocabulary": [
+    {
+      "group": "OBJECT_SAVED_ADDRESSES",
+      "intent": "ACCOUNT_ADDRESS_LIST",
+      "verb": "show",
+      "terms": [
+        "saved delivery locations",
+        "saved delivery addresses",
+        "saved shipping addresses",
+        "addresses on my account",
+        "my delivery addresses",
+        "my shipping addresses"
+      ]
+    },
+    {
+      "group": "OBJECT_ORDERS",
+      "intent": "ORDER_HISTORY",
+      "verb": "show",
+      "terms": [
+        "previous purchases",
+        "past purchases",
+        "my purchase records",
+        "my order records",
+        "earlier purchases",
+        "my buying history"
+      ]
+    },
+    {
+      "group": "OBJECT_PAYMENT_METHODS",
+      "intent": "PAYMENT_METHODS",
+      "verb": "show",
+      "terms": [
+        "accepted payment types",
+        "supported payment options",
+        "available payment options",
+        "payment choices",
+        "accepted ways to pay",
+        "available ways to pay"
+      ]
+    },
+    {
+      "group": "OBJECT_RETURN_POLICY",
+      "intent": "RETURN_POLICY",
+      "verb": "show",
+      "terms": [
+        "returns policy",
+        "rules for returns",
+        "product return rules",
+        "terms for returning items",
+        "item return policy",
+        "policy for returns"
+      ]
+    },
+    {
+      "group": "OBJECT_DELIVERY_COST",
+      "intent": "DELIVERY_COST",
+      "verb": "check",
+      "terms": [
+        "shipping charges",
+        "delivery charges",
+        "postage fees",
+        "cost of delivery",
+        "cost of shipping",
+        "shipping fees"
+      ]
+    },
+    {
+      "group": "OBJECT_STORE_HOURS",
+      "intent": "STORE_HOURS",
+      "verb": "show",
+      "terms": [
+        "shop opening times",
+        "store business hours",
+        "shop business hours",
+        "store operating hours",
+        "shop operating hours",
+        "store opening schedule"
+      ]
+    },
+    {
+      "group": "OBJECT_SIZE_GUIDE",
+      "intent": "PRODUCT_SIZE_GUIDE",
+      "verb": "show",
+      "terms": [
+        "product sizing guide",
+        "clothing size chart",
+        "shoe size chart",
+        "sizing measurements chart",
+        "size measurement guide",
+        "garment size guide"
+      ]
+    },
+    {
+      "group": "OBJECT_INGREDIENTS",
+      "intent": "PRODUCT_INGREDIENTS",
+      "verb": "show",
+      "terms": [
+        "full ingredient list",
+        "list of ingredients",
+        "product ingredient list",
+        "ingredient information",
+        "ingredient details",
+        "ingredients list"
+      ]
+    },
+    {
+      "group": "OBJECT_SUPPORT",
+      "intent": "CONTACT_SUPPORT",
+      "verb": "contact",
+      "terms": [
+        "customer care team",
+        "customer support team",
+        "shop support team",
+        "store support team",
+        "customer service team",
+        "customer assistance team"
+      ]
+    },
+    {
+      "group": "OBJECT_REFUND",
+      "intent": "REFUND_STATUS",
+      "verb": "check",
+      "terms": [
+        "refund processing status",
+        "status of my refund",
+        "status of my reimbursement",
+        "refund payment status",
+        "refund transaction status",
+        "my reimbursement status"
+      ]
+    }
+  ],
+  "heldEnglishTerms": [
+    "ingredient information",
+    "ingredient details"
+  ],
+  "englishVocabularySource": "generated-english-reviewed-v1"
+}

@@ -1,0 +1,47 @@
+✔ bounded admission rejects excess work, preserves liveness and recovers without caching (323.057542ms)
+✔ fixed gateway never receives customer headers or attacker-selected destinations (9.462ms)
+✔ transport refuses oversized responses, respects cancellation and never follows redirects (39.701292ms)
+✔ meaningful server HTML, canonical, robots and structured facts detect regressions (2.043541ms)
+✔ XML validator rejects malformed, foreign-host and forbidden XML (0.468167ms)
+✔ redacted bounded counters and alert thresholds do not expose request secrets (0.593584ms)
+✔ timeouts and redirect loops produce actionable findings without leaking transport details (1.277041ms)
+✔ real HTTP health endpoint requires secret; probes recover after a renderer failure (2035.200875ms)
+✔ canonical redirects retain bounded campaign claims without queries or secrets (0.332166ms)
+✔ social metadata escapes Unicode without truncating and shares canonical identity (0.837083ms)
+✔ missing image and language-only locale do not invent a card image or country (0.084291ms)
+✔ error pages have no social claims or canonical (0.148458ms)
+✔ anonymous content, no-store and identical robots; credentials never forwarded (15.50325ms)
+{"event":"publication_response","installation_id":"one","route":"home","crawler":"none","status":"4xx","code":"unknown_canonical_host"}
+✔ unknown URLs, invalid pagination, methods and spoofed hosts fail closed (5.39775ms)
+{"event":"publication_response","installation_id":"one","route":"home","crawler":"none","status":"5xx","code":"tenant_resolution_failure"}
+{"event":"publication_response","installation_id":"one","route":"home","crawler":"none","status":"5xx","code":"tenant_resolution_failure"}
+{"event":"publication_response","installation_id":"one","route":"home","crawler":"none","status":"5xx","code":"tenant_resolution_failure"}
+{"event":"publication_response","installation_id":"one","route":"home","crawler":"none","status":"5xx","code":"render_failure"}
+✔ mismatched installation/origin and unavailable backend produce 503, never empty success (3.993667ms)
+✔ 404, approved 410 and single-hop 301 preserve status and noindex (2.920334ms)
+✔ query variants noindex and HEAD has no body (1.785167ms)
+✔ embedded state cannot close its script element (0.078ms)
+✔ startup rejects mismatched client/server artifacts before listening (78.513875ms)
+{"event":"publication_response","installation_id":"one","route":"home","crawler":"none","status":"5xx","code":"render_failure"}
+{"event":"publication_response","installation_id":"one","route":"home","crawler":"none","status":"5xx","code":"render_failure"}
+{"event":"publication_response","installation_id":"one","route":"home","crawler":"none","status":"5xx","code":"render_failure"}
+{"event":"publication_response","installation_id":"one","route":"home","crawler":"none","status":"5xx","code":"render_failure"}
+{"event":"publication_response","installation_id":"one","route":"home","crawler":"none","status":"5xx","code":"render_failure"}
+✔ canonical metadata and discovery placeholders share only the approved origin (3.988833ms)
+✔ raw encoded dot segments cannot normalize into a private 200 shell (1.455458ms)
+{"event":"publication_response","installation_id":"one","route":"sitemap","crawler":"none","status":"5xx","code":"sitemap_failure"}
+✔ discovery artifacts require the installation binding and preserve XML and HEAD (4.052666ms)
+✔ JSON-LD survives hostile Unicode text without creating script elements (1.323417ms)
+✔ material price currency seller URL name and availability contradictions fail closed (0.193042ms)
+✔ missing and error structured data do not create fictitious product claims (0.126708ms)
+✔ case, encoded ASCII, slash and tracking normalize before final resource redirect (1.7435ms)
+✔ ambiguous and unsupported paths/parameters fail closed (0.247833ms)
+✔ only bounded normalized relative destinations are allowed (0.108875ms)
+ℹ tests 28
+ℹ suites 0
+ℹ pass 28
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 2139.108917

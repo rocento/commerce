@@ -1,0 +1,26 @@
+[Unit]
+Description=Rocento private health dashboard
+After=network.target
+[Service]
+User=rocento-health
+Group=rocento-health
+WorkingDirectory=/opt/rocento/commerce-api/health-api
+Environment=HEALTH_WEB_ROOT=/opt/rocento/commerce-web/apps/health
+ExecStart=/usr/bin/python3 /opt/rocento/commerce-api/health-api/server.py
+Restart=on-failure
+RestartSec=5
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=strict
+ProtectHome=true
+ProtectKernelTunables=true
+ProtectKernelModules=true
+ProtectControlGroups=true
+RestrictSUIDSGID=true
+RestrictAddressFamilies=AF_INET AF_UNIX
+CapabilityBoundingSet=
+MemoryMax=128M
+TasksMax=48
+UMask=0077
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,193 @@
+{
+  "brand": {
+    "dark": {
+      "background": "#181615",
+      "onPrimary": "#FFFFFF",
+      "primary": "#111111",
+      "surface": "#282320",
+      "text": "#FAF8F7"
+    },
+    "density": "comfortable",
+    "displayName": "Pharmacy",
+    "fontToken": "system",
+    "light": {
+      "background": "#ffffff",
+      "onPrimary": "#FFFFFF",
+      "primary": "#111111",
+      "surface": "#fce1e7",
+      "text": "#171515"
+    },
+    "logoAssetId": "776bfc85-a893-4aef-8965-a7eb2710e5c7",
+    "radiusToken": "none"
+  },
+  "compatibility": {
+    "minAndroidRuntime": "1.2.0",
+    "minIosRuntime": "1.2.0"
+  },
+  "configVersion": 0,
+  "features": {
+    "locationPicker": false,
+    "reviews": false,
+    "wishlist": false
+  },
+  "localization": {
+    "defaultLocale": "en",
+    "messages": {
+      "ar": {
+        "categories": "تسوق حسب الفئة",
+        "demo_pharmacy_categories_heading": "عناية في كل تفصيلة.",
+        "demo_pharmacy_closing_heading": "لحظة هدوء تخصّك.",
+        "demo_pharmacy_closing_label": "اكتشفي روتينك",
+        "demo_pharmacy_closing_text": "اكتشفي ٢٠ منتجاً مختاراً من إستيه لودر وسكينسوتيكلز وكلارنس وكلينيك ولاروش بوزيه.",
+        "demo_pharmacy_essentials_heading": "مختارات الصيدلية",
+        "demo_pharmacy_featured_heading": "مختارات العناية الفاخرة بالبشرة",
+        "demo_pharmacy_hero": "عبوات عناية بالبشرة بالأسود والزجاج الوردي على حجر عاجي مع حرير منسدل وإضاءة ناعمة",
+        "demo_pharmacy_hero_alt": "عبوات عناية بالبشرة بالأسود والزجاج الوردي على حجر عاجي مع حرير منسدل وإضاءة ناعمة",
+        "demo_pharmacy_hero_eyebrow": "NOIR ROSÉ / مجموعة العناية",
+        "demo_pharmacy_hero_heading": "عناية يومية.\nبلمسة من الجمال.",
+        "demo_pharmacy_hero_label": "اكتشفي المجموعة",
+        "demo_pharmacy_hero_text": "نهج أكثر هدوءاً للجمال والعناية. اكتشفي مستحضرات راقية للبشرة وأساسيات الصيدلية المختارة بعناية.",
+        "demo_pharmacy_ritual": "كريم الليل ريفيتالايزينغ سوبريم بلس من إستيه لودر",
+        "demo_pharmacy_ritual_alt": "كريم الليل ريفيتالايزينغ سوبريم بلس من إستيه لودر",
+        "demo_pharmacy_ritual_eyebrow": "روتينك اليومي",
+        "demo_pharmacy_ritual_heading": "تمهّلي قليلاً.\nالعناية أولاً.",
+        "demo_pharmacy_ritual_label": "اكتشفي العناية بالوجه والجسم",
+        "demo_pharmacy_ritual_text": "اكتشفي العناية بالوجه والعينين والجسم من إستيه لودر وكلينيك وكلارنس. مجموعة مختارة لروتينك اليومي.",
+        "products": "اكتشف منتجاتنا",
+        "welcome": "مرحباً بكم في الصيدلية"
+      },
+      "en": {
+        "categories": "Shop by category",
+        "demo_pharmacy_categories_heading": "A little care, in every detail.",
+        "demo_pharmacy_closing_heading": "Your own moment of calm.",
+        "demo_pharmacy_closing_label": "Find your ritual",
+        "demo_pharmacy_closing_text": "Explore 20 selected products from Estée Lauder, SkinCeuticals, Clarins, Clinique and La Roche-Posay.",
+        "demo_pharmacy_essentials_heading": "The pharmacy edit",
+        "demo_pharmacy_featured_heading": "The luxury skincare edit",
+        "demo_pharmacy_hero": "Black and rose glass skincare vessels on ivory stone with flowing silk and soft studio light",
+        "demo_pharmacy_hero_alt": "Black and rose glass skincare vessels on ivory stone with flowing silk and soft studio light",
+        "demo_pharmacy_hero_eyebrow": "NOIR ROSÉ / THE CARE COLLECTION",
+        "demo_pharmacy_hero_heading": "Everyday care.\nBeautifully considered.",
+        "demo_pharmacy_hero_label": "Discover the collection",
+        "demo_pharmacy_hero_text": "A quieter approach to beauty and wellbeing. Discover elevated skincare rituals and thoughtfully chosen pharmacy essentials.",
+        "demo_pharmacy_ritual": "Estée Lauder Revitalizing Supreme+ Night Power Bounce Creme",
+        "demo_pharmacy_ritual_alt": "Estée Lauder Revitalizing Supreme+ Night Power Bounce Creme",
+        "demo_pharmacy_ritual_eyebrow": "YOUR DAILY RITUAL",
+        "demo_pharmacy_ritual_heading": "Slow down.\nCare comes first.",
+        "demo_pharmacy_ritual_label": "Explore face & body",
+        "demo_pharmacy_ritual_text": "Discover face, eye and body care from Estée Lauder, Clinique and Clarins. A considered collection for your everyday rituals.",
+        "products": "Cleansers",
+        "welcome": "Welcome to Pharmacy"
+      }
+    },
+    "rtlEnabled": true,
+    "supportedLocales": [
+      "en",
+      "ar"
+    ]
+  },
+  "navigation": {
+    "tabs": [
+      "home",
+      "categories",
+      "deals",
+      "account",
+      "cart"
+    ]
+  },
+  "schemaVersion": "1.0.0",
+  "screens": {
+    "home": {
+      "layout": "storefront",
+      "sections": [
+        {
+          "id": "demo_pharmacy_hero",
+          "props": {
+            "accessibilityLabelKey": "demo_pharmacy_hero_alt",
+            "action": {
+              "tab": "categories",
+              "type": "openTab"
+            },
+            "appearance": "editorial",
+            "bodyKey": "demo_pharmacy_hero_text",
+            "eyebrowKey": "demo_pharmacy_hero_eyebrow",
+            "headingKey": "demo_pharmacy_hero_heading",
+            "imageAssetId": "703d03fe-a74c-4936-a12f-f7818f847aeb",
+            "labelKey": "demo_pharmacy_hero_label"
+          },
+          "type": "heroBanner"
+        },
+        {
+          "id": "demo_pharmacy_categories",
+          "props": {
+            "appearance": "tiles",
+            "categoryIds": [
+              "0abb9466-a1aa-4314-82ae-2f48eff4a9bc",
+              "9eb4c64d-61ca-4b0c-8ca7-ef45fce76378",
+              "da2d943f-55f8-4ef4-bdea-2e36d0d624b0",
+              "bbbdffda-3c89-4b84-aae0-91f14232c775",
+              "19748592-7335-45f2-aa14-fb9c2167dab2",
+              "3f805982-eee4-4270-9ebe-2e008b7ff700",
+              "ec29260a-fe58-4424-bc4c-e1c1bac1b3cc",
+              "2089e422-49dd-414b-bbb0-163a055946bb"
+            ],
+            "titleKey": "demo_pharmacy_categories_heading"
+          },
+          "type": "categoryGrid"
+        },
+        {
+          "id": "demo_pharmacy_featured",
+          "props": {
+            "collectionId": "demo-feed-featured",
+            "columns": 2,
+            "limit": 4,
+            "titleKey": "demo_pharmacy_featured_heading"
+          },
+          "type": "productGrid"
+        },
+        {
+          "id": "demo_pharmacy_ritual",
+          "props": {
+            "accessibilityLabelKey": "demo_pharmacy_ritual_alt",
+            "action": {
+              "categoryId": "0abb9466-a1aa-4314-82ae-2f48eff4a9bc",
+              "type": "openCategory"
+            },
+            "appearance": "editorial",
+            "bodyKey": "demo_pharmacy_ritual_text",
+            "eyebrowKey": "demo_pharmacy_ritual_eyebrow",
+            "headingKey": "demo_pharmacy_ritual_heading",
+            "imageAssetId": "cd564172-7399-4a92-8e77-c15c1bc53266",
+            "labelKey": "demo_pharmacy_ritual_label"
+          },
+          "type": "heroBanner"
+        },
+        {
+          "id": "demo_pharmacy_essentials",
+          "props": {
+            "collectionId": "demo-feed-essentials",
+            "columns": 2,
+            "limit": 4,
+            "titleKey": "demo_pharmacy_essentials_heading"
+          },
+          "type": "productGrid"
+        },
+        {
+          "id": "demo_pharmacy_closing",
+          "props": {
+            "action": {
+              "tab": "categories",
+              "type": "openTab"
+            },
+            "appearance": "campaign",
+            "headingKey": "demo_pharmacy_closing_heading",
+            "labelKey": "demo_pharmacy_closing_label",
+            "textKey": "demo_pharmacy_closing_text"
+          },
+          "type": "richText"
+        }
+      ]
+    }
+  },
+  "tenantId": "f2c2b1ec-b9ea-53e3-9800-a61f9cd1dc86"
+}

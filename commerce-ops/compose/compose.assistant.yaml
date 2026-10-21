@@ -1,0 +1,121 @@
+# Opt-in MVP deployment. Generate local keys with scripts/assistant-setup.py first.
+services:
+  analytics-worker:
+    environment:
+      ASSISTANT_TENANT_ID: ${ASSISTANT_TENANT_ID:-91d13451-cb20-44a8-8522-e06534aeae17}
+      ASSISTANT_PRIVATE_KEY_FILE: /run/assistant/private.pem
+    volumes:
+      - ${ASSISTANT_SECRETS_DIR:-../../.local/assistant}/private.pem:/run/assistant/private.pem:ro
+  api-gateway:
+    environment:
+      ASSISTANT_TENANT_ID: ${ASSISTANT_TENANT_ID:-91d13451-cb20-44a8-8522-e06534aeae17}
+      ASSISTANT_PRIVATE_KEY_FILE: /run/assistant/private.pem
+      ASSISTANT_PUBLIC_KEY_FILE: /run/assistant/public.pem
+      ASSISTANT_COMPOUND_WRITES_ENABLED: "${ASSISTANT_COMPOUND_WRITES_ENABLED:-false}"
+    volumes:
+      - ${ASSISTANT_SECRETS_DIR:-../../.local/assistant}/private.pem:/run/assistant/private.pem:ro
+      - ${ASSISTANT_SECRETS_DIR:-../../.local/assistant}/public.pem:/run/assistant/public.pem:ro
+  ai-health:
+    image: nginxinc/nginx-unprivileged:1.28-alpine
+    networks: [default, assistant-private]
+    ports: ["127.0.0.1:8000:8080"]
+    volumes: ["../../commerce-ops/deploy/assistant/health.conf:/etc/nginx/conf.d/default.conf:ro"]
+    read_only: true
+    tmpfs: ["/tmp:size=16m,noexec,nosuid"]
+    cap_drop: [ALL]
+    security_opt: [no-new-privileges:true]
+    mem_limit: 64m
+    cpus: 0.25
+    pids_limit: 32
+  ai-service:
+    image: rocento-ai-service:release
+    build: ../../commerce-assistant-platform
+    networks: [assistant-private]
+    depends_on:
+      ai-postgres:
+        condition: service_healthy
+    environment:
+      ASSISTANT_TENANT_ID: ${ASSISTANT_TENANT_ID:-91d13451-cb20-44a8-8522-e06534aeae17}
+      ASSISTANT_PUBLIC_KEY_FILE: /run/assistant/public.pem
+      AI_STORE_PASSWORD_FILE: /run/secrets/ai-runtime-password
+      AI_ACCEPTANCE_FILE: /var/lib/assistant-config/acceptance.json
+      AI_PROVIDER_SETTINGS_FILE: /var/lib/assistant-config/provider.json
+      AI_FEATURE_FLAGS: ${AI_FEATURE_FLAGS:-}
+      AI_INTENT_DEBUG_DIR: ${AI_INTENT_DEBUG_DIR:-}
+      AI_INTENT_TRACKING_ENABLED: ${AI_INTENT_TRACKING_ENABLED:-true}
+      AI_SEMANTIC_RECOVERY_EMBEDDING_BUDGET: ${AI_SEMANTIC_RECOVERY_EMBEDDING_BUDGET:-0}
+      AI_SMALL_MODEL_NAME: ${AI_SMALL_MODEL_NAME:-}
+      AI_MODEL_MAX_CALLS_PER_TURN: ${AI_MODEL_MAX_CALLS_PER_TURN:-2}
+      AI_MODEL_INPUT_MICROS_PER_1K: ${AI_MODEL_INPUT_MICROS_PER_1K:-0}
+      AI_MODEL_OUTPUT_MICROS_PER_1K: ${AI_MODEL_OUTPUT_MICROS_PER_1K:-0}
+      AI_SMALL_MODEL_INPUT_MICROS_PER_1K: ${AI_SMALL_MODEL_INPUT_MICROS_PER_1K:-0}
+      AI_SMALL_MODEL_OUTPUT_MICROS_PER_1K: ${AI_SMALL_MODEL_OUTPUT_MICROS_PER_1K:-0}
+      AI_EXACT_POLICY_FILE: /run/assistant/policy-answers.json
+    volumes:
+      - assistant-config:/var/lib/assistant-config
+      - ${ASSISTANT_SECRETS_DIR:-../../.local/assistant}/store-runtime-password:/run/secrets/ai-runtime-password:ro
+      - ${ASSISTANT_SECRETS_DIR:-../../.local/assistant}/public.pem:/run/assistant/public.pem:ro
+      - ../../commerce-ops/deploy/assistant/policy-answers.json:/run/assistant/policy-answers.json:ro
+    read_only: true
+    tmpfs: ["/tmp:size=16m,noexec,nosuid"]
+    cap_drop: [ALL]
+    security_opt: [no-new-privileges:true]
+    mem_limit: 256m
+    cpus: 0.5
+    pids_limit: 64
+    healthcheck:
+      # Avoid starting Python for each probe inside the assistant CPU quota.
+      test: ["CMD", "/bin/bash", "-ec", "exec 3<>/dev/tcp/127.0.0.1/8000; printf 'GET /health HTTP/1.1\\r\\nHost: localhost\\r\\nConnection: close\\r\\n\\r\\n' >&3; IFS=' ' read -r -t 2 protocol status rest <&3; [[ $$protocol == HTTP/1.[01] && $$status == 200 ]]"]
+      interval: 10s
+      timeout: 5s
+      retries: 12
+      start_period: 30s
+  assistant-ingress:
+    image: nginxinc/nginx-unprivileged:1.28-alpine
+    networks: [default, assistant-private]
+    volumes: ["../../commerce-ops/deploy/assistant/ingress.conf:/etc/nginx/conf.d/default.conf:ro"]
+    read_only: true
+    tmpfs: ["/tmp:size=16m,noexec,nosuid"]
+    cap_drop: [ALL]
+    security_opt: [no-new-privileges:true]
+    mem_limit: 64m
+    cpus: 0.25
+    pids_limit: 32
+  assistant-tools:
+    image: nginxinc/nginx-unprivileged:1.28-alpine
+    networks: [default, assistant-private]
+    volumes: ["../../commerce-ops/deploy/assistant/tools.conf:/etc/nginx/conf.d/default.conf:ro"]
+    read_only: true
+    tmpfs: ["/tmp:size=16m,noexec,nosuid"]
+    cap_drop: [ALL]
+    security_opt: [no-new-privileges:true]
+    mem_limit: 64m
+    cpus: 0.25
+    pids_limit: 32
+
+  ai-postgres:
+    image: rocento-ai-postgres:release
+    build:
+      context: ../..
+      dockerfile: commerce-ops/deploy/assistant/Dockerfile.store
+    networks: [assistant-private]
+    environment:
+      ASSISTANT_TENANT_ID: ${ASSISTANT_TENANT_ID:-91d13451-cb20-44a8-8522-e06534aeae17}
+      POSTGRES_DB: assistant
+      POSTGRES_USER: ai_owner
+      POSTGRES_PASSWORD_FILE: /run/secrets/ai-admin-password
+    volumes:
+      - ai-data:/var/lib/postgresql/data
+      - ${ASSISTANT_SECRETS_DIR:-../../.local/assistant}/store-admin-password:/run/secrets/ai-admin-password:ro
+      - ${ASSISTANT_SECRETS_DIR:-../../.local/assistant}/store-runtime-password:/run/secrets/ai-runtime-password:ro
+    healthcheck:
+      test: ["CMD-SHELL", "psql -U ai_owner -d assistant -tAc \"SELECT 1 FROM assistant.deployment LIMIT 1\" | grep -qx 1"]
+      interval: 5s
+      timeout: 3s
+      retries: 10
+    mem_limit: 256m
+    cpus: 0.5
+    pids_limit: 64
+volumes:
+  assistant-config:
+  ai-data:

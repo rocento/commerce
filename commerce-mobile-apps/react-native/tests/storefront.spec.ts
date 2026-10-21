@@ -1,0 +1,51 @@
+import { expect, test } from '@playwright/test';
+
+test('browse, search, detail, bag totals, Arabic and store isolation', async ({ page }) => {
+  const errors: string[] = [];
+  page.on('pageerror', error => errors.push(error.message));
+  await page.goto('/');
+  await expect(page.getByRole('heading', { name: 'Good things. Every day.' })).toBeVisible();
+  await page.screenshot({ path: 'test-results/home.png', fullPage: true, animations: 'disabled' });
+  await page.getByRole('button', { name: 'Explore the collection' }).click();
+  await page.getByRole('textbox', { name: 'Search products' }).fill('apple');
+  await expect(page.getByRole('button', { name: 'Organic avocado', exact: true })).toHaveCount(0);
+  await page.getByRole('button', { name: 'Fresh apples', exact: true }).click();
+  await page.getByRole('button', { name: 'Add to bag', exact: true }).click();
+  await expect(page.getByText('In your bag: 1', { exact: true }).last()).toBeVisible();
+  await page.getByRole('button', { name: 'Close', exact: true }).click();
+  await page.getByRole('tab', { name: 'Bag, 1 items', exact: true }).click();
+  await page.getByRole('button', { name: 'Increase quantity: Fresh apples' }).click();
+  await expect(page.getByText('$7.00', { exact: true }).last()).toBeVisible();
+  await page.getByRole('button', { name: 'التبديل إلى العربية' }).click();
+  await expect(page.getByRole('button', { name: 'زيادة الكمية: تفاح طازج' })).toBeVisible();
+  await expect(page.getByRole('button', { name: 'زيادة الكمية: تفاح طازج' })).toBeInViewport();
+  await page.screenshot({ path: 'test-results/bag-arabic.png', fullPage: true, animations: 'disabled' });
+  await page.getByRole('tab', { name: 'الإعدادات', exact: true }).click();
+  await page.getByRole('button', { name: 'البوتيك التجريبي', exact: true }).click();
+  await page.getByRole('tab', { name: 'الحقيبة, 0 منتجات', exact: true }).click();
+  await expect(page.getByText('حقيبتك بانتظارك')).toBeVisible();
+  await page.getByRole('button', { name: 'Switch to English', exact: true }).click();
+  await page.getByRole('button', { name: 'Explore the collection' }).click();
+  await expect(page.getByRole('button', { name: 'Everyday tote', exact: true })).toBeVisible();
+  await page.getByRole('textbox', { name: 'Search products' }).fill('no-matches');
+  await expect(page.getByText('No products found')).toBeVisible();
+  await page.getByRole('button', { name: 'Clear search' }).click();
+  await expect(page.getByRole('button', { name: 'Everyday tote', exact: true })).toBeVisible();
+  await page.getByRole('tab', { name: 'Settings', exact: true }).click();
+  await expect(page.getByRole('button', { name: 'Dark', exact: true })).toHaveCount(0);
+  await expect(page.getByRole('button', { name: 'Light', exact: true })).toHaveCount(0);
+  await page.emulateMedia({ colorScheme: 'dark' });
+  await page.getByRole('tab', { name: 'Home', exact: true }).click();
+  await page.screenshot({ path: 'test-results/boutique-single-mode.png', fullPage: true, animations: 'disabled' });
+  expect(errors).toEqual([]);
+});
+
+test('a narrow screen keeps the catalog and bag usable', async ({ page }) => {
+  await page.setViewportSize({ width: 320, height: 700 });
+  await page.goto('/');
+  await page.getByRole('button', { name: 'Add to bag: Fresh apples', exact: true }).click();
+  await page.getByRole('tab', { name: 'Bag, 1 items', exact: true }).click();
+  await page.getByRole('button', { name: 'Remove', exact: true }).click();
+  await expect(page.getByText('Your bag is waiting')).toBeVisible();
+  await page.screenshot({ path: 'test-results/narrow-empty-bag.png', fullPage: true, animations: 'disabled' });
+});

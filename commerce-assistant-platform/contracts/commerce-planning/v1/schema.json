@@ -1,0 +1,1042 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:rocento:commerce-planning:1.0",
+  "$defs": {
+    "ActorContext": {
+      "additionalProperties": false,
+      "description": "Only the trusted gateway/composition root may construct this context.",
+      "properties": {
+        "schema_version": {
+          "const": "1.0",
+          "default": "1.0",
+          "title": "Schema Version",
+          "type": "string"
+        },
+        "tenant_id": {
+          "pattern": "^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$",
+          "title": "Tenant Id",
+          "type": "string"
+        },
+        "store_id": {
+          "pattern": "^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$",
+          "title": "Store Id",
+          "type": "string"
+        },
+        "actor_id": {
+          "anyOf": [
+            {
+              "pattern": "^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Actor Id"
+        },
+        "principal_id": {
+          "anyOf": [
+            {
+              "pattern": "^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Principal Id"
+        },
+        "session_id": {
+          "pattern": "^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$",
+          "title": "Session Id",
+          "type": "string"
+        },
+        "request_id": {
+          "pattern": "^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$",
+          "title": "Request Id",
+          "type": "string"
+        },
+        "channel": {
+          "enum": [
+            "storefront",
+            "admin",
+            "evaluation"
+          ],
+          "title": "Channel",
+          "type": "string"
+        },
+        "scopes": {
+          "default": [],
+          "items": {
+            "pattern": "^[a-z][a-z0-9_.:/-]{0,119}$",
+            "type": "string"
+          },
+          "maxItems": 32,
+          "title": "Scopes",
+          "type": "array"
+        }
+      },
+      "required": [
+        "tenant_id",
+        "store_id",
+        "session_id",
+        "request_id",
+        "channel"
+      ],
+      "title": "ActorContext",
+      "type": "object"
+    },
+    "BoundPlan": {
+      "additionalProperties": false,
+      "properties": {
+        "schema_version": {
+          "const": "1.0",
+          "default": "1.0",
+          "title": "Schema Version",
+          "type": "string"
+        },
+        "playbook": {
+          "$ref": "#/$defs/DefinitionRef"
+        },
+        "context": {
+          "$ref": "#/$defs/ActorContext"
+        },
+        "nodes": {
+          "items": {
+            "$ref": "#/$defs/PlannedNode"
+          },
+          "title": "Nodes",
+          "type": "array"
+        },
+        "budget": {
+          "$ref": "#/$defs/PlanningBudget"
+        },
+        "reserved": {
+          "$ref": "#/$defs/PlanResources"
+        },
+        "policies": {
+          "default": [],
+          "items": {
+            "$ref": "#/$defs/PolicyDecision"
+          },
+          "title": "Policies",
+          "type": "array"
+        },
+        "mode": {
+          "enum": [
+            "read",
+            "action_proposal"
+          ],
+          "title": "Mode",
+          "type": "string"
+        },
+        "reason": {
+          "enum": [
+            "known_journey",
+            "validated_composition"
+          ],
+          "title": "Reason",
+          "type": "string"
+        },
+        "stop_conditions": {
+          "default": [
+            "budget_exceeded",
+            "policy_denied",
+            "dependency_failed",
+            "hard_constraint_conflict",
+            "deadline",
+            "cancelled"
+          ],
+          "items": {
+            "pattern": "^[a-z][a-z0-9_.:/-]{0,119}$",
+            "type": "string"
+          },
+          "title": "Stop Conditions",
+          "type": "array"
+        }
+      },
+      "required": [
+        "playbook",
+        "context",
+        "nodes",
+        "budget",
+        "reserved",
+        "mode",
+        "reason"
+      ],
+      "title": "BoundPlan",
+      "type": "object"
+    },
+    "Confirmation": {
+      "enum": [
+        "none",
+        "undo",
+        "explicit_intent",
+        "fresh_confirmation",
+        "step_up"
+      ],
+      "title": "Confirmation",
+      "type": "string"
+    },
+    "DefinitionRef": {
+      "additionalProperties": false,
+      "properties": {
+        "schema_version": {
+          "const": "1.0",
+          "default": "1.0",
+          "title": "Schema Version",
+          "type": "string"
+        },
+        "id": {
+          "pattern": "^[a-z][a-z0-9_.:/-]{0,119}$",
+          "title": "Id",
+          "type": "string"
+        },
+        "version": {
+          "pattern": "^(0|[1-9][0-9]*)\\.(0|[1-9][0-9]*)\\.(0|[1-9][0-9]*)$",
+          "title": "Version",
+          "type": "string"
+        },
+        "schema_major": {
+          "const": 1,
+          "default": 1,
+          "title": "Schema Major",
+          "type": "integer"
+        }
+      },
+      "required": [
+        "id",
+        "version"
+      ],
+      "title": "DefinitionRef",
+      "type": "object"
+    },
+    "ExecutableSkill": {
+      "additionalProperties": false,
+      "properties": {
+        "schema_version": {
+          "const": "1.0",
+          "default": "1.0",
+          "title": "Schema Version",
+          "type": "string"
+        },
+        "id": {
+          "pattern": "^[a-z][a-z0-9_.:/-]{0,119}$",
+          "title": "Id",
+          "type": "string"
+        },
+        "version": {
+          "pattern": "^(0|[1-9][0-9]*)\\.(0|[1-9][0-9]*)\\.(0|[1-9][0-9]*)$",
+          "title": "Version",
+          "type": "string"
+        },
+        "visibility": {
+          "$ref": "#/$defs/Visibility",
+          "default": {
+            "schema_version": "1.0",
+            "tenants": [],
+            "channels": [
+              "storefront",
+              "evaluation"
+            ],
+            "required_scopes": []
+          }
+        },
+        "dependencies": {
+          "default": [],
+          "items": {
+            "$ref": "#/$defs/DefinitionRef"
+          },
+          "maxItems": 32,
+          "title": "Dependencies",
+          "type": "array"
+        },
+        "deprecated_after": {
+          "anyOf": [
+            {
+              "maximum": 253402300799,
+              "minimum": 0,
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Deprecated After"
+        },
+        "disabled_after": {
+          "anyOf": [
+            {
+              "maximum": 253402300799,
+              "minimum": 0,
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Disabled After"
+        },
+        "kind": {
+          "const": "skill",
+          "default": "skill",
+          "title": "Kind",
+          "type": "string"
+        },
+        "input_contract": {
+          "pattern": "^[a-z][a-z0-9_.:/-]{0,119}$",
+          "title": "Input Contract",
+          "type": "string"
+        },
+        "output_contract": {
+          "pattern": "^[a-z][a-z0-9_.:/-]{0,119}$",
+          "title": "Output Contract",
+          "type": "string"
+        },
+        "risk": {
+          "$ref": "#/$defs/Risk",
+          "default": "R0"
+        },
+        "confirmation": {
+          "$ref": "#/$defs/Confirmation",
+          "default": "none"
+        },
+        "idempotency": {
+          "default": "none",
+          "enum": [
+            "none",
+            "required"
+          ],
+          "title": "Idempotency",
+          "type": "string"
+        },
+        "freshness_seconds": {
+          "default": 0,
+          "maximum": 86400,
+          "minimum": 0,
+          "title": "Freshness Seconds",
+          "type": "integer"
+        },
+        "timeout_ms": {
+          "default": 20000,
+          "maximum": 120000,
+          "minimum": 1,
+          "title": "Timeout Ms",
+          "type": "integer"
+        },
+        "max_calls": {
+          "default": 1,
+          "maximum": 16,
+          "minimum": 0,
+          "title": "Max Calls",
+          "type": "integer"
+        },
+        "purpose": {
+          "maxLength": 1000,
+          "minLength": 1,
+          "title": "Purpose",
+          "type": "string"
+        },
+        "intents": {
+          "items": {
+            "pattern": "^[a-z][a-z0-9_.:/-]{0,119}$",
+            "type": "string"
+          },
+          "maxItems": 32,
+          "minItems": 1,
+          "title": "Intents",
+          "type": "array"
+        },
+        "requires": {
+          "default": [],
+          "items": {
+            "pattern": "^[a-z][a-z0-9_.:/-]{0,119}$",
+            "type": "string"
+          },
+          "maxItems": 16,
+          "title": "Requires",
+          "type": "array"
+        },
+        "preconditions": {
+          "default": [],
+          "items": {
+            "pattern": "^[a-z][a-z0-9_.:/-]{0,119}$",
+            "type": "string"
+          },
+          "maxItems": 16,
+          "title": "Preconditions",
+          "type": "array"
+        },
+        "postconditions": {
+          "default": [],
+          "items": {
+            "pattern": "^[a-z][a-z0-9_.:/-]{0,119}$",
+            "type": "string"
+          },
+          "maxItems": 16,
+          "title": "Postconditions",
+          "type": "array"
+        },
+        "ports": {
+          "items": {
+            "pattern": "^[a-z][a-z0-9_.:/-]{0,119}$",
+            "type": "string"
+          },
+          "maxItems": 4,
+          "minItems": 1,
+          "title": "Ports",
+          "type": "array"
+        },
+        "max_attempts": {
+          "default": 1,
+          "maximum": 3,
+          "minimum": 1,
+          "title": "Max Attempts",
+          "type": "integer"
+        },
+        "concurrency": {
+          "default": "serial",
+          "enum": [
+            "serial",
+            "parallel_read"
+          ],
+          "title": "Concurrency",
+          "type": "string"
+        },
+        "cost_class": {
+          "enum": [
+            "local",
+            "remote_read",
+            "model",
+            "mutation"
+          ],
+          "title": "Cost Class",
+          "type": "string"
+        },
+        "latency_class": {
+          "default": "interactive",
+          "enum": [
+            "local",
+            "interactive",
+            "slow"
+          ],
+          "title": "Latency Class",
+          "type": "string"
+        },
+        "token_reservation": {
+          "default": 0,
+          "maximum": 1000000,
+          "minimum": 0,
+          "title": "Token Reservation",
+          "type": "integer"
+        },
+        "cost_reservation_micros": {
+          "default": 0,
+          "maximum": 10000000,
+          "minimum": 0,
+          "title": "Cost Reservation Micros",
+          "type": "integer"
+        },
+        "produces": {
+          "default": [],
+          "items": {
+            "pattern": "^[a-z][a-z0-9_.:/-]{0,119}$",
+            "type": "string"
+          },
+          "maxItems": 16,
+          "title": "Produces",
+          "type": "array"
+        },
+        "fallback": {
+          "default": "none",
+          "enum": [
+            "none",
+            "clarify",
+            "browse",
+            "review",
+            "legacy_before_start"
+          ],
+          "title": "Fallback",
+          "type": "string"
+        },
+        "executor": {
+          "default": "assistant",
+          "enum": [
+            "assistant",
+            "rust_ui"
+          ],
+          "title": "Executor",
+          "type": "string"
+        },
+        "policy_action": {
+          "anyOf": [
+            {
+              "enum": [
+                "catalog_read",
+                "recommend",
+                "answer",
+                "personalize",
+                "preference_save",
+                "cart_apply",
+                "order_submit",
+                "payment",
+                "refund",
+                "account_change"
+              ],
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Policy Action"
+        }
+      },
+      "required": [
+        "id",
+        "version",
+        "input_contract",
+        "output_contract",
+        "purpose",
+        "intents",
+        "ports",
+        "cost_class"
+      ],
+      "title": "ExecutableSkill",
+      "type": "object"
+    },
+    "IndustryRules": {
+      "additionalProperties": false,
+      "properties": {
+        "schema_version": {
+          "const": "1.0",
+          "default": "1.0",
+          "title": "Schema Version",
+          "type": "string"
+        },
+        "id": {
+          "pattern": "^[a-z][a-z0-9_.:/-]{0,119}$",
+          "title": "Id",
+          "type": "string"
+        },
+        "version": {
+          "title": "Version",
+          "type": "string"
+        },
+        "attributes": {
+          "items": {
+            "pattern": "^[a-z][a-z0-9_.:/-]{0,119}$",
+            "type": "string"
+          },
+          "title": "Attributes",
+          "type": "array"
+        },
+        "status": {
+          "enum": [
+            "dataset_validated",
+            "schema_ready"
+          ],
+          "title": "Status",
+          "type": "string"
+        },
+        "policies": {
+          "items": {
+            "pattern": "^[a-z][a-z0-9_.:/-]{0,119}$",
+            "type": "string"
+          },
+          "title": "Policies",
+          "type": "array"
+        }
+      },
+      "required": [
+        "id",
+        "version",
+        "attributes",
+        "status",
+        "policies"
+      ],
+      "title": "IndustryRules",
+      "type": "object"
+    },
+    "PlanResources": {
+      "additionalProperties": false,
+      "properties": {
+        "schema_version": {
+          "const": "1.0",
+          "default": "1.0",
+          "title": "Schema Version",
+          "type": "string"
+        },
+        "tools": {
+          "default": 0,
+          "minimum": 0,
+          "title": "Tools",
+          "type": "integer"
+        },
+        "models": {
+          "default": 0,
+          "minimum": 0,
+          "title": "Models",
+          "type": "integer"
+        },
+        "tokens": {
+          "default": 0,
+          "minimum": 0,
+          "title": "Tokens",
+          "type": "integer"
+        },
+        "cost_micros": {
+          "default": 0,
+          "minimum": 0,
+          "title": "Cost Micros",
+          "type": "integer"
+        },
+        "mutations": {
+          "default": 0,
+          "minimum": 0,
+          "title": "Mutations",
+          "type": "integer"
+        }
+      },
+      "title": "PlanResources",
+      "type": "object"
+    },
+    "PlannedNode": {
+      "additionalProperties": false,
+      "properties": {
+        "schema_version": {
+          "const": "1.0",
+          "default": "1.0",
+          "title": "Schema Version",
+          "type": "string"
+        },
+        "id": {
+          "pattern": "^[a-z][a-z0-9_.:/-]{0,119}$",
+          "title": "Id",
+          "type": "string"
+        },
+        "skill": {
+          "$ref": "#/$defs/DefinitionRef"
+        },
+        "depends_on": {
+          "default": [],
+          "items": {
+            "pattern": "^[a-z][a-z0-9_.:/-]{0,119}$",
+            "type": "string"
+          },
+          "maxItems": 16,
+          "title": "Depends On",
+          "type": "array"
+        },
+        "max_calls": {
+          "default": 1,
+          "maximum": 8,
+          "minimum": 1,
+          "title": "Max Calls",
+          "type": "integer"
+        },
+        "required": {
+          "default": true,
+          "title": "Required",
+          "type": "boolean"
+        },
+        "arguments_json": {
+          "anyOf": [
+            {
+              "maxLength": 16000,
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Arguments Json"
+        }
+      },
+      "required": [
+        "id",
+        "skill"
+      ],
+      "title": "PlannedNode",
+      "type": "object"
+    },
+    "PlanningBudget": {
+      "additionalProperties": false,
+      "properties": {
+        "schema_version": {
+          "const": "1.0",
+          "default": "1.0",
+          "title": "Schema Version",
+          "type": "string"
+        },
+        "max_steps": {
+          "default": 16,
+          "maximum": 16,
+          "minimum": 1,
+          "title": "Max Steps",
+          "type": "integer"
+        },
+        "max_tool_calls": {
+          "default": 8,
+          "maximum": 32,
+          "minimum": 0,
+          "title": "Max Tool Calls",
+          "type": "integer"
+        },
+        "max_model_calls": {
+          "default": 1,
+          "maximum": 4,
+          "minimum": 0,
+          "title": "Max Model Calls",
+          "type": "integer"
+        },
+        "max_tokens": {
+          "default": 131072,
+          "maximum": 1000000,
+          "minimum": 0,
+          "title": "Max Tokens",
+          "type": "integer"
+        },
+        "max_cost_micros": {
+          "default": 100000,
+          "maximum": 10000000,
+          "minimum": 0,
+          "title": "Max Cost Micros",
+          "type": "integer"
+        },
+        "max_mutations": {
+          "default": 0,
+          "maximum": 4,
+          "minimum": 0,
+          "title": "Max Mutations",
+          "type": "integer"
+        },
+        "timeout_ms": {
+          "default": 25000,
+          "maximum": 120000,
+          "minimum": 1,
+          "title": "Timeout Ms",
+          "type": "integer"
+        },
+        "max_concurrency": {
+          "default": 1,
+          "maximum": 4,
+          "minimum": 1,
+          "title": "Max Concurrency",
+          "type": "integer"
+        }
+      },
+      "title": "PlanningBudget",
+      "type": "object"
+    },
+    "PolicyDecision": {
+      "additionalProperties": false,
+      "properties": {
+        "schema_version": {
+          "const": "1.0",
+          "default": "1.0",
+          "title": "Schema Version",
+          "type": "string"
+        },
+        "policy": {
+          "const": "commerce/default",
+          "default": "commerce/default",
+          "title": "Policy",
+          "type": "string"
+        },
+        "version": {
+          "const": "1.0.0",
+          "default": "1.0.0",
+          "title": "Version",
+          "type": "string"
+        },
+        "outcome": {
+          "enum": [
+            "allow",
+            "deny",
+            "require_confirmation",
+            "require_authentication",
+            "require_step_up",
+            "redact"
+          ],
+          "title": "Outcome",
+          "type": "string"
+        },
+        "reason": {
+          "pattern": "^[a-z][a-z0-9_.:/-]{0,119}$",
+          "title": "Reason",
+          "type": "string"
+        },
+        "facts": {
+          "items": {
+            "$ref": "#/$defs/PolicyFact"
+          },
+          "title": "Facts",
+          "type": "array"
+        },
+        "actor": {
+          "$ref": "#/$defs/ActorContext"
+        },
+        "action": {
+          "enum": [
+            "catalog_read",
+            "recommend",
+            "answer",
+            "personalize",
+            "preference_save",
+            "cart_apply",
+            "order_submit",
+            "payment",
+            "refund",
+            "account_change"
+          ],
+          "title": "Action",
+          "type": "string"
+        },
+        "risk": {
+          "$ref": "#/$defs/Risk"
+        },
+        "confirmation": {
+          "enum": [
+            "none",
+            "undo",
+            "explicit_intent",
+            "fresh_confirmation",
+            "step_up"
+          ],
+          "title": "Confirmation",
+          "type": "string"
+        },
+        "expires_at": {
+          "maximum": 253402300799,
+          "minimum": 0,
+          "title": "Expires At",
+          "type": "integer"
+        },
+        "audit_ref": {
+          "maxLength": 200,
+          "minLength": 1,
+          "title": "Audit Ref",
+          "type": "string"
+        }
+      },
+      "required": [
+        "outcome",
+        "reason",
+        "facts",
+        "actor",
+        "action",
+        "risk",
+        "confirmation",
+        "expires_at",
+        "audit_ref"
+      ],
+      "title": "PolicyDecision",
+      "type": "object"
+    },
+    "PolicyFact": {
+      "additionalProperties": false,
+      "properties": {
+        "schema_version": {
+          "const": "1.0",
+          "default": "1.0",
+          "title": "Schema Version",
+          "type": "string"
+        },
+        "name": {
+          "pattern": "^[a-z][a-z0-9_.:/-]{0,119}$",
+          "title": "Name",
+          "type": "string"
+        },
+        "value": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "boolean"
+            },
+            {
+              "type": "integer"
+            }
+          ],
+          "title": "Value"
+        }
+      },
+      "required": [
+        "name",
+        "value"
+      ],
+      "title": "PolicyFact",
+      "type": "object"
+    },
+    "Procedure": {
+      "additionalProperties": false,
+      "properties": {
+        "schema_version": {
+          "const": "1.0",
+          "default": "1.0",
+          "title": "Schema Version",
+          "type": "string"
+        },
+        "id": {
+          "pattern": "^[a-z][a-z0-9_.:/-]{0,119}$",
+          "title": "Id",
+          "type": "string"
+        },
+        "version": {
+          "pattern": "^\\d+\\.\\d+\\.\\d+$",
+          "title": "Version",
+          "type": "string"
+        },
+        "intents": {
+          "items": {
+            "pattern": "^[a-z][a-z0-9_.:/-]{0,119}$",
+            "type": "string"
+          },
+          "maxItems": 32,
+          "minItems": 1,
+          "title": "Intents",
+          "type": "array"
+        },
+        "requires": {
+          "default": [],
+          "items": {
+            "pattern": "^[a-z][a-z0-9_.:/-]{0,119}$",
+            "type": "string"
+          },
+          "maxItems": 16,
+          "title": "Requires",
+          "type": "array"
+        },
+        "nodes": {
+          "items": {
+            "$ref": "#/$defs/PlannedNode"
+          },
+          "maxItems": 16,
+          "minItems": 1,
+          "title": "Nodes",
+          "type": "array"
+        },
+        "policies": {
+          "items": {
+            "$ref": "#/$defs/DefinitionRef"
+          },
+          "maxItems": 16,
+          "minItems": 1,
+          "title": "Policies",
+          "type": "array"
+        },
+        "verification": {
+          "items": {
+            "pattern": "^[a-z][a-z0-9_.:/-]{0,119}$",
+            "type": "string"
+          },
+          "maxItems": 16,
+          "minItems": 1,
+          "title": "Verification",
+          "type": "array"
+        },
+        "fallbacks": {
+          "default": [],
+          "items": {
+            "enum": [
+              "clarify",
+              "browse",
+              "review",
+              "relax_soft_preferences"
+            ],
+            "type": "string"
+          },
+          "title": "Fallbacks",
+          "type": "array"
+        },
+        "mode": {
+          "default": "read",
+          "enum": [
+            "read",
+            "action_proposal"
+          ],
+          "title": "Mode",
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "version",
+        "intents",
+        "nodes",
+        "policies",
+        "verification"
+      ],
+      "title": "Procedure",
+      "type": "object"
+    },
+    "Risk": {
+      "enum": [
+        "R0",
+        "R1",
+        "R2",
+        "R3",
+        "R4"
+      ],
+      "title": "Risk",
+      "type": "string"
+    },
+    "Visibility": {
+      "additionalProperties": false,
+      "properties": {
+        "schema_version": {
+          "const": "1.0",
+          "default": "1.0",
+          "title": "Schema Version",
+          "type": "string"
+        },
+        "tenants": {
+          "default": [],
+          "items": {
+            "pattern": "^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$",
+            "type": "string"
+          },
+          "maxItems": 100,
+          "title": "Tenants",
+          "type": "array"
+        },
+        "channels": {
+          "default": [
+            "storefront",
+            "evaluation"
+          ],
+          "items": {
+            "enum": [
+              "storefront",
+              "admin",
+              "evaluation"
+            ],
+            "type": "string"
+          },
+          "title": "Channels",
+          "type": "array"
+        },
+        "required_scopes": {
+          "default": [],
+          "items": {
+            "pattern": "^[a-z][a-z0-9_.:/-]{0,119}$",
+            "type": "string"
+          },
+          "maxItems": 32,
+          "title": "Required Scopes",
+          "type": "array"
+        }
+      },
+      "title": "Visibility",
+      "type": "object"
+    }
+  }
+}

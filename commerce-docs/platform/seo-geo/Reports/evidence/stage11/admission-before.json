@@ -1,0 +1,7 @@
+{
+  "synthetic": true,
+  "concurrent_requests": 40,
+  "configured_limit": 4,
+  "peak_gateway_requests": 40,
+  "retry_after_responses": 0
+}

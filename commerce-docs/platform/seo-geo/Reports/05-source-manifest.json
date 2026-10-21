@@ -1,0 +1,146 @@
+{
+  "base_commit": "fdc7e25",
+  "sources": [
+    {
+      "path": "backend/Cargo.lock",
+      "sha256": "18e9ac70212599118256faf3378992fffe77f2cefbe7249146166391c6b6e91b",
+      "provenance": "Stage 05 source after edits"
+    },
+    {
+      "path": "backend/crates/api-gateway/Cargo.toml",
+      "sha256": "045c05d121ddc3bd1203886ed019139719613bfe8eed65761533666ac21a45c3",
+      "provenance": "Stage 05 source after edits"
+    },
+    {
+      "path": "backend/crates/api-gateway/openapi/discoverability_contract.py",
+      "sha256": "31e2d77323c1b559cb3c7f8288ce9d37e4868d72142ad1b32f33ebf9d7b1def3",
+      "provenance": "Stage 05 source after edits"
+    },
+    {
+      "path": "backend/crates/api-gateway/src/catalog.rs",
+      "sha256": "02310afebf06682503bd18366f1ccbccca5174a53e465bdc8bb4e60ec3748d0c",
+      "provenance": "Stage 05 source after edits"
+    },
+    {
+      "path": "backend/crates/api-gateway/src/discoverability.rs",
+      "sha256": "00e7f55e43051afddaaab2c40435cfacb13bf59b08c961b720749749c5a6bb5c",
+      "provenance": "Stage 05 source after edits"
+    },
+    {
+      "path": "backend/crates/api-gateway/src/public_commerce/images.rs",
+      "sha256": "cc9fce4367f4a6e1e761f28468ce55d31cd7eee0109ca884ff3dc2f37b07a612",
+      "provenance": "Stage 05 source after edits"
+    },
+    {
+      "path": "backend/crates/api-gateway/src/public_commerce/metadata.rs",
+      "sha256": "3d562cfebfae60462caa253432c21a6aecbe429925564ba4799136ce4e40a748",
+      "provenance": "Stage 05 source after edits"
+    },
+    {
+      "path": "backend/crates/api-gateway/src/public_commerce/mod.rs",
+      "sha256": "d1e904478c5781a23174782b1599473a35661cbd320293c35d7330625499dfcd",
+      "provenance": "Stage 05 source after edits"
+    },
+    {
+      "path": "backend/crates/api-gateway/src/public_commerce/policy.rs",
+      "sha256": "eccab1aee287d547b8d9105229b71250a267d190600c7bee1fe05edb4cc0ce1f",
+      "provenance": "Stage 05 source after edits"
+    },
+    {
+      "path": "backend/crates/api-gateway/src/public_commerce/snapshot.rs",
+      "sha256": "2c6afa530d6ed3fb3e5b9b843c5221e146d34ecca2cb92bf43353efe86936998",
+      "provenance": "Stage 05 source after edits"
+    },
+    {
+      "path": "backend/crates/api-gateway/tests/publication_metadata.rs",
+      "sha256": "b00ae687a0e3b261b2152ab938571d0a1b77b5e884a82dfb548f07cc1a9097eb",
+      "provenance": "Stage 05 source after edits"
+    },
+    {
+      "path": "backend/crates/api-gateway/tests/publication_rendering.rs",
+      "sha256": "1a60743853518837cbbf39aba0d3bbbeaf08232a6aa84558e8034a3cf05bb0d7",
+      "provenance": "Stage 05 source after edits"
+    },
+    {
+      "path": "backend/crates/domain-catalog/src/public.rs",
+      "sha256": "dc088df568fc9dfb781396a65d862b90fd9a346b6196d99e985e27dd149577b0",
+      "provenance": "Stage 05 source after edits"
+    },
+    {
+      "path": "backend/migrations/20260921160000_publication_metadata.sql",
+      "sha256": "d3b8c560bcc90aa309f140c3cbb370a4078d0852bedd3ac22a7353242a164ac9",
+      "provenance": "Stage 05 source after edits"
+    },
+    {
+      "path": "backend/openapi.json",
+      "sha256": "881083eaa0e569ed6e2d0ce50fb2d7f58ab0a2c28f954bec0740596b6b78c57a",
+      "provenance": "Stage 05 index-only generated contract; concurrent worktree changes retained"
+    },
+    {
+      "path": "frontend/apps/admin/src/discoverability-settings.tsx",
+      "sha256": "04df4547820436b2b7dbc893d036edfb31d43fdd4e5c45df88c34d8b25ccebcb",
+      "provenance": "Stage 05 source after edits"
+    },
+    {
+      "path": "frontend/apps/admin/src/metadata-settings.tsx",
+      "sha256": "e2f863d7f27ee9a743e7e6cb8d0659683998b0eafd5b4f4f761f32fd44feefe8",
+      "provenance": "Stage 05 source after edits"
+    },
+    {
+      "path": "frontend/apps/storefront/server/metadata-checks.mjs",
+      "sha256": "8bec8c02a96ac18f3ce4091ed6be3f1954a94941bb9574e1716cc5aa9700517c",
+      "provenance": "Stage 05 source after edits"
+    },
+    {
+      "path": "frontend/apps/storefront/server/metadata.mjs",
+      "sha256": "55cbb6661e29f05dddb4c1f4d62ebfd7c7097411f5a8966667928eaa1e57401a",
+      "provenance": "Stage 05 source after edits"
+    },
+    {
+      "path": "frontend/apps/storefront/server/publication-checks.mjs",
+      "sha256": "6c1456d68ef7ea3fa5c94d86f048f3b2c0ed30ecc71f318395207663a9176b47",
+      "provenance": "Stage 05 source after edits"
+    },
+    {
+      "path": "frontend/apps/storefront/server/publication.mjs",
+      "sha256": "3f4da14f9faba506f79a1117f7df16e9cfc4be422b036eacc60956460d0cc8fc",
+      "provenance": "Stage 05 source after edits"
+    },
+    {
+      "path": "frontend/apps/storefront/src/content-blocks.tsx",
+      "sha256": "dd751aa38cefb8f75cd94e8c81d18487fbac8ac27bed86a4bc1498a65c1977e2",
+      "provenance": "Stage 05 source after edits"
+    },
+    {
+      "path": "frontend/apps/storefront/src/public/image.tsx",
+      "sha256": "040d0b1c0109a1919a8f8a6cf8aa7ace531c2c4de838599351b625f221ca0e05",
+      "provenance": "Stage 05 source after edits"
+    },
+    {
+      "path": "frontend/apps/storefront/src/public/page.tsx",
+      "sha256": "c47089132f80aa3fa65600f9be950ffbd107acf726dd7bc3e31bbb57f0573d76",
+      "provenance": "Stage 05 source after edits"
+    },
+    {
+      "path": "frontend/apps/storefront/src/public/public.css",
+      "sha256": "f87c07a836182b20580120e80ae9cc2ab598500fa5742625628586bf485b0286",
+      "provenance": "Stage 05 source after edits"
+    },
+    {
+      "path": "frontend/apps/storefront/src/public/types.ts",
+      "sha256": "0030350e73ef86685d210d5051f0ec2c6c97c050f02f82dc377fa78475c1d521",
+      "provenance": "Stage 05 source after edits"
+    },
+    {
+      "path": "frontend/apps/storefront/src/theme-sections.tsx",
+      "sha256": "067783e5b5ed7ec7c88a003915b3dd06b82c960ad6eb0c36d662610d432b43c9",
+      "provenance": "Stage 05 source after edits"
+    },
+    {
+      "path": "frontend/packages/api-client/src/schema.d.ts",
+      "sha256": "03b0e42a759ccc7689e18791bb945aabe99db73280683af99bfb0f9e60b6e90b",
+      "provenance": "Stage 05 index-only generated contract; concurrent worktree changes retained"
+    }
+  ],
+  "scope": "merchant platform; existing untracked application baseline is not fully represented by this commit"
+}

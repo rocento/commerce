@@ -1,0 +1,9 @@
+   Compiling api-gateway v0.1.0 (/Users/momar/Documents/commerce-ai/backend/crates/api-gateway)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 10.24s
+     Running tests/publication_rendering.rs (backend/target/debug/deps/publication_rendering-6d47f1b25fd40fa2)
+
+running 2 tests
+test structured_variants_are_visible_independently_canonical_and_parent_scoped ... ok
+test structured_data_matches_public_facts_across_industries_and_pricing ... ok
+
+test result: ok. 2 passed; 0 failed; 0 ignored; 0 measured; 5 filtered out; finished in 1.37s

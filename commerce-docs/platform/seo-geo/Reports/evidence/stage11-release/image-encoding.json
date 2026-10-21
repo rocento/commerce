@@ -1,0 +1,18 @@
+[
+  {
+    "alpha_preserved": true,
+    "height": 320,
+    "lossless_bytes": 203014,
+    "opaque_mean_absolute_color_error": 9.384629360465116,
+    "quality82_bytes": 11492,
+    "width": 480
+  },
+  {
+    "alpha_preserved": true,
+    "height": 640,
+    "lossless_bytes": 847164,
+    "opaque_mean_absolute_color_error": 11.710790828544061,
+    "quality82_bytes": 89742,
+    "width": 960
+  }
+]

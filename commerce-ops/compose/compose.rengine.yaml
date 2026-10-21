@@ -1,0 +1,68 @@
+name: rocento-rengine
+services:
+  rengine:
+    image: rocento-rengine:release
+    build: ../../commerce-web/apps/rengine
+    restart: unless-stopped
+    ports: ["127.0.0.1:3190:3190"]
+    env_file: /opt/rocento/deploy/rengine-private/operator.env
+    volumes:
+      - /opt/rocento/deploy/rengine-private/data:/data
+      - /opt/rocento/deploy/rengine-private/key:/run/secrets/rengine-key:ro
+    environment:
+      RENGINE_VAULT_FILE: /data/connections.enc
+      RENGINE_VAULT_KEY_FILE: /run/secrets/rengine-key
+      RENGINE_ORIGIN: https://rengine.rocento.com
+      RENGINE_GROCERY_GATEWAY: http://rocento-grocery-api-gateway-1:8080
+      RENGINE_GROCERY_LANGUAGE: http://rocento-grocery-commerce-language-engine-1:3000
+      RENGINE_GROCERY_ASSISTANT: http://rocento-grocery-ai-service-1:8000
+      RENGINE_JEWELRY_GATEWAY: http://rocento-jewelry-api-gateway-1:8080
+      RENGINE_JEWELRY_LANGUAGE: http://rocento-jewelry-commerce-language-engine-1:3000
+      RENGINE_JEWELRY_ASSISTANT: http://rocento-jewelry-ai-service-1:8000
+      RENGINE_ELECTRONICS_GATEWAY: http://rocento-electronics-api-gateway-1:8080
+      RENGINE_ELECTRONICS_LANGUAGE: http://rocento-electronics-commerce-language-engine-1:3000
+      RENGINE_ELECTRONICS_ASSISTANT: http://rocento-electronics-ai-service-1:8000
+      RENGINE_PHARMACY_GATEWAY: http://rocento-pharmacy-api-gateway-1:8080
+      RENGINE_PHARMACY_LANGUAGE: http://rocento-pharmacy-commerce-language-engine-1:3000
+      RENGINE_PHARMACY_ASSISTANT: http://rocento-pharmacy-ai-service-1:8000
+    networks: [edge, grocery, jewelry, electronics, pharmacy, grocery-commerce, jewelry-commerce, electronics-commerce, pharmacy-commerce]
+    read_only: true
+    tmpfs: [/tmp:size=8m]
+    cap_drop: [ALL]
+    security_opt: [no-new-privileges:true]
+    mem_limit: 192m
+    cpus: 0.5
+    pids_limit: 64
+    stop_grace_period: 60s
+    healthcheck:
+      test: ["CMD", "node", "-e", "fetch('http://127.0.0.1:3190/health').then(r=>process.exit(r.ok?0:1)).catch(()=>process.exit(1))"]
+      interval: 15s
+      timeout: 3s
+      retries: 4
+      start_period: 10s
+networks:
+  edge: {}
+  grocery:
+    external: true
+    name: rocento-grocery_assistant-private
+  jewelry:
+    external: true
+    name: rocento-jewelry_assistant-private
+  electronics:
+    external: true
+    name: rocento-electronics_assistant-private
+  pharmacy:
+    external: true
+    name: rocento-pharmacy_assistant-private
+  grocery-commerce:
+    external: true
+    name: rocento-grocery_default
+  jewelry-commerce:
+    external: true
+    name: rocento-jewelry_default
+  electronics-commerce:
+    external: true
+    name: rocento-electronics_default
+  pharmacy-commerce:
+    external: true
+    name: rocento-pharmacy_default

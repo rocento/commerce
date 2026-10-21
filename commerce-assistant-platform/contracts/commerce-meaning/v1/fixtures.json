@@ -1,0 +1,5560 @@
+[
+  {
+    "id": "AssessedStep:valid",
+    "contract": "AssessedStep",
+    "valid": true,
+    "value": {
+      "schema_version": "1.0",
+      "id": "apply",
+      "action": "cart_apply",
+      "policy": {
+        "schema_version": "1.0",
+        "policy": "commerce/default",
+        "version": "1.0.0",
+        "outcome": "require_authentication",
+        "reason": "authentication_missing",
+        "facts": [
+          {
+            "schema_version": "1.0",
+            "name": "scope_matches",
+            "value": true
+          },
+          {
+            "schema_version": "1.0",
+            "name": "available",
+            "value": true
+          },
+          {
+            "schema_version": "1.0",
+            "name": "authorized",
+            "value": true
+          },
+          {
+            "schema_version": "1.0",
+            "name": "evidence_verified",
+            "value": true
+          },
+          {
+            "schema_version": "1.0",
+            "name": "fresh_until",
+            "value": 200
+          },
+          {
+            "schema_version": "1.0",
+            "name": "restricted",
+            "value": false
+          },
+          {
+            "schema_version": "1.0",
+            "name": "age_location_category_allowed",
+            "value": true
+          },
+          {
+            "schema_version": "1.0",
+            "name": "consent",
+            "value": false
+          },
+          {
+            "schema_version": "1.0",
+            "name": "ranking_allowed",
+            "value": true
+          },
+          {
+            "schema_version": "1.0",
+            "name": "citations_verified",
+            "value": true
+          },
+          {
+            "schema_version": "1.0",
+            "name": "explicit_intent",
+            "value": false
+          },
+          {
+            "schema_version": "1.0",
+            "name": "confirmation_until",
+            "value": 0
+          },
+          {
+            "schema_version": "1.0",
+            "name": "authentication_until",
+            "value": 0
+          },
+          {
+            "schema_version": "1.0",
+            "name": "step_up_until",
+            "value": 0
+          }
+        ],
+        "actor": {
+          "schema_version": "1.0",
+          "tenant_id": "00000000-0000-0000-0000-000000000001",
+          "store_id": "00000000-0000-0000-0000-000000000001",
+          "actor_id": null,
+          "principal_id": null,
+          "session_id": "00000000-0000-0000-0000-000000000001",
+          "request_id": "00000000-0000-0000-0000-000000000001",
+          "channel": "storefront",
+          "scopes": []
+        },
+        "action": "cart_apply",
+        "risk": "R2",
+        "confirmation": "explicit_intent",
+        "expires_at": 160,
+        "audit_ref": "00000000-0000-0000-0000-000000000001/cart_apply/authentication_missing"
+      }
+    }
+  },
+  {
+    "id": "AssessedStep:unknown_field",
+    "contract": "AssessedStep",
+    "valid": false,
+    "value": {
+      "schema_version": "1.0",
+      "id": "apply",
+      "action": "cart_apply",
+      "policy": {
+        "schema_version": "1.0",
+        "policy": "commerce/default",
+        "version": "1.0.0",
+        "outcome": "require_authentication",
+        "reason": "authentication_missing",
+        "facts": [
+          {
+            "schema_version": "1.0",
+            "name": "scope_matches",
+            "value": true
+          },
+          {
+            "schema_version": "1.0",
+            "name": "available",
+            "value": true
+          },
+          {
+            "schema_version": "1.0",
+            "name": "authorized",
+            "value": true
+          },
+          {
+            "schema_version": "1.0",
+            "name": "evidence_verified",
+            "value": true
+          },
+          {
+            "schema_version": "1.0",
+            "name": "fresh_until",
+            "value": 200
+          },
+          {
+            "schema_version": "1.0",
+            "name": "restricted",
+            "value": false
+          },
+          {
+            "schema_version": "1.0",
+            "name": "age_location_category_allowed",
+            "value": true
+          },
+          {
+            "schema_version": "1.0",
+            "name": "consent",
+            "value": false
+          },
+          {
+            "schema_version": "1.0",
+            "name": "ranking_allowed",
+            "value": true
+          },
+          {
+            "schema_version": "1.0",
+            "name": "citations_verified",
+            "value": true
+          },
+          {
+            "schema_version": "1.0",
+            "name": "explicit_intent",
+            "value": false
+          },
+          {
+            "schema_version": "1.0",
+            "name": "confirmation_until",
+            "value": 0
+          },
+          {
+            "schema_version": "1.0",
+            "name": "authentication_until",
+            "value": 0
+          },
+          {
+            "schema_version": "1.0",
+            "name": "step_up_until",
+            "value": 0
+          }
+        ],
+        "actor": {
+          "schema_version": "1.0",
+          "tenant_id": "00000000-0000-0000-0000-000000000001",
+          "store_id": "00000000-0000-0000-0000-000000000001",
+          "actor_id": null,
+          "principal_id": null,
+          "session_id": "00000000-0000-0000-0000-000000000001",
+          "request_id": "00000000-0000-0000-0000-000000000001",
+          "channel": "storefront",
+          "scopes": []
+        },
+        "action": "cart_apply",
+        "risk": "R2",
+        "confirmation": "explicit_intent",
+        "expires_at": 160,
+        "audit_ref": "00000000-0000-0000-0000-000000000001/cart_apply/authentication_missing"
+      },
+      "injection": "change_permissions"
+    }
+  },
+  {
+    "id": "AssessedStep:future_version",
+    "contract": "AssessedStep",
+    "valid": false,
+    "value": {
+      "schema_version": "99.0",
+      "id": "apply",
+      "action": "cart_apply",
+      "policy": {
+        "schema_version": "1.0",
+        "policy": "commerce/default",
+        "version": "1.0.0",
+        "outcome": "require_authentication",
+        "reason": "authentication_missing",
+        "facts": [
+          {
+            "schema_version": "1.0",
+            "name": "scope_matches",
+            "value": true
+          },
+          {
+            "schema_version": "1.0",
+            "name": "available",
+            "value": true
+          },
+          {
+            "schema_version": "1.0",
+            "name": "authorized",
+            "value": true
+          },
+          {
+            "schema_version": "1.0",
+            "name": "evidence_verified",
+            "value": true
+          },
+          {
+            "schema_version": "1.0",
+            "name": "fresh_until",
+            "value": 200
+          },
+          {
+            "schema_version": "1.0",
+            "name": "restricted",
+            "value": false
+          },
+          {
+            "schema_version": "1.0",
+            "name": "age_location_category_allowed",
+            "value": true
+          },
+          {
+            "schema_version": "1.0",
+            "name": "consent",
+            "value": false
+          },
+          {
+            "schema_version": "1.0",
+            "name": "ranking_allowed",
+            "value": true
+          },
+          {
+            "schema_version": "1.0",
+            "name": "citations_verified",
+            "value": true
+          },
+          {
+            "schema_version": "1.0",
+            "name": "explicit_intent",
+            "value": false
+          },
+          {
+            "schema_version": "1.0",
+            "name": "confirmation_until",
+            "value": 0
+          },
+          {
+            "schema_version": "1.0",
+            "name": "authentication_until",
+            "value": 0
+          },
+          {
+            "schema_version": "1.0",
+            "name": "step_up_until",
+            "value": 0
+          }
+        ],
+        "actor": {
+          "schema_version": "1.0",
+          "tenant_id": "00000000-0000-0000-0000-000000000001",
+          "store_id": "00000000-0000-0000-0000-000000000001",
+          "actor_id": null,
+          "principal_id": null,
+          "session_id": "00000000-0000-0000-0000-000000000001",
+          "request_id": "00000000-0000-0000-0000-000000000001",
+          "channel": "storefront",
+          "scopes": []
+        },
+        "action": "cart_apply",
+        "risk": "R2",
+        "confirmation": "explicit_intent",
+        "expires_at": 160,
+        "audit_ref": "00000000-0000-0000-0000-000000000001/cart_apply/authentication_missing"
+      }
+    }
+  },
+  {
+    "id": "AssessedStep:missing_id",
+    "contract": "AssessedStep",
+    "valid": false,
+    "value": {
+      "schema_version": "1.0",
+      "action": "cart_apply",
+      "policy": {
+        "schema_version": "1.0",
+        "policy": "commerce/default",
+        "version": "1.0.0",
+        "outcome": "require_authentication",
+        "reason": "authentication_missing",
+        "facts": [
+          {
+            "schema_version": "1.0",
+            "name": "scope_matches",
+            "value": true
+          },
+          {
+            "schema_version": "1.0",
+            "name": "available",
+            "value": true
+          },
+          {
+            "schema_version": "1.0",
+            "name": "authorized",
+            "value": true
+          },
+          {
+            "schema_version": "1.0",
+            "name": "evidence_verified",
+            "value": true
+          },
+          {
+            "schema_version": "1.0",
+            "name": "fresh_until",
+            "value": 200
+          },
+          {
+            "schema_version": "1.0",
+            "name": "restricted",
+            "value": false
+          },
+          {
+            "schema_version": "1.0",
+            "name": "age_location_category_allowed",
+            "value": true
+          },
+          {
+            "schema_version": "1.0",
+            "name": "consent",
+            "value": false
+          },
+          {
+            "schema_version": "1.0",
+            "name": "ranking_allowed",
+            "value": true
+          },
+          {
+            "schema_version": "1.0",
+            "name": "citations_verified",
+            "value": true
+          },
+          {
+            "schema_version": "1.0",
+            "name": "explicit_intent",
+            "value": false
+          },
+          {
+            "schema_version": "1.0",
+            "name": "confirmation_until",
+            "value": 0
+          },
+          {
+            "schema_version": "1.0",
+            "name": "authentication_until",
+            "value": 0
+          },
+          {
+            "schema_version": "1.0",
+            "name": "step_up_until",
+            "value": 0
+          }
+        ],
+        "actor": {
+          "schema_version": "1.0",
+          "tenant_id": "00000000-0000-0000-0000-000000000001",
+          "store_id": "00000000-0000-0000-0000-000000000001",
+          "actor_id": null,
+          "principal_id": null,
+          "session_id": "00000000-0000-0000-0000-000000000001",
+          "request_id": "00000000-0000-0000-0000-000000000001",
+          "channel": "storefront",
+          "scopes": []
+        },
+        "action": "cart_apply",
+        "risk": "R2",
+        "confirmation": "explicit_intent",
+        "expires_at": 160,
+        "audit_ref": "00000000-0000-0000-0000-000000000001/cart_apply/authentication_missing"
+      }
+    }
+  },
+  {
+    "id": "AssessedStep:missing_action",
+    "contract": "AssessedStep",
+    "valid": false,
+    "value": {
+      "schema_version": "1.0",
+      "id": "apply",
+      "policy": {
+        "schema_version": "1.0",
+        "policy": "commerce/default",
+        "version": "1.0.0",
+        "outcome": "require_authentication",
+        "reason": "authentication_missing",
+        "facts": [
+          {
+            "schema_version": "1.0",
+            "name": "scope_matches",
+            "value": true
+          },
+          {
+            "schema_version": "1.0",
+            "name": "available",
+            "value": true
+          },
+          {
+            "schema_version": "1.0",
+            "name": "authorized",
+            "value": true
+          },
+          {
+            "schema_version": "1.0",
+            "name": "evidence_verified",
+            "value": true
+          },
+          {
+            "schema_version": "1.0",
+            "name": "fresh_until",
+            "value": 200
+          },
+          {
+            "schema_version": "1.0",
+            "name": "restricted",
+            "value": false
+          },
+          {
+            "schema_version": "1.0",
+            "name": "age_location_category_allowed",
+            "value": true
+          },
+          {
+            "schema_version": "1.0",
+            "name": "consent",
+            "value": false
+          },
+          {
+            "schema_version": "1.0",
+            "name": "ranking_allowed",
+            "value": true
+          },
+          {
+            "schema_version": "1.0",
+            "name": "citations_verified",
+            "value": true
+          },
+          {
+            "schema_version": "1.0",
+            "name": "explicit_intent",
+            "value": false
+          },
+          {
+            "schema_version": "1.0",
+            "name": "confirmation_until",
+            "value": 0
+          },
+          {
+            "schema_version": "1.0",
+            "name": "authentication_until",
+            "value": 0
+          },
+          {
+            "schema_version": "1.0",
+            "name": "step_up_until",
+            "value": 0
+          }
+        ],
+        "actor": {
+          "schema_version": "1.0",
+          "tenant_id": "00000000-0000-0000-0000-000000000001",
+          "store_id": "00000000-0000-0000-0000-000000000001",
+          "actor_id": null,
+          "principal_id": null,
+          "session_id": "00000000-0000-0000-0000-000000000001",
+          "request_id": "00000000-0000-0000-0000-000000000001",
+          "channel": "storefront",
+          "scopes": []
+        },
+        "action": "cart_apply",
+        "risk": "R2",
+        "confirmation": "explicit_intent",
+        "expires_at": 160,
+        "audit_ref": "00000000-0000-0000-0000-000000000001/cart_apply/authentication_missing"
+      }
+    }
+  },
+  {
+    "id": "AssessedStep:missing_policy",
+    "contract": "AssessedStep",
+    "valid": false,
+    "value": {
+      "schema_version": "1.0",
+      "id": "apply",
+      "action": "cart_apply"
+    }
+  },
+  {
+    "id": "AssessedStep:type_id",
+    "contract": "AssessedStep",
+    "valid": false,
+    "value": {
+      "schema_version": "1.0",
+      "id": {},
+      "action": "cart_apply",
+      "policy": {
+        "schema_version": "1.0",
+        "policy": "commerce/default",
+        "version": "1.0.0",
+        "outcome": "require_authentication",
+        "reason": "authentication_missing",
+        "facts": [
+          {
+            "schema_version": "1.0",
+            "name": "scope_matches",
+            "value": true
+          },
+          {
+            "schema_version": "1.0",
+            "name": "available",
+            "value": true
+          },
+          {
+            "schema_version": "1.0",
+            "name": "authorized",
+            "value": true
+          },
+          {
+            "schema_version": "1.0",
+            "name": "evidence_verified",
+            "value": true
+          },
+          {
+            "schema_version": "1.0",
+            "name": "fresh_until",
+            "value": 200
+          },
+          {
+            "schema_version": "1.0",
+            "name": "restricted",
+            "value": false
+          },
+          {
+            "schema_version": "1.0",
+            "name": "age_location_category_allowed",
+            "value": true
+          },
+          {
+            "schema_version": "1.0",
+            "name": "consent",
+            "value": false
+          },
+          {
+            "schema_version": "1.0",
+            "name": "ranking_allowed",
+            "value": true
+          },
+          {
+            "schema_version": "1.0",
+            "name": "citations_verified",
+            "value": true
+          },
+          {
+            "schema_version": "1.0",
+            "name": "explicit_intent",
+            "value": false
+          },
+          {
+            "schema_version": "1.0",
+            "name": "confirmation_until",
+            "value": 0
+          },
+          {
+            "schema_version": "1.0",
+            "name": "authentication_until",
+            "value": 0
+          },
+          {
+            "schema_version": "1.0",
+            "name": "step_up_until",
+            "value": 0
+          }
+        ],
+        "actor": {
+          "schema_version": "1.0",
+          "tenant_id": "00000000-0000-0000-0000-000000000001",
+          "store_id": "00000000-0000-0000-0000-000000000001",
+          "actor_id": null,
+          "principal_id": null,
+          "session_id": "00000000-0000-0000-0000-000000000001",
+          "request_id": "00000000-0000-0000-0000-000000000001",
+          "channel": "storefront",
+          "scopes": []
+        },
+        "action": "cart_apply",
+        "risk": "R2",
+        "confirmation": "explicit_intent",
+        "expires_at": 160,
+        "audit_ref": "00000000-0000-0000-0000-000000000001/cart_apply/authentication_missing"
+      }
+    }
+  },
+  {
+    "id": "AssessedStep:type_action",
+    "contract": "AssessedStep",
+    "valid": false,
+    "value": {
+      "schema_version": "1.0",
+      "id": "apply",
+      "action": {},
+      "policy": {
+        "schema_version": "1.0",
+        "policy": "commerce/default",
+        "version": "1.0.0",
+        "outcome": "require_authentication",
+        "reason": "authentication_missing",
+        "facts": [
+          {
+            "schema_version": "1.0",
+            "name": "scope_matches",
+            "value": true
+          },
+          {
+            "schema_version": "1.0",
+            "name": "available",
+            "value": true
+          },
+          {
+            "schema_version": "1.0",
+            "name": "authorized",
+            "value": true
+          },
+          {
+            "schema_version": "1.0",
+            "name": "evidence_verified",
+            "value": true
+          },
+          {
+            "schema_version": "1.0",
+            "name": "fresh_until",
+            "value": 200
+          },
+          {
+            "schema_version": "1.0",
+            "name": "restricted",
+            "value": false
+          },
+          {
+            "schema_version": "1.0",
+            "name": "age_location_category_allowed",
+            "value": true
+          },
+          {
+            "schema_version": "1.0",
+            "name": "consent",
+            "value": false
+          },
+          {
+            "schema_version": "1.0",
+            "name": "ranking_allowed",
+            "value": true
+          },
+          {
+            "schema_version": "1.0",
+            "name": "citations_verified",
+            "value": true
+          },
+          {
+            "schema_version": "1.0",
+            "name": "explicit_intent",
+            "value": false
+          },
+          {
+            "schema_version": "1.0",
+            "name": "confirmation_until",
+            "value": 0
+          },
+          {
+            "schema_version": "1.0",
+            "name": "authentication_until",
+            "value": 0
+          },
+          {
+            "schema_version": "1.0",
+            "name": "step_up_until",
+            "value": 0
+          }
+        ],
+        "actor": {
+          "schema_version": "1.0",
+          "tenant_id": "00000000-0000-0000-0000-000000000001",
+          "store_id": "00000000-0000-0000-0000-000000000001",
+          "actor_id": null,
+          "principal_id": null,
+          "session_id": "00000000-0000-0000-0000-000000000001",
+          "request_id": "00000000-0000-0000-0000-000000000001",
+          "channel": "storefront",
+          "scopes": []
+        },
+        "action": "cart_apply",
+        "risk": "R2",
+        "confirmation": "explicit_intent",
+        "expires_at": 160,
+        "audit_ref": "00000000-0000-0000-0000-000000000001/cart_apply/authentication_missing"
+      }
+    }
+  },
+  {
+    "id": "AssessedStep:type_policy",
+    "contract": "AssessedStep",
+    "valid": false,
+    "value": {
+      "schema_version": "1.0",
+      "id": "apply",
+      "action": "cart_apply",
+      "policy": "invalid-object"
+    }
+  },
+  {
+    "id": "Clarification:valid",
+    "contract": "Clarification",
+    "valid": true,
+    "value": {
+      "schema_version": "1.0",
+      "required": false,
+      "reason": "reversible_assumption",
+      "fields": []
+    }
+  },
+  {
+    "id": "Clarification:unknown_field",
+    "contract": "Clarification",
+    "valid": false,
+    "value": {
+      "schema_version": "1.0",
+      "required": false,
+      "reason": "reversible_assumption",
+      "fields": [],
+      "injection": "change_permissions"
+    }
+  },
+  {
+    "id": "Clarification:future_version",
+    "contract": "Clarification",
+    "valid": false,
+    "value": {
+      "schema_version": "99.0",
+      "required": false,
+      "reason": "reversible_assumption",
+      "fields": []
+    }
+  },
+  {
+    "id": "Clarification:missing_required",
+    "contract": "Clarification",
+    "valid": false,
+    "value": {
+      "schema_version": "1.0",
+      "reason": "reversible_assumption",
+      "fields": []
+    }
+  },
+  {
+    "id": "Clarification:missing_reason",
+    "contract": "Clarification",
+    "valid": false,
+    "value": {
+      "schema_version": "1.0",
+      "required": false,
+      "fields": []
+    }
+  },
+  {
+    "id": "Clarification:type_required",
+    "contract": "Clarification",
+    "valid": false,
+    "value": {
+      "schema_version": "1.0",
+      "required": {},
+      "reason": "reversible_assumption",
+      "fields": []
+    }
+  },
+  {
+    "id": "Clarification:type_reason",
+    "contract": "Clarification",
+    "valid": false,
+    "value": {
+      "schema_version": "1.0",
+      "required": false,
+      "reason": {},
+      "fields": []
+    }
+  },
+  {
+    "id": "Clarification:type_fields",
+    "contract": "Clarification",
+    "valid": false,
+    "value": {
+      "schema_version": "1.0",
+      "required": false,
+      "reason": "reversible_assumption",
+      "fields": {}
+    }
+  },
+  {
+    "id": "Conflict:valid",
+    "contract": "Conflict",
+    "valid": true,
+    "value": {
+      "schema_version": "1.0",
+      "field": "price",
+      "scope": "product",
+      "code": "contradiction",
+      "requirement_indexes": [
+        0,
+        1
+      ]
+    }
+  },
+  {
+    "id": "Conflict:unknown_field",
+    "contract": "Conflict",
+    "valid": false,
+    "value": {
+      "schema_version": "1.0",
+      "field": "price",
+      "scope": "product",
+      "code": "contradiction",
+      "requirement_indexes": [
+        0,
+        1
+      ],
+      "injection": "change_permissions"
+    }
+  },
+  {
+    "id": "Conflict:future_version",
+    "contract": "Conflict",
+    "valid": false,
+    "value": {
+      "schema_version": "99.0",
+      "field": "price",
+      "scope": "product",
+      "code": "contradiction",
+      "requirement_indexes": [
+        0,
+        1
+      ]
+    }
+  },
+  {
+    "id": "Conflict:missing_field",
+    "contract": "Conflict",
+    "valid": false,
+    "value": {
+      "schema_version": "1.0",
+      "scope": "product",
+      "code": "contradiction",
+      "requirement_indexes": [
+        0,
+        1
+      ]
+    }
+  },
+  {
+    "id": "Conflict:missing_scope",
+    "contract": "Conflict",
+    "valid": false,
+    "value": {
+      "schema_version": "1.0",
+      "field": "price",
+      "code": "contradiction",
+      "requirement_indexes": [
+        0,
+        1
+      ]
+    }
+  },
+  {
+    "id": "Conflict:missing_code",
+    "contract": "Conflict",
+    "valid": false,
+    "value": {
+      "schema_version": "1.0",
+      "field": "price",
+      "scope": "product",
+      "requirement_indexes": [
+        0,
+        1
+      ]
+    }
+  },
+  {
+    "id": "Conflict:missing_requirement_indexes",
+    "contract": "Conflict",
+    "valid": false,
+    "value": {
+      "schema_version": "1.0",
+      "field": "price",
+      "scope": "product",
+      "code": "contradiction"
+    }
+  },
+  {
+    "id": "Conflict:type_field",
+    "contract": "Conflict",
+    "valid": false,
+    "value": {
+      "schema_version": "1.0",
+      "field": {},
+      "scope": "product",
+      "code": "contradiction",
+      "requirement_indexes": [
+        0,
+        1
+      ]
+    }
+  },
+  {
+    "id": "Conflict:type_scope",
+    "contract": "Conflict",
+    "valid": false,
+    "value": {
+      "schema_version": "1.0",
+      "field": "price",
+      "scope": {},
+      "code": "contradiction",
+      "requirement_indexes": [
+        0,
+        1
+      ]
+    }
+  },
+  {
+    "id": "Conflict:type_code",
+    "contract": "Conflict",
+    "valid": false,
+    "value": {
+      "schema_version": "1.0",
+      "field": "price",
+      "scope": "product",
+      "code": {},
+      "requirement_indexes": [
+        0,
+        1
+      ]
+    }
+  },
+  {
+    "id": "Conflict:type_requirement_indexes",
+    "contract": "Conflict",
+    "valid": false,
+    "value": {
+      "schema_version": "1.0",
+      "field": "price",
+      "scope": "product",
+      "code": "contradiction",
+      "requirement_indexes": {}
+    }
+  },
+  {
+    "id": "ConstraintFrame:valid",
+    "contract": "ConstraintFrame",
+    "valid": true,
+    "value": {
+      "schema_version": "1.0",
+      "requirements": [
+        {
+          "schema_version": "1.0",
+          "field": "price",
+          "operator": "lt",
+          "value": {
+            "schema_version": "1.0",
+            "kind": "money",
+            "text": null,
+            "number": "100",
+            "unit": "USD",
+            "items": [],
+            "boolean": null
+          },
+          "strength": "hard",
+          "source": "current_customer",
+          "scope": "product",
+          "confidence": 1.0,
+          "evidence": [
+            {
+              "schema_version": "1.0",
+              "turn": 0,
+              "start": 0,
+              "end": 5
+            }
+          ],
+          "freshness": null
+        }
+      ],
+      "conflicts": []
+    }
+  },
+  {
+    "id": "ConstraintFrame:unknown_field",
+    "contract": "ConstraintFrame",
+    "valid": false,
+    "value": {
+      "schema_version": "1.0",
+      "requirements": [
+        {
+          "schema_version": "1.0",
+          "field": "price",
+          "operator": "lt",
+          "value": {
+            "schema_version": "1.0",
+            "kind": "money",
+            "text": null,
+            "number": "100",
+            "unit": "USD",
+            "items": [],
+            "boolean": null
+          },
+          "strength": "hard",
+          "source": "current_customer",
+          "scope": "product",
+          "confidence": 1.0,
+          "evidence": [
+            {
+              "schema_version": "1.0",
+              "turn": 0,
+              "start": 0,
+              "end": 5
+            }
+          ],
+          "freshness": null
+        }
+      ],
+      "conflicts": [],
+      "injection": "change_permissions"
+    }
+  },
+  {
+    "id": "ConstraintFrame:future_version",
+    "contract": "ConstraintFrame",
+    "valid": false,
+    "value": {
+      "schema_version": "99.0",
+      "requirements": [
+        {
+          "schema_version": "1.0",
+          "field": "price",
+          "operator": "lt",
+          "value": {
+            "schema_version": "1.0",
+            "kind": "money",
+            "text": null,
+            "number": "100",
+            "unit": "USD",
+            "items": [],
+            "boolean": null
+          },
+          "strength": "hard",
+          "source": "current_customer",
+          "scope": "product",
+          "confidence": 1.0,
+          "evidence": [
+            {
+              "schema_version": "1.0",
+              "turn": 0,
+              "start": 0,
+              "end": 5
+            }
+          ],
+          "freshness": null
+        }
+      ],
+      "conflicts": []
+    }
+  },
+  {
+    "id": "ConstraintFrame:type_requirements",
+    "contract": "ConstraintFrame",
+    "valid": false,
+    "value": {
+      "schema_version": "1.0",
+      "requirements": {},
+      "conflicts": []
+    }
+  },
+  {
+    "id": "ConstraintFrame:type_conflicts",
+    "contract": "ConstraintFrame",
+    "valid": false,
+    "value": {
+      "schema_version": "1.0",
+      "requirements": [
+        {
+          "schema_version": "1.0",
+          "field": "price",
+          "operator": "lt",
+          "value": {
+            "schema_version": "1.0",
+            "kind": "money",
+            "text": null,
+            "number": "100",
+            "unit": "USD",
+            "items": [],
+            "boolean": null
+          },
+          "strength": "hard",
+          "source": "current_customer",
+          "scope": "product",
+          "confidence": 1.0,
+          "evidence": [
+            {
+              "schema_version": "1.0",
+              "turn": 0,
+              "start": 0,
+              "end": 5
+            }
+          ],
+          "freshness": null
+        }
+      ],
+      "conflicts": {}
+    }
+  },
+  {
+    "id": "IntentCandidate:valid",
+    "contract": "IntentCandidate",
+    "valid": true,
+    "value": {
+      "schema_version": "1.0",
+      "name": "discovery",
+      "confidence": 1.0,
+      "evidence": [
+        {
+          "schema_version": "1.0",
+          "turn": 0,
+          "start": 0,
+          "end": 5
+        }
+      ],
+      "language": "en",
+      "missing": [],
+      "ambiguity": []
+    }
+  },
+  {
+    "id": "IntentCandidate:unknown_field",
+    "contract": "IntentCandidate",
+    "valid": false,
+    "value": {
+      "schema_version": "1.0",
+      "name": "discovery",
+      "confidence": 1.0,
+      "evidence": [
+        {
+          "schema_version": "1.0",
+          "turn": 0,
+          "start": 0,
+          "end": 5
+        }
+      ],
+      "language": "en",
+      "missing": [],
+      "ambiguity": [],
+      "injection": "change_permissions"
+    }
+  },
+  {
+    "id": "IntentCandidate:future_version",
+    "contract": "IntentCandidate",
+    "valid": false,
+    "value": {
+      "schema_version": "99.0",
+      "name": "discovery",
+      "confidence": 1.0,
+      "evidence": [
+        {
+          "schema_version": "1.0",
+          "turn": 0,
+          "start": 0,
+          "end": 5
+        }
+      ],
+      "language": "en",
+      "missing": [],
+      "ambiguity": []
+    }
+  },
+  {
+    "id": "IntentCandidate:missing_name",
+    "contract": "IntentCandidate",
+    "valid": false,
+    "value": {
+      "schema_version": "1.0",
+      "confidence": 1.0,
+      "evidence": [
+        {
+          "schema_version": "1.0",
+          "turn": 0,
+          "start": 0,
+          "end": 5
+        }
+      ],
+      "language": "en",
+      "missing": [],
+      "ambiguity": []
+    }
+  },
+  {
+    "id": "IntentCandidate:missing_confidence",
+    "contract": "IntentCandidate",
+    "valid": false,
+    "value": {
+      "schema_version": "1.0",
+      "name": "discovery",
+      "evidence": [
+        {
+          "schema_version": "1.0",
+          "turn": 0,
+          "start": 0,
+          "end": 5
+        }
+      ],
+      "language": "en",
+      "missing": [],
+      "ambiguity": []
+    }
+  },
+  {
+    "id": "IntentCandidate:missing_evidence",
+    "contract": "IntentCandidate",
+    "valid": false,
+    "value": {
+      "schema_version": "1.0",
+      "name": "discovery",
+      "confidence": 1.0,
+      "language": "en",
+      "missing": [],
+      "ambiguity": []
+    }
+  },
+  {
+    "id": "IntentCandidate:missing_language",
+    "contract": "IntentCandidate",
+    "valid": false,
+    "value": {
+      "schema_version": "1.0",
+      "name": "discovery",
+      "confidence": 1.0,
+      "evidence": [
+        {
+          "schema_version": "1.0",
+          "turn": 0,
+          "start": 0,
+          "end": 5
+        }
+      ],
+      "missing": [],
+      "ambiguity": []
+    }
+  },
+  {
+    "id": "IntentCandidate:type_name",
+    "contract": "IntentCandidate",
+    "valid": false,
+    "value": {
+      "schema_version": "1.0",
+      "name": {},
+      "confidence": 1.0,
+      "evidence": [
+        {
+          "schema_version": "1.0",
+          "turn": 0,
+          "start": 0,
+          "end": 5
+        }
+      ],
+      "language": "en",
+      "missing": [],
+      "ambiguity": []
+    }
+  },
+  {
+    "id": "IntentCandidate:type_confidence",
+    "contract": "IntentCandidate",
+    "valid": false,
+    "value": {
+      "schema_version": "1.0",
+      "name": "discovery",
+      "confidence": {},
+      "evidence": [
+        {
+          "schema_version": "1.0",
+          "turn": 0,
+          "start": 0,
+          "end": 5
+        }
+      ],
+      "language": "en",
+      "missing": [],
+      "ambiguity": []
+    }
+  },
+  {
+    "id": "IntentCandidate:type_evidence",
+    "contract": "IntentCandidate",
+    "valid": false,
+    "value": {
+      "schema_version": "1.0",
+      "name": "discovery",
+      "confidence": 1.0,
+      "evidence": {},
+      "language": "en",
+      "missing": [],
+      "ambiguity": []
+    }
+  },
+  {
+    "id": "IntentCandidate:type_language",
+    "contract": "IntentCandidate",
+    "valid": false,
+    "value": {
+      "schema_version": "1.0",
+      "name": "discovery",
+      "confidence": 1.0,
+      "evidence": [
+        {
+          "schema_version": "1.0",
+          "turn": 0,
+          "start": 0,
+          "end": 5
+        }
+      ],
+      "language": {},
+      "missing": [],
+      "ambiguity": []
+    }
+  },
+  {
+    "id": "IntentCandidate:type_missing",
+    "contract": "IntentCandidate",
+    "valid": false,
+    "value": {
+      "schema_version": "1.0",
+      "name": "discovery",
+      "confidence": 1.0,
+      "evidence": [
+        {
+          "schema_version": "1.0",
+          "turn": 0,
+          "start": 0,
+          "end": 5
+        }
+      ],
+      "language": "en",
+      "missing": {},
+      "ambiguity": []
+    }
+  },
+  {
+    "id": "IntentCandidate:type_ambiguity",
+    "contract": "IntentCandidate",
+    "valid": false,
+    "value": {
+      "schema_version": "1.0",
+      "name": "discovery",
+      "confidence": 1.0,
+      "evidence": [
+        {
+          "schema_version": "1.0",
+          "turn": 0,
+          "start": 0,
+          "end": 5
+        }
+      ],
+      "language": "en",
+      "missing": [],
+      "ambiguity": {}
+    }
+  },
+  {
+    "id": "IntentFrame:valid",
+    "contract": "IntentFrame",
+    "valid": true,
+    "value": {
+      "schema_version": "1.0",
+      "candidates": [
+        {
+          "schema_version": "1.0",
+          "name": "discovery",
+          "confidence": 1.0,
+          "evidence": [
+            {
+              "schema_version": "1.0",
+              "turn": 0,
+              "start": 0,
+              "end": 5
+            }
+          ],
+          "language": "en",
+          "missing": [],
+          "ambiguity": []
+        }
+      ],
+      "route": null,
+      "compound": false
+    }
+  },
+  {
+    "id": "IntentFrame:unknown_field",
+    "contract": "IntentFrame",
+    "valid": false,
+    "value": {
+      "schema_version": "1.0",
+      "candidates": [
+        {
+          "schema_version": "1.0",
+          "name": "discovery",
+          "confidence": 1.0,
+          "evidence": [
+            {
+              "schema_version": "1.0",
+              "turn": 0,
+              "start": 0,
+              "end": 5
+            }
+          ],
+          "language": "en",
+          "missing": [],
+          "ambiguity": []
+        }
+      ],
+      "route": null,
+      "compound": false,
+      "injection": "change_permissions"
+    }
+  },
+  {
+    "id": "IntentFrame:future_version",
+    "contract": "IntentFrame",
+    "valid": false,
+    "value": {
+      "schema_version": "99.0",
+      "candidates": [
+        {
+          "schema_version": "1.0",
+          "name": "discovery",
+          "confidence": 1.0,
+          "evidence": [
+            {
+              "schema_version": "1.0",
+              "turn": 0,
+              "start": 0,
+              "end": 5
+            }
+          ],
+          "language": "en",
+          "missing": [],
+          "ambiguity": []
+        }
+      ],
+      "route": null,
+      "compound": false
+    }
+  },
+  {
+    "id": "IntentFrame:missing_candidates",
+    "contract": "IntentFrame",
+    "valid": false,
+    "value": {
+      "schema_version": "1.0",
+      "route": null,
+      "compound": false
+    }
+  },
+  {
+    "id": "IntentFrame:type_candidates",
+    "contract": "IntentFrame",
+    "valid": false,
+    "value": {
+      "schema_version": "1.0",
+      "candidates": {},
+      "route": null,
+      "compound": false
+    }
+  },
+  {
+    "id": "IntentFrame:type_compound",
+    "contract": "IntentFrame",
+    "valid": false,
+    "value": {
+      "schema_version": "1.0",
+      "candidates": [
+        {
+          "schema_version": "1.0",
+          "name": "discovery",
+          "confidence": 1.0,
+          "evidence": [
+            {
+              "schema_version": "1.0",
+              "turn": 0,
+              "start": 0,
+              "end": 5
+            }
+          ],
+          "language": "en",
+          "missing": [],
+          "ambiguity": []
+        }
+      ],
+      "route": null,
+      "compound": {}
+    }
+  },
+  {
+    "id": "PolicyDecision:valid",
+    "contract": "PolicyDecision",
+    "valid": true,
+    "value": {
+      "schema_version": "1.0",
+      "policy": "commerce/default",
+      "version": "1.0.0",
+      "outcome": "require_authentication",
+      "reason": "authentication_missing",
+      "facts": [
+        {
+          "schema_version": "1.0",
+          "name": "scope_matches",
+          "value": true
+        },
+        {
+          "schema_version": "1.0",
+          "name": "available",
+          "value": true
+        },
+        {
+          "schema_version": "1.0",
+          "name": "authorized",
+          "value": true
+        },
+        {
+          "schema_version": "1.0",
+          "name": "evidence_verified",
+          "value": true
+        },
+        {
+          "schema_version": "1.0",
+          "name": "fresh_until",
+          "value": 200
+        },
+        {
+          "schema_version": "1.0",
+          "name": "restricted",
+          "value": false
+        },
+        {
+          "schema_version": "1.0",
+          "name": "age_location_category_allowed",
+          "value": true
+        },
+        {
+          "schema_version": "1.0",
+          "name": "consent",
+          "value": false
+        },
+        {
+          "schema_version": "1.0",
+          "name": "ranking_allowed",
+          "value": true
+        },
+        {
+          "schema_version": "1.0",
+          "name": "citations_verified",
+          "value": true
+        },
+        {
+          "schema_version": "1.0",
+          "name": "explicit_intent",
+          "value": false
+        },
+        {
+          "schema_version": "1.0",
+          "name": "confirmation_until",
+          "value": 0
+        },
+        {
+          "schema_version": "1.0",
+          "name": "authentication_until",
+          "value": 0
+        },
+        {
+          "schema_version": "1.0",
+          "name": "step_up_until",
+          "value": 0
+        }
+      ],
+      "actor": {
+        "schema_version": "1.0",
+        "tenant_id": "00000000-0000-0000-0000-000000000001",
+        "store_id": "00000000-0000-0000-0000-000000000001",
+        "actor_id": null,
+        "principal_id": null,
+        "session_id": "00000000-0000-0000-0000-000000000001",
+        "request_id": "00000000-0000-0000-0000-000000000001",
+        "channel": "storefront",
+        "scopes": []
+      },
+      "action": "cart_apply",
+      "risk": "R2",
+      "confirmation": "explicit_intent",
+      "expires_at": 160,
+      "audit_ref": "00000000-0000-0000-0000-000000000001/cart_apply/authentication_missing"
+    }
+  },
+  {
+    "id": "PolicyDecision:unknown_field",
+    "contract": "PolicyDecision",
+    "valid": false,
+    "value": {
+      "schema_version": "1.0",
+      "policy": "commerce/default",
+      "version": "1.0.0",
+      "outcome": "require_authentication",
+      "reason": "authentication_missing",
+      "facts": [
+        {
+          "schema_version": "1.0",
+          "name": "scope_matches",
+          "value": true
+        },
+        {
+          "schema_version": "1.0",
+          "name": "available",
+          "value": true
+        },
+        {
+          "schema_version": "1.0",
+          "name": "authorized",
+          "value": true
+        },
+        {
+          "schema_version": "1.0",
+          "name": "evidence_verified",
+          "value": true
+        },
+        {
+          "schema_version": "1.0",
+          "name": "fresh_until",
+          "value": 200
+        },
+        {
+          "schema_version": "1.0",
+          "name": "restricted",
+          "value": false
+        },
+        {
+          "schema_version": "1.0",
+          "name": "age_location_category_allowed",
+          "value": true
+        },
+        {
+          "schema_version": "1.0",
+          "name": "consent",
+          "value": false
+        },
+        {
+          "schema_version": "1.0",
+          "name": "ranking_allowed",
+          "value": true
+        },
+        {
+          "schema_version": "1.0",
+          "name": "citations_verified",
+          "value": true
+        },
+        {
+          "schema_version": "1.0",
+          "name": "explicit_intent",
+          "value": false
+        },
+        {
+          "schema_version": "1.0",
+          "name": "confirmation_until",
+          "value": 0
+        },
+        {
+          "schema_version": "1.0",
+          "name": "authentication_until",
+          "value": 0
+        },
+        {
+          "schema_version": "1.0",
+          "name": "step_up_until",
+          "value": 0
+        }
+      ],
+      "actor": {
+        "schema_version": "1.0",
+        "tenant_id": "00000000-0000-0000-0000-000000000001",
+        "store_id": "00000000-0000-0000-0000-000000000001",
+        "actor_id": null,
+        "principal_id": null,
+        "session_id": "00000000-0000-0000-0000-000000000001",
+        "request_id": "00000000-0000-0000-0000-000000000001",
+        "channel": "storefront",
+        "scopes": []
+      },
+      "action": "cart_apply",
+      "risk": "R2",
+      "confirmation": "explicit_intent",
+      "expires_at": 160,
+      "audit_ref": "00000000-0000-0000-0000-000000000001/cart_apply/authentication_missing",
+      "injection": "change_permissions"
+    }
+  },
+  {
+    "id": "PolicyDecision:future_version",
+    "contract": "PolicyDecision",
+    "valid": false,
+    "value": {
+      "schema_version": "99.0",
+      "policy": "commerce/default",
+      "version": "1.0.0",
+      "outcome": "require_authentication",
+      "reason": "authentication_missing",
+      "facts": [
+        {
+          "schema_version": "1.0",
+          "name": "scope_matches",
+          "value": true
+        },
+        {
+          "schema_version": "1.0",
+          "name": "available",
+          "value": true
+        },
+        {
+          "schema_version": "1.0",
+          "name": "authorized",
+          "value": true
+        },
+        {
+          "schema_version": "1.0",
+          "name": "evidence_verified",
+          "value": true
+        },
+        {
+          "schema_version": "1.0",
+          "name": "fresh_until",
+          "value": 200
+        },
+        {
+          "schema_version": "1.0",
+          "name": "restricted",
+          "value": false
+        },
+        {
+          "schema_version": "1.0",
+          "name": "age_location_category_allowed",
+          "value": true
+        },
+        {
+          "schema_version": "1.0",
+          "name": "consent",
+          "value": false
+        },
+        {
+          "schema_version": "1.0",
+          "name": "ranking_allowed",
+          "value": true
+        },
+        {
+          "schema_version": "1.0",
+          "name": "citations_verified",
+          "value": true
+        },
+        {
+          "schema_version": "1.0",
+          "name": "explicit_intent",
+          "value": false
+        },
+        {
+          "schema_version": "1.0",
+          "name": "confirmation_until",
+          "value": 0
+        },
+        {
+          "schema_version": "1.0",
+          "name": "authentication_until",
+          "value": 0
+        },
+        {
+          "schema_version": "1.0",
+          "name": "step_up_until",
+          "value": 0
+        }
+      ],
+      "actor": {
+        "schema_version": "1.0",
+        "tenant_id": "00000000-0000-0000-0000-000000000001",
+        "store_id": "00000000-0000-0000-0000-000000000001",
+        "actor_id": null,
+        "principal_id": null,
+        "session_id": "00000000-0000-0000-0000-000000000001",
+        "request_id": "00000000-0000-0000-0000-000000000001",
+        "channel": "storefront",
+        "scopes": []
+      },
+      "action": "cart_apply",
+      "risk": "R2",
+      "confirmation": "explicit_intent",
+      "expires_at": 160,
+      "audit_ref": "00000000-0000-0000-0000-000000000001/cart_apply/authentication_missing"
+    }
+  },
+  {
+    "id": "PolicyDecision:missing_outcome",
+    "contract": "PolicyDecision",
+    "valid": false,
+    "value": {
+      "schema_version": "1.0",
+      "policy": "commerce/default",
+      "version": "1.0.0",
+      "reason": "authentication_missing",
+      "facts": [
+        {
+          "schema_version": "1.0",
+          "name": "scope_matches",
+          "value": true
+        },
+        {
+          "schema_version": "1.0",
+          "name": "available",
+          "value": true
+        },
+        {
+          "schema_version": "1.0",
+          "name": "authorized",
+          "value": true
+        },
+        {
+          "schema_version": "1.0",
+          "name": "evidence_verified",
+          "value": true
+        },
+        {
+          "schema_version": "1.0",
+          "name": "fresh_until",
+          "value": 200
+        },
+        {
+          "schema_version": "1.0",
+          "name": "restricted",
+          "value": false
+        },
+        {
+          "schema_version": "1.0",
+          "name": "age_location_category_allowed",
+          "value": true
+        },
+        {
+          "schema_version": "1.0",
+          "name": "consent",
+          "value": false
+        },
+        {
+          "schema_version": "1.0",
+          "name": "ranking_allowed",
+          "value": true
+        },
+        {
+          "schema_version": "1.0",
+          "name": "citations_verified",
+          "value": true
+        },
+        {
+          "schema_version": "1.0",
+          "name": "explicit_intent",
+          "value": false
+        },
+        {
+          "schema_version": "1.0",
+          "name": "confirmation_until",
+          "value": 0
+        },
+        {
+          "schema_version": "1.0",
+          "name": "authentication_until",
+          "value": 0
+        },
+        {
+          "schema_version": "1.0",
+          "name": "step_up_until",
+          "value": 0
+        }
+      ],
+      "actor": {
+        "schema_version": "1.0",
+        "tenant_id": "00000000-0000-0000-0000-000000000001",
+        "store_id": "00000000-0000-0000-0000-000000000001",
+        "actor_id": null,
+        "principal_id": null,
+        "session_id": "00000000-0000-0000-0000-000000000001",
+        "request_id": "00000000-0000-0000-0000-000000000001",
+        "channel": "storefront",
+        "scopes": []
+      },
+      "action": "cart_apply",
+      "risk": "R2",
+      "confirmation": "explicit_intent",
+      "expires_at": 160,
+      "audit_ref": "00000000-0000-0000-0000-000000000001/cart_apply/authentication_missing"
+    }
+  },
+  {
+    "id": "PolicyDecision:missing_reason",
+    "contract": "PolicyDecision",
+    "valid": false,
+    "value": {
+      "schema_version": "1.0",
+      "policy": "commerce/default",
+      "version": "1.0.0",
+      "outcome": "require_authentication",
+      "facts": [
+        {
+          "schema_version": "1.0",
+          "name": "scope_matches",
+          "value": true
+        },
+        {
+          "schema_version": "1.0",
+          "name": "available",
+          "value": true
+        },
+        {
+          "schema_version": "1.0",
+          "name": "authorized",
+          "value": true
+        },
+        {
+          "schema_version": "1.0",
+          "name": "evidence_verified",
+          "value": true
+        },
+        {
+          "schema_version": "1.0",
+          "name": "fresh_until",
+          "value": 200
+        },
+        {
+          "schema_version": "1.0",
+          "name": "restricted",
+          "value": false
+        },
+        {
+          "schema_version": "1.0",
+          "name": "age_location_category_allowed",
+          "value": true
+        },
+        {
+          "schema_version": "1.0",
+          "name": "consent",
+          "value": false
+        },
+        {
+          "schema_version": "1.0",
+          "name": "ranking_allowed",
+          "value": true
+        },
+        {
+          "schema_version": "1.0",
+          "name": "citations_verified",
+          "value": true
+        },
+        {
+          "schema_version": "1.0",
+          "name": "explicit_intent",
+          "value": false
+        },
+        {
+          "schema_version": "1.0",
+          "name": "confirmation_until",
+          "value": 0
+        },
+        {
+          "schema_version": "1.0",
+          "name": "authentication_until",
+          "value": 0
+        },
+        {
+          "schema_version": "1.0",
+          "name": "step_up_until",
+          "value": 0
+        }
+      ],
+      "actor": {
+        "schema_version": "1.0",
+        "tenant_id": "00000000-0000-0000-0000-000000000001",
+        "store_id": "00000000-0000-0000-0000-000000000001",
+        "actor_id": null,
+        "principal_id": null,
+        "session_id": "00000000-0000-0000-0000-000000000001",
+        "request_id": "00000000-0000-0000-0000-000000000001",
+        "channel": "storefront",
+        "scopes": []
+      },
+      "action": "cart_apply",
+      "risk": "R2",
+      "confirmation": "explicit_intent",
+      "expires_at": 160,
+      "audit_ref": "00000000-0000-0000-0000-000000000001/cart_apply/authentication_missing"
+    }
+  },
+  {
+    "id": "PolicyDecision:missing_facts",
+    "contract": "PolicyDecision",
+    "valid": false,
+    "value": {
+      "schema_version": "1.0",
+      "policy": "commerce/default",
+      "version": "1.0.0",
+      "outcome": "require_authentication",
+      "reason": "authentication_missing",
+      "actor": {
+        "schema_version": "1.0",
+        "tenant_id": "00000000-0000-0000-0000-000000000001",
+        "store_id": "00000000-0000-0000-0000-000000000001",
+        "actor_id": null,
+        "principal_id": null,
+        "session_id": "00000000-0000-0000-0000-000000000001",
+        "request_id": "00000000-0000-0000-0000-000000000001",
+        "channel": "storefront",
+        "scopes": []
+      },
+      "action": "cart_apply",
+      "risk": "R2",
+      "confirmation": "explicit_intent",
+      "expires_at": 160,
+      "audit_ref": "00000000-0000-0000-0000-000000000001/cart_apply/authentication_missing"
+    }
+  },
+  {
+    "id": "PolicyDecision:missing_actor",
+    "contract": "PolicyDecision",
+    "valid": false,
+    "value": {
+      "schema_version": "1.0",
+      "policy": "commerce/default",
+      "version": "1.0.0",
+      "outcome": "require_authentication",
+      "reason": "authentication_missing",
+      "facts": [
+        {
+          "schema_version": "1.0",
+          "name": "scope_matches",
+          "value": true
+        },
+        {
+          "schema_version": "1.0",
+          "name": "available",
+          "value": true
+        },
+        {
+          "schema_version": "1.0",
+          "name": "authorized",
+          "value": true
+        },
+        {
+          "schema_version": "1.0",
+          "name": "evidence_verified",
+          "value": true
+        },
+        {
+          "schema_version": "1.0",
+          "name": "fresh_until",
+          "value": 200
+        },
+        {
+          "schema_version": "1.0",
+          "name": "restricted",
+          "value": false
+        },
+        {
+          "schema_version": "1.0",
+          "name": "age_location_category_allowed",
+          "value": true
+        },
+        {
+          "schema_version": "1.0",
+          "name": "consent",
+          "value": false
+        },
+        {
+          "schema_version": "1.0",
+          "name": "ranking_allowed",
+          "value": true
+        },
+        {
+          "schema_version": "1.0",
+          "name": "citations_verified",
+          "value": true
+        },
+        {
+          "schema_version": "1.0",
+          "name": "explicit_intent",
+          "value": false
+        },
+        {
+          "schema_version": "1.0",
+          "name": "confirmation_until",
+          "value": 0
+        },
+        {
+          "schema_version": "1.0",
+          "name": "authentication_until",
+          "value": 0
+        },
+        {
+          "schema_version": "1.0",
+          "name": "step_up_until",
+          "value": 0
+        }
+      ],
+      "action": "cart_apply",
+      "risk": "R2",
+      "confirmation": "explicit_intent",
+      "expires_at": 160,
+      "audit_ref": "00000000-0000-0000-0000-000000000001/cart_apply/authentication_missing"
+    }
+  },
+  {
+    "id": "PolicyDecision:missing_action",
+    "contract": "PolicyDecision",
+    "valid": false,
+    "value": {
+      "schema_version": "1.0",
+      "policy": "commerce/default",
+      "version": "1.0.0",
+      "outcome": "require_authentication",
+      "reason": "authentication_missing",
+      "facts": [
+        {
+          "schema_version": "1.0",
+          "name": "scope_matches",
+          "value": true
+        },
+        {
+          "schema_version": "1.0",
+          "name": "available",
+          "value": true
+        },
+        {
+          "schema_version": "1.0",
+          "name": "authorized",
+          "value": true
+        },
+        {
+          "schema_version": "1.0",
+          "name": "evidence_verified",
+          "value": true
+        },
+        {
+          "schema_version": "1.0",
+          "name": "fresh_until",
+          "value": 200
+        },
+        {
+          "schema_version": "1.0",
+          "name": "restricted",
+          "value": false
+        },
+        {
+          "schema_version": "1.0",
+          "name": "age_location_category_allowed",
+          "value": true
+        },
+        {
+          "schema_version": "1.0",
+          "name": "consent",
+          "value": false
+        },
+        {
+          "schema_version": "1.0",
+          "name": "ranking_allowed",
+          "value": true
+        },
+        {
+          "schema_version": "1.0",
+          "name": "citations_verified",
+          "value": true
+        },
+        {
+          "schema_version": "1.0",
+          "name": "explicit_intent",
+          "value": false
+        },
+        {
+          "schema_version": "1.0",
+          "name": "confirmation_until",
+          "value": 0
+        },
+        {
+          "schema_version": "1.0",
+          "name": "authentication_until",
+          "value": 0
+        },
+        {
+          "schema_version": "1.0",
+          "name": "step_up_until",
+          "value": 0
+        }
+      ],
+      "actor": {
+        "schema_version": "1.0",
+        "tenant_id": "00000000-0000-0000-0000-000000000001",
+        "store_id": "00000000-0000-0000-0000-000000000001",
+        "actor_id": null,
+        "principal_id": null,
+        "session_id": "00000000-0000-0000-0000-000000000001",
+        "request_id": "00000000-0000-0000-0000-000000000001",
+        "channel": "storefront",
+        "scopes": []
+      },
+      "risk": "R2",
+      "confirmation": "explicit_intent",
+      "expires_at": 160,
+      "audit_ref": "00000000-0000-0000-0000-000000000001/cart_apply/authentication_missing"
+    }
+  },
+  {
+    "id": "PolicyDecision:missing_risk",
+    "contract": "PolicyDecision",
+    "valid": false,
+    "value": {
+      "schema_version": "1.0",
+      "policy": "commerce/default",
+      "version": "1.0.0",
+      "outcome": "require_authentication",
+      "reason": "authentication_missing",
+      "facts": [
+        {
+          "schema_version": "1.0",
+          "name": "scope_matches",
+          "value": true
+        },
+        {
+          "schema_version": "1.0",
+          "name": "available",
+          "value": true
+        },
+        {
+          "schema_version": "1.0",
+          "name": "authorized",
+          "value": true
+        },
+        {
+          "schema_version": "1.0",
+          "name": "evidence_verified",
+          "value": true
+        },
+        {
+          "schema_version": "1.0",
+          "name": "fresh_until",
+          "value": 200
+        },
+        {
+          "schema_version": "1.0",
+          "name": "restricted",
+          "value": false
+        },
+        {
+          "schema_version": "1.0",
+          "name": "age_location_category_allowed",
+          "value": true
+        },
+        {
+          "schema_version": "1.0",
+          "name": "consent",
+          "value": false
+        },
+        {
+          "schema_version": "1.0",
+          "name": "ranking_allowed",
+          "value": true
+        },
+        {
+          "schema_version": "1.0",
+          "name": "citations_verified",
+          "value": true
+        },
+        {
+          "schema_version": "1.0",
+          "name": "explicit_intent",
+          "value": false
+        },
+        {
+          "schema_version": "1.0",
+          "name": "confirmation_until",
+          "value": 0
+        },
+        {
+          "schema_version": "1.0",
+          "name": "authentication_until",
+          "value": 0
+        },
+        {
+          "schema_version": "1.0",
+          "name": "step_up_until",
+          "value": 0
+        }
+      ],
+      "actor": {
+        "schema_version": "1.0",
+        "tenant_id": "00000000-0000-0000-0000-000000000001",
+        "store_id": "00000000-0000-0000-0000-000000000001",
+        "actor_id": null,
+        "principal_id": null,
+        "session_id": "00000000-0000-0000-0000-000000000001",
+        "request_id": "00000000-0000-0000-0000-000000000001",
+        "channel": "storefront",
+        "scopes": []
+      },
+      "action": "cart_apply",
+      "confirmation": "explicit_intent",
+      "expires_at": 160,
+      "audit_ref": "00000000-0000-0000-0000-000000000001/cart_apply/authentication_missing"
+    }
+  },
+  {
+    "id": "PolicyDecision:missing_confirmation",
+    "contract": "PolicyDecision",
+    "valid": false,
+    "value": {
+      "schema_version": "1.0",
+      "policy": "commerce/default",
+      "version": "1.0.0",
+      "outcome": "require_authentication",
+      "reason": "authentication_missing",
+      "facts": [
+        {
+          "schema_version": "1.0",
+          "name": "scope_matches",
+          "value": true
+        },
+        {
+          "schema_version": "1.0",
+          "name": "available",
+          "value": true
+        },
+        {
+          "schema_version": "1.0",
+          "name": "authorized",
+          "value": true
+        },
+        {
+          "schema_version": "1.0",
+          "name": "evidence_verified",
+          "value": true
+        },
+        {
+          "schema_version": "1.0",
+          "name": "fresh_until",
+          "value": 200
+        },
+        {
+          "schema_version": "1.0",
+          "name": "restricted",
+          "value": false
+        },
+        {
+          "schema_version": "1.0",
+          "name": "age_location_category_allowed",
+          "value": true
+        },
+        {
+          "schema_version": "1.0",
+          "name": "consent",
+          "value": false
+        },
+        {
+          "schema_version": "1.0",
+          "name": "ranking_allowed",
+          "value": true
+        },
+        {
+          "schema_version": "1.0",
+          "name": "citations_verified",
+          "value": true
+        },
+        {
+          "schema_version": "1.0",
+          "name": "explicit_intent",
+          "value": false
+        },
+        {
+          "schema_version": "1.0",
+          "name": "confirmation_until",
+          "value": 0
+        },
+        {
+          "schema_version": "1.0",
+          "name": "authentication_until",
+          "value": 0
+        },
+        {
+          "schema_version": "1.0",
+          "name": "step_up_until",
+          "value": 0
+        }
+      ],
+      "actor": {
+        "schema_version": "1.0",
+        "tenant_id": "00000000-0000-0000-0000-000000000001",
+        "store_id": "00000000-0000-0000-0000-000000000001",
+        "actor_id": null,
+        "principal_id": null,
+        "session_id": "00000000-0000-0000-0000-000000000001",
+        "request_id": "00000000-0000-0000-0000-000000000001",
+        "channel": "storefront",
+        "scopes": []
+      },
+      "action": "cart_apply",
+      "risk": "R2",
+      "expires_at": 160,
+      "audit_ref": "00000000-0000-0000-0000-000000000001/cart_apply/authentication_missing"
+    }
+  },
+  {
+    "id": "PolicyDecision:missing_expires_at",
+    "contract": "PolicyDecision",
+    "valid": false,
+    "value": {
+      "schema_version": "1.0",
+      "policy": "commerce/default",
+      "version": "1.0.0",
+      "outcome": "require_authentication",
+      "reason": "authentication_missing",
+      "facts": [
+        {
+          "schema_version": "1.0",
+          "name": "scope_matches",
+          "value": true
+        },
+        {
+          "schema_version": "1.0",
+          "name": "available",
+          "value": true
+        },
+        {
+          "schema_version": "1.0",
+          "name": "authorized",
+          "value": true
+        },
+        {
+          "schema_version": "1.0",
+          "name": "evidence_verified",
+          "value": true
+        },
+        {
+          "schema_version": "1.0",
+          "name": "fresh_until",
+          "value": 200
+        },
+        {
+          "schema_version": "1.0",
+          "name": "restricted",
+          "value": false
+        },
+        {
+          "schema_version": "1.0",
+          "name": "age_location_category_allowed",
+          "value": true
+        },
+        {
+          "schema_version": "1.0",
+          "name": "consent",
+          "value": false
+        },
+        {
+          "schema_version": "1.0",
+          "name": "ranking_allowed",
+          "value": true
+        },
+        {
+          "schema_version": "1.0",
+          "name": "citations_verified",
+          "value": true
+        },
+        {
+          "schema_version": "1.0",
+          "name": "explicit_intent",
+          "value": false
+        },
+        {
+          "schema_version": "1.0",
+          "name": "confirmation_until",
+          "value": 0
+        },
+        {
+          "schema_version": "1.0",
+          "name": "authentication_until",
+          "value": 0
+        },
+        {
+          "schema_version": "1.0",
+          "name": "step_up_until",
+          "value": 0
+        }
+      ],
+      "actor": {
+        "schema_version": "1.0",
+        "tenant_id": "00000000-0000-0000-0000-000000000001",
+        "store_id": "00000000-0000-0000-0000-000000000001",
+        "actor_id": null,
+        "principal_id": null,
+        "session_id": "00000000-0000-0000-0000-000000000001",
+        "request_id": "00000000-0000-0000-0000-000000000001",
+        "channel": "storefront",
+        "scopes": []
+      },
+      "action": "cart_apply",
+      "risk": "R2",
+      "confirmation": "explicit_intent",
+      "audit_ref": "00000000-0000-0000-0000-000000000001/cart_apply/authentication_missing"
+    }
+  },
+  {
+    "id": "PolicyDecision:missing_audit_ref",
+    "contract": "PolicyDecision",
+    "valid": false,
+    "value": {
+      "schema_version": "1.0",
+      "policy": "commerce/default",
+      "version": "1.0.0",
+      "outcome": "require_authentication",
+      "reason": "authentication_missing",
+      "facts": [
+        {
+          "schema_version": "1.0",
+          "name": "scope_matches",
+          "value": true
+        },
+        {
+          "schema_version": "1.0",
+          "name": "available",
+          "value": true
+        },
+        {
+          "schema_version": "1.0",
+          "name": "authorized",
+          "value": true
+        },
+        {
+          "schema_version": "1.0",
+          "name": "evidence_verified",
+          "value": true
+        },
+        {
+          "schema_version": "1.0",
+          "name": "fresh_until",
+          "value": 200
+        },
+        {
+          "schema_version": "1.0",
+          "name": "restricted",
+          "value": false
+        },
+        {
+          "schema_version": "1.0",
+          "name": "age_location_category_allowed",
+          "value": true
+        },
+        {
+          "schema_version": "1.0",
+          "name": "consent",
+          "value": false
+        },
+        {
+          "schema_version": "1.0",
+          "name": "ranking_allowed",
+          "value": true
+        },
+        {
+          "schema_version": "1.0",
+          "name": "citations_verified",
+          "value": true
+        },
+        {
+          "schema_version": "1.0",
+          "name": "explicit_intent",
+          "value": false
+        },
+        {
+          "schema_version": "1.0",
+          "name": "confirmation_until",
+          "value": 0
+        },
+        {
+          "schema_version": "1.0",
+          "name": "authentication_until",
+          "value": 0
+        },
+        {
+          "schema_version": "1.0",
+          "name": "step_up_until",
+          "value": 0
+        }
+      ],
+      "actor": {
+        "schema_version": "1.0",
+        "tenant_id": "00000000-0000-0000-0000-000000000001",
+        "store_id": "00000000-0000-0000-0000-000000000001",
+        "actor_id": null,
+        "principal_id": null,
+        "session_id": "00000000-0000-0000-0000-000000000001",
+        "request_id": "00000000-0000-0000-0000-000000000001",
+        "channel": "storefront",
+        "scopes": []
+      },
+      "action": "cart_apply",
+      "risk": "R2",
+      "confirmation": "explicit_intent",
+      "expires_at": 160
+    }
+  },
+  {
+    "id": "PolicyDecision:type_policy",
+    "contract": "PolicyDecision",
+    "valid": false,
+    "value": {
+      "schema_version": "1.0",
+      "policy": {},
+      "version": "1.0.0",
+      "outcome": "require_authentication",
+      "reason": "authentication_missing",
+      "facts": [
+        {
+          "schema_version": "1.0",
+          "name": "scope_matches",
+          "value": true
+        },
+        {
+          "schema_version": "1.0",
+          "name": "available",
+          "value": true
+        },
+        {
+          "schema_version": "1.0",
+          "name": "authorized",
+          "value": true
+        },
+        {
+          "schema_version": "1.0",
+          "name": "evidence_verified",
+          "value": true
+        },
+        {
+          "schema_version": "1.0",
+          "name": "fresh_until",
+          "value": 200
+        },
+        {
+          "schema_version": "1.0",
+          "name": "restricted",
+          "value": false
+        },
+        {
+          "schema_version": "1.0",
+          "name": "age_location_category_allowed",
+          "value": true
+        },
+        {
+          "schema_version": "1.0",
+          "name": "consent",
+          "value": false
+        },
+        {
+          "schema_version": "1.0",
+          "name": "ranking_allowed",
+          "value": true
+        },
+        {
+          "schema_version": "1.0",
+          "name": "citations_verified",
+          "value": true
+        },
+        {
+          "schema_version": "1.0",
+          "name": "explicit_intent",
+          "value": false
+        },
+        {
+          "schema_version": "1.0",
+          "name": "confirmation_until",
+          "value": 0
+        },
+        {
+          "schema_version": "1.0",
+          "name": "authentication_until",
+          "value": 0
+        },
+        {
+          "schema_version": "1.0",
+          "name": "step_up_until",
+          "value": 0
+        }
+      ],
+      "actor": {
+        "schema_version": "1.0",
+        "tenant_id": "00000000-0000-0000-0000-000000000001",
+        "store_id": "00000000-0000-0000-0000-000000000001",
+        "actor_id": null,
+        "principal_id": null,
+        "session_id": "00000000-0000-0000-0000-000000000001",
+        "request_id": "00000000-0000-0000-0000-000000000001",
+        "channel": "storefront",
+        "scopes": []
+      },
+      "action": "cart_apply",
+      "risk": "R2",
+      "confirmation": "explicit_intent",
+      "expires_at": 160,
+      "audit_ref": "00000000-0000-0000-0000-000000000001/cart_apply/authentication_missing"
+    }
+  },
+  {
+    "id": "PolicyDecision:type_version",
+    "contract": "PolicyDecision",
+    "valid": false,
+    "value": {
+      "schema_version": "1.0",
+      "policy": "commerce/default",
+      "version": {},
+      "outcome": "require_authentication",
+      "reason": "authentication_missing",
+      "facts": [
+        {
+          "schema_version": "1.0",
+          "name": "scope_matches",
+          "value": true
+        },
+        {
+          "schema_version": "1.0",
+          "name": "available",
+          "value": true
+        },
+        {
+          "schema_version": "1.0",
+          "name": "authorized",
+          "value": true
+        },
+        {
+          "schema_version": "1.0",
+          "name": "evidence_verified",
+          "value": true
+        },
+        {
+          "schema_version": "1.0",
+          "name": "fresh_until",
+          "value": 200
+        },
+        {
+          "schema_version": "1.0",
+          "name": "restricted",
+          "value": false
+        },
+        {
+          "schema_version": "1.0",
+          "name": "age_location_category_allowed",
+          "value": true
+        },
+        {
+          "schema_version": "1.0",
+          "name": "consent",
+          "value": false
+        },
+        {
+          "schema_version": "1.0",
+          "name": "ranking_allowed",
+          "value": true
+        },
+        {
+          "schema_version": "1.0",
+          "name": "citations_verified",
+          "value": true
+        },
+        {
+          "schema_version": "1.0",
+          "name": "explicit_intent",
+          "value": false
+        },
+        {
+          "schema_version": "1.0",
+          "name": "confirmation_until",
+          "value": 0
+        },
+        {
+          "schema_version": "1.0",
+          "name": "authentication_until",
+          "value": 0
+        },
+        {
+          "schema_version": "1.0",
+          "name": "step_up_until",
+          "value": 0
+        }
+      ],
+      "actor": {
+        "schema_version": "1.0",
+        "tenant_id": "00000000-0000-0000-0000-000000000001",
+        "store_id": "00000000-0000-0000-0000-000000000001",
+        "actor_id": null,
+        "principal_id": null,
+        "session_id": "00000000-0000-0000-0000-000000000001",
+        "request_id": "00000000-0000-0000-0000-000000000001",
+        "channel": "storefront",
+        "scopes": []
+      },
+      "action": "cart_apply",
+      "risk": "R2",
+      "confirmation": "explicit_intent",
+      "expires_at": 160,
+      "audit_ref": "00000000-0000-0000-0000-000000000001/cart_apply/authentication_missing"
+    }
+  },
+  {
+    "id": "PolicyDecision:type_outcome",
+    "contract": "PolicyDecision",
+    "valid": false,
+    "value": {
+      "schema_version": "1.0",
+      "policy": "commerce/default",
+      "version": "1.0.0",
+      "outcome": {},
+      "reason": "authentication_missing",
+      "facts": [
+        {
+          "schema_version": "1.0",
+          "name": "scope_matches",
+          "value": true
+        },
+        {
+          "schema_version": "1.0",
+          "name": "available",
+          "value": true
+        },
+        {
+          "schema_version": "1.0",
+          "name": "authorized",
+          "value": true
+        },
+        {
+          "schema_version": "1.0",
+          "name": "evidence_verified",
+          "value": true
+        },
+        {
+          "schema_version": "1.0",
+          "name": "fresh_until",
+          "value": 200
+        },
+        {
+          "schema_version": "1.0",
+          "name": "restricted",
+          "value": false
+        },
+        {
+          "schema_version": "1.0",
+          "name": "age_location_category_allowed",
+          "value": true
+        },
+        {
+          "schema_version": "1.0",
+          "name": "consent",
+          "value": false
+        },
+        {
+          "schema_version": "1.0",
+          "name": "ranking_allowed",
+          "value": true
+        },
+        {
+          "schema_version": "1.0",
+          "name": "citations_verified",
+          "value": true
+        },
+        {
+          "schema_version": "1.0",
+          "name": "explicit_intent",
+          "value": false
+        },
+        {
+          "schema_version": "1.0",
+          "name": "confirmation_until",
+          "value": 0
+        },
+        {
+          "schema_version": "1.0",
+          "name": "authentication_until",
+          "value": 0
+        },
+        {
+          "schema_version": "1.0",
+          "name": "step_up_until",
+          "value": 0
+        }
+      ],
+      "actor": {
+        "schema_version": "1.0",
+        "tenant_id": "00000000-0000-0000-0000-000000000001",
+        "store_id": "00000000-0000-0000-0000-000000000001",
+        "actor_id": null,
+        "principal_id": null,
+        "session_id": "00000000-0000-0000-0000-000000000001",
+        "request_id": "00000000-0000-0000-0000-000000000001",
+        "channel": "storefront",
+        "scopes": []
+      },
+      "action": "cart_apply",
+      "risk": "R2",
+      "confirmation": "explicit_intent",
+      "expires_at": 160,
+      "audit_ref": "00000000-0000-0000-0000-000000000001/cart_apply/authentication_missing"
+    }
+  },
+  {
+    "id": "PolicyDecision:type_reason",
+    "contract": "PolicyDecision",
+    "valid": false,
+    "value": {
+      "schema_version": "1.0",
+      "policy": "commerce/default",
+      "version": "1.0.0",
+      "outcome": "require_authentication",
+      "reason": {},
+      "facts": [
+        {
+          "schema_version": "1.0",
+          "name": "scope_matches",
+          "value": true
+        },
+        {
+          "schema_version": "1.0",
+          "name": "available",
+          "value": true
+        },
+        {
+          "schema_version": "1.0",
+          "name": "authorized",
+          "value": true
+        },
+        {
+          "schema_version": "1.0",
+          "name": "evidence_verified",
+          "value": true
+        },
+        {
+          "schema_version": "1.0",
+          "name": "fresh_until",
+          "value": 200
+        },
+        {
+          "schema_version": "1.0",
+          "name": "restricted",
+          "value": false
+        },
+        {
+          "schema_version": "1.0",
+          "name": "age_location_category_allowed",
+          "value": true
+        },
+        {
+          "schema_version": "1.0",
+          "name": "consent",
+          "value": false
+        },
+        {
+          "schema_version": "1.0",
+          "name": "ranking_allowed",
+          "value": true
+        },
+        {
+          "schema_version": "1.0",
+          "name": "citations_verified",
+          "value": true
+        },
+        {
+          "schema_version": "1.0",
+          "name": "explicit_intent",
+          "value": false
+        },
+        {
+          "schema_version": "1.0",
+          "name": "confirmation_until",
+          "value": 0
+        },
+        {
+          "schema_version": "1.0",
+          "name": "authentication_until",
+          "value": 0
+        },
+        {
+          "schema_version": "1.0",
+          "name": "step_up_until",
+          "value": 0
+        }
+      ],
+      "actor": {
+        "schema_version": "1.0",
+        "tenant_id": "00000000-0000-0000-0000-000000000001",
+        "store_id": "00000000-0000-0000-0000-000000000001",
+        "actor_id": null,
+        "principal_id": null,
+        "session_id": "00000000-0000-0000-0000-000000000001",
+        "request_id": "00000000-0000-0000-0000-000000000001",
+        "channel": "storefront",
+        "scopes": []
+      },
+      "action": "cart_apply",
+      "risk": "R2",
+      "confirmation": "explicit_intent",
+      "expires_at": 160,
+      "audit_ref": "00000000-0000-0000-0000-000000000001/cart_apply/authentication_missing"
+    }
+  },
+  {
+    "id": "PolicyDecision:type_facts",
+    "contract": "PolicyDecision",
+    "valid": false,
+    "value": {
+      "schema_version": "1.0",
+      "policy": "commerce/default",
+      "version": "1.0.0",
+      "outcome": "require_authentication",
+      "reason": "authentication_missing",
+      "facts": {},
+      "actor": {
+        "schema_version": "1.0",
+        "tenant_id": "00000000-0000-0000-0000-000000000001",
+        "store_id": "00000000-0000-0000-0000-000000000001",
+        "actor_id": null,
+        "principal_id": null,
+        "session_id": "00000000-0000-0000-0000-000000000001",
+        "request_id": "00000000-0000-0000-0000-000000000001",
+        "channel": "storefront",
+        "scopes": []
+      },
+      "action": "cart_apply",
+      "risk": "R2",
+      "confirmation": "explicit_intent",
+      "expires_at": 160,
+      "audit_ref": "00000000-0000-0000-0000-000000000001/cart_apply/authentication_missing"
+    }
+  },
+  {
+    "id": "PolicyDecision:type_actor",
+    "contract": "PolicyDecision",
+    "valid": false,
+    "value": {
+      "schema_version": "1.0",
+      "policy": "commerce/default",
+      "version": "1.0.0",
+      "outcome": "require_authentication",
+      "reason": "authentication_missing",
+      "facts": [
+        {
+          "schema_version": "1.0",
+          "name": "scope_matches",
+          "value": true
+        },
+        {
+          "schema_version": "1.0",
+          "name": "available",
+          "value": true
+        },
+        {
+          "schema_version": "1.0",
+          "name": "authorized",
+          "value": true
+        },
+        {
+          "schema_version": "1.0",
+          "name": "evidence_verified",
+          "value": true
+        },
+        {
+          "schema_version": "1.0",
+          "name": "fresh_until",
+          "value": 200
+        },
+        {
+          "schema_version": "1.0",
+          "name": "restricted",
+          "value": false
+        },
+        {
+          "schema_version": "1.0",
+          "name": "age_location_category_allowed",
+          "value": true
+        },
+        {
+          "schema_version": "1.0",
+          "name": "consent",
+          "value": false
+        },
+        {
+          "schema_version": "1.0",
+          "name": "ranking_allowed",
+          "value": true
+        },
+        {
+          "schema_version": "1.0",
+          "name": "citations_verified",
+          "value": true
+        },
+        {
+          "schema_version": "1.0",
+          "name": "explicit_intent",
+          "value": false
+        },
+        {
+          "schema_version": "1.0",
+          "name": "confirmation_until",
+          "value": 0
+        },
+        {
+          "schema_version": "1.0",
+          "name": "authentication_until",
+          "value": 0
+        },
+        {
+          "schema_version": "1.0",
+          "name": "step_up_until",
+          "value": 0
+        }
+      ],
+      "actor": "invalid-object",
+      "action": "cart_apply",
+      "risk": "R2",
+      "confirmation": "explicit_intent",
+      "expires_at": 160,
+      "audit_ref": "00000000-0000-0000-0000-000000000001/cart_apply/authentication_missing"
+    }
+  },
+  {
+    "id": "PolicyDecision:type_action",
+    "contract": "PolicyDecision",
+    "valid": false,
+    "value": {
+      "schema_version": "1.0",
+      "policy": "commerce/default",
+      "version": "1.0.0",
+      "outcome": "require_authentication",
+      "reason": "authentication_missing",
+      "facts": [
+        {
+          "schema_version": "1.0",
+          "name": "scope_matches",
+          "value": true
+        },
+        {
+          "schema_version": "1.0",
+          "name": "available",
+          "value": true
+        },
+        {
+          "schema_version": "1.0",
+          "name": "authorized",
+          "value": true
+        },
+        {
+          "schema_version": "1.0",
+          "name": "evidence_verified",
+          "value": true
+        },
+        {
+          "schema_version": "1.0",
+          "name": "fresh_until",
+          "value": 200
+        },
+        {
+          "schema_version": "1.0",
+          "name": "restricted",
+          "value": false
+        },
+        {
+          "schema_version": "1.0",
+          "name": "age_location_category_allowed",
+          "value": true
+        },
+        {
+          "schema_version": "1.0",
+          "name": "consent",
+          "value": false
+        },
+        {
+          "schema_version": "1.0",
+          "name": "ranking_allowed",
+          "value": true
+        },
+        {
+          "schema_version": "1.0",
+          "name": "citations_verified",
+          "value": true
+        },
+        {
+          "schema_version": "1.0",
+          "name": "explicit_intent",
+          "value": false
+        },
+        {
+          "schema_version": "1.0",
+          "name": "confirmation_until",
+          "value": 0
+        },
+        {
+          "schema_version": "1.0",
+          "name": "authentication_until",
+          "value": 0
+        },
+        {
+          "schema_version": "1.0",
+          "name": "step_up_until",
+          "value": 0
+        }
+      ],
+      "actor": {
+        "schema_version": "1.0",
+        "tenant_id": "00000000-0000-0000-0000-000000000001",
+        "store_id": "00000000-0000-0000-0000-000000000001",
+        "actor_id": null,
+        "principal_id": null,
+        "session_id": "00000000-0000-0000-0000-000000000001",
+        "request_id": "00000000-0000-0000-0000-000000000001",
+        "channel": "storefront",
+        "scopes": []
+      },
+      "action": {},
+      "risk": "R2",
+      "confirmation": "explicit_intent",
+      "expires_at": 160,
+      "audit_ref": "00000000-0000-0000-0000-000000000001/cart_apply/authentication_missing"
+    }
+  },
+  {
+    "id": "PolicyDecision:type_risk",
+    "contract": "PolicyDecision",
+    "valid": false,
+    "value": {
+      "schema_version": "1.0",
+      "policy": "commerce/default",
+      "version": "1.0.0",
+      "outcome": "require_authentication",
+      "reason": "authentication_missing",
+      "facts": [
+        {
+          "schema_version": "1.0",
+          "name": "scope_matches",
+          "value": true
+        },
+        {
+          "schema_version": "1.0",
+          "name": "available",
+          "value": true
+        },
+        {
+          "schema_version": "1.0",
+          "name": "authorized",
+          "value": true
+        },
+        {
+          "schema_version": "1.0",
+          "name": "evidence_verified",
+          "value": true
+        },
+        {
+          "schema_version": "1.0",
+          "name": "fresh_until",
+          "value": 200
+        },
+        {
+          "schema_version": "1.0",
+          "name": "restricted",
+          "value": false
+        },
+        {
+          "schema_version": "1.0",
+          "name": "age_location_category_allowed",
+          "value": true
+        },
+        {
+          "schema_version": "1.0",
+          "name": "consent",
+          "value": false
+        },
+        {
+          "schema_version": "1.0",
+          "name": "ranking_allowed",
+          "value": true
+        },
+        {
+          "schema_version": "1.0",
+          "name": "citations_verified",
+          "value": true
+        },
+        {
+          "schema_version": "1.0",
+          "name": "explicit_intent",
+          "value": false
+        },
+        {
+          "schema_version": "1.0",
+          "name": "confirmation_until",
+          "value": 0
+        },
+        {
+          "schema_version": "1.0",
+          "name": "authentication_until",
+          "value": 0
+        },
+        {
+          "schema_version": "1.0",
+          "name": "step_up_until",
+          "value": 0
+        }
+      ],
+      "actor": {
+        "schema_version": "1.0",
+        "tenant_id": "00000000-0000-0000-0000-000000000001",
+        "store_id": "00000000-0000-0000-0000-000000000001",
+        "actor_id": null,
+        "principal_id": null,
+        "session_id": "00000000-0000-0000-0000-000000000001",
+        "request_id": "00000000-0000-0000-0000-000000000001",
+        "channel": "storefront",
+        "scopes": []
+      },
+      "action": "cart_apply",
+      "risk": {},
+      "confirmation": "explicit_intent",
+      "expires_at": 160,
+      "audit_ref": "00000000-0000-0000-0000-000000000001/cart_apply/authentication_missing"
+    }
+  },
+  {
+    "id": "PolicyDecision:type_confirmation",
+    "contract": "PolicyDecision",
+    "valid": false,
+    "value": {
+      "schema_version": "1.0",
+      "policy": "commerce/default",
+      "version": "1.0.0",
+      "outcome": "require_authentication",
+      "reason": "authentication_missing",
+      "facts": [
+        {
+          "schema_version": "1.0",
+          "name": "scope_matches",
+          "value": true
+        },
+        {
+          "schema_version": "1.0",
+          "name": "available",
+          "value": true
+        },
+        {
+          "schema_version": "1.0",
+          "name": "authorized",
+          "value": true
+        },
+        {
+          "schema_version": "1.0",
+          "name": "evidence_verified",
+          "value": true
+        },
+        {
+          "schema_version": "1.0",
+          "name": "fresh_until",
+          "value": 200
+        },
+        {
+          "schema_version": "1.0",
+          "name": "restricted",
+          "value": false
+        },
+        {
+          "schema_version": "1.0",
+          "name": "age_location_category_allowed",
+          "value": true
+        },
+        {
+          "schema_version": "1.0",
+          "name": "consent",
+          "value": false
+        },
+        {
+          "schema_version": "1.0",
+          "name": "ranking_allowed",
+          "value": true
+        },
+        {
+          "schema_version": "1.0",
+          "name": "citations_verified",
+          "value": true
+        },
+        {
+          "schema_version": "1.0",
+          "name": "explicit_intent",
+          "value": false
+        },
+        {
+          "schema_version": "1.0",
+          "name": "confirmation_until",
+          "value": 0
+        },
+        {
+          "schema_version": "1.0",
+          "name": "authentication_until",
+          "value": 0
+        },
+        {
+          "schema_version": "1.0",
+          "name": "step_up_until",
+          "value": 0
+        }
+      ],
+      "actor": {
+        "schema_version": "1.0",
+        "tenant_id": "00000000-0000-0000-0000-000000000001",
+        "store_id": "00000000-0000-0000-0000-000000000001",
+        "actor_id": null,
+        "principal_id": null,
+        "session_id": "00000000-0000-0000-0000-000000000001",
+        "request_id": "00000000-0000-0000-0000-000000000001",
+        "channel": "storefront",
+        "scopes": []
+      },
+      "action": "cart_apply",
+      "risk": "R2",
+      "confirmation": {},
+      "expires_at": 160,
+      "audit_ref": "00000000-0000-0000-0000-000000000001/cart_apply/authentication_missing"
+    }
+  },
+  {
+    "id": "PolicyDecision:type_expires_at",
+    "contract": "PolicyDecision",
+    "valid": false,
+    "value": {
+      "schema_version": "1.0",
+      "policy": "commerce/default",
+      "version": "1.0.0",
+      "outcome": "require_authentication",
+      "reason": "authentication_missing",
+      "facts": [
+        {
+          "schema_version": "1.0",
+          "name": "scope_matches",
+          "value": true
+        },
+        {
+          "schema_version": "1.0",
+          "name": "available",
+          "value": true
+        },
+        {
+          "schema_version": "1.0",
+          "name": "authorized",
+          "value": true
+        },
+        {
+          "schema_version": "1.0",
+          "name": "evidence_verified",
+          "value": true
+        },
+        {
+          "schema_version": "1.0",
+          "name": "fresh_until",
+          "value": 200
+        },
+        {
+          "schema_version": "1.0",
+          "name": "restricted",
+          "value": false
+        },
+        {
+          "schema_version": "1.0",
+          "name": "age_location_category_allowed",
+          "value": true
+        },
+        {
+          "schema_version": "1.0",
+          "name": "consent",
+          "value": false
+        },
+        {
+          "schema_version": "1.0",
+          "name": "ranking_allowed",
+          "value": true
+        },
+        {
+          "schema_version": "1.0",
+          "name": "citations_verified",
+          "value": true
+        },
+        {
+          "schema_version": "1.0",
+          "name": "explicit_intent",
+          "value": false
+        },
+        {
+          "schema_version": "1.0",
+          "name": "confirmation_until",
+          "value": 0
+        },
+        {
+          "schema_version": "1.0",
+          "name": "authentication_until",
+          "value": 0
+        },
+        {
+          "schema_version": "1.0",
+          "name": "step_up_until",
+          "value": 0
+        }
+      ],
+      "actor": {
+        "schema_version": "1.0",
+        "tenant_id": "00000000-0000-0000-0000-000000000001",
+        "store_id": "00000000-0000-0000-0000-000000000001",
+        "actor_id": null,
+        "principal_id": null,
+        "session_id": "00000000-0000-0000-0000-000000000001",
+        "request_id": "00000000-0000-0000-0000-000000000001",
+        "channel": "storefront",
+        "scopes": []
+      },
+      "action": "cart_apply",
+      "risk": "R2",
+      "confirmation": "explicit_intent",
+      "expires_at": {},
+      "audit_ref": "00000000-0000-0000-0000-000000000001/cart_apply/authentication_missing"
+    }
+  },
+  {
+    "id": "PolicyDecision:type_audit_ref",
+    "contract": "PolicyDecision",
+    "valid": false,
+    "value": {
+      "schema_version": "1.0",
+      "policy": "commerce/default",
+      "version": "1.0.0",
+      "outcome": "require_authentication",
+      "reason": "authentication_missing",
+      "facts": [
+        {
+          "schema_version": "1.0",
+          "name": "scope_matches",
+          "value": true
+        },
+        {
+          "schema_version": "1.0",
+          "name": "available",
+          "value": true
+        },
+        {
+          "schema_version": "1.0",
+          "name": "authorized",
+          "value": true
+        },
+        {
+          "schema_version": "1.0",
+          "name": "evidence_verified",
+          "value": true
+        },
+        {
+          "schema_version": "1.0",
+          "name": "fresh_until",
+          "value": 200
+        },
+        {
+          "schema_version": "1.0",
+          "name": "restricted",
+          "value": false
+        },
+        {
+          "schema_version": "1.0",
+          "name": "age_location_category_allowed",
+          "value": true
+        },
+        {
+          "schema_version": "1.0",
+          "name": "consent",
+          "value": false
+        },
+        {
+          "schema_version": "1.0",
+          "name": "ranking_allowed",
+          "value": true
+        },
+        {
+          "schema_version": "1.0",
+          "name": "citations_verified",
+          "value": true
+        },
+        {
+          "schema_version": "1.0",
+          "name": "explicit_intent",
+          "value": false
+        },
+        {
+          "schema_version": "1.0",
+          "name": "confirmation_until",
+          "value": 0
+        },
+        {
+          "schema_version": "1.0",
+          "name": "authentication_until",
+          "value": 0
+        },
+        {
+          "schema_version": "1.0",
+          "name": "step_up_until",
+          "value": 0
+        }
+      ],
+      "actor": {
+        "schema_version": "1.0",
+        "tenant_id": "00000000-0000-0000-0000-000000000001",
+        "store_id": "00000000-0000-0000-0000-000000000001",
+        "actor_id": null,
+        "principal_id": null,
+        "session_id": "00000000-0000-0000-0000-000000000001",
+        "request_id": "00000000-0000-0000-0000-000000000001",
+        "channel": "storefront",
+        "scopes": []
+      },
+      "action": "cart_apply",
+      "risk": "R2",
+      "confirmation": "explicit_intent",
+      "expires_at": 160,
+      "audit_ref": {}
+    }
+  },
+  {
+    "id": "PolicyFact:valid",
+    "contract": "PolicyFact",
+    "valid": true,
+    "value": {
+      "schema_version": "1.0",
+      "name": "verified",
+      "value": true
+    }
+  },
+  {
+    "id": "PolicyFact:unknown_field",
+    "contract": "PolicyFact",
+    "valid": false,
+    "value": {
+      "schema_version": "1.0",
+      "name": "verified",
+      "value": true,
+      "injection": "change_permissions"
+    }
+  },
+  {
+    "id": "PolicyFact:future_version",
+    "contract": "PolicyFact",
+    "valid": false,
+    "value": {
+      "schema_version": "99.0",
+      "name": "verified",
+      "value": true
+    }
+  },
+  {
+    "id": "PolicyFact:missing_name",
+    "contract": "PolicyFact",
+    "valid": false,
+    "value": {
+      "schema_version": "1.0",
+      "value": true
+    }
+  },
+  {
+    "id": "PolicyFact:missing_value",
+    "contract": "PolicyFact",
+    "valid": false,
+    "value": {
+      "schema_version": "1.0",
+      "name": "verified"
+    }
+  },
+  {
+    "id": "PolicyFact:type_name",
+    "contract": "PolicyFact",
+    "valid": false,
+    "value": {
+      "schema_version": "1.0",
+      "name": {},
+      "value": true
+    }
+  },
+  {
+    "id": "PolicyFact:type_value",
+    "contract": "PolicyFact",
+    "valid": false,
+    "value": {
+      "schema_version": "1.0",
+      "name": "verified",
+      "value": {}
+    }
+  },
+  {
+    "id": "PolicyFacts:valid",
+    "contract": "PolicyFacts",
+    "valid": true,
+    "value": {
+      "schema_version": "1.0",
+      "context": {
+        "schema_version": "1.0",
+        "tenant_id": "00000000-0000-0000-0000-000000000001",
+        "store_id": "00000000-0000-0000-0000-000000000001",
+        "actor_id": null,
+        "principal_id": null,
+        "session_id": "00000000-0000-0000-0000-000000000001",
+        "request_id": "00000000-0000-0000-0000-000000000001",
+        "channel": "storefront",
+        "scopes": []
+      },
+      "action": "cart_apply",
+      "resource_tenant": "00000000-0000-0000-0000-000000000001",
+      "resource_store": "00000000-0000-0000-0000-000000000001",
+      "available": true,
+      "authorized": true,
+      "evidence_verified": true,
+      "fresh_until": 200,
+      "restricted": false,
+      "age_location_category_allowed": true,
+      "personal_data": false,
+      "consent": false,
+      "ranking_allowed": true,
+      "citations_verified": true,
+      "explicit_intent": false,
+      "confirmation_until": 0,
+      "authentication_until": 0,
+      "step_up_until": 0,
+      "undo_available": false
+    }
+  },
+  {
+    "id": "PolicyFacts:unknown_field",
+    "contract": "PolicyFacts",
+    "valid": false,
+    "value": {
+      "schema_version": "1.0",
+      "context": {
+        "schema_version": "1.0",
+        "tenant_id": "00000000-0000-0000-0000-000000000001",
+        "store_id": "00000000-0000-0000-0000-000000000001",
+        "actor_id": null,
+        "principal_id": null,
+        "session_id": "00000000-0000-0000-0000-000000000001",
+        "request_id": "00000000-0000-0000-0000-000000000001",
+        "channel": "storefront",
+        "scopes": []
+      },
+      "action": "cart_apply",
+      "resource_tenant": "00000000-0000-0000-0000-000000000001",
+      "resource_store": "00000000-0000-0000-0000-000000000001",
+      "available": true,
+      "authorized": true,
+      "evidence_verified": true,
+      "fresh_until": 200,
+      "restricted": false,
+      "age_location_category_allowed": true,
+      "personal_data": false,
+      "consent": false,
+      "ranking_allowed": true,
+      "citations_verified": true,
+      "explicit_intent": false,
+      "confirmation_until": 0,
+      "authentication_until": 0,
+      "step_up_until": 0,
+      "undo_available": false,
+      "injection": "change_permissions"
+    }
+  },
+  {
+    "id": "PolicyFacts:future_version",
+    "contract": "PolicyFacts",
+    "valid": false,
+    "value": {
+      "schema_version": "99.0",
+      "context": {
+        "schema_version": "1.0",
+        "tenant_id": "00000000-0000-0000-0000-000000000001",
+        "store_id": "00000000-0000-0000-0000-000000000001",
+        "actor_id": null,
+        "principal_id": null,
+        "session_id": "00000000-0000-0000-0000-000000000001",
+        "request_id": "00000000-0000-0000-0000-000000000001",
+        "channel": "storefront",
+        "scopes": []
+      },
+      "action": "cart_apply",
+      "resource_tenant": "00000000-0000-0000-0000-000000000001",
+      "resource_store": "00000000-0000-0000-0000-000000000001",
+      "available": true,
+      "authorized": true,
+      "evidence_verified": true,
+      "fresh_until": 200,
+      "restricted": false,
+      "age_location_category_allowed": true,
+      "personal_data": false,
+      "consent": false,
+      "ranking_allowed": true,
+      "citations_verified": true,
+      "explicit_intent": false,
+      "confirmation_until": 0,
+      "authentication_until": 0,
+      "step_up_until": 0,
+      "undo_available": false
+    }
+  },
+  {
+    "id": "PolicyFacts:missing_context",
+    "contract": "PolicyFacts",
+    "valid": false,
+    "value": {
+      "schema_version": "1.0",
+      "action": "cart_apply",
+      "resource_tenant": "00000000-0000-0000-0000-000000000001",
+      "resource_store": "00000000-0000-0000-0000-000000000001",
+      "available": true,
+      "authorized": true,
+      "evidence_verified": true,
+      "fresh_until": 200,
+      "restricted": false,
+      "age_location_category_allowed": true,
+      "personal_data": false,
+      "consent": false,
+      "ranking_allowed": true,
+      "citations_verified": true,
+      "explicit_intent": false,
+      "confirmation_until": 0,
+      "authentication_until": 0,
+      "step_up_until": 0,
+      "undo_available": false
+    }
+  },
+  {
+    "id": "PolicyFacts:missing_action",
+    "contract": "PolicyFacts",
+    "valid": false,
+    "value": {
+      "schema_version": "1.0",
+      "context": {
+        "schema_version": "1.0",
+        "tenant_id": "00000000-0000-0000-0000-000000000001",
+        "store_id": "00000000-0000-0000-0000-000000000001",
+        "actor_id": null,
+        "principal_id": null,
+        "session_id": "00000000-0000-0000-0000-000000000001",
+        "request_id": "00000000-0000-0000-0000-000000000001",
+        "channel": "storefront",
+        "scopes": []
+      },
+      "resource_tenant": "00000000-0000-0000-0000-000000000001",
+      "resource_store": "00000000-0000-0000-0000-000000000001",
+      "available": true,
+      "authorized": true,
+      "evidence_verified": true,
+      "fresh_until": 200,
+      "restricted": false,
+      "age_location_category_allowed": true,
+      "personal_data": false,
+      "consent": false,
+      "ranking_allowed": true,
+      "citations_verified": true,
+      "explicit_intent": false,
+      "confirmation_until": 0,
+      "authentication_until": 0,
+      "step_up_until": 0,
+      "undo_available": false
+    }
+  },
+  {
+    "id": "PolicyFacts:missing_resource_tenant",
+    "contract": "PolicyFacts",
+    "valid": false,
+    "value": {
+      "schema_version": "1.0",
+      "context": {
+        "schema_version": "1.0",
+        "tenant_id": "00000000-0000-0000-0000-000000000001",
+        "store_id": "00000000-0000-0000-0000-000000000001",
+        "actor_id": null,
+        "principal_id": null,
+        "session_id": "00000000-0000-0000-0000-000000000001",
+        "request_id": "00000000-0000-0000-0000-000000000001",
+        "channel": "storefront",
+        "scopes": []
+      },
+      "action": "cart_apply",
+      "resource_store": "00000000-0000-0000-0000-000000000001",
+      "available": true,
+      "authorized": true,
+      "evidence_verified": true,
+      "fresh_until": 200,
+      "restricted": false,
+      "age_location_category_allowed": true,
+      "personal_data": false,
+      "consent": false,
+      "ranking_allowed": true,
+      "citations_verified": true,
+      "explicit_intent": false,
+      "confirmation_until": 0,
+      "authentication_until": 0,
+      "step_up_until": 0,
+      "undo_available": false
+    }
+  },
+  {
+    "id": "PolicyFacts:missing_resource_store",
+    "contract": "PolicyFacts",
+    "valid": false,
+    "value": {
+      "schema_version": "1.0",
+      "context": {
+        "schema_version": "1.0",
+        "tenant_id": "00000000-0000-0000-0000-000000000001",
+        "store_id": "00000000-0000-0000-0000-000000000001",
+        "actor_id": null,
+        "principal_id": null,
+        "session_id": "00000000-0000-0000-0000-000000000001",
+        "request_id": "00000000-0000-0000-0000-000000000001",
+        "channel": "storefront",
+        "scopes": []
+      },
+      "action": "cart_apply",
+      "resource_tenant": "00000000-0000-0000-0000-000000000001",
+      "available": true,
+      "authorized": true,
+      "evidence_verified": true,
+      "fresh_until": 200,
+      "restricted": false,
+      "age_location_category_allowed": true,
+      "personal_data": false,
+      "consent": false,
+      "ranking_allowed": true,
+      "citations_verified": true,
+      "explicit_intent": false,
+      "confirmation_until": 0,
+      "authentication_until": 0,
+      "step_up_until": 0,
+      "undo_available": false
+    }
+  },
+  {
+    "id": "PolicyFacts:missing_available",
+    "contract": "PolicyFacts",
+    "valid": false,
+    "value": {
+      "schema_version": "1.0",
+      "context": {
+        "schema_version": "1.0",
+        "tenant_id": "00000000-0000-0000-0000-000000000001",
+        "store_id": "00000000-0000-0000-0000-000000000001",
+        "actor_id": null,
+        "principal_id": null,
+        "session_id": "00000000-0000-0000-0000-000000000001",
+        "request_id": "00000000-0000-0000-0000-000000000001",
+        "channel": "storefront",
+        "scopes": []
+      },
+      "action": "cart_apply",
+      "resource_tenant": "00000000-0000-0000-0000-000000000001",
+      "resource_store": "00000000-0000-0000-0000-000000000001",
+      "authorized": true,
+      "evidence_verified": true,
+      "fresh_until": 200,
+      "restricted": false,
+      "age_location_category_allowed": true,
+      "personal_data": false,
+      "consent": false,
+      "ranking_allowed": true,
+      "citations_verified": true,
+      "explicit_intent": false,
+      "confirmation_until": 0,
+      "authentication_until": 0,
+      "step_up_until": 0,
+      "undo_available": false
+    }
+  },
+  {
+    "id": "PolicyFacts:missing_authorized",
+    "contract": "PolicyFacts",
+    "valid": false,
+    "value": {
+      "schema_version": "1.0",
+      "context": {
+        "schema_version": "1.0",
+        "tenant_id": "00000000-0000-0000-0000-000000000001",
+        "store_id": "00000000-0000-0000-0000-000000000001",
+        "actor_id": null,
+        "principal_id": null,
+        "session_id": "00000000-0000-0000-0000-000000000001",
+        "request_id": "00000000-0000-0000-0000-000000000001",
+        "channel": "storefront",
+        "scopes": []
+      },
+      "action": "cart_apply",
+      "resource_tenant": "00000000-0000-0000-0000-000000000001",
+      "resource_store": "00000000-0000-0000-0000-000000000001",
+      "available": true,
+      "evidence_verified": true,
+      "fresh_until": 200,
+      "restricted": false,
+      "age_location_category_allowed": true,
+      "personal_data": false,
+      "consent": false,
+      "ranking_allowed": true,
+      "citations_verified": true,
+      "explicit_intent": false,
+      "confirmation_until": 0,
+      "authentication_until": 0,
+      "step_up_until": 0,
+      "undo_available": false
+    }
+  },
+  {
+    "id": "PolicyFacts:missing_evidence_verified",
+    "contract": "PolicyFacts",
+    "valid": false,
+    "value": {
+      "schema_version": "1.0",
+      "context": {
+        "schema_version": "1.0",
+        "tenant_id": "00000000-0000-0000-0000-000000000001",
+        "store_id": "00000000-0000-0000-0000-000000000001",
+        "actor_id": null,
+        "principal_id": null,
+        "session_id": "00000000-0000-0000-0000-000000000001",
+        "request_id": "00000000-0000-0000-0000-000000000001",
+        "channel": "storefront",
+        "scopes": []
+      },
+      "action": "cart_apply",
+      "resource_tenant": "00000000-0000-0000-0000-000000000001",
+      "resource_store": "00000000-0000-0000-0000-000000000001",
+      "available": true,
+      "authorized": true,
+      "fresh_until": 200,
+      "restricted": false,
+      "age_location_category_allowed": true,
+      "personal_data": false,
+      "consent": false,
+      "ranking_allowed": true,
+      "citations_verified": true,
+      "explicit_intent": false,
+      "confirmation_until": 0,
+      "authentication_until": 0,
+      "step_up_until": 0,
+      "undo_available": false
+    }
+  },
+  {
+    "id": "PolicyFacts:missing_fresh_until",
+    "contract": "PolicyFacts",
+    "valid": false,
+    "value": {
+      "schema_version": "1.0",
+      "context": {
+        "schema_version": "1.0",
+        "tenant_id": "00000000-0000-0000-0000-000000000001",
+        "store_id": "00000000-0000-0000-0000-000000000001",
+        "actor_id": null,
+        "principal_id": null,
+        "session_id": "00000000-0000-0000-0000-000000000001",
+        "request_id": "00000000-0000-0000-0000-000000000001",
+        "channel": "storefront",
+        "scopes": []
+      },
+      "action": "cart_apply",
+      "resource_tenant": "00000000-0000-0000-0000-000000000001",
+      "resource_store": "00000000-0000-0000-0000-000000000001",
+      "available": true,
+      "authorized": true,
+      "evidence_verified": true,
+      "restricted": false,
+      "age_location_category_allowed": true,
+      "personal_data": false,
+      "consent": false,
+      "ranking_allowed": true,
+      "citations_verified": true,
+      "explicit_intent": false,
+      "confirmation_until": 0,
+      "authentication_until": 0,
+      "step_up_until": 0,
+      "undo_available": false
+    }
+  },
+  {
+    "id": "PolicyFacts:type_context",
+    "contract": "PolicyFacts",
+    "valid": false,
+    "value": {
+      "schema_version": "1.0",
+      "context": "invalid-object",
+      "action": "cart_apply",
+      "resource_tenant": "00000000-0000-0000-0000-000000000001",
+      "resource_store": "00000000-0000-0000-0000-000000000001",
+      "available": true,
+      "authorized": true,
+      "evidence_verified": true,
+      "fresh_until": 200,
+      "restricted": false,
+      "age_location_category_allowed": true,
+      "personal_data": false,
+      "consent": false,
+      "ranking_allowed": true,
+      "citations_verified": true,
+      "explicit_intent": false,
+      "confirmation_until": 0,
+      "authentication_until": 0,
+      "step_up_until": 0,
+      "undo_available": false
+    }
+  },
+  {
+    "id": "PolicyFacts:type_action",
+    "contract": "PolicyFacts",
+    "valid": false,
+    "value": {
+      "schema_version": "1.0",
+      "context": {
+        "schema_version": "1.0",
+        "tenant_id": "00000000-0000-0000-0000-000000000001",
+        "store_id": "00000000-0000-0000-0000-000000000001",
+        "actor_id": null,
+        "principal_id": null,
+        "session_id": "00000000-0000-0000-0000-000000000001",
+        "request_id": "00000000-0000-0000-0000-000000000001",
+        "channel": "storefront",
+        "scopes": []
+      },
+      "action": {},
+      "resource_tenant": "00000000-0000-0000-0000-000000000001",
+      "resource_store": "00000000-0000-0000-0000-000000000001",
+      "available": true,
+      "authorized": true,
+      "evidence_verified": true,
+      "fresh_until": 200,
+      "restricted": false,
+      "age_location_category_allowed": true,
+      "personal_data": false,
+      "consent": false,
+      "ranking_allowed": true,
+      "citations_verified": true,
+      "explicit_intent": false,
+      "confirmation_until": 0,
+      "authentication_until": 0,
+      "step_up_until": 0,
+      "undo_available": false
+    }
+  },
+  {
+    "id": "PolicyFacts:type_resource_tenant",
+    "contract": "PolicyFacts",
+    "valid": false,
+    "value": {
+      "schema_version": "1.0",
+      "context": {
+        "schema_version": "1.0",
+        "tenant_id": "00000000-0000-0000-0000-000000000001",
+        "store_id": "00000000-0000-0000-0000-000000000001",
+        "actor_id": null,
+        "principal_id": null,
+        "session_id": "00000000-0000-0000-0000-000000000001",
+        "request_id": "00000000-0000-0000-0000-000000000001",
+        "channel": "storefront",
+        "scopes": []
+      },
+      "action": "cart_apply",
+      "resource_tenant": {},
+      "resource_store": "00000000-0000-0000-0000-000000000001",
+      "available": true,
+      "authorized": true,
+      "evidence_verified": true,
+      "fresh_until": 200,
+      "restricted": false,
+      "age_location_category_allowed": true,
+      "personal_data": false,
+      "consent": false,
+      "ranking_allowed": true,
+      "citations_verified": true,
+      "explicit_intent": false,
+      "confirmation_until": 0,
+      "authentication_until": 0,
+      "step_up_until": 0,
+      "undo_available": false
+    }
+  },
+  {
+    "id": "PolicyFacts:type_resource_store",
+    "contract": "PolicyFacts",
+    "valid": false,
+    "value": {
+      "schema_version": "1.0",
+      "context": {
+        "schema_version": "1.0",
+        "tenant_id": "00000000-0000-0000-0000-000000000001",
+        "store_id": "00000000-0000-0000-0000-000000000001",
+        "actor_id": null,
+        "principal_id": null,
+        "session_id": "00000000-0000-0000-0000-000000000001",
+        "request_id": "00000000-0000-0000-0000-000000000001",
+        "channel": "storefront",
+        "scopes": []
+      },
+      "action": "cart_apply",
+      "resource_tenant": "00000000-0000-0000-0000-000000000001",
+      "resource_store": {},
+      "available": true,
+      "authorized": true,
+      "evidence_verified": true,
+      "fresh_until": 200,
+      "restricted": false,
+      "age_location_category_allowed": true,
+      "personal_data": false,
+      "consent": false,
+      "ranking_allowed": true,
+      "citations_verified": true,
+      "explicit_intent": false,
+      "confirmation_until": 0,
+      "authentication_until": 0,
+      "step_up_until": 0,
+      "undo_available": false
+    }
+  },
+  {
+    "id": "PolicyFacts:type_available",
+    "contract": "PolicyFacts",
+    "valid": false,
+    "value": {
+      "schema_version": "1.0",
+      "context": {
+        "schema_version": "1.0",
+        "tenant_id": "00000000-0000-0000-0000-000000000001",
+        "store_id": "00000000-0000-0000-0000-000000000001",
+        "actor_id": null,
+        "principal_id": null,
+        "session_id": "00000000-0000-0000-0000-000000000001",
+        "request_id": "00000000-0000-0000-0000-000000000001",
+        "channel": "storefront",
+        "scopes": []
+      },
+      "action": "cart_apply",
+      "resource_tenant": "00000000-0000-0000-0000-000000000001",
+      "resource_store": "00000000-0000-0000-0000-000000000001",
+      "available": {},
+      "authorized": true,
+      "evidence_verified": true,
+      "fresh_until": 200,
+      "restricted": false,
+      "age_location_category_allowed": true,
+      "personal_data": false,
+      "consent": false,
+      "ranking_allowed": true,
+      "citations_verified": true,
+      "explicit_intent": false,
+      "confirmation_until": 0,
+      "authentication_until": 0,
+      "step_up_until": 0,
+      "undo_available": false
+    }
+  },
+  {
+    "id": "PolicyFacts:type_authorized",
+    "contract": "PolicyFacts",
+    "valid": false,
+    "value": {
+      "schema_version": "1.0",
+      "context": {
+        "schema_version": "1.0",
+        "tenant_id": "00000000-0000-0000-0000-000000000001",
+        "store_id": "00000000-0000-0000-0000-000000000001",
+        "actor_id": null,
+        "principal_id": null,
+        "session_id": "00000000-0000-0000-0000-000000000001",
+        "request_id": "00000000-0000-0000-0000-000000000001",
+        "channel": "storefront",
+        "scopes": []
+      },
+      "action": "cart_apply",
+      "resource_tenant": "00000000-0000-0000-0000-000000000001",
+      "resource_store": "00000000-0000-0000-0000-000000000001",
+      "available": true,
+      "authorized": {},
+      "evidence_verified": true,
+      "fresh_until": 200,
+      "restricted": false,
+      "age_location_category_allowed": true,
+      "personal_data": false,
+      "consent": false,
+      "ranking_allowed": true,
+      "citations_verified": true,
+      "explicit_intent": false,
+      "confirmation_until": 0,
+      "authentication_until": 0,
+      "step_up_until": 0,
+      "undo_available": false
+    }
+  },
+  {
+    "id": "PolicyFacts:type_evidence_verified",
+    "contract": "PolicyFacts",
+    "valid": false,
+    "value": {
+      "schema_version": "1.0",
+      "context": {
+        "schema_version": "1.0",
+        "tenant_id": "00000000-0000-0000-0000-000000000001",
+        "store_id": "00000000-0000-0000-0000-000000000001",
+        "actor_id": null,
+        "principal_id": null,
+        "session_id": "00000000-0000-0000-0000-000000000001",
+        "request_id": "00000000-0000-0000-0000-000000000001",
+        "channel": "storefront",
+        "scopes": []
+      },
+      "action": "cart_apply",
+      "resource_tenant": "00000000-0000-0000-0000-000000000001",
+      "resource_store": "00000000-0000-0000-0000-000000000001",
+      "available": true,
+      "authorized": true,
+      "evidence_verified": {},
+      "fresh_until": 200,
+      "restricted": false,
+      "age_location_category_allowed": true,
+      "personal_data": false,
+      "consent": false,
+      "ranking_allowed": true,
+      "citations_verified": true,
+      "explicit_intent": false,
+      "confirmation_until": 0,
+      "authentication_until": 0,
+      "step_up_until": 0,
+      "undo_available": false
+    }
+  },
+  {
+    "id": "PolicyFacts:type_fresh_until",
+    "contract": "PolicyFacts",
+    "valid": false,
+    "value": {
+      "schema_version": "1.0",
+      "context": {
+        "schema_version": "1.0",
+        "tenant_id": "00000000-0000-0000-0000-000000000001",
+        "store_id": "00000000-0000-0000-0000-000000000001",
+        "actor_id": null,
+        "principal_id": null,
+        "session_id": "00000000-0000-0000-0000-000000000001",
+        "request_id": "00000000-0000-0000-0000-000000000001",
+        "channel": "storefront",
+        "scopes": []
+      },
+      "action": "cart_apply",
+      "resource_tenant": "00000000-0000-0000-0000-000000000001",
+      "resource_store": "00000000-0000-0000-0000-000000000001",
+      "available": true,
+      "authorized": true,
+      "evidence_verified": true,
+      "fresh_until": {},
+      "restricted": false,
+      "age_location_category_allowed": true,
+      "personal_data": false,
+      "consent": false,
+      "ranking_allowed": true,
+      "citations_verified": true,
+      "explicit_intent": false,
+      "confirmation_until": 0,
+      "authentication_until": 0,
+      "step_up_until": 0,
+      "undo_available": false
+    }
+  },
+  {
+    "id": "PolicyFacts:type_restricted",
+    "contract": "PolicyFacts",
+    "valid": false,
+    "value": {
+      "schema_version": "1.0",
+      "context": {
+        "schema_version": "1.0",
+        "tenant_id": "00000000-0000-0000-0000-000000000001",
+        "store_id": "00000000-0000-0000-0000-000000000001",
+        "actor_id": null,
+        "principal_id": null,
+        "session_id": "00000000-0000-0000-0000-000000000001",
+        "request_id": "00000000-0000-0000-0000-000000000001",
+        "channel": "storefront",
+        "scopes": []
+      },
+      "action": "cart_apply",
+      "resource_tenant": "00000000-0000-0000-0000-000000000001",
+      "resource_store": "00000000-0000-0000-0000-000000000001",
+      "available": true,
+      "authorized": true,
+      "evidence_verified": true,
+      "fresh_until": 200,
+      "restricted": {},
+      "age_location_category_allowed": true,
+      "personal_data": false,
+      "consent": false,
+      "ranking_allowed": true,
+      "citations_verified": true,
+      "explicit_intent": false,
+      "confirmation_until": 0,
+      "authentication_until": 0,
+      "step_up_until": 0,
+      "undo_available": false
+    }
+  },
+  {
+    "id": "PolicyFacts:type_age_location_category_allowed",
+    "contract": "PolicyFacts",
+    "valid": false,
+    "value": {
+      "schema_version": "1.0",
+      "context": {
+        "schema_version": "1.0",
+        "tenant_id": "00000000-0000-0000-0000-000000000001",
+        "store_id": "00000000-0000-0000-0000-000000000001",
+        "actor_id": null,
+        "principal_id": null,
+        "session_id": "00000000-0000-0000-0000-000000000001",
+        "request_id": "00000000-0000-0000-0000-000000000001",
+        "channel": "storefront",
+        "scopes": []
+      },
+      "action": "cart_apply",
+      "resource_tenant": "00000000-0000-0000-0000-000000000001",
+      "resource_store": "00000000-0000-0000-0000-000000000001",
+      "available": true,
+      "authorized": true,
+      "evidence_verified": true,
+      "fresh_until": 200,
+      "restricted": false,
+      "age_location_category_allowed": {},
+      "personal_data": false,
+      "consent": false,
+      "ranking_allowed": true,
+      "citations_verified": true,
+      "explicit_intent": false,
+      "confirmation_until": 0,
+      "authentication_until": 0,
+      "step_up_until": 0,
+      "undo_available": false
+    }
+  },
+  {
+    "id": "PolicyFacts:type_personal_data",
+    "contract": "PolicyFacts",
+    "valid": false,
+    "value": {
+      "schema_version": "1.0",
+      "context": {
+        "schema_version": "1.0",
+        "tenant_id": "00000000-0000-0000-0000-000000000001",
+        "store_id": "00000000-0000-0000-0000-000000000001",
+        "actor_id": null,
+        "principal_id": null,
+        "session_id": "00000000-0000-0000-0000-000000000001",
+        "request_id": "00000000-0000-0000-0000-000000000001",
+        "channel": "storefront",
+        "scopes": []
+      },
+      "action": "cart_apply",
+      "resource_tenant": "00000000-0000-0000-0000-000000000001",
+      "resource_store": "00000000-0000-0000-0000-000000000001",
+      "available": true,
+      "authorized": true,
+      "evidence_verified": true,
+      "fresh_until": 200,
+      "restricted": false,
+      "age_location_category_allowed": true,
+      "personal_data": {},
+      "consent": false,
+      "ranking_allowed": true,
+      "citations_verified": true,
+      "explicit_intent": false,
+      "confirmation_until": 0,
+      "authentication_until": 0,
+      "step_up_until": 0,
+      "undo_available": false
+    }
+  },
+  {
+    "id": "PolicyFacts:type_consent",
+    "contract": "PolicyFacts",
+    "valid": false,
+    "value": {
+      "schema_version": "1.0",
+      "context": {
+        "schema_version": "1.0",
+        "tenant_id": "00000000-0000-0000-0000-000000000001",
+        "store_id": "00000000-0000-0000-0000-000000000001",
+        "actor_id": null,
+        "principal_id": null,
+        "session_id": "00000000-0000-0000-0000-000000000001",
+        "request_id": "00000000-0000-0000-0000-000000000001",
+        "channel": "storefront",
+        "scopes": []
+      },
+      "action": "cart_apply",
+      "resource_tenant": "00000000-0000-0000-0000-000000000001",
+      "resource_store": "00000000-0000-0000-0000-000000000001",
+      "available": true,
+      "authorized": true,
+      "evidence_verified": true,
+      "fresh_until": 200,
+      "restricted": false,
+      "age_location_category_allowed": true,
+      "personal_data": false,
+      "consent": {},
+      "ranking_allowed": true,
+      "citations_verified": true,
+      "explicit_intent": false,
+      "confirmation_until": 0,
+      "authentication_until": 0,
+      "step_up_until": 0,
+      "undo_available": false
+    }
+  },
+  {
+    "id": "PolicyFacts:type_ranking_allowed",
+    "contract": "PolicyFacts",
+    "valid": false,
+    "value": {
+      "schema_version": "1.0",
+      "context": {
+        "schema_version": "1.0",
+        "tenant_id": "00000000-0000-0000-0000-000000000001",
+        "store_id": "00000000-0000-0000-0000-000000000001",
+        "actor_id": null,
+        "principal_id": null,
+        "session_id": "00000000-0000-0000-0000-000000000001",
+        "request_id": "00000000-0000-0000-0000-000000000001",
+        "channel": "storefront",
+        "scopes": []
+      },
+      "action": "cart_apply",
+      "resource_tenant": "00000000-0000-0000-0000-000000000001",
+      "resource_store": "00000000-0000-0000-0000-000000000001",
+      "available": true,
+      "authorized": true,
+      "evidence_verified": true,
+      "fresh_until": 200,
+      "restricted": false,
+      "age_location_category_allowed": true,
+      "personal_data": false,
+      "consent": false,
+      "ranking_allowed": {},
+      "citations_verified": true,
+      "explicit_intent": false,
+      "confirmation_until": 0,
+      "authentication_until": 0,
+      "step_up_until": 0,
+      "undo_available": false
+    }
+  },
+  {
+    "id": "PolicyFacts:type_citations_verified",
+    "contract": "PolicyFacts",
+    "valid": false,
+    "value": {
+      "schema_version": "1.0",
+      "context": {
+        "schema_version": "1.0",
+        "tenant_id": "00000000-0000-0000-0000-000000000001",
+        "store_id": "00000000-0000-0000-0000-000000000001",
+        "actor_id": null,
+        "principal_id": null,
+        "session_id": "00000000-0000-0000-0000-000000000001",
+        "request_id": "00000000-0000-0000-0000-000000000001",
+        "channel": "storefront",
+        "scopes": []
+      },
+      "action": "cart_apply",
+      "resource_tenant": "00000000-0000-0000-0000-000000000001",
+      "resource_store": "00000000-0000-0000-0000-000000000001",
+      "available": true,
+      "authorized": true,
+      "evidence_verified": true,
+      "fresh_until": 200,
+      "restricted": false,
+      "age_location_category_allowed": true,
+      "personal_data": false,
+      "consent": false,
+      "ranking_allowed": true,
+      "citations_verified": {},
+      "explicit_intent": false,
+      "confirmation_until": 0,
+      "authentication_until": 0,
+      "step_up_until": 0,
+      "undo_available": false
+    }
+  },
+  {
+    "id": "PolicyFacts:type_explicit_intent",
+    "contract": "PolicyFacts",
+    "valid": false,
+    "value": {
+      "schema_version": "1.0",
+      "context": {
+        "schema_version": "1.0",
+        "tenant_id": "00000000-0000-0000-0000-000000000001",
+        "store_id": "00000000-0000-0000-0000-000000000001",
+        "actor_id": null,
+        "principal_id": null,
+        "session_id": "00000000-0000-0000-0000-000000000001",
+        "request_id": "00000000-0000-0000-0000-000000000001",
+        "channel": "storefront",
+        "scopes": []
+      },
+      "action": "cart_apply",
+      "resource_tenant": "00000000-0000-0000-0000-000000000001",
+      "resource_store": "00000000-0000-0000-0000-000000000001",
+      "available": true,
+      "authorized": true,
+      "evidence_verified": true,
+      "fresh_until": 200,
+      "restricted": false,
+      "age_location_category_allowed": true,
+      "personal_data": false,
+      "consent": false,
+      "ranking_allowed": true,
+      "citations_verified": true,
+      "explicit_intent": {},
+      "confirmation_until": 0,
+      "authentication_until": 0,
+      "step_up_until": 0,
+      "undo_available": false
+    }
+  },
+  {
+    "id": "PolicyFacts:type_confirmation_until",
+    "contract": "PolicyFacts",
+    "valid": false,
+    "value": {
+      "schema_version": "1.0",
+      "context": {
+        "schema_version": "1.0",
+        "tenant_id": "00000000-0000-0000-0000-000000000001",
+        "store_id": "00000000-0000-0000-0000-000000000001",
+        "actor_id": null,
+        "principal_id": null,
+        "session_id": "00000000-0000-0000-0000-000000000001",
+        "request_id": "00000000-0000-0000-0000-000000000001",
+        "channel": "storefront",
+        "scopes": []
+      },
+      "action": "cart_apply",
+      "resource_tenant": "00000000-0000-0000-0000-000000000001",
+      "resource_store": "00000000-0000-0000-0000-000000000001",
+      "available": true,
+      "authorized": true,
+      "evidence_verified": true,
+      "fresh_until": 200,
+      "restricted": false,
+      "age_location_category_allowed": true,
+      "personal_data": false,
+      "consent": false,
+      "ranking_allowed": true,
+      "citations_verified": true,
+      "explicit_intent": false,
+      "confirmation_until": {},
+      "authentication_until": 0,
+      "step_up_until": 0,
+      "undo_available": false
+    }
+  },
+  {
+    "id": "PolicyFacts:type_authentication_until",
+    "contract": "PolicyFacts",
+    "valid": false,
+    "value": {
+      "schema_version": "1.0",
+      "context": {
+        "schema_version": "1.0",
+        "tenant_id": "00000000-0000-0000-0000-000000000001",
+        "store_id": "00000000-0000-0000-0000-000000000001",
+        "actor_id": null,
+        "principal_id": null,
+        "session_id": "00000000-0000-0000-0000-000000000001",
+        "request_id": "00000000-0000-0000-0000-000000000001",
+        "channel": "storefront",
+        "scopes": []
+      },
+      "action": "cart_apply",
+      "resource_tenant": "00000000-0000-0000-0000-000000000001",
+      "resource_store": "00000000-0000-0000-0000-000000000001",
+      "available": true,
+      "authorized": true,
+      "evidence_verified": true,
+      "fresh_until": 200,
+      "restricted": false,
+      "age_location_category_allowed": true,
+      "personal_data": false,
+      "consent": false,
+      "ranking_allowed": true,
+      "citations_verified": true,
+      "explicit_intent": false,
+      "confirmation_until": 0,
+      "authentication_until": {},
+      "step_up_until": 0,
+      "undo_available": false
+    }
+  },
+  {
+    "id": "PolicyFacts:type_step_up_until",
+    "contract": "PolicyFacts",
+    "valid": false,
+    "value": {
+      "schema_version": "1.0",
+      "context": {
+        "schema_version": "1.0",
+        "tenant_id": "00000000-0000-0000-0000-000000000001",
+        "store_id": "00000000-0000-0000-0000-000000000001",
+        "actor_id": null,
+        "principal_id": null,
+        "session_id": "00000000-0000-0000-0000-000000000001",
+        "request_id": "00000000-0000-0000-0000-000000000001",
+        "channel": "storefront",
+        "scopes": []
+      },
+      "action": "cart_apply",
+      "resource_tenant": "00000000-0000-0000-0000-000000000001",
+      "resource_store": "00000000-0000-0000-0000-000000000001",
+      "available": true,
+      "authorized": true,
+      "evidence_verified": true,
+      "fresh_until": 200,
+      "restricted": false,
+      "age_location_category_allowed": true,
+      "personal_data": false,
+      "consent": false,
+      "ranking_allowed": true,
+      "citations_verified": true,
+      "explicit_intent": false,
+      "confirmation_until": 0,
+      "authentication_until": 0,
+      "step_up_until": {},
+      "undo_available": false
+    }
+  },
+  {
+    "id": "PolicyFacts:type_undo_available",
+    "contract": "PolicyFacts",
+    "valid": false,
+    "value": {
+      "schema_version": "1.0",
+      "context": {
+        "schema_version": "1.0",
+        "tenant_id": "00000000-0000-0000-0000-000000000001",
+        "store_id": "00000000-0000-0000-0000-000000000001",
+        "actor_id": null,
+        "principal_id": null,
+        "session_id": "00000000-0000-0000-0000-000000000001",
+        "request_id": "00000000-0000-0000-0000-000000000001",
+        "channel": "storefront",
+        "scopes": []
+      },
+      "action": "cart_apply",
+      "resource_tenant": "00000000-0000-0000-0000-000000000001",
+      "resource_store": "00000000-0000-0000-0000-000000000001",
+      "available": true,
+      "authorized": true,
+      "evidence_verified": true,
+      "fresh_until": 200,
+      "restricted": false,
+      "age_location_category_allowed": true,
+      "personal_data": false,
+      "consent": false,
+      "ranking_allowed": true,
+      "citations_verified": true,
+      "explicit_intent": false,
+      "confirmation_until": 0,
+      "authentication_until": 0,
+      "step_up_until": 0,
+      "undo_available": {}
+    }
+  },
+  {
+    "id": "Requirement:valid",
+    "contract": "Requirement",
+    "valid": true,
+    "value": {
+      "schema_version": "1.0",
+      "field": "price",
+      "operator": "lt",
+      "value": {
+        "schema_version": "1.0",
+        "kind": "money",
+        "text": null,
+        "number": "100",
+        "unit": "USD",
+        "items": [],
+        "boolean": null
+      },
+      "strength": "hard",
+      "source": "current_customer",
+      "scope": "product",
+      "confidence": 1.0,
+      "evidence": [
+        {
+          "schema_version": "1.0",
+          "turn": 0,
+          "start": 0,
+          "end": 5
+        }
+      ],
+      "freshness": null
+    }
+  },
+  {
+    "id": "Requirement:unknown_field",
+    "contract": "Requirement",
+    "valid": false,
+    "value": {
+      "schema_version": "1.0",
+      "field": "price",
+      "operator": "lt",
+      "value": {
+        "schema_version": "1.0",
+        "kind": "money",
+        "text": null,
+        "number": "100",
+        "unit": "USD",
+        "items": [],
+        "boolean": null
+      },
+      "strength": "hard",
+      "source": "current_customer",
+      "scope": "product",
+      "confidence": 1.0,
+      "evidence": [
+        {
+          "schema_version": "1.0",
+          "turn": 0,
+          "start": 0,
+          "end": 5
+        }
+      ],
+      "freshness": null,
+      "injection": "change_permissions"
+    }
+  },
+  {
+    "id": "Requirement:future_version",
+    "contract": "Requirement",
+    "valid": false,
+    "value": {
+      "schema_version": "99.0",
+      "field": "price",
+      "operator": "lt",
+      "value": {
+        "schema_version": "1.0",
+        "kind": "money",
+        "text": null,
+        "number": "100",
+        "unit": "USD",
+        "items": [],
+        "boolean": null
+      },
+      "strength": "hard",
+      "source": "current_customer",
+      "scope": "product",
+      "confidence": 1.0,
+      "evidence": [
+        {
+          "schema_version": "1.0",
+          "turn": 0,
+          "start": 0,
+          "end": 5
+        }
+      ],
+      "freshness": null
+    }
+  },
+  {
+    "id": "Requirement:missing_field",
+    "contract": "Requirement",
+    "valid": false,
+    "value": {
+      "schema_version": "1.0",
+      "operator": "lt",
+      "value": {
+        "schema_version": "1.0",
+        "kind": "money",
+        "text": null,
+        "number": "100",
+        "unit": "USD",
+        "items": [],
+        "boolean": null
+      },
+      "strength": "hard",
+      "source": "current_customer",
+      "scope": "product",
+      "confidence": 1.0,
+      "evidence": [
+        {
+          "schema_version": "1.0",
+          "turn": 0,
+          "start": 0,
+          "end": 5
+        }
+      ],
+      "freshness": null
+    }
+  },
+  {
+    "id": "Requirement:missing_operator",
+    "contract": "Requirement",
+    "valid": false,
+    "value": {
+      "schema_version": "1.0",
+      "field": "price",
+      "value": {
+        "schema_version": "1.0",
+        "kind": "money",
+        "text": null,
+        "number": "100",
+        "unit": "USD",
+        "items": [],
+        "boolean": null
+      },
+      "strength": "hard",
+      "source": "current_customer",
+      "scope": "product",
+      "confidence": 1.0,
+      "evidence": [
+        {
+          "schema_version": "1.0",
+          "turn": 0,
+          "start": 0,
+          "end": 5
+        }
+      ],
+      "freshness": null
+    }
+  },
+  {
+    "id": "Requirement:missing_value",
+    "contract": "Requirement",
+    "valid": false,
+    "value": {
+      "schema_version": "1.0",
+      "field": "price",
+      "operator": "lt",
+      "strength": "hard",
+      "source": "current_customer",
+      "scope": "product",
+      "confidence": 1.0,
+      "evidence": [
+        {
+          "schema_version": "1.0",
+          "turn": 0,
+          "start": 0,
+          "end": 5
+        }
+      ],
+      "freshness": null
+    }
+  },
+  {
+    "id": "Requirement:missing_strength",
+    "contract": "Requirement",
+    "valid": false,
+    "value": {
+      "schema_version": "1.0",
+      "field": "price",
+      "operator": "lt",
+      "value": {
+        "schema_version": "1.0",
+        "kind": "money",
+        "text": null,
+        "number": "100",
+        "unit": "USD",
+        "items": [],
+        "boolean": null
+      },
+      "source": "current_customer",
+      "scope": "product",
+      "confidence": 1.0,
+      "evidence": [
+        {
+          "schema_version": "1.0",
+          "turn": 0,
+          "start": 0,
+          "end": 5
+        }
+      ],
+      "freshness": null
+    }
+  },
+  {
+    "id": "Requirement:missing_source",
+    "contract": "Requirement",
+    "valid": false,
+    "value": {
+      "schema_version": "1.0",
+      "field": "price",
+      "operator": "lt",
+      "value": {
+        "schema_version": "1.0",
+        "kind": "money",
+        "text": null,
+        "number": "100",
+        "unit": "USD",
+        "items": [],
+        "boolean": null
+      },
+      "strength": "hard",
+      "scope": "product",
+      "confidence": 1.0,
+      "evidence": [
+        {
+          "schema_version": "1.0",
+          "turn": 0,
+          "start": 0,
+          "end": 5
+        }
+      ],
+      "freshness": null
+    }
+  },
+  {
+    "id": "Requirement:missing_confidence",
+    "contract": "Requirement",
+    "valid": false,
+    "value": {
+      "schema_version": "1.0",
+      "field": "price",
+      "operator": "lt",
+      "value": {
+        "schema_version": "1.0",
+        "kind": "money",
+        "text": null,
+        "number": "100",
+        "unit": "USD",
+        "items": [],
+        "boolean": null
+      },
+      "strength": "hard",
+      "source": "current_customer",
+      "scope": "product",
+      "evidence": [
+        {
+          "schema_version": "1.0",
+          "turn": 0,
+          "start": 0,
+          "end": 5
+        }
+      ],
+      "freshness": null
+    }
+  },
+  {
+    "id": "Requirement:type_field",
+    "contract": "Requirement",
+    "valid": false,
+    "value": {
+      "schema_version": "1.0",
+      "field": {},
+      "operator": "lt",
+      "value": {
+        "schema_version": "1.0",
+        "kind": "money",
+        "text": null,
+        "number": "100",
+        "unit": "USD",
+        "items": [],
+        "boolean": null
+      },
+      "strength": "hard",
+      "source": "current_customer",
+      "scope": "product",
+      "confidence": 1.0,
+      "evidence": [
+        {
+          "schema_version": "1.0",
+          "turn": 0,
+          "start": 0,
+          "end": 5
+        }
+      ],
+      "freshness": null
+    }
+  },
+  {
+    "id": "Requirement:type_operator",
+    "contract": "Requirement",
+    "valid": false,
+    "value": {
+      "schema_version": "1.0",
+      "field": "price",
+      "operator": {},
+      "value": {
+        "schema_version": "1.0",
+        "kind": "money",
+        "text": null,
+        "number": "100",
+        "unit": "USD",
+        "items": [],
+        "boolean": null
+      },
+      "strength": "hard",
+      "source": "current_customer",
+      "scope": "product",
+      "confidence": 1.0,
+      "evidence": [
+        {
+          "schema_version": "1.0",
+          "turn": 0,
+          "start": 0,
+          "end": 5
+        }
+      ],
+      "freshness": null
+    }
+  },
+  {
+    "id": "Requirement:type_value",
+    "contract": "Requirement",
+    "valid": false,
+    "value": {
+      "schema_version": "1.0",
+      "field": "price",
+      "operator": "lt",
+      "value": "invalid-object",
+      "strength": "hard",
+      "source": "current_customer",
+      "scope": "product",
+      "confidence": 1.0,
+      "evidence": [
+        {
+          "schema_version": "1.0",
+          "turn": 0,
+          "start": 0,
+          "end": 5
+        }
+      ],
+      "freshness": null
+    }
+  },
+  {
+    "id": "Requirement:type_strength",
+    "contract": "Requirement",
+    "valid": false,
+    "value": {
+      "schema_version": "1.0",
+      "field": "price",
+      "operator": "lt",
+      "value": {
+        "schema_version": "1.0",
+        "kind": "money",
+        "text": null,
+        "number": "100",
+        "unit": "USD",
+        "items": [],
+        "boolean": null
+      },
+      "strength": {},
+      "source": "current_customer",
+      "scope": "product",
+      "confidence": 1.0,
+      "evidence": [
+        {
+          "schema_version": "1.0",
+          "turn": 0,
+          "start": 0,
+          "end": 5
+        }
+      ],
+      "freshness": null
+    }
+  },
+  {
+    "id": "Requirement:type_source",
+    "contract": "Requirement",
+    "valid": false,
+    "value": {
+      "schema_version": "1.0",
+      "field": "price",
+      "operator": "lt",
+      "value": {
+        "schema_version": "1.0",
+        "kind": "money",
+        "text": null,
+        "number": "100",
+        "unit": "USD",
+        "items": [],
+        "boolean": null
+      },
+      "strength": "hard",
+      "source": {},
+      "scope": "product",
+      "confidence": 1.0,
+      "evidence": [
+        {
+          "schema_version": "1.0",
+          "turn": 0,
+          "start": 0,
+          "end": 5
+        }
+      ],
+      "freshness": null
+    }
+  },
+  {
+    "id": "Requirement:type_scope",
+    "contract": "Requirement",
+    "valid": false,
+    "value": {
+      "schema_version": "1.0",
+      "field": "price",
+      "operator": "lt",
+      "value": {
+        "schema_version": "1.0",
+        "kind": "money",
+        "text": null,
+        "number": "100",
+        "unit": "USD",
+        "items": [],
+        "boolean": null
+      },
+      "strength": "hard",
+      "source": "current_customer",
+      "scope": {},
+      "confidence": 1.0,
+      "evidence": [
+        {
+          "schema_version": "1.0",
+          "turn": 0,
+          "start": 0,
+          "end": 5
+        }
+      ],
+      "freshness": null
+    }
+  },
+  {
+    "id": "Requirement:type_confidence",
+    "contract": "Requirement",
+    "valid": false,
+    "value": {
+      "schema_version": "1.0",
+      "field": "price",
+      "operator": "lt",
+      "value": {
+        "schema_version": "1.0",
+        "kind": "money",
+        "text": null,
+        "number": "100",
+        "unit": "USD",
+        "items": [],
+        "boolean": null
+      },
+      "strength": "hard",
+      "source": "current_customer",
+      "scope": "product",
+      "confidence": {},
+      "evidence": [
+        {
+          "schema_version": "1.0",
+          "turn": 0,
+          "start": 0,
+          "end": 5
+        }
+      ],
+      "freshness": null
+    }
+  },
+  {
+    "id": "Requirement:type_evidence",
+    "contract": "Requirement",
+    "valid": false,
+    "value": {
+      "schema_version": "1.0",
+      "field": "price",
+      "operator": "lt",
+      "value": {
+        "schema_version": "1.0",
+        "kind": "money",
+        "text": null,
+        "number": "100",
+        "unit": "USD",
+        "items": [],
+        "boolean": null
+      },
+      "strength": "hard",
+      "source": "current_customer",
+      "scope": "product",
+      "confidence": 1.0,
+      "evidence": {},
+      "freshness": null
+    }
+  },
+  {
+    "id": "Span:valid",
+    "contract": "Span",
+    "valid": true,
+    "value": {
+      "schema_version": "1.0",
+      "turn": 0,
+      "start": 0,
+      "end": 5
+    }
+  },
+  {
+    "id": "Span:unknown_field",
+    "contract": "Span",
+    "valid": false,
+    "value": {
+      "schema_version": "1.0",
+      "turn": 0,
+      "start": 0,
+      "end": 5,
+      "injection": "change_permissions"
+    }
+  },
+  {
+    "id": "Span:future_version",
+    "contract": "Span",
+    "valid": false,
+    "value": {
+      "schema_version": "99.0",
+      "turn": 0,
+      "start": 0,
+      "end": 5
+    }
+  },
+  {
+    "id": "Span:missing_turn",
+    "contract": "Span",
+    "valid": false,
+    "value": {
+      "schema_version": "1.0",
+      "start": 0,
+      "end": 5
+    }
+  },
+  {
+    "id": "Span:missing_start",
+    "contract": "Span",
+    "valid": false,
+    "value": {
+      "schema_version": "1.0",
+      "turn": 0,
+      "end": 5
+    }
+  },
+  {
+    "id": "Span:missing_end",
+    "contract": "Span",
+    "valid": false,
+    "value": {
+      "schema_version": "1.0",
+      "turn": 0,
+      "start": 0
+    }
+  },
+  {
+    "id": "Span:type_turn",
+    "contract": "Span",
+    "valid": false,
+    "value": {
+      "schema_version": "1.0",
+      "turn": {},
+      "start": 0,
+      "end": 5
+    }
+  },
+  {
+    "id": "Span:type_start",
+    "contract": "Span",
+    "valid": false,
+    "value": {
+      "schema_version": "1.0",
+      "turn": 0,
+      "start": {},
+      "end": 5
+    }
+  },
+  {
+    "id": "Span:type_end",
+    "contract": "Span",
+    "valid": false,
+    "value": {
+      "schema_version": "1.0",
+      "turn": 0,
+      "start": 0,
+      "end": {}
+    }
+  },
+  {
+    "id": "Value:valid",
+    "contract": "Value",
+    "valid": true,
+    "value": {
+      "schema_version": "1.0",
+      "kind": "money",
+      "text": null,
+      "number": "100",
+      "unit": "USD",
+      "items": [],
+      "boolean": null
+    }
+  },
+  {
+    "id": "Value:unknown_field",
+    "contract": "Value",
+    "valid": false,
+    "value": {
+      "schema_version": "1.0",
+      "kind": "money",
+      "text": null,
+      "number": "100",
+      "unit": "USD",
+      "items": [],
+      "boolean": null,
+      "injection": "change_permissions"
+    }
+  },
+  {
+    "id": "Value:future_version",
+    "contract": "Value",
+    "valid": false,
+    "value": {
+      "schema_version": "99.0",
+      "kind": "money",
+      "text": null,
+      "number": "100",
+      "unit": "USD",
+      "items": [],
+      "boolean": null
+    }
+  },
+  {
+    "id": "Value:missing_kind",
+    "contract": "Value",
+    "valid": false,
+    "value": {
+      "schema_version": "1.0",
+      "text": null,
+      "number": "100",
+      "unit": "USD",
+      "items": [],
+      "boolean": null
+    }
+  },
+  {
+    "id": "Value:type_kind",
+    "contract": "Value",
+    "valid": false,
+    "value": {
+      "schema_version": "1.0",
+      "kind": {},
+      "text": null,
+      "number": "100",
+      "unit": "USD",
+      "items": [],
+      "boolean": null
+    }
+  },
+  {
+    "id": "Value:type_number",
+    "contract": "Value",
+    "valid": false,
+    "value": {
+      "schema_version": "1.0",
+      "kind": "money",
+      "text": null,
+      "number": {},
+      "unit": "USD",
+      "items": [],
+      "boolean": null
+    }
+  },
+  {
+    "id": "Value:type_unit",
+    "contract": "Value",
+    "valid": false,
+    "value": {
+      "schema_version": "1.0",
+      "kind": "money",
+      "text": null,
+      "number": "100",
+      "unit": {},
+      "items": [],
+      "boolean": null
+    }
+  },
+  {
+    "id": "Value:type_items",
+    "contract": "Value",
+    "valid": false,
+    "value": {
+      "schema_version": "1.0",
+      "kind": "money",
+      "text": null,
+      "number": "100",
+      "unit": "USD",
+      "items": {},
+      "boolean": null
+    }
+  }
+]

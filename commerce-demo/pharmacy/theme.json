@@ -1,0 +1,494 @@
+{
+  "schema_version": "theme/v1",
+  "tokens": {
+    "color.primary": "#111111",
+    "color.secondary": "#f29aaa",
+    "color.background": "#ffffff",
+    "color.surface": "#fce1e7",
+    "color.text": "#171515",
+    "color.muted": "#6b5c5b",
+    "color.success": "#146c43",
+    "color.warning": "#946200",
+    "color.error": "#b42318",
+    "font.body": "Arial",
+    "font.heading": "Arial",
+    "font.size-offset": 2,
+    "spacing.xs": 4,
+    "spacing.sm": 8,
+    "spacing.md": 24,
+    "spacing.lg": 32,
+    "spacing.xl": 80,
+    "radius.default": 0,
+    "border.width": 1,
+    "shadow.default": "none",
+    "container.width": 1320,
+    "breakpoint.mobile": 640,
+    "breakpoint.desktop": 1024,
+    "grid.columns.desktop": 5,
+    "grid.columns.tablet": 3,
+    "grid.columns.mobile": 2,
+    "layout.direction": "ltr",
+    "font.arabic.body": "Tajawal",
+    "font.arabic.heading": "Tajawal"
+  },
+  "global": {
+    "top": [
+      {
+        "id": "presentation",
+        "component": "presentation",
+        "version": 1,
+        "enabled": true,
+        "settings": {
+          "style": "heritage"
+        }
+      },
+      {
+        "id": "announcement",
+        "component": "announcement",
+        "version": 1,
+        "enabled": true,
+        "settings": {
+          "text": "The art of everyday care · Pharmacy & skincare"
+        },
+        "translations": {
+          "ar": {
+            "text": {
+              "source": "The art of everyday care · Pharmacy & skincare",
+              "value": "فن العناية اليومية · الصيدلية والعناية بالبشرة"
+            }
+          }
+        }
+      },
+      {
+        "id": "header",
+        "component": "header",
+        "version": 1,
+        "enabled": true,
+        "settings": {
+          "brand": "NOIR ROSÉ"
+        }
+      },
+      {
+        "id": "header-options",
+        "component": "header_options",
+        "version": 1,
+        "enabled": true,
+        "settings": {
+          "sticky": "off",
+          "alt": "Store logo",
+          "logo_width": 160,
+          "show_assistant": "off",
+          "show_location": "on",
+          "image": null,
+          "cart_display": "sidebar_and_page"
+        },
+        "translations": {
+          "ar": {
+            "alt": {
+              "source": "Store logo",
+              "value": "شعار المتجر"
+            }
+          }
+        }
+      },
+      {
+        "id": "navigation",
+        "component": "navigation",
+        "version": 1,
+        "enabled": true,
+        "settings": {}
+      },
+      {
+        "id": "filters",
+        "component": "catalog_filters",
+        "version": 1,
+        "enabled": true,
+        "settings": {
+          "layout": "horizontal"
+        }
+      }
+    ],
+    "bottom": [
+      {
+        "id": "footer-options",
+        "component": "footer_options",
+        "version": 1,
+        "enabled": true,
+        "settings": {
+          "style": "heritage",
+          "show_services": "on",
+          "service_1": "Everyday essentials",
+          "service_2": "Considered skincare",
+          "service_3": "Care, beautifully simple",
+          "show_brand": "on",
+          "copyright": "All rights reserved.",
+          "newsletter_title": "Stay in the know",
+          "newsletter_text": "Discover the latest news and collections.",
+          "newsletter_label": "Explore the latest",
+          "newsletter_href": "/search",
+          "show_newsletter": "off",
+          "column_1_heading": "Customer care",
+          "column_1_link_1_label": "Contact & support",
+          "column_1_link_1_href": "/support",
+          "column_1_link_2_label": "Your orders",
+          "column_1_link_2_href": "/account/orders",
+          "column_2_heading": "Your account",
+          "column_2_link_1_label": "My account",
+          "column_2_link_1_href": "/account",
+          "column_2_link_2_label": "Wishlist",
+          "column_2_link_2_href": "/account/wishlist",
+          "column_3_heading": "Discover",
+          "column_3_link_1_label": "Shop all",
+          "column_3_link_1_href": "/search",
+          "column_3_link_2_label": "Pharmacy essentials",
+          "column_3_link_2_href": "category-link:pharmacy-essentials",
+          "back_to_top_label": "Back to top",
+          "install_label": "Install app",
+          "install_pending_label": "Opening install…",
+          "install_ios_help": "In Safari, open the Share menu (you may need to tap More first), choose Add to Home Screen, then tap Add. If shown, keep Open as Web App enabled.",
+          "install_android_help": "Open your browser menu and choose Install app or Add to Home screen, if available.",
+          "install_browser_help": "Use the install option in your browser’s address bar or menu, if available.",
+          "install_connection_notice": "An internet connection is required to shop."
+        },
+        "translations": {
+          "ar": {
+            "service_1": {
+              "source": "Everyday essentials",
+              "value": "أساسيات كل يوم"
+            },
+            "service_2": {
+              "source": "Considered skincare",
+              "value": "عناية مختارة بالبشرة"
+            },
+            "service_3": {
+              "source": "Care, beautifully simple",
+              "value": "العناية ببساطة وجمال"
+            },
+            "copyright": {
+              "source": "All rights reserved.",
+              "value": "جميع الحقوق محفوظة."
+            },
+            "newsletter_title": {
+              "source": "Stay in the know",
+              "value": "كوني على اطلاع"
+            },
+            "newsletter_text": {
+              "source": "Discover the latest news and collections.",
+              "value": "اكتشفي أحدث الأخبار والمجموعات."
+            },
+            "newsletter_label": {
+              "source": "Explore the latest",
+              "value": "اكتشفي الجديد"
+            },
+            "column_1_heading": {
+              "source": "Customer care",
+              "value": "خدمة العملاء"
+            },
+            "column_1_link_1_label": {
+              "source": "Contact & support",
+              "value": "التواصل والدعم"
+            },
+            "column_1_link_2_label": {
+              "source": "Your orders",
+              "value": "طلباتك"
+            },
+            "column_2_heading": {
+              "source": "Your account",
+              "value": "حسابك"
+            },
+            "column_2_link_1_label": {
+              "source": "My account",
+              "value": "حسابي"
+            },
+            "column_2_link_2_label": {
+              "source": "Wishlist",
+              "value": "المفضّلة"
+            },
+            "column_3_heading": {
+              "source": "Discover",
+              "value": "اكتشفي"
+            },
+            "column_3_link_1_label": {
+              "source": "Shop all",
+              "value": "تسوّقي الكل"
+            },
+            "column_3_link_2_label": {
+              "source": "Pharmacy essentials",
+              "value": "أساسيات الصيدلية"
+            },
+            "back_to_top_label": {
+              "source": "Back to top",
+              "value": "العودة للأعلى"
+            },
+            "install_label": {
+              "source": "Install app",
+              "value": "تثبيت التطبيق"
+            },
+            "install_pending_label": {
+              "source": "Opening install…",
+              "value": "جارٍ فتح التثبيت…"
+            },
+            "install_ios_help": {
+              "source": "In Safari, open the Share menu (you may need to tap More first), choose Add to Home Screen, then tap Add. If shown, keep Open as Web App enabled.",
+              "value": "في سفاري، افتحي قائمة المشاركة ثم اختاري إضافة إلى الشاشة الرئيسية واضغطي إضافة. أبقي خيار الفتح كتطبيق ويب مفعّلاً إن ظهر."
+            },
+            "install_android_help": {
+              "source": "Open your browser menu and choose Install app or Add to Home screen, if available.",
+              "value": "افتحي قائمة المتصفح واختاري تثبيت التطبيق أو إضافة إلى الشاشة الرئيسية إن كان متاحاً."
+            },
+            "install_browser_help": {
+              "source": "Use the install option in your browser’s address bar or menu, if available.",
+              "value": "استخدمي خيار التثبيت في شريط عنوان المتصفح أو قائمته إن كان متاحاً."
+            },
+            "install_connection_notice": {
+              "source": "An internet connection is required to shop.",
+              "value": "يلزم الاتصال بالإنترنت للتسوّق."
+            }
+          }
+        }
+      },
+      {
+        "id": "footer",
+        "component": "footer",
+        "version": 1,
+        "enabled": true,
+        "settings": {
+          "text": "NOIR ROSÉ · Independent design demo. Illustrative USD prices. Brand names belong to their respective owners; no affiliation implied."
+        },
+        "translations": {
+          "ar": {
+            "text": {
+              "source": "NOIR ROSÉ · Independent design demo. Illustrative USD prices. Brand names belong to their respective owners; no affiliation implied.",
+              "value": "NOIR ROSÉ · نموذج تصميم مستقل. الأسعار بالدولار للعرض فقط. العلامات التجارية ملك لأصحابها ولا تعني أي شراكة."
+            }
+          }
+        }
+      }
+    ]
+  },
+  "pages": {
+    "home": [
+      {
+        "id": "hero",
+        "component": "editorial_hero",
+        "version": 1,
+        "enabled": true,
+        "settings": {
+          "heading": "Everyday care.\nBeautifully considered.",
+          "text": "A quieter approach to beauty and wellbeing. Discover elevated skincare rituals and thoughtfully chosen pharmacy essentials.",
+          "image": "asset:pharmacy/hero-luxury.jpg",
+          "alt": "Black and rose glass skincare vessels on ivory stone with flowing silk and soft studio light",
+          "label": "Discover the collection",
+          "href": "/search",
+          "eyebrow": "NOIR ROSÉ / THE CARE COLLECTION"
+        },
+        "translations": {
+          "ar": {
+            "heading": {
+              "source": "Everyday care.\nBeautifully considered.",
+              "value": "عناية يومية.\nبلمسة من الجمال."
+            },
+            "text": {
+              "source": "A quieter approach to beauty and wellbeing. Discover elevated skincare rituals and thoughtfully chosen pharmacy essentials.",
+              "value": "نهج أكثر هدوءاً للجمال والعناية. اكتشفي مستحضرات راقية للبشرة وأساسيات الصيدلية المختارة بعناية."
+            },
+            "alt": {
+              "source": "Black and rose glass skincare vessels on ivory stone with flowing silk and soft studio light",
+              "value": "عبوات عناية بالبشرة بالأسود والزجاج الوردي على حجر عاجي مع حرير منسدل وإضاءة ناعمة"
+            },
+            "label": {
+              "source": "Discover the collection",
+              "value": "اكتشفي المجموعة"
+            },
+            "eyebrow": {
+              "source": "NOIR ROSÉ / THE CARE COLLECTION",
+              "value": "NOIR ROSÉ / مجموعة العناية"
+            }
+          }
+        }
+      },
+      {
+        "id": "categories",
+        "component": "category_showcase",
+        "version": 1,
+        "enabled": true,
+        "settings": {
+          "heading": "A little care, in every detail.",
+          "limit": 8
+        },
+        "translations": {
+          "ar": {
+            "heading": {
+              "source": "A little care, in every detail.",
+              "value": "عناية في كل تفصيلة."
+            }
+          }
+        }
+      },
+      {
+        "id": "featured",
+        "component": "product_collection",
+        "version": 1,
+        "enabled": true,
+        "settings": {
+          "heading": "The luxury skincare edit",
+          "limit": 4,
+          "query": "",
+          "category": "category:skincare"
+        },
+        "translations": {
+          "ar": {
+            "heading": {
+              "source": "The luxury skincare edit",
+              "value": "مختارات العناية الفاخرة بالبشرة"
+            }
+          }
+        }
+      },
+      {
+        "id": "ritual",
+        "component": "image_text",
+        "version": 1,
+        "enabled": true,
+        "settings": {
+          "heading": "Slow down.\nCare comes first.",
+          "text": "Discover face, eye and body care from Estée Lauder, Clinique and Clarins. A considered collection for your everyday rituals.",
+          "image": "asset:pharmacy/ritual-luxury.jpg",
+          "alt": "Estée Lauder night cream on ivory stone in soft warm light",
+          "label": "Explore face & body",
+          "href": "category-link:face-body",
+          "eyebrow": "YOUR DAILY RITUAL",
+          "image_side": "left"
+        },
+        "translations": {
+          "ar": {
+            "heading": {
+              "source": "Slow down.\nCare comes first.",
+              "value": "تمهّلي قليلاً.\nالعناية أولاً."
+            },
+            "text": {
+              "source": "Discover face, eye and body care from Estée Lauder, Clinique and Clarins. A considered collection for your everyday rituals.",
+              "value": "اكتشفي العناية بالوجه والعينين والجسم من إستيه لودر وكلينيك وكلارنس. مجموعة مختارة لروتينك اليومي."
+            },
+            "alt": {
+              "source": "Estée Lauder night cream on ivory stone in soft warm light",
+              "value": "كريم الليل من إستيه لودر على حجر عاجي بإضاءة دافئة وناعمة"
+            },
+            "label": {
+              "source": "Explore face & body",
+              "value": "اكتشفي العناية بالوجه والجسم"
+            },
+            "eyebrow": {
+              "source": "YOUR DAILY RITUAL",
+              "value": "روتينك اليومي"
+            }
+          }
+        }
+      },
+      {
+        "id": "essentials",
+        "component": "product_collection",
+        "version": 1,
+        "enabled": true,
+        "settings": {
+          "heading": "The pharmacy edit",
+          "limit": 4,
+          "query": "",
+          "category": "category:pharmacy-essentials"
+        },
+        "translations": {
+          "ar": {
+            "heading": {
+              "source": "The pharmacy edit",
+              "value": "مختارات الصيدلية"
+            }
+          }
+        }
+      },
+      {
+        "id": "closing",
+        "component": "banner",
+        "version": 1,
+        "enabled": true,
+        "settings": {
+          "heading": "Your own moment of calm.",
+          "text": "Explore 20 selected products from Estée Lauder, SkinCeuticals, Clarins, Clinique and La Roche-Posay.",
+          "label": "Find your ritual",
+          "href": "/search"
+        },
+        "translations": {
+          "ar": {
+            "heading": {
+              "source": "Your own moment of calm.",
+              "value": "لحظة هدوء تخصّك."
+            },
+            "text": {
+              "source": "Explore 20 selected products from Estée Lauder, SkinCeuticals, Clarins, Clinique and La Roche-Posay.",
+              "value": "اكتشفي ٢٠ منتجاً مختاراً من إستيه لودر وسكينسوتيكلز وكلارنس وكلينيك ولاروش بوزيه."
+            },
+            "label": {
+              "source": "Find your ritual",
+              "value": "اكتشفي روتينك"
+            }
+          }
+        }
+      }
+    ],
+    "category": [
+      {
+        "id": "section-10",
+        "component": "product_grid",
+        "version": 1,
+        "enabled": true,
+        "settings": {}
+      }
+    ],
+    "search": [
+      {
+        "id": "section-11",
+        "component": "product_grid",
+        "version": 1,
+        "enabled": true,
+        "settings": {}
+      }
+    ],
+    "product": [
+      {
+        "id": "section-12",
+        "component": "product_detail",
+        "version": 1,
+        "enabled": true,
+        "settings": {}
+      },
+      {
+        "id": "related",
+        "component": "product_collection",
+        "version": 1,
+        "enabled": true,
+        "settings": {
+          "heading": "More to discover",
+          "limit": 4,
+          "query": "",
+          "category": "category:skincare"
+        },
+        "translations": {
+          "ar": {
+            "heading": {
+              "source": "More to discover",
+              "value": "المزيد لتكتشفيه"
+            }
+          }
+        }
+      }
+    ],
+    "cart": [
+      {
+        "id": "section-14",
+        "component": "cart",
+        "version": 1,
+        "enabled": true,
+        "settings": {}
+      }
+    ]
+  }
+}

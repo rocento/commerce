@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "run_id": "YYYY-MM-DD-purpose",
+  "owner": "Responsible person or team",
+  "purpose": "What this run demonstrates or produces",
+  "status": "active",
+  "source": {
+    "commit": "Exact source commit",
+    "dirty_patch_sha256": null,
+    "candidate_manifest": null
+  },
+  "environment": "Local, staging, or named production installation",
+  "commands": [],
+  "verification": {
+    "implementation": "unverified",
+    "local_acceptance": "unverified",
+    "deployment": "unverified",
+    "production_acceptance": "unverified",
+    "limits": []
+  },
+  "files": [],
+  "depends_on": [],
+  "consumed_by": [],
+  "archive": {
+    "location": null,
+    "sha256": null,
+    "restoration_verified_at": null
+  },
+  "retention": {
+    "decision": "retain",
+    "review_after": null,
+    "reason": "Unclassified or active run; preserve until reviewed"
+  }
+}

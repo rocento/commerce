@@ -1,0 +1,130 @@
+/* Shared fields, buttons and form feedback. */
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin: 18px 0;
+  font-size: 13px;
+  font-weight: 500;
+}
+.field input,.field select,select {
+  width: 100%;
+  border: 1px solid #ccd3de;
+  border-radius: 6px;
+  padding: 12px;
+  background: #fff;
+  font: inherit;
+  font-size: 14px;
+  color: #202731;
+}
+.field input:focus,select:focus {
+  outline: 2px solid #9ab1ff;
+  outline-offset: 1px;
+}
+.field input[type=number] {
+  min-width: 0;
+}
+button:disabled {
+  opacity: .55;
+  cursor: wait;
+}
+.text-button {
+  background: none;
+  color: #2855dd;
+  padding: 7px 0;
+}
+.text-button:hover {
+  background: none;
+  color: #153494;
+}
+.secondary {
+  background: #fff;
+  border: 1px solid #ccd3de;
+  color: #4b5566;
+}
+.secondary:hover {
+  background: #edf0f6;
+}
+.danger {
+  color: #b3323d;
+}
+.notice {
+  padding: 14px 16px;
+  background: #eef6f0;
+  color: #296743;
+  border: 1px solid #cce2d2;
+  border-radius: 7px;
+  margin: 16px 0;
+  font-size: 14px;
+  line-height: 1.5;
+}
+.notice.error {
+  background: #fff1f1;
+  color: #a02e3d;
+  border-color: #f1cdd2;
+}
+.help {
+  font-size: 12px;
+  color: #78818f;
+  line-height: 1.6;
+}
+.badge {
+  display: inline-block;
+  background: #edf0f5;
+  color: #626d7e;
+  border-radius: 5px;
+  padding: 5px 8px;
+  font-size: 11px;
+  white-space: nowrap;
+}
+.badge.success {
+  color: #276940;
+  background: #eaf5ed;
+}
+.row {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(2,minmax(0,1fr));
+  gap: 0 18px;
+}
+.checkbox {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+  margin: 14px 0;
+}
+.checkbox input {
+  width: 16px;
+  height: 16px;
+  accent-color: #2855dd;
+}
+@media(max-width:600px) {
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+}
+/* Match product-form checkboxes across forms, tables, and both applications.
+   Keep geometry independent of page-specific text-input styles. */
+input[type="checkbox"] {
+  box-sizing: border-box;
+  appearance: auto;
+  width: 16px !important;
+  height: 16px !important;
+  min-width: 16px !important;
+  min-height: 16px !important;
+  max-width: 16px !important;
+  max-height: 16px !important;
+  flex: 0 0 16px !important;
+  padding: 0 !important;
+  vertical-align: middle;
+  cursor: pointer;
+}
+input[type="checkbox"]:disabled {
+  cursor: not-allowed;
+}

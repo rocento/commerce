@@ -1,0 +1,61 @@
+{
+  "cases": 100000,
+  "turns": 112500,
+  "outcome_changes": 0,
+  "route_changes": 3130,
+  "changed_families": {
+    "requirements_review": 3130
+  },
+  "complex_dispositions": {
+    "specific_evidence_clarification": 5200,
+    "clarify": 1050
+  },
+  "evidence_questions_by_kind": {
+    "household_value": 1004,
+    "delivery_deadline": 1017,
+    "allergy_safety": 1058,
+    "pregnancy_suitability": 1066,
+    "device_compatibility": 1055
+  },
+  "examples": [
+    {
+      "id": "9d1b48a738b4a541069d",
+      "message": "I need chargers under $280, the best value for a family of five. What would you suggest?",
+      "clarification": "What quantity or serving size and time period does your family need, and what total budget should I compare? I need comparable pack sizes and unit prices to assess value."
+    },
+    {
+      "id": "315d1e260d3659720a89",
+      "message": "I need potatoes under $555, the best value for a family of five. What would you suggest?",
+      "clarification": "What quantity or serving size and time period does your family need, and what total budget should I compare? I need comparable pack sizes and unit prices to assess value."
+    },
+    {
+      "id": "d8a1dc3a1770f61ea927",
+      "message": "can you I need linen napkins under $825, delivered tomorrow before 9am. What would you suggest?",
+      "clarification": "What delivery address and exact date, time, and time zone do you need? Only current checkout delivery-slot evidence can confirm that deadline; catalog stock cannot."
+    },
+    {
+      "id": "cbe5476c1573d7e82417",
+      "message": "please I need chickpeas under $380, the best value for a family of five. What would you suggest?",
+      "clarification": "What quantity or serving size and time period does your family need, and what total budget should I compare? I need comparable pack sizes and unit prices to assess value."
+    },
+    {
+      "id": "7ed7446f27f6f7d78861",
+      "message": "would you I need coffee under $995, the best value for a family of five. What would you suggest?",
+      "clarification": "What quantity or serving size and time period does your family need, and what total budget should I compare? I need comparable pack sizes and unit prices to assess value."
+    },
+    {
+      "id": "762c3c50c09b2fa64f54",
+      "message": "I need towels under $135, safe for a severe peanut allergy. What would you suggest?",
+      "clarification": "I cannot verify allergy safety from a product name or missing allergen tags. Which exact product should I check for an explicit allergen and cross-contact statement?"
+    }
+  ],
+  "validation": {
+    "python_passed": 282,
+    "node_focused_passed": 38,
+    "typecheck": "passed",
+    "architecture": "passed"
+  },
+  "paid_llm_calls": 0,
+  "baseline_run": "artifacts/shopping-evals/strict-minimum-2026-09-23",
+  "candidate_run": "artifacts/shopping-evals/requirements-evidence-2026-09-23"
+}

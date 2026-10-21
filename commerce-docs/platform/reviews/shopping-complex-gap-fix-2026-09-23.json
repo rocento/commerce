@@ -1,0 +1,37 @@
+{
+  "cases": 500000,
+  "turns": 566666,
+  "language_scope": "english",
+  "cases_sha256": "cfc05c6f1b9d3bc5c0a381b84c42457833e563cd8248ec856919fe03ab3ec8ab",
+  "outcome_changes_by_family": {},
+  "route_changes_by_family": {
+    "unsupported_conditions_review": 4904,
+    "device_requirements_review": 4208
+  },
+  "catalog_plan_changes_by_family": {
+    "unsupported_conditions_review": 4904,
+    "device_requirements_review": 4208
+  },
+  "regressions": [],
+  "outcomes": {
+    "passed": 416669,
+    "review": 83331
+  },
+  "safety_violations": 0,
+  "quantity_family": {
+    "fallback_turns": 0,
+    "cases": 16667,
+    "passed": 16667
+  },
+  "examples": [],
+  "source_changes_during_run": [],
+  "validation": {
+    "node_tests_passed": 89,
+    "python_tests_passed": 115,
+    "typecheck": "passed",
+    "architecture_check": "passed"
+  },
+  "paid_llm_calls": 0,
+  "baseline": "artifacts/shopping-evals/route-gap-fix-500k-2026-09-23",
+  "candidate": "artifacts/shopping-evals/complex-gap-fix-500k-2026-09-23"
+}

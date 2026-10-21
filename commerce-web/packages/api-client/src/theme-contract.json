@@ -1,0 +1,1156 @@
+{
+  "schema_version": "theme/v1",
+  "tokens": {
+    "color.primary": {
+      "kind": "color",
+      "default": "#146c43"
+    },
+    "color.secondary": {
+      "kind": "color",
+      "default": "#d93f52"
+    },
+    "color.background": {
+      "kind": "color",
+      "default": "#ffffff"
+    },
+    "color.surface": {
+      "kind": "color",
+      "default": "#f3f5f4"
+    },
+    "color.text": {
+      "kind": "color",
+      "default": "#17251d"
+    },
+    "color.muted": {
+      "kind": "color",
+      "default": "#58645d"
+    },
+    "color.success": {
+      "kind": "color",
+      "default": "#146c43"
+    },
+    "color.warning": {
+      "kind": "color",
+      "default": "#946200"
+    },
+    "color.error": {
+      "kind": "color",
+      "default": "#b42318"
+    },
+    "font.body": {
+      "kind": "select",
+      "default": "system-ui",
+      "options": [
+        "system-ui",
+        "Arial",
+        "Georgia",
+        "Bodoni Moda",
+        "Jost",
+        "Saol Display",
+        "Futura Now Headline",
+        "Cairo",
+        "Tajawal",
+        "Noto Sans Arabic"
+      ]
+    },
+    "font.heading": {
+      "kind": "select",
+      "default": "system-ui",
+      "options": [
+        "system-ui",
+        "Arial",
+        "Georgia",
+        "Bodoni Moda",
+        "Jost",
+        "Saol Display",
+        "Futura Now Headline",
+        "Cairo",
+        "Tajawal",
+        "Noto Sans Arabic"
+      ]
+    },
+    "font.size-offset": {
+      "kind": "number",
+      "default": 0,
+      "min": 0,
+      "max": 4
+    },
+    "spacing.xs": {
+      "kind": "number",
+      "default": 4,
+      "min": 0,
+      "max": 96
+    },
+    "spacing.sm": {
+      "kind": "number",
+      "default": 8,
+      "min": 0,
+      "max": 96
+    },
+    "spacing.md": {
+      "kind": "number",
+      "default": 16,
+      "min": 0,
+      "max": 96
+    },
+    "spacing.lg": {
+      "kind": "number",
+      "default": 24,
+      "min": 0,
+      "max": 96
+    },
+    "spacing.xl": {
+      "kind": "number",
+      "default": 48,
+      "min": 0,
+      "max": 96
+    },
+    "radius.default": {
+      "kind": "number",
+      "default": 6,
+      "min": 0,
+      "max": 8
+    },
+    "border.width": {
+      "kind": "number",
+      "default": 1,
+      "min": 0,
+      "max": 4
+    },
+    "shadow.default": {
+      "kind": "select",
+      "default": "none",
+      "options": [
+        "none",
+        "0 2px 8px #00000014",
+        "0 4px 16px #0000001f"
+      ]
+    },
+    "container.width": {
+      "kind": "number",
+      "default": 1280,
+      "min": 960,
+      "max": 1600
+    },
+    "breakpoint.mobile": {
+      "kind": "number",
+      "default": 640,
+      "min": 320,
+      "max": 767
+    },
+    "breakpoint.desktop": {
+      "kind": "number",
+      "default": 1024,
+      "min": 768,
+      "max": 1440
+    },
+    "grid.columns.desktop": {
+      "kind": "number",
+      "default": 4,
+      "min": 1,
+      "max": 6
+    },
+    "grid.columns.tablet": {
+      "kind": "number",
+      "default": 3,
+      "min": 1,
+      "max": 6
+    },
+    "grid.columns.mobile": {
+      "kind": "number",
+      "default": 2,
+      "min": 1,
+      "max": 6
+    },
+    "layout.direction": {
+      "kind": "select",
+      "default": "ltr",
+      "options": [
+        "ltr",
+        "rtl"
+      ]
+    },
+    "font.arabic.body": {
+      "kind": "select",
+      "default": "inherit",
+      "options": [
+        "inherit",
+        "Cairo",
+        "Tajawal",
+        "Noto Sans Arabic"
+      ]
+    },
+    "font.arabic.heading": {
+      "kind": "select",
+      "default": "inherit",
+      "options": [
+        "inherit",
+        "Cairo",
+        "Tajawal",
+        "Noto Sans Arabic"
+      ]
+    }
+  },
+  "components": {
+    "announcement": {
+      "label": "Announcement bar",
+      "version": 1,
+      "locations": [
+        "top"
+      ],
+      "required": false,
+      "settings": {
+        "text": {
+          "kind": "text",
+          "default": "Fresh choices, delivered to your door",
+          "min": 1,
+          "max": 200
+        }
+      }
+    },
+    "header": {
+      "label": "Header",
+      "version": 1,
+      "locations": [
+        "top"
+      ],
+      "required": true,
+      "settings": {
+        "brand": {
+          "kind": "text",
+          "default": "Commerce",
+          "min": 1,
+          "max": 80
+        }
+      }
+    },
+    "navigation": {
+      "label": "Navigation",
+      "version": 1,
+      "locations": [
+        "top"
+      ],
+      "required": true,
+      "settings": {}
+    },
+    "hero": {
+      "label": "Hero",
+      "version": 1,
+      "locations": [
+        "home"
+      ],
+      "required": false,
+      "settings": {
+        "heading": {
+          "kind": "text",
+          "default": "Discover more",
+          "min": 1,
+          "max": 200
+        },
+        "text": {
+          "kind": "text",
+          "default": "Everyday essentials. Carefully selected.",
+          "min": 0,
+          "max": 1000
+        },
+        "image": {
+          "kind": "asset",
+          "default": null
+        },
+        "alt": {
+          "kind": "text",
+          "default": "",
+          "min": 0,
+          "max": 200
+        },
+        "label": {
+          "kind": "text",
+          "default": "Shop now",
+          "min": 1,
+          "max": 80
+        },
+        "href": {
+          "kind": "link",
+          "default": "/search"
+        }
+      }
+    },
+    "banner": {
+      "label": "Promotional banner",
+      "version": 1,
+      "locations": [
+        "home",
+        "category",
+        "search",
+        "product",
+        "cart"
+      ],
+      "required": false,
+      "settings": {
+        "heading": {
+          "kind": "text",
+          "default": "Discover more",
+          "min": 1,
+          "max": 200
+        },
+        "text": {
+          "kind": "text",
+          "default": "",
+          "min": 0,
+          "max": 1000
+        },
+        "label": {
+          "kind": "text",
+          "default": "Shop now",
+          "min": 1,
+          "max": 80
+        },
+        "href": {
+          "kind": "link",
+          "default": "/search"
+        }
+      }
+    },
+    "category_grid": {
+      "label": "Categories",
+      "version": 1,
+      "locations": [
+        "home"
+      ],
+      "required": false,
+      "settings": {
+        "heading": {
+          "kind": "text",
+          "default": "Discover more",
+          "min": 1,
+          "max": 200
+        },
+        "limit": {
+          "kind": "number",
+          "default": 8,
+          "min": 1,
+          "max": 24
+        }
+      }
+    },
+    "featured_products": {
+      "label": "Featured products",
+      "version": 1,
+      "locations": [
+        "home"
+      ],
+      "required": false,
+      "settings": {
+        "heading": {
+          "kind": "text",
+          "default": "Discover more",
+          "min": 1,
+          "max": 200
+        },
+        "limit": {
+          "kind": "number",
+          "default": 8,
+          "min": 1,
+          "max": 24
+        }
+      }
+    },
+    "recommendations": {
+      "label": "Recommendations",
+      "version": 1,
+      "locations": [
+        "home",
+        "product",
+        "cart"
+      ],
+      "required": false,
+      "settings": {
+        "heading": {
+          "kind": "text",
+          "default": "More to explore",
+          "min": 1,
+          "max": 200
+        },
+        "limit": {
+          "kind": "number",
+          "default": 4,
+          "min": 1,
+          "max": 12
+        }
+      }
+    },
+    "rich_text": {
+      "label": "Text",
+      "version": 1,
+      "locations": [
+        "home",
+        "category",
+        "search",
+        "product",
+        "cart",
+        "bottom"
+      ],
+      "required": false,
+      "settings": {
+        "heading": {
+          "kind": "text",
+          "default": "Discover more",
+          "min": 1,
+          "max": 200
+        },
+        "text": {
+          "kind": "text",
+          "default": "",
+          "min": 0,
+          "max": 5000
+        }
+      }
+    },
+    "image": {
+      "label": "Image",
+      "version": 1,
+      "locations": [
+        "home",
+        "category",
+        "product"
+      ],
+      "required": false,
+      "settings": {
+        "image": {
+          "kind": "asset",
+          "default": null
+        },
+        "alt": {
+          "kind": "text",
+          "default": "",
+          "min": 0,
+          "max": 200
+        }
+      }
+    },
+    "footer": {
+      "label": "Footer",
+      "version": 1,
+      "locations": [
+        "bottom"
+      ],
+      "required": true,
+      "settings": {
+        "text": {
+          "kind": "text",
+          "default": "Commerce",
+          "min": 1,
+          "max": 500
+        }
+      }
+    },
+    "product_grid": {
+      "label": "Product listing",
+      "version": 1,
+      "locations": [
+        "category",
+        "search"
+      ],
+      "required": true,
+      "settings": {}
+    },
+    "product_detail": {
+      "label": "Product details",
+      "version": 1,
+      "locations": [
+        "product"
+      ],
+      "required": true,
+      "settings": {}
+    },
+    "cart": {
+      "label": "Cart",
+      "version": 1,
+      "locations": [
+        "cart"
+      ],
+      "required": true,
+      "settings": {}
+    },
+    "editorial_hero": {
+      "label": "Editorial hero",
+      "version": 1,
+      "locations": [
+        "home"
+      ],
+      "required": false,
+      "settings": {
+        "heading": {
+          "kind": "text",
+          "default": "Discover more",
+          "min": 1,
+          "max": 200
+        },
+        "text": {
+          "kind": "text",
+          "default": "Everyday essentials. Carefully selected.",
+          "min": 0,
+          "max": 1000
+        },
+        "image": {
+          "kind": "asset",
+          "default": null
+        },
+        "alt": {
+          "kind": "text",
+          "default": "",
+          "min": 0,
+          "max": 200
+        },
+        "label": {
+          "kind": "text",
+          "default": "Shop now",
+          "min": 1,
+          "max": 80
+        },
+        "href": {
+          "kind": "link",
+          "default": "/search"
+        },
+        "eyebrow": {
+          "kind": "text",
+          "default": "The collection",
+          "min": 0,
+          "max": 200
+        }
+      }
+    },
+    "image_text": {
+      "label": "Image and text",
+      "version": 1,
+      "locations": [
+        "home",
+        "category",
+        "product"
+      ],
+      "required": false,
+      "settings": {
+        "heading": {
+          "kind": "text",
+          "default": "Discover more",
+          "min": 1,
+          "max": 200
+        },
+        "text": {
+          "kind": "text",
+          "default": "Everyday essentials. Carefully selected.",
+          "min": 0,
+          "max": 1000
+        },
+        "image": {
+          "kind": "asset",
+          "default": null
+        },
+        "alt": {
+          "kind": "text",
+          "default": "",
+          "min": 0,
+          "max": 200
+        },
+        "label": {
+          "kind": "text",
+          "default": "Shop now",
+          "min": 1,
+          "max": 80
+        },
+        "href": {
+          "kind": "link",
+          "default": "/search"
+        },
+        "eyebrow": {
+          "kind": "text",
+          "default": "The collection",
+          "min": 0,
+          "max": 200
+        },
+        "image_side": {
+          "kind": "select",
+          "default": "left",
+          "options": [
+            "left",
+            "right"
+          ]
+        }
+      }
+    },
+    "presentation": {
+      "label": "Storefront presentation",
+      "version": 1,
+      "locations": [
+        "top"
+      ],
+      "required": false,
+      "settings": {
+        "style": {
+          "kind": "select",
+          "default": "standard",
+          "options": [
+            "standard",
+            "editorial",
+            "heritage",
+            "showcase"
+          ]
+        }
+      }
+    },
+    "product_collection": {
+      "label": "Product collection",
+      "version": 1,
+      "locations": [
+        "home",
+        "product",
+        "cart"
+      ],
+      "required": false,
+      "settings": {
+        "heading": {
+          "kind": "text",
+          "default": "Discover more",
+          "min": 1,
+          "max": 200
+        },
+        "limit": {
+          "kind": "number",
+          "default": 8,
+          "min": 1,
+          "max": 24
+        },
+        "query": {
+          "kind": "text",
+          "default": "",
+          "min": 0,
+          "max": 200
+        },
+        "category": {
+          "kind": "text",
+          "default": "",
+          "min": 0,
+          "max": 100
+        }
+      }
+    },
+    "category_showcase": {
+      "label": "Category showcase",
+      "version": 1,
+      "locations": [
+        "home"
+      ],
+      "required": false,
+      "settings": {
+        "heading": {
+          "kind": "text",
+          "default": "Discover more",
+          "min": 1,
+          "max": 200
+        },
+        "limit": {
+          "kind": "number",
+          "default": 8,
+          "min": 1,
+          "max": 24
+        }
+      }
+    },
+    "catalog_filters": {
+      "label": "Catalog filters",
+      "version": 1,
+      "locations": [
+        "top",
+        "category",
+        "search"
+      ],
+      "required": false,
+      "settings": {
+        "layout": {
+          "kind": "select",
+          "default": "vertical",
+          "options": [
+            "horizontal",
+            "vertical"
+          ]
+        }
+      }
+    },
+    "header_options": {
+      "label": "Header options",
+      "version": 1,
+      "locations": [
+        "top"
+      ],
+      "required": false,
+      "settings": {
+        "sticky": {
+          "kind": "select",
+          "default": "off",
+          "options": [
+            "off",
+            "on"
+          ]
+        },
+        "alt": {
+          "kind": "text",
+          "default": "Store logo",
+          "min": 0,
+          "max": 200
+        },
+        "logo_width": {
+          "kind": "number",
+          "default": 160,
+          "min": 60,
+          "max": 280
+        },
+        "show_assistant": {
+          "kind": "select",
+          "default": "on",
+          "options": [
+            "on",
+            "off"
+          ]
+        },
+        "show_location": {
+          "kind": "select",
+          "default": "on",
+          "options": [
+            "on",
+            "off"
+          ]
+        },
+        "image": {
+          "kind": "asset",
+          "default": null
+        },
+        "cart_display": {
+          "kind": "select",
+          "default": "sidebar_and_page",
+          "options": [
+            "sidebar_and_page",
+            "page_only"
+          ]
+        }
+      }
+    },
+    "footer_options": {
+      "label": "Footer content & links",
+      "version": 1,
+      "locations": [
+        "bottom"
+      ],
+      "required": false,
+      "settings": {
+        "style": {
+          "kind": "select",
+          "default": "inherit",
+          "options": [
+            "inherit",
+            "standard",
+            "heritage"
+          ]
+        },
+        "show_services": {
+          "kind": "select",
+          "default": "on",
+          "options": [
+            "on",
+            "off"
+          ]
+        },
+        "service_1": {
+          "kind": "text",
+          "default": "Thoughtfully selected",
+          "min": 0,
+          "max": 200
+        },
+        "service_2": {
+          "kind": "text",
+          "default": "Here to help",
+          "min": 0,
+          "max": 200
+        },
+        "service_3": {
+          "kind": "text",
+          "default": "Shop with confidence",
+          "min": 0,
+          "max": 200
+        },
+        "show_brand": {
+          "kind": "select",
+          "default": "on",
+          "options": [
+            "on",
+            "off"
+          ]
+        },
+        "copyright": {
+          "kind": "text",
+          "default": "All rights reserved.",
+          "min": 0,
+          "max": 200
+        },
+        "newsletter_title": {
+          "kind": "text",
+          "default": "Stay in the know",
+          "min": 0,
+          "max": 200
+        },
+        "newsletter_text": {
+          "kind": "text",
+          "default": "Discover the latest news and collections.",
+          "min": 0,
+          "max": 200
+        },
+        "newsletter_label": {
+          "kind": "text",
+          "default": "Explore the latest",
+          "min": 0,
+          "max": 200
+        },
+        "newsletter_href": {
+          "kind": "link",
+          "default": "/search"
+        },
+        "show_newsletter": {
+          "kind": "select",
+          "default": "off",
+          "options": [
+            "off",
+            "on"
+          ]
+        },
+        "column_1_heading": {
+          "kind": "text",
+          "default": "Customer care",
+          "min": 0,
+          "max": 200
+        },
+        "column_1_link_1_label": {
+          "kind": "text",
+          "default": "Contact & support",
+          "min": 0,
+          "max": 80
+        },
+        "column_1_link_1_href": {
+          "kind": "link",
+          "default": "/support"
+        },
+        "column_1_link_2_label": {
+          "kind": "text",
+          "default": "Your orders",
+          "min": 0,
+          "max": 80
+        },
+        "column_1_link_2_href": {
+          "kind": "link",
+          "default": "/account/orders"
+        },
+        "column_2_heading": {
+          "kind": "text",
+          "default": "Your account",
+          "min": 0,
+          "max": 200
+        },
+        "column_2_link_1_label": {
+          "kind": "text",
+          "default": "My account",
+          "min": 0,
+          "max": 80
+        },
+        "column_2_link_1_href": {
+          "kind": "link",
+          "default": "/account"
+        },
+        "column_2_link_2_label": {
+          "kind": "text",
+          "default": "Wishlist",
+          "min": 0,
+          "max": 80
+        },
+        "column_2_link_2_href": {
+          "kind": "link",
+          "default": "/account/wishlist"
+        },
+        "column_3_heading": {
+          "kind": "text",
+          "default": "Discover",
+          "min": 0,
+          "max": 200
+        },
+        "column_3_link_1_label": {
+          "kind": "text",
+          "default": "Shop all",
+          "min": 0,
+          "max": 80
+        },
+        "column_3_link_1_href": {
+          "kind": "link",
+          "default": "/search"
+        },
+        "column_3_link_2_label": {
+          "kind": "text",
+          "default": "Shopping assistant",
+          "min": 0,
+          "max": 80
+        },
+        "column_3_link_2_href": {
+          "kind": "link",
+          "default": "/assistant"
+        },
+        "back_to_top_label": {
+          "kind": "text",
+          "default": "Back to top",
+          "min": 0,
+          "max": 200
+        },
+        "install_label": {
+          "kind": "text",
+          "default": "Install app",
+          "min": 0,
+          "max": 200
+        },
+        "install_pending_label": {
+          "kind": "text",
+          "default": "Opening install…",
+          "min": 0,
+          "max": 200
+        },
+        "install_ios_help": {
+          "kind": "text",
+          "default": "In Safari, open the Share menu (you may need to tap More first), choose Add to Home Screen, then tap Add. If shown, keep Open as Web App enabled.",
+          "min": 0,
+          "max": 1000
+        },
+        "install_android_help": {
+          "kind": "text",
+          "default": "Open your browser menu and choose Install app or Add to Home screen, if available.",
+          "min": 0,
+          "max": 1000
+        },
+        "install_browser_help": {
+          "kind": "text",
+          "default": "Use the install option in your browser’s address bar or menu, if available.",
+          "min": 0,
+          "max": 1000
+        },
+        "install_connection_notice": {
+          "kind": "text",
+          "default": "An internet connection is required to shop.",
+          "min": 0,
+          "max": 200
+        }
+      }
+    },
+    "best_sellers": {
+      "label": "Best sellers",
+      "version": 1,
+      "locations": [
+        "home",
+        "category",
+        "product",
+        "cart"
+      ],
+      "required": false,
+      "settings": {
+        "heading": {
+          "kind": "text",
+          "default": "Best sellers",
+          "min": 1,
+          "max": 200
+        },
+        "period": {
+          "kind": "select",
+          "default": "last_month",
+          "options": [
+            "today",
+            "last_week",
+            "last_month",
+            "last_year"
+          ]
+        },
+        "limit": {
+          "kind": "number",
+          "default": 8,
+          "min": 1,
+          "max": 24
+        }
+      }
+    }
+  },
+  "default": {
+    "schema_version": "theme/v1",
+    "tokens": {
+      "color.primary": "#146c43",
+      "color.secondary": "#d93f52",
+      "color.background": "#ffffff",
+      "color.surface": "#f3f5f4",
+      "color.text": "#17251d",
+      "color.muted": "#58645d",
+      "color.success": "#146c43",
+      "color.warning": "#946200",
+      "color.error": "#b42318",
+      "font.body": "system-ui",
+      "font.heading": "system-ui",
+      "spacing.xs": 4,
+      "spacing.sm": 8,
+      "spacing.md": 16,
+      "spacing.lg": 24,
+      "spacing.xl": 48,
+      "radius.default": 6,
+      "border.width": 1,
+      "shadow.default": "none",
+      "container.width": 1280,
+      "breakpoint.mobile": 640,
+      "breakpoint.desktop": 1024,
+      "layout.direction": "ltr"
+    },
+    "global": {
+      "top": [
+        {
+          "id": "section-1",
+          "component": "announcement",
+          "version": 1,
+          "enabled": true,
+          "settings": {
+            "text": "Fresh choices, delivered to your door"
+          }
+        },
+        {
+          "id": "section-2",
+          "component": "header",
+          "version": 1,
+          "enabled": true,
+          "settings": {
+            "brand": "Commerce"
+          }
+        },
+        {
+          "id": "section-3",
+          "component": "navigation",
+          "version": 1,
+          "enabled": true,
+          "settings": {}
+        }
+      ],
+      "bottom": [
+        {
+          "id": "section-4",
+          "component": "footer",
+          "version": 1,
+          "enabled": true,
+          "settings": {
+            "text": "Commerce"
+          }
+        }
+      ]
+    },
+    "pages": {
+      "home": [
+        {
+          "id": "section-5",
+          "component": "hero",
+          "version": 1,
+          "enabled": true,
+          "settings": {
+            "heading": "Good food. Everyday.",
+            "text": "Fresh produce and pantry favourites for your table.",
+            "image": null,
+            "alt": "",
+            "label": "Shop now",
+            "href": "/search"
+          }
+        },
+        {
+          "id": "section-6",
+          "component": "category_grid",
+          "version": 1,
+          "enabled": true,
+          "settings": {
+            "heading": "Shop by category",
+            "limit": 8
+          }
+        },
+        {
+          "id": "section-7",
+          "component": "featured_products",
+          "version": 1,
+          "enabled": true,
+          "settings": {
+            "heading": "Fresh picks",
+            "limit": 8
+          }
+        },
+        {
+          "id": "section-8",
+          "component": "banner",
+          "version": 1,
+          "enabled": true,
+          "settings": {
+            "heading": "Make room for something new",
+            "text": "",
+            "label": "Shop now",
+            "href": "/search"
+          }
+        },
+        {
+          "id": "section-9",
+          "component": "recommendations",
+          "version": 1,
+          "enabled": true,
+          "settings": {
+            "heading": "More to explore",
+            "limit": 4
+          }
+        }
+      ],
+      "category": [
+        {
+          "id": "section-10",
+          "component": "product_grid",
+          "version": 1,
+          "enabled": true,
+          "settings": {}
+        }
+      ],
+      "search": [
+        {
+          "id": "section-11",
+          "component": "product_grid",
+          "version": 1,
+          "enabled": true,
+          "settings": {}
+        }
+      ],
+      "product": [
+        {
+          "id": "section-12",
+          "component": "product_detail",
+          "version": 1,
+          "enabled": true,
+          "settings": {}
+        },
+        {
+          "id": "section-13",
+          "component": "recommendations",
+          "version": 1,
+          "enabled": true,
+          "settings": {
+            "heading": "More to explore",
+            "limit": 4
+          }
+        }
+      ],
+      "cart": [
+        {
+          "id": "section-14",
+          "component": "cart",
+          "version": 1,
+          "enabled": true,
+          "settings": {}
+        }
+      ]
+    }
+  }
+}

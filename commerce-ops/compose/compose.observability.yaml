@@ -1,0 +1,70 @@
+# Optional local stack. docker compose -f commerce-ops/compose/compose.yaml -f commerce-ops/compose/compose.observability.yaml up -d
+services:
+  analytics-worker:
+    environment:
+      OTEL_EXPORTER_OTLP_ENDPOINT: http://otel-collector:4318
+  api-gateway:
+    environment:
+      OTEL_EXPORTER_OTLP_ENDPOINT: http://otel-collector:4318
+      LOKI_URL: http://loki:3100
+  storefront:
+    environment:
+      VITE_OTEL_ENDPOINT: http://localhost:4318/v1/traces
+  admin:
+    environment:
+      VITE_OTEL_ENDPOINT: http://localhost:4318/v1/traces
+  otel-collector:
+    image: otel/opentelemetry-collector:0.133.0
+    command: [--config=/etc/otel/config.yaml]
+    volumes: ["../../commerce-ops/deploy/observability/collector.yaml:/etc/otel/config.yaml:ro"]
+    ports: ["127.0.0.1:4318:4318"]
+    mem_limit: 192m
+  observability-volumes:
+    image: python:3.12-alpine
+    user: "0:0"
+    command: [python, -c, "import os; os.chown('/tempo',10001,10001); os.chown('/loki',10001,10001)"]
+    volumes: ["tempo-data:/tempo", "loki-data:/loki"]
+    network_mode: none
+  tempo:
+    depends_on:
+      observability-volumes: {condition: service_completed_successfully}
+    image: grafana/tempo:2.9.0
+    command: [-config.file=/etc/tempo.yaml]
+    volumes: ["../../commerce-ops/deploy/observability/tempo.yaml:/etc/tempo.yaml:ro", "tempo-data:/tmp/tempo"]
+    ports: ["127.0.0.1:3200:3200"]
+  loki:
+    depends_on:
+      observability-volumes: {condition: service_completed_successfully}
+    image: grafana/loki:3.5.4
+    command: [-config.file=/etc/loki.yaml]
+    volumes: ["../../commerce-ops/deploy/observability/loki.yaml:/etc/loki.yaml:ro", "loki-data:/tmp/loki"]
+    ports: ["127.0.0.1:3100:3100"]
+  prometheus:
+    image: prom/prometheus:v3.5.0
+    command: [--config.file=/etc/prometheus/prometheus.yaml, --storage.tsdb.retention.time=24h]
+    volumes: ["../../commerce-ops/deploy/observability/prometheus.yaml:/etc/prometheus/prometheus.yaml:ro", "../../commerce-ops/deploy/observability/alerts.yaml:/etc/prometheus/alerts.yaml:ro", "prometheus-data:/prometheus"]
+    ports: ["127.0.0.1:9090:9090"]
+  alertmanager:
+    image: prom/alertmanager:v0.28.1
+    command: [--config.file=/etc/alertmanager/alertmanager.yaml]
+    volumes: ["../../commerce-ops/deploy/observability/alertmanager.yaml:/etc/alertmanager/alertmanager.yaml:ro"]
+    ports: ["127.0.0.1:9093:9093"]
+  alert-receiver:
+    image: python:3.12-alpine
+    command: [python, /app/alert-receiver.py]
+    volumes: ["../../commerce-ops/deploy/observability/alert-receiver.py:/app/alert-receiver.py:ro"]
+    read_only: true
+    cap_drop: [ALL]
+  grafana:
+    image: grafana/grafana:12.1.1
+    environment:
+      GF_AUTH_ANONYMOUS_ENABLED: "true"
+      GF_AUTH_ANONYMOUS_ORG_ROLE: Viewer
+      GF_USERS_ALLOW_SIGN_UP: "false"
+    ports: ["127.0.0.1:3000:3000"]
+    volumes: ["../../commerce-ops/deploy/observability/grafana/provisioning:/etc/grafana/provisioning:ro", "../../commerce-ops/deploy/observability/grafana/dashboard.json:/etc/grafana/dashboards/commerce.json:ro", "../../commerce-ops/deploy/observability/grafana/reliability.json:/etc/grafana/dashboards/reliability.json:ro", "grafana-data:/var/lib/grafana"]
+volumes:
+  tempo-data:
+  loki-data:
+  prometheus-data:
+  grafana-data:

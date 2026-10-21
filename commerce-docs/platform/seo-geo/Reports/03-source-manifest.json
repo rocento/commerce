@@ -1,0 +1,210 @@
+{
+  "stage": "03",
+  "scope": "merchant storefront public rendering",
+  "files": [
+    {
+      "path": "SEO-GEO/Docs/cache-and-invalidation.md",
+      "sha256": "aae75a7fd7e515e08f3ffe23f01f123c8228f702d256e06c778fd14c971e659d"
+    },
+    {
+      "path": "SEO-GEO/Docs/http-status-policy.md",
+      "sha256": "17b10a2dd7460c5eb08411eedc6e9dbd522964a6f360425b9e5c73b84fb36ed8"
+    },
+    {
+      "path": "SEO-GEO/Docs/rendering-strategy.md",
+      "sha256": "7a05485bf8f36bb3c59a819e5732a0ea7263bc392c10beca9ea422fdaa13dd9a"
+    },
+    {
+      "path": "SEO-GEO/Reports/03-existing-source-delta.patch",
+      "sha256": "7182232f62ee3ed9290c8627f989dcfd5b1f2e887f8fa20d741288c8c74de995"
+    },
+    {
+      "path": "SEO-GEO/Reports/03-server-visible-rendering-and-http-status.md",
+      "sha256": "35c60e9cb724ae89f30ab7b0bb95b8299b41c73e421006c9c675733b1a28e2ff"
+    },
+    {
+      "path": "SEO-GEO/Tests/stage03/.gitattributes",
+      "sha256": "f22d517aa82abe0ef547befa8cbd37b18e8b4d37b527f875bec7993dcec98218"
+    },
+    {
+      "path": "SEO-GEO/Tests/stage03/README.md",
+      "sha256": "f2739abfd6c249b6ec0859e0ddd16af15f879c4e982222c7038838d9155eae3f"
+    },
+    {
+      "path": "SEO-GEO/Tests/stage03/api-regression-validation.log",
+      "sha256": "7bec03d207e703286d5506704a87abc7d4d351f120da6dd4fd7d9d7966619de6"
+    },
+    {
+      "path": "SEO-GEO/Tests/stage03/categories-fruit.http",
+      "sha256": "d995eaa9daf6d979c4ac85b57655ccbd79786862a670324c043104d0fd15c8dd"
+    },
+    {
+      "path": "SEO-GEO/Tests/stage03/frontend-validation.log",
+      "sha256": "6f3cf221b32eb3e5235e7c19d8ac9b291ba9eb432061b73893231bd2bc68b016"
+    },
+    {
+      "path": "SEO-GEO/Tests/stage03/home.http",
+      "sha256": "255730625b997cefda4360bd751c7fd4c85fa07937b23ddafc2d7f2fa7208362"
+    },
+    {
+      "path": "SEO-GEO/Tests/stage03/http-validation.log",
+      "sha256": "760840e0bbad60aed87fba023c28fa480cae3c796d968477621218243034cc6a"
+    },
+    {
+      "path": "SEO-GEO/Tests/stage03/pages-about.http",
+      "sha256": "7f436255e9e35d057f441033b889018aa90584d6cb1dbf072d8229a2cdf7d506"
+    },
+    {
+      "path": "SEO-GEO/Tests/stage03/product-desktop.png",
+      "sha256": "f927b2eb63c5212c05f634bf632e279bd7c071bb8838e31ba63cc8ed990650a7"
+    },
+    {
+      "path": "SEO-GEO/Tests/stage03/product-mobile.png",
+      "sha256": "71896c1f79ad8d14daeedaaf82f16492280343ef8a323d98992132365c4e5863"
+    },
+    {
+      "path": "SEO-GEO/Tests/stage03/products-apples.http",
+      "sha256": "58db3840ee112354a8e0bee32bfbcf5dd5c02cecc7f2e0e3c26a27671ba1cc98"
+    },
+    {
+      "path": "SEO-GEO/Tests/stage03/renamed-301.http",
+      "sha256": "45e5ef100441b809260a88ab548827dd0e2c07818e6fddcd09a7a23b37592684"
+    },
+    {
+      "path": "SEO-GEO/Tests/stage03/retired-410.http",
+      "sha256": "a5fa87ee508b1c4f897042c35ed90f2b59ec63882bf89e080dc1aace517ebe1d"
+    },
+    {
+      "path": "SEO-GEO/Tests/stage03/unknown-404.http",
+      "sha256": "3fa9f069698886d4784e5b0d276d4bfda4830a20c3ec37dd2cf6ec3569cc7a96"
+    },
+    {
+      "path": "backend/crates/api-gateway/src/discoverability.rs",
+      "sha256": "e97cd73efbbee30cb5aff20bd256a75a7f30be03e000fb1596979b15964aef9e"
+    },
+    {
+      "path": "backend/crates/api-gateway/src/public_commerce/mod.rs",
+      "sha256": "efd32f7d27527503baec2364abea9affd6c5b2fa34c2f66dfa29dbbd8951d350"
+    },
+    {
+      "path": "backend/crates/api-gateway/src/public_commerce/snapshot.rs",
+      "sha256": "664877af4f241bea5fb2d6e47a497bd37dafedd2ba0007af6bd2b6583caeeb00"
+    },
+    {
+      "path": "backend/crates/api-gateway/tests/publication_policy.rs",
+      "sha256": "6d3af188bedecd9fce4ac29f4d2c376009489a2baa0ca401d6f67c34f95e1d04"
+    },
+    {
+      "path": "backend/crates/api-gateway/tests/publication_rendering.rs",
+      "sha256": "2c358aaf2b5d52909ae0ed41500843254a61d7eaaf7221c781d6be14a2ea9a79"
+    },
+    {
+      "path": "backend/crates/domain-catalog/src/lib.rs",
+      "sha256": "7abb4ec4d8d4fb520da988344e4d835e8c95d3643a024e09f9e17096a55c1390"
+    },
+    {
+      "path": "backend/crates/domain-catalog/src/public.rs",
+      "sha256": "3228d58a09f4752b44a40f14995dccb58ac5ce60be02fb0260ae24815c213f6a"
+    },
+    {
+      "path": "backend/migrations/20260921100000_publication_routes.sql",
+      "sha256": "849e7d2f574dbd32c1cb49ab87341596d10bb5b3013125abf15ce032fc774b7c"
+    },
+    {
+      "path": "compose.publication.yaml",
+      "sha256": "65f7d5ff573801e79185dea66ed4c254925a9e220b47438db02bf866ac01ad10"
+    },
+    {
+      "path": "deploy/ec2/publication.py",
+      "sha256": "0b8f9d075a90a2dd356fbd89e994772aa8c46cc7a9b0bf3060f4d51d4ebcc742"
+    },
+    {
+      "path": "frontend/apps/storefront/package.json",
+      "sha256": "0ed65827428f1794b25cb8d409dd9a6eb3649ca1a65bc8bfaceb01c738acae3c"
+    },
+    {
+      "path": "frontend/apps/storefront/public.html",
+      "sha256": "e660af85452ede25945a1c444a2e41098f7d03dc557fdaa3fb4accec90a7eb53"
+    },
+    {
+      "path": "frontend/apps/storefront/server/publication-checks.mjs",
+      "sha256": "fa6e7e968d32b697103fb4b85b3d0b08d469896686974a63970c818ef8cac476"
+    },
+    {
+      "path": "frontend/apps/storefront/server/publication.mjs",
+      "sha256": "e9c5ba828b7418c9012a4bb398d4ea762eebe6f68777a10a5c38ff7a5efd6552"
+    },
+    {
+      "path": "frontend/apps/storefront/server/seal-build.mjs",
+      "sha256": "75832657255800fb8bfade745aaf0e7c695acff2e8dc5208c1dcb48db57e5e0e"
+    },
+    {
+      "path": "frontend/apps/storefront/server/start.mjs",
+      "sha256": "6323954a5616a33a065da74dbc99f70be1e49eba6d7bb9e35c1ca27f81fb8fae"
+    },
+    {
+      "path": "frontend/apps/storefront/server/transport.mjs",
+      "sha256": "035b0bd1d8333504a315f121d150f6ab107097163a5f83aac9ae98cdf284dba3"
+    },
+    {
+      "path": "frontend/apps/storefront/src/content-blocks.tsx",
+      "sha256": "b5549f0cd26f5007f64c6790429d83c6c4497759f4311fb515ca83765bb2517e"
+    },
+    {
+      "path": "frontend/apps/storefront/src/content.tsx",
+      "sha256": "3747f1d35c743f3aa4670dbdd5911b947d699a7e81b81a5cbe7171045ced237e"
+    },
+    {
+      "path": "frontend/apps/storefront/src/entry-public-client.tsx",
+      "sha256": "65fa0dc5f83360b5c06ffc339e4a9fc641bf61eea717b78b9e5d2d68ddf58efe"
+    },
+    {
+      "path": "frontend/apps/storefront/src/entry-public-server.tsx",
+      "sha256": "2a4a0f5e499b2724f1b874bd0072d05fcdcc6b628c689b773af4bbb8f9bc41c3"
+    },
+    {
+      "path": "frontend/apps/storefront/src/public/page.tsx",
+      "sha256": "3a5d38ef7af56b505b778636343402aafc4e74a51d14b51a619dc4549aa8c60e"
+    },
+    {
+      "path": "frontend/apps/storefront/src/public/public.css",
+      "sha256": "56b78962181498a5658e46e029829449c8f6b45cd234d9f2d4069f69b781d743"
+    },
+    {
+      "path": "frontend/apps/storefront/src/public/search-widget.tsx",
+      "sha256": "7cfd393bb30161ebfa9d899ccc92a67f37520f48d4dde15e11d1ad718615b23e"
+    },
+    {
+      "path": "frontend/apps/storefront/src/public/types.ts",
+      "sha256": "972d6d257ff7ea3072a723b4ffc5763ea1d0192fb9a232e3abb12d36d839e902"
+    },
+    {
+      "path": "frontend/apps/storefront/src/theme-sections.tsx",
+      "sha256": "99e55f6daee2803de63d5e9f5ad249ff16d88e021168d3ea8b4ac0acf4186cae"
+    },
+    {
+      "path": "frontend/apps/storefront/src/theme-tokens.ts",
+      "sha256": "4cb4e312ae01e458f2fd7428c8c93e881a0d171e4dac21ad152c667a871f4561"
+    },
+    {
+      "path": "frontend/apps/storefront/src/themes.tsx",
+      "sha256": "1a2fa29124e3be8093e9c1a4fa8699e19e6e5e23145e255e0950535c621f017d"
+    },
+    {
+      "path": "frontend/apps/storefront/vite.config.ts",
+      "sha256": "2e254b3ed0c51e8a7d0d7bde369ad32a18ddd80cefabad788fdcf917b06e091c"
+    },
+    {
+      "path": "frontend/e2e/publication-check.mjs",
+      "sha256": "742263e4b872dd72bb97827cfbde91013264019dbbdacd099171de39b1b2bb5e"
+    },
+    {
+      "path": "scripts/tests/test_publication_deployment.py",
+      "sha256": "645dfb7f290276535f56170df6e817ac5a79b46c029dd642cfd9e494f4e31bd1"
+    }
+  ],
+  "excluded_concurrent_generated_files": [
+    "backend/openapi.json",
+    "frontend/packages/api-client/src/schema.d.ts"
+  ]
+}

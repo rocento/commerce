@@ -1,0 +1,84 @@
+{
+  "findings": [
+    {
+      "code": "installation_binding",
+      "evidence": {
+        "matched": true
+      },
+      "observed_at": "2026-09-21T09:46:00.106696Z",
+      "remediation": "Correct the operator's installation binding.",
+      "resource": "installation",
+      "severity": "Healthy"
+    },
+    {
+      "code": "effective_indexing",
+      "evidence": {
+        "environment": "production",
+        "state": "INDEXABLE"
+      },
+      "observed_at": "2026-09-21T09:46:00.106706Z",
+      "remediation": "Review approved canonical origin, production environment, merchant preference and deployment noindex override.",
+      "resource": "https://shop.example.test/",
+      "severity": "Healthy"
+    },
+    {
+      "code": "feed_freshness",
+      "evidence": {
+        "failed_items": 0,
+        "freshness": {
+          "completed_generation": 0,
+          "generation": 3,
+          "lag_seconds": 0.387496,
+          "last_completed_at": null,
+          "last_error": "publication_batch_failed"
+        },
+        "stale_items": 0,
+        "threshold_seconds": 900
+      },
+      "observed_at": "2026-09-21T09:46:00.107872Z",
+      "remediation": "Inspect feed item errors, worker availability and catalog throughput; repair and request reconciliation.",
+      "resource": "reference-v1",
+      "severity": "Warning"
+    },
+    {
+      "code": "redirect_target",
+      "evidence": {
+        "resolved_status": 404
+      },
+      "observed_at": "2026-09-21T09:46:00.109731Z",
+      "remediation": "Repair a loop, overlong chain, or unavailable redirect target.",
+      "resource": "/products/a",
+      "severity": "Error"
+    },
+    {
+      "code": "redirect_target",
+      "evidence": {
+        "resolved_status": 404
+      },
+      "observed_at": "2026-09-21T09:46:00.110384Z",
+      "remediation": "Repair a loop, overlong chain, or unavailable redirect target.",
+      "resource": "/products/b",
+      "severity": "Error"
+    },
+    {
+      "code": "renderer_probe",
+      "evidence": "Not observed: private renderer probe URL/token is not configured.",
+      "observed_at": "2026-09-21T09:46:00.110391Z",
+      "remediation": "Configure PUBLICATION_RENDERER_URL and PUBLICATION_OBSERVATION_TOKEN through operator-managed secrets.",
+      "resource": "https://shop.example.test/",
+      "severity": "Warning"
+    },
+    {
+      "code": "external_edge",
+      "evidence": "External CDN responses and verified crawler identity have not been observed by this local probe.",
+      "observed_at": "2026-09-21T09:46:00.110394Z",
+      "remediation": "Review CDN access logs and externally probe the approved merchant domain.",
+      "resource": "https://shop.example.test/",
+      "severity": "Warning"
+    }
+  ],
+  "installation_id": "1c1369c4-4227-4f02-bfc8-9782ba188dcd",
+  "observations": null,
+  "observed_at": "2026-09-21T09:46:00.110397Z",
+  "scope": "Current database state; at most 100 redirects and a bounded local renderer sample. No score or ranking."
+}

@@ -1,0 +1,19 @@
+{
+  "synthetic": true,
+  "results": [
+    {
+      "tenant": "A",
+      "stored_markup_visible_as_text": true,
+      "injected_scripts": 0,
+      "event_handlers": 0,
+      "execution": false
+    },
+    {
+      "tenant": "B",
+      "stored_markup_visible_as_text": true,
+      "injected_scripts": 0,
+      "event_handlers": 0,
+      "execution": false
+    }
+  ]
+}

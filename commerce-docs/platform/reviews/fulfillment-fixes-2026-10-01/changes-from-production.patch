@@ -1,0 +1,591 @@
+--- a/frontend/apps/admin/src/main.tsx
++++ b/frontend/apps/admin/src/main.tsx
+@@ -33,10 +33,11 @@
+ import { AttributeDefinitions, AttributeDefinitionEditorPage, AttributeSetEditorPage } from "./attributes";
+ import { ImportCenter } from "./import-center";
+ import { ExportCenter, type ExportEntity } from "./export-center";
+-import React, { useState, type FormEvent, type ReactNode } from "react";
++import React, { useEffect, useState, type FormEvent, type ReactNode } from "react";
+ import ReactDOM from "react-dom/client";
+ import {
+-  BrowserRouter,
++  createBrowserRouter,
++  RouterProvider,
+   Routes,
+   Route,
+   NavLink,
+@@ -107,6 +108,8 @@
+   const geoEnabled=fulfillmentSettings.data?.stores?.some(s=>s.resolved.geo_fencing_enabled)??true;
+   const a = useAction();
+   const [collapsed, setCollapsed] = useState(false);
++  const [navigationOpen, setNavigationOpen] = useState(false);
++  useEffect(() => { setNavigationOpen(false); }, [location.pathname]);
+   const [assistantOpen, setAssistantOpen] = useState(false);
+   const [assistantQuestion, setAssistantQuestion] = useState<MerchantInput["question"]>();
+   const openAssistant = (question?: MerchantInput["question"]) => { setAssistantQuestion(question); setAssistantOpen(true); };
+@@ -142,13 +145,14 @@
+   ].filter((item)=>allowed(who,item[3])).map(([value,label,description])=>({value,label,description}));
+   const systemSectionActive = location.pathname.startsWith("/system/") || location.pathname === "/settings/ai-assistant" || location.pathname.startsWith("/settings/catalog/");
+   return (
+-    <div className={`admin-shell ${collapsed ? "is-collapsed" : ""}`}>
++    <div className={`admin-shell ${collapsed ? "is-collapsed" : ""} ${navigationOpen ? "navigation-open" : ""}`}>
+       <aside className="sidebar">
+         <div className="brand-row"><a href="/" className="brand" aria-label="Recento home"><span className="recento-full"><BrandLogo /></span><span className="recento-compact"><BrandLogo iconOnly /></span></a><button className="icon-button collapse-button" onClick={()=>setCollapsed(!collapsed)} aria-label={collapsed ? "Expand sidebar" : "Collapse sidebar"}>‹</button></div>
+-        <nav>
++        <button type="button" className="admin-navigation-toggle secondary" aria-expanded={navigationOpen} aria-controls="admin-navigation" onClick={() => setNavigationOpen(!navigationOpen)}>{navigationOpen ? "Close navigation" : "Open navigation"}</button>
++        <nav id="admin-navigation" aria-label="Administration navigation">
+           <NavItem to="/" end icon="home">Overview</NavItem>
+           {allowed(who,"catalog.read") && <SidebarGroup label="Catalog" icon="box" open={location.pathname.startsWith("/catalog/") && !["/catalog/inventory","/catalog/sources","/catalog/stocks","/catalog/delivery-areas"].some((path)=>location.pathname.startsWith(path))}>{(["products","categories","attributes","media"] as const).map(section=><NavLink key={section} to={`/catalog/${section}`}><span>{section[0].toUpperCase()+section.slice(1)}</span></NavLink>)}{allowed(who,"attributes.read")&&<NavLink to="/catalog/enrichment"><span>Catalog enrichment</span></NavLink>}</SidebarGroup>}
+-          {(allowed(who,"inventory.read")||allowed(who,"fulfillment.settings.read")||allowed(who,"fulfillment.capacity.view")||allowed(who,"fulfillment.settings.view")) && <SidebarGroup label="Fulfillment" icon="truck" open={["/catalog/inventory","/catalog/sources","/catalog/stocks","/catalog/delivery-areas","/fulfillment/replenishment","/fulfillment/capacity","/settings/delivery-fee"].some((path)=>location.pathname.startsWith(path))}>{allowed(who,"fulfillment.settings.view")&&<NavLink to="/settings/fulfillment"><span>Fulfillment settings</span></NavLink>}{allowed(who,"fulfillment.capacity.view")&&allowed(who,"fulfillment.schedule.view")&&<NavLink to="/fulfillment/capacity"><span>Capacity & scheduling</span></NavLink>}{allowed(who,"inventory.read")&&<><NavLink to="/catalog/inventory"><span>Stock overview</span></NavLink><NavLink to="/fulfillment/replenishment"><span>Replenishment</span></NavLink><NavLink to="/catalog/sources"><span>Inventory locations</span></NavLink><NavLink to="/catalog/stocks"><span>Stocks</span></NavLink>{geoEnabled&&<NavLink to="/catalog/delivery-areas"><span>Delivery areas</span></NavLink>}</>}{allowed(who,"fulfillment.settings.read")&&<NavLink to="/settings/delivery-fee"><span>Delivery fees</span></NavLink>}</SidebarGroup>}
++          {(allowed(who,"inventory.read")||allowed(who,"fulfillment.settings.read")||allowed(who,"fulfillment.capacity.view")||allowed(who,"fulfillment.settings.view")) && <SidebarGroup label="Fulfillment" icon="truck" open={["/catalog/inventory","/catalog/sources","/catalog/stocks","/catalog/delivery-areas","/fulfillment/replenishment","/fulfillment/","/settings/fulfillment","/settings/delivery-fee"].some((path)=>location.pathname.startsWith(path))}>{allowed(who,"fulfillment.settings.view")&&<NavLink to="/settings/fulfillment"><span>Fulfillment settings</span></NavLink>}{allowed(who,"fulfillment.capacity.view")&&allowed(who,"fulfillment.schedule.view")&&<NavLink to="/fulfillment/capacity"><span>Capacity & scheduling</span></NavLink>}{allowed(who,"inventory.read")&&<><NavLink to="/catalog/inventory"><span>Stock overview</span></NavLink><NavLink to="/fulfillment/replenishment"><span>Replenishment</span></NavLink><NavLink to="/catalog/sources"><span>Inventory locations</span></NavLink><NavLink to="/catalog/stocks"><span>Stocks</span></NavLink>{geoEnabled&&<NavLink to="/catalog/delivery-areas"><span>Delivery areas</span></NavLink>}</>}{allowed(who,"fulfillment.settings.read")&&<NavLink to="/settings/delivery-fee"><span>Delivery fees</span></NavLink>}</SidebarGroup>}
+           {(allowed(who,"orders.read")||allowed(who,"tax.read")) && <SidebarGroup label="Sales" icon="cart" open={location.pathname.startsWith("/sales/") || location.pathname === "/settings/tax"}>{allowed(who,"orders.read")&&<><NavLink to="/sales/orders"><span>Orders</span></NavLink><NavLink to="/sales/order-geography"><span>Order geography</span></NavLink></>}{allowed(who,"tax.read")&&<NavLink to="/settings/tax"><span>Tax rules</span></NavLink>}</SidebarGroup>}
+           {allowed(who,"customers.read") && <SidebarGroup label="Customer" icon="users" open={location.pathname.startsWith("/customers/")}><NavLink to="/customers/profiles"><span>Profiles</span></NavLink><NavLink to="/customers/journey"><span>Shopping journey</span></NavLink><NavLink to="/customers/segments"><span>Segments</span></NavLink><NavLink to="/customers/attributes"><span>Attributes</span></NavLink><NavLink to="/customers/cohorts"><span>Cohorts & retention</span></NavLink></SidebarGroup>}
+           {(allowed(who,"promotions.read")||allowed(who,"reviews.read")) && <SidebarGroup label="Marketing" icon="spark" open={location.pathname.startsWith("/marketing/")}>{allowed(who,"promotions.read")&&<NavLink to="/marketing/promotions"><span>Promotions</span></NavLink>}{allowed(who,"reviews.read")&&<NavLink to="/marketing/reviews"><span>Reviews</span></NavLink>}</SidebarGroup>}
+@@ -862,15 +866,14 @@
+     </main>
+   );
+ }
++const router = createBrowserRouter([
++  { path: '/customer-journey', element: <Navigate to="/customers/journey" replace /> },
++  { path: '*', element: <App /> },
++]);
+ ReactDOM.createRoot(document.getElementById("root")!).render(
+   <React.StrictMode>
+     <QueryClientProvider client={client}>
+-      <BrowserRouter>
+-        <Routes>
+-          <Route path="/customer-journey" element={<Navigate to="/customers/journey" replace />} />
+-          <Route path="*" element={<App />} />
+-        </Routes>
+-      </BrowserRouter>
++      <RouterProvider router={router} />
+     </QueryClientProvider>
+   </React.StrictMode>,
+ );
+--- a/frontend/apps/admin/src/style.css
++++ b/frontend/apps/admin/src/style.css
+@@ -50,3 +50,17 @@
+ 
+ /* Top-level links share the same typography as expandable menu headings. */
+ .sidebar nav > a { font-family:inherit; font-size:14px; font-weight:600; color:#565550; min-height:40px; }
++
++/* The compact shell keeps all navigation available through a disclosure. */
++.admin-navigation-toggle{display:none}
++@media(max-width:1180px){
++ .admin-shell,.admin-shell.is-collapsed{display:block}
++ .admin-shell .sidebar{position:static;width:100%;height:auto;display:flex;flex-direction:row;flex-wrap:wrap;align-items:center;overflow:visible;border-right:0;border-bottom:1px solid var(--line);padding:12px 16px}
++ .admin-navigation-toggle{display:block;margin-left:auto}
++ .admin-shell .sidebar>nav{display:none;flex-basis:100%;width:100%}
++ .admin-shell.navigation-open .sidebar>nav{display:flex}
++ .admin-shell .sidebar .nav-children{display:block}
++ .admin-shell .sidebar nav a span,.admin-shell .sidebar .nav-group summary span,.admin-shell .sidebar .nav-group summary b{display:inline}
++ .admin-shell .sidebar nav a,.admin-shell .sidebar .nav-group summary{justify-content:flex-start}
++ .admin-shell .sidebar-bottom{display:none}
++}
+--- a/frontend/apps/admin/src/capacity.tsx
++++ b/frontend/apps/admin/src/capacity.tsx
+@@ -1,4 +1,6 @@
+-import { useEffect, useState } from 'react';
++import { useUnsavedChanges } from './unsaved-changes';
++import { blockWindow, capacityRuleError, scheduleBounds, scheduleError, scheduleMethods } from './capacity-validation';
++import { useEffect, useRef, useState } from 'react';
+ import { useLocation, useNavigate, useParams } from 'react-router-dom';
+ import { useQuery, useQueries, useQueryClient } from '@tanstack/react-query';
+ import { capacityApi, type FulfillmentSchedule, type CapacityRule, type CapacityRow } from '@commerce/api-client';
+@@ -15,6 +17,8 @@
+   const scheduleEditor=location.pathname.includes('schedule');
+   const [date, setDate] = useState(today), [source, setSource] = useState(''), [area, setArea] = useState(''), [method, setMethod] = useState(''), [status, setStatus] = useState('');
+   const [schedule, setSchedule] = useState<FulfillmentSchedule | null>(null), [rule, setRule] = useState<CapacityRule | null>(null);
++  const [baseline, setBaseline] = useState('');
++  const editorIdentity = useRef('');
+   const [activationReason, setActivationReason] = useState('');
+   const [reason, setReason] = useState(''), [ack, setAck] = useState(false), [blackout, setBlackout] = useState('');
+   const config = useQuery({ queryKey: ['capacity-config'], queryFn: capacityApi.configuration });
+@@ -25,20 +29,31 @@
+   const weekDates = Array.from({ length: 7 }, (_, i) => { const d = new Date(date + 'T12:00:00'); d.setDate(d.getDate() + i); return d.toLocaleDateString('en-CA'); });
+   const weekQueries = useQueries({ queries: weekDates.map(day => ({ queryKey: ['capacity-overview', day], queryFn: () => capacityApi.overview(day), enabled: week, staleTime: 30000 })) });
+   const action = useAction(), cache = useQueryClient();
++  const editorDirty = editor && !!baseline && (JSON.stringify(schedule ?? rule) !== baseline || !!reason || !!blackout);
++  const allowLeave = useUnsavedChanges(editorDirty);
++  const validation = schedule ? scheduleError(schedule) : rule ? capacityRuleError(rule) : '';
++  const scopeLocked = !!params.id || !!rule?.overrides_rule_id;
++  const overviewUnavailable = !overview.data || overview.isError;
+   const rows = (overview.data?.slots ?? []).filter(r => (!source || r.slot.source_id === source) && (!area || r.area_id === area) && (!method || r.slot.method === method) && (!status || r.status === status));
+   const reserved = rows.reduce((n, r) => n + r.reserved, 0), confirmed = rows.reduce((n, r) => n + r.confirmed, 0);
+   const sourceName = (id: string) => config.data?.sources.find(([key]) => key === id)?.[1] || id;
+   const refresh = async () => { await cache.invalidateQueries({ queryKey: ['capacity-config'] }); await cache.invalidateQueries({ queryKey: ['capacity-overview'] }); };
+   useEffect(()=>{
+-    if(!editor)return;
+-    const state=location.state as {schedule?:FulfillmentSchedule;rule?:CapacityRule}|null;
+-    if(scheduleEditor){setRule(null);setSchedule(state?.schedule??(params.id?config.data?.schedules.find(x=>x.id===params.id):freshSchedule())??null);}
+-    else {setSchedule(null);setRule(state?.rule??(params.id?config.data?.rules.find(x=>x.id===params.id):freshRule())??null);}
++    if (!editor) { editorIdentity.current = ''; return; }
++    const identity = location.key;
++    if (editorIdentity.current === identity || !config.data) return;
++    const state = location.state as {schedule?:FulfillmentSchedule;rule?:CapacityRule}|null;
++    const nextSchedule = scheduleEditor ? state?.schedule ?? (params.id ? config.data.schedules.find(x=>x.id===params.id) : freshSchedule()) ?? null : null;
++    const nextRule = !scheduleEditor ? state?.rule ?? (params.id ? config.data.rules.find(x=>x.id===params.id) : freshRule()) ?? null : null;
++    setSchedule(nextSchedule); setRule(nextRule); setBaseline(JSON.stringify(nextSchedule ?? nextRule));
++    editorIdentity.current = identity;
+     setReason('');setAck(false);setBlackout('');
+-  },[location.pathname,location.state,params.id,config.data,editor,scheduleEditor]);
++  },[location.key,location.state,params.id,config.data,editor,scheduleEditor]);
+   function editSlot(row: CapacityRow, block: boolean) {
++    if (block) { navigate('/fulfillment/new-capacity', { state: { rule: blockWindow(row) } }); return; }
+     const governing = row.caps.find(c=>c.period==='slot');
+     const parent = config.data?.rules.find(r=>r.id===governing?.rule_id);
++    if (parent?.overrides_rule_id) { navigate(`/fulfillment/capacity-rules/${parent.id}`); return; }
+     const localStart = new Date(row.slot.starts_at).toLocaleTimeString('en-GB',{timeZone:parent?.timezone || row.slot.timezone,hour12:false,hour:'2-digit',minute:'2-digit',second:'2-digit'});
+     const next:CapacityRule = parent ? {...parent,id:parent.overrides_rule_id?parent.id:crypto.randomUUID(),overrides_rule_id:parent.overrides_rule_id || parent.id} : {...freshRule(),source_id:row.slot.source_id,area_id:row.area_id,method:row.slot.method,timezone:row.slot.timezone};
+     const ruleDate=new Date(row.slot.starts_at).toLocaleDateString('en-CA',{timeZone:next.timezone});
+@@ -48,35 +63,35 @@
+   if(editor){
+     const cancel=()=>navigate('/fulfillment/capacity');
+     if(config.isLoading)return <main className="catalog-admin capacity-page"><PageHeader title={<>Loading configuration</>} description={<>Preparing the fulfillment editor.</>}/><p role="status">Loading…</p></main>;
+-    if(scheduleEditor&&schedule)return <main className="catalog-admin capacity-page capacity-editor-page"><button className="text-button back-link" onClick={cancel}>← Capacity & scheduling</button><PageHeader title={<>{params.id?'Edit':'New'} delivery schedule</>} description={<>Define where orders can be promised, when each window runs, and how checkout allocates capacity.</>}/><Notice error>{config.error?.message||action.error}</Notice><Notice>{action.message}</Notice><form className="form-card capacity-editor" onSubmit={e=>{e.preventDefault();void action.run(async()=>{await capacityApi.saveSchedule(schedule,reason);await refresh();navigate('/fulfillment/capacity');action.setMessage('Schedule saved. Existing bookings are preserved.');});}}><div className="capacity-editor-intro"><span className="capacity-kicker">DELIVERY CONFIGURATION</span><h2>Schedule details</h2><p>Customer selection and automatic allocation both respect the location’s enabled fulfillment capabilities.</p></div><div className="capacity-fields">
+-      <label>Location<select required value={schedule.source_id} onChange={e=>setSchedule({...schedule,source_id:e.target.value})}><option value="">Choose location</option>{config.data?.sources.map(([id,name])=><option key={id} value={id}>{name}</option>)}</select></label><label>Delivery area<select value={schedule.area_id||''} onChange={e=>setSchedule({...schedule,area_id:e.target.value||null})}><option value="">Location default</option>{config.data?.areas.map(([id,name])=><option key={id} value={id}>{name}</option>)}</select></label><label>Delivery method<input required list="delivery-methods" value={schedule.method} onChange={e=>setSchedule({...schedule,method:e.target.value})}/></label><datalist id="delivery-methods">{['standard_delivery','same_day','next_day','scheduled_delivery','express','store_pickup','curbside_pickup'].map(m=><option key={m}>{m}</option>)}</datalist><label>IANA timezone<input required value={schedule.timezone} onChange={e=>setSchedule({...schedule,timezone:e.target.value})}/></label>
++    if(scheduleEditor&&schedule)return <main className="catalog-admin capacity-page capacity-editor-page"><button className="text-button back-link" onClick={cancel}>← Capacity & scheduling</button><PageHeader title={<>{params.id?'Edit':'New'} fulfillment schedule</>} description={<>Define where orders can be promised, when each window runs, and how checkout allocates capacity.</>}/><Notice error>{config.error?.message||action.error}</Notice><Notice>{action.message}</Notice><Notice error>{validation}</Notice><form className="form-card capacity-editor" onSubmit={e=>{e.preventDefault();if(validation || !reason.trim())return;void action.run(async()=>{await capacityApi.saveSchedule(schedule,reason);await refresh();allowLeave();navigate('/fulfillment/capacity');action.setMessage('Schedule saved. Existing bookings are preserved.');});}}><div className="capacity-editor-intro"><span className="capacity-kicker">DELIVERY CONFIGURATION</span><h2>Schedule details</h2><p>Customer selection and automatic allocation both respect the location’s enabled fulfillment capabilities.</p></div><div className="capacity-fields">
++      <label>Location<select required disabled={!!params.id} value={schedule.source_id} onChange={e=>setSchedule({...schedule,source_id:e.target.value})}><option value="">Choose location</option>{config.data?.sources.map(([id,name])=><option key={id} value={id}>{name}</option>)}</select></label><label>Delivery area<select disabled={!!params.id} value={schedule.area_id||''} onChange={e=>setSchedule({...schedule,area_id:e.target.value||null})}><option value="">Location default</option>{config.data?.areas.map(([id,name])=><option key={id} value={id}>{name}</option>)}</select></label><label>Fulfillment method<select required disabled={!!params.id} value={schedule.method} onChange={e=>setSchedule({...schedule,method:e.target.value})}>{!scheduleMethods.some(([value])=>value===schedule.method)&&<option value={schedule.method}>{schedule.method} (existing method)</option>}{scheduleMethods.map(([value,label])=><option key={value} value={value}>{label}</option>)}</select></label><label>IANA timezone<input required value={schedule.timezone} onChange={e=>setSchedule({...schedule,timezone:e.target.value})}/></label>
+       <label>Checkout allocation<select value={schedule.config.selection_required===false?'automatic':'customer'} onChange={e=>setSchedule({...schedule,config:{...schedule.config,selection_required:e.target.value==='customer'}})}><option value="customer">Customer chooses a window</option><option value="automatic">Automatically allocate capacity</option></select></label><label>Window type<select value={schedule.config.duration_minutes===null?'fixed':'generated'} onChange={e=>setSchedule({...schedule,config:{...schedule.config,duration_minutes:e.target.value==='fixed'?null:60}})}><option value="generated">Generate equal slots</option><option value="fixed">Use fixed windows</option></select></label>
+-      {(['duration_minutes','spacing_minutes','lead_minutes','min_days','max_days','ttl_minutes'] as const).filter(k=>k!=='duration_minutes'||schedule.config.duration_minutes!==null).map(k=><label key={k}>{({duration_minutes:'Slot length (minutes)',spacing_minutes:'Gap between slots (minutes)',lead_minutes:'Preparation lead time (minutes)',min_days:'Minimum days ahead',max_days:'Maximum days ahead',ttl_minutes:'Hold duration (minutes)'})[k]}<input type="number" required min={['duration_minutes','ttl_minutes'].includes(k)?1:0} value={schedule.config[k]??''} onChange={e=>setSchedule({...schedule,config:{...schedule.config,[k]:Number(e.target.value)}})}/></label>)}<label>Same-day booking cutoff<input type="time" value={schedule.config.cutoff?.slice(0,5)||''} onChange={e=>setSchedule({...schedule,config:{...schedule.config,cutoff:e.target.value?e.target.value+':00':null}})}/></label><label>Return capacity when cancelled before<select value={schedule.config.release_before} onChange={e=>setSchedule({...schedule,config:{...schedule.config,release_before:e.target.value}})}>{['never','confirmed','fulfilling','shipped'].map(v=><option key={v}>{v}</option>)}</select></label></div>
++      {(['duration_minutes','spacing_minutes','lead_minutes','min_days','max_days','ttl_minutes'] as const).filter(k=>k!=='duration_minutes'||schedule.config.duration_minutes!==null).map(k=><label key={k}>{({duration_minutes:'Slot length (minutes)',spacing_minutes:'Gap between slots (minutes)',lead_minutes:'Preparation lead time (minutes)',min_days:'Minimum days ahead',max_days:'Maximum days ahead',ttl_minutes:'Hold duration (minutes)'})[k]}<input type="number" required min={scheduleBounds[k][0]} max={scheduleBounds[k][1]} step={1} value={schedule.config[k]??''} onChange={e=>setSchedule({...schedule,config:{...schedule.config,[k]:Number(e.target.value)}})}/></label>)}<label>Same-day booking cutoff<input type="time" value={schedule.config.cutoff?.slice(0,5)||''} onChange={e=>setSchedule({...schedule,config:{...schedule.config,cutoff:e.target.value?e.target.value+':00':null}})}/></label><label>Return capacity when cancelled before<select value={schedule.config.release_before} onChange={e=>setSchedule({...schedule,config:{...schedule.config,release_before:e.target.value}})}>{['never','confirmed','fulfilling','shipped'].map(v=><option key={v}>{v}</option>)}</select></label></div>
+       <div className="capacity-editor-intro"><h2>Weekly operating windows</h2><p>Remove every window on a day to close it. Add another window for split operating hours.</p></div>{schedule.config.windows.map((w,i)=><div className="capacity-window" key={i}><select aria-label="Weekday" value={w.weekday} onChange={e=>setSchedule({...schedule,config:{...schedule.config,windows:schedule.config.windows.map((v,j)=>j===i?{...v,weekday:Number(e.target.value)}:v)}})}>{days.map((d,j)=><option key={d} value={j}>{d}</option>)}</select>{(['start','end','cutoff'] as const).map(k=><label key={k}>{k}<input type="time" required={k!=='cutoff'} value={w[k]?.slice(0,5)||''} onChange={e=>setSchedule({...schedule,config:{...schedule.config,windows:schedule.config.windows.map((v,j)=>j===i?{...v,[k]:e.target.value?e.target.value+':00':null}:v)}})}/></label>)}<button type="button" className="secondary" onClick={()=>setSchedule({...schedule,config:{...schedule.config,windows:schedule.config.windows.filter((_,j)=>j!==i)}})}>Remove</button></div>)}<button type="button" className="secondary" onClick={()=>setSchedule({...schedule,config:{...schedule.config,windows:[...schedule.config.windows,{weekday:0,start:'18:00:00',end:'20:00:00',cutoff:null}]}})}>Add operating window</button>
+       {canOverride&&<><div className="capacity-editor-intro"><h2>Holidays & blackouts</h2><p>Close a date without changing the weekly schedule.</p></div>{schedule.config.exceptions.map((x,i)=><div className="capacity-policy" key={i}><span>{x.from}–{x.through} · {x.closed?'Closed':'Special hours'}</span><button type="button" className="secondary" onClick={()=>setSchedule({...schedule,config:{...schedule.config,exceptions:schedule.config.exceptions.filter((_,j)=>j!==i)}})}>Remove exception</button></div>)}<div className="capacity-window"><label>Closed date<input type="date" value={blackout} onChange={e=>setBlackout(e.target.value)}/></label><button type="button" disabled={!blackout} onClick={()=>{setSchedule({...schedule,config:{...schedule.config,exceptions:[...schedule.config.exceptions,{from:blackout,through:blackout,closed:true,windows:[]}]}});setBlackout('');}}>Add blackout</button></div></>}
+-      <label className="capacity-toggle"><input type="checkbox" checked={schedule.enabled} onChange={e=>setSchedule({...schedule,enabled:e.target.checked})}/> Enable scheduling</label><label>Change reason<input required maxLength={300} value={reason} onChange={e=>setReason(e.target.value)}/></label><div className="capacity-form-actions"><button disabled={action.busy}>{action.busy?'Saving…':'Save schedule'}</button><button type="button" className="secondary" onClick={cancel}>Cancel</button></div></form></main>;
+-    if(!scheduleEditor&&rule)return <main className="catalog-admin capacity-page capacity-editor-page"><button className="text-button back-link" onClick={cancel}>← Capacity & scheduling</button><PageHeader title={<>{params.id?'Edit':'New'} capacity rule</>} description={<>Set shared limits by location, area and fulfillment method. Every matching rule applies.</>}/><Notice error>{config.error?.message||action.error}</Notice><Notice>{action.message}</Notice><form className="form-card capacity-editor" onSubmit={e=>{e.preventDefault();void action.run(async()=>{await capacityApi.saveRule(rule,reason,ack);await refresh();navigate('/fulfillment/capacity');action.setMessage('Capacity rule saved.');});}}>
+-      {canOverride&&<label>Override a rule for specific dates<select value={rule.overrides_rule_id||''} onChange={e=>{const parent=config.data?.rules.find(r=>r.id===e.target.value);if(parent)setRule({...parent,id:crypto.randomUUID(),overrides_rule_id:parent.id,starts_on:date,ends_on:date});else setRule(freshRule());}}><option value="">Independent capacity rule</option>{config.data?.rules.filter(r=>!r.overrides_rule_id).map(r=><option key={r.id} value={r.id}>{r.source_id?sourceName(r.source_id):'All locations'} · {r.period}</option>)}</select></label>}<div className="capacity-fields"><label>Location<select value={rule.source_id||''} onChange={e=>setRule({...rule,source_id:e.target.value||null})}><option value="">All locations</option>{config.data?.sources.map(([id,name])=><option key={id} value={id}>{name}</option>)}</select></label><label>Area<select value={rule.area_id||''} onChange={e=>setRule({...rule,area_id:e.target.value||null})}><option value="">All areas</option>{config.data?.areas.map(([id,name])=><option key={id} value={id}>{name}</option>)}</select></label><label>Method (blank = all)<input value={rule.method||''} onChange={e=>setRule({...rule,method:e.target.value||null})}/></label><label>Period<select value={rule.period} onChange={e=>setRule({...rule,period:e.target.value})}>{['slot','hour','day'].map(p=><option key={p}>{p}</option>)}</select></label><label>Timezone<input required value={rule.timezone} onChange={e=>setRule({...rule,timezone:e.target.value})}/></label><label>Soft overflow (%)<input type="number" min={0} max={100} value={rule.overflow_percent} onChange={e=>setRule({...rule,overflow_percent:Number(e.target.value)})}/></label>{['orders','stops','items','units','weight_grams','volume_ml','workload'].map(d=><label key={d}>{d.replaceAll('_',' ')} (blank = unlimited)<input type="number" min={0} max={1000000000} value={rule.limits[d]??''} onChange={e=>{const limits={...rule.limits};if(e.target.value==='')delete limits[d];else limits[d]=Number(e.target.value);setRule({...rule,limits});}}/></label>)}</div>
+-      {canOverride&&<div className="capacity-fields"><label>From date<input type="date" value={rule.starts_on||''} onChange={e=>setRule({...rule,starts_on:e.target.value||null})}/></label><label>Through date<input type="date" value={rule.ends_on||''} onChange={e=>setRule({...rule,ends_on:e.target.value||null})}/></label><label>Specific local slot start<input type="time" value={rule.local_start?.slice(0,5)||''} onChange={e=>setRule({...rule,local_start:e.target.value?e.target.value+':00':null})}/></label></div>}<label className="capacity-toggle"><input type="checkbox" checked={rule.enabled} onChange={e=>setRule({...rule,enabled:e.target.checked})}/> Enabled</label><label className="capacity-warning"><input type="checkbox" checked={ack} onChange={e=>setAck(e.target.checked)}/> I understand existing holds and orders remain valid. Lower limits may leave windows over capacity and stop new bookings.</label><label>Change reason<input required maxLength={300} value={reason} onChange={e=>setReason(e.target.value)}/></label><div className="capacity-form-actions"><button disabled={action.busy}>{action.busy?'Saving…':'Save capacity rule'}</button><button type="button" className="secondary" onClick={cancel}>Cancel</button></div></form></main>;
++      <label className="capacity-toggle"><input type="checkbox" checked={schedule.enabled} onChange={e=>setSchedule({...schedule,enabled:e.target.checked})}/> Enable scheduling</label><label>Change reason<input required maxLength={300} value={reason} onChange={e=>setReason(e.target.value)}/></label><div className="capacity-form-actions"><button disabled={action.busy || !!validation || !reason.trim()}>{action.busy?'Saving…':'Save schedule'}</button><button type="button" className="secondary" onClick={cancel}>Cancel</button></div></form></main>;
++    if(!scheduleEditor&&rule)return <main className="catalog-admin capacity-page capacity-editor-page"><button className="text-button back-link" onClick={cancel}>← Capacity & scheduling</button><PageHeader title={<>{params.id?'Edit':'New'} capacity rule</>} description={<>Set shared limits by location, area and fulfillment method. Every matching rule applies.</>}/><Notice error>{config.error?.message||action.error}</Notice><Notice>{action.message}</Notice><Notice error>{validation}</Notice><form className="form-card capacity-editor" onSubmit={e=>{e.preventDefault();if(validation || !reason.trim())return;void action.run(async()=>{await capacityApi.saveRule(rule,reason,ack);await refresh();allowLeave();navigate('/fulfillment/capacity');action.setMessage('Capacity rule saved.');});}}>
++      {rule.overrides_rule_id&&<p role="note" className="capacity-warning">This replaces a shared rule for {rule.source_id ? sourceName(rule.source_id) : 'all locations'}, {rule.area_id ? config.data?.areas.find(([id])=>id===rule.area_id)?.[1] || rule.area_id : 'all areas'}, and {rule.method?.replaceAll('_',' ') || 'all methods'} during the dates below. Existing bookings remain valid.</p>}{params.id&&<p>Location, area, method and rule scope cannot be changed. Create a new configuration for a different scope.</p>}{canOverride&&<label>Override a rule for specific dates<select disabled={!!params.id} value={rule.overrides_rule_id||''} onChange={e=>{const parent=config.data?.rules.find(r=>r.id===e.target.value);if(parent)setRule({...parent,id:crypto.randomUUID(),overrides_rule_id:parent.id,starts_on:date,ends_on:date});else setRule(freshRule());}}><option value="">Independent capacity rule</option>{config.data?.rules.filter(r=>!r.overrides_rule_id).map(r=><option key={r.id} value={r.id}>{r.source_id?sourceName(r.source_id):'All locations'} · {r.period}</option>)}</select></label>}<div className="capacity-fields"><label>Location<select disabled={scopeLocked} value={rule.source_id||''} onChange={e=>setRule({...rule,source_id:e.target.value||null})}><option value="">All locations</option>{config.data?.sources.map(([id,name])=><option key={id} value={id}>{name}</option>)}</select></label><label>Area<select disabled={scopeLocked} value={rule.area_id||''} onChange={e=>setRule({...rule,area_id:e.target.value||null})}><option value="">All areas</option>{config.data?.areas.map(([id,name])=><option key={id} value={id}>{name}</option>)}</select></label><label>Method (blank = all)<input disabled={scopeLocked} value={rule.method||''} onChange={e=>setRule({...rule,method:e.target.value||null})}/></label><label>Period<select disabled={scopeLocked} value={rule.period} onChange={e=>setRule({...rule,period:e.target.value})}>{['slot','hour','day'].map(p=><option key={p}>{p}</option>)}</select></label><label>Timezone<input required disabled={scopeLocked} value={rule.timezone} onChange={e=>setRule({...rule,timezone:e.target.value})}/></label><label>Soft overflow (%)<input type="number" min={0} max={100} value={rule.overflow_percent} onChange={e=>setRule({...rule,overflow_percent:Number(e.target.value)})}/></label>{['orders','stops','items','units','weight_grams','volume_ml','workload'].map(d=><label key={d}>{d.replaceAll('_',' ')} (blank = unlimited)<input type="number" min={0} max={1000000000} value={rule.limits[d]??''} onChange={e=>{const limits={...rule.limits};if(e.target.value==='')delete limits[d];else limits[d]=Number(e.target.value);setRule({...rule,limits});}}/></label>)}</div>
++      {canOverride&&<div className="capacity-fields"><label>From date<input type="date" value={rule.starts_on||''} onChange={e=>setRule({...rule,starts_on:e.target.value||null})}/></label><label>Through date<input type="date" value={rule.ends_on||''} onChange={e=>setRule({...rule,ends_on:e.target.value||null})}/></label><label>Specific local slot start<input type="time" value={rule.local_start?.slice(0,5)||''} onChange={e=>setRule({...rule,local_start:e.target.value?e.target.value+':00':null})}/></label></div>}<label className="capacity-toggle"><input type="checkbox" checked={rule.enabled} onChange={e=>setRule({...rule,enabled:e.target.checked})}/> Enabled</label><label className="capacity-warning"><input type="checkbox" checked={ack} onChange={e=>setAck(e.target.checked)}/> I understand existing holds and orders remain valid. Lower limits may leave windows over capacity and stop new bookings.</label><label>Change reason<input required maxLength={300} value={reason} onChange={e=>setReason(e.target.value)}/></label><div className="capacity-form-actions"><button disabled={action.busy || !!validation || !reason.trim()}>{action.busy?'Saving…':'Save capacity rule'}</button><button type="button" className="secondary" onClick={cancel}>Cancel</button></div></form></main>;
+     return <main className="catalog-admin capacity-page"><PageHeader title={<>Configuration unavailable</>} description={<>This schedule or capacity rule could not be found.</>}/><Notice error>{config.error?.message||'The requested configuration is no longer available.'}</Notice><button className="secondary" onClick={cancel}>Return to capacity & scheduling</button></main>;
+   }
+   return <main className="catalog-admin capacity-page">
+     <PageHeader title={<>Capacity & scheduling</>} description={<>Monitor delivery commitments and control order intake across your fulfillment network.</>} actions={<div className="capacity-page-actions">{canCapacity&&<button className="secondary" onClick={()=>navigate('/fulfillment/new-capacity')}>New capacity rule</button>}{canSchedule&&<button onClick={()=>navigate('/fulfillment/new-schedule')}>New schedule</button>}</div>} />
+     {config.data?.controls?.capacity===false&&<Notice>Capacity limits are disabled in store settings. Scheduling remains available where enabled.</Notice>}
+-    <Notice error>{config.error?.message || overview.error?.message || action.error}</Notice><Notice>{action.message}</Notice>
++    <Notice error>{config.error?.message || overview.error?.message || action.error}</Notice><Notice>{action.message}</Notice>{overview.isError&&<div role="alert"><p>Capacity is unavailable. Booking counts and alerts cannot be confirmed.{overview.dataUpdatedAt>0&&` Last successful refresh: ${new Date(overview.dataUpdatedAt).toLocaleString()}.`}</p><button type="button" className="secondary" onClick={()=>void overview.refetch()}>Retry capacity</button></div>}
+     {config.data?.legacy_controls===false&&<p>Activation is controlled per store in <a href="/settings/fulfillment">Fulfillment settings</a>.</p>}
+     {config.data?.legacy_controls!==false&&<section className="form-card capacity-control-banner"><div><span className="capacity-kicker">CHECKOUT ADMISSION</span><h2>Capacity controls <span className={`capacity-status ${config.data?.enabled?'':'capacity-status-off'}`}>{config.data?.enabled ? 'Active' : 'Off'}</span></h2><p>{config.data?.enabled ? 'New bookings are checked against schedules and capacity limits.' : 'Standard checkout is available. Enable controls to apply configured schedules and limits.'}</p>{config.data?.enabled&&<small>Confirmed bookings stay protected if a rule changes or a schedule closes.</small>}</div>{canSchedule && canCapacity && <form className="capacity-control-action" onSubmit={e=>{e.preventDefault();void action.run(async()=>{await capacityApi.setEnabled(!config.data?.enabled,activationReason);setActivationReason('');await refresh();});}}><label>Reason for this change<input required maxLength={300} placeholder="For example, seasonal capacity update" value={activationReason} onChange={e=>setActivationReason(e.target.value)}/></label><button className={config.data?.enabled?'secondary':'primary'} disabled={action.busy||!config.data}>{config.data?.enabled ? 'Turn off controls' : 'Enable controls'}</button></form>}</section>}
+-    <section className="capacity-filter-panel"><div className="capacity-toolbar"><div className="capacity-date-control"><button className="secondary" aria-label="Previous day" onClick={() => changeDate(-1)}>←</button><label>Delivery date<input type="date" value={date} onChange={e => setDate(e.target.value)} /></label><button className="secondary" aria-label="Next day" onClick={() => changeDate(1)}>→</button><button className="text-button" onClick={()=>setDate(today())}>Today</button></div>
++    <section className="capacity-filter-panel"><div className="capacity-toolbar"><div className="capacity-date-control"><button className="secondary" aria-label="Previous day" onClick={() => changeDate(-1)}>←</button><label>Delivery date<input type="date" value={date} onChange={e => e.target.value && setDate(e.target.value)} /></label><button className="secondary" aria-label="Next day" onClick={() => changeDate(1)}>→</button><button className="text-button" onClick={()=>setDate(today())}>Today</button></div>
+       <label>Location<select value={source} onChange={e => setSource(e.target.value)}><option value="">All locations</option>{config.data?.sources.map(([id, name]) => <option key={id} value={id}>{name}</option>)}</select></label>
+       <label>Delivery area<select value={area} onChange={e => setArea(e.target.value)}><option value="">All areas</option>{config.data?.areas.map(([id, name]) => <option key={id} value={id}>{name}</option>)}</select></label>
+       <label>Method<select value={method} onChange={e => setMethod(e.target.value)}><option value="">All methods</option>{[...new Set(config.data?.schedules.map(s => s.method))].map(m => <option key={m}>{m}</option>)}</select></label>
+       <label>Status<select value={status} onChange={e => setStatus(e.target.value)}><option value="">All statuses</option>{['Available', 'Filling', 'Near Capacity', 'Full', 'Over Capacity', 'Disabled'].map(s => <option key={s}>{s}</option>)}</select></label></div></section>
+-    <section className="capacity-stats" aria-label="Capacity summary"><article><span>Confirmed orders</span><strong>{confirmed.toLocaleString()}</strong><small>Committed for this date</small></article><article><span>Checkout holds</span><strong>{reserved.toLocaleString()}</strong><small>Temporarily reserved</small></article><article data-tone={rows.some(r=>['Full','Over Capacity'].includes(r.status))?'warning':'good'}><span>Full or over capacity</span><strong>{rows.filter(r => ['Full', 'Over Capacity'].includes(r.status)).length.toLocaleString()}</strong><small>{rows.some(r=>['Full','Over Capacity'].includes(r.status))?'Review windows below':'No capacity alerts'}</small></article><article><span>Delivery windows</span><strong>{rows.length.toLocaleString()}</strong><small>Matching current filters</small></article></section>
++    <section className="capacity-stats" aria-label="Capacity summary"><article><span>Confirmed orders</span><strong>{overviewUnavailable ? '—' : confirmed.toLocaleString()}</strong><small>Committed for this date</small></article><article><span>Checkout holds</span><strong>{overviewUnavailable ? '—' : reserved.toLocaleString()}</strong><small>Temporarily reserved</small></article><article data-tone={overviewUnavailable ? undefined : rows.some(r=>['Full','Over Capacity'].includes(r.status))?'warning':'good'}><span>Full or over capacity</span><strong>{overviewUnavailable ? '—' : rows.filter(r => ['Full', 'Over Capacity'].includes(r.status)).length.toLocaleString()}</strong><small>{overviewUnavailable ? 'Capacity status unavailable' : rows.some(r=>['Full','Over Capacity'].includes(r.status)) ? 'Review windows below':'No capacity alerts'}</small></article><article><span>Delivery windows</span><strong>{overviewUnavailable ? '—' : rows.length.toLocaleString()}</strong><small>Matching current filters</small></article></section>
+     <section className="capacity-week-panel"><div className="capacity-section-head"><div><h2>Network outlook</h2><p>Peak utilization for each day from the selected date.</p></div><button className="text-button" onClick={() => setWeek(!week)} aria-expanded={week}>{week ? 'Hide outlook' : 'Show 7-day outlook'}</button></div>
+     {week && <section className="capacity-week" aria-label="Seven day capacity">{weekDates.map((day, i) => { const slots=weekQueries[i].data?.slots.filter(r=>(!source||r.slot.source_id===source)&&(!area||r.area_id===area)&&(!method||r.slot.method===method)) ?? []; const peak=Math.max(0,...slots.map(s=>s.utilization)); return <button className="secondary" key={day} onClick={()=>setDate(day)}><strong>{new Date(day+'T12:00:00').toLocaleDateString([], {weekday:'short',month:'short',day:'numeric'})}</strong><progress max={100} value={Math.min(100,peak*100)} /><small>{weekQueries[i].isLoading?'Loading…':weekQueries[i].error?'Unavailable':slots.length?`${Math.round(peak*100)}% peak utilization`:'No windows'}</small></button>; })}</section>}
+     </section>
+-    <section className="form-card capacity-operations"><div className="capacity-section-head"><div><h2>Delivery windows</h2><p>Bookings, holds and available capacity by location and fulfillment method.</p></div><span className="capacity-result-count">{rows.length.toLocaleString()} windows</span></div>
+-      {overview.isLoading ? <div className="capacity-loading" role="status"><span className="capacity-spinner"/>Loading capacity for {new Date(date+'T12:00:00').toLocaleDateString([], {weekday:'long',month:'long',day:'numeric'})}…</div> : rows.length === 0 ? <div className="capacity-empty"><span className="capacity-empty-icon" aria-hidden="true">◷</span><h3>No windows match these filters</h3><p>{config.data?.schedules.length?'Try another date or clear a filter to see configured windows.':'Add a delivery schedule to define operating hours and available customer windows.'}</p><div className="capacity-form-actions">{canSchedule&&<button onClick={()=>navigate('/fulfillment/new-schedule')}>Create delivery schedule</button>}<button className="text-button" onClick={()=>{setSource('');setArea('');setMethod('');setStatus('');}}>Clear filters</button></div></div> : <div className="capacity-table"><table><thead><tr><th>Delivery window</th><th>Location & area</th><th>Method</th><th>Bookings</th><th>Utilization</th><th>Remaining capacity</th><th>Status</th>{canCapacity&&canOverride&&<th>Actions</th>}</tr></thead><tbody>{rows.map(r => <tr key={r.slot.schedule_id + r.slot.starts_at}><td><strong>{new Date(r.slot.starts_at).toLocaleTimeString([], { timeZone: r.slot.timezone, hour: '2-digit', minute: '2-digit' })}–{new Date(r.slot.ends_at).toLocaleTimeString([], { timeZone: r.slot.timezone, hour: '2-digit', minute: '2-digit' })}</strong><small>{new Date(r.slot.starts_at).toLocaleDateString([], {timeZone:r.slot.timezone,weekday:'short',month:'short',day:'numeric'})} · {r.slot.timezone}</small></td><td><strong>{sourceName(r.slot.source_id)}</strong><small>{config.data?.areas.find(([id])=>id===r.area_id)?.[1]||'All service areas'}</small></td><td>{r.slot.method.replaceAll('_', ' ')}</td><td><strong>{r.confirmed} confirmed</strong><small>{r.reserved} checkout holds</small></td><td><div className="capacity-utilization"><progress max={100} value={Math.min(100, r.utilization * 100)} aria-label={`${Math.round(r.utilization*100)} percent utilized`} /><strong>{Math.round(r.utilization * 100)}%</strong></div></td><td>{r.caps.length ? r.caps.map(c => <small key={c.rule_id + c.dimension}>{c.remaining} {c.dimension.replaceAll('_', ' ')} · {c.period}</small>) : <small>Uncapped</small>}</td><td><span className="capacity-status" data-status={r.status}>{r.status}</span></td>{canCapacity&&canOverride&&<td><div className="capacity-row-actions"><button className="secondary" onClick={()=>editSlot(r,false)}>Override</button><button className="text-button" onClick={()=>editSlot(r,true)}>Block</button></div></td>}</tr>)}</tbody></table></div>}</section>
++    <section className="form-card capacity-operations"><div className="capacity-section-head"><div><h2>Delivery windows</h2><p>Bookings, holds and available capacity by location and fulfillment method.</p></div><span className="capacity-result-count">{overviewUnavailable ? '—' : rows.length.toLocaleString()} windows</span></div>
++      {overview.isError ? <p role="status">Delivery windows could not be loaded. Retry to see current availability.</p> : overview.isLoading ? <div className="capacity-loading" role="status"><span className="capacity-spinner"/>Loading capacity for {new Date(date+'T12:00:00').toLocaleDateString([], {weekday:'long',month:'long',day:'numeric'})}…</div> : rows.length === 0 ? <div className="capacity-empty"><span className="capacity-empty-icon" aria-hidden="true">◷</span><h3>No windows match these filters</h3><p>{config.data?.schedules.length?'Try another date or clear a filter to see configured windows.':'Add a delivery schedule to define operating hours and available customer windows.'}</p><div className="capacity-form-actions">{canSchedule&&<button onClick={()=>navigate('/fulfillment/new-schedule')}>Create delivery schedule</button>}<button className="text-button" onClick={()=>{setSource('');setArea('');setMethod('');setStatus('');}}>Clear filters</button></div></div> : <div className="capacity-table"><table><thead><tr><th>Delivery window</th><th>Location & area</th><th>Method</th><th>Bookings</th><th>Utilization</th><th>Remaining capacity</th><th>Status</th>{canCapacity&&canOverride&&<th>Actions</th>}</tr></thead><tbody>{rows.map(r => <tr key={r.slot.schedule_id + r.slot.starts_at}><td><strong>{new Date(r.slot.starts_at).toLocaleTimeString([], { timeZone: r.slot.timezone, hour: '2-digit', minute: '2-digit' })}–{new Date(r.slot.ends_at).toLocaleTimeString([], { timeZone: r.slot.timezone, hour: '2-digit', minute: '2-digit' })}</strong><small>{new Date(r.slot.starts_at).toLocaleDateString([], {timeZone:r.slot.timezone,weekday:'short',month:'short',day:'numeric'})} · {r.slot.timezone}</small></td><td><strong>{sourceName(r.slot.source_id)}</strong><small>{config.data?.areas.find(([id])=>id===r.area_id)?.[1]||'All service areas'}</small></td><td>{r.slot.method.replaceAll('_', ' ')}</td><td><strong>{r.confirmed} confirmed</strong><small>{r.reserved} checkout holds</small></td><td><div className="capacity-utilization"><progress max={100} value={Math.min(100, r.utilization * 100)} aria-label={`${Math.round(r.utilization*100)} percent utilized`} /><strong>{Math.round(r.utilization * 100)}%</strong></div></td><td>{r.caps.length ? r.caps.map(c => <small key={c.rule_id + c.dimension}>{c.remaining} {c.dimension.replaceAll('_', ' ')} · {c.period}</small>) : <small>Uncapped</small>}</td><td><span className="capacity-status" data-status={r.status}>{r.status}</span></td>{canCapacity&&canOverride&&<td><div className="capacity-row-actions"><button className="secondary" onClick={()=>editSlot(r,false)}>Override</button><button className="text-button" onClick={()=>editSlot(r,true)}>Block</button></div></td>}</tr>)}</tbody></table></div>}</section>
+     <section className="form-card capacity-config-lists"><div className="capacity-section-head"><div><h2>Schedules & capacity policies</h2><p>Manage the rules that shape customer delivery promises.</p></div></div><div className="capacity-config-grid"><div><div className="capacity-subhead"><h3>Delivery schedules</h3><span>{config.data?.schedules.length??0}</span></div>
+       {config.data?.schedules.map(s => <div className="capacity-policy" key={s.id}><div><strong>{sourceName(s.source_id)} · {s.method.replaceAll('_', ' ')}</strong><small>{s.timezone} · {s.enabled ? 'Enabled' : 'Disabled'} · {s.config.lead_minutes} minute lead time · {s.config.min_days}–{s.config.max_days} days ahead</small></div>{canSchedule && <button className="secondary" onClick={() => navigate(`/fulfillment/schedules/${s.id}`)}>Edit schedule</button>}</div>)}
+     </div><div><div className="capacity-subhead"><h3>Shared capacity limits</h3><span>{config.data?.rules.length??0}</span></div><p>Every matching rule applies, so local slot rules cannot bypass a shared cap.</p>
+--- /dev/null
++++ b/frontend/apps/admin/src/capacity-validation.ts
+@@ -0,0 +1,56 @@
++import type { CapacityRow, CapacityRule, FulfillmentSchedule, ScheduleWindow } from '@commerce/api-client';
++
++export const scheduleMethods = [
++  ['standard_delivery', 'Standard delivery'], ['same_day', 'Same-day delivery'],
++  ['next_day', 'Next-day delivery'], ['scheduled_delivery', 'Scheduled delivery'],
++  ['express', 'Express delivery'], ['pickup', 'Store pickup'],
++] as const;
++export const scheduleBounds = {
++  duration_minutes: [15, 1440], spacing_minutes: [0, 1440], lead_minutes: [0, 10080],
++  min_days: [0, 30], max_days: [0, 60], ttl_minutes: [1, 30],
++} as const;
++function validTimezone(value: string) {
++  try { new Intl.DateTimeFormat('en', { timeZone: value }).format(); return true; } catch { return false; }
++}
++function windowsError(windows: ScheduleWindow[]) {
++  if (windows.length > 28) return 'Use at most 28 operating windows.';
++  const minutes = (value: string) => Number(value.slice(0, 2)) * 60 + Number(value.slice(3, 5));
++  if (windows.some(w => !w.start || !w.end || minutes(w.end) - minutes(w.start) < 15)) return 'Each operating window must end at least 15 minutes after it starts on the same day.';
++  if (windows.some((w, i) => windows.slice(i + 1).some(v => w.weekday === v.weekday && w.start < v.end && v.start < w.end))) return 'Operating windows on the same day must not overlap.';
++  return '';
++}
++export function scheduleError(schedule: FulfillmentSchedule) {
++  if (!schedule.source_id) return 'Choose a location.';
++  if (!schedule.method.trim()) return 'Choose a fulfillment method.';
++  if (schedule.enabled && ['store_pickup', 'curbside_pickup'].includes(schedule.method)) return 'This legacy pickup method is unsupported. Create a replacement schedule using Store pickup and disable the old schedule.';
++  if (!validTimezone(schedule.timezone)) return 'Enter a valid IANA timezone, such as Africa/Cairo.';
++  for (const [key, [min, max]] of Object.entries(scheduleBounds)) {
++    const value = schedule.config[key as keyof typeof scheduleBounds];
++    if (key === 'duration_minutes' && value === null) continue;
++    if (value === null || !Number.isInteger(value) || value < min || value > max) return `${key.replaceAll('_', ' ')} must be a whole number from ${min} to ${max}.`;
++  }
++  if (schedule.config.min_days > schedule.config.max_days) return 'Maximum days ahead must be at least minimum days ahead.';
++  const error = windowsError(schedule.config.windows);
++  if (error) return error;
++  const exceptions = schedule.config.exceptions;
++  if (exceptions.length > 100) return 'Use at most 100 calendar exceptions.';
++  if (exceptions.some((x, i) => !x.from || !x.through || x.from > x.through || exceptions.slice(i + 1).some(y => x.from <= y.through && y.from <= x.through))) return 'Calendar exception dates must be valid and must not overlap.';
++  return exceptions.map(x => windowsError(x.windows)).find(Boolean) || '';
++}
++export function capacityRuleError(rule: CapacityRule) {
++  if (!validTimezone(rule.timezone)) return 'Enter a valid IANA timezone, such as Africa/Cairo.';
++  if (rule.starts_on && rule.ends_on && rule.starts_on > rule.ends_on) return 'Through date must be on or after the from date.';
++  if (rule.overrides_rule_id && (!rule.starts_on || !rule.ends_on)) return 'An override requires both dates.';
++  if (!Object.keys(rule.limits).length) return 'Set at least one capacity limit.';
++  if (Object.values(rule.limits).some(value => !Number.isInteger(value) || value < 0 || value > 1000000000)) return 'Capacity limits must be whole numbers from 0 to 1,000,000,000.';
++  return '';
++}
++export function blockWindow(row: CapacityRow): CapacityRule {
++  const timezone = row.slot.timezone;
++  const starts = new Date(row.slot.starts_at);
++  const date = starts.toLocaleDateString('en-CA', { timeZone: timezone });
++  return { id: crypto.randomUUID(), overrides_rule_id: null, source_id: row.slot.source_id,
++    area_id: row.area_id, method: row.slot.method, timezone, period: 'slot',
++    local_start: starts.toLocaleTimeString('en-GB', { timeZone: timezone, hour12: false }),
++    starts_on: date, ends_on: date, limits: { orders: 0 }, overflow_percent: 0, enabled: true };
++}
+--- /dev/null
++++ b/frontend/apps/admin/src/capacity-validation.test.ts
+@@ -0,0 +1,16 @@
++import { describe, expect, it } from 'vitest';
++import type { CapacityRow, FulfillmentSchedule } from '@commerce/api-client';
++import { blockWindow, capacityRuleError, scheduleError } from './capacity-validation';
++
++const schedule = (): FulfillmentSchedule => ({ id:'schedule',source_id:'warehouse',area_id:null,method:'pickup',enabled:true,timezone:'Africa/Cairo',config:{windows:[{weekday:0,start:'09:00:00',end:'18:00:00',cutoff:null}],duration_minutes:60,spacing_minutes:0,lead_minutes:120,cutoff:null,min_days:0,max_days:14,ttl_minutes:10,release_before:'fulfilling',exceptions:[]} });
++describe('fulfillment editor validation',()=>{
++ it('accepts valid pickup and rejects a legacy pickup identifier while enabled',()=>{const s=schedule();expect(scheduleError(s)).toBe('');s.method='store_pickup';expect(scheduleError(s)).toContain('unsupported');s.enabled=false;expect(scheduleError(s)).toBe('');});
++ it('rejects reversed windows, overlap and invalid exception ranges',()=>{const s=schedule();s.config.windows[0].end='08:00:00';expect(scheduleError(s)).toContain('15 minutes');s.config.windows[0].end='18:00:00';s.config.windows.push({weekday:0,start:'17:00:00',end:'19:00:00',cutoff:null});expect(scheduleError(s)).toContain('overlap');s.config.windows.pop();s.config.exceptions=[{from:'2026-10-03',through:'2026-10-01',closed:true,windows:[]}];expect(scheduleError(s)).toContain('dates');});
++ it('matches backend duration, hold and advance bounds',()=>{const s=schedule();s.config.duration_minutes=14;expect(scheduleError(s)).toContain('15 to 1440');s.config.duration_minutes=null;s.config.ttl_minutes=31;expect(scheduleError(s)).toContain('1 to 30');s.config.ttl_minutes=10;s.config.min_days=15;expect(scheduleError(s)).toContain('Maximum days');});
++ it('rejects invalid timezones before submission',()=>{const s=schedule();s.timezone='Not/AZone';expect(scheduleError(s)).toContain('timezone');});
++ it('blocks one location at its local date without inheriting a shared scope',()=>{
++  const row={slot:{source_id:'warehouse',method:'pickup',timezone:'Africa/Cairo',starts_at:'2026-10-01T22:30:00Z'},area_id:'area',caps:[{rule_id:'shared'}]} as CapacityRow;
++  const rule=blockWindow(row);expect(rule).toMatchObject({source_id:'warehouse',area_id:'area',method:'pickup',overrides_rule_id:null,starts_on:'2026-10-02',ends_on:'2026-10-02',local_start:'01:30:00',limits:{orders:0},overflow_percent:0});expect(capacityRuleError(rule)).toBe('');
++  rule.ends_on='2026-10-01';expect(capacityRuleError(rule)).toContain('Through date');rule.ends_on=rule.starts_on;rule.limits={};expect(capacityRuleError(rule)).toContain('at least one');
++ });
++});
+--- /dev/null
++++ b/frontend/apps/admin/src/unsaved-changes.ts
+@@ -0,0 +1,25 @@
++import { useCallback, useEffect, useRef } from 'react';
++import { useBlocker, useLocation } from 'react-router-dom';
++
++/** Covers links, browser history and document unload. Call allowLeave after a successful save. */
++export function useUnsavedChanges(dirty: boolean) {
++  const allowed = useRef(false);
++  const location = useLocation();
++  useEffect(() => { allowed.current = false; }, [location.key]);
++  const blocker = useBlocker(useCallback(() => dirty && !allowed.current, [dirty]));
++  useEffect(() => {
++    if (blocker.state !== 'blocked') return;
++    if (window.confirm('Discard unsaved changes and leave this page?')) blocker.proceed();
++    else blocker.reset();
++  }, [blocker]);
++  useEffect(() => {
++    if (!dirty) return;
++    const warn = (event: BeforeUnloadEvent) => {
++      if (allowed.current) return;
++      event.preventDefault(); event.returnValue = '';
++    };
++    window.addEventListener('beforeunload', warn);
++    return () => window.removeEventListener('beforeunload', warn);
++  }, [dirty]);
++  return () => { allowed.current = true; };
++}
+--- a/frontend/apps/admin/src/fulfillment-settings.tsx
++++ b/frontend/apps/admin/src/fulfillment-settings.tsx
+@@ -1,4 +1,5 @@
+-import { useEffect, useRef, useState, type ReactNode } from 'react';
++import { useUnsavedChanges } from './unsaved-changes';
++import { useRef, useState, type ReactNode } from 'react';
+ import { useQuery, useQueryClient } from '@tanstack/react-query';
+ import { fulfillmentPlanApi, msiApi, type FulfillmentCapabilities } from '@commerce/api-client';
+ import { Notice, useAction } from '@commerce/ui';
+@@ -46,12 +47,7 @@
+   const pickupCount = sources.filter(s => s.pickup_enabled).length;
+   const validation = c && (!c.delivery_enabled && !c.pickup_enabled ? 'Enable at least one fulfillment method before saving.' : c.delivery_enabled && !c.asap_delivery_enabled && !c.scheduled_delivery_enabled ? 'Enable ASAP or scheduled delivery before saving.' : c.delivery_city_ids.length > 500 ? 'Delivery coverage supports up to 500 city IDs.' : '');
+ 
+-  useEffect(() => {
+-    if (!unsaved) return;
+-    const warn = (event: BeforeUnloadEvent) => { event.preventDefault(); event.returnValue = ''; };
+-    window.addEventListener('beforeunload', warn);
+-    return () => window.removeEventListener('beforeunload', warn);
+-  }, [unsaved]);
++  useUnsavedChanges(unsaved);
+ 
+   async function refresh() {
+     await Promise.all([cache.invalidateQueries({ queryKey: ['fulfillment-settings'] }), cache.invalidateQueries({ queryKey: ['capacity-config'] }), cache.invalidateQueries({ queryKey: ['inventory'] })]);
+@@ -93,7 +89,7 @@
+     {query.isError && <button type="button" className="secondary" onClick={() => void query.refetch()}>Retry loading settings</button>}
+     {query.data && <>
+       <div className="fs-store-bar"><label className="fs-field"><span>STORE WORKSPACE</span><select aria-label="Store" value={selected?.id ?? ''} disabled={action.busy || !selected} onChange={e => chooseStore(e.target.value)}>{!selected && <option value="">No stores available</option>}{query.data.stores.map(s => <option key={s.id} value={s.id}>{s.name}</option>)}</select></label><div className="fs-store-context"><span className={`fs-dot ${dirty ? 'is-draft' : ''}`} /><span>{dirty ? 'Unsaved changes' : selected && Object.keys(selected.overrides).length ? 'Custom store policy' : 'Inherited defaults'}</span></div>{canManage && <button type="button" className="secondary" onClick={() => setAddingStore(!addingStore)} aria-expanded={addingStore}>+ Add store or branch</button>}</div>
+-      {addingStore && canManage && <Panel title="Add a store or branch" description="Create an online store, or a physical branch with its own linked inventory location."><form className="fs-form-grid" onSubmit={e => { e.preventDefault(); if (!name.trim() || !storeReason.trim() || (holdsInventory && (!canInventory || !branchAddress.trim() || (!branchDelivery && !branchPickup) || (branchPickup && !canPickup)))) return; void action.run(async () => { const id = newStoreId.current ??= crypto.randomUUID(); await fulfillmentPlanApi.saveStore(id, name.trim(), storeReason.trim(), holdsInventory ? {address: branchAddress.trim(), delivery_enabled: branchDelivery, pickup_enabled: branchPickup, ...(branchStock ? {stock_id: branchStock} : {})} : undefined); await refresh(); setName(''); setStoreReason(''); setAddingStore(false); setStore(id); setReason(''); setCityInput(null); setLocationDirty(false); setLocationReason(''); newStoreId.current = undefined; setHoldsInventory(false); setBranchAddress(''); setBranchStock(''); setBranchPickup(false); setBranchDelivery(true); setDraft(null); setSource(''); action.setMessage(holdsInventory ? (branchStock ? 'Branch created and connected to the selected stock pool. Add product quantities in Inventory before fulfilling orders.' : 'Branch and inventory location created. Assign a stock pool and product quantities in Inventory before fulfilling orders.') : 'Store created. Connect existing inventory locations to configure fulfillment.'); }); }}><label className="fs-field">Store name<input required maxLength={100} value={name} disabled={action.busy} onChange={e => setName(e.target.value)} /></label><label className="fs-setting"><span><strong>Holds inventory</strong><small>Create a linked inventory location for this physical branch.</small></span><input type="checkbox" checked={holdsInventory} disabled={action.busy || !canInventory} onChange={e => setHoldsInventory(e.target.checked)} /></label>
++      {addingStore && canManage && <Panel title="Add a store or branch" description="Create an online store, or a physical branch with its own linked inventory location."><form className="fs-form-grid" onSubmit={e => { e.preventDefault(); if (!name.trim() || !storeReason.trim() || (holdsInventory && (!canInventory || !branchAddress.trim() || (!branchDelivery && !branchPickup) || (branchPickup && !canPickup)))) return; void action.run(async () => { if ((dirty || locationDirty) && !window.confirm("Discard the current store’s unsaved changes and create this store?")) return; const id = newStoreId.current ??= crypto.randomUUID(); await fulfillmentPlanApi.saveStore(id, name.trim(), storeReason.trim(), holdsInventory ? {address: branchAddress.trim(), delivery_enabled: branchDelivery, pickup_enabled: branchPickup, ...(branchStock ? {stock_id: branchStock} : {})} : undefined); await refresh(); setName(''); setStoreReason(''); setAddingStore(false); setStore(id); setReason(''); setCityInput(null); setLocationDirty(false); setLocationReason(''); newStoreId.current = undefined; setHoldsInventory(false); setBranchAddress(''); setBranchStock(''); setBranchPickup(false); setBranchDelivery(true); setDraft(null); setSource(''); action.setMessage(holdsInventory ? (branchStock ? 'Branch created and connected to the selected stock pool. Add product quantities in Inventory before fulfilling orders.' : 'Branch and inventory location created. Assign a stock pool and product quantities in Inventory before fulfilling orders.') : 'Store created. Connect existing inventory locations to configure fulfillment.'); }); }}><label className="fs-field">Store name<input required maxLength={100} value={name} disabled={action.busy} onChange={e => setName(e.target.value)} /></label><label className="fs-setting"><span><strong>Holds inventory</strong><small>Create a linked inventory location for this physical branch.</small></span><input type="checkbox" checked={holdsInventory} disabled={action.busy || !canInventory} onChange={e => setHoldsInventory(e.target.checked)} /></label>
+       {!canInventory && <p className="fs-hint">Creating a branch inventory location requires inventory management permission.</p>}
+       {holdsInventory && <><label className="fs-field">Branch address<textarea required maxLength={500} value={branchAddress} disabled={action.busy} onChange={e => setBranchAddress(e.target.value)} /></label>
+       <label><input type="checkbox" checked={branchDelivery} disabled={action.busy} onChange={e => setBranchDelivery(e.target.checked)} /> Fulfills delivery</label>
+@@ -116,7 +112,7 @@
+       {section === sections[0] && <><Panel title="Fulfillment methods" description="Choose how customers receive their orders.">{check('delivery_enabled', 'Delivery', 'Deliver orders to eligible customer addresses.')}{check('pickup_enabled', 'Store pickup', 'Let customers collect orders from an activated location.')}{c.pickup_enabled && !pickupCount && <div className="fs-callout">Pickup needs an active location. <button type="button" onClick={() => setSection(sections[3])}>Configure store locations →</button></div>}</Panel><Panel title="Scheduling & delivery promises" description="Set the timing options customers see during checkout.">{c.delivery_enabled && <>{check('asap_delivery_enabled', 'ASAP delivery', 'Accept orders without a future delivery window.')}{check('scheduled_delivery_enabled', 'Scheduled delivery', 'Offer delivery windows from location calendars.')}{c.scheduled_delivery_enabled && check('customer_delivery_slot_selection_enabled', 'Customer-selected windows', 'When off, the earliest compatible window is assigned automatically.')}</>}{c.pickup_enabled && check('pickup_scheduling_enabled', 'Scheduled pickup', 'Use pickup calendars independently of delivery windows.')}{check('admin_manual_scheduling_enabled', 'Operator scheduling', 'Allow authorized operators to edit location calendars.')}</Panel></>}
+       {section === sections[1] && <><Panel title="Capacity management" description="Match order intake to the limits configured for your operations.">{check('capacity_management_enabled', 'Enforce capacity limits', 'Apply location and shared capacity limits to fulfillment.')}{c.capacity_management_enabled && check('checkout_capacity_holds_enabled', 'Reserve capacity at checkout', 'Temporarily hold capacity while a customer completes checkout.')}<div className="fs-hint">Without checkout holds, enabled capacity limits are checked when the order is placed.</div></Panel><Panel title="Inventory routing" description="Define how inventory locations work together to fulfill a basket.">{check('automatic_source_routing_enabled', 'Automatic location selection', 'Select an inventory location automatically. When off, customers choose a location.')}{check('multi_source_fulfillment_enabled', 'Fulfill from multiple locations', 'Split stock across locations when one location cannot fulfill the basket.')}{c.multi_source_fulfillment_enabled && c.scheduled_delivery_enabled && check('split_order_scheduling_enabled', 'Coordinate split-order schedules', 'Reserve capacity for all participating sources together.')}{c.split_order_scheduling_enabled && <label className="fs-field fs-inset">Split delivery timing<select disabled={!canManage || action.busy} value={c.split_delivery_mode} onChange={e => setDraft({ ...c, split_delivery_mode: e.target.value as FulfillmentCapabilities['split_delivery_mode'] })}><option value="same_window_required">All packages in the same window</option><option value="independent_windows">Separate windows per package</option></select></label>}</Panel></>}
+       {section === sections[2] && <Panel title="Delivery coverage" description="Define which customer addresses are eligible for delivery.">{c.delivery_enabled ? <>{check('geo_fencing_enabled', 'Match delivery area boundaries', 'Check customer addresses against configured map boundaries.')}{!c.geo_fencing_enabled && <label className="fs-field fs-inset">Eligible city IDs<textarea rows={4} disabled={!canManage || action.busy} placeholder="Enter city IDs, separated by commas" value={cityInput ?? c.delivery_city_ids.join(', ')} onChange={e => { setCityInput(e.target.value); setDraft({ ...c, delivery_city_ids: e.target.value.split(',').map(s => s.trim()).filter(Boolean) }); }} /><small>{c.delivery_city_ids.length} / 500 cities · Use IDs from your address geography.</small></label>}{!c.geo_fencing_enabled && !c.delivery_city_ids.length && <div className="fs-callout">All saved addresses are eligible using the default stock. Add city IDs to restrict coverage.</div>}</> : <div className="fs-empty"><h3>Delivery is turned off</h3><p>Enable delivery in Methods & scheduling to configure coverage.</p><button type="button" className="secondary" onClick={() => setSection(sections[0])}>Go to fulfillment methods</button></div>}</Panel>}
+-      {section === sections[3] && <><Panel title="Connected locations" description="Inventory locations assigned to this store and their pickup configuration.">{sources.length ? <div className="fs-location-list">{sources.map(s => <article key={s.source_id}><div className="fs-location-icon" aria-hidden="true">⌂</div><div><strong>{query.data?.locations.find(l => l.id === s.source_id)?.name ?? s.source_id}</strong><small>{s.pickup_enabled && selected.resolved.pickup_enabled ? `Pickup · ${s.preparation_minutes} min preparation` : s.pickup_enabled ? 'Pickup configured · store pickup is off' : 'Pickup not activated'}</small></div>{canManage && canPickup && <button type="button" className="secondary" disabled={action.busy} onClick={() => chooseSource(s.source_id)}>Edit</button>}</article>)}</div> : <div className="fs-empty"><h3>No locations connected</h3><p>Assign an inventory location to begin fulfilling from this store.</p></div>}</Panel>{canManage && canPickup ? <Panel title={source && sources.some(s => s.source_id === source) ? 'Edit location' : 'Assign a location'} description="Configure pickup instructions and preparation time for an inventory location."><form className="fs-location-form" onSubmit={e => { e.preventDefault(); if (!source || !locationReason.trim() || !Number.isInteger(preparation) || preparation < 1 || preparation > 1440) return; void action.run(async () => { await fulfillmentPlanApi.saveSource({ store_id: selected.id, source_id: source, pickup_enabled: selected.resolved.pickup_enabled && pickup, pickup_instructions: instructions, preparation_minutes: preparation }, locationReason.trim()); await refresh(); setLocationDirty(false); setLocationReason(''); action.setMessage('Location configuration saved.'); }); }}><label className="fs-field">Inventory location<select required value={source} disabled={action.busy} onChange={e => chooseSource(e.target.value)}><option value="">Choose an inventory location</option>{query.data?.locations.map(l => <option key={l.id} value={l.id}>{l.name}</option>)}</select></label>{!query.data?.locations.length && <p className="fs-hint">Create an inventory location before assigning a location.</p>}{source && <><label className="fs-setting"><span><strong>Accept pickup at this location</strong><small>{selected.resolved.pickup_enabled ? 'Customers can collect orders here.' : 'Save a policy with store pickup enabled to activate this location.'}</small></span><span className="fs-switch"><input type="checkbox" role="switch" aria-label="Accept pickup at this location" checked={pickup} disabled={!selected.resolved.pickup_enabled || action.busy} onChange={e => { setPickup(e.target.checked); setLocationDirty(true); }} /><span aria-hidden="true" /></span></label><label className="fs-field">Pickup instructions<textarea value={instructions} maxLength={1000} rows={3} disabled={action.busy} placeholder="Where to collect the order and what to bring" onChange={e => { setInstructions(e.target.value); setLocationDirty(true); }} /></label><label className="fs-field">Preparation time (minutes)<input type="number" min={1} max={1440} step={1} required value={preparation} disabled={action.busy} onChange={e => { setPreparation(Number(e.target.value)); setLocationDirty(true); }} /></label><label className="fs-field">Location change reason<input required maxLength={300} value={locationReason} disabled={action.busy} placeholder="Explain this location update" onChange={e => { setLocationReason(e.target.value); setLocationDirty(true); }} /></label><button disabled={action.busy || !locationReason.trim()}>Save location</button></>}</form></Panel> : <div className="fs-hint">Managing locations requires fulfillment settings and pickup management permissions.</div>}</>}
++      {section === sections[3] && <><Panel title="Connected locations" description="Inventory locations assigned to this store and their pickup configuration.">{sources.length ? <div className="fs-location-list">{sources.map(s => <article key={s.source_id}><div className="fs-location-icon" aria-hidden="true">⌂</div><div><strong>{query.data?.locations.find(l => l.id === s.source_id)?.name ?? s.source_id}</strong><small>{s.pickup_enabled && selected.resolved.pickup_enabled ? `Pickup · ${s.preparation_minutes} min preparation` : s.pickup_enabled ? 'Pickup configured · store pickup is off' : 'Pickup not activated'}</small></div>{canManage && canPickup && <button type="button" className="secondary" disabled={action.busy} onClick={() => chooseSource(s.source_id)}>Edit</button>}</article>)}</div> : <div className="fs-empty"><h3>No locations connected</h3><p>Assign an inventory location to begin fulfilling from this store.</p></div>}</Panel>{canManage && canPickup ? <Panel title={source && sources.some(s => s.source_id === source) ? 'Edit location' : 'Assign a location'} description="Configure pickup instructions and preparation time for an inventory location."><form className="fs-location-form" onSubmit={e => { e.preventDefault(); if (!source || !locationReason.trim() || !Number.isInteger(preparation) || preparation < 1 || preparation > 1440) return; void action.run(async () => { await fulfillmentPlanApi.saveSource({ store_id: selected.id, source_id: source, pickup_enabled: pickup, pickup_instructions: instructions, preparation_minutes: preparation }, locationReason.trim()); await refresh(); setLocationDirty(false); setLocationReason(''); action.setMessage('Location configuration saved.'); }); }}><label className="fs-field">Inventory location<select required value={source} disabled={action.busy} onChange={e => chooseSource(e.target.value)}><option value="">Choose an inventory location</option>{query.data?.locations.map(l => <option key={l.id} value={l.id}>{l.name}</option>)}</select></label>{!query.data?.locations.length && <p className="fs-hint">Create an inventory location before assigning a location.</p>}{source && <><label className="fs-setting"><span><strong>Accept pickup at this location</strong><small>{selected.resolved.pickup_enabled ? 'Customers can collect orders here.' : 'Store pickup is off. Existing location configuration is preserved until store pickup is enabled.'}</small></span><span className="fs-switch"><input type="checkbox" role="switch" aria-label="Accept pickup at this location" checked={pickup} disabled={!selected.resolved.pickup_enabled || action.busy} onChange={e => { setPickup(e.target.checked); setLocationDirty(true); }} /><span aria-hidden="true" /></span></label><label className="fs-field">Pickup instructions<textarea value={instructions} maxLength={1000} rows={3} disabled={action.busy} placeholder="Where to collect the order and what to bring" onChange={e => { setInstructions(e.target.value); setLocationDirty(true); }} /></label><label className="fs-field">Preparation time (minutes)<input type="number" min={1} max={1440} step={1} required value={preparation} disabled={action.busy} onChange={e => { setPreparation(Number(e.target.value)); setLocationDirty(true); }} /></label><label className="fs-field">Location change reason<input required maxLength={300} value={locationReason} disabled={action.busy} placeholder="Explain this location update" onChange={e => { setLocationReason(e.target.value); setLocationDirty(true); }} /></label><button disabled={action.busy || !locationReason.trim()}>Save location</button></>}</form></Panel> : <div className="fs-hint">Managing locations requires fulfillment settings and pickup management permissions.</div>}</>}
+       {canManage && <section className="fs-save-panel"><div className="fs-save-heading"><div><h2>{dirty ? `${changedKeys.length} unsaved setting${changedKeys.length === 1 ? '' : 's'}` : 'Policy is up to date'}</h2><p>{dirty ? 'Review your changes and record why this policy is changing.' : 'Updates are saved only when you apply them.'}</p></div><span className={`fs-badge ${dirty ? 'fs-badge-draft' : ''}`}>{dirty ? 'Draft' : 'Saved'}</span></div>{(dirty || restore) && <label className="fs-field">Policy change reason<input maxLength={300} value={reason} disabled={action.busy} placeholder="e.g. Enable scheduled delivery for the new service area" onChange={e => setReason(e.target.value)} /><small>Required for the audit trail · {reason.length}/300</small></label>}{dirty && <div className="fs-save-actions"><span>Applies immediately to {selected.name}.</span><button type="button" className="secondary" disabled={action.busy} onClick={() => { setDraft(null); setCityInput(null); setReason(''); clearFeedback(); }}>Discard changes</button><button type="button" disabled={action.busy || !reason.trim() || !!validation} onClick={() => void action.run(saveSettings)}>{action.busy ? 'Saving…' : 'Save fulfillment settings'}</button></div>}{!!Object.keys(selected.overrides).length && <div className="fs-defaults">{!restore ? <button type="button" className="fs-text-button" disabled={action.busy} onClick={() => setRestore(true)}>Restore inherited defaults</button> : <><p>This removes the store’s policy overrides and replaces any unsaved policy changes. Open checkout selections will be invalidated.</p><div className="fs-inline-actions"><button type="button" className="secondary" disabled={action.busy} onClick={() => setRestore(false)}>Cancel</button><button type="button" disabled={action.busy || !reason.trim()} onClick={() => void action.run(async () => { await fulfillmentPlanApi.saveSettings(selected.id, {}, reason.trim()); await refresh(); setDraft(null); setCityInput(null); setReason(''); setRestore(false); action.setMessage('Inherited fulfillment defaults restored.'); })}>Confirm restore</button></div></>}</div>}</section>}
+       </div></div>
+     </>}
+--- a/frontend/apps/admin/src/delivery-areas.tsx
++++ b/frontend/apps/admin/src/delivery-areas.tsx
+@@ -1,3 +1,4 @@
++import { useUnsavedChanges } from './unsaved-changes';
+ import { DeliveryAreaOverview } from "./delivery-area-overview";
+ import { RowActions } from "./row-actions";
+ import { PageHeader } from "./page-header";
+@@ -44,7 +45,7 @@
+  const grid=useLocalGrid({name:'delivery-areas',rows:areas.data?.filter(x=>!status||String(x.is_active)===status),searchText:x=>x.name,sorts:{name:x=>x.name,priority:x=>x.priority},initialSort:'priority',scope:status,busy:areas.isFetching,error:areas.error?.message,refresh:()=>void areas.refetch()});
+  useEffect(()=>{if(editing)document.querySelector('.delivery-area-editor')?.scrollIntoView({block:'start'});},[editing,editorVersion]);
+  const dirty=editing&&JSON.stringify(form)!==baseline;
+- useEffect(()=>{if(!dirty)return;const warn=(event:BeforeUnloadEvent)=>{event.preventDefault();};window.addEventListener('beforeunload',warn);return()=>window.removeEventListener('beforeunload',warn);},[dirty]);
++ useUnsavedChanges(dirty);
+  const patch=(value:Partial<typeof form>)=>setForm(f=>({...f,...value}));
+  function open(area?:DeliveryArea,duplicate=false) {
+   if(dirty&&!window.confirm('Discard unsaved delivery area changes?'))return;
+--- a/frontend/apps/admin/src/msi.tsx
++++ b/frontend/apps/admin/src/msi.tsx
+@@ -1,3 +1,4 @@
++import { useUnsavedChanges } from './unsaved-changes';
+ import { RowActions } from "./row-actions";
+ import { PageHeader } from "./page-header";
+ import { SourceMap } from "./source-map";
+@@ -40,8 +41,10 @@
+   contact_phone:source.contact_phone,priority:source.priority,
+  }:emptySource);
+  const a=useAction(),cache=useQueryClient(),navigate=useNavigate();
++ const [initial] = useState(() => JSON.stringify(form));
++ const allowLeave = useUnsavedChanges(JSON.stringify(form) !== initial);
+  const update=<K extends keyof InventorySourceInput>(key:K,value:InventorySourceInput[K])=>setForm({...form,[key]:value});
+- return <form className="form-card" onSubmit={e=>{e.preventDefault();void a.run(async()=>{await msiApi.saveSource(form,source?.id);await cache.invalidateQueries({queryKey:["inventory"]});navigate("/catalog/sources");});}}><Notice error>{a.error}</Notice><div className="form-grid">
++ return <form className="form-card" onSubmit={e=>{e.preventDefault();void a.run(async()=>{await msiApi.saveSource(form,source?.id);await cache.invalidateQueries({queryKey:["inventory"]});allowLeave();navigate("/catalog/sources");});}}><Notice error>{a.error}</Notice><div className="form-grid">
+  <Field label="Code" required maxLength={64} pattern="[A-Za-z0-9_-]+" value={form.code} onChange={e=>update("code",e.target.value)}/>
+  <Field label="Name" required maxLength={100} value={form.name} onChange={e=>update("name",e.target.value)}/>
+  <Field label="Address" maxLength={500} value={form.address} onChange={e=>update("address",e.target.value)}/>
+@@ -69,14 +72,16 @@
+  const sources=useQuery({queryKey:["inventory","sources"],queryFn:msiApi.sources});
+  const existing=stocks.data?.find(s=>s.id===id);
+  const [form,setForm]=useState<StockPoolInput>(emptyStock);
++ const [initial,setInitial]=useState(JSON.stringify(emptyStock));
++ const allowLeave=useUnsavedChanges(JSON.stringify(form)!==initial);
+  const a=useAction(),cache=useQueryClient();
+- useEffect(()=>{if(existing)setForm({code:existing.code,name:existing.name,is_default:existing.is_default,sources:[...existing.sources]});else if(!editing)setForm(emptyStock);},[existing,editing]);
++ useEffect(()=>{const next=existing?{code:existing.code,name:existing.name,is_default:existing.is_default,sources:[...existing.sources]}:emptyStock;if(existing||!editing){setForm(next);setInitial(JSON.stringify(next));}},[existing,editing]);
+  const assigned=useMemo(()=>deductionOrder(form),[form]);
+  const sourceById=(sourceId:string)=>sources.data?.find(s=>s.id===sourceId);
+  const toggle=(source_id:string,checked:boolean)=>setForm(setSourceAssignment(form,source_id,checked));
+  const priority=(source_id:string,next:number)=>setForm(setSourcePriority(form,source_id,next));
+  if(!canWrite)return <main><PageHeader title={<>Stocks</>} description={<>You do not have permission to edit stocks.</>} /></main>;
+- return <main className="catalog-admin stock-admin stock-editor-page"><Link to="/catalog/stocks" className="back-link">Stocks</Link><PageHeader title={<>{editing?"Edit stock":"Create new stock"}</>} description={<>This is a dedicated stock setup page. Define the salable pool, assign sources, then review deduction order before saving.</>} /><Notice error>{a.error||stocks.error?.message||sources.error?.message}</Notice>{editing&&stocks.data&&!existing?<Notice error>Stock not found.</Notice>:<form className="stock-editor" onSubmit={e=>{e.preventDefault();void a.run(async()=>{await msiApi.saveStock(form,editing?id:undefined);await cache.invalidateQueries({queryKey:["inventory"]});navigate("/catalog/stocks");});}}><section className="stock-editor-hero"><div><span className="status-pill pending">Step 1</span><h2>Stock information</h2><p>Use a stable stock code for integrations, delivery area mapping, and channel availability.</p></div><label className="checkbox"><input type="checkbox" checked={form.is_default} onChange={e=>setForm({...form,is_default:e.target.checked})}/>Default storefront stock</label></section><section className="order-panel"><div className="form-grid"><Field label="Stock code" required maxLength={64} pattern="[A-Za-z0-9_-]+" value={form.code} onChange={e=>setForm({...form,code:e.target.value})}/><Field label="Stock name" required maxLength={100} value={form.name} onChange={e=>setForm({...form,name:e.target.value})}/></div></section><section className="stock-editor-hero"><div><span className="status-pill pending">Step 2</span><h2>Sources and priorities</h2><p>Assign physical sources to this stock. Lower numbers are deducted before higher numbers.</p></div><strong>{form.sources.length} assigned</strong></section>{sources.isPending?<p className="order-panel">Loading sources...</p>:<div className="stock-assignment-layout"><section className="order-panel source-picker-panel"><h3>Available sources</h3>{sources.data?.map(s=>{const link=form.sources.find(l=>l.source_id===s.id);return <article className={`source-assignment ${link?"selected":""}`} key={s.id}><label className="checkbox"><input type="checkbox" checked={!!link} onChange={e=>toggle(s.id,e.target.checked)}/><span><strong>{s.name}</strong><small><code>{s.code}</code> · {s.is_enabled?"Enabled":"Disabled"} · {s.address||"No address"}</small></span></label>{link&&<Field label="Deduction priority" type="number" step="1" value={link.priority} onChange={e=>priority(s.id,Number(e.target.value))}/>}</article>;})}</section><aside className="order-panel deduction-panel"><h3>Deduction order</h3>{assigned.length===0?<p>No sources assigned yet.</p>:<ol className="stock-source-list">{assigned.map(l=>{const source=sourceById(l.source_id);return <li key={l.source_id}><span>{source?.name??l.source_id}</span><small>priority {l.priority}</small></li>;})}</ol>}</aside></div>}<div className="stock-save-bar"><Link className="secondary button-link" to="/catalog/stocks">Cancel</Link><button disabled={a.busy||form.sources.length===0}>{a.busy?"Saving...":"Save stock"}</button></div></form>}</main>;
++ return <main className="catalog-admin stock-admin stock-editor-page"><Link to="/catalog/stocks" className="back-link">Stocks</Link><PageHeader title={<>{editing?"Edit stock":"Create new stock"}</>} description={<>This is a dedicated stock setup page. Define the salable pool, assign sources, then review deduction order before saving.</>} /><Notice error>{a.error||stocks.error?.message||sources.error?.message}</Notice>{editing&&stocks.data&&!existing?<Notice error>Stock not found.</Notice>:<form className="stock-editor" onSubmit={e=>{e.preventDefault();void a.run(async()=>{await msiApi.saveStock(form,editing?id:undefined);await cache.invalidateQueries({queryKey:["inventory"]});allowLeave();navigate("/catalog/stocks");});}}><section className="stock-editor-hero"><div><span className="status-pill pending">Step 1</span><h2>Stock information</h2><p>Use a stable stock code for integrations, delivery area mapping, and channel availability.</p></div><label className="checkbox"><input type="checkbox" checked={form.is_default} onChange={e=>setForm({...form,is_default:e.target.checked})}/>Default storefront stock</label></section><section className="order-panel"><div className="form-grid"><Field label="Stock code" required maxLength={64} pattern="[A-Za-z0-9_-]+" value={form.code} onChange={e=>setForm({...form,code:e.target.value})}/><Field label="Stock name" required maxLength={100} value={form.name} onChange={e=>setForm({...form,name:e.target.value})}/></div></section><section className="stock-editor-hero"><div><span className="status-pill pending">Step 2</span><h2>Sources and priorities</h2><p>Assign physical sources to this stock. Lower numbers are deducted before higher numbers.</p></div><strong>{form.sources.length} assigned</strong></section>{sources.isPending?<p className="order-panel">Loading sources...</p>:<div className="stock-assignment-layout"><section className="order-panel source-picker-panel"><h3>Available sources</h3>{sources.data?.map(s=>{const link=form.sources.find(l=>l.source_id===s.id);return <article className={`source-assignment ${link?"selected":""}`} key={s.id}><label className="checkbox"><input type="checkbox" checked={!!link} onChange={e=>toggle(s.id,e.target.checked)}/><span><strong>{s.name}</strong><small><code>{s.code}</code> · {s.is_enabled?"Enabled":"Disabled"} · {s.address||"No address"}</small></span></label>{link&&<Field label="Deduction priority" type="number" step="1" value={link.priority} onChange={e=>priority(s.id,Number(e.target.value))}/>}</article>;})}</section><aside className="order-panel deduction-panel"><h3>Deduction order</h3>{assigned.length===0?<p>No sources assigned yet.</p>:<ol className="stock-source-list">{assigned.map(l=>{const source=sourceById(l.source_id);return <li key={l.source_id}><span>{source?.name??l.source_id}</span><small>priority {l.priority}</small></li>;})}</ol>}</aside></div>}<div className="stock-save-bar"><Link className="secondary button-link" to="/catalog/stocks">Cancel</Link><button disabled={a.busy||form.sources.length===0}>{a.busy?"Saving...":"Save stock"}</button></div></form>}</main>;
+ }
+ export function SourceQuantities({productId,canWrite}:{productId:string;canWrite:boolean}) {
+  const q=useGrid("source-items",["inventory","source-items",productId],()=>msiApi.items(productId),{product_id:productId});
+--- a/frontend/apps/admin/src/replenishment.tsx
++++ b/frontend/apps/admin/src/replenishment.tsx
+@@ -1,3 +1,4 @@
++import { useUnsavedChanges } from './unsaved-changes';
+ import { RowActions } from "./row-actions";
+ import { PageHeader } from "./page-header";
+ import { useLocalGrid } from "./local-grid";
+@@ -46,8 +47,9 @@
+  const q=useQuery({queryKey:["replenishment"],queryFn:replenishmentApi.list});
+  const row=q.data?.find(x=>x.product_id===id);
+  const [draft,setDraft]=useState<ReplenishmentPolicyInput>();
++ const allowLeave=useUnsavedChanges(!!draft);
+  const form=draft??(row&&{supplier:row.supplier,planning_group:row.planning_group,lead_time_days:row.lead_time_days,target_cover_days:row.target_cover_days,safety_stock_days:row.safety_stock_days,minimum_order_qty:row.minimum_order_qty,order_multiple:row.order_multiple,enabled:row.enabled});
+- const save=useMutation({mutationFn:(body:ReplenishmentPolicyInput)=>replenishmentApi.save(id!,body),onSuccess:async()=>{await cache.invalidateQueries({queryKey:["replenishment"]});navigate("/fulfillment/replenishment");}});
++ const save=useMutation({mutationFn:(body:ReplenishmentPolicyInput)=>replenishmentApi.save(id!,body),onSuccess:async()=>{await cache.invalidateQueries({queryKey:["replenishment"]});allowLeave();navigate("/fulfillment/replenishment");}});
+  const update=<K extends keyof ReplenishmentPolicyInput>(key:K,value:ReplenishmentPolicyInput[K])=>setDraft({...form!,[key]:value});
+  if(q.isPending)return <main><p role="status">Loading replenishment policy…</p></main>;
+  if(!row||!form)return <main className="product-detail-page"><PageHeader title={<>Policy unavailable</>} /><Notice error>Product or replenishment policy was not found.</Notice><button onClick={()=>navigate("/fulfillment/replenishment")}>Back to replenishment</button></main>;
+@@ -56,13 +58,13 @@
+   <PageHeader title={<>{row.product}</>} description={<>Configure replenishment for <strong>{row.sku}</strong>. Changes affect future recommendations.</>} />
+   <Notice error>{save.error?.message}</Notice>
+   <div className="policy-layout">
+-   <section className="policy-form-card">
++   <form className="policy-form-card" onSubmit={e=>{e.preventDefault();save.mutate(form);}}>
+     <div className="policy-switch"><div><strong>Planning enabled</strong><small>Include this product in reorder recommendations.</small></div><label className="switch-control"><input aria-label="Planning enabled" type="checkbox" checked={form.enabled} onChange={e=>update("enabled",e.target.checked)}/><span/></label></div>
+     <div className="policy-section"><header><h2>Supply details</h2><p>Identify who supplies this item and how purchasing teams group it.</p></header><div className="policy-grid"><label><span>Primary supplier</span><input maxLength={160} placeholder="e.g. Fresh Foods Co." value={form.supplier} onChange={e=>update("supplier",e.target.value)}/></label><label><span>Planning group</span><input maxLength={120} placeholder="e.g. Fresh produce" value={form.planning_group} onChange={e=>update("planning_group",e.target.value)}/></label></div></div>
+-    <div className="policy-section"><header><h2>Stock targets</h2><p>Set the demand horizon used to decide when and how much to reorder.</p></header><div className="policy-grid policy-number-grid"><label><span>Lead time</span><input type="number" min="0" max="3650" value={form.lead_time_days} onChange={e=>update("lead_time_days",Number(e.target.value))}/><small>Days from order to receipt</small></label><label><span>Target stock cover</span><input type="number" min="1" max="3650" value={form.target_cover_days} onChange={e=>update("target_cover_days",Number(e.target.value))}/><small>Days of demand to hold</small></label><label><span>Safety stock</span><input type="number" min="0" max="3650" value={form.safety_stock_days} onChange={e=>update("safety_stock_days",Number(e.target.value))}/><small>Extra days for uncertainty</small></label></div></div>
+-    <div className="policy-section"><header><h2>Ordering constraints</h2><p>Match supplier packaging and purchasing requirements.</p></header><div className="policy-grid"><label><span>Minimum order quantity</span><input type="number" min="1" max="1000000" value={form.minimum_order_qty} onChange={e=>update("minimum_order_qty",Number(e.target.value))}/></label><label><span>Order multiple</span><input type="number" min="1" max="1000000" value={form.order_multiple} onChange={e=>update("order_multiple",Number(e.target.value))}/></label></div></div>
+-    <div className="editor-actions policy-actions"><button disabled={save.isPending} onClick={()=>save.mutate(form)}>{save.isPending?"Saving…":"Save policy"}</button><button className="secondary" onClick={()=>navigate("/fulfillment/replenishment")}>Cancel</button></div>
+-   </section>
++    <div className="policy-section"><header><h2>Stock targets</h2><p>Set the demand horizon used to decide when and how much to reorder.</p></header><div className="policy-grid policy-number-grid"><label><span>Lead time</span><input type="number" required step="1" min="0" max="3650" value={form.lead_time_days} onChange={e=>update("lead_time_days",Number(e.target.value))}/><small>Days from order to receipt</small></label><label><span>Target stock cover</span><input type="number" required step="1" min="1" max="3650" value={form.target_cover_days} onChange={e=>update("target_cover_days",Number(e.target.value))}/><small>Days of demand to hold</small></label><label><span>Safety stock</span><input type="number" required step="1" min="0" max="3650" value={form.safety_stock_days} onChange={e=>update("safety_stock_days",Number(e.target.value))}/><small>Extra days for uncertainty</small></label></div></div>
++    <div className="policy-section"><header><h2>Ordering constraints</h2><p>Match supplier packaging and purchasing requirements.</p></header><div className="policy-grid"><label><span>Minimum order quantity</span><input type="number" required step="1" min="1" max="1000000" value={form.minimum_order_qty} onChange={e=>update("minimum_order_qty",Number(e.target.value))}/></label><label><span>Order multiple</span><input type="number" required step="1" min="1" max="1000000" value={form.order_multiple} onChange={e=>update("order_multiple",Number(e.target.value))}/></label></div></div>
++    <div className="editor-actions policy-actions"><button type="submit" disabled={save.isPending}>{save.isPending?"Saving…":"Save policy"}</button><button type="button" className="secondary" onClick={()=>navigate("/fulfillment/replenishment")}>Cancel</button></div>
++   </form>
+    <aside className="policy-summary"><span className="eyebrow">CURRENT FORECAST</span><strong>{number(row.replenishment_qty)}<small> units</small></strong><p>{row.replenishment_qty>0?`Recommended by ${date(row.recommended_date)}.`:"No replenishment is currently required."}</p><dl><div><dt>Sales velocity</dt><dd>{number(row.sales_velocity,2)} / day</dd></div><div><dt>Stock cover</dt><dd>{days(row.days_of_stock)}</dd></div><div><dt>Saleable stock</dt><dd>{number(row.saleable_qty)} units</dd></div><div><dt>Lead time</dt><dd>{row.lead_time_days} days</dd></div></dl><small className="summary-note">The preview uses the saved policy. Save changes to recalculate it.</small></aside>
+   </div>
+  </main>;
+--- a/backend/crates/api-gateway/src/capacity.rs
++++ b/backend/crates/api-gateway/src/capacity.rs
+@@ -254,8 +254,13 @@
+     let who=admin(&a,&h,"fulfillment.settings.manage").await?;who.require("fulfillment.pickup.manage")?;
+     if i.reason.trim().is_empty()||i.reason.len()>300||i.pickup_instructions.len()>1000||!(1..=1440).contains(&i.preparation_minutes){return Err(infra_auth::Error::Invalid("Invalid location settings".into()).into());}
+     let mut tx=domain_inventory::begin(&a.cart.pool).await?;
+-    let cap=domain_fulfillment::capabilities::resolve(&mut tx,i.store_id).await?;if i.pickup_enabled{cap.require(cap.pickup_enabled,"pickup")?;}
++    let cap=domain_fulfillment::capabilities::resolve(&mut tx,i.store_id).await?;
+     let before:Option<Value>=sqlx::query_scalar("SELECT to_jsonb(s) FROM fulfillment.store_sources s WHERE store_id=$1 AND source_id=$2").bind(i.store_id).bind(i.source_id).fetch_optional(&mut *tx).await?;
++    // Preserve a configured pickup location while the store temporarily disables pickup.
++    // Enabling pickup on a new or previously disabled location still requires the capability.
++    if i.pickup_enabled && before.as_ref().and_then(|v| v["pickup_enabled"].as_bool()) != Some(true) {
++        cap.require(cap.pickup_enabled, "pickup")?;
++    }
+     sqlx::query("INSERT INTO fulfillment.store_sources VALUES($1,$2,$3,$4,$5) ON CONFLICT(store_id,source_id) DO UPDATE SET pickup_enabled=$3,pickup_instructions=$4,preparation_minutes=$5").bind(i.store_id).bind(i.source_id).bind(i.pickup_enabled).bind(&i.pickup_instructions).bind(i.preparation_minutes).execute(&mut *tx).await?;
+     domain_admin_iam::Service::audit(&mut tx,Some(who.user.id),"fulfillment.source.changed",i.source_id,json!({"store_id":i.store_id,"before":before,"pickup_enabled":i.pickup_enabled,"pickup_instructions":i.pickup_instructions,"preparation_minutes":i.preparation_minutes,"reason":i.reason})).await?;
+     tx.commit().await?;Ok(Json(json!({"status":"ok"})))
+--- /dev/null
++++ b/backend/crates/api-gateway/tests/fulfillment_admin.rs
+@@ -0,0 +1,40 @@
++use api_gateway::identity::App;
++use axum::{body::Body, http::Request};
++use serde_json::{json, Value};
++use sqlx::PgPool;
++use tower::ServiceExt;
++use uuid::Uuid;
++
++#[sqlx::test(migrations = "../../migrations")]
++async fn editing_pickup_details_preserves_configuration_while_store_is_off(pool: PgPool) {
++    let security = infra_auth::Security::new(
++        "test-secret-at-least-32-characters-long".into(),
++        "http://localhost:5173".into(), false,
++    ).await.unwrap();
++    let app = App::new(pool.clone(), security, vec!["http://localhost:5173".into()]);
++    let admin = Uuid::new_v4();
++    sqlx::query("INSERT INTO admin_iam.admin_users(id,email,name,password_hash,role_id) VALUES($1,'fulfillment@example.test','Operator','unused',$2)")
++        .bind(admin).bind(domain_admin_iam::SUPER).execute(&pool).await.unwrap();
++    sqlx::query("INSERT INTO admin_iam.sessions(token_hash,admin_id,expires_at) VALUES($1,$2,now()+interval '1 hour')")
++        .bind(infra_auth::digest("fulfillment-test-session")).bind(admin).execute(&pool).await.unwrap();
++    let store: Uuid = sqlx::query_scalar("SELECT id FROM fulfillment.stores WHERE is_default").fetch_one(&pool).await.unwrap();
++    let source = Uuid::from_u128(1);
++    sqlx::query("UPDATE fulfillment.stores SET capabilities=capabilities||'{\"pickup_enabled\":false}'::jsonb WHERE id=$1").bind(store).execute(&pool).await.unwrap();
++    sqlx::query("INSERT INTO fulfillment.store_sources(store_id,source_id,pickup_enabled) VALUES($1,$2,true)").bind(store).bind(source).execute(&pool).await.unwrap();
++    let router = api_gateway::capacity::routes().with_state(app);
++    let body = json!({"store_id":store,"source_id":source,"pickup_enabled":true,"pickup_instructions":"Side entrance","preparation_minutes":45,"reason":"Entrance moved"});
++    let request = |body: Value| Request::builder().method("POST").uri("/v1/admin/fulfillment/store-sources")
++        .header("content-type", "application/json").header("cookie", "admin_session=fulfillment-test-session")
++        .body(Body::from(body.to_string())).unwrap();
++    assert!(router.clone().oneshot(request(body.clone())).await.unwrap().status().is_success());
++    let saved: (bool, String, i32) = sqlx::query_as("SELECT pickup_enabled,pickup_instructions,preparation_minutes FROM fulfillment.store_sources WHERE store_id=$1 AND source_id=$2")
++        .bind(store).bind(source).fetch_one(&pool).await.unwrap();
++    assert_eq!(saved, (true, "Side entrance".into(), 45));
++    let mut disabled = body.clone(); disabled["pickup_enabled"] = json!(false);
++    assert!(router.clone().oneshot(request(disabled)).await.unwrap().status().is_success());
++    // Preserving a configuration does not authorize activating pickup while the store is off.
++    assert!(!router.oneshot(request(body)).await.unwrap().status().is_success());
++    let enabled: bool = sqlx::query_scalar("SELECT pickup_enabled FROM fulfillment.store_sources WHERE store_id=$1 AND source_id=$2")
++        .bind(store).bind(source).fetch_one(&pool).await.unwrap();
++    assert!(!enabled);
++}
+--- a/backend/crates/domain-fulfillment/tests/capacity.rs
++++ b/backend/crates/domain-fulfillment/tests/capacity.rs
+@@ -7,6 +7,27 @@
+ use sqlx::PgPool;
+ use uuid::Uuid;
+ const SOURCE: Uuid = Uuid::from_u128(1);
++
++#[sqlx::test(migrations = "../../migrations")]
++async fn independent_window_block_does_not_close_other_locations(pool: PgPool) {
++    let (service, _, _, selection) = setup(&pool, 1, 1, 30, "orders").await;
++    let other = Uuid::new_v4();
++    sqlx::query("INSERT INTO inventory.inventory_sources(id,code,name) VALUES($1,'other-location','Other location')")
++        .bind(other).execute(&pool).await.unwrap();
++    sqlx::query("INSERT INTO fulfillment.schedules(id,source_id,area_id,method,enabled,timezone,config) SELECT $1,$2,area_id,method,enabled,timezone,config FROM fulfillment.schedules WHERE id=$3")
++        .bind(Uuid::new_v4()).bind(other).bind(selection.schedule_id).execute(&pool).await.unwrap();
++    sqlx::query("UPDATE fulfillment.capacity_rules SET source_id=NULL").execute(&pool).await.unwrap();
++    sqlx::query("INSERT INTO fulfillment.capacity_rules(id,source_id,method,period,limits,timezone,starts_on,ends_on,local_start) SELECT $1,$2,method,'slot','{\"orders\":0}',timezone,($3 AT TIME ZONE timezone)::date,($3 AT TIME ZONE timezone)::date,($3 AT TIME ZONE timezone)::time FROM fulfillment.schedules WHERE id=$4")
++        .bind(Uuid::new_v4()).bind(SOURCE).bind(selection.starts_at).bind(selection.schedule_id).execute(&pool).await.unwrap();
++    let overview = service.overview(selection.starts_at.date_naive()).await.unwrap();
++    let rows = overview["slots"].as_array().unwrap();
++    let at_start = |row: &&serde_json::Value| row["slot"]["starts_at"] == json!(selection.starts_at);
++    let blocked = rows.iter().filter(at_start).find(|r| r["slot"]["source_id"] == json!(SOURCE)).unwrap();
++    let available = rows.iter().filter(at_start).find(|r| r["slot"]["source_id"] == json!(other)).unwrap();
++    assert_eq!(blocked["status"], "Full");
++    assert_eq!(available["status"], "Available");
++}
++
+ async fn setup(
+     pool: &PgPool,
+     count: i32,
+--- a/frontend/e2e/capacity/admin.spec.ts
++++ b/frontend/e2e/capacity/admin.spec.ts
+@@ -33,6 +33,6 @@
+  await page.route('**/api/**',route=>{const path=new URL(route.request().url()).pathname;
+  if(path.endsWith('/admin/me'))return route.fulfill({json:{user:{id:source,name:'Operator',email:'operator@example.test'},permissions:['*']}});
+  if(path.endsWith('/fulfillment/capabilities')){if(route.request().method()==='POST'){saved=route.request().postDataJSON();return route.fulfill({json:{status:'ok'}});}return route.fulfill({json:{system:{},stores:[{id:source,name:'Simple store',overrides:{},resolved:c}],locations:[{id:source,name:'Main shop'}],sources:[]}});}return route.fulfill({json:{}});});
+- await page.goto('/settings/fulfillment');await expect(page.getByRole('heading',{name:'Fulfillment settings',exact:true})).toBeVisible();await expect(page.getByLabel('Pickup scheduling')).toHaveCount(0);await expect(page.getByLabel('Hold capacity during checkout')).toHaveCount(0);
+- await page.getByLabel('Pickup',{exact:false}).first().check();await expect(page.getByLabel('Pickup scheduling')).toBeVisible();await page.getByLabel('Change reason',{exact:true}).fill('Offer collection from our shop');await page.getByRole('button',{name:'Save fulfillment settings',exact:true}).click();await expect(page.getByText('Fulfillment settings saved.')).toBeVisible();expect(saved).toMatchObject({store_id:source,capabilities:{pickup_enabled:true},reason:'Offer collection from our shop'});
++ await page.goto('/settings/fulfillment');await expect(page.getByRole('heading',{name:'Fulfillment settings',exact:true})).toBeVisible();await expect(page.getByLabel('Scheduled pickup')).toHaveCount(0);await expect(page.getByLabel('Reserve capacity at checkout')).toHaveCount(0);
++ await page.getByLabel('Pickup',{exact:false}).first().check();await expect(page.getByLabel('Scheduled pickup')).toBeVisible();await page.getByRole('textbox',{name:/^Policy change reason/}).fill('Offer collection from our shop');await page.getByRole('button',{name:'Save fulfillment settings',exact:true}).click();await expect(page.getByText('Fulfillment settings saved. The updated policy is now active.')).toBeVisible();expect(saved).toMatchObject({store_id:source,capabilities:{pickup_enabled:true},reason:'Offer collection from our shop'});
+ });
+--- /dev/null
++++ b/frontend/e2e/capacity/fulfillment-fixes.spec.ts
+@@ -0,0 +1,61 @@
++import {test,expect,type Page} from '@playwright/test';
++const id='00000000-0000-4000-8000-000000000001';
++const caps={delivery_enabled:true,pickup_enabled:false,scheduled_delivery_enabled:true,asap_delivery_enabled:true,capacity_management_enabled:true,checkout_capacity_holds_enabled:true,geo_fencing_enabled:false,multi_source_fulfillment_enabled:false,split_order_scheduling_enabled:false,automatic_source_routing_enabled:true,customer_delivery_slot_selection_enabled:true,admin_manual_scheduling_enabled:true,pickup_scheduling_enabled:false,split_delivery_mode:'same_window_required',delivery_city_ids:[]};
++const shared={id,overrides_rule_id:null,source_id:null,area_id:null,method:null,timezone:'Africa/Cairo',local_start:null,period:'slot',limits:{orders:30},overflow_percent:0,starts_on:null,ends_on:null,enabled:true};
++const schedule={id,source_id:id,area_id:null,method:'scheduled_delivery',enabled:true,timezone:'Africa/Cairo',config:{windows:[{weekday:0,start:'09:00:00',end:'18:00:00',cutoff:null}],duration_minutes:60,spacing_minutes:0,lead_minutes:120,cutoff:null,min_days:0,max_days:14,ttl_minutes:10,release_before:'fulfilling',exceptions:[]}};
++async function mock(page:Page,failOverview=false){
++ const writes:{path:string;body:any}[]=[];
++ await page.route('**/api/**',route=>{const p=new URL(route.request().url()).pathname;
++ if(route.request().method()==='POST'){const body=route.request().postDataJSON();writes.push({path:p,body});return route.fulfill({json:{status:'ok'}});}
++ if(p.endsWith('/admin/me'))return route.fulfill({json:{user:{id,name:'Test operator',email:'review@example.test'},permissions:['*']}});
++ if(p.endsWith('/fulfillment/capabilities'))return route.fulfill({json:{system:{},stores:[{id,name:'Cairo store',overrides:{},resolved:caps}],locations:[{id,name:'Cairo warehouse'}],sources:[{store_id:id,source_id:id,pickup_enabled:true,pickup_instructions:'Front desk',preparation_minutes:30}]}});
++ if(p.endsWith('/fulfillment/configuration'))return route.fulfill({json:{enabled:true,legacy_controls:false,sources:[[id,'Cairo warehouse']],areas:[],schedules:[schedule],rules:[shared]}});
++ if(p.endsWith('/fulfillment/capacity'))return failOverview ? route.fulfill({status:503,json:{error:'Capacity connection failed'}}) : route.fulfill({json:{slots:[{slot:{schedule_id:id,source_id:id,method:'scheduled_delivery',timezone:'Africa/Cairo',starts_at:'2026-10-02T06:00:00Z',ends_at:'2026-10-02T07:00:00Z'},area_id:null,reserved:0,confirmed:0,utilization:0,status:'Available',caps:[{rule_id:id,period:'slot',dimension:'orders',remaining:30}]}]}});
++ return route.fulfill({json:{}});
++ });return writes;
++}
++test('Block creates an independent location-specific zero rule',async({page})=>{
++ const writes=await mock(page);await page.goto('/fulfillment/capacity');await page.getByRole('button',{name:'Block',exact:true}).click();
++ await expect(page.getByRole('combobox',{name:'Location',exact:true})).toHaveValue(id);
++ await page.getByRole('textbox',{name:'Change reason',exact:true}).fill('Maintenance');await page.getByRole('button',{name:'Save capacity rule',exact:true}).click();
++ await expect(page.getByRole('heading',{name:'Capacity & scheduling',exact:true})).toBeVisible();
++ expect(writes.at(-1)?.body.rule).toMatchObject({source_id:id,method:'scheduled_delivery',overrides_rule_id:null,limits:{orders:0},starts_on:'2026-10-02',ends_on:'2026-10-02'});
++});
++test('pickup uses the canonical method and immutable scope is locked on edit',async({page})=>{
++ const writes=await mock(page);await page.goto('/fulfillment/new-schedule');await page.getByRole('combobox',{name:'Location',exact:true}).selectOption(id);
++ await page.getByRole('combobox',{name:'Fulfillment method',exact:true}).selectOption('pickup');await page.getByRole('textbox',{name:'Change reason',exact:true}).fill('Offer scheduled pickup');
++ await page.getByRole('button',{name:'Save schedule',exact:true}).click();await expect(page.getByRole('heading',{name:'Capacity & scheduling',exact:true})).toBeVisible();expect(writes.at(-1)?.body.schedule.method).toBe('pickup');
++ await page.getByRole('button',{name:'Edit schedule'}).click();await expect(page.getByRole('combobox',{name:'Location',exact:true})).toBeDisabled();await expect(page.getByRole('combobox',{name:'Fulfillment method',exact:true})).toBeDisabled();
++});
++test('policy draft is protected on sidebar navigation and browser back',async({page})=>{
++ await mock(page);await page.goto('/fulfillment/capacity');await page.getByRole('navigation',{name:'Administration navigation'}).getByRole('link',{name:'Fulfillment settings',exact:true}).click();
++ await page.getByRole('switch',{name:'Store pickup',exact:true}).check();
++ page.once('dialog',dialog=>dialog.dismiss());await page.getByRole('link',{name:'Capacity & scheduling',exact:true}).click();await expect(page).toHaveURL(/settings\/fulfillment$/);await expect(page.getByRole('switch',{name:'Store pickup',exact:true})).toBeChecked();
++ page.once('dialog',dialog=>dialog.dismiss());await page.goBack();await expect(page).toHaveURL(/settings\/fulfillment$/);
++ page.once('dialog',dialog=>dialog.accept());await page.getByRole('link',{name:'Capacity & scheduling',exact:true}).click();await expect(page).toHaveURL(/fulfillment\/capacity$/);
++});
++test('a new edit is protected after a successful save',async({page})=>{
++ await mock(page);await page.goto('/fulfillment/capacity');await page.getByRole('button',{name:'Edit schedule'}).click();await page.getByLabel('Preparation lead time (minutes)').fill('180');await page.getByRole('textbox',{name:'Change reason',exact:true}).fill('More preparation');await page.getByRole('button',{name:'Save schedule',exact:true}).click();
++ await page.getByRole('button',{name:'Edit schedule'}).click();await page.getByLabel('Preparation lead time (minutes)').fill('240');page.once('dialog',d=>d.dismiss());await page.getByRole('button',{name:'Cancel',exact:true}).click();await expect(page.getByLabel('Preparation lead time (minutes)')).toHaveValue('240');
++});
++for(const width of [390,768,1024])test(`navigation remains usable at ${width}px`,async({page})=>{
++ await mock(page);await page.setViewportSize({width,height:900});await page.goto('/settings/fulfillment');await page.getByRole('button',{name:'Open navigation',exact:true}).click();await page.screenshot({path:`test-results/fulfillment-navigation-${width}.png`});await page.getByRole('link',{name:'Capacity & scheduling',exact:true}).click();await expect(page.getByRole('heading',{name:'Capacity & scheduling',exact:true})).toBeVisible();await expect(page.getByRole('button',{name:'Open navigation',exact:true})).toBeVisible();expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBe(true);
++});
++test('failed capacity loads show unavailable metrics and a retry',async({page})=>{
++ await mock(page,true);await page.goto('/fulfillment/capacity');await expect(page.getByRole('button',{name:'Retry capacity'})).toBeVisible();await expect(page.getByText('No capacity alerts',{exact:true})).toHaveCount(0);await expect(page.getByRole('region',{name:'Capacity summary'}).locator('strong')).toHaveText(['—','—','—','—']);
++});
++test('location instruction edits preserve configured pickup while store pickup is off',async({page})=>{
++ const writes=await mock(page);await page.goto('/settings/fulfillment');await page.getByRole('button',{name:/04 Store locations/}).click();await page.getByRole('button',{name:'Edit',exact:true}).click();await page.getByRole('textbox',{name:/^Pickup instructions/}).fill('Use side entrance');await page.getByLabel('Location change reason',{exact:true}).fill('Entrance moved');await page.getByRole('button',{name:'Save location',exact:true}).click();await expect(page.getByText('Location configuration saved.')).toBeVisible();expect(writes.at(-1)?.body.pickup_enabled).toBe(true);
++});
++test('invalid scheduling limits and overlaps cannot be saved',async({page})=>{
++ const writes=await mock(page);await page.goto('/fulfillment/new-schedule');await page.getByRole('combobox',{name:'Location',exact:true}).selectOption(id);await page.getByRole('textbox',{name:'Change reason',exact:true}).fill('Test constraints');await page.getByLabel('Hold duration (minutes)').fill('31');await expect(page.getByRole('button',{name:'Save schedule',exact:true})).toBeDisabled();await page.getByLabel('Hold duration (minutes)').fill('10');await page.getByLabel('Minimum days ahead').fill('15');await expect(page.getByText('Maximum days ahead must be at least minimum days ahead.')).toBeVisible();await expect(page.getByRole('button',{name:'Save schedule',exact:true})).toBeDisabled();expect(writes).toEqual([]);
++});
++test('replenishment rejects invalid numeric values before making a request',async({page})=>{
++ await mock(page);let saves=0;
++ await page.route('**/api/v1/admin/replenishment**',route=>{
++  if(route.request().method()==='PUT'){saves++;return route.fulfill({json:{status:'ok'}});}
++  return route.fulfill({json:[{product_id:id,product:'Test product',sku:'TEST',supplier:'Supplier',planning_group:'Stock',lead_time_days:2,target_cover_days:7,safety_stock_days:1,minimum_order_qty:1,order_multiple:1,enabled:true,replenishment_qty:0,sales_velocity:1,days_of_stock:10,saleable_qty:10,recommended_date:null}]});
++ });
++ await page.goto(`/fulfillment/replenishment/${id}`);await page.getByRole('spinbutton',{name:'Order multiple',exact:true}).fill('0');await page.getByRole('button',{name:'Save policy',exact:true}).click();expect(saves).toBe(0);expect(await page.getByRole('spinbutton',{name:'Order multiple',exact:true}).evaluate((el:HTMLInputElement)=>el.checkValidity())).toBe(false);
++ await page.getByRole('spinbutton',{name:'Order multiple',exact:true}).fill('2');await page.getByRole('button',{name:'Save policy',exact:true}).click();await expect.poll(()=>saves).toBe(1);await expect(page).toHaveURL(/fulfillment\/replenishment$/);
++});

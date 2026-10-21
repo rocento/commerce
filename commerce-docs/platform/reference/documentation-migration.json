@@ -1,0 +1,50 @@
+{
+  "date": "2026-09-22",
+  "moves": {
+    "SEO-GEO": "docs/seo-geo",
+    "docs/demo-delivery-testing.md": "docs/demos/delivery-testing.md",
+    "start.md": "docs/operations/local-session.md",
+    "docs/deployment/zero-touch-ec2-prompt.md": "docs/archive/zero-touch-ec2-prompt.md",
+    "Rocento-Agentic-Commerce-Plan": "docs/Rocento-Agentic-Commerce-Plan"
+  },
+  "removed_with_replacement": {
+    "shopping-assistant-report-2026-09-21.md": "docs/reviews/shopping-assistant-report-2026-09-21.md",
+    "docs/reference/codebase-report.md": "docs/overview.md",
+    "docs/archive/cleanup-proposal.md": "docs/reference/workspace-cleanup.md"
+  },
+  "historical_evidence": "Original manifests, logs, hashes and SEO/GEO ZIP entries retain historical paths.",
+  "agentic_commerce_stage": {
+    "scope": "M01–M10; English engineering and scoped isolated local acceptance",
+    "deferred": [
+      "M11",
+      "M12",
+      "M13",
+      "M14",
+      "M15",
+      "M16",
+      "Arabic/mixed-language acceptance"
+    ],
+    "original_plans": "docs/Rocento-Agentic-Commerce-Plan/archive/plans",
+    "remaining_deferred_prompts": "docs/Rocento-Agentic-Commerce-Plan/archive/deferred",
+    "already_absent": [
+      "M11-MULTIMODAL-DEEP-SHOPPING.md",
+      "M12-MERCHANT-INTELLIGENCE.md",
+      "M13-PROTOCOL-GATEWAY.md",
+      "M14-SIMULATION-AND-LEARNING.md"
+    ],
+    "evidence_preservation": "Original report prose retained; relative Markdown links adjusted. Evidence JSON, manifests and hashes unchanged.",
+    "validation": {
+      "original_files_preserved": 82,
+      "byte_identical": 79,
+      "navigation_only_changes": [
+        "README.md",
+        "reports/M02-implementation-2026-09-21.md",
+        "reports/M04-implementation-2026-09-22.md"
+      ],
+      "markdown_files_checked": 55,
+      "local_links_checked": 275,
+      "missing_targets": [],
+      "old_root_removed": true
+    }
+  }
+}

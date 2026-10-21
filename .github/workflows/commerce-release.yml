@@ -1,0 +1,57 @@
+name: Commerce release verification
+on:
+  workflow_dispatch:
+  pull_request:
+    paths:
+      - 'commerce-api/**'
+      - 'commerce-ops/compose/compose.yaml'
+      - 'commerce-ops/scripts/commerce*'
+      - 'commerce-ops/scripts/release/**'
+      - 'commerce-ops/scripts/checks/**'
+      - 'commerce-ops/scripts/tests/test_commerce*'
+      - 'commerce-ops/scripts/tests/test_rust_architecture.py'
+      - 'commerce-ops/scripts/m14_support.py'
+      - 'commerce-ops/scripts/system-qa-http.py'
+      - 'commerce-ops/scripts/check*architecture*'
+      - '.github/workflows/commerce-release.yml'
+permissions:
+  contents: read
+concurrency:
+  group: commerce-release-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+      - uses: dtolnay/rust-toolchain@stable
+        with:
+          toolchain: '1.94.0'
+      - uses: Swatinem/rust-cache@v2
+        with:
+          workspaces: commerce-api/rocento-api
+      - name: Verify release tooling
+        run: |
+          python3 -m unittest discover -s commerce-ops/scripts/tests -p 'test_commerce_image.py'
+          python3 -m unittest discover -s commerce-ops/scripts/tests -p 'test_commerce_release.py'
+          python3 -m unittest discover -s commerce-ops/scripts/tests -p 'test_commerce_reliability.py'
+          python3 -m unittest discover -s commerce-ops/scripts/tests -p 'test_rust_architecture.py'
+      - name: Build frozen release image
+        run: python3 commerce-ops/scripts/release/commerce-release.py build-image --output .local/commerce-release/candidate
+      - name: Verify exact image on disposable providers
+        run: python3 commerce-ops/scripts/release/commerce-release.py verify-image --candidate .local/commerce-release/candidate
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: commerce-release-evidence
+          include-hidden-files: true
+          retention-days: 14
+          path: |
+            .local/commerce-release/candidate/release-image.json
+            .local/commerce-release/candidate/image-source-manifest.json
+            .local/commerce-reliability/*/report.json
+            .local/commerce-reliability/*/source-manifest.json
+            .local/commerce-reliability/*/verifier-source-manifest.json
+            .local/commerce-reliability/*/analytics-isolation.json
+            .local/commerce-reliability/*/async-recovery.json

@@ -1,0 +1,10 @@
+[package]
+name = "infra-media"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+
+[dependencies]
+tokio.workspace = true
+tracing.workspace = true
+rust-s3 = { version = "0.35", default-features = false, features = ["tokio-rustls-tls"] }

@@ -1,0 +1,27 @@
+{
+  "source": "offline generation",
+  "requestPrefixes": 15,
+  "actionFrames": 6,
+  "intents": 181,
+  "intentRules": 206,
+  "families": 17,
+  "semanticGroups": 527,
+  "semanticTerms": 2394,
+  "distinctNormalizedTerms": 1505,
+  "actionTerms": 398,
+  "referenceTerms": 67,
+  "objectTerms": 763,
+  "entityTerms": 550,
+  "phrasePatterns": 181,
+  "transitions": 32,
+  "conflicts": 7,
+  "evaluationUtterances": 136325,
+  "duplicatesRemoved": 610,
+  "bySplit": {
+    "development": 34441,
+    "test": 35587,
+    "train": 66297
+  },
+  "generationMs": 5355.322875000001,
+  "totalMs": 5425.525375
+}

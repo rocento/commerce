@@ -1,0 +1,10 @@
+{
+  "synthetic": true,
+  "desktop": "1440px wide; tall capture viewport",
+  "mobile": "390px wide; tall capture viewport",
+  "health_failure_visible": true,
+  "refresh_recovery": true,
+  "revenue_permission_redaction": true,
+  "card_overflow": false,
+  "page_errors": []
+}

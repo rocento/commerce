@@ -1,0 +1,26 @@
+{
+  "version": 1,
+  "cohort": "authored-regression",
+  "limitations": "Synthetic safety examples authored during implementation; not independent held-out data or customer accuracy.",
+  "cases": [
+    {"text":"serach milk under 10.50 EGP","intent":"PRODUCT_SEARCH","status":"RESOLVED","edits":[["serach","search"]],"protected":["10.50","EGP"],"price":10.5},
+    {"text":"shwo my cart","intent":"VIEW_CART","status":"RESOLVED","edits":[["shwo","show"]]},
+    {"text":"browes headphones","intent":"PRODUCT_SEARCH","status":"RESOLVED","edits":[["browes","browse"]]},
+    {"text":"recommennd milk","intent":"PRODUCT_RECOMMEND","status":"RESOLVED","edits":[["recommennd","recommend"]]},
+    {"text":"comapre milk and bread","intent":"PRODUCT_COMPARE","status":"RESOLVED","edits":[["comapre","compare"]]},
+    {"text":"trcak my order","intent":"TRACK_ORDER","status":"RESOLVED","edits":[["trcak","track"]]},
+    {"text":"serach AB-012 under 10.50 EGP","intent":"PRODUCT_SEARCH","status":"RESOLVED","edits":[["serach","search"]],"protected":["AB-012","10.50","EGP"],"price":10.5},
+    {"text":"serach APL shoes","intent":"PRODUCT_SEARCH","status":"RESOLVED","edits":[["serach","search"]],"protected":["APL"]},
+    {"text":"fin tea","intent":null,"status":"UNKNOWN","edits":[],"protected":["fin"]},
+    {"text":"snow my cart","intent":null,"status":"UNKNOWN","edits":[],"protected":["snow"]},
+    {"text":"shoo my cart","intent":null,"status":"UNKNOWN","edits":[],"protected":["shoo"]},
+    {"text":"never serach milk","intent":null,"status":"UNKNOWN","edits":[],"protected":["never"]},
+    {"text":"cancle my order","intent":null,"status":"NEEDS_CONTEXT","edits":[],"protected":["cancle"]},
+    {"text":"serach milk then delete my cart","intent":null,"status":"NEEDS_CONTEXT","edits":[],"protected":["delete"]},
+    {"text":"serach milk and remove bread from cart","intent":null,"status":"NEEDS_CONTEXT","edits":[],"protected":["remove"]},
+    {"text":"find mi ordar ad","intent":"PRODUCT_SEARCH","status":"RESOLVED","edits":[],"protected":["mi ordar ad"]},
+    {"text":"find AB-012","intent":"PRODUCT_SEARCH","status":"RESOLVED","edits":[],"protected":["AB-012"]},
+    {"text":"fi nd milk","intent":null,"status":"UNKNOWN","edits":[]},
+    {"text":"searchmilk","intent":null,"status":"UNKNOWN","edits":[]}
+  ]
+}

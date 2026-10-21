@@ -1,0 +1,78 @@
+{
+  "schema_version": 1,
+  "country": {
+    "code": "KW",
+    "name": "Kuwait",
+    "name_ar": "الكويت"
+  },
+  "state_label": "Governorate",
+  "states": [
+    {
+      "code": "02",
+      "name": "Al Asimah Governorate",
+      "name_ar": "العاصمة",
+      "geonames_id": "285788",
+      "city_count": 21,
+      "sha256": "511654a190f0f4d944203f3e661fb3b6b5083e0a196ba267316da9c2c71435fd"
+    },
+    {
+      "code": "08",
+      "name": "Muhafazat Hawalli",
+      "name_ar": "حوالی",
+      "geonames_id": "285628",
+      "city_count": 5,
+      "sha256": "d9957addeb0449ef0b61b4c6418ace0fd946d38510988dab0d8f3222c67851e8"
+    },
+    {
+      "code": "09",
+      "name": "Muhafazat Mubarak al Kabir",
+      "name_ar": "مبارك الكبير",
+      "geonames_id": "7733358",
+      "city_count": 12,
+      "sha256": "8036500435f5e1f564c186448c893205b87fafa59fae52121a404e6433e6bb3d"
+    },
+    {
+      "code": "04",
+      "name": "Muhafazat al Ahmadi",
+      "name_ar": "احمدی اوستانی",
+      "geonames_id": "285841",
+      "city_count": 14,
+      "sha256": "11d8aaf245e69651280503f8f94f3cd18ce212e96c95ee82e15a2de267dfaad0"
+    },
+    {
+      "code": "07",
+      "name": "Muhafazat al Farwaniyah",
+      "name_ar": "استان فروانیه",
+      "geonames_id": "285816",
+      "city_count": 4,
+      "sha256": "11b11566faeabc2b4fa64ae24d4a1c48d24476b5005b0cec03c0c1894fc56975"
+    },
+    {
+      "code": "05",
+      "name": "Muhafazat al Jahra'",
+      "name_ar": "استان جهرا",
+      "geonames_id": "285798",
+      "city_count": 7,
+      "sha256": "e50aa3be1b088ba9e6f10efe5b22e7cfc7105029417c3505a750c20d1dc7d483"
+    }
+  ],
+  "source": "https://download.geonames.org/export/dump/KW.zip",
+  "attribution": "GeoNames",
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "source_sha256": "3c1328d51721837a232f93674c8a0c7800031d576da7237e6a5ffc7bd41a5472",
+  "source_latest_record_date": "2026-09-14",
+  "feature_codes": [
+    "PPL",
+    "PPLA",
+    "PPLA2",
+    "PPLA3",
+    "PPLA4",
+    "PPLC",
+    "PPLL",
+    "PPLX"
+  ],
+  "city_count": 63,
+  "excluded": {
+    "unassigned_adm1": 63
+  }
+}

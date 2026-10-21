@@ -1,0 +1,385 @@
+--- a/backend/crates/api-gateway/src/discoverability.rs
++++ b/backend/crates/api-gateway/src/discoverability.rs
+@@ -126 +126 @@
+-const SELECT:&str="SELECT revision,enabled,indexing_enabled,llms_txt_enabled,site_name,organization_name,canonical_url,description,default_locale,feature_pages_enabled,industry_pages_enabled,docs_enabled,pricing_page_enabled,security_page_enabled,integrations_page_enabled,changelog_enabled,grocery_demo_url,jewelry_demo_url,updated_at FROM cms.discoverability_settings WHERE singleton";
++pub(crate) const SELECT:&str="SELECT revision,enabled,indexing_enabled,llms_txt_enabled,site_name,organization_name,canonical_url,description,default_locale,feature_pages_enabled,industry_pages_enabled,docs_enabled,pricing_page_enabled,security_page_enabled,integrations_page_enabled,changelog_enabled,grocery_demo_url,jewelry_demo_url,updated_at FROM cms.discoverability_settings WHERE singleton";
+@@ -138,0 +139,4 @@
++        .route(
++            "/v1/publication/snapshot",
++            get(crate::public_commerce::snapshot::handler),
++        )
+@@ -212,0 +217,17 @@
++    let path = request.uri().path();
++    let private = private_page(path);
++    let interactive = crate::public_commerce::snapshot::valid_path(path)
++        && request.uri().query().is_some_and(|query| {
++            reqwest::Url::parse(&format!("https://placeholder.test/?{query}")).is_ok_and(|url| {
++                url.query_pairs()
++                    .any(|(key, value)| key == "theme_preview" || (key == "shop" && value == "1"))
++            })
++        });
++    if !private && !interactive {
++        // Anonymous documents must be served by the bound Node renderer, never an empty 200 shell.
++        return blocked(if crate::public_commerce::snapshot::valid_path(path) {
++            StatusCode::SERVICE_UNAVAILABLE
++        } else {
++            StatusCode::NOT_FOUND
++        });
++    }
+@@ -216,11 +236,0 @@
+-    let Ok(Json(settings)) = public(State(a.clone())).await else {
+-        return blocked(StatusCode::SERVICE_UNAVAILABLE);
+-    };
+-    let policy = a.deployment.resolve(&settings);
+-    let directive = if crate::public_commerce::policy::public_page(request.uri().path())
+-        && request.uri().query().is_none()
+-    {
+-        policy.robots_meta
+-    } else {
+-        "noindex, nofollow"
+-    };
+@@ -229 +239 @@
+-        &format!("<meta name=\"robots\" content=\"{directive}\"/></head>"),
++        "<meta name=\"robots\" content=\"noindex, nofollow\"/></head>",
+@@ -235 +245 @@
+-            ("x-robots-tag", directive),
++            ("x-robots-tag", "noindex, nofollow"),
+@@ -240,0 +251,33 @@
++fn private_page(path: &str) -> bool {
++    if [
++        "/search",
++        "/cart",
++        "/checkout",
++        "/delivery-location",
++        "/login",
++        "/register",
++        "/verify",
++        "/forgot-password",
++        "/reset-password",
++        "/assistant",
++        "/support",
++        "/account",
++    ]
++    .contains(&path)
++    {
++        return true;
++    }
++    path.strip_prefix("/account/").is_some_and(|rest| {
++        let parts: Vec<_> = rest.split('/').collect();
++        !parts.is_empty()
++            && parts.len() <= 2
++            && ["wishlist", "tickets", "orders", "locations", "addresses"].contains(&parts[0])
++            && parts.iter().all(|part| {
++                !part.is_empty()
++                    && part
++                        .bytes()
++                        .all(|b| b.is_ascii_alphanumeric() || b == b'-' || b == b'_')
++            })
++    })
++}
++
+--- a/backend/crates/api-gateway/src/public_commerce/mod.rs
++++ b/backend/crates/api-gateway/src/public_commerce/mod.rs
+@@ -1 +1 @@
+-//! Installation-scoped public publishing. Catalog SSR follows in Stage 03.
++//! Installation-scoped public publishing.
+@@ -2,0 +3 @@
++pub mod snapshot;
+--- a/backend/crates/api-gateway/tests/publication_policy.rs
++++ b/backend/crates/api-gateway/tests/publication_policy.rs
+@@ -152 +152 @@
+-    let response = get(&base, "/").await;
++    let response = get(&base, "/v1/publication/snapshot?path=%2F").await;
+@@ -154 +154 @@
+-    assert_eq!(response.headers()["x-robots-tag"], "index, follow");
++    assert_eq!(response.headers()["x-robots-tag"], "noindex, nofollow");
+@@ -156,5 +156,4 @@
+-    assert!(response
+-        .text()
+-        .await
+-        .unwrap()
+-        .contains("name=\"robots\" content=\"index, follow\""));
++    assert_eq!(
++        response.json::<Value>().await.unwrap()["robots"],
++        "index, follow"
++    );
+@@ -194 +193 @@
+-    assert_eq!(spoof.status(), 200);
++    assert_eq!(spoof.status(), 503);
+@@ -206 +205 @@
+-    let response = get(&base, "/").await;
++    let response = get(&base, "/v1/publication/snapshot?path=%2F").await;
+@@ -208,5 +207,4 @@
+-    assert!(response
+-        .text()
+-        .await
+-        .unwrap()
+-        .contains("content=\"noindex, nofollow\""));
++    assert_eq!(
++        response.json::<Value>().await.unwrap()["robots"],
++        "noindex, nofollow"
++    );
+@@ -258 +256 @@
+-        let response = get(&base, "/").await;
++        let response = get(&base, "/v1/publication/snapshot?path=%2F").await;
+@@ -260,5 +258,4 @@
+-        assert!(response
+-            .text()
+-            .await
+-            .unwrap()
+-            .contains("content=\"noindex, nofollow\""));
++        assert_eq!(
++            response.json::<Value>().await.unwrap()["robots"],
++            "noindex, nofollow"
++        );
+--- a/backend/crates/domain-catalog/src/lib.rs
++++ b/backend/crates/domain-catalog/src/lib.rs
+@@ -105,0 +106 @@
++pub mod media_library;
+@@ -598,0 +600,2 @@
++
++pub mod public;
+--- a/frontend/apps/storefront/package.json
++++ b/frontend/apps/storefront/package.json
+@@ -8,0 +9,2 @@
++    "build:publication": "vite build && vite build --ssr src/entry-public-server.tsx --outDir dist-server && node server/seal-build.mjs",
++    "start:publication": "node server/start.mjs",
+--- a/frontend/apps/storefront/vite.config.ts
++++ b/frontend/apps/storefront/vite.config.ts
+@@ -3,0 +4 @@
++  build: { rollupOptions: { input: { app: "index.html", public: "public.html" } } },
+--- a/frontend/apps/storefront/src/themes.tsx
++++ b/frontend/apps/storefront/src/themes.tsx
+@@ -2 +2 @@
+-import React, { createContext, useContext, useEffect, useMemo, useState, type ReactNode } from 'react';
++import { useEffect, useMemo, useState, type ReactNode } from 'react';
+@@ -5 +5 @@
+-import { ApiError, catalogApi, defaultTheme, mediaUrl, themeApi, themeContract, validThemeValue, validateTheme, type ThemeConfiguration, type ThemePage, type ThemeSection } from '@commerce/api-client';
++import { ApiError, catalogApi, defaultTheme, mediaUrl, themeApi, validateTheme, type ThemeSection } from '@commerce/api-client';
+@@ -8,2 +8,4 @@
+-import referenceImage from './theme-default.png';
+-import { productGridCss } from './theme-grid';
++import { tokenCss } from './theme-tokens';
++import { ThemeContext, CollectionContext } from './theme-sections';
++export { tokenCss } from './theme-tokens';
++export { useTheme, themeOptions, ThemeSections, ThemeGlobal, ThemePageView } from './theme-sections';
+@@ -13,2 +14,0 @@
+-const ThemeContext = createContext<ThemeConfiguration>(defaultTheme());
+-export const useTheme = () => useContext(ThemeContext);
+@@ -42 +42 @@
+-  return <ThemeContext.Provider value={config}><style>{css}</style>{previewId && <div className="theme-preview-status" role="status">Draft preview</div>}{!previewId && !!query.data?.cities?.length && <label className="theme-city-selector">Shopping city <select aria-label="Shopping city" value={city} onChange={e => { setCity(e.target.value); try { sessionStorage.setItem('commerce-theme-city', e.target.value); } catch { /* Session storage may be disabled. */ } }}><option value="">No city preference</option>{query.data.cities.map(name => <option key={name}>{name}</option>)}</select></label>}{children}</ThemeContext.Provider>;
++  return <ThemeContext.Provider value={config}><CollectionContext.Provider value={{ products: section => <Products section={section} />, categories: section => <Categories section={section} /> }}><style>{css}</style>{previewId && <div className="theme-preview-status" role="status">Draft preview</div>}{!previewId && !!query.data?.cities?.length && <label className="theme-city-selector">Shopping city <select aria-label="Shopping city" value={city} onChange={e => { setCity(e.target.value); try { sessionStorage.setItem('commerce-theme-city', e.target.value); } catch { /* Session storage may be disabled. */ } }}><option value="">No city preference</option>{query.data.cities.map(name => <option key={name}>{name}</option>)}</select></label>}{children}</CollectionContext.Provider></ThemeContext.Provider>;
+@@ -44,32 +44 @@
+-export function tokenCss(c: ThemeConfiguration): string {
+-  const declarations = Object.entries(themeContract.tokens).map(([key, def]) => {
+-    const value = validThemeValue(def, c.tokens[key]) ? c.tokens[key] : def.default;
+-    const unit = def.kind === 'number' && !key.startsWith('grid.columns.') ? 'px' : '';
+-    return `--theme-${key.replaceAll('.', '-')}:${value}${unit}`;
+-  }).join(';');
+-  const mobile = validThemeValue(themeContract.tokens['breakpoint.mobile'], c.tokens['breakpoint.mobile']) ? c.tokens['breakpoint.mobile'] : 640;
+-  const desktop = validThemeValue(themeContract.tokens['breakpoint.desktop'], c.tokens['breakpoint.desktop']) ? c.tokens['breakpoint.desktop'] : 1024;
+-  const primary = validThemeValue(themeContract.tokens['color.primary'], c.tokens['color.primary']) ? String(c.tokens['color.primary']) : '#146c43';
+-  const rgb = [1, 3, 5].map(start => parseInt(primary.slice(start, start + 2), 16) / 255).map(v => v <= 0.04045 ? v / 12.92 : ((v + 0.055) / 1.055) ** 2.4);
+-  const luminance = rgb[0] * 0.2126 + rgb[1] * 0.7152 + rgb[2] * 0.0722;
+-  const foreground = luminance > 0.179 ? '#000000' : '#ffffff';
+-  return `:root{${declarations};--theme-color-on-primary:${foreground}}@media(max-width:${desktop}px){.theme-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}@media(max-width:${mobile}px){.theme-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.theme-hero{min-height:360px}}${productGridCss(c)}`;
+-}
+-type Slots = { header?: ReactNode; navigation?: ReactNode; commerce?: ReactNode; footer?: ReactNode };
+-type ComponentProps = { section: ThemeSection; slots: Slots };
+-const string = (s: ThemeSection, key: string) => String(s.settings[key] || '');
+-function ThemeImage({ section }: ComponentProps) {
+-  return section.settings.image ? <img className="theme-image" src={mediaUrl(string(section, 'image'))} alt={string(section, 'alt')} loading="lazy" /> : null;
+-}
+-function Hero({ section: s }: ComponentProps) {
+-  return <section className="theme-hero"><img src={s.settings.image ? mediaUrl(string(s, 'image')) : referenceImage} alt={s.settings.image ? string(s, 'alt') : 'Fresh Gala apples'} fetchPriority="high" /><div><h1>{string(s, 'heading')}</h1><p>{string(s, 'text')}</p><Link className="theme-cta" to={string(s, 'href')}>{string(s, 'label')}</Link></div></section>;
+-}
+-function ImageText({ section: s }: ComponentProps) {
+-  const hero = s.component === 'editorial_hero';
+-  const Heading = hero ? 'h1' : 'h2';
+-  return <section className={`theme-editorial ${hero ? 'theme-editorial-hero' : 'theme-editorial-story'}`} data-image-side={s.settings.image_side || 'right'}>
+-    <div className="theme-editorial-copy"><p className="theme-eyebrow">{string(s, 'eyebrow')}</p><Heading>{string(s, 'heading')}</Heading><p>{string(s, 'text')}</p><Link className="theme-cta" to={string(s, 'href')}>{string(s, 'label')} <span aria-hidden="true">↗</span></Link></div>
+-    {s.settings.image && <img src={mediaUrl(string(s, 'image'))} alt={string(s, 'alt')} loading={hero ? 'eager' : 'lazy'} fetchPriority={hero ? 'high' : 'auto'} />}
+-  </section>;
+-}
+-function Products({ section: s }: ComponentProps) {
++function Products({ section: s }: { section: ThemeSection }) {
+@@ -82 +51 @@
+-function Categories({ section: s }: ComponentProps) {
++function Categories({ section: s }: { section: ThemeSection }) {
+@@ -92,68 +61,2 @@
+-export function themeOptions(theme: ThemeConfiguration, component: string, location: 'top' | 'bottom') {
+-  return { ...Object.fromEntries(Object.entries(themeContract.components[component].settings).map(([key, p]) => [key, p.default])), ...theme.global[location].find(s => s.enabled && s.component === component)?.settings };
+-}
+-function CoreHeader({ section, slots }: ComponentProps) {
+-  const options = themeOptions(useTheme(), 'header_options', 'top');
+-  return <div className="theme-header" data-sticky={options.sticky} data-brand={string(section, 'brand')}>{slots.header}</div>;
+-}
+-function CoreFooter({ section, slots }: ComponentProps) {
+-  const theme = useTheme();
+-  const options = themeOptions(theme, 'footer_options', 'bottom');
+-  const brand = String(theme.global.top.find(s => s.component === 'header')?.settings.brand || 'Commerce');
+-  const value = (key: string) => String(options[key] || '');
+-  return <footer className="theme-footer theme-footer-core" data-style={value('style')}>
+-    {options.show_services === 'on' && <div className="footer-services">{[1, 2, 3].map(i => <span key={i}>{value(`service_${i}`)}</span>)}</div>}
+-    <div className="footer-columns">
+-      {[1, 2, 3].map(i => <section className="footer-column" key={i}><h2>{value(`column_${i}_heading`)}</h2><nav aria-label={value(`column_${i}_heading`)}>{[1, 2].map(j => value(`column_${i}_link_${j}_label`) && <Link key={j} to={value(`column_${i}_link_${j}_href`)}>{value(`column_${i}_link_${j}_label`)}</Link>)}</nav></section>)}
+-      {options.show_newsletter === 'on' && <section className="footer-column footer-newsletter"><h2>{value('newsletter_title')}</h2><p>{value('newsletter_text')}</p><Link className="footer-newsletter-link" to={value('newsletter_href')}>{value('newsletter_label')} <span aria-hidden="true">↗</span></Link></section>}
+-    </div>
+-    {slots.footer && <div className="footer-managed" data-show-brand={options.show_brand}>{slots.footer}</div>}
+-    {string(section, 'text') !== brand && <p className="footer-description">{string(section, 'text')}</p>}
+-    <div className="footer-bottom"><span>© {new Date().getFullYear()} {brand}. {value('copyright')}</span><a href="#store-top">Back to top ↑</a></div>
+-  </footer>;
+-}
+-const registry: Record<string, React.ComponentType<ComponentProps>> = {
+-  announcement: ({ section }) => <div className="theme-announcement">{string(section, 'text')}</div>,
+-  header: CoreHeader,
+-  header_options: () => null,
+-  footer_options: () => null,
+-  navigation: ({ slots }) => <>{slots.navigation}</>,
+-  hero: Hero,
+-  editorial_hero: ImageText,
+-  image_text: ImageText,
+-  presentation: () => null,
+-  catalog_filters: () => null,
+-  product_collection: Products,
+-  category_showcase: Categories,
+-  banner: ({ section: s }) => <section className="theme-section theme-banner"><h2>{string(s, 'heading')}</h2><p>{string(s, 'text')}</p><Link to={string(s, 'href')}>{string(s, 'label')}</Link></section>,
+-  category_grid: Categories,
+-  featured_products: Products,
+-  recommendations: Products,
+-  rich_text: ({ section: s }) => <section className="theme-section theme-prose"><h2>{string(s, 'heading')}</h2><p>{string(s, 'text')}</p></section>,
+-  image: ThemeImage,
+-  footer: CoreFooter,
+-  product_grid: ({ slots }) => <>{slots.commerce}</>,
+-  product_detail: ({ slots }) => <>{slots.commerce}</>,
+-  cart: ({ slots }) => <>{slots.commerce}</>,
+-};
+-class RenderBoundary extends React.Component<{ children: ReactNode }, { failed: boolean }> {
+-  state = { failed: false };
+-  static getDerivedStateFromError() { return { failed: true }; }
+-  componentDidCatch(error: Error) { console.error('theme_render_failure', error); }
+-  render() { return this.state.failed ? <p role="alert">This section is temporarily unavailable.</p> : this.props.children; }
+-}
+-export function ThemeSections({ sections, slots = {} }: { sections: ThemeSection[]; slots?: Slots }) {
+-  return <>{sections.filter(s => s.enabled).map(s => {
+-    const definition = themeContract.components[s.component];
+-    const Component = definition?.version === s.version ? registry[s.component] : undefined;
+-    return Component ? <RenderBoundary key={s.id}><Component section={s} slots={slots} /></RenderBoundary> : null;
+-  })}</>;
+-}
+-export function ThemeGlobal({ location, ...slots }: Slots & { location: 'top' | 'bottom' }) { return <ThemeSections sections={useTheme().global[location]} slots={slots} />; }
+-export function ThemePageView({ page, children }: { page: ThemePage; children?: ReactNode }) {
+-  const theme = useTheme();
+-  const sections = theme.pages[page];
+-  const content = <ThemeSections sections={sections} slots={{ commerce: children }} />;
+-  const brand = theme.global.top.find(s => s.component === 'header')?.settings.brand || 'Commerce';
+-  return page === 'home' ? <main className="theme-home">{!sections.some(s => s.enabled && ['hero', 'editorial_hero'].includes(s.component)) && <h1 className="theme-section">{String(brand)}</h1>}{content}</main> : <div className="theme-page">{content}</div>;
+-}
++
++const string = (s: ThemeSection, key: string) => String(s.settings[key] || '');
+--- a/frontend/apps/storefront/src/content.tsx
++++ b/frontend/apps/storefront/src/content.tsx
+@@ -4 +4 @@
+-import { contentApi, mediaUrl, type ContentBlock } from "@commerce/api-client";
++import { contentApi } from "@commerce/api-client";
+@@ -7,25 +7,2 @@
+-export function ContentBlocks({ blocks }: { blocks: ContentBlock[] }) {
+-  return (
+-    <>
+-      {blocks.map((b, n) => (
+-        <section className={`content-block content-${b.kind}`} key={n}>
+-          <div>
+-            {b.heading && <h2>{b.heading}</h2>}
+-            {b.text && <p>{b.text}</p>}
+-            {b.link_url && (
+-              <a
+-                className={b.kind === "hero" ? "primary-link" : "text-button"}
+-                href={b.link_url}
+-              >
+-                {b.link_label}
+-              </a>
+-            )}
+-          </div>
+-          {b.image_id && (
+-            <img src={mediaUrl(b.image_id)} alt={b.heading || ""} />
+-          )}
+-        </section>
+-      ))}
+-    </>
+-  );
+-}
++export { ContentBlocks } from "./content-blocks";
++import { ContentBlocks } from "./content-blocks";
+--- a/compose.publication.yaml
++++ b/compose.publication.yaml
+@@ -12,0 +13,19 @@
++  publication-renderer:
++    # Build artifacts on the same release as the gateway. Node dependencies must be installed.
++    image: node:22-bookworm-slim
++    working_dir: /workspace/frontend/apps/storefront
++    command: ["node", "server/start.mjs"]
++    environment:
++      PUBLICATION_APPROVED_ORIGIN: ${PUBLICATION_APPROVED_ORIGIN:?Set the approved merchant origin}
++      PUBLICATION_INSTALLATION_ID: ${PUBLICATION_INSTALLATION_ID:?Set the installation UUID}
++      NODE_ENV: production
++      PUBLICATION_GATEWAY: http://api-gateway:8080/
++      PUBLICATION_BIND: 0.0.0.0
++      PUBLICATION_PORT: 8081
++    ports:
++      - "127.0.0.1:${PUBLICATION_PORT:-8081}:8081"
++    volumes:
++      - ${PUBLICATION_WORKSPACE_DIR:?Set the release workspace with built frontend artifacts and installed Node dependencies}:/workspace:ro
++    read_only: true
++    init: true
++    restart: unless-stopped
+--- a/deploy/ec2/publication.py
++++ b/deploy/ec2/publication.py
+@@ -7 +7 @@
+-def merchant_nginx(host, gateway_port=8080):
++def merchant_nginx(host, gateway_port=8080, renderer_port=8081):
+@@ -15 +15 @@
+-    if not 1024 <= gateway_port <= 65535:
++    if not 1024 <= gateway_port <= 65535 or not 1024 <= renderer_port <= 65535:
+@@ -40 +40 @@
+-        proxy_pass http://127.0.0.1:{gateway_port};
++        proxy_pass http://127.0.0.1:{renderer_port};
+@@ -54,0 +55 @@
++    parser.add_argument('--renderer-port', type=int, default=8081)
+@@ -56 +57 @@
+-    print(merchant_nginx(args.host, args.gateway_port), end='')
++    print(merchant_nginx(args.host, args.gateway_port, args.renderer_port), end='')
+--- a/scripts/tests/test_publication_deployment.py
++++ b/scripts/tests/test_publication_deployment.py
+@@ -19 +19 @@
+-        config = publication.merchant_nginx('shop.example.test', 58080)
++        config = publication.merchant_nginx('shop.example.test', 58080, 58081)
+@@ -21 +21 @@
+-        self.assertIn('proxy_pass http://127.0.0.1:58080;', html)
++        self.assertIn('proxy_pass http://127.0.0.1:58081;', html)
+--- a/SEO-GEO/Docs/rendering-strategy.md
++++ b/SEO-GEO/Docs/rendering-strategy.md
+@@ -59,0 +60,24 @@
++
++## Stage 03 implementation record — 21 September 2026
++
++The selected hybrid is implemented in `src/entry-public-server.tsx`, `src/entry-public-client.tsx`, `src/public/`, and `server/`. Both entries render the same `PublicPage` from the exact serialized snapshot; script state escapes `<` and Unicode line separators. Theme tokens, global/section renderers and CMS blocks have been extracted from their browser providers and are shared with the existing app. Product presentation reuses the storefront's product/gallery/purchase CSS and published presentation choice. No crawler-specific content or User-Agent branch exists.
++
++Rust `public_commerce::snapshot` owns the page/status envelope. `domain_catalog::public` projects explicit anonymous fields rather than serializing administrative products. Unknown/hidden/disabled attributes, media object keys, draft themes, unpublished CMS revisions and private customer context are excluded. Public attributes are currently scalar values with active visible definitions. Only primary image metadata is included in the initial projection; the existing interactive gallery/options remain in the shopper view.
++
++The initial response includes catalog base price for simple products. Configurable/grouped/bundle items invite option selection rather than suggesting the parent's numeric placeholder is a purchasable price. Availability is deliberately conservative: configured regional stores say availability varies by delivery location; non-regional stores still confirm stock during shopping. No InStock or personalized offer assertion is generated.
++
++Published theme product collections use bounded anonymous catalog queries, not personalized recommendation ranking. The existing live-search widget loads after hydration with its own query client; the server form works without JavaScript. Product purchase/options and personalized stock continue through a document navigation to `?shop=1`. This is an explicit transitional integration: inline cart/variant islands are not implemented. The meaningful product content never waits for that navigation or session restoration.
++
++Build from `frontend/apps/storefront` using the installed toolchain:
++
++```sh
++node ../../node_modules/vite/bin/vite.js build
++node ../../node_modules/vite/bin/vite.js build --ssr src/entry-public-server.tsx --outDir dist-server
++node server/seal-build.mjs
++```
++
++`build:publication` runs this sequence. Deploy `dist`, `dist-server`, server runtime and installed workspace dependencies from the same release. The seal records SHA-256 of the public template and SSR entry; startup rejects mismatches. Use Node 22.12+ with `NODE_ENV=production`. `PUBLICATION_APPROVED_ORIGIN`, `PUBLICATION_INSTALLATION_ID`, `PUBLICATION_GATEWAY`, `PUBLICATION_ARTIFACT_DIR`, `PUBLICATION_SSR_ENTRY`, `PUBLICATION_PORT` and `PUBLICATION_BIND` govern the runtime. Defaults bind localhost:8081 and fixed gateway localhost:8080. `/health` is process liveness; `/ready` validates a live snapshot/binding/schema and artifact validity is checked at startup.
++
++`compose.publication.yaml` adds an opt-in Node 22 renderer, read-only release mount and localhost-only port. `deploy/ec2/publication.py --host <approved-host> --gateway-port <port> --renderer-port <port>` sends merchant documents to Node and APIs to Rust. Keep PUBLICATION_NOINDEX=true through installation-specific rollout checks. No deployment was performed in Stage 03. Do not apply the overlay to demo/admin services.
++
++Local evidence uses real PostgreSQL and the Rust gateway, production-built Vite entries, curl, Chromium with and without JavaScript, an assigned published theme distinct from its draft, and a second installation with overlapping catalog identifiers. Full merchant-theme screenshot parity across every published theme and a deployed TLS/CDN response remain separate rollout checks; local screenshots are retained as fixtures, not production screenshots.

@@ -1,0 +1,206 @@
+{
+  "grocery_group": {
+    "entity_id": "4292e697-a7eb-5cfe-a001-d0d94774ace1",
+    "name": "Grocery group",
+    "source": {
+      "description": "Merchant-authored grocery categorization and suggested culinary uses; not nutrition, allergen safety, certification or preparation instructions.",
+      "label": "Grocery group",
+      "option.bakery": "Bakery",
+      "option.beverages": "Beverages",
+      "option.condiments": "Condiments",
+      "option.dairy": "Dairy",
+      "option.dried_fruit": "Dried Fruit",
+      "option.eggs": "Eggs",
+      "option.fruit": "Fruit",
+      "option.grains": "Grains",
+      "option.household": "Household",
+      "option.legumes": "Legumes",
+      "option.meat": "Meat",
+      "option.nuts": "Nuts",
+      "option.seafood": "Seafood",
+      "option.vegetables": "Vegetables"
+    },
+    "fields": {
+      "description": "تصنيف لمنتجات البقالة واستخدامات مقترحة في الطهي وضعها التاجر؛ لا تمثل معلومات غذائية أو ضماناً للسلامة من مسببات الحساسية أو شهادات اعتماد أو تعليمات تحضير.",
+      "label": "مجموعة البقالة",
+      "option.bakery": "مخبوزات",
+      "option.beverages": "مشروبات",
+      "option.condiments": "صلصات وتوابل",
+      "option.dairy": "منتجات ألبان",
+      "option.dried_fruit": "فاكهة مجففة",
+      "option.eggs": "بيض",
+      "option.fruit": "فاكهة",
+      "option.grains": "حبوب",
+      "option.household": "مستلزمات منزلية",
+      "option.legumes": "بقوليات",
+      "option.meat": "لحوم",
+      "option.nuts": "مكسرات",
+      "option.seafood": "مأكولات بحرية",
+      "option.vegetables": "خضروات"
+    },
+    "revision": 1,
+    "status": "reviewed"
+  },
+  "ingredient_role": {
+    "entity_id": "f495d9fc-0aaf-5126-8b53-684d41bec88f",
+    "name": "Ingredient role",
+    "source": {
+      "description": "Merchant-authored grocery categorization and suggested culinary uses; not nutrition, allergen safety, certification or preparation instructions.",
+      "label": "Ingredient role",
+      "option.base": "Base",
+      "option.cooking_fat": "Cooking Fat",
+      "option.main_ingredient": "Main Ingredient",
+      "option.seasoning": "Seasoning",
+      "option.side": "Side",
+      "option.spread": "Spread",
+      "option.sweetener": "Sweetener",
+      "option.topping": "Topping"
+    },
+    "fields": {
+      "description": "تصنيف لمنتجات البقالة واستخدامات مقترحة في الطهي وضعها التاجر؛ لا تمثل معلومات غذائية أو ضماناً للسلامة من مسببات الحساسية أو شهادات اعتماد أو تعليمات تحضير.",
+      "label": "دور المكون",
+      "option.base": "مكون أساسي",
+      "option.cooking_fat": "دهون للطهي",
+      "option.main_ingredient": "المكون الرئيسي",
+      "option.seasoning": "تتبيل",
+      "option.side": "طبق جانبي",
+      "option.spread": "مكون للدهن",
+      "option.sweetener": "تحلية",
+      "option.topping": "إضافة علوية"
+    },
+    "revision": 1,
+    "status": "reviewed"
+  },
+  "meal_occasion": {
+    "entity_id": "9f7c2a01-95be-5584-9f7f-338b75774760",
+    "name": "Meal occasion",
+    "source": {
+      "description": "Merchant-authored grocery categorization and suggested culinary uses; not nutrition, allergen safety, certification or preparation instructions.",
+      "label": "Meal occasion",
+      "option.breakfast": "Breakfast",
+      "option.dessert": "Dessert",
+      "option.dinner": "Dinner",
+      "option.lunch": "Lunch",
+      "option.snack": "Snack"
+    },
+    "fields": {
+      "description": "تصنيف لمنتجات البقالة واستخدامات مقترحة في الطهي وضعها التاجر؛ لا تمثل معلومات غذائية أو ضماناً للسلامة من مسببات الحساسية أو شهادات اعتماد أو تعليمات تحضير.",
+      "label": "الوجبة",
+      "option.breakfast": "إفطار",
+      "option.dessert": "تحلية",
+      "option.dinner": "عشاء",
+      "option.lunch": "غداء",
+      "option.snack": "وجبة خفيفة"
+    },
+    "revision": 1,
+    "status": "reviewed"
+  },
+  "grocery-pack-size": {
+    "entity_id": "68b4e8bf-1414-49fc-99ec-92f49638d376",
+    "name": "Pack size",
+    "source": {
+      "description": "",
+      "label": "Pack size",
+      "option.1kg": "1kg",
+      "option.250g": "250g",
+      "option.2kg": "2kg",
+      "option.3 Pack": "3 Pack",
+      "option.300g": "300g",
+      "option.500g": "500g",
+      "option.6 Pack": "6 Pack",
+      "option.600g": "600g"
+    },
+    "fields": {
+      "description": "",
+      "label": "حجم العبوة",
+      "option.1kg": "1 كجم",
+      "option.250g": "250 جم",
+      "option.2kg": "2 كجم",
+      "option.3 Pack": "3 قطع",
+      "option.300g": "300 جم",
+      "option.500g": "500 جم",
+      "option.6 Pack": "6 قطع",
+      "option.600g": "600 جم"
+    },
+    "revision": 1,
+    "status": "reviewed"
+  },
+  "short_description": {
+    "entity_id": "cfd80d8e-96d6-46a8-a951-e6c40a1a9a0e",
+    "name": "Short description",
+    "source": {
+      "description": "",
+      "label": "Short description"
+    },
+    "fields": {
+      "description": "",
+      "label": "وصف مختصر"
+    },
+    "revision": 1,
+    "status": "reviewed"
+  },
+  "dish_type": {
+    "entity_id": "3396b838-16b6-5dc9-b893-ae2d919a8f76",
+    "name": "Suggested dishes",
+    "source": {
+      "description": "Merchant-authored grocery categorization and suggested culinary uses; not nutrition, allergen safety, certification or preparation instructions.",
+      "label": "Suggested dishes",
+      "option.baking": "Baking",
+      "option.breakfast_bowls": "Breakfast Bowls",
+      "option.desserts": "Desserts",
+      "option.drinks": "Drinks",
+      "option.pasta_dishes": "Pasta Dishes",
+      "option.rice_dishes": "Rice Dishes",
+      "option.roast_dinners": "Roast Dinners",
+      "option.salads": "Salads",
+      "option.sandwiches": "Sandwiches",
+      "option.smoothies": "Smoothies",
+      "option.soups": "Soups",
+      "option.stir_fries": "Stir Fries"
+    },
+    "fields": {
+      "description": "تصنيف لمنتجات البقالة واستخدامات مقترحة في الطهي وضعها التاجر؛ لا تمثل معلومات غذائية أو ضماناً للسلامة من مسببات الحساسية أو شهادات اعتماد أو تعليمات تحضير.",
+      "label": "الأطباق المقترحة",
+      "option.baking": "خبز في الفرن",
+      "option.breakfast_bowls": "أطباق الإفطار",
+      "option.desserts": "حلويات",
+      "option.drinks": "مشروبات",
+      "option.pasta_dishes": "أطباق المكرونة",
+      "option.rice_dishes": "أطباق الأرز",
+      "option.roast_dinners": "وجبات مشوية في الفرن",
+      "option.salads": "سلطات",
+      "option.sandwiches": "ساندويتشات",
+      "option.smoothies": "سموذي",
+      "option.soups": "شوربات",
+      "option.stir_fries": "أطباق القلي السريع"
+    },
+    "revision": 1,
+    "status": "reviewed"
+  },
+  "preparation_method": {
+    "entity_id": "99021637-f738-5901-89e9-8d6d213c8b62",
+    "name": "Suggested preparation",
+    "source": {
+      "description": "Merchant-authored grocery categorization and suggested culinary uses; not nutrition, allergen safety, certification or preparation instructions.",
+      "label": "Suggested preparation",
+      "option.baking": "Baking",
+      "option.boiling": "Boiling",
+      "option.grilling": "Grilling",
+      "option.no_cook": "No Cook",
+      "option.roasting": "Roasting",
+      "option.sauteing": "Sauteing"
+    },
+    "fields": {
+      "description": "تصنيف لمنتجات البقالة واستخدامات مقترحة في الطهي وضعها التاجر؛ لا تمثل معلومات غذائية أو ضماناً للسلامة من مسببات الحساسية أو شهادات اعتماد أو تعليمات تحضير.",
+      "label": "طريقة التحضير المقترحة",
+      "option.baking": "خبز في الفرن",
+      "option.boiling": "سلق",
+      "option.grilling": "شوي",
+      "option.no_cook": "دون طهي",
+      "option.roasting": "شوي في الفرن",
+      "option.sauteing": "تشويح"
+    },
+    "revision": 1,
+    "status": "reviewed"
+  }
+}

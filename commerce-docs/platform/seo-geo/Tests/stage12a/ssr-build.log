@@ -1,0 +1,15 @@
+vite v7.3.6 building ssr environment for production...
+transforming...
+
+/fonts/saol-display-regular.ttf referenced in /fonts/saol-display-regular.ttf didn't resolve at build time, it will remain unchanged to be resolved at runtime
+
+/fonts/futura-now-headline.ttf referenced in /fonts/futura-now-headline.ttf didn't resolve at build time, it will remain unchanged to be resolved at runtime
+
+/fonts/bodoni-moda.ttf referenced in /fonts/bodoni-moda.ttf didn't resolve at build time, it will remain unchanged to be resolved at runtime
+
+/fonts/jost.ttf referenced in /fonts/jost.ttf didn't resolve at build time, it will remain unchanged to be resolved at runtime
+✓ 360 modules transformed.
+rendering chunks...
+dist-server/assets/search-widget-B3Id1F7W.js    9.62 kB
+dist-server/entry-public-server.js            183.05 kB
+✓ built in 428ms

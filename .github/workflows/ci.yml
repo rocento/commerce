@@ -1,0 +1,508 @@
+name: CI
+on: [push, pull_request]
+permissions:
+  contents: read
+jobs:
+  rengine:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22.18'
+      - run: node --test commerce-web/apps/rengine/tests/*.test.mjs
+      - run: node --check commerce-web/apps/rengine/public/app.js
+      - run: node --check commerce-web/apps/rengine/public/journey.js
+      - run: for script in commerce-ops/deploy/aws-deploy/deploy-rengine.sh commerce-ops/deploy/ec2/server/ec2-deploy-rengine.sh; do bash -n "$script"; done
+      - run: docker compose -f commerce-ops/compose/compose.rengine.yaml config --quiet
+  documentation:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: commerce-ops/scripts
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python3 checks/check-documentation.py
+      - run: python3 -m unittest discover -s tests -p test_documentation.py
+      - run: python3 -m unittest discover -s tests -p test_output_inventory.py
+      - run: python3 -m unittest discover -s tests -p test_commerce_reliability.py
+  repository-layout:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    defaults:
+      run:
+        working-directory: commerce-ops/scripts
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Verify deployment and native controller entry points
+        run: |
+          python3 -m unittest discover -s tests -p 'test_deployment_layout.py'
+          python3 -m unittest discover -s tests -p 'test_native_preview_layout.py'
+          python3 -m unittest discover -s ../deploy/aws-automation -p 'test_*.py'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Verify grouped scripts and compatibility commands
+        run: python3 -m unittest discover -s tests -p 'test_script_layout.py'
+      - name: Check canonical deployment shell syntax
+        run: |
+          for script in local/*.sh ../deploy/aws-deploy/*.sh ../deploy/ec2/server/*.sh ../deploy/aws-automation/install-services.sh; do
+            bash -n "$script"
+          done
+  backend:
+    runs-on: ubuntu-latest
+    env:
+      DATABASE_URL: postgres://commerce:test-only-password@localhost:5432/commerce
+      M07_MEILI_URL: http://127.0.0.1:7700
+      M07_EVAL_REPORT: /tmp/discovery-relevance.json
+    services:
+      postgres:
+        image: postgres:16
+        env:
+          POSTGRES_DB: commerce
+          POSTGRES_USER: commerce
+          POSTGRES_PASSWORD: test-only-password
+        ports: ['5432:5432']
+        options: >-
+          --health-cmd "pg_isready -U commerce -d commerce"
+          --health-interval 5s --health-timeout 5s --health-retries 15
+      meilisearch:
+        image: getmeili/meilisearch:v1.15
+        env:
+          MEILI_MASTER_KEY: m07-disposable-key-only
+          MEILI_ENV: development
+          MEILI_NO_ANALYTICS: 'true'
+        ports: ['7700:7700']
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 10.32.1
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: pnpm
+          cache-dependency-path: commerce-web/pnpm-lock.yaml
+      - run: pnpm install --frozen-lockfile
+        working-directory: commerce-web
+      - name: Build sealed renderer for publication integration tests
+        run: pnpm --filter @commerce/storefront build:publication
+        working-directory: commerce-web
+      - name: Wait for discovery search
+        run: |
+          python3 - <<'PY'
+          import time, urllib.request
+          for attempt in range(60):
+              try:
+                  urllib.request.urlopen('http://127.0.0.1:7700/health', timeout=2)
+                  break
+              except OSError:
+                  time.sleep(1)
+          else:
+              raise SystemExit('Discovery search did not become ready')
+          PY
+      - uses: dtolnay/rust-toolchain@stable
+        with:
+          components: rustfmt, clippy
+      - uses: Swatinem/rust-cache@v2
+        with:
+          workspaces: commerce-api/rocento-api
+      - name: Enforce Rust module boundaries
+        run: |
+          python3 commerce-ops/scripts/checks/check-rust-architecture.py
+          python3 -m unittest discover -s commerce-ops/scripts/tests -p 'test_rust_architecture.py'
+      - run: cargo fmt --all -- --check
+        working-directory: commerce-api/rocento-api
+      - run: cargo clippy --workspace --all-targets --locked -- -D warnings
+        working-directory: commerce-api/rocento-api
+      # Authentication fixtures share the production password-work budget.
+      - run: cargo test --workspace --locked -- --test-threads=2
+        working-directory: commerce-api/rocento-api
+      - name: Verify snapshot metrics remain isolated with concurrent tests
+        run: cargo test --locked -p api-gateway --test cart_snapshot -- --test-threads=4
+        working-directory: commerce-api/rocento-api
+      - run: cargo build --workspace --locked
+        working-directory: commerce-api/rocento-api
+  frontend:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: commerce-web
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 10.32.1
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: pnpm
+          cache-dependency-path: commerce-web/pnpm-lock.yaml
+      - run: pnpm install --frozen-lockfile
+      - run: python3 ../commerce-ops/scripts/contracts/generate_openapi.py
+      - name: Validate full API contract and route coverage
+        run: |
+          python3 -m pip install -r ../commerce-ops/scripts/tests/requirements-openapi.txt
+          python3 -m unittest discover -s ../commerce-ops/scripts/tests -p 'test_openapi_contract.py'
+          python3 -m unittest discover -s ../commerce-ops/scripts/tests -p 'test_mobile_contract.py'
+      - name: Check reviewed public API contract
+        run: python3 ../commerce-ops/scripts/contracts/generate_public_openapi.py --check
+      - name: Check protected API contract and documentation coverage
+        run: |
+          python3 ../commerce-ops/scripts/contracts/generate_merchant_openapi.py --check
+          python3 ../commerce-ops/scripts/checks/check_api_documentation.py --check
+      - name: Test public API publication boundaries
+        run: |
+          python3 -m unittest discover -s ../commerce-ops/scripts/tests -p 'test_public_openapi.py'
+          python3 -m unittest discover -s ../commerce-ops/scripts/tests -p 'test_ec2_deployment.py'
+          python3 -m unittest discover -s ../commerce-ops/scripts/tests -p 'test_website_publication.py'
+          python3 -m unittest discover -s ../commerce-ops/scripts/tests -p 'test_merchant_docs_ingress.py'
+          python3 -m unittest discover -s ../commerce-ops/scripts/tests -p 'test_merchant_openapi.py'
+          python3 -m unittest discover -s ../commerce-ops/scripts/tests -p 'test_api_documentation.py'
+          python3 -m unittest discover -s ../commerce-ops/scripts/tests -p 'test_contact*.py'
+      - name: Check canonical mobile dashboard contract
+        run: python3 ../commerce-mobile-apps/tools/generate_contract.py --check
+      - name: Verify isolated mobile dashboard ingress
+        run: MOBILE_STUDIO_INGRESS_TESTS=1 python3 -m unittest discover -s ../commerce-ops/scripts/tests -p 'test_mobile_studio_ingress.py'
+      - run: node ../commerce-ops/scripts/contracts/sync-theme-contract.mjs --check
+      - run: pnpm generate:api
+      - run: git diff --exit-code -- ../commerce-api/rocento-api/openapi.json packages/api-client/src/schema.d.ts
+      - run: pnpm lint
+      - run: pnpm typecheck
+      - run: pnpm typecheck:e2e
+      - run: pnpm test
+      - run: pnpm build
+      - name: Install and build corporate website
+        run: |
+          pnpm install --no-frozen-lockfile
+          pnpm build
+        working-directory: commerce-corporate-site
+      - name: Verify corporate website export
+        run: pnpm verify
+        working-directory: commerce-corporate-site
+      - name: Verify authenticated API viewer boundaries
+        run: |
+          pnpm exec playwright install --with-deps chromium
+          node e2e/api-reference/merchant-reference.mjs
+      - name: Verify standalone mobile editor and publishing flow
+        run: pnpm test:mobile-studio
+      - name: Verify API documentation browser security
+        run: |
+          pnpm exec playwright install --with-deps chromium
+          python3 -m http.server 5180 --bind 127.0.0.1 --directory out > /tmp/api-docs-server.log 2>&1 &
+          server_pid=$!
+          trap 'kill "$server_pid"' EXIT
+          python3 - <<'PY'
+          import time, urllib.request
+          for attempt in range(50):
+              try:
+                  urllib.request.urlopen('http://127.0.0.1:5180/docs/api/', timeout=1)
+                  break
+              except OSError:
+                  time.sleep(0.1)
+          else:
+              raise SystemExit('API documentation preview did not become ready')
+          PY
+          API_DOCS_BASE_URL=http://127.0.0.1:5180 node scripts/test-api-docs.mjs
+        working-directory: commerce-corporate-site
+  ai:
+    runs-on: ubuntu-latest
+    env:
+      M04_TEST_DATABASE_URL: postgres://postgres:knowledge-test-only@localhost:5432/postgres
+    services:
+      knowledge-postgres:
+        image: pgvector/pgvector:pg16
+        env:
+          POSTGRES_PASSWORD: knowledge-test-only
+        ports: ['5432:5432']
+        options: >-
+          --health-cmd "pg_isready -U postgres"
+          --health-interval 5s --health-timeout 5s --health-retries 15
+    defaults:
+      run:
+        working-directory: commerce-assistant-platform
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install --require-hashes -r requirements-dev.lock
+      - run: python ../commerce-ops/scripts/release/agentic-preflight.py
+      - run: python -m unittest discover -s ../commerce-ops/scripts/tests -p test_agentic_preflight.py
+      - name: Verify contract generator entry points and output parity
+        run: python -m unittest discover -s ../commerce-ops/scripts/tests -p test_contract_generator_entrypoints.py
+      - name: Enforce workflow dependency boundaries
+        run: python ../commerce-ops/scripts/checks/check-ai-architecture.py
+      - name: Check AI capability manifest and documentation
+        run: python ../commerce-ops/scripts/generation/generate_ai_capabilities.py --check
+      - name: Test architecture guard
+        run: python -m unittest discover -s ../commerce-ops/scripts/tests -p test_ai_architecture.py
+      - run: mypy app
+      - name: Check language resolution wire contract
+        run: python ../commerce-ops/scripts/contracts/generate_language_resolution_contract.py --check
+      - name: Check assistant generated contracts
+        run: |
+          python ../commerce-ops/scripts/contracts/generate_catalog_tool_contract.py
+          python ../commerce-ops/scripts/contracts/generate_openapi.py
+          python ../commerce-ops/scripts/contracts/generate_assistant_models.py
+          python ../commerce-ops/scripts/contracts/generate_assistant_validator.py
+          ruff format app/commerce_action_engine/contracts/__init__.py
+          git diff --exit-code -- ../commerce-api/rocento-api/crates/api-gateway/openapi/shopper_tools.json app/commerce_action_engine/contracts/__init__.py ../commerce-web/packages/api-client/src/assistant-schemas.ts
+      - run: ruff check .
+      - run: ruff format --check .
+      - run: pytest
+      - name: Run bounded assistant load and failure acceptance
+        run: python ../commerce-ops/scripts/evaluation/agent-performance.py
+      - run: python -m compileall -q app
+  language-engine:
+    runs-on: ubuntu-latest
+    env:
+      LANGUAGE_RELEASE_TEST_DATABASE_URL: postgres://postgres:language-test-only@127.0.0.1:5432/postgres
+      LANGUAGE_KNOWLEDGE_TEST_DATABASE_URL: postgres://postgres:language-test-only@127.0.0.1:5432/postgres
+      ENGLISH_VOCABULARY_TEST_DATABASE_URL: postgres://postgres:language-test-only@127.0.0.1:5432/postgres
+      RELEASE_TEST_DATABASE_URL: postgres://postgres:language-test-only@127.0.0.1:5432/postgres
+    services:
+      language-postgres:
+        image: postgres:16-bookworm
+        env:
+          POSTGRES_PASSWORD: language-test-only
+        ports: ['5432:5432']
+        options: >-
+          --health-cmd "pg_isready -U postgres"
+          --health-interval 5s --health-timeout 5s --health-retries 15
+    defaults:
+      run:
+        working-directory: commerce-assistant-platform/app/commerce_language_engine
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: commerce-assistant-platform/app/commerce_language_engine/package-lock.json
+      - run: npm ci
+      - name: Validate offline generation without replacing the reviewed test artifact
+        run: |
+          engine_root="$PWD"
+          generated_dir="$(mktemp -d)"
+          trap 'rm -rf "$generated_dir"' EXIT
+          cd "$generated_dir"
+          node "$engine_root/scripts/generate.ts" --offline
+          node "$engine_root/scripts/compile.ts" --offline
+          node "$engine_root/scripts/verify-artifacts.ts"
+      - run: npm run typecheck
+      - run: npm test
+      - name: Verify the immutable packaged release and parser identity
+        run: npm run export:release
+      - name: Evaluate complete English request contracts
+        run: |
+          npm run evaluate:requests -- --output /tmp/full-request-report.json
+          npm run evaluate:requests -- --dataset tests/fixtures/english-price-currencies-v1/cases.json --output /tmp/english-price-currencies-report.json
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: full-request-evaluation
+          path: |
+            /tmp/full-request-report.json
+            /tmp/english-price-currencies-report.json
+  compose:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: commerce-ops/compose
+    steps:
+      - uses: actions/checkout@v4
+      - run: cp ../../.env.example .env
+      - run: docker compose config --quiet
+      - run: docker compose up --build --wait --wait-timeout 600
+      - run: python3 ../scripts/checks/smoke.py
+      - run: python3 ../scripts/checks/m1-smoke.py
+      - run: python3 ../scripts/local/bootstrap-admin.py
+      - run: python3 ../scripts/checks/m2-smoke.py
+      - name: Run M3 cart and short-TTL inventory smoke
+        run: |
+          docker compose run -d --name commerce-ai-m3-expiry -p 127.0.0.1:8081:8080 -e RESERVATION_TTL_SECONDS=2 api-gateway
+          python3 - <<'PY'
+          import time, urllib.request
+          for attempt in range(60):
+              try:
+                  urllib.request.urlopen('http://localhost:8081/health', timeout=2)
+                  break
+              except OSError:
+                  time.sleep(1)
+          else:
+              raise SystemExit('Short-TTL gateway did not start')
+          PY
+          python3 ../scripts/checks/m3-smoke.py --expiry-base http://localhost:8081
+      - if: always()
+        run: docker rm -f commerce-ai-m3-expiry || true
+      - name: Run M4 COD and publisher-crash replay smoke
+        run: python3 ../scripts/checks/m4-smoke.py --replay
+      - name: Run M5 tax and fulfillment smoke
+        run: python3 ../scripts/checks/m5-smoke.py
+      - name: Run M6 pricing and promotions smoke
+        run: python3 ../scripts/checks/m6-smoke.py
+      - name: M8 analytics, realistic data and observability
+        run: |
+          docker compose -f compose.yaml -f compose.observability.yaml up -d
+          python3 ../scripts/demo/seed-reporting.py --apply-local
+          docker compose exec -T api-gateway sync-reports
+          python3 ../scripts/checks/m8-smoke.py --observability
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: commerce-assistant-platform/app/commerce_language_engine/package-lock.json
+      - name: Prepare the explicit disposable CI language release
+        env:
+          CLE_CI_BOOTSTRAP: 'true'
+          DATABASE_URL: postgres://commerce:local-commerce-only@127.0.0.1:5432/commerce_language
+        run: |
+          npm --prefix ../../commerce-assistant-platform/app/commerce_language_engine ci
+          docker compose exec -T postgres createdb -U commerce commerce_language
+          node ../../commerce-assistant-platform/app/commerce_language_engine/scripts/prepare-ci-release.ts \
+            --artifact ../../commerce-assistant-platform/app/commerce_language_engine/data/compiled.json \
+            --output-dir ../../commerce-assistant-platform/app/commerce_language_engine/data
+      - name: Assistant MVP isolation and live flows
+        run: |
+          python3 ../scripts/local/assistant-setup.py
+          docker compose -f compose.yaml -f compose.assistant.yaml -f compose.language-engine.yaml up -d --build --wait --wait-timeout 240
+          python3 ../scripts/checks/assistant-isolation.py
+          docker exec -i commerce-ai-ai-service-1 python < ../scripts/checks/assistant-store-check.py
+          python3 ../scripts/checks/assistant-smoke.py --chaos
+      - name: Run M7 admin, CMS and reviews smoke
+        run: python3 ../scripts/checks/m7-smoke.py
+      - name: Run M11 attributes and product types smoke
+        run: python3 ../scripts/checks/m11-smoke.py
+      - if: always()
+        run: docker compose -f compose.yaml -f compose.assistant.yaml -f compose.language-engine.yaml -f compose.observability.yaml down
+  improvement-browser:
+    runs-on: ubuntu-latest
+    env:
+      DATABASE_URL: postgres://commerce_test:isolated-test-only@127.0.0.1:5432/commerce_status_browser
+      ADMIN_TEST_EMAIL: admin@example.test
+      ADMIN_TEST_PASSWORD: Isolated browser test password!
+      MAILPIT_TEST_URL: http://127.0.0.1:8025
+      API_PROXY_TARGET: http://127.0.0.1:18085
+    services:
+      postgres:
+        image: postgres:16-bookworm
+        env:
+          POSTGRES_DB: commerce_status_browser
+          POSTGRES_USER: commerce_test
+          POSTGRES_PASSWORD: isolated-test-only
+        ports: ['5432:5432']
+        options: >-
+          --health-cmd "pg_isready -U commerce_test -d commerce_status_browser"
+          --health-interval 5s --health-timeout 5s --health-retries 15
+      mailpit:
+        image: axllent/mailpit:v1.30.6
+        ports: ['8025:8025']
+    steps:
+      - uses: actions/checkout@v4
+      - uses: dtolnay/rust-toolchain@stable
+      - uses: Swatinem/rust-cache@v2
+        with:
+          workspaces: commerce-api/rocento-api
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 10.32.1
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: pnpm
+          cache-dependency-path: commerce-web/pnpm-lock.yaml
+      - run: pnpm install --frozen-lockfile
+        working-directory: commerce-web
+      - run: pnpm exec playwright install --with-deps chromium
+        working-directory: commerce-web
+      - run: cargo build -p api-gateway --example status_fixture --locked
+        working-directory: commerce-api/rocento-api
+      - name: Start isolated fixture and admin preview
+        run: |
+          ./commerce-api/rocento-api/target/debug/examples/status_fixture > /tmp/status-api.log 2>&1 &
+          pnpm --dir commerce-web/apps/admin exec vite --host 127.0.0.1 --port 5176 --strictPort > /tmp/status-admin.log 2>&1 &
+          python3 - <<'PY'
+          import time, urllib.request
+          for port in (18085, 5176):
+              for attempt in range(60):
+                  try:
+                      urllib.request.urlopen(f'http://127.0.0.1:{port}/health', timeout=2)
+                      break
+                  except OSError:
+                      time.sleep(1)
+              else:
+                  raise SystemExit(f'Fixture on {port} failed to start')
+          PY
+      - run: pnpm test:improvements
+        working-directory: commerce-web
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: improvement-browser-report
+          path: commerce-web/playwright-report/improvements
+  assistant-browser:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    defaults:
+      run:
+        working-directory: commerce-web
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 10.32.1
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: pnpm
+          cache-dependency-path: commerce-web/pnpm-lock.yaml
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm exec playwright install --with-deps chromium
+      - name: Verify assistant journeys on desktop and mobile with mocked APIs
+        run: pnpm exec playwright test --config playwright.assistant.config.ts
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: assistant-browser-results
+          path: commerce-web/test-results/assistant
+  release-policy:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    defaults:
+      run:
+        working-directory: commerce-ops/scripts
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python3 -m unittest discover -s tests -p 'test_release_readiness.py'
+      - run: python3 -m unittest discover -s tests -p 'test_deployment_gate.py'
+      - run: python3 -m unittest discover -s tests -p 'test_deploy_activation.py'
+  required-ci:
+    name: Required CI
+    if: always()
+    needs: [rengine, documentation, repository-layout, backend, frontend, ai, language-engine, compose, improvement-browser, assistant-browser, release-policy]
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Require every prerequisite to succeed
+        env:
+          RESULTS: ${{ toJSON(needs) }}
+        run: |
+          python3 - <<'PY'
+          import json, os, sys
+          results = json.loads(os.environ['RESULTS'])
+          blocked = {name: job['result'] for name, job in results.items() if job['result'] != 'success'}
+          if not results or blocked:
+              print('Required CI blocked:', json.dumps(blocked, sort_keys=True))
+              sys.exit(1)
+          print('All required CI jobs passed. Operational release evidence is a separate gate.')
+          PY

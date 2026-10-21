@@ -1,0 +1,2000 @@
+[
+  {
+    "store": "grocery",
+    "input": {
+      "request_id": "a95a2aa1-a11f-44ab-94e6-d6a36237ad2b",
+      "conversation_id": "cb30bd7b-0abd-4453-8048-8da45439ad5a",
+      "message": "Save Whole Milk 1L for later"
+    },
+    "status": 200,
+    "text": "Saved Whole Milk 1L to your wishlist.",
+    "events": [
+      {
+        "version": "1",
+        "request_id": "a95a2aa1-a11f-44ab-94e6-d6a36237ad2b",
+        "sequence": 0,
+        "type": "progress",
+        "stage": "preparing"
+      },
+      {
+        "response_source": "R",
+        "version": "1",
+        "request_id": "a95a2aa1-a11f-44ab-94e6-d6a36237ad2b",
+        "sequence": 1,
+        "type": "message.delta",
+        "text": "Saved Whole Milk 1L to your wishlist."
+      },
+      {
+        "response_source": "R",
+        "version": "1",
+        "request_id": "a95a2aa1-a11f-44ab-94e6-d6a36237ad2b",
+        "sequence": 2,
+        "type": "content.blocks",
+        "blocks": [
+          {
+            "kind": "text",
+            "text": "Saved Whole Milk 1L to your wishlist."
+          },
+          {
+            "kind": "cart_summary",
+            "cart": {
+              "items": [],
+              "total_lines": 0,
+              "total_quantity": 0,
+              "subtotal": "0",
+              "discount_amount": "0",
+              "currency": "USD",
+              "fully_reserved": false
+            }
+          }
+        ]
+      },
+      {
+        "response_source": "R",
+        "version": "1",
+        "request_id": "a95a2aa1-a11f-44ab-94e6-d6a36237ad2b",
+        "sequence": 3,
+        "type": "done",
+        "saved": true
+      }
+    ],
+    "state": {
+      "wishlist": [
+        "696c9077-7729-4bbe-a7ae-93a39b10af95"
+      ],
+      "cart": {
+        "discount_amount": "0",
+        "discount_snapshot": [],
+        "coupon_code": null,
+        "coupon_error": null,
+        "id": "122aecb2-0954-488e-bfce-3b5fcc78ada5",
+        "customer_id": "8e86c9a9-867e-4368-85b2-220948cc6509",
+        "items": [],
+        "subtotal": "0",
+        "currency": "USD",
+        "fully_reserved": false
+      }
+    }
+  },
+  {
+    "store": "grocery",
+    "input": {
+      "request_id": "cdfb35b2-9200-4a70-a392-1a16ac9084f2",
+      "conversation_id": "49ae43f9-f839-49a1-9c3c-dcf05f3880c8",
+      "message": "Show my saved items"
+    },
+    "status": 200,
+    "text": "You have 1 saved item in your wishlist. Here are up to three:",
+    "events": [
+      {
+        "version": "1",
+        "request_id": "cdfb35b2-9200-4a70-a392-1a16ac9084f2",
+        "sequence": 0,
+        "type": "progress",
+        "stage": "preparing"
+      },
+      {
+        "version": "1",
+        "request_id": "cdfb35b2-9200-4a70-a392-1a16ac9084f2",
+        "sequence": 1,
+        "type": "progress",
+        "stage": "catalog"
+      },
+      {
+        "response_source": "R",
+        "version": "1",
+        "request_id": "cdfb35b2-9200-4a70-a392-1a16ac9084f2",
+        "sequence": 2,
+        "type": "message.delta",
+        "text": "You have 1 saved item in your wishlist. Here are up to three:"
+      },
+      {
+        "response_source": "R",
+        "version": "1",
+        "request_id": "cdfb35b2-9200-4a70-a392-1a16ac9084f2",
+        "sequence": 3,
+        "type": "content.blocks",
+        "blocks": [
+          {
+            "kind": "product_list",
+            "title": "Your wishlist",
+            "products": [
+              {
+                "id": "696c9077-7729-4bbe-a7ae-93a39b10af95",
+                "name": "Whole Milk 1L",
+                "image_id": "6cc03c5f-21b2-4d44-bacf-63e319486b0d",
+                "price": "1.75",
+                "currency": "USD",
+                "in_stock": true,
+                "route": "/products/696c9077-7729-4bbe-a7ae-93a39b10af95",
+                "attributes": [
+                  {
+                    "name": "meal_occasion_breakfast_priority",
+                    "value": "\"addition\""
+                  },
+                  {
+                    "name": "grocery_group",
+                    "value": "[\"dairy\"]"
+                  },
+                  {
+                    "name": "ingredient_role",
+                    "value": "[\"base\"]"
+                  },
+                  {
+                    "name": "meal_occasion",
+                    "value": "[\"breakfast\",\"dessert\"]"
+                  },
+                  {
+                    "name": "dish_type",
+                    "value": "[\"breakfast_bowls\",\"smoothies\",\"baking\",\"desserts\"]"
+                  },
+                  {
+                    "name": "preparation_method",
+                    "value": "[\"no_cook\",\"baking\"]"
+                  }
+                ],
+                "reasons": [],
+                "unmet": []
+              }
+            ],
+            "sources": [
+              {
+                "kind": "catalog",
+                "product_id": "696c9077-7729-4bbe-a7ae-93a39b10af95",
+                "route": "/products/696c9077-7729-4bbe-a7ae-93a39b10af95"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "response_source": "R",
+        "version": "1",
+        "request_id": "cdfb35b2-9200-4a70-a392-1a16ac9084f2",
+        "sequence": 4,
+        "type": "done",
+        "saved": true
+      }
+    ],
+    "state": {
+      "wishlist": [
+        "696c9077-7729-4bbe-a7ae-93a39b10af95"
+      ],
+      "cart": {
+        "discount_amount": "0",
+        "discount_snapshot": [],
+        "coupon_code": null,
+        "coupon_error": null,
+        "id": "122aecb2-0954-488e-bfce-3b5fcc78ada5",
+        "customer_id": "8e86c9a9-867e-4368-85b2-220948cc6509",
+        "items": [],
+        "subtotal": "0",
+        "currency": "USD",
+        "fully_reserved": false
+      }
+    }
+  },
+  {
+    "store": "grocery",
+    "input": {
+      "request_id": "eeaa4e3c-9659-4d15-b565-adae79d2976e",
+      "conversation_id": "46fbc540-4987-488b-8fa0-667b7b35624d",
+      "message": "Do not remove Whole Milk 1L from my wishlist"
+    },
+    "status": 200,
+    "text": "Please restate the full request so I can understand what you need. You can ask about products, your cart, an order, or a problem with the store.",
+    "events": [
+      {
+        "version": "1",
+        "request_id": "eeaa4e3c-9659-4d15-b565-adae79d2976e",
+        "sequence": 0,
+        "type": "progress",
+        "stage": "preparing"
+      },
+      {
+        "response_source": "L",
+        "version": "1",
+        "request_id": "eeaa4e3c-9659-4d15-b565-adae79d2976e",
+        "sequence": 1,
+        "type": "message.delta",
+        "text": "Please restate the full request so I can understand what you need. You can ask about products, your cart, an order, or a problem with the store."
+      },
+      {
+        "response_source": "L",
+        "version": "1",
+        "request_id": "eeaa4e3c-9659-4d15-b565-adae79d2976e",
+        "sequence": 2,
+        "type": "done",
+        "saved": true
+      }
+    ],
+    "state": {
+      "wishlist": [
+        "696c9077-7729-4bbe-a7ae-93a39b10af95"
+      ],
+      "cart": {
+        "discount_amount": "0",
+        "discount_snapshot": [],
+        "coupon_code": null,
+        "coupon_error": null,
+        "id": "122aecb2-0954-488e-bfce-3b5fcc78ada5",
+        "customer_id": "8e86c9a9-867e-4368-85b2-220948cc6509",
+        "items": [],
+        "subtotal": "0",
+        "currency": "USD",
+        "fully_reserved": false
+      }
+    }
+  },
+  {
+    "store": "grocery",
+    "input": {
+      "request_id": "88dc7a01-bd08-410b-bfba-4e8355786ac3",
+      "conversation_id": "90145f59-3458-4a48-afb4-fa75a2753c5f",
+      "message": "Copy Whole Milk 1L from wishlist to cart"
+    },
+    "status": 200,
+    "text": "Copying wishlist items while keeping them saved is not supported in chat yet. Open your wishlist and add the products to your cart; they will remain saved.",
+    "events": [
+      {
+        "version": "1",
+        "request_id": "88dc7a01-bd08-410b-bfba-4e8355786ac3",
+        "sequence": 0,
+        "type": "progress",
+        "stage": "preparing"
+      },
+      {
+        "response_source": "R",
+        "version": "1",
+        "request_id": "88dc7a01-bd08-410b-bfba-4e8355786ac3",
+        "sequence": 1,
+        "type": "message.delta",
+        "text": "Copying wishlist items while keeping them saved is not supported in chat yet. Open your wishlist and add the products to your cart; they will remain saved."
+      },
+      {
+        "response_source": "R",
+        "version": "1",
+        "request_id": "88dc7a01-bd08-410b-bfba-4e8355786ac3",
+        "sequence": 2,
+        "type": "done",
+        "saved": true
+      }
+    ],
+    "state": {
+      "wishlist": [
+        "696c9077-7729-4bbe-a7ae-93a39b10af95"
+      ],
+      "cart": {
+        "discount_amount": "0",
+        "discount_snapshot": [],
+        "coupon_code": null,
+        "coupon_error": null,
+        "id": "122aecb2-0954-488e-bfce-3b5fcc78ada5",
+        "customer_id": "8e86c9a9-867e-4368-85b2-220948cc6509",
+        "items": [],
+        "subtotal": "0",
+        "currency": "USD",
+        "fully_reserved": false
+      }
+    }
+  },
+  {
+    "store": "grocery",
+    "input": {
+      "request_id": "1f0d7dbc-c766-4d3c-8b67-8fe108a5ecad",
+      "conversation_id": "cdd9c9b0-b079-4701-b5a2-d858bf68de68",
+      "message": "Unsave Whole Milk 1L"
+    },
+    "status": 200,
+    "text": "Removed Whole Milk 1L from your wishlist.",
+    "events": [
+      {
+        "version": "1",
+        "request_id": "1f0d7dbc-c766-4d3c-8b67-8fe108a5ecad",
+        "sequence": 0,
+        "type": "progress",
+        "stage": "preparing"
+      },
+      {
+        "version": "1",
+        "request_id": "1f0d7dbc-c766-4d3c-8b67-8fe108a5ecad",
+        "sequence": 1,
+        "type": "progress",
+        "stage": "catalog"
+      },
+      {
+        "response_source": "R",
+        "version": "1",
+        "request_id": "1f0d7dbc-c766-4d3c-8b67-8fe108a5ecad",
+        "sequence": 2,
+        "type": "message.delta",
+        "text": "Removed Whole Milk 1L from your wishlist."
+      },
+      {
+        "response_source": "R",
+        "version": "1",
+        "request_id": "1f0d7dbc-c766-4d3c-8b67-8fe108a5ecad",
+        "sequence": 3,
+        "type": "done",
+        "saved": true
+      }
+    ],
+    "state": {
+      "wishlist": [],
+      "cart": {
+        "discount_amount": "0",
+        "discount_snapshot": [],
+        "coupon_code": null,
+        "coupon_error": null,
+        "id": "122aecb2-0954-488e-bfce-3b5fcc78ada5",
+        "customer_id": "8e86c9a9-867e-4368-85b2-220948cc6509",
+        "items": [],
+        "subtotal": "0",
+        "currency": "USD",
+        "fully_reserved": false
+      }
+    }
+  },
+  {
+    "store": "grocery",
+    "input": {
+      "request_id": "63d19187-1805-423c-9b00-dce82fd57caf",
+      "conversation_id": "845ba0f1-6d60-479c-a0cd-1863511d6f4c",
+      "message": "Send Whole Milk 1L from my saved items to my basket"
+    },
+    "status": 200,
+    "text": "Transferred 1 Whole Milk 1L to your cart.",
+    "events": [
+      {
+        "version": "1",
+        "request_id": "63d19187-1805-423c-9b00-dce82fd57caf",
+        "sequence": 0,
+        "type": "progress",
+        "stage": "preparing"
+      },
+      {
+        "version": "1",
+        "request_id": "63d19187-1805-423c-9b00-dce82fd57caf",
+        "sequence": 1,
+        "type": "progress",
+        "stage": "catalog"
+      },
+      {
+        "response_source": "R",
+        "version": "1",
+        "request_id": "63d19187-1805-423c-9b00-dce82fd57caf",
+        "sequence": 2,
+        "type": "message.delta",
+        "text": "Transferred 1 Whole Milk 1L to your cart."
+      },
+      {
+        "response_source": "R",
+        "version": "1",
+        "request_id": "63d19187-1805-423c-9b00-dce82fd57caf",
+        "sequence": 3,
+        "type": "content.blocks",
+        "blocks": [
+          {
+            "kind": "wishlist_transfer",
+            "title": "Wishlist transfer",
+            "transfer_items": [
+              {
+                "name": "Whole Milk 1L",
+                "status": "transferred",
+                "detail": "Quantity 1 added to cart and removed from your wishlist."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "response_source": "R",
+        "version": "1",
+        "request_id": "63d19187-1805-423c-9b00-dce82fd57caf",
+        "sequence": 4,
+        "type": "content.blocks",
+        "blocks": [
+          {
+            "kind": "cart_summary",
+            "cart": {
+              "items": [
+                {
+                  "product_id": "696c9077-7729-4bbe-a7ae-93a39b10af95",
+                  "name": "Whole Milk 1L",
+                  "price": "1.75",
+                  "currency": "USD",
+                  "quantity": 1,
+                  "line_total": "1.75"
+                }
+              ],
+              "total_lines": 1,
+              "total_quantity": 1,
+              "subtotal": "1.75",
+              "discount_amount": "0",
+              "currency": "USD",
+              "fully_reserved": true
+            }
+          }
+        ]
+      },
+      {
+        "response_source": "R",
+        "version": "1",
+        "request_id": "63d19187-1805-423c-9b00-dce82fd57caf",
+        "sequence": 5,
+        "type": "done",
+        "saved": true
+      }
+    ],
+    "state": {
+      "wishlist": [],
+      "cart": {
+        "discount_amount": "0",
+        "discount_snapshot": [],
+        "coupon_code": null,
+        "coupon_error": null,
+        "id": "122aecb2-0954-488e-bfce-3b5fcc78ada5",
+        "customer_id": "8e86c9a9-867e-4368-85b2-220948cc6509",
+        "items": [
+          {
+            "product_id": "696c9077-7729-4bbe-a7ae-93a39b10af95",
+            "sku": "DEMO-GRO-WHITE-016",
+            "name": "Whole Milk 1L",
+            "unit": "pack",
+            "price": "1.75",
+            "currency": "USD",
+            "quantity": 1,
+            "reserved_quantity": 1,
+            "available": 188,
+            "expires_at": "2026-09-30T17:20:41.576135Z",
+            "line_total": "1.75"
+          }
+        ],
+        "subtotal": "1.75",
+        "currency": "USD",
+        "fully_reserved": true
+      }
+    }
+  },
+  {
+    "store": "grocery",
+    "input": {
+      "request_id": "63d19187-1805-423c-9b00-dce82fd57caf",
+      "conversation_id": "845ba0f1-6d60-479c-a0cd-1863511d6f4c",
+      "message": "Send Whole Milk 1L from my saved items to my basket"
+    },
+    "status": 200,
+    "text": "I couldn't move that wishlist item to your cart.",
+    "events": [
+      {
+        "version": "1",
+        "request_id": "63d19187-1805-423c-9b00-dce82fd57caf",
+        "sequence": 0,
+        "type": "progress",
+        "stage": "preparing"
+      },
+      {
+        "version": "1",
+        "request_id": "63d19187-1805-423c-9b00-dce82fd57caf",
+        "sequence": 1,
+        "type": "progress",
+        "stage": "catalog"
+      },
+      {
+        "response_source": "R",
+        "version": "1",
+        "request_id": "63d19187-1805-423c-9b00-dce82fd57caf",
+        "sequence": 2,
+        "type": "message.delta",
+        "text": "I couldn't move that wishlist item to your cart."
+      },
+      {
+        "response_source": "R",
+        "version": "1",
+        "request_id": "63d19187-1805-423c-9b00-dce82fd57caf",
+        "sequence": 3,
+        "type": "content.blocks",
+        "blocks": [
+          {
+            "kind": "wishlist_transfer",
+            "title": "Wishlist transfer",
+            "transfer_items": [
+              {
+                "name": "whole milk 1l",
+                "status": "not_transferred",
+                "detail": "No exact matching wishlist item was found."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "response_source": "R",
+        "version": "1",
+        "request_id": "63d19187-1805-423c-9b00-dce82fd57caf",
+        "sequence": 4,
+        "type": "done",
+        "saved": true
+      }
+    ],
+    "state": {
+      "wishlist": [],
+      "cart": {
+        "discount_amount": "0",
+        "discount_snapshot": [],
+        "coupon_code": null,
+        "coupon_error": null,
+        "id": "122aecb2-0954-488e-bfce-3b5fcc78ada5",
+        "customer_id": "8e86c9a9-867e-4368-85b2-220948cc6509",
+        "items": [
+          {
+            "product_id": "696c9077-7729-4bbe-a7ae-93a39b10af95",
+            "sku": "DEMO-GRO-WHITE-016",
+            "name": "Whole Milk 1L",
+            "unit": "pack",
+            "price": "1.75",
+            "currency": "USD",
+            "quantity": 1,
+            "reserved_quantity": 1,
+            "available": 188,
+            "expires_at": "2026-09-30T17:20:41.576135Z",
+            "line_total": "1.75"
+          }
+        ],
+        "subtotal": "1.75",
+        "currency": "USD",
+        "fully_reserved": true
+      }
+    }
+  },
+  {
+    "store": "grocery",
+    "input": {
+      "request_id": "c8e92fc9-395b-4090-b20b-a9eb6299d7bf",
+      "conversation_id": "e9abb897-300c-4166-8bbc-ad15773b3da3",
+      "message": "Save Whole Milk 1L from my cart to my favorites"
+    },
+    "status": 200,
+    "text": "Moved Whole Milk 1L to your wishlist.",
+    "events": [
+      {
+        "version": "1",
+        "request_id": "c8e92fc9-395b-4090-b20b-a9eb6299d7bf",
+        "sequence": 0,
+        "type": "progress",
+        "stage": "preparing"
+      },
+      {
+        "response_source": "R",
+        "version": "1",
+        "request_id": "c8e92fc9-395b-4090-b20b-a9eb6299d7bf",
+        "sequence": 1,
+        "type": "message.delta",
+        "text": "Moved Whole Milk 1L to your wishlist."
+      },
+      {
+        "response_source": "R",
+        "version": "1",
+        "request_id": "c8e92fc9-395b-4090-b20b-a9eb6299d7bf",
+        "sequence": 2,
+        "type": "content.blocks",
+        "blocks": [
+          {
+            "kind": "text",
+            "text": "Moved Whole Milk 1L to your wishlist."
+          },
+          {
+            "kind": "cart_summary",
+            "cart": {
+              "items": [],
+              "total_lines": 0,
+              "total_quantity": 0,
+              "subtotal": "0",
+              "discount_amount": "0",
+              "currency": "USD",
+              "fully_reserved": false
+            }
+          }
+        ]
+      },
+      {
+        "response_source": "R",
+        "version": "1",
+        "request_id": "c8e92fc9-395b-4090-b20b-a9eb6299d7bf",
+        "sequence": 3,
+        "type": "done",
+        "saved": true
+      }
+    ],
+    "state": {
+      "wishlist": [
+        "696c9077-7729-4bbe-a7ae-93a39b10af95"
+      ],
+      "cart": {
+        "discount_amount": "0",
+        "discount_snapshot": [],
+        "coupon_code": null,
+        "coupon_error": null,
+        "id": "122aecb2-0954-488e-bfce-3b5fcc78ada5",
+        "customer_id": "8e86c9a9-867e-4368-85b2-220948cc6509",
+        "items": [],
+        "subtotal": "0",
+        "currency": "USD",
+        "fully_reserved": false
+      }
+    }
+  },
+  {
+    "store": "grocery",
+    "input": {
+      "request_id": "b1e7959f-c514-4190-a9ed-15493c0584be",
+      "conversation_id": "ebf00b09-af49-42fd-a107-f91e0293ca97",
+      "message": "Clear my wishlist"
+    },
+    "status": 200,
+    "text": "Your wishlist is now empty. Your cart has not been changed.",
+    "events": [
+      {
+        "version": "1",
+        "request_id": "b1e7959f-c514-4190-a9ed-15493c0584be",
+        "sequence": 0,
+        "type": "progress",
+        "stage": "preparing"
+      },
+      {
+        "version": "1",
+        "request_id": "b1e7959f-c514-4190-a9ed-15493c0584be",
+        "sequence": 1,
+        "type": "progress",
+        "stage": "catalog"
+      },
+      {
+        "response_source": "R",
+        "version": "1",
+        "request_id": "b1e7959f-c514-4190-a9ed-15493c0584be",
+        "sequence": 2,
+        "type": "message.delta",
+        "text": "Your wishlist is now empty. Your cart has not been changed."
+      },
+      {
+        "response_source": "R",
+        "version": "1",
+        "request_id": "b1e7959f-c514-4190-a9ed-15493c0584be",
+        "sequence": 3,
+        "type": "done",
+        "saved": true
+      }
+    ],
+    "state": {
+      "wishlist": [],
+      "cart": {
+        "discount_amount": "0",
+        "discount_snapshot": [],
+        "coupon_code": null,
+        "coupon_error": null,
+        "id": "122aecb2-0954-488e-bfce-3b5fcc78ada5",
+        "customer_id": "8e86c9a9-867e-4368-85b2-220948cc6509",
+        "items": [],
+        "subtotal": "0",
+        "currency": "USD",
+        "fully_reserved": false
+      }
+    }
+  },
+  {
+    "store": "grocery",
+    "input": {
+      "request_id": "6c109f88-d042-4eba-9ab3-9ffb492fa9df",
+      "conversation_id": "88d3fb8a-5261-4412-8a2a-2951fd79512e",
+      "message": "Clear my wishlist"
+    },
+    "status": 200,
+    "text": "Your wishlist is empty.",
+    "events": [
+      {
+        "version": "1",
+        "request_id": "6c109f88-d042-4eba-9ab3-9ffb492fa9df",
+        "sequence": 0,
+        "type": "progress",
+        "stage": "preparing"
+      },
+      {
+        "version": "1",
+        "request_id": "6c109f88-d042-4eba-9ab3-9ffb492fa9df",
+        "sequence": 1,
+        "type": "progress",
+        "stage": "catalog"
+      },
+      {
+        "response_source": "R",
+        "version": "1",
+        "request_id": "6c109f88-d042-4eba-9ab3-9ffb492fa9df",
+        "sequence": 2,
+        "type": "message.delta",
+        "text": "Your wishlist is empty."
+      },
+      {
+        "response_source": "R",
+        "version": "1",
+        "request_id": "6c109f88-d042-4eba-9ab3-9ffb492fa9df",
+        "sequence": 3,
+        "type": "done",
+        "saved": true
+      }
+    ],
+    "state": {
+      "wishlist": [],
+      "cart": {
+        "discount_amount": "0",
+        "discount_snapshot": [],
+        "coupon_code": null,
+        "coupon_error": null,
+        "id": "122aecb2-0954-488e-bfce-3b5fcc78ada5",
+        "customer_id": "8e86c9a9-867e-4368-85b2-220948cc6509",
+        "items": [],
+        "subtotal": "0",
+        "currency": "USD",
+        "fully_reserved": false
+      }
+    }
+  },
+  {
+    "store": "grocery",
+    "input": {
+      "request_id": "4eafe831-9ff4-4139-9619-9ebed170a783",
+      "conversation_id": "bd8b2273-16a3-4cda-8462-18de1ebecb24",
+      "message": "Move something from wishlist to cart"
+    },
+    "status": 200,
+    "text": "Which wishlist item would you like to move to your cart?",
+    "events": [
+      {
+        "version": "1",
+        "request_id": "4eafe831-9ff4-4139-9619-9ebed170a783",
+        "sequence": 0,
+        "type": "progress",
+        "stage": "preparing"
+      },
+      {
+        "response_source": "R",
+        "version": "1",
+        "request_id": "4eafe831-9ff4-4139-9619-9ebed170a783",
+        "sequence": 1,
+        "type": "message.delta",
+        "clarification": {
+          "original_message": "Move something from wishlist to cart",
+          "question": "Which wishlist item would you like to move to your cart?"
+        },
+        "text": "Which wishlist item would you like to move to your cart?"
+      },
+      {
+        "response_source": "R",
+        "version": "1",
+        "request_id": "4eafe831-9ff4-4139-9619-9ebed170a783",
+        "sequence": 2,
+        "type": "done",
+        "saved": true
+      }
+    ],
+    "state": {
+      "wishlist": [],
+      "cart": {
+        "discount_amount": "0",
+        "discount_snapshot": [],
+        "coupon_code": null,
+        "coupon_error": null,
+        "id": "122aecb2-0954-488e-bfce-3b5fcc78ada5",
+        "customer_id": "8e86c9a9-867e-4368-85b2-220948cc6509",
+        "items": [],
+        "subtotal": "0",
+        "currency": "USD",
+        "fully_reserved": false
+      }
+    }
+  },
+  {
+    "store": "grocery",
+    "input": {
+      "request_id": "d53d5900-4e92-44d2-81a4-68bd240ea7c2",
+      "conversation_id": "3c76358f-8c09-44cf-b9dd-871aecfeb315",
+      "message": "Move my wishlist to my cart"
+    },
+    "status": 200,
+    "text": "Which wishlist item would you like to move to your cart?",
+    "events": [
+      {
+        "version": "1",
+        "request_id": "d53d5900-4e92-44d2-81a4-68bd240ea7c2",
+        "sequence": 0,
+        "type": "progress",
+        "stage": "preparing"
+      },
+      {
+        "response_source": "R",
+        "version": "1",
+        "request_id": "d53d5900-4e92-44d2-81a4-68bd240ea7c2",
+        "sequence": 1,
+        "type": "message.delta",
+        "clarification": {
+          "original_message": "Move my wishlist to my cart",
+          "question": "Which wishlist item would you like to move to your cart?"
+        },
+        "text": "Which wishlist item would you like to move to your cart?"
+      },
+      {
+        "response_source": "R",
+        "version": "1",
+        "request_id": "d53d5900-4e92-44d2-81a4-68bd240ea7c2",
+        "sequence": 2,
+        "type": "done",
+        "saved": true
+      }
+    ],
+    "state": {
+      "wishlist": [
+        "696c9077-7729-4bbe-a7ae-93a39b10af95"
+      ],
+      "cart": {
+        "discount_amount": "0",
+        "discount_snapshot": [],
+        "coupon_code": null,
+        "coupon_error": null,
+        "id": "122aecb2-0954-488e-bfce-3b5fcc78ada5",
+        "customer_id": "8e86c9a9-867e-4368-85b2-220948cc6509",
+        "items": [],
+        "subtotal": "0",
+        "currency": "USD",
+        "fully_reserved": false
+      }
+    }
+  },
+  {
+    "store": "grocery",
+    "input": {
+      "request_id": "c12e9c7e-297b-403c-8220-ca9aa1bd3a62",
+      "conversation_id": "3c76358f-8c09-44cf-b9dd-871aecfeb315",
+      "message": "all",
+      "clarification": {
+        "original_message": "Move my wishlist to my cart",
+        "question": "Which wishlist item would you like to move to your cart?"
+      }
+    },
+    "status": 200,
+    "text": "I'll move all 1 wishlist items, one of each.",
+    "events": [
+      {
+        "version": "1",
+        "request_id": "c12e9c7e-297b-403c-8220-ca9aa1bd3a62",
+        "sequence": 0,
+        "type": "progress",
+        "stage": "preparing"
+      },
+      {
+        "response_source": "R",
+        "version": "1",
+        "request_id": "c12e9c7e-297b-403c-8220-ca9aa1bd3a62",
+        "sequence": 1,
+        "type": "message.delta",
+        "text": "I'll move all 1 wishlist items, one of each."
+      },
+      {
+        "response_source": "R",
+        "version": "1",
+        "request_id": "c12e9c7e-297b-403c-8220-ca9aa1bd3a62",
+        "sequence": 2,
+        "type": "content.blocks",
+        "blocks": [
+          {
+            "kind": "wishlist_transfer",
+            "title": "Wishlist transfer",
+            "transfer_items": [
+              {
+                "name": "Whole Milk 1L",
+                "status": "transferred",
+                "detail": "Quantity 1 added to cart and removed from your wishlist."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "response_source": "R",
+        "version": "1",
+        "request_id": "c12e9c7e-297b-403c-8220-ca9aa1bd3a62",
+        "sequence": 3,
+        "type": "content.blocks",
+        "blocks": [
+          {
+            "kind": "cart_summary",
+            "cart": {
+              "items": [
+                {
+                  "product_id": "696c9077-7729-4bbe-a7ae-93a39b10af95",
+                  "name": "Whole Milk 1L",
+                  "price": "1.75",
+                  "currency": "USD",
+                  "quantity": 1,
+                  "line_total": "1.75"
+                }
+              ],
+              "total_lines": 1,
+              "total_quantity": 1,
+              "subtotal": "1.75",
+              "discount_amount": "0",
+              "currency": "USD",
+              "fully_reserved": true
+            }
+          }
+        ]
+      },
+      {
+        "response_source": "R",
+        "version": "1",
+        "request_id": "c12e9c7e-297b-403c-8220-ca9aa1bd3a62",
+        "sequence": 4,
+        "type": "done",
+        "saved": true
+      }
+    ],
+    "state": {
+      "wishlist": [],
+      "cart": {
+        "discount_amount": "0",
+        "discount_snapshot": [],
+        "coupon_code": null,
+        "coupon_error": null,
+        "id": "122aecb2-0954-488e-bfce-3b5fcc78ada5",
+        "customer_id": "8e86c9a9-867e-4368-85b2-220948cc6509",
+        "items": [
+          {
+            "product_id": "696c9077-7729-4bbe-a7ae-93a39b10af95",
+            "sku": "DEMO-GRO-WHITE-016",
+            "name": "Whole Milk 1L",
+            "unit": "pack",
+            "price": "1.75",
+            "currency": "USD",
+            "quantity": 1,
+            "reserved_quantity": 1,
+            "available": 188,
+            "expires_at": "2026-09-30T17:20:46.641461Z",
+            "line_total": "1.75"
+          }
+        ],
+        "subtotal": "1.75",
+        "currency": "USD",
+        "fully_reserved": true
+      }
+    }
+  },
+  {
+    "store": "jewelry",
+    "input": {
+      "request_id": "5e80e615-32b5-4ee3-8939-edb3984b9e0e",
+      "conversation_id": "986ac642-2f02-4440-ab00-0cf63b004888",
+      "message": "Save Silver Moon Necklace — 45cm for later"
+    },
+    "status": 200,
+    "text": "Saved Silver Moon Necklace — 45cm to your wishlist.",
+    "events": [
+      {
+        "version": "1",
+        "request_id": "5e80e615-32b5-4ee3-8939-edb3984b9e0e",
+        "sequence": 0,
+        "type": "progress",
+        "stage": "preparing"
+      },
+      {
+        "response_source": "R",
+        "version": "1",
+        "request_id": "5e80e615-32b5-4ee3-8939-edb3984b9e0e",
+        "sequence": 1,
+        "type": "message.delta",
+        "text": "Saved Silver Moon Necklace — 45cm to your wishlist."
+      },
+      {
+        "response_source": "R",
+        "version": "1",
+        "request_id": "5e80e615-32b5-4ee3-8939-edb3984b9e0e",
+        "sequence": 2,
+        "type": "content.blocks",
+        "blocks": [
+          {
+            "kind": "text",
+            "text": "Saved Silver Moon Necklace — 45cm to your wishlist."
+          },
+          {
+            "kind": "cart_summary",
+            "cart": {
+              "items": [],
+              "total_lines": 0,
+              "total_quantity": 0,
+              "subtotal": "0",
+              "discount_amount": "0",
+              "currency": "USD",
+              "fully_reserved": false
+            }
+          }
+        ]
+      },
+      {
+        "response_source": "R",
+        "version": "1",
+        "request_id": "5e80e615-32b5-4ee3-8939-edb3984b9e0e",
+        "sequence": 3,
+        "type": "done",
+        "saved": true
+      }
+    ],
+    "state": {
+      "wishlist": [
+        "ada2feaf-edc6-40b5-bae3-a27d3a411061"
+      ],
+      "cart": {
+        "discount_amount": "0",
+        "discount_snapshot": [],
+        "coupon_code": null,
+        "coupon_error": null,
+        "id": "6ee14559-503e-4f59-8a23-4b2a280e9a30",
+        "customer_id": "8e86c9a9-867e-4368-85b2-220948cc6509",
+        "items": [],
+        "subtotal": "0",
+        "currency": "USD",
+        "fully_reserved": false
+      }
+    }
+  },
+  {
+    "store": "jewelry",
+    "input": {
+      "request_id": "33175d90-0c3b-4d05-85d7-98386868d662",
+      "conversation_id": "dcead7a4-70ba-441e-b3b2-4e5281147631",
+      "message": "Show my saved items"
+    },
+    "status": 200,
+    "text": "You have 1 saved item in your wishlist. Here are up to three:",
+    "events": [
+      {
+        "version": "1",
+        "request_id": "33175d90-0c3b-4d05-85d7-98386868d662",
+        "sequence": 0,
+        "type": "progress",
+        "stage": "preparing"
+      },
+      {
+        "version": "1",
+        "request_id": "33175d90-0c3b-4d05-85d7-98386868d662",
+        "sequence": 1,
+        "type": "progress",
+        "stage": "catalog"
+      },
+      {
+        "response_source": "R",
+        "version": "1",
+        "request_id": "33175d90-0c3b-4d05-85d7-98386868d662",
+        "sequence": 2,
+        "type": "message.delta",
+        "text": "You have 1 saved item in your wishlist. Here are up to three:"
+      },
+      {
+        "response_source": "R",
+        "version": "1",
+        "request_id": "33175d90-0c3b-4d05-85d7-98386868d662",
+        "sequence": 3,
+        "type": "content.blocks",
+        "blocks": [
+          {
+            "kind": "product_list",
+            "title": "Your wishlist",
+            "products": [
+              {
+                "id": "ada2feaf-edc6-40b5-bae3-a27d3a411061",
+                "name": "Silver Moon Necklace — 45cm",
+                "image_id": "5ac5c027-8707-4e2a-b8fc-53eb751ce4b5",
+                "price": "69.00",
+                "currency": "USD",
+                "in_stock": true,
+                "route": "/products/ada2feaf-edc6-40b5-bae3-a27d3a411061",
+                "attributes": [
+                  {
+                    "name": "jewelry_color",
+                    "value": "[\"silver_tone\"]"
+                  },
+                  {
+                    "name": "collection",
+                    "value": "\"The everyday collection\""
+                  },
+                  {
+                    "name": "color",
+                    "value": "\"Silver\""
+                  },
+                  {
+                    "name": "jewelry_motif",
+                    "value": "[\"moon\"]"
+                  },
+                  {
+                    "name": "jewelry_design",
+                    "value": "[\"moon_pendant\"]"
+                  },
+                  {
+                    "name": "jewelry_length",
+                    "value": "\"45cm\""
+                  },
+                  {
+                    "name": "jewelry_style",
+                    "value": "[\"classic\"]"
+                  },
+                  {
+                    "name": "jewelry_type",
+                    "value": "[\"necklace\"]"
+                  },
+                  {
+                    "name": "material",
+                    "value": "\"Illustrative jewelry alloy\""
+                  },
+                  {
+                    "name": "metal",
+                    "value": "\"Silver\""
+                  },
+                  {
+                    "name": "stone",
+                    "value": "\"None\""
+                  },
+                  {
+                    "name": "jewelry_occasion",
+                    "value": "[\"evening\",\"anniversary\"]"
+                  }
+                ],
+                "reasons": [],
+                "unmet": []
+              }
+            ],
+            "sources": [
+              {
+                "kind": "catalog",
+                "product_id": "ada2feaf-edc6-40b5-bae3-a27d3a411061",
+                "route": "/products/ada2feaf-edc6-40b5-bae3-a27d3a411061"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "response_source": "R",
+        "version": "1",
+        "request_id": "33175d90-0c3b-4d05-85d7-98386868d662",
+        "sequence": 4,
+        "type": "done",
+        "saved": true
+      }
+    ],
+    "state": {
+      "wishlist": [
+        "ada2feaf-edc6-40b5-bae3-a27d3a411061"
+      ],
+      "cart": {
+        "discount_amount": "0",
+        "discount_snapshot": [],
+        "coupon_code": null,
+        "coupon_error": null,
+        "id": "6ee14559-503e-4f59-8a23-4b2a280e9a30",
+        "customer_id": "8e86c9a9-867e-4368-85b2-220948cc6509",
+        "items": [],
+        "subtotal": "0",
+        "currency": "USD",
+        "fully_reserved": false
+      }
+    }
+  },
+  {
+    "store": "jewelry",
+    "input": {
+      "request_id": "75943706-f19a-4b05-98dc-5dae680842b1",
+      "conversation_id": "be63172e-a06b-44f0-a7c8-5acac34d1225",
+      "message": "Do not remove Silver Moon Necklace — 45cm from my wishlist"
+    },
+    "status": 200,
+    "text": "Please restate the full request so I can understand what you need. You can ask about products, your cart, an order, or a problem with the store.",
+    "events": [
+      {
+        "version": "1",
+        "request_id": "75943706-f19a-4b05-98dc-5dae680842b1",
+        "sequence": 0,
+        "type": "progress",
+        "stage": "preparing"
+      },
+      {
+        "response_source": "L",
+        "version": "1",
+        "request_id": "75943706-f19a-4b05-98dc-5dae680842b1",
+        "sequence": 1,
+        "type": "message.delta",
+        "text": "Please restate the full request so I can understand what you need. You can ask about products, your cart, an order, or a problem with the store."
+      },
+      {
+        "response_source": "L",
+        "version": "1",
+        "request_id": "75943706-f19a-4b05-98dc-5dae680842b1",
+        "sequence": 2,
+        "type": "done",
+        "saved": true
+      }
+    ],
+    "state": {
+      "wishlist": [
+        "ada2feaf-edc6-40b5-bae3-a27d3a411061"
+      ],
+      "cart": {
+        "discount_amount": "0",
+        "discount_snapshot": [],
+        "coupon_code": null,
+        "coupon_error": null,
+        "id": "6ee14559-503e-4f59-8a23-4b2a280e9a30",
+        "customer_id": "8e86c9a9-867e-4368-85b2-220948cc6509",
+        "items": [],
+        "subtotal": "0",
+        "currency": "USD",
+        "fully_reserved": false
+      }
+    }
+  },
+  {
+    "store": "jewelry",
+    "input": {
+      "request_id": "6575e6d2-3daf-4544-8728-de8fe8703cdb",
+      "conversation_id": "1fe80a07-9e2a-4d42-9e50-4b6aae012a35",
+      "message": "Copy Silver Moon Necklace — 45cm from wishlist to cart"
+    },
+    "status": 200,
+    "text": "Copying wishlist items while keeping them saved is not supported in chat yet. Open your wishlist and add the products to your cart; they will remain saved.",
+    "events": [
+      {
+        "version": "1",
+        "request_id": "6575e6d2-3daf-4544-8728-de8fe8703cdb",
+        "sequence": 0,
+        "type": "progress",
+        "stage": "preparing"
+      },
+      {
+        "response_source": "R",
+        "version": "1",
+        "request_id": "6575e6d2-3daf-4544-8728-de8fe8703cdb",
+        "sequence": 1,
+        "type": "message.delta",
+        "text": "Copying wishlist items while keeping them saved is not supported in chat yet. Open your wishlist and add the products to your cart; they will remain saved."
+      },
+      {
+        "response_source": "R",
+        "version": "1",
+        "request_id": "6575e6d2-3daf-4544-8728-de8fe8703cdb",
+        "sequence": 2,
+        "type": "done",
+        "saved": true
+      }
+    ],
+    "state": {
+      "wishlist": [
+        "ada2feaf-edc6-40b5-bae3-a27d3a411061"
+      ],
+      "cart": {
+        "discount_amount": "0",
+        "discount_snapshot": [],
+        "coupon_code": null,
+        "coupon_error": null,
+        "id": "6ee14559-503e-4f59-8a23-4b2a280e9a30",
+        "customer_id": "8e86c9a9-867e-4368-85b2-220948cc6509",
+        "items": [],
+        "subtotal": "0",
+        "currency": "USD",
+        "fully_reserved": false
+      }
+    }
+  },
+  {
+    "store": "jewelry",
+    "input": {
+      "request_id": "b9fe09a1-0933-4447-8d11-7751ba435d7f",
+      "conversation_id": "62511f22-c00e-48c0-814d-ed645db23131",
+      "message": "Unsave Silver Moon Necklace — 45cm"
+    },
+    "status": 200,
+    "text": "Removed Silver Moon Necklace — 45cm from your wishlist.",
+    "events": [
+      {
+        "version": "1",
+        "request_id": "b9fe09a1-0933-4447-8d11-7751ba435d7f",
+        "sequence": 0,
+        "type": "progress",
+        "stage": "preparing"
+      },
+      {
+        "version": "1",
+        "request_id": "b9fe09a1-0933-4447-8d11-7751ba435d7f",
+        "sequence": 1,
+        "type": "progress",
+        "stage": "catalog"
+      },
+      {
+        "response_source": "R",
+        "version": "1",
+        "request_id": "b9fe09a1-0933-4447-8d11-7751ba435d7f",
+        "sequence": 2,
+        "type": "message.delta",
+        "text": "Removed Silver Moon Necklace — 45cm from your wishlist."
+      },
+      {
+        "response_source": "R",
+        "version": "1",
+        "request_id": "b9fe09a1-0933-4447-8d11-7751ba435d7f",
+        "sequence": 3,
+        "type": "done",
+        "saved": true
+      }
+    ],
+    "state": {
+      "wishlist": [],
+      "cart": {
+        "discount_amount": "0",
+        "discount_snapshot": [],
+        "coupon_code": null,
+        "coupon_error": null,
+        "id": "6ee14559-503e-4f59-8a23-4b2a280e9a30",
+        "customer_id": "8e86c9a9-867e-4368-85b2-220948cc6509",
+        "items": [],
+        "subtotal": "0",
+        "currency": "USD",
+        "fully_reserved": false
+      }
+    }
+  },
+  {
+    "store": "jewelry",
+    "input": {
+      "request_id": "eb0b27cb-7d34-45fe-930d-fbec5264ab24",
+      "conversation_id": "4585d3c3-b6a4-40da-97fb-ab1225d41eb1",
+      "message": "Send Silver Moon Necklace — 45cm from my saved items to my basket"
+    },
+    "status": 200,
+    "text": "Transferred 1 Silver Moon Necklace — 45cm to your cart.",
+    "events": [
+      {
+        "version": "1",
+        "request_id": "eb0b27cb-7d34-45fe-930d-fbec5264ab24",
+        "sequence": 0,
+        "type": "progress",
+        "stage": "preparing"
+      },
+      {
+        "version": "1",
+        "request_id": "eb0b27cb-7d34-45fe-930d-fbec5264ab24",
+        "sequence": 1,
+        "type": "progress",
+        "stage": "catalog"
+      },
+      {
+        "response_source": "R",
+        "version": "1",
+        "request_id": "eb0b27cb-7d34-45fe-930d-fbec5264ab24",
+        "sequence": 2,
+        "type": "message.delta",
+        "text": "Transferred 1 Silver Moon Necklace — 45cm to your cart."
+      },
+      {
+        "response_source": "R",
+        "version": "1",
+        "request_id": "eb0b27cb-7d34-45fe-930d-fbec5264ab24",
+        "sequence": 3,
+        "type": "content.blocks",
+        "blocks": [
+          {
+            "kind": "wishlist_transfer",
+            "title": "Wishlist transfer",
+            "transfer_items": [
+              {
+                "name": "Silver Moon Necklace — 45cm",
+                "status": "transferred",
+                "detail": "Quantity 1 added to cart and removed from your wishlist."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "response_source": "R",
+        "version": "1",
+        "request_id": "eb0b27cb-7d34-45fe-930d-fbec5264ab24",
+        "sequence": 4,
+        "type": "content.blocks",
+        "blocks": [
+          {
+            "kind": "cart_summary",
+            "cart": {
+              "items": [
+                {
+                  "product_id": "ada2feaf-edc6-40b5-bae3-a27d3a411061",
+                  "name": "Silver Moon Necklace — 45cm",
+                  "price": "69.00",
+                  "currency": "USD",
+                  "quantity": 1,
+                  "line_total": "69.00"
+                }
+              ],
+              "total_lines": 1,
+              "total_quantity": 1,
+              "subtotal": "69.00",
+              "discount_amount": "0",
+              "currency": "USD",
+              "fully_reserved": true
+            }
+          }
+        ]
+      },
+      {
+        "response_source": "R",
+        "version": "1",
+        "request_id": "eb0b27cb-7d34-45fe-930d-fbec5264ab24",
+        "sequence": 5,
+        "type": "done",
+        "saved": true
+      }
+    ],
+    "state": {
+      "wishlist": [],
+      "cart": {
+        "discount_amount": "0",
+        "discount_snapshot": [],
+        "coupon_code": null,
+        "coupon_error": null,
+        "id": "6ee14559-503e-4f59-8a23-4b2a280e9a30",
+        "customer_id": "8e86c9a9-867e-4368-85b2-220948cc6509",
+        "items": [
+          {
+            "product_id": "ada2feaf-edc6-40b5-bae3-a27d3a411061",
+            "sku": "DEMO-JWL-50-020",
+            "name": "Silver Moon Necklace — 45cm",
+            "unit": "each",
+            "price": "69.00",
+            "currency": "USD",
+            "quantity": 1,
+            "reserved_quantity": 1,
+            "available": 32,
+            "expires_at": "2026-09-30T18:01:57.894607Z",
+            "line_total": "69.00"
+          }
+        ],
+        "subtotal": "69.00",
+        "currency": "USD",
+        "fully_reserved": true
+      }
+    }
+  },
+  {
+    "store": "jewelry",
+    "input": {
+      "request_id": "eb0b27cb-7d34-45fe-930d-fbec5264ab24",
+      "conversation_id": "4585d3c3-b6a4-40da-97fb-ab1225d41eb1",
+      "message": "Send Silver Moon Necklace — 45cm from my saved items to my basket"
+    },
+    "status": 200,
+    "text": "I couldn't move that wishlist item to your cart.",
+    "events": [
+      {
+        "version": "1",
+        "request_id": "eb0b27cb-7d34-45fe-930d-fbec5264ab24",
+        "sequence": 0,
+        "type": "progress",
+        "stage": "preparing"
+      },
+      {
+        "version": "1",
+        "request_id": "eb0b27cb-7d34-45fe-930d-fbec5264ab24",
+        "sequence": 1,
+        "type": "progress",
+        "stage": "catalog"
+      },
+      {
+        "response_source": "R",
+        "version": "1",
+        "request_id": "eb0b27cb-7d34-45fe-930d-fbec5264ab24",
+        "sequence": 2,
+        "type": "message.delta",
+        "text": "I couldn't move that wishlist item to your cart."
+      },
+      {
+        "response_source": "R",
+        "version": "1",
+        "request_id": "eb0b27cb-7d34-45fe-930d-fbec5264ab24",
+        "sequence": 3,
+        "type": "content.blocks",
+        "blocks": [
+          {
+            "kind": "wishlist_transfer",
+            "title": "Wishlist transfer",
+            "transfer_items": [
+              {
+                "name": "silver moon necklace — 45cm",
+                "status": "not_transferred",
+                "detail": "No exact matching wishlist item was found."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "response_source": "R",
+        "version": "1",
+        "request_id": "eb0b27cb-7d34-45fe-930d-fbec5264ab24",
+        "sequence": 4,
+        "type": "done",
+        "saved": true
+      }
+    ],
+    "state": {
+      "wishlist": [],
+      "cart": {
+        "discount_amount": "0",
+        "discount_snapshot": [],
+        "coupon_code": null,
+        "coupon_error": null,
+        "id": "6ee14559-503e-4f59-8a23-4b2a280e9a30",
+        "customer_id": "8e86c9a9-867e-4368-85b2-220948cc6509",
+        "items": [
+          {
+            "product_id": "ada2feaf-edc6-40b5-bae3-a27d3a411061",
+            "sku": "DEMO-JWL-50-020",
+            "name": "Silver Moon Necklace — 45cm",
+            "unit": "each",
+            "price": "69.00",
+            "currency": "USD",
+            "quantity": 1,
+            "reserved_quantity": 1,
+            "available": 32,
+            "expires_at": "2026-09-30T18:01:57.894607Z",
+            "line_total": "69.00"
+          }
+        ],
+        "subtotal": "69.00",
+        "currency": "USD",
+        "fully_reserved": true
+      }
+    }
+  },
+  {
+    "store": "jewelry",
+    "input": {
+      "request_id": "405b2658-bb1d-46b2-8a0c-2df486e87d98",
+      "conversation_id": "1ebffe99-75a9-4353-b83d-ed0edfd298a7",
+      "message": "Save Silver Moon Necklace — 45cm from my cart to my favorites"
+    },
+    "status": 200,
+    "text": "Moved Silver Moon Necklace — 45cm to your wishlist.",
+    "events": [
+      {
+        "version": "1",
+        "request_id": "405b2658-bb1d-46b2-8a0c-2df486e87d98",
+        "sequence": 0,
+        "type": "progress",
+        "stage": "preparing"
+      },
+      {
+        "response_source": "R",
+        "version": "1",
+        "request_id": "405b2658-bb1d-46b2-8a0c-2df486e87d98",
+        "sequence": 1,
+        "type": "message.delta",
+        "text": "Moved Silver Moon Necklace — 45cm to your wishlist."
+      },
+      {
+        "response_source": "R",
+        "version": "1",
+        "request_id": "405b2658-bb1d-46b2-8a0c-2df486e87d98",
+        "sequence": 2,
+        "type": "content.blocks",
+        "blocks": [
+          {
+            "kind": "text",
+            "text": "Moved Silver Moon Necklace — 45cm to your wishlist."
+          },
+          {
+            "kind": "cart_summary",
+            "cart": {
+              "items": [],
+              "total_lines": 0,
+              "total_quantity": 0,
+              "subtotal": "0",
+              "discount_amount": "0",
+              "currency": "USD",
+              "fully_reserved": false
+            }
+          }
+        ]
+      },
+      {
+        "response_source": "R",
+        "version": "1",
+        "request_id": "405b2658-bb1d-46b2-8a0c-2df486e87d98",
+        "sequence": 3,
+        "type": "done",
+        "saved": true
+      }
+    ],
+    "state": {
+      "wishlist": [
+        "ada2feaf-edc6-40b5-bae3-a27d3a411061"
+      ],
+      "cart": {
+        "discount_amount": "0",
+        "discount_snapshot": [],
+        "coupon_code": null,
+        "coupon_error": null,
+        "id": "6ee14559-503e-4f59-8a23-4b2a280e9a30",
+        "customer_id": "8e86c9a9-867e-4368-85b2-220948cc6509",
+        "items": [],
+        "subtotal": "0",
+        "currency": "USD",
+        "fully_reserved": false
+      }
+    }
+  },
+  {
+    "store": "jewelry",
+    "input": {
+      "request_id": "6ceda355-7b33-42a7-9507-29e2a26a6186",
+      "conversation_id": "c2b961a8-707e-4c36-a15b-05beb7b70f69",
+      "message": "Clear my wishlist"
+    },
+    "status": 200,
+    "text": "Your wishlist is now empty. Your cart has not been changed.",
+    "events": [
+      {
+        "version": "1",
+        "request_id": "6ceda355-7b33-42a7-9507-29e2a26a6186",
+        "sequence": 0,
+        "type": "progress",
+        "stage": "preparing"
+      },
+      {
+        "version": "1",
+        "request_id": "6ceda355-7b33-42a7-9507-29e2a26a6186",
+        "sequence": 1,
+        "type": "progress",
+        "stage": "catalog"
+      },
+      {
+        "response_source": "R",
+        "version": "1",
+        "request_id": "6ceda355-7b33-42a7-9507-29e2a26a6186",
+        "sequence": 2,
+        "type": "message.delta",
+        "text": "Your wishlist is now empty. Your cart has not been changed."
+      },
+      {
+        "response_source": "R",
+        "version": "1",
+        "request_id": "6ceda355-7b33-42a7-9507-29e2a26a6186",
+        "sequence": 3,
+        "type": "done",
+        "saved": true
+      }
+    ],
+    "state": {
+      "wishlist": [],
+      "cart": {
+        "discount_amount": "0",
+        "discount_snapshot": [],
+        "coupon_code": null,
+        "coupon_error": null,
+        "id": "6ee14559-503e-4f59-8a23-4b2a280e9a30",
+        "customer_id": "8e86c9a9-867e-4368-85b2-220948cc6509",
+        "items": [],
+        "subtotal": "0",
+        "currency": "USD",
+        "fully_reserved": false
+      }
+    }
+  },
+  {
+    "store": "jewelry",
+    "input": {
+      "request_id": "d50df7e4-da8e-46a5-a155-641672156e80",
+      "conversation_id": "8009a578-9a42-4db2-8ffa-3e9ef893ded1",
+      "message": "Clear my wishlist"
+    },
+    "status": 200,
+    "text": "Your wishlist is empty.",
+    "events": [
+      {
+        "version": "1",
+        "request_id": "d50df7e4-da8e-46a5-a155-641672156e80",
+        "sequence": 0,
+        "type": "progress",
+        "stage": "preparing"
+      },
+      {
+        "version": "1",
+        "request_id": "d50df7e4-da8e-46a5-a155-641672156e80",
+        "sequence": 1,
+        "type": "progress",
+        "stage": "catalog"
+      },
+      {
+        "response_source": "R",
+        "version": "1",
+        "request_id": "d50df7e4-da8e-46a5-a155-641672156e80",
+        "sequence": 2,
+        "type": "message.delta",
+        "text": "Your wishlist is empty."
+      },
+      {
+        "response_source": "R",
+        "version": "1",
+        "request_id": "d50df7e4-da8e-46a5-a155-641672156e80",
+        "sequence": 3,
+        "type": "done",
+        "saved": true
+      }
+    ],
+    "state": {
+      "wishlist": [],
+      "cart": {
+        "discount_amount": "0",
+        "discount_snapshot": [],
+        "coupon_code": null,
+        "coupon_error": null,
+        "id": "6ee14559-503e-4f59-8a23-4b2a280e9a30",
+        "customer_id": "8e86c9a9-867e-4368-85b2-220948cc6509",
+        "items": [],
+        "subtotal": "0",
+        "currency": "USD",
+        "fully_reserved": false
+      }
+    }
+  },
+  {
+    "store": "jewelry",
+    "input": {
+      "request_id": "f6fa8ec1-09fe-46d6-9e5b-2115d9a21807",
+      "conversation_id": "8674018c-9af9-4dc3-8ed7-20e79606fac3",
+      "message": "Move something from wishlist to cart"
+    },
+    "status": 200,
+    "text": "Which wishlist item would you like to move to your cart?",
+    "events": [
+      {
+        "version": "1",
+        "request_id": "f6fa8ec1-09fe-46d6-9e5b-2115d9a21807",
+        "sequence": 0,
+        "type": "progress",
+        "stage": "preparing"
+      },
+      {
+        "response_source": "R",
+        "version": "1",
+        "request_id": "f6fa8ec1-09fe-46d6-9e5b-2115d9a21807",
+        "sequence": 1,
+        "type": "message.delta",
+        "clarification": {
+          "original_message": "Move something from wishlist to cart",
+          "question": "Which wishlist item would you like to move to your cart?"
+        },
+        "text": "Which wishlist item would you like to move to your cart?"
+      },
+      {
+        "response_source": "R",
+        "version": "1",
+        "request_id": "f6fa8ec1-09fe-46d6-9e5b-2115d9a21807",
+        "sequence": 2,
+        "type": "done",
+        "saved": true
+      }
+    ],
+    "state": {
+      "wishlist": [],
+      "cart": {
+        "discount_amount": "0",
+        "discount_snapshot": [],
+        "coupon_code": null,
+        "coupon_error": null,
+        "id": "6ee14559-503e-4f59-8a23-4b2a280e9a30",
+        "customer_id": "8e86c9a9-867e-4368-85b2-220948cc6509",
+        "items": [],
+        "subtotal": "0",
+        "currency": "USD",
+        "fully_reserved": false
+      }
+    }
+  },
+  {
+    "store": "jewelry",
+    "input": {
+      "request_id": "9a50a86d-69e1-4dd5-b0f8-60b5349398d9",
+      "conversation_id": "f31ab887-a915-4311-9d2d-8b6d48d16f5a",
+      "message": "Move my wishlist to my cart"
+    },
+    "status": 200,
+    "text": "Which wishlist item would you like to move to your cart?",
+    "events": [
+      {
+        "version": "1",
+        "request_id": "9a50a86d-69e1-4dd5-b0f8-60b5349398d9",
+        "sequence": 0,
+        "type": "progress",
+        "stage": "preparing"
+      },
+      {
+        "response_source": "R",
+        "version": "1",
+        "request_id": "9a50a86d-69e1-4dd5-b0f8-60b5349398d9",
+        "sequence": 1,
+        "type": "message.delta",
+        "clarification": {
+          "original_message": "Move my wishlist to my cart",
+          "question": "Which wishlist item would you like to move to your cart?"
+        },
+        "text": "Which wishlist item would you like to move to your cart?"
+      },
+      {
+        "response_source": "R",
+        "version": "1",
+        "request_id": "9a50a86d-69e1-4dd5-b0f8-60b5349398d9",
+        "sequence": 2,
+        "type": "done",
+        "saved": true
+      }
+    ],
+    "state": {
+      "wishlist": [
+        "ada2feaf-edc6-40b5-bae3-a27d3a411061"
+      ],
+      "cart": {
+        "discount_amount": "0",
+        "discount_snapshot": [],
+        "coupon_code": null,
+        "coupon_error": null,
+        "id": "6ee14559-503e-4f59-8a23-4b2a280e9a30",
+        "customer_id": "8e86c9a9-867e-4368-85b2-220948cc6509",
+        "items": [],
+        "subtotal": "0",
+        "currency": "USD",
+        "fully_reserved": false
+      }
+    }
+  },
+  {
+    "store": "jewelry",
+    "input": {
+      "request_id": "ca367962-20f9-4005-b666-623af1269e24",
+      "conversation_id": "f31ab887-a915-4311-9d2d-8b6d48d16f5a",
+      "message": "all",
+      "clarification": {
+        "original_message": "Move my wishlist to my cart",
+        "question": "Which wishlist item would you like to move to your cart?"
+      }
+    },
+    "status": 200,
+    "text": "I'll move all 1 wishlist items, one of each.",
+    "events": [
+      {
+        "version": "1",
+        "request_id": "ca367962-20f9-4005-b666-623af1269e24",
+        "sequence": 0,
+        "type": "progress",
+        "stage": "preparing"
+      },
+      {
+        "response_source": "R",
+        "version": "1",
+        "request_id": "ca367962-20f9-4005-b666-623af1269e24",
+        "sequence": 1,
+        "type": "message.delta",
+        "text": "I'll move all 1 wishlist items, one of each."
+      },
+      {
+        "response_source": "R",
+        "version": "1",
+        "request_id": "ca367962-20f9-4005-b666-623af1269e24",
+        "sequence": 2,
+        "type": "content.blocks",
+        "blocks": [
+          {
+            "kind": "wishlist_transfer",
+            "title": "Wishlist transfer",
+            "transfer_items": [
+              {
+                "name": "Silver Moon Necklace — 45cm",
+                "status": "transferred",
+                "detail": "Quantity 1 added to cart and removed from your wishlist."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "response_source": "R",
+        "version": "1",
+        "request_id": "ca367962-20f9-4005-b666-623af1269e24",
+        "sequence": 3,
+        "type": "content.blocks",
+        "blocks": [
+          {
+            "kind": "cart_summary",
+            "cart": {
+              "items": [
+                {
+                  "product_id": "ada2feaf-edc6-40b5-bae3-a27d3a411061",
+                  "name": "Silver Moon Necklace — 45cm",
+                  "price": "69.00",
+                  "currency": "USD",
+                  "quantity": 1,
+                  "line_total": "69.00"
+                }
+              ],
+              "total_lines": 1,
+              "total_quantity": 1,
+              "subtotal": "69.00",
+              "discount_amount": "0",
+              "currency": "USD",
+              "fully_reserved": true
+            }
+          }
+        ]
+      },
+      {
+        "response_source": "R",
+        "version": "1",
+        "request_id": "ca367962-20f9-4005-b666-623af1269e24",
+        "sequence": 4,
+        "type": "done",
+        "saved": true
+      }
+    ],
+    "state": {
+      "wishlist": [],
+      "cart": {
+        "discount_amount": "0",
+        "discount_snapshot": [],
+        "coupon_code": null,
+        "coupon_error": null,
+        "id": "6ee14559-503e-4f59-8a23-4b2a280e9a30",
+        "customer_id": "8e86c9a9-867e-4368-85b2-220948cc6509",
+        "items": [
+          {
+            "product_id": "ada2feaf-edc6-40b5-bae3-a27d3a411061",
+            "sku": "DEMO-JWL-50-020",
+            "name": "Silver Moon Necklace — 45cm",
+            "unit": "each",
+            "price": "69.00",
+            "currency": "USD",
+            "quantity": 1,
+            "reserved_quantity": 1,
+            "available": 32,
+            "expires_at": "2026-09-30T18:02:03.122161Z",
+            "line_total": "69.00"
+          }
+        ],
+        "subtotal": "69.00",
+        "currency": "USD",
+        "fully_reserved": true
+      }
+    }
+  }
+]

@@ -1,0 +1,25 @@
+{
+  "verdict": "not_ready",
+  "head": "4c4f39215bd8b3d9d1ad04bf68fe176ed2e4b064",
+  "checks": {
+    "preflight": "pass",
+    "architecture": "pass",
+    "migration_source": "pass; no applied checksums verified",
+    "capabilities": "pass",
+    "storefront_typecheck": "pass",
+    "admin_typecheck": "pass",
+    "website_typecheck": "pass",
+    "python_lint": "14 errors",
+    "python_format": "95 files",
+    "python_types": "2 errors",
+    "rust_format": "31 files",
+    "frontend_lint": "59 errors, 5 warnings",
+    "frontend_unit": "2073 passed, 7 failed",
+    "documentation": "48 missing targets"
+  },
+  "live_deployed_configuration": "not verified",
+  "changes_made": [
+    "Ignore root tmp directory; no feature flag or runtime changes"
+  ],
+  "scope": "Working-checkout audit, concurrent edits possible; not an immutable committed candidate"
+}

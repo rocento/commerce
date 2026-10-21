@@ -1,0 +1,12 @@
+{
+  "date": "2026-09-22",
+  "scope": "read-only recorded-evidence integrity audit; no tests rerun and no live deployment inspected",
+  "recorded_revision": "4b3e047",
+  "recorded_files": 60,
+  "committed_mismatches": [],
+  "working_tree_drift": [
+    "backend/Cargo.lock"
+  ],
+  "context_dependency_drift": [],
+  "status": "Verified"
+}

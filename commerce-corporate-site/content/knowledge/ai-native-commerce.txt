@@ -1,0 +1,60 @@
+---
+{
+  "title": "What Is AI-Native Commerce?",
+  "summary": "Why intelligent commerce begins with a connected architecture, rather than an added interface.",
+  "author": "Rocento editorial",
+  "date": "2026-09-15",
+  "category": "Architecture",
+  "tags": [
+    "AI-native commerce",
+    "Platform design"
+  ]
+}
+---
+## Start with the system
+
+AI-native commerce is an architectural approach: transactions, behavioral signals, analytics and AI capabilities are designed to work together from the beginning. For Rocento, the starting question is not where to place a chatbot. It is what an intelligent system needs to know, and what it should be allowed to do.
+
+A commerce platform holds authoritative facts: a price, an available quantity, an order state. It also observes a journey: a search, a comparison, a cart change. These are related, but they are not interchangeable. A useful architecture preserves that distinction while making the relationship available to approved applications.
+
+## From commerce to context
+
+Consider a customer searching for a gift. A transaction records what they eventually buy. Earlier interactions may express a price constraint, a preferred material or uncertainty about delivery. Context can help an assistant ask a useful follow-up question instead of guessing.
+
+```text
+Commerce → Behavior → Context → Intelligence → Action
+    ↑                                          │
+    └──── Authoritative application rules ──────┘
+```
+
+The diagram describes a conceptual flow, not an autonomous production loop. An intelligent response must still respect current inventory, pricing, permissions and the customer's stated constraints.
+
+## Architecture before interface
+
+Three boundaries matter:
+
+- **Operational truth:** commerce APIs remain responsible for current facts and transactional validation.
+- **Analytical context:** historical events and reports help explain activity, but can be delayed or incomplete.
+- **Controlled assistance:** an agent receives scoped capabilities, rather than general access to the underlying database.
+
+Keeping those boundaries explicit makes failures easier to understand. If a product is unavailable, a plausible answer from a model does not make it available. If a customer has not stated their budget, a behavioral signal is not permission to invent one.
+
+## What Rocento implements today
+
+Rocento combines a commerce foundation, configurable storefronts, operational reporting and a scoped assistant preview. The documented assistant uses approved knowledge retrieval and read-only commerce tools. Provider configuration and answer quality require evaluation for each deployment.
+
+Forecasting, conversion prediction and wider automation are development directions. They are not implied by the presence of an AI interface, and this architectural description makes no claims about model accuracy or commercial performance.
+
+## A foundation for what comes next
+
+An architecture can create room for better models without promising their results. Future intelligence work still needs suitable data, evaluation, operational limits and a clear account of who can authorize an action.
+
+That is the practical meaning of AI-native at Rocento: connect the foundations, preserve the boundaries, and grow capabilities deliberately.
+
+## References and further reading
+
+- [Explore the Rocento platform](/platform/)
+- [From Commerce Data to Commerce Context](/knowledge/commerce-context/)
+- [Agentic Commerce](/knowledge/agentic-commerce/)
+
+This essay describes Rocento's architectural philosophy. It is not an empirical research study.

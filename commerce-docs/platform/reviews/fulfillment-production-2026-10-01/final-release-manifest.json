@@ -1,0 +1,70 @@
+{
+  "note": "Preserves concurrent navigation labels and Guide addition; all fulfillment fixes retained. Original manifest retained separately.",
+  "files": {
+    "frontend/apps/admin/src/main.tsx": {
+      "before": "f74bbd25e20fad3dd40dbbf223fae619f74818888457800be28a79d9c9f13988",
+      "after": "f2767e7c43bd305288448021643f959848fdad9cc113cac775dc4b2b734c39d0"
+    },
+    "frontend/apps/admin/src/style.css": {
+      "before": "5b5a2167b98902de14decdb940e5386e7088ec8f803a9face0b5da84c793611e",
+      "after": "9bb5a794157dc76ea303a1d2d1e011ba1052cc123d498b8677b9e3ba8df68ac2"
+    },
+    "frontend/apps/admin/src/capacity.tsx": {
+      "before": "b0edd1a98930b4ffc39bab4133b5eb92f2a3ba8146aab6f6f07b02594460a1ef",
+      "after": "6e8e8e48829855427311af945c6042f19ed5a507579c2ac1389ed499af1b88c9"
+    },
+    "frontend/apps/admin/src/capacity-validation.ts": {
+      "before": null,
+      "after": "f5870be19bf8af34b9b2abeae1119673d9c3ec070f4a5c5789dc47cfb1136e16"
+    },
+    "frontend/apps/admin/src/capacity-validation.test.ts": {
+      "before": null,
+      "after": "88ec364d6078952967365adb1d3271cf4321a97f24a64ddc2b7dcac0f0536c17"
+    },
+    "frontend/apps/admin/src/unsaved-changes.ts": {
+      "before": null,
+      "after": "34d0c63648c084a70a8f7d4edda701f7ddf71028780ae27ea6fc9900f8190e1d"
+    },
+    "frontend/apps/admin/src/fulfillment-settings.tsx": {
+      "before": "0a5c2a86a4d9d73677efa375a22a98f48402364ede973c0047d43596fb64229c",
+      "after": "1c1cb0088c32b81556eca4b4d1628db89810c0aec79d105aece4c8350ef4ef7b"
+    },
+    "frontend/apps/admin/src/delivery-areas.tsx": {
+      "before": "a51358a4c92d98012be7115a5eabaf3c7800cb8cef173f8ad9deef72e461752c",
+      "after": "7f153ea321ddbbe11364875a9fc1db6beb897fd2f7fec127cb04b1a97c35c293"
+    },
+    "frontend/apps/admin/src/msi.tsx": {
+      "before": "4e67e82ccef9b088fe3eaaf965985f5d7aff7cf60c182dc58fc4284bda35f7ef",
+      "after": "4c6b0efbda7ae3e9a6e84bb0d9448a309c42bfc612b65866dc929b4ca239ff35"
+    },
+    "frontend/apps/admin/src/replenishment.tsx": {
+      "before": "93b4df426abc7c97c732de2633ce9edbce2add55e713210f1b5a51d779cd6def",
+      "after": "79d59a6d9d56bb0e30c5ebf65c019c22b614b6d9f2ffd2aab4586f6b0e557bcb"
+    },
+    "backend/crates/api-gateway/src/capacity.rs": {
+      "before": "a8c6d6228eeb6ac1deea12d9ea93b8959fb8a712850854a0f404be4676af1fba",
+      "after": "50a89d6415d666c7ec4ce1d8d97c03fbe8734389617744cc7cb538ebc8ca245c"
+    },
+    "backend/crates/api-gateway/tests/fulfillment_admin.rs": {
+      "before": null,
+      "after": "f1e738d61d7846f4239a09ad08d2dd5394500ef4722c4bd64e23cd2c5c2f976c"
+    },
+    "backend/crates/domain-fulfillment/tests/capacity.rs": {
+      "before": "3b97cdd723aad4134bd10fe5e0eadd0016094c6689f69bf9154640cb415640ba",
+      "after": "af6c95010f41479ddf8d45cc5b9ae998f81288b5face0ddc8320e2498ebbe620"
+    },
+    "frontend/e2e/capacity/admin.spec.ts": {
+      "before": "4925b7de677f1ed3e3f4b3474c68f08388fe452e1faa1f5e60ea89ae3724372d",
+      "after": "f5e2dc3e2d09f346dd3be04d78ca0e31885c8fe0dd1ff55ddd788be284a2cd20"
+    },
+    "frontend/e2e/capacity/fulfillment-fixes.spec.ts": {
+      "before": null,
+      "after": "c3e3d2073b1be0cd3ee64420307a3d9291f8f805153d1a7ce6205290549e0d68"
+    },
+    "backend/openapi.json": {
+      "before": "f54dea4fa7057b85474fa61f1f1c858eb96416a6cdd446a0a85cee883f0245d1",
+      "after": "1c0c734906c91df8b373b315260afde8c6e0ec5412fbe30822d6cf3e0f06f451"
+    }
+  },
+  "generated_artifact_note": "Regenerated from existing production theme schema after preflight detected stale cart_display field. Assistant contracts were unchanged."
+}

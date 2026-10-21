@@ -1,0 +1,12 @@
+{
+  "id": "f2dd7869-bc1e-4224-91e0-34d16bbf48bc",
+  "tenant": "00000000-0000-0000-0000-000000000000",
+  "title": "Reviewed English shopping intent examples",
+  "revision": 1,
+  "kind": "imported",
+  "language": "en",
+  "collection": "intent_examples",
+  "approved": true,
+  "personas": ["shopper"],
+  "permissions": []
+}

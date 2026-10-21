@@ -1,0 +1,119 @@
+/* Shared purchase and filter geometry verified against the native simulator screens. */
+.ms-native-phone .ms-native-sheet.ms-full-screen { inset:0; height:100%; border-radius:0; }
+.ms-native-phone .ms-native-sheet .ms-sheet-toolbar { display:flex; justify-content:space-between; align-items:center; flex:none; min-height:56px; padding:0 20px; border-bottom:1px solid color-mix(in srgb,var(--phone-text) 10%,transparent); }
+.ms-native-phone .ms-sheet-toolbar > button,.ms-native-phone .ms-sheet-toolbar > span { min-width:44px; }
+.ms-native-phone .ms-sheet-toolbar > button { min-height:44px; border:0; background:none; color:var(--phone-primary); font:inherit; cursor:pointer; }
+.ms-native-phone .ms-sheet-toolbar > strong { font-size:17px; text-align:center; }
+.ms-native-phone .ms-native-sheet .ms-sheet-content { flex:1 1 auto; min-height:0; padding:20px; }
+.ms-native-phone .ms-sheet-footer { flex:none; padding:16px 20px 30px; border-top:1px solid color-mix(in srgb,var(--phone-text) 12%,transparent); background:var(--phone-bg); }
+.ms-native-phone .ms-sheet-footer > .ms-cart-primary,.ms-native-phone .ms-purchase-bar > .ms-cart-primary { width:100%; min-height:52px; border-radius:var(--phone-radius); font-size:16px; }
+.ms-purchase-bar { display:grid; gap:12px; }
+.ms-purchase-row { display:flex; align-items:center; justify-content:space-between; gap:12px; }
+.ms-purchase-row > div:first-child { display:grid; gap:6px; }
+.ms-purchase-row small { font-size:12px; opacity:.6; }
+.ms-purchase-row strong { font-size:17px; }
+.ms-purchase-quantity { display:flex; align-items:center; border:1px solid color-mix(in srgb,var(--phone-text) 18%,transparent); border-radius:8px; }
+.ms-purchase-quantity button { border:0; background:none; color:var(--phone-primary); min-width:44px; min-height:44px; font:inherit; cursor:pointer; }
+.ms-purchase-quantity output { min-width:24px; text-align:center; }
+.ms-native-phone button:disabled { opacity:.45; cursor:default; }
+.ms-native-phone .ms-category-chips { display:flex; gap:8px; overflow:auto; padding-block:8px 16px; flex:none; }
+.ms-category-chips button { white-space:nowrap; min-height:40px; padding:8px 14px; border:1px solid color-mix(in srgb,var(--phone-text) 20%,transparent); border-radius:8px; background:var(--phone-bg); color:var(--phone-text); font:inherit; cursor:pointer; }
+.ms-category-chips button[aria-pressed="true"] { color:var(--phone-primary); border-color:var(--phone-primary); background:color-mix(in srgb,var(--phone-primary) 7%,var(--phone-bg)); }
+.ms-filter-heading { display:flex; justify-content:space-between; align-items:center; gap:12px; margin-bottom:16px; }
+.ms-filter-heading span { opacity:.6; font-size:14px; }
+.ms-filter-heading button { border:0; background:none; font:inherit; color:var(--phone-primary); min-height:44px; cursor:pointer; }
+.ms-native-phone .ms-native-sheet .ms-search-form { display:grid; gap:20px; margin:0; padding:0; background:none; border:0; }
+.ms-native-phone .ms-native-sheet .ms-search-form label { font-size:15px; }
+.ms-native-phone .ms-native-sheet .ms-search-form input:not([type=checkbox]),.ms-native-phone .ms-native-sheet .ms-search-form select { min-height:44px; border-radius:8px; }
+.ms-native-phone .ms-native-sheet .ms-price-range { display:flex; gap:8px; }
+.ms-native-phone .ms-native-sheet .ms-price-range > label { flex:1; min-width:0; }
+.ms-assistant-options { display:flex; gap:10px; justify-content:flex-end; flex-wrap:wrap; }
+.ms-assistant-options button { border:0; background:none; min-height:44px; color:var(--phone-primary); font:inherit; cursor:pointer; }
+.ms-assistant-welcome { display:grid; gap:16px; padding-block:30px; }
+.ms-assistant-welcome h2 { margin:0; font-size:28px; }
+.ms-assistant-welcome p { line-height:1.5; margin:0; }
+.ms-assistant-welcome button { padding:14px; min-height:48px; background:var(--phone-surface); color:var(--phone-primary); border:1px solid color-mix(in srgb,var(--phone-primary) 25%,transparent); border-radius:8px; font:inherit; text-align:start; cursor:pointer; }
+.ms-assistant-composer { display:flex; align-items:center; gap:10px; }
+.ms-assistant-composer input { min-width:0; width:100%; padding:12px; border:1px solid color-mix(in srgb,var(--phone-text) 18%,transparent); border-radius:8px; background:var(--phone-bg); color:var(--phone-text); font:inherit; }
+.ms-assistant-composer button { flex:none; width:44px; height:44px; border:0; border-radius:22px; background:var(--phone-primary); color:var(--phone-on-primary); font:inherit; cursor:pointer; }
+.ms-assistant-question { margin-inline-start:32px; padding:12px; border-radius:12px; background:var(--phone-surface); }
+.ms-assistant-products { display:grid; gap:12px; }
+.ms-assistant-products button { display:grid; gap:8px; text-align:start; padding:12px; color:var(--phone-text); background:var(--phone-bg); border:1px solid color-mix(in srgb,var(--phone-text) 15%,transparent); border-radius:8px; font:inherit; cursor:pointer; }
+.ms-assistant-products img { width:80px; height:80px; object-fit:contain; }
+.ms-native-phone .ms-native-assistant { background:none; border:0; color:var(--phone-primary); cursor:pointer; }
+[data-preview-target$="react-native"] .ms-native-tabbar button::before { display:none; }
+[data-preview-target$="react-native"] .ms-native-tabbar button { font-size:13px; }
+.ms-native-phone[data-active-screen="account"] .ms-native-store-header,.ms-native-phone[data-active-screen="cart"] .ms-native-store-header { display:none; }
+.ms-native-phone .ms-account-title { font-size:34px; line-height:1.2; margin:0 0 24px; }
+.ms-native-phone .ms-account-identity { padding:12px 0 24px; background:none; border:0; border-radius:0; flex-wrap:nowrap; }
+.ms-native-phone .ms-account-identity > div { flex:1; min-width:0; }
+.ms-native-phone .ms-account-identity > div > span { color:color-mix(in srgb,var(--phone-text) 55%,transparent); }
+.ms-native-phone .ms-account-identity p { font-size:22px; font-weight:600; }
+.ms-native-phone .ms-account-avatar { background:none; width:72px; height:72px; }
+.ms-native-phone .ms-account-avatar svg { width:60px; height:60px; }
+.ms-account-shortcuts { display:flex; gap:12px; margin-bottom:24px; }
+.ms-account-shortcuts button { flex:1; min-width:0; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:8px; min-height:112px; padding:8px; border:1px solid color-mix(in srgb,var(--phone-text) 12%,transparent); border-radius:16px; color:var(--phone-text); background:var(--phone-bg); cursor:pointer; font:inherit; }
+.ms-account-shortcuts small { font-size:12px; opacity:.6; }
+.ms-native-phone .ms-account-empty { background:none; border:1px solid color-mix(in srgb,var(--phone-text) 12%,transparent); border-radius:16px; margin-bottom:24px; }
+.ms-native-phone .ms-account-preferences { display:flex; flex-direction:column; border:1px solid color-mix(in srgb,var(--phone-text) 12%,transparent); border-radius:16px; padding:0 12px; }
+.ms-native-phone .ms-account-preferences button { text-align:start; padding:16px 4px; min-height:56px; border-radius:0; }
+.ms-native-phone .ms-account-preferences button + button { border-top:1px solid color-mix(in srgb,var(--phone-text) 10%,transparent); }
+[data-preview-target$="react-native"] .ms-native-app > nav button { font-size:13px; }
+[data-preview-target$="react-native"] .ms-native-app > nav button[aria-current] .ms-tab-icon { background:none; }
+.ms-native-phone.ms-ios .ms-product-sheet-layer { inset-block-start:62px; }
+.ms-native-phone.ms-android .ms-product-sheet-layer { inset-block-start:30px; }
+.ms-native-phone .ms-native-product .ms-detail-image { height:288px; }
+[data-preview-target$="react-native"] .ms-native-product .ms-detail-image { height:260px; }
+.ms-native-phone .ms-native-sheet .ms-sheet-toolbar:has(+ .ms-sheet-content) { display:grid; grid-template-columns:64px 1fr 64px; justify-content:initial; gap:0; }
+.ms-native-phone .ms-product-detail.ms-native-product .ms-detail-image { height:288px; min-height:288px; }
+[data-preview-target$="react-native"] .ms-native-phone .ms-product-detail.ms-native-product .ms-detail-image { height:260px; min-height:260px; }
+.ms-native-phone .ms-detail-placeholder { width:84%; height:84%; color:color-mix(in srgb,var(--phone-text) 48%,var(--phone-surface)); }
+.ms-native-phone.ms-ios .ms-product-detail .ms-wishlist-toggle { justify-content:flex-start; background:none; padding-inline:0; font-weight:400; }
+.ms-native-phone .ms-native-sheet.ms-full-screen .ms-sheet-toolbar > button { padding:0; font-size:0; border-radius:22px; width:44px; background:var(--phone-bg); box-shadow:0 8px 28px #0000000a; }
+.ms-native-phone .ms-native-sheet.ms-full-screen .ms-sheet-toolbar > button::before { content:'‹'; font-size:36px; font-weight:300; line-height:1; }
+[dir="rtl"] .ms-native-sheet.ms-full-screen .ms-sheet-toolbar > button::before { content:'›'; }
+.ms-native-phone .ms-filter-radios { display:grid; gap:0; }
+.ms-native-phone .ms-filter-radios label { display:flex; align-items:center; gap:12px; min-height:44px; }
+.ms-native-phone .ms-native-sheet .ms-search-form .ms-filter-radios input { min-height:22px; width:22px; height:22px; margin:0; accent-color:var(--phone-primary); }
+.ms-native-phone .ms-search-form h3 { font-size:20px; font-weight:600; margin:0; }
+.ms-assistant-welcome h2 { font-size:24px; }
+.ms-native-phone .ms-native-account .ms-account-preferences button { width:100%; align-self:stretch; }
+.ms-native-phone .ms-account-preferences { gap:0; }
+.ms-assistant-welcome p { font-size:17px; color:color-mix(in srgb,var(--phone-text) 65%,var(--phone-bg)); }
+.ms-assistant-welcome button { font-size:17px; font-weight:600; text-align:center; min-height:52px; border-color:var(--phone-primary); }
+.ms-assistant-composer input { font-size:16px; min-height:50px; }
+.ms-assistant-composer button { height:52px; border-radius:8px; }
+.ms-account-heading,.ms-account-latest { display:flex; align-items:center; justify-content:space-between; gap:12px; }
+.ms-account-heading { margin-bottom:24px; }
+.ms-native-phone .ms-account-heading h2 { margin:0; }
+.ms-account-heading button,.ms-account-latest button { min-height:44px; color:var(--phone-text); border:0; background:none; font:inherit; cursor:pointer; }
+.ms-native-phone .ms-account-latest h3 { font-size:18px; }
+.ms-account-preferences-label { font-size:11px; letter-spacing:2px; opacity:.6; margin:0; }
+.ms-native-phone .ms-account-preferences button { font-weight:400!important; color:var(--phone-text); display:flex; justify-content:space-between; }
+.ms-account-preferences button span { opacity:.6; }
+[data-preview-target$="react-native"] .ms-native-phone .ms-native-sheet .ms-search-form { gap:12px; }
+.ms-native-phone .ms-sheet-toolbar > button:last-child { background:none; }
+.ms-product-variants { display:grid; gap:12px; }
+.ms-product-variants h3 { margin:0; font-size:20px; }
+.ms-product-variants [role=radiogroup] { display:grid; gap:12px; }
+.ms-native-phone .ms-product-variants button { width:100%; min-height:48px; padding:12px; margin-block:6px; text-align:start; font:inherit; border:1px solid color-mix(in srgb,var(--phone-primary) 35%,transparent); border-radius:var(--phone-radius); color:var(--phone-primary); background:var(--phone-surface); }
+.ms-native-phone .ms-product-variants button[aria-checked=true] { border:2px solid var(--phone-primary); background:color-mix(in srgb,var(--phone-primary) 12%,var(--phone-bg)); }
+/* SwiftUI sizes the missing-art illustration to its intrinsic aspect ratio. */
+[data-preview-target="ios-swift"] .ms-native-product .ms-detail-image:has(.ms-detail-placeholder) { height:auto; aspect-ratio:1.22; }
+[data-preview-target="ios-swift"] .ms-native-product .ms-detail-description,
+[data-preview-target="ios-swift"] .ms-native-product .ms-stock { font-size:17px; }
+.ms-purchase-quantity button { font-size:24px; }
+.ms-purchase-quantity output { font-size:17px; }
+
+/* Fresh simulator comparison: account subpages do not repeat the shop header. */
+.ms-native-phone:is([data-active-screen="settings"],[data-active-screen="notifications"],[data-active-screen="wishlist"],[data-active-screen="about"],[data-active-screen="privacy"],[data-active-screen="terms"],[data-active-screen="help"],[data-active-screen="contact"]) .ms-native-store-header {display:none;}
+.ms-native-phone.ms-ios .ms-preferences .ms-native-toggle {flex-direction:row;}
+.ms-native-phone.ms-ios .ms-preferences .ms-native-toggle input {order:2;}
+.ms-native-phone .ms-native-account[data-account-screen="orders"]>.ms-cart-note {display:none;}
+.ms-native-phone .ms-order-history-detail:empty {display:none;}
+/* Simulator reference sizing for native detail and preference controls. */
+[data-preview-target="android-kotlin"] .ms-detail-image:has(.ms-detail-placeholder) {background:transparent;}
+[data-preview-target="android-kotlin"] .ms-detail-placeholder {visibility:hidden;}
+.ms-native-phone .ms-preferences .ms-native-toggle input {flex:none;width:51px;min-width:51px;height:31px;padding:3px;border:0;}
+.ms-native-phone .ms-preferences .ms-native-toggle input::before {width:25px;height:25px;}
+.ms-native-phone .ms-native-account .ms-account-add-address {background:var(--phone-primary);color:var(--phone-on-primary);border:0;border-radius:var(--phone-radius);text-align:center;}

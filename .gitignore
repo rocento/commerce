@@ -1,0 +1,91 @@
+.env
+.env.*
+!.env.example
+**/node_modules/
+**/dist/
+**/dist-server/
+**/.next/
+/commerce-web/apps/website/out/
+/commerce-web/apps/*/.stage*-dist/
+/commerce-web/apps/*/.stage*-dist-server/
+**/target/
+**/__pycache__/
+**/.pytest_cache/
+**/.ruff_cache/
+**/.mypy_cache/
+**/.venv/
+.DS_Store
+**/*.egg-info/
+**/build/
+.pnpm-store/
+**/*.tsbuildinfo
+
+# Disposable editor and test scratch files
+**/*.swp
+**/*.swo
+**/*~
+**/*.tmp
+**/.coverage
+**/.coverage.*
+**/htmlcov/
+
+.local/
+
+# Native signing material belongs outside source control.
+*.jks
+*.keystore
+*.p12
+*.p8
+*.mobileprovision
+**/*-private.pem
+**/*_private.pem
+/mobile/signing.local.env
+**/playwright-report/
+**/test-results/
+
+# Private local startup guide with development credentials
+/start.md
+
+# EC2 deployment secrets and generated state (keep scripts/templates tracked)
+/commerce-ops/deploy/ec2/*.env
+/commerce-ops/deploy/ec2/*.seeded
+/commerce-ops/deploy/ec2/setup.lock
+/commerce-ops/deploy/ec2/common.yaml
+/commerce-ops/deploy/ec2/grocery.yaml
+/commerce-ops/deploy/ec2/jewelry.yaml
+/commerce-ops/deploy/ec2/electronics.yaml
+/commerce-ops/deploy/ec2/pharmacy.yaml
+/commerce-ops/deploy/ec2/public/
+/commerce-ops/deploy/ec2/state/
+/commerce-ops/deploy/ec2/shared-ai/
+/commerce-ops/deploy/ec2/bootstrap.env
+/commerce-ops/deploy/aws-deploy/bootstrap.env
+/commerce-ops/deploy/aws-deploy/contact.env
+/commerce-ops/deploy/aws-deploy/notifications.env
+/commerce-ops/deploy/aws-deploy/rocento.pem
+/commerce-ops/deploy/aws-deploy/rocento-origin.pem
+/commerce-ops/deploy/aws-deploy/rocento-origin.key
+/commerce-ops/deploy/aws-deploy/quality/known_hosts
+/commerce-ops/deploy/aws-deploy/quality/admin-bootstrap.json
+/commerce-ops/deploy/gcp-deploy/target.env
+/commerce-ops/deploy/gcp-deploy/bootstrap.env
+/commerce-ops/deploy/gcp-deploy/origin.pem
+/commerce-ops/deploy/gcp-deploy/origin.key
+/commerce-ops/deploy/gcp-deploy/*.key
+/.quality/
+/backups/
+
+# Reproducible bulk synthetic evaluation evidence; retained separately from guides.
+/commerce-artifacts/shopping-evals/
+
+# Local scratch runs and copied deployment workspaces are not release source.
+/commerce-output/tmp/
+/commerce-api/tmp/
+
+# Build-generated, pinned Swagger UI assets
+commerce-web/apps/website/public/docs/api/reference/vendor/
+commerce-web/apps/admin/public/api-reference/vendor/
+
+# Generated local reports and deployment copies
+/commerce-output/
+/commerce-artifacts/

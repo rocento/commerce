@@ -1,0 +1,12 @@
+{
+  "unchanged": true,
+  "scope": [
+    "catalog.products",
+    "customers.customers",
+    "cart_checkout.items",
+    "orders.orders",
+    "orders.order_items",
+    "payments.payment_transactions"
+  ],
+  "financial_tools": []
+}

@@ -1,0 +1,1466 @@
+{
+  "acceptance_note": "Status is limited to each recorded environment. A source hash or provider connection alone is not complete milestone acceptance.",
+  "generated_at": "2026-09-21T09:51:35.176752+00:00",
+  "git_revision": "6bb49c22065984b75de032d3aab6059c678581e4",
+  "milestone": "M01",
+  "performance_flags_default": {
+    "catalog_cache": false,
+    "catalog_singleflight": false,
+    "small_model": false
+  },
+  "schema_version": "1",
+  "source": {
+    "files": {
+      "ai-service/Dockerfile": "0ab715437f728d75da9e239546f47b29e7c5a616260fbe498867c51143e9bc1e",
+      "ai-service/app/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "ai-service/app/account_intents.py": "dc5fe4abe708b75103aae40c2b353049ac113752a9fcc384fbc57e000255d3b9",
+      "ai-service/app/adapters/__init__.py": "813b045bdd2d80875d2a8f897da7b9990c274e837cddf6a814ac89ffcc3cfaef",
+      "ai-service/app/adapters/embeddings.py": "85a44456184b2302800f5a1dcfc8233ff15c145d832afe74af96d3e033b833c6",
+      "ai-service/app/adapters/openai.py": "74949677fec204d3c016b81c15197fadcddd0b010b69b17660fa8f11072ff438",
+      "ai-service/app/agents.py": "a15e12097692bf5494187701943ca8b62c9763a53d8628854cf5f3526c6e9e58",
+      "ai-service/app/baseline.py": "39e55b27c4d3b6dcc9e32e811328a6c72fc02571f4d879a5f41344486c78b871",
+      "ai-service/app/baskets.py": "7218a8319de7a275abf37af58855cb7e54831dc87fa427178da93e8131b553a4",
+      "ai-service/app/catalog_cache.py": "2e685fc93dac63a36427d34cd7df947bc7afa008ee93afffe2ba2295541fabe9",
+      "ai-service/app/catalog_tools.py": "fe946636b94d902bb5e64f71d4ffdcc9045592e0bce2fed0189b99d1e4b25cc6",
+      "ai-service/app/contracts.py": "5908e370d9b4b875e4cacb82818146a78674442a4da39b6b9b6ffd1f92ac67bc",
+      "ai-service/app/costs.py": "d47d25840762e6806d1bef72001761deae47ee9b4ebcb56d7edb1730cf0a4e93",
+      "ai-service/app/failures.py": "3f911070f6114791193b6078ed4925ba53cc852f81c8d4ef1c0e5b0055bca731",
+      "ai-service/app/knowledge.py": "f87632d1bb3ae0adaf7cec56e0a8dc19c445afc190a74d8066c9e8924bd373aa",
+      "ai-service/app/knowledge_cli.py": "c6db2f0cffe61b092aed4028362a13aa8c0a95187baec4f678cde75042a10681",
+      "ai-service/app/knowledge_extract.py": "6766b045a2e678c4d0c8367ab85046d167859d78534d11387d3f7dd0cfab6ec5",
+      "ai-service/app/knowledge_store.py": "e5b7d711b4447f557074b2d363dd703254a7928e58ae865736ee6b34ad5ffa70",
+      "ai-service/app/main.py": "c70886233a9546be8463b58e66b231302ae57b8bfcf7cc3500eb98757c8f1a25",
+      "ai-service/app/model.py": "d23208ecbb1dad64deac870a2ca650ca4ad29800b339ed183b70da0aad07c6bc",
+      "ai-service/app/policy_answers.py": "bee8c2db5839db969a171d2a8c2d6fe7e72b8937e3e5e11f73265501f9ab98a9",
+      "ai-service/app/provider_factory.py": "3d5e2306e2bd1b3ec060a17ed44f3fbfd49027b70d0d0ab80af552613016e4e6",
+      "ai-service/app/provider_settings.py": "9a4c833875791a46bc6c83cd670ca76404a2324f31546b9defc3bec6f66fcd1c",
+      "ai-service/app/provider_smoke.py": "d1d0ac5cc16a36742fbc2e295aa75be76e6ae23413d4fbc8db8d77e2c444714c",
+      "ai-service/app/providers.py": "46ab1f786932d68d9cd044a91e7ca742ee36636f6abe0a81f6c61e232a803092",
+      "ai-service/app/rich_responses.py": "dc528d9e584c69a44497fe7b4297afc4e4f68ca000295e066e90651150e0f576",
+      "ai-service/app/runtime.py": "f2f6ca75b08664e76140a67b6cc71b30c2f588c52086fd329a498b521cb5a4ba",
+      "ai-service/app/security.py": "4da392dbf7421270c4b9ad6f228b80d4c8fc291d17ffc1bd19e726f97837c1d9",
+      "ai-service/app/settings.py": "ed03fc72f0e4c464ea1ec9d27abe017955998c039255e36aae79c84f0169ec47",
+      "ai-service/app/shopping.py": "a4a0e813685f2391549c1160a2680814da155d734785f5fcc0b40e81fa6a8bdb",
+      "ai-service/app/singleflight.py": "608e0b9c7692c418e14e86dfda0e03d8f139a17427a2091b42b0403149351984",
+      "ai-service/app/store.py": "a22cd9a84b001d4ba3e9270d306617d105b3cb752acfc5bb67292ab9ffb35c7f",
+      "ai-service/app/telemetry.py": "9450f9ca9cef549a9fadb8a09d015e6cd959d6d2466b83c16173f5170235ec3e",
+      "ai-service/app/tools.py": "219310b429b75e92e79e45c09a4c8bd324aefea9e800dea5ad71323dc6859e06",
+      "ai-service/app/usage.py": "7111e5c541487049274b9198920a7a9631b1785f8e407774d21917d3ed9970f6",
+      "ai-service/requirements.lock": "d5b585adbf88095754cba27db0174226ec2feb9c100b9c9ec0f0486f100bcc23",
+      "backend/Cargo.lock": "9424133b4e6dcf1645ea31c98ef55942c8dcc339c04c732a029c2b72c15ee8af",
+      "backend/Cargo.toml": "c1a925c56d02e3f03951a8f726786084040f0bceb17789c2ee852354a741a046",
+      "backend/Dockerfile": "a6ad4f819af15563478096612e4704afe95104738fa8edecbbb92cb279a9f63f",
+      "backend/crates/api-gateway/Cargo.toml": "a11ab4be7443fe16b1379f0046b5c20e12dc2129e201766b433fbc2e8f596507",
+      "backend/crates/api-gateway/examples/status_fixture.rs": "73755d9247270e6df66837d7e6e285e30c827afc9c1ecf815b1cb26e253211f2",
+      "backend/crates/api-gateway/openapi/assistant_contract.py": "ffdcfd6e14ed7bae23b770bb92e3b1628dbc1ef4c29c8c1a37a018a246fa4bc6",
+      "backend/crates/api-gateway/openapi/assistant_settings_contract.py": "b3bae4c415b564d97063ea100704a0778421a54e17f68841eea686f30070d5fc",
+      "backend/crates/api-gateway/openapi/catalog_schema_contract.py": "3c756dee05b2c36ce24f5d57c561359902241beaaa8f6193d8a3af6ac051a9e5",
+      "backend/crates/api-gateway/openapi/customer_journey_contract.py": "7fb7954f6b0fb28ed61c94bce147d4567eb482c24608c28d073f844a90db7f15",
+      "backend/crates/api-gateway/openapi/discoverability_contract.py": "1977163c83534f4e8284a01b8f04c548b2f4e0684ba4e7a604df72915f8f6ce2",
+      "backend/crates/api-gateway/openapi/generate_openapi.py": "b67102954f5d13786b211a75da3d0481c59b430031611569d100d813bf5c4979",
+      "backend/crates/api-gateway/openapi/m11_contract.py": "dd82173ebbe07bec4a610262f5e48f22db0773f5ca2e52af22aaeb376ffd57b2",
+      "backend/crates/api-gateway/openapi/m13_contract.py": "1e9ac610ab83d71f46057deba6daf565c35c50124cb5ddc73aaa974a0758d1bb",
+      "backend/crates/api-gateway/openapi/m7_contract.py": "a8baed186b2cdbcb705da2fe60445a3f5b4a21fd62dd17c0b8c1b435402c0101",
+      "backend/crates/api-gateway/openapi/merchant_contract.py": "8a16ce76b06597f3767b15d5a128ef05ff77192ed57939c8c5b1ef8ee37a9ee4",
+      "backend/crates/api-gateway/openapi/msi_contract.py": "3f872f03507f233b8bd42e81741ecf2c27b39066ba755928e1251035497726c6",
+      "backend/crates/api-gateway/openapi/reporting_contract.py": "b3e881a008762ec409ed86695deafd660249f2f7ea83eef4d44925ee2d225c38",
+      "backend/crates/api-gateway/openapi/segments_contract.py": "c438059b38b160ee6918a6756f12dcdb1be1268dced398b210e27d71a2057a1b",
+      "backend/crates/api-gateway/openapi/shopper_tools.json": "7ce51ad82acb7f16d0854fc2ef80efc0b782d42aa6864d25207de22052b63f04",
+      "backend/crates/api-gateway/openapi/shopping_contract.py": "a3f8a2d2b433bd86d28da589b045b93f71e57bbec61dcc042f437a9f0cb2b2c6",
+      "backend/crates/api-gateway/openapi/theme_contract.py": "b8500bfe555dd1bd3a1e6435241af1185cd6983e7a02a327677d06b5816becba",
+      "backend/crates/api-gateway/src/admin_depth.rs": "e11e88829f2a64028f5d6cc92af13cb548c4220ad76a4d9e5bad625f6f3e1044",
+      "backend/crates/api-gateway/src/analytics.rs": "14f8d6cdd4d25fa053b1940cba44a314663598946aedb25b43e81b595d5536a3",
+      "backend/crates/api-gateway/src/areas.rs": "be215e8e0b24545ca0cdd0655d240db76afea9155643eeb5bb5eab4f70df083a",
+      "backend/crates/api-gateway/src/assistant.rs": "1f25f08aed2a1eca857bcddf295ac177d486bbd9e5a393e24991d56c9a1087ed",
+      "backend/crates/api-gateway/src/assistant_baseline.rs": "0ed6abc98e9fea757181f0b9c280e280e63b2679f5df4dc4cf71b74a030632b3",
+      "backend/crates/api-gateway/src/assistant_catalog.rs": "1f2eb61de92b5c0ca96c1805b4425f03030f4d8d9ef6513b8928e1e58c09e986",
+      "backend/crates/api-gateway/src/assistant_failures.rs": "2cbe01270adc721c21d764ce248c677531372cc973a3978cbbd358fa29699079",
+      "backend/crates/api-gateway/src/assistant_settings.rs": "6007ce42267e47a0fa729d8ecd4245b94a068e54c4eac98149484cf53514a47d",
+      "backend/crates/api-gateway/src/attributes.rs": "20971c18e160170177146784315e06281a3a8e7c42cbc03442bb78de49ccc310",
+      "backend/crates/api-gateway/src/bin/export-worker.rs": "f0f4f23667ccacc8538ba90551cce03a6c0e196425aa8356c34d5159b3450dde",
+      "backend/crates/api-gateway/src/bin/install-catalog-data.rs": "bf655f10e57dbbe883097608dd2be971b8359aa4e135112314c9ea0f0403b5a5",
+      "backend/crates/api-gateway/src/bin/seed-admin.rs": "831df3e474979ebabe1556f17ebb5837f89ce7dcf02c11bf8dbf496fe497bff4",
+      "backend/crates/api-gateway/src/bin/sync-reports.rs": "eedf628ff1b1f1814b6080d072c494874f8a4d7c01d90bc87fcdbaee14ba8c3c",
+      "backend/crates/api-gateway/src/cart.rs": "67f6df6ed2aefaad7ea00eba7280b88c8ca80b1dfcbbcba78549312308794238",
+      "backend/crates/api-gateway/src/catalog.rs": "476604aab61d627939d32cbf79498e792ac783d0578b44d2cc1152f728166075",
+      "backend/crates/api-gateway/src/customer_journey.rs": "0196108a7904324a7061e9f25d98e9ce75e9ac90f297a394da9416aaa8f32277",
+      "backend/crates/api-gateway/src/customer_journey.sql": "534e19a613c66f31c6cecf4f1211662c32b89d735068172eea5fdbe16f2c50e3",
+      "backend/crates/api-gateway/src/discoverability.rs": "f9576014d73657449081256f8b7447ffcd43dc95c44b67d13d4fb9d0d2b7a79d",
+      "backend/crates/api-gateway/src/exports.rs": "397e6537321092dade0669a7e35ce41777728c33e222cb62990c1ad629074110",
+      "backend/crates/api-gateway/src/grids.rs": "176aa3fb8d7700131652246a88960861871adb523aeec2ff52497b87accc7563",
+      "backend/crates/api-gateway/src/identity.rs": "d3bf2cd6d66871a87eafcc338fdfe2d1021869466909efc06cb95d6abfeb9d91",
+      "backend/crates/api-gateway/src/lib.rs": "a06c7f1235b9dd13498823d10dd4ee0d88a4dc517070dcdda238ae7144899233",
+      "backend/crates/api-gateway/src/main.rs": "d976785a8cc7b7016d415678a961ad4cb21816a1732b9ccbe5c58e08cce9156c",
+      "backend/crates/api-gateway/src/merchant/category_decline.sql": "03576b704a7387fdf529b80f8efee5b8c53691091d25bad6c1f81533b0e50c2a",
+      "backend/crates/api-gateway/src/merchant/low_stock.sql": "2b7f9026af33770da185199a54efffe41c115d03c16acf23e07ebdd1b1664ab2",
+      "backend/crates/api-gateway/src/merchant/mod.rs": "a2bdc09a1b28bf2084dbde5f40bb49de32b1f550878f18e5ab662d2a50f3d709",
+      "backend/crates/api-gateway/src/merchant/order_status.sql": "acb250b6c2ad453a9ae98e6c7730b03ff0c3f05f3a05f510813b203eeb9393ae",
+      "backend/crates/api-gateway/src/merchant/orders.sql": "f41e4951f44aad5b75be41471a6575fdcb597de2c09041b0e7fb91d9716535f1",
+      "backend/crates/api-gateway/src/merchant/slow_stock.sql": "f160b92bb44f5fb039e7fee0e8204085c6b04458942c89a9787e1d470204611d",
+      "backend/crates/api-gateway/src/merchant/top_sellers.sql": "301d4b7ecfe64e14d26700195376ec4d06c09898a310e7a34f7ebfe6e7920290",
+      "backend/crates/api-gateway/src/msi.rs": "c5ddd1609f733c4d66ec83b0c5a824e263a0148f8676adcd6f3c9d39d66d256e",
+      "backend/crates/api-gateway/src/notifications.rs": "72c0b4e734ec96c16950471733290dfe3eec269b9575ba67b38a28a4f2345c04",
+      "backend/crates/api-gateway/src/orders.rs": "d0bf4fe3980a1a57cf117db3e1e415f66ad2db1188c962ec3a781b5c21b6ae84",
+      "backend/crates/api-gateway/src/public_commerce/attribution.rs": "31d092132914a2e37fff4dd8357f8426378f2758874b8ef3a70531f6e4c853c9",
+      "backend/crates/api-gateway/src/public_commerce/canonical.rs": "eea9d9cf31355cb74c3a1b7f5c25c2b115a8028d927cc2cb7dd0fbcbac7eda28",
+      "backend/crates/api-gateway/src/public_commerce/crawlers.json": "f5d86dc8cd9a03851a3e30b378bb1a844e49c7080fb02a2af829a1e6a61980eb",
+      "backend/crates/api-gateway/src/public_commerce/discovery.rs": "4997b8decee90d256cc4f4b6be50a01910622a82f48c5f2290c5c7f3b8a3011e",
+      "backend/crates/api-gateway/src/public_commerce/entity.rs": "bcb5466ae964804fe7432ee325e385f0220451e147f6dccffe6f22389be961f3",
+      "backend/crates/api-gateway/src/public_commerce/facts.rs": "1cef80e5943d07358a879ccc5cc987f0c67cd1291a0b0151882b1c748de18d77",
+      "backend/crates/api-gateway/src/public_commerce/feeds.rs": "f9a544071f79da4389e38b23c5799a1ec93c54e454217fb41016d5ed33c49a05",
+      "backend/crates/api-gateway/src/public_commerce/health.rs": "b014a8998f1fb3e57abe1b6a71227ea6718455a5b609ff7a8dc422edcebafa3f",
+      "backend/crates/api-gateway/src/public_commerce/images.rs": "95af422cb91ee2d5c14c8283604da72779e1050d95312a7307035737b3ac4372",
+      "backend/crates/api-gateway/src/public_commerce/metadata.rs": "3d562cfebfae60462caa253432c21a6aecbe429925564ba4799136ce4e40a748",
+      "backend/crates/api-gateway/src/public_commerce/mod.rs": "2661d296fe96b6f6b460cb78e591e1072c4f2f373b2c3d9899543c1f68c2af5f",
+      "backend/crates/api-gateway/src/public_commerce/policy.rs": "0c84bfdfa9d2e99b59e637da57aa8329997b28979ae48698bdbd2c4dd7f2b925",
+      "backend/crates/api-gateway/src/public_commerce/snapshot.rs": "7209e1c422e0985f770f9192c8af78e2279e128298de73649dbc46b09686117d",
+      "backend/crates/api-gateway/src/readiness.rs": "70f60320e41f2c705b5d7d378aa413b863bbf9106e4c3262a61a09ebd4d00225",
+      "backend/crates/api-gateway/src/replenishment.rs": "ecae5b23ffa8ef3a216f9eb1eb0251f7aef696c29d3b8104c0fa59d4108f93c8",
+      "backend/crates/api-gateway/src/reporting/aggregate.sql": "88ce958ae8df555ce51a273e8b74cf9f73f0fad648a0d487544e4743ed0b2f29",
+      "backend/crates/api-gateway/src/reporting/assistant.rs": "5b7aed2d4767010f2e2f5a2688ee78669b773afea372555924984e63c052f886",
+      "backend/crates/api-gateway/src/reporting/mod.rs": "fcb3c1edddf5f69a506f892b0b89386ccea9cb38f9dd11abb39c01c0a5daf7ad",
+      "backend/crates/api-gateway/src/reporting/schema.sql": "3edeb97b59883f86aa7019b0c888dd5414b6a8a2481c89078751ac0281d1a068",
+      "backend/crates/api-gateway/src/segments.rs": "9c4a013d4505d4e08ce9d97debd3411fc4b04c293867453b99afed3e6f1f9905",
+      "backend/crates/api-gateway/src/shopping.rs": "0f91d934ec61917be2a5258c1777058402f1a0be39b00410bf2a341b3a785fff",
+      "backend/crates/api-gateway/src/support.rs": "5aa10275fdb9fd88be55c162ffb421330f1b1c31c1fbd040113dc3385f4664e2",
+      "backend/crates/api-gateway/src/themes.rs": "00f0f7e7a791f06d154a77771b16ab49500e7289b3d12906f94c42bf79fee68d",
+      "backend/crates/api-gateway/tests/admin_depth.rs": "16c3065d63ec652a93e21ca8ce1c502301a99038dca0d74e6fa64a03c08c1d08",
+      "backend/crates/api-gateway/tests/assistant.rs": "d09c735251e020473dc99c79a591b2d641c61d96c7cd47ea82c2c6c45ffed869",
+      "backend/crates/api-gateway/tests/assistant_settings.rs": "65a14d444491985f86f5c1471c5d560af677b5d0bbf62e299acf8c917b8b747a",
+      "backend/crates/api-gateway/tests/attributes_types.rs": "971131b8b6094ee7ebbc1130ad3d2b0ce41cd715db6f59fab0378c1b186bb326",
+      "backend/crates/api-gateway/tests/cart_inventory.rs": "cabc73dbde266bb14320c5c5e0024159fcb86c0f95571ed60fbb715b3a97482c",
+      "backend/crates/api-gateway/tests/catalog.rs": "17248712e632fc60d03a6f918ab7a400f7cbc46714c52344bd5b2f8b20ae8c9c",
+      "backend/crates/api-gateway/tests/catalog_schema.rs": "87a23797dfb88ea00111eb19906c64509d93a41cd27f06c5187daecd33d84b7e",
+      "backend/crates/api-gateway/tests/customer_journey.rs": "1167b16c9b9f210c81005b731d9f3d78e526f8715ecfd80e722a968a6f2a1631",
+      "backend/crates/api-gateway/tests/delivery_areas.rs": "92aa4ccd369e1feefa45672e638767f3fec3398877023e10a7298c3980ff319f",
+      "backend/crates/api-gateway/tests/demo_admin.rs": "090a77fd0b1aa05353246dc1157419c3d2131d163d10a0e804b3945adb1f66ec",
+      "backend/crates/api-gateway/tests/grids.rs": "24e87fef4ab65a8b8a7f97fd661171390eee0eee17adcb96ef75a066518e5909",
+      "backend/crates/api-gateway/tests/identity.rs": "a54c10d0b33a942cdbc6f4ad6c4fb19332d42ce0feb0295954c086ed0b70c63e",
+      "backend/crates/api-gateway/tests/media_library.rs": "32e4e482a17d8c9e793fc617b13245d2305769aefd7a4b48ba5050728b973b8f",
+      "backend/crates/api-gateway/tests/merchant.rs": "79fb336d2af3a7bc4c1f1d419efeb700830601cce6a1468794f7ec26b1c36f04",
+      "backend/crates/api-gateway/tests/msi.rs": "5d8cfffbb7ef3203f471a589e3563cd4c21a3d14fd2ca58b5683db5028aa1df1",
+      "backend/crates/api-gateway/tests/notifications.rs": "588a0c184ab93773c2e2da7a6da92257417668dd647c9da1c1155b4aed50ec7b",
+      "backend/crates/api-gateway/tests/orders.rs": "a7b2250f3089306da6d6bd4b6ed4a11863df6a77511df0e44ebef512e17d077c",
+      "backend/crates/api-gateway/tests/publication_discovery.rs": "35dfac8a2c4f81f14bd0424dad9ed482f359e69cbe60c499b60c3f6d6e6cb7b2",
+      "backend/crates/api-gateway/tests/publication_feeds.rs": "9b0e4dc951ca8d17c6640dc3370e50345ee27066aaee8c84ae10bfc0c85b8e70",
+      "backend/crates/api-gateway/tests/publication_measurement.rs": "84559d08070ef1d31857feae5cf99cd34331c7b305e4324954b6fe24e6be5ff8",
+      "backend/crates/api-gateway/tests/publication_metadata.rs": "b00ae687a0e3b261b2152ab938571d0a1b77b5e884a82dfb548f07cc1a9097eb",
+      "backend/crates/api-gateway/tests/publication_migration_upgrade.rs": "68560b86616ffaf1bc8362db01243bbacec0f1079bafa7f1957e928aade8e1e0",
+      "backend/crates/api-gateway/tests/publication_policy.rs": "f130d195bae50b707a6ec17877f206b7214aa3d143f456521a08d1533dc5e035",
+      "backend/crates/api-gateway/tests/publication_rendering.rs": "799a10c3769de1d7fa4735df2c66cae2cc79b5ea6aebd92dc43dc9ac7acba79b",
+      "backend/crates/api-gateway/tests/readiness.rs": "20ddfe93f59b2613f39d756b0de8cc5fbc1597fd175776343d041a62f800e731",
+      "backend/crates/api-gateway/tests/replenishment.rs": "d4b6236ffb4681f35cf65320aa2fb8f55f905bb601411faa921ab4375307c744",
+      "backend/crates/api-gateway/tests/reporting.rs": "2a8bed51c4e5fc741471ddaf1fc12e8e1e73c5e1fdee4751c909ce5e6e86992c",
+      "backend/crates/api-gateway/tests/segments.rs": "24fef8c093f4a7b798a259a1727537e7bd41d18a220cbffb7dfce3b797872f24",
+      "backend/crates/api-gateway/tests/shopping.rs": "967c7b23b2392989c2bd4e1f62d5564931f76e7c45d1b1da1c46f4fa49771573",
+      "backend/crates/api-gateway/tests/support/mod.rs": "eac06884c74515f4d4e63251fbd7e4dbd8de455b3dbfff38309fbcb5d148294a",
+      "backend/crates/api-gateway/tests/themes.rs": "fd254c7253c70039f69724ab567ce569dd9f9ae5a9e4479b8a1a729fe1487a02",
+      "backend/crates/domain-admin-iam/Cargo.toml": "122e5fd70aeaee9443665f0b4901026a67680d596187e25a00f038935c8badcf",
+      "backend/crates/domain-admin-iam/src/lib.rs": "f263cd957649438edb66dd5df244283a9049cdd683738b47282d0d0191e1ddbf",
+      "backend/crates/domain-admin-operations/Cargo.toml": "66aee41bfb37a82ed67fce2fb60ed96e98eb334b8b5805c35341e18af617cf6a",
+      "backend/crates/domain-admin-operations/src/lib.rs": "5452fbfab5ab1d11e2b9a550da85bf4192131c4a755a70633e2a34f7405813fa",
+      "backend/crates/domain-attributes/Cargo.toml": "defcf1d0963163d19622260225503803175ddfdb97b7d55094cb932276326fc8",
+      "backend/crates/domain-attributes/src/enrichment.rs": "bdff4c5fa736575eaa199c2a7416ae4cfd59cf2947f86f860c70be3af2d5dbb3",
+      "backend/crates/domain-attributes/src/industry.rs": "ed3217cfaff8842861d5b2a178da28f142e794bc359a6b398d606db8da340cbc",
+      "backend/crates/domain-attributes/src/lib.rs": "d2ca8deb8100698dccf53eb842b9d13ab6674d79736a01a856fe34c1142934bd",
+      "backend/crates/domain-attributes/src/metadata.rs": "5ef538279d3295f5709720a56d9c4dbf888dadfe50d2448f4c1c76b009f7258c",
+      "backend/crates/domain-attributes/src/schema.rs": "adc8e2df1c7f44b953dcf1a6568cd70b2ddb1c42aff8bef069204013fd16cff9",
+      "backend/crates/domain-attributes/templates/industries.json": "71031f4abbaad643cdbadbf0904c5d69730d284c90fdec23566bae9ac384dde0",
+      "backend/crates/domain-cart-checkout/Cargo.toml": "15a8376f83d141ffd5c74350efb19e6d26e3c8e883bb26fc325ce29180648279",
+      "backend/crates/domain-cart-checkout/src/checkout.rs": "85255e072434a0be9884a74e64a5b973bfbec706a5b45273493e31dc08521f1c",
+      "backend/crates/domain-cart-checkout/src/lib.rs": "c261fa4d82c4f4ca4ef0c7fa51c9e050c11ac53a0575415b03d37ae03569eaaf",
+      "backend/crates/domain-cart-checkout/src/shopping.rs": "ede52e530b792513525dfdd6d0a07908a1ba753c53f63f4067756f661e378c15",
+      "backend/crates/domain-catalog/Cargo.toml": "b5131ff4d160a70515af81f6e69191331e8d39fb5527aaaf98fff8706d2f6a36",
+      "backend/crates/domain-catalog/src/lib.rs": "2f10de72cd708ae199ec9d8a70f833e65b7de54253569307f801328eb4c06071",
+      "backend/crates/domain-catalog/src/media_library.rs": "2fc677805bc589531c1e3a389ca85025a22e9baf7b0b8ad407606a9328346439",
+      "backend/crates/domain-catalog/src/public.rs": "a30b95d159e0c5040fd23f608a5f018b5f092194d9e57e40aca9ab96ff0ede43",
+      "backend/crates/domain-catalog/src/types.rs": "ea9bc286d38562231b970564b7ad9d6efd7d2f216a828b00539c7dcf048c01f6",
+      "backend/crates/domain-cms/Cargo.toml": "ab09060603b74250a0e87556ecb3f77e8bf1414df20995d61b75a3aa2c5d3774",
+      "backend/crates/domain-cms/src/lib.rs": "655fedf49ec24e3fd70099234b88b0c7e901178d03c6ff7874694297cefdc23e",
+      "backend/crates/domain-customers/Cargo.toml": "405a3fda24b76d81f8843cef067cfc3907c5ad9e5cfd8305be7b2ebce56d20ef",
+      "backend/crates/domain-customers/src/lib.rs": "8de7dc2dca7409d865328de20fd40dcf05d5b839def65c439218eefb37bb7904",
+      "backend/crates/domain-customers/src/segments.rs": "cd59eb555f962f30aa18a02157083065fb5c22dbd50718c00e3ac7bb8dd47517",
+      "backend/crates/domain-fulfillment/Cargo.toml": "e5799052b88e59c0fa913aee60d0e03707af87fa0504ce0f1c2eb15792c3011e",
+      "backend/crates/domain-fulfillment/src/lib.rs": "b1d705c49b802d9e2b97c133d6c0dca1f36cf03776a10447641a9499a1473617",
+      "backend/crates/domain-inventory/Cargo.toml": "ac3db0b1cf1d1aee79466d1b30e8a9d58a871f2b1b17ea118366728f4bf54070",
+      "backend/crates/domain-inventory/src/areas.rs": "e74de80054ecbdbcf03ce05f06a5e9a0741cb7a61d1459a96a008cb65b323806",
+      "backend/crates/domain-inventory/src/lib.rs": "24651081176141c5cbce0b5169e243fc93cd1919ecb14dc3dfddd01918209365",
+      "backend/crates/domain-inventory/src/msi.rs": "6be1a25ee65f02903a8f993d54309ea05d62738931acc1ea53dbc50b9a92d4e2",
+      "backend/crates/domain-inventory/tests/msi.rs": "35fb68e5dfd557330efc54c21f206e158be1b561b021cbe6e7da72a0967eafaf",
+      "backend/crates/domain-orders/Cargo.toml": "c80a7c2c2efe5d4f8d403092a9557ee2d3a283f39f5ff5bab1af6c3161e6a312",
+      "backend/crates/domain-orders/src/lib.rs": "4427336d9d74aecbbdabef6b127a50ba610506309f63a05e3eebcc2055cf70e1",
+      "backend/crates/domain-payments/Cargo.toml": "0f51e1974aa4e855f619ac8b5ae866b4a5f3ae13ffa8cf2680869ef8f99f7f10",
+      "backend/crates/domain-payments/src/lib.rs": "c4c412576e910ec0dcd703fcb4572e5b6f6ba0578d8cd499eeaa12b96aaed3f6",
+      "backend/crates/domain-pricing-promotions/Cargo.toml": "26abcda24f2eb49a4053672440d611db57607e26a83a1a37c0f71384418c31a1",
+      "backend/crates/domain-pricing-promotions/src/lib.rs": "2994f51e3398ea3f8702552b38e710c2d6261a39aa3dc40cf749748b3c97e7fb",
+      "backend/crates/domain-reviews/Cargo.toml": "f2bea821fe0df7fa08a44eb42067fb0c048fee49d8ec9300f1dc189444597110",
+      "backend/crates/domain-reviews/src/lib.rs": "9be2e59fb03b080a99a387066d994ea7d0b3f04191e52ae1d58dab4ce4d02fb4",
+      "backend/crates/domain-search-client/Cargo.toml": "b54f3b251eb34a48567ebc93a6d785e767e089543cdaa96b8a5ee6f703e7e3ce",
+      "backend/crates/domain-search-client/src/lib.rs": "8682364c4862d5e2098402fef52ce04284ab6573e19a55d83d3aac642d597053",
+      "backend/crates/domain-support/Cargo.toml": "b40f5c15b81e525f2f4deb0caf2471c1615b86195b097572e5a46dc95d281113",
+      "backend/crates/domain-support/src/lib.rs": "ad933c6ec892981f662c03c1a209b4281b08c3b57ee445dc7bdabd6c777497fe",
+      "backend/crates/domain-tax/Cargo.toml": "8cf1c1b464f30a53cbf756346d35568b151c3bd5f43bb2267a0ea1d75eda34b7",
+      "backend/crates/domain-tax/src/lib.rs": "a73fd04d47cc4b9394d0b46a6a4cff6cfbaccc559da00dd6b0dcd3c8d48e8049",
+      "backend/crates/domain-theme/Cargo.toml": "d63ee0c4eabdf00f4ce4dd883e91ddf95e33f1e805df9be8fa5f10c9c6e86f53",
+      "backend/crates/domain-theme/src/application.rs": "10bb3746ed57414f49d6584d6fc2d62b4a06c66bf39319f479c7c3af904fda8a",
+      "backend/crates/domain-theme/src/domain.rs": "611cabf224ee14ba312bb247d2f142f13186c2d8fa3bf0207712b1d30162154e",
+      "backend/crates/domain-theme/src/lib.rs": "e4c08a9965bd08800ae39674f6a45abd6f3c9207ab78c21e066095a70bae2281",
+      "backend/crates/domain-theme/src/postgres.rs": "3379c99fb072dc478b65c44e8f45f7e00205df9e47be117bf1a9ded649bcf660",
+      "backend/crates/domain-theme/tests/lifecycle.rs": "6fccc084cbc8f8a4937b30f879e52cee6b5d3b606f16ad1aaeed804a15b04af5",
+      "backend/crates/infra-auth/Cargo.toml": "9b4465d9d6b1e97ae0c365acc6383cf50b6e47b1730e9c79644bcca1e0e09946",
+      "backend/crates/infra-auth/src/lib.rs": "a235fa10b9fd9ade5b189d7e8a6926b9dc44c088b7a59d0bf39e5e733ac36a54",
+      "backend/crates/infra-auth/src/notifications.rs": "bbe7970ca97a972aa2c29059e9505db8d9bbc1e196e76525a168c52541f6b9b0",
+      "backend/crates/infra-db/Cargo.toml": "f7e8c8af1e37a1d71a74da1a79903bc51d2db1095784aa61ba16eab4e82a1102",
+      "backend/crates/infra-db/build.rs": "bcc005330e921a4b9224f1d971cab0da537176d7d69c799eb4a792b9174acfd9",
+      "backend/crates/infra-db/src/lib.rs": "83c0b7d466c492564303072209f63fce11e82147095b5999f869bbbfeb05d6c6",
+      "backend/crates/infra-events/Cargo.toml": "083f105b1201373be3509a4ed23845e242b0a91949acd9a2831df860683eadef",
+      "backend/crates/infra-events/src/lib.rs": "3a6d2a7c28fb02dbb0ea2a1769bd5ff8224bb7db859f5b4f0299c9f99f6d6f56",
+      "backend/crates/infra-media/Cargo.toml": "31d57d155da4431778cbfb26d7c9033b3041f98fb448ed3103d461755c1c8b94",
+      "backend/crates/infra-media/src/lib.rs": "57563814963bc1795709a28c3e88b4a9005e439d91c2cf9891e60aa05818f1e0",
+      "backend/crates/infra-observability/Cargo.toml": "8c781c1e6bfc15f0a03c3249707bbe74e6a793a7135011aa3b42cf40b39aa4ec",
+      "backend/crates/infra-observability/src/lib.rs": "ddcebba2d2cfd545a6cfc2c330eb24c956b8a98069ef63b6b62a120581e681bc",
+      "backend/crates/shared-kernel/Cargo.toml": "deea91cc8e7edb961a6e5a2d6572df05d56ff3eb7d36f1de02ac9d3abfca52e2",
+      "backend/crates/shared-kernel/src/lib.rs": "d04b0a802f84e954a49c08c122410892b8d505395bd74dbdb9e5deea33e5b287",
+      "backend/migrations/20260913000000_foundations.sql": "082410226be7269eb827a95da3504afcbace8349e30effa5fd5afacac82e374d",
+      "backend/migrations/20260913010000_identity.sql": "3fd5a017a2eee9437ece78d883e10adeb53f69452407d3175a2cc42ac920dd46",
+      "backend/migrations/20260913020000_catalog.sql": "593d351fb682645d1fc385aee40d9a96a0adb67e2ba164e4b14105ee9a3165ea",
+      "backend/migrations/20260913030000_cart_inventory.sql": "4352417d327947524b27f6994c50e1d2e7ff95958c6f12b5d2dd1886e11aca0b",
+      "backend/migrations/20260914040000_checkout_orders.sql": "29f7f3ef3e0721fb13f95b8f7b907124fd7af08c34bf407bf85c73b118e87933",
+      "backend/migrations/20260914050000_tax_fulfillment.sql": "6a8e2d852ceba5648e02a4113271e1842588e87667f02a78e70332447d5729ab",
+      "backend/migrations/20260914060000_pricing_promotions.sql": "5691144023d1fd8c4de8ec3fafc3ac3edb94540ed889a397b6de18d27c10b9f6",
+      "backend/migrations/20260914070000_support.sql": "5fa45819499f817b8c557f792c210eadd4fd11c6a2e08b49868f282a8a065ec6",
+      "backend/migrations/20260914071000_admin_cms_reviews.sql": "ae115cb63fd1bfff420295ca66d400075542a63a7b85621baec87c6bad7335c3",
+      "backend/migrations/20260914090000_admin_grids.sql": "1de1ffbff32f53f7b127d4ac0fda0742383225e1893823dd6720558e13113597",
+      "backend/migrations/20260914110000_attributes_product_types.sql": "cf447bec9c14a611995190db1e875d5db9f0131b23df16c8df1d0494be8ba7ef",
+      "backend/migrations/20260914120000_multi_source_inventory.sql": "53693d63f980c7a2ed046964c94a233b4c713071147f35f6a2037e4df9b69022",
+      "backend/migrations/20260914130000_delivery_areas.sql": "fbfad2ce84869faa0da991426cc52708d5b9422db9cb9fee054730f55ecdcea8",
+      "backend/migrations/20260914131000_area_availability.sql": "b903e27112013d7f9cb6fb676d5bc622bd5a5300152895dcda320b59d59853c8",
+      "backend/migrations/20260914140000_grid_extensions.sql": "306022286c70aaf407b71ef413fd135a571d7d5ddc94064bea2e84c2ca1981bd",
+      "backend/migrations/20260914141000_consumer_receipts.sql": "1bdf94e75a90ec5d97e58ad72f2b1928fd5bf07f070ce9b2bd175ec9953b2d61",
+      "backend/migrations/20260914150000_grid_cms_downloads.sql": "d1a0cf29c5059ef8bf67e9fbb342544344f825c1eaadcc7a9cb769cd5487f5c9",
+      "backend/migrations/20260914162000_msi_stock_refresh.sql": "99149e2714729b24bbfb2c477c9dbcecb1e7621dc99a91115172c36e16a8cdec",
+      "backend/migrations/20260914163000_delivery_search_backfill.sql": "79de9f296dffc2e5240fa3b11175173bb7b0cc02a117a22673f23a97255934ea",
+      "backend/migrations/20260914164000_inventory_grid_indexes.sql": "26ee329135c006a5a6d558785bdaa089fe960a31e44d1929b1e06fd168e4a444",
+      "backend/migrations/20260914170000_attribute_sets.sql": "8a08bfd328837c8a488b6e52eaa5069075a65286bc85a3e29d73c0a27cf877fc",
+      "backend/migrations/20260915103000_replenishment_planner.sql": "61fea84202fc0dee97a6ddab39a3a0587bd6d8889bd6abe173342857ade48284",
+      "backend/migrations/20260915110000_theme_engine.sql": "4c12cc940f638e586e5c7654a09f987b94f63d4a9203e585ab989eaaf7a0a793",
+      "backend/migrations/20260915111000_theme_targeting.sql": "f6927413a1e1b26f75405dcf55d6ebe7c2018b15cdec9ffc72894ab037ef84ec",
+      "backend/migrations/20260915120000_category_images.sql": "335077680d70f0bfb62e5ab33ea992a2a56ff09b24139a8fc6beba3693b9d1d4",
+      "backend/migrations/20260915123151_notification_delivery.sql": "a31fc5d38d4f958252b8254a29a6bd68d5865ed1ae6e2f6d0ee15135a422176f",
+      "backend/migrations/20260915124531_customer_segments.sql": "f276534f2d9fce0edf1bbd0e2572292dcdbac3cda11f170cd43c636e7c32b42e",
+      "backend/migrations/20260915140000_polygon_delivery_areas.sql": "401e0aa2c25b7aef280ed988f4ada4a367ba69cc993dd7b6e8f43526d8fe4d36",
+      "backend/migrations/20260915150000_merchant_conversations.sql": "77c338725d7f3ef2681f6ee9ae4767f963f22e3e703875e33dd14b31d5bdee27",
+      "backend/migrations/20260915154500_merchant_conversation_ownership.sql": "c2daddb73cf8d77f496d6c466a16bdc083f613fb7e297a8a4875b6ca6b8b7dd4",
+      "backend/migrations/20260915160000_catalog_schema.sql": "3d0572ea8476c0e5138f0175276c6a74a2b70b5ea0ec853be6236422a2abf3bb",
+      "backend/migrations/20260917010000_discoverability_settings.sql": "2726341d8561785bccea9ffea1c85d796b44a188d9b08ad4e71fe30c59172b86",
+      "backend/migrations/20260917020000_inventory_product_lookup_indexes.sql": "42f381e18f998f1b56f904a40768adcfbc7a4ea9706f2787134852cbfb76e2cb",
+      "backend/migrations/20260917110000_location_selection_method.sql": "6ddd08625bf02ba1dfc0eab055e86279ba6701a0cc36c65e19bb8943e3e5242e",
+      "backend/migrations/20260921090000_publication_installation.sql": "631c328032068f46f287d0c040ea505011af13c25539e4a65fdc1275c15f6d15",
+      "backend/migrations/20260921100000_publication_routes.sql": "849e7d2f574dbd32c1cb49ab87341596d10bb5b3013125abf15ce032fc774b7c",
+      "backend/migrations/20260921110000_publication_slug_history.sql": "2e882860f532f3eaae463dab3fa7395d193cc39bce64ebd339f13df367d92e0b",
+      "backend/migrations/20260921120000_shopping_proposals.sql": "e1978058b32bccd320e4bc5296b181af548a3b8db5b0bdaedaa753eaf65d8638",
+      "backend/migrations/20260921150000_media_folders.sql": "40217795a9708f96d2665ee011cb480c9919bc3473fd67c461bd99cab0880074",
+      "backend/migrations/20260921160000_publication_metadata.sql": "d3b8c560bcc90aa309f140c3cbb370a4078d0852bedd3ac22a7353242a164ac9",
+      "backend/migrations/20260921180000_publication_discovery.sql": "d161eddc47f6d2b5d82e8310d57fdcecf1b504d36d5b3803a6bf4681606e6cd9",
+      "backend/migrations/20260921183000_publication_sitemap_route_key.sql": "6ad6e4e5ae5cc806877333502ac3fcda8dd354860ab79cd66e0a9ee2dd960a00",
+      "backend/migrations/20260921190000_publication_entity.sql": "2518fcb39af1b43cfe9ff1771ded0217eaa004d3ed6b278b3b2bf8960768318c",
+      "backend/migrations/20260921200000_customer_journey.sql": "d669f448ff4e0cb02dd06ae79bcbae330bd2aa40d9d102fe101aa2a1c9c6b2eb",
+      "backend/migrations/20260921210000_publication_feeds.sql": "bf642a0448cd5a25f85c44dc06a673abc544f90068bdc362ba016351e8a83b2a",
+      "backend/migrations/20260921220000_publication_measurement.sql": "8fce5b6196fe9d7fce000a2df82e0089b1d8d344917ee9cd6fa302714806ca64",
+      "backend/openapi.json": "d220afcc6f490558038973d68867087b448db90f7f6e552083ea02ff952e3b3d",
+      "compose.assistant-admin.yaml": "bfffa30de88499ed697b0dd066d84376048e6466ace20f7dd77eea69ec525fdd",
+      "compose.assistant.yaml": "a47106c61b0da7e7203927233bdb3c8368b5703a598ad98fa72fb0b76098bd48",
+      "deploy/assistant/health.conf": "170ef985342bd1fa2e83dc06ed0a79523ca20b121cc8cbb3254b346102cc18f1",
+      "deploy/assistant/ingress.conf": "8967709b4f90d03d6ef43c1ae2fdd21debed04ea47302e1d43b5d905ed0172d0",
+      "deploy/assistant/pilots/grocery-guides.template.json": "ec4976758418ef673dc5937135610b77a9b644507d3f3caa433e5f1ec33cc615",
+      "deploy/assistant/policy-answers.json": "ed7e0275e52da725bf1e20240b746ef8444bcee544daf3720cb29b1179bcaac6",
+      "deploy/assistant/provider.conf": "a230ab80f2344e0c2c39ff49f4fa30768722fdcb1c056548544a19c75091dd0b",
+      "deploy/assistant/tools.conf": "86caf7c6e22a8d11e1e9be73c5f9202d20389ba443fe9f6c6d3a1c78e8086141",
+      "deploy/ec2/assistant.yaml": "52be547e67a3532c34e8dfb3a5bcc543da765848167be0e5fea511ce80896d76",
+      "frontend/apps/admin/src/ai-reports.tsx": "48ddeb84be5b5de8b534884c925963d4f8c0bcb448289fe0980d52587520895f",
+      "frontend/apps/admin/src/assistant-readiness.tsx": "1f458f4f2ef4b2c1af9e969b6abff680182be2d837d03313e996b0f1d9e24fd3",
+      "frontend/apps/admin/src/assistant-settings.css": "6dc5c98203ecc536de33eafa0756dd69c40f2e90850fc322c5dfdbf9c3b3f64b",
+      "frontend/apps/admin/src/assistant-settings.tsx": "cb9deedd15185e05348d7c9e5f9db1076057d27643bd55310aa122ed43326c02",
+      "frontend/apps/admin/src/attributes.tsx": "566338ccbce981da8943efdf236fb9c46c87e6913a4b28f46aa41199026a030d",
+      "frontend/apps/admin/src/catalog-industry.tsx": "29c8f6159d3a075e9a1a573eb2fbe4caeae61a33f89aa254facb8dc0fd9683e2",
+      "frontend/apps/admin/src/catalog.css": "8d6f4a01a20bd0e7bccad4b7843cee87944f1a1ac3c6f904355f8bc830a4468b",
+      "frontend/apps/admin/src/catalog.tsx": "e070abb45fe33d16b7b7ad8ba8f8899b713adcfdc648c993c77797c8efaaa288",
+      "frontend/apps/admin/src/category-management.css": "dd2865ffd2f1eeee1710d618e660c02cfb34326cd28b037c71d115a39ac15e71",
+      "frontend/apps/admin/src/category-management.tsx": "d4a55ee926b7f0f2775d9c82b1ea2f2af9f4dbff6a15de2492630c8ef28a8f7d",
+      "frontend/apps/admin/src/category-tree.test.ts": "472db9ef49aff0e6ec6898c6b114c0af892396bd2be42de70acf0104e9662fb1",
+      "frontend/apps/admin/src/category-tree.ts": "8ab8abd2d462ba4600d1c99cbec7633058f52df29527f8594b10bb40811a6358",
+      "frontend/apps/admin/src/content.tsx": "a42506759931c482cf66d777aa7f17284aca840a080605898aaaf2edc4fa63bb",
+      "frontend/apps/admin/src/crawler-settings.tsx": "c7fce219fea1da76c4c6f1ea901980299a64d55e5e3946cee7c41aa02fe1b5e3",
+      "frontend/apps/admin/src/customer-journey.css": "08b6cf1e89a8caa5414ea335ca5ed3c8a78e0058990562ad2f7d179c5f9aa09e",
+      "frontend/apps/admin/src/customer-journey.tsx": "be4888ff4e16af3e39e939f609a0e199ea8dc6e8f3003cc0089e7906c70d92e6",
+      "frontend/apps/admin/src/customer-profiles.css": "8442f1d969cd071303b09373d02fef0548d0d22104af12558f1c949bbe38d079",
+      "frontend/apps/admin/src/customer-segments.tsx": "90312096cf882a62d81eb4c143b8e2564d1ff27f219411da7e6f89adf0d29237",
+      "frontend/apps/admin/src/customers.tsx": "fc452b061db2f1e72abe7da78aace5118cdcaf829dfff1c7943abdaf28871e19",
+      "frontend/apps/admin/src/delivery-area-overview.tsx": "83ecbf51988ce806f1e69ea431fd36396f510c78f2fcede5894465368c737d15",
+      "frontend/apps/admin/src/delivery-areas.css": "9d7e53d980620de3f3811ba08c042a588db86287d482e2193d8fc0673cd64394",
+      "frontend/apps/admin/src/delivery-areas.tsx": "a51358a4c92d98012be7115a5eabaf3c7800cb8cef173f8ad9deef72e461752c",
+      "frontend/apps/admin/src/delivery-geometry.test.ts": "8973b59e53a7989e191239dbbd264ec4439ea74f3cfc927f7f8328c384fd252f",
+      "frontend/apps/admin/src/delivery-geometry.ts": "bcbca8a8bc859005925097b5266d6319720992ded3239e907fe05c95d9103e80",
+      "frontend/apps/admin/src/discoverability-settings.tsx": "0b2ade29d6f77ab68af1d42bc0af60c66247154e5692f153a8ea71e524ee1629",
+      "frontend/apps/admin/src/discovery-health.css": "7d8fad811ab94cde8a16bd13b5e00f8be0fd4fae46f53e84a15e917ddb3351b1",
+      "frontend/apps/admin/src/discovery-health.tsx": "f6ebdf266129fa75570a10b3abc9893c41d61d49128d48cdee2878f2b1240bfe",
+      "frontend/apps/admin/src/effective-indexing-status.test.tsx": "acf148e3dfd0398dea90583343416f51509e0d07ebb0683bf3779132798baa6c",
+      "frontend/apps/admin/src/effective-indexing-status.tsx": "9638028c637eeff8e4541c5e48a98a74a513768501405a1b7b60315299b6a6a8",
+      "frontend/apps/admin/src/export-center.tsx": "f8dbcb04d9ae633cc49cba9881e6bd45ae5c088bd7c2211b9b576cde0a6a5af7",
+      "frontend/apps/admin/src/fulfillment.tsx": "903cfa4bd3003f6d1bc88d79f74080f03e5ca4efae37d620ab180969750966c7",
+      "frontend/apps/admin/src/grid-controls.tsx": "9e87b77b3f27e2adb2fb841f1482e233b6679d0f5c62c75a2dea7fcbfe03f7aa",
+      "frontend/apps/admin/src/grids.css": "5d3910faf38265b37d89a63109957b3723d2251352c067ce11474a5391a8cf85",
+      "frontend/apps/admin/src/grids.tsx": "32a9575bda5475a95ae5451ade134a7d23a0ed9dd6a329b4274f8082be993add",
+      "frontend/apps/admin/src/import-center.tsx": "b8f0f685f445489329fbf4efc2a64b0a525f88799dc0ac9acc1b0809ecd025be",
+      "frontend/apps/admin/src/inventory.tsx": "893c568fddcaa2bbb4975c85a14d358f79fd8860fb3cdda539f328066a63d743",
+      "frontend/apps/admin/src/local-grid.tsx": "51ee5aa33644150be82e947b9cd88aea10c89dd806cf38d094943b0b06f26675",
+      "frontend/apps/admin/src/main.tsx": "efe64d2a909d273e7336aca2dff3b4261448e40e184e5ec09fe6f6e7350d9b34",
+      "frontend/apps/admin/src/media-folders.ts": "11de04b0c2f0e37c177f55d15edc76f5007b0f28d650a3fe04a96e43b5a84dc0",
+      "frontend/apps/admin/src/media-library.css": "4382f86c645e6a8f03f31c43e819532b2589b1b0d89fe6db617aab6050a35944",
+      "frontend/apps/admin/src/media-library.tsx": "f6ab76e4b853d54050278268a311ef1ea205acf78ec51b530b07a2cabe693c3c",
+      "frontend/apps/admin/src/merchant-assistant.css": "e648ad228faf4944a1dc976563dd414f9df56fdd50af12bb5a3eb0d8104fcafc",
+      "frontend/apps/admin/src/merchant-assistant.test.tsx": "012fcba65a51cf921a0e85683192225db565859997d4c0eea6297953fd321983",
+      "frontend/apps/admin/src/merchant-assistant.tsx": "d8821c95771964e0348eb8481d36aebcc3ea48728408a495606f436f75dd6738",
+      "frontend/apps/admin/src/merchant-publication.tsx": "102f0663b3f717ea1f1965b6cf45c704b955d8b65fe370437fee6936325d9bf9",
+      "frontend/apps/admin/src/merchant-questions.test.ts": "7d48cb0ef2c2ed3bf3b786c4572d86b928d91be69bff9ad683e7ed8a9a6d7cdc",
+      "frontend/apps/admin/src/merchant-questions.ts": "db132d5fb365eb6cc30e574516bd47b8be43fd1836e7d360eb4311c72c946d0c",
+      "frontend/apps/admin/src/metadata-settings.tsx": "e2f863d7f27ee9a743e7e6cb8d0659683998b0eafd5b4f4f761f32fd44feefe8",
+      "frontend/apps/admin/src/msi-logic.test.ts": "a55df7da82f0ba98b89e16b818ba888f51b15d75e93ae5b9f591646bbbe0dd5b",
+      "frontend/apps/admin/src/msi-logic.ts": "75605ea6f17886724db2f2cd78da549483958432cf521a050e4d12673b974c3b",
+      "frontend/apps/admin/src/msi.tsx": "a0b83a2b1ffc52a6bca34d2242d8167ac0035ac67c358754a9f87ddf62ed020c",
+      "frontend/apps/admin/src/operations.tsx": "ae465aa193a3c3b11f62c5ea1f3055b360b8872beb02702ac78be3bcb36b87d3",
+      "frontend/apps/admin/src/order-geo-logic.test.ts": "04655097487e311d98c9d4248716219450cd9ed5725f0d69ebd98c3bf2cd1545",
+      "frontend/apps/admin/src/order-geo-logic.ts": "5669d1cd075f21ecd026c2c0d45b7d5cd9b47e2354ae3c6f9a1051c4e47a4c91",
+      "frontend/apps/admin/src/order-geo.css": "7aed5f4d5d43efbaadccbe9cb7a933c6a24d9645df10516a61420cadc811b593",
+      "frontend/apps/admin/src/order-geo.tsx": "417a0b765fc887cf219f8c7b408f043ba51b7896bbc5497fd79250d9280baeb9",
+      "frontend/apps/admin/src/order-notes.tsx": "f7a0938e69be3e1b3e57cdb1b91dbaebab73990d1eda273abeb44485f6194e4a",
+      "frontend/apps/admin/src/orders.tsx": "c6bc1a07174e13efbd09c5e7d0e307c7196eeb9a6bdcd8432f464bcd2191977b",
+      "frontend/apps/admin/src/overview-metrics.tsx": "46994fe0f28ca77e51618018d71aafd060d206c2a5342bf433fd44c42122c247",
+      "frontend/apps/admin/src/page-header.css": "5930d350e23ee5f6675495604e436eda11594d7745219739ada7f32482b99e25",
+      "frontend/apps/admin/src/page-header.tsx": "4df34186e496bdb4be2246ac32ea65d5cbc706dcc2dfd6e2f0597547eacc3d57",
+      "frontend/apps/admin/src/permission-model.test.ts": "fe43f47bcfbd9023ef33c5e774dfc59698e0c27c9685c016dd3726deee7cde6d",
+      "frontend/apps/admin/src/permission-model.ts": "cc1450e38180e34315506f4744a1ad243dcbdf860d7a70900b9245f96574850b",
+      "frontend/apps/admin/src/permission-tree.css": "c3c1418e86ba17fa60e270b704a8314da983a39133ebdb191d22edddb84f942f",
+      "frontend/apps/admin/src/permission-tree.tsx": "b2d0aae0191409147457e64a4fee12ec5577796f66704b4f3664ec42eaa6d8ac",
+      "frontend/apps/admin/src/product-images.css": "65d85c05645c9aa35f51e5488967febf4b94bf1283ea9efea5092c027140f44f",
+      "frontend/apps/admin/src/product-images.tsx": "06277051935349e0ed957d1133ba288230e7b1544dc267547cc1f71cf7f216c4",
+      "frontend/apps/admin/src/promotions.tsx": "f34a2469ddbd6e1f6dd73e8bb79b1800181d69eb60216931906eda1e11114df1",
+      "frontend/apps/admin/src/replenishment.css": "665746e8e3edf227e39c9cfc2fb3bfbc97f548de91adff73188f50ebdcbdc78d",
+      "frontend/apps/admin/src/replenishment.tsx": "93b4df426abc7c97c732de2633ce9edbce2add55e713210f1b5a51d779cd6def",
+      "frontend/apps/admin/src/reports.css": "2c3bf7f0cf430ae71ffcb4b194d9ac7714f4d1dfc36d0d750c22913d32247f19",
+      "frontend/apps/admin/src/reports.tsx": "15ffdf611e19a00197af81e07c24ce4a52fcaadcbd2242e92d248b6af97892ed",
+      "frontend/apps/admin/src/reviews.tsx": "e73f4144e4031e2aef6e00fe3c3022b45c5c807f0e6a2315f93a00cc15fdedf8",
+      "frontend/apps/admin/src/row-actions.css": "a254ff848fa7cb5da1d168a33c0fb62c54bc3b5c359f0e2ba6f22f6c1ee511cc",
+      "frontend/apps/admin/src/row-actions.tsx": "bb1fb01fa9b7ad387af4485360227cafb9c476a8a5e65d0128bea83bf5eb05b2",
+      "frontend/apps/admin/src/shortcuts.tsx": "a47bef0cf838f9625527b0b6e7c7e3210edeca0a74447615eff8da885a18366b",
+      "frontend/apps/admin/src/source-map.tsx": "26ef922c46b0e6010df1572659584b01709f42c0cd5ab1aa78c98ecea6be45d3",
+      "frontend/apps/admin/src/style.css": "1b87216e0722bb67f3ee8c9fe279631f2054732cd2932a6e517dab2e5f23aa37",
+      "frontend/apps/admin/src/support.tsx": "02d0371c24a53fc7084d27d1cbb5a1f1a8c320d462a5eb4deaf00aee15afdf83",
+      "frontend/apps/admin/src/theme-draft-preview.tsx": "68873352ad687347542e593bde2868d9dd0bd381b143246dc81d9b1bcabe5fec",
+      "frontend/apps/admin/src/themes.css": "27d160da6ff7eebd47b38a88ee84e6645d933cadd284e6b87dbaa596922b1d94",
+      "frontend/apps/admin/src/themes.tsx": "365c6b30f31926458b3cfa02febb76bc06e6910b9629a823316e2fcecb883b1b",
+      "frontend/apps/admin/src/vite-env.d.ts": "65996936fbb042915f7b74a200fcdde7e410f32a669b1ab9597cfaa4b0faddb5",
+      "frontend/apps/storefront/server/entry-attribution.mjs": "b8f47136b52fa34aa80ad0b321c34a53fe8a5357aba447b6142897f8b41c614d",
+      "frontend/apps/storefront/server/health-checks.mjs": "b813af8bfdc270e11bf6992ef7455eed3ba93c00c952dc3c97c90d4fc4234089",
+      "frontend/apps/storefront/server/health.mjs": "c12ab4099306910337d72829c34aa0616e384b4a66f623f31612a949261b3326",
+      "frontend/apps/storefront/server/metadata-checks.mjs": "8bec8c02a96ac18f3ce4091ed6be3f1954a94941bb9574e1716cc5aa9700517c",
+      "frontend/apps/storefront/server/metadata.mjs": "55cbb6661e29f05dddb4c1f4d62ebfd7c7097411f5a8966667928eaa1e57401a",
+      "frontend/apps/storefront/server/observability.mjs": "66100cafae06692d1a595adae76e9a2d138bbf68b538951bcd0aee2059eb1dd2",
+      "frontend/apps/storefront/server/publication-checks.mjs": "42ccb5a5e9e02fd552c0370c8c3a477a469841f1a061376a5ffcc6402fd4159e",
+      "frontend/apps/storefront/server/publication.mjs": "a293e7c6eaab2ebdd15944ab432f5af2f366a652f2c09adb688a343fc9d4c613",
+      "frontend/apps/storefront/server/seal-build.mjs": "75832657255800fb8bfade745aaf0e7c695acff2e8dc5208c1dcb48db57e5e0e",
+      "frontend/apps/storefront/server/start.mjs": "3d76d685253443780cf6821d2c337db6372a643f0b9ceea4e8000b3007949893",
+      "frontend/apps/storefront/server/structured-data-checks.mjs": "b230b684f312f5c61a70ccc66f95e241a8f704ae8c0568728fc5040648dd381e",
+      "frontend/apps/storefront/server/structured-data.mjs": "5282b69b58923b65b39f2e556f2033751f08dae14f9b2a775e19fdca94c9a97e",
+      "frontend/apps/storefront/server/transport.mjs": "035b0bd1d8333504a315f121d150f6ab107097163a5f83aac9ae98cdf284dba3",
+      "frontend/apps/storefront/server/url-policy-checks.mjs": "6450723a80e8af6e50fc958d9e7a4db036262875cd0324bca9801f1eebbd0ad2",
+      "frontend/apps/storefront/server/url-policy.mjs": "85f1ddf38cdba76f1e74257b555ad7a145ec4d17ad5514ee55b7f0f0ae206135",
+      "frontend/apps/storefront/src/account.css": "df69a912a3eb098fc953a915f5081397caaab97358b7474cff17cd2e6a5efe22",
+      "frontend/apps/storefront/src/analytics.ts": "a53552d4f059f2e8138fdfa6bb2a4343981a36755e1a1696f71349276b66f20a",
+      "frontend/apps/storefront/src/assistant-addresses.tsx": "c2528c49067d54664e64d2660b787d205689dcd250eab3bdd66622b0e361bc50",
+      "frontend/apps/storefront/src/assistant-markdown.test.tsx": "bcb959fc6550669100ec26a046872fb77e505ae76ea5a9af1cc3faa28eba71df",
+      "frontend/apps/storefront/src/assistant-markdown.tsx": "3559be2e142840fba6629b0e1273a390c6137c49bbb598a3d5c2376e65c59754",
+      "frontend/apps/storefront/src/assistant-orders.tsx": "629c6a52096d76185d8bd2f97ba9873c569b9fa5bdc6f7c842303d0cc8c7574f",
+      "frontend/apps/storefront/src/assistant-rich.test.tsx": "918031ae351533a803dfb25f280b4ec57e8d8afa355723297e05b7af7266a126",
+      "frontend/apps/storefront/src/assistant-rich.tsx": "806d9d2e32e1e095547998cfcdf4feb14a6bf2215fcc5f467d02e93d0e94c6cd",
+      "frontend/apps/storefront/src/assistant-state.test.ts": "4a55cbc5f56b478e71135a54aef23ec274d3ac8c3cf96ebc492762f1feebb719",
+      "frontend/apps/storefront/src/assistant-state.ts": "d3cc2e8e34fe76809645682e49a7ae7a8b23badb8720602f0a519af56b64ebd8",
+      "frontend/apps/storefront/src/assistant.css": "6a26a6dbf54957395aa9367db7e72e3c4a2775e5a94421d5efc0f7d1b5c114d6",
+      "frontend/apps/storefront/src/assistant.tsx": "9bb741842ee121b61c43cb5be7bd11fd2fdc42f2986b34b572a96e507b799f79",
+      "frontend/apps/storefront/src/cart.css": "937c95d74848e34fd0d24e52614a553f245444cc873a1cb203f5995b60639703",
+      "frontend/apps/storefront/src/cart.tsx": "43568e314b67cbc54b0385e7d7966d57b91d52eea226ef5fdeece46874c29ba2",
+      "frontend/apps/storefront/src/catalog.css": "c4043e1d11070866e60019302e2e5dbc5aa4201e8968d78b65ba3af6ad04f164",
+      "frontend/apps/storefront/src/catalog.tsx": "3447cbdcc59f43716cd101ed35cf171b14e721ad95c25a60ed34f539e422c32f",
+      "frontend/apps/storefront/src/checkout-logic.test.ts": "67e068ea399b091d7d5b0a32e4b9be7362d62c5bda74d8ae29318b37443732ba",
+      "frontend/apps/storefront/src/checkout-logic.ts": "314668fea8d2293f1f49601bd2c698bebfe9d426c32c4ec8a0ce8624d3c77e2c",
+      "frontend/apps/storefront/src/checkout.css": "f3211b64ff550a09b7bcb8d324c69cd6d4cd90dddc4a003577d0562244c68a9f",
+      "frontend/apps/storefront/src/checkout.tsx": "7b7fe8405900014373365f812564b7f4bdb2e56ae32b16814d70a65e339d92e4",
+      "frontend/apps/storefront/src/city-select.tsx": "0b5d3fd69ae7de65422130cb68a35d65fdfdb241d84d37fd2a8496c0b76729cd",
+      "frontend/apps/storefront/src/community.tsx": "16abcd916dbbbdf2b7420ca985458f082d7529adecabed0316f942f1dedddff8",
+      "frontend/apps/storefront/src/content-blocks.tsx": "dd751aa38cefb8f75cd94e8c81d18487fbac8ac27bed86a4bc1498a65c1977e2",
+      "frontend/apps/storefront/src/content.css": "304ecb6c216d63bbb937c77718f87b5ca1ea4138ef6116ec402fc4e037281def",
+      "frontend/apps/storefront/src/content.tsx": "3747f1d35c743f3aa4670dbdd5911b947d699a7e81b81a5cbe7171045ced237e",
+      "frontend/apps/storefront/src/delivery-geography.test.ts": "cfad030a489efa374061d2347662b1aab729da7ce7abe40b998b013109c6c2d8",
+      "frontend/apps/storefront/src/delivery-geography.ts": "255fd177b81b104ae3fe6b253c57a7ae41bafea82bb8ec29413faa6b06eae3eb",
+      "frontend/apps/storefront/src/discovery-attribution.test.ts": "0077d1cf20093dc1d7931671213002bf501205b33ab78fed1baecdeefea3d98f",
+      "frontend/apps/storefront/src/discovery-attribution.ts": "3dcb332b8686ddc89f65a531d662c733378566006dcea725befc902b22a8a229",
+      "frontend/apps/storefront/src/entry-public-client.tsx": "47cb4a3c23aab0c9b32ef34aa6d95f9ba650160497d9b233220fc89a87ce9432",
+      "frontend/apps/storefront/src/entry-public-server.tsx": "2a4a0f5e499b2724f1b874bd0072d05fcdcc6b628c689b773af4bbb8f9bc41c3",
+      "frontend/apps/storefront/src/locations-logic.test.ts": "e23ddbc136dab1eb881f666b10fe280607589c59190fecd1deffa3e0ac71a387",
+      "frontend/apps/storefront/src/locations-logic.ts": "9cdaccfc8288811b562fe0baa20160d475da5955afd25e1229a012066c2675d4",
+      "frontend/apps/storefront/src/locations.css": "a0e2a2f963b98c85c05c211e4edd34ce0b5434982fb2d75560746daa02bd55b2",
+      "frontend/apps/storefront/src/locations.tsx": "05f8c92079ccdadd0716bb429728465eb50a562bf7df9812fbe1890f511febf0",
+      "frontend/apps/storefront/src/main.tsx": "c30d1c08031a8b4b4be00cd5184db4c65c1680957ec31a946e4f07a336bae17b",
+      "frontend/apps/storefront/src/mobile-navigation.css": "d5cbb0d6e8164f01868a7523e900b3dbfd64996f1eb30a9f342f3e23c6cef76b",
+      "frontend/apps/storefront/src/orders.css": "2315160857370ee70e8e2bb9f51455e188d895bad24c44a3dd490f181ac084e8",
+      "frontend/apps/storefront/src/orders.tsx": "50c8fe2a3fa1fb34b6fd0196829114c66e9e09aa7cbe5b16f6889beb10b5fb85",
+      "frontend/apps/storefront/src/price-filter.tsx": "f905974288a9d44ad960d6fa35e9cc30ec1cd9ebb425f7f77e1f8219d149b7ea",
+      "frontend/apps/storefront/src/product-types.tsx": "00e4ee161400c51f3c41405236da9c1eb5dcac4d519fba6de3bcd9c9ad35609e",
+      "frontend/apps/storefront/src/public/image.tsx": "040d0b1c0109a1919a8f8a6cf8aa7ace531c2c4de838599351b625f221ca0e05",
+      "frontend/apps/storefront/src/public/merchant.tsx": "daeba15884fc426db433eac1ec865dabc97a4b64042a7cf732e0f01d7f3ce29b",
+      "frontend/apps/storefront/src/public/page.tsx": "d84b3863abac662aef7e2a56b9740d9ed01d2023a02afa51bb46a28295052877",
+      "frontend/apps/storefront/src/public/public.css": "f87c07a836182b20580120e80ae9cc2ab598500fa5742625628586bf485b0286",
+      "frontend/apps/storefront/src/public/search-widget.tsx": "7cfd393bb30161ebfa9d899ccc92a67f37520f48d4dde15e11d1ad718615b23e",
+      "frontend/apps/storefront/src/public/types.ts": "897cbe2c7380e91f4f2dbf5da5387b3619eed0e9743af48668f8d7fbca40e2f2",
+      "frontend/apps/storefront/src/search.css": "2d5f6fef19796435e15a0ecd2007ac37e5ea457da5771039ea84ede103680a70",
+      "frontend/apps/storefront/src/search.tsx": "11de7697ae0face89299047d9ec943479fd333948630906f417b109804bd167c",
+      "frontend/apps/storefront/src/shopping.css": "776cab206bda21be7987fc58b8b7d64511eac04689e32ceaddff23cadcc79b69",
+      "frontend/apps/storefront/src/shopping.tsx": "5b861d1e240eebb1b0ec0cab1b8244633f052d75377e75dde3f6fc72228a408c",
+      "frontend/apps/storefront/src/showcase.css": "7c92925824d4980b9b720000f96bc5d03e50130b55a9f501326a09240187ac3b",
+      "frontend/apps/storefront/src/style.css": "94d13da5ab57a842e3c56b5ea0e40c51c6b0f83a8a54d77f85edaa259b2138ab",
+      "frontend/apps/storefront/src/support-logic.test.ts": "1adc49db55f20bc508e38a5828f0b0264fa050691a6d03fe1a2f33da22501ea5",
+      "frontend/apps/storefront/src/support-logic.ts": "b4566ef5fdaf160e47fd83e0b366065501f32884885c12441fcf3a619f86bc5d",
+      "frontend/apps/storefront/src/support.css": "5945ca1c4ce21b416b67b9f317fd0153973fa436127ed092577daba10e83964c",
+      "frontend/apps/storefront/src/support.tsx": "c7f7eca4ecbd0b825a963222a5eb9a0883e828b3be96a64eacebfc9ff1aed048",
+      "frontend/apps/storefront/src/theme-grid.test.ts": "1f1b14fe5a5c1546a8890817d6456e75ce473ec08a698a39d44b2df5df08f202",
+      "frontend/apps/storefront/src/theme-grid.ts": "d4375d7731efb713fc3eaa926aae2f3edf6e29416da131eb6e8ffa7e62eb4b3b",
+      "frontend/apps/storefront/src/theme-preview.test.ts": "a2070c8a1b3c7b04ad863b24e8269017e59943f1ab9e9d54d82f7bdb337acab9",
+      "frontend/apps/storefront/src/theme-preview.ts": "773884dc37526da7e16b809c191b3216f35c308a88b513ced5095586d46ecf01",
+      "frontend/apps/storefront/src/theme-sections.tsx": "b6662eb3e92b43ef1223b10f21edd624b3c6276aa567026de3f09e8ebd2f018e",
+      "frontend/apps/storefront/src/theme-tokens.ts": "4cb4e312ae01e458f2fd7428c8c93e881a0d171e4dac21ad152c667a871f4561",
+      "frontend/apps/storefront/src/themes.css": "d759905b9997af1c74c68dd73c41ff489361e0d68bf229dc6be3566cd06adcfd",
+      "frontend/apps/storefront/src/themes.tsx": "1a2fa29124e3be8093e9c1a4fa8699e19e6e5e23145e255e0950535c621f017d",
+      "frontend/apps/storefront/src/vite-env.d.ts": "65996936fbb042915f7b74a200fcdde7e410f32a669b1ab9597cfaa4b0faddb5",
+      "frontend/package.json": "a7b6da19a0d6ba1eb1a421bf268a8b82ffcfbcf6dd8f1dda600fdb912770278e",
+      "frontend/packages/api-client/package.json": "ce43891c8e21d851d4ca6645dc0c470091b795d62c5f1663cefe2a8db98c2a98",
+      "frontend/packages/api-client/src/assistant-schemas.ts": "fb67bb537a3a7c02359044c24524836a18fef1a4c7ffb194026d1f152e00629b",
+      "frontend/packages/api-client/src/assistant-settings.ts": "6a86b25746efe025d81864bacce5008f68d9fe7246ca7a658954b809f1241c2f",
+      "frontend/packages/api-client/src/assistant-validation.ts": "ef87d93bfc64ab0e33d0941120afb78a49d57fdc4439963ea2895626ba484c47",
+      "frontend/packages/api-client/src/assistant.test.ts": "b28ce5ca8530f963ffa6164bab13abe766f5e77996aa6d0ba8896a8518fe6ddd",
+      "frontend/packages/api-client/src/assistant.ts": "7879e6fa088a46c677eb23a59a95ae649d104d056af0cab20b7339a4370f5bfc",
+      "frontend/packages/api-client/src/catalog.ts": "8ab6386713cf874231b4c0b8f273adbab2f30617f9ea082c2c53480c44933e88",
+      "frontend/packages/api-client/src/delivery.ts": "f59c76c7aafe0fadcc11b3a0e5560fcbf5eb6e5dcb345acce9d55ab205d62148",
+      "frontend/packages/api-client/src/demo-presets.test.ts": "bf608fd379ccea629f365e6229cabf2f4f468238cb035233b9f3ee14afaf872c",
+      "frontend/packages/api-client/src/discoverability.ts": "6c80324aa68dd053010cbe4af06a77a55443f760734fe3c4e5df2fc3db0d93a4",
+      "frontend/packages/api-client/src/identity.ts": "dc856ad4f0204f9e975feb45ac1eb0f9b1c1a834dd527af026f1babe20491e5a",
+      "frontend/packages/api-client/src/index.test.ts": "87f4618c78c6b0ef960b77fb0e85b14060da3aaebd6629f419c0c308d4cd2202",
+      "frontend/packages/api-client/src/index.ts": "2db354cb9fa7b73e6a4d377dbe707ffbbe38aa50eeee0e490dbc7b61757b4e6a",
+      "frontend/packages/api-client/src/merchant.test.ts": "269917b1af118d0ed9dd15dc6f1a772b9fea9318f973586f51e2ae0d7cb74f54",
+      "frontend/packages/api-client/src/merchant.ts": "ccfcd3730feb937f78bb53bdbbd80139f4d3b08d8a9ecb72060ca8dcb38b7f2b",
+      "frontend/packages/api-client/src/msi.ts": "15adc83df1cc98b04eab686757ae4cfeff6e4c90cad26bff88c2654f9eebf5e4",
+      "frontend/packages/api-client/src/replenishment.ts": "8c40f481e39c6571dbfe323ff05ce38a064fb55092158b087f8a0184708e0be1",
+      "frontend/packages/api-client/src/reporting.ts": "179fb8b4c4608b89b8c86452316e1b421b1d87059805c0ba409cacce30575b55",
+      "frontend/packages/api-client/src/schema.d.ts": "1842aa3077748970090a85699e155a81fe168e0afd1ec4c317f0d8216b9504c5",
+      "frontend/packages/api-client/src/segments.ts": "55126ac3cb18137a56e0fef70f1ec8dd1fe073dbfd1b26b4e014b56f4c5e6b04",
+      "frontend/packages/api-client/src/telemetry.ts": "fba0dcddd6f2aae672c3103c166cdba63cb481f15b87b8adf4447b42b40f0860",
+      "frontend/packages/api-client/src/theme-contract.json": "96f26e5973b8d781ecea5403c22e7f7c783eb72ed72766d79343a5466c2007f0",
+      "frontend/packages/api-client/src/themes.test.ts": "323f520de5e477ff38a9021a711ea5fbda09d1743ccc51d4b8b1fc98193296fc",
+      "frontend/packages/api-client/src/themes.ts": "59fc91e689a8d2ee75249695de73fc3f1f8ae02f8fd54161cebf2d84c0361835",
+      "frontend/packages/api-client/tsconfig.json": "df065a9995b70c921e86879e745577d1bc7e7463bf2164bb0433a918f5cea934",
+      "frontend/packages/config/tsconfig.json": "3dc522704692ce5f14ae9fe464ca140fae5440a6289e443c05cf4fb8b184d06f",
+      "frontend/packages/ui/package.json": "16810928dce1963cacaadf1842c05c329cfa522b146ec45b1d87545ff8115fba",
+      "frontend/packages/ui/src/BrandLogo.tsx": "f322153bc372481c8d5e1da75a24cf191c7c11310384654b7e1743d77df81719",
+      "frontend/packages/ui/src/Foundation.tsx": "35fac51f5a267d1087dc9f5fcdd0fe352461af9eb3196f56b1af528d3c554921",
+      "frontend/packages/ui/src/attributes.tsx": "a4bbfdfa9c4ee9e2412f8c0718e8eaafab6a9070aec256a0dbc961e03e42eda8",
+      "frontend/packages/ui/src/forms.tsx": "471b1d7802d9dcc806491c0011fe74539e2f44f39d24c357406f83e9d25df2ac",
+      "frontend/packages/ui/src/index.ts": "f4963a6f79a0c85c6c5b6171d3fecf2592196b2f09af444543486b86c9e44a7c",
+      "frontend/packages/ui/src/media-picker.css": "1c098895d0be945f5c59c47aa833687f3cbfec3669e843a3157e7498442f384c",
+      "frontend/packages/ui/src/media-picker.tsx": "3e4a16ed78626efd948df187305e634dad77fc2ee6ec756bb84935fc3902b3e2",
+      "frontend/packages/ui/src/styles.css": "4c43e828bf9643a86d6281edb94047227ac61b7395faa3a18fceebf0f4b5712e",
+      "frontend/packages/ui/tsconfig.json": "df065a9995b70c921e86879e745577d1bc7e7463bf2164bb0433a918f5cea934",
+      "frontend/pnpm-lock.yaml": "aa950d0e428e2e7df5fab908595699fb39ecc85f11146ebb8a56bbab5100f2ae"
+    },
+    "sha256": "54d8c8dacce8e0119b267f6a55779d7e0374ab64952f3306b5a5c408676f256f"
+  },
+  "stores": {
+    "electronics": {
+      "acceptance": null,
+      "accepted_at": null,
+      "artifact_revisions": {
+        "api-gateway": "sha256:132cab2dc230fc35bf5873c6d9d938992c29944ea5216ff608c0e69c2aa61cba"
+      },
+      "assistant_configuration_revision": null,
+      "enabled_flags": [],
+      "environment": "existing local demo; not upgraded",
+      "migrations": [
+        {
+          "checksum_sha384": "22fcba1130cffb0f43f41b916eee14f986f7a0bcfab31effc5a214de14dd0f28ff43daacec77f7c664f0519c93b42e04",
+          "success": true,
+          "version": "20260913000000"
+        },
+        {
+          "checksum_sha384": "11c625cdd91e8354f8eccbdabed05b9a2e4b95e388c26d2d0565c66429370084578971d778e419ecfb7d58aa0c48a485",
+          "success": true,
+          "version": "20260913010000"
+        },
+        {
+          "checksum_sha384": "781f3e43adcaa92dfcd467b04df90bd3a96fb76af8446b4923e4d5821ebe8533c4165897a5d107222968ae8aa42d469e",
+          "success": true,
+          "version": "20260913020000"
+        },
+        {
+          "checksum_sha384": "831b89da7aa93cc97c46ee55ffb4271ffb1d939bc1050a279aedd04eedfd6194766208f3a0509e32fb6cdd28564f6910",
+          "success": true,
+          "version": "20260913030000"
+        },
+        {
+          "checksum_sha384": "77caf004222ad1f1f7b547c3097b7fd939ea69220ab9529a458f42d43820787907fb4e250d9e589bbadd95ad1e8551f0",
+          "success": true,
+          "version": "20260914040000"
+        },
+        {
+          "checksum_sha384": "d955659ecfd39a8ee717cf7669a973bf2556bb93b0be0c5b395aa412c879a37944b5f07a5723f3e48a2e0db689a331ed",
+          "success": true,
+          "version": "20260914050000"
+        },
+        {
+          "checksum_sha384": "f3ffe352d1b8352b2e6093fa577a386720d045ceb558527d79dd487a16430597fe67fe70614e0f2a1420ae521b7186c6",
+          "success": true,
+          "version": "20260914060000"
+        },
+        {
+          "checksum_sha384": "3772a7e4f92a2ad0eca5a7958f7960e54966499192f822b734328bf7df18728209e836d0eb87177f29e54fdc98f2de6a",
+          "success": true,
+          "version": "20260914070000"
+        },
+        {
+          "checksum_sha384": "29b51d3bb12992dc34a2dbec882515fe37606b92eabafe7bcc61a20662c56df370a03912b3a3ed4f6190096b3bd9f1a4",
+          "success": true,
+          "version": "20260914071000"
+        },
+        {
+          "checksum_sha384": "828f74960a69807663608a309849679781a21fd0b3336983e2de2533edb3ecfb5cce648cb8fbb8ca3434e583078b23fc",
+          "success": true,
+          "version": "20260914090000"
+        },
+        {
+          "checksum_sha384": "a820ec045bb7e75d2e74a6a7be636996e5d834812da9f08d7b155419b320a486c81829040c602dec7437c9c305775919",
+          "success": true,
+          "version": "20260914110000"
+        },
+        {
+          "checksum_sha384": "eefa9e3bed8fa6d3c3e61c9bf8374096fc18b520fb9286ee54878e7937242b8e7111f0ed1c97da874998178b89bdc57f",
+          "success": true,
+          "version": "20260914120000"
+        },
+        {
+          "checksum_sha384": "db2ba81545b33f57b8e285d8c5928e4a097e4bf655219193e120e8696c9c4fb826ab3422140a92daba0580ad3a36dc00",
+          "success": true,
+          "version": "20260914130000"
+        },
+        {
+          "checksum_sha384": "ed273f716f0fcb01b41ea82809672aa0bf975641e8ad78fb5e006b487335de8c2e17452a71bda5505b19a1eb6d034d8e",
+          "success": true,
+          "version": "20260914131000"
+        },
+        {
+          "checksum_sha384": "542a3eb7776e135ef5ed3f803ca6edecf59c8abcdaa9daf549e0ed73e29d2debe8c6c5bd458d7307be0aad6746b98181",
+          "success": true,
+          "version": "20260914140000"
+        },
+        {
+          "checksum_sha384": "74004af47fc6948e4d7c889389ec0841ff83191b8a3fcef5483a1508831def0aa7b64c6deed900ffd255e634e20bd57a",
+          "success": true,
+          "version": "20260914141000"
+        },
+        {
+          "checksum_sha384": "7fb2cfcbc35e0240d187671697be14f255fd6e806184746bdf73f3ff3d05ed9bcc716cebb57a371cb3479975ef774d00",
+          "success": true,
+          "version": "20260914150000"
+        },
+        {
+          "checksum_sha384": "9297443fbaef7bb288b1f96f41bd93c1e2ef9cae4dc5a264d4a9b9b9d597326bbdc566b3340867d5f82e2f5956994c62",
+          "success": true,
+          "version": "20260914162000"
+        },
+        {
+          "checksum_sha384": "bab22c0adc1ebb22789a16736a332462c204c8d01db85ce8dcd01c2b85d909ec947788df84ec2c4ae89f73890f171623",
+          "success": true,
+          "version": "20260914163000"
+        },
+        {
+          "checksum_sha384": "752f5a1c64dc2ec9c159abe643d8641549ee3693277b3457a8da7cf8afa0cf4fb8690ef282c7b13f745e550fbec6c54a",
+          "success": true,
+          "version": "20260914164000"
+        },
+        {
+          "checksum_sha384": "66b99973fd30f4558f20223d09e92eb65238e7b1d848b257f0fe8231f0fb50d8cfe0d62595b12c3a5182148872bf8e8a",
+          "success": true,
+          "version": "20260914170000"
+        },
+        {
+          "checksum_sha384": "b2ed375236acea1da5329fb06b46cad1319daecdcedc4fd8656999c1578c989426a26e06e581118df7a46d34704ad8bc",
+          "success": true,
+          "version": "20260915103000"
+        },
+        {
+          "checksum_sha384": "bac55bf3d0b51e8e6d1b1e245e65e9b7665bc638d00c80ca32ee4b3720f07977266317d0030531e8ed00a7fa5f085f50",
+          "success": true,
+          "version": "20260915110000"
+        },
+        {
+          "checksum_sha384": "34763c1df233d54fe7126422e96bd74edbf7ce3e27d383171d23c6e0c3e496f2102a4e70bb586fd3472d2173c383e1b3",
+          "success": true,
+          "version": "20260915111000"
+        },
+        {
+          "checksum_sha384": "d23c4681f556847c1b5d734f184ef9d1976b65f394e6966fd21cb5cfa02e8bde3244d1dacc44c2290e5161e6ebb66c67",
+          "success": true,
+          "version": "20260915120000"
+        },
+        {
+          "checksum_sha384": "50ff1beac549b1e0b222b19bf83fc55ff589fa48e1cc134e8cd70cc600aff0746cfb0055e5b7b44b1d28858004281735",
+          "success": true,
+          "version": "20260915123151"
+        },
+        {
+          "checksum_sha384": "d579a4c152f2e1cb3d2f34355b7f232c5cdbcb28a556c93699ce2c288142f0c5c8429002dedc347cfe0aa4fda7368c8f",
+          "success": true,
+          "version": "20260915124531"
+        },
+        {
+          "checksum_sha384": "0d8ccfdb183653d7c356f1292bb67bb16c560447a7797ef40c6d9bd09975788eabe012601d2db8b3bf7d72b99e451f1c",
+          "success": true,
+          "version": "20260915140000"
+        },
+        {
+          "checksum_sha384": "90fd91e76afde2eceb8a5a1ad5995577a47fbb87c5c7c96803d3613fa7d6a74891dd8a4ba3732cf296d65137c44481c9",
+          "success": true,
+          "version": "20260915150000"
+        },
+        {
+          "checksum_sha384": "609124a15f7316dc140c9337ff9d2a1a13a3b7a695b63e353528e87fe082853465ae6d33e639757706f79db5a945a34f",
+          "success": true,
+          "version": "20260915154500"
+        },
+        {
+          "checksum_sha384": "4b9ce57adbbba85b87d47824ffe4eaa385624bf0436c41c610cb0465d52d9c5dab9a49d6f1021bcd82554047620a3d23",
+          "success": true,
+          "version": "20260915160000"
+        },
+        {
+          "checksum_sha384": "cfe58ce4f2f60998e11c909c4f815ec6fa86cc7b915a106d9f8169952c6717c431e8c44b8b660259bd34b1243d34962a",
+          "success": true,
+          "version": "20260917010000"
+        },
+        {
+          "checksum_sha384": "fb0a6fe3a7f0cb729c6458a1d00e2382153dc56e9fee0c6deed22bda72e5045042cdb71c7a20757490ed804d4a82e278",
+          "success": true,
+          "version": "20260917020000"
+        }
+      ],
+      "provider_model_policy": null,
+      "reason": "No assistant container is configured in the observed local demo deployment; no provider or shopping acceptance performed. Existing gateway is restarting; this is not the M01 pilot build.",
+      "status": "not_configured",
+      "tenant_id": "91d13451-cb20-44a8-8522-e06534aeae17",
+      "tenant_identity_conflict_with": "jewelry"
+    },
+    "grocery": {
+      "acceptance": {
+        "accepted_at": "2026-09-21T09:51:35.125444+00:00",
+        "browser_suite": {
+          "admin_readiness_and_journey": "pass",
+          "ai_crash_drill": {
+            "ai_killed_during_active_shopping_stream": true,
+            "bounded_interruption_seconds": 0.15,
+            "checkout_quote_available_during_ai_outage": true,
+            "commerce_and_saved_proposals_preserved_across_restarts": true,
+            "provider_checks_after_restart": 4,
+            "stream_event_types": [
+              "progress",
+              "progress"
+            ]
+          },
+          "all_nine_error_recoveries": "pass",
+          "browser_run": "m01-fixed-final",
+          "buy_again": "pass",
+          "deterministic_transport_fault_scenarios": 2,
+          "failed": 0,
+          "flaky": 0,
+          "live_stack_scenarios": 8,
+          "lost_committed_responses": "pass",
+          "optimize_cart": "pass",
+          "passed": 10,
+          "pilot_exact_guides_and_unknown": "pass",
+          "prestream_http_recovery": "pass",
+          "provider_schema_rich_card": {
+            "checked_at": "2026-09-21T09:46:18.033087Z",
+            "configuration_revision": "ffde83e7daca009c251ccf1d4d57a92ddde249162fbe04dd2ff5b751c3a88ba2",
+            "duration_ms": 2743,
+            "input_tokens": 1125,
+            "message": "Live catalog tools, provider schemas and a catalog-grounded rich card passed. Full shopping journeys require separate acceptance.",
+            "output_tokens": 34,
+            "request_reference": "3e437881-f342-4009-a944-31b23c5affd4",
+            "status": "pass"
+          },
+          "receipt_survives_restart": true,
+          "saved_proposal_interruption": "pass",
+          "shop_for_me": "pass",
+          "stale_proposal_recovery": "pass"
+        },
+        "exit_gate": "pass",
+        "limits": [
+          "Isolated local Grocery staging; no production deployment.",
+          "Jewelry and Electronics explicitly not configured or accepted.",
+          "Workspace contains separate concurrent publication changes; exact tested artifact/source identities are recorded independently.",
+          "The completion report is versioned separately; existing implementation workspace changes are not swept into its documentation commit."
+        ],
+        "milestone": "M01",
+        "regressions": {
+          "backend_ignored_browser_case": 1,
+          "backend_postgres_passed": 44,
+          "deployment_and_preflight_passed": 13,
+          "frontend_passed": 122,
+          "http_error_unit_passed": 1,
+          "python_passed": 347,
+          "python_skipped": 3
+        },
+        "resolved_defect": {
+          "final_live_optimize_runs": 1,
+          "preliminary_live_optimize_runs": 3,
+          "request": "Find cheaper equivalent coffee for my current cart. I allow substitutions, keep the exact quantities and selling units. Budget scope is merchandise only, in USD.",
+          "resolution": "New model identity locks require verbatim customer evidence; narrow quantity-only evidence is rejected, saved/explicit/mixed/uncertain identity locks remain protected. Missing or fabricated evidence requires clarification."
+        },
+        "status": "complete_in_isolated_staging"
+      },
+      "accepted_at": "2026-09-21T09:51:35.125444+00:00",
+      "applied_migrations_match_staged_source": true,
+      "artifact_revisions": {
+        "admin": "615c8943466285b3391658c87a03a21e87cf84f3e8e5163a765a1523774cc2da",
+        "ai-service": "sha256:f6b6e554eb269856dfd18cbe6aea544c6938dcdc149360e9195bfd1482a1434f",
+        "api-gateway": "sha256:47b67b504b331a0572d0e94dd6100f37bbc75e534dc8e6ccd4d70ddac122a2ed",
+        "assistant-ingress": "sha256:b486e3d150c0420da4819a722088ac5e0d4ff3e46148761b7fdf310dbf45ba38",
+        "assistant-tools": "sha256:b486e3d150c0420da4819a722088ac5e0d4ff3e46148761b7fdf310dbf45ba38",
+        "storefront": "3f0e1ac81167cc398a6a239a8b7ff56c0c28925ebe7190d1a653561652a899f8"
+      },
+      "assistant_configuration_revision": "ffde83e7daca009c251ccf1d4d57a92ddde249162fbe04dd2ff5b751c3a88ba2",
+      "enabled_flags": [
+        "typed_errors"
+      ],
+      "environment": "isolated local staging",
+      "migrations": [
+        {
+          "checksum_sha384": "22fcba1130cffb0f43f41b916eee14f986f7a0bcfab31effc5a214de14dd0f28ff43daacec77f7c664f0519c93b42e04",
+          "success": true,
+          "version": "20260913000000"
+        },
+        {
+          "checksum_sha384": "11c625cdd91e8354f8eccbdabed05b9a2e4b95e388c26d2d0565c66429370084578971d778e419ecfb7d58aa0c48a485",
+          "success": true,
+          "version": "20260913010000"
+        },
+        {
+          "checksum_sha384": "781f3e43adcaa92dfcd467b04df90bd3a96fb76af8446b4923e4d5821ebe8533c4165897a5d107222968ae8aa42d469e",
+          "success": true,
+          "version": "20260913020000"
+        },
+        {
+          "checksum_sha384": "831b89da7aa93cc97c46ee55ffb4271ffb1d939bc1050a279aedd04eedfd6194766208f3a0509e32fb6cdd28564f6910",
+          "success": true,
+          "version": "20260913030000"
+        },
+        {
+          "checksum_sha384": "77caf004222ad1f1f7b547c3097b7fd939ea69220ab9529a458f42d43820787907fb4e250d9e589bbadd95ad1e8551f0",
+          "success": true,
+          "version": "20260914040000"
+        },
+        {
+          "checksum_sha384": "d955659ecfd39a8ee717cf7669a973bf2556bb93b0be0c5b395aa412c879a37944b5f07a5723f3e48a2e0db689a331ed",
+          "success": true,
+          "version": "20260914050000"
+        },
+        {
+          "checksum_sha384": "f3ffe352d1b8352b2e6093fa577a386720d045ceb558527d79dd487a16430597fe67fe70614e0f2a1420ae521b7186c6",
+          "success": true,
+          "version": "20260914060000"
+        },
+        {
+          "checksum_sha384": "3772a7e4f92a2ad0eca5a7958f7960e54966499192f822b734328bf7df18728209e836d0eb87177f29e54fdc98f2de6a",
+          "success": true,
+          "version": "20260914070000"
+        },
+        {
+          "checksum_sha384": "29b51d3bb12992dc34a2dbec882515fe37606b92eabafe7bcc61a20662c56df370a03912b3a3ed4f6190096b3bd9f1a4",
+          "success": true,
+          "version": "20260914071000"
+        },
+        {
+          "checksum_sha384": "828f74960a69807663608a309849679781a21fd0b3336983e2de2533edb3ecfb5cce648cb8fbb8ca3434e583078b23fc",
+          "success": true,
+          "version": "20260914090000"
+        },
+        {
+          "checksum_sha384": "a820ec045bb7e75d2e74a6a7be636996e5d834812da9f08d7b155419b320a486c81829040c602dec7437c9c305775919",
+          "success": true,
+          "version": "20260914110000"
+        },
+        {
+          "checksum_sha384": "eefa9e3bed8fa6d3c3e61c9bf8374096fc18b520fb9286ee54878e7937242b8e7111f0ed1c97da874998178b89bdc57f",
+          "success": true,
+          "version": "20260914120000"
+        },
+        {
+          "checksum_sha384": "db2ba81545b33f57b8e285d8c5928e4a097e4bf655219193e120e8696c9c4fb826ab3422140a92daba0580ad3a36dc00",
+          "success": true,
+          "version": "20260914130000"
+        },
+        {
+          "checksum_sha384": "ed273f716f0fcb01b41ea82809672aa0bf975641e8ad78fb5e006b487335de8c2e17452a71bda5505b19a1eb6d034d8e",
+          "success": true,
+          "version": "20260914131000"
+        },
+        {
+          "checksum_sha384": "542a3eb7776e135ef5ed3f803ca6edecf59c8abcdaa9daf549e0ed73e29d2debe8c6c5bd458d7307be0aad6746b98181",
+          "success": true,
+          "version": "20260914140000"
+        },
+        {
+          "checksum_sha384": "74004af47fc6948e4d7c889389ec0841ff83191b8a3fcef5483a1508831def0aa7b64c6deed900ffd255e634e20bd57a",
+          "success": true,
+          "version": "20260914141000"
+        },
+        {
+          "checksum_sha384": "7fb2cfcbc35e0240d187671697be14f255fd6e806184746bdf73f3ff3d05ed9bcc716cebb57a371cb3479975ef774d00",
+          "success": true,
+          "version": "20260914150000"
+        },
+        {
+          "checksum_sha384": "9297443fbaef7bb288b1f96f41bd93c1e2ef9cae4dc5a264d4a9b9b9d597326bbdc566b3340867d5f82e2f5956994c62",
+          "success": true,
+          "version": "20260914162000"
+        },
+        {
+          "checksum_sha384": "bab22c0adc1ebb22789a16736a332462c204c8d01db85ce8dcd01c2b85d909ec947788df84ec2c4ae89f73890f171623",
+          "success": true,
+          "version": "20260914163000"
+        },
+        {
+          "checksum_sha384": "752f5a1c64dc2ec9c159abe643d8641549ee3693277b3457a8da7cf8afa0cf4fb8690ef282c7b13f745e550fbec6c54a",
+          "success": true,
+          "version": "20260914164000"
+        },
+        {
+          "checksum_sha384": "66b99973fd30f4558f20223d09e92eb65238e7b1d848b257f0fe8231f0fb50d8cfe0d62595b12c3a5182148872bf8e8a",
+          "success": true,
+          "version": "20260914170000"
+        },
+        {
+          "checksum_sha384": "b2ed375236acea1da5329fb06b46cad1319daecdcedc4fd8656999c1578c989426a26e06e581118df7a46d34704ad8bc",
+          "success": true,
+          "version": "20260915103000"
+        },
+        {
+          "checksum_sha384": "bac55bf3d0b51e8e6d1b1e245e65e9b7665bc638d00c80ca32ee4b3720f07977266317d0030531e8ed00a7fa5f085f50",
+          "success": true,
+          "version": "20260915110000"
+        },
+        {
+          "checksum_sha384": "34763c1df233d54fe7126422e96bd74edbf7ce3e27d383171d23c6e0c3e496f2102a4e70bb586fd3472d2173c383e1b3",
+          "success": true,
+          "version": "20260915111000"
+        },
+        {
+          "checksum_sha384": "d23c4681f556847c1b5d734f184ef9d1976b65f394e6966fd21cb5cfa02e8bde3244d1dacc44c2290e5161e6ebb66c67",
+          "success": true,
+          "version": "20260915120000"
+        },
+        {
+          "checksum_sha384": "50ff1beac549b1e0b222b19bf83fc55ff589fa48e1cc134e8cd70cc600aff0746cfb0055e5b7b44b1d28858004281735",
+          "success": true,
+          "version": "20260915123151"
+        },
+        {
+          "checksum_sha384": "d579a4c152f2e1cb3d2f34355b7f232c5cdbcb28a556c93699ce2c288142f0c5c8429002dedc347cfe0aa4fda7368c8f",
+          "success": true,
+          "version": "20260915124531"
+        },
+        {
+          "checksum_sha384": "0d8ccfdb183653d7c356f1292bb67bb16c560447a7797ef40c6d9bd09975788eabe012601d2db8b3bf7d72b99e451f1c",
+          "success": true,
+          "version": "20260915140000"
+        },
+        {
+          "checksum_sha384": "90fd91e76afde2eceb8a5a1ad5995577a47fbb87c5c7c96803d3613fa7d6a74891dd8a4ba3732cf296d65137c44481c9",
+          "success": true,
+          "version": "20260915150000"
+        },
+        {
+          "checksum_sha384": "609124a15f7316dc140c9337ff9d2a1a13a3b7a695b63e353528e87fe082853465ae6d33e639757706f79db5a945a34f",
+          "success": true,
+          "version": "20260915154500"
+        },
+        {
+          "checksum_sha384": "4b9ce57adbbba85b87d47824ffe4eaa385624bf0436c41c610cb0465d52d9c5dab9a49d6f1021bcd82554047620a3d23",
+          "success": true,
+          "version": "20260915160000"
+        },
+        {
+          "checksum_sha384": "cfe58ce4f2f60998e11c909c4f815ec6fa86cc7b915a106d9f8169952c6717c431e8c44b8b660259bd34b1243d34962a",
+          "success": true,
+          "version": "20260917010000"
+        },
+        {
+          "checksum_sha384": "fb0a6fe3a7f0cb729c6458a1d00e2382153dc56e9fee0c6deed22bda72e5045042cdb71c7a20757490ed804d4a82e278",
+          "success": true,
+          "version": "20260917020000"
+        },
+        {
+          "checksum_sha384": "270e5ca374cf1a42d5e91bf66ccbecef68106dcef88ba745b42c1b6550c1e60bd895b655283d32684e8e065584bcfd7c",
+          "success": true,
+          "version": "20260917110000"
+        },
+        {
+          "checksum_sha384": "ec73f33f7b7608b293cae1fa93578cb523943d4c73e7814f5e5ec2414cff563ad18a33623319ff9660203ff30d0a6399",
+          "success": true,
+          "version": "20260921090000"
+        },
+        {
+          "checksum_sha384": "329d0fb97f4c7472e502c45544e54729e0068eb55f4947c6537c48cef8b33f13ee201c1a38b79d3852ed123589719d84",
+          "success": true,
+          "version": "20260921100000"
+        },
+        {
+          "checksum_sha384": "1fc87a9fa87f8de87c31043b3605264114c095dcdd11dffcf7cc660ffecf50a88417cdf0cc81522bd58b503ab8dc9bd7",
+          "success": true,
+          "version": "20260921110000"
+        },
+        {
+          "checksum_sha384": "785ff548c4b95856da6763184932b8352633f7ffbdb8bf9aaffaa3b4de6bee69487939cc48cc6437fceed904d7bbdc4c",
+          "success": true,
+          "version": "20260921120000"
+        },
+        {
+          "checksum_sha384": "fdceb409c9e3fa1b5a8464f3b8899f470e02ff6c7ea85893b060039c5d1fca692cd6428c186c85762c92b6f237b97bf5",
+          "success": true,
+          "version": "20260921150000"
+        },
+        {
+          "checksum_sha384": "04c16623894b008b1d2a0dd1712db84bd74cf5bad55a39eeafcb6a5feb209f8271f8ff3e006f3a8964c2b2351b357dcb",
+          "success": true,
+          "version": "20260921160000"
+        },
+        {
+          "checksum_sha384": "e4b06bf8a3cd126943447645f5409d7f628aa93b95327ae1e23f0eec88182f4c77ccbd14adcafed8e158ede8c3582062",
+          "success": true,
+          "version": "20260921180000"
+        },
+        {
+          "checksum_sha384": "527c519d4055c75cc88379224d3e4873b043314ba1812d65da04e3c210fd4322bb4cf954145d571a8e6434584cd84c54",
+          "success": true,
+          "version": "20260921190000"
+        },
+        {
+          "checksum_sha384": "37320535b1164095c4e3fad92e76faac5ad6b8b62f04cb64e597aa89a3b7ae15537b5845c626c956355a6a9be415f280",
+          "success": true,
+          "version": "20260921200000"
+        },
+        {
+          "checksum_sha384": "9c61685cbc9bfbf60c45456519b227ced22279b78bd88996e36cee91165704d72b09c40baf293b1fc7b44282cf018326",
+          "success": true,
+          "version": "20260921210000"
+        }
+      ],
+      "provider_model_policy": {
+        "maximum_calls_per_turn": 2,
+        "model": "gpt-4.1-mini",
+        "provider": "openai"
+      },
+      "readiness": {
+        "checks": [
+          {
+            "message": "Provider key configured; connectivity is a separate test.",
+            "name": "provider",
+            "status": "pass"
+          },
+          {
+            "message": "Assistant enabled.",
+            "name": "assistant",
+            "status": "pass"
+          },
+          {
+            "message": "All registered model tool schemas are strict closed objects.",
+            "name": "tool_schemas",
+            "status": "pass"
+          },
+          {
+            "message": "Live catalog schema validated through the tool proxy.",
+            "name": "catalog_tools",
+            "status": "pass"
+          },
+          {
+            "message": "Current tenant-scoped guides with dated source citations are loaded.",
+            "name": "knowledge",
+            "status": "pass"
+          },
+          {
+            "message": "Assistant storage and acceptance path configured.",
+            "name": "storage",
+            "status": "pass"
+          },
+          {
+            "message": "Customer journey migration is applied.",
+            "name": "commerce_schema",
+            "status": "pass"
+          }
+        ],
+        "configuration_revision": "ffde83e7daca009c251ccf1d4d57a92ddde249162fbe04dd2ff5b751c3a88ba2",
+        "currency_modes": [
+          "USD"
+        ],
+        "delivery_modes": [
+          "area_availability",
+          "no_scheduled_slots"
+        ],
+        "enabled": true,
+        "feature_flags": [
+          "typed_errors"
+        ],
+        "knowledge_configured": true,
+        "last_acceptance": {
+          "checked_at": "2026-09-21T09:46:18.033087Z",
+          "configuration_revision": "ffde83e7daca009c251ccf1d4d57a92ddde249162fbe04dd2ff5b751c3a88ba2",
+          "duration_ms": 2743,
+          "input_tokens": 1125,
+          "message": "Live catalog tools, provider schemas and a catalog-grounded rich card passed. Full shopping journeys require separate acceptance.",
+          "output_tokens": 34,
+          "request_reference": "3e437881-f342-4009-a944-31b23c5affd4",
+          "status": "pass"
+        },
+        "model": "gpt-4.1-mini",
+        "payment_modes": [
+          "cash_on_delivery"
+        ],
+        "provider_configured": true,
+        "quantity_modes": [
+          "whole_selling_units"
+        ],
+        "tenant_id": "0b597bc4-8eab-4e21-99b3-0c610a9ef7ba",
+        "tool_schema_revision": "2a9fb9ccc55a6e6b06dd8d838ca4447b91936792d3284e9650cc2a018d80a4f4",
+        "version": "1"
+      },
+      "reason": "All 10 final browser scenarios pass, including eight live-stack journeys and two deterministic transport-fault scenarios; AI interruption, replay and safe recovery verified.",
+      "staged_backend_source": {
+        "files": {
+          "Cargo.lock": "9424133b4e6dcf1645ea31c98ef55942c8dcc339c04c732a029c2b72c15ee8af",
+          "Cargo.toml": "c1a925c56d02e3f03951a8f726786084040f0bceb17789c2ee852354a741a046",
+          "crates/api-gateway/Cargo.toml": "a11ab4be7443fe16b1379f0046b5c20e12dc2129e201766b433fbc2e8f596507",
+          "crates/api-gateway/examples/status_fixture.rs": "73755d9247270e6df66837d7e6e285e30c827afc9c1ecf815b1cb26e253211f2",
+          "crates/api-gateway/openapi/assistant_contract.py": "ffdcfd6e14ed7bae23b770bb92e3b1628dbc1ef4c29c8c1a37a018a246fa4bc6",
+          "crates/api-gateway/openapi/assistant_settings_contract.py": "b3bae4c415b564d97063ea100704a0778421a54e17f68841eea686f30070d5fc",
+          "crates/api-gateway/openapi/catalog_schema_contract.py": "3c756dee05b2c36ce24f5d57c561359902241beaaa8f6193d8a3af6ac051a9e5",
+          "crates/api-gateway/openapi/customer_journey_contract.py": "7fb7954f6b0fb28ed61c94bce147d4567eb482c24608c28d073f844a90db7f15",
+          "crates/api-gateway/openapi/discoverability_contract.py": "35dd99ffe555d1dbb9b44214480062a2c4f2c3d426158d0627f851cbcdb4ac0c",
+          "crates/api-gateway/openapi/generate_openapi.py": "b67102954f5d13786b211a75da3d0481c59b430031611569d100d813bf5c4979",
+          "crates/api-gateway/openapi/m11_contract.py": "dd82173ebbe07bec4a610262f5e48f22db0773f5ca2e52af22aaeb376ffd57b2",
+          "crates/api-gateway/openapi/m13_contract.py": "1e9ac610ab83d71f46057deba6daf565c35c50124cb5ddc73aaa974a0758d1bb",
+          "crates/api-gateway/openapi/m7_contract.py": "a8baed186b2cdbcb705da2fe60445a3f5b4a21fd62dd17c0b8c1b435402c0101",
+          "crates/api-gateway/openapi/merchant_contract.py": "8a16ce76b06597f3767b15d5a128ef05ff77192ed57939c8c5b1ef8ee37a9ee4",
+          "crates/api-gateway/openapi/msi_contract.py": "3f872f03507f233b8bd42e81741ecf2c27b39066ba755928e1251035497726c6",
+          "crates/api-gateway/openapi/reporting_contract.py": "b3e881a008762ec409ed86695deafd660249f2f7ea83eef4d44925ee2d225c38",
+          "crates/api-gateway/openapi/segments_contract.py": "c438059b38b160ee6918a6756f12dcdb1be1268dced398b210e27d71a2057a1b",
+          "crates/api-gateway/openapi/shopper_tools.json": "7ce51ad82acb7f16d0854fc2ef80efc0b782d42aa6864d25207de22052b63f04",
+          "crates/api-gateway/openapi/shopping_contract.py": "a3f8a2d2b433bd86d28da589b045b93f71e57bbec61dcc042f437a9f0cb2b2c6",
+          "crates/api-gateway/openapi/theme_contract.py": "b8500bfe555dd1bd3a1e6435241af1185cd6983e7a02a327677d06b5816becba",
+          "crates/api-gateway/src/admin_depth.rs": "e11e88829f2a64028f5d6cc92af13cb548c4220ad76a4d9e5bad625f6f3e1044",
+          "crates/api-gateway/src/analytics.rs": "14f8d6cdd4d25fa053b1940cba44a314663598946aedb25b43e81b595d5536a3",
+          "crates/api-gateway/src/areas.rs": "be215e8e0b24545ca0cdd0655d240db76afea9155643eeb5bb5eab4f70df083a",
+          "crates/api-gateway/src/assistant.rs": "1f25f08aed2a1eca857bcddf295ac177d486bbd9e5a393e24991d56c9a1087ed",
+          "crates/api-gateway/src/assistant_baseline.rs": "0ed6abc98e9fea757181f0b9c280e280e63b2679f5df4dc4cf71b74a030632b3",
+          "crates/api-gateway/src/assistant_catalog.rs": "1f2eb61de92b5c0ca96c1805b4425f03030f4d8d9ef6513b8928e1e58c09e986",
+          "crates/api-gateway/src/assistant_failures.rs": "2cbe01270adc721c21d764ce248c677531372cc973a3978cbbd358fa29699079",
+          "crates/api-gateway/src/assistant_settings.rs": "6007ce42267e47a0fa729d8ecd4245b94a068e54c4eac98149484cf53514a47d",
+          "crates/api-gateway/src/attributes.rs": "20971c18e160170177146784315e06281a3a8e7c42cbc03442bb78de49ccc310",
+          "crates/api-gateway/src/bin/export-worker.rs": "f0f4f23667ccacc8538ba90551cce03a6c0e196425aa8356c34d5159b3450dde",
+          "crates/api-gateway/src/bin/install-catalog-data.rs": "bf655f10e57dbbe883097608dd2be971b8359aa4e135112314c9ea0f0403b5a5",
+          "crates/api-gateway/src/bin/seed-admin.rs": "831df3e474979ebabe1556f17ebb5837f89ce7dcf02c11bf8dbf496fe497bff4",
+          "crates/api-gateway/src/bin/sync-reports.rs": "eedf628ff1b1f1814b6080d072c494874f8a4d7c01d90bc87fcdbaee14ba8c3c",
+          "crates/api-gateway/src/cart.rs": "67f6df6ed2aefaad7ea00eba7280b88c8ca80b1dfcbbcba78549312308794238",
+          "crates/api-gateway/src/catalog.rs": "476604aab61d627939d32cbf79498e792ac783d0578b44d2cc1152f728166075",
+          "crates/api-gateway/src/customer_journey.rs": "0196108a7904324a7061e9f25d98e9ce75e9ac90f297a394da9416aaa8f32277",
+          "crates/api-gateway/src/customer_journey.sql": "534e19a613c66f31c6cecf4f1211662c32b89d735068172eea5fdbe16f2c50e3",
+          "crates/api-gateway/src/discoverability.rs": "40e1ce9f2ba87eaa512a5be3698ae9737190ff407332d0bf19acf10d9f4793a4",
+          "crates/api-gateway/src/exports.rs": "397e6537321092dade0669a7e35ce41777728c33e222cb62990c1ad629074110",
+          "crates/api-gateway/src/grids.rs": "176aa3fb8d7700131652246a88960861871adb523aeec2ff52497b87accc7563",
+          "crates/api-gateway/src/identity.rs": "d3bf2cd6d66871a87eafcc338fdfe2d1021869466909efc06cb95d6abfeb9d91",
+          "crates/api-gateway/src/lib.rs": "a06c7f1235b9dd13498823d10dd4ee0d88a4dc517070dcdda238ae7144899233",
+          "crates/api-gateway/src/main.rs": "60ea3791b5adda4a72c59fc20554729657a3a46ba75d62bb5be285a7a778a9aa",
+          "crates/api-gateway/src/merchant/category_decline.sql": "03576b704a7387fdf529b80f8efee5b8c53691091d25bad6c1f81533b0e50c2a",
+          "crates/api-gateway/src/merchant/low_stock.sql": "2b7f9026af33770da185199a54efffe41c115d03c16acf23e07ebdd1b1664ab2",
+          "crates/api-gateway/src/merchant/mod.rs": "a2bdc09a1b28bf2084dbde5f40bb49de32b1f550878f18e5ab662d2a50f3d709",
+          "crates/api-gateway/src/merchant/order_status.sql": "acb250b6c2ad453a9ae98e6c7730b03ff0c3f05f3a05f510813b203eeb9393ae",
+          "crates/api-gateway/src/merchant/orders.sql": "f41e4951f44aad5b75be41471a6575fdcb597de2c09041b0e7fb91d9716535f1",
+          "crates/api-gateway/src/merchant/slow_stock.sql": "f160b92bb44f5fb039e7fee0e8204085c6b04458942c89a9787e1d470204611d",
+          "crates/api-gateway/src/merchant/top_sellers.sql": "301d4b7ecfe64e14d26700195376ec4d06c09898a310e7a34f7ebfe6e7920290",
+          "crates/api-gateway/src/msi.rs": "c5ddd1609f733c4d66ec83b0c5a824e263a0148f8676adcd6f3c9d39d66d256e",
+          "crates/api-gateway/src/notifications.rs": "72c0b4e734ec96c16950471733290dfe3eec269b9575ba67b38a28a4f2345c04",
+          "crates/api-gateway/src/orders.rs": "d0bf4fe3980a1a57cf117db3e1e415f66ad2db1188c962ec3a781b5c21b6ae84",
+          "crates/api-gateway/src/public_commerce/canonical.rs": "b1ff5335661e900b0afff193474b2f724a127fc5cfae32205a31be2e32d222ce",
+          "crates/api-gateway/src/public_commerce/crawlers.json": "f5d86dc8cd9a03851a3e30b378bb1a844e49c7080fb02a2af829a1e6a61980eb",
+          "crates/api-gateway/src/public_commerce/discovery.rs": "8675de0c4f1751127c8a2f948db0eede04c6f9f33b6bbfa1ee10a3963ba57942",
+          "crates/api-gateway/src/public_commerce/entity.rs": "bcb5466ae964804fe7432ee325e385f0220451e147f6dccffe6f22389be961f3",
+          "crates/api-gateway/src/public_commerce/facts.rs": "1cef80e5943d07358a879ccc5cc987f0c67cd1291a0b0151882b1c748de18d77",
+          "crates/api-gateway/src/public_commerce/feeds.rs": "7042235501cb6b78fe7ebb48b5051414c9364e6b7d47ef6391dcf714c7282c76",
+          "crates/api-gateway/src/public_commerce/images.rs": "95af422cb91ee2d5c14c8283604da72779e1050d95312a7307035737b3ac4372",
+          "crates/api-gateway/src/public_commerce/metadata.rs": "3d562cfebfae60462caa253432c21a6aecbe429925564ba4799136ce4e40a748",
+          "crates/api-gateway/src/public_commerce/mod.rs": "a0966ef7c50eb46a6d57ef6b588d232851c2abffe2416fae1143c9c03300346d",
+          "crates/api-gateway/src/public_commerce/policy.rs": "0c84bfdfa9d2e99b59e637da57aa8329997b28979ae48698bdbd2c4dd7f2b925",
+          "crates/api-gateway/src/public_commerce/snapshot.rs": "3d18ec0603e6ee5a60dd60a8c0d2bed8ea835db70323dc0bc7d9f03c915ba72b",
+          "crates/api-gateway/src/readiness.rs": "70f60320e41f2c705b5d7d378aa413b863bbf9106e4c3262a61a09ebd4d00225",
+          "crates/api-gateway/src/replenishment.rs": "ecae5b23ffa8ef3a216f9eb1eb0251f7aef696c29d3b8104c0fa59d4108f93c8",
+          "crates/api-gateway/src/reporting/aggregate.sql": "88ce958ae8df555ce51a273e8b74cf9f73f0fad648a0d487544e4743ed0b2f29",
+          "crates/api-gateway/src/reporting/assistant.rs": "5b7aed2d4767010f2e2f5a2688ee78669b773afea372555924984e63c052f886",
+          "crates/api-gateway/src/reporting/mod.rs": "fcb3c1edddf5f69a506f892b0b89386ccea9cb38f9dd11abb39c01c0a5daf7ad",
+          "crates/api-gateway/src/reporting/schema.sql": "3edeb97b59883f86aa7019b0c888dd5414b6a8a2481c89078751ac0281d1a068",
+          "crates/api-gateway/src/segments.rs": "9c4a013d4505d4e08ce9d97debd3411fc4b04c293867453b99afed3e6f1f9905",
+          "crates/api-gateway/src/shopping.rs": "0f91d934ec61917be2a5258c1777058402f1a0be39b00410bf2a341b3a785fff",
+          "crates/api-gateway/src/support.rs": "5aa10275fdb9fd88be55c162ffb421330f1b1c31c1fbd040113dc3385f4664e2",
+          "crates/api-gateway/src/themes.rs": "00f0f7e7a791f06d154a77771b16ab49500e7289b3d12906f94c42bf79fee68d",
+          "crates/api-gateway/tests/admin_depth.rs": "16c3065d63ec652a93e21ca8ce1c502301a99038dca0d74e6fa64a03c08c1d08",
+          "crates/api-gateway/tests/assistant.rs": "020c356fde5c42e42901a3d9939b8ed166f2baf4de9dbd99910668b661f66e73",
+          "crates/api-gateway/tests/assistant_settings.rs": "f3c29536ce98c43df039c6caa7add39f094ac14c72debb598f1a86606a0b21ad",
+          "crates/api-gateway/tests/attributes_types.rs": "971131b8b6094ee7ebbc1130ad3d2b0ce41cd715db6f59fab0378c1b186bb326",
+          "crates/api-gateway/tests/cart_inventory.rs": "cabc73dbde266bb14320c5c5e0024159fcb86c0f95571ed60fbb715b3a97482c",
+          "crates/api-gateway/tests/catalog.rs": "17248712e632fc60d03a6f918ab7a400f7cbc46714c52344bd5b2f8b20ae8c9c",
+          "crates/api-gateway/tests/catalog_schema.rs": "87a23797dfb88ea00111eb19906c64509d93a41cd27f06c5187daecd33d84b7e",
+          "crates/api-gateway/tests/customer_journey.rs": "1167b16c9b9f210c81005b731d9f3d78e526f8715ecfd80e722a968a6f2a1631",
+          "crates/api-gateway/tests/delivery_areas.rs": "92aa4ccd369e1feefa45672e638767f3fec3398877023e10a7298c3980ff319f",
+          "crates/api-gateway/tests/demo_admin.rs": "090a77fd0b1aa05353246dc1157419c3d2131d163d10a0e804b3945adb1f66ec",
+          "crates/api-gateway/tests/grids.rs": "24e87fef4ab65a8b8a7f97fd661171390eee0eee17adcb96ef75a066518e5909",
+          "crates/api-gateway/tests/identity.rs": "a54c10d0b33a942cdbc6f4ad6c4fb19332d42ce0feb0295954c086ed0b70c63e",
+          "crates/api-gateway/tests/media_library.rs": "32e4e482a17d8c9e793fc617b13245d2305769aefd7a4b48ba5050728b973b8f",
+          "crates/api-gateway/tests/merchant.rs": "79fb336d2af3a7bc4c1f1d419efeb700830601cce6a1468794f7ec26b1c36f04",
+          "crates/api-gateway/tests/msi.rs": "5d8cfffbb7ef3203f471a589e3563cd4c21a3d14fd2ca58b5683db5028aa1df1",
+          "crates/api-gateway/tests/notifications.rs": "588a0c184ab93773c2e2da7a6da92257417668dd647c9da1c1155b4aed50ec7b",
+          "crates/api-gateway/tests/orders.rs": "a7b2250f3089306da6d6bd4b6ed4a11863df6a77511df0e44ebef512e17d077c",
+          "crates/api-gateway/tests/publication_discovery.rs": "35dfac8a2c4f81f14bd0424dad9ed482f359e69cbe60c499b60c3f6d6e6cb7b2",
+          "crates/api-gateway/tests/publication_feeds.rs": "17d80f416f6fb95be949cbce97879260864f437eb88fefb3e4d054c612debd8f",
+          "crates/api-gateway/tests/publication_metadata.rs": "b00ae687a0e3b261b2152ab938571d0a1b77b5e884a82dfb548f07cc1a9097eb",
+          "crates/api-gateway/tests/publication_policy.rs": "f130d195bae50b707a6ec17877f206b7214aa3d143f456521a08d1533dc5e035",
+          "crates/api-gateway/tests/publication_rendering.rs": "87b90ed2ce00758e62ae8e2773964987b06d4f33b647dc629765146ed38d9329",
+          "crates/api-gateway/tests/readiness.rs": "20ddfe93f59b2613f39d756b0de8cc5fbc1597fd175776343d041a62f800e731",
+          "crates/api-gateway/tests/replenishment.rs": "d4b6236ffb4681f35cf65320aa2fb8f55f905bb601411faa921ab4375307c744",
+          "crates/api-gateway/tests/reporting.rs": "2a8bed51c4e5fc741471ddaf1fc12e8e1e73c5e1fdee4751c909ce5e6e86992c",
+          "crates/api-gateway/tests/segments.rs": "24fef8c093f4a7b798a259a1727537e7bd41d18a220cbffb7dfce3b797872f24",
+          "crates/api-gateway/tests/shopping.rs": "c2ac2a0e19f3b22cda43f0d10f9a5e84f14a643665d2a4846d0d5b6ecfb40bc3",
+          "crates/api-gateway/tests/support/mod.rs": "eac06884c74515f4d4e63251fbd7e4dbd8de455b3dbfff38309fbcb5d148294a",
+          "crates/api-gateway/tests/themes.rs": "fd254c7253c70039f69724ab567ce569dd9f9ae5a9e4479b8a1a729fe1487a02",
+          "crates/domain-admin-iam/Cargo.toml": "122e5fd70aeaee9443665f0b4901026a67680d596187e25a00f038935c8badcf",
+          "crates/domain-admin-iam/src/lib.rs": "f263cd957649438edb66dd5df244283a9049cdd683738b47282d0d0191e1ddbf",
+          "crates/domain-admin-operations/Cargo.toml": "66aee41bfb37a82ed67fce2fb60ed96e98eb334b8b5805c35341e18af617cf6a",
+          "crates/domain-admin-operations/src/lib.rs": "5452fbfab5ab1d11e2b9a550da85bf4192131c4a755a70633e2a34f7405813fa",
+          "crates/domain-attributes/Cargo.toml": "defcf1d0963163d19622260225503803175ddfdb97b7d55094cb932276326fc8",
+          "crates/domain-attributes/src/enrichment.rs": "bdff4c5fa736575eaa199c2a7416ae4cfd59cf2947f86f860c70be3af2d5dbb3",
+          "crates/domain-attributes/src/industry.rs": "ed3217cfaff8842861d5b2a178da28f142e794bc359a6b398d606db8da340cbc",
+          "crates/domain-attributes/src/lib.rs": "d2ca8deb8100698dccf53eb842b9d13ab6674d79736a01a856fe34c1142934bd",
+          "crates/domain-attributes/src/metadata.rs": "5ef538279d3295f5709720a56d9c4dbf888dadfe50d2448f4c1c76b009f7258c",
+          "crates/domain-attributes/src/schema.rs": "adc8e2df1c7f44b953dcf1a6568cd70b2ddb1c42aff8bef069204013fd16cff9",
+          "crates/domain-attributes/templates/industries.json": "71031f4abbaad643cdbadbf0904c5d69730d284c90fdec23566bae9ac384dde0",
+          "crates/domain-cart-checkout/Cargo.toml": "15a8376f83d141ffd5c74350efb19e6d26e3c8e883bb26fc325ce29180648279",
+          "crates/domain-cart-checkout/src/checkout.rs": "85255e072434a0be9884a74e64a5b973bfbec706a5b45273493e31dc08521f1c",
+          "crates/domain-cart-checkout/src/lib.rs": "c261fa4d82c4f4ca4ef0c7fa51c9e050c11ac53a0575415b03d37ae03569eaaf",
+          "crates/domain-cart-checkout/src/shopping.rs": "ede52e530b792513525dfdd6d0a07908a1ba753c53f63f4067756f661e378c15",
+          "crates/domain-catalog/Cargo.toml": "b5131ff4d160a70515af81f6e69191331e8d39fb5527aaaf98fff8706d2f6a36",
+          "crates/domain-catalog/src/lib.rs": "2f10de72cd708ae199ec9d8a70f833e65b7de54253569307f801328eb4c06071",
+          "crates/domain-catalog/src/media_library.rs": "2fc677805bc589531c1e3a389ca85025a22e9baf7b0b8ad407606a9328346439",
+          "crates/domain-catalog/src/public.rs": "a30b95d159e0c5040fd23f608a5f018b5f092194d9e57e40aca9ab96ff0ede43",
+          "crates/domain-catalog/src/types.rs": "ea9bc286d38562231b970564b7ad9d6efd7d2f216a828b00539c7dcf048c01f6",
+          "crates/domain-cms/Cargo.toml": "ab09060603b74250a0e87556ecb3f77e8bf1414df20995d61b75a3aa2c5d3774",
+          "crates/domain-cms/src/lib.rs": "655fedf49ec24e3fd70099234b88b0c7e901178d03c6ff7874694297cefdc23e",
+          "crates/domain-customers/Cargo.toml": "405a3fda24b76d81f8843cef067cfc3907c5ad9e5cfd8305be7b2ebce56d20ef",
+          "crates/domain-customers/src/lib.rs": "8de7dc2dca7409d865328de20fd40dcf05d5b839def65c439218eefb37bb7904",
+          "crates/domain-customers/src/segments.rs": "cd59eb555f962f30aa18a02157083065fb5c22dbd50718c00e3ac7bb8dd47517",
+          "crates/domain-fulfillment/Cargo.toml": "e5799052b88e59c0fa913aee60d0e03707af87fa0504ce0f1c2eb15792c3011e",
+          "crates/domain-fulfillment/src/lib.rs": "b1d705c49b802d9e2b97c133d6c0dca1f36cf03776a10447641a9499a1473617",
+          "crates/domain-inventory/Cargo.toml": "ac3db0b1cf1d1aee79466d1b30e8a9d58a871f2b1b17ea118366728f4bf54070",
+          "crates/domain-inventory/src/areas.rs": "e74de80054ecbdbcf03ce05f06a5e9a0741cb7a61d1459a96a008cb65b323806",
+          "crates/domain-inventory/src/lib.rs": "24651081176141c5cbce0b5169e243fc93cd1919ecb14dc3dfddd01918209365",
+          "crates/domain-inventory/src/msi.rs": "6be1a25ee65f02903a8f993d54309ea05d62738931acc1ea53dbc50b9a92d4e2",
+          "crates/domain-inventory/tests/msi.rs": "35fb68e5dfd557330efc54c21f206e158be1b561b021cbe6e7da72a0967eafaf",
+          "crates/domain-orders/Cargo.toml": "c80a7c2c2efe5d4f8d403092a9557ee2d3a283f39f5ff5bab1af6c3161e6a312",
+          "crates/domain-orders/src/lib.rs": "4427336d9d74aecbbdabef6b127a50ba610506309f63a05e3eebcc2055cf70e1",
+          "crates/domain-payments/Cargo.toml": "0f51e1974aa4e855f619ac8b5ae866b4a5f3ae13ffa8cf2680869ef8f99f7f10",
+          "crates/domain-payments/src/lib.rs": "c4c412576e910ec0dcd703fcb4572e5b6f6ba0578d8cd499eeaa12b96aaed3f6",
+          "crates/domain-pricing-promotions/Cargo.toml": "26abcda24f2eb49a4053672440d611db57607e26a83a1a37c0f71384418c31a1",
+          "crates/domain-pricing-promotions/src/lib.rs": "2994f51e3398ea3f8702552b38e710c2d6261a39aa3dc40cf749748b3c97e7fb",
+          "crates/domain-reviews/Cargo.toml": "f2bea821fe0df7fa08a44eb42067fb0c048fee49d8ec9300f1dc189444597110",
+          "crates/domain-reviews/src/lib.rs": "9be2e59fb03b080a99a387066d994ea7d0b3f04191e52ae1d58dab4ce4d02fb4",
+          "crates/domain-search-client/Cargo.toml": "b54f3b251eb34a48567ebc93a6d785e767e089543cdaa96b8a5ee6f703e7e3ce",
+          "crates/domain-search-client/src/lib.rs": "8682364c4862d5e2098402fef52ce04284ab6573e19a55d83d3aac642d597053",
+          "crates/domain-support/Cargo.toml": "b40f5c15b81e525f2f4deb0caf2471c1615b86195b097572e5a46dc95d281113",
+          "crates/domain-support/src/lib.rs": "ad933c6ec892981f662c03c1a209b4281b08c3b57ee445dc7bdabd6c777497fe",
+          "crates/domain-tax/Cargo.toml": "8cf1c1b464f30a53cbf756346d35568b151c3bd5f43bb2267a0ea1d75eda34b7",
+          "crates/domain-tax/src/lib.rs": "a73fd04d47cc4b9394d0b46a6a4cff6cfbaccc559da00dd6b0dcd3c8d48e8049",
+          "crates/domain-theme/Cargo.toml": "d63ee0c4eabdf00f4ce4dd883e91ddf95e33f1e805df9be8fa5f10c9c6e86f53",
+          "crates/domain-theme/src/application.rs": "10bb3746ed57414f49d6584d6fc2d62b4a06c66bf39319f479c7c3af904fda8a",
+          "crates/domain-theme/src/domain.rs": "611cabf224ee14ba312bb247d2f142f13186c2d8fa3bf0207712b1d30162154e",
+          "crates/domain-theme/src/lib.rs": "e4c08a9965bd08800ae39674f6a45abd6f3c9207ab78c21e066095a70bae2281",
+          "crates/domain-theme/src/postgres.rs": "3379c99fb072dc478b65c44e8f45f7e00205df9e47be117bf1a9ded649bcf660",
+          "crates/domain-theme/tests/lifecycle.rs": "6fccc084cbc8f8a4937b30f879e52cee6b5d3b606f16ad1aaeed804a15b04af5",
+          "crates/infra-auth/Cargo.toml": "9b4465d9d6b1e97ae0c365acc6383cf50b6e47b1730e9c79644bcca1e0e09946",
+          "crates/infra-auth/src/lib.rs": "a235fa10b9fd9ade5b189d7e8a6926b9dc44c088b7a59d0bf39e5e733ac36a54",
+          "crates/infra-auth/src/notifications.rs": "bbe7970ca97a972aa2c29059e9505db8d9bbc1e196e76525a168c52541f6b9b0",
+          "crates/infra-db/Cargo.toml": "f7e8c8af1e37a1d71a74da1a79903bc51d2db1095784aa61ba16eab4e82a1102",
+          "crates/infra-db/build.rs": "bcc005330e921a4b9224f1d971cab0da537176d7d69c799eb4a792b9174acfd9",
+          "crates/infra-db/src/lib.rs": "83c0b7d466c492564303072209f63fce11e82147095b5999f869bbbfeb05d6c6",
+          "crates/infra-events/Cargo.toml": "083f105b1201373be3509a4ed23845e242b0a91949acd9a2831df860683eadef",
+          "crates/infra-events/src/lib.rs": "3a6d2a7c28fb02dbb0ea2a1769bd5ff8224bb7db859f5b4f0299c9f99f6d6f56",
+          "crates/infra-media/Cargo.toml": "31d57d155da4431778cbfb26d7c9033b3041f98fb448ed3103d461755c1c8b94",
+          "crates/infra-media/src/lib.rs": "57563814963bc1795709a28c3e88b4a9005e439d91c2cf9891e60aa05818f1e0",
+          "crates/infra-observability/Cargo.toml": "8c781c1e6bfc15f0a03c3249707bbe74e6a793a7135011aa3b42cf40b39aa4ec",
+          "crates/infra-observability/src/lib.rs": "ddcebba2d2cfd545a6cfc2c330eb24c956b8a98069ef63b6b62a120581e681bc",
+          "crates/shared-kernel/Cargo.toml": "deea91cc8e7edb961a6e5a2d6572df05d56ff3eb7d36f1de02ac9d3abfca52e2",
+          "crates/shared-kernel/src/lib.rs": "d04b0a802f84e954a49c08c122410892b8d505395bd74dbdb9e5deea33e5b287",
+          "migrations/20260913000000_foundations.sql": "082410226be7269eb827a95da3504afcbace8349e30effa5fd5afacac82e374d",
+          "migrations/20260913010000_identity.sql": "3fd5a017a2eee9437ece78d883e10adeb53f69452407d3175a2cc42ac920dd46",
+          "migrations/20260913020000_catalog.sql": "593d351fb682645d1fc385aee40d9a96a0adb67e2ba164e4b14105ee9a3165ea",
+          "migrations/20260913030000_cart_inventory.sql": "4352417d327947524b27f6994c50e1d2e7ff95958c6f12b5d2dd1886e11aca0b",
+          "migrations/20260914040000_checkout_orders.sql": "29f7f3ef3e0721fb13f95b8f7b907124fd7af08c34bf407bf85c73b118e87933",
+          "migrations/20260914050000_tax_fulfillment.sql": "6a8e2d852ceba5648e02a4113271e1842588e87667f02a78e70332447d5729ab",
+          "migrations/20260914060000_pricing_promotions.sql": "5691144023d1fd8c4de8ec3fafc3ac3edb94540ed889a397b6de18d27c10b9f6",
+          "migrations/20260914070000_support.sql": "5fa45819499f817b8c557f792c210eadd4fd11c6a2e08b49868f282a8a065ec6",
+          "migrations/20260914071000_admin_cms_reviews.sql": "ae115cb63fd1bfff420295ca66d400075542a63a7b85621baec87c6bad7335c3",
+          "migrations/20260914090000_admin_grids.sql": "1de1ffbff32f53f7b127d4ac0fda0742383225e1893823dd6720558e13113597",
+          "migrations/20260914110000_attributes_product_types.sql": "cf447bec9c14a611995190db1e875d5db9f0131b23df16c8df1d0494be8ba7ef",
+          "migrations/20260914120000_multi_source_inventory.sql": "53693d63f980c7a2ed046964c94a233b4c713071147f35f6a2037e4df9b69022",
+          "migrations/20260914130000_delivery_areas.sql": "fbfad2ce84869faa0da991426cc52708d5b9422db9cb9fee054730f55ecdcea8",
+          "migrations/20260914131000_area_availability.sql": "b903e27112013d7f9cb6fb676d5bc622bd5a5300152895dcda320b59d59853c8",
+          "migrations/20260914140000_grid_extensions.sql": "306022286c70aaf407b71ef413fd135a571d7d5ddc94064bea2e84c2ca1981bd",
+          "migrations/20260914141000_consumer_receipts.sql": "1bdf94e75a90ec5d97e58ad72f2b1928fd5bf07f070ce9b2bd175ec9953b2d61",
+          "migrations/20260914150000_grid_cms_downloads.sql": "d1a0cf29c5059ef8bf67e9fbb342544344f825c1eaadcc7a9cb769cd5487f5c9",
+          "migrations/20260914162000_msi_stock_refresh.sql": "99149e2714729b24bbfb2c477c9dbcecb1e7621dc99a91115172c36e16a8cdec",
+          "migrations/20260914163000_delivery_search_backfill.sql": "79de9f296dffc2e5240fa3b11175173bb7b0cc02a117a22673f23a97255934ea",
+          "migrations/20260914164000_inventory_grid_indexes.sql": "26ee329135c006a5a6d558785bdaa089fe960a31e44d1929b1e06fd168e4a444",
+          "migrations/20260914170000_attribute_sets.sql": "8a08bfd328837c8a488b6e52eaa5069075a65286bc85a3e29d73c0a27cf877fc",
+          "migrations/20260915103000_replenishment_planner.sql": "61fea84202fc0dee97a6ddab39a3a0587bd6d8889bd6abe173342857ade48284",
+          "migrations/20260915110000_theme_engine.sql": "4c12cc940f638e586e5c7654a09f987b94f63d4a9203e585ab989eaaf7a0a793",
+          "migrations/20260915111000_theme_targeting.sql": "f6927413a1e1b26f75405dcf55d6ebe7c2018b15cdec9ffc72894ab037ef84ec",
+          "migrations/20260915120000_category_images.sql": "335077680d70f0bfb62e5ab33ea992a2a56ff09b24139a8fc6beba3693b9d1d4",
+          "migrations/20260915123151_notification_delivery.sql": "a31fc5d38d4f958252b8254a29a6bd68d5865ed1ae6e2f6d0ee15135a422176f",
+          "migrations/20260915124531_customer_segments.sql": "f276534f2d9fce0edf1bbd0e2572292dcdbac3cda11f170cd43c636e7c32b42e",
+          "migrations/20260915140000_polygon_delivery_areas.sql": "401e0aa2c25b7aef280ed988f4ada4a367ba69cc993dd7b6e8f43526d8fe4d36",
+          "migrations/20260915150000_merchant_conversations.sql": "77c338725d7f3ef2681f6ee9ae4767f963f22e3e703875e33dd14b31d5bdee27",
+          "migrations/20260915154500_merchant_conversation_ownership.sql": "c2daddb73cf8d77f496d6c466a16bdc083f613fb7e297a8a4875b6ca6b8b7dd4",
+          "migrations/20260915160000_catalog_schema.sql": "3d0572ea8476c0e5138f0175276c6a74a2b70b5ea0ec853be6236422a2abf3bb",
+          "migrations/20260917010000_discoverability_settings.sql": "2726341d8561785bccea9ffea1c85d796b44a188d9b08ad4e71fe30c59172b86",
+          "migrations/20260917020000_inventory_product_lookup_indexes.sql": "42f381e18f998f1b56f904a40768adcfbc7a4ea9706f2787134852cbfb76e2cb",
+          "migrations/20260917110000_location_selection_method.sql": "6ddd08625bf02ba1dfc0eab055e86279ba6701a0cc36c65e19bb8943e3e5242e",
+          "migrations/20260921090000_publication_installation.sql": "631c328032068f46f287d0c040ea505011af13c25539e4a65fdc1275c15f6d15",
+          "migrations/20260921100000_publication_routes.sql": "849e7d2f574dbd32c1cb49ab87341596d10bb5b3013125abf15ce032fc774b7c",
+          "migrations/20260921110000_publication_slug_history.sql": "2e882860f532f3eaae463dab3fa7395d193cc39bce64ebd339f13df367d92e0b",
+          "migrations/20260921120000_shopping_proposals.sql": "e1978058b32bccd320e4bc5296b181af548a3b8db5b0bdaedaa753eaf65d8638",
+          "migrations/20260921150000_media_folders.sql": "40217795a9708f96d2665ee011cb480c9919bc3473fd67c461bd99cab0880074",
+          "migrations/20260921160000_publication_metadata.sql": "d3b8c560bcc90aa309f140c3cbb370a4078d0852bedd3ac22a7353242a164ac9",
+          "migrations/20260921180000_publication_discovery.sql": "edcfc86505d3e230fe8d97aed84fae77cdf28998d157f418fb05422516a5ab5d",
+          "migrations/20260921190000_publication_entity.sql": "2518fcb39af1b43cfe9ff1771ded0217eaa004d3ed6b278b3b2bf8960768318c",
+          "migrations/20260921200000_customer_journey.sql": "d669f448ff4e0cb02dd06ae79bcbae330bd2aa40d9d102fe101aa2a1c9c6b2eb",
+          "migrations/20260921210000_publication_feeds.sql": "1703568e60221f9fda2360b2e0669d3f1e4c9bc3007ca37710c3e1483b1f552c",
+          "openapi.json": "a6f8354496b4fd8e2887dcb4559e2df14a9fd59fefa870ad98677c225767961b",
+          "theme-contract.json": "96f26e5973b8d781ecea5403c22e7f7c783eb72ed72766d79343a5466c2007f0"
+        },
+        "sha256": "510030e3ea45620e817f9a9ea1c503174d69ce59a9dbcc449471cac22c169d66"
+      },
+      "status": "pass",
+      "tenant_id": "0b597bc4-8eab-4e21-99b3-0c610a9ef7ba",
+      "workspace_differences": [
+        "crates/api-gateway/openapi/discoverability_contract.py",
+        "crates/api-gateway/src/discoverability.rs",
+        "crates/api-gateway/src/main.rs",
+        "crates/api-gateway/src/public_commerce/canonical.rs",
+        "crates/api-gateway/src/public_commerce/discovery.rs",
+        "crates/api-gateway/src/public_commerce/feeds.rs",
+        "crates/api-gateway/src/public_commerce/mod.rs",
+        "crates/api-gateway/src/public_commerce/snapshot.rs",
+        "crates/api-gateway/tests/assistant.rs",
+        "crates/api-gateway/tests/assistant_settings.rs",
+        "crates/api-gateway/tests/publication_feeds.rs",
+        "crates/api-gateway/tests/publication_rendering.rs",
+        "crates/api-gateway/tests/shopping.rs",
+        "migrations/20260921180000_publication_discovery.sql",
+        "migrations/20260921210000_publication_feeds.sql",
+        "openapi.json"
+      ]
+    },
+    "jewelry": {
+      "acceptance": null,
+      "accepted_at": null,
+      "artifact_revisions": {
+        "api-gateway": "sha256:b4d55b413fd62a8c5c594cabc618bee7bb64515419e0a85e732a1336743be994"
+      },
+      "assistant_configuration_revision": null,
+      "enabled_flags": [],
+      "environment": "existing local demo; not upgraded",
+      "migrations": [
+        {
+          "checksum_sha384": "22fcba1130cffb0f43f41b916eee14f986f7a0bcfab31effc5a214de14dd0f28ff43daacec77f7c664f0519c93b42e04",
+          "success": true,
+          "version": "20260913000000"
+        },
+        {
+          "checksum_sha384": "11c625cdd91e8354f8eccbdabed05b9a2e4b95e388c26d2d0565c66429370084578971d778e419ecfb7d58aa0c48a485",
+          "success": true,
+          "version": "20260913010000"
+        },
+        {
+          "checksum_sha384": "781f3e43adcaa92dfcd467b04df90bd3a96fb76af8446b4923e4d5821ebe8533c4165897a5d107222968ae8aa42d469e",
+          "success": true,
+          "version": "20260913020000"
+        },
+        {
+          "checksum_sha384": "831b89da7aa93cc97c46ee55ffb4271ffb1d939bc1050a279aedd04eedfd6194766208f3a0509e32fb6cdd28564f6910",
+          "success": true,
+          "version": "20260913030000"
+        },
+        {
+          "checksum_sha384": "77caf004222ad1f1f7b547c3097b7fd939ea69220ab9529a458f42d43820787907fb4e250d9e589bbadd95ad1e8551f0",
+          "success": true,
+          "version": "20260914040000"
+        },
+        {
+          "checksum_sha384": "d955659ecfd39a8ee717cf7669a973bf2556bb93b0be0c5b395aa412c879a37944b5f07a5723f3e48a2e0db689a331ed",
+          "success": true,
+          "version": "20260914050000"
+        },
+        {
+          "checksum_sha384": "f3ffe352d1b8352b2e6093fa577a386720d045ceb558527d79dd487a16430597fe67fe70614e0f2a1420ae521b7186c6",
+          "success": true,
+          "version": "20260914060000"
+        },
+        {
+          "checksum_sha384": "3772a7e4f92a2ad0eca5a7958f7960e54966499192f822b734328bf7df18728209e836d0eb87177f29e54fdc98f2de6a",
+          "success": true,
+          "version": "20260914070000"
+        },
+        {
+          "checksum_sha384": "29b51d3bb12992dc34a2dbec882515fe37606b92eabafe7bcc61a20662c56df370a03912b3a3ed4f6190096b3bd9f1a4",
+          "success": true,
+          "version": "20260914071000"
+        },
+        {
+          "checksum_sha384": "828f74960a69807663608a309849679781a21fd0b3336983e2de2533edb3ecfb5cce648cb8fbb8ca3434e583078b23fc",
+          "success": true,
+          "version": "20260914090000"
+        },
+        {
+          "checksum_sha384": "a820ec045bb7e75d2e74a6a7be636996e5d834812da9f08d7b155419b320a486c81829040c602dec7437c9c305775919",
+          "success": true,
+          "version": "20260914110000"
+        },
+        {
+          "checksum_sha384": "eefa9e3bed8fa6d3c3e61c9bf8374096fc18b520fb9286ee54878e7937242b8e7111f0ed1c97da874998178b89bdc57f",
+          "success": true,
+          "version": "20260914120000"
+        },
+        {
+          "checksum_sha384": "db2ba81545b33f57b8e285d8c5928e4a097e4bf655219193e120e8696c9c4fb826ab3422140a92daba0580ad3a36dc00",
+          "success": true,
+          "version": "20260914130000"
+        },
+        {
+          "checksum_sha384": "ed273f716f0fcb01b41ea82809672aa0bf975641e8ad78fb5e006b487335de8c2e17452a71bda5505b19a1eb6d034d8e",
+          "success": true,
+          "version": "20260914131000"
+        },
+        {
+          "checksum_sha384": "542a3eb7776e135ef5ed3f803ca6edecf59c8abcdaa9daf549e0ed73e29d2debe8c6c5bd458d7307be0aad6746b98181",
+          "success": true,
+          "version": "20260914140000"
+        },
+        {
+          "checksum_sha384": "74004af47fc6948e4d7c889389ec0841ff83191b8a3fcef5483a1508831def0aa7b64c6deed900ffd255e634e20bd57a",
+          "success": true,
+          "version": "20260914141000"
+        },
+        {
+          "checksum_sha384": "7fb2cfcbc35e0240d187671697be14f255fd6e806184746bdf73f3ff3d05ed9bcc716cebb57a371cb3479975ef774d00",
+          "success": true,
+          "version": "20260914150000"
+        },
+        {
+          "checksum_sha384": "9297443fbaef7bb288b1f96f41bd93c1e2ef9cae4dc5a264d4a9b9b9d597326bbdc566b3340867d5f82e2f5956994c62",
+          "success": true,
+          "version": "20260914162000"
+        },
+        {
+          "checksum_sha384": "bab22c0adc1ebb22789a16736a332462c204c8d01db85ce8dcd01c2b85d909ec947788df84ec2c4ae89f73890f171623",
+          "success": true,
+          "version": "20260914163000"
+        },
+        {
+          "checksum_sha384": "752f5a1c64dc2ec9c159abe643d8641549ee3693277b3457a8da7cf8afa0cf4fb8690ef282c7b13f745e550fbec6c54a",
+          "success": true,
+          "version": "20260914164000"
+        },
+        {
+          "checksum_sha384": "66b99973fd30f4558f20223d09e92eb65238e7b1d848b257f0fe8231f0fb50d8cfe0d62595b12c3a5182148872bf8e8a",
+          "success": true,
+          "version": "20260914170000"
+        },
+        {
+          "checksum_sha384": "b2ed375236acea1da5329fb06b46cad1319daecdcedc4fd8656999c1578c989426a26e06e581118df7a46d34704ad8bc",
+          "success": true,
+          "version": "20260915103000"
+        },
+        {
+          "checksum_sha384": "bac55bf3d0b51e8e6d1b1e245e65e9b7665bc638d00c80ca32ee4b3720f07977266317d0030531e8ed00a7fa5f085f50",
+          "success": true,
+          "version": "20260915110000"
+        },
+        {
+          "checksum_sha384": "34763c1df233d54fe7126422e96bd74edbf7ce3e27d383171d23c6e0c3e496f2102a4e70bb586fd3472d2173c383e1b3",
+          "success": true,
+          "version": "20260915111000"
+        },
+        {
+          "checksum_sha384": "d23c4681f556847c1b5d734f184ef9d1976b65f394e6966fd21cb5cfa02e8bde3244d1dacc44c2290e5161e6ebb66c67",
+          "success": true,
+          "version": "20260915120000"
+        },
+        {
+          "checksum_sha384": "50ff1beac549b1e0b222b19bf83fc55ff589fa48e1cc134e8cd70cc600aff0746cfb0055e5b7b44b1d28858004281735",
+          "success": true,
+          "version": "20260915123151"
+        },
+        {
+          "checksum_sha384": "d579a4c152f2e1cb3d2f34355b7f232c5cdbcb28a556c93699ce2c288142f0c5c8429002dedc347cfe0aa4fda7368c8f",
+          "success": true,
+          "version": "20260915124531"
+        },
+        {
+          "checksum_sha384": "0d8ccfdb183653d7c356f1292bb67bb16c560447a7797ef40c6d9bd09975788eabe012601d2db8b3bf7d72b99e451f1c",
+          "success": true,
+          "version": "20260915140000"
+        },
+        {
+          "checksum_sha384": "90fd91e76afde2eceb8a5a1ad5995577a47fbb87c5c7c96803d3613fa7d6a74891dd8a4ba3732cf296d65137c44481c9",
+          "success": true,
+          "version": "20260915150000"
+        },
+        {
+          "checksum_sha384": "609124a15f7316dc140c9337ff9d2a1a13a3b7a695b63e353528e87fe082853465ae6d33e639757706f79db5a945a34f",
+          "success": true,
+          "version": "20260915154500"
+        },
+        {
+          "checksum_sha384": "4b9ce57adbbba85b87d47824ffe4eaa385624bf0436c41c610cb0465d52d9c5dab9a49d6f1021bcd82554047620a3d23",
+          "success": true,
+          "version": "20260915160000"
+        }
+      ],
+      "provider_model_policy": null,
+      "reason": "No assistant container is configured in the observed local demo deployment; no provider or shopping acceptance performed. Existing gateway is restarting; this is not the M01 pilot build.",
+      "status": "not_configured",
+      "tenant_id": "91d13451-cb20-44a8-8522-e06534aeae17",
+      "tenant_identity_conflict_with": "electronics"
+    }
+  }
+}

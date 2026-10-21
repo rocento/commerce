@@ -1,0 +1,669 @@
+{
+  "source": "generated-english-reviewed-v1",
+  "language": "English",
+  "provenance": "Model-authored synthetic concept aliases and test cases; no private training data or customer transcripts.",
+  "concepts": 10,
+  "addedTerms": 58,
+  "cases": 1517,
+  "passed": 1474,
+  "improved": 995,
+  "regressions": 0,
+  "heldTerms": [
+    "ingredient information",
+    "ingredient details"
+  ],
+  "releaseBlockingFailures": [],
+  "failures": [
+    {
+      "text": "show ingredient information",
+      "intent": "PRODUCT_INGREDIENTS",
+      "family": "generated-positive",
+      "held": true,
+      "pass": false,
+      "before": {
+        "status": "AMBIGUOUS",
+        "intent": null
+      },
+      "after": {
+        "status": "AMBIGUOUS",
+        "intent": null
+      }
+    },
+    {
+      "text": "show ingredient information please",
+      "intent": "PRODUCT_INGREDIENTS",
+      "family": "generated-positive",
+      "held": true,
+      "pass": false,
+      "before": {
+        "status": "RESOLVED",
+        "intent": "PRODUCT_SEARCH"
+      },
+      "after": {
+        "status": "RESOLVED",
+        "intent": "PRODUCT_SEARCH"
+      }
+    },
+    {
+      "text": "show ingredient information?",
+      "intent": "PRODUCT_INGREDIENTS",
+      "family": "generated-positive",
+      "held": true,
+      "pass": false,
+      "before": {
+        "status": "AMBIGUOUS",
+        "intent": null
+      },
+      "after": {
+        "status": "AMBIGUOUS",
+        "intent": null
+      }
+    },
+    {
+      "text": "please show ingredient information",
+      "intent": "PRODUCT_INGREDIENTS",
+      "family": "generated-positive",
+      "held": true,
+      "pass": false,
+      "before": {
+        "status": "AMBIGUOUS",
+        "intent": null
+      },
+      "after": {
+        "status": "AMBIGUOUS",
+        "intent": null
+      }
+    },
+    {
+      "text": "please show ingredient information please",
+      "intent": "PRODUCT_INGREDIENTS",
+      "family": "generated-positive",
+      "held": true,
+      "pass": false,
+      "before": {
+        "status": "RESOLVED",
+        "intent": "PRODUCT_SEARCH"
+      },
+      "after": {
+        "status": "RESOLVED",
+        "intent": "PRODUCT_SEARCH"
+      }
+    },
+    {
+      "text": "please show ingredient information?",
+      "intent": "PRODUCT_INGREDIENTS",
+      "family": "generated-positive",
+      "held": true,
+      "pass": false,
+      "before": {
+        "status": "AMBIGUOUS",
+        "intent": null
+      },
+      "after": {
+        "status": "AMBIGUOUS",
+        "intent": null
+      }
+    },
+    {
+      "text": "pls show ingredient information",
+      "intent": "PRODUCT_INGREDIENTS",
+      "family": "generated-positive",
+      "held": true,
+      "pass": false,
+      "before": {
+        "status": "AMBIGUOUS",
+        "intent": null
+      },
+      "after": {
+        "status": "AMBIGUOUS",
+        "intent": null
+      }
+    },
+    {
+      "text": "pls show ingredient information please",
+      "intent": "PRODUCT_INGREDIENTS",
+      "family": "generated-positive",
+      "held": true,
+      "pass": false,
+      "before": {
+        "status": "RESOLVED",
+        "intent": "PRODUCT_SEARCH"
+      },
+      "after": {
+        "status": "RESOLVED",
+        "intent": "PRODUCT_SEARCH"
+      }
+    },
+    {
+      "text": "pls show ingredient information?",
+      "intent": "PRODUCT_INGREDIENTS",
+      "family": "generated-positive",
+      "held": true,
+      "pass": false,
+      "before": {
+        "status": "AMBIGUOUS",
+        "intent": null
+      },
+      "after": {
+        "status": "AMBIGUOUS",
+        "intent": null
+      }
+    },
+    {
+      "text": "can you show ingredient information",
+      "intent": "PRODUCT_INGREDIENTS",
+      "family": "generated-positive",
+      "held": true,
+      "pass": false,
+      "before": {
+        "status": "AMBIGUOUS",
+        "intent": null
+      },
+      "after": {
+        "status": "AMBIGUOUS",
+        "intent": null
+      }
+    },
+    {
+      "text": "can you show ingredient information please",
+      "intent": "PRODUCT_INGREDIENTS",
+      "family": "generated-positive",
+      "held": true,
+      "pass": false,
+      "before": {
+        "status": "RESOLVED",
+        "intent": "PRODUCT_SEARCH"
+      },
+      "after": {
+        "status": "RESOLVED",
+        "intent": "PRODUCT_SEARCH"
+      }
+    },
+    {
+      "text": "can you show ingredient information?",
+      "intent": "PRODUCT_INGREDIENTS",
+      "family": "generated-positive",
+      "held": true,
+      "pass": false,
+      "before": {
+        "status": "AMBIGUOUS",
+        "intent": null
+      },
+      "after": {
+        "status": "AMBIGUOUS",
+        "intent": null
+      }
+    },
+    {
+      "text": "could you show ingredient information",
+      "intent": "PRODUCT_INGREDIENTS",
+      "family": "generated-positive",
+      "held": true,
+      "pass": false,
+      "before": {
+        "status": "AMBIGUOUS",
+        "intent": null
+      },
+      "after": {
+        "status": "AMBIGUOUS",
+        "intent": null
+      }
+    },
+    {
+      "text": "could you show ingredient information please",
+      "intent": "PRODUCT_INGREDIENTS",
+      "family": "generated-positive",
+      "held": true,
+      "pass": false,
+      "before": {
+        "status": "RESOLVED",
+        "intent": "PRODUCT_SEARCH"
+      },
+      "after": {
+        "status": "RESOLVED",
+        "intent": "PRODUCT_SEARCH"
+      }
+    },
+    {
+      "text": "could you show ingredient information?",
+      "intent": "PRODUCT_INGREDIENTS",
+      "family": "generated-positive",
+      "held": true,
+      "pass": false,
+      "before": {
+        "status": "AMBIGUOUS",
+        "intent": null
+      },
+      "after": {
+        "status": "AMBIGUOUS",
+        "intent": null
+      }
+    },
+    {
+      "text": "would you show ingredient information",
+      "intent": "PRODUCT_INGREDIENTS",
+      "family": "generated-positive",
+      "held": true,
+      "pass": false,
+      "before": {
+        "status": "AMBIGUOUS",
+        "intent": null
+      },
+      "after": {
+        "status": "AMBIGUOUS",
+        "intent": null
+      }
+    },
+    {
+      "text": "would you show ingredient information please",
+      "intent": "PRODUCT_INGREDIENTS",
+      "family": "generated-positive",
+      "held": true,
+      "pass": false,
+      "before": {
+        "status": "RESOLVED",
+        "intent": "PRODUCT_SEARCH"
+      },
+      "after": {
+        "status": "RESOLVED",
+        "intent": "PRODUCT_SEARCH"
+      }
+    },
+    {
+      "text": "would you show ingredient information?",
+      "intent": "PRODUCT_INGREDIENTS",
+      "family": "generated-positive",
+      "held": true,
+      "pass": false,
+      "before": {
+        "status": "AMBIGUOUS",
+        "intent": null
+      },
+      "after": {
+        "status": "AMBIGUOUS",
+        "intent": null
+      }
+    },
+    {
+      "text": "please could you show ingredient information",
+      "intent": "PRODUCT_INGREDIENTS",
+      "family": "generated-positive",
+      "held": true,
+      "pass": false,
+      "before": {
+        "status": "AMBIGUOUS",
+        "intent": null
+      },
+      "after": {
+        "status": "AMBIGUOUS",
+        "intent": null
+      }
+    },
+    {
+      "text": "please could you show ingredient information please",
+      "intent": "PRODUCT_INGREDIENTS",
+      "family": "generated-positive",
+      "held": true,
+      "pass": false,
+      "before": {
+        "status": "RESOLVED",
+        "intent": "PRODUCT_SEARCH"
+      },
+      "after": {
+        "status": "RESOLVED",
+        "intent": "PRODUCT_SEARCH"
+      }
+    },
+    {
+      "text": "please could you show ingredient information?",
+      "intent": "PRODUCT_INGREDIENTS",
+      "family": "generated-positive",
+      "held": true,
+      "pass": false,
+      "before": {
+        "status": "AMBIGUOUS",
+        "intent": null
+      },
+      "after": {
+        "status": "AMBIGUOUS",
+        "intent": null
+      }
+    },
+    {
+      "text": "show ingredient details",
+      "intent": "PRODUCT_INGREDIENTS",
+      "family": "generated-positive",
+      "held": true,
+      "pass": false,
+      "before": {
+        "status": "AMBIGUOUS",
+        "intent": null
+      },
+      "after": {
+        "status": "AMBIGUOUS",
+        "intent": null
+      }
+    },
+    {
+      "text": "show ingredient details please",
+      "intent": "PRODUCT_INGREDIENTS",
+      "family": "generated-positive",
+      "held": true,
+      "pass": false,
+      "before": {
+        "status": "RESOLVED",
+        "intent": "PRODUCT_SEARCH"
+      },
+      "after": {
+        "status": "RESOLVED",
+        "intent": "PRODUCT_SEARCH"
+      }
+    },
+    {
+      "text": "show ingredient details?",
+      "intent": "PRODUCT_INGREDIENTS",
+      "family": "generated-positive",
+      "held": true,
+      "pass": false,
+      "before": {
+        "status": "AMBIGUOUS",
+        "intent": null
+      },
+      "after": {
+        "status": "AMBIGUOUS",
+        "intent": null
+      }
+    },
+    {
+      "text": "please show ingredient details",
+      "intent": "PRODUCT_INGREDIENTS",
+      "family": "generated-positive",
+      "held": true,
+      "pass": false,
+      "before": {
+        "status": "AMBIGUOUS",
+        "intent": null
+      },
+      "after": {
+        "status": "AMBIGUOUS",
+        "intent": null
+      }
+    },
+    {
+      "text": "please show ingredient details please",
+      "intent": "PRODUCT_INGREDIENTS",
+      "family": "generated-positive",
+      "held": true,
+      "pass": false,
+      "before": {
+        "status": "RESOLVED",
+        "intent": "PRODUCT_SEARCH"
+      },
+      "after": {
+        "status": "RESOLVED",
+        "intent": "PRODUCT_SEARCH"
+      }
+    },
+    {
+      "text": "please show ingredient details?",
+      "intent": "PRODUCT_INGREDIENTS",
+      "family": "generated-positive",
+      "held": true,
+      "pass": false,
+      "before": {
+        "status": "AMBIGUOUS",
+        "intent": null
+      },
+      "after": {
+        "status": "AMBIGUOUS",
+        "intent": null
+      }
+    },
+    {
+      "text": "pls show ingredient details",
+      "intent": "PRODUCT_INGREDIENTS",
+      "family": "generated-positive",
+      "held": true,
+      "pass": false,
+      "before": {
+        "status": "AMBIGUOUS",
+        "intent": null
+      },
+      "after": {
+        "status": "AMBIGUOUS",
+        "intent": null
+      }
+    },
+    {
+      "text": "pls show ingredient details please",
+      "intent": "PRODUCT_INGREDIENTS",
+      "family": "generated-positive",
+      "held": true,
+      "pass": false,
+      "before": {
+        "status": "RESOLVED",
+        "intent": "PRODUCT_SEARCH"
+      },
+      "after": {
+        "status": "RESOLVED",
+        "intent": "PRODUCT_SEARCH"
+      }
+    },
+    {
+      "text": "pls show ingredient details?",
+      "intent": "PRODUCT_INGREDIENTS",
+      "family": "generated-positive",
+      "held": true,
+      "pass": false,
+      "before": {
+        "status": "AMBIGUOUS",
+        "intent": null
+      },
+      "after": {
+        "status": "AMBIGUOUS",
+        "intent": null
+      }
+    },
+    {
+      "text": "can you show ingredient details",
+      "intent": "PRODUCT_INGREDIENTS",
+      "family": "generated-positive",
+      "held": true,
+      "pass": false,
+      "before": {
+        "status": "AMBIGUOUS",
+        "intent": null
+      },
+      "after": {
+        "status": "AMBIGUOUS",
+        "intent": null
+      }
+    },
+    {
+      "text": "can you show ingredient details please",
+      "intent": "PRODUCT_INGREDIENTS",
+      "family": "generated-positive",
+      "held": true,
+      "pass": false,
+      "before": {
+        "status": "RESOLVED",
+        "intent": "PRODUCT_SEARCH"
+      },
+      "after": {
+        "status": "RESOLVED",
+        "intent": "PRODUCT_SEARCH"
+      }
+    },
+    {
+      "text": "can you show ingredient details?",
+      "intent": "PRODUCT_INGREDIENTS",
+      "family": "generated-positive",
+      "held": true,
+      "pass": false,
+      "before": {
+        "status": "AMBIGUOUS",
+        "intent": null
+      },
+      "after": {
+        "status": "AMBIGUOUS",
+        "intent": null
+      }
+    },
+    {
+      "text": "could you show ingredient details",
+      "intent": "PRODUCT_INGREDIENTS",
+      "family": "generated-positive",
+      "held": true,
+      "pass": false,
+      "before": {
+        "status": "AMBIGUOUS",
+        "intent": null
+      },
+      "after": {
+        "status": "AMBIGUOUS",
+        "intent": null
+      }
+    },
+    {
+      "text": "could you show ingredient details please",
+      "intent": "PRODUCT_INGREDIENTS",
+      "family": "generated-positive",
+      "held": true,
+      "pass": false,
+      "before": {
+        "status": "RESOLVED",
+        "intent": "PRODUCT_SEARCH"
+      },
+      "after": {
+        "status": "RESOLVED",
+        "intent": "PRODUCT_SEARCH"
+      }
+    },
+    {
+      "text": "could you show ingredient details?",
+      "intent": "PRODUCT_INGREDIENTS",
+      "family": "generated-positive",
+      "held": true,
+      "pass": false,
+      "before": {
+        "status": "AMBIGUOUS",
+        "intent": null
+      },
+      "after": {
+        "status": "AMBIGUOUS",
+        "intent": null
+      }
+    },
+    {
+      "text": "would you show ingredient details",
+      "intent": "PRODUCT_INGREDIENTS",
+      "family": "generated-positive",
+      "held": true,
+      "pass": false,
+      "before": {
+        "status": "AMBIGUOUS",
+        "intent": null
+      },
+      "after": {
+        "status": "AMBIGUOUS",
+        "intent": null
+      }
+    },
+    {
+      "text": "would you show ingredient details please",
+      "intent": "PRODUCT_INGREDIENTS",
+      "family": "generated-positive",
+      "held": true,
+      "pass": false,
+      "before": {
+        "status": "RESOLVED",
+        "intent": "PRODUCT_SEARCH"
+      },
+      "after": {
+        "status": "RESOLVED",
+        "intent": "PRODUCT_SEARCH"
+      }
+    },
+    {
+      "text": "would you show ingredient details?",
+      "intent": "PRODUCT_INGREDIENTS",
+      "family": "generated-positive",
+      "held": true,
+      "pass": false,
+      "before": {
+        "status": "AMBIGUOUS",
+        "intent": null
+      },
+      "after": {
+        "status": "AMBIGUOUS",
+        "intent": null
+      }
+    },
+    {
+      "text": "please could you show ingredient details",
+      "intent": "PRODUCT_INGREDIENTS",
+      "family": "generated-positive",
+      "held": true,
+      "pass": false,
+      "before": {
+        "status": "AMBIGUOUS",
+        "intent": null
+      },
+      "after": {
+        "status": "AMBIGUOUS",
+        "intent": null
+      }
+    },
+    {
+      "text": "please could you show ingredient details please",
+      "intent": "PRODUCT_INGREDIENTS",
+      "family": "generated-positive",
+      "held": true,
+      "pass": false,
+      "before": {
+        "status": "RESOLVED",
+        "intent": "PRODUCT_SEARCH"
+      },
+      "after": {
+        "status": "RESOLVED",
+        "intent": "PRODUCT_SEARCH"
+      }
+    },
+    {
+      "text": "please could you show ingredient details?",
+      "intent": "PRODUCT_INGREDIENTS",
+      "family": "generated-positive",
+      "held": true,
+      "pass": false,
+      "before": {
+        "status": "AMBIGUOUS",
+        "intent": null
+      },
+      "after": {
+        "status": "AMBIGUOUS",
+        "intent": null
+      }
+    },
+    {
+      "text": "Please list the ingredient details.",
+      "intent": "PRODUCT_INGREDIENTS",
+      "family": "separately-authored",
+      "held": true,
+      "pass": false,
+      "before": {
+        "status": "RESOLVED",
+        "intent": "PRODUCT_DETAILS"
+      },
+      "after": {
+        "status": "RESOLVED",
+        "intent": "PRODUCT_DETAILS"
+      }
+    }
+  ],
+  "fingerprint": "3a8f617efa020e286f59b53a1378e35a97a3ec770c8e507330ddb2fb36c6c88c",
+  "limits": [
+    "Template variations are not independent human examples.",
+    "Development holdouts have been inspected; independent human review is still useful.",
+    "Vocabulary does not implement or authorize backend actions."
+  ]
+}

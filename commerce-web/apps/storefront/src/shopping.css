@@ -1,0 +1,26 @@
+.shopping-proposal { margin:20px 0; padding:20px; border:1px solid var(--theme-color-border,#dedfd8); border-radius:14px; background:var(--theme-color-background,#fff); overflow-wrap:anywhere; }
+.shopping-badge { font-size:12px; font-weight:600; color:var(--theme-color-primary); }
+.shopping-proposal h3 { margin:10px 0; }
+.shopping-proposal fieldset { display:flex; flex-wrap:wrap; gap:16px; padding:16px; margin:16px 0; border:1px solid var(--theme-color-border,#dedfd8); }
+.shopping-proposal label { display:flex; gap:8px; align-items:center; font-size:13px; }
+.shopping-proposal input[type=number] { width:90px; min-height:40px; }
+.shopping-proposal select { max-width:100%; min-height:40px; }
+.shopping-lines { list-style:none; padding:0; display:grid; gap:20px; }
+.shopping-lines > li { display:grid; grid-template-columns:76px minmax(0,1fr); gap:16px; border-bottom:1px solid var(--theme-color-border,#dedfd8); padding-bottom:20px; }
+.shopping-lines img { width:76px; height:76px; object-fit:contain; background:#f5f3ee; border-radius:8px; }
+.shopping-image-fallback { font-size:11px; padding:15px 5px; background:#f5f3ee; border-radius:8px; text-align:center; align-self:start; }
+.shopping-lines p, .shopping-lines dl, .shopping-note { font-size:12px; line-height:1.6; }
+.shopping-lines dl > div { display:flex; gap:10px; }
+.shopping-lines dd { margin:0; }
+.shopping-line-controls, .shopping-actions { display:flex; flex-wrap:wrap; gap:12px; margin-top:12px; }
+.shopping-line-controls label { min-height:40px; }
+.shopping-actions > p { flex-basis:100%; }
+.shopping-comparison { display:grid; grid-template-columns:repeat(auto-fit,minmax(180px,1fr)); gap:20px; }
+.shopping-totals dl > div { display:flex; justify-content:space-between; gap:10px; padding:7px 0; border-bottom:1px solid var(--theme-color-border,#dedfd8); font-size:13px; }
+.shopping-totals dd { margin:0; text-align:end; }
+.shopping-totals h4 { margin:10px 0; }
+@media(max-width:600px){.shopping-proposal{padding:12px}.shopping-proposal fieldset{display:grid;padding:10px}.shopping-lines>li{grid-template-columns:48px minmax(0,1fr);gap:10px}.shopping-lines img{width:48px;height:48px}.shopping-comparison{grid-template-columns:1fr}.shopping-line-controls{display:grid}}
+
+.shopping-proposal > header { display:block; height:auto; min-height:0; margin:0; padding:0; border:0; }
+.shopping-proposal > header h3 { font-size:18px; line-height:1.35; margin:10px 0; }
+.shopping-proposal > header p { margin:10px 0; font-size:14px; line-height:1.6; }

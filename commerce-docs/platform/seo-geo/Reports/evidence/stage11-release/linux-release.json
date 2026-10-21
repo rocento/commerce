@@ -1,0 +1,169 @@
+{
+  "build": "Rust release profile; Node production-built React",
+  "catalog_products": 50001,
+  "family_links": 100,
+  "feed_sample": {
+    "batches": 3,
+    "elapsed_ms": 120.17191700000001,
+    "resources": 30,
+    "resources_per_second": 249.64235196481053,
+    "sampled_test_process_peak_rss_kib": 53348,
+    "scope": "three bounded reconciliation/delivery batches, not full catalog rebuild; test-process RSS sampled after each batch"
+  },
+  "pages": [
+    {
+      "cache_hit_ratio": 0,
+      "html_bytes": 29422,
+      "median_ttfb_ms": 4.500458,
+      "p95_ttfb_ms": 7.749625,
+      "path": "/",
+      "samples": [
+        3.335792,
+        3.410208,
+        3.5772920000000004,
+        3.672917,
+        3.938917,
+        3.988167,
+        4.0770420000000005,
+        4.500458,
+        4.528916,
+        4.728667,
+        4.907042000000001,
+        4.949834,
+        4.963167,
+        5.324583,
+        7.749625
+      ]
+    },
+    {
+      "cache_hit_ratio": 0,
+      "html_bytes": 126667,
+      "median_ttfb_ms": 5.038082999999999,
+      "p95_ttfb_ms": 7.027541,
+      "path": "/products/apples",
+      "samples": [
+        4.0725,
+        4.2104170000000005,
+        4.747125,
+        4.8037920000000005,
+        4.8462499999999995,
+        4.921250000000001,
+        4.929667,
+        5.038082999999999,
+        5.08575,
+        5.197291,
+        5.313917,
+        5.35825,
+        5.474541,
+        6.427916,
+        7.027541
+      ]
+    },
+    {
+      "cache_hit_ratio": 0,
+      "html_bytes": 23285,
+      "median_ttfb_ms": 2.4234999999999998,
+      "p95_ttfb_ms": 2.801917,
+      "path": "/categories/fruit",
+      "samples": [
+        2.1775,
+        2.188583,
+        2.2556249999999998,
+        2.311375,
+        2.315916,
+        2.3259589999999997,
+        2.400417,
+        2.4234999999999998,
+        2.425709,
+        2.432334,
+        2.455,
+        2.731792,
+        2.7395,
+        2.7799169999999997,
+        2.801917
+      ]
+    },
+    {
+      "cache_hit_ratio": 0,
+      "html_bytes": 10738,
+      "median_ttfb_ms": 2.035542,
+      "p95_ttfb_ms": 2.412,
+      "path": "/pages/about",
+      "samples": [
+        1.7912080000000001,
+        1.827167,
+        1.828709,
+        1.837583,
+        1.9705,
+        1.9900410000000002,
+        1.9988340000000002,
+        2.035542,
+        2.083708,
+        2.1015,
+        2.103375,
+        2.1062089999999998,
+        2.126125,
+        2.1541669999999997,
+        2.412
+      ]
+    }
+  ],
+  "product_lookup": [
+    {
+      "key_kind": "slug",
+      "mean_ms": 0.09163056666666666,
+      "samples": 30
+    },
+    {
+      "key_kind": "uuid",
+      "mean_ms": 0.10195276666666667,
+      "samples": 30
+    }
+  ],
+  "renderer": {
+    "calls": 68,
+    "cpu": {
+      "system": 17349,
+      "user": 121102
+    },
+    "gateway_total_ms": 203.3611670000002,
+    "memory": {
+      "arrayBuffers": 999999,
+      "external": 4719797,
+      "heapTotal": 21729280,
+      "heapUsed": 15054416,
+      "rss": 92184576
+    },
+    "node": "v22.23.2",
+    "peak_gateway_concurrency": 1,
+    "resource": {
+      "fsRead": 0,
+      "fsWrite": 8,
+      "involuntaryContextSwitches": 3,
+      "ipcReceived": 0,
+      "ipcSent": 0,
+      "majorPageFault": 0,
+      "maxRSS": 91828,
+      "minorPageFault": 13489,
+      "sharedMemorySize": 0,
+      "signalsCount": 0,
+      "swappedOut": 0,
+      "systemCPUTime": 38524,
+      "unsharedDataSize": 0,
+      "unsharedStackSize": 0,
+      "userCPUTime": 195747,
+      "voluntaryContextSwitches": 693
+    }
+  },
+  "samples_per_path": 15,
+  "sitemap": {
+    "index_bytes": 7687,
+    "index_ms": 24.457041,
+    "partitions": 54,
+    "sampled_bytes": 135919,
+    "sampled_ms": 8.793624999999999,
+    "sampled_partitions": 3
+  },
+  "synthetic": true,
+  "warmups_per_path": 1
+}

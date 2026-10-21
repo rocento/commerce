@@ -1,0 +1,68 @@
+[package]
+name = "api-gateway"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+
+[dependencies]
+domain-mobile = { path = "../domain-mobile" }
+lettre = { version = "0.11", default-features = false, features = ["builder", "smtp-transport", "tokio1-rustls-tls"] }
+domain-theme = { path = "../domain-theme" }
+domain-attributes = { path = "../domain-attributes" }
+domain-cms = { path = "../domain-cms" }
+domain-reviews = { path = "../domain-reviews" }
+domain-admin-operations = { path = "../domain-admin-operations" }
+domain-pricing-promotions = { path = "../domain-pricing-promotions" }
+axum = { workspace = true, features = ["multipart"] }
+tokio.workspace = true
+serde.workspace = true
+tracing.workspace = true
+shared-kernel = { path = "../shared-kernel" }
+infra-db = { path = "../infra-db" }
+infra-events = { path = "../infra-events" }
+infra-observability = { path = "../infra-observability" }
+
+sqlx.workspace = true
+uuid.workspace = true
+serde_json.workspace = true
+rust_decimal.workspace = true
+infra-auth = { path = "../infra-auth" }
+domain-customers = { path = "../domain-customers" }
+domain-admin-iam = { path = "../domain-admin-iam" }
+
+reqwest.workspace = true
+chrono.workspace = true
+domain-catalog = { path = "../domain-catalog" }
+domain-search-client = { path = "../domain-search-client" }
+infra-media = { path = "../infra-media" }
+
+domain-inventory = { path = "../domain-inventory" }
+domain-cart-checkout = { path = "../domain-cart-checkout" }
+
+async-nats.workspace = true
+futures-util.workspace = true
+
+domain-orders = { path = "../domain-orders" }
+domain-payments = { path = "../domain-payments" }
+
+domain-tax = { path = "../domain-tax" }
+domain-fulfillment = { path = "../domain-fulfillment" }
+
+jsonwebtoken.workspace = true
+
+domain-support = { path = "../domain-support" }
+image = { version = "0.25", default-features = false, features = ["png", "jpeg", "webp"] }
+webp = { version = "0.3.1", default-features = false }
+
+[dev-dependencies]
+tower = { version = "0.5", features = ["util"] }
+http-body-util = "0.1"
+
+
+
+[dependencies.zip]
+version = "2"
+default-features = false
+
+[dependencies.csv]
+version = "1"

@@ -1,0 +1,25 @@
+[Unit]
+Description=Rocento private Android preview worker
+After=network-online.target
+Wants=network-online.target
+[Service]
+User=rocento-preview
+Group=rocento-preview
+SupplementaryGroups=kvm
+WorkingDirectory=/opt/rocento-preview
+Environment=ANDROID_HOME=/opt/android-sdk
+Environment=ANDROID_SDK_ROOT=/opt/android-sdk
+Environment=PYTHONUNBUFFERED=1
+EnvironmentFile=/etc/rocento-android-preview.env
+ExecStart=/opt/rocento-preview/venv/bin/python /opt/rocento-preview/android_worker.py --artifacts /opt/rocento-preview/artifacts.json --state /opt/rocento-preview/state --sdk /opt/android-sdk --system-image /opt/android-sdk/system-images/android-36/google_apis/x86_64 --signing-check /opt/rocento-preview/check_android_signing.py
+UMask=0077
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=strict
+ProtectHome=true
+ReadWritePaths=/opt/rocento-preview
+TimeoutStopSec=260
+Restart=on-failure
+RestartSec=10
+[Install]
+WantedBy=multi-user.target

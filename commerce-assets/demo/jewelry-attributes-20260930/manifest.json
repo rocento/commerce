@@ -1,0 +1,1188 @@
+{
+  "definitions": [
+    {
+      "id": "7b0213c1-6470-5361-beae-f01af30fa2d6",
+      "entity_type": "product",
+      "attribute_code": "jewelry_design",
+      "label": "Jewelry design",
+      "input_type": "multi_select",
+      "scope": "global",
+      "is_required": false,
+      "is_unique": false,
+      "is_searchable": true,
+      "is_filterable": true,
+      "is_comparable": true,
+      "is_visible_on_front": true,
+      "used_for_promo_rules": false,
+      "used_for_configurations": false,
+      "swatch_type": "none",
+      "options": [
+        {
+          "value": "bangle",
+          "label": "Bangle"
+        },
+        {
+          "value": "beaded",
+          "label": "Beaded"
+        },
+        {
+          "value": "brooch",
+          "label": "Brooch"
+        },
+        {
+          "value": "bypass",
+          "label": "Bypass"
+        },
+        {
+          "value": "chain",
+          "label": "Chain"
+        },
+        {
+          "value": "chain_anklet",
+          "label": "Chain Anklet"
+        },
+        {
+          "value": "chain_drop",
+          "label": "Chain Drop"
+        },
+        {
+          "value": "charm",
+          "label": "Charm"
+        },
+        {
+          "value": "cluster",
+          "label": "Cluster"
+        },
+        {
+          "value": "cocktail",
+          "label": "Cocktail"
+        },
+        {
+          "value": "compass_pendant",
+          "label": "Compass Pendant"
+        },
+        {
+          "value": "cord",
+          "label": "Cord"
+        },
+        {
+          "value": "cuff",
+          "label": "Cuff"
+        },
+        {
+          "value": "cufflinks",
+          "label": "Cufflinks"
+        },
+        {
+          "value": "decorative_stone_ring",
+          "label": "Decorative Stone Ring"
+        },
+        {
+          "value": "disc_charm",
+          "label": "Disc Charm"
+        },
+        {
+          "value": "dragonfly_brooch",
+          "label": "Dragonfly Brooch"
+        },
+        {
+          "value": "drop",
+          "label": "Drop"
+        },
+        {
+          "value": "enamel_bangle",
+          "label": "Enamel Bangle"
+        },
+        {
+          "value": "fan_drop",
+          "label": "Fan Drop"
+        },
+        {
+          "value": "geometric_band",
+          "label": "Geometric Band"
+        },
+        {
+          "value": "geometric_drop",
+          "label": "Geometric Drop"
+        },
+        {
+          "value": "hair_pin",
+          "label": "Hair Pin"
+        },
+        {
+          "value": "halo",
+          "label": "Halo"
+        },
+        {
+          "value": "hoop",
+          "label": "Hoop"
+        },
+        {
+          "value": "huggie",
+          "label": "Huggie"
+        },
+        {
+          "value": "knot_stud",
+          "label": "Knot Stud"
+        },
+        {
+          "value": "lariat",
+          "label": "Lariat"
+        },
+        {
+          "value": "leaf_stud",
+          "label": "Leaf Stud"
+        },
+        {
+          "value": "link",
+          "label": "Link"
+        },
+        {
+          "value": "moon_pendant",
+          "label": "Moon Pendant"
+        },
+        {
+          "value": "pendant",
+          "label": "Pendant"
+        },
+        {
+          "value": "plain_band",
+          "label": "Plain Band"
+        },
+        {
+          "value": "rope_chain",
+          "label": "Rope Chain"
+        },
+        {
+          "value": "signet",
+          "label": "Signet"
+        },
+        {
+          "value": "solitaire",
+          "label": "Solitaire"
+        },
+        {
+          "value": "star_charm",
+          "label": "Star Charm"
+        },
+        {
+          "value": "stud",
+          "label": "Stud"
+        },
+        {
+          "value": "sunburst_pendant",
+          "label": "Sunburst Pendant"
+        },
+        {
+          "value": "tennis",
+          "label": "Tennis"
+        },
+        {
+          "value": "tie_clip",
+          "label": "Tie Clip"
+        },
+        {
+          "value": "twist",
+          "label": "Twist"
+        },
+        {
+          "value": "wave_band",
+          "label": "Wave Band"
+        }
+      ],
+      "version": 0,
+      "metadata": {
+        "status": "active",
+        "admin_visible": true,
+        "facetable": true,
+        "ai_queryable": true,
+        "ai_enrichable": false,
+        "source_policy": "semantic",
+        "description": "Catalog design classification from the declared product name."
+      }
+    },
+    {
+      "id": "b1a4b61e-24a5-5504-8f3f-91174192a207",
+      "entity_type": "product",
+      "attribute_code": "jewelry_motif",
+      "label": "Design motif",
+      "input_type": "multi_select",
+      "scope": "global",
+      "is_required": false,
+      "is_unique": false,
+      "is_searchable": true,
+      "is_filterable": true,
+      "is_comparable": true,
+      "is_visible_on_front": true,
+      "used_for_promo_rules": false,
+      "used_for_configurations": false,
+      "swatch_type": "none",
+      "options": [
+        {
+          "value": "compass",
+          "label": "Compass"
+        },
+        {
+          "value": "dragonfly",
+          "label": "Dragonfly"
+        },
+        {
+          "value": "fan",
+          "label": "Fan"
+        },
+        {
+          "value": "flower",
+          "label": "Flower"
+        },
+        {
+          "value": "geometric",
+          "label": "Geometric"
+        },
+        {
+          "value": "heart",
+          "label": "Heart"
+        },
+        {
+          "value": "knot",
+          "label": "Knot"
+        },
+        {
+          "value": "leaf",
+          "label": "Leaf"
+        },
+        {
+          "value": "moon",
+          "label": "Moon"
+        },
+        {
+          "value": "star",
+          "label": "Star"
+        },
+        {
+          "value": "sun",
+          "label": "Sun"
+        },
+        {
+          "value": "teardrop",
+          "label": "Teardrop"
+        },
+        {
+          "value": "wave",
+          "label": "Wave"
+        }
+      ],
+      "version": 0,
+      "metadata": {
+        "status": "active",
+        "admin_visible": true,
+        "facetable": true,
+        "ai_queryable": true,
+        "ai_enrichable": false,
+        "source_policy": "semantic",
+        "description": "Catalog design classification from the declared product name."
+      }
+    },
+    {
+      "id": "2c96d3fc-385a-5395-81b0-2281388952d2",
+      "entity_type": "product",
+      "attribute_code": "jewelry_length",
+      "label": "Jewelry length",
+      "input_type": "single_select",
+      "scope": "global",
+      "is_required": false,
+      "is_unique": false,
+      "is_searchable": true,
+      "is_filterable": true,
+      "is_comparable": true,
+      "is_visible_on_front": true,
+      "used_for_promo_rules": false,
+      "used_for_configurations": false,
+      "swatch_type": "none",
+      "options": [
+        {
+          "value": "18cm",
+          "label": "18 cm"
+        },
+        {
+          "value": "19cm",
+          "label": "19 cm"
+        },
+        {
+          "value": "24cm",
+          "label": "24 cm"
+        },
+        {
+          "value": "45cm",
+          "label": "45 cm"
+        },
+        {
+          "value": "50cm",
+          "label": "50 cm"
+        }
+      ],
+      "version": 0,
+      "metadata": {
+        "status": "active",
+        "admin_visible": true,
+        "facetable": true,
+        "ai_queryable": true,
+        "ai_enrichable": false,
+        "source_policy": "factual",
+        "description": "Length explicitly declared in the product title, in centimeters. Not inferred for unspecified products."
+      }
+    },
+    {
+      "id": "9683e81f-2ea4-434b-ab48-d9d0b1c7d4ba",
+      "entity_type": "product",
+      "attribute_code": "size",
+      "label": "Size",
+      "input_type": "select",
+      "scope": "global",
+      "is_required": false,
+      "is_unique": false,
+      "is_searchable": true,
+      "is_filterable": true,
+      "is_comparable": true,
+      "is_visible_on_front": true,
+      "used_for_promo_rules": false,
+      "used_for_configurations": true,
+      "swatch_type": "none",
+      "options": [
+        {
+          "label": "US 6",
+          "value": "6"
+        },
+        {
+          "label": "US 7",
+          "value": "7"
+        },
+        {
+          "label": "US 8",
+          "value": "8"
+        }
+      ],
+      "version": 1,
+      "metadata": {
+        "description": "",
+        "status": "active",
+        "admin_visible": true,
+        "facetable": false,
+        "sortable": false,
+        "ai_queryable": true,
+        "ai_enrichable": false,
+        "source_policy": "factual",
+        "unit": null,
+        "semantic_role": null,
+        "min": null,
+        "max": null,
+        "max_length": null,
+        "default_value": null,
+        "display_order": 0
+      }
+    }
+  ],
+  "products": [
+    {
+      "sku": "JWL-NEW-20260929-020",
+      "slug": "jewelry-star-charm-anklet",
+      "name": "Rose-gold-tone Star Charm Anklet \u2014 24cm",
+      "attributes": {
+        "jewelry_design": [
+          "star_charm"
+        ],
+        "jewelry_motif": [
+          "star"
+        ],
+        "jewelry_length": "24cm"
+      }
+    },
+    {
+      "sku": "JWL-NEW-20260929-019",
+      "slug": "jewelry-silver-tone-tie-clip",
+      "name": "Brushed Silver-tone Tie Clip",
+      "attributes": {
+        "jewelry_design": [
+          "tie_clip"
+        ]
+      }
+    },
+    {
+      "sku": "JWL-NEW-20260929-018",
+      "slug": "jewelry-crescent-hair-pin",
+      "name": "Gold-tone Crescent Hair Pin",
+      "attributes": {
+        "jewelry_design": [
+          "hair_pin"
+        ],
+        "jewelry_motif": [
+          "moon"
+        ]
+      }
+    },
+    {
+      "sku": "JWL-NEW-20260929-017",
+      "slug": "jewelry-dragonfly-brooch",
+      "name": "Blue Dragonfly Brooch",
+      "attributes": {
+        "jewelry_design": [
+          "dragonfly_brooch"
+        ],
+        "jewelry_motif": [
+          "dragonfly"
+        ]
+      }
+    },
+    {
+      "sku": "JWL-NEW-20260929-016",
+      "slug": "jewelry-floral-enamel-bangle",
+      "name": "Floral Enamel Bangle",
+      "attributes": {
+        "jewelry_design": [
+          "enamel_bangle"
+        ],
+        "jewelry_motif": [
+          "flower"
+        ]
+      }
+    },
+    {
+      "sku": "JWL-NEW-20260929-015",
+      "slug": "jewelry-black-cord-bracelet",
+      "name": "Black Cord Slider Bracelet",
+      "attributes": {
+        "jewelry_design": [
+          "cord"
+        ]
+      }
+    },
+    {
+      "sku": "JWL-NEW-20260929-014",
+      "slug": "jewelry-gold-tone-disc-bracelet",
+      "name": "Gold-tone Disc Charm Bracelet \u2014 18cm",
+      "attributes": {
+        "jewelry_design": [
+          "disc_charm"
+        ],
+        "jewelry_length": "18cm"
+      }
+    },
+    {
+      "sku": "JWL-NEW-20260929-013",
+      "slug": "jewelry-silver-tone-rope-bracelet",
+      "name": "Silver-tone Rope Bracelet \u2014 19cm",
+      "attributes": {
+        "jewelry_design": [
+          "rope_chain"
+        ],
+        "jewelry_length": "19cm"
+      }
+    },
+    {
+      "sku": "JWL-NEW-20260929-012",
+      "slug": "jewelry-paperclip-lariat",
+      "name": "Gold-tone Paperclip Lariat Necklace \u2014 50cm",
+      "attributes": {
+        "jewelry_design": [
+          "lariat"
+        ],
+        "jewelry_length": "50cm"
+      }
+    },
+    {
+      "sku": "JWL-NEW-20260929-011",
+      "slug": "jewelry-blue-bead-necklace",
+      "name": "Blue Bead Necklace \u2014 45cm",
+      "attributes": {
+        "jewelry_design": [
+          "beaded"
+        ],
+        "jewelry_length": "45cm"
+      }
+    },
+    {
+      "sku": "JWL-NEW-20260929-010",
+      "slug": "jewelry-compass-pendant",
+      "name": "Silver-tone Compass Pendant Necklace \u2014 50cm",
+      "attributes": {
+        "jewelry_design": [
+          "compass_pendant"
+        ],
+        "jewelry_motif": [
+          "compass"
+        ],
+        "jewelry_length": "50cm"
+      }
+    },
+    {
+      "sku": "JWL-NEW-20260929-009",
+      "slug": "jewelry-sunburst-pendant",
+      "name": "Gold-tone Sunburst Pendant Necklace \u2014 45cm",
+      "attributes": {
+        "jewelry_design": [
+          "sunburst_pendant"
+        ],
+        "jewelry_motif": [
+          "sun"
+        ],
+        "jewelry_length": "45cm"
+      }
+    },
+    {
+      "sku": "JWL-NEW-20260929-008",
+      "slug": "jewelry-pink-geometric-earrings",
+      "name": "Pink Geometric Drop Earrings",
+      "attributes": {
+        "jewelry_design": [
+          "geometric_drop"
+        ],
+        "jewelry_motif": [
+          "geometric"
+        ]
+      }
+    },
+    {
+      "sku": "JWL-NEW-20260929-007",
+      "slug": "jewelry-teal-fan-earrings",
+      "name": "Teal Fan Drop Earrings",
+      "attributes": {
+        "jewelry_design": [
+          "fan_drop"
+        ],
+        "jewelry_motif": [
+          "fan"
+        ]
+      }
+    },
+    {
+      "sku": "JWL-NEW-20260929-006",
+      "slug": "jewelry-silver-tone-knot-studs",
+      "name": "Silver-tone Knot Stud Earrings",
+      "attributes": {
+        "jewelry_design": [
+          "knot_stud"
+        ],
+        "jewelry_motif": [
+          "knot"
+        ]
+      }
+    },
+    {
+      "sku": "JWL-NEW-20260929-005",
+      "slug": "jewelry-gold-tone-leaf-studs",
+      "name": "Gold-tone Leaf Stud Earrings",
+      "attributes": {
+        "jewelry_design": [
+          "leaf_stud"
+        ],
+        "jewelry_motif": [
+          "leaf"
+        ]
+      }
+    },
+    {
+      "sku": "JWL-NEW-20260929-004",
+      "slug": "jewelry-black-geometric-ring",
+      "name": "Black Geometric Ring \u2014 US Size 8",
+      "attributes": {
+        "jewelry_design": [
+          "geometric_band"
+        ],
+        "jewelry_motif": [
+          "geometric"
+        ],
+        "size": "8"
+      }
+    },
+    {
+      "sku": "JWL-NEW-20260929-003",
+      "slug": "jewelry-violet-cushion-ring",
+      "name": "Violet Cushion Cocktail Ring \u2014 US Size 7",
+      "attributes": {
+        "jewelry_design": [
+          "cocktail"
+        ],
+        "size": "7"
+      }
+    },
+    {
+      "sku": "JWL-NEW-20260929-002",
+      "slug": "jewelry-silver-tone-wave-ring",
+      "name": "Silver-tone Wave Ring \u2014 US Size 7",
+      "attributes": {
+        "jewelry_design": [
+          "wave_band"
+        ],
+        "jewelry_motif": [
+          "wave"
+        ],
+        "size": "7"
+      }
+    },
+    {
+      "sku": "JWL-NEW-20260929-001",
+      "slug": "jewelry-gold-tone-bypass-ring",
+      "name": "Gold-tone Teardrop Bypass Ring",
+      "attributes": {
+        "jewelry_design": [
+          "bypass"
+        ],
+        "jewelry_motif": [
+          "teardrop"
+        ]
+      }
+    },
+    {
+      "sku": "DEMO-JWL-50-001",
+      "slug": "demo-jewelry-gold-solitaire-ring",
+      "name": "Gold Solitaire Ring \u2014 US Size 6",
+      "attributes": {
+        "jewelry_design": [
+          "solitaire"
+        ],
+        "size": "6"
+      }
+    },
+    {
+      "sku": "DEMO-JWL-50-002",
+      "slug": "demo-jewelry-silver-halo-ring",
+      "name": "Silver Halo Ring \u2014 US Size 6",
+      "attributes": {
+        "jewelry_design": [
+          "halo"
+        ],
+        "size": "6"
+      }
+    },
+    {
+      "sku": "DEMO-JWL-50-003",
+      "slug": "demo-jewelry-emerald-gold-ring",
+      "name": "Emerald Gold Ring \u2014 US Size 6",
+      "attributes": {
+        "jewelry_design": [
+          "decorative_stone_ring"
+        ],
+        "size": "6"
+      }
+    },
+    {
+      "sku": "DEMO-JWL-50-004",
+      "slug": "demo-jewelry-sapphire-silver-ring",
+      "name": "Sapphire Silver Ring \u2014 US Size 6",
+      "attributes": {
+        "jewelry_design": [
+          "decorative_stone_ring"
+        ],
+        "size": "6"
+      }
+    },
+    {
+      "sku": "DEMO-JWL-50-005",
+      "slug": "demo-jewelry-ruby-gold-ring",
+      "name": "Ruby Gold Ring \u2014 US Size 6",
+      "attributes": {
+        "jewelry_design": [
+          "decorative_stone_ring"
+        ],
+        "size": "6"
+      }
+    },
+    {
+      "sku": "DEMO-JWL-50-006",
+      "slug": "demo-jewelry-rose-gold-band",
+      "name": "Rose Gold Band \u2014 US Size 6",
+      "attributes": {
+        "jewelry_design": [
+          "plain_band"
+        ],
+        "size": "6"
+      }
+    },
+    {
+      "sku": "DEMO-JWL-50-007",
+      "slug": "demo-jewelry-gold-signet-ring",
+      "name": "Gold Signet Ring \u2014 US Size 6",
+      "attributes": {
+        "jewelry_design": [
+          "signet"
+        ],
+        "size": "6"
+      }
+    },
+    {
+      "sku": "DEMO-JWL-50-008",
+      "slug": "demo-jewelry-silver-twist-ring",
+      "name": "Silver Twist Ring \u2014 US Size 6",
+      "attributes": {
+        "jewelry_design": [
+          "twist"
+        ],
+        "size": "6"
+      }
+    },
+    {
+      "sku": "DEMO-JWL-50-009",
+      "slug": "demo-jewelry-gold-hoop-earrings",
+      "name": "Gold Hoop Earrings",
+      "attributes": {
+        "jewelry_design": [
+          "hoop"
+        ]
+      }
+    },
+    {
+      "sku": "DEMO-JWL-50-010",
+      "slug": "demo-jewelry-pearl-stud-earrings",
+      "name": "Pearl Stud Earrings",
+      "attributes": {
+        "jewelry_design": [
+          "stud"
+        ]
+      }
+    },
+    {
+      "sku": "DEMO-JWL-50-011",
+      "slug": "demo-jewelry-diamond-stud-earrings",
+      "name": "Diamond Stud Earrings",
+      "attributes": {
+        "jewelry_design": [
+          "stud"
+        ]
+      }
+    },
+    {
+      "sku": "DEMO-JWL-50-012",
+      "slug": "demo-jewelry-emerald-drop-earrings",
+      "name": "Emerald Drop Earrings",
+      "attributes": {
+        "jewelry_design": [
+          "drop"
+        ]
+      }
+    },
+    {
+      "sku": "DEMO-JWL-50-013",
+      "slug": "demo-jewelry-silver-huggie-earrings",
+      "name": "Silver Huggie Earrings",
+      "attributes": {
+        "jewelry_design": [
+          "huggie"
+        ]
+      }
+    },
+    {
+      "sku": "DEMO-JWL-50-014",
+      "slug": "demo-jewelry-rose-gold-chain-earrings",
+      "name": "Rose Gold Chain Earrings",
+      "attributes": {
+        "jewelry_design": [
+          "chain_drop"
+        ]
+      }
+    },
+    {
+      "sku": "DEMO-JWL-50-015",
+      "slug": "demo-jewelry-sapphire-cluster-earrings",
+      "name": "Sapphire Cluster Earrings",
+      "attributes": {
+        "jewelry_design": [
+          "cluster"
+        ]
+      }
+    },
+    {
+      "sku": "DEMO-JWL-50-016",
+      "slug": "demo-jewelry-gold-chain-necklace",
+      "name": "Gold Chain Necklace \u2014 45cm",
+      "attributes": {
+        "jewelry_design": [
+          "chain"
+        ],
+        "jewelry_length": "45cm"
+      }
+    },
+    {
+      "sku": "DEMO-JWL-50-017",
+      "slug": "demo-jewelry-pearl-strand-necklace",
+      "name": "Pearl Strand Necklace \u2014 45cm",
+      "attributes": {
+        "jewelry_design": [
+          "beaded"
+        ],
+        "jewelry_length": "45cm"
+      }
+    },
+    {
+      "sku": "DEMO-JWL-50-018",
+      "slug": "demo-jewelry-heart-pendant-necklace",
+      "name": "Heart Pendant Necklace \u2014 45cm",
+      "attributes": {
+        "jewelry_design": [
+          "pendant"
+        ],
+        "jewelry_motif": [
+          "heart"
+        ],
+        "jewelry_length": "45cm"
+      }
+    },
+    {
+      "sku": "DEMO-JWL-50-019",
+      "slug": "demo-jewelry-emerald-pendant-necklace",
+      "name": "Emerald Pendant Necklace \u2014 45cm",
+      "attributes": {
+        "jewelry_design": [
+          "pendant"
+        ],
+        "jewelry_length": "45cm"
+      }
+    },
+    {
+      "sku": "DEMO-JWL-50-020",
+      "slug": "demo-jewelry-silver-moon-necklace",
+      "name": "Silver Moon Necklace \u2014 45cm",
+      "attributes": {
+        "jewelry_design": [
+          "moon_pendant"
+        ],
+        "jewelry_motif": [
+          "moon"
+        ],
+        "jewelry_length": "45cm"
+      }
+    },
+    {
+      "sku": "DEMO-JWL-50-021",
+      "slug": "demo-jewelry-diamond-pendant-necklace",
+      "name": "Diamond Pendant Necklace \u2014 45cm",
+      "attributes": {
+        "jewelry_design": [
+          "pendant"
+        ],
+        "jewelry_length": "45cm"
+      }
+    },
+    {
+      "sku": "DEMO-JWL-50-022",
+      "slug": "demo-jewelry-gold-tennis-bracelet",
+      "name": "Gold Tennis Bracelet",
+      "attributes": {
+        "jewelry_design": [
+          "tennis"
+        ]
+      }
+    },
+    {
+      "sku": "DEMO-JWL-50-023",
+      "slug": "demo-jewelry-silver-cuff-bracelet",
+      "name": "Silver Cuff Bracelet",
+      "attributes": {
+        "jewelry_design": [
+          "cuff"
+        ]
+      }
+    },
+    {
+      "sku": "DEMO-JWL-50-024",
+      "slug": "demo-jewelry-gold-bangle-bracelet",
+      "name": "Gold Bangle Bracelet",
+      "attributes": {
+        "jewelry_design": [
+          "bangle"
+        ]
+      }
+    },
+    {
+      "sku": "DEMO-JWL-50-025",
+      "slug": "demo-jewelry-pearl-bracelet",
+      "name": "Pearl Bracelet",
+      "attributes": {
+        "jewelry_design": [
+          "beaded"
+        ]
+      }
+    },
+    {
+      "sku": "DEMO-JWL-50-026",
+      "slug": "demo-jewelry-rose-gold-link-bracelet",
+      "name": "Rose Gold Link Bracelet",
+      "attributes": {
+        "jewelry_design": [
+          "link"
+        ]
+      }
+    },
+    {
+      "sku": "DEMO-JWL-50-027",
+      "slug": "demo-jewelry-silver-charm-bracelet",
+      "name": "Silver Charm Bracelet",
+      "attributes": {
+        "jewelry_design": [
+          "charm"
+        ]
+      }
+    },
+    {
+      "sku": "DEMO-JWL-50-028",
+      "slug": "demo-jewelry-gold-anklet",
+      "name": "Gold Anklet",
+      "attributes": {
+        "jewelry_design": [
+          "chain_anklet"
+        ]
+      }
+    },
+    {
+      "sku": "DEMO-JWL-50-029",
+      "slug": "demo-jewelry-pearl-gold-brooch",
+      "name": "Pearl Gold Brooch",
+      "attributes": {
+        "jewelry_design": [
+          "brooch"
+        ]
+      }
+    },
+    {
+      "sku": "DEMO-JWL-50-030",
+      "slug": "demo-jewelry-onyx-silver-cufflinks",
+      "name": "Onyx Silver Cufflinks",
+      "attributes": {
+        "jewelry_design": [
+          "cufflinks"
+        ]
+      }
+    },
+    {
+      "sku": "DEMO-JWL-50-031",
+      "slug": "demo-jewelry-gold-solitaire-ring-size-7",
+      "name": "Gold Solitaire Ring \u2014 US Size 7",
+      "attributes": {
+        "jewelry_design": [
+          "solitaire"
+        ],
+        "size": "7"
+      }
+    },
+    {
+      "sku": "DEMO-JWL-50-032",
+      "slug": "demo-jewelry-silver-halo-ring-size-7",
+      "name": "Silver Halo Ring \u2014 US Size 7",
+      "attributes": {
+        "jewelry_design": [
+          "halo"
+        ],
+        "size": "7"
+      }
+    },
+    {
+      "sku": "DEMO-JWL-50-033",
+      "slug": "demo-jewelry-emerald-gold-ring-size-7",
+      "name": "Emerald Gold Ring \u2014 US Size 7",
+      "attributes": {
+        "jewelry_design": [
+          "decorative_stone_ring"
+        ],
+        "size": "7"
+      }
+    },
+    {
+      "sku": "DEMO-JWL-50-034",
+      "slug": "demo-jewelry-sapphire-silver-ring-size-7",
+      "name": "Sapphire Silver Ring \u2014 US Size 7",
+      "attributes": {
+        "jewelry_design": [
+          "decorative_stone_ring"
+        ],
+        "size": "7"
+      }
+    },
+    {
+      "sku": "DEMO-JWL-50-035",
+      "slug": "demo-jewelry-ruby-gold-ring-size-7",
+      "name": "Ruby Gold Ring \u2014 US Size 7",
+      "attributes": {
+        "jewelry_design": [
+          "decorative_stone_ring"
+        ],
+        "size": "7"
+      }
+    },
+    {
+      "sku": "DEMO-JWL-50-036",
+      "slug": "demo-jewelry-rose-gold-band-size-7",
+      "name": "Rose Gold Band \u2014 US Size 7",
+      "attributes": {
+        "jewelry_design": [
+          "plain_band"
+        ],
+        "size": "7"
+      }
+    },
+    {
+      "sku": "DEMO-JWL-50-037",
+      "slug": "demo-jewelry-gold-signet-ring-size-7",
+      "name": "Gold Signet Ring \u2014 US Size 7",
+      "attributes": {
+        "jewelry_design": [
+          "signet"
+        ],
+        "size": "7"
+      }
+    },
+    {
+      "sku": "DEMO-JWL-50-038",
+      "slug": "demo-jewelry-silver-twist-ring-size-7",
+      "name": "Silver Twist Ring \u2014 US Size 7",
+      "attributes": {
+        "jewelry_design": [
+          "twist"
+        ],
+        "size": "7"
+      }
+    },
+    {
+      "sku": "DEMO-JWL-50-039",
+      "slug": "demo-jewelry-gold-solitaire-ring-size-8",
+      "name": "Gold Solitaire Ring \u2014 US Size 8",
+      "attributes": {
+        "jewelry_design": [
+          "solitaire"
+        ],
+        "size": "8"
+      }
+    },
+    {
+      "sku": "DEMO-JWL-50-040",
+      "slug": "demo-jewelry-silver-halo-ring-size-8",
+      "name": "Silver Halo Ring \u2014 US Size 8",
+      "attributes": {
+        "jewelry_design": [
+          "halo"
+        ],
+        "size": "8"
+      }
+    },
+    {
+      "sku": "DEMO-JWL-50-041",
+      "slug": "demo-jewelry-emerald-gold-ring-size-8",
+      "name": "Emerald Gold Ring \u2014 US Size 8",
+      "attributes": {
+        "jewelry_design": [
+          "decorative_stone_ring"
+        ],
+        "size": "8"
+      }
+    },
+    {
+      "sku": "DEMO-JWL-50-042",
+      "slug": "demo-jewelry-sapphire-silver-ring-size-8",
+      "name": "Sapphire Silver Ring \u2014 US Size 8",
+      "attributes": {
+        "jewelry_design": [
+          "decorative_stone_ring"
+        ],
+        "size": "8"
+      }
+    },
+    {
+      "sku": "DEMO-JWL-50-043",
+      "slug": "demo-jewelry-ruby-gold-ring-size-8",
+      "name": "Ruby Gold Ring \u2014 US Size 8",
+      "attributes": {
+        "jewelry_design": [
+          "decorative_stone_ring"
+        ],
+        "size": "8"
+      }
+    },
+    {
+      "sku": "DEMO-JWL-50-044",
+      "slug": "demo-jewelry-rose-gold-band-size-8",
+      "name": "Rose Gold Band \u2014 US Size 8",
+      "attributes": {
+        "jewelry_design": [
+          "plain_band"
+        ],
+        "size": "8"
+      }
+    },
+    {
+      "sku": "DEMO-JWL-50-045",
+      "slug": "demo-jewelry-gold-signet-ring-size-8",
+      "name": "Gold Signet Ring \u2014 US Size 8",
+      "attributes": {
+        "jewelry_design": [
+          "signet"
+        ],
+        "size": "8"
+      }
+    },
+    {
+      "sku": "DEMO-JWL-50-046",
+      "slug": "demo-jewelry-silver-twist-ring-size-8",
+      "name": "Silver Twist Ring \u2014 US Size 8",
+      "attributes": {
+        "jewelry_design": [
+          "twist"
+        ],
+        "size": "8"
+      }
+    },
+    {
+      "sku": "DEMO-JWL-50-047",
+      "slug": "demo-jewelry-gold-chain-necklace-50cm",
+      "name": "Gold Chain Necklace \u2014 50cm",
+      "attributes": {
+        "jewelry_design": [
+          "chain"
+        ],
+        "jewelry_length": "50cm"
+      }
+    },
+    {
+      "sku": "DEMO-JWL-50-048",
+      "slug": "demo-jewelry-pearl-strand-necklace-50cm",
+      "name": "Pearl Strand Necklace \u2014 50cm",
+      "attributes": {
+        "jewelry_design": [
+          "beaded"
+        ],
+        "jewelry_length": "50cm"
+      }
+    },
+    {
+      "sku": "DEMO-JWL-50-049",
+      "slug": "demo-jewelry-heart-pendant-necklace-50cm",
+      "name": "Heart Pendant Necklace \u2014 50cm",
+      "attributes": {
+        "jewelry_design": [
+          "pendant"
+        ],
+        "jewelry_motif": [
+          "heart"
+        ],
+        "jewelry_length": "50cm"
+      }
+    },
+    {
+      "sku": "DEMO-JWL-50-050",
+      "slug": "demo-jewelry-emerald-pendant-necklace-50cm",
+      "name": "Emerald Pendant Necklace \u2014 50cm",
+      "attributes": {
+        "jewelry_design": [
+          "pendant"
+        ],
+        "jewelry_length": "50cm"
+      }
+    },
+    {
+      "sku": "DEMO-JWL-SOLITAIRE",
+      "slug": "demo-jewelry-solitaire",
+      "name": "The Solitaire Ring",
+      "attributes": {
+        "jewelry_design": [
+          "solitaire"
+        ]
+      }
+    }
+  ]
+}

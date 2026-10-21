@@ -1,0 +1,607 @@
+{
+  "uid": "commerce-reliability",
+  "title": "Commerce \u00b7 Reliability baseline",
+  "schemaVersion": 41,
+  "version": 3,
+  "refresh": "10s",
+  "time": {
+    "from": "now-30m",
+    "to": "now"
+  },
+  "tags": [
+    "commerce",
+    "reliability"
+  ],
+  "templating": {
+    "list": [
+      {
+        "name": "instance",
+        "type": "query",
+        "datasource": {
+          "type": "prometheus",
+          "uid": "prometheus"
+        },
+        "query": "label_values(up{job=\"commerce-gateway\"}, instance)",
+        "refresh": 1,
+        "multi": true,
+        "includeAll": true,
+        "allValue": ".*",
+        "current": {
+          "text": "All",
+          "value": "$__all"
+        }
+      },
+      {
+        "name": "analytics_instance",
+        "type": "query",
+        "datasource": {
+          "type": "prometheus",
+          "uid": "prometheus"
+        },
+        "query": "label_values(up{job=\"commerce-analytics\"}, instance)",
+        "refresh": 1,
+        "multi": true,
+        "includeAll": true,
+        "allValue": ".*",
+        "current": {
+          "text": "All",
+          "value": "$__all"
+        }
+      }
+    ]
+  },
+  "panels": [
+    {
+      "id": 1,
+      "type": "timeseries",
+      "title": "Commerce route latency p95",
+      "description": "Server handler histograms; p99 is coarse for small samples and durations beyond the largest finite bucket. Use the runner for exact client sample percentiles.",
+      "datasource": {
+        "type": "prometheus",
+        "uid": "prometheus"
+      },
+      "gridPos": {
+        "x": 0,
+        "y": 0,
+        "w": 12,
+        "h": 8
+      },
+      "targets": [
+        {
+          "refId": "A",
+          "expr": "histogram_quantile(0.95,sum by (le,instance,route,method)(rate(commerce_http_duration_seconds_bucket{job=\"commerce-gateway\",instance=~\"$instance\",route=~\"/v1/cart.*|/v1/customer/checkout/.*|/v1/catalog/products/.*\"}[$__rate_interval])))",
+          "legendFormat": "{{instance}} {{method}} {{route}}"
+        }
+      ],
+      "fieldConfig": {
+        "defaults": {
+          "unit": "s"
+        },
+        "overrides": []
+      }
+    },
+    {
+      "id": 2,
+      "type": "timeseries",
+      "title": "Commerce route latency p99",
+      "description": "Server handler histograms; p99 is coarse for small samples and durations beyond the largest finite bucket. Use the runner for exact client sample percentiles.",
+      "datasource": {
+        "type": "prometheus",
+        "uid": "prometheus"
+      },
+      "gridPos": {
+        "x": 12,
+        "y": 0,
+        "w": 12,
+        "h": 8
+      },
+      "targets": [
+        {
+          "refId": "A",
+          "expr": "histogram_quantile(0.99,sum by (le,instance,route,method)(rate(commerce_http_duration_seconds_bucket{job=\"commerce-gateway\",instance=~\"$instance\",route=~\"/v1/cart.*|/v1/customer/checkout/.*|/v1/catalog/products/.*\"}[$__rate_interval])))",
+          "legendFormat": "{{instance}} {{method}} {{route}}"
+        }
+      ],
+      "fieldConfig": {
+        "defaults": {
+          "unit": "s"
+        },
+        "overrides": []
+      }
+    },
+    {
+      "id": 3,
+      "type": "timeseries",
+      "title": "Commerce request rate",
+      "description": "",
+      "datasource": {
+        "type": "prometheus",
+        "uid": "prometheus"
+      },
+      "gridPos": {
+        "x": 0,
+        "y": 8,
+        "w": 12,
+        "h": 8
+      },
+      "targets": [
+        {
+          "refId": "A",
+          "expr": "sum by(instance,route,method)(rate(commerce_http_requests_total{job=\"commerce-gateway\",instance=~\"$instance\",route=~\"/v1/cart.*|/v1/customer/checkout/.*|/v1/catalog/products/.*\"}[$__rate_interval]))",
+          "legendFormat": "{{instance}} {{method}} {{route}}"
+        }
+      ],
+      "fieldConfig": {
+        "defaults": {
+          "unit": "reqps"
+        },
+        "overrides": []
+      }
+    },
+    {
+      "id": 4,
+      "type": "timeseries",
+      "title": "Commerce server error fraction",
+      "description": "5xx only. No requests produces no fraction; 4xx and transport errors are classified separately in the baseline report.",
+      "datasource": {
+        "type": "prometheus",
+        "uid": "prometheus"
+      },
+      "gridPos": {
+        "x": 12,
+        "y": 8,
+        "w": 12,
+        "h": 8
+      },
+      "targets": [
+        {
+          "refId": "A",
+          "expr": "sum by(instance,route,method)(rate(commerce_http_errors_total{job=\"commerce-gateway\",instance=~\"$instance\",route=~\"/v1/cart.*|/v1/customer/checkout/.*|/v1/catalog/products/.*\"}[$__rate_interval])) / sum by(instance,route,method)(rate(commerce_http_requests_total{job=\"commerce-gateway\",instance=~\"$instance\",route=~\"/v1/cart.*|/v1/customer/checkout/.*|/v1/catalog/products/.*\"}[$__rate_interval]))",
+          "legendFormat": "{{instance}} {{method}} {{route}}"
+        }
+      ],
+      "fieldConfig": {
+        "defaults": {
+          "unit": "percentunit"
+        },
+        "overrides": []
+      }
+    },
+    {
+      "id": 5,
+      "type": "timeseries",
+      "title": "Database acquisition p95",
+      "description": "",
+      "datasource": {
+        "type": "prometheus",
+        "uid": "prometheus"
+      },
+      "gridPos": {
+        "x": 0,
+        "y": 16,
+        "w": 12,
+        "h": 8
+      },
+      "targets": [
+        {
+          "refId": "A",
+          "expr": "histogram_quantile(0.95,sum by(le,instance,result)(rate(commerce_db_pool_acquire_seconds_bucket{job=\"commerce-gateway\",instance=~\"$instance\"}[$__rate_interval])))",
+          "legendFormat": "{{instance}} {{result}}"
+        }
+      ],
+      "fieldConfig": {
+        "defaults": {
+          "unit": "s"
+        },
+        "overrides": []
+      }
+    },
+    {
+      "id": 6,
+      "type": "timeseries",
+      "title": "Inventory lock wait p95",
+      "description": "",
+      "datasource": {
+        "type": "prometheus",
+        "uid": "prometheus"
+      },
+      "gridPos": {
+        "x": 12,
+        "y": 16,
+        "w": 12,
+        "h": 8
+      },
+      "targets": [
+        {
+          "refId": "A",
+          "expr": "histogram_quantile(0.95,sum by(le,instance,result)(rate(commerce_inventory_lock_wait_seconds_bucket{job=\"commerce-gateway\",instance=~\"$instance\"}[$__rate_interval])))",
+          "legendFormat": "{{instance}} {{result}}"
+        }
+      ],
+      "fieldConfig": {
+        "defaults": {
+          "unit": "s"
+        },
+        "overrides": []
+      }
+    },
+    {
+      "id": 7,
+      "type": "timeseries",
+      "title": "Inventory transaction p95",
+      "description": "",
+      "datasource": {
+        "type": "prometheus",
+        "uid": "prometheus"
+      },
+      "gridPos": {
+        "x": 0,
+        "y": 24,
+        "w": 12,
+        "h": 8
+      },
+      "targets": [
+        {
+          "refId": "A",
+          "expr": "histogram_quantile(0.95,sum by(le,instance,result)(rate(commerce_inventory_transaction_seconds_bucket{job=\"commerce-gateway\",instance=~\"$instance\"}[$__rate_interval])))",
+          "legendFormat": "{{instance}} {{result}}"
+        }
+      ],
+      "fieldConfig": {
+        "defaults": {
+          "unit": "s"
+        },
+        "overrides": []
+      }
+    },
+    {
+      "id": 8,
+      "type": "timeseries",
+      "title": "Cart snapshot p95",
+      "description": "",
+      "datasource": {
+        "type": "prometheus",
+        "uid": "prometheus"
+      },
+      "gridPos": {
+        "x": 12,
+        "y": 24,
+        "w": 12,
+        "h": 8
+      },
+      "targets": [
+        {
+          "refId": "A",
+          "expr": "histogram_quantile(0.95,sum by(le,instance,result)(rate(commerce_cart_snapshot_seconds_bucket{job=\"commerce-gateway\",instance=~\"$instance\"}[$__rate_interval])))",
+          "legendFormat": "{{instance}} {{result}}"
+        }
+      ],
+      "fieldConfig": {
+        "defaults": {
+          "unit": "s"
+        },
+        "overrides": []
+      }
+    },
+    {
+      "id": 9,
+      "type": "timeseries",
+      "title": "Primary database pool",
+      "description": "",
+      "datasource": {
+        "type": "prometheus",
+        "uid": "prometheus"
+      },
+      "gridPos": {
+        "x": 0,
+        "y": 32,
+        "w": 12,
+        "h": 8
+      },
+      "targets": [
+        {
+          "refId": "A",
+          "expr": "commerce_db_pool_connections{job=\"commerce-gateway\",instance=~\"$instance\"}",
+          "legendFormat": "size {{instance}}"
+        },
+        {
+          "refId": "B",
+          "expr": "commerce_db_pool_idle_connections{job=\"commerce-gateway\",instance=~\"$instance\"}",
+          "legendFormat": "idle {{instance}}"
+        },
+        {
+          "refId": "C",
+          "expr": "commerce_db_pool_max_connections{job=\"commerce-gateway\",instance=~\"$instance\"}",
+          "legendFormat": "max {{instance}}"
+        }
+      ],
+      "fieldConfig": {
+        "defaults": {
+          "unit": "short"
+        },
+        "overrides": []
+      }
+    },
+    {
+      "id": 10,
+      "type": "timeseries",
+      "title": "Queue pending jobs (fresh samples only)",
+      "description": "Notifications includes all pending jobs, including scheduled retries and pending expiry cleanup. Missing data means sampling is unavailable; it does not mean an empty queue.",
+      "datasource": {
+        "type": "prometheus",
+        "uid": "prometheus"
+      },
+      "gridPos": {
+        "x": 12,
+        "y": 32,
+        "w": 12,
+        "h": 8
+      },
+      "targets": [
+        {
+          "refId": "A",
+          "expr": "commerce_queue_pending{job=\"commerce-gateway\",instance=~\"$instance\"} and on(instance,job) ((commerce_reliability_sample_success{job=\"commerce-gateway\",instance=~\"$instance\"} == 1) and on(instance,job) (time() - commerce_reliability_last_success_seconds{job=\"commerce-gateway\",instance=~\"$instance\"} < 30))",
+          "legendFormat": "{{instance}} {{queue}}"
+        }
+      ],
+      "fieldConfig": {
+        "defaults": {
+          "unit": "short"
+        },
+        "overrides": []
+      }
+    },
+    {
+      "id": 11,
+      "type": "timeseries",
+      "title": "Oldest pending job age",
+      "description": "Age since creation at sample time; not consumer lag or time since eligibility. Queue samples are cached for 10 seconds.",
+      "datasource": {
+        "type": "prometheus",
+        "uid": "prometheus"
+      },
+      "gridPos": {
+        "x": 0,
+        "y": 40,
+        "w": 12,
+        "h": 8
+      },
+      "targets": [
+        {
+          "refId": "A",
+          "expr": "commerce_queue_oldest_pending_seconds{job=\"commerce-gateway\",instance=~\"$instance\"} and on(instance,job) ((commerce_reliability_sample_success{job=\"commerce-gateway\",instance=~\"$instance\"} == 1) and on(instance,job) (time() - commerce_reliability_last_success_seconds{job=\"commerce-gateway\",instance=~\"$instance\"} < 30))",
+          "legendFormat": "{{instance}} {{queue}}"
+        }
+      ],
+      "fieldConfig": {
+        "defaults": {
+          "unit": "s"
+        },
+        "overrides": []
+      }
+    },
+    {
+      "id": 12,
+      "type": "timeseries",
+      "title": "Queue collector health",
+      "description": "Sampling uses one dedicated connection and bounded read-only queries. Failure does not affect commerce readiness.",
+      "datasource": {
+        "type": "prometheus",
+        "uid": "prometheus"
+      },
+      "gridPos": {
+        "x": 12,
+        "y": 40,
+        "w": 12,
+        "h": 8
+      },
+      "targets": [
+        {
+          "refId": "A",
+          "expr": "commerce_reliability_sample_success{job=\"commerce-gateway\",instance=~\"$instance\"}",
+          "legendFormat": "sample success {{instance}}"
+        },
+        {
+          "refId": "B",
+          "expr": "up{job=\"commerce-gateway\",instance=~\"$instance\"}",
+          "legendFormat": "scrape up {{instance}}"
+        }
+      ],
+      "fieldConfig": {
+        "defaults": {
+          "unit": "short"
+        },
+        "overrides": []
+      }
+    },
+    {
+      "id": 13,
+      "type": "timeseries",
+      "title": "Reporting last-success age",
+      "description": "Dedicated analytics worker; zero means no successful refresh yet. A missing series means monitoring is unavailable.",
+      "datasource": {
+        "type": "prometheus",
+        "uid": "prometheus"
+      },
+      "gridPos": {
+        "x": 0,
+        "y": 48,
+        "w": 12,
+        "h": 8
+      },
+      "targets": [
+        {
+          "refId": "A",
+          "expr": "time() - (commerce_reporting_last_success_seconds{job=\"commerce-analytics\",instance=~\"$analytics_instance\"} > 0)",
+          "legendFormat": "{{instance}}"
+        }
+      ],
+      "fieldConfig": {
+        "defaults": {
+          "unit": "s"
+        },
+        "overrides": []
+      }
+    },
+    {
+      "id": 14,
+      "type": "timeseries",
+      "title": "Queue collector last-success age",
+      "description": "",
+      "datasource": {
+        "type": "prometheus",
+        "uid": "prometheus"
+      },
+      "gridPos": {
+        "x": 12,
+        "y": 48,
+        "w": 12,
+        "h": 8
+      },
+      "targets": [
+        {
+          "refId": "A",
+          "expr": "time() - (commerce_reliability_last_success_seconds{job=\"commerce-gateway\",instance=~\"$instance\"} > 0)",
+          "legendFormat": "{{instance}}"
+        }
+      ],
+      "fieldConfig": {
+        "defaults": {
+          "unit": "s"
+        },
+        "overrides": []
+      }
+    },
+    {
+      "id": 15,
+      "type": "timeseries",
+      "title": "Authentication retention last-success age",
+      "description": "",
+      "datasource": {
+        "type": "prometheus",
+        "uid": "prometheus"
+      },
+      "gridPos": {
+        "x": 0,
+        "y": 56,
+        "w": 12,
+        "h": 8
+      },
+      "targets": [
+        {
+          "refId": "A",
+          "expr": "time() - (commerce_auth_retention_last_success_seconds{job=\"commerce-gateway\",instance=~\"$instance\"} > 0)",
+          "legendFormat": "{{instance}}"
+        }
+      ],
+      "fieldConfig": {
+        "defaults": {
+          "unit": "s"
+        },
+        "overrides": []
+      }
+    },
+    {
+      "id": 16,
+      "type": "timeseries",
+      "title": "Successful observations",
+      "description": "Zero explicitly means never successful; a missing age must not be interpreted as healthy.",
+      "datasource": {
+        "type": "prometheus",
+        "uid": "prometheus"
+      },
+      "gridPos": {
+        "x": 12,
+        "y": 56,
+        "w": 12,
+        "h": 8
+      },
+      "targets": [
+        {
+          "refId": "A",
+          "expr": "commerce_reporting_last_success_seconds{job=\"commerce-analytics\",instance=~\"$analytics_instance\"} > bool 0",
+          "legendFormat": "reporting {{instance}}"
+        },
+        {
+          "refId": "B",
+          "expr": "commerce_reliability_last_success_seconds{job=\"commerce-gateway\",instance=~\"$instance\"} > bool 0",
+          "legendFormat": "queue sampling {{instance}}"
+        }
+      ],
+      "fieldConfig": {
+        "defaults": {
+          "unit": "short"
+        },
+        "overrides": []
+      }
+    },
+    {
+      "id": 17,
+      "type": "timeseries",
+      "title": "Analytics worker readiness",
+      "description": "Independent of commerce readiness. A running but unready worker is visible even while its /metrics endpoint is reachable.",
+      "datasource": {
+        "type": "prometheus",
+        "uid": "prometheus"
+      },
+      "gridPos": {
+        "x": 0,
+        "y": 64,
+        "w": 12,
+        "h": 8
+      },
+      "targets": [
+        {
+          "refId": "A",
+          "expr": "commerce_analytics_worker_ready{job=\"commerce-analytics\",instance=~\"$analytics_instance\"}",
+          "legendFormat": "ready {{instance}}"
+        },
+        {
+          "refId": "B",
+          "expr": "up{job=\"commerce-analytics\",instance=~\"$analytics_instance\"}",
+          "legendFormat": "up {{instance}}"
+        }
+      ],
+      "fieldConfig": {
+        "defaults": {
+          "unit": "short"
+        },
+        "overrides": []
+      }
+    },
+    {
+      "id": 18,
+      "type": "timeseries",
+      "title": "Asynchronous delivery failures",
+      "description": "Retrying unpublished outbox events and retained terminal notification failures. Missing/stale collection is not zero. Failed notification counts include retained historical failures.",
+      "datasource": {
+        "type": "prometheus",
+        "uid": "prometheus"
+      },
+      "gridPos": {
+        "x": 12,
+        "y": 64,
+        "w": 12,
+        "h": 8
+      },
+      "targets": [
+        {
+          "refId": "A",
+          "expr": "commerce_outbox_retrying{job=\"commerce-gateway\",instance=~\"$instance\"} and on(instance,job) ((commerce_reliability_sample_success == 1) and on(instance,job) (time() - commerce_reliability_last_success_seconds < 30))",
+          "legendFormat": "retrying events"
+        },
+        {
+          "refId": "B",
+          "expr": "commerce_notifications_failed{job=\"commerce-gateway\",instance=~\"$instance\"} and on(instance,job) ((commerce_reliability_sample_success == 1) and on(instance,job) (time() - commerce_reliability_last_success_seconds < 30))",
+          "legendFormat": "failed notifications"
+        }
+      ],
+      "fieldConfig": {
+        "defaults": {
+          "unit": "short"
+        },
+        "overrides": []
+      }
+    }
+  ]
+}

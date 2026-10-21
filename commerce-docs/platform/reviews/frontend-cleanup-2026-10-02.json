@@ -1,0 +1,75 @@
+{
+  "date": "2026-10-02",
+  "scope": "Local storefront, admin UI and shared frontend cleanup; existing workspace changes preserved.",
+  "changes": [
+    "Removed five confirmed unused source/assets and their unused exports/styles.",
+    "Lazy-loaded admin page modules and extracted Users from the shell.",
+    "Removed unused grid loader parameters and shared source-editor unsaved-change guards.",
+    "Validated language metadata and preserved editor recovery paths.",
+    "Separated assistant ticket intake, streaming lifecycle, icons/dialog and history/support panels.",
+    "Propagated stream cancellation through memory lookup and guarded unmounted/stale responses.",
+    "Bound category availability to four concurrent requests while retaining complete count-based ranking.",
+    "Removed 19 unreachable assistant header selectors and 13 unused starter CSS selectors; split base/form styles.",
+    "Resolved six React hook dependency warnings without replaying reorder writes.",
+    "Included all browser TypeScript sources/configurations in CI and removed invalid pnpm build-policy placeholders.",
+    "Verified delivery links in grocery, jewelry and electronics headers at 390px and 1440px."
+  ],
+  "removed_files": [
+    "frontend/packages/ui/src/Foundation.tsx",
+    "frontend/apps/storefront/src/theme-default.png",
+    "frontend/apps/admin/public/journey/gold-hoop-earrings.png",
+    "frontend/apps/admin/public/journey/gold-chain-necklace.png",
+    "frontend/apps/admin/public/journey/emerald-pendant-necklace.png"
+  ],
+  "removed_asset_and_source_bytes": 5567570,
+  "admin_initial_javascript_kb": {
+    "before_lazy_routes": 1094.08,
+    "after_lazy_routes": 356.47,
+    "after_gzip": 109.34,
+    "unit": "decimal kB, Vite production output"
+  },
+  "validation": {
+    "unit_tests": {
+      "passed": 3196,
+      "failed": 0
+    },
+    "eslint": {
+      "errors": 0,
+      "warnings": 0,
+      "scope": [
+        "apps/admin/src",
+        "apps/storefront/src",
+        "packages",
+        "new streaming and header browser tests"
+      ]
+    },
+    "typechecks": [
+      "storefront",
+      "admin",
+      "api-client",
+      "shared UI",
+      "all e2e TypeScript and Playwright configurations"
+    ],
+    "builds": [
+      "admin browser",
+      "storefront browser",
+      "storefront public SSR"
+    ],
+    "mocked_browser_unique_cases": 214,
+    "mocked_browser_suites": {
+      "admin_regression": 89,
+      "assistant_desktop_and_mobile": 108,
+      "navigation": 11,
+      "delivery_header_grocery_jewelry_electronics": 6
+    },
+    "assistant_rerun_note": "Initial run passed 100 of 108; six new assertions used the wrong message class and two existing assertions used lowercase home. Corrected to accessible article roles and a case-insensitive address label; all 12 targeted cases passed on rerun, including all eight previously failing cases."
+  },
+  "recommendations": [
+    "Use a backend aggregate endpoint for delivery-aware category counts to reduce total requests further.",
+    "Retain public brand images until configured theme URLs and sync-brand-assets.py are updated together.",
+    "Preserve fixture/authentication/port/backend requirements when consolidating Playwright configurations.",
+    "Scope remaining shared element styles only with visual coverage of admin, storefront and public rendering."
+  ],
+  "retained": "Generated contracts, SSR/Vite entry points, fonts/licenses, PWA assets, public delivery data and original demo assets.",
+  "limitations": "Mocked browser fixtures; no live backend, production acceptance or deployment in this pass."
+}

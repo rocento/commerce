@@ -1,0 +1,6 @@
+{
+  "version": "1",
+  "id": "m02-english-v1",
+  "languages": ["en", "typo"],
+  "reason": "User explicitly excluded Arabic from the current stage. Arabic, Egyptian Arabic and Arabic-containing mixed-language cases remain archived but are deferred from current acceptance and paid canaries. English and English-typo cases remain required."
+}

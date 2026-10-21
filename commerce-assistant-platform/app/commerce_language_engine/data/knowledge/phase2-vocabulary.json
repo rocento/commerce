@@ -1,0 +1,799 @@
+{
+  "activity": [
+    [
+      "invoicing",
+      "creating invoices",
+      "preparing invoices"
+    ],
+    [
+      "bookkeeping",
+      "keeping accounts",
+      "recording business expenses"
+    ],
+    [
+      "transcription",
+      "transcribing audio",
+      "typing transcripts"
+    ],
+    [
+      "bird photography",
+      "photographing birds"
+    ],
+    [
+      "batch cooking",
+      "cooking in batches"
+    ],
+    [
+      "hand washing",
+      "washing hands",
+      "handwashing"
+    ],
+    [
+      "afternoon tea",
+      "tea time"
+    ],
+    [
+      "body care",
+      "bodycare"
+    ],
+    [
+      "video conferencing",
+      "joining video conferences",
+      "video conference calls"
+    ],
+    [
+      "online tutoring",
+      "teaching online lessons"
+    ],
+    [
+      "language learning",
+      "learning languages"
+    ],
+    [
+      "web development",
+      "building websites",
+      "developing websites"
+    ],
+    [
+      "app development",
+      "building apps",
+      "developing apps"
+    ],
+    [
+      "database work",
+      "working with databases"
+    ],
+    [
+      "scientific computing",
+      "scientific computation"
+    ],
+    [
+      "statistical analysis",
+      "analyzing statistics",
+      "analysing statistics"
+    ],
+    [
+      "architectural drawing",
+      "drawing building plans"
+    ],
+    [
+      "technical drawing",
+      "drafting technical drawings"
+    ],
+    [
+      "film editing",
+      "editing films"
+    ],
+    [
+      "color grading",
+      "colour grading"
+    ],
+    [
+      "sound editing",
+      "editing sound",
+      "editing audio"
+    ],
+    [
+      "voice recording",
+      "recording voiceovers",
+      "voiceover recording"
+    ],
+    [
+      "vlogging",
+      "recording vlogs"
+    ],
+    [
+      "screen recording",
+      "recording my screen"
+    ],
+    [
+      "subtitling",
+      "creating subtitles",
+      "adding subtitles"
+    ],
+    [
+      "online exams",
+      "taking online exams"
+    ],
+    [
+      "research writing",
+      "writing research papers"
+    ],
+    [
+      "essay writing",
+      "writing essays"
+    ],
+    [
+      "document review",
+      "reviewing documents"
+    ],
+    [
+      "inventory management",
+      "managing inventory"
+    ],
+    [
+      "stocktaking",
+      "counting stock"
+    ],
+    [
+      "label printing",
+      "printing labels"
+    ],
+    [
+      "receipt printing",
+      "printing receipts"
+    ],
+    [
+      "home schooling",
+      "homeschooling"
+    ],
+    [
+      "commuting by train",
+      "train commuting"
+    ],
+    [
+      "long flights",
+      "long-haul flights"
+    ],
+    [
+      "road trips",
+      "road trip"
+    ],
+    [
+      "overnight travel",
+      "travelling overnight",
+      "traveling overnight"
+    ],
+    [
+      "food storage",
+      "storing food"
+    ],
+    [
+      "freezer meals",
+      "preparing freezer meals"
+    ],
+    [
+      "bread making",
+      "making bread"
+    ],
+    [
+      "cake decorating",
+      "decorating cakes"
+    ],
+    [
+      "salad preparation",
+      "making salads"
+    ],
+    [
+      "smoothie preparation",
+      "making smoothies"
+    ],
+    [
+      "coffee brewing",
+      "brewing coffee"
+    ],
+    [
+      "tea brewing",
+      "brewing tea"
+    ],
+    [
+      "meal planning",
+      "planning meals"
+    ],
+    [
+      "lunch preparation",
+      "preparing lunch"
+    ],
+    [
+      "party catering",
+      "catering a party"
+    ],
+    [
+      "pantry organization",
+      "organising the pantry",
+      "organizing the pantry"
+    ],
+    [
+      "jewelry storage",
+      "jewellery storage",
+      "storing jewelry",
+      "storing jewellery"
+    ],
+    [
+      "jewelry cleaning",
+      "jewellery cleaning",
+      "cleaning jewelry",
+      "cleaning jewellery"
+    ],
+    [
+      "costume styling",
+      "styling costumes"
+    ],
+    [
+      "stage performances",
+      "stage performance"
+    ],
+    [
+      "choir performances",
+      "choir performance"
+    ],
+    [
+      "medication organization",
+      "organising medication",
+      "organizing medication"
+    ],
+    [
+      "first aid kit organization",
+      "organizing a first aid kit"
+    ],
+    [
+      "travel toiletry packing",
+      "packing toiletries"
+    ],
+    [
+      "contact lens storage",
+      "storing contact lenses"
+    ],
+    [
+      "nail care",
+      "nailcare"
+    ],
+    [
+      "foot care",
+      "footcare"
+    ],
+    [
+      "beard care",
+      "beard grooming"
+    ]
+  ],
+  "material": [
+    [
+      "gold",
+      "gold metal"
+    ],
+    [
+      "silver",
+      "silver metal"
+    ],
+    [
+      "sterling silver",
+      "sterling-silver"
+    ],
+    [
+      "platinum",
+      "platinum metal"
+    ],
+    [
+      "palladium",
+      "palladium metal"
+    ],
+    [
+      "titanium",
+      "titanium metal"
+    ],
+    [
+      "stainless steel",
+      "stainless-steel"
+    ],
+    [
+      "steel",
+      "steel metal"
+    ],
+    [
+      "copper",
+      "copper metal"
+    ],
+    [
+      "brass",
+      "brass metal"
+    ],
+    [
+      "bronze",
+      "bronze metal"
+    ],
+    [
+      "aluminum",
+      "aluminium"
+    ],
+    [
+      "nickel",
+      "nickel metal"
+    ],
+    [
+      "zinc",
+      "zinc metal"
+    ],
+    [
+      "iron",
+      "iron metal"
+    ],
+    [
+      "ceramic",
+      "ceramic material"
+    ],
+    [
+      "porcelain"
+    ],
+    [
+      "resin"
+    ],
+    [
+      "acrylic",
+      "acrylic material"
+    ],
+    [
+      "silicone",
+      "silicone material"
+    ],
+    [
+      "rubber",
+      "rubber material"
+    ],
+    [
+      "plastic",
+      "plastic material"
+    ],
+    [
+      "polycarbonate"
+    ],
+    [
+      "polypropylene"
+    ],
+    [
+      "polyethylene"
+    ],
+    [
+      "nylon"
+    ],
+    [
+      "polyester"
+    ],
+    [
+      "cotton",
+      "cotton fabric"
+    ],
+    [
+      "linen",
+      "linen fabric"
+    ],
+    [
+      "silk",
+      "silk fabric"
+    ],
+    [
+      "wool",
+      "wool fabric"
+    ],
+    [
+      "leather",
+      "leather material"
+    ],
+    [
+      "faux leather",
+      "imitation leather"
+    ],
+    [
+      "wood",
+      "wooden material"
+    ],
+    [
+      "bamboo",
+      "bamboo material"
+    ],
+    [
+      "cork",
+      "cork material"
+    ],
+    [
+      "carbon fiber",
+      "carbon fibre"
+    ],
+    [
+      "fiberglass",
+      "fibreglass"
+    ],
+    [
+      "recycled aluminum",
+      "recycled aluminium"
+    ],
+    [
+      "recycled plastic"
+    ],
+    [
+      "recycled paper"
+    ],
+    [
+      "cardboard"
+    ],
+    [
+      "paper",
+      "paper material"
+    ],
+    [
+      "glass",
+      "glass material"
+    ],
+    [
+      "quartz",
+      "quartz material"
+    ]
+  ],
+  "person": [
+    [
+      "godmother",
+      "godmothers"
+    ],
+    [
+      "godfather",
+      "godfathers"
+    ],
+    [
+      "godchild",
+      "godchildren"
+    ],
+    [
+      "caregiver",
+      "caregivers",
+      "carer",
+      "carers"
+    ],
+    [
+      "mentor",
+      "mentors"
+    ],
+    [
+      "apprentice",
+      "apprentices"
+    ],
+    [
+      "teammate",
+      "teammates"
+    ],
+    [
+      "housemate",
+      "housemates"
+    ],
+    [
+      "study partner",
+      "study partners"
+    ],
+    [
+      "business partner",
+      "business partners"
+    ],
+    [
+      "coworking partner",
+      "coworking partners"
+    ],
+    [
+      "pen pal",
+      "pen pals"
+    ]
+  ],
+  "occasion": [
+    [
+      "retirement party",
+      "retirement celebration"
+    ],
+    [
+      "housewarming party",
+      "housewarming celebration"
+    ],
+    [
+      "farewell party",
+      "leaving party"
+    ],
+    [
+      "welcome party",
+      "welcome celebration"
+    ],
+    [
+      "engagement party",
+      "engagement celebration"
+    ],
+    [
+      "wedding rehearsal",
+      "rehearsal dinner"
+    ],
+    [
+      "bridal shower"
+    ],
+    [
+      "baby naming ceremony"
+    ],
+    [
+      "school reunion",
+      "class reunion"
+    ],
+    [
+      "family reunion"
+    ],
+    [
+      "award ceremony",
+      "awards ceremony"
+    ],
+    [
+      "opening night"
+    ],
+    [
+      "charity dinner",
+      "fundraising dinner"
+    ],
+    [
+      "work anniversary",
+      "work anniversary celebration"
+    ],
+    [
+      "new job celebration"
+    ],
+    [
+      "team celebration"
+    ],
+    [
+      "festival",
+      "festivals"
+    ]
+  ],
+  "device": [
+    [
+      "Google Pixel 7",
+      "pixel 7",
+      "google pixel seven"
+    ],
+    [
+      "Samsung Galaxy S22",
+      "galaxy s22",
+      "samsung s22"
+    ],
+    [
+      "PlayStation 5",
+      "playstation five",
+      "ps5"
+    ],
+    [
+      "Xbox Series X",
+      "xbox series x console"
+    ]
+  ],
+  "unit": [
+    [
+      "bottle",
+      "bottles"
+    ],
+    [
+      "box",
+      "boxes"
+    ],
+    [
+      "packet",
+      "packets"
+    ],
+    [
+      "bag",
+      "bags"
+    ],
+    [
+      "pack",
+      "packs"
+    ],
+    [
+      "can",
+      "cans"
+    ],
+    [
+      "carton",
+      "cartons"
+    ],
+    [
+      "jar",
+      "jars"
+    ],
+    [
+      "tube",
+      "tubes"
+    ],
+    [
+      "pair",
+      "pairs"
+    ],
+    [
+      "piece",
+      "pieces"
+    ],
+    [
+      "sachet",
+      "sachets"
+    ],
+    [
+      "pouch",
+      "pouches"
+    ],
+    [
+      "roll",
+      "rolls"
+    ],
+    [
+      "tray",
+      "trays"
+    ],
+    [
+      "capsule",
+      "capsules"
+    ],
+    [
+      "tablet",
+      "tablets"
+    ],
+    [
+      "ampoule",
+      "ampoules",
+      "ampule",
+      "ampules"
+    ],
+    [
+      "vial",
+      "vials"
+    ],
+    [
+      "millimeter",
+      "millimeters",
+      "millimetre",
+      "millimetres",
+      "mm"
+    ],
+    [
+      "centimeter",
+      "centimeters",
+      "centimetre",
+      "centimetres",
+      "cm"
+    ],
+    [
+      "meter",
+      "meters",
+      "metre",
+      "metres",
+      "m"
+    ],
+    [
+      "inch",
+      "inches",
+      "in"
+    ],
+    [
+      "foot",
+      "feet",
+      "ft"
+    ],
+    [
+      "gram",
+      "grams",
+      "g"
+    ],
+    [
+      "kilogram",
+      "kilograms",
+      "kg"
+    ],
+    [
+      "milligram",
+      "milligrams",
+      "mg"
+    ],
+    [
+      "milliliter",
+      "milliliters",
+      "millilitre",
+      "millilitres",
+      "ml"
+    ],
+    [
+      "liter",
+      "liters",
+      "litre",
+      "litres",
+      "l"
+    ],
+    [
+      "ounce",
+      "ounces",
+      "oz"
+    ],
+    [
+      "pound",
+      "pounds",
+      "lb",
+      "lbs"
+    ],
+    [
+      "tin",
+      "tins"
+    ]
+  ],
+  "dimension": [
+    [
+      "length",
+      "long"
+    ],
+    [
+      "width",
+      "wide"
+    ],
+    [
+      "height",
+      "tall"
+    ],
+    [
+      "depth",
+      "deep"
+    ],
+    [
+      "diameter"
+    ],
+    [
+      "thickness"
+    ],
+    [
+      "weight",
+      "mass"
+    ],
+    [
+      "volume"
+    ]
+  ],
+  "aliases": {
+    "activity.online_classes": [
+      "online schooling",
+      "remote schooling",
+      "virtual schooling"
+    ],
+    "activity.video_editing": [
+      "editing video clips",
+      "editing my videos",
+      "cutting videos"
+    ],
+    "activity.office_work": [
+      "general office duties",
+      "everyday office tasks"
+    ],
+    "activity.remote_work": [
+      "doing my job from home"
+    ],
+    "activity.podcasting": [
+      "making podcasts",
+      "producing podcasts"
+    ],
+    "activity.programming": [
+      "computer programming",
+      "software coding"
+    ]
+  },
+  "source": {
+    "id": "phase2-curated-english-v1",
+    "author": "codex",
+    "method": "ai_assisted",
+    "scope": "First-party English lexical curation plus existing published CATEGORY aliases; no merchant facts, suitability assertions, or unit conversions.",
+    "createdAt": "2026-10-10T00:00:00.000Z"
+  }
+}

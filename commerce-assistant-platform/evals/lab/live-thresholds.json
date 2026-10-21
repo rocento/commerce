@@ -1,0 +1,151 @@
+{
+  "version": "1",
+  "dataset_sha256": "db49ec7326c12a0fcb49f9ec9234a840b638c47c86056300d3c7cb9cd3ea685b",
+  "mode": "live",
+  "basis": "Observed baseline, zero loss on paired passing cases; Wilson intervals describe this finite case sample, not production prevalence.",
+  "segments": {
+    "journey:comparison": {
+      "baseline": 1.0,
+      "target": 1.0,
+      "wilson_95": [
+        0.20654931437723745,
+        1
+      ],
+      "maximum_regression": 0,
+      "minimum_cases": 1,
+      "status": "measured"
+    },
+    "journey:discovery": {
+      "baseline": 0.5,
+      "target": 0.5,
+      "wilson_95": [
+        0.15003898915214947,
+        0.8499610108478506
+      ],
+      "maximum_regression": 0,
+      "minimum_cases": 4,
+      "status": "measured"
+    },
+    "journey:gift": {
+      "baseline": 0.0,
+      "target": 0.0,
+      "wilson_95": [
+        0,
+        0.7934506856227626
+      ],
+      "maximum_regression": 0,
+      "minimum_cases": 1,
+      "status": "measured"
+    },
+    "language:ar": {
+      "baseline": 0.0,
+      "target": 0.0,
+      "wilson_95": [
+        0,
+        0.7934506856227626
+      ],
+      "maximum_regression": 0,
+      "minimum_cases": 1,
+      "status": "measured"
+    },
+    "language:en": {
+      "baseline": 0.5,
+      "target": 0.5,
+      "wilson_95": [
+        0.15003898915214947,
+        0.8499610108478506
+      ],
+      "maximum_regression": 0,
+      "minimum_cases": 4,
+      "status": "measured"
+    },
+    "language:mixed": {
+      "baseline": 1.0,
+      "target": 1.0,
+      "wilson_95": [
+        0.20654931437723745,
+        1
+      ],
+      "maximum_regression": 0,
+      "minimum_cases": 1,
+      "status": "measured"
+    },
+    "store:grocery": {
+      "baseline": 0.5,
+      "target": 0.5,
+      "wilson_95": [
+        0.1876163064826506,
+        0.8123836935173494
+      ],
+      "maximum_regression": 0,
+      "minimum_cases": 6,
+      "status": "measured"
+    },
+    "store_language:grocery:ar": {
+      "baseline": 0.0,
+      "target": 0.0,
+      "wilson_95": [
+        0,
+        0.7934506856227626
+      ],
+      "maximum_regression": 0,
+      "minimum_cases": 1,
+      "status": "measured"
+    },
+    "store_language:grocery:en": {
+      "baseline": 0.5,
+      "target": 0.5,
+      "wilson_95": [
+        0.15003898915214947,
+        0.8499610108478506
+      ],
+      "maximum_regression": 0,
+      "minimum_cases": 4,
+      "status": "measured"
+    },
+    "store_language:grocery:mixed": {
+      "baseline": 1.0,
+      "target": 1.0,
+      "wilson_95": [
+        0.20654931437723745,
+        1
+      ],
+      "maximum_regression": 0,
+      "minimum_cases": 1,
+      "status": "measured"
+    },
+    "suite:catalog_grounded": {
+      "baseline": 0.3333333333333333,
+      "target": 0.3333333333333333,
+      "wilson_95": [
+        0.06149194472039621,
+        0.7923403991979522
+      ],
+      "maximum_regression": 0,
+      "minimum_cases": 3,
+      "status": "measured"
+    },
+    "suite:conversation": {
+      "baseline": 1.0,
+      "target": 1.0,
+      "wilson_95": [
+        0.20654931437723745,
+        1
+      ],
+      "maximum_regression": 0,
+      "minimum_cases": 1,
+      "status": "measured"
+    },
+    "suite:journey": {
+      "baseline": 0.5,
+      "target": 0.5,
+      "wilson_95": [
+        0.09453120573423074,
+        0.9054687942657693
+      ],
+      "maximum_regression": 0,
+      "minimum_cases": 2,
+      "status": "measured"
+    }
+  }
+}

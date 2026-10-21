@@ -1,0 +1,639 @@
+✔ complete supported pairs have a consistent compound interpretation (244.980125ms)
+✔ whole-request domain recognizers retain their meaning (48.3805ms)
+✔ reports bounded structured uncertainty without exporting invalid quantities (58.928167ms)
+✔ agreement preserves action multiplicity and order, not preparation operations (54.187709ms)
+✔ an exact count never upgrades a pre-existing non-resolved interpretation (3.537208ms)
+✔ whole address-form requests preserve original input and recognize bounded typo (215.830042ms)
+✔ negations, products and compound requests do not open an address form (34.125791ms)
+✔ address shortcut and typed reads resolve to the same read-only intent (268.035ms)
+✔ address read paraphrases do not swallow writes, conditions or quoted requests (0.396125ms)
+✔ generated: bestseller periods remain explicit (268.314042ms)
+✔ generated: ranking cannot discard constraints or execute a compound action (26.442625ms)
+✔ packaged: bestseller periods remain explicit (80.762166ms)
+✔ packaged: ranking cannot discard constraints or execute a compound action (8.903208ms)
+✔ cross-family errors use predicted family in fitting and held-out scoring (1.994666ms)
+✔ abstentions are separately counted and cannot contaminate calibration (0.77075ms)
+✔ missing or undersampled predicted families retain raw confidence (0.091084ms)
+✔ isotonic fit is monotonic and improves a deliberately overconfident heldout-style sample (0.961084ms)
+✔ Platt and temperature calibrators clamp output safely (0.091208ms)
+✔ calibration selection is dictionary-version scoped and prefers intent to family (0.083333ms)
+✔ runtime calibration is explicitly gated to diagnostic-only artifacts (0.686708ms)
+✔ artifact promotion requires production samples and critical-intent precision (0.650542ms)
+✔ reliability metrics and confusion matrix account for abstentions (0.1555ms)
+✔ whole-cart grammar supports removal, emptying, polite wrappers and cart destinations (27.750708ms)
+✔ packaged: complete whole-cart commands use the existing clear-cart contract (646.993417ms)
+✔ packaged: partial, qualified and informational messages cannot become an executable cart clear (170.655541ms)
+✔ generated: complete whole-cart commands use the existing clear-cart contract (211.279375ms)
+✔ generated: partial, qualified and informational messages cannot become an executable cart clear (220.297958ms)
+✔ core: cart optimization understands budget requests and controlled typos (228.595125ms)
+✔ core: optimization requires a cart and an affirmative action (4.377875ms)
+✔ expanded: cart optimization understands budget requests and controlled typos (20.563166ms)
+✔ expanded: optimization requires a cart and an affirmative action (10.857834ms)
+✔ informal on-cart requests preserve product and quantity (258.716709ms)
+✔ packaged: cart pricing questions use the authorized cart read (312.168541ms)
+✔ generated: cart pricing questions use the authorized cart read (106.361125ms)
+✔ pricing reads do not consume writes, conditions, product searches or order pricing (0.146625ms)
+✔ dates recommendations resolve with polite prefixes and optional item wording (258.340208ms)
+✔ category-only recommendation phrases resolve to catalog categories (5.372208ms)
+✔ recommendations retain names and support explicit merchant filters (29.49975ms)
+✔ explicit filters never swallow additional requirements (18.940417ms)
+✔ open-ended recommendations browse the catalog without dropping constraints (78.73225ms)
+✔ bounded discovery followups retain their mode (53.253417ms)
+✔ generated: cheapest searches need no reference product (260.384708ms)
+✔ generated: preserve negation and unbound result references (12.419667ms)
+✔ packaged: cheapest searches need no reference product (6.087583ms)
+✔ packaged: preserve negation and unbound result references (35.023792ms)
+✔ generated: highest-price store requests select descending prices (68.64475ms)
+✔ packaged: highest-price store requests select descending prices (27.804791ms)
+✖ omitted collection requests client context without guessing cart (254.627667ms)
+✔ explicit collection and client-supplied collection resolve the same action (28.352208ms)
+✔ explicit collection takes precedence over client collection (5.884459ms)
+✔ negation, instructions, bare commands and unrelated objects do not ask collection context (24.0605ms)
+✔ missing context keeps specific questions while other statuses also have messages (45.543958ms)
+✖ commerce noun fragments use explicit read actions with polite wording and stray punctuation (537.307666ms)
+✔ category fragments use catalog search across all supported industry vocabularies (5258.249375ms)
+✔ no fragment inference for negation, multiple clauses, numeric values, or arbitrary product identities (0.093875ms)
+✔ supports bounded courteous phrasing and retains safeguards (12.514625ms)
+✔ packaged: comparison clear connects a distinct intent without cart/product operations (561.32825ms)
+✔ generated: comparison clear connects a distinct intent without cart/product operations (103.356541ms)
+✔ core: explicit complaint requests resolve (333.508083ms)
+✔ core: denied or weak complaints do not resolve (6.991708ms)
+✔ core: other support actions keep their meaning (2.164041ms)
+✔ expanded: explicit complaint requests resolve (32.887291ms)
+✔ expanded: denied or weak complaints do not resolve (49.438791ms)
+✔ expanded: other support actions keep their meaning (6.548625ms)
+✔ indirect problems and dissatisfaction with purchases imply complaints (33.287167ms)
+✔ indirect complaints require an unresolved commerce problem (105.573666ms)
+✔ specific order problems retain their specialized intents (65.7295ms)
+✔ fills a product in the complete request and preserves quantities and sequence (344.820334ms)
+✔ fills only the unknown product without changing an independent wishlist item (20.809917ms)
+✔ complete corrections replace the old actions and cancellation is explicit (34.211458ms)
+✔ confirmations, conditions, amounts and extra instructions cannot fill a product (64.756292ms)
+✔ pending text is bounded and cannot include execution authority (6.367166ms)
+✔ one complete interpretation drives ordered actions, counts and graph (343.685833ms)
+✔ partial parses and unsupported compositions never acquire complete interpretation (166.311042ms)
+✔ stale context cannot supply an absent product or change a complete request (36.780458ms)
+✔ scoped product clarification reparses the full pair; yes never approves a parse (49.520875ms)
+✔ the complete composition requires both intents in the active dictionary (43.863375ms)
+✔ packaged: explicit jokes and pretend commands cannot execute shopping (66.89825ms)
+✔ packaged: quoted product names remain searchable (9.3075ms)
+✔ generated: explicit jokes and pretend commands cannot execute shopping (21.324084ms)
+✔ generated: quoted product names remain searchable (4.0685ms)
+✔ tone and literal product words do not imply joking (0.080458ms)
+✔ packaged: sequence markers retain items before checkout (294.638792ms)
+✔ packaged: direct orders retain items through address clarification (66.306167ms)
+✔ packaged: passive cart requests preserve quantities through a product reply (174.215917ms)
+✔ generated: sequence markers retain items before checkout (23.947208ms)
+✔ generated: direct orders retain items through address clarification (86.72925ms)
+✔ generated: passive cart requests preserve quantities through a product reply (48.193375ms)
+✔ generated: reviewed conversational search heads retain the product and budget (362.514708ms)
+✔ generated: independently authored phrasings and quantities (33.060042ms)
+✔ generated: all reviewed typo heads work only at the request command (216.167042ms)
+✔ generated: negation and incomplete or instructional requests never become searches (90.683417ms)
+✔ generated: product names and SKU-like tokens are not autocorrected (15.019917ms)
+✔ generated: explicit actions and conflict handling survive conversational wrappers (40.192125ms)
+✔ generated: corrected search prepositions remain distinct from a later purpose (28.045667ms)
+✔ generated: recommendation qualifiers remain evidence rather than merchant purposes (6.8065ms)
+✔ packaged: reviewed conversational search heads retain the product and budget (49.978292ms)
+✔ packaged: independently authored phrasings and quantities (38.508875ms)
+✔ packaged: all reviewed typo heads work only at the request command (82.053084ms)
+✔ packaged: negation and incomplete or instructional requests never become searches (73.693583ms)
+✔ packaged: product names and SKU-like tokens are not autocorrected (17.640459ms)
+✔ packaged: explicit actions and conflict handling survive conversational wrappers (11.830208ms)
+✔ packaged: corrected search prepositions remain distinct from a later purpose (24.119208ms)
+✔ packaged: recommendation qualifiers remain evidence rather than merchant purposes (5.839834ms)
+✔ correction evidence and semantic token offsets refer to the original input (0.107542ms)
+✔ new search recognition does not depend on catalog membership (58.136208ms)
+✔ counted shorthand creates separate selection requests, never a cart mutation (279.466625ms)
+✔ ambiguous measurements, model numbers and clauses stay on the existing guarded path (0.1305ms)
+✖ authored linguistic structures retain their independent semantic labels (417.380917ms)
+✔ all six reorder formulations share the same intent and order references stay scoped (69.040458ms)
+✔ reference atoms cannot independently invent a purchase or cross domains (21.808583ms)
+✔ action/object/reference proximity is required, not bag-of-words co-occurrence (29.619708ms)
+✔ expanded dataset covers held-out structures, ambiguity, noise, negatives and fragments (12.094792ms)
+✔ ontology expansion interns exact equivalents and retains catalog separation (4.950333ms)
+✔ open product noun phrases do not create unrelated action/object candidates (76.487208ms)
+✔ indirect event rules respect denied commands and explicit alternatives remain ambiguous (13.369ms)
+✔ tracking questions preserve latest-order references without suggesting creation (45.407125ms)
+✔ first and oldest order reads are history requests rather than product searches (13.902208ms)
+✖ new information intents require an action and the specific industry concept (701.851084ms)
+✔ partial request-prefix matches defer to explicit search actions (18.268416ms)
+✔ new data covers all industries with authored positives and negatives (7.340084ms)
+✔ language alone never makes a customer authorization decision (411.959667ms)
+✔ trusted denied status has distinct non-retry messaging (0.162833ms)
+▶ deployment inputs reject corrupt or mismatched releases before database startup
+  ✔ compiled-only deployments remain supported (24.519458ms)
+  ✔ matching private bundle is accepted (35.789041ms)
+  ✔ invalid checksum is rejected (28.26675ms)
+  ✔ different artifact is rejected even with a valid checksum (48.982334ms)
+  ✔ incomplete corpus is rejected (72.467083ms)
+✔ deployment inputs reject corrupt or mismatched releases before database startup (232.769167ms)
+✔ packaged: current generic discount recommendations (487.765375ms)
+✔ generated: current generic discount recommendations (37.953375ms)
+✔ search extracts reusable category, brand, color, size and price (246.314708ms)
+✔ unknown and weak language cannot resolve an order action (118.335167ms)
+✔ negated cancellation does not beat tracking (1.024292ms)
+✔ conflicting positive actions abstain (2.449583ms)
+✔ session selection then contextual quantity (16.452292ms)
+✖ order repeat and cart removal use context (2.077208ms)
+✔ controlled typo correction remains explainable (0.773667ms)
+✔ compiler rejects broken group references (1.7665ms)
+✔ required occurrences and disqualifiers change candidate eligibility (18.442667ms)
+✔ packaged: a complete quantity answer replaces the unresolved original prefix (373.877041ms)
+✔ packaged: invalid, partial, orphan and forged quantity answers cannot authorize actions (115.443667ms)
+✔ packaged: product replies preserve quantity, destination and monetary requirements (106.783208ms)
+✔ packaged: a currency answer fills only a currency-less complete search (102.65775ms)
+✔ packaged: bounded same-in refinements retain category, bounds, currency and exclusions (119.349ms)
+✔ packaged: pending clarification context is bounded linguistic data (0.112ms)
+✔ generated: a complete quantity answer replaces the unresolved original prefix (58.2075ms)
+✔ generated: invalid, partial, orphan and forged quantity answers cannot authorize actions (79.701541ms)
+✔ generated: product replies preserve quantity, destination and monetary requirements (65.314166ms)
+✔ generated: a currency answer fills only a currency-less complete search (120.701291ms)
+✔ generated: bounded same-in refinements retain category, bounds, currency and exclusions (123.458333ms)
+✔ generated: pending clarification context is bounded linguistic data (0.066ms)
+✔ English correction numbers are fully consumed and preserve decimal amounts (2.2805ms)
+✔ packaged: labeled merchant values survive subsequent corrections and independent replay (440.4685ms)
+✔ packaged: compound edits distinguish number conjunctions from field separators (35.819ms)
+✔ packaged: quantity corrections support scales and count expressions without cart mutations (44.110042ms)
+✔ packaged: ambiguous or unconsumed corrections leave the previous search untouched (166.261542ms)
+✔ packaged: new attribute values preserve exclusions and cannot grant authority (85.445167ms)
+✔ generated: labeled merchant values survive subsequent corrections and independent replay (100.675625ms)
+✔ generated: compound edits distinguish number conjunctions from field separators (24.059541ms)
+✔ generated: quantity corrections support scales and count expressions without cart mutations (37.307042ms)
+✔ generated: ambiguous or unconsumed corrections leave the previous search untouched (152.437167ms)
+✔ generated: new attribute values preserve exclusions and cannot grant authority (97.651917ms)
+✔ merchant fields stay separate from product search and survive budget edits (93.270584ms)
+✔ packaged: English currency names bind to numeric price amounts (467.396083ms)
+✔ packaged: named currency ranges and joined limits remain one product search (20.839292ms)
+✔ packaged: budget edits preserve named currency and the opposite bound (44.632417ms)
+✔ packaged: currency words alone and quoted names remain product data (32.489459ms)
+✔ packaged: currency clarification accepts only complete supported names (77.038667ms)
+✔ generated: English currency names bind to numeric price amounts (96.462416ms)
+✔ generated: named currency ranges and joined limits remain one product search (5.947792ms)
+✔ generated: budget edits preserve named currency and the opposite bound (12.874417ms)
+✔ generated: currency words alone and quoted names remain product data (11.121125ms)
+✔ generated: currency clarification accepts only complete supported names (56.283208ms)
+✔ catalog nouns are entities, never primary intent terms (328.083166ms)
+✔ product argument extraction and scores are catalog independent (96.846333ms)
+✔ cart relationships extract arbitrary direct objects and quantities (70.758167ms)
+✔ structural objects and missing arguments do not become product searches (11.917417ms)
+✔ compiler enforces separate catalog storage (25.916541ms)
+✔ open product arguments retain unknown multiword names and quantities (0.313375ms)
+✔ requirement spans retain literal text and Unicode offsets (5.116917ms)
+✔ quoted names and ordinary product searches do not acquire requirements (0.728375ms)
+✔ searches carry evidence requirements without upgrading negation or actions (332.591959ms)
+✔ named models and manufacturing exclusions carry literal evidence spans (41.966542ms)
+✖ expanded canonical intents remain reachable with correct resolution status (4.692042ms)
+✔ generation is reproducible, deduplicated, split-safe and category-compatible (10581.34875ms)
+✔ overlapping phrase patterns cannot inflate candidate confidence (186.245625ms)
+✔ compiler rejects contradictory rules and unknown transition states (16.236708ms)
+✔ new opposite-action conflicts abstain and mutations require confirmation (4.94175ms)
+✔ metallic adjective is a color for electronics and a material for jewelry (6.652ms)
+✔ words inside category aliases do not invent attribute filters (3.049958ms)
+✔ every authored industry term extracts its intended canonical value (329.921875ms)
+✔ new industry vocabulary does not change intent scores (3253.10675ms)
+✔ qualified aliases avoid common cross-industry collisions (4.452292ms)
+✔ counts actions independently of quantities, products and intent types (398.64575ms)
+✔ inherits products for omitted destination actions and preserves sequence (4.987458ms)
+✔ product lists and quoted conjunctions stay inside a single action (22.191083ms)
+✔ clarifies uncertainty instead of reporting an exact count (32.811917ms)
+✔ counts customer clauses rather than internal preparation operations (15.341792ms)
+✔ context resolves a product reference without granting execution authority (4.563041ms)
+✔ retains domain intent aliases and does not invent a collection destination (38.468375ms)
+✔ supports a changed product in an omitted add clause and the bounded card typo (4.248166ms)
+✔ bounds interpretation and retains an exact zero for negated commands (56.613167ms)
+✔ invalid numeric prefixes require quantity clarification without fallback (495.160708ms)
+✔ invalid quantities cannot disappear inside compound requests (29.4245ms)
+✔ valid quantities, quoted numeric names and numeric SKUs stay intact (50.042375ms)
+✔ frozen 1000-request corpus preserves selections and reviewed clarification/plan outcomes (3494.583875ms)
+✔ orders naming products require selection and preserve each search (315.842083ms)
+✔ plain checkout and negated or conditional requests are not product discovery (0.0925ms)
+✔ unpunctuated orders preserve separate product quantities without executing (55.494959ms)
+✔ order discovery never drops constraints or invalid quantities (0.143334ms)
+✔ polite order requests preserve merchant product text and quantities (29.195458ms)
+✔ polite prefixes preserve guards (0.136708ms)
+✔ count-first order lists preserve typos, local names and quantities without writes (6.50775ms)
+✔ counted shorthand rejects invalid quantities, measurements and ambiguous model numbers (0.158666ms)
+✔ order quantity notation is fully consumed, including invalid values (26.86075ms)
+✔ conversational purchase heads do not consume availability questions or rewrite product typos (16.344084ms)
+✔ bare first-order fragments are read-only requests and retain the original text (292.560375ms)
+✔ order fragment recognition does not consume actions, negations, product names or clauses (9.119208ms)
+✔ session identifiers require opaque UUID values and never accept tenant labels (0.689708ms)
+✔ repository creates, reloads, advances revisions, isolates tenants and rejects stale writes (437.318ms)
+✔ phase 8 migration scopes rows by tenant/session, enforces revisions and expires/cancels sessions (3.500625ms)
+✔ price conjunctions remain constraints of one product search (336.528708ms)
+✔ real item conjunctions and action boundaries remain present (29.260708ms)
+✔ generated: generic concepts retain the existing merchant search text (344.703916ms)
+✔ generated: packaged quantities reuse the existing cart grammar (31.2665ms)
+✔ generated: noun-fragment meaning preserves constraints without inventing actions (10.76075ms)
+✔ generated: multiple products remain separate, and denied language stays non-actionable (61.538625ms)
+✔ packaged: generic concepts retain the existing merchant search text (10.379083ms)
+✔ packaged: packaged quantities reuse the existing cart grammar (10.838541ms)
+✔ packaged: noun-fragment meaning preserves constraints without inventing actions (4.704625ms)
+✔ packaged: multiple products remain separate, and denied language stays non-actionable (23.693375ms)
+✔ all configured concepts and aliases resolve without merchant data (2.635292ms)
+✔ labeled attributes accept open English values and measurements (0.422875ms)
+✔ adding concept data needs no parser branches and invalid hierarchies fail early (0.492083ms)
+✔ whole product questions retain the named product without inferred attributes (4.056875ms)
+✔ selected product questions retain a reference, never a fabricated identity (0.133917ms)
+✔ partial, conditional and compound requests do not become fact reads (0.173917ms)
+✔ guides incomplete positive commands while preserving original spelling and SKU (333.19425ms)
+✔ keeps explicit destinations and existing non-product actions on their normal paths (45.62775ms)
+✔ does not guide negated, conditional, compound, invalid quantities or constrained commands (0.303167ms)
+✔ offers a removal destination only for incomplete removal commands (0.157833ms)
+✔ routes all-item removal to clear cart or a destination choice (13.644916ms)
+✔ packaged: reviewed price boundaries and independent variations (403.740625ms)
+✔ packaged: price words inside product identities remain intact (22.366916ms)
+✔ generated: reviewed price boundaries and independent variations (50.596459ms)
+✔ generated: price words inside product identities remain intact (13.415333ms)
+✔ purchase paraphrases preserve quantities and require exact product selection (494.566583ms)
+✔ existing-order references resolve to reads without product or creation actions (14.659167ms)
+✔ an order-reference reply still completes a pending repeat-order request (10.866583ms)
+✔ whole checkout phrases start review without creating an order (19.085875ms)
+✔ discovery excludes existing orders, repeats, conditions and extra actions (0.130708ms)
+✔ purpose syntax is shared across product types and arbitrary merchant vocabulary (272.928459ms)
+✔ purpose and budget refinements preserve independent constraints and replay (70.336542ms)
+✔ purpose does not swallow extra actions, exclusions, quotes or conditional requests (26.685ms)
+✔ preparation wording is a catalog purpose, not a hardcoded cooking rule (63.866458ms)
+✔ whole-request recommendation reads do not invent a required today purpose (29.091792ms)
+✔ packaged: quoted search names cannot create action or price entities (99.562083ms)
+✔ generated: quoted search names cannot create action or price entities (47.575292ms)
+✔ quoted-search shortcut excludes denial and additional commands (0.081583ms)
+✔ packaged: shipping-status questions retain their explicit order reference (373.497083ms)
+✔ packaged: explicit availability questions retain product identity (41.831458ms)
+✔ generated: shipping-status questions retain their explicit order reference (34.565458ms)
+✔ generated: explicit availability questions retain product identity (34.919917ms)
+✔ read paraphrases never consume negations, quoted commands or additional actions (0.173708ms)
+✔ common offer questions use the verified discount recommendation path (387.581458ms)
+✔ offer aliases do not discard product constraints or action clauses (9.787167ms)
+✔ conversational recommendations preserve original text and read-only intent (416.53975ms)
+✔ normalization preserves compound commands, negations and quoted names (0.134875ms)
+✔ medical claims retain literal evidence through normalization (3.175291ms)
+✔ numbered buy-again commands provide a high-confidence owned-order lookup argument (365.529792ms)
+✔ negated reorder is not an executable reorder (3.30175ms)
+✔ core: recreate spelling variants repeat an order (291.770292ms)
+✔ core: recreation still requires affirmative order evidence (5.970375ms)
+✔ expanded: recreate spelling variants repeat an order (12.901292ms)
+✔ expanded: recreation still requires affirmative order evidence (11.960375ms)
+✔ core: numbered shorthand starts a reorder review (3.10775ms)
+✔ expanded: numbered shorthand starts a reorder review (42.973916ms)
+✔ same intent and high confidence cannot hide lost products, quantities or actions (1.463208ms)
+✔ full entities detect extra writes, removed constraints and changed money direction (0.18ms)
+✔ incomplete annotations and empty corpora are rejected (0.208792ms)
+✔ safe abstention is separated from a wrong resolved result (0.092958ms)
+✔ user request resolves its action separately from catalog fulfillment (158.853166ms)
+✔ request prefixes defer to a subsequent command; a concrete need can search with quantity (150.294791ms)
+✔ quantity syntax allows quantifiers, word numbers and grouping (28.348541ms)
+✔ direct objects distinguish coupon application from adding products (8.802333ms)
+✔ destination distinguishes cart and wishlist even when cart is mentioned as a modifier (4.337584ms)
+✔ negated commands and instructions do not become cart actions (7.572375ms)
+✔ related actions expose a semantic plan instead of flattening or rejecting them (6.086791ms)
+✔ multiple item quantities are preserved rather than pretending one count describes everything (33.40275ms)
+✔ unknown concrete catalog items can still have a known commerce action (2.099666ms)
+✔ packaged: conditions retain the action and distinguish monetary scope (291.056ms)
+✔ packaged: exclusions and ranges preserve one product without false quantities (17.353833ms)
+✔ packaged: search edits replace only named fields across three turns (73.253375ms)
+✔ packaged: corrections cannot erase exclusions or run a partial edit (31.940417ms)
+✔ packaged: missing, stale and forged search context cannot invent an action (46.00525ms)
+✔ packaged: quoted conditions and explicit new searches stay independent (12.672792ms)
+✔ generated: conditions retain the action and distinguish monetary scope (8.75625ms)
+✔ generated: exclusions and ranges preserve one product without false quantities (17.932459ms)
+✔ generated: search edits replace only named fields across three turns (62.619458ms)
+✔ generated: corrections cannot erase exclusions or run a partial edit (57.8435ms)
+✔ generated: missing, stale and forged search context cannot invent an action (65.402833ms)
+✔ generated: quoted conditions and explicit new searches stay independent (18.054125ms)
+✔ constraint source spans use Unicode code points and quoted markers remain literal (1.024958ms)
+✔ every resolution status has a short customer-facing message (266.909875ms)
+✔ resolved mutation messages acknowledge intent without claiming execution (12.143917ms)
+✔ clarification messages identify missing data and multiple actions (12.625917ms)
+✖ admitted English aliases resolve to reviewed existing intents and retain provenance (589.768416ms)
+✔ enriched phrases remain negatable and quoted products remain literal (310.96575ms)
+✖ Rocento profile excludes unsupported operations and dependent definitions (2.915333ms)
+✔ stale dictionaries cannot restore unsupported actions at compilation (302.117083ms)
+✖ unsupported customer requests abstain while implemented features remain available (102.058125ms)
+✔ requested regression cases resolve intent before entity completeness (317.198208ms)
+✔ action and destination contribute 4 + 4 + 5 and request markers only once (5.715625ms)
+✔ negated actions retain explicit penalties and cannot be rescued by a frame (1.792875ms)
+✔ softmax and multiplicative confidence match the specification (0.122083ms)
+✔ softmax is stable for large values, normalized, and temperature configurable (0.084625ms)
+✔ configuration controls weights, penalties and each decision threshold (59.461208ms)
+✔ duplicate overlapping semantic conditions and templates do not multiply evidence (14.483084ms)
+✔ missing business entities cannot affect scores or confidence (43.626375ms)
+✔ destination contradictions use configured penalty rather than a frame override (2.553833ms)
+✔ recency modifiers remain compositional and explicit actions separate their meanings (77.127667ms)
+✔ quantity clarification does not invent a missing concrete product reference (2.189125ms)
+✔ generated everyday search requests preserve filters and distinguish other actions (1765.1795ms)
+✔ show search evidence is independent of catalog membership and filter values (18.075541ms)
+✔ a size guide concept remains required despite the SIZE prefix in its name (3.742041ms)
+✔ compound requests expose action-item, quantity and sequence graph edges (330.076959ms)
+✔ coordinators inside arguments are not blindly treated as clause boundaries (0.165542ms)
+✔ graph output stays within explicit node and edge budgets (0.424125ms)
+✔ compiled composition index selects deterministic typed edge rules (54.281625ms)
+✔ HTTP context round trip binds the same request and rejects malformed context (771.2035ms)
+✔ compiler accepts V2 semantic definitions and preserves V1 turn behavior (518.797334ms)
+✔ compiler rejects semantic graph references that do not resolve (28.6425ms)
+✔ compiler rejects industry inheritance cycles (63.211666ms)
+✔ compiler rejects conflicting composition rules with the same scope and precedence (28.284542ms)
+✔ V2 database migration is additive, privacy-conscious and has an explicit rollback script (8.796375ms)
+✔ corpus migration accepts every difficulty label emitted by the generator (33.876917ms)
+✔ composition rule ownership metadata is additive and guarded on rollback (7.599375ms)
+✔ reference and ambiguity ownership metadata is additive and guarded on rollback (1.397625ms)
+✔ phase 7 confidence artifacts cannot be promoted after held-out Brier regression (1.368459ms)
+✔ phase 8 durable pending sessions migration has tenant isolation, revision and expiry guards (2.15175ms)
+✔ unscoped colliding catalog terms return explicit ambiguity candidates (179.162167ms)
+✔ database decimal weights remain numeric after artifact compilation (168.684833ms)
+✔ store industry context resolves catalog collisions without inventing ownership (17.559166ms)
+✔ singular and plural pronouns bind only compatible prior items (17.758ms)
+✔ location references require conversation context and never infer an address (20.623ms)
+✔ result-set ranking references remain symbolic until a commerce lookup (9.872125ms)
+✔ explicit last-order lookup stays symbolic and does not claim an owned order (36.773166ms)
+✔ context bounds result sets and store industry values (0.261167ms)
+✔ order creation binds products and delivery to ordered preparation operations (342.6605ms)
+✔ action boundaries differ from item list boundaries and quantities stay bound (7.050584ms)
+✔ generic quantities and novel product phrases do not depend on example sentences (55.544417ms)
+✔ word-number conjunctions and quoted coordinated names remain intact (7.957708ms)
+✔ unresolved address preserves primary intent and items (23.922083ms)
+✔ order references stay unresolved without explicit conversational context (10.239458ms)
+✔ same order with a changed address preserves relationship to prior order (4.003083ms)
+✖ a product reply fills a pending request without losing quantity (15.431958ms)
+✔ pronouns refer to prior clauses or explicit selected items (11.506083ms)
+✔ dates and time windows are symbolic until a caller supplies a calendar anchor (27.525584ms)
+✔ negated clauses do not create operations and alternatives remain ambiguous (28.4385ms)
+✔ context validates bounds and rejects arbitrary IDs or authorization claims (18.194708ms)
+✔ successive missing fields retain known items without answering themselves (26.868417ms)
+✔ over-limit and invalid quantities remain incomplete and produce valid next context (41.206791ms)
+✔ compound order exposes typed slots and prioritizes item clarification deterministically (13.8965ms)
+✖ saved address and prior-order resolution are signaled without inventing commerce authority (8.786208ms)
+✔ clarification policy is additive to the existing flat response fields (4.724792ms)
+✔ comparison query and order tracking expose typed slots and authority requirements (11.750292ms)
+✔ delivery slot clarification follows required date then time policy order (10.288959ms)
+✔ service questions resolve existing read intents (362.151625ms)
+✔ purpose wrappers preserve merchant vocabulary and budget across product domains (263.863875ms)
+✔ recommendation typos correct only leading commands and preserve constraints (37.836417ms)
+✔ packaged: linked transfer commands preserve direction and quantity (330.758ms)
+✔ packaged: linked transfers retain invalid-quantity clarification (32.150125ms)
+✔ packaged: different objects, negation and trailing commands cannot resolve as one transfer (35.533292ms)
+✔ generated: linked transfer commands preserve direction and quantity (46.980417ms)
+✔ generated: linked transfers retain invalid-quantity clarification (18.095541ms)
+✔ generated: different objects, negation and trailing commands cannot resolve as one transfer (24.184333ms)
+✔ advanced transfer cases preserve direction, quantities and negative boundaries (3684.918167ms)
+✔ item clarification keeps the original transfer direction and quantity (13.000334ms)
+✔ a pronoun requires an item in the matching source collection (4.428708ms)
+✔ multiple transfer items do not invent a single product or silently accept an unspecified line (5.611ms)
+✔ all and any resume wishlist selection without granting execution (13.856542ms)
+✔ recognizes unsupported capabilities without restoring executable intents (278.7085ms)
+✔ mixed requests never return the executable supported portion (3.805875ms)
+✔ mentions, negation, uncertainty and instructions are not unsupported commands (17.799334ms)
+✔ collection paraphrases preserve exact product text and transfer direction (293.0795ms)
+✔ paraphrases never consume quotes, negation, conditions or later commands (0.08375ms)
+✔ bulk clear stays in wishlist and copying cannot become a move (8.860959ms)
+✔ merchant name punctuation survives wishlist actions and explicit quantities (31.545416ms)
+✔ generated vocabulary: wishlist listing verbs reach the same read intent (229.970583ms)
+✔ generated vocabulary: negated listing does not request a wishlist read (20.667ms)
+✔ packaged runtime: wishlist listing verbs reach the same read intent (35.260417ms)
+✔ packaged runtime: negated listing does not request a wishlist read (12.803125ms)
+ℹ tests 393
+ℹ suites 0
+ℹ pass 382
+ℹ fail 11
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 12749.086666
+
+✖ failing tests:
+
+test at tests/collection-context.test.ts:7:1
+✖ omitted collection requests client context without guessing cart (254.627667ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  + actual - expected
+  
+  + 'PRODUCT_ACTION_CHOICE'
+  - null
+  
+      at TestContext.<anonymous> (file:///Users/momar/Documents/commerce-ai/ai-service/app/commerce_language_engine/tests/collection-context.test.ts:10:54)
+      at Test.runInAsyncScope (node:async_hooks:226:14)
+      at Test.run (node:internal/test_runner/test:1201:25)
+      at Test.start (node:internal/test_runner/test:1096:17)
+      at startSubtestAfterBootstrap (node:internal/test_runner/harness:385:17) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 'PRODUCT_ACTION_CHOICE',
+    expected: null,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at tests/commerce-fragments.test.ts:7:1
+✖ commerce noun fragments use explicit read actions with polite wording and stray punctuation (537.307666ms)
+  AssertionError [ERR_ASSERTION]: wishlist /
+  + actual - expected
+  
+  + 'NEEDS_CONTEXT'
+  - 'RESOLVED'
+  
+      at TestContext.<anonymous> (file:///Users/momar/Documents/commerce-ai/ai-service/app/commerce_language_engine/tests/commerce-fragments.test.ts:10:10)
+      at Test.runInAsyncScope (node:async_hooks:226:14)
+      at Test.run (node:internal/test_runner/test:1201:25)
+      at Test.start (node:internal/test_runner/test:1096:17)
+      at startSubtestAfterBootstrap (node:internal/test_runner/harness:385:17) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: 'NEEDS_CONTEXT',
+    expected: 'RESOLVED',
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at tests/coverage.test.ts:9:1
+✖ authored linguistic structures retain their independent semantic labels (417.380917ms)
+  AssertionError [ERR_ASSERTION]: order what I ordered last time
+      at TestContext.<anonymous> (file:///Users/momar/Documents/commerce-ai/ai-service/app/commerce_language_engine/tests/coverage.test.ts:13:10)
+      at Test.runInAsyncScope (node:async_hooks:226:14)
+      at Test.run (node:internal/test_runner/test:1201:25)
+      at Test.start (node:internal/test_runner/test:1096:17)
+      at startSubtestAfterBootstrap (node:internal/test_runner/harness:385:17) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: false,
+    expected: true,
+    operator: '==',
+    diff: 'simple'
+  }
+
+test at tests/data-expansion.test.ts:9:1
+✖ new information intents require an action and the specific industry concept (701.851084ms)
+  AssertionError [ERR_ASSERTION]: material safety data sheet
+  + actual - expected
+  
+  + 'PRODUCT_MATERIAL'
+  - 'SAFETY_DATA_SHEET'
+  
+      at TestContext.<anonymous> (file:///Users/momar/Documents/commerce-ai/ai-service/app/commerce_language_engine/tests/data-expansion.test.ts:11:10)
+      at Test.runInAsyncScope (node:async_hooks:226:14)
+      at Test.run (node:internal/test_runner/test:1201:25)
+      at Test.start (node:internal/test_runner/test:1096:17)
+      at startSubtestAfterBootstrap (node:internal/test_runner/harness:385:17) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: 'PRODUCT_MATERIAL',
+    expected: 'SAFETY_DATA_SHEET',
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at tests/engine.test.ts:14:1
+✖ order repeat and cart removal use context (2.077208ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  + actual - expected
+  
+  + 'PRODUCT_ACTION_CHOICE'
+  - 'REMOVE_FROM_CART'
+  
+      at TestContext.<anonymous> (file:///Users/momar/Documents/commerce-ai/ai-service/app/commerce_language_engine/tests/engine.test.ts:14:188)
+      at Test.runInAsyncScope (node:async_hooks:226:14)
+      at Test.run (node:internal/test_runner/test:1201:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:831:18)
+      at Test.postRun (node:internal/test_runner/test:1330:19)
+      at Test.run (node:internal/test_runner/test:1258:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:831:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 'PRODUCT_ACTION_CHOICE',
+    expected: 'REMOVE_FROM_CART',
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at tests/generation.test.ts:10:1
+✖ expanded canonical intents remain reachable with correct resolution status (4.692042ms)
+  AssertionError [ERR_ASSERTION]: The expression evaluated to a falsy value:
+  
+    assert.ok(d.intents.length===rocentoIntentCodes.size)
+  
+      at TestContext.<anonymous> (file:///Users/momar/Documents/commerce-ai/ai-service/app/commerce_language_engine/tests/generation.test.ts:10:95)
+      at Test.runInAsyncScope (node:async_hooks:226:14)
+      at Test.run (node:internal/test_runner/test:1201:25)
+      at Test.start (node:internal/test_runner/test:1096:17)
+      at startSubtestAfterBootstrap (node:internal/test_runner/harness:385:17) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: false,
+    expected: true,
+    operator: '==',
+    diff: 'simple'
+  }
+
+test at tests/reviewed-english.test.ts:8:1
+✖ admitted English aliases resolve to reviewed existing intents and retain provenance (589.768416ms)
+  AssertionError [ERR_ASSERTION]: show rules for returns
+  + actual - expected
+  
+  + 'PRODUCT_SEARCH'
+  - 'RETURN_POLICY'
+  
+      at TestContext.<anonymous> (file:///Users/momar/Documents/commerce-ai/ai-service/app/commerce_language_engine/tests/reviewed-english.test.ts:17:12)
+      at Test.runInAsyncScope (node:async_hooks:226:14)
+      at Test.run (node:internal/test_runner/test:1201:25)
+      at Test.start (node:internal/test_runner/test:1096:17)
+      at startSubtestAfterBootstrap (node:internal/test_runner/harness:385:17) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: 'PRODUCT_SEARCH',
+    expected: 'RETURN_POLICY',
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at tests/rocento-capabilities.test.ts:10:1
+✖ Rocento profile excludes unsupported operations and dependent definitions (2.915333ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly deep-equal:
+  + actual - expected
+  ... Skipped lines
+  
+  + Set(180) {
+  - Set(181) {
+      'ACCOUNT_ADDRESS_ADD',
+      'ACCOUNT_ADDRESS_DEFAULT',
+      'ACCOUNT_ADDRESS_LIST',
+      'ACCOUNT_ADDRESS_REMOVE',
+      'ACCOUNT_CREATE',
+  ...
+      'CLEAR_CART',
+  -   'CLEAR_COMPARISON',
+      'COMPARE_BRANDS',
+      'COMPARE_FEATURES',
+      'COMPARE_PRICE',
+      'COMPARE_SIZE',
+      'COMPARE_VARIANTS',
+  
+      at TestContext.<anonymous> (file:///Users/momar/Documents/commerce-ai/ai-service/app/commerce_language_engine/tests/rocento-capabilities.test.ts:11:9)
+      at Test.runInAsyncScope (node:async_hooks:226:14)
+      at Test.run (node:internal/test_runner/test:1201:25)
+      at Test.start (node:internal/test_runner/test:1096:17)
+      at startSubtestAfterBootstrap (node:internal/test_runner/harness:385:17) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: Set(180) { 'PRODUCT_SEARCH', 'PRODUCT_RECOMMEND', 'PRODUCT_ALTERNATIVE', 'PRODUCT_SIMILAR', 'PRODUCT_NEW_ARRIVALS', 'PRODUCT_TRENDING', 'PRODUCT_BESTSELLERS', 'PRODUCT_DETAILS', 'PRODUCT_ATTRIBUTE', 'PRODUCT_INGREDIENTS', 'PRODUCT_MATERIAL', 'PRODUCT_DIMENSIONS', 'PRODUCT_COMPATIBILITY', 'PRODUCT_USAGE', 'PRODUCT_CARE', 'PRODUCT_ORIGIN', 'PRODUCT_WARRANTY', 'PRODUCT_VARIANTS', 'PRODUCT_COMPARE', 'COMPARE_PRICE', 'COMPARE_FEATURES', 'COMPARE_SIZE', 'COMPARE_BRANDS', 'COMPARE_VARIANTS', 'CHECK_PRICE', 'PRICE_RANGE', 'CHECK_PROMOTION', 'APPLY_COUPON', 'REMOVE_COUPON', 'PROMOTION_ELIGIBILITY', 'CHECK_STOCK', 'CHECK_STORE_STOCK', 'CHECK_VARIANT_STOCK', 'ADD_TO_CART', 'REMOVE_FROM_CART', 'UPDATE_CART_QUANTITY', 'VIEW_CART', 'CLEAR_CART', 'OPTIMIZE_CART', 'ADD_TO_WISHLIST', 'REMOVE_FROM_WISHLIST', 'VIEW_WISHLIST', 'START_CHECKOUT', 'CONTINUE_CHECKOUT', 'CHANGE_ADDRESS', 'SELECT_PAYMENT', 'SELECT_DELIVERY_METHOD', 'CREATE_ORDER', 'ORDER_HISTORY', 'ORDER_DETAILS', 'TRACK_ORDER', 'CANCEL_ORDER', 'REORDER', 'REFUND_STATUS', 'RETURN_POLICY', 'CHECK_DELIVERY', 'DELIVERY_COST', 'DELIVERY_TIME', 'DELIVERY_DATE', 'DELIVERY_AREA', 'VIEW_DELIVERY_SLOTS', 'SELECT_DELIVERY_SLOT', 'CHANGE_DELIVERY_SLOT', 'CHECK_PICKUP', 'FIND_PICKUP_LOCATION', 'SELECT_PICKUP_LOCATION', 'PICKUP_TIME', 'NEAREST_STORE', 'STORE_LOCATION', 'STORE_HOURS', 'SERVICE_AREA', 'CREATE_SUPPORT_REQUEST', 'COMPLAINT', 'CONTACT_SUPPORT', 'AFFIRM', 'DENY', 'GO_BACK', 'CONTINUE', 'REPEAT', 'CLARIFY', 'SHOW_MORE', 'SELECT_FIRST', 'SELECT_SECOND', 'SELECT_LAST', 'SELECT_PRODUCT', 'SELECT_ORDER', 'SELECT_VARIANT', 'REPEAT_PREVIOUS_ACTION', 'PRODUCT_REVIEWS', 'PRODUCT_RATING', 'PRODUCT_PHOTOS', 'PRODUCT_SAFETY', 'PRODUCT_CERTIFICATION', 'PRODUCT_EXPIRY', 'PRODUCT_SHELF_LIFE', 'PRODUCT_STORAGE', 'PRODUCT_ALLERGENS', 'PRODUCT_NUTRITION', 'PRODUCT_SERVING_SIZE', 'PRODUCT_NET_WEIGHT', ... 80 more items },
+    expected: Set(181) { 'PRODUCT_SEARCH', 'PRODUCT_RECOMMEND', 'PRODUCT_ALTERNATIVE', 'PRODUCT_SIMILAR', 'PRODUCT_NEW_ARRIVALS', 'PRODUCT_TRENDING', 'PRODUCT_BESTSELLERS', 'PRODUCT_DETAILS', 'PRODUCT_ATTRIBUTE', 'PRODUCT_INGREDIENTS', 'PRODUCT_MATERIAL', 'PRODUCT_DIMENSIONS', 'PRODUCT_COMPATIBILITY', 'PRODUCT_USAGE', 'PRODUCT_CARE', 'PRODUCT_ORIGIN', 'PRODUCT_WARRANTY', 'PRODUCT_VARIANTS', 'PRODUCT_COMPARE', 'COMPARE_PRICE', 'COMPARE_FEATURES', 'COMPARE_SIZE', 'COMPARE_BRANDS', 'COMPARE_VARIANTS', 'CLEAR_COMPARISON', 'CHECK_PRICE', 'PRICE_RANGE', 'CHECK_PROMOTION', 'APPLY_COUPON', 'REMOVE_COUPON', 'PROMOTION_ELIGIBILITY', 'CHECK_STOCK', 'CHECK_STORE_STOCK', 'CHECK_VARIANT_STOCK', 'ADD_TO_CART', 'REMOVE_FROM_CART', 'UPDATE_CART_QUANTITY', 'VIEW_CART', 'CLEAR_CART', 'OPTIMIZE_CART', 'ADD_TO_WISHLIST', 'REMOVE_FROM_WISHLIST', 'VIEW_WISHLIST', 'START_CHECKOUT', 'CONTINUE_CHECKOUT', 'CHANGE_ADDRESS', 'SELECT_PAYMENT', 'SELECT_DELIVERY_METHOD', 'CREATE_ORDER', 'ORDER_HISTORY', 'ORDER_DETAILS', 'TRACK_ORDER', 'CANCEL_ORDER', 'REORDER', 'REFUND_STATUS', 'RETURN_POLICY', 'CHECK_DELIVERY', 'DELIVERY_COST', 'DELIVERY_TIME', 'DELIVERY_DATE', 'DELIVERY_AREA', 'VIEW_DELIVERY_SLOTS', 'SELECT_DELIVERY_SLOT', 'CHANGE_DELIVERY_SLOT', 'CHECK_PICKUP', 'FIND_PICKUP_LOCATION', 'SELECT_PICKUP_LOCATION', 'PICKUP_TIME', 'NEAREST_STORE', 'STORE_LOCATION', 'STORE_HOURS', 'SERVICE_AREA', 'CREATE_SUPPORT_REQUEST', 'COMPLAINT', 'CONTACT_SUPPORT', 'AFFIRM', 'DENY', 'GO_BACK', 'CONTINUE', 'REPEAT', 'CLARIFY', 'SHOW_MORE', 'SELECT_FIRST', 'SELECT_SECOND', 'SELECT_LAST', 'SELECT_PRODUCT', 'SELECT_ORDER', 'SELECT_VARIANT', 'REPEAT_PREVIOUS_ACTION', 'PRODUCT_REVIEWS', 'PRODUCT_RATING', 'PRODUCT_PHOTOS', 'PRODUCT_SAFETY', 'PRODUCT_CERTIFICATION', 'PRODUCT_EXPIRY', 'PRODUCT_SHELF_LIFE', 'PRODUCT_STORAGE', 'PRODUCT_ALLERGENS', 'PRODUCT_NUTRITION', 'PRODUCT_SERVING_SIZE', ... 81 more items },
+    operator: 'deepStrictEqual',
+    diff: 'simple'
+  }
+
+test at tests/rocento-capabilities.test.ts:24:1
+✖ unsupported customer requests abstain while implemented features remain available (102.058125ms)
+  AssertionError [ERR_ASSERTION]: is pickup available
+  + actual - expected
+  
+  + 'CHECK_STOCK'
+  - 'CHECK_PICKUP'
+           ^
+  
+      at TestContext.<anonymous> (file:///Users/momar/Documents/commerce-ai/ai-service/app/commerce_language_engine/tests/rocento-capabilities.test.ts:27:250)
+      at Test.runInAsyncScope (node:async_hooks:226:14)
+      at Test.run (node:internal/test_runner/test:1201:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:831:18)
+      at Test.postRun (node:internal/test_runner/test:1330:19)
+      at Test.run (node:internal/test_runner/test:1258:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:831:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: 'CHECK_STOCK',
+    expected: 'CHECK_PICKUP',
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at tests/semantic-request.test.ts:52:1
+✖ a product reply fills a pending request without losing quantity (15.431958ms)
+  TypeError: Cannot read properties of undefined (reading '0')
+      at TestContext.<anonymous> (file:///Users/momar/Documents/commerce-ai/ai-service/app/commerce_language_engine/tests/semantic-request.test.ts:54:119)
+      at Test.runInAsyncScope (node:async_hooks:226:14)
+      at Test.run (node:internal/test_runner/test:1201:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:831:18)
+      at Test.postRun (node:internal/test_runner/test:1330:19)
+      at Test.run (node:internal/test_runner/test:1258:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:831:7)
+
+test at tests/semantic-request.test.ts:94:1
+✖ saved address and prior-order resolution are signaled without inventing commerce authority (8.786208ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  + actual - expected
+  
+  + 'NEEDS_CONTEXT'
+  - 'RESOLVED'
+  
+      at TestContext.<anonymous> (file:///Users/momar/Documents/commerce-ai/ai-service/app/commerce_language_engine/tests/semantic-request.test.ts:96:9)
+      at Test.runInAsyncScope (node:async_hooks:226:14)
+      at Test.run (node:internal/test_runner/test:1201:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:831:18)
+      at Test.postRun (node:internal/test_runner/test:1330:19)
+      at Test.run (node:internal/test_runner/test:1258:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:831:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 'NEEDS_CONTEXT',
+    expected: 'RESOLVED',
+    operator: 'strictEqual',
+    diff: 'simple'
+  }

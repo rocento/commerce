@@ -1,0 +1,32 @@
+{
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {
+      "const": "1.0",
+      "default": "1.0",
+      "title": "Schema Version",
+      "type": "string"
+    },
+    "request_id": {
+      "pattern": "^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$",
+      "title": "Request Id",
+      "type": "string"
+    },
+    "code": {
+      "enum": [
+        "unavailable",
+        "invalid_response",
+        "incompatible_version",
+        "incompatible_release"
+      ],
+      "title": "Code",
+      "type": "string"
+    }
+  },
+  "required": [
+    "request_id",
+    "code"
+  ],
+  "title": "InterpretationFailure",
+  "type": "object"
+}

@@ -1,0 +1,7 @@
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {"Effect": "Allow", "Action": "ec2:DescribeInstances", "Resource": "*", "Condition": {"StringEquals": {"aws:RequestedRegion": "eu-central-1"}}},
+    {"Effect": "Allow", "Action": ["ec2:StartInstances", "ec2:StopInstances"], "Resource": "arn:aws:ec2:eu-central-1:879381261006:instance/i-0af639278db7286a9"}
+  ]
+}

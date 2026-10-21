@@ -1,0 +1,10 @@
+{
+  "operation": "delete",
+  "payload": {
+    "id": "00000000-0000-0000-0000-000000000002",
+    "installation_id": "cd5e6c75-61a0-43fe-ad34-4ae6cb804731",
+    "locale": "en",
+    "market": "default"
+  },
+  "version": 21
+}

@@ -1,0 +1,5864 @@
+{
+  "version": 1,
+  "intents": [
+    {
+      "code": "PRODUCT_SEARCH",
+      "family": "Discovery",
+      "productArgument": true,
+      "description": "product search",
+      "examples": [
+        "show me black running shoes under 3000"
+      ],
+      "conditions": [
+        {
+          "group": "ACTION_SEARCH",
+          "kind": "REQUIRED",
+          "score": 5
+        }
+      ],
+      "entities": [
+        "CATEGORY",
+        "BRAND",
+        "COLOR",
+        "SIZE",
+        "PRICE"
+      ],
+      "previousIntents": [],
+      "states": [],
+      "riskLevel": "LOW",
+      "requiresConfirmation": false
+    },
+    {
+      "code": "PRODUCT_RECOMMEND",
+      "family": "Discovery",
+      "productArgument": true,
+      "description": "product recommend",
+      "examples": [
+        "recommend a laptop"
+      ],
+      "conditions": [
+        {
+          "group": "ACTION_RECOMMEND",
+          "kind": "REQUIRED",
+          "score": 5
+        },
+        {
+          "group": "ACTION_RECOMMEND",
+          "kind": "BOOST",
+          "score": 4
+        }
+      ],
+      "entities": [],
+      "previousIntents": [],
+      "states": [],
+      "riskLevel": "LOW",
+      "requiresConfirmation": false
+    },
+    {
+      "code": "PRODUCT_ALTERNATIVE",
+      "family": "Discovery",
+      "productArgument": true,
+      "description": "product alternative",
+      "examples": [
+        "find alternative shoes"
+      ],
+      "conditions": [
+        {
+          "group": "ACTION_ALTERNATIVE",
+          "kind": "REQUIRED",
+          "score": 5
+        },
+        {
+          "group": "ACTION_ALTERNATIVE",
+          "kind": "BOOST",
+          "score": 4
+        }
+      ],
+      "entities": [],
+      "previousIntents": [],
+      "states": [],
+      "riskLevel": "LOW",
+      "requiresConfirmation": false
+    },
+    {
+      "code": "PRODUCT_SIMILAR",
+      "family": "Discovery",
+      "productArgument": true,
+      "description": "product similar",
+      "examples": [
+        "show similar shoes"
+      ],
+      "conditions": [
+        {
+          "group": "ACTION_SIMILAR",
+          "kind": "REQUIRED",
+          "score": 5
+        },
+        {
+          "group": "ACTION_SIMILAR",
+          "kind": "BOOST",
+          "score": 4
+        }
+      ],
+      "entities": [],
+      "previousIntents": [],
+      "states": [],
+      "riskLevel": "LOW",
+      "requiresConfirmation": false
+    },
+    {
+      "code": "PRODUCT_NEW_ARRIVALS",
+      "family": "Discovery",
+      "productArgument": true,
+      "description": "product new arrivals",
+      "examples": [
+        "show new arrivals products"
+      ],
+      "conditions": [
+        {
+          "group": "ACTION_NEW_ARRIVALS",
+          "kind": "REQUIRED",
+          "score": 5
+        },
+        {
+          "group": "ACTION_NEW_ARRIVALS",
+          "kind": "BOOST",
+          "score": 4
+        }
+      ],
+      "entities": [],
+      "previousIntents": [],
+      "states": [],
+      "riskLevel": "LOW",
+      "requiresConfirmation": false
+    },
+    {
+      "code": "PRODUCT_TRENDING",
+      "family": "Discovery",
+      "productArgument": true,
+      "description": "product trending",
+      "examples": [
+        "show trending shoes"
+      ],
+      "conditions": [
+        {
+          "group": "ACTION_TRENDING",
+          "kind": "REQUIRED",
+          "score": 5
+        },
+        {
+          "group": "ACTION_TRENDING",
+          "kind": "BOOST",
+          "score": 4
+        }
+      ],
+      "entities": [],
+      "previousIntents": [],
+      "states": [],
+      "riskLevel": "LOW",
+      "requiresConfirmation": false
+    },
+    {
+      "code": "PRODUCT_BESTSELLERS",
+      "family": "Discovery",
+      "productArgument": true,
+      "description": "product bestsellers",
+      "examples": [
+        "show bestselling shoes"
+      ],
+      "conditions": [
+        {
+          "group": "ACTION_BESTSELLING",
+          "kind": "REQUIRED",
+          "score": 5
+        },
+        {
+          "group": "ACTION_BESTSELLING",
+          "kind": "BOOST",
+          "score": 4
+        }
+      ],
+      "entities": [],
+      "previousIntents": [],
+      "states": [],
+      "riskLevel": "LOW",
+      "requiresConfirmation": false
+    },
+    {
+      "code": "PRODUCT_DETAILS",
+      "family": "Product information",
+      "productArgument": true,
+      "description": "product details",
+      "examples": [
+        "phone details"
+      ],
+      "conditions": [
+        {
+          "group": "ACTION_DETAILS",
+          "kind": "REQUIRED",
+          "score": 5
+        }
+      ],
+      "entities": [],
+      "previousIntents": [],
+      "states": [],
+      "riskLevel": "LOW",
+      "requiresConfirmation": false
+    },
+    {
+      "code": "PRODUCT_ATTRIBUTE",
+      "family": "Product information",
+      "productArgument": false,
+      "description": "product attribute",
+      "examples": [
+        "show specifications"
+      ],
+      "conditions": [
+        {
+          "group": "ACTION_WHAT",
+          "kind": "REQUIRED",
+          "score": 5
+        },
+        {
+          "group": "OBJECT_ATTRIBUTES",
+          "kind": "REQUIRED",
+          "score": 4
+        }
+      ],
+      "entities": [],
+      "previousIntents": [],
+      "states": [],
+      "riskLevel": "LOW",
+      "requiresConfirmation": false
+    },
+    {
+      "code": "PRODUCT_INGREDIENTS",
+      "family": "Product information",
+      "productArgument": false,
+      "description": "product ingredients",
+      "examples": [
+        "list ingredients"
+      ],
+      "conditions": [
+        {
+          "group": "ACTION_WHAT_11",
+          "kind": "REQUIRED",
+          "score": 5
+        },
+        {
+          "group": "OBJECT_INGREDIENTS",
+          "kind": "REQUIRED",
+          "score": 4
+        }
+      ],
+      "entities": [],
+      "previousIntents": [],
+      "states": [],
+      "riskLevel": "LOW",
+      "requiresConfirmation": false
+    },
+    {
+      "code": "PRODUCT_MATERIAL",
+      "family": "Product information",
+      "productArgument": false,
+      "description": "product material",
+      "examples": [
+        "what material is this"
+      ],
+      "conditions": [
+        {
+          "group": "ACTION_WHAT",
+          "kind": "REQUIRED",
+          "score": 5
+        },
+        {
+          "group": "OBJECT_MATERIAL",
+          "kind": "REQUIRED",
+          "score": 4
+        }
+      ],
+      "entities": [],
+      "previousIntents": [],
+      "states": [],
+      "riskLevel": "LOW",
+      "requiresConfirmation": false
+    },
+    {
+      "code": "PRODUCT_DIMENSIONS",
+      "family": "Product information",
+      "productArgument": false,
+      "description": "product dimensions",
+      "examples": [
+        "show dimensions"
+      ],
+      "conditions": [
+        {
+          "group": "ACTION_WHAT",
+          "kind": "REQUIRED",
+          "score": 5
+        },
+        {
+          "group": "OBJECT_DIMENSIONS",
+          "kind": "REQUIRED",
+          "score": 4
+        }
+      ],
+      "entities": [],
+      "previousIntents": [],
+      "states": [],
+      "riskLevel": "LOW",
+      "requiresConfirmation": false
+    },
+    {
+      "code": "PRODUCT_COMPATIBILITY",
+      "family": "Product information",
+      "productArgument": false,
+      "description": "product compatibility",
+      "examples": [
+        "is this compatible"
+      ],
+      "conditions": [
+        {
+          "group": "ACTION_CHECK",
+          "kind": "REQUIRED",
+          "score": 5
+        },
+        {
+          "group": "OBJECT_COMPATIBLE",
+          "kind": "REQUIRED",
+          "score": 4
+        }
+      ],
+      "entities": [],
+      "previousIntents": [],
+      "states": [],
+      "riskLevel": "LOW",
+      "requiresConfirmation": false
+    },
+    {
+      "code": "PRODUCT_USAGE",
+      "family": "Product information",
+      "productArgument": false,
+      "description": "product usage",
+      "examples": [
+        "how to use this"
+      ],
+      "conditions": [
+        {
+          "group": "ACTION_HOW",
+          "kind": "REQUIRED",
+          "score": 5
+        },
+        {
+          "group": "OBJECT_USE",
+          "kind": "REQUIRED",
+          "score": 4
+        }
+      ],
+      "entities": [],
+      "previousIntents": [],
+      "states": [],
+      "riskLevel": "LOW",
+      "requiresConfirmation": false
+    },
+    {
+      "code": "PRODUCT_CARE",
+      "family": "Product information",
+      "productArgument": false,
+      "description": "product care",
+      "examples": [
+        "how to wash this"
+      ],
+      "conditions": [
+        {
+          "group": "ACTION_HOW_19",
+          "kind": "REQUIRED",
+          "score": 5
+        },
+        {
+          "group": "OBJECT_WASH",
+          "kind": "REQUIRED",
+          "score": 4
+        }
+      ],
+      "entities": [],
+      "previousIntents": [],
+      "states": [],
+      "riskLevel": "LOW",
+      "requiresConfirmation": false
+    },
+    {
+      "code": "PRODUCT_ORIGIN",
+      "family": "Product information",
+      "productArgument": false,
+      "description": "product origin",
+      "examples": [
+        "where is this made"
+      ],
+      "conditions": [
+        {
+          "group": "ACTION_WHERE",
+          "kind": "REQUIRED",
+          "score": 5
+        },
+        {
+          "group": "OBJECT_MADE",
+          "kind": "REQUIRED",
+          "score": 4
+        }
+      ],
+      "entities": [],
+      "previousIntents": [],
+      "states": [],
+      "riskLevel": "LOW",
+      "requiresConfirmation": false
+    },
+    {
+      "code": "PRODUCT_WARRANTY",
+      "family": "Product information",
+      "productArgument": false,
+      "description": "product warranty",
+      "examples": [
+        "show warranty"
+      ],
+      "conditions": [
+        {
+          "group": "ACTION_WHAT_23",
+          "kind": "REQUIRED",
+          "score": 5
+        },
+        {
+          "group": "OBJECT_WARRANTY",
+          "kind": "REQUIRED",
+          "score": 4
+        }
+      ],
+      "entities": [],
+      "previousIntents": [],
+      "states": [],
+      "riskLevel": "LOW",
+      "requiresConfirmation": false
+    },
+    {
+      "code": "PRODUCT_VARIANTS",
+      "family": "Product information",
+      "productArgument": false,
+      "description": "product variants",
+      "examples": [
+        "show variants"
+      ],
+      "conditions": [
+        {
+          "group": "ACTION_WHAT_11",
+          "kind": "REQUIRED",
+          "score": 5
+        },
+        {
+          "group": "OBJECT_VARIANTS",
+          "kind": "REQUIRED",
+          "score": 4
+        }
+      ],
+      "entities": [],
+      "previousIntents": [],
+      "states": [],
+      "riskLevel": "LOW",
+      "requiresConfirmation": false
+    },
+    {
+      "code": "PRODUCT_COMPARE",
+      "family": "Comparison",
+      "productArgument": true,
+      "description": "product compare",
+      "examples": [
+        "compare phones"
+      ],
+      "conditions": [
+        {
+          "group": "ACTION_COMPARE",
+          "kind": "REQUIRED",
+          "score": 5
+        }
+      ],
+      "entities": [],
+      "previousIntents": [],
+      "states": [],
+      "riskLevel": "LOW",
+      "requiresConfirmation": false
+    },
+    {
+      "code": "COMPARE_PRICE",
+      "family": "Comparison",
+      "productArgument": false,
+      "description": "compare price",
+      "examples": [
+        "compare prices"
+      ],
+      "conditions": [
+        {
+          "group": "ACTION_COMPARE",
+          "kind": "REQUIRED",
+          "score": 5
+        },
+        {
+          "group": "OBJECT_PRICES",
+          "kind": "REQUIRED",
+          "score": 4
+        }
+      ],
+      "entities": [],
+      "previousIntents": [],
+      "states": [],
+      "riskLevel": "LOW",
+      "requiresConfirmation": false
+    },
+    {
+      "code": "COMPARE_FEATURES",
+      "family": "Comparison",
+      "productArgument": false,
+      "description": "compare features",
+      "examples": [
+        "compare features"
+      ],
+      "conditions": [
+        {
+          "group": "ACTION_COMPARE",
+          "kind": "REQUIRED",
+          "score": 5
+        },
+        {
+          "group": "OBJECT_FEATURES",
+          "kind": "REQUIRED",
+          "score": 4
+        }
+      ],
+      "entities": [],
+      "previousIntents": [],
+      "states": [],
+      "riskLevel": "LOW",
+      "requiresConfirmation": false
+    },
+    {
+      "code": "COMPARE_SIZE",
+      "family": "Comparison",
+      "productArgument": false,
+      "description": "compare size",
+      "examples": [
+        "compare sizes"
+      ],
+      "conditions": [
+        {
+          "group": "ACTION_COMPARE",
+          "kind": "REQUIRED",
+          "score": 5
+        },
+        {
+          "group": "OBJECT_SIZES",
+          "kind": "REQUIRED",
+          "score": 4
+        }
+      ],
+      "entities": [],
+      "previousIntents": [],
+      "states": [],
+      "riskLevel": "LOW",
+      "requiresConfirmation": false
+    },
+    {
+      "code": "COMPARE_BRANDS",
+      "family": "Comparison",
+      "productArgument": false,
+      "description": "compare brands",
+      "examples": [
+        "compare brands"
+      ],
+      "conditions": [
+        {
+          "group": "ACTION_COMPARE",
+          "kind": "REQUIRED",
+          "score": 5
+        },
+        {
+          "group": "OBJECT_BRANDS",
+          "kind": "REQUIRED",
+          "score": 4
+        }
+      ],
+      "entities": [],
+      "previousIntents": [],
+      "states": [],
+      "riskLevel": "LOW",
+      "requiresConfirmation": false
+    },
+    {
+      "code": "COMPARE_VARIANTS",
+      "family": "Comparison",
+      "productArgument": false,
+      "description": "compare variants",
+      "examples": [
+        "compare variants"
+      ],
+      "conditions": [
+        {
+          "group": "ACTION_COMPARE",
+          "kind": "REQUIRED",
+          "score": 5
+        },
+        {
+          "group": "OBJECT_VARIANTS_31",
+          "kind": "REQUIRED",
+          "score": 4
+        }
+      ],
+      "entities": [],
+      "previousIntents": [],
+      "states": [],
+      "riskLevel": "LOW",
+      "requiresConfirmation": false
+    },
+    {
+      "code": "CLEAR_COMPARISON",
+      "family": "Comparison",
+      "productArgument": false,
+      "description": "clear comparison",
+      "examples": [
+        "clear comparison list"
+      ],
+      "conditions": [
+        {
+          "group": "ACTION_CLEAR",
+          "kind": "REQUIRED",
+          "score": 5
+        },
+        {
+          "group": "OBJECT_COMPARISON_LIST",
+          "kind": "REQUIRED",
+          "score": 4
+        }
+      ],
+      "entities": [],
+      "previousIntents": [],
+      "states": [],
+      "riskLevel": "HIGH",
+      "requiresConfirmation": true
+    },
+    {
+      "code": "CHECK_PRICE",
+      "family": "Pricing",
+      "productArgument": false,
+      "description": "check price",
+      "examples": [
+        "check price"
+      ],
+      "conditions": [
+        {
+          "group": "ACTION_WHAT_34",
+          "kind": "REQUIRED",
+          "score": 5
+        },
+        {
+          "group": "OBJECT_PRICE",
+          "kind": "REQUIRED",
+          "score": 4
+        }
+      ],
+      "entities": [],
+      "previousIntents": [],
+      "states": [],
+      "riskLevel": "LOW",
+      "requiresConfirmation": false
+    },
+    {
+      "code": "PRICE_RANGE",
+      "family": "Pricing",
+      "productArgument": false,
+      "description": "price range",
+      "examples": [
+        "show price range"
+      ],
+      "conditions": [
+        {
+          "group": "ACTION_WHAT_36",
+          "kind": "REQUIRED",
+          "score": 5
+        },
+        {
+          "group": "OBJECT_PRICE_RANGE",
+          "kind": "REQUIRED",
+          "score": 4
+        }
+      ],
+      "entities": [],
+      "previousIntents": [],
+      "states": [],
+      "riskLevel": "LOW",
+      "requiresConfirmation": false
+    },
+    {
+      "code": "PRICE_DROP",
+      "family": "Pricing",
+      "productArgument": false,
+      "description": "price drop",
+      "examples": [
+        "check price drops"
+      ],
+      "conditions": [
+        {
+          "group": "ACTION_CHECK_38",
+          "kind": "REQUIRED",
+          "score": 5
+        },
+        {
+          "group": "OBJECT_PRICE_DROP",
+          "kind": "REQUIRED",
+          "score": 4
+        }
+      ],
+      "entities": [],
+      "previousIntents": [],
+      "states": [],
+      "riskLevel": "LOW",
+      "requiresConfirmation": false
+    },
+    {
+      "code": "CHECK_PROMOTION",
+      "family": "Pricing",
+      "productArgument": false,
+      "description": "check promotion",
+      "examples": [
+        "show promotions"
+      ],
+      "conditions": [
+        {
+          "group": "ACTION_CHECK_40",
+          "kind": "REQUIRED",
+          "score": 5
+        },
+        {
+          "group": "OBJECT_PROMOTIONS",
+          "kind": "REQUIRED",
+          "score": 4
+        }
+      ],
+      "entities": [],
+      "previousIntents": [],
+      "states": [],
+      "riskLevel": "LOW",
+      "requiresConfirmation": false
+    },
+    {
+      "code": "APPLY_COUPON",
+      "family": "Pricing",
+      "productArgument": false,
+      "description": "apply coupon",
+      "examples": [
+        "apply coupon SAVE10"
+      ],
+      "conditions": [
+        {
+          "group": "ACTION_APPLY",
+          "kind": "REQUIRED",
+          "score": 5
+        },
+        {
+          "group": "OBJECT_COUPON",
+          "kind": "REQUIRED",
+          "score": 4
+        }
+      ],
+      "entities": [],
+      "previousIntents": [],
+      "states": [],
+      "riskLevel": "LOW",
+      "requiresConfirmation": false
+    },
+    {
+      "code": "REMOVE_COUPON",
+      "family": "Pricing",
+      "productArgument": false,
+      "description": "remove coupon",
+      "examples": [
+        "remove coupon"
+      ],
+      "conditions": [
+        {
+          "group": "ACTION_REMOVE",
+          "kind": "REQUIRED",
+          "score": 5
+        },
+        {
+          "group": "OBJECT_COUPON",
+          "kind": "REQUIRED",
+          "score": 4
+        }
+      ],
+      "entities": [],
+      "previousIntents": [],
+      "states": [],
+      "riskLevel": "LOW",
+      "requiresConfirmation": false
+    },
+    {
+      "code": "PROMOTION_ELIGIBILITY",
+      "family": "Pricing",
+      "productArgument": false,
+      "description": "promotion eligibility",
+      "examples": [
+        "check promotion eligibility"
+      ],
+      "conditions": [
+        {
+          "group": "ACTION_AM_I",
+          "kind": "REQUIRED",
+          "score": 5
+        },
+        {
+          "group": "OBJECT_ELIGIBLE_FOR_PROMOTION",
+          "kind": "REQUIRED",
+          "score": 4
+        }
+      ],
+      "entities": [],
+      "previousIntents": [],
+      "states": [],
+      "riskLevel": "LOW",
+      "requiresConfirmation": false
+    },
+    {
+      "code": "CHECK_STOCK",
+      "family": "Availability",
+      "productArgument": false,
+      "description": "check stock",
+      "examples": [
+        "check stock"
+      ],
+      "conditions": [
+        {
+          "group": "ACTION_CHECK_47",
+          "kind": "REQUIRED",
+          "score": 5
+        },
+        {
+          "group": "OBJECT_STOCK",
+          "kind": "REQUIRED",
+          "score": 4
+        }
+      ],
+      "entities": [],
+      "previousIntents": [],
+      "states": [],
+      "riskLevel": "LOW",
+      "requiresConfirmation": false
+    },
+    {
+      "code": "CHECK_STORE_STOCK",
+      "family": "Availability",
+      "productArgument": false,
+      "description": "check store stock",
+      "examples": [
+        "check store stock"
+      ],
+      "conditions": [
+        {
+          "group": "ACTION_CHECK_49",
+          "kind": "REQUIRED",
+          "score": 5
+        },
+        {
+          "group": "OBJECT_STORE_STOCK",
+          "kind": "REQUIRED",
+          "score": 4
+        }
+      ],
+      "entities": [],
+      "previousIntents": [],
+      "states": [],
+      "riskLevel": "LOW",
+      "requiresConfirmation": false
+    },
+    {
+      "code": "CHECK_VARIANT_STOCK",
+      "family": "Availability",
+      "productArgument": false,
+      "description": "check variant stock",
+      "examples": [
+        "check variant stock"
+      ],
+      "conditions": [
+        {
+          "group": "ACTION_CHECK_49",
+          "kind": "REQUIRED",
+          "score": 5
+        },
+        {
+          "group": "OBJECT_VARIANT_STOCK",
+          "kind": "REQUIRED",
+          "score": 4
+        }
+      ],
+      "entities": [],
+      "previousIntents": [],
+      "states": [],
+      "riskLevel": "LOW",
+      "requiresConfirmation": false
+    },
+    {
+      "code": "RESTOCK_QUERY",
+      "family": "Availability",
+      "productArgument": false,
+      "description": "restock query",
+      "examples": [
+        "when will this restock"
+      ],
+      "conditions": [
+        {
+          "group": "ACTION_WHEN",
+          "kind": "REQUIRED",
+          "score": 5
+        },
+        {
+          "group": "OBJECT_RESTOCK",
+          "kind": "REQUIRED",
+          "score": 4
+        }
+      ],
+      "entities": [],
+      "previousIntents": [],
+      "states": [],
+      "riskLevel": "LOW",
+      "requiresConfirmation": false
+    },
+    {
+      "code": "ADD_TO_CART",
+      "family": "Cart",
+      "productArgument": false,
+      "description": "add to cart",
+      "examples": [
+        "add shoes to cart"
+      ],
+      "conditions": [
+        {
+          "group": "ACTION_ADD",
+          "kind": "REQUIRED",
+          "score": 5
+        },
+        {
+          "group": "OBJECT_CART",
+          "kind": "REQUIRED",
+          "score": 4
+        },
+        {
+          "group": "ACTION_REMOVE_56",
+          "kind": "NEGATIVE",
+          "score": -4
+        }
+      ],
+      "entities": [],
+      "previousIntents": [
+        "PRODUCT_SEARCH",
+        "SELECT_PRODUCT"
+      ],
+      "states": [],
+      "riskLevel": "LOW",
+      "requiresConfirmation": false
+    },
+    {
+      "code": "REMOVE_FROM_CART",
+      "family": "Cart",
+      "productArgument": false,
+      "description": "remove from cart",
+      "examples": [
+        "remove shoes from cart"
+      ],
+      "conditions": [
+        {
+          "group": "ACTION_REMOVE_56",
+          "kind": "REQUIRED",
+          "score": 5
+        },
+        {
+          "group": "OBJECT_CART",
+          "kind": "REQUIRED",
+          "score": 4
+        },
+        {
+          "group": "ACTION_ADD",
+          "kind": "NEGATIVE",
+          "score": -4
+        }
+      ],
+      "entities": [],
+      "previousIntents": [
+        "VIEW_CART"
+      ],
+      "states": [],
+      "riskLevel": "LOW",
+      "requiresConfirmation": false
+    },
+    {
+      "code": "UPDATE_CART_QUANTITY",
+      "family": "Cart",
+      "productArgument": false,
+      "description": "update cart quantity",
+      "examples": [
+        "change cart quantity to 2"
+      ],
+      "conditions": [
+        {
+          "group": "ACTION_UPDATE",
+          "kind": "REQUIRED",
+          "score": 5
+        },
+        {
+          "group": "OBJECT_QUANTITY",
+          "kind": "REQUIRED",
+          "score": 4
+        }
+      ],
+      "entities": [],
+      "previousIntents": [],
+      "states": [],
+      "riskLevel": "LOW",
+      "requiresConfirmation": false
+    },
+    {
+      "code": "VIEW_CART",
+      "family": "Cart",
+      "productArgument": false,
+      "description": "view cart",
+      "examples": [
+        "show cart"
+      ],
+      "conditions": [
+        {
+          "group": "ACTION_VIEW",
+          "kind": "REQUIRED",
+          "score": 5
+        },
+        {
+          "group": "OBJECT_CART",
+          "kind": "REQUIRED",
+          "score": 4
+        }
+      ],
+      "entities": [],
+      "previousIntents": [],
+      "states": [],
+      "riskLevel": "LOW",
+      "requiresConfirmation": false
+    },
+    {
+      "code": "CLEAR_CART",
+      "family": "Cart",
+      "productArgument": false,
+      "description": "clear cart",
+      "examples": [
+        "empty cart"
+      ],
+      "conditions": [
+        {
+          "group": "ACTION_CLEAR_60",
+          "kind": "REQUIRED",
+          "score": 5
+        },
+        {
+          "group": "OBJECT_CART",
+          "kind": "REQUIRED",
+          "score": 4
+        }
+      ],
+      "entities": [],
+      "previousIntents": [],
+      "states": [],
+      "riskLevel": "HIGH",
+      "requiresConfirmation": true
+    },
+    {
+      "code": "OPTIMIZE_CART",
+      "family": "Cart",
+      "productArgument": false,
+      "description": "optimize cart",
+      "examples": [
+        "optimize my cart to be less than 50 usd"
+      ],
+      "conditions": [
+        {
+          "group": "ACTION_OPTIMIZE",
+          "kind": "REQUIRED",
+          "score": 5
+        },
+        {
+          "group": "OBJECT_CART",
+          "kind": "REQUIRED",
+          "score": 4
+        }
+      ],
+      "entities": [
+        "PRICE",
+        "CURRENCY"
+      ],
+      "previousIntents": [],
+      "states": [],
+      "riskLevel": "HIGH",
+      "requiresConfirmation": true,
+      "actionType": "MUTATION_REQUEST"
+    },
+    {
+      "code": "ADD_TO_WISHLIST",
+      "family": "Wishlist",
+      "productArgument": false,
+      "description": "add to wishlist",
+      "examples": [
+        "add shoes to wishlist"
+      ],
+      "conditions": [
+        {
+          "group": "ACTION_ADD_62",
+          "kind": "REQUIRED",
+          "score": 5
+        },
+        {
+          "group": "OBJECT_WISHLIST",
+          "kind": "REQUIRED",
+          "score": 4
+        }
+      ],
+      "entities": [],
+      "previousIntents": [],
+      "states": [],
+      "riskLevel": "LOW",
+      "requiresConfirmation": false
+    },
+    {
+      "code": "REMOVE_FROM_WISHLIST",
+      "family": "Wishlist",
+      "productArgument": false,
+      "description": "remove from wishlist",
+      "examples": [
+        "remove shoes from wishlist"
+      ],
+      "conditions": [
+        {
+          "group": "ACTION_REMOVE",
+          "kind": "REQUIRED",
+          "score": 5
+        },
+        {
+          "group": "OBJECT_WISHLIST",
+          "kind": "REQUIRED",
+          "score": 4
+        }
+      ],
+      "entities": [],
+      "previousIntents": [],
+      "states": [],
+      "riskLevel": "LOW",
+      "requiresConfirmation": false
+    },
+    {
+      "code": "VIEW_WISHLIST",
+      "family": "Wishlist",
+      "productArgument": false,
+      "description": "view wishlist",
+      "examples": [
+        "show wishlist"
+      ],
+      "conditions": [
+        {
+          "group": "ACTION_VIEW",
+          "kind": "REQUIRED",
+          "score": 5
+        },
+        {
+          "group": "OBJECT_WISHLIST",
+          "kind": "REQUIRED",
+          "score": 4
+        }
+      ],
+      "entities": [],
+      "previousIntents": [],
+      "states": [],
+      "riskLevel": "LOW",
+      "requiresConfirmation": false
+    },
+    {
+      "code": "START_CHECKOUT",
+      "family": "Orders",
+      "productArgument": false,
+      "description": "start checkout",
+      "examples": [
+        "start checkout"
+      ],
+      "conditions": [
+        {
+          "group": "ACTION_START",
+          "kind": "REQUIRED",
+          "score": 5
+        },
+        {
+          "group": "OBJECT_CHECKOUT",
+          "kind": "REQUIRED",
+          "score": 4
+        }
+      ],
+      "entities": [],
+      "previousIntents": [],
+      "states": [],
+      "riskLevel": "LOW",
+      "requiresConfirmation": false
+    },
+    {
+      "code": "CONTINUE_CHECKOUT",
+      "family": "Orders",
+      "productArgument": false,
+      "description": "continue checkout",
+      "examples": [
+        "continue checkout"
+      ],
+      "conditions": [
+        {
+          "group": "ACTION_CONTINUE",
+          "kind": "REQUIRED",
+          "score": 5
+        },
+        {
+          "group": "OBJECT_CHECKOUT",
+          "kind": "REQUIRED",
+          "score": 4
+        }
+      ],
+      "entities": [],
+      "previousIntents": [],
+      "states": [],
+      "riskLevel": "LOW",
+      "requiresConfirmation": false
+    },
+    {
+      "code": "CHANGE_ADDRESS",
+      "family": "Orders",
+      "productArgument": false,
+      "description": "change address",
+      "examples": [
+        "change shipping address"
+      ],
+      "conditions": [
+        {
+          "group": "ACTION_CHANGE",
+          "kind": "REQUIRED",
+          "score": 5
+        },
+        {
+          "group": "OBJECT_ADDRESS",
+          "kind": "REQUIRED",
+          "score": 4
+        }
+      ],
+      "entities": [],
+      "previousIntents": [],
+      "states": [],
+      "riskLevel": "LOW",
+      "requiresConfirmation": false
+    },
+    {
+      "code": "SELECT_PAYMENT",
+      "family": "Orders",
+      "productArgument": false,
+      "description": "select payment",
+      "examples": [
+        "select payment method"
+      ],
+      "conditions": [
+        {
+          "group": "ACTION_SELECT",
+          "kind": "REQUIRED",
+          "score": 5
+        },
+        {
+          "group": "OBJECT_PAYMENT",
+          "kind": "REQUIRED",
+          "score": 4
+        }
+      ],
+      "entities": [],
+      "previousIntents": [],
+      "states": [],
+      "riskLevel": "LOW",
+      "requiresConfirmation": false
+    },
+    {
+      "code": "SELECT_DELIVERY_METHOD",
+      "family": "Orders",
+      "productArgument": false,
+      "description": "select delivery method",
+      "examples": [
+        "choose delivery method"
+      ],
+      "conditions": [
+        {
+          "group": "ACTION_SELECT",
+          "kind": "REQUIRED",
+          "score": 5
+        },
+        {
+          "group": "OBJECT_DELIVERY_METHOD",
+          "kind": "REQUIRED",
+          "score": 4
+        }
+      ],
+      "entities": [],
+      "previousIntents": [],
+      "states": [],
+      "riskLevel": "LOW",
+      "requiresConfirmation": false
+    },
+    {
+      "code": "CREATE_ORDER",
+      "family": "Orders",
+      "productArgument": false,
+      "description": "create order",
+      "examples": [
+        "place an order"
+      ],
+      "conditions": [
+        {
+          "group": "ACTION_CREATE",
+          "kind": "REQUIRED",
+          "score": 5
+        },
+        {
+          "group": "OBJECT_ORDER",
+          "kind": "REQUIRED",
+          "score": 4
+        },
+        {
+          "group": "ACTION_RECREATE_ORDER",
+          "kind": "NEGATIVE",
+          "score": -6
+        },
+        {
+          "group": "ACTION_CANCEL",
+          "kind": "NEGATIVE",
+          "score": -4
+        }
+      ],
+      "entities": [],
+      "previousIntents": [],
+      "states": [],
+      "riskLevel": "HIGH",
+      "requiresConfirmation": true,
+      "alternativeRules": [
+        {
+          "code": "order-recency",
+          "conditions": [
+            {
+              "group": "ORDER_RECENCY",
+              "kind": "REQUIRED",
+              "score": 4
+            },
+            {
+              "group": "OBJECT_ORDER",
+              "kind": "REQUIRED",
+              "score": 4,
+              "near": "ORDER_RECENCY",
+              "proximity": 3
+            },
+            {
+              "group": "ACTION_SHOW_76",
+              "kind": "DISQUALIFY",
+              "score": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "ORDER_HISTORY",
+      "family": "Orders",
+      "productArgument": false,
+      "description": "order history",
+      "examples": [
+        "show my orders"
+      ],
+      "conditions": [
+        {
+          "group": "ACTION_SHOW",
+          "kind": "REQUIRED",
+          "score": 5
+        },
+        {
+          "group": "OBJECT_ORDERS",
+          "kind": "REQUIRED",
+          "score": 4
+        }
+      ],
+      "entities": [],
+      "previousIntents": [],
+      "states": [],
+      "riskLevel": "LOW",
+      "requiresConfirmation": false
+    },
+    {
+      "code": "ORDER_DETAILS",
+      "family": "Orders",
+      "productArgument": false,
+      "description": "order details",
+      "examples": [
+        "show order details"
+      ],
+      "conditions": [
+        {
+          "group": "ACTION_SHOW_76",
+          "kind": "REQUIRED",
+          "score": 5
+        },
+        {
+          "group": "OBJECT_ORDER",
+          "kind": "REQUIRED",
+          "score": 4
+        }
+      ],
+      "entities": [],
+      "previousIntents": [],
+      "states": [],
+      "riskLevel": "LOW",
+      "requiresConfirmation": false,
+      "alternativeRules": [
+        {
+          "code": "order-recency",
+          "conditions": [
+            {
+              "group": "ORDER_RECENCY",
+              "kind": "REQUIRED",
+              "score": 4
+            },
+            {
+              "group": "OBJECT_ORDER",
+              "kind": "REQUIRED",
+              "score": 4,
+              "near": "ORDER_RECENCY",
+              "proximity": 3
+            },
+            {
+              "group": "ACTION_CREATE",
+              "kind": "DISQUALIFY",
+              "score": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "TRACK_ORDER",
+      "family": "Orders",
+      "productArgument": false,
+      "description": "track order",
+      "examples": [
+        "track my order"
+      ],
+      "conditions": [
+        {
+          "group": "ACTION_TRACK",
+          "kind": "REQUIRED",
+          "score": 5
+        },
+        {
+          "group": "OBJECT_ORDER_78",
+          "kind": "REQUIRED",
+          "score": 4
+        }
+      ],
+      "entities": [],
+      "previousIntents": [],
+      "states": [],
+      "riskLevel": "LOW",
+      "requiresConfirmation": false
+    },
+    {
+      "code": "CANCEL_ORDER",
+      "family": "Orders",
+      "productArgument": false,
+      "description": "cancel order",
+      "examples": [
+        "cancel my order"
+      ],
+      "conditions": [
+        {
+          "group": "ACTION_CANCEL",
+          "kind": "REQUIRED",
+          "score": 5
+        },
+        {
+          "group": "OBJECT_ORDER",
+          "kind": "REQUIRED",
+          "score": 4
+        },
+        {
+          "group": "ACTION_CREATE",
+          "kind": "NEGATIVE",
+          "score": -4
+        }
+      ],
+      "entities": [],
+      "previousIntents": [],
+      "states": [],
+      "riskLevel": "HIGH",
+      "requiresConfirmation": true
+    },
+    {
+      "code": "REORDER",
+      "family": "Orders",
+      "productArgument": false,
+      "description": "reorder",
+      "examples": [
+        "reorder items"
+      ],
+      "conditions": [
+        {
+          "group": "ACTION_REORDER",
+          "kind": "REQUIRED",
+          "score": 5
+        },
+        {
+          "group": "OBJECT_ORDER_81",
+          "kind": "REQUIRED",
+          "score": 4
+        }
+      ],
+      "entities": [],
+      "previousIntents": [
+        "ORDER_HISTORY"
+      ],
+      "states": [],
+      "riskLevel": "LOW",
+      "requiresConfirmation": false
+    },
+    {
+      "code": "MODIFY_ORDER",
+      "family": "Orders",
+      "productArgument": false,
+      "description": "modify order",
+      "examples": [
+        "modify my order"
+      ],
+      "conditions": [
+        {
+          "group": "ACTION_MODIFY",
+          "kind": "REQUIRED",
+          "score": 5
+        },
+        {
+          "group": "OBJECT_ORDER",
+          "kind": "REQUIRED",
+          "score": 4
+        }
+      ],
+      "entities": [],
+      "previousIntents": [],
+      "states": [],
+      "riskLevel": "LOW",
+      "requiresConfirmation": false
+    },
+    {
+      "code": "RETURN_ITEM",
+      "family": "Returns",
+      "productArgument": true,
+      "description": "return item",
+      "examples": [
+        "return an item"
+      ],
+      "conditions": [
+        {
+          "group": "ACTION_RETURN",
+          "kind": "REQUIRED",
+          "score": 5
+        },
+        {
+          "group": "ACTION_EXCHANGE",
+          "kind": "NEGATIVE",
+          "score": -4
+        }
+      ],
+      "entities": [],
+      "previousIntents": [],
+      "states": [],
+      "riskLevel": "LOW",
+      "requiresConfirmation": false
+    },
+    {
+      "code": "RETURN_ORDER",
+      "family": "Returns",
+      "productArgument": false,
+      "description": "return order",
+      "examples": [
+        "return my order"
+      ],
+      "conditions": [
+        {
+          "group": "ACTION_RETURN",
+          "kind": "REQUIRED",
+          "score": 5
+        },
+        {
+          "group": "OBJECT_ORDER",
+          "kind": "REQUIRED",
+          "score": 4
+        }
+      ],
+      "entities": [],
+      "previousIntents": [],
+      "states": [],
+      "riskLevel": "LOW",
+      "requiresConfirmation": false
+    },
+    {
+      "code": "EXCHANGE_ITEM",
+      "family": "Returns",
+      "productArgument": true,
+      "description": "exchange item",
+      "examples": [
+        "exchange shoes"
+      ],
+      "conditions": [
+        {
+          "group": "ACTION_EXCHANGE",
+          "kind": "REQUIRED",
+          "score": 5
+        },
+        {
+          "group": "ACTION_RETURN",
+          "kind": "NEGATIVE",
+          "score": -4
+        }
+      ],
+      "entities": [],
+      "previousIntents": [],
+      "states": [],
+      "riskLevel": "LOW",
+      "requiresConfirmation": false
+    },
+    {
+      "code": "REFUND_STATUS",
+      "family": "Returns",
+      "productArgument": false,
+      "description": "refund status",
+      "examples": [
+        "check refund status"
+      ],
+      "conditions": [
+        {
+          "group": "ACTION_CHECK_85",
+          "kind": "REQUIRED",
+          "score": 5
+        },
+        {
+          "group": "OBJECT_REFUND",
+          "kind": "REQUIRED",
+          "score": 4
+        }
+      ],
+      "entities": [],
+      "previousIntents": [],
+      "states": [],
+      "riskLevel": "LOW",
+      "requiresConfirmation": false
+    },
+    {
+      "code": "RETURN_POLICY",
+      "family": "Returns",
+      "productArgument": false,
+      "description": "return policy",
+      "examples": [
+        "show return policy"
+      ],
+      "conditions": [
+        {
+          "group": "ACTION_WHAT_36",
+          "kind": "REQUIRED",
+          "score": 5
+        },
+        {
+          "group": "OBJECT_RETURN_POLICY",
+          "kind": "REQUIRED",
+          "score": 4
+        }
+      ],
+      "entities": [],
+      "previousIntents": [],
+      "states": [],
+      "riskLevel": "LOW",
+      "requiresConfirmation": false
+    },
+    {
+      "code": "RETURN_ELIGIBILITY",
+      "family": "Returns",
+      "productArgument": false,
+      "description": "return eligibility",
+      "examples": [
+        "is this returnable"
+      ],
+      "conditions": [
+        {
+          "group": "ACTION_CHECK_88",
+          "kind": "REQUIRED",
+          "score": 5
+        },
+        {
+          "group": "OBJECT_RETURN_ELIGIBILITY",
+          "kind": "REQUIRED",
+          "score": 4
+        }
+      ],
+      "entities": [],
+      "previousIntents": [],
+      "states": [],
+      "riskLevel": "LOW",
+      "requiresConfirmation": false
+    },
+    {
+      "code": "CHECK_DELIVERY",
+      "family": "Delivery",
+      "productArgument": false,
+      "description": "check delivery",
+      "examples": [
+        "is delivery available"
+      ],
+      "conditions": [
+        {
+          "group": "ACTION_CHECK_90",
+          "kind": "REQUIRED",
+          "score": 5
+        },
+        {
+          "group": "OBJECT_DELIVERY_AVAILABLE",
+          "kind": "REQUIRED",
+          "score": 4
+        }
+      ],
+      "entities": [],
+      "previousIntents": [],
+      "states": [],
+      "riskLevel": "LOW",
+      "requiresConfirmation": false
+    },
+    {
+      "code": "DELIVERY_COST",
+      "family": "Delivery",
+      "productArgument": false,
+      "description": "delivery cost",
+      "examples": [
+        "check delivery cost"
+      ],
+      "conditions": [
+        {
+          "group": "ACTION_WHAT_23",
+          "kind": "REQUIRED",
+          "score": 5
+        },
+        {
+          "group": "OBJECT_DELIVERY_COST",
+          "kind": "REQUIRED",
+          "score": 4
+        }
+      ],
+      "entities": [],
+      "previousIntents": [],
+      "states": [],
+      "riskLevel": "LOW",
+      "requiresConfirmation": false
+    },
+    {
+      "code": "DELIVERY_TIME",
+      "family": "Delivery",
+      "productArgument": false,
+      "description": "delivery time",
+      "examples": [
+        "check delivery time"
+      ],
+      "conditions": [
+        {
+          "group": "ACTION_WHAT_23",
+          "kind": "REQUIRED",
+          "score": 5
+        },
+        {
+          "group": "OBJECT_DELIVERY_TIME",
+          "kind": "REQUIRED",
+          "score": 4
+        }
+      ],
+      "entities": [],
+      "previousIntents": [],
+      "states": [],
+      "riskLevel": "LOW",
+      "requiresConfirmation": false
+    },
+    {
+      "code": "DELIVERY_DATE",
+      "family": "Delivery",
+      "productArgument": false,
+      "description": "delivery date",
+      "examples": [
+        "show delivery date"
+      ],
+      "conditions": [
+        {
+          "group": "ACTION_WHAT_23",
+          "kind": "REQUIRED",
+          "score": 5
+        },
+        {
+          "group": "OBJECT_DELIVERY_DATE",
+          "kind": "REQUIRED",
+          "score": 4
+        }
+      ],
+      "entities": [],
+      "previousIntents": [],
+      "states": [],
+      "riskLevel": "LOW",
+      "requiresConfirmation": false
+    },
+    {
+      "code": "SAME_DAY_DELIVERY",
+      "family": "Delivery",
+      "productArgument": false,
+      "description": "same day delivery",
+      "examples": [
+        "check same day delivery"
+      ],
+      "conditions": [
+        {
+          "group": "ACTION_CHECK_95",
+          "kind": "REQUIRED",
+          "score": 5
+        },
+        {
+          "group": "OBJECT_SAME_DAY_DELIVERY",
+          "kind": "REQUIRED",
+          "score": 4
+        }
+      ],
+      "entities": [],
+      "previousIntents": [],
+      "states": [],
+      "riskLevel": "LOW",
+      "requiresConfirmation": false
+    },
+    {
+      "code": "EXPRESS_DELIVERY",
+      "family": "Delivery",
+      "productArgument": false,
+      "description": "express delivery",
+      "examples": [
+        "check express delivery"
+      ],
+      "conditions": [
+        {
+          "group": "ACTION_CHECK_95",
+          "kind": "REQUIRED",
+          "score": 5
+        },
+        {
+          "group": "OBJECT_EXPRESS_DELIVERY",
+          "kind": "REQUIRED",
+          "score": 4
+        }
+      ],
+      "entities": [],
+      "previousIntents": [],
+      "states": [],
+      "riskLevel": "LOW",
+      "requiresConfirmation": false
+    },
+    {
+      "code": "DELIVERY_AREA",
+      "family": "Delivery",
+      "productArgument": false,
+      "description": "delivery area",
+      "examples": [
+        "show delivery area"
+      ],
+      "conditions": [
+        {
+          "group": "ACTION_CHECK_49",
+          "kind": "REQUIRED",
+          "score": 5
+        },
+        {
+          "group": "OBJECT_DELIVERY_AREA",
+          "kind": "REQUIRED",
+          "score": 4
+        }
+      ],
+      "entities": [],
+      "previousIntents": [],
+      "states": [],
+      "riskLevel": "LOW",
+      "requiresConfirmation": false
+    },
+    {
+      "code": "VIEW_DELIVERY_SLOTS",
+      "family": "Delivery",
+      "productArgument": false,
+      "description": "view delivery slots",
+      "examples": [
+        "show delivery slots"
+      ],
+      "conditions": [
+        {
+          "group": "ACTION_SHOW",
+          "kind": "REQUIRED",
+          "score": 5
+        },
+        {
+          "group": "OBJECT_DELIVERY_SLOTS",
+          "kind": "REQUIRED",
+          "score": 4
+        }
+      ],
+      "entities": [],
+      "previousIntents": [],
+      "states": [],
+      "riskLevel": "LOW",
+      "requiresConfirmation": false
+    },
+    {
+      "code": "SELECT_DELIVERY_SLOT",
+      "family": "Delivery",
+      "productArgument": false,
+      "description": "select delivery slot",
+      "examples": [
+        "choose delivery slot"
+      ],
+      "conditions": [
+        {
+          "group": "ACTION_SELECT_100",
+          "kind": "REQUIRED",
+          "score": 5
+        },
+        {
+          "group": "OBJECT_DELIVERY_SLOT",
+          "kind": "REQUIRED",
+          "score": 4
+        }
+      ],
+      "entities": [],
+      "previousIntents": [],
+      "states": [],
+      "riskLevel": "LOW",
+      "requiresConfirmation": false
+    },
+    {
+      "code": "CHANGE_DELIVERY_SLOT",
+      "family": "Delivery",
+      "productArgument": false,
+      "description": "change delivery slot",
+      "examples": [
+        "change delivery slot"
+      ],
+      "conditions": [
+        {
+          "group": "ACTION_CHANGE_102",
+          "kind": "REQUIRED",
+          "score": 5
+        },
+        {
+          "group": "OBJECT_DELIVERY_SLOT",
+          "kind": "REQUIRED",
+          "score": 4
+        }
+      ],
+      "entities": [],
+      "previousIntents": [],
+      "states": [],
+      "riskLevel": "LOW",
+      "requiresConfirmation": false
+    },
+    {
+      "code": "CHECK_PICKUP",
+      "family": "Pickup",
+      "productArgument": false,
+      "description": "check pickup",
+      "examples": [
+        "is pickup available"
+      ],
+      "conditions": [
+        {
+          "group": "ACTION_CHECK_90",
+          "kind": "REQUIRED",
+          "score": 5
+        },
+        {
+          "group": "OBJECT_PICKUP_AVAILABLE",
+          "kind": "REQUIRED",
+          "score": 4
+        }
+      ],
+      "entities": [],
+      "previousIntents": [],
+      "states": [],
+      "riskLevel": "LOW",
+      "requiresConfirmation": false
+    },
+    {
+      "code": "FIND_PICKUP_LOCATION",
+      "family": "Pickup",
+      "productArgument": false,
+      "description": "find pickup location",
+      "examples": [
+        "find pickup locations"
+      ],
+      "conditions": [
+        {
+          "group": "ACTION_FIND",
+          "kind": "REQUIRED",
+          "score": 5
+        },
+        {
+          "group": "OBJECT_PICKUP_LOCATIONS",
+          "kind": "REQUIRED",
+          "score": 4
+        }
+      ],
+      "entities": [],
+      "previousIntents": [],
+      "states": [],
+      "riskLevel": "LOW",
+      "requiresConfirmation": false
+    },
+    {
+      "code": "SELECT_PICKUP_LOCATION",
+      "family": "Pickup",
+      "productArgument": false,
+      "description": "select pickup location",
+      "examples": [
+        "choose pickup location"
+      ],
+      "conditions": [
+        {
+          "group": "ACTION_SELECT_106",
+          "kind": "REQUIRED",
+          "score": 5
+        },
+        {
+          "group": "OBJECT_PICKUP_LOCATION",
+          "kind": "REQUIRED",
+          "score": 4
+        }
+      ],
+      "entities": [],
+      "previousIntents": [],
+      "states": [],
+      "riskLevel": "LOW",
+      "requiresConfirmation": false
+    },
+    {
+      "code": "PICKUP_TIME",
+      "family": "Pickup",
+      "productArgument": false,
+      "description": "pickup time",
+      "examples": [
+        "check pickup time"
+      ],
+      "conditions": [
+        {
+          "group": "ACTION_WHAT_23",
+          "kind": "REQUIRED",
+          "score": 5
+        },
+        {
+          "group": "OBJECT_PICKUP_TIME",
+          "kind": "REQUIRED",
+          "score": 4
+        }
+      ],
+      "entities": [],
+      "previousIntents": [],
+      "states": [],
+      "riskLevel": "LOW",
+      "requiresConfirmation": false
+    },
+    {
+      "code": "NEAREST_STORE",
+      "family": "Location",
+      "productArgument": false,
+      "description": "nearest store",
+      "examples": [
+        "find nearest store"
+      ],
+      "conditions": [
+        {
+          "group": "ACTION_NEAREST",
+          "kind": "REQUIRED",
+          "score": 5
+        },
+        {
+          "group": "OBJECT_STORE",
+          "kind": "REQUIRED",
+          "score": 4
+        }
+      ],
+      "entities": [],
+      "previousIntents": [],
+      "states": [],
+      "riskLevel": "LOW",
+      "requiresConfirmation": false
+    },
+    {
+      "code": "STORE_LOCATION",
+      "family": "Location",
+      "productArgument": false,
+      "description": "store location",
+      "examples": [
+        "show store location"
+      ],
+      "conditions": [
+        {
+          "group": "ACTION_WHERE_111",
+          "kind": "REQUIRED",
+          "score": 5
+        },
+        {
+          "group": "OBJECT_STORE_LOCATION",
+          "kind": "REQUIRED",
+          "score": 4
+        }
+      ],
+      "entities": [],
+      "previousIntents": [],
+      "states": [],
+      "riskLevel": "LOW",
+      "requiresConfirmation": false
+    },
+    {
+      "code": "STORE_HOURS",
+      "family": "Location",
+      "productArgument": false,
+      "description": "store hours",
+      "examples": [
+        "show store hours"
+      ],
+      "conditions": [
+        {
+          "group": "ACTION_WHAT_23",
+          "kind": "REQUIRED",
+          "score": 5
+        },
+        {
+          "group": "OBJECT_STORE_HOURS",
+          "kind": "REQUIRED",
+          "score": 4
+        }
+      ],
+      "entities": [],
+      "previousIntents": [],
+      "states": [],
+      "riskLevel": "LOW",
+      "requiresConfirmation": false
+    },
+    {
+      "code": "SERVICE_AREA",
+      "family": "Location",
+      "productArgument": false,
+      "description": "service area",
+      "examples": [
+        "show service area"
+      ],
+      "conditions": [
+        {
+          "group": "ACTION_WHAT_23",
+          "kind": "REQUIRED",
+          "score": 5
+        },
+        {
+          "group": "OBJECT_SERVICE_AREA",
+          "kind": "REQUIRED",
+          "score": 4
+        }
+      ],
+      "entities": [],
+      "previousIntents": [],
+      "states": [],
+      "riskLevel": "LOW",
+      "requiresConfirmation": false
+    },
+    {
+      "code": "CHECK_POINTS",
+      "family": "Loyalty",
+      "productArgument": false,
+      "description": "check points",
+      "examples": [
+        "check points"
+      ],
+      "conditions": [
+        {
+          "group": "ACTION_CHECK_49",
+          "kind": "REQUIRED",
+          "score": 5
+        },
+        {
+          "group": "OBJECT_POINTS",
+          "kind": "REQUIRED",
+          "score": 4
+        }
+      ],
+      "entities": [],
+      "previousIntents": [],
+      "states": [],
+      "riskLevel": "LOW",
+      "requiresConfirmation": false
+    },
+    {
+      "code": "REDEEM_POINTS",
+      "family": "Loyalty",
+      "productArgument": false,
+      "description": "redeem points",
+      "examples": [
+        "redeem points"
+      ],
+      "conditions": [
+        {
+          "group": "ACTION_REDEEM",
+          "kind": "REQUIRED",
+          "score": 5
+        },
+        {
+          "group": "OBJECT_POINTS_117",
+          "kind": "REQUIRED",
+          "score": 4
+        }
+      ],
+      "entities": [],
+      "previousIntents": [],
+      "states": [],
+      "riskLevel": "HIGH",
+      "requiresConfirmation": true
+    },
+    {
+      "code": "CHECK_REWARD",
+      "family": "Loyalty",
+      "productArgument": false,
+      "description": "check reward",
+      "examples": [
+        "show rewards"
+      ],
+      "conditions": [
+        {
+          "group": "ACTION_CHECK_40",
+          "kind": "REQUIRED",
+          "score": 5
+        },
+        {
+          "group": "OBJECT_REWARDS",
+          "kind": "REQUIRED",
+          "score": 4
+        }
+      ],
+      "entities": [],
+      "previousIntents": [],
+      "states": [],
+      "riskLevel": "LOW",
+      "requiresConfirmation": false
+    },
+    {
+      "code": "CREATE_SUBSCRIPTION",
+      "family": "Subscription",
+      "productArgument": false,
+      "description": "create subscription",
+      "examples": [
+        "start subscription"
+      ],
+      "conditions": [
+        {
+          "group": "ACTION_CREATE_119",
+          "kind": "REQUIRED",
+          "score": 5
+        },
+        {
+          "group": "OBJECT_SUBSCRIPTION",
+          "kind": "REQUIRED",
+          "score": 4
+        }
+      ],
+      "entities": [],
+      "previousIntents": [],
+      "states": [],
+      "riskLevel": "LOW",
+      "requiresConfirmation": false
+    },
+    {
+      "code": "PAUSE_SUBSCRIPTION",
+      "family": "Subscription",
+      "productArgument": false,
+      "description": "pause subscription",
+      "examples": [
+        "pause subscription"
+      ],
+      "conditions": [
+        {
+          "group": "ACTION_PAUSE",
+          "kind": "REQUIRED",
+          "score": 5
+        },
+        {
+          "group": "OBJECT_SUBSCRIPTION",
+          "kind": "REQUIRED",
+          "score": 4
+        }
+      ],
+      "entities": [],
+      "previousIntents": [],
+      "states": [],
+      "riskLevel": "LOW",
+      "requiresConfirmation": false
+    },
+    {
+      "code": "CANCEL_SUBSCRIPTION",
+      "family": "Subscription",
+      "productArgument": false,
+      "description": "cancel subscription",
+      "examples": [
+        "cancel subscription"
+      ],
+      "conditions": [
+        {
+          "group": "ACTION_CANCEL",
+          "kind": "REQUIRED",
+          "score": 5
+        },
+        {
+          "group": "OBJECT_SUBSCRIPTION",
+          "kind": "REQUIRED",
+          "score": 4
+        }
+      ],
+      "entities": [],
+      "previousIntents": [],
+      "states": [],
+      "riskLevel": "HIGH",
+      "requiresConfirmation": true
+    },
+    {
+      "code": "CREATE_SUPPORT_REQUEST",
+      "family": "Support",
+      "productArgument": false,
+      "description": "create support request",
+      "examples": [
+        "open support ticket"
+      ],
+      "conditions": [
+        {
+          "group": "ACTION_CREATE_122",
+          "kind": "REQUIRED",
+          "score": 5
+        },
+        {
+          "group": "OBJECT_SUPPORT_REQUEST",
+          "kind": "REQUIRED",
+          "score": 4
+        }
+      ],
+      "entities": [],
+      "previousIntents": [],
+      "states": [],
+      "riskLevel": "LOW",
+      "requiresConfirmation": false
+    },
+    {
+      "code": "COMPLAINT",
+      "family": "Support",
+      "productArgument": false,
+      "description": "complaint",
+      "examples": [
+        "file a complaint"
+      ],
+      "conditions": [
+        {
+          "group": "ACTION_FILE",
+          "kind": "REQUIRED",
+          "score": 5
+        },
+        {
+          "group": "OBJECT_COMPLAINT",
+          "kind": "REQUIRED",
+          "score": 4
+        },
+        {
+          "group": "NO_COMPLAINT",
+          "kind": "DISQUALIFY",
+          "score": 0
+        }
+      ],
+      "entities": [],
+      "previousIntents": [],
+      "states": [],
+      "riskLevel": "LOW",
+      "requiresConfirmation": false,
+      "alternativeRules": [
+        {
+          "code": "request-to-complain",
+          "conditions": [
+            {
+              "group": "ACTION_COMPLAIN",
+              "kind": "REQUIRED",
+              "score": 5
+            },
+            {
+              "group": "COMPLAINT_REQUEST_PREFIX",
+              "kind": "REQUIRED",
+              "score": 4,
+              "near": "ACTION_COMPLAIN",
+              "proximity": 3
+            },
+            {
+              "group": "NO_COMPLAINT",
+              "kind": "DISQUALIFY",
+              "score": 0
+            }
+          ]
+        },
+        {
+          "code": "complain-about-commerce",
+          "conditions": [
+            {
+              "group": "ACTION_COMPLAIN",
+              "kind": "REQUIRED",
+              "score": 5
+            },
+            {
+              "group": "COMPLAINT_TOPIC",
+              "kind": "REQUIRED",
+              "score": 4,
+              "near": "ACTION_COMPLAIN",
+              "proximity": 8
+            },
+            {
+              "group": "NO_COMPLAINT",
+              "kind": "DISQUALIFY",
+              "score": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "CONTACT_SUPPORT",
+      "family": "Support",
+      "productArgument": false,
+      "description": "contact support",
+      "examples": [
+        "contact support"
+      ],
+      "conditions": [
+        {
+          "group": "ACTION_CONTACT",
+          "kind": "REQUIRED",
+          "score": 5
+        },
+        {
+          "group": "OBJECT_SUPPORT",
+          "kind": "REQUIRED",
+          "score": 4
+        }
+      ],
+      "entities": [],
+      "previousIntents": [],
+      "states": [],
+      "riskLevel": "LOW",
+      "requiresConfirmation": false
+    },
+    {
+      "code": "AFFIRM",
+      "family": "Conversation",
+      "productArgument": false,
+      "description": "affirm",
+      "examples": [
+        "yes"
+      ],
+      "conditions": [
+        {
+          "group": "ACTION_YES",
+          "kind": "REQUIRED",
+          "score": 5
+        }
+      ],
+      "entities": [],
+      "previousIntents": [],
+      "states": [],
+      "riskLevel": "LOW",
+      "requiresConfirmation": false
+    },
+    {
+      "code": "DENY",
+      "family": "Conversation",
+      "productArgument": false,
+      "description": "deny",
+      "examples": [
+        "no"
+      ],
+      "conditions": [
+        {
+          "group": "ACTION_NO",
+          "kind": "REQUIRED",
+          "score": 5
+        }
+      ],
+      "entities": [],
+      "previousIntents": [],
+      "states": [],
+      "riskLevel": "LOW",
+      "requiresConfirmation": false
+    },
+    {
+      "code": "GO_BACK",
+      "family": "Conversation",
+      "productArgument": false,
+      "description": "go back",
+      "examples": [
+        "go back"
+      ],
+      "conditions": [
+        {
+          "group": "ACTION_GO_BACK",
+          "kind": "REQUIRED",
+          "score": 5
+        }
+      ],
+      "entities": [],
+      "previousIntents": [],
+      "states": [],
+      "riskLevel": "LOW",
+      "requiresConfirmation": false
+    },
+    {
+      "code": "CONTINUE",
+      "family": "Conversation",
+      "productArgument": false,
+      "description": "continue",
+      "examples": [
+        "continue"
+      ],
+      "conditions": [
+        {
+          "group": "ACTION_CONTINUE_131",
+          "kind": "REQUIRED",
+          "score": 5
+        }
+      ],
+      "entities": [],
+      "previousIntents": [],
+      "states": [],
+      "riskLevel": "LOW",
+      "requiresConfirmation": false
+    },
+    {
+      "code": "REPEAT",
+      "family": "Conversation",
+      "productArgument": false,
+      "description": "repeat",
+      "examples": [
+        "repeat"
+      ],
+      "conditions": [
+        {
+          "group": "ACTION_REPEAT",
+          "kind": "REQUIRED",
+          "score": 5
+        }
+      ],
+      "entities": [],
+      "previousIntents": [],
+      "states": [],
+      "riskLevel": "LOW",
+      "requiresConfirmation": false
+    },
+    {
+      "code": "CLARIFY",
+      "family": "Conversation",
+      "productArgument": false,
+      "description": "clarify",
+      "examples": [
+        "what do you mean"
+      ],
+      "conditions": [
+        {
+          "group": "ACTION_EXPLAIN",
+          "kind": "REQUIRED",
+          "score": 5
+        }
+      ],
+      "entities": [],
+      "previousIntents": [],
+      "states": [],
+      "riskLevel": "LOW",
+      "requiresConfirmation": false
+    },
+    {
+      "code": "SHOW_MORE",
+      "family": "Conversation",
+      "productArgument": false,
+      "description": "show more",
+      "examples": [
+        "show more"
+      ],
+      "conditions": [
+        {
+          "group": "ACTION_SHOW_MORE",
+          "kind": "REQUIRED",
+          "score": 5
+        }
+      ],
+      "entities": [],
+      "previousIntents": [],
+      "states": [
+        "PRODUCT_RESULTS_VISIBLE"
+      ],
+      "riskLevel": "LOW",
+      "requiresConfirmation": false
+    },
+    {
+      "code": "SELECT_FIRST",
+      "family": "Conversation",
+      "productArgument": false,
+      "description": "select first",
+      "examples": [
+        "the first one"
+      ],
+      "conditions": [
+        {
+          "group": "ACTION_FIRST_ONE",
+          "kind": "REQUIRED",
+          "score": 5
+        }
+      ],
+      "entities": [],
+      "previousIntents": [],
+      "states": [
+        "PRODUCT_RESULTS_VISIBLE"
+      ],
+      "riskLevel": "LOW",
+      "requiresConfirmation": false
+    },
+    {
+      "code": "SELECT_SECOND",
+      "family": "Conversation",
+      "productArgument": false,
+      "description": "select second",
+      "examples": [
+        "the second one"
+      ],
+      "conditions": [
+        {
+          "group": "ACTION_SECOND_ONE",
+          "kind": "REQUIRED",
+          "score": 5
+        }
+      ],
+      "entities": [],
+      "previousIntents": [],
+      "states": [
+        "PRODUCT_RESULTS_VISIBLE"
+      ],
+      "riskLevel": "LOW",
+      "requiresConfirmation": false
+    },
+    {
+      "code": "SELECT_LAST",
+      "family": "Conversation",
+      "productArgument": false,
+      "description": "select last",
+      "examples": [
+        "the last one"
+      ],
+      "conditions": [
+        {
+          "group": "ACTION_LAST_ONE",
+          "kind": "REQUIRED",
+          "score": 5
+        }
+      ],
+      "entities": [],
+      "previousIntents": [],
+      "states": [
+        "PRODUCT_RESULTS_VISIBLE"
+      ],
+      "riskLevel": "LOW",
+      "requiresConfirmation": false
+    },
+    {
+      "code": "SELECT_PRODUCT",
+      "family": "Conversation",
+      "productArgument": false,
+      "description": "select product",
+      "examples": [
+        "choose product"
+      ],
+      "conditions": [
+        {
+          "group": "ACTION_SELECT_106",
+          "kind": "REQUIRED",
+          "score": 5
+        },
+        {
+          "group": "OBJECT_PRODUCT_138",
+          "kind": "REQUIRED",
+          "score": 4
+        }
+      ],
+      "entities": [],
+      "previousIntents": [
+        "PRODUCT_SEARCH"
+      ],
+      "states": [
+        "PRODUCT_RESULTS_VISIBLE"
+      ],
+      "riskLevel": "LOW",
+      "requiresConfirmation": false
+    },
+    {
+      "code": "SELECT_ORDER",
+      "family": "Conversation",
+      "productArgument": false,
+      "description": "select order",
+      "examples": [
+        "choose order"
+      ],
+      "conditions": [
+        {
+          "group": "ACTION_SELECT_106",
+          "kind": "REQUIRED",
+          "score": 5
+        },
+        {
+          "group": "OBJECT_ORDER",
+          "kind": "REQUIRED",
+          "score": 4
+        }
+      ],
+      "entities": [],
+      "previousIntents": [
+        "ORDER_HISTORY"
+      ],
+      "states": [
+        "ORDER_LIST_VISIBLE"
+      ],
+      "riskLevel": "LOW",
+      "requiresConfirmation": false
+    },
+    {
+      "code": "SELECT_VARIANT",
+      "family": "Conversation",
+      "productArgument": false,
+      "description": "select variant",
+      "examples": [
+        "choose variant"
+      ],
+      "conditions": [
+        {
+          "group": "ACTION_SELECT_106",
+          "kind": "REQUIRED",
+          "score": 5
+        },
+        {
+          "group": "OBJECT_VARIANT",
+          "kind": "REQUIRED",
+          "score": 4
+        }
+      ],
+      "entities": [],
+      "previousIntents": [],
+      "states": [
+        "PRODUCT_RESULTS_VISIBLE"
+      ],
+      "riskLevel": "LOW",
+      "requiresConfirmation": false
+    },
+    {
+      "code": "REPEAT_PREVIOUS_ACTION",
+      "family": "Conversation",
+      "productArgument": false,
+      "description": "repeat previous action",
+      "examples": [
+        "do it again"
+      ],
+      "conditions": [
+        {
+          "group": "ACTION_DO_IT_AGAIN",
+          "kind": "REQUIRED",
+          "score": 5
+        }
+      ],
+      "entities": [],
+      "previousIntents": [],
+      "states": [
+        "PRODUCT_RESULTS_VISIBLE"
+      ],
+      "riskLevel": "LOW",
+      "requiresConfirmation": false
+    }
+  ],
+  "groups": [
+    {
+      "code": "ACTION_SEARCH",
+      "terms": [
+        "search",
+        "find",
+        "look for",
+        "show",
+        "show me",
+        "browse",
+        "i need",
+        "i am looking for",
+        "get me"
+      ],
+      "category": "CONCEPT"
+    },
+    {
+      "code": "OBJECT_PRODUCT",
+      "terms": [
+        "product",
+        "products",
+        "item",
+        "items"
+      ],
+      "category": "CONCEPT"
+    },
+    {
+      "code": "ACTION_RECOMMEND",
+      "terms": [
+        "recommend",
+        "suggest"
+      ],
+      "category": "CONCEPT"
+    },
+    {
+      "code": "ACTION_ALTERNATIVE",
+      "terms": [
+        "alternative",
+        "alternatives",
+        "instead"
+      ],
+      "category": "CONCEPT"
+    },
+    {
+      "code": "ACTION_SIMILAR",
+      "terms": [
+        "similar",
+        "like this",
+        "like that"
+      ],
+      "category": "CONCEPT"
+    },
+    {
+      "code": "ACTION_NEW_ARRIVALS",
+      "terms": [
+        "new arrivals",
+        "just arrived"
+      ],
+      "category": "CONCEPT"
+    },
+    {
+      "code": "ACTION_TRENDING",
+      "terms": [
+        "trending",
+        "popular"
+      ],
+      "category": "CONCEPT"
+    },
+    {
+      "code": "ACTION_BESTSELLING",
+      "terms": [
+        "bestselling",
+        "best sellers"
+      ],
+      "category": "CONCEPT"
+    },
+    {
+      "code": "ACTION_DETAILS",
+      "terms": [
+        "details",
+        "information",
+        "tell me about"
+      ],
+      "category": "CONCEPT"
+    },
+    {
+      "code": "ACTION_WHAT",
+      "terms": [
+        "what",
+        "show",
+        "tell me"
+      ],
+      "category": "CONCEPT"
+    },
+    {
+      "code": "OBJECT_ATTRIBUTES",
+      "terms": [
+        "attributes",
+        "specifications",
+        "specs"
+      ],
+      "category": "CONCEPT"
+    },
+    {
+      "code": "ACTION_WHAT_11",
+      "terms": [
+        "what",
+        "show",
+        "list"
+      ],
+      "category": "CONCEPT"
+    },
+    {
+      "code": "OBJECT_INGREDIENTS",
+      "terms": [
+        "ingredients"
+      ],
+      "category": "CONCEPT"
+    },
+    {
+      "code": "OBJECT_MATERIAL",
+      "terms": [
+        "material",
+        "made of"
+      ],
+      "category": "CONCEPT"
+    },
+    {
+      "code": "OBJECT_DIMENSIONS",
+      "terms": [
+        "dimensions",
+        "measurements"
+      ],
+      "category": "CONCEPT"
+    },
+    {
+      "code": "ACTION_CHECK",
+      "terms": [
+        "check",
+        "is",
+        "does"
+      ],
+      "category": "CONCEPT"
+    },
+    {
+      "code": "OBJECT_COMPATIBLE",
+      "terms": [
+        "compatible",
+        "compatibility",
+        "work with"
+      ],
+      "category": "CONCEPT"
+    },
+    {
+      "code": "ACTION_HOW",
+      "terms": [
+        "how",
+        "instructions"
+      ],
+      "category": "CONCEPT"
+    },
+    {
+      "code": "OBJECT_USE",
+      "terms": [
+        "use",
+        "usage"
+      ],
+      "category": "CONCEPT"
+    },
+    {
+      "code": "ACTION_HOW_19",
+      "terms": [
+        "how",
+        "show"
+      ],
+      "category": "CONCEPT"
+    },
+    {
+      "code": "OBJECT_WASH",
+      "terms": [
+        "wash",
+        "care",
+        "clean"
+      ],
+      "category": "CONCEPT"
+    },
+    {
+      "code": "ACTION_WHERE",
+      "terms": [
+        "where",
+        "what"
+      ],
+      "category": "CONCEPT"
+    },
+    {
+      "code": "OBJECT_MADE",
+      "terms": [
+        "made",
+        "origin"
+      ],
+      "category": "CONCEPT"
+    },
+    {
+      "code": "ACTION_WHAT_23",
+      "terms": [
+        "what",
+        "show",
+        "check"
+      ],
+      "category": "CONCEPT"
+    },
+    {
+      "code": "OBJECT_WARRANTY",
+      "terms": [
+        "warranty"
+      ],
+      "category": "CONCEPT"
+    },
+    {
+      "code": "OBJECT_VARIANTS",
+      "terms": [
+        "variants",
+        "available colors",
+        "available sizes"
+      ],
+      "category": "CONCEPT"
+    },
+    {
+      "code": "ACTION_COMPARE",
+      "terms": [
+        "compare",
+        "comparison"
+      ],
+      "category": "CONCEPT"
+    },
+    {
+      "code": "OBJECT_PRICES",
+      "terms": [
+        "prices",
+        "price"
+      ],
+      "category": "CONCEPT"
+    },
+    {
+      "code": "OBJECT_FEATURES",
+      "terms": [
+        "features",
+        "specs"
+      ],
+      "category": "CONCEPT"
+    },
+    {
+      "code": "OBJECT_SIZES",
+      "terms": [
+        "sizes",
+        "size"
+      ],
+      "category": "CONCEPT"
+    },
+    {
+      "code": "OBJECT_BRANDS",
+      "terms": [
+        "brands"
+      ],
+      "category": "CONCEPT"
+    },
+    {
+      "code": "OBJECT_VARIANTS_31",
+      "terms": [
+        "variants"
+      ],
+      "category": "CONCEPT"
+    },
+    {
+      "code": "ACTION_CLEAR",
+      "terms": [
+        "clear",
+        "empty",
+        "reset"
+      ],
+      "category": "CONCEPT"
+    },
+    {
+      "code": "OBJECT_COMPARISON_LIST",
+      "terms": [
+        "comparison list",
+        "comparison tray"
+      ],
+      "category": "CONCEPT"
+    },
+    {
+      "code": "ACTION_WHAT_34",
+      "terms": [
+        "what",
+        "check",
+        "show",
+        "how much"
+      ],
+      "category": "CONCEPT"
+    },
+    {
+      "code": "OBJECT_PRICE",
+      "terms": [
+        "price",
+        "cost"
+      ],
+      "category": "CONCEPT"
+    },
+    {
+      "code": "ACTION_WHAT_36",
+      "terms": [
+        "what",
+        "show"
+      ],
+      "category": "CONCEPT"
+    },
+    {
+      "code": "OBJECT_PRICE_RANGE",
+      "terms": [
+        "price range"
+      ],
+      "category": "CONCEPT"
+    },
+    {
+      "code": "ACTION_CHECK_38",
+      "terms": [
+        "check",
+        "show",
+        "notify"
+      ],
+      "category": "CONCEPT"
+    },
+    {
+      "code": "OBJECT_PRICE_DROP",
+      "terms": [
+        "price drop",
+        "price drops"
+      ],
+      "category": "CONCEPT"
+    },
+    {
+      "code": "ACTION_CHECK_40",
+      "terms": [
+        "check",
+        "show",
+        "list"
+      ],
+      "category": "CONCEPT"
+    },
+    {
+      "code": "OBJECT_PROMOTIONS",
+      "terms": [
+        "promotions",
+        "deals",
+        "offers"
+      ],
+      "category": "CONCEPT"
+    },
+    {
+      "code": "ACTION_APPLY",
+      "terms": [
+        "apply",
+        "use",
+        "add"
+      ],
+      "category": "CONCEPT"
+    },
+    {
+      "code": "OBJECT_COUPON",
+      "terms": [
+        "coupon",
+        "promo code",
+        "discount code"
+      ],
+      "category": "CONCEPT"
+    },
+    {
+      "code": "ACTION_REMOVE",
+      "terms": [
+        "remove",
+        "delete"
+      ],
+      "category": "CONCEPT"
+    },
+    {
+      "code": "ACTION_AM_I",
+      "terms": [
+        "am i",
+        "is this",
+        "check"
+      ],
+      "category": "CONCEPT"
+    },
+    {
+      "code": "OBJECT_ELIGIBLE_FOR_PROMOTION",
+      "terms": [
+        "eligible for promotion",
+        "promotion eligibility"
+      ],
+      "category": "CONCEPT"
+    },
+    {
+      "code": "ACTION_CHECK_47",
+      "terms": [
+        "check",
+        "show",
+        "is"
+      ],
+      "category": "CONCEPT"
+    },
+    {
+      "code": "OBJECT_STOCK",
+      "terms": [
+        "stock",
+        "in stock",
+        "available"
+      ],
+      "category": "CONCEPT"
+    },
+    {
+      "code": "ACTION_CHECK_49",
+      "terms": [
+        "check",
+        "show"
+      ],
+      "category": "CONCEPT"
+    },
+    {
+      "code": "OBJECT_STORE_STOCK",
+      "terms": [
+        "store stock"
+      ],
+      "category": "CONCEPT"
+    },
+    {
+      "code": "OBJECT_VARIANT_STOCK",
+      "terms": [
+        "variant stock"
+      ],
+      "category": "CONCEPT"
+    },
+    {
+      "code": "ACTION_WHEN",
+      "terms": [
+        "when",
+        "notify",
+        "check"
+      ],
+      "category": "CONCEPT"
+    },
+    {
+      "code": "OBJECT_RESTOCK",
+      "terms": [
+        "restock",
+        "back in stock"
+      ],
+      "category": "CONCEPT"
+    },
+    {
+      "code": "ACTION_ADD",
+      "terms": [
+        "add",
+        "put"
+      ],
+      "category": "CONCEPT"
+    },
+    {
+      "code": "OBJECT_CART",
+      "terms": [
+        "cart",
+        "basket"
+      ],
+      "category": "CONCEPT"
+    },
+    {
+      "code": "ACTION_REMOVE_56",
+      "terms": [
+        "remove",
+        "take out",
+        "delete"
+      ],
+      "category": "CONCEPT"
+    },
+    {
+      "code": "ACTION_UPDATE",
+      "terms": [
+        "update",
+        "change",
+        "set"
+      ],
+      "category": "CONCEPT"
+    },
+    {
+      "code": "OBJECT_QUANTITY",
+      "terms": [
+        "quantity",
+        "cart quantity"
+      ],
+      "category": "CONCEPT"
+    },
+    {
+      "code": "ACTION_VIEW",
+      "terms": [
+        "view",
+        "show",
+        "open",
+        "list"
+      ],
+      "category": "CONCEPT"
+    },
+    {
+      "code": "ACTION_CLEAR_60",
+      "terms": [
+        "clear",
+        "empty"
+      ],
+      "category": "CONCEPT"
+    },
+    {
+      "code": "ACTION_OPTIMIZE",
+      "terms": [
+        "optimize",
+        "optimise"
+      ],
+      "category": "CONCEPT"
+    },
+    {
+      "code": "ACTION_ADD_62",
+      "terms": [
+        "add",
+        "save"
+      ],
+      "category": "CONCEPT"
+    },
+    {
+      "code": "OBJECT_WISHLIST",
+      "terms": [
+        "wishlist",
+        "favorites"
+      ],
+      "category": "CONCEPT"
+    },
+    {
+      "code": "ACTION_START",
+      "terms": [
+        "start",
+        "begin"
+      ],
+      "category": "CONCEPT"
+    },
+    {
+      "code": "OBJECT_CHECKOUT",
+      "terms": [
+        "checkout"
+      ],
+      "category": "CONCEPT"
+    },
+    {
+      "code": "ACTION_CONTINUE",
+      "terms": [
+        "continue",
+        "resume"
+      ],
+      "category": "CONCEPT"
+    },
+    {
+      "code": "ACTION_CHANGE",
+      "terms": [
+        "change",
+        "update",
+        "edit"
+      ],
+      "category": "CONCEPT"
+    },
+    {
+      "code": "OBJECT_ADDRESS",
+      "terms": [
+        "address",
+        "shipping address"
+      ],
+      "category": "CONCEPT"
+    },
+    {
+      "code": "ACTION_SELECT",
+      "terms": [
+        "select",
+        "choose",
+        "change"
+      ],
+      "category": "CONCEPT"
+    },
+    {
+      "code": "OBJECT_PAYMENT",
+      "terms": [
+        "payment",
+        "payment method"
+      ],
+      "category": "CONCEPT"
+    },
+    {
+      "code": "OBJECT_DELIVERY_METHOD",
+      "terms": [
+        "delivery method",
+        "shipping method"
+      ],
+      "category": "CONCEPT"
+    },
+    {
+      "code": "ACTION_CREATE",
+      "terms": [
+        "create",
+        "place",
+        "submit"
+      ],
+      "category": "CONCEPT"
+    },
+    {
+      "code": "OBJECT_ORDER",
+      "terms": [
+        "order"
+      ],
+      "category": "CONCEPT"
+    },
+    {
+      "code": "ACTION_SHOW",
+      "terms": [
+        "show",
+        "view",
+        "list"
+      ],
+      "category": "CONCEPT"
+    },
+    {
+      "code": "OBJECT_ORDERS",
+      "terms": [
+        "orders",
+        "order history",
+        "past orders"
+      ],
+      "category": "CONCEPT"
+    },
+    {
+      "code": "ACTION_SHOW_76",
+      "terms": [
+        "show",
+        "view",
+        "details"
+      ],
+      "category": "CONCEPT"
+    },
+    {
+      "code": "ACTION_TRACK",
+      "terms": [
+        "track",
+        "where is",
+        "where has",
+        "status",
+        "where it is"
+      ],
+      "category": "CONCEPT"
+    },
+    {
+      "code": "OBJECT_ORDER_78",
+      "terms": [
+        "order",
+        "package",
+        "parcel",
+        "shipment"
+      ],
+      "category": "CONCEPT"
+    },
+    {
+      "code": "ACTION_CANCEL",
+      "terms": [
+        "cancel",
+        "stop"
+      ],
+      "category": "CONCEPT"
+    },
+    {
+      "code": "ACTION_REORDER",
+      "terms": [
+        "reorder",
+        "buy again",
+        "order again",
+        "recreate",
+        "re create",
+        "re-create"
+      ],
+      "category": "CONCEPT"
+    },
+    {
+      "code": "OBJECT_ORDER_81",
+      "terms": [
+        "order",
+        "items",
+        "products"
+      ],
+      "category": "CONCEPT"
+    },
+    {
+      "code": "ACTION_MODIFY",
+      "terms": [
+        "modify",
+        "edit",
+        "change"
+      ],
+      "category": "CONCEPT"
+    },
+    {
+      "code": "ACTION_RETURN",
+      "terms": [
+        "return",
+        "send back"
+      ],
+      "category": "CONCEPT"
+    },
+    {
+      "code": "ACTION_EXCHANGE",
+      "terms": [
+        "exchange",
+        "swap"
+      ],
+      "category": "CONCEPT"
+    },
+    {
+      "code": "ACTION_CHECK_85",
+      "terms": [
+        "check",
+        "track",
+        "status"
+      ],
+      "category": "CONCEPT"
+    },
+    {
+      "code": "OBJECT_REFUND",
+      "terms": [
+        "refund"
+      ],
+      "category": "CONCEPT"
+    },
+    {
+      "code": "OBJECT_RETURN_POLICY",
+      "terms": [
+        "return policy"
+      ],
+      "category": "CONCEPT"
+    },
+    {
+      "code": "ACTION_CHECK_88",
+      "terms": [
+        "check",
+        "is this"
+      ],
+      "category": "CONCEPT"
+    },
+    {
+      "code": "OBJECT_RETURN_ELIGIBILITY",
+      "terms": [
+        "return eligibility",
+        "returnable"
+      ],
+      "category": "CONCEPT"
+    },
+    {
+      "code": "ACTION_CHECK_90",
+      "terms": [
+        "check",
+        "is"
+      ],
+      "category": "CONCEPT"
+    },
+    {
+      "code": "OBJECT_DELIVERY_AVAILABLE",
+      "terms": [
+        "delivery available"
+      ],
+      "category": "CONCEPT"
+    },
+    {
+      "code": "OBJECT_DELIVERY_COST",
+      "terms": [
+        "delivery cost",
+        "shipping cost",
+        "delivery fee"
+      ],
+      "category": "CONCEPT"
+    },
+    {
+      "code": "OBJECT_DELIVERY_TIME",
+      "terms": [
+        "delivery time",
+        "shipping time"
+      ],
+      "category": "CONCEPT"
+    },
+    {
+      "code": "OBJECT_DELIVERY_DATE",
+      "terms": [
+        "delivery date"
+      ],
+      "category": "CONCEPT"
+    },
+    {
+      "code": "ACTION_CHECK_95",
+      "terms": [
+        "check",
+        "select",
+        "show"
+      ],
+      "category": "CONCEPT"
+    },
+    {
+      "code": "OBJECT_SAME_DAY_DELIVERY",
+      "terms": [
+        "same day delivery"
+      ],
+      "category": "CONCEPT"
+    },
+    {
+      "code": "OBJECT_EXPRESS_DELIVERY",
+      "terms": [
+        "express delivery"
+      ],
+      "category": "CONCEPT"
+    },
+    {
+      "code": "OBJECT_DELIVERY_AREA",
+      "terms": [
+        "delivery area",
+        "delivery coverage"
+      ],
+      "category": "CONCEPT"
+    },
+    {
+      "code": "OBJECT_DELIVERY_SLOTS",
+      "terms": [
+        "delivery slots"
+      ],
+      "category": "CONCEPT"
+    },
+    {
+      "code": "ACTION_SELECT_100",
+      "terms": [
+        "select",
+        "choose",
+        "book"
+      ],
+      "category": "CONCEPT"
+    },
+    {
+      "code": "OBJECT_DELIVERY_SLOT",
+      "terms": [
+        "delivery slot"
+      ],
+      "category": "CONCEPT"
+    },
+    {
+      "code": "ACTION_CHANGE_102",
+      "terms": [
+        "change",
+        "update",
+        "reschedule"
+      ],
+      "category": "CONCEPT"
+    },
+    {
+      "code": "OBJECT_PICKUP_AVAILABLE",
+      "terms": [
+        "pickup available"
+      ],
+      "category": "CONCEPT"
+    },
+    {
+      "code": "ACTION_FIND",
+      "terms": [
+        "find",
+        "show",
+        "list"
+      ],
+      "category": "CONCEPT"
+    },
+    {
+      "code": "OBJECT_PICKUP_LOCATIONS",
+      "terms": [
+        "pickup locations",
+        "pickup points"
+      ],
+      "category": "CONCEPT"
+    },
+    {
+      "code": "ACTION_SELECT_106",
+      "terms": [
+        "select",
+        "choose"
+      ],
+      "category": "CONCEPT"
+    },
+    {
+      "code": "OBJECT_PICKUP_LOCATION",
+      "terms": [
+        "pickup location",
+        "pickup point"
+      ],
+      "category": "CONCEPT"
+    },
+    {
+      "code": "OBJECT_PICKUP_TIME",
+      "terms": [
+        "pickup time"
+      ],
+      "category": "CONCEPT"
+    },
+    {
+      "code": "ACTION_NEAREST",
+      "terms": [
+        "nearest",
+        "closest"
+      ],
+      "category": "CONCEPT"
+    },
+    {
+      "code": "OBJECT_STORE",
+      "terms": [
+        "store",
+        "shop"
+      ],
+      "category": "CONCEPT"
+    },
+    {
+      "code": "ACTION_WHERE_111",
+      "terms": [
+        "where",
+        "show",
+        "find"
+      ],
+      "category": "CONCEPT"
+    },
+    {
+      "code": "OBJECT_STORE_LOCATION",
+      "terms": [
+        "store location",
+        "store address"
+      ],
+      "category": "CONCEPT"
+    },
+    {
+      "code": "OBJECT_STORE_HOURS",
+      "terms": [
+        "store hours",
+        "opening hours"
+      ],
+      "category": "CONCEPT"
+    },
+    {
+      "code": "OBJECT_SERVICE_AREA",
+      "terms": [
+        "service area"
+      ],
+      "category": "CONCEPT"
+    },
+    {
+      "code": "OBJECT_POINTS",
+      "terms": [
+        "points",
+        "point balance"
+      ],
+      "category": "CONCEPT"
+    },
+    {
+      "code": "ACTION_REDEEM",
+      "terms": [
+        "redeem",
+        "use"
+      ],
+      "category": "CONCEPT"
+    },
+    {
+      "code": "OBJECT_POINTS_117",
+      "terms": [
+        "points"
+      ],
+      "category": "CONCEPT"
+    },
+    {
+      "code": "OBJECT_REWARDS",
+      "terms": [
+        "rewards",
+        "reward"
+      ],
+      "category": "CONCEPT"
+    },
+    {
+      "code": "ACTION_CREATE_119",
+      "terms": [
+        "create",
+        "start"
+      ],
+      "category": "CONCEPT"
+    },
+    {
+      "code": "OBJECT_SUBSCRIPTION",
+      "terms": [
+        "subscription"
+      ],
+      "category": "CONCEPT"
+    },
+    {
+      "code": "ACTION_PAUSE",
+      "terms": [
+        "pause",
+        "suspend"
+      ],
+      "category": "CONCEPT"
+    },
+    {
+      "code": "ACTION_CREATE_122",
+      "terms": [
+        "create",
+        "open"
+      ],
+      "category": "CONCEPT"
+    },
+    {
+      "code": "OBJECT_SUPPORT_REQUEST",
+      "terms": [
+        "support request",
+        "support ticket"
+      ],
+      "category": "CONCEPT"
+    },
+    {
+      "code": "ACTION_FILE",
+      "terms": [
+        "file",
+        "make",
+        "submit",
+        "raise",
+        "lodge",
+        "register",
+        "handle",
+        "have"
+      ],
+      "category": "CONCEPT"
+    },
+    {
+      "code": "OBJECT_COMPLAINT",
+      "terms": [
+        "complaint",
+        "complaints"
+      ],
+      "category": "CONCEPT"
+    },
+    {
+      "code": "ACTION_CONTACT",
+      "terms": [
+        "contact",
+        "talk to",
+        "chat with"
+      ],
+      "category": "CONCEPT"
+    },
+    {
+      "code": "OBJECT_SUPPORT",
+      "terms": [
+        "support",
+        "customer service"
+      ],
+      "category": "CONCEPT"
+    },
+    {
+      "code": "ACTION_YES",
+      "terms": [
+        "yes",
+        "yeah",
+        "okay",
+        "ok",
+        "confirm"
+      ],
+      "category": "CONCEPT"
+    },
+    {
+      "code": "ACTION_NO",
+      "terms": [
+        "no",
+        "nope",
+        "no thanks"
+      ],
+      "category": "CONCEPT"
+    },
+    {
+      "code": "ACTION_GO_BACK",
+      "terms": [
+        "go back",
+        "previous step"
+      ],
+      "category": "CONCEPT"
+    },
+    {
+      "code": "ACTION_CONTINUE_131",
+      "terms": [
+        "continue",
+        "go on"
+      ],
+      "category": "CONCEPT"
+    },
+    {
+      "code": "ACTION_REPEAT",
+      "terms": [
+        "repeat",
+        "say that again"
+      ],
+      "category": "CONCEPT"
+    },
+    {
+      "code": "ACTION_EXPLAIN",
+      "terms": [
+        "explain",
+        "what do you mean"
+      ],
+      "category": "CONCEPT"
+    },
+    {
+      "code": "ACTION_SHOW_MORE",
+      "terms": [
+        "show more",
+        "more results"
+      ],
+      "category": "CONCEPT"
+    },
+    {
+      "code": "ACTION_FIRST_ONE",
+      "terms": [
+        "first one",
+        "first item"
+      ],
+      "category": "CONCEPT"
+    },
+    {
+      "code": "ACTION_SECOND_ONE",
+      "terms": [
+        "second one",
+        "second item"
+      ],
+      "category": "CONCEPT"
+    },
+    {
+      "code": "ACTION_LAST_ONE",
+      "terms": [
+        "last one",
+        "last item"
+      ],
+      "category": "CONCEPT"
+    },
+    {
+      "code": "OBJECT_PRODUCT_138",
+      "terms": [
+        "product"
+      ],
+      "category": "CONCEPT"
+    },
+    {
+      "code": "OBJECT_VARIANT",
+      "terms": [
+        "variant"
+      ],
+      "category": "CONCEPT"
+    },
+    {
+      "code": "ACTION_DO_IT_AGAIN",
+      "terms": [
+        "do it again",
+        "same again"
+      ],
+      "category": "CONCEPT"
+    },
+    {
+      "code": "REFERENCE_IT",
+      "terms": [
+        "it",
+        "this",
+        "that",
+        "one"
+      ],
+      "category": "REFERENCE"
+    },
+    {
+      "code": "REFERENCE_AGAIN",
+      "terms": [
+        "do it again",
+        "same again"
+      ],
+      "category": "REFERENCE"
+    },
+    {
+      "code": "ORDINAL_FIRST",
+      "terms": [
+        "first one",
+        "first item",
+        "first product"
+      ],
+      "category": "REFERENCE"
+    },
+    {
+      "code": "ORDINAL_SECOND",
+      "terms": [
+        "second one",
+        "second item",
+        "second product"
+      ],
+      "category": "REFERENCE"
+    },
+    {
+      "code": "ORDINAL_LAST",
+      "terms": [
+        "last one",
+        "last item",
+        "last product"
+      ],
+      "category": "REFERENCE"
+    },
+    {
+      "code": "PRICE_MAX_OPERATOR",
+      "terms": [
+        "no more than",
+        "less than",
+        "at most",
+        "up to",
+        "under",
+        "below"
+      ],
+      "category": "OPERATOR"
+    },
+    {
+      "code": "PRICE_MIN_OPERATOR",
+      "terms": [
+        "no less than",
+        "greater than",
+        "more than",
+        "at least",
+        "above",
+        "over"
+      ],
+      "category": "OPERATOR"
+    },
+    {
+      "code": "PRICE_RANGE_OPERATOR",
+      "terms": [
+        "between"
+      ],
+      "category": "OPERATOR"
+    },
+    {
+      "code": "QUANTITY_REFERENCE",
+      "terms": [
+        "two",
+        "three",
+        "2",
+        "3"
+      ],
+      "category": "REFERENCE"
+    },
+    {
+      "code": "COLOR_BLACK",
+      "terms": [
+        "black"
+      ],
+      "category": "ATTRIBUTE"
+    },
+    {
+      "code": "COLOR_WHITE",
+      "terms": [
+        "white"
+      ],
+      "category": "ATTRIBUTE"
+    },
+    {
+      "code": "COLOR_RED",
+      "terms": [
+        "red"
+      ],
+      "category": "ATTRIBUTE"
+    },
+    {
+      "code": "COLOR_BLUE",
+      "terms": [
+        "blue"
+      ],
+      "category": "ATTRIBUTE"
+    },
+    {
+      "code": "COLOR_GREEN",
+      "terms": [
+        "green"
+      ],
+      "category": "ATTRIBUTE"
+    },
+    {
+      "code": "COLOR_YELLOW",
+      "terms": [
+        "yellow"
+      ],
+      "category": "ATTRIBUTE"
+    },
+    {
+      "code": "COLOR_PINK",
+      "terms": [
+        "pink"
+      ],
+      "category": "ATTRIBUTE"
+    },
+    {
+      "code": "COLOR_BROWN",
+      "terms": [
+        "brown"
+      ],
+      "category": "ATTRIBUTE"
+    },
+    {
+      "code": "COLOR_GRAY",
+      "terms": [
+        "gray"
+      ],
+      "category": "ATTRIBUTE"
+    },
+    {
+      "code": "COLOR_PURPLE",
+      "terms": [
+        "purple"
+      ],
+      "category": "ATTRIBUTE"
+    },
+    {
+      "code": "ACTION_RECREATE_ORDER",
+      "terms": [
+        "recreate",
+        "re create",
+        "re-create"
+      ],
+      "category": "ACTION"
+    },
+    {
+      "code": "ACTION_COMPLAIN",
+      "terms": [
+        "complain",
+        "complaining"
+      ],
+      "category": "ACTION"
+    },
+    {
+      "code": "COMPLAINT_REQUEST_PREFIX",
+      "terms": [
+        "want to",
+        "need to",
+        "would like to"
+      ],
+      "category": "CONCEPT"
+    },
+    {
+      "code": "COMPLAINT_TOPIC",
+      "terms": [
+        "order",
+        "delivery",
+        "service",
+        "customer service",
+        "product",
+        "item",
+        "payment",
+        "refund",
+        "experience"
+      ],
+      "category": "CONCEPT"
+    },
+    {
+      "code": "NO_COMPLAINT",
+      "terms": [
+        "no complaint",
+        "no complaints",
+        "not a complaint",
+        "nothing to complain",
+        "not complaining"
+      ],
+      "category": "CONCEPT"
+    },
+    {
+      "code": "ORDER_RECENCY",
+      "terms": [
+        "new",
+        "recent",
+        "latest"
+      ],
+      "category": "CONCEPT"
+    }
+  ],
+  "entity_terms": [
+    {
+      "type": "COLOR",
+      "value": "black",
+      "alias": "black",
+      "industry": "FASHION"
+    },
+    {
+      "type": "COLOR",
+      "value": "white",
+      "alias": "white",
+      "industry": "FASHION"
+    },
+    {
+      "type": "COLOR",
+      "value": "red",
+      "alias": "red",
+      "industry": "FASHION"
+    },
+    {
+      "type": "COLOR",
+      "value": "blue",
+      "alias": "blue",
+      "industry": "FASHION"
+    },
+    {
+      "type": "COLOR",
+      "value": "green",
+      "alias": "green",
+      "industry": "FASHION"
+    },
+    {
+      "type": "COLOR",
+      "value": "yellow",
+      "alias": "yellow",
+      "industry": "FASHION"
+    },
+    {
+      "type": "COLOR",
+      "value": "pink",
+      "alias": "pink",
+      "industry": "FASHION"
+    },
+    {
+      "type": "COLOR",
+      "value": "brown",
+      "alias": "brown",
+      "industry": "FASHION"
+    },
+    {
+      "type": "COLOR",
+      "value": "gray",
+      "alias": "gray",
+      "industry": "FASHION"
+    },
+    {
+      "type": "COLOR",
+      "value": "purple",
+      "alias": "purple",
+      "industry": "FASHION"
+    },
+    {
+      "type": "CATEGORY",
+      "value": "running_shoes",
+      "alias": "running shoes",
+      "industry": "FASHION"
+    },
+    {
+      "type": "CATEGORY",
+      "value": "running_shoes",
+      "alias": "sneakers",
+      "industry": "FASHION"
+    },
+    {
+      "type": "CATEGORY",
+      "value": "shoes",
+      "alias": "shoes",
+      "industry": "FASHION"
+    },
+    {
+      "type": "CATEGORY",
+      "value": "shoes",
+      "alias": "shoe",
+      "industry": "FASHION"
+    },
+    {
+      "type": "CATEGORY",
+      "value": "shirt",
+      "alias": "shirt",
+      "industry": "FASHION"
+    },
+    {
+      "type": "CATEGORY",
+      "value": "shirt",
+      "alias": "shirts",
+      "industry": "FASHION"
+    },
+    {
+      "type": "CATEGORY",
+      "value": "shirt",
+      "alias": "t shirt",
+      "industry": "FASHION"
+    },
+    {
+      "type": "CATEGORY",
+      "value": "jeans",
+      "alias": "jeans",
+      "industry": "FASHION"
+    },
+    {
+      "type": "CATEGORY",
+      "value": "phone",
+      "alias": "phone",
+      "industry": "ELECTRONICS"
+    },
+    {
+      "type": "CATEGORY",
+      "value": "phone",
+      "alias": "phones",
+      "industry": "ELECTRONICS"
+    },
+    {
+      "type": "CATEGORY",
+      "value": "phone",
+      "alias": "smartphone",
+      "industry": "ELECTRONICS"
+    },
+    {
+      "type": "CATEGORY",
+      "value": "laptop",
+      "alias": "laptop",
+      "industry": "ELECTRONICS"
+    },
+    {
+      "type": "CATEGORY",
+      "value": "laptop",
+      "alias": "laptops",
+      "industry": "ELECTRONICS"
+    },
+    {
+      "type": "CATEGORY",
+      "value": "headphones",
+      "alias": "headphones",
+      "industry": "ELECTRONICS"
+    },
+    {
+      "type": "CATEGORY",
+      "value": "milk",
+      "alias": "milk",
+      "industry": "GROCERY"
+    },
+    {
+      "type": "CATEGORY",
+      "value": "cream",
+      "alias": "cream",
+      "industry": "BEAUTY"
+    },
+    {
+      "type": "CATEGORY",
+      "value": "vitamins",
+      "alias": "vitamins",
+      "industry": "PHARMACY"
+    },
+    {
+      "type": "CATEGORY",
+      "value": "ring",
+      "alias": "ring",
+      "industry": "JEWELRY"
+    },
+    {
+      "type": "CATEGORY",
+      "value": "sofa",
+      "alias": "sofa",
+      "industry": "HOME"
+    },
+    {
+      "type": "CATEGORY",
+      "value": "tires",
+      "alias": "tires",
+      "industry": "AUTOMOTIVE"
+    },
+    {
+      "type": "CATEGORY",
+      "value": "bolts",
+      "alias": "bolts",
+      "industry": "B2B"
+    },
+    {
+      "type": "BRAND",
+      "value": "Adidas",
+      "alias": "Adidas",
+      "industry": "CORE"
+    },
+    {
+      "type": "BRAND",
+      "value": "Nike",
+      "alias": "Nike",
+      "industry": "CORE"
+    },
+    {
+      "type": "BRAND",
+      "value": "Apple",
+      "alias": "Apple",
+      "industry": "CORE"
+    },
+    {
+      "type": "BRAND",
+      "value": "Samsung",
+      "alias": "Samsung",
+      "industry": "CORE"
+    },
+    {
+      "type": "BRAND",
+      "value": "Sony",
+      "alias": "Sony",
+      "industry": "CORE"
+    },
+    {
+      "type": "MATERIAL",
+      "value": "cotton",
+      "alias": "cotton",
+      "industry": "CORE"
+    },
+    {
+      "type": "MATERIAL",
+      "value": "leather",
+      "alias": "leather",
+      "industry": "CORE"
+    },
+    {
+      "type": "MATERIAL",
+      "value": "wool",
+      "alias": "wool",
+      "industry": "CORE"
+    },
+    {
+      "type": "MATERIAL",
+      "value": "gold",
+      "alias": "gold",
+      "industry": "CORE"
+    },
+    {
+      "type": "MATERIAL",
+      "value": "silver",
+      "alias": "silver",
+      "industry": "CORE"
+    },
+    {
+      "type": "MATERIAL",
+      "value": "steel",
+      "alias": "steel",
+      "industry": "CORE"
+    }
+  ],
+  "transitions": [
+    {
+      "previousIntent": "PRODUCT_SEARCH",
+      "group": "ORDINAL_FIRST",
+      "intent": "SELECT_PRODUCT",
+      "states": [
+        "PRODUCT_RESULTS_VISIBLE"
+      ],
+      "boost": 9
+    },
+    {
+      "previousIntent": "ORDER_HISTORY",
+      "group": "ORDINAL_FIRST",
+      "intent": "SELECT_ORDER",
+      "states": [
+        "ORDER_LIST_VISIBLE"
+      ],
+      "boost": 9
+    },
+    {
+      "previousIntent": "VIEW_CART",
+      "group": "ORDINAL_FIRST",
+      "intent": "REMOVE_FROM_CART",
+      "states": [
+        "CART_NON_EMPTY"
+      ],
+      "boost": 9
+    },
+    {
+      "previousIntent": "PRODUCT_SEARCH",
+      "group": "ORDINAL_SECOND",
+      "intent": "SELECT_PRODUCT",
+      "states": [
+        "PRODUCT_RESULTS_VISIBLE"
+      ],
+      "boost": 9
+    },
+    {
+      "previousIntent": "ORDER_HISTORY",
+      "group": "ORDINAL_SECOND",
+      "intent": "SELECT_ORDER",
+      "states": [
+        "ORDER_LIST_VISIBLE"
+      ],
+      "boost": 9
+    },
+    {
+      "previousIntent": "VIEW_CART",
+      "group": "ORDINAL_SECOND",
+      "intent": "REMOVE_FROM_CART",
+      "states": [
+        "CART_NON_EMPTY"
+      ],
+      "boost": 9
+    },
+    {
+      "previousIntent": "PRODUCT_SEARCH",
+      "group": "ORDINAL_LAST",
+      "intent": "SELECT_PRODUCT",
+      "states": [
+        "PRODUCT_RESULTS_VISIBLE"
+      ],
+      "boost": 9
+    },
+    {
+      "previousIntent": "ORDER_HISTORY",
+      "group": "ORDINAL_LAST",
+      "intent": "SELECT_ORDER",
+      "states": [
+        "ORDER_LIST_VISIBLE"
+      ],
+      "boost": 9
+    },
+    {
+      "previousIntent": "VIEW_CART",
+      "group": "ORDINAL_LAST",
+      "intent": "REMOVE_FROM_CART",
+      "states": [
+        "CART_NON_EMPTY"
+      ],
+      "boost": 9
+    },
+    {
+      "previousIntent": "PRODUCT_SEARCH",
+      "group": "ACTION_ADD",
+      "intent": "ADD_TO_CART",
+      "states": [
+        "PRODUCT_RESULTS_VISIBLE"
+      ],
+      "boost": 9
+    },
+    {
+      "previousIntent": "SELECT_PRODUCT",
+      "group": "ACTION_ADD",
+      "intent": "ADD_TO_CART",
+      "states": [
+        "PRODUCT_SELECTED"
+      ],
+      "boost": 9
+    },
+    {
+      "previousIntent": "ORDER_HISTORY",
+      "group": "REFERENCE_AGAIN",
+      "intent": "REORDER",
+      "states": [
+        "ORDER_LIST_VISIBLE"
+      ],
+      "boost": 9
+    }
+  ],
+  "conflicts": [
+    [
+      "CREATE_ORDER",
+      "CANCEL_ORDER"
+    ],
+    [
+      "TRACK_ORDER",
+      "ORDER_HISTORY"
+    ],
+    [
+      "ADD_TO_CART",
+      "REMOVE_FROM_CART"
+    ],
+    [
+      "RETURN_ITEM",
+      "EXCHANGE_ITEM"
+    ],
+    [
+      "CHECK_DELIVERY",
+      "CHECK_PICKUP"
+    ]
+  ],
+  "patterns": [
+    {
+      "intent": "PRODUCT_ATTRIBUTE",
+      "groups": [
+        "ACTION_WHAT",
+        "OBJECT_ATTRIBUTES"
+      ],
+      "score": 1
+    },
+    {
+      "intent": "PRODUCT_INGREDIENTS",
+      "groups": [
+        "ACTION_WHAT_11",
+        "OBJECT_INGREDIENTS"
+      ],
+      "score": 1
+    },
+    {
+      "intent": "PRODUCT_MATERIAL",
+      "groups": [
+        "ACTION_WHAT",
+        "OBJECT_MATERIAL"
+      ],
+      "score": 1
+    },
+    {
+      "intent": "PRODUCT_DIMENSIONS",
+      "groups": [
+        "ACTION_WHAT",
+        "OBJECT_DIMENSIONS"
+      ],
+      "score": 1
+    },
+    {
+      "intent": "PRODUCT_COMPATIBILITY",
+      "groups": [
+        "ACTION_CHECK",
+        "OBJECT_COMPATIBLE"
+      ],
+      "score": 1
+    },
+    {
+      "intent": "PRODUCT_USAGE",
+      "groups": [
+        "ACTION_HOW",
+        "OBJECT_USE"
+      ],
+      "score": 1
+    },
+    {
+      "intent": "PRODUCT_CARE",
+      "groups": [
+        "ACTION_HOW_19",
+        "OBJECT_WASH"
+      ],
+      "score": 1
+    },
+    {
+      "intent": "PRODUCT_ORIGIN",
+      "groups": [
+        "ACTION_WHERE",
+        "OBJECT_MADE"
+      ],
+      "score": 1
+    },
+    {
+      "intent": "PRODUCT_WARRANTY",
+      "groups": [
+        "ACTION_WHAT_23",
+        "OBJECT_WARRANTY"
+      ],
+      "score": 1
+    },
+    {
+      "intent": "PRODUCT_VARIANTS",
+      "groups": [
+        "ACTION_WHAT_11",
+        "OBJECT_VARIANTS"
+      ],
+      "score": 1
+    },
+    {
+      "intent": "COMPARE_PRICE",
+      "groups": [
+        "ACTION_COMPARE",
+        "OBJECT_PRICES"
+      ],
+      "score": 1
+    },
+    {
+      "intent": "COMPARE_FEATURES",
+      "groups": [
+        "ACTION_COMPARE",
+        "OBJECT_FEATURES"
+      ],
+      "score": 1
+    },
+    {
+      "intent": "COMPARE_SIZE",
+      "groups": [
+        "ACTION_COMPARE",
+        "OBJECT_SIZES"
+      ],
+      "score": 1
+    },
+    {
+      "intent": "COMPARE_BRANDS",
+      "groups": [
+        "ACTION_COMPARE",
+        "OBJECT_BRANDS"
+      ],
+      "score": 1
+    },
+    {
+      "intent": "COMPARE_VARIANTS",
+      "groups": [
+        "ACTION_COMPARE",
+        "OBJECT_VARIANTS_31"
+      ],
+      "score": 1
+    },
+    {
+      "intent": "CLEAR_COMPARISON",
+      "groups": [
+        "ACTION_CLEAR",
+        "OBJECT_COMPARISON_LIST"
+      ],
+      "score": 1
+    },
+    {
+      "intent": "CHECK_PRICE",
+      "groups": [
+        "ACTION_WHAT_34",
+        "OBJECT_PRICE"
+      ],
+      "score": 1
+    },
+    {
+      "intent": "PRICE_RANGE",
+      "groups": [
+        "ACTION_WHAT_36",
+        "OBJECT_PRICE_RANGE"
+      ],
+      "score": 1
+    },
+    {
+      "intent": "PRICE_DROP",
+      "groups": [
+        "ACTION_CHECK_38",
+        "OBJECT_PRICE_DROP"
+      ],
+      "score": 1
+    },
+    {
+      "intent": "CHECK_PROMOTION",
+      "groups": [
+        "ACTION_CHECK_40",
+        "OBJECT_PROMOTIONS"
+      ],
+      "score": 1
+    },
+    {
+      "intent": "APPLY_COUPON",
+      "groups": [
+        "ACTION_APPLY",
+        "OBJECT_COUPON"
+      ],
+      "score": 1
+    },
+    {
+      "intent": "REMOVE_COUPON",
+      "groups": [
+        "ACTION_REMOVE",
+        "OBJECT_COUPON"
+      ],
+      "score": 1
+    },
+    {
+      "intent": "PROMOTION_ELIGIBILITY",
+      "groups": [
+        "ACTION_AM_I",
+        "OBJECT_ELIGIBLE_FOR_PROMOTION"
+      ],
+      "score": 1
+    },
+    {
+      "intent": "CHECK_STOCK",
+      "groups": [
+        "ACTION_CHECK_47",
+        "OBJECT_STOCK"
+      ],
+      "score": 1
+    },
+    {
+      "intent": "CHECK_STORE_STOCK",
+      "groups": [
+        "ACTION_CHECK_49",
+        "OBJECT_STORE_STOCK"
+      ],
+      "score": 1
+    },
+    {
+      "intent": "CHECK_VARIANT_STOCK",
+      "groups": [
+        "ACTION_CHECK_49",
+        "OBJECT_VARIANT_STOCK"
+      ],
+      "score": 1
+    },
+    {
+      "intent": "RESTOCK_QUERY",
+      "groups": [
+        "ACTION_WHEN",
+        "OBJECT_RESTOCK"
+      ],
+      "score": 1
+    },
+    {
+      "intent": "ADD_TO_CART",
+      "groups": [
+        "ACTION_ADD",
+        "OBJECT_CART"
+      ],
+      "score": 1
+    },
+    {
+      "intent": "REMOVE_FROM_CART",
+      "groups": [
+        "ACTION_REMOVE_56",
+        "OBJECT_CART"
+      ],
+      "score": 1
+    },
+    {
+      "intent": "UPDATE_CART_QUANTITY",
+      "groups": [
+        "ACTION_UPDATE",
+        "OBJECT_QUANTITY"
+      ],
+      "score": 1
+    },
+    {
+      "intent": "VIEW_CART",
+      "groups": [
+        "ACTION_VIEW",
+        "OBJECT_CART"
+      ],
+      "score": 1
+    },
+    {
+      "intent": "CLEAR_CART",
+      "groups": [
+        "ACTION_CLEAR_60",
+        "OBJECT_CART"
+      ],
+      "score": 1
+    },
+    {
+      "intent": "OPTIMIZE_CART",
+      "groups": [
+        "ACTION_OPTIMIZE",
+        "OBJECT_CART"
+      ],
+      "score": 1
+    },
+    {
+      "intent": "ADD_TO_WISHLIST",
+      "groups": [
+        "ACTION_ADD_62",
+        "OBJECT_WISHLIST"
+      ],
+      "score": 1
+    },
+    {
+      "intent": "REMOVE_FROM_WISHLIST",
+      "groups": [
+        "ACTION_REMOVE",
+        "OBJECT_WISHLIST"
+      ],
+      "score": 1
+    },
+    {
+      "intent": "VIEW_WISHLIST",
+      "groups": [
+        "ACTION_VIEW",
+        "OBJECT_WISHLIST"
+      ],
+      "score": 1
+    },
+    {
+      "intent": "START_CHECKOUT",
+      "groups": [
+        "ACTION_START",
+        "OBJECT_CHECKOUT"
+      ],
+      "score": 1
+    },
+    {
+      "intent": "CONTINUE_CHECKOUT",
+      "groups": [
+        "ACTION_CONTINUE",
+        "OBJECT_CHECKOUT"
+      ],
+      "score": 1
+    },
+    {
+      "intent": "CHANGE_ADDRESS",
+      "groups": [
+        "ACTION_CHANGE",
+        "OBJECT_ADDRESS"
+      ],
+      "score": 1
+    },
+    {
+      "intent": "SELECT_PAYMENT",
+      "groups": [
+        "ACTION_SELECT",
+        "OBJECT_PAYMENT"
+      ],
+      "score": 1
+    },
+    {
+      "intent": "SELECT_DELIVERY_METHOD",
+      "groups": [
+        "ACTION_SELECT",
+        "OBJECT_DELIVERY_METHOD"
+      ],
+      "score": 1
+    },
+    {
+      "intent": "CREATE_ORDER",
+      "groups": [
+        "ACTION_CREATE",
+        "OBJECT_ORDER"
+      ],
+      "score": 1
+    },
+    {
+      "intent": "ORDER_HISTORY",
+      "groups": [
+        "ACTION_SHOW",
+        "OBJECT_ORDERS"
+      ],
+      "score": 1
+    },
+    {
+      "intent": "ORDER_DETAILS",
+      "groups": [
+        "ACTION_SHOW_76",
+        "OBJECT_ORDER"
+      ],
+      "score": 1
+    },
+    {
+      "intent": "TRACK_ORDER",
+      "groups": [
+        "ACTION_TRACK",
+        "OBJECT_ORDER_78"
+      ],
+      "score": 1
+    },
+    {
+      "intent": "CANCEL_ORDER",
+      "groups": [
+        "ACTION_CANCEL",
+        "OBJECT_ORDER"
+      ],
+      "score": 1
+    },
+    {
+      "intent": "REORDER",
+      "groups": [
+        "ACTION_REORDER",
+        "OBJECT_ORDER_81"
+      ],
+      "score": 1
+    },
+    {
+      "intent": "MODIFY_ORDER",
+      "groups": [
+        "ACTION_MODIFY",
+        "OBJECT_ORDER"
+      ],
+      "score": 1
+    },
+    {
+      "intent": "RETURN_ORDER",
+      "groups": [
+        "ACTION_RETURN",
+        "OBJECT_ORDER"
+      ],
+      "score": 1
+    },
+    {
+      "intent": "REFUND_STATUS",
+      "groups": [
+        "ACTION_CHECK_85",
+        "OBJECT_REFUND"
+      ],
+      "score": 1
+    },
+    {
+      "intent": "RETURN_POLICY",
+      "groups": [
+        "ACTION_WHAT_36",
+        "OBJECT_RETURN_POLICY"
+      ],
+      "score": 1
+    },
+    {
+      "intent": "RETURN_ELIGIBILITY",
+      "groups": [
+        "ACTION_CHECK_88",
+        "OBJECT_RETURN_ELIGIBILITY"
+      ],
+      "score": 1
+    },
+    {
+      "intent": "CHECK_DELIVERY",
+      "groups": [
+        "ACTION_CHECK_90",
+        "OBJECT_DELIVERY_AVAILABLE"
+      ],
+      "score": 1
+    },
+    {
+      "intent": "DELIVERY_COST",
+      "groups": [
+        "ACTION_WHAT_23",
+        "OBJECT_DELIVERY_COST"
+      ],
+      "score": 1
+    },
+    {
+      "intent": "DELIVERY_TIME",
+      "groups": [
+        "ACTION_WHAT_23",
+        "OBJECT_DELIVERY_TIME"
+      ],
+      "score": 1
+    },
+    {
+      "intent": "DELIVERY_DATE",
+      "groups": [
+        "ACTION_WHAT_23",
+        "OBJECT_DELIVERY_DATE"
+      ],
+      "score": 1
+    },
+    {
+      "intent": "SAME_DAY_DELIVERY",
+      "groups": [
+        "ACTION_CHECK_95",
+        "OBJECT_SAME_DAY_DELIVERY"
+      ],
+      "score": 1
+    },
+    {
+      "intent": "EXPRESS_DELIVERY",
+      "groups": [
+        "ACTION_CHECK_95",
+        "OBJECT_EXPRESS_DELIVERY"
+      ],
+      "score": 1
+    },
+    {
+      "intent": "DELIVERY_AREA",
+      "groups": [
+        "ACTION_CHECK_49",
+        "OBJECT_DELIVERY_AREA"
+      ],
+      "score": 1
+    },
+    {
+      "intent": "VIEW_DELIVERY_SLOTS",
+      "groups": [
+        "ACTION_SHOW",
+        "OBJECT_DELIVERY_SLOTS"
+      ],
+      "score": 1
+    },
+    {
+      "intent": "SELECT_DELIVERY_SLOT",
+      "groups": [
+        "ACTION_SELECT_100",
+        "OBJECT_DELIVERY_SLOT"
+      ],
+      "score": 1
+    },
+    {
+      "intent": "CHANGE_DELIVERY_SLOT",
+      "groups": [
+        "ACTION_CHANGE_102",
+        "OBJECT_DELIVERY_SLOT"
+      ],
+      "score": 1
+    },
+    {
+      "intent": "CHECK_PICKUP",
+      "groups": [
+        "ACTION_CHECK_90",
+        "OBJECT_PICKUP_AVAILABLE"
+      ],
+      "score": 1
+    },
+    {
+      "intent": "FIND_PICKUP_LOCATION",
+      "groups": [
+        "ACTION_FIND",
+        "OBJECT_PICKUP_LOCATIONS"
+      ],
+      "score": 1
+    },
+    {
+      "intent": "SELECT_PICKUP_LOCATION",
+      "groups": [
+        "ACTION_SELECT_106",
+        "OBJECT_PICKUP_LOCATION"
+      ],
+      "score": 1
+    },
+    {
+      "intent": "PICKUP_TIME",
+      "groups": [
+        "ACTION_WHAT_23",
+        "OBJECT_PICKUP_TIME"
+      ],
+      "score": 1
+    },
+    {
+      "intent": "NEAREST_STORE",
+      "groups": [
+        "ACTION_NEAREST",
+        "OBJECT_STORE"
+      ],
+      "score": 1
+    },
+    {
+      "intent": "STORE_LOCATION",
+      "groups": [
+        "ACTION_WHERE_111",
+        "OBJECT_STORE_LOCATION"
+      ],
+      "score": 1
+    },
+    {
+      "intent": "STORE_HOURS",
+      "groups": [
+        "ACTION_WHAT_23",
+        "OBJECT_STORE_HOURS"
+      ],
+      "score": 1
+    },
+    {
+      "intent": "SERVICE_AREA",
+      "groups": [
+        "ACTION_WHAT_23",
+        "OBJECT_SERVICE_AREA"
+      ],
+      "score": 1
+    },
+    {
+      "intent": "CHECK_POINTS",
+      "groups": [
+        "ACTION_CHECK_49",
+        "OBJECT_POINTS"
+      ],
+      "score": 1
+    },
+    {
+      "intent": "REDEEM_POINTS",
+      "groups": [
+        "ACTION_REDEEM",
+        "OBJECT_POINTS_117"
+      ],
+      "score": 1
+    },
+    {
+      "intent": "CHECK_REWARD",
+      "groups": [
+        "ACTION_CHECK_40",
+        "OBJECT_REWARDS"
+      ],
+      "score": 1
+    },
+    {
+      "intent": "CREATE_SUBSCRIPTION",
+      "groups": [
+        "ACTION_CREATE_119",
+        "OBJECT_SUBSCRIPTION"
+      ],
+      "score": 1
+    },
+    {
+      "intent": "PAUSE_SUBSCRIPTION",
+      "groups": [
+        "ACTION_PAUSE",
+        "OBJECT_SUBSCRIPTION"
+      ],
+      "score": 1
+    },
+    {
+      "intent": "CANCEL_SUBSCRIPTION",
+      "groups": [
+        "ACTION_CANCEL",
+        "OBJECT_SUBSCRIPTION"
+      ],
+      "score": 1
+    },
+    {
+      "intent": "CREATE_SUPPORT_REQUEST",
+      "groups": [
+        "ACTION_CREATE_122",
+        "OBJECT_SUPPORT_REQUEST"
+      ],
+      "score": 1
+    },
+    {
+      "intent": "COMPLAINT",
+      "groups": [
+        "ACTION_FILE",
+        "OBJECT_COMPLAINT"
+      ],
+      "score": 1
+    },
+    {
+      "intent": "CONTACT_SUPPORT",
+      "groups": [
+        "ACTION_CONTACT",
+        "OBJECT_SUPPORT"
+      ],
+      "score": 1
+    },
+    {
+      "intent": "SELECT_PRODUCT",
+      "groups": [
+        "ACTION_SELECT_106",
+        "OBJECT_PRODUCT_138"
+      ],
+      "score": 1
+    },
+    {
+      "intent": "SELECT_ORDER",
+      "groups": [
+        "ACTION_SELECT_106",
+        "OBJECT_ORDER"
+      ],
+      "score": 1
+    },
+    {
+      "intent": "SELECT_VARIANT",
+      "groups": [
+        "ACTION_SELECT_106",
+        "OBJECT_VARIANT"
+      ],
+      "score": 1
+    }
+  ],
+  "corpus": [
+    {
+      "text": "show me black running shoes under 3000",
+      "intent": "PRODUCT_SEARCH",
+      "status": "RESOLVED",
+      "difficulty": "EASY"
+    },
+    {
+      "text": "recommend a laptop",
+      "intent": "PRODUCT_RECOMMEND",
+      "status": "RESOLVED",
+      "difficulty": "EASY"
+    },
+    {
+      "text": "find alternative shoes",
+      "intent": "PRODUCT_ALTERNATIVE",
+      "status": "RESOLVED",
+      "difficulty": "EASY"
+    },
+    {
+      "text": "show similar shoes",
+      "intent": "PRODUCT_SIMILAR",
+      "status": "RESOLVED",
+      "difficulty": "EASY"
+    },
+    {
+      "text": "show new arrivals products",
+      "intent": "PRODUCT_NEW_ARRIVALS",
+      "status": "RESOLVED",
+      "difficulty": "EASY"
+    },
+    {
+      "text": "show trending shoes",
+      "intent": "PRODUCT_TRENDING",
+      "status": "RESOLVED",
+      "difficulty": "EASY"
+    },
+    {
+      "text": "show bestselling shoes",
+      "intent": "PRODUCT_BESTSELLERS",
+      "status": "RESOLVED",
+      "difficulty": "EASY"
+    },
+    {
+      "text": "phone details",
+      "intent": "PRODUCT_DETAILS",
+      "status": "RESOLVED",
+      "difficulty": "EASY"
+    },
+    {
+      "text": "show specifications",
+      "intent": "PRODUCT_ATTRIBUTE",
+      "status": "RESOLVED",
+      "difficulty": "EASY"
+    },
+    {
+      "text": "list ingredients",
+      "intent": "PRODUCT_INGREDIENTS",
+      "status": "RESOLVED",
+      "difficulty": "EASY"
+    },
+    {
+      "text": "what material is this",
+      "intent": "PRODUCT_MATERIAL",
+      "status": "RESOLVED",
+      "difficulty": "EASY"
+    },
+    {
+      "text": "show dimensions",
+      "intent": "PRODUCT_DIMENSIONS",
+      "status": "RESOLVED",
+      "difficulty": "EASY"
+    },
+    {
+      "text": "is this compatible",
+      "intent": "PRODUCT_COMPATIBILITY",
+      "status": "RESOLVED",
+      "difficulty": "EASY"
+    },
+    {
+      "text": "how to use this",
+      "intent": "PRODUCT_USAGE",
+      "status": "RESOLVED",
+      "difficulty": "EASY"
+    },
+    {
+      "text": "how to wash this",
+      "intent": "PRODUCT_CARE",
+      "status": "RESOLVED",
+      "difficulty": "EASY"
+    },
+    {
+      "text": "where is this made",
+      "intent": "PRODUCT_ORIGIN",
+      "status": "RESOLVED",
+      "difficulty": "EASY"
+    },
+    {
+      "text": "show warranty",
+      "intent": "PRODUCT_WARRANTY",
+      "status": "RESOLVED",
+      "difficulty": "EASY"
+    },
+    {
+      "text": "show variants",
+      "intent": "PRODUCT_VARIANTS",
+      "status": "RESOLVED",
+      "difficulty": "EASY"
+    },
+    {
+      "text": "compare phones",
+      "intent": "PRODUCT_COMPARE",
+      "status": "RESOLVED",
+      "difficulty": "EASY"
+    },
+    {
+      "text": "compare prices",
+      "intent": "COMPARE_PRICE",
+      "status": "RESOLVED",
+      "difficulty": "EASY"
+    },
+    {
+      "text": "compare features",
+      "intent": "COMPARE_FEATURES",
+      "status": "RESOLVED",
+      "difficulty": "EASY"
+    },
+    {
+      "text": "compare sizes",
+      "intent": "COMPARE_SIZE",
+      "status": "RESOLVED",
+      "difficulty": "EASY"
+    },
+    {
+      "text": "compare brands",
+      "intent": "COMPARE_BRANDS",
+      "status": "RESOLVED",
+      "difficulty": "EASY"
+    },
+    {
+      "text": "compare variants",
+      "intent": "COMPARE_VARIANTS",
+      "status": "RESOLVED",
+      "difficulty": "EASY"
+    },
+    {
+      "text": "clear comparison list",
+      "intent": "CLEAR_COMPARISON",
+      "status": "RESOLVED",
+      "difficulty": "EASY"
+    },
+    {
+      "text": "check price",
+      "intent": "CHECK_PRICE",
+      "status": "RESOLVED",
+      "difficulty": "EASY"
+    },
+    {
+      "text": "show price range",
+      "intent": "PRICE_RANGE",
+      "status": "RESOLVED",
+      "difficulty": "EASY"
+    },
+    {
+      "text": "check price drops",
+      "intent": "PRICE_DROP",
+      "status": "RESOLVED",
+      "difficulty": "EASY"
+    },
+    {
+      "text": "show promotions",
+      "intent": "CHECK_PROMOTION",
+      "status": "RESOLVED",
+      "difficulty": "EASY"
+    },
+    {
+      "text": "apply coupon SAVE10",
+      "intent": "APPLY_COUPON",
+      "status": "RESOLVED",
+      "difficulty": "EASY"
+    },
+    {
+      "text": "remove coupon",
+      "intent": "REMOVE_COUPON",
+      "status": "RESOLVED",
+      "difficulty": "EASY"
+    },
+    {
+      "text": "check promotion eligibility",
+      "intent": "PROMOTION_ELIGIBILITY",
+      "status": "RESOLVED",
+      "difficulty": "EASY"
+    },
+    {
+      "text": "check stock",
+      "intent": "CHECK_STOCK",
+      "status": "RESOLVED",
+      "difficulty": "EASY"
+    },
+    {
+      "text": "check store stock",
+      "intent": "CHECK_STORE_STOCK",
+      "status": "RESOLVED",
+      "difficulty": "EASY"
+    },
+    {
+      "text": "check variant stock",
+      "intent": "CHECK_VARIANT_STOCK",
+      "status": "RESOLVED",
+      "difficulty": "EASY"
+    },
+    {
+      "text": "when will this restock",
+      "intent": "RESTOCK_QUERY",
+      "status": "RESOLVED",
+      "difficulty": "EASY"
+    },
+    {
+      "text": "add shoes to cart",
+      "intent": "ADD_TO_CART",
+      "status": "RESOLVED",
+      "difficulty": "EASY"
+    },
+    {
+      "text": "remove shoes from cart",
+      "intent": "REMOVE_FROM_CART",
+      "status": "RESOLVED",
+      "difficulty": "EASY"
+    },
+    {
+      "text": "change cart quantity to 2",
+      "intent": "UPDATE_CART_QUANTITY",
+      "status": "RESOLVED",
+      "difficulty": "EASY"
+    },
+    {
+      "text": "show cart",
+      "intent": "VIEW_CART",
+      "status": "RESOLVED",
+      "difficulty": "EASY"
+    },
+    {
+      "text": "empty cart",
+      "intent": "CLEAR_CART",
+      "status": "RESOLVED",
+      "difficulty": "EASY"
+    },
+    {
+      "text": "optimize my cart to be less than 50 usd",
+      "intent": "OPTIMIZE_CART",
+      "status": "RESOLVED",
+      "difficulty": "EASY"
+    },
+    {
+      "text": "add shoes to wishlist",
+      "intent": "ADD_TO_WISHLIST",
+      "status": "RESOLVED",
+      "difficulty": "EASY"
+    },
+    {
+      "text": "remove shoes from wishlist",
+      "intent": "REMOVE_FROM_WISHLIST",
+      "status": "RESOLVED",
+      "difficulty": "EASY"
+    },
+    {
+      "text": "show wishlist",
+      "intent": "VIEW_WISHLIST",
+      "status": "RESOLVED",
+      "difficulty": "EASY"
+    },
+    {
+      "text": "start checkout",
+      "intent": "START_CHECKOUT",
+      "status": "RESOLVED",
+      "difficulty": "EASY"
+    },
+    {
+      "text": "continue checkout",
+      "intent": "CONTINUE_CHECKOUT",
+      "status": "RESOLVED",
+      "difficulty": "EASY"
+    },
+    {
+      "text": "change shipping address",
+      "intent": "CHANGE_ADDRESS",
+      "status": "RESOLVED",
+      "difficulty": "EASY"
+    },
+    {
+      "text": "select payment method",
+      "intent": "SELECT_PAYMENT",
+      "status": "RESOLVED",
+      "difficulty": "EASY"
+    },
+    {
+      "text": "choose delivery method",
+      "intent": "SELECT_DELIVERY_METHOD",
+      "status": "RESOLVED",
+      "difficulty": "EASY"
+    },
+    {
+      "text": "place an order",
+      "intent": "CREATE_ORDER",
+      "status": "RESOLVED",
+      "difficulty": "EASY"
+    },
+    {
+      "text": "show my orders",
+      "intent": "ORDER_HISTORY",
+      "status": "RESOLVED",
+      "difficulty": "EASY"
+    },
+    {
+      "text": "show order details",
+      "intent": "ORDER_DETAILS",
+      "status": "RESOLVED",
+      "difficulty": "EASY"
+    },
+    {
+      "text": "track my order",
+      "intent": "TRACK_ORDER",
+      "status": "RESOLVED",
+      "difficulty": "EASY"
+    },
+    {
+      "text": "cancel my order",
+      "intent": "CANCEL_ORDER",
+      "status": "RESOLVED",
+      "difficulty": "EASY"
+    },
+    {
+      "text": "reorder items",
+      "intent": "REORDER",
+      "status": "RESOLVED",
+      "difficulty": "EASY"
+    },
+    {
+      "text": "modify my order",
+      "intent": "MODIFY_ORDER",
+      "status": "RESOLVED",
+      "difficulty": "EASY"
+    },
+    {
+      "text": "return an item",
+      "intent": "RETURN_ITEM",
+      "status": "RESOLVED",
+      "difficulty": "EASY"
+    },
+    {
+      "text": "return my order",
+      "intent": "RETURN_ORDER",
+      "status": "RESOLVED",
+      "difficulty": "EASY"
+    },
+    {
+      "text": "exchange shoes",
+      "intent": "EXCHANGE_ITEM",
+      "status": "RESOLVED",
+      "difficulty": "EASY"
+    },
+    {
+      "text": "check refund status",
+      "intent": "REFUND_STATUS",
+      "status": "RESOLVED",
+      "difficulty": "EASY"
+    },
+    {
+      "text": "show return policy",
+      "intent": "RETURN_POLICY",
+      "status": "RESOLVED",
+      "difficulty": "EASY"
+    },
+    {
+      "text": "is this returnable",
+      "intent": "RETURN_ELIGIBILITY",
+      "status": "RESOLVED",
+      "difficulty": "EASY"
+    },
+    {
+      "text": "is delivery available",
+      "intent": "CHECK_DELIVERY",
+      "status": "RESOLVED",
+      "difficulty": "EASY"
+    },
+    {
+      "text": "check delivery cost",
+      "intent": "DELIVERY_COST",
+      "status": "RESOLVED",
+      "difficulty": "EASY"
+    },
+    {
+      "text": "check delivery time",
+      "intent": "DELIVERY_TIME",
+      "status": "RESOLVED",
+      "difficulty": "EASY"
+    },
+    {
+      "text": "show delivery date",
+      "intent": "DELIVERY_DATE",
+      "status": "RESOLVED",
+      "difficulty": "EASY"
+    },
+    {
+      "text": "check same day delivery",
+      "intent": "SAME_DAY_DELIVERY",
+      "status": "RESOLVED",
+      "difficulty": "EASY"
+    },
+    {
+      "text": "check express delivery",
+      "intent": "EXPRESS_DELIVERY",
+      "status": "RESOLVED",
+      "difficulty": "EASY"
+    },
+    {
+      "text": "show delivery area",
+      "intent": "DELIVERY_AREA",
+      "status": "RESOLVED",
+      "difficulty": "EASY"
+    },
+    {
+      "text": "show delivery slots",
+      "intent": "VIEW_DELIVERY_SLOTS",
+      "status": "RESOLVED",
+      "difficulty": "EASY"
+    },
+    {
+      "text": "choose delivery slot",
+      "intent": "SELECT_DELIVERY_SLOT",
+      "status": "RESOLVED",
+      "difficulty": "EASY"
+    },
+    {
+      "text": "change delivery slot",
+      "intent": "CHANGE_DELIVERY_SLOT",
+      "status": "RESOLVED",
+      "difficulty": "EASY"
+    },
+    {
+      "text": "is pickup available",
+      "intent": "CHECK_PICKUP",
+      "status": "RESOLVED",
+      "difficulty": "EASY"
+    },
+    {
+      "text": "find pickup locations",
+      "intent": "FIND_PICKUP_LOCATION",
+      "status": "RESOLVED",
+      "difficulty": "EASY"
+    },
+    {
+      "text": "choose pickup location",
+      "intent": "SELECT_PICKUP_LOCATION",
+      "status": "RESOLVED",
+      "difficulty": "EASY"
+    },
+    {
+      "text": "check pickup time",
+      "intent": "PICKUP_TIME",
+      "status": "RESOLVED",
+      "difficulty": "EASY"
+    },
+    {
+      "text": "find nearest store",
+      "intent": "NEAREST_STORE",
+      "status": "RESOLVED",
+      "difficulty": "EASY"
+    },
+    {
+      "text": "show store location",
+      "intent": "STORE_LOCATION",
+      "status": "RESOLVED",
+      "difficulty": "EASY"
+    },
+    {
+      "text": "show store hours",
+      "intent": "STORE_HOURS",
+      "status": "RESOLVED",
+      "difficulty": "EASY"
+    },
+    {
+      "text": "show service area",
+      "intent": "SERVICE_AREA",
+      "status": "RESOLVED",
+      "difficulty": "EASY"
+    },
+    {
+      "text": "check points",
+      "intent": "CHECK_POINTS",
+      "status": "RESOLVED",
+      "difficulty": "EASY"
+    },
+    {
+      "text": "redeem points",
+      "intent": "REDEEM_POINTS",
+      "status": "RESOLVED",
+      "difficulty": "EASY"
+    },
+    {
+      "text": "show rewards",
+      "intent": "CHECK_REWARD",
+      "status": "RESOLVED",
+      "difficulty": "EASY"
+    },
+    {
+      "text": "start subscription",
+      "intent": "CREATE_SUBSCRIPTION",
+      "status": "RESOLVED",
+      "difficulty": "EASY"
+    },
+    {
+      "text": "pause subscription",
+      "intent": "PAUSE_SUBSCRIPTION",
+      "status": "RESOLVED",
+      "difficulty": "EASY"
+    },
+    {
+      "text": "cancel subscription",
+      "intent": "CANCEL_SUBSCRIPTION",
+      "status": "RESOLVED",
+      "difficulty": "EASY"
+    },
+    {
+      "text": "open support ticket",
+      "intent": "CREATE_SUPPORT_REQUEST",
+      "status": "RESOLVED",
+      "difficulty": "EASY"
+    },
+    {
+      "text": "file a complaint",
+      "intent": "COMPLAINT",
+      "status": "RESOLVED",
+      "difficulty": "EASY"
+    },
+    {
+      "text": "contact support",
+      "intent": "CONTACT_SUPPORT",
+      "status": "RESOLVED",
+      "difficulty": "EASY"
+    },
+    {
+      "text": "yes",
+      "intent": "AFFIRM",
+      "status": "RESOLVED",
+      "difficulty": "EASY"
+    },
+    {
+      "text": "no",
+      "intent": "DENY",
+      "status": "RESOLVED",
+      "difficulty": "EASY"
+    },
+    {
+      "text": "go back",
+      "intent": "GO_BACK",
+      "status": "RESOLVED",
+      "difficulty": "EASY"
+    },
+    {
+      "text": "continue",
+      "intent": "CONTINUE",
+      "status": "RESOLVED",
+      "difficulty": "EASY"
+    },
+    {
+      "text": "repeat",
+      "intent": "REPEAT",
+      "status": "RESOLVED",
+      "difficulty": "EASY"
+    },
+    {
+      "text": "what do you mean",
+      "intent": "CLARIFY",
+      "status": "RESOLVED",
+      "difficulty": "EASY"
+    },
+    {
+      "text": "show more",
+      "intent": null,
+      "status": "CONTEXT_REQUIRED",
+      "difficulty": "CONTEXT_REQUIRED"
+    },
+    {
+      "text": "the first one",
+      "intent": null,
+      "status": "CONTEXT_REQUIRED",
+      "difficulty": "CONTEXT_REQUIRED"
+    },
+    {
+      "text": "the second one",
+      "intent": null,
+      "status": "CONTEXT_REQUIRED",
+      "difficulty": "CONTEXT_REQUIRED"
+    },
+    {
+      "text": "the last one",
+      "intent": null,
+      "status": "CONTEXT_REQUIRED",
+      "difficulty": "CONTEXT_REQUIRED"
+    },
+    {
+      "text": "choose product",
+      "intent": null,
+      "status": "CONTEXT_REQUIRED",
+      "difficulty": "CONTEXT_REQUIRED"
+    },
+    {
+      "text": "choose order",
+      "intent": null,
+      "status": "CONTEXT_REQUIRED",
+      "difficulty": "CONTEXT_REQUIRED"
+    },
+    {
+      "text": "choose variant",
+      "intent": null,
+      "status": "CONTEXT_REQUIRED",
+      "difficulty": "CONTEXT_REQUIRED"
+    },
+    {
+      "text": "do it again",
+      "intent": null,
+      "status": "CONTEXT_REQUIRED",
+      "difficulty": "CONTEXT_REQUIRED"
+    }
+  ]
+}

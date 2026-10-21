@@ -1,0 +1,15 @@
+{
+  "purpose": "Rules frozen before these authored cohorts were executed. These are synthetic cohorts, not independent customer data. Families disjoint within this evaluation only; historical development tests are not a clean training partition.",
+  "policy": {
+    "maximumCommandEditDistance": 1,
+    "requireUniqueRead": true,
+    "noMissingLetterAcceptance": true,
+    "noSubstitutionAcceptance": true,
+    "noBoundaryAcceptance": true,
+    "noCatalogAcceptance": true
+  },
+  "datasets": {
+    "validation-v1": "b2356255a5bc4b87892ecac865fde3740c22ea10c3052fb61b228bf30ec317e2",
+    "reserved-v1": "eea62bd724e6311d2deb433ee8f4688e35172665470d890270705538855eb96a"
+  }
+}

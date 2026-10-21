@@ -1,0 +1,24 @@
+{
+  "milestone": "M09",
+  "evaluated_at": "2026-09-22T12:05:42.707776+00:00",
+  "status": "passed",
+  "checks": {
+    "public_key_not_echoed": "passed",
+    "signed_cart_read": "passed",
+    "proof_replay": "passed",
+    "body_tamper": "passed",
+    "read_cannot_apply": "passed",
+    "tenant_binding": "passed",
+    "deny_order.place": "passed",
+    "deny_payment.authorize": "passed",
+    "deny_order.refund": "passed",
+    "protocol_kill": "passed",
+    "scope_kill": "passed",
+    "tenant_kill": "passed",
+    "agent_kill": "passed",
+    "revoked_grant": "passed",
+    "commerce_unchanged": "passed"
+  },
+  "financial_actions_enabled": false,
+  "production_changed": false
+}

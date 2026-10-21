@@ -1,0 +1,8 @@
+{
+  "blocked_table": "catalog.products",
+  "elapsed_ms": 3016,
+  "recovery_status": 200,
+  "stale_html_served": false,
+  "status": 503,
+  "synthetic": true
+}

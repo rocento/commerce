@@ -1,0 +1,70 @@
+---
+{
+  "title": "Behavioral Data as an AI Foundation",
+  "summary": "How searches, product interactions and checkout activity create a foundation for commerce context.",
+  "author": "Rocento editorial",
+  "date": "2026-09-15",
+  "category": "Data & context",
+  "tags": [
+    "Behavioral analytics",
+    "Events",
+    "Machine learning"
+  ]
+}
+---
+## The journey produces signals
+
+A customer journey includes many small interactions. Search queries, product views, cart changes and checkout steps provide observations that orders alone cannot capture.
+
+These observations can support reporting and future intelligent systems when their meaning is defined carefully. More collected events do not automatically mean better understanding.
+
+```text
+Search
+  → Product view
+    → Add to cart
+      → Checkout
+        → Conversion / possible abandonment
+```
+
+This is an illustrative sequence. Real journeys can repeat steps, switch devices or end without a recorded outcome.
+
+## Define the event before using it
+
+An event needs a clear name, a timestamp, appropriate identifiers and a documented meaning. A product impression and a deliberate product view should not silently share a definition. Duplicate delivery and out-of-order arrival also need an explicit handling strategy.
+
+The following is an illustrative event envelope, not Rocento's published API contract:
+
+```json
+{
+  "event": "product_view",
+  "occurred_at": "2026-09-15T10:00:00Z",
+  "session_id": "example-session",
+  "product_id": "example-product"
+}
+```
+
+The smallest useful event is often preferable to collecting every available attribute. Identity, access, retention and consent choices need deliberate design appropriate to the deployment.
+
+## Abandonment is an interpretation
+
+A cart without a completed order might represent interrupted browsing, a later purchase, or a decision made elsewhere. Calling it abandoned requires a defined observation window and knowledge of what the application can actually observe.
+
+An abandonment prediction model adds further assumptions and requires separate evaluation. The presence of cart events does not establish a validated predictor.
+
+## Build context without losing boundaries
+
+Historical behavior can be connected with product and order data for analysis. Current commerce decisions still need current facts. A customer's previous interest in an item does not establish current inventory or permission to purchase it.
+
+Rocento treats behavioral events as part of the context foundation. Operational reports and bounded assistant capabilities are distinct from proposed future machine-learning models.
+
+## A careful path toward learning
+
+Before introducing a predictive capability, define the decision it should support, inspect the available data, establish a baseline and evaluate failures. Keep the ability to explain where a signal came from and what it cannot tell you.
+
+Recommendations, forecasting, intent and conversion prediction remain research directions for Rocento. No accuracy, revenue uplift or conversion claims are made.
+
+## References and further reading
+
+- [From Commerce Data to Commerce Context](/knowledge/commerce-context/)
+- [What Is AI-Native Commerce?](/knowledge/ai-native-commerce/)
+- [Platform: behavioral data](/platform/#behavior)

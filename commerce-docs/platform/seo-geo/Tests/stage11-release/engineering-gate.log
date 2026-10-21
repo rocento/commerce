@@ -1,0 +1,42 @@
+{
+  "gate": "Passed",
+  "scope": "synthetic local Linux engineering budgets; not a production release approval",
+  "browser": [
+    {
+      "width": 1440,
+      "path": "/",
+      "median_lcp_ms": 1548,
+      "max_cls": 0.00012143614969135802
+    },
+    {
+      "width": 1440,
+      "path": "/products/apples",
+      "median_lcp_ms": 2160,
+      "max_cls": 0.00012143614969135802
+    },
+    {
+      "width": 1440,
+      "path": "/categories/fruit",
+      "median_lcp_ms": 1540,
+      "max_cls": 0.00012143614969135802
+    },
+    {
+      "width": 390,
+      "path": "/",
+      "median_lcp_ms": 1544,
+      "max_cls": 0.011935378809999774
+    },
+    {
+      "width": 390,
+      "path": "/products/apples",
+      "median_lcp_ms": 1692,
+      "max_cls": 0.011935378809999774
+    },
+    {
+      "width": 390,
+      "path": "/categories/fruit",
+      "median_lcp_ms": 1340,
+      "max_cls": 0.011935378809999774
+    }
+  ]
+}

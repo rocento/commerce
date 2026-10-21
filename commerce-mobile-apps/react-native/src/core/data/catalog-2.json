@@ -1,0 +1,49 @@
+{
+  "merchantId": "00000000-0000-0000-0000-000000000002",
+  "categories": [
+    {
+      "id": "40000000-0000-0000-0000-000000000002",
+      "name": "The collection",
+      "nameAr": "المجموعة",
+      "slug": "featured"
+    }
+  ],
+  "products": [
+    {
+      "id": "50000000-0000-0000-0000-000000000021",
+      "name": "Everyday tote",
+      "nameAr": "حقيبة يومية",
+      "description": "Thoughtfully selected for your everyday. Explore the details of this demo product.",
+      "descriptionAr": "منتج مختار بعناية لاحتياجاتك اليومية. استكشف تفاصيل هذا المنتج التجريبي.",
+      "price": "32.00",
+      "currency": "USD",
+      "in_stock": true,
+      "category_id": "40000000-0000-0000-0000-000000000002",
+      "symbol": "bag"
+    },
+    {
+      "id": "50000000-0000-0000-0000-000000000022",
+      "name": "Linen essentials",
+      "nameAr": "أساسيات الكتان",
+      "description": "Thoughtfully selected for your everyday. Explore the details of this demo product.",
+      "descriptionAr": "منتج مختار بعناية لاحتياجاتك اليومية. استكشف تفاصيل هذا المنتج التجريبي.",
+      "price": "48.00",
+      "currency": "USD",
+      "in_stock": true,
+      "category_id": "40000000-0000-0000-0000-000000000002",
+      "symbol": "shirt"
+    },
+    {
+      "id": "50000000-0000-0000-0000-000000000023",
+      "name": "Ceramic cup",
+      "nameAr": "كوب سيراميك",
+      "description": "Thoughtfully selected for your everyday. Explore the details of this demo product.",
+      "descriptionAr": "منتج مختار بعناية لاحتياجاتك اليومية. استكشف تفاصيل هذا المنتج التجريبي.",
+      "price": "18.00",
+      "currency": "USD",
+      "in_stock": true,
+      "category_id": "40000000-0000-0000-0000-000000000002",
+      "symbol": "cup"
+    }
+  ]
+}

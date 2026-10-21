@@ -1,0 +1,56 @@
+{
+  "created_count": 7,
+  "verified_count": 7,
+  "existing_products_unchanged": 154,
+  "products": [
+    {
+      "name": "Cod Fillets 500g",
+      "id": "37736eea-2d04-49be-9bc8-2c1ba17a7257",
+      "price": "8.00",
+      "attribute_count": 9,
+      "stock_sources": 44
+    },
+    {
+      "name": "Tilapia Fillets 500g",
+      "id": "4b678116-71c5-4872-bc18-e3b58b0bb208",
+      "price": "5.50",
+      "attribute_count": 9,
+      "stock_sources": 44
+    },
+    {
+      "name": "Whole Sea Bass 600g",
+      "id": "b97c3e9b-8b0d-4565-aaba-b0fb2ceab588",
+      "price": "9.00",
+      "attribute_count": 9,
+      "stock_sources": 44
+    },
+    {
+      "name": "Mackerel Fillets 500g",
+      "id": "9b702e26-fc6d-4aa0-89cc-63d0d31f7741",
+      "price": "6.50",
+      "attribute_count": 9,
+      "stock_sources": 44
+    },
+    {
+      "name": "Whole Sardines 500g",
+      "id": "4afd3db5-79a0-4b38-aa4e-d1a053db762d",
+      "price": "4.00",
+      "attribute_count": 9,
+      "stock_sources": 44
+    },
+    {
+      "name": "Squid Rings 500g",
+      "id": "3201c39d-6115-4752-9d0c-c8f076c3dd1a",
+      "price": "7.00",
+      "attribute_count": 9,
+      "stock_sources": 44
+    },
+    {
+      "name": "Whole Mussels 1kg",
+      "id": "52761900-b41f-4b93-90cb-2ffe7dc10b66",
+      "price": "8.50",
+      "attribute_count": 9,
+      "stock_sources": 44
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "operation": "upsert",
+  "payload": {
+    "attributes": {
+      "Color": "Red"
+    },
+    "availability": {
+      "description": "Availability varies by delivery location. Choose a delivery location to confirm eligibility and stock.",
+      "status": "unresolved"
+    },
+    "currency": "USD",
+    "description": "Crisp orchard apples, sold by the kilogram.",
+    "id": "00000000-0000-0000-0000-000000000002",
+    "image": null,
+    "installation_id": "cd5e6c75-61a0-43fe-ad34-4ae6cb804731",
+    "locale": "en",
+    "market": "default",
+    "parent_id": null,
+    "price": "6.75",
+    "price_diagnostic": "public_catalog_price",
+    "product_type": "simple",
+    "representation_version": "288c5f6a5ab0fbd8786d3f5b546b94f445932006a854a4f350eb6663fe59eed4",
+    "schema_version": 1,
+    "sku": "APPLE",
+    "title": "Stage nine apples",
+    "url": "https://shop.example.test/products/apples",
+    "variant_dimensions": []
+  },
+  "version": 8
+}

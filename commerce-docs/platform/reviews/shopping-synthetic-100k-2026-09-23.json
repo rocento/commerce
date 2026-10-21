@@ -1,0 +1,614 @@
+{
+  "created_at": "2026-09-23T11:12:07.584592+00:00",
+  "cases": 100000,
+  "turns": 112500,
+  "measurement": "local_engine_and_python_route_only",
+  "actual_llm_calls": 0,
+  "full_assistant_evaluated": false,
+  "outcomes": {
+    "passed": 72245,
+    "failed": 21505,
+    "review": 6250
+  },
+  "families": {
+    "search": {
+      "fallback_turns": 0,
+      "cases": 6250,
+      "passed": 6250
+    },
+    "conversational_search": {
+      "fallback_turns": 2755,
+      "cases": 6250,
+      "failed": 2755,
+      "passed": 3495
+    },
+    "typos": {
+      "fallback_turns": 6250,
+      "cases": 6250,
+      "failed": 6250
+    },
+    "price_constraints": {
+      "fallback_turns": 0,
+      "cases": 6250,
+      "passed": 6250
+    },
+    "add_cart": {
+      "fallback_turns": 0,
+      "cases": 6250,
+      "passed": 6250
+    },
+    "remove_cart": {
+      "fallback_turns": 0,
+      "cases": 6250,
+      "passed": 6250
+    },
+    "wishlist_to_cart": {
+      "fallback_turns": 0,
+      "cases": 6250,
+      "passed": 6250
+    },
+    "cart_to_wishlist": {
+      "fallback_turns": 0,
+      "cases": 6250,
+      "passed": 6250
+    },
+    "negation": {
+      "fallback_turns": 6250,
+      "cases": 6250,
+      "passed": 6250
+    },
+    "conflicting_actions": {
+      "fallback_turns": 0,
+      "cases": 6250,
+      "passed": 6250
+    },
+    "compound_checkout": {
+      "fallback_turns": 0,
+      "cases": 6250,
+      "passed": 6250
+    },
+    "address_followup": {
+      "fallback_turns": 0,
+      "cases": 6250,
+      "passed": 6250
+    },
+    "product_followup": {
+      "fallback_turns": 0,
+      "cases": 6250,
+      "passed": 6250
+    },
+    "arabic": {
+      "fallback_turns": 6250,
+      "cases": 6250,
+      "failed": 6250
+    },
+    "mixed_language": {
+      "fallback_turns": 6250,
+      "cases": 6250,
+      "failed": 6250
+    },
+    "requirements_review": {
+      "fallback_turns": 0,
+      "cases": 6250,
+      "review": 6250
+    }
+  },
+  "scopes": {
+    "english": {
+      "cases": 87500,
+      "passed": 72245,
+      "failed": 9005,
+      "review": 6250
+    },
+    "expansion_target": {
+      "cases": 12500,
+      "failed": 12500
+    }
+  },
+  "routes": {
+    "search": 16554,
+    "fallback": 27755,
+    "cart_action": 25000,
+    "wishlist_to_cart": 6250,
+    "clarify": 19800,
+    "guided_action": 12500,
+    "unmapped": 4641
+  },
+  "mismatch_fields": {
+    "status": 21505,
+    "intent": 21505,
+    "entities.productText": 9005
+  },
+  "intent_confusion": {
+    "PRODUCT_SEARCH -> PRODUCT_SEARCH": 15995,
+    "PRODUCT_SEARCH -> None": 21505,
+    "ADD_TO_CART -> ADD_TO_CART": 18750,
+    "REMOVE_FROM_CART -> REMOVE_FROM_CART": 6250,
+    "CART_MOVE_FROM_WISHLIST -> CART_MOVE_FROM_WISHLIST": 6250,
+    "CART_MOVE_TO_WISHLIST -> CART_MOVE_TO_WISHLIST": 6250,
+    "None -> None": 12500,
+    "START_CHECKOUT -> START_CHECKOUT": 6250,
+    "CREATE_ORDER -> CREATE_ORDER": 12500
+  },
+  "latency_ms": {
+    "mean": 1.042,
+    "p50": 1.036,
+    "p95": 1.408
+  },
+  "examples": {
+    "conversational_search": [
+      {
+        "id": "756303549810c5a64bbb",
+        "messages": [
+          "I was hoping to buy hats under $270"
+        ],
+        "failures": [
+          {
+            "turn": 0,
+            "field": "status",
+            "expected": "RESOLVED",
+            "actual": "UNKNOWN"
+          },
+          {
+            "turn": 0,
+            "field": "intent",
+            "expected": "PRODUCT_SEARCH",
+            "actual": null
+          },
+          {
+            "turn": 0,
+            "field": "entities.productText",
+            "expected": "hats",
+            "actual": null
+          }
+        ]
+      },
+      {
+        "id": "786911f911f30b3e95a9",
+        "messages": [
+          "I need mugs under $560"
+        ],
+        "failures": [
+          {
+            "turn": 0,
+            "field": "status",
+            "expected": "RESOLVED",
+            "actual": "UNKNOWN"
+          },
+          {
+            "turn": 0,
+            "field": "intent",
+            "expected": "PRODUCT_SEARCH",
+            "actual": null
+          },
+          {
+            "turn": 0,
+            "field": "entities.productText",
+            "expected": "mugs",
+            "actual": null
+          }
+        ]
+      },
+      {
+        "id": "aaee5480ec0652bcb5a9",
+        "messages": [
+          "could you got any headphones under $410"
+        ],
+        "failures": [
+          {
+            "turn": 0,
+            "field": "status",
+            "expected": "RESOLVED",
+            "actual": "UNKNOWN"
+          },
+          {
+            "turn": 0,
+            "field": "intent",
+            "expected": "PRODUCT_SEARCH",
+            "actual": null
+          },
+          {
+            "turn": 0,
+            "field": "entities.productText",
+            "expected": "headphones",
+            "actual": null
+          }
+        ]
+      },
+      {
+        "id": "c608c84e4280a380e293",
+        "messages": [
+          "please I need brown rice under $870"
+        ],
+        "failures": [
+          {
+            "turn": 0,
+            "field": "status",
+            "expected": "RESOLVED",
+            "actual": "UNKNOWN"
+          },
+          {
+            "turn": 0,
+            "field": "intent",
+            "expected": "PRODUCT_SEARCH",
+            "actual": null
+          },
+          {
+            "turn": 0,
+            "field": "entities.productText",
+            "expected": "brown rice",
+            "actual": null
+          }
+        ]
+      },
+      {
+        "id": "4d5e868b9ff75d7f088c",
+        "messages": [
+          "please I was hoping to buy soap under $80"
+        ],
+        "failures": [
+          {
+            "turn": 0,
+            "field": "status",
+            "expected": "RESOLVED",
+            "actual": "UNKNOWN"
+          },
+          {
+            "turn": 0,
+            "field": "intent",
+            "expected": "PRODUCT_SEARCH",
+            "actual": null
+          },
+          {
+            "turn": 0,
+            "field": "entities.productText",
+            "expected": "soap",
+            "actual": null
+          }
+        ]
+      }
+    ],
+    "typos": [
+      {
+        "id": "18c2dc3914e9d8f31d9b",
+        "messages": [
+          "please looking fr moisturizer under $670"
+        ],
+        "failures": [
+          {
+            "turn": 0,
+            "field": "status",
+            "expected": "RESOLVED",
+            "actual": "UNKNOWN"
+          },
+          {
+            "turn": 0,
+            "field": "intent",
+            "expected": "PRODUCT_SEARCH",
+            "actual": null
+          },
+          {
+            "turn": 0,
+            "field": "entities.productText",
+            "expected": "moisturizer",
+            "actual": null
+          }
+        ]
+      },
+      {
+        "id": "a07f296761ef4dcd81a7",
+        "messages": [
+          "would you fnd headphones under $670"
+        ],
+        "failures": [
+          {
+            "turn": 0,
+            "field": "status",
+            "expected": "RESOLVED",
+            "actual": "UNKNOWN"
+          },
+          {
+            "turn": 0,
+            "field": "intent",
+            "expected": "PRODUCT_SEARCH",
+            "actual": null
+          },
+          {
+            "turn": 0,
+            "field": "entities.productText",
+            "expected": "headphones",
+            "actual": null
+          }
+        ]
+      },
+      {
+        "id": "2a7a103af4db8ce4871d",
+        "messages": [
+          "can you looking fr dates under $545"
+        ],
+        "failures": [
+          {
+            "turn": 0,
+            "field": "status",
+            "expected": "RESOLVED",
+            "actual": "UNKNOWN"
+          },
+          {
+            "turn": 0,
+            "field": "intent",
+            "expected": "PRODUCT_SEARCH",
+            "actual": null
+          },
+          {
+            "turn": 0,
+            "field": "entities.productText",
+            "expected": "dates",
+            "actual": null
+          }
+        ]
+      },
+      {
+        "id": "585e353955492078404e",
+        "messages": [
+          "can you showw me cheese under $580"
+        ],
+        "failures": [
+          {
+            "turn": 0,
+            "field": "status",
+            "expected": "RESOLVED",
+            "actual": "UNKNOWN"
+          },
+          {
+            "turn": 0,
+            "field": "intent",
+            "expected": "PRODUCT_SEARCH",
+            "actual": null
+          },
+          {
+            "turn": 0,
+            "field": "entities.productText",
+            "expected": "cheese",
+            "actual": null
+          }
+        ]
+      },
+      {
+        "id": "ab875914327b859e7814",
+        "messages": [
+          "would you looking fr cat food under $130"
+        ],
+        "failures": [
+          {
+            "turn": 0,
+            "field": "status",
+            "expected": "RESOLVED",
+            "actual": "UNKNOWN"
+          },
+          {
+            "turn": 0,
+            "field": "intent",
+            "expected": "PRODUCT_SEARCH",
+            "actual": null
+          },
+          {
+            "turn": 0,
+            "field": "entities.productText",
+            "expected": "cat food",
+            "actual": null
+          }
+        ]
+      }
+    ],
+    "arabic": [
+      {
+        "id": "2493d3fab69b21cea51e",
+        "messages": [
+          "عندكم جبنة بسعر أقل من 700 دولار"
+        ],
+        "failures": [
+          {
+            "turn": 0,
+            "field": "status",
+            "expected": "RESOLVED",
+            "actual": "UNKNOWN"
+          },
+          {
+            "turn": 0,
+            "field": "intent",
+            "expected": "PRODUCT_SEARCH",
+            "actual": null
+          }
+        ]
+      },
+      {
+        "id": "dfa62cb06d69244d5b69",
+        "messages": [
+          "أريد أرز بسعر أقل من 385 جنيه"
+        ],
+        "failures": [
+          {
+            "turn": 0,
+            "field": "status",
+            "expected": "RESOLVED",
+            "actual": "UNKNOWN"
+          },
+          {
+            "turn": 0,
+            "field": "intent",
+            "expected": "PRODUCT_SEARCH",
+            "actual": null
+          }
+        ]
+      },
+      {
+        "id": "571beb2e4ead4ea199ee",
+        "messages": [
+          "عايز حذاء بأقل من 400 جنيه"
+        ],
+        "failures": [
+          {
+            "turn": 0,
+            "field": "status",
+            "expected": "RESOLVED",
+            "actual": "UNKNOWN"
+          },
+          {
+            "turn": 0,
+            "field": "intent",
+            "expected": "PRODUCT_SEARCH",
+            "actual": null
+          }
+        ]
+      },
+      {
+        "id": "7532a62df93bea550aa6",
+        "messages": [
+          "أبحث عن جبنة تحت 30 دولار"
+        ],
+        "failures": [
+          {
+            "turn": 0,
+            "field": "status",
+            "expected": "RESOLVED",
+            "actual": "UNKNOWN"
+          },
+          {
+            "turn": 0,
+            "field": "intent",
+            "expected": "PRODUCT_SEARCH",
+            "actual": null
+          }
+        ]
+      },
+      {
+        "id": "88e2d4784bb90915b669",
+        "messages": [
+          "عندكم أرز بسعر أقل من 655 دولار"
+        ],
+        "failures": [
+          {
+            "turn": 0,
+            "field": "status",
+            "expected": "RESOLVED",
+            "actual": "UNKNOWN"
+          },
+          {
+            "turn": 0,
+            "field": "intent",
+            "expected": "PRODUCT_SEARCH",
+            "actual": null
+          }
+        ]
+      }
+    ],
+    "mixed_language": [
+      {
+        "id": "b7bb353bc45e9008a8db",
+        "messages": [
+          "بدور على bananas under $385"
+        ],
+        "failures": [
+          {
+            "turn": 0,
+            "field": "status",
+            "expected": "RESOLVED",
+            "actual": "UNKNOWN"
+          },
+          {
+            "turn": 0,
+            "field": "intent",
+            "expected": "PRODUCT_SEARCH",
+            "actual": null
+          }
+        ]
+      },
+      {
+        "id": "2649fc4cbabe6308655b",
+        "messages": [
+          "محتاج chargers under $310"
+        ],
+        "failures": [
+          {
+            "turn": 0,
+            "field": "status",
+            "expected": "RESOLVED",
+            "actual": "UNKNOWN"
+          },
+          {
+            "turn": 0,
+            "field": "intent",
+            "expected": "PRODUCT_SEARCH",
+            "actual": null
+          }
+        ]
+      },
+      {
+        "id": "4aa59e910a4c075c8d47",
+        "messages": [
+          "بدور على mugs under $915"
+        ],
+        "failures": [
+          {
+            "turn": 0,
+            "field": "status",
+            "expected": "RESOLVED",
+            "actual": "UNKNOWN"
+          },
+          {
+            "turn": 0,
+            "field": "intent",
+            "expected": "PRODUCT_SEARCH",
+            "actual": null
+          }
+        ]
+      },
+      {
+        "id": "013e4861e978a36b8110",
+        "messages": [
+          "محتاج baby wipes under $285"
+        ],
+        "failures": [
+          {
+            "turn": 0,
+            "field": "status",
+            "expected": "RESOLVED",
+            "actual": "UNKNOWN"
+          },
+          {
+            "turn": 0,
+            "field": "intent",
+            "expected": "PRODUCT_SEARCH",
+            "actual": null
+          }
+        ]
+      },
+      {
+        "id": "b63b404b0c3ac24f304a",
+        "messages": [
+          "عندكم lentils under $655"
+        ],
+        "failures": [
+          {
+            "turn": 0,
+            "field": "status",
+            "expected": "RESOLVED",
+            "actual": "UNKNOWN"
+          },
+          {
+            "turn": 0,
+            "field": "intent",
+            "expected": "PRODUCT_SEARCH",
+            "actual": null
+          }
+        ]
+      }
+    ]
+  },
+  "route_gap_families": {
+    "price_constraints": 1511,
+    "requirements_review": 3130
+  },
+  "semantic_pass_but_unmapped": 1511,
+  "reporter_sha256": "44bcc6797686401fbf5cec6e70dd1a2e8f0544c57ec1b418541bde1437b439cf"
+}

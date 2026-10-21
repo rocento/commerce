@@ -1,0 +1,56 @@
+{
+  "ai-service/evals/lab/live-baseline.json": {
+    "sha256": "84c724dd49c8e0b51e4b5a3216c3a9ef4532146dca82df915363b6649e476469",
+    "matches_current": true,
+    "matches_git_HEAD": true,
+    "git_HEAD_available": true
+  },
+  "ai-service/evals/lab/baseline.json": {
+    "sha256": "df8a6c541a59b510d9191e2433a5ca261092a5221988937c0e139e950e672929",
+    "matches_current": true,
+    "matches_git_HEAD": true,
+    "git_HEAD_available": true
+  },
+  "ai-service/evals/lab/english-baseline.json": {
+    "sha256": "6472e6e5c20ae61238eee107d6472be9dc8fffb7037e180ae8eae500924fa41e",
+    "matches_current": true,
+    "matches_git_HEAD": true,
+    "git_HEAD_available": true
+  },
+  "ai-service/evals/lab/english-live-baseline.json": {
+    "sha256": "1143a04a4f7cb1cd65f6a35df2b2553a5ec8da365e0669934b69c2091a7fddc9",
+    "matches_current": true,
+    "matches_git_HEAD": true,
+    "git_HEAD_available": true
+  },
+  "ai-service/evals/lab/live-thresholds.json": {
+    "sha256": "c73112b5ed9fa5c8b460fa3729a11bd046364d16f4d450502d600bb1e322a473",
+    "matches_current": true,
+    "matches_git_HEAD": true,
+    "git_HEAD_available": true
+  },
+  "ai-service/evals/lab/thresholds.json": {
+    "sha256": "c4dd4a9e891966908c528753a7ac32930819087aedd23fc502f8f5d7e605600d",
+    "matches_current": true,
+    "matches_git_HEAD": true,
+    "git_HEAD_available": true
+  },
+  "ai-service/evals/lab/english-live-thresholds.json": {
+    "sha256": "d23464cda0ccf3e6ce5b5ef9a4991fa6a9e1a800ac9f3acc91bad5e4ad6cc4e5",
+    "matches_current": true,
+    "matches_git_HEAD": true,
+    "git_HEAD_available": true
+  },
+  "ai-service/evals/lab/english-thresholds.json": {
+    "sha256": "f1eb992334e1ff9e8f935a5011df23a83e74465a9f129a815666a5c4338a12d5",
+    "matches_current": true,
+    "matches_git_HEAD": true,
+    "git_HEAD_available": true
+  },
+  "ai-service/evals/lab/commerce-v1.json": {
+    "sha256": "670ce61ccdbb4675b0789d40f0f08b3ae69d5ba87ad205f1f9b3b69849bcd55a",
+    "matches_current": true,
+    "matches_git_HEAD": true,
+    "git_HEAD_available": true
+  }
+}

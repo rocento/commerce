@@ -1,0 +1,7546 @@
+[
+  {
+    "id": "BoundPlan:valid",
+    "contract": "BoundPlan",
+    "valid": true,
+    "value": {
+      "schema_version": "1.0",
+      "playbook": {
+        "schema_version": "1.0",
+        "id": "playbook://commerce/discovery",
+        "version": "1.0.0",
+        "schema_major": 1
+      },
+      "context": {
+        "schema_version": "1.0",
+        "tenant_id": "00000000-0000-0000-0000-000000000001",
+        "store_id": "00000000-0000-0000-0000-000000000001",
+        "actor_id": null,
+        "principal_id": null,
+        "session_id": "00000000-0000-0000-0000-000000000001",
+        "request_id": "00000000-0000-0000-0000-000000000001",
+        "channel": "evaluation",
+        "scopes": []
+      },
+      "nodes": [
+        {
+          "schema_version": "1.0",
+          "id": "schema",
+          "skill": {
+            "schema_version": "1.0",
+            "id": "skill://catalog/schema",
+            "version": "1.0.0",
+            "schema_major": 1
+          },
+          "depends_on": [],
+          "max_calls": 1,
+          "required": true,
+          "arguments_json": null
+        },
+        {
+          "schema_version": "1.0",
+          "id": "interpret",
+          "skill": {
+            "schema_version": "1.0",
+            "id": "skill://reasoning/shopping",
+            "version": "1.0.0",
+            "schema_major": 1
+          },
+          "depends_on": [
+            "schema"
+          ],
+          "max_calls": 1,
+          "required": true,
+          "arguments_json": null
+        },
+        {
+          "schema_version": "1.0",
+          "id": "reference",
+          "skill": {
+            "schema_version": "1.0",
+            "id": "skill://catalog/facts",
+            "version": "1.0.0",
+            "schema_major": 1
+          },
+          "depends_on": [
+            "interpret"
+          ],
+          "max_calls": 1,
+          "required": false,
+          "arguments_json": null
+        },
+        {
+          "schema_version": "1.0",
+          "id": "search",
+          "skill": {
+            "schema_version": "1.0",
+            "id": "skill://catalog/search",
+            "version": "1.0.0",
+            "schema_major": 1
+          },
+          "depends_on": [
+            "interpret"
+          ],
+          "max_calls": 1,
+          "required": false,
+          "arguments_json": null
+        },
+        {
+          "schema_version": "1.0",
+          "id": "compare",
+          "skill": {
+            "schema_version": "1.0",
+            "id": "skill://catalog/compare",
+            "version": "1.0.0",
+            "schema_major": 1
+          },
+          "depends_on": [
+            "interpret"
+          ],
+          "max_calls": 1,
+          "required": false,
+          "arguments_json": null
+        },
+        {
+          "schema_version": "1.0",
+          "id": "rank",
+          "skill": {
+            "schema_version": "1.0",
+            "id": "skill://ranking/candidates",
+            "version": "1.0.0",
+            "schema_major": 1
+          },
+          "depends_on": [
+            "search"
+          ],
+          "max_calls": 1,
+          "required": false,
+          "arguments_json": null
+        }
+      ],
+      "budget": {
+        "schema_version": "1.0",
+        "max_steps": 16,
+        "max_tool_calls": 8,
+        "max_model_calls": 1,
+        "max_tokens": 131072,
+        "max_cost_micros": 100000,
+        "max_mutations": 0,
+        "timeout_ms": 25000,
+        "max_concurrency": 1
+      },
+      "reserved": {
+        "schema_version": "1.0",
+        "tools": 4,
+        "models": 1,
+        "tokens": 65536,
+        "cost_micros": 100000,
+        "mutations": 0
+      },
+      "policies": [],
+      "mode": "read",
+      "reason": "known_journey",
+      "stop_conditions": [
+        "budget_exceeded",
+        "policy_denied",
+        "dependency_failed",
+        "hard_constraint_conflict",
+        "deadline",
+        "cancelled"
+      ]
+    }
+  },
+  {
+    "id": "BoundPlan:unknown_field",
+    "contract": "BoundPlan",
+    "valid": false,
+    "value": {
+      "schema_version": "1.0",
+      "playbook": {
+        "schema_version": "1.0",
+        "id": "playbook://commerce/discovery",
+        "version": "1.0.0",
+        "schema_major": 1
+      },
+      "context": {
+        "schema_version": "1.0",
+        "tenant_id": "00000000-0000-0000-0000-000000000001",
+        "store_id": "00000000-0000-0000-0000-000000000001",
+        "actor_id": null,
+        "principal_id": null,
+        "session_id": "00000000-0000-0000-0000-000000000001",
+        "request_id": "00000000-0000-0000-0000-000000000001",
+        "channel": "evaluation",
+        "scopes": []
+      },
+      "nodes": [
+        {
+          "schema_version": "1.0",
+          "id": "schema",
+          "skill": {
+            "schema_version": "1.0",
+            "id": "skill://catalog/schema",
+            "version": "1.0.0",
+            "schema_major": 1
+          },
+          "depends_on": [],
+          "max_calls": 1,
+          "required": true,
+          "arguments_json": null
+        },
+        {
+          "schema_version": "1.0",
+          "id": "interpret",
+          "skill": {
+            "schema_version": "1.0",
+            "id": "skill://reasoning/shopping",
+            "version": "1.0.0",
+            "schema_major": 1
+          },
+          "depends_on": [
+            "schema"
+          ],
+          "max_calls": 1,
+          "required": true,
+          "arguments_json": null
+        },
+        {
+          "schema_version": "1.0",
+          "id": "reference",
+          "skill": {
+            "schema_version": "1.0",
+            "id": "skill://catalog/facts",
+            "version": "1.0.0",
+            "schema_major": 1
+          },
+          "depends_on": [
+            "interpret"
+          ],
+          "max_calls": 1,
+          "required": false,
+          "arguments_json": null
+        },
+        {
+          "schema_version": "1.0",
+          "id": "search",
+          "skill": {
+            "schema_version": "1.0",
+            "id": "skill://catalog/search",
+            "version": "1.0.0",
+            "schema_major": 1
+          },
+          "depends_on": [
+            "interpret"
+          ],
+          "max_calls": 1,
+          "required": false,
+          "arguments_json": null
+        },
+        {
+          "schema_version": "1.0",
+          "id": "compare",
+          "skill": {
+            "schema_version": "1.0",
+            "id": "skill://catalog/compare",
+            "version": "1.0.0",
+            "schema_major": 1
+          },
+          "depends_on": [
+            "interpret"
+          ],
+          "max_calls": 1,
+          "required": false,
+          "arguments_json": null
+        },
+        {
+          "schema_version": "1.0",
+          "id": "rank",
+          "skill": {
+            "schema_version": "1.0",
+            "id": "skill://ranking/candidates",
+            "version": "1.0.0",
+            "schema_major": 1
+          },
+          "depends_on": [
+            "search"
+          ],
+          "max_calls": 1,
+          "required": false,
+          "arguments_json": null
+        }
+      ],
+      "budget": {
+        "schema_version": "1.0",
+        "max_steps": 16,
+        "max_tool_calls": 8,
+        "max_model_calls": 1,
+        "max_tokens": 131072,
+        "max_cost_micros": 100000,
+        "max_mutations": 0,
+        "timeout_ms": 25000,
+        "max_concurrency": 1
+      },
+      "reserved": {
+        "schema_version": "1.0",
+        "tools": 4,
+        "models": 1,
+        "tokens": 65536,
+        "cost_micros": 100000,
+        "mutations": 0
+      },
+      "policies": [],
+      "mode": "read",
+      "reason": "known_journey",
+      "stop_conditions": [
+        "budget_exceeded",
+        "policy_denied",
+        "dependency_failed",
+        "hard_constraint_conflict",
+        "deadline",
+        "cancelled"
+      ],
+      "tool": "arbitrary_unregistered"
+    }
+  },
+  {
+    "id": "BoundPlan:future_version",
+    "contract": "BoundPlan",
+    "valid": false,
+    "value": {
+      "schema_version": "99.0",
+      "playbook": {
+        "schema_version": "1.0",
+        "id": "playbook://commerce/discovery",
+        "version": "1.0.0",
+        "schema_major": 1
+      },
+      "context": {
+        "schema_version": "1.0",
+        "tenant_id": "00000000-0000-0000-0000-000000000001",
+        "store_id": "00000000-0000-0000-0000-000000000001",
+        "actor_id": null,
+        "principal_id": null,
+        "session_id": "00000000-0000-0000-0000-000000000001",
+        "request_id": "00000000-0000-0000-0000-000000000001",
+        "channel": "evaluation",
+        "scopes": []
+      },
+      "nodes": [
+        {
+          "schema_version": "1.0",
+          "id": "schema",
+          "skill": {
+            "schema_version": "1.0",
+            "id": "skill://catalog/schema",
+            "version": "1.0.0",
+            "schema_major": 1
+          },
+          "depends_on": [],
+          "max_calls": 1,
+          "required": true,
+          "arguments_json": null
+        },
+        {
+          "schema_version": "1.0",
+          "id": "interpret",
+          "skill": {
+            "schema_version": "1.0",
+            "id": "skill://reasoning/shopping",
+            "version": "1.0.0",
+            "schema_major": 1
+          },
+          "depends_on": [
+            "schema"
+          ],
+          "max_calls": 1,
+          "required": true,
+          "arguments_json": null
+        },
+        {
+          "schema_version": "1.0",
+          "id": "reference",
+          "skill": {
+            "schema_version": "1.0",
+            "id": "skill://catalog/facts",
+            "version": "1.0.0",
+            "schema_major": 1
+          },
+          "depends_on": [
+            "interpret"
+          ],
+          "max_calls": 1,
+          "required": false,
+          "arguments_json": null
+        },
+        {
+          "schema_version": "1.0",
+          "id": "search",
+          "skill": {
+            "schema_version": "1.0",
+            "id": "skill://catalog/search",
+            "version": "1.0.0",
+            "schema_major": 1
+          },
+          "depends_on": [
+            "interpret"
+          ],
+          "max_calls": 1,
+          "required": false,
+          "arguments_json": null
+        },
+        {
+          "schema_version": "1.0",
+          "id": "compare",
+          "skill": {
+            "schema_version": "1.0",
+            "id": "skill://catalog/compare",
+            "version": "1.0.0",
+            "schema_major": 1
+          },
+          "depends_on": [
+            "interpret"
+          ],
+          "max_calls": 1,
+          "required": false,
+          "arguments_json": null
+        },
+        {
+          "schema_version": "1.0",
+          "id": "rank",
+          "skill": {
+            "schema_version": "1.0",
+            "id": "skill://ranking/candidates",
+            "version": "1.0.0",
+            "schema_major": 1
+          },
+          "depends_on": [
+            "search"
+          ],
+          "max_calls": 1,
+          "required": false,
+          "arguments_json": null
+        }
+      ],
+      "budget": {
+        "schema_version": "1.0",
+        "max_steps": 16,
+        "max_tool_calls": 8,
+        "max_model_calls": 1,
+        "max_tokens": 131072,
+        "max_cost_micros": 100000,
+        "max_mutations": 0,
+        "timeout_ms": 25000,
+        "max_concurrency": 1
+      },
+      "reserved": {
+        "schema_version": "1.0",
+        "tools": 4,
+        "models": 1,
+        "tokens": 65536,
+        "cost_micros": 100000,
+        "mutations": 0
+      },
+      "policies": [],
+      "mode": "read",
+      "reason": "known_journey",
+      "stop_conditions": [
+        "budget_exceeded",
+        "policy_denied",
+        "dependency_failed",
+        "hard_constraint_conflict",
+        "deadline",
+        "cancelled"
+      ]
+    }
+  },
+  {
+    "id": "BoundPlan:missing_playbook",
+    "contract": "BoundPlan",
+    "valid": false,
+    "value": {
+      "schema_version": "1.0",
+      "context": {
+        "schema_version": "1.0",
+        "tenant_id": "00000000-0000-0000-0000-000000000001",
+        "store_id": "00000000-0000-0000-0000-000000000001",
+        "actor_id": null,
+        "principal_id": null,
+        "session_id": "00000000-0000-0000-0000-000000000001",
+        "request_id": "00000000-0000-0000-0000-000000000001",
+        "channel": "evaluation",
+        "scopes": []
+      },
+      "nodes": [
+        {
+          "schema_version": "1.0",
+          "id": "schema",
+          "skill": {
+            "schema_version": "1.0",
+            "id": "skill://catalog/schema",
+            "version": "1.0.0",
+            "schema_major": 1
+          },
+          "depends_on": [],
+          "max_calls": 1,
+          "required": true,
+          "arguments_json": null
+        },
+        {
+          "schema_version": "1.0",
+          "id": "interpret",
+          "skill": {
+            "schema_version": "1.0",
+            "id": "skill://reasoning/shopping",
+            "version": "1.0.0",
+            "schema_major": 1
+          },
+          "depends_on": [
+            "schema"
+          ],
+          "max_calls": 1,
+          "required": true,
+          "arguments_json": null
+        },
+        {
+          "schema_version": "1.0",
+          "id": "reference",
+          "skill": {
+            "schema_version": "1.0",
+            "id": "skill://catalog/facts",
+            "version": "1.0.0",
+            "schema_major": 1
+          },
+          "depends_on": [
+            "interpret"
+          ],
+          "max_calls": 1,
+          "required": false,
+          "arguments_json": null
+        },
+        {
+          "schema_version": "1.0",
+          "id": "search",
+          "skill": {
+            "schema_version": "1.0",
+            "id": "skill://catalog/search",
+            "version": "1.0.0",
+            "schema_major": 1
+          },
+          "depends_on": [
+            "interpret"
+          ],
+          "max_calls": 1,
+          "required": false,
+          "arguments_json": null
+        },
+        {
+          "schema_version": "1.0",
+          "id": "compare",
+          "skill": {
+            "schema_version": "1.0",
+            "id": "skill://catalog/compare",
+            "version": "1.0.0",
+            "schema_major": 1
+          },
+          "depends_on": [
+            "interpret"
+          ],
+          "max_calls": 1,
+          "required": false,
+          "arguments_json": null
+        },
+        {
+          "schema_version": "1.0",
+          "id": "rank",
+          "skill": {
+            "schema_version": "1.0",
+            "id": "skill://ranking/candidates",
+            "version": "1.0.0",
+            "schema_major": 1
+          },
+          "depends_on": [
+            "search"
+          ],
+          "max_calls": 1,
+          "required": false,
+          "arguments_json": null
+        }
+      ],
+      "budget": {
+        "schema_version": "1.0",
+        "max_steps": 16,
+        "max_tool_calls": 8,
+        "max_model_calls": 1,
+        "max_tokens": 131072,
+        "max_cost_micros": 100000,
+        "max_mutations": 0,
+        "timeout_ms": 25000,
+        "max_concurrency": 1
+      },
+      "reserved": {
+        "schema_version": "1.0",
+        "tools": 4,
+        "models": 1,
+        "tokens": 65536,
+        "cost_micros": 100000,
+        "mutations": 0
+      },
+      "policies": [],
+      "mode": "read",
+      "reason": "known_journey",
+      "stop_conditions": [
+        "budget_exceeded",
+        "policy_denied",
+        "dependency_failed",
+        "hard_constraint_conflict",
+        "deadline",
+        "cancelled"
+      ]
+    }
+  },
+  {
+    "id": "BoundPlan:missing_context",
+    "contract": "BoundPlan",
+    "valid": false,
+    "value": {
+      "schema_version": "1.0",
+      "playbook": {
+        "schema_version": "1.0",
+        "id": "playbook://commerce/discovery",
+        "version": "1.0.0",
+        "schema_major": 1
+      },
+      "nodes": [
+        {
+          "schema_version": "1.0",
+          "id": "schema",
+          "skill": {
+            "schema_version": "1.0",
+            "id": "skill://catalog/schema",
+            "version": "1.0.0",
+            "schema_major": 1
+          },
+          "depends_on": [],
+          "max_calls": 1,
+          "required": true,
+          "arguments_json": null
+        },
+        {
+          "schema_version": "1.0",
+          "id": "interpret",
+          "skill": {
+            "schema_version": "1.0",
+            "id": "skill://reasoning/shopping",
+            "version": "1.0.0",
+            "schema_major": 1
+          },
+          "depends_on": [
+            "schema"
+          ],
+          "max_calls": 1,
+          "required": true,
+          "arguments_json": null
+        },
+        {
+          "schema_version": "1.0",
+          "id": "reference",
+          "skill": {
+            "schema_version": "1.0",
+            "id": "skill://catalog/facts",
+            "version": "1.0.0",
+            "schema_major": 1
+          },
+          "depends_on": [
+            "interpret"
+          ],
+          "max_calls": 1,
+          "required": false,
+          "arguments_json": null
+        },
+        {
+          "schema_version": "1.0",
+          "id": "search",
+          "skill": {
+            "schema_version": "1.0",
+            "id": "skill://catalog/search",
+            "version": "1.0.0",
+            "schema_major": 1
+          },
+          "depends_on": [
+            "interpret"
+          ],
+          "max_calls": 1,
+          "required": false,
+          "arguments_json": null
+        },
+        {
+          "schema_version": "1.0",
+          "id": "compare",
+          "skill": {
+            "schema_version": "1.0",
+            "id": "skill://catalog/compare",
+            "version": "1.0.0",
+            "schema_major": 1
+          },
+          "depends_on": [
+            "interpret"
+          ],
+          "max_calls": 1,
+          "required": false,
+          "arguments_json": null
+        },
+        {
+          "schema_version": "1.0",
+          "id": "rank",
+          "skill": {
+            "schema_version": "1.0",
+            "id": "skill://ranking/candidates",
+            "version": "1.0.0",
+            "schema_major": 1
+          },
+          "depends_on": [
+            "search"
+          ],
+          "max_calls": 1,
+          "required": false,
+          "arguments_json": null
+        }
+      ],
+      "budget": {
+        "schema_version": "1.0",
+        "max_steps": 16,
+        "max_tool_calls": 8,
+        "max_model_calls": 1,
+        "max_tokens": 131072,
+        "max_cost_micros": 100000,
+        "max_mutations": 0,
+        "timeout_ms": 25000,
+        "max_concurrency": 1
+      },
+      "reserved": {
+        "schema_version": "1.0",
+        "tools": 4,
+        "models": 1,
+        "tokens": 65536,
+        "cost_micros": 100000,
+        "mutations": 0
+      },
+      "policies": [],
+      "mode": "read",
+      "reason": "known_journey",
+      "stop_conditions": [
+        "budget_exceeded",
+        "policy_denied",
+        "dependency_failed",
+        "hard_constraint_conflict",
+        "deadline",
+        "cancelled"
+      ]
+    }
+  },
+  {
+    "id": "BoundPlan:missing_nodes",
+    "contract": "BoundPlan",
+    "valid": false,
+    "value": {
+      "schema_version": "1.0",
+      "playbook": {
+        "schema_version": "1.0",
+        "id": "playbook://commerce/discovery",
+        "version": "1.0.0",
+        "schema_major": 1
+      },
+      "context": {
+        "schema_version": "1.0",
+        "tenant_id": "00000000-0000-0000-0000-000000000001",
+        "store_id": "00000000-0000-0000-0000-000000000001",
+        "actor_id": null,
+        "principal_id": null,
+        "session_id": "00000000-0000-0000-0000-000000000001",
+        "request_id": "00000000-0000-0000-0000-000000000001",
+        "channel": "evaluation",
+        "scopes": []
+      },
+      "budget": {
+        "schema_version": "1.0",
+        "max_steps": 16,
+        "max_tool_calls": 8,
+        "max_model_calls": 1,
+        "max_tokens": 131072,
+        "max_cost_micros": 100000,
+        "max_mutations": 0,
+        "timeout_ms": 25000,
+        "max_concurrency": 1
+      },
+      "reserved": {
+        "schema_version": "1.0",
+        "tools": 4,
+        "models": 1,
+        "tokens": 65536,
+        "cost_micros": 100000,
+        "mutations": 0
+      },
+      "policies": [],
+      "mode": "read",
+      "reason": "known_journey",
+      "stop_conditions": [
+        "budget_exceeded",
+        "policy_denied",
+        "dependency_failed",
+        "hard_constraint_conflict",
+        "deadline",
+        "cancelled"
+      ]
+    }
+  },
+  {
+    "id": "BoundPlan:missing_budget",
+    "contract": "BoundPlan",
+    "valid": false,
+    "value": {
+      "schema_version": "1.0",
+      "playbook": {
+        "schema_version": "1.0",
+        "id": "playbook://commerce/discovery",
+        "version": "1.0.0",
+        "schema_major": 1
+      },
+      "context": {
+        "schema_version": "1.0",
+        "tenant_id": "00000000-0000-0000-0000-000000000001",
+        "store_id": "00000000-0000-0000-0000-000000000001",
+        "actor_id": null,
+        "principal_id": null,
+        "session_id": "00000000-0000-0000-0000-000000000001",
+        "request_id": "00000000-0000-0000-0000-000000000001",
+        "channel": "evaluation",
+        "scopes": []
+      },
+      "nodes": [
+        {
+          "schema_version": "1.0",
+          "id": "schema",
+          "skill": {
+            "schema_version": "1.0",
+            "id": "skill://catalog/schema",
+            "version": "1.0.0",
+            "schema_major": 1
+          },
+          "depends_on": [],
+          "max_calls": 1,
+          "required": true,
+          "arguments_json": null
+        },
+        {
+          "schema_version": "1.0",
+          "id": "interpret",
+          "skill": {
+            "schema_version": "1.0",
+            "id": "skill://reasoning/shopping",
+            "version": "1.0.0",
+            "schema_major": 1
+          },
+          "depends_on": [
+            "schema"
+          ],
+          "max_calls": 1,
+          "required": true,
+          "arguments_json": null
+        },
+        {
+          "schema_version": "1.0",
+          "id": "reference",
+          "skill": {
+            "schema_version": "1.0",
+            "id": "skill://catalog/facts",
+            "version": "1.0.0",
+            "schema_major": 1
+          },
+          "depends_on": [
+            "interpret"
+          ],
+          "max_calls": 1,
+          "required": false,
+          "arguments_json": null
+        },
+        {
+          "schema_version": "1.0",
+          "id": "search",
+          "skill": {
+            "schema_version": "1.0",
+            "id": "skill://catalog/search",
+            "version": "1.0.0",
+            "schema_major": 1
+          },
+          "depends_on": [
+            "interpret"
+          ],
+          "max_calls": 1,
+          "required": false,
+          "arguments_json": null
+        },
+        {
+          "schema_version": "1.0",
+          "id": "compare",
+          "skill": {
+            "schema_version": "1.0",
+            "id": "skill://catalog/compare",
+            "version": "1.0.0",
+            "schema_major": 1
+          },
+          "depends_on": [
+            "interpret"
+          ],
+          "max_calls": 1,
+          "required": false,
+          "arguments_json": null
+        },
+        {
+          "schema_version": "1.0",
+          "id": "rank",
+          "skill": {
+            "schema_version": "1.0",
+            "id": "skill://ranking/candidates",
+            "version": "1.0.0",
+            "schema_major": 1
+          },
+          "depends_on": [
+            "search"
+          ],
+          "max_calls": 1,
+          "required": false,
+          "arguments_json": null
+        }
+      ],
+      "reserved": {
+        "schema_version": "1.0",
+        "tools": 4,
+        "models": 1,
+        "tokens": 65536,
+        "cost_micros": 100000,
+        "mutations": 0
+      },
+      "policies": [],
+      "mode": "read",
+      "reason": "known_journey",
+      "stop_conditions": [
+        "budget_exceeded",
+        "policy_denied",
+        "dependency_failed",
+        "hard_constraint_conflict",
+        "deadline",
+        "cancelled"
+      ]
+    }
+  },
+  {
+    "id": "BoundPlan:missing_reserved",
+    "contract": "BoundPlan",
+    "valid": false,
+    "value": {
+      "schema_version": "1.0",
+      "playbook": {
+        "schema_version": "1.0",
+        "id": "playbook://commerce/discovery",
+        "version": "1.0.0",
+        "schema_major": 1
+      },
+      "context": {
+        "schema_version": "1.0",
+        "tenant_id": "00000000-0000-0000-0000-000000000001",
+        "store_id": "00000000-0000-0000-0000-000000000001",
+        "actor_id": null,
+        "principal_id": null,
+        "session_id": "00000000-0000-0000-0000-000000000001",
+        "request_id": "00000000-0000-0000-0000-000000000001",
+        "channel": "evaluation",
+        "scopes": []
+      },
+      "nodes": [
+        {
+          "schema_version": "1.0",
+          "id": "schema",
+          "skill": {
+            "schema_version": "1.0",
+            "id": "skill://catalog/schema",
+            "version": "1.0.0",
+            "schema_major": 1
+          },
+          "depends_on": [],
+          "max_calls": 1,
+          "required": true,
+          "arguments_json": null
+        },
+        {
+          "schema_version": "1.0",
+          "id": "interpret",
+          "skill": {
+            "schema_version": "1.0",
+            "id": "skill://reasoning/shopping",
+            "version": "1.0.0",
+            "schema_major": 1
+          },
+          "depends_on": [
+            "schema"
+          ],
+          "max_calls": 1,
+          "required": true,
+          "arguments_json": null
+        },
+        {
+          "schema_version": "1.0",
+          "id": "reference",
+          "skill": {
+            "schema_version": "1.0",
+            "id": "skill://catalog/facts",
+            "version": "1.0.0",
+            "schema_major": 1
+          },
+          "depends_on": [
+            "interpret"
+          ],
+          "max_calls": 1,
+          "required": false,
+          "arguments_json": null
+        },
+        {
+          "schema_version": "1.0",
+          "id": "search",
+          "skill": {
+            "schema_version": "1.0",
+            "id": "skill://catalog/search",
+            "version": "1.0.0",
+            "schema_major": 1
+          },
+          "depends_on": [
+            "interpret"
+          ],
+          "max_calls": 1,
+          "required": false,
+          "arguments_json": null
+        },
+        {
+          "schema_version": "1.0",
+          "id": "compare",
+          "skill": {
+            "schema_version": "1.0",
+            "id": "skill://catalog/compare",
+            "version": "1.0.0",
+            "schema_major": 1
+          },
+          "depends_on": [
+            "interpret"
+          ],
+          "max_calls": 1,
+          "required": false,
+          "arguments_json": null
+        },
+        {
+          "schema_version": "1.0",
+          "id": "rank",
+          "skill": {
+            "schema_version": "1.0",
+            "id": "skill://ranking/candidates",
+            "version": "1.0.0",
+            "schema_major": 1
+          },
+          "depends_on": [
+            "search"
+          ],
+          "max_calls": 1,
+          "required": false,
+          "arguments_json": null
+        }
+      ],
+      "budget": {
+        "schema_version": "1.0",
+        "max_steps": 16,
+        "max_tool_calls": 8,
+        "max_model_calls": 1,
+        "max_tokens": 131072,
+        "max_cost_micros": 100000,
+        "max_mutations": 0,
+        "timeout_ms": 25000,
+        "max_concurrency": 1
+      },
+      "policies": [],
+      "mode": "read",
+      "reason": "known_journey",
+      "stop_conditions": [
+        "budget_exceeded",
+        "policy_denied",
+        "dependency_failed",
+        "hard_constraint_conflict",
+        "deadline",
+        "cancelled"
+      ]
+    }
+  },
+  {
+    "id": "BoundPlan:missing_mode",
+    "contract": "BoundPlan",
+    "valid": false,
+    "value": {
+      "schema_version": "1.0",
+      "playbook": {
+        "schema_version": "1.0",
+        "id": "playbook://commerce/discovery",
+        "version": "1.0.0",
+        "schema_major": 1
+      },
+      "context": {
+        "schema_version": "1.0",
+        "tenant_id": "00000000-0000-0000-0000-000000000001",
+        "store_id": "00000000-0000-0000-0000-000000000001",
+        "actor_id": null,
+        "principal_id": null,
+        "session_id": "00000000-0000-0000-0000-000000000001",
+        "request_id": "00000000-0000-0000-0000-000000000001",
+        "channel": "evaluation",
+        "scopes": []
+      },
+      "nodes": [
+        {
+          "schema_version": "1.0",
+          "id": "schema",
+          "skill": {
+            "schema_version": "1.0",
+            "id": "skill://catalog/schema",
+            "version": "1.0.0",
+            "schema_major": 1
+          },
+          "depends_on": [],
+          "max_calls": 1,
+          "required": true,
+          "arguments_json": null
+        },
+        {
+          "schema_version": "1.0",
+          "id": "interpret",
+          "skill": {
+            "schema_version": "1.0",
+            "id": "skill://reasoning/shopping",
+            "version": "1.0.0",
+            "schema_major": 1
+          },
+          "depends_on": [
+            "schema"
+          ],
+          "max_calls": 1,
+          "required": true,
+          "arguments_json": null
+        },
+        {
+          "schema_version": "1.0",
+          "id": "reference",
+          "skill": {
+            "schema_version": "1.0",
+            "id": "skill://catalog/facts",
+            "version": "1.0.0",
+            "schema_major": 1
+          },
+          "depends_on": [
+            "interpret"
+          ],
+          "max_calls": 1,
+          "required": false,
+          "arguments_json": null
+        },
+        {
+          "schema_version": "1.0",
+          "id": "search",
+          "skill": {
+            "schema_version": "1.0",
+            "id": "skill://catalog/search",
+            "version": "1.0.0",
+            "schema_major": 1
+          },
+          "depends_on": [
+            "interpret"
+          ],
+          "max_calls": 1,
+          "required": false,
+          "arguments_json": null
+        },
+        {
+          "schema_version": "1.0",
+          "id": "compare",
+          "skill": {
+            "schema_version": "1.0",
+            "id": "skill://catalog/compare",
+            "version": "1.0.0",
+            "schema_major": 1
+          },
+          "depends_on": [
+            "interpret"
+          ],
+          "max_calls": 1,
+          "required": false,
+          "arguments_json": null
+        },
+        {
+          "schema_version": "1.0",
+          "id": "rank",
+          "skill": {
+            "schema_version": "1.0",
+            "id": "skill://ranking/candidates",
+            "version": "1.0.0",
+            "schema_major": 1
+          },
+          "depends_on": [
+            "search"
+          ],
+          "max_calls": 1,
+          "required": false,
+          "arguments_json": null
+        }
+      ],
+      "budget": {
+        "schema_version": "1.0",
+        "max_steps": 16,
+        "max_tool_calls": 8,
+        "max_model_calls": 1,
+        "max_tokens": 131072,
+        "max_cost_micros": 100000,
+        "max_mutations": 0,
+        "timeout_ms": 25000,
+        "max_concurrency": 1
+      },
+      "reserved": {
+        "schema_version": "1.0",
+        "tools": 4,
+        "models": 1,
+        "tokens": 65536,
+        "cost_micros": 100000,
+        "mutations": 0
+      },
+      "policies": [],
+      "reason": "known_journey",
+      "stop_conditions": [
+        "budget_exceeded",
+        "policy_denied",
+        "dependency_failed",
+        "hard_constraint_conflict",
+        "deadline",
+        "cancelled"
+      ]
+    }
+  },
+  {
+    "id": "BoundPlan:missing_reason",
+    "contract": "BoundPlan",
+    "valid": false,
+    "value": {
+      "schema_version": "1.0",
+      "playbook": {
+        "schema_version": "1.0",
+        "id": "playbook://commerce/discovery",
+        "version": "1.0.0",
+        "schema_major": 1
+      },
+      "context": {
+        "schema_version": "1.0",
+        "tenant_id": "00000000-0000-0000-0000-000000000001",
+        "store_id": "00000000-0000-0000-0000-000000000001",
+        "actor_id": null,
+        "principal_id": null,
+        "session_id": "00000000-0000-0000-0000-000000000001",
+        "request_id": "00000000-0000-0000-0000-000000000001",
+        "channel": "evaluation",
+        "scopes": []
+      },
+      "nodes": [
+        {
+          "schema_version": "1.0",
+          "id": "schema",
+          "skill": {
+            "schema_version": "1.0",
+            "id": "skill://catalog/schema",
+            "version": "1.0.0",
+            "schema_major": 1
+          },
+          "depends_on": [],
+          "max_calls": 1,
+          "required": true,
+          "arguments_json": null
+        },
+        {
+          "schema_version": "1.0",
+          "id": "interpret",
+          "skill": {
+            "schema_version": "1.0",
+            "id": "skill://reasoning/shopping",
+            "version": "1.0.0",
+            "schema_major": 1
+          },
+          "depends_on": [
+            "schema"
+          ],
+          "max_calls": 1,
+          "required": true,
+          "arguments_json": null
+        },
+        {
+          "schema_version": "1.0",
+          "id": "reference",
+          "skill": {
+            "schema_version": "1.0",
+            "id": "skill://catalog/facts",
+            "version": "1.0.0",
+            "schema_major": 1
+          },
+          "depends_on": [
+            "interpret"
+          ],
+          "max_calls": 1,
+          "required": false,
+          "arguments_json": null
+        },
+        {
+          "schema_version": "1.0",
+          "id": "search",
+          "skill": {
+            "schema_version": "1.0",
+            "id": "skill://catalog/search",
+            "version": "1.0.0",
+            "schema_major": 1
+          },
+          "depends_on": [
+            "interpret"
+          ],
+          "max_calls": 1,
+          "required": false,
+          "arguments_json": null
+        },
+        {
+          "schema_version": "1.0",
+          "id": "compare",
+          "skill": {
+            "schema_version": "1.0",
+            "id": "skill://catalog/compare",
+            "version": "1.0.0",
+            "schema_major": 1
+          },
+          "depends_on": [
+            "interpret"
+          ],
+          "max_calls": 1,
+          "required": false,
+          "arguments_json": null
+        },
+        {
+          "schema_version": "1.0",
+          "id": "rank",
+          "skill": {
+            "schema_version": "1.0",
+            "id": "skill://ranking/candidates",
+            "version": "1.0.0",
+            "schema_major": 1
+          },
+          "depends_on": [
+            "search"
+          ],
+          "max_calls": 1,
+          "required": false,
+          "arguments_json": null
+        }
+      ],
+      "budget": {
+        "schema_version": "1.0",
+        "max_steps": 16,
+        "max_tool_calls": 8,
+        "max_model_calls": 1,
+        "max_tokens": 131072,
+        "max_cost_micros": 100000,
+        "max_mutations": 0,
+        "timeout_ms": 25000,
+        "max_concurrency": 1
+      },
+      "reserved": {
+        "schema_version": "1.0",
+        "tools": 4,
+        "models": 1,
+        "tokens": 65536,
+        "cost_micros": 100000,
+        "mutations": 0
+      },
+      "policies": [],
+      "mode": "read",
+      "stop_conditions": [
+        "budget_exceeded",
+        "policy_denied",
+        "dependency_failed",
+        "hard_constraint_conflict",
+        "deadline",
+        "cancelled"
+      ]
+    }
+  },
+  {
+    "id": "BoundPlan:type_playbook",
+    "contract": "BoundPlan",
+    "valid": false,
+    "value": {
+      "schema_version": "1.0",
+      "playbook": "wrong-object",
+      "context": {
+        "schema_version": "1.0",
+        "tenant_id": "00000000-0000-0000-0000-000000000001",
+        "store_id": "00000000-0000-0000-0000-000000000001",
+        "actor_id": null,
+        "principal_id": null,
+        "session_id": "00000000-0000-0000-0000-000000000001",
+        "request_id": "00000000-0000-0000-0000-000000000001",
+        "channel": "evaluation",
+        "scopes": []
+      },
+      "nodes": [
+        {
+          "schema_version": "1.0",
+          "id": "schema",
+          "skill": {
+            "schema_version": "1.0",
+            "id": "skill://catalog/schema",
+            "version": "1.0.0",
+            "schema_major": 1
+          },
+          "depends_on": [],
+          "max_calls": 1,
+          "required": true,
+          "arguments_json": null
+        },
+        {
+          "schema_version": "1.0",
+          "id": "interpret",
+          "skill": {
+            "schema_version": "1.0",
+            "id": "skill://reasoning/shopping",
+            "version": "1.0.0",
+            "schema_major": 1
+          },
+          "depends_on": [
+            "schema"
+          ],
+          "max_calls": 1,
+          "required": true,
+          "arguments_json": null
+        },
+        {
+          "schema_version": "1.0",
+          "id": "reference",
+          "skill": {
+            "schema_version": "1.0",
+            "id": "skill://catalog/facts",
+            "version": "1.0.0",
+            "schema_major": 1
+          },
+          "depends_on": [
+            "interpret"
+          ],
+          "max_calls": 1,
+          "required": false,
+          "arguments_json": null
+        },
+        {
+          "schema_version": "1.0",
+          "id": "search",
+          "skill": {
+            "schema_version": "1.0",
+            "id": "skill://catalog/search",
+            "version": "1.0.0",
+            "schema_major": 1
+          },
+          "depends_on": [
+            "interpret"
+          ],
+          "max_calls": 1,
+          "required": false,
+          "arguments_json": null
+        },
+        {
+          "schema_version": "1.0",
+          "id": "compare",
+          "skill": {
+            "schema_version": "1.0",
+            "id": "skill://catalog/compare",
+            "version": "1.0.0",
+            "schema_major": 1
+          },
+          "depends_on": [
+            "interpret"
+          ],
+          "max_calls": 1,
+          "required": false,
+          "arguments_json": null
+        },
+        {
+          "schema_version": "1.0",
+          "id": "rank",
+          "skill": {
+            "schema_version": "1.0",
+            "id": "skill://ranking/candidates",
+            "version": "1.0.0",
+            "schema_major": 1
+          },
+          "depends_on": [
+            "search"
+          ],
+          "max_calls": 1,
+          "required": false,
+          "arguments_json": null
+        }
+      ],
+      "budget": {
+        "schema_version": "1.0",
+        "max_steps": 16,
+        "max_tool_calls": 8,
+        "max_model_calls": 1,
+        "max_tokens": 131072,
+        "max_cost_micros": 100000,
+        "max_mutations": 0,
+        "timeout_ms": 25000,
+        "max_concurrency": 1
+      },
+      "reserved": {
+        "schema_version": "1.0",
+        "tools": 4,
+        "models": 1,
+        "tokens": 65536,
+        "cost_micros": 100000,
+        "mutations": 0
+      },
+      "policies": [],
+      "mode": "read",
+      "reason": "known_journey",
+      "stop_conditions": [
+        "budget_exceeded",
+        "policy_denied",
+        "dependency_failed",
+        "hard_constraint_conflict",
+        "deadline",
+        "cancelled"
+      ]
+    }
+  },
+  {
+    "id": "BoundPlan:type_context",
+    "contract": "BoundPlan",
+    "valid": false,
+    "value": {
+      "schema_version": "1.0",
+      "playbook": {
+        "schema_version": "1.0",
+        "id": "playbook://commerce/discovery",
+        "version": "1.0.0",
+        "schema_major": 1
+      },
+      "context": "wrong-object",
+      "nodes": [
+        {
+          "schema_version": "1.0",
+          "id": "schema",
+          "skill": {
+            "schema_version": "1.0",
+            "id": "skill://catalog/schema",
+            "version": "1.0.0",
+            "schema_major": 1
+          },
+          "depends_on": [],
+          "max_calls": 1,
+          "required": true,
+          "arguments_json": null
+        },
+        {
+          "schema_version": "1.0",
+          "id": "interpret",
+          "skill": {
+            "schema_version": "1.0",
+            "id": "skill://reasoning/shopping",
+            "version": "1.0.0",
+            "schema_major": 1
+          },
+          "depends_on": [
+            "schema"
+          ],
+          "max_calls": 1,
+          "required": true,
+          "arguments_json": null
+        },
+        {
+          "schema_version": "1.0",
+          "id": "reference",
+          "skill": {
+            "schema_version": "1.0",
+            "id": "skill://catalog/facts",
+            "version": "1.0.0",
+            "schema_major": 1
+          },
+          "depends_on": [
+            "interpret"
+          ],
+          "max_calls": 1,
+          "required": false,
+          "arguments_json": null
+        },
+        {
+          "schema_version": "1.0",
+          "id": "search",
+          "skill": {
+            "schema_version": "1.0",
+            "id": "skill://catalog/search",
+            "version": "1.0.0",
+            "schema_major": 1
+          },
+          "depends_on": [
+            "interpret"
+          ],
+          "max_calls": 1,
+          "required": false,
+          "arguments_json": null
+        },
+        {
+          "schema_version": "1.0",
+          "id": "compare",
+          "skill": {
+            "schema_version": "1.0",
+            "id": "skill://catalog/compare",
+            "version": "1.0.0",
+            "schema_major": 1
+          },
+          "depends_on": [
+            "interpret"
+          ],
+          "max_calls": 1,
+          "required": false,
+          "arguments_json": null
+        },
+        {
+          "schema_version": "1.0",
+          "id": "rank",
+          "skill": {
+            "schema_version": "1.0",
+            "id": "skill://ranking/candidates",
+            "version": "1.0.0",
+            "schema_major": 1
+          },
+          "depends_on": [
+            "search"
+          ],
+          "max_calls": 1,
+          "required": false,
+          "arguments_json": null
+        }
+      ],
+      "budget": {
+        "schema_version": "1.0",
+        "max_steps": 16,
+        "max_tool_calls": 8,
+        "max_model_calls": 1,
+        "max_tokens": 131072,
+        "max_cost_micros": 100000,
+        "max_mutations": 0,
+        "timeout_ms": 25000,
+        "max_concurrency": 1
+      },
+      "reserved": {
+        "schema_version": "1.0",
+        "tools": 4,
+        "models": 1,
+        "tokens": 65536,
+        "cost_micros": 100000,
+        "mutations": 0
+      },
+      "policies": [],
+      "mode": "read",
+      "reason": "known_journey",
+      "stop_conditions": [
+        "budget_exceeded",
+        "policy_denied",
+        "dependency_failed",
+        "hard_constraint_conflict",
+        "deadline",
+        "cancelled"
+      ]
+    }
+  },
+  {
+    "id": "BoundPlan:type_nodes",
+    "contract": "BoundPlan",
+    "valid": false,
+    "value": {
+      "schema_version": "1.0",
+      "playbook": {
+        "schema_version": "1.0",
+        "id": "playbook://commerce/discovery",
+        "version": "1.0.0",
+        "schema_major": 1
+      },
+      "context": {
+        "schema_version": "1.0",
+        "tenant_id": "00000000-0000-0000-0000-000000000001",
+        "store_id": "00000000-0000-0000-0000-000000000001",
+        "actor_id": null,
+        "principal_id": null,
+        "session_id": "00000000-0000-0000-0000-000000000001",
+        "request_id": "00000000-0000-0000-0000-000000000001",
+        "channel": "evaluation",
+        "scopes": []
+      },
+      "nodes": {},
+      "budget": {
+        "schema_version": "1.0",
+        "max_steps": 16,
+        "max_tool_calls": 8,
+        "max_model_calls": 1,
+        "max_tokens": 131072,
+        "max_cost_micros": 100000,
+        "max_mutations": 0,
+        "timeout_ms": 25000,
+        "max_concurrency": 1
+      },
+      "reserved": {
+        "schema_version": "1.0",
+        "tools": 4,
+        "models": 1,
+        "tokens": 65536,
+        "cost_micros": 100000,
+        "mutations": 0
+      },
+      "policies": [],
+      "mode": "read",
+      "reason": "known_journey",
+      "stop_conditions": [
+        "budget_exceeded",
+        "policy_denied",
+        "dependency_failed",
+        "hard_constraint_conflict",
+        "deadline",
+        "cancelled"
+      ]
+    }
+  },
+  {
+    "id": "BoundPlan:type_budget",
+    "contract": "BoundPlan",
+    "valid": false,
+    "value": {
+      "schema_version": "1.0",
+      "playbook": {
+        "schema_version": "1.0",
+        "id": "playbook://commerce/discovery",
+        "version": "1.0.0",
+        "schema_major": 1
+      },
+      "context": {
+        "schema_version": "1.0",
+        "tenant_id": "00000000-0000-0000-0000-000000000001",
+        "store_id": "00000000-0000-0000-0000-000000000001",
+        "actor_id": null,
+        "principal_id": null,
+        "session_id": "00000000-0000-0000-0000-000000000001",
+        "request_id": "00000000-0000-0000-0000-000000000001",
+        "channel": "evaluation",
+        "scopes": []
+      },
+      "nodes": [
+        {
+          "schema_version": "1.0",
+          "id": "schema",
+          "skill": {
+            "schema_version": "1.0",
+            "id": "skill://catalog/schema",
+            "version": "1.0.0",
+            "schema_major": 1
+          },
+          "depends_on": [],
+          "max_calls": 1,
+          "required": true,
+          "arguments_json": null
+        },
+        {
+          "schema_version": "1.0",
+          "id": "interpret",
+          "skill": {
+            "schema_version": "1.0",
+            "id": "skill://reasoning/shopping",
+            "version": "1.0.0",
+            "schema_major": 1
+          },
+          "depends_on": [
+            "schema"
+          ],
+          "max_calls": 1,
+          "required": true,
+          "arguments_json": null
+        },
+        {
+          "schema_version": "1.0",
+          "id": "reference",
+          "skill": {
+            "schema_version": "1.0",
+            "id": "skill://catalog/facts",
+            "version": "1.0.0",
+            "schema_major": 1
+          },
+          "depends_on": [
+            "interpret"
+          ],
+          "max_calls": 1,
+          "required": false,
+          "arguments_json": null
+        },
+        {
+          "schema_version": "1.0",
+          "id": "search",
+          "skill": {
+            "schema_version": "1.0",
+            "id": "skill://catalog/search",
+            "version": "1.0.0",
+            "schema_major": 1
+          },
+          "depends_on": [
+            "interpret"
+          ],
+          "max_calls": 1,
+          "required": false,
+          "arguments_json": null
+        },
+        {
+          "schema_version": "1.0",
+          "id": "compare",
+          "skill": {
+            "schema_version": "1.0",
+            "id": "skill://catalog/compare",
+            "version": "1.0.0",
+            "schema_major": 1
+          },
+          "depends_on": [
+            "interpret"
+          ],
+          "max_calls": 1,
+          "required": false,
+          "arguments_json": null
+        },
+        {
+          "schema_version": "1.0",
+          "id": "rank",
+          "skill": {
+            "schema_version": "1.0",
+            "id": "skill://ranking/candidates",
+            "version": "1.0.0",
+            "schema_major": 1
+          },
+          "depends_on": [
+            "search"
+          ],
+          "max_calls": 1,
+          "required": false,
+          "arguments_json": null
+        }
+      ],
+      "budget": "wrong-object",
+      "reserved": {
+        "schema_version": "1.0",
+        "tools": 4,
+        "models": 1,
+        "tokens": 65536,
+        "cost_micros": 100000,
+        "mutations": 0
+      },
+      "policies": [],
+      "mode": "read",
+      "reason": "known_journey",
+      "stop_conditions": [
+        "budget_exceeded",
+        "policy_denied",
+        "dependency_failed",
+        "hard_constraint_conflict",
+        "deadline",
+        "cancelled"
+      ]
+    }
+  },
+  {
+    "id": "BoundPlan:type_reserved",
+    "contract": "BoundPlan",
+    "valid": false,
+    "value": {
+      "schema_version": "1.0",
+      "playbook": {
+        "schema_version": "1.0",
+        "id": "playbook://commerce/discovery",
+        "version": "1.0.0",
+        "schema_major": 1
+      },
+      "context": {
+        "schema_version": "1.0",
+        "tenant_id": "00000000-0000-0000-0000-000000000001",
+        "store_id": "00000000-0000-0000-0000-000000000001",
+        "actor_id": null,
+        "principal_id": null,
+        "session_id": "00000000-0000-0000-0000-000000000001",
+        "request_id": "00000000-0000-0000-0000-000000000001",
+        "channel": "evaluation",
+        "scopes": []
+      },
+      "nodes": [
+        {
+          "schema_version": "1.0",
+          "id": "schema",
+          "skill": {
+            "schema_version": "1.0",
+            "id": "skill://catalog/schema",
+            "version": "1.0.0",
+            "schema_major": 1
+          },
+          "depends_on": [],
+          "max_calls": 1,
+          "required": true,
+          "arguments_json": null
+        },
+        {
+          "schema_version": "1.0",
+          "id": "interpret",
+          "skill": {
+            "schema_version": "1.0",
+            "id": "skill://reasoning/shopping",
+            "version": "1.0.0",
+            "schema_major": 1
+          },
+          "depends_on": [
+            "schema"
+          ],
+          "max_calls": 1,
+          "required": true,
+          "arguments_json": null
+        },
+        {
+          "schema_version": "1.0",
+          "id": "reference",
+          "skill": {
+            "schema_version": "1.0",
+            "id": "skill://catalog/facts",
+            "version": "1.0.0",
+            "schema_major": 1
+          },
+          "depends_on": [
+            "interpret"
+          ],
+          "max_calls": 1,
+          "required": false,
+          "arguments_json": null
+        },
+        {
+          "schema_version": "1.0",
+          "id": "search",
+          "skill": {
+            "schema_version": "1.0",
+            "id": "skill://catalog/search",
+            "version": "1.0.0",
+            "schema_major": 1
+          },
+          "depends_on": [
+            "interpret"
+          ],
+          "max_calls": 1,
+          "required": false,
+          "arguments_json": null
+        },
+        {
+          "schema_version": "1.0",
+          "id": "compare",
+          "skill": {
+            "schema_version": "1.0",
+            "id": "skill://catalog/compare",
+            "version": "1.0.0",
+            "schema_major": 1
+          },
+          "depends_on": [
+            "interpret"
+          ],
+          "max_calls": 1,
+          "required": false,
+          "arguments_json": null
+        },
+        {
+          "schema_version": "1.0",
+          "id": "rank",
+          "skill": {
+            "schema_version": "1.0",
+            "id": "skill://ranking/candidates",
+            "version": "1.0.0",
+            "schema_major": 1
+          },
+          "depends_on": [
+            "search"
+          ],
+          "max_calls": 1,
+          "required": false,
+          "arguments_json": null
+        }
+      ],
+      "budget": {
+        "schema_version": "1.0",
+        "max_steps": 16,
+        "max_tool_calls": 8,
+        "max_model_calls": 1,
+        "max_tokens": 131072,
+        "max_cost_micros": 100000,
+        "max_mutations": 0,
+        "timeout_ms": 25000,
+        "max_concurrency": 1
+      },
+      "reserved": "wrong-object",
+      "policies": [],
+      "mode": "read",
+      "reason": "known_journey",
+      "stop_conditions": [
+        "budget_exceeded",
+        "policy_denied",
+        "dependency_failed",
+        "hard_constraint_conflict",
+        "deadline",
+        "cancelled"
+      ]
+    }
+  },
+  {
+    "id": "BoundPlan:type_policies",
+    "contract": "BoundPlan",
+    "valid": false,
+    "value": {
+      "schema_version": "1.0",
+      "playbook": {
+        "schema_version": "1.0",
+        "id": "playbook://commerce/discovery",
+        "version": "1.0.0",
+        "schema_major": 1
+      },
+      "context": {
+        "schema_version": "1.0",
+        "tenant_id": "00000000-0000-0000-0000-000000000001",
+        "store_id": "00000000-0000-0000-0000-000000000001",
+        "actor_id": null,
+        "principal_id": null,
+        "session_id": "00000000-0000-0000-0000-000000000001",
+        "request_id": "00000000-0000-0000-0000-000000000001",
+        "channel": "evaluation",
+        "scopes": []
+      },
+      "nodes": [
+        {
+          "schema_version": "1.0",
+          "id": "schema",
+          "skill": {
+            "schema_version": "1.0",
+            "id": "skill://catalog/schema",
+            "version": "1.0.0",
+            "schema_major": 1
+          },
+          "depends_on": [],
+          "max_calls": 1,
+          "required": true,
+          "arguments_json": null
+        },
+        {
+          "schema_version": "1.0",
+          "id": "interpret",
+          "skill": {
+            "schema_version": "1.0",
+            "id": "skill://reasoning/shopping",
+            "version": "1.0.0",
+            "schema_major": 1
+          },
+          "depends_on": [
+            "schema"
+          ],
+          "max_calls": 1,
+          "required": true,
+          "arguments_json": null
+        },
+        {
+          "schema_version": "1.0",
+          "id": "reference",
+          "skill": {
+            "schema_version": "1.0",
+            "id": "skill://catalog/facts",
+            "version": "1.0.0",
+            "schema_major": 1
+          },
+          "depends_on": [
+            "interpret"
+          ],
+          "max_calls": 1,
+          "required": false,
+          "arguments_json": null
+        },
+        {
+          "schema_version": "1.0",
+          "id": "search",
+          "skill": {
+            "schema_version": "1.0",
+            "id": "skill://catalog/search",
+            "version": "1.0.0",
+            "schema_major": 1
+          },
+          "depends_on": [
+            "interpret"
+          ],
+          "max_calls": 1,
+          "required": false,
+          "arguments_json": null
+        },
+        {
+          "schema_version": "1.0",
+          "id": "compare",
+          "skill": {
+            "schema_version": "1.0",
+            "id": "skill://catalog/compare",
+            "version": "1.0.0",
+            "schema_major": 1
+          },
+          "depends_on": [
+            "interpret"
+          ],
+          "max_calls": 1,
+          "required": false,
+          "arguments_json": null
+        },
+        {
+          "schema_version": "1.0",
+          "id": "rank",
+          "skill": {
+            "schema_version": "1.0",
+            "id": "skill://ranking/candidates",
+            "version": "1.0.0",
+            "schema_major": 1
+          },
+          "depends_on": [
+            "search"
+          ],
+          "max_calls": 1,
+          "required": false,
+          "arguments_json": null
+        }
+      ],
+      "budget": {
+        "schema_version": "1.0",
+        "max_steps": 16,
+        "max_tool_calls": 8,
+        "max_model_calls": 1,
+        "max_tokens": 131072,
+        "max_cost_micros": 100000,
+        "max_mutations": 0,
+        "timeout_ms": 25000,
+        "max_concurrency": 1
+      },
+      "reserved": {
+        "schema_version": "1.0",
+        "tools": 4,
+        "models": 1,
+        "tokens": 65536,
+        "cost_micros": 100000,
+        "mutations": 0
+      },
+      "policies": {},
+      "mode": "read",
+      "reason": "known_journey",
+      "stop_conditions": [
+        "budget_exceeded",
+        "policy_denied",
+        "dependency_failed",
+        "hard_constraint_conflict",
+        "deadline",
+        "cancelled"
+      ]
+    }
+  },
+  {
+    "id": "BoundPlan:type_mode",
+    "contract": "BoundPlan",
+    "valid": false,
+    "value": {
+      "schema_version": "1.0",
+      "playbook": {
+        "schema_version": "1.0",
+        "id": "playbook://commerce/discovery",
+        "version": "1.0.0",
+        "schema_major": 1
+      },
+      "context": {
+        "schema_version": "1.0",
+        "tenant_id": "00000000-0000-0000-0000-000000000001",
+        "store_id": "00000000-0000-0000-0000-000000000001",
+        "actor_id": null,
+        "principal_id": null,
+        "session_id": "00000000-0000-0000-0000-000000000001",
+        "request_id": "00000000-0000-0000-0000-000000000001",
+        "channel": "evaluation",
+        "scopes": []
+      },
+      "nodes": [
+        {
+          "schema_version": "1.0",
+          "id": "schema",
+          "skill": {
+            "schema_version": "1.0",
+            "id": "skill://catalog/schema",
+            "version": "1.0.0",
+            "schema_major": 1
+          },
+          "depends_on": [],
+          "max_calls": 1,
+          "required": true,
+          "arguments_json": null
+        },
+        {
+          "schema_version": "1.0",
+          "id": "interpret",
+          "skill": {
+            "schema_version": "1.0",
+            "id": "skill://reasoning/shopping",
+            "version": "1.0.0",
+            "schema_major": 1
+          },
+          "depends_on": [
+            "schema"
+          ],
+          "max_calls": 1,
+          "required": true,
+          "arguments_json": null
+        },
+        {
+          "schema_version": "1.0",
+          "id": "reference",
+          "skill": {
+            "schema_version": "1.0",
+            "id": "skill://catalog/facts",
+            "version": "1.0.0",
+            "schema_major": 1
+          },
+          "depends_on": [
+            "interpret"
+          ],
+          "max_calls": 1,
+          "required": false,
+          "arguments_json": null
+        },
+        {
+          "schema_version": "1.0",
+          "id": "search",
+          "skill": {
+            "schema_version": "1.0",
+            "id": "skill://catalog/search",
+            "version": "1.0.0",
+            "schema_major": 1
+          },
+          "depends_on": [
+            "interpret"
+          ],
+          "max_calls": 1,
+          "required": false,
+          "arguments_json": null
+        },
+        {
+          "schema_version": "1.0",
+          "id": "compare",
+          "skill": {
+            "schema_version": "1.0",
+            "id": "skill://catalog/compare",
+            "version": "1.0.0",
+            "schema_major": 1
+          },
+          "depends_on": [
+            "interpret"
+          ],
+          "max_calls": 1,
+          "required": false,
+          "arguments_json": null
+        },
+        {
+          "schema_version": "1.0",
+          "id": "rank",
+          "skill": {
+            "schema_version": "1.0",
+            "id": "skill://ranking/candidates",
+            "version": "1.0.0",
+            "schema_major": 1
+          },
+          "depends_on": [
+            "search"
+          ],
+          "max_calls": 1,
+          "required": false,
+          "arguments_json": null
+        }
+      ],
+      "budget": {
+        "schema_version": "1.0",
+        "max_steps": 16,
+        "max_tool_calls": 8,
+        "max_model_calls": 1,
+        "max_tokens": 131072,
+        "max_cost_micros": 100000,
+        "max_mutations": 0,
+        "timeout_ms": 25000,
+        "max_concurrency": 1
+      },
+      "reserved": {
+        "schema_version": "1.0",
+        "tools": 4,
+        "models": 1,
+        "tokens": 65536,
+        "cost_micros": 100000,
+        "mutations": 0
+      },
+      "policies": [],
+      "mode": {},
+      "reason": "known_journey",
+      "stop_conditions": [
+        "budget_exceeded",
+        "policy_denied",
+        "dependency_failed",
+        "hard_constraint_conflict",
+        "deadline",
+        "cancelled"
+      ]
+    }
+  },
+  {
+    "id": "BoundPlan:type_reason",
+    "contract": "BoundPlan",
+    "valid": false,
+    "value": {
+      "schema_version": "1.0",
+      "playbook": {
+        "schema_version": "1.0",
+        "id": "playbook://commerce/discovery",
+        "version": "1.0.0",
+        "schema_major": 1
+      },
+      "context": {
+        "schema_version": "1.0",
+        "tenant_id": "00000000-0000-0000-0000-000000000001",
+        "store_id": "00000000-0000-0000-0000-000000000001",
+        "actor_id": null,
+        "principal_id": null,
+        "session_id": "00000000-0000-0000-0000-000000000001",
+        "request_id": "00000000-0000-0000-0000-000000000001",
+        "channel": "evaluation",
+        "scopes": []
+      },
+      "nodes": [
+        {
+          "schema_version": "1.0",
+          "id": "schema",
+          "skill": {
+            "schema_version": "1.0",
+            "id": "skill://catalog/schema",
+            "version": "1.0.0",
+            "schema_major": 1
+          },
+          "depends_on": [],
+          "max_calls": 1,
+          "required": true,
+          "arguments_json": null
+        },
+        {
+          "schema_version": "1.0",
+          "id": "interpret",
+          "skill": {
+            "schema_version": "1.0",
+            "id": "skill://reasoning/shopping",
+            "version": "1.0.0",
+            "schema_major": 1
+          },
+          "depends_on": [
+            "schema"
+          ],
+          "max_calls": 1,
+          "required": true,
+          "arguments_json": null
+        },
+        {
+          "schema_version": "1.0",
+          "id": "reference",
+          "skill": {
+            "schema_version": "1.0",
+            "id": "skill://catalog/facts",
+            "version": "1.0.0",
+            "schema_major": 1
+          },
+          "depends_on": [
+            "interpret"
+          ],
+          "max_calls": 1,
+          "required": false,
+          "arguments_json": null
+        },
+        {
+          "schema_version": "1.0",
+          "id": "search",
+          "skill": {
+            "schema_version": "1.0",
+            "id": "skill://catalog/search",
+            "version": "1.0.0",
+            "schema_major": 1
+          },
+          "depends_on": [
+            "interpret"
+          ],
+          "max_calls": 1,
+          "required": false,
+          "arguments_json": null
+        },
+        {
+          "schema_version": "1.0",
+          "id": "compare",
+          "skill": {
+            "schema_version": "1.0",
+            "id": "skill://catalog/compare",
+            "version": "1.0.0",
+            "schema_major": 1
+          },
+          "depends_on": [
+            "interpret"
+          ],
+          "max_calls": 1,
+          "required": false,
+          "arguments_json": null
+        },
+        {
+          "schema_version": "1.0",
+          "id": "rank",
+          "skill": {
+            "schema_version": "1.0",
+            "id": "skill://ranking/candidates",
+            "version": "1.0.0",
+            "schema_major": 1
+          },
+          "depends_on": [
+            "search"
+          ],
+          "max_calls": 1,
+          "required": false,
+          "arguments_json": null
+        }
+      ],
+      "budget": {
+        "schema_version": "1.0",
+        "max_steps": 16,
+        "max_tool_calls": 8,
+        "max_model_calls": 1,
+        "max_tokens": 131072,
+        "max_cost_micros": 100000,
+        "max_mutations": 0,
+        "timeout_ms": 25000,
+        "max_concurrency": 1
+      },
+      "reserved": {
+        "schema_version": "1.0",
+        "tools": 4,
+        "models": 1,
+        "tokens": 65536,
+        "cost_micros": 100000,
+        "mutations": 0
+      },
+      "policies": [],
+      "mode": "read",
+      "reason": {},
+      "stop_conditions": [
+        "budget_exceeded",
+        "policy_denied",
+        "dependency_failed",
+        "hard_constraint_conflict",
+        "deadline",
+        "cancelled"
+      ]
+    }
+  },
+  {
+    "id": "BoundPlan:type_stop_conditions",
+    "contract": "BoundPlan",
+    "valid": false,
+    "value": {
+      "schema_version": "1.0",
+      "playbook": {
+        "schema_version": "1.0",
+        "id": "playbook://commerce/discovery",
+        "version": "1.0.0",
+        "schema_major": 1
+      },
+      "context": {
+        "schema_version": "1.0",
+        "tenant_id": "00000000-0000-0000-0000-000000000001",
+        "store_id": "00000000-0000-0000-0000-000000000001",
+        "actor_id": null,
+        "principal_id": null,
+        "session_id": "00000000-0000-0000-0000-000000000001",
+        "request_id": "00000000-0000-0000-0000-000000000001",
+        "channel": "evaluation",
+        "scopes": []
+      },
+      "nodes": [
+        {
+          "schema_version": "1.0",
+          "id": "schema",
+          "skill": {
+            "schema_version": "1.0",
+            "id": "skill://catalog/schema",
+            "version": "1.0.0",
+            "schema_major": 1
+          },
+          "depends_on": [],
+          "max_calls": 1,
+          "required": true,
+          "arguments_json": null
+        },
+        {
+          "schema_version": "1.0",
+          "id": "interpret",
+          "skill": {
+            "schema_version": "1.0",
+            "id": "skill://reasoning/shopping",
+            "version": "1.0.0",
+            "schema_major": 1
+          },
+          "depends_on": [
+            "schema"
+          ],
+          "max_calls": 1,
+          "required": true,
+          "arguments_json": null
+        },
+        {
+          "schema_version": "1.0",
+          "id": "reference",
+          "skill": {
+            "schema_version": "1.0",
+            "id": "skill://catalog/facts",
+            "version": "1.0.0",
+            "schema_major": 1
+          },
+          "depends_on": [
+            "interpret"
+          ],
+          "max_calls": 1,
+          "required": false,
+          "arguments_json": null
+        },
+        {
+          "schema_version": "1.0",
+          "id": "search",
+          "skill": {
+            "schema_version": "1.0",
+            "id": "skill://catalog/search",
+            "version": "1.0.0",
+            "schema_major": 1
+          },
+          "depends_on": [
+            "interpret"
+          ],
+          "max_calls": 1,
+          "required": false,
+          "arguments_json": null
+        },
+        {
+          "schema_version": "1.0",
+          "id": "compare",
+          "skill": {
+            "schema_version": "1.0",
+            "id": "skill://catalog/compare",
+            "version": "1.0.0",
+            "schema_major": 1
+          },
+          "depends_on": [
+            "interpret"
+          ],
+          "max_calls": 1,
+          "required": false,
+          "arguments_json": null
+        },
+        {
+          "schema_version": "1.0",
+          "id": "rank",
+          "skill": {
+            "schema_version": "1.0",
+            "id": "skill://ranking/candidates",
+            "version": "1.0.0",
+            "schema_major": 1
+          },
+          "depends_on": [
+            "search"
+          ],
+          "max_calls": 1,
+          "required": false,
+          "arguments_json": null
+        }
+      ],
+      "budget": {
+        "schema_version": "1.0",
+        "max_steps": 16,
+        "max_tool_calls": 8,
+        "max_model_calls": 1,
+        "max_tokens": 131072,
+        "max_cost_micros": 100000,
+        "max_mutations": 0,
+        "timeout_ms": 25000,
+        "max_concurrency": 1
+      },
+      "reserved": {
+        "schema_version": "1.0",
+        "tools": 4,
+        "models": 1,
+        "tokens": 65536,
+        "cost_micros": 100000,
+        "mutations": 0
+      },
+      "policies": [],
+      "mode": "read",
+      "reason": "known_journey",
+      "stop_conditions": {}
+    }
+  },
+  {
+    "id": "ExecutableSkill:valid",
+    "contract": "ExecutableSkill",
+    "valid": true,
+    "value": {
+      "schema_version": "1.0",
+      "id": "skill://catalog/schema",
+      "version": "1.0.0",
+      "visibility": {
+        "schema_version": "1.0",
+        "tenants": [],
+        "channels": [
+          "storefront",
+          "evaluation"
+        ],
+        "required_scopes": []
+      },
+      "dependencies": [],
+      "deprecated_after": null,
+      "disabled_after": null,
+      "kind": "skill",
+      "input_contract": "catalog://get_catalog_schema-v1",
+      "output_contract": "catalog://result-v1",
+      "risk": "R0",
+      "confirmation": "none",
+      "idempotency": "none",
+      "freshness_seconds": 30,
+      "timeout_ms": 5000,
+      "max_calls": 1,
+      "purpose": "Use the existing scoped get_catalog_schema operation.",
+      "intents": [
+        "schema"
+      ],
+      "requires": [],
+      "preconditions": [],
+      "postconditions": [
+        "typed_result"
+      ],
+      "ports": [
+        "catalog.get_catalog_schema"
+      ],
+      "max_attempts": 1,
+      "concurrency": "serial",
+      "cost_class": "remote_read",
+      "latency_class": "interactive",
+      "token_reservation": 0,
+      "cost_reservation_micros": 0,
+      "produces": [
+        "catalog_schema"
+      ],
+      "fallback": "none",
+      "executor": "assistant",
+      "policy_action": null
+    }
+  },
+  {
+    "id": "ExecutableSkill:unknown_field",
+    "contract": "ExecutableSkill",
+    "valid": false,
+    "value": {
+      "schema_version": "1.0",
+      "id": "skill://catalog/schema",
+      "version": "1.0.0",
+      "visibility": {
+        "schema_version": "1.0",
+        "tenants": [],
+        "channels": [
+          "storefront",
+          "evaluation"
+        ],
+        "required_scopes": []
+      },
+      "dependencies": [],
+      "deprecated_after": null,
+      "disabled_after": null,
+      "kind": "skill",
+      "input_contract": "catalog://get_catalog_schema-v1",
+      "output_contract": "catalog://result-v1",
+      "risk": "R0",
+      "confirmation": "none",
+      "idempotency": "none",
+      "freshness_seconds": 30,
+      "timeout_ms": 5000,
+      "max_calls": 1,
+      "purpose": "Use the existing scoped get_catalog_schema operation.",
+      "intents": [
+        "schema"
+      ],
+      "requires": [],
+      "preconditions": [],
+      "postconditions": [
+        "typed_result"
+      ],
+      "ports": [
+        "catalog.get_catalog_schema"
+      ],
+      "max_attempts": 1,
+      "concurrency": "serial",
+      "cost_class": "remote_read",
+      "latency_class": "interactive",
+      "token_reservation": 0,
+      "cost_reservation_micros": 0,
+      "produces": [
+        "catalog_schema"
+      ],
+      "fallback": "none",
+      "executor": "assistant",
+      "policy_action": null,
+      "tool": "arbitrary_unregistered"
+    }
+  },
+  {
+    "id": "ExecutableSkill:future_version",
+    "contract": "ExecutableSkill",
+    "valid": false,
+    "value": {
+      "schema_version": "99.0",
+      "id": "skill://catalog/schema",
+      "version": "1.0.0",
+      "visibility": {
+        "schema_version": "1.0",
+        "tenants": [],
+        "channels": [
+          "storefront",
+          "evaluation"
+        ],
+        "required_scopes": []
+      },
+      "dependencies": [],
+      "deprecated_after": null,
+      "disabled_after": null,
+      "kind": "skill",
+      "input_contract": "catalog://get_catalog_schema-v1",
+      "output_contract": "catalog://result-v1",
+      "risk": "R0",
+      "confirmation": "none",
+      "idempotency": "none",
+      "freshness_seconds": 30,
+      "timeout_ms": 5000,
+      "max_calls": 1,
+      "purpose": "Use the existing scoped get_catalog_schema operation.",
+      "intents": [
+        "schema"
+      ],
+      "requires": [],
+      "preconditions": [],
+      "postconditions": [
+        "typed_result"
+      ],
+      "ports": [
+        "catalog.get_catalog_schema"
+      ],
+      "max_attempts": 1,
+      "concurrency": "serial",
+      "cost_class": "remote_read",
+      "latency_class": "interactive",
+      "token_reservation": 0,
+      "cost_reservation_micros": 0,
+      "produces": [
+        "catalog_schema"
+      ],
+      "fallback": "none",
+      "executor": "assistant",
+      "policy_action": null
+    }
+  },
+  {
+    "id": "ExecutableSkill:missing_id",
+    "contract": "ExecutableSkill",
+    "valid": false,
+    "value": {
+      "schema_version": "1.0",
+      "version": "1.0.0",
+      "visibility": {
+        "schema_version": "1.0",
+        "tenants": [],
+        "channels": [
+          "storefront",
+          "evaluation"
+        ],
+        "required_scopes": []
+      },
+      "dependencies": [],
+      "deprecated_after": null,
+      "disabled_after": null,
+      "kind": "skill",
+      "input_contract": "catalog://get_catalog_schema-v1",
+      "output_contract": "catalog://result-v1",
+      "risk": "R0",
+      "confirmation": "none",
+      "idempotency": "none",
+      "freshness_seconds": 30,
+      "timeout_ms": 5000,
+      "max_calls": 1,
+      "purpose": "Use the existing scoped get_catalog_schema operation.",
+      "intents": [
+        "schema"
+      ],
+      "requires": [],
+      "preconditions": [],
+      "postconditions": [
+        "typed_result"
+      ],
+      "ports": [
+        "catalog.get_catalog_schema"
+      ],
+      "max_attempts": 1,
+      "concurrency": "serial",
+      "cost_class": "remote_read",
+      "latency_class": "interactive",
+      "token_reservation": 0,
+      "cost_reservation_micros": 0,
+      "produces": [
+        "catalog_schema"
+      ],
+      "fallback": "none",
+      "executor": "assistant",
+      "policy_action": null
+    }
+  },
+  {
+    "id": "ExecutableSkill:missing_version",
+    "contract": "ExecutableSkill",
+    "valid": false,
+    "value": {
+      "schema_version": "1.0",
+      "id": "skill://catalog/schema",
+      "visibility": {
+        "schema_version": "1.0",
+        "tenants": [],
+        "channels": [
+          "storefront",
+          "evaluation"
+        ],
+        "required_scopes": []
+      },
+      "dependencies": [],
+      "deprecated_after": null,
+      "disabled_after": null,
+      "kind": "skill",
+      "input_contract": "catalog://get_catalog_schema-v1",
+      "output_contract": "catalog://result-v1",
+      "risk": "R0",
+      "confirmation": "none",
+      "idempotency": "none",
+      "freshness_seconds": 30,
+      "timeout_ms": 5000,
+      "max_calls": 1,
+      "purpose": "Use the existing scoped get_catalog_schema operation.",
+      "intents": [
+        "schema"
+      ],
+      "requires": [],
+      "preconditions": [],
+      "postconditions": [
+        "typed_result"
+      ],
+      "ports": [
+        "catalog.get_catalog_schema"
+      ],
+      "max_attempts": 1,
+      "concurrency": "serial",
+      "cost_class": "remote_read",
+      "latency_class": "interactive",
+      "token_reservation": 0,
+      "cost_reservation_micros": 0,
+      "produces": [
+        "catalog_schema"
+      ],
+      "fallback": "none",
+      "executor": "assistant",
+      "policy_action": null
+    }
+  },
+  {
+    "id": "ExecutableSkill:missing_input_contract",
+    "contract": "ExecutableSkill",
+    "valid": false,
+    "value": {
+      "schema_version": "1.0",
+      "id": "skill://catalog/schema",
+      "version": "1.0.0",
+      "visibility": {
+        "schema_version": "1.0",
+        "tenants": [],
+        "channels": [
+          "storefront",
+          "evaluation"
+        ],
+        "required_scopes": []
+      },
+      "dependencies": [],
+      "deprecated_after": null,
+      "disabled_after": null,
+      "kind": "skill",
+      "output_contract": "catalog://result-v1",
+      "risk": "R0",
+      "confirmation": "none",
+      "idempotency": "none",
+      "freshness_seconds": 30,
+      "timeout_ms": 5000,
+      "max_calls": 1,
+      "purpose": "Use the existing scoped get_catalog_schema operation.",
+      "intents": [
+        "schema"
+      ],
+      "requires": [],
+      "preconditions": [],
+      "postconditions": [
+        "typed_result"
+      ],
+      "ports": [
+        "catalog.get_catalog_schema"
+      ],
+      "max_attempts": 1,
+      "concurrency": "serial",
+      "cost_class": "remote_read",
+      "latency_class": "interactive",
+      "token_reservation": 0,
+      "cost_reservation_micros": 0,
+      "produces": [
+        "catalog_schema"
+      ],
+      "fallback": "none",
+      "executor": "assistant",
+      "policy_action": null
+    }
+  },
+  {
+    "id": "ExecutableSkill:missing_output_contract",
+    "contract": "ExecutableSkill",
+    "valid": false,
+    "value": {
+      "schema_version": "1.0",
+      "id": "skill://catalog/schema",
+      "version": "1.0.0",
+      "visibility": {
+        "schema_version": "1.0",
+        "tenants": [],
+        "channels": [
+          "storefront",
+          "evaluation"
+        ],
+        "required_scopes": []
+      },
+      "dependencies": [],
+      "deprecated_after": null,
+      "disabled_after": null,
+      "kind": "skill",
+      "input_contract": "catalog://get_catalog_schema-v1",
+      "risk": "R0",
+      "confirmation": "none",
+      "idempotency": "none",
+      "freshness_seconds": 30,
+      "timeout_ms": 5000,
+      "max_calls": 1,
+      "purpose": "Use the existing scoped get_catalog_schema operation.",
+      "intents": [
+        "schema"
+      ],
+      "requires": [],
+      "preconditions": [],
+      "postconditions": [
+        "typed_result"
+      ],
+      "ports": [
+        "catalog.get_catalog_schema"
+      ],
+      "max_attempts": 1,
+      "concurrency": "serial",
+      "cost_class": "remote_read",
+      "latency_class": "interactive",
+      "token_reservation": 0,
+      "cost_reservation_micros": 0,
+      "produces": [
+        "catalog_schema"
+      ],
+      "fallback": "none",
+      "executor": "assistant",
+      "policy_action": null
+    }
+  },
+  {
+    "id": "ExecutableSkill:missing_purpose",
+    "contract": "ExecutableSkill",
+    "valid": false,
+    "value": {
+      "schema_version": "1.0",
+      "id": "skill://catalog/schema",
+      "version": "1.0.0",
+      "visibility": {
+        "schema_version": "1.0",
+        "tenants": [],
+        "channels": [
+          "storefront",
+          "evaluation"
+        ],
+        "required_scopes": []
+      },
+      "dependencies": [],
+      "deprecated_after": null,
+      "disabled_after": null,
+      "kind": "skill",
+      "input_contract": "catalog://get_catalog_schema-v1",
+      "output_contract": "catalog://result-v1",
+      "risk": "R0",
+      "confirmation": "none",
+      "idempotency": "none",
+      "freshness_seconds": 30,
+      "timeout_ms": 5000,
+      "max_calls": 1,
+      "intents": [
+        "schema"
+      ],
+      "requires": [],
+      "preconditions": [],
+      "postconditions": [
+        "typed_result"
+      ],
+      "ports": [
+        "catalog.get_catalog_schema"
+      ],
+      "max_attempts": 1,
+      "concurrency": "serial",
+      "cost_class": "remote_read",
+      "latency_class": "interactive",
+      "token_reservation": 0,
+      "cost_reservation_micros": 0,
+      "produces": [
+        "catalog_schema"
+      ],
+      "fallback": "none",
+      "executor": "assistant",
+      "policy_action": null
+    }
+  },
+  {
+    "id": "ExecutableSkill:missing_intents",
+    "contract": "ExecutableSkill",
+    "valid": false,
+    "value": {
+      "schema_version": "1.0",
+      "id": "skill://catalog/schema",
+      "version": "1.0.0",
+      "visibility": {
+        "schema_version": "1.0",
+        "tenants": [],
+        "channels": [
+          "storefront",
+          "evaluation"
+        ],
+        "required_scopes": []
+      },
+      "dependencies": [],
+      "deprecated_after": null,
+      "disabled_after": null,
+      "kind": "skill",
+      "input_contract": "catalog://get_catalog_schema-v1",
+      "output_contract": "catalog://result-v1",
+      "risk": "R0",
+      "confirmation": "none",
+      "idempotency": "none",
+      "freshness_seconds": 30,
+      "timeout_ms": 5000,
+      "max_calls": 1,
+      "purpose": "Use the existing scoped get_catalog_schema operation.",
+      "requires": [],
+      "preconditions": [],
+      "postconditions": [
+        "typed_result"
+      ],
+      "ports": [
+        "catalog.get_catalog_schema"
+      ],
+      "max_attempts": 1,
+      "concurrency": "serial",
+      "cost_class": "remote_read",
+      "latency_class": "interactive",
+      "token_reservation": 0,
+      "cost_reservation_micros": 0,
+      "produces": [
+        "catalog_schema"
+      ],
+      "fallback": "none",
+      "executor": "assistant",
+      "policy_action": null
+    }
+  },
+  {
+    "id": "ExecutableSkill:missing_ports",
+    "contract": "ExecutableSkill",
+    "valid": false,
+    "value": {
+      "schema_version": "1.0",
+      "id": "skill://catalog/schema",
+      "version": "1.0.0",
+      "visibility": {
+        "schema_version": "1.0",
+        "tenants": [],
+        "channels": [
+          "storefront",
+          "evaluation"
+        ],
+        "required_scopes": []
+      },
+      "dependencies": [],
+      "deprecated_after": null,
+      "disabled_after": null,
+      "kind": "skill",
+      "input_contract": "catalog://get_catalog_schema-v1",
+      "output_contract": "catalog://result-v1",
+      "risk": "R0",
+      "confirmation": "none",
+      "idempotency": "none",
+      "freshness_seconds": 30,
+      "timeout_ms": 5000,
+      "max_calls": 1,
+      "purpose": "Use the existing scoped get_catalog_schema operation.",
+      "intents": [
+        "schema"
+      ],
+      "requires": [],
+      "preconditions": [],
+      "postconditions": [
+        "typed_result"
+      ],
+      "max_attempts": 1,
+      "concurrency": "serial",
+      "cost_class": "remote_read",
+      "latency_class": "interactive",
+      "token_reservation": 0,
+      "cost_reservation_micros": 0,
+      "produces": [
+        "catalog_schema"
+      ],
+      "fallback": "none",
+      "executor": "assistant",
+      "policy_action": null
+    }
+  },
+  {
+    "id": "ExecutableSkill:missing_cost_class",
+    "contract": "ExecutableSkill",
+    "valid": false,
+    "value": {
+      "schema_version": "1.0",
+      "id": "skill://catalog/schema",
+      "version": "1.0.0",
+      "visibility": {
+        "schema_version": "1.0",
+        "tenants": [],
+        "channels": [
+          "storefront",
+          "evaluation"
+        ],
+        "required_scopes": []
+      },
+      "dependencies": [],
+      "deprecated_after": null,
+      "disabled_after": null,
+      "kind": "skill",
+      "input_contract": "catalog://get_catalog_schema-v1",
+      "output_contract": "catalog://result-v1",
+      "risk": "R0",
+      "confirmation": "none",
+      "idempotency": "none",
+      "freshness_seconds": 30,
+      "timeout_ms": 5000,
+      "max_calls": 1,
+      "purpose": "Use the existing scoped get_catalog_schema operation.",
+      "intents": [
+        "schema"
+      ],
+      "requires": [],
+      "preconditions": [],
+      "postconditions": [
+        "typed_result"
+      ],
+      "ports": [
+        "catalog.get_catalog_schema"
+      ],
+      "max_attempts": 1,
+      "concurrency": "serial",
+      "latency_class": "interactive",
+      "token_reservation": 0,
+      "cost_reservation_micros": 0,
+      "produces": [
+        "catalog_schema"
+      ],
+      "fallback": "none",
+      "executor": "assistant",
+      "policy_action": null
+    }
+  },
+  {
+    "id": "ExecutableSkill:type_id",
+    "contract": "ExecutableSkill",
+    "valid": false,
+    "value": {
+      "schema_version": "1.0",
+      "id": {},
+      "version": "1.0.0",
+      "visibility": {
+        "schema_version": "1.0",
+        "tenants": [],
+        "channels": [
+          "storefront",
+          "evaluation"
+        ],
+        "required_scopes": []
+      },
+      "dependencies": [],
+      "deprecated_after": null,
+      "disabled_after": null,
+      "kind": "skill",
+      "input_contract": "catalog://get_catalog_schema-v1",
+      "output_contract": "catalog://result-v1",
+      "risk": "R0",
+      "confirmation": "none",
+      "idempotency": "none",
+      "freshness_seconds": 30,
+      "timeout_ms": 5000,
+      "max_calls": 1,
+      "purpose": "Use the existing scoped get_catalog_schema operation.",
+      "intents": [
+        "schema"
+      ],
+      "requires": [],
+      "preconditions": [],
+      "postconditions": [
+        "typed_result"
+      ],
+      "ports": [
+        "catalog.get_catalog_schema"
+      ],
+      "max_attempts": 1,
+      "concurrency": "serial",
+      "cost_class": "remote_read",
+      "latency_class": "interactive",
+      "token_reservation": 0,
+      "cost_reservation_micros": 0,
+      "produces": [
+        "catalog_schema"
+      ],
+      "fallback": "none",
+      "executor": "assistant",
+      "policy_action": null
+    }
+  },
+  {
+    "id": "ExecutableSkill:type_version",
+    "contract": "ExecutableSkill",
+    "valid": false,
+    "value": {
+      "schema_version": "1.0",
+      "id": "skill://catalog/schema",
+      "version": {},
+      "visibility": {
+        "schema_version": "1.0",
+        "tenants": [],
+        "channels": [
+          "storefront",
+          "evaluation"
+        ],
+        "required_scopes": []
+      },
+      "dependencies": [],
+      "deprecated_after": null,
+      "disabled_after": null,
+      "kind": "skill",
+      "input_contract": "catalog://get_catalog_schema-v1",
+      "output_contract": "catalog://result-v1",
+      "risk": "R0",
+      "confirmation": "none",
+      "idempotency": "none",
+      "freshness_seconds": 30,
+      "timeout_ms": 5000,
+      "max_calls": 1,
+      "purpose": "Use the existing scoped get_catalog_schema operation.",
+      "intents": [
+        "schema"
+      ],
+      "requires": [],
+      "preconditions": [],
+      "postconditions": [
+        "typed_result"
+      ],
+      "ports": [
+        "catalog.get_catalog_schema"
+      ],
+      "max_attempts": 1,
+      "concurrency": "serial",
+      "cost_class": "remote_read",
+      "latency_class": "interactive",
+      "token_reservation": 0,
+      "cost_reservation_micros": 0,
+      "produces": [
+        "catalog_schema"
+      ],
+      "fallback": "none",
+      "executor": "assistant",
+      "policy_action": null
+    }
+  },
+  {
+    "id": "ExecutableSkill:type_visibility",
+    "contract": "ExecutableSkill",
+    "valid": false,
+    "value": {
+      "schema_version": "1.0",
+      "id": "skill://catalog/schema",
+      "version": "1.0.0",
+      "visibility": "wrong-object",
+      "dependencies": [],
+      "deprecated_after": null,
+      "disabled_after": null,
+      "kind": "skill",
+      "input_contract": "catalog://get_catalog_schema-v1",
+      "output_contract": "catalog://result-v1",
+      "risk": "R0",
+      "confirmation": "none",
+      "idempotency": "none",
+      "freshness_seconds": 30,
+      "timeout_ms": 5000,
+      "max_calls": 1,
+      "purpose": "Use the existing scoped get_catalog_schema operation.",
+      "intents": [
+        "schema"
+      ],
+      "requires": [],
+      "preconditions": [],
+      "postconditions": [
+        "typed_result"
+      ],
+      "ports": [
+        "catalog.get_catalog_schema"
+      ],
+      "max_attempts": 1,
+      "concurrency": "serial",
+      "cost_class": "remote_read",
+      "latency_class": "interactive",
+      "token_reservation": 0,
+      "cost_reservation_micros": 0,
+      "produces": [
+        "catalog_schema"
+      ],
+      "fallback": "none",
+      "executor": "assistant",
+      "policy_action": null
+    }
+  },
+  {
+    "id": "ExecutableSkill:type_dependencies",
+    "contract": "ExecutableSkill",
+    "valid": false,
+    "value": {
+      "schema_version": "1.0",
+      "id": "skill://catalog/schema",
+      "version": "1.0.0",
+      "visibility": {
+        "schema_version": "1.0",
+        "tenants": [],
+        "channels": [
+          "storefront",
+          "evaluation"
+        ],
+        "required_scopes": []
+      },
+      "dependencies": {},
+      "deprecated_after": null,
+      "disabled_after": null,
+      "kind": "skill",
+      "input_contract": "catalog://get_catalog_schema-v1",
+      "output_contract": "catalog://result-v1",
+      "risk": "R0",
+      "confirmation": "none",
+      "idempotency": "none",
+      "freshness_seconds": 30,
+      "timeout_ms": 5000,
+      "max_calls": 1,
+      "purpose": "Use the existing scoped get_catalog_schema operation.",
+      "intents": [
+        "schema"
+      ],
+      "requires": [],
+      "preconditions": [],
+      "postconditions": [
+        "typed_result"
+      ],
+      "ports": [
+        "catalog.get_catalog_schema"
+      ],
+      "max_attempts": 1,
+      "concurrency": "serial",
+      "cost_class": "remote_read",
+      "latency_class": "interactive",
+      "token_reservation": 0,
+      "cost_reservation_micros": 0,
+      "produces": [
+        "catalog_schema"
+      ],
+      "fallback": "none",
+      "executor": "assistant",
+      "policy_action": null
+    }
+  },
+  {
+    "id": "ExecutableSkill:type_kind",
+    "contract": "ExecutableSkill",
+    "valid": false,
+    "value": {
+      "schema_version": "1.0",
+      "id": "skill://catalog/schema",
+      "version": "1.0.0",
+      "visibility": {
+        "schema_version": "1.0",
+        "tenants": [],
+        "channels": [
+          "storefront",
+          "evaluation"
+        ],
+        "required_scopes": []
+      },
+      "dependencies": [],
+      "deprecated_after": null,
+      "disabled_after": null,
+      "kind": {},
+      "input_contract": "catalog://get_catalog_schema-v1",
+      "output_contract": "catalog://result-v1",
+      "risk": "R0",
+      "confirmation": "none",
+      "idempotency": "none",
+      "freshness_seconds": 30,
+      "timeout_ms": 5000,
+      "max_calls": 1,
+      "purpose": "Use the existing scoped get_catalog_schema operation.",
+      "intents": [
+        "schema"
+      ],
+      "requires": [],
+      "preconditions": [],
+      "postconditions": [
+        "typed_result"
+      ],
+      "ports": [
+        "catalog.get_catalog_schema"
+      ],
+      "max_attempts": 1,
+      "concurrency": "serial",
+      "cost_class": "remote_read",
+      "latency_class": "interactive",
+      "token_reservation": 0,
+      "cost_reservation_micros": 0,
+      "produces": [
+        "catalog_schema"
+      ],
+      "fallback": "none",
+      "executor": "assistant",
+      "policy_action": null
+    }
+  },
+  {
+    "id": "ExecutableSkill:type_input_contract",
+    "contract": "ExecutableSkill",
+    "valid": false,
+    "value": {
+      "schema_version": "1.0",
+      "id": "skill://catalog/schema",
+      "version": "1.0.0",
+      "visibility": {
+        "schema_version": "1.0",
+        "tenants": [],
+        "channels": [
+          "storefront",
+          "evaluation"
+        ],
+        "required_scopes": []
+      },
+      "dependencies": [],
+      "deprecated_after": null,
+      "disabled_after": null,
+      "kind": "skill",
+      "input_contract": {},
+      "output_contract": "catalog://result-v1",
+      "risk": "R0",
+      "confirmation": "none",
+      "idempotency": "none",
+      "freshness_seconds": 30,
+      "timeout_ms": 5000,
+      "max_calls": 1,
+      "purpose": "Use the existing scoped get_catalog_schema operation.",
+      "intents": [
+        "schema"
+      ],
+      "requires": [],
+      "preconditions": [],
+      "postconditions": [
+        "typed_result"
+      ],
+      "ports": [
+        "catalog.get_catalog_schema"
+      ],
+      "max_attempts": 1,
+      "concurrency": "serial",
+      "cost_class": "remote_read",
+      "latency_class": "interactive",
+      "token_reservation": 0,
+      "cost_reservation_micros": 0,
+      "produces": [
+        "catalog_schema"
+      ],
+      "fallback": "none",
+      "executor": "assistant",
+      "policy_action": null
+    }
+  },
+  {
+    "id": "ExecutableSkill:type_output_contract",
+    "contract": "ExecutableSkill",
+    "valid": false,
+    "value": {
+      "schema_version": "1.0",
+      "id": "skill://catalog/schema",
+      "version": "1.0.0",
+      "visibility": {
+        "schema_version": "1.0",
+        "tenants": [],
+        "channels": [
+          "storefront",
+          "evaluation"
+        ],
+        "required_scopes": []
+      },
+      "dependencies": [],
+      "deprecated_after": null,
+      "disabled_after": null,
+      "kind": "skill",
+      "input_contract": "catalog://get_catalog_schema-v1",
+      "output_contract": {},
+      "risk": "R0",
+      "confirmation": "none",
+      "idempotency": "none",
+      "freshness_seconds": 30,
+      "timeout_ms": 5000,
+      "max_calls": 1,
+      "purpose": "Use the existing scoped get_catalog_schema operation.",
+      "intents": [
+        "schema"
+      ],
+      "requires": [],
+      "preconditions": [],
+      "postconditions": [
+        "typed_result"
+      ],
+      "ports": [
+        "catalog.get_catalog_schema"
+      ],
+      "max_attempts": 1,
+      "concurrency": "serial",
+      "cost_class": "remote_read",
+      "latency_class": "interactive",
+      "token_reservation": 0,
+      "cost_reservation_micros": 0,
+      "produces": [
+        "catalog_schema"
+      ],
+      "fallback": "none",
+      "executor": "assistant",
+      "policy_action": null
+    }
+  },
+  {
+    "id": "ExecutableSkill:type_risk",
+    "contract": "ExecutableSkill",
+    "valid": false,
+    "value": {
+      "schema_version": "1.0",
+      "id": "skill://catalog/schema",
+      "version": "1.0.0",
+      "visibility": {
+        "schema_version": "1.0",
+        "tenants": [],
+        "channels": [
+          "storefront",
+          "evaluation"
+        ],
+        "required_scopes": []
+      },
+      "dependencies": [],
+      "deprecated_after": null,
+      "disabled_after": null,
+      "kind": "skill",
+      "input_contract": "catalog://get_catalog_schema-v1",
+      "output_contract": "catalog://result-v1",
+      "risk": {},
+      "confirmation": "none",
+      "idempotency": "none",
+      "freshness_seconds": 30,
+      "timeout_ms": 5000,
+      "max_calls": 1,
+      "purpose": "Use the existing scoped get_catalog_schema operation.",
+      "intents": [
+        "schema"
+      ],
+      "requires": [],
+      "preconditions": [],
+      "postconditions": [
+        "typed_result"
+      ],
+      "ports": [
+        "catalog.get_catalog_schema"
+      ],
+      "max_attempts": 1,
+      "concurrency": "serial",
+      "cost_class": "remote_read",
+      "latency_class": "interactive",
+      "token_reservation": 0,
+      "cost_reservation_micros": 0,
+      "produces": [
+        "catalog_schema"
+      ],
+      "fallback": "none",
+      "executor": "assistant",
+      "policy_action": null
+    }
+  },
+  {
+    "id": "ExecutableSkill:type_confirmation",
+    "contract": "ExecutableSkill",
+    "valid": false,
+    "value": {
+      "schema_version": "1.0",
+      "id": "skill://catalog/schema",
+      "version": "1.0.0",
+      "visibility": {
+        "schema_version": "1.0",
+        "tenants": [],
+        "channels": [
+          "storefront",
+          "evaluation"
+        ],
+        "required_scopes": []
+      },
+      "dependencies": [],
+      "deprecated_after": null,
+      "disabled_after": null,
+      "kind": "skill",
+      "input_contract": "catalog://get_catalog_schema-v1",
+      "output_contract": "catalog://result-v1",
+      "risk": "R0",
+      "confirmation": {},
+      "idempotency": "none",
+      "freshness_seconds": 30,
+      "timeout_ms": 5000,
+      "max_calls": 1,
+      "purpose": "Use the existing scoped get_catalog_schema operation.",
+      "intents": [
+        "schema"
+      ],
+      "requires": [],
+      "preconditions": [],
+      "postconditions": [
+        "typed_result"
+      ],
+      "ports": [
+        "catalog.get_catalog_schema"
+      ],
+      "max_attempts": 1,
+      "concurrency": "serial",
+      "cost_class": "remote_read",
+      "latency_class": "interactive",
+      "token_reservation": 0,
+      "cost_reservation_micros": 0,
+      "produces": [
+        "catalog_schema"
+      ],
+      "fallback": "none",
+      "executor": "assistant",
+      "policy_action": null
+    }
+  },
+  {
+    "id": "ExecutableSkill:type_idempotency",
+    "contract": "ExecutableSkill",
+    "valid": false,
+    "value": {
+      "schema_version": "1.0",
+      "id": "skill://catalog/schema",
+      "version": "1.0.0",
+      "visibility": {
+        "schema_version": "1.0",
+        "tenants": [],
+        "channels": [
+          "storefront",
+          "evaluation"
+        ],
+        "required_scopes": []
+      },
+      "dependencies": [],
+      "deprecated_after": null,
+      "disabled_after": null,
+      "kind": "skill",
+      "input_contract": "catalog://get_catalog_schema-v1",
+      "output_contract": "catalog://result-v1",
+      "risk": "R0",
+      "confirmation": "none",
+      "idempotency": {},
+      "freshness_seconds": 30,
+      "timeout_ms": 5000,
+      "max_calls": 1,
+      "purpose": "Use the existing scoped get_catalog_schema operation.",
+      "intents": [
+        "schema"
+      ],
+      "requires": [],
+      "preconditions": [],
+      "postconditions": [
+        "typed_result"
+      ],
+      "ports": [
+        "catalog.get_catalog_schema"
+      ],
+      "max_attempts": 1,
+      "concurrency": "serial",
+      "cost_class": "remote_read",
+      "latency_class": "interactive",
+      "token_reservation": 0,
+      "cost_reservation_micros": 0,
+      "produces": [
+        "catalog_schema"
+      ],
+      "fallback": "none",
+      "executor": "assistant",
+      "policy_action": null
+    }
+  },
+  {
+    "id": "ExecutableSkill:type_freshness_seconds",
+    "contract": "ExecutableSkill",
+    "valid": false,
+    "value": {
+      "schema_version": "1.0",
+      "id": "skill://catalog/schema",
+      "version": "1.0.0",
+      "visibility": {
+        "schema_version": "1.0",
+        "tenants": [],
+        "channels": [
+          "storefront",
+          "evaluation"
+        ],
+        "required_scopes": []
+      },
+      "dependencies": [],
+      "deprecated_after": null,
+      "disabled_after": null,
+      "kind": "skill",
+      "input_contract": "catalog://get_catalog_schema-v1",
+      "output_contract": "catalog://result-v1",
+      "risk": "R0",
+      "confirmation": "none",
+      "idempotency": "none",
+      "freshness_seconds": {},
+      "timeout_ms": 5000,
+      "max_calls": 1,
+      "purpose": "Use the existing scoped get_catalog_schema operation.",
+      "intents": [
+        "schema"
+      ],
+      "requires": [],
+      "preconditions": [],
+      "postconditions": [
+        "typed_result"
+      ],
+      "ports": [
+        "catalog.get_catalog_schema"
+      ],
+      "max_attempts": 1,
+      "concurrency": "serial",
+      "cost_class": "remote_read",
+      "latency_class": "interactive",
+      "token_reservation": 0,
+      "cost_reservation_micros": 0,
+      "produces": [
+        "catalog_schema"
+      ],
+      "fallback": "none",
+      "executor": "assistant",
+      "policy_action": null
+    }
+  },
+  {
+    "id": "ExecutableSkill:type_timeout_ms",
+    "contract": "ExecutableSkill",
+    "valid": false,
+    "value": {
+      "schema_version": "1.0",
+      "id": "skill://catalog/schema",
+      "version": "1.0.0",
+      "visibility": {
+        "schema_version": "1.0",
+        "tenants": [],
+        "channels": [
+          "storefront",
+          "evaluation"
+        ],
+        "required_scopes": []
+      },
+      "dependencies": [],
+      "deprecated_after": null,
+      "disabled_after": null,
+      "kind": "skill",
+      "input_contract": "catalog://get_catalog_schema-v1",
+      "output_contract": "catalog://result-v1",
+      "risk": "R0",
+      "confirmation": "none",
+      "idempotency": "none",
+      "freshness_seconds": 30,
+      "timeout_ms": {},
+      "max_calls": 1,
+      "purpose": "Use the existing scoped get_catalog_schema operation.",
+      "intents": [
+        "schema"
+      ],
+      "requires": [],
+      "preconditions": [],
+      "postconditions": [
+        "typed_result"
+      ],
+      "ports": [
+        "catalog.get_catalog_schema"
+      ],
+      "max_attempts": 1,
+      "concurrency": "serial",
+      "cost_class": "remote_read",
+      "latency_class": "interactive",
+      "token_reservation": 0,
+      "cost_reservation_micros": 0,
+      "produces": [
+        "catalog_schema"
+      ],
+      "fallback": "none",
+      "executor": "assistant",
+      "policy_action": null
+    }
+  },
+  {
+    "id": "ExecutableSkill:type_max_calls",
+    "contract": "ExecutableSkill",
+    "valid": false,
+    "value": {
+      "schema_version": "1.0",
+      "id": "skill://catalog/schema",
+      "version": "1.0.0",
+      "visibility": {
+        "schema_version": "1.0",
+        "tenants": [],
+        "channels": [
+          "storefront",
+          "evaluation"
+        ],
+        "required_scopes": []
+      },
+      "dependencies": [],
+      "deprecated_after": null,
+      "disabled_after": null,
+      "kind": "skill",
+      "input_contract": "catalog://get_catalog_schema-v1",
+      "output_contract": "catalog://result-v1",
+      "risk": "R0",
+      "confirmation": "none",
+      "idempotency": "none",
+      "freshness_seconds": 30,
+      "timeout_ms": 5000,
+      "max_calls": {},
+      "purpose": "Use the existing scoped get_catalog_schema operation.",
+      "intents": [
+        "schema"
+      ],
+      "requires": [],
+      "preconditions": [],
+      "postconditions": [
+        "typed_result"
+      ],
+      "ports": [
+        "catalog.get_catalog_schema"
+      ],
+      "max_attempts": 1,
+      "concurrency": "serial",
+      "cost_class": "remote_read",
+      "latency_class": "interactive",
+      "token_reservation": 0,
+      "cost_reservation_micros": 0,
+      "produces": [
+        "catalog_schema"
+      ],
+      "fallback": "none",
+      "executor": "assistant",
+      "policy_action": null
+    }
+  },
+  {
+    "id": "ExecutableSkill:type_purpose",
+    "contract": "ExecutableSkill",
+    "valid": false,
+    "value": {
+      "schema_version": "1.0",
+      "id": "skill://catalog/schema",
+      "version": "1.0.0",
+      "visibility": {
+        "schema_version": "1.0",
+        "tenants": [],
+        "channels": [
+          "storefront",
+          "evaluation"
+        ],
+        "required_scopes": []
+      },
+      "dependencies": [],
+      "deprecated_after": null,
+      "disabled_after": null,
+      "kind": "skill",
+      "input_contract": "catalog://get_catalog_schema-v1",
+      "output_contract": "catalog://result-v1",
+      "risk": "R0",
+      "confirmation": "none",
+      "idempotency": "none",
+      "freshness_seconds": 30,
+      "timeout_ms": 5000,
+      "max_calls": 1,
+      "purpose": {},
+      "intents": [
+        "schema"
+      ],
+      "requires": [],
+      "preconditions": [],
+      "postconditions": [
+        "typed_result"
+      ],
+      "ports": [
+        "catalog.get_catalog_schema"
+      ],
+      "max_attempts": 1,
+      "concurrency": "serial",
+      "cost_class": "remote_read",
+      "latency_class": "interactive",
+      "token_reservation": 0,
+      "cost_reservation_micros": 0,
+      "produces": [
+        "catalog_schema"
+      ],
+      "fallback": "none",
+      "executor": "assistant",
+      "policy_action": null
+    }
+  },
+  {
+    "id": "ExecutableSkill:type_intents",
+    "contract": "ExecutableSkill",
+    "valid": false,
+    "value": {
+      "schema_version": "1.0",
+      "id": "skill://catalog/schema",
+      "version": "1.0.0",
+      "visibility": {
+        "schema_version": "1.0",
+        "tenants": [],
+        "channels": [
+          "storefront",
+          "evaluation"
+        ],
+        "required_scopes": []
+      },
+      "dependencies": [],
+      "deprecated_after": null,
+      "disabled_after": null,
+      "kind": "skill",
+      "input_contract": "catalog://get_catalog_schema-v1",
+      "output_contract": "catalog://result-v1",
+      "risk": "R0",
+      "confirmation": "none",
+      "idempotency": "none",
+      "freshness_seconds": 30,
+      "timeout_ms": 5000,
+      "max_calls": 1,
+      "purpose": "Use the existing scoped get_catalog_schema operation.",
+      "intents": {},
+      "requires": [],
+      "preconditions": [],
+      "postconditions": [
+        "typed_result"
+      ],
+      "ports": [
+        "catalog.get_catalog_schema"
+      ],
+      "max_attempts": 1,
+      "concurrency": "serial",
+      "cost_class": "remote_read",
+      "latency_class": "interactive",
+      "token_reservation": 0,
+      "cost_reservation_micros": 0,
+      "produces": [
+        "catalog_schema"
+      ],
+      "fallback": "none",
+      "executor": "assistant",
+      "policy_action": null
+    }
+  },
+  {
+    "id": "ExecutableSkill:type_requires",
+    "contract": "ExecutableSkill",
+    "valid": false,
+    "value": {
+      "schema_version": "1.0",
+      "id": "skill://catalog/schema",
+      "version": "1.0.0",
+      "visibility": {
+        "schema_version": "1.0",
+        "tenants": [],
+        "channels": [
+          "storefront",
+          "evaluation"
+        ],
+        "required_scopes": []
+      },
+      "dependencies": [],
+      "deprecated_after": null,
+      "disabled_after": null,
+      "kind": "skill",
+      "input_contract": "catalog://get_catalog_schema-v1",
+      "output_contract": "catalog://result-v1",
+      "risk": "R0",
+      "confirmation": "none",
+      "idempotency": "none",
+      "freshness_seconds": 30,
+      "timeout_ms": 5000,
+      "max_calls": 1,
+      "purpose": "Use the existing scoped get_catalog_schema operation.",
+      "intents": [
+        "schema"
+      ],
+      "requires": {},
+      "preconditions": [],
+      "postconditions": [
+        "typed_result"
+      ],
+      "ports": [
+        "catalog.get_catalog_schema"
+      ],
+      "max_attempts": 1,
+      "concurrency": "serial",
+      "cost_class": "remote_read",
+      "latency_class": "interactive",
+      "token_reservation": 0,
+      "cost_reservation_micros": 0,
+      "produces": [
+        "catalog_schema"
+      ],
+      "fallback": "none",
+      "executor": "assistant",
+      "policy_action": null
+    }
+  },
+  {
+    "id": "ExecutableSkill:type_preconditions",
+    "contract": "ExecutableSkill",
+    "valid": false,
+    "value": {
+      "schema_version": "1.0",
+      "id": "skill://catalog/schema",
+      "version": "1.0.0",
+      "visibility": {
+        "schema_version": "1.0",
+        "tenants": [],
+        "channels": [
+          "storefront",
+          "evaluation"
+        ],
+        "required_scopes": []
+      },
+      "dependencies": [],
+      "deprecated_after": null,
+      "disabled_after": null,
+      "kind": "skill",
+      "input_contract": "catalog://get_catalog_schema-v1",
+      "output_contract": "catalog://result-v1",
+      "risk": "R0",
+      "confirmation": "none",
+      "idempotency": "none",
+      "freshness_seconds": 30,
+      "timeout_ms": 5000,
+      "max_calls": 1,
+      "purpose": "Use the existing scoped get_catalog_schema operation.",
+      "intents": [
+        "schema"
+      ],
+      "requires": [],
+      "preconditions": {},
+      "postconditions": [
+        "typed_result"
+      ],
+      "ports": [
+        "catalog.get_catalog_schema"
+      ],
+      "max_attempts": 1,
+      "concurrency": "serial",
+      "cost_class": "remote_read",
+      "latency_class": "interactive",
+      "token_reservation": 0,
+      "cost_reservation_micros": 0,
+      "produces": [
+        "catalog_schema"
+      ],
+      "fallback": "none",
+      "executor": "assistant",
+      "policy_action": null
+    }
+  },
+  {
+    "id": "ExecutableSkill:type_postconditions",
+    "contract": "ExecutableSkill",
+    "valid": false,
+    "value": {
+      "schema_version": "1.0",
+      "id": "skill://catalog/schema",
+      "version": "1.0.0",
+      "visibility": {
+        "schema_version": "1.0",
+        "tenants": [],
+        "channels": [
+          "storefront",
+          "evaluation"
+        ],
+        "required_scopes": []
+      },
+      "dependencies": [],
+      "deprecated_after": null,
+      "disabled_after": null,
+      "kind": "skill",
+      "input_contract": "catalog://get_catalog_schema-v1",
+      "output_contract": "catalog://result-v1",
+      "risk": "R0",
+      "confirmation": "none",
+      "idempotency": "none",
+      "freshness_seconds": 30,
+      "timeout_ms": 5000,
+      "max_calls": 1,
+      "purpose": "Use the existing scoped get_catalog_schema operation.",
+      "intents": [
+        "schema"
+      ],
+      "requires": [],
+      "preconditions": [],
+      "postconditions": {},
+      "ports": [
+        "catalog.get_catalog_schema"
+      ],
+      "max_attempts": 1,
+      "concurrency": "serial",
+      "cost_class": "remote_read",
+      "latency_class": "interactive",
+      "token_reservation": 0,
+      "cost_reservation_micros": 0,
+      "produces": [
+        "catalog_schema"
+      ],
+      "fallback": "none",
+      "executor": "assistant",
+      "policy_action": null
+    }
+  },
+  {
+    "id": "ExecutableSkill:type_ports",
+    "contract": "ExecutableSkill",
+    "valid": false,
+    "value": {
+      "schema_version": "1.0",
+      "id": "skill://catalog/schema",
+      "version": "1.0.0",
+      "visibility": {
+        "schema_version": "1.0",
+        "tenants": [],
+        "channels": [
+          "storefront",
+          "evaluation"
+        ],
+        "required_scopes": []
+      },
+      "dependencies": [],
+      "deprecated_after": null,
+      "disabled_after": null,
+      "kind": "skill",
+      "input_contract": "catalog://get_catalog_schema-v1",
+      "output_contract": "catalog://result-v1",
+      "risk": "R0",
+      "confirmation": "none",
+      "idempotency": "none",
+      "freshness_seconds": 30,
+      "timeout_ms": 5000,
+      "max_calls": 1,
+      "purpose": "Use the existing scoped get_catalog_schema operation.",
+      "intents": [
+        "schema"
+      ],
+      "requires": [],
+      "preconditions": [],
+      "postconditions": [
+        "typed_result"
+      ],
+      "ports": {},
+      "max_attempts": 1,
+      "concurrency": "serial",
+      "cost_class": "remote_read",
+      "latency_class": "interactive",
+      "token_reservation": 0,
+      "cost_reservation_micros": 0,
+      "produces": [
+        "catalog_schema"
+      ],
+      "fallback": "none",
+      "executor": "assistant",
+      "policy_action": null
+    }
+  },
+  {
+    "id": "ExecutableSkill:type_max_attempts",
+    "contract": "ExecutableSkill",
+    "valid": false,
+    "value": {
+      "schema_version": "1.0",
+      "id": "skill://catalog/schema",
+      "version": "1.0.0",
+      "visibility": {
+        "schema_version": "1.0",
+        "tenants": [],
+        "channels": [
+          "storefront",
+          "evaluation"
+        ],
+        "required_scopes": []
+      },
+      "dependencies": [],
+      "deprecated_after": null,
+      "disabled_after": null,
+      "kind": "skill",
+      "input_contract": "catalog://get_catalog_schema-v1",
+      "output_contract": "catalog://result-v1",
+      "risk": "R0",
+      "confirmation": "none",
+      "idempotency": "none",
+      "freshness_seconds": 30,
+      "timeout_ms": 5000,
+      "max_calls": 1,
+      "purpose": "Use the existing scoped get_catalog_schema operation.",
+      "intents": [
+        "schema"
+      ],
+      "requires": [],
+      "preconditions": [],
+      "postconditions": [
+        "typed_result"
+      ],
+      "ports": [
+        "catalog.get_catalog_schema"
+      ],
+      "max_attempts": {},
+      "concurrency": "serial",
+      "cost_class": "remote_read",
+      "latency_class": "interactive",
+      "token_reservation": 0,
+      "cost_reservation_micros": 0,
+      "produces": [
+        "catalog_schema"
+      ],
+      "fallback": "none",
+      "executor": "assistant",
+      "policy_action": null
+    }
+  },
+  {
+    "id": "ExecutableSkill:type_concurrency",
+    "contract": "ExecutableSkill",
+    "valid": false,
+    "value": {
+      "schema_version": "1.0",
+      "id": "skill://catalog/schema",
+      "version": "1.0.0",
+      "visibility": {
+        "schema_version": "1.0",
+        "tenants": [],
+        "channels": [
+          "storefront",
+          "evaluation"
+        ],
+        "required_scopes": []
+      },
+      "dependencies": [],
+      "deprecated_after": null,
+      "disabled_after": null,
+      "kind": "skill",
+      "input_contract": "catalog://get_catalog_schema-v1",
+      "output_contract": "catalog://result-v1",
+      "risk": "R0",
+      "confirmation": "none",
+      "idempotency": "none",
+      "freshness_seconds": 30,
+      "timeout_ms": 5000,
+      "max_calls": 1,
+      "purpose": "Use the existing scoped get_catalog_schema operation.",
+      "intents": [
+        "schema"
+      ],
+      "requires": [],
+      "preconditions": [],
+      "postconditions": [
+        "typed_result"
+      ],
+      "ports": [
+        "catalog.get_catalog_schema"
+      ],
+      "max_attempts": 1,
+      "concurrency": {},
+      "cost_class": "remote_read",
+      "latency_class": "interactive",
+      "token_reservation": 0,
+      "cost_reservation_micros": 0,
+      "produces": [
+        "catalog_schema"
+      ],
+      "fallback": "none",
+      "executor": "assistant",
+      "policy_action": null
+    }
+  },
+  {
+    "id": "ExecutableSkill:type_cost_class",
+    "contract": "ExecutableSkill",
+    "valid": false,
+    "value": {
+      "schema_version": "1.0",
+      "id": "skill://catalog/schema",
+      "version": "1.0.0",
+      "visibility": {
+        "schema_version": "1.0",
+        "tenants": [],
+        "channels": [
+          "storefront",
+          "evaluation"
+        ],
+        "required_scopes": []
+      },
+      "dependencies": [],
+      "deprecated_after": null,
+      "disabled_after": null,
+      "kind": "skill",
+      "input_contract": "catalog://get_catalog_schema-v1",
+      "output_contract": "catalog://result-v1",
+      "risk": "R0",
+      "confirmation": "none",
+      "idempotency": "none",
+      "freshness_seconds": 30,
+      "timeout_ms": 5000,
+      "max_calls": 1,
+      "purpose": "Use the existing scoped get_catalog_schema operation.",
+      "intents": [
+        "schema"
+      ],
+      "requires": [],
+      "preconditions": [],
+      "postconditions": [
+        "typed_result"
+      ],
+      "ports": [
+        "catalog.get_catalog_schema"
+      ],
+      "max_attempts": 1,
+      "concurrency": "serial",
+      "cost_class": {},
+      "latency_class": "interactive",
+      "token_reservation": 0,
+      "cost_reservation_micros": 0,
+      "produces": [
+        "catalog_schema"
+      ],
+      "fallback": "none",
+      "executor": "assistant",
+      "policy_action": null
+    }
+  },
+  {
+    "id": "ExecutableSkill:type_latency_class",
+    "contract": "ExecutableSkill",
+    "valid": false,
+    "value": {
+      "schema_version": "1.0",
+      "id": "skill://catalog/schema",
+      "version": "1.0.0",
+      "visibility": {
+        "schema_version": "1.0",
+        "tenants": [],
+        "channels": [
+          "storefront",
+          "evaluation"
+        ],
+        "required_scopes": []
+      },
+      "dependencies": [],
+      "deprecated_after": null,
+      "disabled_after": null,
+      "kind": "skill",
+      "input_contract": "catalog://get_catalog_schema-v1",
+      "output_contract": "catalog://result-v1",
+      "risk": "R0",
+      "confirmation": "none",
+      "idempotency": "none",
+      "freshness_seconds": 30,
+      "timeout_ms": 5000,
+      "max_calls": 1,
+      "purpose": "Use the existing scoped get_catalog_schema operation.",
+      "intents": [
+        "schema"
+      ],
+      "requires": [],
+      "preconditions": [],
+      "postconditions": [
+        "typed_result"
+      ],
+      "ports": [
+        "catalog.get_catalog_schema"
+      ],
+      "max_attempts": 1,
+      "concurrency": "serial",
+      "cost_class": "remote_read",
+      "latency_class": {},
+      "token_reservation": 0,
+      "cost_reservation_micros": 0,
+      "produces": [
+        "catalog_schema"
+      ],
+      "fallback": "none",
+      "executor": "assistant",
+      "policy_action": null
+    }
+  },
+  {
+    "id": "ExecutableSkill:type_token_reservation",
+    "contract": "ExecutableSkill",
+    "valid": false,
+    "value": {
+      "schema_version": "1.0",
+      "id": "skill://catalog/schema",
+      "version": "1.0.0",
+      "visibility": {
+        "schema_version": "1.0",
+        "tenants": [],
+        "channels": [
+          "storefront",
+          "evaluation"
+        ],
+        "required_scopes": []
+      },
+      "dependencies": [],
+      "deprecated_after": null,
+      "disabled_after": null,
+      "kind": "skill",
+      "input_contract": "catalog://get_catalog_schema-v1",
+      "output_contract": "catalog://result-v1",
+      "risk": "R0",
+      "confirmation": "none",
+      "idempotency": "none",
+      "freshness_seconds": 30,
+      "timeout_ms": 5000,
+      "max_calls": 1,
+      "purpose": "Use the existing scoped get_catalog_schema operation.",
+      "intents": [
+        "schema"
+      ],
+      "requires": [],
+      "preconditions": [],
+      "postconditions": [
+        "typed_result"
+      ],
+      "ports": [
+        "catalog.get_catalog_schema"
+      ],
+      "max_attempts": 1,
+      "concurrency": "serial",
+      "cost_class": "remote_read",
+      "latency_class": "interactive",
+      "token_reservation": {},
+      "cost_reservation_micros": 0,
+      "produces": [
+        "catalog_schema"
+      ],
+      "fallback": "none",
+      "executor": "assistant",
+      "policy_action": null
+    }
+  },
+  {
+    "id": "ExecutableSkill:type_cost_reservation_micros",
+    "contract": "ExecutableSkill",
+    "valid": false,
+    "value": {
+      "schema_version": "1.0",
+      "id": "skill://catalog/schema",
+      "version": "1.0.0",
+      "visibility": {
+        "schema_version": "1.0",
+        "tenants": [],
+        "channels": [
+          "storefront",
+          "evaluation"
+        ],
+        "required_scopes": []
+      },
+      "dependencies": [],
+      "deprecated_after": null,
+      "disabled_after": null,
+      "kind": "skill",
+      "input_contract": "catalog://get_catalog_schema-v1",
+      "output_contract": "catalog://result-v1",
+      "risk": "R0",
+      "confirmation": "none",
+      "idempotency": "none",
+      "freshness_seconds": 30,
+      "timeout_ms": 5000,
+      "max_calls": 1,
+      "purpose": "Use the existing scoped get_catalog_schema operation.",
+      "intents": [
+        "schema"
+      ],
+      "requires": [],
+      "preconditions": [],
+      "postconditions": [
+        "typed_result"
+      ],
+      "ports": [
+        "catalog.get_catalog_schema"
+      ],
+      "max_attempts": 1,
+      "concurrency": "serial",
+      "cost_class": "remote_read",
+      "latency_class": "interactive",
+      "token_reservation": 0,
+      "cost_reservation_micros": {},
+      "produces": [
+        "catalog_schema"
+      ],
+      "fallback": "none",
+      "executor": "assistant",
+      "policy_action": null
+    }
+  },
+  {
+    "id": "ExecutableSkill:type_produces",
+    "contract": "ExecutableSkill",
+    "valid": false,
+    "value": {
+      "schema_version": "1.0",
+      "id": "skill://catalog/schema",
+      "version": "1.0.0",
+      "visibility": {
+        "schema_version": "1.0",
+        "tenants": [],
+        "channels": [
+          "storefront",
+          "evaluation"
+        ],
+        "required_scopes": []
+      },
+      "dependencies": [],
+      "deprecated_after": null,
+      "disabled_after": null,
+      "kind": "skill",
+      "input_contract": "catalog://get_catalog_schema-v1",
+      "output_contract": "catalog://result-v1",
+      "risk": "R0",
+      "confirmation": "none",
+      "idempotency": "none",
+      "freshness_seconds": 30,
+      "timeout_ms": 5000,
+      "max_calls": 1,
+      "purpose": "Use the existing scoped get_catalog_schema operation.",
+      "intents": [
+        "schema"
+      ],
+      "requires": [],
+      "preconditions": [],
+      "postconditions": [
+        "typed_result"
+      ],
+      "ports": [
+        "catalog.get_catalog_schema"
+      ],
+      "max_attempts": 1,
+      "concurrency": "serial",
+      "cost_class": "remote_read",
+      "latency_class": "interactive",
+      "token_reservation": 0,
+      "cost_reservation_micros": 0,
+      "produces": {},
+      "fallback": "none",
+      "executor": "assistant",
+      "policy_action": null
+    }
+  },
+  {
+    "id": "ExecutableSkill:type_fallback",
+    "contract": "ExecutableSkill",
+    "valid": false,
+    "value": {
+      "schema_version": "1.0",
+      "id": "skill://catalog/schema",
+      "version": "1.0.0",
+      "visibility": {
+        "schema_version": "1.0",
+        "tenants": [],
+        "channels": [
+          "storefront",
+          "evaluation"
+        ],
+        "required_scopes": []
+      },
+      "dependencies": [],
+      "deprecated_after": null,
+      "disabled_after": null,
+      "kind": "skill",
+      "input_contract": "catalog://get_catalog_schema-v1",
+      "output_contract": "catalog://result-v1",
+      "risk": "R0",
+      "confirmation": "none",
+      "idempotency": "none",
+      "freshness_seconds": 30,
+      "timeout_ms": 5000,
+      "max_calls": 1,
+      "purpose": "Use the existing scoped get_catalog_schema operation.",
+      "intents": [
+        "schema"
+      ],
+      "requires": [],
+      "preconditions": [],
+      "postconditions": [
+        "typed_result"
+      ],
+      "ports": [
+        "catalog.get_catalog_schema"
+      ],
+      "max_attempts": 1,
+      "concurrency": "serial",
+      "cost_class": "remote_read",
+      "latency_class": "interactive",
+      "token_reservation": 0,
+      "cost_reservation_micros": 0,
+      "produces": [
+        "catalog_schema"
+      ],
+      "fallback": {},
+      "executor": "assistant",
+      "policy_action": null
+    }
+  },
+  {
+    "id": "ExecutableSkill:type_executor",
+    "contract": "ExecutableSkill",
+    "valid": false,
+    "value": {
+      "schema_version": "1.0",
+      "id": "skill://catalog/schema",
+      "version": "1.0.0",
+      "visibility": {
+        "schema_version": "1.0",
+        "tenants": [],
+        "channels": [
+          "storefront",
+          "evaluation"
+        ],
+        "required_scopes": []
+      },
+      "dependencies": [],
+      "deprecated_after": null,
+      "disabled_after": null,
+      "kind": "skill",
+      "input_contract": "catalog://get_catalog_schema-v1",
+      "output_contract": "catalog://result-v1",
+      "risk": "R0",
+      "confirmation": "none",
+      "idempotency": "none",
+      "freshness_seconds": 30,
+      "timeout_ms": 5000,
+      "max_calls": 1,
+      "purpose": "Use the existing scoped get_catalog_schema operation.",
+      "intents": [
+        "schema"
+      ],
+      "requires": [],
+      "preconditions": [],
+      "postconditions": [
+        "typed_result"
+      ],
+      "ports": [
+        "catalog.get_catalog_schema"
+      ],
+      "max_attempts": 1,
+      "concurrency": "serial",
+      "cost_class": "remote_read",
+      "latency_class": "interactive",
+      "token_reservation": 0,
+      "cost_reservation_micros": 0,
+      "produces": [
+        "catalog_schema"
+      ],
+      "fallback": "none",
+      "executor": {},
+      "policy_action": null
+    }
+  },
+  {
+    "id": "IndustryRules:valid",
+    "contract": "IndustryRules",
+    "valid": true,
+    "value": {
+      "schema_version": "1.0",
+      "id": "industry://commerce/common",
+      "version": "1.0.0",
+      "attributes": [],
+      "status": "schema_ready",
+      "policies": [
+        "verified_only"
+      ]
+    }
+  },
+  {
+    "id": "IndustryRules:unknown_field",
+    "contract": "IndustryRules",
+    "valid": false,
+    "value": {
+      "schema_version": "1.0",
+      "id": "industry://commerce/common",
+      "version": "1.0.0",
+      "attributes": [],
+      "status": "schema_ready",
+      "policies": [
+        "verified_only"
+      ],
+      "tool": "arbitrary_unregistered"
+    }
+  },
+  {
+    "id": "IndustryRules:future_version",
+    "contract": "IndustryRules",
+    "valid": false,
+    "value": {
+      "schema_version": "99.0",
+      "id": "industry://commerce/common",
+      "version": "1.0.0",
+      "attributes": [],
+      "status": "schema_ready",
+      "policies": [
+        "verified_only"
+      ]
+    }
+  },
+  {
+    "id": "IndustryRules:missing_id",
+    "contract": "IndustryRules",
+    "valid": false,
+    "value": {
+      "schema_version": "1.0",
+      "version": "1.0.0",
+      "attributes": [],
+      "status": "schema_ready",
+      "policies": [
+        "verified_only"
+      ]
+    }
+  },
+  {
+    "id": "IndustryRules:missing_version",
+    "contract": "IndustryRules",
+    "valid": false,
+    "value": {
+      "schema_version": "1.0",
+      "id": "industry://commerce/common",
+      "attributes": [],
+      "status": "schema_ready",
+      "policies": [
+        "verified_only"
+      ]
+    }
+  },
+  {
+    "id": "IndustryRules:missing_attributes",
+    "contract": "IndustryRules",
+    "valid": false,
+    "value": {
+      "schema_version": "1.0",
+      "id": "industry://commerce/common",
+      "version": "1.0.0",
+      "status": "schema_ready",
+      "policies": [
+        "verified_only"
+      ]
+    }
+  },
+  {
+    "id": "IndustryRules:missing_status",
+    "contract": "IndustryRules",
+    "valid": false,
+    "value": {
+      "schema_version": "1.0",
+      "id": "industry://commerce/common",
+      "version": "1.0.0",
+      "attributes": [],
+      "policies": [
+        "verified_only"
+      ]
+    }
+  },
+  {
+    "id": "IndustryRules:missing_policies",
+    "contract": "IndustryRules",
+    "valid": false,
+    "value": {
+      "schema_version": "1.0",
+      "id": "industry://commerce/common",
+      "version": "1.0.0",
+      "attributes": [],
+      "status": "schema_ready"
+    }
+  },
+  {
+    "id": "IndustryRules:type_id",
+    "contract": "IndustryRules",
+    "valid": false,
+    "value": {
+      "schema_version": "1.0",
+      "id": {},
+      "version": "1.0.0",
+      "attributes": [],
+      "status": "schema_ready",
+      "policies": [
+        "verified_only"
+      ]
+    }
+  },
+  {
+    "id": "IndustryRules:type_version",
+    "contract": "IndustryRules",
+    "valid": false,
+    "value": {
+      "schema_version": "1.0",
+      "id": "industry://commerce/common",
+      "version": {},
+      "attributes": [],
+      "status": "schema_ready",
+      "policies": [
+        "verified_only"
+      ]
+    }
+  },
+  {
+    "id": "IndustryRules:type_attributes",
+    "contract": "IndustryRules",
+    "valid": false,
+    "value": {
+      "schema_version": "1.0",
+      "id": "industry://commerce/common",
+      "version": "1.0.0",
+      "attributes": {},
+      "status": "schema_ready",
+      "policies": [
+        "verified_only"
+      ]
+    }
+  },
+  {
+    "id": "IndustryRules:type_status",
+    "contract": "IndustryRules",
+    "valid": false,
+    "value": {
+      "schema_version": "1.0",
+      "id": "industry://commerce/common",
+      "version": "1.0.0",
+      "attributes": [],
+      "status": {},
+      "policies": [
+        "verified_only"
+      ]
+    }
+  },
+  {
+    "id": "IndustryRules:type_policies",
+    "contract": "IndustryRules",
+    "valid": false,
+    "value": {
+      "schema_version": "1.0",
+      "id": "industry://commerce/common",
+      "version": "1.0.0",
+      "attributes": [],
+      "status": "schema_ready",
+      "policies": {}
+    }
+  },
+  {
+    "id": "PlanResources:valid",
+    "contract": "PlanResources",
+    "valid": true,
+    "value": {
+      "schema_version": "1.0",
+      "tools": 0,
+      "models": 0,
+      "tokens": 0,
+      "cost_micros": 0,
+      "mutations": 0
+    }
+  },
+  {
+    "id": "PlanResources:unknown_field",
+    "contract": "PlanResources",
+    "valid": false,
+    "value": {
+      "schema_version": "1.0",
+      "tools": 0,
+      "models": 0,
+      "tokens": 0,
+      "cost_micros": 0,
+      "mutations": 0,
+      "tool": "arbitrary_unregistered"
+    }
+  },
+  {
+    "id": "PlanResources:future_version",
+    "contract": "PlanResources",
+    "valid": false,
+    "value": {
+      "schema_version": "99.0",
+      "tools": 0,
+      "models": 0,
+      "tokens": 0,
+      "cost_micros": 0,
+      "mutations": 0
+    }
+  },
+  {
+    "id": "PlanResources:type_tools",
+    "contract": "PlanResources",
+    "valid": false,
+    "value": {
+      "schema_version": "1.0",
+      "tools": {},
+      "models": 0,
+      "tokens": 0,
+      "cost_micros": 0,
+      "mutations": 0
+    }
+  },
+  {
+    "id": "PlanResources:type_models",
+    "contract": "PlanResources",
+    "valid": false,
+    "value": {
+      "schema_version": "1.0",
+      "tools": 0,
+      "models": {},
+      "tokens": 0,
+      "cost_micros": 0,
+      "mutations": 0
+    }
+  },
+  {
+    "id": "PlanResources:type_tokens",
+    "contract": "PlanResources",
+    "valid": false,
+    "value": {
+      "schema_version": "1.0",
+      "tools": 0,
+      "models": 0,
+      "tokens": {},
+      "cost_micros": 0,
+      "mutations": 0
+    }
+  },
+  {
+    "id": "PlanResources:type_cost_micros",
+    "contract": "PlanResources",
+    "valid": false,
+    "value": {
+      "schema_version": "1.0",
+      "tools": 0,
+      "models": 0,
+      "tokens": 0,
+      "cost_micros": {},
+      "mutations": 0
+    }
+  },
+  {
+    "id": "PlanResources:type_mutations",
+    "contract": "PlanResources",
+    "valid": false,
+    "value": {
+      "schema_version": "1.0",
+      "tools": 0,
+      "models": 0,
+      "tokens": 0,
+      "cost_micros": 0,
+      "mutations": {}
+    }
+  },
+  {
+    "id": "PlannedNode:valid",
+    "contract": "PlannedNode",
+    "valid": true,
+    "value": {
+      "schema_version": "1.0",
+      "id": "schema",
+      "skill": {
+        "schema_version": "1.0",
+        "id": "skill://catalog/schema",
+        "version": "1.0.0",
+        "schema_major": 1
+      },
+      "depends_on": [],
+      "max_calls": 1,
+      "required": true,
+      "arguments_json": null
+    }
+  },
+  {
+    "id": "PlannedNode:unknown_field",
+    "contract": "PlannedNode",
+    "valid": false,
+    "value": {
+      "schema_version": "1.0",
+      "id": "schema",
+      "skill": {
+        "schema_version": "1.0",
+        "id": "skill://catalog/schema",
+        "version": "1.0.0",
+        "schema_major": 1
+      },
+      "depends_on": [],
+      "max_calls": 1,
+      "required": true,
+      "arguments_json": null,
+      "tool": "arbitrary_unregistered"
+    }
+  },
+  {
+    "id": "PlannedNode:future_version",
+    "contract": "PlannedNode",
+    "valid": false,
+    "value": {
+      "schema_version": "99.0",
+      "id": "schema",
+      "skill": {
+        "schema_version": "1.0",
+        "id": "skill://catalog/schema",
+        "version": "1.0.0",
+        "schema_major": 1
+      },
+      "depends_on": [],
+      "max_calls": 1,
+      "required": true,
+      "arguments_json": null
+    }
+  },
+  {
+    "id": "PlannedNode:missing_id",
+    "contract": "PlannedNode",
+    "valid": false,
+    "value": {
+      "schema_version": "1.0",
+      "skill": {
+        "schema_version": "1.0",
+        "id": "skill://catalog/schema",
+        "version": "1.0.0",
+        "schema_major": 1
+      },
+      "depends_on": [],
+      "max_calls": 1,
+      "required": true,
+      "arguments_json": null
+    }
+  },
+  {
+    "id": "PlannedNode:missing_skill",
+    "contract": "PlannedNode",
+    "valid": false,
+    "value": {
+      "schema_version": "1.0",
+      "id": "schema",
+      "depends_on": [],
+      "max_calls": 1,
+      "required": true,
+      "arguments_json": null
+    }
+  },
+  {
+    "id": "PlannedNode:type_id",
+    "contract": "PlannedNode",
+    "valid": false,
+    "value": {
+      "schema_version": "1.0",
+      "id": {},
+      "skill": {
+        "schema_version": "1.0",
+        "id": "skill://catalog/schema",
+        "version": "1.0.0",
+        "schema_major": 1
+      },
+      "depends_on": [],
+      "max_calls": 1,
+      "required": true,
+      "arguments_json": null
+    }
+  },
+  {
+    "id": "PlannedNode:type_skill",
+    "contract": "PlannedNode",
+    "valid": false,
+    "value": {
+      "schema_version": "1.0",
+      "id": "schema",
+      "skill": "wrong-object",
+      "depends_on": [],
+      "max_calls": 1,
+      "required": true,
+      "arguments_json": null
+    }
+  },
+  {
+    "id": "PlannedNode:type_depends_on",
+    "contract": "PlannedNode",
+    "valid": false,
+    "value": {
+      "schema_version": "1.0",
+      "id": "schema",
+      "skill": {
+        "schema_version": "1.0",
+        "id": "skill://catalog/schema",
+        "version": "1.0.0",
+        "schema_major": 1
+      },
+      "depends_on": {},
+      "max_calls": 1,
+      "required": true,
+      "arguments_json": null
+    }
+  },
+  {
+    "id": "PlannedNode:type_max_calls",
+    "contract": "PlannedNode",
+    "valid": false,
+    "value": {
+      "schema_version": "1.0",
+      "id": "schema",
+      "skill": {
+        "schema_version": "1.0",
+        "id": "skill://catalog/schema",
+        "version": "1.0.0",
+        "schema_major": 1
+      },
+      "depends_on": [],
+      "max_calls": {},
+      "required": true,
+      "arguments_json": null
+    }
+  },
+  {
+    "id": "PlannedNode:type_required",
+    "contract": "PlannedNode",
+    "valid": false,
+    "value": {
+      "schema_version": "1.0",
+      "id": "schema",
+      "skill": {
+        "schema_version": "1.0",
+        "id": "skill://catalog/schema",
+        "version": "1.0.0",
+        "schema_major": 1
+      },
+      "depends_on": [],
+      "max_calls": 1,
+      "required": {},
+      "arguments_json": null
+    }
+  },
+  {
+    "id": "PlanningBudget:valid",
+    "contract": "PlanningBudget",
+    "valid": true,
+    "value": {
+      "schema_version": "1.0",
+      "max_steps": 16,
+      "max_tool_calls": 8,
+      "max_model_calls": 1,
+      "max_tokens": 131072,
+      "max_cost_micros": 100000,
+      "max_mutations": 0,
+      "timeout_ms": 25000,
+      "max_concurrency": 1
+    }
+  },
+  {
+    "id": "PlanningBudget:unknown_field",
+    "contract": "PlanningBudget",
+    "valid": false,
+    "value": {
+      "schema_version": "1.0",
+      "max_steps": 16,
+      "max_tool_calls": 8,
+      "max_model_calls": 1,
+      "max_tokens": 131072,
+      "max_cost_micros": 100000,
+      "max_mutations": 0,
+      "timeout_ms": 25000,
+      "max_concurrency": 1,
+      "tool": "arbitrary_unregistered"
+    }
+  },
+  {
+    "id": "PlanningBudget:future_version",
+    "contract": "PlanningBudget",
+    "valid": false,
+    "value": {
+      "schema_version": "99.0",
+      "max_steps": 16,
+      "max_tool_calls": 8,
+      "max_model_calls": 1,
+      "max_tokens": 131072,
+      "max_cost_micros": 100000,
+      "max_mutations": 0,
+      "timeout_ms": 25000,
+      "max_concurrency": 1
+    }
+  },
+  {
+    "id": "PlanningBudget:type_max_steps",
+    "contract": "PlanningBudget",
+    "valid": false,
+    "value": {
+      "schema_version": "1.0",
+      "max_steps": {},
+      "max_tool_calls": 8,
+      "max_model_calls": 1,
+      "max_tokens": 131072,
+      "max_cost_micros": 100000,
+      "max_mutations": 0,
+      "timeout_ms": 25000,
+      "max_concurrency": 1
+    }
+  },
+  {
+    "id": "PlanningBudget:type_max_tool_calls",
+    "contract": "PlanningBudget",
+    "valid": false,
+    "value": {
+      "schema_version": "1.0",
+      "max_steps": 16,
+      "max_tool_calls": {},
+      "max_model_calls": 1,
+      "max_tokens": 131072,
+      "max_cost_micros": 100000,
+      "max_mutations": 0,
+      "timeout_ms": 25000,
+      "max_concurrency": 1
+    }
+  },
+  {
+    "id": "PlanningBudget:type_max_model_calls",
+    "contract": "PlanningBudget",
+    "valid": false,
+    "value": {
+      "schema_version": "1.0",
+      "max_steps": 16,
+      "max_tool_calls": 8,
+      "max_model_calls": {},
+      "max_tokens": 131072,
+      "max_cost_micros": 100000,
+      "max_mutations": 0,
+      "timeout_ms": 25000,
+      "max_concurrency": 1
+    }
+  },
+  {
+    "id": "PlanningBudget:type_max_tokens",
+    "contract": "PlanningBudget",
+    "valid": false,
+    "value": {
+      "schema_version": "1.0",
+      "max_steps": 16,
+      "max_tool_calls": 8,
+      "max_model_calls": 1,
+      "max_tokens": {},
+      "max_cost_micros": 100000,
+      "max_mutations": 0,
+      "timeout_ms": 25000,
+      "max_concurrency": 1
+    }
+  },
+  {
+    "id": "PlanningBudget:type_max_cost_micros",
+    "contract": "PlanningBudget",
+    "valid": false,
+    "value": {
+      "schema_version": "1.0",
+      "max_steps": 16,
+      "max_tool_calls": 8,
+      "max_model_calls": 1,
+      "max_tokens": 131072,
+      "max_cost_micros": {},
+      "max_mutations": 0,
+      "timeout_ms": 25000,
+      "max_concurrency": 1
+    }
+  },
+  {
+    "id": "PlanningBudget:type_max_mutations",
+    "contract": "PlanningBudget",
+    "valid": false,
+    "value": {
+      "schema_version": "1.0",
+      "max_steps": 16,
+      "max_tool_calls": 8,
+      "max_model_calls": 1,
+      "max_tokens": 131072,
+      "max_cost_micros": 100000,
+      "max_mutations": {},
+      "timeout_ms": 25000,
+      "max_concurrency": 1
+    }
+  },
+  {
+    "id": "PlanningBudget:type_timeout_ms",
+    "contract": "PlanningBudget",
+    "valid": false,
+    "value": {
+      "schema_version": "1.0",
+      "max_steps": 16,
+      "max_tool_calls": 8,
+      "max_model_calls": 1,
+      "max_tokens": 131072,
+      "max_cost_micros": 100000,
+      "max_mutations": 0,
+      "timeout_ms": {},
+      "max_concurrency": 1
+    }
+  },
+  {
+    "id": "PlanningBudget:type_max_concurrency",
+    "contract": "PlanningBudget",
+    "valid": false,
+    "value": {
+      "schema_version": "1.0",
+      "max_steps": 16,
+      "max_tool_calls": 8,
+      "max_model_calls": 1,
+      "max_tokens": 131072,
+      "max_cost_micros": 100000,
+      "max_mutations": 0,
+      "timeout_ms": 25000,
+      "max_concurrency": {}
+    }
+  },
+  {
+    "id": "Procedure:valid",
+    "contract": "Procedure",
+    "valid": true,
+    "value": {
+      "schema_version": "1.0",
+      "id": "playbook://commerce/discovery",
+      "version": "1.0.0",
+      "intents": [
+        "discovery"
+      ],
+      "requires": [],
+      "nodes": [
+        {
+          "schema_version": "1.0",
+          "id": "schema",
+          "skill": {
+            "schema_version": "1.0",
+            "id": "skill://catalog/schema",
+            "version": "1.0.0",
+            "schema_major": 1
+          },
+          "depends_on": [],
+          "max_calls": 1,
+          "required": true,
+          "arguments_json": null
+        },
+        {
+          "schema_version": "1.0",
+          "id": "interpret",
+          "skill": {
+            "schema_version": "1.0",
+            "id": "skill://reasoning/shopping",
+            "version": "1.0.0",
+            "schema_major": 1
+          },
+          "depends_on": [
+            "schema"
+          ],
+          "max_calls": 1,
+          "required": true,
+          "arguments_json": null
+        },
+        {
+          "schema_version": "1.0",
+          "id": "reference",
+          "skill": {
+            "schema_version": "1.0",
+            "id": "skill://catalog/facts",
+            "version": "1.0.0",
+            "schema_major": 1
+          },
+          "depends_on": [
+            "interpret"
+          ],
+          "max_calls": 1,
+          "required": false,
+          "arguments_json": null
+        },
+        {
+          "schema_version": "1.0",
+          "id": "search",
+          "skill": {
+            "schema_version": "1.0",
+            "id": "skill://catalog/search",
+            "version": "1.0.0",
+            "schema_major": 1
+          },
+          "depends_on": [
+            "interpret"
+          ],
+          "max_calls": 1,
+          "required": false,
+          "arguments_json": null
+        },
+        {
+          "schema_version": "1.0",
+          "id": "compare",
+          "skill": {
+            "schema_version": "1.0",
+            "id": "skill://catalog/compare",
+            "version": "1.0.0",
+            "schema_major": 1
+          },
+          "depends_on": [
+            "interpret"
+          ],
+          "max_calls": 1,
+          "required": false,
+          "arguments_json": null
+        },
+        {
+          "schema_version": "1.0",
+          "id": "rank",
+          "skill": {
+            "schema_version": "1.0",
+            "id": "skill://ranking/candidates",
+            "version": "1.0.0",
+            "schema_major": 1
+          },
+          "depends_on": [
+            "search"
+          ],
+          "max_calls": 1,
+          "required": false,
+          "arguments_json": null
+        }
+      ],
+      "policies": [
+        {
+          "schema_version": "1.0",
+          "id": "policy://commerce/authority",
+          "version": "1.0.0",
+          "schema_major": 1
+        },
+        {
+          "schema_version": "1.0",
+          "id": "policy://commerce/default",
+          "version": "1.0.0",
+          "schema_major": 1
+        }
+      ],
+      "verification": [
+        "all_hard_constraints",
+        "current_price_and_stock",
+        "no_implicit_mutation"
+      ],
+      "fallbacks": [
+        "clarify",
+        "browse"
+      ],
+      "mode": "read"
+    }
+  },
+  {
+    "id": "Procedure:unknown_field",
+    "contract": "Procedure",
+    "valid": false,
+    "value": {
+      "schema_version": "1.0",
+      "id": "playbook://commerce/discovery",
+      "version": "1.0.0",
+      "intents": [
+        "discovery"
+      ],
+      "requires": [],
+      "nodes": [
+        {
+          "schema_version": "1.0",
+          "id": "schema",
+          "skill": {
+            "schema_version": "1.0",
+            "id": "skill://catalog/schema",
+            "version": "1.0.0",
+            "schema_major": 1
+          },
+          "depends_on": [],
+          "max_calls": 1,
+          "required": true,
+          "arguments_json": null
+        },
+        {
+          "schema_version": "1.0",
+          "id": "interpret",
+          "skill": {
+            "schema_version": "1.0",
+            "id": "skill://reasoning/shopping",
+            "version": "1.0.0",
+            "schema_major": 1
+          },
+          "depends_on": [
+            "schema"
+          ],
+          "max_calls": 1,
+          "required": true,
+          "arguments_json": null
+        },
+        {
+          "schema_version": "1.0",
+          "id": "reference",
+          "skill": {
+            "schema_version": "1.0",
+            "id": "skill://catalog/facts",
+            "version": "1.0.0",
+            "schema_major": 1
+          },
+          "depends_on": [
+            "interpret"
+          ],
+          "max_calls": 1,
+          "required": false,
+          "arguments_json": null
+        },
+        {
+          "schema_version": "1.0",
+          "id": "search",
+          "skill": {
+            "schema_version": "1.0",
+            "id": "skill://catalog/search",
+            "version": "1.0.0",
+            "schema_major": 1
+          },
+          "depends_on": [
+            "interpret"
+          ],
+          "max_calls": 1,
+          "required": false,
+          "arguments_json": null
+        },
+        {
+          "schema_version": "1.0",
+          "id": "compare",
+          "skill": {
+            "schema_version": "1.0",
+            "id": "skill://catalog/compare",
+            "version": "1.0.0",
+            "schema_major": 1
+          },
+          "depends_on": [
+            "interpret"
+          ],
+          "max_calls": 1,
+          "required": false,
+          "arguments_json": null
+        },
+        {
+          "schema_version": "1.0",
+          "id": "rank",
+          "skill": {
+            "schema_version": "1.0",
+            "id": "skill://ranking/candidates",
+            "version": "1.0.0",
+            "schema_major": 1
+          },
+          "depends_on": [
+            "search"
+          ],
+          "max_calls": 1,
+          "required": false,
+          "arguments_json": null
+        }
+      ],
+      "policies": [
+        {
+          "schema_version": "1.0",
+          "id": "policy://commerce/authority",
+          "version": "1.0.0",
+          "schema_major": 1
+        },
+        {
+          "schema_version": "1.0",
+          "id": "policy://commerce/default",
+          "version": "1.0.0",
+          "schema_major": 1
+        }
+      ],
+      "verification": [
+        "all_hard_constraints",
+        "current_price_and_stock",
+        "no_implicit_mutation"
+      ],
+      "fallbacks": [
+        "clarify",
+        "browse"
+      ],
+      "mode": "read",
+      "tool": "arbitrary_unregistered"
+    }
+  },
+  {
+    "id": "Procedure:future_version",
+    "contract": "Procedure",
+    "valid": false,
+    "value": {
+      "schema_version": "99.0",
+      "id": "playbook://commerce/discovery",
+      "version": "1.0.0",
+      "intents": [
+        "discovery"
+      ],
+      "requires": [],
+      "nodes": [
+        {
+          "schema_version": "1.0",
+          "id": "schema",
+          "skill": {
+            "schema_version": "1.0",
+            "id": "skill://catalog/schema",
+            "version": "1.0.0",
+            "schema_major": 1
+          },
+          "depends_on": [],
+          "max_calls": 1,
+          "required": true,
+          "arguments_json": null
+        },
+        {
+          "schema_version": "1.0",
+          "id": "interpret",
+          "skill": {
+            "schema_version": "1.0",
+            "id": "skill://reasoning/shopping",
+            "version": "1.0.0",
+            "schema_major": 1
+          },
+          "depends_on": [
+            "schema"
+          ],
+          "max_calls": 1,
+          "required": true,
+          "arguments_json": null
+        },
+        {
+          "schema_version": "1.0",
+          "id": "reference",
+          "skill": {
+            "schema_version": "1.0",
+            "id": "skill://catalog/facts",
+            "version": "1.0.0",
+            "schema_major": 1
+          },
+          "depends_on": [
+            "interpret"
+          ],
+          "max_calls": 1,
+          "required": false,
+          "arguments_json": null
+        },
+        {
+          "schema_version": "1.0",
+          "id": "search",
+          "skill": {
+            "schema_version": "1.0",
+            "id": "skill://catalog/search",
+            "version": "1.0.0",
+            "schema_major": 1
+          },
+          "depends_on": [
+            "interpret"
+          ],
+          "max_calls": 1,
+          "required": false,
+          "arguments_json": null
+        },
+        {
+          "schema_version": "1.0",
+          "id": "compare",
+          "skill": {
+            "schema_version": "1.0",
+            "id": "skill://catalog/compare",
+            "version": "1.0.0",
+            "schema_major": 1
+          },
+          "depends_on": [
+            "interpret"
+          ],
+          "max_calls": 1,
+          "required": false,
+          "arguments_json": null
+        },
+        {
+          "schema_version": "1.0",
+          "id": "rank",
+          "skill": {
+            "schema_version": "1.0",
+            "id": "skill://ranking/candidates",
+            "version": "1.0.0",
+            "schema_major": 1
+          },
+          "depends_on": [
+            "search"
+          ],
+          "max_calls": 1,
+          "required": false,
+          "arguments_json": null
+        }
+      ],
+      "policies": [
+        {
+          "schema_version": "1.0",
+          "id": "policy://commerce/authority",
+          "version": "1.0.0",
+          "schema_major": 1
+        },
+        {
+          "schema_version": "1.0",
+          "id": "policy://commerce/default",
+          "version": "1.0.0",
+          "schema_major": 1
+        }
+      ],
+      "verification": [
+        "all_hard_constraints",
+        "current_price_and_stock",
+        "no_implicit_mutation"
+      ],
+      "fallbacks": [
+        "clarify",
+        "browse"
+      ],
+      "mode": "read"
+    }
+  },
+  {
+    "id": "Procedure:missing_id",
+    "contract": "Procedure",
+    "valid": false,
+    "value": {
+      "schema_version": "1.0",
+      "version": "1.0.0",
+      "intents": [
+        "discovery"
+      ],
+      "requires": [],
+      "nodes": [
+        {
+          "schema_version": "1.0",
+          "id": "schema",
+          "skill": {
+            "schema_version": "1.0",
+            "id": "skill://catalog/schema",
+            "version": "1.0.0",
+            "schema_major": 1
+          },
+          "depends_on": [],
+          "max_calls": 1,
+          "required": true,
+          "arguments_json": null
+        },
+        {
+          "schema_version": "1.0",
+          "id": "interpret",
+          "skill": {
+            "schema_version": "1.0",
+            "id": "skill://reasoning/shopping",
+            "version": "1.0.0",
+            "schema_major": 1
+          },
+          "depends_on": [
+            "schema"
+          ],
+          "max_calls": 1,
+          "required": true,
+          "arguments_json": null
+        },
+        {
+          "schema_version": "1.0",
+          "id": "reference",
+          "skill": {
+            "schema_version": "1.0",
+            "id": "skill://catalog/facts",
+            "version": "1.0.0",
+            "schema_major": 1
+          },
+          "depends_on": [
+            "interpret"
+          ],
+          "max_calls": 1,
+          "required": false,
+          "arguments_json": null
+        },
+        {
+          "schema_version": "1.0",
+          "id": "search",
+          "skill": {
+            "schema_version": "1.0",
+            "id": "skill://catalog/search",
+            "version": "1.0.0",
+            "schema_major": 1
+          },
+          "depends_on": [
+            "interpret"
+          ],
+          "max_calls": 1,
+          "required": false,
+          "arguments_json": null
+        },
+        {
+          "schema_version": "1.0",
+          "id": "compare",
+          "skill": {
+            "schema_version": "1.0",
+            "id": "skill://catalog/compare",
+            "version": "1.0.0",
+            "schema_major": 1
+          },
+          "depends_on": [
+            "interpret"
+          ],
+          "max_calls": 1,
+          "required": false,
+          "arguments_json": null
+        },
+        {
+          "schema_version": "1.0",
+          "id": "rank",
+          "skill": {
+            "schema_version": "1.0",
+            "id": "skill://ranking/candidates",
+            "version": "1.0.0",
+            "schema_major": 1
+          },
+          "depends_on": [
+            "search"
+          ],
+          "max_calls": 1,
+          "required": false,
+          "arguments_json": null
+        }
+      ],
+      "policies": [
+        {
+          "schema_version": "1.0",
+          "id": "policy://commerce/authority",
+          "version": "1.0.0",
+          "schema_major": 1
+        },
+        {
+          "schema_version": "1.0",
+          "id": "policy://commerce/default",
+          "version": "1.0.0",
+          "schema_major": 1
+        }
+      ],
+      "verification": [
+        "all_hard_constraints",
+        "current_price_and_stock",
+        "no_implicit_mutation"
+      ],
+      "fallbacks": [
+        "clarify",
+        "browse"
+      ],
+      "mode": "read"
+    }
+  },
+  {
+    "id": "Procedure:missing_version",
+    "contract": "Procedure",
+    "valid": false,
+    "value": {
+      "schema_version": "1.0",
+      "id": "playbook://commerce/discovery",
+      "intents": [
+        "discovery"
+      ],
+      "requires": [],
+      "nodes": [
+        {
+          "schema_version": "1.0",
+          "id": "schema",
+          "skill": {
+            "schema_version": "1.0",
+            "id": "skill://catalog/schema",
+            "version": "1.0.0",
+            "schema_major": 1
+          },
+          "depends_on": [],
+          "max_calls": 1,
+          "required": true,
+          "arguments_json": null
+        },
+        {
+          "schema_version": "1.0",
+          "id": "interpret",
+          "skill": {
+            "schema_version": "1.0",
+            "id": "skill://reasoning/shopping",
+            "version": "1.0.0",
+            "schema_major": 1
+          },
+          "depends_on": [
+            "schema"
+          ],
+          "max_calls": 1,
+          "required": true,
+          "arguments_json": null
+        },
+        {
+          "schema_version": "1.0",
+          "id": "reference",
+          "skill": {
+            "schema_version": "1.0",
+            "id": "skill://catalog/facts",
+            "version": "1.0.0",
+            "schema_major": 1
+          },
+          "depends_on": [
+            "interpret"
+          ],
+          "max_calls": 1,
+          "required": false,
+          "arguments_json": null
+        },
+        {
+          "schema_version": "1.0",
+          "id": "search",
+          "skill": {
+            "schema_version": "1.0",
+            "id": "skill://catalog/search",
+            "version": "1.0.0",
+            "schema_major": 1
+          },
+          "depends_on": [
+            "interpret"
+          ],
+          "max_calls": 1,
+          "required": false,
+          "arguments_json": null
+        },
+        {
+          "schema_version": "1.0",
+          "id": "compare",
+          "skill": {
+            "schema_version": "1.0",
+            "id": "skill://catalog/compare",
+            "version": "1.0.0",
+            "schema_major": 1
+          },
+          "depends_on": [
+            "interpret"
+          ],
+          "max_calls": 1,
+          "required": false,
+          "arguments_json": null
+        },
+        {
+          "schema_version": "1.0",
+          "id": "rank",
+          "skill": {
+            "schema_version": "1.0",
+            "id": "skill://ranking/candidates",
+            "version": "1.0.0",
+            "schema_major": 1
+          },
+          "depends_on": [
+            "search"
+          ],
+          "max_calls": 1,
+          "required": false,
+          "arguments_json": null
+        }
+      ],
+      "policies": [
+        {
+          "schema_version": "1.0",
+          "id": "policy://commerce/authority",
+          "version": "1.0.0",
+          "schema_major": 1
+        },
+        {
+          "schema_version": "1.0",
+          "id": "policy://commerce/default",
+          "version": "1.0.0",
+          "schema_major": 1
+        }
+      ],
+      "verification": [
+        "all_hard_constraints",
+        "current_price_and_stock",
+        "no_implicit_mutation"
+      ],
+      "fallbacks": [
+        "clarify",
+        "browse"
+      ],
+      "mode": "read"
+    }
+  },
+  {
+    "id": "Procedure:missing_intents",
+    "contract": "Procedure",
+    "valid": false,
+    "value": {
+      "schema_version": "1.0",
+      "id": "playbook://commerce/discovery",
+      "version": "1.0.0",
+      "requires": [],
+      "nodes": [
+        {
+          "schema_version": "1.0",
+          "id": "schema",
+          "skill": {
+            "schema_version": "1.0",
+            "id": "skill://catalog/schema",
+            "version": "1.0.0",
+            "schema_major": 1
+          },
+          "depends_on": [],
+          "max_calls": 1,
+          "required": true,
+          "arguments_json": null
+        },
+        {
+          "schema_version": "1.0",
+          "id": "interpret",
+          "skill": {
+            "schema_version": "1.0",
+            "id": "skill://reasoning/shopping",
+            "version": "1.0.0",
+            "schema_major": 1
+          },
+          "depends_on": [
+            "schema"
+          ],
+          "max_calls": 1,
+          "required": true,
+          "arguments_json": null
+        },
+        {
+          "schema_version": "1.0",
+          "id": "reference",
+          "skill": {
+            "schema_version": "1.0",
+            "id": "skill://catalog/facts",
+            "version": "1.0.0",
+            "schema_major": 1
+          },
+          "depends_on": [
+            "interpret"
+          ],
+          "max_calls": 1,
+          "required": false,
+          "arguments_json": null
+        },
+        {
+          "schema_version": "1.0",
+          "id": "search",
+          "skill": {
+            "schema_version": "1.0",
+            "id": "skill://catalog/search",
+            "version": "1.0.0",
+            "schema_major": 1
+          },
+          "depends_on": [
+            "interpret"
+          ],
+          "max_calls": 1,
+          "required": false,
+          "arguments_json": null
+        },
+        {
+          "schema_version": "1.0",
+          "id": "compare",
+          "skill": {
+            "schema_version": "1.0",
+            "id": "skill://catalog/compare",
+            "version": "1.0.0",
+            "schema_major": 1
+          },
+          "depends_on": [
+            "interpret"
+          ],
+          "max_calls": 1,
+          "required": false,
+          "arguments_json": null
+        },
+        {
+          "schema_version": "1.0",
+          "id": "rank",
+          "skill": {
+            "schema_version": "1.0",
+            "id": "skill://ranking/candidates",
+            "version": "1.0.0",
+            "schema_major": 1
+          },
+          "depends_on": [
+            "search"
+          ],
+          "max_calls": 1,
+          "required": false,
+          "arguments_json": null
+        }
+      ],
+      "policies": [
+        {
+          "schema_version": "1.0",
+          "id": "policy://commerce/authority",
+          "version": "1.0.0",
+          "schema_major": 1
+        },
+        {
+          "schema_version": "1.0",
+          "id": "policy://commerce/default",
+          "version": "1.0.0",
+          "schema_major": 1
+        }
+      ],
+      "verification": [
+        "all_hard_constraints",
+        "current_price_and_stock",
+        "no_implicit_mutation"
+      ],
+      "fallbacks": [
+        "clarify",
+        "browse"
+      ],
+      "mode": "read"
+    }
+  },
+  {
+    "id": "Procedure:missing_nodes",
+    "contract": "Procedure",
+    "valid": false,
+    "value": {
+      "schema_version": "1.0",
+      "id": "playbook://commerce/discovery",
+      "version": "1.0.0",
+      "intents": [
+        "discovery"
+      ],
+      "requires": [],
+      "policies": [
+        {
+          "schema_version": "1.0",
+          "id": "policy://commerce/authority",
+          "version": "1.0.0",
+          "schema_major": 1
+        },
+        {
+          "schema_version": "1.0",
+          "id": "policy://commerce/default",
+          "version": "1.0.0",
+          "schema_major": 1
+        }
+      ],
+      "verification": [
+        "all_hard_constraints",
+        "current_price_and_stock",
+        "no_implicit_mutation"
+      ],
+      "fallbacks": [
+        "clarify",
+        "browse"
+      ],
+      "mode": "read"
+    }
+  },
+  {
+    "id": "Procedure:missing_policies",
+    "contract": "Procedure",
+    "valid": false,
+    "value": {
+      "schema_version": "1.0",
+      "id": "playbook://commerce/discovery",
+      "version": "1.0.0",
+      "intents": [
+        "discovery"
+      ],
+      "requires": [],
+      "nodes": [
+        {
+          "schema_version": "1.0",
+          "id": "schema",
+          "skill": {
+            "schema_version": "1.0",
+            "id": "skill://catalog/schema",
+            "version": "1.0.0",
+            "schema_major": 1
+          },
+          "depends_on": [],
+          "max_calls": 1,
+          "required": true,
+          "arguments_json": null
+        },
+        {
+          "schema_version": "1.0",
+          "id": "interpret",
+          "skill": {
+            "schema_version": "1.0",
+            "id": "skill://reasoning/shopping",
+            "version": "1.0.0",
+            "schema_major": 1
+          },
+          "depends_on": [
+            "schema"
+          ],
+          "max_calls": 1,
+          "required": true,
+          "arguments_json": null
+        },
+        {
+          "schema_version": "1.0",
+          "id": "reference",
+          "skill": {
+            "schema_version": "1.0",
+            "id": "skill://catalog/facts",
+            "version": "1.0.0",
+            "schema_major": 1
+          },
+          "depends_on": [
+            "interpret"
+          ],
+          "max_calls": 1,
+          "required": false,
+          "arguments_json": null
+        },
+        {
+          "schema_version": "1.0",
+          "id": "search",
+          "skill": {
+            "schema_version": "1.0",
+            "id": "skill://catalog/search",
+            "version": "1.0.0",
+            "schema_major": 1
+          },
+          "depends_on": [
+            "interpret"
+          ],
+          "max_calls": 1,
+          "required": false,
+          "arguments_json": null
+        },
+        {
+          "schema_version": "1.0",
+          "id": "compare",
+          "skill": {
+            "schema_version": "1.0",
+            "id": "skill://catalog/compare",
+            "version": "1.0.0",
+            "schema_major": 1
+          },
+          "depends_on": [
+            "interpret"
+          ],
+          "max_calls": 1,
+          "required": false,
+          "arguments_json": null
+        },
+        {
+          "schema_version": "1.0",
+          "id": "rank",
+          "skill": {
+            "schema_version": "1.0",
+            "id": "skill://ranking/candidates",
+            "version": "1.0.0",
+            "schema_major": 1
+          },
+          "depends_on": [
+            "search"
+          ],
+          "max_calls": 1,
+          "required": false,
+          "arguments_json": null
+        }
+      ],
+      "verification": [
+        "all_hard_constraints",
+        "current_price_and_stock",
+        "no_implicit_mutation"
+      ],
+      "fallbacks": [
+        "clarify",
+        "browse"
+      ],
+      "mode": "read"
+    }
+  },
+  {
+    "id": "Procedure:missing_verification",
+    "contract": "Procedure",
+    "valid": false,
+    "value": {
+      "schema_version": "1.0",
+      "id": "playbook://commerce/discovery",
+      "version": "1.0.0",
+      "intents": [
+        "discovery"
+      ],
+      "requires": [],
+      "nodes": [
+        {
+          "schema_version": "1.0",
+          "id": "schema",
+          "skill": {
+            "schema_version": "1.0",
+            "id": "skill://catalog/schema",
+            "version": "1.0.0",
+            "schema_major": 1
+          },
+          "depends_on": [],
+          "max_calls": 1,
+          "required": true,
+          "arguments_json": null
+        },
+        {
+          "schema_version": "1.0",
+          "id": "interpret",
+          "skill": {
+            "schema_version": "1.0",
+            "id": "skill://reasoning/shopping",
+            "version": "1.0.0",
+            "schema_major": 1
+          },
+          "depends_on": [
+            "schema"
+          ],
+          "max_calls": 1,
+          "required": true,
+          "arguments_json": null
+        },
+        {
+          "schema_version": "1.0",
+          "id": "reference",
+          "skill": {
+            "schema_version": "1.0",
+            "id": "skill://catalog/facts",
+            "version": "1.0.0",
+            "schema_major": 1
+          },
+          "depends_on": [
+            "interpret"
+          ],
+          "max_calls": 1,
+          "required": false,
+          "arguments_json": null
+        },
+        {
+          "schema_version": "1.0",
+          "id": "search",
+          "skill": {
+            "schema_version": "1.0",
+            "id": "skill://catalog/search",
+            "version": "1.0.0",
+            "schema_major": 1
+          },
+          "depends_on": [
+            "interpret"
+          ],
+          "max_calls": 1,
+          "required": false,
+          "arguments_json": null
+        },
+        {
+          "schema_version": "1.0",
+          "id": "compare",
+          "skill": {
+            "schema_version": "1.0",
+            "id": "skill://catalog/compare",
+            "version": "1.0.0",
+            "schema_major": 1
+          },
+          "depends_on": [
+            "interpret"
+          ],
+          "max_calls": 1,
+          "required": false,
+          "arguments_json": null
+        },
+        {
+          "schema_version": "1.0",
+          "id": "rank",
+          "skill": {
+            "schema_version": "1.0",
+            "id": "skill://ranking/candidates",
+            "version": "1.0.0",
+            "schema_major": 1
+          },
+          "depends_on": [
+            "search"
+          ],
+          "max_calls": 1,
+          "required": false,
+          "arguments_json": null
+        }
+      ],
+      "policies": [
+        {
+          "schema_version": "1.0",
+          "id": "policy://commerce/authority",
+          "version": "1.0.0",
+          "schema_major": 1
+        },
+        {
+          "schema_version": "1.0",
+          "id": "policy://commerce/default",
+          "version": "1.0.0",
+          "schema_major": 1
+        }
+      ],
+      "fallbacks": [
+        "clarify",
+        "browse"
+      ],
+      "mode": "read"
+    }
+  },
+  {
+    "id": "Procedure:type_id",
+    "contract": "Procedure",
+    "valid": false,
+    "value": {
+      "schema_version": "1.0",
+      "id": {},
+      "version": "1.0.0",
+      "intents": [
+        "discovery"
+      ],
+      "requires": [],
+      "nodes": [
+        {
+          "schema_version": "1.0",
+          "id": "schema",
+          "skill": {
+            "schema_version": "1.0",
+            "id": "skill://catalog/schema",
+            "version": "1.0.0",
+            "schema_major": 1
+          },
+          "depends_on": [],
+          "max_calls": 1,
+          "required": true,
+          "arguments_json": null
+        },
+        {
+          "schema_version": "1.0",
+          "id": "interpret",
+          "skill": {
+            "schema_version": "1.0",
+            "id": "skill://reasoning/shopping",
+            "version": "1.0.0",
+            "schema_major": 1
+          },
+          "depends_on": [
+            "schema"
+          ],
+          "max_calls": 1,
+          "required": true,
+          "arguments_json": null
+        },
+        {
+          "schema_version": "1.0",
+          "id": "reference",
+          "skill": {
+            "schema_version": "1.0",
+            "id": "skill://catalog/facts",
+            "version": "1.0.0",
+            "schema_major": 1
+          },
+          "depends_on": [
+            "interpret"
+          ],
+          "max_calls": 1,
+          "required": false,
+          "arguments_json": null
+        },
+        {
+          "schema_version": "1.0",
+          "id": "search",
+          "skill": {
+            "schema_version": "1.0",
+            "id": "skill://catalog/search",
+            "version": "1.0.0",
+            "schema_major": 1
+          },
+          "depends_on": [
+            "interpret"
+          ],
+          "max_calls": 1,
+          "required": false,
+          "arguments_json": null
+        },
+        {
+          "schema_version": "1.0",
+          "id": "compare",
+          "skill": {
+            "schema_version": "1.0",
+            "id": "skill://catalog/compare",
+            "version": "1.0.0",
+            "schema_major": 1
+          },
+          "depends_on": [
+            "interpret"
+          ],
+          "max_calls": 1,
+          "required": false,
+          "arguments_json": null
+        },
+        {
+          "schema_version": "1.0",
+          "id": "rank",
+          "skill": {
+            "schema_version": "1.0",
+            "id": "skill://ranking/candidates",
+            "version": "1.0.0",
+            "schema_major": 1
+          },
+          "depends_on": [
+            "search"
+          ],
+          "max_calls": 1,
+          "required": false,
+          "arguments_json": null
+        }
+      ],
+      "policies": [
+        {
+          "schema_version": "1.0",
+          "id": "policy://commerce/authority",
+          "version": "1.0.0",
+          "schema_major": 1
+        },
+        {
+          "schema_version": "1.0",
+          "id": "policy://commerce/default",
+          "version": "1.0.0",
+          "schema_major": 1
+        }
+      ],
+      "verification": [
+        "all_hard_constraints",
+        "current_price_and_stock",
+        "no_implicit_mutation"
+      ],
+      "fallbacks": [
+        "clarify",
+        "browse"
+      ],
+      "mode": "read"
+    }
+  },
+  {
+    "id": "Procedure:type_version",
+    "contract": "Procedure",
+    "valid": false,
+    "value": {
+      "schema_version": "1.0",
+      "id": "playbook://commerce/discovery",
+      "version": {},
+      "intents": [
+        "discovery"
+      ],
+      "requires": [],
+      "nodes": [
+        {
+          "schema_version": "1.0",
+          "id": "schema",
+          "skill": {
+            "schema_version": "1.0",
+            "id": "skill://catalog/schema",
+            "version": "1.0.0",
+            "schema_major": 1
+          },
+          "depends_on": [],
+          "max_calls": 1,
+          "required": true,
+          "arguments_json": null
+        },
+        {
+          "schema_version": "1.0",
+          "id": "interpret",
+          "skill": {
+            "schema_version": "1.0",
+            "id": "skill://reasoning/shopping",
+            "version": "1.0.0",
+            "schema_major": 1
+          },
+          "depends_on": [
+            "schema"
+          ],
+          "max_calls": 1,
+          "required": true,
+          "arguments_json": null
+        },
+        {
+          "schema_version": "1.0",
+          "id": "reference",
+          "skill": {
+            "schema_version": "1.0",
+            "id": "skill://catalog/facts",
+            "version": "1.0.0",
+            "schema_major": 1
+          },
+          "depends_on": [
+            "interpret"
+          ],
+          "max_calls": 1,
+          "required": false,
+          "arguments_json": null
+        },
+        {
+          "schema_version": "1.0",
+          "id": "search",
+          "skill": {
+            "schema_version": "1.0",
+            "id": "skill://catalog/search",
+            "version": "1.0.0",
+            "schema_major": 1
+          },
+          "depends_on": [
+            "interpret"
+          ],
+          "max_calls": 1,
+          "required": false,
+          "arguments_json": null
+        },
+        {
+          "schema_version": "1.0",
+          "id": "compare",
+          "skill": {
+            "schema_version": "1.0",
+            "id": "skill://catalog/compare",
+            "version": "1.0.0",
+            "schema_major": 1
+          },
+          "depends_on": [
+            "interpret"
+          ],
+          "max_calls": 1,
+          "required": false,
+          "arguments_json": null
+        },
+        {
+          "schema_version": "1.0",
+          "id": "rank",
+          "skill": {
+            "schema_version": "1.0",
+            "id": "skill://ranking/candidates",
+            "version": "1.0.0",
+            "schema_major": 1
+          },
+          "depends_on": [
+            "search"
+          ],
+          "max_calls": 1,
+          "required": false,
+          "arguments_json": null
+        }
+      ],
+      "policies": [
+        {
+          "schema_version": "1.0",
+          "id": "policy://commerce/authority",
+          "version": "1.0.0",
+          "schema_major": 1
+        },
+        {
+          "schema_version": "1.0",
+          "id": "policy://commerce/default",
+          "version": "1.0.0",
+          "schema_major": 1
+        }
+      ],
+      "verification": [
+        "all_hard_constraints",
+        "current_price_and_stock",
+        "no_implicit_mutation"
+      ],
+      "fallbacks": [
+        "clarify",
+        "browse"
+      ],
+      "mode": "read"
+    }
+  },
+  {
+    "id": "Procedure:type_intents",
+    "contract": "Procedure",
+    "valid": false,
+    "value": {
+      "schema_version": "1.0",
+      "id": "playbook://commerce/discovery",
+      "version": "1.0.0",
+      "intents": {},
+      "requires": [],
+      "nodes": [
+        {
+          "schema_version": "1.0",
+          "id": "schema",
+          "skill": {
+            "schema_version": "1.0",
+            "id": "skill://catalog/schema",
+            "version": "1.0.0",
+            "schema_major": 1
+          },
+          "depends_on": [],
+          "max_calls": 1,
+          "required": true,
+          "arguments_json": null
+        },
+        {
+          "schema_version": "1.0",
+          "id": "interpret",
+          "skill": {
+            "schema_version": "1.0",
+            "id": "skill://reasoning/shopping",
+            "version": "1.0.0",
+            "schema_major": 1
+          },
+          "depends_on": [
+            "schema"
+          ],
+          "max_calls": 1,
+          "required": true,
+          "arguments_json": null
+        },
+        {
+          "schema_version": "1.0",
+          "id": "reference",
+          "skill": {
+            "schema_version": "1.0",
+            "id": "skill://catalog/facts",
+            "version": "1.0.0",
+            "schema_major": 1
+          },
+          "depends_on": [
+            "interpret"
+          ],
+          "max_calls": 1,
+          "required": false,
+          "arguments_json": null
+        },
+        {
+          "schema_version": "1.0",
+          "id": "search",
+          "skill": {
+            "schema_version": "1.0",
+            "id": "skill://catalog/search",
+            "version": "1.0.0",
+            "schema_major": 1
+          },
+          "depends_on": [
+            "interpret"
+          ],
+          "max_calls": 1,
+          "required": false,
+          "arguments_json": null
+        },
+        {
+          "schema_version": "1.0",
+          "id": "compare",
+          "skill": {
+            "schema_version": "1.0",
+            "id": "skill://catalog/compare",
+            "version": "1.0.0",
+            "schema_major": 1
+          },
+          "depends_on": [
+            "interpret"
+          ],
+          "max_calls": 1,
+          "required": false,
+          "arguments_json": null
+        },
+        {
+          "schema_version": "1.0",
+          "id": "rank",
+          "skill": {
+            "schema_version": "1.0",
+            "id": "skill://ranking/candidates",
+            "version": "1.0.0",
+            "schema_major": 1
+          },
+          "depends_on": [
+            "search"
+          ],
+          "max_calls": 1,
+          "required": false,
+          "arguments_json": null
+        }
+      ],
+      "policies": [
+        {
+          "schema_version": "1.0",
+          "id": "policy://commerce/authority",
+          "version": "1.0.0",
+          "schema_major": 1
+        },
+        {
+          "schema_version": "1.0",
+          "id": "policy://commerce/default",
+          "version": "1.0.0",
+          "schema_major": 1
+        }
+      ],
+      "verification": [
+        "all_hard_constraints",
+        "current_price_and_stock",
+        "no_implicit_mutation"
+      ],
+      "fallbacks": [
+        "clarify",
+        "browse"
+      ],
+      "mode": "read"
+    }
+  },
+  {
+    "id": "Procedure:type_requires",
+    "contract": "Procedure",
+    "valid": false,
+    "value": {
+      "schema_version": "1.0",
+      "id": "playbook://commerce/discovery",
+      "version": "1.0.0",
+      "intents": [
+        "discovery"
+      ],
+      "requires": {},
+      "nodes": [
+        {
+          "schema_version": "1.0",
+          "id": "schema",
+          "skill": {
+            "schema_version": "1.0",
+            "id": "skill://catalog/schema",
+            "version": "1.0.0",
+            "schema_major": 1
+          },
+          "depends_on": [],
+          "max_calls": 1,
+          "required": true,
+          "arguments_json": null
+        },
+        {
+          "schema_version": "1.0",
+          "id": "interpret",
+          "skill": {
+            "schema_version": "1.0",
+            "id": "skill://reasoning/shopping",
+            "version": "1.0.0",
+            "schema_major": 1
+          },
+          "depends_on": [
+            "schema"
+          ],
+          "max_calls": 1,
+          "required": true,
+          "arguments_json": null
+        },
+        {
+          "schema_version": "1.0",
+          "id": "reference",
+          "skill": {
+            "schema_version": "1.0",
+            "id": "skill://catalog/facts",
+            "version": "1.0.0",
+            "schema_major": 1
+          },
+          "depends_on": [
+            "interpret"
+          ],
+          "max_calls": 1,
+          "required": false,
+          "arguments_json": null
+        },
+        {
+          "schema_version": "1.0",
+          "id": "search",
+          "skill": {
+            "schema_version": "1.0",
+            "id": "skill://catalog/search",
+            "version": "1.0.0",
+            "schema_major": 1
+          },
+          "depends_on": [
+            "interpret"
+          ],
+          "max_calls": 1,
+          "required": false,
+          "arguments_json": null
+        },
+        {
+          "schema_version": "1.0",
+          "id": "compare",
+          "skill": {
+            "schema_version": "1.0",
+            "id": "skill://catalog/compare",
+            "version": "1.0.0",
+            "schema_major": 1
+          },
+          "depends_on": [
+            "interpret"
+          ],
+          "max_calls": 1,
+          "required": false,
+          "arguments_json": null
+        },
+        {
+          "schema_version": "1.0",
+          "id": "rank",
+          "skill": {
+            "schema_version": "1.0",
+            "id": "skill://ranking/candidates",
+            "version": "1.0.0",
+            "schema_major": 1
+          },
+          "depends_on": [
+            "search"
+          ],
+          "max_calls": 1,
+          "required": false,
+          "arguments_json": null
+        }
+      ],
+      "policies": [
+        {
+          "schema_version": "1.0",
+          "id": "policy://commerce/authority",
+          "version": "1.0.0",
+          "schema_major": 1
+        },
+        {
+          "schema_version": "1.0",
+          "id": "policy://commerce/default",
+          "version": "1.0.0",
+          "schema_major": 1
+        }
+      ],
+      "verification": [
+        "all_hard_constraints",
+        "current_price_and_stock",
+        "no_implicit_mutation"
+      ],
+      "fallbacks": [
+        "clarify",
+        "browse"
+      ],
+      "mode": "read"
+    }
+  },
+  {
+    "id": "Procedure:type_nodes",
+    "contract": "Procedure",
+    "valid": false,
+    "value": {
+      "schema_version": "1.0",
+      "id": "playbook://commerce/discovery",
+      "version": "1.0.0",
+      "intents": [
+        "discovery"
+      ],
+      "requires": [],
+      "nodes": {},
+      "policies": [
+        {
+          "schema_version": "1.0",
+          "id": "policy://commerce/authority",
+          "version": "1.0.0",
+          "schema_major": 1
+        },
+        {
+          "schema_version": "1.0",
+          "id": "policy://commerce/default",
+          "version": "1.0.0",
+          "schema_major": 1
+        }
+      ],
+      "verification": [
+        "all_hard_constraints",
+        "current_price_and_stock",
+        "no_implicit_mutation"
+      ],
+      "fallbacks": [
+        "clarify",
+        "browse"
+      ],
+      "mode": "read"
+    }
+  },
+  {
+    "id": "Procedure:type_policies",
+    "contract": "Procedure",
+    "valid": false,
+    "value": {
+      "schema_version": "1.0",
+      "id": "playbook://commerce/discovery",
+      "version": "1.0.0",
+      "intents": [
+        "discovery"
+      ],
+      "requires": [],
+      "nodes": [
+        {
+          "schema_version": "1.0",
+          "id": "schema",
+          "skill": {
+            "schema_version": "1.0",
+            "id": "skill://catalog/schema",
+            "version": "1.0.0",
+            "schema_major": 1
+          },
+          "depends_on": [],
+          "max_calls": 1,
+          "required": true,
+          "arguments_json": null
+        },
+        {
+          "schema_version": "1.0",
+          "id": "interpret",
+          "skill": {
+            "schema_version": "1.0",
+            "id": "skill://reasoning/shopping",
+            "version": "1.0.0",
+            "schema_major": 1
+          },
+          "depends_on": [
+            "schema"
+          ],
+          "max_calls": 1,
+          "required": true,
+          "arguments_json": null
+        },
+        {
+          "schema_version": "1.0",
+          "id": "reference",
+          "skill": {
+            "schema_version": "1.0",
+            "id": "skill://catalog/facts",
+            "version": "1.0.0",
+            "schema_major": 1
+          },
+          "depends_on": [
+            "interpret"
+          ],
+          "max_calls": 1,
+          "required": false,
+          "arguments_json": null
+        },
+        {
+          "schema_version": "1.0",
+          "id": "search",
+          "skill": {
+            "schema_version": "1.0",
+            "id": "skill://catalog/search",
+            "version": "1.0.0",
+            "schema_major": 1
+          },
+          "depends_on": [
+            "interpret"
+          ],
+          "max_calls": 1,
+          "required": false,
+          "arguments_json": null
+        },
+        {
+          "schema_version": "1.0",
+          "id": "compare",
+          "skill": {
+            "schema_version": "1.0",
+            "id": "skill://catalog/compare",
+            "version": "1.0.0",
+            "schema_major": 1
+          },
+          "depends_on": [
+            "interpret"
+          ],
+          "max_calls": 1,
+          "required": false,
+          "arguments_json": null
+        },
+        {
+          "schema_version": "1.0",
+          "id": "rank",
+          "skill": {
+            "schema_version": "1.0",
+            "id": "skill://ranking/candidates",
+            "version": "1.0.0",
+            "schema_major": 1
+          },
+          "depends_on": [
+            "search"
+          ],
+          "max_calls": 1,
+          "required": false,
+          "arguments_json": null
+        }
+      ],
+      "policies": {},
+      "verification": [
+        "all_hard_constraints",
+        "current_price_and_stock",
+        "no_implicit_mutation"
+      ],
+      "fallbacks": [
+        "clarify",
+        "browse"
+      ],
+      "mode": "read"
+    }
+  },
+  {
+    "id": "Procedure:type_verification",
+    "contract": "Procedure",
+    "valid": false,
+    "value": {
+      "schema_version": "1.0",
+      "id": "playbook://commerce/discovery",
+      "version": "1.0.0",
+      "intents": [
+        "discovery"
+      ],
+      "requires": [],
+      "nodes": [
+        {
+          "schema_version": "1.0",
+          "id": "schema",
+          "skill": {
+            "schema_version": "1.0",
+            "id": "skill://catalog/schema",
+            "version": "1.0.0",
+            "schema_major": 1
+          },
+          "depends_on": [],
+          "max_calls": 1,
+          "required": true,
+          "arguments_json": null
+        },
+        {
+          "schema_version": "1.0",
+          "id": "interpret",
+          "skill": {
+            "schema_version": "1.0",
+            "id": "skill://reasoning/shopping",
+            "version": "1.0.0",
+            "schema_major": 1
+          },
+          "depends_on": [
+            "schema"
+          ],
+          "max_calls": 1,
+          "required": true,
+          "arguments_json": null
+        },
+        {
+          "schema_version": "1.0",
+          "id": "reference",
+          "skill": {
+            "schema_version": "1.0",
+            "id": "skill://catalog/facts",
+            "version": "1.0.0",
+            "schema_major": 1
+          },
+          "depends_on": [
+            "interpret"
+          ],
+          "max_calls": 1,
+          "required": false,
+          "arguments_json": null
+        },
+        {
+          "schema_version": "1.0",
+          "id": "search",
+          "skill": {
+            "schema_version": "1.0",
+            "id": "skill://catalog/search",
+            "version": "1.0.0",
+            "schema_major": 1
+          },
+          "depends_on": [
+            "interpret"
+          ],
+          "max_calls": 1,
+          "required": false,
+          "arguments_json": null
+        },
+        {
+          "schema_version": "1.0",
+          "id": "compare",
+          "skill": {
+            "schema_version": "1.0",
+            "id": "skill://catalog/compare",
+            "version": "1.0.0",
+            "schema_major": 1
+          },
+          "depends_on": [
+            "interpret"
+          ],
+          "max_calls": 1,
+          "required": false,
+          "arguments_json": null
+        },
+        {
+          "schema_version": "1.0",
+          "id": "rank",
+          "skill": {
+            "schema_version": "1.0",
+            "id": "skill://ranking/candidates",
+            "version": "1.0.0",
+            "schema_major": 1
+          },
+          "depends_on": [
+            "search"
+          ],
+          "max_calls": 1,
+          "required": false,
+          "arguments_json": null
+        }
+      ],
+      "policies": [
+        {
+          "schema_version": "1.0",
+          "id": "policy://commerce/authority",
+          "version": "1.0.0",
+          "schema_major": 1
+        },
+        {
+          "schema_version": "1.0",
+          "id": "policy://commerce/default",
+          "version": "1.0.0",
+          "schema_major": 1
+        }
+      ],
+      "verification": {},
+      "fallbacks": [
+        "clarify",
+        "browse"
+      ],
+      "mode": "read"
+    }
+  },
+  {
+    "id": "Procedure:type_fallbacks",
+    "contract": "Procedure",
+    "valid": false,
+    "value": {
+      "schema_version": "1.0",
+      "id": "playbook://commerce/discovery",
+      "version": "1.0.0",
+      "intents": [
+        "discovery"
+      ],
+      "requires": [],
+      "nodes": [
+        {
+          "schema_version": "1.0",
+          "id": "schema",
+          "skill": {
+            "schema_version": "1.0",
+            "id": "skill://catalog/schema",
+            "version": "1.0.0",
+            "schema_major": 1
+          },
+          "depends_on": [],
+          "max_calls": 1,
+          "required": true,
+          "arguments_json": null
+        },
+        {
+          "schema_version": "1.0",
+          "id": "interpret",
+          "skill": {
+            "schema_version": "1.0",
+            "id": "skill://reasoning/shopping",
+            "version": "1.0.0",
+            "schema_major": 1
+          },
+          "depends_on": [
+            "schema"
+          ],
+          "max_calls": 1,
+          "required": true,
+          "arguments_json": null
+        },
+        {
+          "schema_version": "1.0",
+          "id": "reference",
+          "skill": {
+            "schema_version": "1.0",
+            "id": "skill://catalog/facts",
+            "version": "1.0.0",
+            "schema_major": 1
+          },
+          "depends_on": [
+            "interpret"
+          ],
+          "max_calls": 1,
+          "required": false,
+          "arguments_json": null
+        },
+        {
+          "schema_version": "1.0",
+          "id": "search",
+          "skill": {
+            "schema_version": "1.0",
+            "id": "skill://catalog/search",
+            "version": "1.0.0",
+            "schema_major": 1
+          },
+          "depends_on": [
+            "interpret"
+          ],
+          "max_calls": 1,
+          "required": false,
+          "arguments_json": null
+        },
+        {
+          "schema_version": "1.0",
+          "id": "compare",
+          "skill": {
+            "schema_version": "1.0",
+            "id": "skill://catalog/compare",
+            "version": "1.0.0",
+            "schema_major": 1
+          },
+          "depends_on": [
+            "interpret"
+          ],
+          "max_calls": 1,
+          "required": false,
+          "arguments_json": null
+        },
+        {
+          "schema_version": "1.0",
+          "id": "rank",
+          "skill": {
+            "schema_version": "1.0",
+            "id": "skill://ranking/candidates",
+            "version": "1.0.0",
+            "schema_major": 1
+          },
+          "depends_on": [
+            "search"
+          ],
+          "max_calls": 1,
+          "required": false,
+          "arguments_json": null
+        }
+      ],
+      "policies": [
+        {
+          "schema_version": "1.0",
+          "id": "policy://commerce/authority",
+          "version": "1.0.0",
+          "schema_major": 1
+        },
+        {
+          "schema_version": "1.0",
+          "id": "policy://commerce/default",
+          "version": "1.0.0",
+          "schema_major": 1
+        }
+      ],
+      "verification": [
+        "all_hard_constraints",
+        "current_price_and_stock",
+        "no_implicit_mutation"
+      ],
+      "fallbacks": {},
+      "mode": "read"
+    }
+  },
+  {
+    "id": "Procedure:type_mode",
+    "contract": "Procedure",
+    "valid": false,
+    "value": {
+      "schema_version": "1.0",
+      "id": "playbook://commerce/discovery",
+      "version": "1.0.0",
+      "intents": [
+        "discovery"
+      ],
+      "requires": [],
+      "nodes": [
+        {
+          "schema_version": "1.0",
+          "id": "schema",
+          "skill": {
+            "schema_version": "1.0",
+            "id": "skill://catalog/schema",
+            "version": "1.0.0",
+            "schema_major": 1
+          },
+          "depends_on": [],
+          "max_calls": 1,
+          "required": true,
+          "arguments_json": null
+        },
+        {
+          "schema_version": "1.0",
+          "id": "interpret",
+          "skill": {
+            "schema_version": "1.0",
+            "id": "skill://reasoning/shopping",
+            "version": "1.0.0",
+            "schema_major": 1
+          },
+          "depends_on": [
+            "schema"
+          ],
+          "max_calls": 1,
+          "required": true,
+          "arguments_json": null
+        },
+        {
+          "schema_version": "1.0",
+          "id": "reference",
+          "skill": {
+            "schema_version": "1.0",
+            "id": "skill://catalog/facts",
+            "version": "1.0.0",
+            "schema_major": 1
+          },
+          "depends_on": [
+            "interpret"
+          ],
+          "max_calls": 1,
+          "required": false,
+          "arguments_json": null
+        },
+        {
+          "schema_version": "1.0",
+          "id": "search",
+          "skill": {
+            "schema_version": "1.0",
+            "id": "skill://catalog/search",
+            "version": "1.0.0",
+            "schema_major": 1
+          },
+          "depends_on": [
+            "interpret"
+          ],
+          "max_calls": 1,
+          "required": false,
+          "arguments_json": null
+        },
+        {
+          "schema_version": "1.0",
+          "id": "compare",
+          "skill": {
+            "schema_version": "1.0",
+            "id": "skill://catalog/compare",
+            "version": "1.0.0",
+            "schema_major": 1
+          },
+          "depends_on": [
+            "interpret"
+          ],
+          "max_calls": 1,
+          "required": false,
+          "arguments_json": null
+        },
+        {
+          "schema_version": "1.0",
+          "id": "rank",
+          "skill": {
+            "schema_version": "1.0",
+            "id": "skill://ranking/candidates",
+            "version": "1.0.0",
+            "schema_major": 1
+          },
+          "depends_on": [
+            "search"
+          ],
+          "max_calls": 1,
+          "required": false,
+          "arguments_json": null
+        }
+      ],
+      "policies": [
+        {
+          "schema_version": "1.0",
+          "id": "policy://commerce/authority",
+          "version": "1.0.0",
+          "schema_major": 1
+        },
+        {
+          "schema_version": "1.0",
+          "id": "policy://commerce/default",
+          "version": "1.0.0",
+          "schema_major": 1
+        }
+      ],
+      "verification": [
+        "all_hard_constraints",
+        "current_price_and_stock",
+        "no_implicit_mutation"
+      ],
+      "fallbacks": [
+        "clarify",
+        "browse"
+      ],
+      "mode": {}
+    }
+  }
+]

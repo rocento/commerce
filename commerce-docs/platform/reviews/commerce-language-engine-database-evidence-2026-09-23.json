@@ -1,0 +1,712 @@
+{
+  "observedAt": "2026-09-23T07:39:02.790Z",
+  "scope": "Local configured CLE database; read-only inspection",
+  "database_bytes": "82384563",
+  "server_version": "17.11",
+  "counts": {
+    "action_frame_slots": 4,
+    "action_frames": 4,
+    "clarification_policies": 12,
+    "commerce_intents": 180,
+    "commerce_operators": 14,
+    "confidence_calibrations": 0,
+    "context_states": 11,
+    "entity_aliases": 0,
+    "entity_terms": 525,
+    "entity_types": 20,
+    "evaluation_results": 6,
+    "generated_utterances": 134072,
+    "generation_runs": 12,
+    "industry_pack_relations": 0,
+    "industry_packs": 10,
+    "intent_conflicts": 7,
+    "intent_families": 17,
+    "intent_rule_conditions": 640,
+    "intent_rules": 205,
+    "intent_slots": 14,
+    "intent_transition_rules": 32,
+    "pending_clarification_sessions": 0,
+    "phrase_patterns": 180,
+    "reference_rules": 8,
+    "request_prefixes": 15,
+    "resolution_feedback": 0,
+    "semantic_ambiguities": 4,
+    "semantic_composition_rules": 16,
+    "semantic_groups": 525,
+    "semantic_relationships": 0,
+    "semantic_terms": 2300
+  },
+  "releases": [
+    {
+      "id": "1",
+      "dictionary_version": 2,
+      "fingerprint": "3b53bcac5bdfc0e642ad4f3c3c59d890df754c41800a736844128c6b72965a25",
+      "active": false
+    },
+    {
+      "id": "2",
+      "dictionary_version": 2,
+      "fingerprint": "50b8158638b7d3e01adcf45b5cd1e9860ca2b03d73d905a67edb8e27823a41aa",
+      "active": false
+    },
+    {
+      "id": "3",
+      "dictionary_version": 2,
+      "fingerprint": "9e4f725ac372f4552171ca9572aa55de7e73b5fd23e804b17e1a73573a8f95df",
+      "active": false
+    },
+    {
+      "id": "4",
+      "dictionary_version": 3,
+      "fingerprint": "324cbe42487d05dcd42ef31e547841d204132b2c3bb09959bf07dc1cf472c178",
+      "active": false
+    },
+    {
+      "id": "5",
+      "dictionary_version": 7,
+      "fingerprint": "15b99b95673521121e7da2f2a4e1f37441fb3baa17fce14915d11f8d85f0e8ce",
+      "active": false
+    },
+    {
+      "id": "6",
+      "dictionary_version": 7,
+      "fingerprint": "9c8f022b6124d71d8b872a0776bf556be0f09601b258f76640e1dbf0c166413e",
+      "active": false
+    },
+    {
+      "id": "7",
+      "dictionary_version": 7,
+      "fingerprint": "deb51eb782a0f9c7ed2bbe355d003eb09df6f21ebb6c1c291f8d8c88130aa6f0",
+      "active": false
+    },
+    {
+      "id": "8",
+      "dictionary_version": 7,
+      "fingerprint": "deb51eb782a0f9c7ed2bbe355d003eb09df6f21ebb6c1c291f8d8c88130aa6f0",
+      "active": false
+    },
+    {
+      "id": "9",
+      "dictionary_version": 7,
+      "fingerprint": "0e83f5c65b41722e4c14b27111ac25da4ec72b86845066921b0ef679144f6155",
+      "active": false
+    },
+    {
+      "id": "10",
+      "dictionary_version": 7,
+      "fingerprint": "0e83f5c65b41722e4c14b27111ac25da4ec72b86845066921b0ef679144f6155",
+      "active": false
+    },
+    {
+      "id": "11",
+      "dictionary_version": 7,
+      "fingerprint": "e62c7ecfa43b67cfdcfc5cc606e60c102efc2f9d47fa148c4f758b2a72237076",
+      "active": false
+    },
+    {
+      "id": "12",
+      "dictionary_version": 8,
+      "fingerprint": "7c4ee75c81288910e9efbdad8ac2af895860dde804e9cdeed7d45a48db7ba77a",
+      "active": true
+    }
+  ],
+  "diagnostics": {
+    "nullIndustryTerms": "0",
+    "duplicateGlobalAmbiguities": "0"
+  },
+  "indexes": [
+    {
+      "tablename": "action_frame_slots",
+      "indexname": "action_frame_slots_action_frame_id_role_code_version_key",
+      "indexdef": "CREATE UNIQUE INDEX action_frame_slots_action_frame_id_role_code_version_key ON public.action_frame_slots USING btree (action_frame_id, role_code, version)"
+    },
+    {
+      "tablename": "action_frame_slots",
+      "indexname": "action_frame_slots_pkey",
+      "indexdef": "CREATE UNIQUE INDEX action_frame_slots_pkey ON public.action_frame_slots USING btree (id)"
+    },
+    {
+      "tablename": "action_frames",
+      "indexname": "action_frames_code_key",
+      "indexdef": "CREATE UNIQUE INDEX action_frames_code_key ON public.action_frames USING btree (code)"
+    },
+    {
+      "tablename": "action_frames",
+      "indexname": "action_frames_intent_idx",
+      "indexdef": "CREATE INDEX action_frames_intent_idx ON public.action_frames USING btree (intent_id)"
+    },
+    {
+      "tablename": "action_frames",
+      "indexname": "action_frames_pkey",
+      "indexdef": "CREATE UNIQUE INDEX action_frames_pkey ON public.action_frames USING btree (id)"
+    },
+    {
+      "tablename": "clarification_policies",
+      "indexname": "clarification_policies_intent_id_slot_code_version_key",
+      "indexdef": "CREATE UNIQUE INDEX clarification_policies_intent_id_slot_code_version_key ON public.clarification_policies USING btree (intent_id, slot_code, version)"
+    },
+    {
+      "tablename": "clarification_policies",
+      "indexname": "clarification_policies_pkey",
+      "indexdef": "CREATE UNIQUE INDEX clarification_policies_pkey ON public.clarification_policies USING btree (id)"
+    },
+    {
+      "tablename": "commerce_intents",
+      "indexname": "commerce_intents_code_key",
+      "indexdef": "CREATE UNIQUE INDEX commerce_intents_code_key ON public.commerce_intents USING btree (code)"
+    },
+    {
+      "tablename": "commerce_intents",
+      "indexname": "commerce_intents_pkey",
+      "indexdef": "CREATE UNIQUE INDEX commerce_intents_pkey ON public.commerce_intents USING btree (id)"
+    },
+    {
+      "tablename": "commerce_operators",
+      "indexname": "commerce_operators_code_key",
+      "indexdef": "CREATE UNIQUE INDEX commerce_operators_code_key ON public.commerce_operators USING btree (code)"
+    },
+    {
+      "tablename": "commerce_operators",
+      "indexname": "commerce_operators_pkey",
+      "indexdef": "CREATE UNIQUE INDEX commerce_operators_pkey ON public.commerce_operators USING btree (id)"
+    },
+    {
+      "tablename": "confidence_calibrations",
+      "indexname": "confidence_calibration_active_idx",
+      "indexdef": "CREATE INDEX confidence_calibration_active_idx ON public.confidence_calibrations USING btree (scope_kind, scope_code, dictionary_version) WHERE active"
+    },
+    {
+      "tablename": "confidence_calibrations",
+      "indexname": "confidence_calibrations_pkey",
+      "indexdef": "CREATE UNIQUE INDEX confidence_calibrations_pkey ON public.confidence_calibrations USING btree (id)"
+    },
+    {
+      "tablename": "confidence_calibrations",
+      "indexname": "confidence_calibrations_scope_kind_scope_code_dictionary_ve_key",
+      "indexdef": "CREATE UNIQUE INDEX confidence_calibrations_scope_kind_scope_code_dictionary_ve_key ON public.confidence_calibrations USING btree (scope_kind, scope_code, dictionary_version, method)"
+    },
+    {
+      "tablename": "context_states",
+      "indexname": "context_states_code_key",
+      "indexdef": "CREATE UNIQUE INDEX context_states_code_key ON public.context_states USING btree (code)"
+    },
+    {
+      "tablename": "context_states",
+      "indexname": "context_states_pkey",
+      "indexdef": "CREATE UNIQUE INDEX context_states_pkey ON public.context_states USING btree (id)"
+    },
+    {
+      "tablename": "entity_aliases",
+      "indexname": "aliases_normalized_idx",
+      "indexdef": "CREATE INDEX aliases_normalized_idx ON public.entity_aliases USING btree (normalized_alias)"
+    },
+    {
+      "tablename": "entity_aliases",
+      "indexname": "entity_aliases_entity_type_id_normalized_alias_key",
+      "indexdef": "CREATE UNIQUE INDEX entity_aliases_entity_type_id_normalized_alias_key ON public.entity_aliases USING btree (entity_type_id, normalized_alias)"
+    },
+    {
+      "tablename": "entity_aliases",
+      "indexname": "entity_aliases_pkey",
+      "indexdef": "CREATE UNIQUE INDEX entity_aliases_pkey ON public.entity_aliases USING btree (id)"
+    },
+    {
+      "tablename": "entity_terms",
+      "indexname": "entity_terms_entity_type_id_normalized_alias_key",
+      "indexdef": "CREATE UNIQUE INDEX entity_terms_entity_type_id_normalized_alias_key ON public.entity_terms USING btree (entity_type_id, normalized_alias)"
+    },
+    {
+      "tablename": "entity_terms",
+      "indexname": "entity_terms_normalized_idx",
+      "indexdef": "CREATE INDEX entity_terms_normalized_idx ON public.entity_terms USING btree (normalized_alias)"
+    },
+    {
+      "tablename": "entity_terms",
+      "indexname": "entity_terms_pkey",
+      "indexdef": "CREATE UNIQUE INDEX entity_terms_pkey ON public.entity_terms USING btree (id)"
+    },
+    {
+      "tablename": "entity_types",
+      "indexname": "entity_types_code_key",
+      "indexdef": "CREATE UNIQUE INDEX entity_types_code_key ON public.entity_types USING btree (code)"
+    },
+    {
+      "tablename": "entity_types",
+      "indexname": "entity_types_pkey",
+      "indexdef": "CREATE UNIQUE INDEX entity_types_pkey ON public.entity_types USING btree (id)"
+    },
+    {
+      "tablename": "evaluation_results",
+      "indexname": "evaluation_results_pkey",
+      "indexdef": "CREATE UNIQUE INDEX evaluation_results_pkey ON public.evaluation_results USING btree (id)"
+    },
+    {
+      "tablename": "generated_utterances",
+      "indexname": "generated_utterances_pkey",
+      "indexdef": "CREATE UNIQUE INDEX generated_utterances_pkey ON public.generated_utterances USING btree (id)"
+    },
+    {
+      "tablename": "generated_utterances",
+      "indexname": "utterances_hash_idx",
+      "indexdef": "CREATE UNIQUE INDEX utterances_hash_idx ON public.generated_utterances USING btree (content_hash)"
+    },
+    {
+      "tablename": "generated_utterances",
+      "indexname": "utterances_split_difficulty_idx",
+      "indexdef": "CREATE INDEX utterances_split_difficulty_idx ON public.generated_utterances USING btree (split, difficulty)"
+    },
+    {
+      "tablename": "generation_runs",
+      "indexname": "generation_active_idx",
+      "indexdef": "CREATE UNIQUE INDEX generation_active_idx ON public.generation_runs USING btree (active) WHERE active"
+    },
+    {
+      "tablename": "generation_runs",
+      "indexname": "generation_runs_pkey",
+      "indexdef": "CREATE UNIQUE INDEX generation_runs_pkey ON public.generation_runs USING btree (id)"
+    },
+    {
+      "tablename": "industry_pack_relations",
+      "indexname": "industry_pack_relations_pkey",
+      "indexdef": "CREATE UNIQUE INDEX industry_pack_relations_pkey ON public.industry_pack_relations USING btree (parent_pack_id, child_pack_id)"
+    },
+    {
+      "tablename": "industry_packs",
+      "indexname": "industry_packs_code_key",
+      "indexdef": "CREATE UNIQUE INDEX industry_packs_code_key ON public.industry_packs USING btree (code)"
+    },
+    {
+      "tablename": "industry_packs",
+      "indexname": "industry_packs_pkey",
+      "indexdef": "CREATE UNIQUE INDEX industry_packs_pkey ON public.industry_packs USING btree (id)"
+    },
+    {
+      "tablename": "intent_conflicts",
+      "indexname": "intent_conflicts_pkey",
+      "indexdef": "CREATE UNIQUE INDEX intent_conflicts_pkey ON public.intent_conflicts USING btree (intent_id, conflicting_intent_id)"
+    },
+    {
+      "tablename": "intent_families",
+      "indexname": "intent_families_code_key",
+      "indexdef": "CREATE UNIQUE INDEX intent_families_code_key ON public.intent_families USING btree (code)"
+    },
+    {
+      "tablename": "intent_families",
+      "indexname": "intent_families_pkey",
+      "indexdef": "CREATE UNIQUE INDEX intent_families_pkey ON public.intent_families USING btree (id)"
+    },
+    {
+      "tablename": "intent_rule_conditions",
+      "indexname": "conditions_rule_idx",
+      "indexdef": "CREATE INDEX conditions_rule_idx ON public.intent_rule_conditions USING btree (rule_id)"
+    },
+    {
+      "tablename": "intent_rule_conditions",
+      "indexname": "intent_rule_conditions_pkey",
+      "indexdef": "CREATE UNIQUE INDEX intent_rule_conditions_pkey ON public.intent_rule_conditions USING btree (id)"
+    },
+    {
+      "tablename": "intent_rules",
+      "indexname": "intent_rule_code_idx",
+      "indexdef": "CREATE UNIQUE INDEX intent_rule_code_idx ON public.intent_rules USING btree (intent_id, code)"
+    },
+    {
+      "tablename": "intent_rules",
+      "indexname": "intent_rules_intent_idx",
+      "indexdef": "CREATE INDEX intent_rules_intent_idx ON public.intent_rules USING btree (intent_id)"
+    },
+    {
+      "tablename": "intent_rules",
+      "indexname": "intent_rules_pkey",
+      "indexdef": "CREATE UNIQUE INDEX intent_rules_pkey ON public.intent_rules USING btree (id)"
+    },
+    {
+      "tablename": "intent_slots",
+      "indexname": "intent_slots_active_idx",
+      "indexdef": "CREATE INDEX intent_slots_active_idx ON public.intent_slots USING btree (intent_id, clarification_rank) WHERE active"
+    },
+    {
+      "tablename": "intent_slots",
+      "indexname": "intent_slots_intent_id_code_version_key",
+      "indexdef": "CREATE UNIQUE INDEX intent_slots_intent_id_code_version_key ON public.intent_slots USING btree (intent_id, code, version)"
+    },
+    {
+      "tablename": "intent_slots",
+      "indexname": "intent_slots_pkey",
+      "indexdef": "CREATE UNIQUE INDEX intent_slots_pkey ON public.intent_slots USING btree (id)"
+    },
+    {
+      "tablename": "intent_transition_rules",
+      "indexname": "intent_transition_rules_pkey",
+      "indexdef": "CREATE UNIQUE INDEX intent_transition_rules_pkey ON public.intent_transition_rules USING btree (id)"
+    },
+    {
+      "tablename": "intent_transition_rules",
+      "indexname": "transitions_lookup_idx",
+      "indexdef": "CREATE INDEX transitions_lookup_idx ON public.intent_transition_rules USING btree (previous_intent_id, semantic_group_id)"
+    },
+    {
+      "tablename": "pending_clarification_sessions",
+      "indexname": "pending_clarification_expiry_idx",
+      "indexdef": "CREATE INDEX pending_clarification_expiry_idx ON public.pending_clarification_sessions USING btree (expires_at) WHERE (cancelled_at IS NULL)"
+    },
+    {
+      "tablename": "pending_clarification_sessions",
+      "indexname": "pending_clarification_sessions_pkey",
+      "indexdef": "CREATE UNIQUE INDEX pending_clarification_sessions_pkey ON public.pending_clarification_sessions USING btree (tenant_id, session_id)"
+    },
+    {
+      "tablename": "phrase_patterns",
+      "indexname": "phrase_patterns_pkey",
+      "indexdef": "CREATE UNIQUE INDEX phrase_patterns_pkey ON public.phrase_patterns USING btree (id)"
+    },
+    {
+      "tablename": "reference_rules",
+      "indexname": "reference_rules_code_version_key",
+      "indexdef": "CREATE UNIQUE INDEX reference_rules_code_version_key ON public.reference_rules USING btree (code, version)"
+    },
+    {
+      "tablename": "reference_rules",
+      "indexname": "reference_rules_lookup_idx",
+      "indexdef": "CREATE INDEX reference_rules_lookup_idx ON public.reference_rules USING btree (reference_group_id, precedence) WHERE active"
+    },
+    {
+      "tablename": "reference_rules",
+      "indexname": "reference_rules_pkey",
+      "indexdef": "CREATE UNIQUE INDEX reference_rules_pkey ON public.reference_rules USING btree (id)"
+    },
+    {
+      "tablename": "request_prefixes",
+      "indexname": "request_prefixes_phrase_key",
+      "indexdef": "CREATE UNIQUE INDEX request_prefixes_phrase_key ON public.request_prefixes USING btree (phrase)"
+    },
+    {
+      "tablename": "request_prefixes",
+      "indexname": "request_prefixes_pkey",
+      "indexdef": "CREATE UNIQUE INDEX request_prefixes_pkey ON public.request_prefixes USING btree (id)"
+    },
+    {
+      "tablename": "resolution_feedback",
+      "indexname": "resolution_feedback_eval_idx",
+      "indexdef": "CREATE INDEX resolution_feedback_eval_idx ON public.resolution_feedback USING btree (dictionary_version, created_at)"
+    },
+    {
+      "tablename": "resolution_feedback",
+      "indexname": "resolution_feedback_hash_idx",
+      "indexdef": "CREATE INDEX resolution_feedback_hash_idx ON public.resolution_feedback USING btree (utterance_hash)"
+    },
+    {
+      "tablename": "resolution_feedback",
+      "indexname": "resolution_feedback_pkey",
+      "indexdef": "CREATE UNIQUE INDEX resolution_feedback_pkey ON public.resolution_feedback USING btree (id)"
+    },
+    {
+      "tablename": "semantic_ambiguities",
+      "indexname": "semantic_ambiguities_normalized_term_candidate_kind_candida_key",
+      "indexdef": "CREATE UNIQUE INDEX semantic_ambiguities_normalized_term_candidate_kind_candida_key ON public.semantic_ambiguities USING btree (normalized_term, candidate_kind, candidate_ref, industry_pack_id, version)"
+    },
+    {
+      "tablename": "semantic_ambiguities",
+      "indexname": "semantic_ambiguities_pkey",
+      "indexdef": "CREATE UNIQUE INDEX semantic_ambiguities_pkey ON public.semantic_ambiguities USING btree (id)"
+    },
+    {
+      "tablename": "semantic_ambiguities",
+      "indexname": "semantic_ambiguities_term_idx",
+      "indexdef": "CREATE INDEX semantic_ambiguities_term_idx ON public.semantic_ambiguities USING btree (normalized_term) WHERE active"
+    },
+    {
+      "tablename": "semantic_composition_rules",
+      "indexname": "semantic_composition_active_idx",
+      "indexdef": "CREATE INDEX semantic_composition_active_idx ON public.semantic_composition_rules USING btree (precedence, code) WHERE active"
+    },
+    {
+      "tablename": "semantic_composition_rules",
+      "indexname": "semantic_composition_rules_code_version_key",
+      "indexdef": "CREATE UNIQUE INDEX semantic_composition_rules_code_version_key ON public.semantic_composition_rules USING btree (code, version)"
+    },
+    {
+      "tablename": "semantic_composition_rules",
+      "indexname": "semantic_composition_rules_pkey",
+      "indexdef": "CREATE UNIQUE INDEX semantic_composition_rules_pkey ON public.semantic_composition_rules USING btree (id)"
+    },
+    {
+      "tablename": "semantic_groups",
+      "indexname": "semantic_groups_code_key",
+      "indexdef": "CREATE UNIQUE INDEX semantic_groups_code_key ON public.semantic_groups USING btree (code)"
+    },
+    {
+      "tablename": "semantic_groups",
+      "indexname": "semantic_groups_pkey",
+      "indexdef": "CREATE UNIQUE INDEX semantic_groups_pkey ON public.semantic_groups USING btree (id)"
+    },
+    {
+      "tablename": "semantic_relationships",
+      "indexname": "semantic_relationships_identity_idx",
+      "indexdef": "CREATE UNIQUE INDEX semantic_relationships_identity_idx ON public.semantic_relationships USING btree (source_group_id, relation_code, target_group_id, COALESCE(industry_pack_id, (0)::bigint), version)"
+    },
+    {
+      "tablename": "semantic_relationships",
+      "indexname": "semantic_relationships_pkey",
+      "indexdef": "CREATE UNIQUE INDEX semantic_relationships_pkey ON public.semantic_relationships USING btree (id)"
+    },
+    {
+      "tablename": "semantic_relationships",
+      "indexname": "semantic_relationships_source_group_id_relation_code_target_key",
+      "indexdef": "CREATE UNIQUE INDEX semantic_relationships_source_group_id_relation_code_target_key ON public.semantic_relationships USING btree (source_group_id, relation_code, target_group_id, industry_pack_id, version)"
+    },
+    {
+      "tablename": "semantic_relationships",
+      "indexname": "semantic_relationships_source_idx",
+      "indexdef": "CREATE INDEX semantic_relationships_source_idx ON public.semantic_relationships USING btree (source_group_id, relation_code) WHERE active"
+    },
+    {
+      "tablename": "semantic_relationships",
+      "indexname": "semantic_relationships_target_idx",
+      "indexdef": "CREATE INDEX semantic_relationships_target_idx ON public.semantic_relationships USING btree (target_group_id, relation_code) WHERE active"
+    },
+    {
+      "tablename": "semantic_terms",
+      "indexname": "semantic_terms_normalized_idx",
+      "indexdef": "CREATE INDEX semantic_terms_normalized_idx ON public.semantic_terms USING btree (normalized_term)"
+    },
+    {
+      "tablename": "semantic_terms",
+      "indexname": "semantic_terms_pkey",
+      "indexdef": "CREATE UNIQUE INDEX semantic_terms_pkey ON public.semantic_terms USING btree (id)"
+    },
+    {
+      "tablename": "semantic_terms",
+      "indexname": "semantic_terms_semantic_group_id_normalized_term_key",
+      "indexdef": "CREATE UNIQUE INDEX semantic_terms_semantic_group_id_normalized_term_key ON public.semantic_terms USING btree (semantic_group_id, normalized_term)"
+    }
+  ],
+  "plans": {
+    "corpus": [
+      {
+        "QUERY PLAN": [
+          {
+            "Plan": {
+              "Node Type": "Gather",
+              "Parallel Aware": false,
+              "Async Capable": false,
+              "Startup Cost": 1018.05,
+              "Total Cost": 7593.58,
+              "Plan Rows": 329,
+              "Plan Width": 63,
+              "Actual Startup Time": 0.29,
+              "Actual Total Time": 10.622,
+              "Actual Rows": 181,
+              "Actual Loops": 1,
+              "Workers Planned": 2,
+              "Workers Launched": 2,
+              "Single Copy": false,
+              "Shared Hit Blocks": 5794,
+              "Shared Read Blocks": 0,
+              "Shared Dirtied Blocks": 0,
+              "Shared Written Blocks": 0,
+              "Local Hit Blocks": 0,
+              "Local Read Blocks": 0,
+              "Local Dirtied Blocks": 0,
+              "Local Written Blocks": 0,
+              "Temp Read Blocks": 0,
+              "Temp Written Blocks": 0,
+              "Plans": [
+                {
+                  "Node Type": "Hash Join",
+                  "Parent Relationship": "Outer",
+                  "Parallel Aware": false,
+                  "Async Capable": false,
+                  "Join Type": "Left",
+                  "Startup Cost": 18.05,
+                  "Total Cost": 6560.68,
+                  "Plan Rows": 137,
+                  "Plan Width": 63,
+                  "Actual Startup Time": 3.949,
+                  "Actual Total Time": 6.758,
+                  "Actual Rows": 60,
+                  "Actual Loops": 3,
+                  "Inner Unique": true,
+                  "Hash Cond": "(u.expected_intent_id = i.id)",
+                  "Shared Hit Blocks": 5794,
+                  "Shared Read Blocks": 0,
+                  "Shared Dirtied Blocks": 0,
+                  "Shared Written Blocks": 0,
+                  "Local Hit Blocks": 0,
+                  "Local Read Blocks": 0,
+                  "Local Dirtied Blocks": 0,
+                  "Local Written Blocks": 0,
+                  "Temp Read Blocks": 0,
+                  "Temp Written Blocks": 0,
+                  "Workers": [],
+                  "Plans": [
+                    {
+                      "Node Type": "Seq Scan",
+                      "Parent Relationship": "Outer",
+                      "Parallel Aware": true,
+                      "Async Capable": false,
+                      "Relation Name": "generated_utterances",
+                      "Alias": "u",
+                      "Startup Cost": 0,
+                      "Total Cost": 6542.27,
+                      "Plan Rows": 137,
+                      "Plan Width": 55,
+                      "Actual Startup Time": 3.929,
+                      "Actual Total Time": 6.732,
+                      "Actual Rows": 60,
+                      "Actual Loops": 3,
+                      "Filter": "(template_family = ANY ('{canonical,legacy}'::text[]))",
+                      "Rows Removed by Filter": 44630,
+                      "Shared Hit Blocks": 5780,
+                      "Shared Read Blocks": 0,
+                      "Shared Dirtied Blocks": 0,
+                      "Shared Written Blocks": 0,
+                      "Local Hit Blocks": 0,
+                      "Local Read Blocks": 0,
+                      "Local Dirtied Blocks": 0,
+                      "Local Written Blocks": 0,
+                      "Temp Read Blocks": 0,
+                      "Temp Written Blocks": 0,
+                      "Workers": []
+                    },
+                    {
+                      "Node Type": "Hash",
+                      "Parent Relationship": "Inner",
+                      "Parallel Aware": false,
+                      "Async Capable": false,
+                      "Startup Cost": 15.8,
+                      "Total Cost": 15.8,
+                      "Plan Rows": 180,
+                      "Plan Width": 24,
+                      "Actual Startup Time": 0.051,
+                      "Actual Total Time": 0.051,
+                      "Actual Rows": 180,
+                      "Actual Loops": 1,
+                      "Hash Buckets": 1024,
+                      "Original Hash Buckets": 1024,
+                      "Hash Batches": 1,
+                      "Original Hash Batches": 1,
+                      "Peak Memory Usage": 19,
+                      "Shared Hit Blocks": 14,
+                      "Shared Read Blocks": 0,
+                      "Shared Dirtied Blocks": 0,
+                      "Shared Written Blocks": 0,
+                      "Local Hit Blocks": 0,
+                      "Local Read Blocks": 0,
+                      "Local Dirtied Blocks": 0,
+                      "Local Written Blocks": 0,
+                      "Temp Read Blocks": 0,
+                      "Temp Written Blocks": 0,
+                      "Workers": [],
+                      "Plans": [
+                        {
+                          "Node Type": "Seq Scan",
+                          "Parent Relationship": "Outer",
+                          "Parallel Aware": false,
+                          "Async Capable": false,
+                          "Relation Name": "commerce_intents",
+                          "Alias": "i",
+                          "Startup Cost": 0,
+                          "Total Cost": 15.8,
+                          "Plan Rows": 180,
+                          "Plan Width": 24,
+                          "Actual Startup Time": 0.002,
+                          "Actual Total Time": 0.036,
+                          "Actual Rows": 180,
+                          "Actual Loops": 1,
+                          "Shared Hit Blocks": 14,
+                          "Shared Read Blocks": 0,
+                          "Shared Dirtied Blocks": 0,
+                          "Shared Written Blocks": 0,
+                          "Local Hit Blocks": 0,
+                          "Local Read Blocks": 0,
+                          "Local Dirtied Blocks": 0,
+                          "Local Written Blocks": 0,
+                          "Temp Read Blocks": 0,
+                          "Temp Written Blocks": 0,
+                          "Workers": []
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            "Planning": {
+              "Shared Hit Blocks": 39,
+              "Shared Read Blocks": 0,
+              "Shared Dirtied Blocks": 0,
+              "Shared Written Blocks": 0,
+              "Local Hit Blocks": 0,
+              "Local Read Blocks": 0,
+              "Local Dirtied Blocks": 0,
+              "Local Written Blocks": 0,
+              "Temp Read Blocks": 0,
+              "Temp Written Blocks": 0
+            },
+            "Planning Time": 0.199,
+            "Triggers": [],
+            "Execution Time": 10.645
+          }
+        ]
+      }
+    ],
+    "expiry": [
+      {
+        "QUERY PLAN": [
+          {
+            "Plan": {
+              "Node Type": "Seq Scan",
+              "Parallel Aware": false,
+              "Async Capable": false,
+              "Relation Name": "pending_clarification_sessions",
+              "Alias": "pending_clarification_sessions",
+              "Startup Cost": 0,
+              "Total Cost": 17.65,
+              "Plan Rows": 508,
+              "Plan Width": 32,
+              "Actual Startup Time": 0.001,
+              "Actual Total Time": 0.001,
+              "Actual Rows": 0,
+              "Actual Loops": 1,
+              "Filter": "((expires_at <= now()) OR (cancelled_at IS NOT NULL))",
+              "Rows Removed by Filter": 0,
+              "Shared Hit Blocks": 0,
+              "Shared Read Blocks": 0,
+              "Shared Dirtied Blocks": 0,
+              "Shared Written Blocks": 0,
+              "Local Hit Blocks": 0,
+              "Local Read Blocks": 0,
+              "Local Dirtied Blocks": 0,
+              "Local Written Blocks": 0,
+              "Temp Read Blocks": 0,
+              "Temp Written Blocks": 0
+            },
+            "Planning": {
+              "Shared Hit Blocks": 2,
+              "Shared Read Blocks": 0,
+              "Shared Dirtied Blocks": 0,
+              "Shared Written Blocks": 0,
+              "Local Hit Blocks": 0,
+              "Local Read Blocks": 0,
+              "Local Dirtied Blocks": 0,
+              "Local Written Blocks": 0,
+              "Temp Read Blocks": 0,
+              "Temp Written Blocks": 0
+            },
+            "Planning Time": 0.034,
+            "Triggers": [],
+            "Execution Time": 0.005
+          }
+        ]
+      }
+    ]
+  },
+  "loadDictionary": {
+    "success": true,
+    "version": 8,
+    "intents": 180,
+    "groups": 525,
+    "entityTerms": 525
+  }
+}

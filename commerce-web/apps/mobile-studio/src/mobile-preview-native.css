@@ -1,0 +1,400 @@
+/* Browser equivalents of StorefrontView.swift and MainActivity.kt, verified
+   against the saved iOS 26 / Material 3 screenshots. Keep token sizes in sync. */
+.ms-native-preview-tools { display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:10px; margin:12px 0 20px; font-size:11px; color:var(--muted); }
+.ms-native-preview-tools label { display:flex; gap:6px; align-items:center; }
+.ms-native-phone { position:relative; height:var(--phone-height); display:flex; flex-direction:column; isolation:isolate; font-size:16px; line-height:1.4; }
+.ms-native-phone.ms-ios { border-radius:46px; border-width:8px; font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif; }
+.ms-native-phone.ms-android { border-radius:28px; font-family:Roboto,'Segoe UI',Arial,sans-serif; }
+.ms-native-phone .ms-device-status { position:relative; direction:ltr; flex:none; height:42px; padding:12px 20px 6px; font-size:12px; align-items:center; }
+.ms-native-phone.ms-android .ms-device-status { height:30px; padding:5px 14px; background:var(--phone-surface); }
+.ms-camera-cutout { position:absolute; top:10px; left:50%; transform:translateX(-50%); width:82px; height:24px; border-radius:20px; background:#080808; }
+.ms-android .ms-camera-cutout { width:8px; height:8px; top:11px; }
+.ms-system-symbols { display:flex; gap:5px; align-items:center; font-size:8px; }
+.ms-battery { width:19px; height:10px; border:1px solid currentColor; padding:1px; border-radius:3px; }
+.ms-battery::after { content:''; display:block; width:90%; height:100%; border-radius:1px; background:currentColor; }
+.ms-native-app { min-height:0; flex:1; display:flex; flex-direction:column; }
+.ms-native-toolbar { display:flex; align-items:center; justify-content:space-between; flex:none; gap:8px; padding:10px 14px; min-height:56px; background:var(--phone-bg); }
+.ms-native-toolbar small { font-size:11px; opacity:.7; display:block; }
+.ms-native-phone button.ms-native-language { font:inherit; font-size:15px; padding:10px 14px; border:0; background:var(--phone-surface); color:var(--phone-primary); border-radius:28px; }
+.ms-ios .ms-native-toolbar small { padding:12px 8px; background:var(--phone-surface); border-radius:30px; }
+.ms-ios .ms-android-title { display:none; }
+.ms-android .ms-native-toolbar { background:var(--phone-surface); min-height:64px; padding:6px 16px; }
+.ms-android-title { font-size:22px; font-weight:600; line-height:1.3; display:block; }
+.ms-android .ms-native-toolbar small { font-size:12px; font-weight:500; opacity:1; }
+.ms-android button.ms-native-language { background:transparent; font-size:14px; padding:8px 0; }
+.ms-native-phone .ms-phone-content { height:auto; min-height:0; flex:1; overflow:auto; padding:var(--phone-space); scrollbar-width:none; overscroll-behavior:contain; }
+.ms-native-phone .ms-phone-content::-webkit-scrollbar { display:none; }
+.ms-native-phone.ms-ios .ms-phone-content { padding-top:4px; padding-bottom:var(--phone-space); }
+.ms-native-large-title { font-size:34px; font-weight:700; line-height:1.15; margin:0 0 22px; letter-spacing:-.8px; overflow-wrap:anywhere; }
+.ms-native-brand { margin-bottom:var(--phone-space); }
+.ms-native-brand img { display:block; width:100%; height:60px; object-fit:contain; margin-bottom:16px; }
+.ms-native-brand p { font-size:11px; letter-spacing:1.5px; margin:8px 0 0; }
+[dir=rtl] .ms-native-brand p { letter-spacing:0; }
+.ms-native-phone .ms-preview-section { position:relative; margin-bottom:var(--phone-space); }
+.ms-native-phone .ms-preview-section > p { font-size:16px; line-height:1.45; }
+.ms-native-phone .ms-preview-section h4 { font-size:22px; font-weight:700; line-height:1.25; margin:0 0 var(--phone-space); }
+.ms-native-phone.ms-android .ms-preview-section h4 { font-weight:500; }
+.ms-native-phone .ms-hero { width:100%; border:0; text-align:start; display:flex; flex-direction:column; gap:20px; padding:24px; font:inherit; cursor:pointer; }
+.ms-native-phone .ms-hero-art { display:grid; grid-template-columns:minmax(0,1fr) auto; gap:14px; align-items:center; }
+.ms-native-phone .ms-hero img { width:100%; height:96px; object-fit:contain; }
+.ms-native-phone .ms-hero > strong { font-size:32px; line-height:1.2; font-weight:600; white-space:pre-line; letter-spacing:-.5px; }
+.ms-native-phone .ms-hero > span { padding:0; font-size:15px; line-height:1.4; font-weight:600; }
+.ms-hero-symbol { font-size:46px; line-height:1; }
+.ms-hero-arrow { font-size:26px; line-height:1; }
+
+.ms-native-phone .ms-products { gap:var(--phone-space); }
+.ms-native-phone .ms-product { padding:0; background:transparent; border-radius:0; align-self:start; }
+.ms-native-phone .ms-product-art { height:150px; background:var(--phone-surface); display:flex; align-items:center; justify-content:center; overflow:hidden; font-size:12px; }
+.ms-native-phone .ms-product-art img { width:100%; height:100%; object-fit:contain; }
+.ms-native-phone .ms-product b { font-size:16px; margin:12px 0; line-height:1.25; font-weight:600; }
+.ms-native-phone .ms-product small { font-size:14px; opacity:1; }
+.ms-native-phone .ms-carousel { gap:var(--phone-space); scroll-snap-type:x proximity; }
+.ms-native-phone .ms-carousel .ms-product { flex:0 0 180px; scroll-snap-align:start; }
+.ms-native-phone.ms-android .ms-carousel .ms-product { flex-basis:172px; }
+.ms-native-phone .ms-categories { display:flex; flex-direction:column; gap:var(--phone-space); margin-bottom:var(--phone-space); }
+.ms-native-phone .ms-category-link { display:flex; align-items:center; justify-content:space-between; gap:12px; width:100%; min-height:56px; text-align:start; padding:16px; background:var(--phone-surface); border-radius:var(--phone-radius); font-size:18px; }
+.ms-native-phone.ms-android .ms-category-link { font-size:16px; padding:20px; background:color-mix(in srgb,var(--phone-primary) 6%,var(--phone-surface)); }
+.ms-native-phone .ms-categories .ms-category-chevron { font-size:24px; padding:0; margin:0; background:none; font-weight:400; }
+[dir=rtl] .ms-category-chevron { transform:scaleX(-1); }
+.ms-native-phone .ms-category-text-links .ms-category-link { min-height:48px; padding:4px 0; background:transparent; color:var(--phone-primary); border-radius:0; font-size:16px; }
+.ms-category-selection { margin:12px 0 20px; }
+.ms-native-phone .ms-native-app > nav { display:flex; justify-content:space-around; flex:none; padding:8px 6px; min-height:72px; background:var(--phone-surface); }
+.ms-native-phone .ms-native-app > nav button { position:relative; min-width:0; flex:1; padding:0 2px; background:none; border:0; color:var(--phone-text); font-size:11px; font-weight:500; line-height:1.2; }
+.ms-native-phone .ms-tab-icon { width:56px; max-width:100%; height:32px; display:flex; justify-content:center; align-items:center; border-radius:24px; margin:0 auto 4px; }
+.ms-native-phone .ms-native-app > nav button[aria-current] { color:var(--phone-primary); }
+.ms-android .ms-native-app > nav button[aria-current] .ms-tab-icon { background:color-mix(in srgb,var(--phone-primary) 12%,transparent); }
+.ms-native-phone.ms-ios .ms-native-app > nav { position:static; border:0; border-top:1px solid color-mix(in srgb,var(--phone-text) 15%,transparent); border-radius:0; min-height:60px; padding:0; background:var(--phone-surface); box-shadow:none; }
+.ms-ios .ms-native-app > nav button { border-radius:0; min-height:60px; padding:4px 0; font-size:11px; }
+.ms-ios .ms-native-app > nav button[aria-current] { background:transparent; }
+.ms-ios .ms-tab-icon { margin-bottom:4px; height:22px; }
+.ms-ios .ms-tab-icon svg { width:22px; height:22px; }
+.ms-native-phone .ms-cart-badge { position:absolute; inset-inline-end:8px; top:0; min-width:15px; padding:1px 3px; border-radius:10px; font-size:9px; background:var(--phone-primary); color:var(--phone-on-primary); }
+.ms-gesture-bar { flex:none; height:20px; background:var(--phone-surface); display:grid; place-items:center; }
+.ms-gesture-bar::after { content:''; width:90px; height:4px; border-radius:4px; background:var(--phone-text); }
+.ms-ios .ms-gesture-bar { background:var(--phone-surface); height:16px; }
+.ms-device-preview-utility { display:flex; gap:10px; align-items:center; justify-content:center; font-size:10px; color:var(--muted); margin-top:10px; }
+.ms-device-preview-utility button { border:0; padding:5px; border-radius:6px; font:inherit; background:var(--panel); color:var(--ink); cursor:pointer; }
+.ms-product-sheet-layer { position:absolute; inset:42px 0 0; z-index:5; }
+.ms-product-scrim { position:absolute; inset:0; width:100%; border:0; background:#0005; }
+.ms-native-phone .ms-native-sheet { position:absolute; inset:20px 0 0; margin:0; width:100%; height:calc(100% - 20px); max-height:none; max-width:none; padding:0; border:0; border-radius:28px 28px 0 0; background:var(--phone-bg); color:var(--phone-text); overflow:hidden; }
+.ms-native-sheet[open] { display:flex; flex-direction:column; }
+.ms-sheet-toolbar { display:flex; justify-content:flex-end; padding:12px 18px; flex:none; }
+.ms-sheet-toolbar button { background:var(--phone-surface); color:var(--phone-primary); font:inherit; border:0; border-radius:24px; padding:8px 14px; cursor:pointer; }
+.ms-sheet-content { overflow:auto; padding:0 24px 30px; overscroll-behavior:contain; }
+.ms-sheet-handle { width:32px; height:4px; border-radius:4px; background:color-mix(in srgb,var(--phone-text) 40%,transparent); margin:14px auto 0; flex:none; }
+.ms-native-phone .ms-product-detail h2 { font-size:30px; line-height:1.2; margin:24px 0; }
+.ms-native-phone .ms-detail-price { font-size:22px; }
+.ms-native-phone .ms-product-detail dl { display:none; }
+.ms-native-phone .ms-stock { font-size:14px; background:none; padding:0; margin:0 0 24px; }
+.ms-native-phone .ms-cart-primary { font-size:15px; font-weight:600; border-radius:24px; padding:12px 18px; min-height:44px; }
+.ms-ios .ms-cart-primary { border-radius:12px; }
+.ms-native-phone .ms-cart-screen h3, .ms-native-phone .ms-checkout h3 { font-size:24px; }
+.ms-native-phone .ms-cart-product strong { font-size:16px; }
+.ms-native-phone .ms-cart-product small { font-size:14px; }
+.ms-native-phone .ms-cart-clear, .ms-native-phone .ms-added-to-cart button, .ms-native-phone .ms-browse-back { font-size:14px; }
+.ms-native-phone .ms-checkout-form label { font-size:14px; }
+.ms-native-phone .ms-checkout-form input { min-height:48px; border-radius:4px; background:transparent; }
+.ms-ios .ms-checkout-form input { min-height:36px; border-radius:8px; background:var(--phone-surface); }
+.ms-native-account, .ms-native-auth { display:flex; flex-direction:column; gap:16px; min-width:0; }
+.ms-native-account h3 { font-size:24px; margin:0; line-height:1.2; }
+.ms-native-account h4 { font-size:20px; margin:0; }
+.ms-native-account p { margin:0; font-size:15px; }
+.ms-native-account small { font-size:12px; }
+.ms-native-account label { display:flex; flex-direction:column; gap:6px; font-size:14px; }
+.ms-native-phone .ms-native-account input:not([type=checkbox]) { width:100%; min-width:0; border:1px solid color-mix(in srgb,var(--phone-text) 45%,transparent); background:transparent; color:var(--phone-text); font:inherit; padding:12px; min-height:52px; border-radius:4px; }
+.ms-native-phone.ms-ios .ms-native-account input:not([type=checkbox]) { min-height:34px; padding:6px; border-radius:6px; background:var(--phone-surface); border-color:color-mix(in srgb,var(--phone-text) 18%,transparent); }
+.ms-native-phone .ms-native-text-button { align-self:flex-start; font:inherit; font-size:15px; color:var(--phone-primary); padding:8px 0; background:transparent; border:0; cursor:pointer; text-align:start; }
+.ms-native-account .ms-native-toggle { flex-direction:row; align-items:center; justify-content:space-between; }
+.ms-native-toggle input { appearance:none; width:46px; min-width:46px; height:26px; border-radius:20px; background:color-mix(in srgb,var(--phone-text) 25%,transparent); padding:3px; cursor:pointer; }
+.ms-native-toggle input::before { content:''; display:block; width:20px; height:20px; border-radius:50%; background:var(--phone-surface); transition:transform .15s; }
+.ms-native-toggle input:checked { background:var(--phone-primary); }
+.ms-native-toggle input:checked::before { transform:translateX(20px); }
+[dir=rtl] .ms-native-toggle input:checked::before { transform:translateX(-20px); }
+.ms-native-connection summary { color:var(--phone-primary); cursor:pointer; font-size:15px; }
+.ms-native-connection > * { margin-bottom:12px; }
+.ms-native-connection button { font:inherit; font-size:14px; }
+.ms-native-address { padding:16px; background:var(--phone-surface); border-radius:var(--phone-radius); display:grid; gap:16px; }
+@media(prefers-reduced-motion:reduce) { .ms-native-toggle input::before { transition:none; } }
+
+/* Customer navigation and account hierarchy. */
+.ms-native-phone .ms-native-toolbar { border-bottom:1px solid color-mix(in srgb,var(--phone-text) 10%,transparent); gap:12px; }
+.ms-native-phone .ms-toolbar-identity { flex:1; min-width:0; }
+.ms-native-phone .ms-android-title { display:block; font-size:20px; overflow-wrap:anywhere; }
+.ms-native-phone.ms-ios .ms-native-toolbar small { padding:0; background:none; border-radius:0; }
+.ms-native-phone .ms-native-language { flex-shrink:0; min-height:44px; }
+.ms-native-phone .ms-native-auth { padding:20px; background:var(--phone-surface); border-radius:24px; }
+.ms-native-phone .ms-native-auth h3 { font-size:28px; letter-spacing:-.5px; }
+.ms-native-phone .ms-native-auth > p { line-height:1.55; opacity:.75; }
+.ms-account-avatar { display:grid; place-items:center; width:64px; height:64px; flex-shrink:0; border-radius:20px; color:var(--phone-primary); background:color-mix(in srgb,var(--phone-primary) 8%,transparent); }
+.ms-account-avatar svg { width:32px; height:32px; }
+.ms-native-phone .ms-native-account input:not([type=checkbox]) { min-height:52px; padding:12px; border-radius:12px; border-color:color-mix(in srgb,var(--phone-text) 25%,transparent); }
+.ms-native-phone .ms-native-auth .ms-cart-primary { width:100%; min-height:52px; margin-top:4px; }
+.ms-native-phone .ms-account-secondary { min-height:52px; width:100%; padding:12px; border:1px solid color-mix(in srgb,var(--phone-primary) 45%,transparent); background:transparent; color:var(--phone-primary); border-radius:12px; font:inherit; font-weight:600; cursor:pointer; }
+.ms-native-phone .ms-native-text-button { min-height:44px; }
+.ms-account-identity { display:flex; align-items:center; gap:14px; padding:20px; border-radius:20px; background:var(--phone-surface); }
+.ms-account-identity > div { min-width:0; overflow-wrap:anywhere; }
+.ms-account-identity p { margin-block:6px; }
+.ms-account-empty { padding:20px; border-radius:16px; background:var(--phone-surface); }
+.ms-account-empty p { margin-top:8px; opacity:.75; }
+.ms-native-phone :is(button,input):focus-visible { outline:2px solid var(--phone-primary); outline-offset:3px; }
+.ms-native-phone.ms-ios .ms-native-account input:not([type=checkbox]) { min-height:52px; padding:12px; border-radius:12px; }
+.ms-account-identity { flex-wrap:wrap; }
+.ms-account-identity > div { flex:1 1 180px; }
+
+/* Catalog surfaces share the account and checkout card language. */
+.ms-catalog-intro { display:flex; align-items:center; gap:14px; margin-bottom:24px; }
+.ms-catalog-intro > div { min-width:0; }
+.ms-native-phone .ms-catalog-intro h3 { font-size:24px; line-height:1.2; margin:0 0 6px; letter-spacing:-.4px; }
+.ms-catalog-intro p { font-size:14px; line-height:1.5; margin:0; opacity:.7; }
+.ms-native-phone .ms-category-screen .ms-categories { gap:10px; }
+.ms-native-phone .ms-category-screen .ms-category-link { min-height:80px; padding:12px; font-size:16px; border:1px solid color-mix(in srgb,var(--phone-text) 8%,transparent); border-radius:18px; background:var(--phone-surface); }
+.ms-native-phone .ms-category-link[aria-pressed=true] { border-color:var(--phone-primary); background:color-mix(in srgb,var(--phone-primary) 8%,var(--phone-surface)); }
+.ms-category-link > strong { flex:1; min-width:0; }
+.ms-native-phone .ms-category-art { display:grid; place-items:center; width:52px; height:52px; flex-shrink:0; border-radius:14px; overflow:hidden; background:var(--phone-bg); color:var(--phone-primary); }
+.ms-category-art img { width:100%; height:100%; object-fit:cover; }
+.ms-native-phone .ms-category-selection { display:flex; flex-wrap:wrap; align-items:center; gap:12px; padding:18px; border-radius:18px; background:var(--phone-surface); }
+.ms-category-selection h3 { flex:1 1 100%; margin:0; font-size:22px; overflow-wrap:anywhere; }
+.ms-native-phone .ms-category-selection button { min-height:44px; border-radius:12px; }
+.ms-catalog-products-title { font-size:22px; margin:24px 0 16px; }
+.ms-native-phone .ms-category-screen .ms-product { border:1px solid color-mix(in srgb,var(--phone-text) 8%,transparent); border-radius:18px; padding:10px; background:var(--phone-surface); overflow:hidden; }
+.ms-native-phone .ms-category-screen .ms-product-art { height:120px; border-radius:12px; background:var(--phone-bg); }
+.ms-native-phone .ms-category-screen .ms-product b { font-size:15px; line-height:1.4; margin:12px 0 8px; overflow-wrap:anywhere; }
+.ms-native-phone .ms-category-screen .ms-product small { font-size:13px; line-height:1.5; }
+.ms-native-phone .ms-sheet-toolbar { align-items:center; justify-content:space-between; gap:12px; padding:12px 20px; border-bottom:1px solid color-mix(in srgb,var(--phone-text) 10%,transparent); }
+.ms-sheet-toolbar > strong { font-size:16px; }
+.ms-native-phone .ms-sheet-toolbar button { min-height:44px; font-weight:600; }
+.ms-native-phone .ms-sheet-content { padding:20px 20px 32px; scroll-padding-bottom:24px; }
+.ms-native-phone .ms-detail-image { height:230px; border-radius:20px; border:1px solid color-mix(in srgb,var(--phone-text) 8%,transparent); }
+.ms-detail-overview { padding:20px 0 16px; }
+.ms-detail-brand { font-size:12px; opacity:.65; display:block; }
+.ms-native-phone .ms-product-detail h2 { font-size:26px; line-height:1.25; margin:8px 0 14px; letter-spacing:-.4px; overflow-wrap:anywhere; }
+.ms-native-phone .ms-detail-price { font-size:24px; font-weight:700; margin:0 0 8px; font-variant-numeric:tabular-nums; }
+.ms-detail-price small { font-size:14px; font-weight:400; opacity:.7; }
+.ms-native-phone .ms-product-detail .ms-stock { display:inline-flex; margin:8px 0 0; padding:7px 12px; border-radius:20px; font-size:12px; font-weight:600; background:color-mix(in srgb,var(--phone-primary) 10%,transparent); color:var(--phone-text); }
+.ms-native-phone .ms-product-detail .ms-wishlist-toggle { min-height:48px; width:100%; justify-content:center; border-radius:12px; background:var(--phone-surface); }
+.ms-detail-purchase { display:flex; flex-direction:column; gap:12px; margin:14px 0 24px; }
+.ms-native-phone .ms-detail-purchase > .ms-cart-primary { min-height:52px; width:100%; border-radius:12px; }
+.ms-native-phone.ms-android .ms-detail-purchase > .ms-cart-primary { border-radius:26px; }
+.ms-native-phone .ms-added-to-cart { display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:8px; padding:12px; border-radius:12px; background:var(--phone-surface); }
+.ms-native-phone .ms-added-to-cart button { min-height:44px; }
+.ms-detail-info-title { font-size:17px; margin:0 0 12px; }
+.ms-native-phone .ms-product-detail dl { display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1fr); padding:16px; border:0; border-radius:16px; background:var(--phone-surface); font-size:14px; line-height:1.5; overflow-wrap:anywhere; }
+.ms-product-detail dt { opacity:.7; }
+
+.ms-native-phone .ms-category-link > strong { text-align:start; }
+.ms-native-phone .ms-category-art { position:relative; }
+.ms-native-phone .ms-category-art img { position:absolute; inset:0; width:100%; height:100%; }
+
+/* Home discovery and search share the customer commerce surfaces. */
+.ms-native-phone .ms-home-welcome { display:flex; align-items:center; gap:12px; margin:4px 0 18px; }
+.ms-native-phone .ms-home-welcome img { width:46px; height:46px; flex-shrink:0; margin:0; border-radius:12px; object-fit:contain; }
+.ms-home-welcome > div { min-width:0; }
+.ms-native-phone .ms-home-welcome p { font-size:10px; letter-spacing:.8px; line-height:1.5; margin:0 0 5px; opacity:.65; }
+.ms-native-phone .ms-home-welcome h3 { font-size:22px; line-height:1.25; letter-spacing:-.4px; margin:0; }
+.ms-native-phone .ms-home-search { display:flex; align-items:center; gap:12px; width:100%; min-height:54px; padding:14px; text-align:start; font:inherit; font-size:14px; border:1px solid color-mix(in srgb,var(--phone-text) 16%,transparent); border-radius:16px; background:var(--phone-surface); color:var(--phone-text); cursor:pointer; }
+.ms-home-search svg { flex-shrink:0; color:var(--phone-primary); }
+.ms-home-shortcuts { display:flex; gap:10px; margin:12px 0 24px; }
+.ms-home-shortcuts button { display:flex; align-items:center; justify-content:center; flex:1; gap:8px; min-width:0; min-height:48px; padding:10px; border:0; border-radius:12px; background:color-mix(in srgb,var(--phone-primary) 7%,var(--phone-surface)); color:var(--phone-primary); font:inherit; font-size:12px; font-weight:600; cursor:pointer; }
+.ms-home-shortcuts svg { flex-shrink:0; width:20px; height:20px; }
+
+.ms-search-intro { display:flex; align-items:center; gap:14px; margin:4px 0 20px; }
+.ms-search-intro > div { min-width:0; }
+.ms-native-phone .ms-search-intro h3 { margin:0 0 6px; font-size:24px; line-height:1.2; }
+.ms-search-intro p { margin:0; opacity:.7; font-size:14px; line-height:1.5; }
+.ms-native-phone .ms-search-form { padding:18px; border-radius:20px; background:var(--phone-surface); border:1px solid color-mix(in srgb,var(--phone-text) 8%,transparent); gap:16px; }
+.ms-native-phone .ms-search-form label { font-size:13px; font-weight:500; gap:8px; }
+.ms-native-phone .ms-search-form input:not([type=checkbox]), .ms-native-phone .ms-search-form select { min-height:48px; padding:12px; border-radius:12px; font:inherit; font-size:15px; background:var(--phone-bg); box-sizing:border-box; }
+.ms-search-filter-grid { display:grid; grid-template-columns:minmax(0,1fr); gap:14px; }
+.ms-native-phone .ms-search-form summary { min-height:44px; display:list-item; padding:12px 0; font-size:14px; color:var(--phone-primary); }
+.ms-native-phone .ms-search-form details { border-block:1px solid color-mix(in srgb,var(--phone-text) 10%,transparent); }
+.ms-native-phone .ms-search-stock { min-height:44px; padding-block:8px; }
+.ms-search-stock input { width:20px; height:20px; }
+.ms-native-phone .ms-search-actions { align-items:center; gap:12px; }
+.ms-native-phone .ms-search-actions > button { min-height:52px; border-radius:12px; font:inherit; font-size:14px; padding:12px; cursor:pointer; }
+.ms-native-phone .ms-search-actions .ms-cart-primary { flex:1; }
+.ms-native-phone.ms-android .ms-search-actions .ms-cart-primary { border-radius:26px; }
+.ms-native-phone .ms-search-count { font-size:14px; font-weight:600; margin:20px 0 14px; }
+.ms-native-phone .ms-search-screen .ms-search-feedback { padding:20px; border-radius:16px; background:var(--phone-surface); font-size:14px; line-height:1.6; }
+.ms-search-feedback button { min-height:44px; border:0; background:transparent; color:var(--phone-primary); font:inherit; cursor:pointer; }
+.ms-native-phone .ms-search-screen .ms-search-more { min-height:52px; font-size:14px; border-radius:12px; margin-top:20px; }
+[dir=rtl] .ms-native-phone .ms-home-welcome p { letter-spacing:0; }
+
+/* Saved products and order tracking share the commerce card system. */
+.ms-wishlist-heading { display:flex; align-items:center; gap:14px; margin:4px 0 18px; }
+.ms-wishlist-heading > div { min-width:0; }
+.ms-native-phone .ms-wishlist-heading h3 { font-size:24px; line-height:1.2; margin:0 0 6px; }
+.ms-wishlist-heading p { font-size:14px; line-height:1.5; opacity:.7; margin:0; }
+.ms-wishlist-count { font-size:14px; font-weight:600; margin:20px 0 12px; }
+.ms-wishlist-empty { padding:22px; border-radius:20px; background:var(--phone-surface); margin-top:20px; }
+.ms-wishlist-empty h4 { margin:0 0 10px; font-size:19px; line-height:1.3; }
+.ms-wishlist-empty p { font-size:14px; line-height:1.6; opacity:.75; margin-bottom:20px; }
+.ms-native-phone .ms-wishlist-card { padding:18px; margin:14px 0; border:1px solid color-mix(in srgb,var(--phone-text) 8%,transparent); border-radius:20px; background:var(--phone-surface); }
+.ms-native-phone .ms-wishlist-card .ms-cart-product { align-items:center; gap:14px; min-width:0; }
+.ms-native-phone .ms-wishlist-image { display:grid; place-items:center; position:relative; width:72px; height:80px; flex:0 0 72px; border-radius:14px; background:var(--phone-bg); color:var(--phone-primary); overflow:hidden; }
+.ms-native-phone .ms-wishlist-image img { position:absolute; inset:0; width:100%; height:100%; border-radius:0; object-fit:contain; }
+.ms-native-phone .ms-wishlist-card .ms-cart-product > span:last-child { min-width:0; flex:1; overflow-wrap:anywhere; }
+.ms-native-phone .ms-wishlist-card .ms-cart-product strong { font-size:16px; line-height:1.4; }
+.ms-native-phone .ms-wishlist-card .ms-cart-product small { font-size:14px; font-weight:600; line-height:1.5; margin-top:8px; }
+.ms-wishlist-availability { display:inline-block; padding:6px 10px; border-radius:20px; background:color-mix(in srgb,var(--phone-primary) 8%,transparent); font-size:12px; margin:14px 0; }
+.ms-native-phone .ms-wishlist-card .ms-profile-actions { display:grid; grid-template-columns:minmax(0,1fr); gap:6px; }
+.ms-native-phone .ms-wishlist-card .ms-profile-actions button { min-height:48px; font-size:14px; border-radius:12px; }
+.ms-native-phone .ms-wishlist-card .ms-profile-actions .ms-cart-primary { color:var(--phone-on-primary); background:var(--phone-primary); border:0; min-height:52px; }
+.ms-native-phone .ms-wishlist-card .ms-profile-actions button:last-child { border:0; background:transparent; font-size:13px; }
+.ms-native-phone.ms-android .ms-wishlist-card .ms-profile-actions .ms-cart-primary { border-radius:26px; }
+.ms-wishlist-screen > [role=status] { padding:14px; border-radius:12px; background:var(--phone-surface); font-size:14px; }
+.ms-native-phone .ms-wishlist-screen > .ms-cart-primary, .ms-wishlist-empty .ms-cart-primary { min-height:52px; }
+.ms-native-phone .ms-native-order { padding:0; border:0; background:transparent; gap:18px; }
+.ms-tracking-hero, .ms-tracking-journey, .ms-tracking-delivery, .ms-tracking-receipt, .ms-tracking-actions { padding:20px; border-radius:20px; background:var(--phone-surface); border:1px solid color-mix(in srgb,var(--phone-text) 8%,transparent); min-width:0; }
+.ms-tracking-hero { display:flex; flex-direction:column; align-items:flex-start; gap:10px; }
+.ms-tracking-symbol { display:grid; place-items:center; width:52px; height:52px; border-radius:16px; font-size:28px; color:var(--phone-primary); background:color-mix(in srgb,var(--phone-primary) 10%,transparent); }
+.ms-native-phone .ms-tracking-hero h4 { font-size:13px; font-weight:500; opacity:.7; margin:0; }
+.ms-native-phone .ms-native-order-status { font-size:24px; line-height:1.25; font-weight:700; margin:0; letter-spacing:-.4px; }
+.ms-tracking-caption { font-size:14px; opacity:.7; line-height:1.5; margin:0; }
+.ms-native-phone .ms-native-order h4 { margin-block:0 12px; }
+.ms-native-phone .ms-order-timeline { margin:20px 0 0; }
+.ms-native-phone .ms-order-timeline li { opacity:1; gap:12px; padding-bottom:22px; }
+.ms-native-phone .ms-order-timeline li:not(.is-complete) { color:color-mix(in srgb,var(--phone-text) 65%,var(--phone-surface)); }
+.ms-native-phone .ms-order-timeline li > span { width:28px; height:28px; font-size:13px; background:var(--phone-bg); }
+.ms-native-phone .ms-order-timeline li.is-complete > span { background:var(--phone-primary); color:var(--phone-on-primary); border-color:var(--phone-primary); }
+.ms-native-phone .ms-order-timeline li[aria-current=step] > span { box-shadow:0 0 0 4px color-mix(in srgb,var(--phone-primary) 12%,transparent); }
+.ms-native-phone .ms-order-timeline li:not(:last-child)::before { inset-inline-start:13px; top:32px; bottom:4px; border-color:color-mix(in srgb,var(--phone-primary) 22%,var(--phone-surface)); }
+.ms-order-timeline strong { font-size:14px; }
+.ms-order-timeline small { line-height:1.5; opacity:.75; }
+.ms-tracking-delivery p { font-size:14px; line-height:1.6; overflow-wrap:anywhere; margin:10px 0 0; }
+.ms-native-phone .ms-tracking-receipt .ms-checkout-item { padding-block:12px; font-size:14px; line-height:1.5; border-bottom:1px solid color-mix(in srgb,var(--phone-text) 10%,transparent); gap:12px; }
+.ms-native-phone .ms-tracking-receipt .ms-checkout-summary { padding:0; margin:20px 0; font-size:14px; }
+.ms-tracking-payment { font-size:13px; opacity:.7; margin:0; }
+.ms-native-phone .ms-native-order .ms-cart-primary { min-height:52px; width:100%; border-radius:12px; }
+.ms-native-phone.ms-android .ms-native-order .ms-cart-primary { border-radius:26px; }
+.ms-native-phone .ms-tracking-actions button { min-height:44px; }
+
+/* Saved addresses and delivery forms. */
+.ms-native-phone .ms-saved-address-disclosure { padding:16px; border:1px solid color-mix(in srgb,var(--phone-text) 10%,transparent); background:var(--phone-surface); border-radius:18px; }
+.ms-saved-address-disclosure > summary { cursor:pointer; font-size:15px; font-weight:600; min-height:32px; }
+.ms-native-phone .ms-address-book { display:flex; flex-direction:column; gap:14px; margin-top:14px; }
+.ms-native-phone .ms-address-book h3 { font-size:22px; line-height:1.25; margin:0; }
+.ms-address-empty { padding:18px; border-radius:14px; background:var(--phone-bg); font-size:15px; }
+.ms-address-empty p { font-size:14px; line-height:1.5; opacity:.7; margin:8px 0 0; }
+.ms-native-phone .ms-address-book .ms-saved-address { padding:18px; margin:0; background:var(--phone-bg); border:1px solid color-mix(in srgb,var(--phone-text) 10%,transparent); border-radius:16px; }
+.ms-saved-address-heading { display:flex; gap:10px; flex-wrap:wrap; align-items:center; font-size:16px; line-height:1.4; overflow-wrap:anywhere; }
+.ms-native-phone .ms-address-default { padding:5px 9px; border-radius:20px; font-size:11px; color:var(--phone-primary); background:color-mix(in srgb,var(--phone-primary) 10%,transparent); }
+.ms-saved-address-body { margin:12px 0; font-size:14px; line-height:1.6; overflow-wrap:anywhere; }
+.ms-native-phone .ms-saved-address-body p { margin:4px 0; font-size:14px; }
+.ms-native-phone .ms-address-book .ms-profile-actions { display:flex; flex-wrap:wrap; gap:8px; }
+.ms-native-phone .ms-address-book .ms-profile-actions button { flex:1 1 100px; min-height:44px; font-size:13px; border-radius:10px; }
+.ms-native-phone .ms-address-book > .ms-cart-primary, .ms-address-book .ms-checkout-form .ms-cart-primary { min-height:52px; border-radius:12px; }
+.ms-native-phone .ms-address-book .ms-checkout-form { padding:16px; border-radius:16px; background:var(--phone-bg); }
+.ms-native-phone .ms-address-book .ms-checkout-form input { min-height:48px; font-size:16px; border-radius:12px; }
+.ms-native-phone .ms-native-address-dialog { border:1px solid color-mix(in srgb,var(--phone-text) 10%,transparent); }
+.ms-native-phone .ms-native-address-dialog header { padding:18px; border-bottom:1px solid color-mix(in srgb,var(--phone-text) 10%,transparent); }
+.ms-address-heading { display:flex; gap:10px; align-items:center; }
+.ms-address-heading > div { flex:1; min-width:0; }
+.ms-address-heading-icon { width:40px; height:44px; display:grid; place-items:center; flex-shrink:0; border-radius:12px; color:var(--phone-primary); background:color-mix(in srgb,var(--phone-primary) 10%,transparent); }
+.ms-address-heading small { font-size:11px; opacity:.65; }
+.ms-native-phone .ms-address-heading h3 { font-size:21px; font-weight:700; margin:3px 0 0; }
+.ms-native-phone .ms-address-heading button { min-height:44px; flex-shrink:0; }
+.ms-native-phone .ms-native-address-fields { padding:18px; gap:16px; }
+.ms-address-group { margin:0; padding:16px; min-width:0; border:1px solid color-mix(in srgb,var(--phone-text) 10%,transparent); border-radius:16px; background:var(--phone-surface); display:grid; gap:14px; }
+.ms-address-group legend { padding:0 6px; font-size:15px; font-weight:600; }
+.ms-native-phone .ms-native-address-fields .ms-address-helper { font-size:12px; line-height:1.5; opacity:.7; }
+.ms-address-coordinate-grid, .ms-address-detail-grid { display:grid; grid-template-columns:minmax(0,1fr); gap:12px; }
+.ms-native-phone .ms-native-address-fields label { font-size:13px; gap:8px; }
+.ms-native-phone .ms-native-address-fields :is(input,textarea) { box-sizing:border-box; width:100%; min-width:0; min-height:48px; padding:12px; border:1px solid color-mix(in srgb,var(--phone-text) 22%,transparent); border-radius:12px; font:inherit; font-size:16px; background:var(--phone-bg); color:var(--phone-text); }
+.ms-native-address-fields textarea { resize:vertical; }
+.ms-native-phone .ms-native-address-form footer { padding:12px 18px 18px; border-top:1px solid color-mix(in srgb,var(--phone-text) 10%,transparent); }
+.ms-native-phone .ms-native-address-form footer .ms-cart-primary { width:100%; min-height:52px; border-radius:12px; }
+.ms-native-phone .ms-address-android .ms-native-address-form footer .ms-cart-primary { border-radius:26px; }
+.ms-native-phone .ms-demo-map { height:190px; border-radius:16px; }
+.ms-native-phone .ms-sample-address { min-height:44px; border:1px dashed color-mix(in srgb,var(--phone-primary) 40%,transparent); border-radius:12px; text-align:center; padding:10px; }
+.ms-native-address-fields :is(input,textarea):focus-visible { outline:2px solid var(--phone-primary); outline-offset:2px; }
+
+/* Order history and confirmation. */
+.ms-order-history-list { display:grid; gap:14px; }
+.ms-native-phone .ms-order-history-list .ms-native-order-link { width:100%; min-width:0; display:flex; flex-direction:column; gap:14px; padding:18px; border:1px solid color-mix(in srgb,var(--phone-text) 12%,transparent); border-radius:20px; background:var(--phone-surface); color:var(--phone-text); text-align:start; }
+.ms-native-phone .ms-order-history-list .ms-native-order-link[aria-pressed=true] { border-color:var(--phone-primary); }
+.ms-history-top { display:flex; flex-wrap:wrap; align-items:center; gap:10px; justify-content:space-between; width:100%; }
+.ms-history-top > strong { font-size:14px; overflow-wrap:anywhere; }
+.ms-history-status { padding:6px 10px; border-radius:20px; background:color-mix(in srgb,var(--phone-primary) 10%,transparent); color:var(--phone-primary); font-size:12px; font-weight:600; }
+.ms-native-order-link > small { font-size:12px; opacity:.7; }
+.ms-history-products { display:flex; align-items:center; gap:8px; flex-wrap:wrap; }
+.ms-history-thumbnail { width:44px; height:48px; border-radius:10px; display:grid; place-items:center; overflow:hidden; background:var(--phone-bg); color:var(--phone-primary); }
+.ms-history-thumbnail img { width:100%; height:100%; object-fit:contain; }
+.ms-history-products > span:last-child { font-size:13px; line-height:1.5; }
+.ms-history-products small { display:block; font-size:11px; opacity:.65; }
+.ms-history-bottom { display:flex; justify-content:space-between; gap:12px; flex-wrap:wrap; width:100%; border-top:1px solid color-mix(in srgb,var(--phone-text) 10%,transparent); padding-top:14px; font-size:14px; }
+.ms-history-bottom > span { color:var(--phone-primary); }
+.ms-order-history-detail { scroll-margin-top:16px; }
+.ms-order-history-detail:empty { display:none; }
+.ms-order-confirmation { display:flex; flex-direction:column; align-items:center; text-align:center; gap:14px; padding:24px 20px; border-radius:24px; background:var(--phone-surface); border:1px solid color-mix(in srgb,var(--phone-primary) 20%,transparent); scroll-margin-top:16px; }
+.ms-confirmation-symbol { width:64px; height:64px; display:grid; place-items:center; border-radius:50%; background:var(--phone-primary); color:var(--phone-on-primary); font-size:32px; }
+.ms-native-phone .ms-order-confirmation h3 { font-size:26px; line-height:1.2; }
+.ms-order-confirmation > p { font-size:14px; line-height:1.5; opacity:.75; }
+.ms-order-confirmation > small { font-size:11px; line-height:1.5; opacity:.65; }
+.ms-order-confirmation dl { width:100%; margin:4px 0; text-align:start; padding-block:14px; border-block:1px solid color-mix(in srgb,var(--phone-text) 12%,transparent); display:grid; gap:12px; }
+.ms-order-confirmation dl > div { display:flex; justify-content:space-between; gap:12px; flex-wrap:wrap; font-size:14px; }
+.ms-order-confirmation dt { opacity:.7; }
+.ms-order-confirmation dd { margin:0; font-weight:600; overflow-wrap:anywhere; }
+.ms-native-phone .ms-order-confirmation .ms-cart-primary { width:100%; min-height:52px; border-radius:12px; }
+
+.ms-history-thumbnail { position:relative; }
+.ms-history-thumbnail img { position:absolute; inset:0; }
+
+/* Published component tokens are authoritative on every native home surface. */
+.ms-native-phone .ms-hero { border-radius:var(--phone-radius); padding:24px; gap:20px; overflow:hidden; }
+.ms-native-phone .ms-preview-section .ms-product-art { border-radius:var(--phone-radius); background:var(--phone-surface); height:150px; }
+.ms-native-phone .ms-preview-section > p { margin:0; }
+.ms-native-phone.ms-ios .ms-native-toolbar .ms-toolbar-identity { text-align:center; }
+.ms-native-phone.ms-ios .ms-native-toolbar .ms-toolbar-identity small { display:none; }
+.ms-native-phone.ms-ios .ms-native-toolbar .ms-android-title { font-size:17px; }
+
+/* Configured storefront content replaces the generic mobile campaign shell. */
+.ms-native-phone .ms-editorial { overflow:hidden; color:var(--phone-text); background:var(--phone-bg); border-radius:var(--phone-radius); }
+.ms-native-phone .ms-editorial-image { display:block; width:100%; height:auto; max-height:none; object-fit:contain; }
+.ms-native-phone .ms-editorial-copy { display:flex; flex-direction:column; align-items:flex-start; gap:12px; padding:24px 12px; }
+.ms-native-phone .ms-editorial h3 { margin:0; font-size:27px; line-height:1.15; font-weight:500; letter-spacing:-.5px; white-space:pre-line; }
+.ms-native-phone .ms-editorial p { margin:0; font-size:14px; line-height:1.6; white-space:pre-line; }
+.ms-native-phone .ms-editorial-eyebrow { font-size:10px; letter-spacing:1.6px; line-height:1.5; }
+.ms-native-phone .ms-editorial-cta { border:0; border-bottom:1px solid currentColor; border-radius:0; background:transparent; color:var(--phone-primary); padding:8px 0; font-size:13px; text-decoration:none; cursor:pointer; }
+.ms-native-phone .ms-editorial-campaign { background:var(--phone-surface); }
+.ms-native-phone .ms-editorial-campaign .ms-editorial-copy { padding:26px 18px; }
+.ms-native-phone.ms-storefront-layout .ms-native-brand { justify-content:center; padding:14px 0; }
+.ms-native-phone.ms-storefront-layout .ms-native-brand img { width:auto; max-width:180px; max-height:48px; object-fit:contain; }
+.ms-native-phone .ms-category-tiles .ms-categories { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:12px; }
+.ms-native-phone .ms-category-tiles button { display:flex; flex-direction:column; align-items:stretch; gap:8px; padding:0 0 8px; width:100%; border:0; background:transparent; }
+.ms-native-phone .ms-category-tiles img { width:100%; height:auto; aspect-ratio:1; object-fit:contain; border-radius:var(--phone-radius); }
+
+/* Preserve the selected device width; narrow workbenches stack the devices. */
+.ms-devices { flex-wrap:wrap; }
+.ms-devices > .ms-device { flex:0 1 390px; width:390px; max-width:100%; }
+
+/* Shared native header: brand + saved delivery location, search below. */
+.ms-native-phone .ms-native-store-header{display:flex;flex-direction:column;align-items:stretch;gap:10px;padding:8px 16px;background:#fff;position:relative;z-index:5}.ms-native-header-row{display:flex;align-items:center;gap:12px;min-width:0}.ms-native-header-logo{width:72px;height:36px;object-fit:contain;flex:none}.ms-native-header-brand{max-width:90px;font-size:16px;overflow-wrap:anywhere}.ms-native-phone .ms-native-header-row .ms-native-language{padding:0;min-width:44px;min-height:44px;border-radius:0;background:none;font-size:12px}.ms-native-location-menu{flex:1;min-width:0;position:relative}.ms-native-location-menu summary{display:flex;align-items:center;gap:6px;min-height:44px;color:var(--phone-primary);cursor:pointer;list-style:none}.ms-native-location-menu summary::-webkit-details-marker{display:none}.ms-native-location-menu summary>span:first-of-type{flex:1;min-width:0}.ms-native-location-menu summary>svg{width:20px;height:20px;flex:none}.ms-native-phone .ms-native-location-menu small{padding:0;border-radius:0;background:none;font-size:11px;font-weight:400}.ms-native-location-menu strong{display:block;font-size:14px;font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.ms-native-location-options{position:absolute;z-index:10;inset-inline-end:0;top:100%;min-width:170px;max-width:230px;background:var(--phone-surface);border:1px solid color-mix(in srgb,var(--phone-text) 18%,transparent);box-shadow:0 6px 20px #0003;border-radius:12px;overflow:hidden}.ms-native-location-options button{display:block;width:100%;min-height:44px;text-align:start;border:0;background:transparent;color:var(--phone-text);padding:12px;font:inherit;overflow-wrap:anywhere}.ms-native-location-options button:disabled{opacity:.5}.ms-native-header-search{display:flex;align-items:center;gap:8px;padding:8px 12px;min-height:44px;border-radius:14px;background:var(--phone-bg)}.ms-native-header-search svg{flex:none;opacity:.6}.ms-native-header-search input{min-width:0;width:100%;padding:0;background:transparent;border:0;color:var(--phone-text);font:inherit;font-size:16px;outline-offset:4px}.ms-native-header-search button{border:0;background:none;color:var(--phone-primary);min-height:32px;min-width:32px;font-size:20px}.ms-native-deal-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:var(--phone-space)}.ms-native-deal-grid .ms-product{min-width:0}.ms-native-deals h2{font-size:22px;margin:0 0 16px}.ms-native-deals>p{font-size:16px;line-height:1.5}
+.ms-native-assistant{display:grid;place-items:center;color:var(--phone-primary);width:44px;min-width:44px;min-height:44px}.ms-native-assistant[aria-disabled=true]{opacity:.45;pointer-events:none}.ms-native-header-row{gap:8px}
+/* Android StoreHeader uses a Material outlined field and a plain Surface row. */
+.ms-android .ms-native-store-header{gap:8px}.ms-android .ms-native-header-row{gap:12px}.ms-android .ms-native-header-search{min-height:56px;border:1px solid var(--phone-outline,#79747e);border-radius:16px;background:transparent;padding:12px}.ms-android .ms-native-header-search:focus-within{border:2px solid var(--phone-primary);padding:11px}.ms-android .ms-native-header-search>svg{width:24px;height:24px;opacity:1;color:color-mix(in srgb,var(--phone-text) 75%,var(--phone-surface))}.ms-android .ms-native-location-menu summary{min-height:48px;color:var(--phone-text)}.ms-android .ms-native-location-menu summary>svg{color:var(--phone-primary)}.ms-android .ms-native-location-menu[open] summary,.ms-android .ms-native-location-menu summary:hover{background:color-mix(in srgb,var(--phone-text) 10%,var(--phone-surface))}.ms-android .ms-native-location-menu small{opacity:1}.ms-android .ms-native-location-menu strong{font-size:14px;font-weight:500}.ms-android .ms-native-assistant{width:48px;min-width:48px;min-height:48px}
+
+/* Native viewport dimensions exclude the decorative hardware frame. Shrink the
+   entire preview when space is limited, never the app's layout viewport. */
+.ms-native-phone { box-sizing:content-box; }
+.ms-devices { flex-wrap:wrap; }
+.ms-native-phone.ms-ios .ms-device-status { height:62px; font-size:16px; padding:16px 28px 10px; background:var(--phone-surface); }
+.ms-ios .ms-camera-cutout { width:126px; height:37px; top:14px; }
+.ms-native-phone.ms-ios .ms-phone-content { padding-top:var(--phone-space); }
+.ms-ios .ms-gesture-bar { height:34px; }
+.ms-ios .ms-gesture-bar::after { width:134px; }
+.ms-ios .ms-native-header-row { gap:12px; }
+.ms-ios .ms-native-location-menu strong { font-size:15px; }
+.ms-ios .ms-native-header-search { min-height:46px; padding:12px; }
+.ms-ios .ms-native-header-search input { font-size:17px; }
+.ms-native-phone .ms-editorial-cta { font-family:inherit; font-weight:400; border-bottom:0; text-decoration:underline; text-underline-offset:2px; }
+.ms-native-phone.ms-android .ms-editorial-cta { font-weight:500; min-height:48px; padding:12px; }
+
+.ms-native-location-trigger{display:flex;align-items:center;gap:6px;flex:1;min-width:0;min-height:48px;border:0;background:transparent;color:var(--phone-primary);text-align:start;padding:0;font:inherit;cursor:pointer}.ms-native-location-trigger>svg{flex:none}.ms-native-location-trigger>span{min-width:0}.ms-native-location-trigger small{display:block;font-size:12px}.ms-native-location-trigger strong{display:block;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-size:14px}
+
+.ms-delivery-map{display:block;width:100%;height:300px;border:0;border-radius:14px;flex:none}
+
+.ms-banner-gallery { display:flex; gap:12px; overflow-x:auto; scroll-snap-type:x mandatory; padding:0 0 8px; }
+.ms-banner-gallery .ms-banner-slide { flex:0 0 88%; aspect-ratio:3/1; padding:0; border:0; border-radius:18px; overflow:hidden; background:var(--phone-surface, #f1f4f0); scroll-snap-align:center; }
+.ms-banner-portrait .ms-banner-slide { flex-basis:78%; aspect-ratio:2/3; }
+.ms-banner-gallery .ms-banner-slide:only-child { flex-basis:100%; }
+.ms-banner-gallery .ms-banner-slide img { width:100%; height:100%; display:block; }

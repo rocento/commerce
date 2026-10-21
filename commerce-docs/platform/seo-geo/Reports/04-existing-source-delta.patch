@@ -1,0 +1,656 @@
+--- a/backend/crates/api-gateway/src/public_commerce/mod.rs
++++ b/backend/crates/api-gateway/src/public_commerce/mod.rs
+@@ -1,0 +2 @@
++pub mod canonical;
+--- a/backend/crates/api-gateway/src/public_commerce/snapshot.rs
++++ b/backend/crates/api-gateway/src/public_commerce/snapshot.rs
+@@ -41,0 +42 @@
++    pub canonical: Option<super::canonical::Identity>,
+@@ -103,0 +105,2 @@
++    let canonical_context =
++        super::canonical::Context::from_installation(&app.deployment, &settings, installation_id);
+@@ -128,0 +132 @@
++        canonical: None,
+@@ -145,36 +149,5 @@
+-    let decision: Option<(i32, Option<String>)> =
+-        sqlx::query_as("SELECT status,target FROM platform.publication_routes WHERE path=$1")
+-            .bind(&request.path)
+-            .fetch_optional(&mut *tx)
+-            .await?;
+-    if let Some((status, target)) = decision {
+-        // Redirects are emitted only to a currently public resource, never to another registry row.
+-        let target_exists = if let Some(target) = &target {
+-            let overridden: bool = sqlx::query_scalar(
+-                "SELECT EXISTS(SELECT 1 FROM platform.publication_routes WHERE path=$1)",
+-            )
+-            .bind(target)
+-            .fetch_one(&mut *tx)
+-            .await?;
+-            if overridden {
+-                false
+-            } else if let Some(key) = target.strip_prefix("/products/") {
+-                catalog::product(&mut tx, key).await?.is_some()
+-            } else if let Some(key) = target.strip_prefix("/categories/") {
+-                result
+-                    .categories
+-                    .iter()
+-                    .any(|c| c.slug == key || c.id.to_string() == key)
+-            } else if let Some(key) = target.strip_prefix("/pages/") {
+-                content(&mut tx, key).await?.is_some()
+-            } else {
+-                false
+-            }
+-        } else {
+-            false
+-        };
+-        if status == 410 || target_exists {
+-            result.status = status as u16;
+-            result.location = target;
+-        }
+-    } else if request.path == "/" {
++    let route = super::canonical::resolve(&mut tx, &request.path).await?;
++    let resolved_path = route.path.as_deref().unwrap_or(&request.path);
++    if ![200, 301].contains(&route.status) {
++        result.status = route.status;
++    } else if resolved_path == "/" {
+@@ -185 +158 @@
+-    } else if let Some(key) = request.path.strip_prefix("/products/") {
++    } else if let Some(key) = resolved_path.strip_prefix("/products/") {
+@@ -193 +166 @@
+-    } else if let Some(key) = request.path.strip_prefix("/categories/") {
++    } else if let Some(key) = resolved_path.strip_prefix("/categories/") {
+@@ -204 +177 @@
+-    } else if let Some(key) = request.path.strip_prefix("/pages/") {
++    } else if let Some(key) = resolved_path.strip_prefix("/pages/") {
+@@ -209,0 +183,8 @@
++    }
++    if result.status == 200 && route.status == 301 {
++        result.status = 301;
++        result.location = Some(if request.page > 1 {
++            format!("{resolved_path}?page={}", request.page)
++        } else {
++            resolved_path.to_owned()
++        });
+@@ -216,0 +198,4 @@
++    }
++    if [200, 301].contains(&result.status) {
++        result.canonical =
++            canonical_context.and_then(|context| context.resource(resolved_path, request.page));
+--- a/backend/crates/api-gateway/tests/publication_rendering.rs
++++ b/backend/crates/api-gateway/tests/publication_rendering.rs
+@@ -234 +234 @@
+-        "/products/apples?shop=1",
++        "/products/00000000-0000-0000-0000-000000000002?shop=1",
+@@ -372,0 +373,2 @@
++    assert!(html.contains("rel=\"canonical\" href=\"https://other.example.test/products/apples\""));
++    assert!(!html.contains("https://shop.example.test/products/apples"));
+@@ -373,0 +376,7 @@
++    canonical_evidence(
++        &second,
++        "other.example.test",
++        "/products/apples",
++        "tenant-b-canonical-200",
++    )
++    .await;
+@@ -394,0 +404,414 @@
++
++#[sqlx::test(migrations = "../../migrations")]
++async fn canonical_lifecycle_single_hop_and_query_policy(pool: PgPool) {
++    seed(&pool, "Orchard apples").await;
++    let (base, gateway, _renderer, task) = fixture(&pool, "shop.example.test").await;
++    let id = "00000000-0000-0000-0000-000000000002";
++    let initial = get(&base, "shop.example.test", "/products/apples")
++        .await
++        .text()
++        .await
++        .unwrap();
++    assert!(
++        initial.contains("rel=\"canonical\" href=\"https://shop.example.test/products/apples\"")
++    );
++    assert!(initial.contains("href=\"/categories/fruit\""));
++    assert!(initial.contains("href=\"/products/apples\""));
++    for path in [
++        format!("/products/{id}"),
++        "/PrOdUcTs/%61pples/?utm_source=email".into(),
++        "/products/apples?campaign=mail".into(),
++        "/products/apples?page=01".into(),
++        "/products/apples?locale=en".into(),
++    ] {
++        let response = get(&base, "shop.example.test", &path).await;
++        assert_eq!(response.status(), 301, "{path}");
++        assert_eq!(response.headers()["location"], "/products/apples");
++        assert_eq!(
++            get(&base, "shop.example.test", "/products/apples")
++                .await
++                .status(),
++            200
++        );
++    }
++    for path in [
++        "/products/apples?locale=ar",
++        "/ar/products/apples",
++        "/products/apples?sort=price",
++        "/products/apples?filter=color",
++        "/products/apples?variant=small",
++        "/products/apples?x=1",
++        "/products/apples?page=1&page=1",
++        "/products/apples?utm_source=a&utm_source=b",
++        "/products%2fapples",
++        "/products/%2561pples",
++    ] {
++        assert_eq!(
++            get(&base, "shop.example.test", path).await.status(),
++            404,
++            "{path}"
++        );
++    }
++    sqlx::query("UPDATE catalog.products SET slug='Café Apples' WHERE id=$1::uuid")
++        .bind(id)
++        .execute(&pool)
++        .await
++        .unwrap();
++    sqlx::query("UPDATE catalog.products SET slug='orchard-selection' WHERE id=$1::uuid")
++        .bind(id)
++        .execute(&pool)
++        .await
++        .unwrap();
++    for path in [
++        format!("/products/{id}"),
++        "/products/apples".into(),
++        "/products/cafe-apples".into(),
++        "/products/old-apples".into(),
++        "/PRODUCTS/APPLES/?utm_source=mail".into(),
++    ] {
++        let r = get(&base, "shop.example.test", &path).await;
++        assert_eq!(r.status(), 301, "{path}");
++        assert_eq!(r.headers()["location"], "/products/orchard-selection");
++    }
++    let current = get(&base, "shop.example.test", "/products/orchard-selection").await;
++    assert_eq!(current.status(), 200);
++    let snapshot: Value = get(
++        gateway.trim_end_matches('/'),
++        "shop.example.test",
++        "/v1/publication/snapshot?path=%2Fproducts%2Forchard-selection",
++    )
++    .await
++    .json()
++    .await
++    .unwrap();
++    for adapter in ["url", "html", "json_ld", "sitemap", "feed"] {
++        assert_eq!(
++            snapshot["canonical"][adapter],
++            "https://shop.example.test/products/orchard-selection"
++        );
++    }
++    assert_eq!(snapshot["canonical"]["locale"], "en");
++    for (path, name) in [
++        (format!("/products/{id}"), "legacy-id-301"),
++        ("/products/apples".into(), "history-first-301"),
++        ("/products/cafe-apples".into(), "history-previous-301"),
++        (
++            "/PRODUCTS/APPLES/?utm_source=mail".into(),
++            "normalized-history-301",
++        ),
++        (
++            "/products/orchard-selection".into(),
++            "canonical-product-200",
++        ),
++        (
++            "/products/orchard-selection?sort=price".into(),
++            "unsupported-sort-404",
++        ),
++    ] {
++        canonical_evidence(&base, "shop.example.test", &path, name).await;
++    }
++    if let Ok(output) = std::env::var("PUBLICATION_EVIDENCE_DIR") {
++        std::fs::write(
++            format!("{output}/canonical-identities.json"),
++            serde_json::to_vec_pretty(&snapshot["canonical"]).unwrap(),
++        )
++        .unwrap();
++    }
++    let mut tx = pool.begin().await.unwrap();
++    sqlx::query("UPDATE catalog.products SET slug='rolled-back' WHERE id=$1::uuid")
++        .bind(id)
++        .execute(&mut *tx)
++        .await
++        .unwrap();
++    tx.rollback().await.unwrap();
++    assert_eq!(
++        get(&base, "shop.example.test", "/products/rolled-back")
++            .await
++            .status(),
++        404
++    );
++    let collision=sqlx::query("INSERT INTO catalog.products(id,sku,slug,name,description,price,currency,unit,category_id) VALUES(gen_random_uuid(),'COLLIDE','apples','Other','Other',1,'USD','kg','00000000-0000-0000-0000-000000000001')").execute(&pool).await.unwrap_err();
++    assert_eq!(
++        collision.as_database_error().unwrap().code().unwrap(),
++        "23505"
++    );
++    sqlx::query("INSERT INTO platform.publication_routes(path,status,target,reason) VALUES('/products/replace-one',301,'/products/replace-two','Approved'),('/products/replace-two',301,'/products/apples','Approved'),('/products/loop-one',301,'/products/loop-two','Fixture'),('/products/loop-two',301,'/products/loop-one','Fixture')").execute(&pool).await.unwrap();
++    let replacement = get(&base, "shop.example.test", "/products/replace-one").await;
++    assert_eq!(replacement.status(), 301);
++    assert_eq!(
++        replacement.headers()["location"],
++        "/products/orchard-selection"
++    );
++    assert_eq!(
++        get(&base, "shop.example.test", "/products/loop-one")
++            .await
++            .status(),
++        404
++    );
++    let override_collision=sqlx::query("INSERT INTO catalog.products(id,sku,slug,name,description,price,currency,unit,category_id) VALUES(gen_random_uuid(),'REDIRECT-COLLISION','replace-one','Other','Other',1,'USD','kg','00000000-0000-0000-0000-000000000001')").execute(&pool).await.unwrap_err();
++    assert_eq!(
++        override_collision
++            .as_database_error()
++            .unwrap()
++            .code()
++            .unwrap(),
++        "23505"
++    );
++    // Page two has its own canonical. Normalization + ID alias + tracking remains one hop.
++    sqlx::query("INSERT INTO catalog.products(id,sku,slug,name,description,price,currency,unit,category_id) SELECT gen_random_uuid(),'PAGE-'||n,'page-'||n,'Z fruit '||n,'Fruit',1,'USD','kg','00000000-0000-0000-0000-000000000001' FROM generate_series(1,25) n").execute(&pool).await.unwrap();
++    let listing = get(
++        &base,
++        "shop.example.test",
++        "/categories/00000000-0000-0000-0000-000000000001/?page=02&utm_source=test",
++    )
++    .await;
++    assert_eq!(listing.status(), 301);
++    assert_eq!(listing.headers()["location"], "/categories/fruit?page=2");
++    let listing = get(&base, "shop.example.test", "/categories/fruit?page=2").await;
++    assert_eq!(listing.status(), 200);
++    assert!(listing
++        .text()
++        .await
++        .unwrap()
++        .contains("rel=\"canonical\" href=\"https://shop.example.test/categories/fruit?page=2\""));
++    canonical_evidence(
++        &base,
++        "shop.example.test",
++        "/categories/fruit?page=2",
++        "canonical-pagination-200",
++    )
++    .await;
++    // A configured second locale does not invent a second translated route.
++    sqlx::query("UPDATE cms.discoverability_settings SET default_locale='ar'")
++        .execute(&pool)
++        .await
++        .unwrap();
++    let localized = get(&base, "shop.example.test", "/products/orchard-selection")
++        .await
++        .text()
++        .await
++        .unwrap();
++    assert!(localized.contains("lang=\"ar\""));
++    assert!(localized.contains("https://shop.example.test/products/orchard-selection"));
++    assert_eq!(
++        get(
++            &base,
++            "shop.example.test",
++            "/products/orchard-selection?locale=en"
++        )
++        .await
++        .status(),
++        404
++    );
++    // Distinct published variants are individual resources; inactive parents hide all children.
++    let child = Uuid::new_v4();
++    sqlx::query("INSERT INTO catalog.products(id,sku,slug,name,description,price,currency,unit,category_id,parent_id) VALUES($1,'CHILD','small-apples','Small apples','Child',2,'USD','kg','00000000-0000-0000-0000-000000000001',$2::uuid)").bind(child).bind(id).execute(&pool).await.unwrap();
++    assert!(get(&base, "shop.example.test", "/products/small-apples")
++        .await
++        .text()
++        .await
++        .unwrap()
++        .contains("rel=\"canonical\" href=\"https://shop.example.test/products/small-apples\""));
++    sqlx::query("UPDATE catalog.products SET active=false WHERE id=$1::uuid")
++        .bind(id)
++        .execute(&pool)
++        .await
++        .unwrap();
++    for path in [
++        "/products/apples",
++        "/products/orchard-selection",
++        "/products/small-apples",
++    ] {
++        assert_eq!(get(&base, "shop.example.test", path).await.status(), 404);
++    }
++    sqlx::query("INSERT INTO platform.publication_routes(path,status,reason) VALUES('/products/orchard-selection',410,'Approved retirement')").execute(&pool).await.unwrap();
++    assert_eq!(
++        get(&base, "shop.example.test", "/products/orchard-selection")
++            .await
++            .status(),
++        410
++    );
++    // Physical deletion keeps reservations, without fabricating a 410 decision.
++    sqlx::query("DELETE FROM catalog.products WHERE id=$1")
++        .bind(child)
++        .execute(&pool)
++        .await
++        .unwrap();
++    assert_eq!(
++        get(&base, "shop.example.test", "/products/small-apples")
++            .await
++            .status(),
++        404
++    );
++    task.abort();
++}
++
++#[sqlx::test(migrations = "../../migrations")]
++async fn generated_slugs_unicode_collisions_and_deleted_categories(pool: PgPool) {
++    let service = domain_catalog::Service { pool: pool.clone() };
++    let create = |name: &str, slug: &str| {
++        serde_json::from_value::<domain_catalog::CategoryInput>(
++            json!({"name":name,"slug":slug,"parent_id":null}),
++        )
++        .unwrap()
++    };
++    let a = service
++        .save_category(None, create("Café Fruit", ""))
++        .await
++        .unwrap();
++    assert_eq!(a.slug, "cafe-fruit");
++    let b = service
++        .save_category(None, create("Cafe\u{301} Fruit", ""))
++        .await
++        .unwrap();
++    assert_eq!(b.slug, format!("cafe-fruit-{}", b.id.simple()));
++    let arabic = service
++        .save_category(None, create("تفاح أحمر", ""))
++        .await
++        .unwrap();
++    assert_eq!(arabic.slug, "tfah-ahmr");
++    let reserved = service
++        .save_category(None, create("New", "new"))
++        .await
++        .unwrap();
++    assert_eq!(reserved.slug, "category-new");
++    let unsupported = service
++        .save_category(None, create("苹果", ""))
++        .await
++        .unwrap();
++    assert_eq!(
++        unsupported.slug,
++        format!("category-{}", unsupported.id.simple())
++    );
++    let (left, right) = tokio::join!(
++        service.save_category(None, create("Concurrent", "")),
++        service.save_category(None, create("Concurrent", ""))
++    );
++    assert_ne!(left.unwrap().slug, right.unwrap().slug);
++    let mut tx = pool.begin().await.unwrap();
++    sqlx::query("UPDATE catalog.categories SET slug='renamed-fruit' WHERE id=$1")
++        .bind(a.id)
++        .execute(&mut *tx)
++        .await
++        .unwrap();
++    tx.commit().await.unwrap();
++    let route = api_gateway::public_commerce::canonical::resolve(
++        &mut pool.acquire().await.unwrap(),
++        "/categories/cafe-fruit",
++    )
++    .await
++    .unwrap();
++    assert_eq!(route.status, 301);
++    assert_eq!(route.path.as_deref(), Some("/categories/renamed-fruit"));
++    service.delete_category(a.id).await.unwrap();
++    for key in [
++        "cafe-fruit".to_owned(),
++        "renamed-fruit".to_owned(),
++        a.id.to_string(),
++    ] {
++        assert_eq!(
++            api_gateway::public_commerce::canonical::resolve(
++                &mut pool.acquire().await.unwrap(),
++                &format!("/categories/{key}")
++            )
++            .await
++            .unwrap()
++            .status,
++            404
++        );
++    }
++    assert!(service
++        .save_category(None, create("Other", "cafe-fruit"))
++        .await
++        .is_err());
++}
++
++#[sqlx::test(migrations = "../../migrations")]
++async fn migration_backfills_legacy_rows_and_rejects_ambiguous_ownership(pool: PgPool) {
++    const REVERT_FIXTURE: &str = "DROP FUNCTION platform.reserve_public_slug() CASCADE; DROP FUNCTION platform.public_slug(text); DROP TABLE platform.publication_aliases;";
++    // Recreate the pre-Stage-04 boundary inside a rolled-back, isolated transaction.
++    let mut tx = pool.begin().await.unwrap();
++    sqlx::raw_sql(REVERT_FIXTURE)
++        .execute(&mut *tx)
++        .await
++        .unwrap();
++    let category = Uuid::new_v4();
++    let product = Uuid::new_v4();
++    sqlx::query(
++        "INSERT INTO catalog.categories(id,name,slug) VALUES($1,'Legacy fruit','Legacy--Fruit')",
++    )
++    .bind(category)
++    .execute(&mut *tx)
++    .await
++    .unwrap();
++    sqlx::query("INSERT INTO catalog.products(id,sku,slug,name,description,price,currency,unit,category_id) VALUES($1,'LEGACY','legacy-apples','Legacy apples','Legacy',1,'USD','kg',$2)").bind(product).bind(category).execute(&mut *tx).await.unwrap();
++    sqlx::raw_sql(include_str!(
++        "../../../migrations/20260921110000_publication_slug_history.sql"
++    ))
++    .execute(&mut *tx)
++    .await
++    .unwrap();
++    for (path, expected) in [
++        (
++            format!("/categories/{category}"),
++            "/categories/legacy-fruit",
++        ),
++        (
++            "/categories/legacy--fruit".into(),
++            "/categories/legacy-fruit",
++        ),
++        (format!("/products/{product}"), "/products/legacy-apples"),
++    ] {
++        let route = api_gateway::public_commerce::canonical::resolve(&mut tx, &path)
++            .await
++            .unwrap();
++        assert_eq!(route.status, 301);
++        assert_eq!(route.path.as_deref(), Some(expected));
++    }
++    tx.rollback().await.unwrap();
++    let mut tx = pool.begin().await.unwrap();
++    sqlx::raw_sql(REVERT_FIXTURE)
++        .execute(&mut *tx)
++        .await
++        .unwrap();
++    sqlx::query("INSERT INTO catalog.categories(id,name,slug) VALUES(gen_random_uuid(),'First','FRUIT'),(gen_random_uuid(),'Second','fruit')").execute(&mut *tx).await.unwrap();
++    let conflict = sqlx::raw_sql(include_str!(
++        "../../../migrations/20260921110000_publication_slug_history.sql"
++    ))
++    .execute(&mut *tx)
++    .await
++    .unwrap_err();
++    assert_eq!(
++        conflict.as_database_error().unwrap().code().unwrap(),
++        "23505"
++    );
++    tx.rollback().await.unwrap();
++    let present: bool =
++        sqlx::query_scalar("SELECT to_regclass('platform.publication_aliases') IS NOT NULL")
++            .fetch_one(&pool)
++            .await
++            .unwrap();
++    assert!(present);
++}
++
++async fn canonical_evidence(base: &str, host: &str, path: &str, name: &str) {
++    if let Ok(output) = std::env::var("PUBLICATION_EVIDENCE_DIR") {
++        std::fs::create_dir_all(&output).unwrap();
++        let result = tokio::process::Command::new("curl")
++            .args([
++                "--silent",
++                "--show-error",
++                "--include",
++                "--noproxy",
++                "*",
++                "-H",
++                &format!("Host: {host}"),
++                &format!("{base}{path}"),
++            ])
++            .output()
++            .await
++            .unwrap();
++        assert!(result.status.success());
++        std::fs::write(format!("{output}/{name}.http"), result.stdout).unwrap();
++    }
++}
+--- a/backend/crates/domain-catalog/src/lib.rs
++++ b/backend/crates/domain-catalog/src/lib.rs
+@@ -104,0 +105 @@
++pub mod media_library;
+@@ -106 +106,0 @@
+-pub mod media_library;
+@@ -225 +225,3 @@
+-        slug(&input.slug)?;
++        if input.slug.len() > 400 {
++            return Err(invalid("Slug is too long"));
++        }
+@@ -359 +361,3 @@
+-        slug(&input.slug)?;
++        if input.slug.len() > 400 {
++            return Err(invalid("Slug is too long"));
++        }
+--- a/frontend/apps/storefront/server/publication.mjs
++++ b/frontend/apps/storefront/server/publication.mjs
+@@ -5 +5,2 @@
+-export const publicPath = path => path === '/' || /^\/(products|categories|pages)\/[A-Za-z0-9_-]{1,200}$/.test(path);
++import { publicPath, publicTarget, canonicalTarget, validDestination, decodedRequestPath } from './url-policy.mjs';
++export { publicPath } from './url-policy.mjs';
+@@ -24,0 +26 @@
++      if (decodedRequestPath(req.url) === null) return fail(404, 'Page not found');
+@@ -46,10 +48,2 @@
+-      if (privatePath(url.pathname) || (publicPath(url.pathname) && (url.searchParams.has('theme_preview') || url.searchParams.get('shop') === '1'))) {
+-        if (publicPath(url.pathname) && url.searchParams.get('shop') === '1') {
+-          const check = await get(`/v1/publication/snapshot?${new URLSearchParams({ path: url.pathname })}`);
+-          if (check.status !== 200) return fail(503, 'Storefront temporarily unavailable');
+-          const resource = await check.json();
+-          if (resource.installation_id !== installationId || resource.origin !== origin || resource.path !== url.pathname) return fail(503, 'Storefront temporarily unavailable');
+-          if (resource.status === 301 && publicPath(resource.location) && resource.location !== url.pathname) { res.setHeader('Location', `${resource.location}?shop=1`); return send(301, 'This page has moved.'); }
+-          if (resource.status === 404 || resource.status === 410) return fail(resource.status, resource.status === 410 ? 'Page permanently removed' : 'Page not found');
+-          if (resource.status !== 200) return fail(503, 'Storefront temporarily unavailable');
+-        }
++      if (publicPath(url.pathname) && [...url.searchParams.keys()].some((key, index, keys) => keys.indexOf(key) !== index)) return fail(404, 'Page not found');
++      if (privatePath(url.pathname) || (publicPath(url.pathname) && url.searchParams.has('theme_preview'))) {
+@@ -60,4 +54,5 @@
+-      if (!publicPath(url.pathname)) return fail(404, 'Page not found');
+-      const page = url.searchParams.get('page') || '1';
+-      if (!/^[1-9][0-9]{0,4}$/.test(page) || Number(page) > 10000 || url.searchParams.getAll('page').length > 1) return fail(404, 'Page not found');
+-      const r = await get(`/v1/publication/snapshot?${new URLSearchParams({ path: url.pathname, page })}`);
++      const shopping = publicPath(url.pathname) && url.pathname.startsWith('/products/') && url.searchParams.get('shop') === '1';
++      const target = publicTarget(shopping ? url.pathname : req.url);
++      if (!target) return fail(404, 'Page not found');
++      const { path, page } = target;
++      const r = await get(`/v1/publication/snapshot?${new URLSearchParams({ path, page: String(page) })}`);
+@@ -65,4 +60,28 @@
+-      const s = await r.json();
+-      if (s.schema_version !== 1 || s.installation_id !== installationId || s.origin !== origin || s.path !== url.pathname || s.page !== Number(page) || !/^[a-z]{2}(?:-[A-Z]{2})?$/.test(s.locale) || ![200,301,404,410].includes(s.status)) throw new Error('Invalid snapshot');
+-      if (s.status === 301) { if (!publicPath(s.location) || s.location === url.pathname) throw new Error('Invalid redirect'); res.setHeader('Location', s.location); return send(301, 'This page has moved.'); }
+-      const robots = s.status === 200 && [...url.searchParams.keys()].every(key => key === 'page') && s.robots === 'index, follow' ? 'index, follow' : noindex;
++      let s = await r.json();
++      const bound = snapshot => snapshot.schema_version === 1 && snapshot.installation_id === installationId && snapshot.origin === origin && /^[a-z]{2}(?:-[A-Z]{2})?$/.test(snapshot.locale) && [200,301,404,410].includes(snapshot.status);
++      if (!bound(s) || s.path !== path || s.page !== page) throw new Error('Invalid snapshot');
++      if (target.locale !== null && target.locale !== s.locale) return fail(404, 'Page not found');
++      if (shopping) {
++        // The legacy purchase app calls ID APIs. Its explicit private URL is not a canonical document.
++        if (s.status === 301) {
++          if (!validDestination(s.location)) throw new Error('Invalid redirect');
++          const expected = s.location;
++          const next = await get(`/v1/publication/snapshot?${new URLSearchParams({ path: expected })}`);
++          if (next.status !== 200) throw new Error('Unavailable product');
++          s = await next.json(); if (!bound(s) || s.path !== expected || s.page !== 1) throw new Error('Invalid snapshot');
++        }
++        if ([404,410].includes(s.status)) return fail(s.status, s.status === 410 ? 'Page permanently removed' : 'Page not found');
++        if (s.status !== 200 || !s.product?.id || !/^[0-9a-f-]{36}$/.test(s.product.id)) throw new Error('Invalid shopping resource');
++        const privateURL = `/products/${s.product.id}?shop=1`;
++        if (req.url !== privateURL) { res.setHeader('Location', privateURL); return send(301, 'Open the shopping view.'); }
++        const shell = await get(privateURL); if (shell.status !== 200) throw new Error('Unavailable shopping view');
++        return send(200, await shell.text());
++      }
++      if (s.status === 301) { if (!validDestination(s.location) || s.location === req.url) throw new Error('Invalid redirect'); res.setHeader('Location', s.location); return send(301, 'This page has moved.'); }
++      const normalized = canonicalTarget(path,page);
++      if (s.status === 200 && req.url !== normalized) { res.setHeader('Location', normalized); return send(301, 'This page has moved.'); }
++      if (s.canonical != null) {
++        const c = s.canonical;
++        if (s.status !== 200 || c.installation_id !== installationId || c.locale !== s.locale || c.path !== normalized || c.url !== origin.slice(0,-1) + normalized || !['html','json_ld','sitemap','feed'].every(key => c[key] === c.url)) throw new Error('Invalid canonical identity');
++      }
++      const robots = s.status === 200 && s.robots === 'index, follow' ? 'index, follow' : noindex;
+@@ -72 +91 @@
+-      const document = template.replace('lang="en"', `lang="${s.locale}"`).replace(/<title>.*?<\/title>/s, () => `<title>${escape(title)} · ${escape(s.site_name)}</title>`).replace('</head>', () => `<meta name="robots" content="${robots}"/><meta name="description" content="${escape(s.product?.description || s.description)}"/><!--publication-metadata--></head>`).replace('<!--publication-html-->', () => html).replace('<!--publication-state-->', () => state);
++      const document = template.replace('lang="en"', `lang="${s.locale}"`).replace(/<title>.*?<\/title>/s, () => `<title>${escape(title)} · ${escape(s.site_name)}</title>`).replace('</head>', () => `<meta name="robots" content="${robots}"/><meta name="description" content="${escape(s.product?.description || s.description)}"/>${s.canonical ? `<link rel="canonical" href="${escape(s.canonical.html)}"/>` : ''}<!--publication-metadata--></head>`).replace('<!--publication-html-->', () => html).replace('<!--publication-state-->', () => state);
+--- a/frontend/apps/storefront/server/publication-checks.mjs
++++ b/frontend/apps/storefront/server/publication-checks.mjs
+@@ -12 +12 @@
+-  return { calls, get: (path='/', options={}) => gatewayFetch(`http://127.0.0.1:${server.address().port}${path}`, {redirect:'manual',...options,headers:{host:'shop.example.test',...options.headers}}) };
++  return { calls, port: server.address().port, get: (path='/', options={}) => gatewayFetch(`http://127.0.0.1:${server.address().port}${path}`, {redirect:'manual',...options,headers:{host:'shop.example.test',...options.headers}}) };
+@@ -50,0 +51,18 @@
++test('canonical metadata and discovery placeholders share only the approved origin', async t => {
++  const url='https://shop.example.test/';
++  const canonical={installation_id:'one',locale:'en',path:'/',url,html:url,json_ld:url,sitemap:url,feed:url};
++  const {get}=await fixture(t,{fetcher:async()=>new Response(JSON.stringify({...snapshot,canonical}))});
++  const r=await get();assert.equal(r.status,200);assert.match(await r.text(),/<link rel="canonical" href="https:\/\/shop.example.test\/"\/>/);
++  for(const change of [{url:'https://other.example/'},{installation_id:'two'},{html:'https://other.example/'},{locale:'ar'},{path:'//other.example/'}]) {
++    const {get}=await fixture(t,{fetcher:async()=>new Response(JSON.stringify({...snapshot,canonical:{...canonical,...change}}))});assert.equal((await get()).status,503);
++  }
++});
++
++test('raw encoded dot segments cannot normalize into a private 200 shell', async t => {
++  const {port,calls}=await fixture(t);const {request}=await import('node:http');
++  for(const path of ['/products/%2e%2e/account','/products/../account','/account%2flocations','/products/%ff']) {
++    const status=await new Promise((resolve,reject)=>{const req=request({hostname:'127.0.0.1',port,path,headers:{host:'shop.example.test'}},res=>{res.resume();res.on('end',()=>resolve(res.statusCode));});req.on('error',reject);req.end();});
++    assert.equal(status,404,path);
++  }
++  assert.equal(calls.length,0);
++});
+--- a/frontend/apps/storefront/src/public/page.tsx
++++ b/frontend/apps/storefront/src/public/page.tsx
+@@ -24 +24 @@
+-  return <article className="product-card"><a href={`/products/${p.id}`}>{p.image_id && <img src={mediaUrl(p.image_id)} alt={p.image_alt || p.name} loading="lazy" />}<h3>{p.name}</h3></a><p>{p.product_type === "simple" ? `${p.price} ${p.currency}${p.unit ? ` / ${p.unit}` : ""}` : "Choose options for pricing"}</p></article>;
++  return <article className="product-card"><a href={`/products/${p.slug}`}>{p.image_id && <img src={mediaUrl(p.image_id)} alt={p.image_alt || p.name} loading="lazy" />}<h3>{p.name}</h3></a><p>{p.product_type === "simple" ? `${p.price} ${p.currency}${p.unit ? ` / ${p.unit}` : ""}` : "Choose options for pricing"}</p></article>;
+@@ -38 +38 @@
+-    return <section className="theme-section"><h2>{String(section.settings.heading || '')}</h2><Grid products={products} /><a href={categoryId ? `/categories/${categoryId}` : '/search'}>Browse all products</a></section>;
++    return <section className="theme-section"><h2>{String(section.settings.heading || '')}</h2><Grid products={products} /><a href={categoryId && s.categories.find(c => c.id === categoryId) ? `/categories/${s.categories.find(c => c.id === categoryId)!.slug}` : '/search'}>Browse all products</a></section>;
+@@ -40 +40 @@
+-  const categories = (section: ThemeSection) => <section className="theme-section"><h2>{String(section.settings.heading || '')}</h2><nav className="theme-category-showcase">{s.categories.slice(0, Number(section.settings.limit || 8)).map(c => <a href={`/categories/${c.id}`} key={c.id}>{c.thumbnail && <img src={mediaUrl(c.thumbnail)} alt="" loading="lazy" />}<span>{c.name}</span></a>)}</nav></section>;
++  const categories = (section: ThemeSection) => <section className="theme-section"><h2>{String(section.settings.heading || '')}</h2><nav className="theme-category-showcase">{s.categories.slice(0, Number(section.settings.limit || 8)).map(c => <a href={`/categories/${c.slug}`} key={c.id}>{c.thumbnail && <img src={mediaUrl(c.thumbnail)} alt="" loading="lazy" />}<span>{c.name}</span></a>)}</nav></section>;
+@@ -43 +43 @@
+-    <ThemeGlobal location="top" header={<header className="store-header"><a className="brand" href="/">{headerOptions.image ? <img className="header-custom-logo" src={mediaUrl(String(headerOptions.image))} alt={String(headerOptions.alt || s.site_name)} style={{ width: Number(headerOptions.logo_width) }} /> : s.site_name}</a><div className="header-search-zone">{Search ? <Search /> : <form action="/search" role="search"><label>Search <input name="q" type="search" /></label><button>Search</button></form>}</div><nav aria-label="Shopper tools"><a href="/delivery-location">Delivery location</a><a href="/cart">Cart</a><a href="/account">My account</a></nav></header>} navigation={<nav className="category-nav" aria-label="Shop categories"><a href="/search">Shop all</a>{s.categories.map(c => <a key={c.id} href={`/categories/${c.id}`}>{c.name}</a>)}</nav>} />
++    <ThemeGlobal location="top" header={<header className="store-header"><a className="brand" href="/">{headerOptions.image ? <img className="header-custom-logo" src={mediaUrl(String(headerOptions.image))} alt={String(headerOptions.alt || s.site_name)} style={{ width: Number(headerOptions.logo_width) }} /> : s.site_name}</a><div className="header-search-zone">{Search ? <Search /> : <form action="/search" role="search"><label>Search <input name="q" type="search" /></label><button>Search</button></form>}</div><nav aria-label="Shopper tools"><a href="/delivery-location">Delivery location</a><a href="/cart">Cart</a><a href="/account">My account</a></nav></header>} navigation={<nav className="category-nav" aria-label="Shop categories"><a href="/search">Shop all</a>{s.categories.map(c => <a key={c.id} href={`/categories/${c.slug}`}>{c.name}</a>)}</nav>} />
+@@ -45 +45 @@
+-      {s.kind !== 'home' && <nav className="public-breadcrumbs" aria-label="Breadcrumb"><a href="/">{s.site_name}</a>{category && <a href={`/categories/${category.id}`}>{category.name}</a>}<span>{p?.name || s.content?.title}</span></nav>}
++      {s.kind !== 'home' && <nav className="public-breadcrumbs" aria-label="Breadcrumb"><a href="/">{s.site_name}</a>{category && <a href={`/categories/${category.slug}`}>{category.name}</a>}<span>{p?.name || s.content?.title}</span></nav>}
+--- a/frontend/apps/storefront/src/public/types.ts
++++ b/frontend/apps/storefront/src/public/types.ts
+@@ -6 +6 @@
+-  path: string; kind: 'home' | 'category' | 'product' | 'content' | 'missing'; status: number; location: string | null; robots: string;
++  path: string; kind: 'home' | 'category' | 'product' | 'content' | 'missing'; status: number; location: string | null; canonical: { installation_id: string; locale: string; path: string; url: string; html: string; json_ld: string; sitemap: string; feed: string } | null; robots: string;
+--- a/frontend/e2e/publication-check.mjs
++++ b/frontend/e2e/publication-check.mjs
+@@ -30 +30 @@
+-  assert.ok(page.url().includes('/products/00000000-0000-0000-0000-000000000002'));
++  assert.ok(page.url().endsWith('/products/apples'));
+--- a/SEO-GEO/Docs/http-status-policy.md
++++ b/SEO-GEO/Docs/http-status-policy.md
+@@ -11 +11 @@
+-| Redirect destination missing, inactive, or itself in the route registry | 404 (no redirect chains/loops) |
++| Redirect destination missing/inactive, cyclic or exceeding the resolver bound | 404; valid replacement/history chains collapse to one 301 |
+@@ -27,0 +28,2 @@
++
++Stage 04 supersedes the initial registry-only behavior with stable-ID history and centralized canonical URLs. See `canonical-policy.md` and `slug-and-redirect-policy.md` for current normalization, query and lifecycle behavior.
+--- a/SEO-GEO/Docs/public-commerce-contract.md
++++ b/SEO-GEO/Docs/public-commerce-contract.md
+@@ -3 +3 @@
+-Stage 01 design specification. **Not implemented** as an API yet. Use one typed Rust assembler and generated TypeScript contract. Existing domain objects are not the public contract.
++Stage 01 design specification. Stage 03 implemented the initial internal snapshot; Stage 04 implemented its canonical identity and alias lifecycle. Remaining fields below continue to describe later-stage targets. Use one typed Rust assembler and generated TypeScript contract. Existing domain objects are not the public contract.

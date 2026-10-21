@@ -1,0 +1,309 @@
+--- a/backend/crates/api-gateway/src/catalog.rs
++++ b/backend/crates/api-gateway/src/catalog.rs
+@@ -64,0 +65,4 @@
++        .route(
++            "/v1/admin/catalog/media/{id}/publication",
++            post(process_image),
++        )
+@@ -282,4 +286,34 @@
+-async fn media_info(State(a): State<App>, Path(id): Path<Uuid>) -> Result<impl IntoResponse> {
+-    Ok(Json(a.catalog.media_by_id(id).await?))
+-}
+-async fn media_content(State(a): State<App>, Path(id): Path<Uuid>) -> Result<Response> {
++async fn media_info(
++    State(a): State<App>,
++    h: HeaderMap,
++    Path(id): Path<Uuid>,
++) -> Result<impl IntoResponse> {
++    let public =
++        crate::public_commerce::images::is_public(&mut *a.catalog.pool.acquire().await?, id)
++            .await?;
++    if !public {
++        a.authorize(&h, "catalog.read").await?;
++    }
++    let mut media = a.catalog.media_by_id(id).await?;
++    if public {
++        media.object_key.clear();
++    }
++    Ok(([("cache-control", "no-store")], Json(media)))
++}
++#[derive(Deserialize)]
++#[serde(deny_unknown_fields)]
++struct ImageQuery {
++    width: Option<u32>,
++}
++async fn media_content(
++    State(a): State<App>,
++    h: HeaderMap,
++    Path(id): Path<Uuid>,
++    Query(q): Query<ImageQuery>,
++) -> Result<Response> {
++    let public =
++        crate::public_commerce::images::is_public(&mut *a.catalog.pool.acquire().await?, id)
++            .await?;
++    if !public {
++        a.authorize(&h, "catalog.read").await?;
++    }
+@@ -287 +321,16 @@
+-    let bytes = a.media.get(&m.object_key).await.map_err(provider)?;
++    let (key, content_type) = if let Some(width) = q.width {
++        if ![480, 960].contains(&width) {
++            return Err(Error::NotFound.into());
++        }
++        let exists:bool=sqlx::query_scalar("SELECT EXISTS(SELECT 1 FROM catalog.publication_images WHERE media_id=$1 AND variants @> $2)").bind(id).bind(json!([{"width":width}])).fetch_one(&a.catalog.pool).await?;
++        if !exists {
++            return Err(Error::NotFound.into());
++        }
++        (
++            format!("catalog/{id}/publication-{width}.webp"),
++            "image/webp".to_string(),
++        )
++    } else {
++        (m.object_key, m.content_type)
++    };
++    let bytes = a.media.get(&key).await.map_err(provider)?;
+@@ -290,2 +339,3 @@
+-            ("content-type", m.content_type),
+-            ("cache-control", "public, max-age=86400".into()),
++            ("content-type", content_type),
++            ("cache-control", "no-store".into()),
++            ("x-content-type-options", "nosniff".into()),
+@@ -389 +439,13 @@
+-        Ok(media) => Ok((StatusCode::CREATED, Json(media))),
++        Ok(media) => {
++            if let Err(error) = crate::public_commerce::images::store_derived(
++                &a.catalog.pool,
++                &a.media,
++                id,
++                bytes.to_vec(),
++            )
++            .await
++            {
++                tracing::warn!(media_id=%id,error=%error,"Image rendition unavailable; original retained for retry");
++            }
++            Ok((StatusCode::CREATED, Json(media)))
++        }
+@@ -419,0 +482,9 @@
++    for width in [480, 960] {
++        if let Err(e) = a
++            .media
++            .delete(&format!("catalog/{id}/publication-{width}.webp"))
++            .await
++        {
++            tracing::warn!(error=%e,media_id=%id,"derived media object requires cleanup");
++        }
++    }
+@@ -479,0 +551,21 @@
++
++/// Explicit retry/backfill for media uploaded before dimensioned publication existed.
++async fn process_image(
++    State(a): State<App>,
++    h: HeaderMap,
++    Path(id): Path<Uuid>,
++) -> Result<impl IntoResponse> {
++    a.authorize(&h, "catalog.write").await?;
++    let media = a.catalog.media_by_id(id).await?;
++    if media.size_bytes > 5 * 1024 * 1024 {
++        return Err(catalog::invalid("Images must be at most 5 MB").into());
++    }
++    let bytes = a.media.get(&media.object_key).await.map_err(provider)?;
++    if bytes.len() > 5 * 1024 * 1024 {
++        return Err(catalog::invalid("Images must be at most 5 MB").into());
++    }
++    crate::public_commerce::images::store_derived(&a.catalog.pool, &a.media, id, bytes)
++        .await
++        .map_err(|e| catalog::invalid(&e))?;
++    Ok(Json(json!({"status":"processed"})))
++}
+--- a/backend/crates/api-gateway/Cargo.toml
++++ b/backend/crates/api-gateway/Cargo.toml
+@@ -51,0 +52 @@
++image = { version = "0.25", default-features = false, features = ["png", "jpeg", "webp"] }
+--- a/backend/Cargo.lock
++++ b/backend/Cargo.lock
+@@ -3,0 +4,6 @@
++
++[[package]]
++name = "adler2"
++version = "2.0.1"
++source = "registry+https://github.com/rust-lang/crates.io-index"
++checksum = "320119579fcad9c21884f5c4861d16174d0e06250625266f50fe6898340abefa"
+@@ -61,0 +68 @@
++ "image",
+@@ -351,0 +359,6 @@
++name = "bytemuck"
++version = "1.25.2"
++source = "registry+https://github.com/rust-lang/crates.io-index"
++checksum = "95832e849adfb21180ccb6826a99da14e5d266ae5c2e668e1602cf234f153797"
++
++[[package]]
+@@ -355,0 +369,6 @@
++
++[[package]]
++name = "byteorder-lite"
++version = "0.1.0"
++source = "registry+https://github.com/rust-lang/crates.io-index"
++checksum = "8f1fe948ff07f4bd06c30984e69f5b4899c516a3ef74f34df92a2df2ab535495"
+@@ -1040,0 +1060,9 @@
++name = "fdeflate"
++version = "0.3.7"
++source = "registry+https://github.com/rust-lang/crates.io-index"
++checksum = "1e6853b52649d4ac5c0bd02320cddc5ba956bdb407c4b75a2c6b75bf51500f8c"
++dependencies = [
++ "simd-adler32",
++]
++
++[[package]]
+@@ -1050,0 +1079,11 @@
++
++[[package]]
++name = "flate2"
++version = "1.1.10"
++source = "registry+https://github.com/rust-lang/crates.io-index"
++checksum = "6e634e2e0ebac1ee034020da1ca582e17ffe4e0f5e985823721e168928136dcb"
++dependencies = [
++ "crc32fast",
++ "miniz_oxide 0.9.1",
++ "zlib-rs",
++]
+@@ -1592,0 +1632,26 @@
++]
++
++[[package]]
++name = "image"
++version = "0.25.10"
++source = "registry+https://github.com/rust-lang/crates.io-index"
++checksum = "85ab80394333c02fe689eaf900ab500fbd0c2213da414687ebf995a65d5a6104"
++dependencies = [
++ "bytemuck",
++ "byteorder-lite",
++ "image-webp",
++ "moxcms",
++ "num-traits",
++ "png",
++ "zune-core",
++ "zune-jpeg",
++]
++
++[[package]]
++name = "image-webp"
++version = "0.2.4"
++source = "registry+https://github.com/rust-lang/crates.io-index"
++checksum = "525e9ff3e1a4be2fbea1fdf0e98686a6d98b4d8f937e1bf7402245af1909e8c3"
++dependencies = [
++ "byteorder-lite",
++ "quick-error",
+@@ -1866,0 +1932,20 @@
++name = "miniz_oxide"
++version = "0.8.9"
++source = "registry+https://github.com/rust-lang/crates.io-index"
++checksum = "1fa76a2c86f704bdb222d66965fb3d63269ce38518b83cb0575fca855ebb6316"
++dependencies = [
++ "adler2",
++ "simd-adler32",
++]
++
++[[package]]
++name = "miniz_oxide"
++version = "0.9.1"
++source = "registry+https://github.com/rust-lang/crates.io-index"
++checksum = "b63fbc4a50860e98e7b2aa7804ded1db5cbc3aff9193adaff57a6931bf7c4b4c"
++dependencies = [
++ "adler2",
++ "simd-adler32",
++]
++
++[[package]]
+@@ -1874,0 +1960,10 @@
++]
++
++[[package]]
++name = "moxcms"
++version = "0.8.1"
++source = "registry+https://github.com/rust-lang/crates.io-index"
++checksum = "bb85c154ba489f01b25c0d36ae69a87e4a1c73a72631fc6c0eb6dde34a73e44b"
++dependencies = [
++ "num-traits",
++ "pxfm",
+@@ -2241,0 +2337,13 @@
++name = "png"
++version = "0.18.1"
++source = "registry+https://github.com/rust-lang/crates.io-index"
++checksum = "60769b8b31b2a9f263dae2776c37b1b28ae246943cf719eb6946a1db05128a61"
++dependencies = [
++ "bitflags",
++ "crc32fast",
++ "fdeflate",
++ "flate2",
++ "miniz_oxide 0.8.9",
++]
++
++[[package]]
+@@ -2310,0 +2419,12 @@
++
++[[package]]
++name = "pxfm"
++version = "0.1.30"
++source = "registry+https://github.com/rust-lang/crates.io-index"
++checksum = "d55d956fa96f5ec02be2e13af0e20391a5aa83d6a074e3ad368959d0fab299ea"
++
++[[package]]
++name = "quick-error"
++version = "2.0.1"
++source = "registry+https://github.com/rust-lang/crates.io-index"
++checksum = "a993555f31e5a609f617c12db6250dedcac1b0a85076912c436e6fc9b2c8e6a3"
+@@ -3029,0 +3150,6 @@
++
++[[package]]
++name = "simd-adler32"
++version = "0.3.10"
++source = "registry+https://github.com/rust-lang/crates.io-index"
++checksum = "3a219298ac11a56ea9a6d2120044824d6f01aeb034955e7af7bc16858527deea"
+@@ -4371,0 +4498,6 @@
++name = "zlib-rs"
++version = "0.6.8"
++source = "registry+https://github.com/rust-lang/crates.io-index"
++checksum = "b268e58e7c693d7c271f93ffc4ba3b380412554231c85bf61ca7af91042a4112"
++
++[[package]]
+@@ -4375,0 +4508,15 @@
++
++[[package]]
++name = "zune-core"
++version = "0.5.3"
++source = "registry+https://github.com/rust-lang/crates.io-index"
++checksum = "d56377fd46368984a170bc5aac5567e52ca5da874caa60bea39fcbca78fb658b"
++
++[[package]]
++name = "zune-jpeg"
++version = "0.5.15"
++source = "registry+https://github.com/rust-lang/crates.io-index"
++checksum = "27bc9d5b815bc103f142aa054f561d9187d191692ec7c2d1e2b4737f8dbd7296"
++dependencies = [
++ "zune-core",
++]
+--- a/backend/crates/api-gateway/openapi/discoverability_contract.py
++++ b/backend/crates/api-gateway/openapi/discoverability_contract.py
+@@ -34,0 +35,22 @@
++
++    ref=lambda name: {'$ref': '#/components/schemas/'+name}
++    def obj(fields): return {'type':'object','additionalProperties':False,'required':list(fields),'properties':fields}
++    text={'type':'string','maxLength':2000}
++    schemas['PublicationMetadataText']=obj({'title':text,'description':text})
++    schemas['PublicationMetadataConfiguration']=obj({
++        'templates':{'type':'object','additionalProperties':ref('PublicationMetadataText')},
++        'overrides':{'type':'object','maxProperties':500,'additionalProperties':ref('PublicationMetadataText')},
++        'social_image':{'type':'string','format':'uuid','nullable':True},
++    })
++    schemas['PublicationMetadataSettings']=obj({'revision':{'type':'integer'},'configuration':ref('PublicationMetadataConfiguration')})
++    schemas['PublicationMetadataInput']=obj({'expected_revision':{'type':'integer','minimum':1},'configuration':ref('PublicationMetadataConfiguration')})
++    schemas['PublicationMetadataPreviewInput']=obj({'path':{'type':'string'},'page':{'type':'integer','minimum':1,'maximum':10000,'default':1},'configuration':ref('PublicationMetadataConfiguration')})
++    schemas['PublicationMetadataPreviewInput']['required'].remove('page')
++    schemas['PublicationResolvedMetadata']=obj({'title':{'type':'string'},'description':{'type':'string'},'image':{'type':'string','format':'uuid','nullable':True},'warnings':{'type':'array','items':{'type':'string'}}})
++    schemas['PublicationMetadataPreview']={'type':'object','additionalProperties':True,'required':['metadata','status','robots','canonical','images'],'properties':{'metadata':ref('PublicationResolvedMetadata'),'status':{'type':'integer'},'robots':{'type':'string'},'canonical':{'type':'object','nullable':True,'additionalProperties':True},'images':{'type':'object','additionalProperties':True}}}
++    endpoint('/v1/admin/discovery/metadata','get','PublicationMetadataSettings',auth='adminSession')
++    endpoint('/v1/admin/discovery/metadata','put','PublicationMetadataSettings','PublicationMetadataInput',auth='adminSession')
++    endpoint('/v1/admin/discovery/metadata/preview','post','PublicationMetadataPreview','PublicationMetadataPreviewInput',auth='adminSession')
++    schemas['PublicationImageProcessed']=obj({'status':{'type':'string','enum':['processed']}})
++    endpoint('/v1/admin/catalog/media/{id}/publication','post','PublicationImageProcessed',auth='adminSession')
++    paths['/v1/catalog/media/{id}/content']['get'].setdefault('parameters',[]).append({'in':'query','name':'width','schema':{'type':'integer','enum':[480,960]},'description':'An existing processed WebP rendition; omitted returns the original. Private files require catalog.read.'})

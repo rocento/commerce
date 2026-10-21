@@ -1,0 +1,349 @@
+{
+  "date": "2026-10-01",
+  "project": "rocento-compound-pilot-27dd155ef7",
+  "production_changed": false,
+  "synthetic_only": true,
+  "external_model_used": false,
+  "acceptance": [
+    {
+      "case": "success",
+      "request": "d32cf7cd-152e-4eaf-aa61-e19cc108eda1",
+      "states": [
+        "succeeded",
+        "succeeded"
+      ],
+      "cart_quantity": 2,
+      "wishlist_items": 1,
+      "write_requests": 2,
+      "gateway_receipts": 2,
+      "completion": "completed",
+      "response": "Outcomes: cart: succeeded; wishlist: succeeded. No actions were retried.",
+      "saved_response": "Outcomes: cart: succeeded; wishlist: succeeded. No actions were retried.",
+      "metric_completion": "completed"
+    },
+    {
+      "case": "exact_replay",
+      "request": "d32cf7cd-152e-4eaf-aa61-e19cc108eda1",
+      "states": [
+        "succeeded",
+        "succeeded"
+      ],
+      "cart_quantity": 2,
+      "wishlist_items": 1,
+      "write_requests": 2,
+      "gateway_receipts": 2,
+      "completion": "completed",
+      "response": "Outcomes: cart: succeeded; wishlist: succeeded. No actions were retried.",
+      "saved_response": "Outcomes: cart: succeeded; wishlist: succeeded. No actions were retried.",
+      "metric_completion": "completed"
+    },
+    {
+      "case": "clarification_then_execution",
+      "request": "86ba61ed-e633-4901-8f8a-76cf6bcb16b8",
+      "states": [
+        "succeeded",
+        "succeeded"
+      ],
+      "cart_quantity": 2,
+      "wishlist_items": 1,
+      "write_requests": 2,
+      "gateway_receipts": 2,
+      "completion": "completed",
+      "response": "Outcomes: cart: succeeded; wishlist: succeeded. No actions were retried.",
+      "saved_response": "Outcomes: cart: succeeded; wishlist: succeeded. No actions were retried.",
+      "metric_completion": "completed"
+    },
+    {
+      "case": "concurrent_chat_replay",
+      "request": "10bc1cf6-00ac-41c9-ab85-102c9dab7c80",
+      "states": [
+        "succeeded",
+        "succeeded"
+      ],
+      "cart_quantity": 2,
+      "wishlist_items": 1,
+      "write_requests": 2,
+      "gateway_receipts": 2,
+      "completion": "completed",
+      "response": "Outcomes: cart: succeeded; wishlist: succeeded. No actions were retried.",
+      "saved_response": "Outcomes: cart: succeeded; wishlist: succeeded. No actions were retried.",
+      "metric_completion": "completed"
+    },
+    {
+      "case": "drop_after_first",
+      "request": "675fd7f8-1d7e-4839-a358-a305c9dfe0b1",
+      "states": [
+        "outcome_unknown",
+        "not_started"
+      ],
+      "cart_quantity": 2,
+      "wishlist_items": 0,
+      "write_requests": 1,
+      "gateway_receipts": 1,
+      "completion": "unverified",
+      "response": "Outcomes: cart: unconfirmed; wishlist: not started. Please do not repeat this request while its receipt is unavailable. No further actions were started.",
+      "saved_response": "Outcomes: cart: unconfirmed; wishlist: not started. Please do not repeat this request while its receipt is unavailable. No further actions were started.",
+      "metric_completion": "unverified"
+    },
+    {
+      "case": "drop_after_first_receipt_recovery",
+      "request": "675fd7f8-1d7e-4839-a358-a305c9dfe0b1",
+      "states": [
+        "succeeded",
+        "not_started"
+      ],
+      "cart_quantity": 2,
+      "wishlist_items": 0,
+      "write_requests": 1,
+      "gateway_receipts": 1,
+      "completion": "unverified",
+      "response": "Outcomes: cart: succeeded; wishlist: not started. No actions were retried.",
+      "saved_response": "Outcomes: cart: succeeded; wishlist: not started. No actions were retried.",
+      "metric_completion": "unverified"
+    },
+    {
+      "case": "timeout_after_first",
+      "request": "191bf0fb-62db-404a-9e0e-042f98a5feee",
+      "states": [
+        "outcome_unknown",
+        "not_started"
+      ],
+      "cart_quantity": 2,
+      "wishlist_items": 0,
+      "write_requests": 1,
+      "gateway_receipts": 1,
+      "completion": "unverified",
+      "response": "Outcomes: cart: unconfirmed; wishlist: not started. Please do not repeat this request while its receipt is unavailable. No further actions were started.",
+      "saved_response": "Outcomes: cart: unconfirmed; wishlist: not started. Please do not repeat this request while its receipt is unavailable. No further actions were started.",
+      "metric_completion": "unverified"
+    },
+    {
+      "case": "timeout_after_first_receipt_recovery",
+      "request": "191bf0fb-62db-404a-9e0e-042f98a5feee",
+      "states": [
+        "succeeded",
+        "not_started"
+      ],
+      "cart_quantity": 2,
+      "wishlist_items": 0,
+      "write_requests": 1,
+      "gateway_receipts": 1,
+      "completion": "unverified",
+      "response": "Outcomes: cart: succeeded; wishlist: not started. No actions were retried.",
+      "saved_response": "Outcomes: cart: succeeded; wishlist: not started. No actions were retried.",
+      "metric_completion": "unverified"
+    },
+    {
+      "case": "second_business_failure",
+      "request": "d323d088-1e19-4189-824a-402cc5d10fa5",
+      "states": [
+        "succeeded",
+        "failed"
+      ],
+      "cart_quantity": 2,
+      "wishlist_items": 0,
+      "write_requests": 2,
+      "gateway_receipts": 2,
+      "completion": "unverified",
+      "response": "Outcomes: cart: succeeded; wishlist: failed. No actions were retried.",
+      "saved_response": "Outcomes: cart: succeeded; wishlist: failed. No actions were retried.",
+      "metric_completion": "unverified"
+    },
+    {
+      "case": "cancellation_after_first_commit",
+      "request": "553e2379-6963-4c2b-a3a5-cd76f34b79d3",
+      "states": [
+        "succeeded",
+        "ready"
+      ],
+      "cart_quantity": 2,
+      "wishlist_items": 0,
+      "write_requests": 1,
+      "gateway_receipts": 1,
+      "completion": "unverified",
+      "response": "Outcomes: cart: succeeded; wishlist: superseded. No actions were retried.",
+      "saved_response": "Outcomes: cart: succeeded; wishlist: superseded. No actions were retried.",
+      "metric_completion": "unverified"
+    },
+    {
+      "case": "recovery_with_both_write_controls_off",
+      "request": "7b520079-4560-45f8-98be-a721a35265a3",
+      "states": [
+        "succeeded",
+        "not_started"
+      ],
+      "cart_quantity": 2,
+      "wishlist_items": 0,
+      "write_requests": 1,
+      "gateway_receipts": 1,
+      "completion": "unverified",
+      "response": "Outcomes: cart: succeeded; wishlist: not started. No actions were retried.",
+      "saved_response": "Outcomes: cart: succeeded; wishlist: not started. No actions were retried.",
+      "metric_completion": "unverified"
+    },
+    {
+      "case": "gateway_off",
+      "request": "85e3725e-8f38-46a9-a03f-ebffd782365e",
+      "states": [
+        "ready",
+        "ready"
+      ],
+      "cart_quantity": 0,
+      "wishlist_items": 0,
+      "write_requests": 0,
+      "gateway_receipts": 0,
+      "completion": "unverified",
+      "response": "I matched both requested products: cart: 2 \u00d7 banana; wishlist: 1 \u00d7 apples. I saved the plan, but combined execution is not enabled. No changes have been made.",
+      "saved_response": "I matched both requested products: cart: 2 \u00d7 banana; wishlist: 1 \u00d7 apples. I saved the plan, but combined execution is not enabled. No changes have been made.",
+      "metric_completion": "unverified"
+    },
+    {
+      "case": "gateway_off_review_not_promoted",
+      "request": "85e3725e-8f38-46a9-a03f-ebffd782365e",
+      "states": [
+        "ready",
+        "ready"
+      ],
+      "cart_quantity": 0,
+      "wishlist_items": 0,
+      "write_requests": 0,
+      "gateway_receipts": 0,
+      "completion": "unverified",
+      "response": "I matched both requested products: cart: 2 \u00d7 banana; wishlist: 1 \u00d7 apples. I saved the plan, but combined execution is not enabled. No changes have been made.",
+      "saved_response": "I matched both requested products: cart: 2 \u00d7 banana; wishlist: 1 \u00d7 apples. I saved the plan, but combined execution is not enabled. No changes have been made.",
+      "metric_completion": "unverified"
+    },
+    {
+      "case": "assistant_execution_off",
+      "request": "f35b537e-14e1-43db-8751-24fbddcc1792",
+      "states": [
+        "ready",
+        "ready"
+      ],
+      "cart_quantity": 0,
+      "wishlist_items": 0,
+      "write_requests": 0,
+      "gateway_receipts": 0,
+      "completion": "unverified",
+      "response": "I matched both requested products: cart: 2 \u00d7 banana; wishlist: 1 \u00d7 apples. I saved the plan, but combined execution is not enabled. No changes have been made.",
+      "saved_response": "I matched both requested products: cart: 2 \u00d7 banana; wishlist: 1 \u00d7 apples. I saved the plan, but combined execution is not enabled. No changes have been made.",
+      "metric_completion": "unverified"
+    },
+    {
+      "case": "assistant_execution_off_review_not_promoted",
+      "request": "f35b537e-14e1-43db-8751-24fbddcc1792",
+      "states": [
+        "ready",
+        "ready"
+      ],
+      "cart_quantity": 0,
+      "wishlist_items": 0,
+      "write_requests": 0,
+      "gateway_receipts": 0,
+      "completion": "unverified",
+      "response": "I matched both requested products: cart: 2 \u00d7 banana; wishlist: 1 \u00d7 apples. I saved the plan, but combined execution is not enabled. No changes have been made.",
+      "saved_response": "I matched both requested products: cart: 2 \u00d7 banana; wishlist: 1 \u00d7 apples. I saved the plan, but combined execution is not enabled. No changes have been made.",
+      "metric_completion": "unverified"
+    },
+    {
+      "case": "production_facade_success",
+      "request": "2d611f9c-88e0-42b7-8a02-bd7a17825129",
+      "states": [
+        "succeeded",
+        "succeeded"
+      ],
+      "cart_quantity": 2,
+      "wishlist_items": 1,
+      "write_requests": null,
+      "gateway_receipts": 2,
+      "completion": "completed",
+      "response": "Outcomes: cart: succeeded; wishlist: succeeded. No actions were retried.",
+      "saved_response": "Outcomes: cart: succeeded; wishlist: succeeded. No actions were retried.",
+      "metric_completion": "completed"
+    },
+    {
+      "case": "production_facade_replay",
+      "request": "2d611f9c-88e0-42b7-8a02-bd7a17825129",
+      "states": [
+        "succeeded",
+        "succeeded"
+      ],
+      "cart_quantity": 2,
+      "wishlist_items": 1,
+      "write_requests": null,
+      "gateway_receipts": 2,
+      "completion": "completed",
+      "response": "Outcomes: cart: succeeded; wishlist: succeeded. No actions were retried.",
+      "saved_response": "Outcomes: cart: succeeded; wishlist: succeeded. No actions were retried.",
+      "metric_completion": "completed"
+    }
+  ],
+  "browser": {
+    "request": "1809d706-f5da-40d3-90b3-0315f8966dad",
+    "customer": "62b9ca4d-6d50-4947-9a03-287bf2d3e344",
+    "desktop": {
+      "response": {
+        "x": 243,
+        "y": 222.85452270507812,
+        "width": 1034,
+        "height": 72.59375
+      },
+      "composer": {
+        "x": 243,
+        "y": 849,
+        "width": 1034,
+        "height": 114
+      },
+      "horizontal_overflow": false
+    },
+    "mobile": {
+      "response": {
+        "x": 71,
+        "y": 334.147705078125,
+        "width": 304,
+        "height": 164.375
+      },
+      "composer": {
+        "x": 71,
+        "y": 858,
+        "width": 304,
+        "height": 111
+      },
+      "horizontal_overflow": false
+    },
+    "success_visible": true,
+    "success_after_reload": true
+  },
+  "source_sha256": {
+    "ai-service/app/commerce_action_engine/platform/store.py": "6b3351a25896caf87f0b241ca591f468790a50e4a98a6e73711768566046b543",
+    "ai-service/app/commerce_action_engine/platform/compound_plans.py": "c234154cba7c10560f9df86fcb2eb960853cb5e0a4133a4af47098cdaebd6c15",
+    "ai-service/app/commerce_action_engine/application/handle_turn.py": "77547c6d737eb0f0451e68fa61986518539a2939629b582dc710a06fae4c8076",
+    "ai-service/app/commerce_action_engine/application/handlers/compound.py": "7371d0e160297ac28fedad36690e8f29b9a22db9a52cbcfdd74e63a792a44f22",
+    "ai-service/app/commerce_action_engine/application/handlers/compound_execution.py": "fa0bbd46a73994ff3fc4e4f74cd55c3b24e5d210552c2542a23a0f3015eb1529",
+    "ai-service/app/commerce_action_engine/execution/planning/compound_execution.py": "e919d580844744c8f2ec785e82a64c5cecb6a1a4158970b74a13b21fda379b42",
+    "ai-service/app/commerce_action_engine/execution/planning/planning_library.json": "87bcc033f73434aafc523955c0008db810cb7787143c85b037c65e5aec0334f4",
+    "ai-service/app/commerce_action_engine/contracts/compound_plan.py": "950e0513b3556f9161a48d946b43897b56cb88e2f57d8aac8121dab67cb03b6c",
+    "backend/crates/api-gateway/src/assistant_compound.rs": "67bbf7ee2b8593969d089861ebbddd6089df7e3354a006864a14055de2760bc7",
+    "backend/migrations/20260930110000_assistant_compound_receipts.sql": "2a404e1795ee12857c4705e202a1e06fb4cabfdca619d0de870eed70a483cc68",
+    "ai-service/app/commerce_language_engine/src/compound-language.ts": "0781524992756f1e49895001df11746232f8721864ec5ed916d1edb3e2bfc6f9",
+    "frontend/apps/storefront/src/assistant.css": "b19fc63503fcc91b6bd07a49c0898c59c6e9cfdeb8e0489bbf08851f7c12e755"
+  },
+  "running_images": {
+    "api-gateway": "sha256:12e64d24c92d930beef9ea8687d28cb02f7dac204b6010e73be2a7a2d7aabd7a",
+    "ai-service": "sha256:0b85028eab861fbcfd13736ca271cbe80cd01034800d98886a447d714dab0c30",
+    "commerce-language-engine": "sha256:9028da7f5ff2dfd9f7e1c28357ffacc1f360c320f76d694c7fbb77f410871c2a",
+    "postgres": "sha256:db6e27d09055c2375cfd2d57329eca6188ab913c93cfb5b3935961606c823b6a",
+    "ai-postgres": "sha256:2dbfde49c067cafff2a69e7019423181adca6328b94f197ac93fbb01a96a3a9d",
+    "assistant-tools": "sha256:b486e3d150c0420da4819a722088ac5e0d4ff3e46148761b7fdf310dbf45ba38"
+  },
+  "commerce_migration_count": 64,
+  "commerce_latest_migration": "20260930110000",
+  "regressions": {
+    "focused_python": 99,
+    "live_postgres": 4,
+    "mypy_files": 3,
+    "ruff": "passed",
+    "architecture": "passed"
+  },
+  "cleanup_completed": true
+}

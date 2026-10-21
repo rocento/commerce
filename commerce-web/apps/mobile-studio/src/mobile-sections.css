@@ -1,0 +1,96 @@
+.ms-app-with-sidebar .is-sections-panel .ms-editor-section { padding: 24px; margin-top: 0; }
+.ms-app-with-sidebar .is-sections-panel .ms-panel-heading { margin-bottom: 18px; }
+.ms-app-with-sidebar .is-sections-panel .ms-panel-heading h2 { font-size: 23px; letter-spacing: -.5px; }
+.ms-section-builder { min-width: 0; }
+.ms-section-builder .ms-builder-summary { padding: 0 0 20px; margin-bottom: 20px; border-bottom: 1px solid var(--line); }
+.ms-section-builder .ms-builder-summary strong { font-size: 15px; }
+.ms-section-builder .ms-builder-summary span { font-size: 12px; line-height: 1.6; }
+.ms-section-builder .ms-builder-summary button { flex-shrink: 0; min-height: 40px; padding: 10px 16px; font-size: 12px; }
+.ms-sections-workspace { display: grid; grid-template-columns: minmax(250px, 310px) minmax(0, 1fr); align-items: start; gap: 20px; }
+.ms-section-outline, .ms-section-inspector { min-width: 0; padding: 20px; border: 1px solid var(--line); border-radius: 14px; background: var(--paper); }
+.ms-section-outline { background: #fcfbfa; }
+.ms-outline-heading { display: flex; align-items: center; justify-content: space-between; gap: 10px; margin-bottom: 22px; }
+.ms-sections-eyebrow { display: block; font-size: 9px; color: var(--muted); font-weight: 700; letter-spacing: 1.3px; margin-bottom: 7px; }
+.ms-outline-heading h3 { margin: 0; font-size: 16px; }
+.ms-section-count { padding: 5px 8px; border: 1px solid var(--line); border-radius: 6px; background: #fff; font-size: 10px; color: var(--muted); white-space: nowrap; }
+.ms-section-builder .ms-help, .ms-section-builder .ms-hint { font-size: 11px; line-height: 1.65; }
+.ms-section-builder .ms-field { font-size: 11px; gap: 8px; }
+.ms-section-builder .ms-field > span { color: var(--ink); }
+.ms-section-builder input, .ms-section-builder select, .ms-section-builder textarea { font-size: 12px; }
+.ms-section-builder select { min-height: 42px; }
+.ms-section-builder textarea { line-height: 1.7; }
+.ms-section-builder .ms-section-list { grid-template-columns: minmax(0, 1fr); gap: 8px; margin: 18px 0; }
+.ms-section-builder .ms-section-list > li { min-width: 0; padding: 5px; background: #fff; border-radius: 9px; transition: border-color .15s; }
+.ms-section-builder .ms-section-list > li.is-active { background: var(--coral-soft); border-color: var(--accent); box-shadow: inset 2px 0 var(--accent); }
+.ms-section-builder .ms-section-list > li > button { gap: 8px; padding: 9px 4px; }
+.ms-section-builder .ms-section-list > li > button > svg { width: 17px; color: var(--muted); }
+.ms-section-builder .ms-section-list > li.is-active > button > svg { color: var(--accent); }
+.ms-section-builder .ms-section-list > li > button > span { margin: 0; font-size: 11px; }
+.ms-section-builder .ms-section-list > li > button > .ms-section-position { flex-shrink: 0; color: var(--muted); font-size: 9px; font-weight: 400; }
+.ms-section-builder .ms-section-list small { max-width: none; font-size: 10px; font-weight: 400; margin-top: 4px; word-break: normal; }
+.ms-section-builder .ms-section-list > li > div { flex-direction: column; gap: 1px; flex-shrink: 0; }
+.ms-section-builder .ms-section-list > li > div > button { padding: 2px 6px; min-height: 24px; border-color: transparent; background: transparent; font-size: 12px; }
+.ms-section-builder .ms-section-list > li > div > button:hover:not(:disabled) { background: #fff; border-color: var(--line); }
+.ms-outline-note { padding-top: 14px; border-top: 1px solid var(--line); margin: 18px 0 0; color: var(--muted); font-size: 10px; line-height: 1.6; }
+.ms-section-builder .ms-inspector-heading { padding: 0; border: 0; gap: 12px; }
+.ms-section-builder .ms-inspector-heading > svg { box-sizing: content-box; padding: 12px; border-radius: 10px; background: var(--coral-soft); }
+.ms-section-builder .ms-inspector-heading h3 { font-size: 18px; margin: 0 0 5px; }
+.ms-section-builder .ms-inspector-heading small { font-size: 11px; }
+.ms-section-inspector > .ms-help { margin: 16px 0 20px; padding-bottom: 20px; border-bottom: 1px solid var(--line); }
+.ms-section-fields { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 18px; align-items: start; }
+.ms-section-content-column { min-width: 0; display: grid; gap: 16px; }
+.ms-section-builder .ms-settings-group { margin: 0; padding: 16px; border-radius: 10px; background: var(--surface); min-width: 0; }
+.ms-section-builder .ms-settings-group h4 { font-size: 12px; margin-bottom: 16px; }
+.ms-section-builder .ms-settings-group > .ms-help { margin: -6px 0 16px; }
+.ms-section-builder .ms-settings-group .ms-settings-group { margin-top: 12px; padding: 12px; background: var(--paper); }
+.ms-section-builder .ms-editorial-options summary { cursor: pointer; font-size: 12px; font-weight: 700; }
+.ms-section-builder .ms-editorial-options[open] summary { margin-bottom: 18px; }
+.ms-section-builder .ms-editorial-options > div { display: grid; grid-template-columns: minmax(0, 1fr); }
+.ms-section-builder .ms-section-actions { grid-column: 1 / -1; justify-content: flex-end; padding-top: 16px; border-top: 1px solid var(--line); }
+.ms-section-builder .ms-section-actions button { flex: 0 1 auto; padding: 10px 14px; min-height: 40px; }
+.ms-section-builder .ms-remove-confirm { grid-column: 1 / -1; margin: 0; }
+.ms-section-content-note { padding: 24px 16px; border: 1px dashed var(--line); border-radius: 10px; color: var(--muted); }
+.ms-section-content-note svg { color: var(--accent); }
+.ms-section-content-note h4 { font-size: 13px; color: var(--ink); margin: 14px 0 8px; }
+.ms-section-content-note p { font-size: 12px; line-height: 1.65; margin: 0; }
+.ms-section-builder .ms-section-image { max-height: 180px; border: 1px solid var(--line); border-radius: 8px; padding: 6px; }
+.ms-section-builder .ms-component-library { padding: 22px; margin-bottom: 22px; background: var(--surface); border: 1px solid var(--line); border-radius: 14px; }
+.ms-library-heading h3 { font-size: 18px; margin-bottom: 8px; }
+.ms-section-builder .ms-component-library > label { max-width: 440px; }
+.ms-section-builder .ms-library-filters { gap: 7px; margin: 14px 0 20px; }
+.ms-section-builder .ms-library-filters button { min-height: 34px; padding: 7px 12px; font-size: 11px; }
+.ms-section-builder .ms-component-cards { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; }
+.ms-section-builder .ms-component-card { padding: 16px; gap: 12px; border-radius: 10px; min-width: 0; }
+.ms-section-builder .ms-component-card strong { font-size: 13px; }
+.ms-section-builder .ms-component-card > span { min-width: 0; }
+.ms-layout-collection { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+.ms-layout-collection > h3, .ms-layout-collection > p { grid-column: 1 / -1; margin: 0; }
+.ms-section-builder .ms-layout-preset { display: grid; gap: 8px; margin: 0; padding: 18px; background: #fff; border-radius: 10px; }
+.ms-section-builder .ms-layout-preset p, .ms-section-builder .ms-layout-preset > span { margin: 0; }
+.ms-section-builder .ms-layout-preset button { margin-top: 6px; align-self: end; min-height: 36px; }
+@media (max-width: 1250px) {
+  .ms-sections-workspace { grid-template-columns: minmax(230px, 280px) minmax(0, 1fr); gap: 16px; }
+  .ms-section-fields { grid-template-columns: minmax(0, 1fr); }
+  .ms-section-builder .ms-component-cards { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 900px) {
+  .ms-sections-workspace { grid-template-columns: minmax(0, 1fr); }
+  .ms-section-outline, .ms-section-inspector { padding: 16px; }
+  .ms-section-builder .ms-section-list > li > div { flex-direction: row; }
+  .ms-section-builder .ms-section-list > li > div > button { min-height: 36px; min-width: 30px; }
+  .ms-app-with-sidebar .is-sections-panel .ms-editor-section { padding: 16px; }
+}
+@media (max-width: 600px) {
+  .ms-section-builder .ms-builder-summary { flex-direction: column; align-items: stretch; }
+  .ms-section-builder .ms-component-cards, .ms-layout-collection { grid-template-columns: minmax(0, 1fr); }
+  .ms-section-builder .ms-component-library { padding: 14px; }
+  .ms-section-builder input, .ms-section-builder select, .ms-section-builder textarea { font-size: 16px; }
+  .ms-section-builder .ms-section-list > li > button > svg { display: none; }
+  .ms-section-builder .ms-section-actions button { flex: 1 1 auto; }
+  .ms-section-builder .ms-section-list > li > div { flex-direction: column; }
+  .ms-section-builder .ms-settings-group { padding: 12px; }
+}
+@media (max-width: 380px) {
+  .ms-app-with-sidebar .is-sections-panel .ms-editor-section { padding: 10px; }
+  .ms-section-outline, .ms-section-inspector { padding: 10px; }
+}

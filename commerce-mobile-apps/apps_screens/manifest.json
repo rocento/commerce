@@ -1,0 +1,235 @@
+{
+  "captured_on": "2026-10-15",
+  "timezone": "Africa/Cairo",
+  "scope": "Public guest screens from current local app source, not App Store/Play Store releases",
+  "api": "https://grocery.rocento.com/api",
+  "source_commit": "4c4f39215bd8b3d9d1ad04bf68fe176ed2e4b064",
+  "working_tree_dirty": true,
+  "source_inventory_sha256": "3d940ec753e9cdf694416fc119504eff74734a760a5b77dc22176ace112354bc",
+  "source_changes_during_final_capture": [
+    "mobile/ios/StorefrontUITests/StorefrontUITests.swift"
+  ],
+  "builds": {
+    "swift": {
+      "bundle_id": "com.rocento.grocery",
+      "version": "1.3.0",
+      "build": "5",
+      "executable_sha256": "c9808c96aaa4eb095b7463b62ead9d54a78532c641087165327d4cd85cef9e19",
+      "device": "iPhone 17 Pro / iOS 26.2",
+      "simulator": "3ABFBB67-7267-4380-9E26-C5D3C2C0288A",
+      "mode": "standalone Debug, live Grocery API"
+    },
+    "reactNative": {
+      "bundle_id": "com.rocento.preview.reactnative",
+      "version": "0.1.0",
+      "build": "1",
+      "executable_sha256": "dff4a24e0612746cc2d135b8c3aa63a218a984a5eb9cc283e52fded91a7f3840",
+      "device": "iPhone 17 Pro / iOS 26.2",
+      "simulator": "3ABFBB67-7267-4380-9E26-C5D3C2C0288A",
+      "mode": "standalone Debug, live Grocery API",
+      "javascript": "Current local Metro source on port 8097; EXPO_PUBLIC_DEMO=0, EXPO_PUBLIC_VISUAL_QA=0, EXPO_PUBLIC_ACCEPTANCE=0. Development warning overlays dismissed before capture."
+    },
+    "kotlin": {
+      "package_id": "com.rocento.grocery",
+      "version_code": 5,
+      "debuggable": true,
+      "instrumentation_target": null,
+      "certificate_sha256": "e741ac7499af7d37de94a2b29ad98418b41560d2144e348ac0a38e08055bef7f",
+      "apk_sha256": "2831b751d5836b9912f9e11671656483031f0a7db882f376212c264f653d98a0",
+      "baseline_checked": true,
+      "serial": "emulator-5554",
+      "android_user": "0",
+      "device": "Medium Phone API 36 emulator",
+      "mode": "standalone Debug, live Grocery API"
+    }
+  },
+  "screenshots": [
+    {
+      "path": "kotlin/account.png",
+      "bytes": 176478,
+      "sha256": "dc42060094bd2df3591612e2ff6341f69a6f9920906f2dd190e23f50ffc7a7f1"
+    },
+    {
+      "path": "kotlin/cart.png",
+      "bytes": 160137,
+      "sha256": "15fd340ec1b866a06f5c036bc30c5fbf5e22790536f481df8dcd6358a4a88c59"
+    },
+    {
+      "path": "kotlin/categories.png",
+      "bytes": 806418,
+      "sha256": "4b549410e056d7e8912c55b6a1d3df4ec23f3f6ca6117248b312426b8977c546"
+    },
+    {
+      "path": "kotlin/category-bakery.png",
+      "bytes": 891647,
+      "sha256": "6625a876dec67e22146b9921c332d8b4d213d763f1368ae1299c05adf9e89956"
+    },
+    {
+      "path": "kotlin/deals.png",
+      "bytes": 698621,
+      "sha256": "53c3c43f7763076b1cc3382414202236d678a42beaae03c0d2caa921eddf26b7"
+    },
+    {
+      "path": "kotlin/delivery-manual.png",
+      "bytes": 151369,
+      "sha256": "4d43d2a4a58b466733d809a145621331a0aec5cc4ce6908329a533ed3313963a"
+    },
+    {
+      "path": "kotlin/delivery-map.png",
+      "bytes": 908141,
+      "sha256": "5efeee347214a3ad337f40ff62da9571bcf0d6dc90372ac5895c89151d504713"
+    },
+    {
+      "path": "kotlin/filters.png",
+      "bytes": 112057,
+      "sha256": "fdad97bc30f5785ad85d715cbf2759eff5b4412624e74afbfef330f75f695a35"
+    },
+    {
+      "path": "kotlin/home.png",
+      "bytes": 1918349,
+      "sha256": "3acecbb6c91b4d5a72e56f594f8dd73b0b58c74e23f88a18b62c0ddd9844b38d"
+    },
+    {
+      "path": "kotlin/product-butter-croissants.png",
+      "bytes": 425518,
+      "sha256": "f50515fb3d14b9090f1014ecd1e6f03cf122b991dff02aefd629fc3d27203d6c"
+    },
+    {
+      "path": "kotlin/search-bananas.png",
+      "bytes": 238423,
+      "sha256": "414c9c60fa56b05a228dbf42981dd05361753c70b6b8382a6728e53f94d6abab"
+    },
+    {
+      "path": "reactNative/account.png",
+      "bytes": 220746,
+      "sha256": "4e3af6f99daaecff745ed5dca451f24a3e80c0bff9ed62ef687e15a7b28f8c52"
+    },
+    {
+      "path": "reactNative/cart.png",
+      "bytes": 161215,
+      "sha256": "44e8e66fa858090e46329b32ece62c353d75b0d06cbce341ddabb27f375ce4ac"
+    },
+    {
+      "path": "reactNative/categories.png",
+      "bytes": 1081632,
+      "sha256": "261d2845ae4a0cdb5aea9db1297c84598e572c28ca782ce62caa6d4f0c55455d"
+    },
+    {
+      "path": "reactNative/category-bakery.png",
+      "bytes": 1103769,
+      "sha256": "4bab8f5c0cc57e9d96316aeb1ed94789d53b27ba631df76a383bc5130a9a08e6"
+    },
+    {
+      "path": "reactNative/compare.png",
+      "bytes": 317141,
+      "sha256": "5358c08e692e9adb3f3fb9c21d76b576a68f768a4178c236fbc2f54a1c0aeb12"
+    },
+    {
+      "path": "reactNative/deals.png",
+      "bytes": 1160498,
+      "sha256": "1b9be2df817e5514be212821afb8be96905e9adb9cadb129f888df25df0c47b3"
+    },
+    {
+      "path": "reactNative/delivery-manual.png",
+      "bytes": 206682,
+      "sha256": "320e26abf4e4970ddc1f53fd5f8d1d37229d203dad14e7c38e4b44cac6a87494"
+    },
+    {
+      "path": "reactNative/delivery-map.png",
+      "bytes": 1539774,
+      "sha256": "17033139ab2c49a0b829bf036157b4a56737c8985a4c1400add009428f1b6dfa"
+    },
+    {
+      "path": "reactNative/filters.png",
+      "bytes": 201784,
+      "sha256": "aaf5a9df293adbf8da798319f5444572f1e13da336b813186cec1bafe91bafb8"
+    },
+    {
+      "path": "reactNative/home.png",
+      "bytes": 2556716,
+      "sha256": "bc4abe25720503864c811ceb1f27039c0b2a678e4e4208dfbdb02fd6a5be7557"
+    },
+    {
+      "path": "reactNative/product-butter-croissants.png",
+      "bytes": 685045,
+      "sha256": "7c404f60bc8c70bb5198c7d7b305751b53a4d92ee15f91cd1744d3748c5d522a"
+    },
+    {
+      "path": "reactNative/product-oat-bread.png",
+      "bytes": 740619,
+      "sha256": "c77bd1eedd6db7c880a2b89a34f94aa7cea7cfc8172f21e928d2cc892df41a9b"
+    },
+    {
+      "path": "reactNative/sign-in.png",
+      "bytes": 178724,
+      "sha256": "5fa499bc456487d7b698bf952e5a5ca6da4af0c803db01782c56747ed5331a46"
+    },
+    {
+      "path": "reactNative/support.png",
+      "bytes": 116645,
+      "sha256": "bb9c14cf56d9852bbbe5c453761f27396ba5d7fd8975f5b71362013d5268d731"
+    },
+    {
+      "path": "swift/account.png",
+      "bytes": 260048,
+      "sha256": "b8664a534f58ea3fc595d5e69bce20a74ba4419ce28ae60a8793312637477516"
+    },
+    {
+      "path": "swift/cart.png",
+      "bytes": 227015,
+      "sha256": "3ef66b7cd51274d027ef75821c3d107a2c30f87f57a6ebda65f7ccd559cb196a"
+    },
+    {
+      "path": "swift/categories.png",
+      "bytes": 1075336,
+      "sha256": "44678277193f19ef0c49bf1ed9777178a4d23c2393f836f0c0d1da4b2a31fa6e"
+    },
+    {
+      "path": "swift/category-bakery.png",
+      "bytes": 1226996,
+      "sha256": "3c37bfc8b0f279762b1575ccfe106dfe8aba23c5d7f54b6f72bb9837d96298ef"
+    },
+    {
+      "path": "swift/deals.png",
+      "bytes": 933314,
+      "sha256": "ae300472f3c5b78675f69d8c3f0caba05f5ad1f311e497d277a144706c28780e"
+    },
+    {
+      "path": "swift/delivery-manual.png",
+      "bytes": 218341,
+      "sha256": "07d5b7e31598b60a51f40bc9e2a4fd44bc886b51e1bcf67d2b3fa42e806e70d7"
+    },
+    {
+      "path": "swift/delivery-map.png",
+      "bytes": 1213429,
+      "sha256": "e72552c2de561bac8539762112257aec95fb6bfceb4203d2b98f59c45b028910"
+    },
+    {
+      "path": "swift/filters.png",
+      "bytes": 228959,
+      "sha256": "60fd509f6792054aebf21fb9dde1add03cf8b6ac1dabd91b78b121870502f10d"
+    },
+    {
+      "path": "swift/home.png",
+      "bytes": 2567178,
+      "sha256": "fbc54f52dddd9e2ec9957925859dd1e672042a5c1099d494623958b9dcb02c50"
+    },
+    {
+      "path": "swift/product-butter-croissants.png",
+      "bytes": 1006045,
+      "sha256": "44a040cbdaa4aed9753ffc9618f3a737de65e2c032e85b4a2ab4bcfa375227c9"
+    }
+  ],
+  "evidence_run": "output/2026-10-15-apps-screens-refresh",
+  "verification": {
+    "signed_builds": "passed",
+    "visual_review": "passed; loaded public data, warning overlays removed",
+    "production_mutations": "none; no accounts, tickets, orders, or saved addresses created",
+    "limits": [
+      "Guest browsing only; authenticated flows are not covered.",
+      "Other chats continued editing test code; capture source inventory records the exact local source state.",
+      "React Native comparison table scrolls horizontally; the initial viewport shows the first product column."
+    ],
+    "documentation_checks": "Passed; 173 documents, 1134 links, 18 tests"
+  }
+}

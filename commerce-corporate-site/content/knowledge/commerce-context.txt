@@ -1,0 +1,63 @@
+---
+{
+  "title": "From Commerce Data to Commerce Context",
+  "summary": "Transactions tell us what happened. Context helps connect the activity surrounding a decision.",
+  "author": "Rocento editorial",
+  "date": "2026-09-15",
+  "category": "Data & context",
+  "tags": [
+    "Commerce context",
+    "Analytics"
+  ]
+}
+---
+## A transaction is one part of the story
+
+An order contains essential facts: products, quantities, prices and state. It does not, on its own, explain the search that preceded it, the alternative a customer considered, or the delivery constraint that shaped the decision.
+
+Commerce context connects these observations without pretending they reveal a person's private motivations. A search for a product is an observable signal. A conclusion about why someone wants it is an inference that may be wrong.
+
+## Connect signals with operational truth
+
+A useful context layer combines information with different responsibilities:
+
+- Transactions describe recorded commerce activity.
+- Behavioral events describe interactions observed by the application.
+- Catalog and inventory services provide authoritative current facts.
+- Analytics summarize activity over a defined period.
+- Customer-provided constraints explain what the customer explicitly asked for.
+
+An assistant should know which kind of information it is using. Yesterday's stock report should not answer whether an item can be ordered now.
+
+## A concrete example
+
+Imagine a customer looking at a gold ring, then asking for a less expensive alternative. The original product and its current price establish a comparison point. The customer's words supply a budget relationship. Product attributes and available SKUs determine which alternatives can satisfy it.
+
+![A synthetic gold solitaire ring from the Rocento jewelry demo catalog](/images/jewelry.webp)
+
+Illustrative product imagery from the Rocento jewelry demo.
+
+```text
+Customer request: a less expensive gold ring
+Reference: current product and current price
+Constraints: material + lower price + availability
+Response: grounded alternatives, or an explicit limitation
+```
+
+This is more useful than asking a model to invent similar products. It also creates clear failure cases: a missing reference price, conflicting constraints, or no available match.
+
+## Preserve uncertainty
+
+Context should include provenance and freshness where relevant. A missing event might reflect interrupted connectivity, a privacy choice or an unobserved interaction. A cart without an order is not proof that the customer rejected a product.
+
+Good system design keeps these gaps visible. It avoids turning incomplete activity into a confident story. Historical context can inform a response while current commerce capabilities validate the facts that matter at the point of action.
+
+## From connection to useful assistance
+
+Rocento's direction is to make this context usable through explicit application boundaries. The assistant preview can retrieve scoped commerce facts and approved knowledge. More advanced inference and prediction require separate evaluation and remain development work.
+
+## References and further reading
+
+- [What Is AI-Native Commerce?](/knowledge/ai-native-commerce/)
+- [Behavioral Data as an AI Foundation](/knowledge/behavioral-data/)
+- [Platform: controlled agents](/platform/#agents)

@@ -1,0 +1,986 @@
+{
+  "commerce_before": {
+    "catalog.products": "5417a60fa93628d89d87c85b05acaae2",
+    "customers.customers": "0773bb39aef386fb7807a5c5cf38ea42",
+    "cart_checkout.items": "e31a23d88eca81fb7d25fe33a821d85c",
+    "orders.orders": "e20c7197cacd05963ab057bf8d959b73",
+    "orders.order_items": "dee4482522ce7370234dca812f8f0d8b",
+    "payments.payment_transactions": "23f69a412dee626f736e95b1b37f21ae"
+  },
+  "source_sha256": {
+    "backend/crates/domain-cart-checkout/src/execution.rs": "37ae8736deb11816b10937d889170ab1cce725251d3727753b5e9432b2e488c1",
+    "backend/crates/domain-cart-checkout/src/shopping.rs": "fdd4a999e4c4ee9ba0295a4c511cf31cdf5dae42701c3595a39473ab306eab4d",
+    "backend/crates/domain-cart-checkout/src/lib.rs": "b765f47fb9568d7e42183e931ee3009dbc01e85cc17c4954fcfa6fad1c747b35",
+    "backend/crates/api-gateway/src/shopping.rs": "32e0dc9bf0bfed63a35e0990f9b382651a4d2e29fd431091d07e08118ec1a06c",
+    "backend/migrations/20260922090000_commerce_execution.sql": "de6523ee60a4e52fcb41a100c79dfe864f6a00c228af5572250e5af1de8e71b5",
+    "ai-service/app/execution.py": "4bc74135ae51c887de6ce8b35c2c137ba565cfdb1ef723691012f6e2ce768fc6",
+    "ai-service/app/baskets.py": "9bd00067d1b2daad07027478d7e49474a5671644a2736181018f624cec4f0032",
+    "ai-service/app/telemetry.py": "750725ee45b6dc3bbf09e876f8780c5cfc4d8bda9d7118dc108999133be95ee3"
+  },
+  "old_images": {
+    "api-gateway": "sha256:47b67b504b331a0572d0e94dd6100f37bbc75e534dc8e6ccd4d70ddac122a2ed",
+    "ai-service": "sha256:f3d6b80bb45613ba4c4606ccc50b1c61fd2f9839c3039678641611405fe7ad2e"
+  },
+  "rollback_directory": "/Users/momar/Documents/commerce-ai/.local/shopping-staging/rocento-shopping-stage-9535d4d7/m06-rollback",
+  "feature": "cart_checkout.execution_config.enabled",
+  "production_changed": false,
+  "new_images": {
+    "api-gateway": "sha256:f697f4cf24a3eea60e389f491a29fb3988f2c15e10e4867e53622dfb897e8ca8",
+    "ai-service": "sha256:09b8b43ea78fac85146ee0df0e9621fb824869f64f527bdcd78a8e3730f7cade"
+  },
+  "commerce_unchanged": true,
+  "frontend_sha256": {
+    "assets/app-7GSU8ppy.js": "f0efbe5a0a8f418dd05ad73c03b5221a8b7294ebeaf9d3ca6b6271f527475b70",
+    "assets/app-PUBY89Yp.css": "5d9b71121bb426e67fdab5971188ea5b43d536d3dae9ef54c6ca6740838308a8",
+    "assets/index-BkfGzFMK.js": "abbba84fa5975892911b39e38e3f07eb51e28a14e6e8e376c9a03b470a13c1d1",
+    "assets/public-C1vZajYR.css": "d6e32cdb608e38745475336d62f66c1788624a0288d6fe74dbf8667d58b1c53b",
+    "assets/public-CkSteote.js": "a5dfa0b88e92b18b0b02ef00855acc0a1eb912ed20b54048b336289b53086a78",
+    "assets/search-CxGi9OSo.js": "3bca856901da3d4b271578a2adbaa0b675d1c0eaa080d1c966bc995c4b67f5ac",
+    "assets/search-DrvJueiD.css": "6280b0c3ef973af1c992480b307402b6dffc7df5f8a0443073f847be5188944b",
+    "assets/search-widget-DQuJbw2k.js": "c59df1dc540ba6b749c1681955d5ebc2c330581d08ea8dfcc265ae6de084ace7",
+    "assets/style-BiN8d-iq.js": "9ecd0d54b54f56b7cfdc73101009b73d775ebe0e3d66480de3f0ed268237f038",
+    "assets/style-Lsyhwrys.css": "d73062391d1d0b1ad8fcdc45b2be985a37e02e6bd197a50b9c4b932b4638bc53",
+    "assets/theme-default-BP_4Ao9p.png": "673f4e4a4988e7626d3895d29b8f19bda5422fad53a6dbb94c0b61ef3631587b",
+    "brand/apple-touch-icon.png": "56ed4f838e2cd9ac10112a8813f5fda04e7a5ee4236ac9f57a1cca200554bf9c",
+    "brand/favicon-32.png": "9c62bb83779ebcaca13e5d205b5efe3246c52c0718f08ff28ba8998db1c58f1d",
+    "brand/favicon.ico": "296cafcdc54f3ee70cce706993cc78e5cd60c5e3f88c24f7c9b3711e38b85de5",
+    "brand/icon-192.png": "49edc938462cae489648292718e121881d637c9a362217086be771feed2be4ab",
+    "brand/icon-512.png": "deb9f16b2667ef7e24b4c921b2fec747812e8aabc689d3b79f2577f22fbfad2c",
+    "brand/recento-icon.png": "d0093ef238d22b249920e0a71a0f9af93c8226fe610af429e301ce9d9fc8912f",
+    "brand/recento-logo.png": "ea70d7b75bf2d3f51db67443c1beec7425069da73a099f3c3746f3b19bbab37a",
+    "brand/rocento-logo.png": "306301f5fbcfb4b5e1629d97b8a0a87bd82b6d0a44e9110eb7cd13a8c2d66228",
+    "data/delivery/README.md": "e69385c34a6e28d8e3f3c89cff5c745d3577e5149c1709b25e830c7384b508f8",
+    "data/delivery/eg/01.json": "fd7127eccb430320a647427a16957641d954e49c10001124e64cfc676ae6108c",
+    "data/delivery/eg/02.json": "e8d146a47c5e349fbb752b37746460389f28608ef6e11fba9f9fc6eb627041a6",
+    "data/delivery/eg/03.json": "1788b6ac5875ba83b2059ed763c80a54dddae16b8995b780c7635f9ab43be8dc",
+    "data/delivery/eg/04.json": "ef7ca50b56a480a84ea6b1c8c2a02369ed413f45335d2aa20abd6a134bfdde56",
+    "data/delivery/eg/05.json": "6076689ca2e547cb16eb1694b111d665a09b5ccecce886e4ee96d626aeba2252",
+    "data/delivery/eg/06.json": "4414be2304eff435b4596360b4e5a6ef82c6dac2140bc61ba99076fd23991267",
+    "data/delivery/eg/07.json": "a9d1b85b2b1677ea15867d681eacbabf0c19a5ae1fc09966d17e538d33008414",
+    "data/delivery/eg/08.json": "ab357b42f7a152bc10e936a4bbfca26bb531b25482149f6a8f26b79ba41f8b78",
+    "data/delivery/eg/09.json": "58a0288c4303d133b46842e547632a3982f28a59d3b32120379b8b4657e72827",
+    "data/delivery/eg/10.json": "f39f5a739bb23ecefbf223edace0dce88c5e6f1177b63f06f6342fa46b23d76d",
+    "data/delivery/eg/11.json": "d1aba4012b42a3682e78a846ada27e667d788c8eb956daacee4b4a5de2927852",
+    "data/delivery/eg/12.json": "bcbf166e9a38ae06ea55d7140895fe0712c7f5dbf11f8185c3357d11e3a41f4d",
+    "data/delivery/eg/13.json": "f157336283095f47244138d45e41196c047775bfc103ad45dd0c3792935f00ba",
+    "data/delivery/eg/14.json": "7acb83653ff9d6790d83c050231a6d86f05a2ac393b6c00fc8259725b1d60bfe",
+    "data/delivery/eg/15.json": "9eaa7db2eecfed365832c83385864cd68708c96c7ed212d70cf75e874df84377",
+    "data/delivery/eg/16.json": "c4e391a25fb9cad7d655117ba924f7917f060caf8ffa82a2bc800178a2dfa55d",
+    "data/delivery/eg/17.json": "556cac38f0849bd1f68fb511457b2f686d80748068dc816111a93f70843d69b8",
+    "data/delivery/eg/18.json": "c71f24be79b79e33b75e464a46167674b51e64f1f0816be1d47e2f6483144f48",
+    "data/delivery/eg/19.json": "d27d84e11aa97605ede40dc269b3d9d9ead45b07a60008d3b35c5c6d6dfd3dbb",
+    "data/delivery/eg/20.json": "12fab3b22b6007149c5f7260564ccdc8e9a1dfee3334db241cb50bb4b1fcf70e",
+    "data/delivery/eg/21.json": "fc738679c6cba9dc363c6e7dc6094473d947a95bd3f0f43bd7295924bdf48489",
+    "data/delivery/eg/22.json": "433ad7e382f7060b32e76f03acaf217020f4ffaa1747570a477182c29900e8e3",
+    "data/delivery/eg/23.json": "29a26ef1ca0706f6755079b5037abb003c2d138d5560d7a2716a7887e02a011a",
+    "data/delivery/eg/24.json": "9ed76a404c10f3799535ca4ca06d7543c0ef715c3ae372d293b807b55fd7a7e7",
+    "data/delivery/eg/26.json": "d1d19c8e02664a4f3f8b4c840a351490b7d71b643fd151ab7151e63c1798142e",
+    "data/delivery/eg/27.json": "9667fd3a932f3604d1d6b2fc21e52e6ab2f2ded53bb0628e626e78c50f925755",
+    "data/delivery/eg/28.json": "d64fe12b20ac4b6f4ce8963b43c2abcdbc326e8e1495c270d93dc05fd56f1d11",
+    "data/delivery/eg/index.json": "94e6bded9132616c92093ed2191667f2dc53761b7b421efa84a34b8e4e1efd0d",
+    "favicon.ico": "296cafcdc54f3ee70cce706993cc78e5cd60c5e3f88c24f7c9b3711e38b85de5",
+    "fonts/README.md": "18df3e78aec42e5ce4ec9a582511c7022191262da9e25a38630b14d1d37d4ab0",
+    "fonts/bodoni-moda-OFL.txt": "931dfe2e0cd3c9443295f5c1d754b8a8403bf060df50c1d5900267ade83d0046",
+    "fonts/bodoni-moda.ttf": "550f5e34ee0a828d7941b1fe9bc58b34e5260d3f33a61532e6d0a0114e79a5cf",
+    "fonts/futura-now-headline.ttf": "ef37942e96dc25521582bfe6e446a5979e8ba711046ae2374a955d2ee74ae02c",
+    "fonts/jost-OFL.txt": "1af3438a4d5f0ed2bdbc5751a5a67ebf6d537334161184b7fbb68503ef0ea0c5",
+    "fonts/jost.ttf": "6343b70971000b04c5d401c96ae08ce371086135e999d5e1e1413039c0213076",
+    "fonts/saol-display-regular.ttf": "388aa9a18cd14f592b74976deceae0046027e195cebb40433210df5676b73f47",
+    "index.html": "c01fce4dd2c1f89838d13612111e470b3c228fade2487a3f7af9ea8e30245e29",
+    "public.html": "cf7b69a618384d7a4ce5b76fda54e7af26602487bc5bd7889b9806e23a58781d"
+  },
+  "verification": {
+    "commerce_unchanged": true,
+    "source_matches": true,
+    "browser_stats": {
+      "startTime": "2026-09-22T09:24:51.969Z",
+      "duration": 16523.689,
+      "expected": 15,
+      "skipped": 0,
+      "unexpected": 0,
+      "flaky": 0
+    },
+    "traces": [
+      {
+        "trace_id": "40df26f5-8ad6-427f-b00c-1ed23f51f85d",
+        "outcome": "completed",
+        "timings": {
+          "request_ms": 1,
+          "first_text_ms": 0,
+          "provider_first_token_ms": null
+        }
+      },
+      {
+        "trace_id": "506f10cd-81ad-4161-a9e4-fd366bc299e6",
+        "outcome": "completed",
+        "timings": {
+          "request_ms": 0,
+          "first_text_ms": 0,
+          "provider_first_token_ms": null
+        }
+      },
+      {
+        "trace_id": "ae5a052f-9680-42ee-8b3e-fda513c0ef4d",
+        "outcome": "completed",
+        "timings": {
+          "request_ms": 1977,
+          "first_text_ms": 1976,
+          "provider_first_token_ms": null,
+          "policy_decisions": 1,
+          "policy_R0_allow": 1,
+          "catalog_network_calls": 2,
+          "tool_ms": 21,
+          "tool_count": 2,
+          "provider_ms": 1929,
+          "provider_count": 1,
+          "meaning_requirements": 2,
+          "meaning_conflicts": 0,
+          "meaning_clarifications": 0,
+          "meaning_assumptions": 1
+        },
+        "planning": {
+          "playbook": "playbook://commerce/discovery",
+          "version": "1.0.0",
+          "reason": "known_journey",
+          "mode": "read",
+          "skills": [
+            {
+              "step": "schema",
+              "id": "skill://catalog/schema",
+              "version": "1.0.0",
+              "attempts": 1,
+              "completed": 1
+            },
+            {
+              "step": "interpret",
+              "id": "skill://reasoning/shopping",
+              "version": "1.0.0",
+              "attempts": 1,
+              "completed": 1
+            },
+            {
+              "step": "reference",
+              "id": "skill://catalog/facts",
+              "version": "1.0.0",
+              "attempts": 0,
+              "completed": 0
+            },
+            {
+              "step": "search",
+              "id": "skill://catalog/search",
+              "version": "1.0.0",
+              "attempts": 1,
+              "completed": 1
+            },
+            {
+              "step": "compare",
+              "id": "skill://catalog/compare",
+              "version": "1.0.0",
+              "attempts": 0,
+              "completed": 0
+            },
+            {
+              "step": "rank",
+              "id": "skill://ranking/candidates",
+              "version": "1.0.0",
+              "attempts": 1,
+              "completed": 1
+            }
+          ],
+          "reserved": {
+            "schema_version": "1.0",
+            "tools": 4,
+            "models": 1,
+            "tokens": 65536,
+            "cost_micros": 100000,
+            "mutations": 0
+          },
+          "failed": false,
+          "industry": {
+            "schema_version": "1.0",
+            "id": "industry://commerce/common",
+            "version": "1.0.0",
+            "attributes": [],
+            "status": "schema_ready",
+            "policies": [
+              "verified_only"
+            ]
+          },
+          "reserved_model_cost_micros": 6922,
+          "reserved_tokens": 14231
+        }
+      },
+      {
+        "trace_id": "84f39217-1178-4ffd-bd82-229aeee2ce8c",
+        "outcome": "completed",
+        "timings": {
+          "request_ms": 1803,
+          "first_text_ms": 1803,
+          "provider_first_token_ms": null,
+          "policy_decisions": 1,
+          "policy_R0_allow": 1,
+          "catalog_network_calls": 2,
+          "tool_ms": 14,
+          "tool_count": 2,
+          "provider_ms": 1785,
+          "provider_count": 1,
+          "meaning_requirements": 2,
+          "meaning_conflicts": 0,
+          "meaning_clarifications": 0,
+          "meaning_assumptions": 1
+        },
+        "planning": {
+          "playbook": "playbook://commerce/discovery",
+          "version": "1.0.0",
+          "reason": "known_journey",
+          "mode": "read",
+          "skills": [
+            {
+              "step": "schema",
+              "id": "skill://catalog/schema",
+              "version": "1.0.0",
+              "attempts": 1,
+              "completed": 1
+            },
+            {
+              "step": "interpret",
+              "id": "skill://reasoning/shopping",
+              "version": "1.0.0",
+              "attempts": 1,
+              "completed": 1
+            },
+            {
+              "step": "reference",
+              "id": "skill://catalog/facts",
+              "version": "1.0.0",
+              "attempts": 0,
+              "completed": 0
+            },
+            {
+              "step": "search",
+              "id": "skill://catalog/search",
+              "version": "1.0.0",
+              "attempts": 1,
+              "completed": 1
+            },
+            {
+              "step": "compare",
+              "id": "skill://catalog/compare",
+              "version": "1.0.0",
+              "attempts": 0,
+              "completed": 0
+            },
+            {
+              "step": "rank",
+              "id": "skill://ranking/candidates",
+              "version": "1.0.0",
+              "attempts": 1,
+              "completed": 1
+            }
+          ],
+          "reserved": {
+            "schema_version": "1.0",
+            "tools": 4,
+            "models": 1,
+            "tokens": 65536,
+            "cost_micros": 100000,
+            "mutations": 0
+          },
+          "failed": false,
+          "industry": {
+            "schema_version": "1.0",
+            "id": "industry://commerce/common",
+            "version": "1.0.0",
+            "attributes": [],
+            "status": "schema_ready",
+            "policies": [
+              "verified_only"
+            ]
+          },
+          "reserved_model_cost_micros": 6926,
+          "reserved_tokens": 14242
+        }
+      },
+      {
+        "trace_id": "1dec3c03-7dd1-4701-b7a2-b3ded4103aff",
+        "outcome": "completed",
+        "timings": {
+          "request_ms": 2829,
+          "first_text_ms": 2822,
+          "provider_first_token_ms": null,
+          "history_ms": 0,
+          "history_count": 1,
+          "policy_decisions": 1,
+          "policy_R2_require_confirmation": 1,
+          "catalog_network_calls": 2,
+          "provider_ms": 2781,
+          "provider_count": 1,
+          "meaning_requirements": 1,
+          "meaning_conflicts": 0,
+          "meaning_clarifications": 0,
+          "meaning_assumptions": 1,
+          "persistence_ms": 5,
+          "persistence_count": 1
+        },
+        "planning": {
+          "playbook": "playbook://commerce/shop",
+          "version": "1.0.0",
+          "reason": "validated_composition",
+          "mode": "read",
+          "skills": [
+            {
+              "step": "context",
+              "id": "skill://cart/context",
+              "version": "1.0.0",
+              "attempts": 1,
+              "completed": 1
+            },
+            {
+              "step": "schema",
+              "id": "skill://catalog/schema",
+              "version": "1.0.0",
+              "attempts": 1,
+              "completed": 1
+            },
+            {
+              "step": "interpret",
+              "id": "skill://reasoning/basket",
+              "version": "1.0.0",
+              "attempts": 1,
+              "completed": 1
+            },
+            {
+              "step": "search",
+              "id": "skill://catalog/search",
+              "version": "1.0.0",
+              "attempts": 1,
+              "completed": 1
+            },
+            {
+              "step": "rank",
+              "id": "skill://ranking/candidates",
+              "version": "1.0.0",
+              "attempts": 1,
+              "completed": 1
+            },
+            {
+              "step": "quote",
+              "id": "skill://cart/quote-proposal",
+              "version": "1.0.0",
+              "attempts": 1,
+              "completed": 1
+            }
+          ],
+          "reserved": {
+            "schema_version": "1.0",
+            "tools": 4,
+            "models": 1,
+            "tokens": 65536,
+            "cost_micros": 100000,
+            "mutations": 0
+          },
+          "failed": false,
+          "industry": {
+            "schema_version": "1.0",
+            "id": "industry://commerce/common",
+            "version": "1.0.0",
+            "attributes": [],
+            "status": "schema_ready",
+            "policies": [
+              "verified_only"
+            ]
+          },
+          "reserved_model_cost_micros": 11835,
+          "reserved_tokens": 20587
+        },
+        "execution": {
+          "schema_version": "1.0",
+          "goal_id": "1fb43137-8f76-42c3-bc85-ad0132d18bcf",
+          "revision": 1,
+          "state": "awaiting_confirmation",
+          "verdict": "pass",
+          "playbook": "playbook://commerce/shop",
+          "version": "1.0.0",
+          "proposal_id": "d23bd34f-2340-4529-805c-17087c729379",
+          "observed_at": "2026-09-22T09:25:01.262972Z",
+          "expires_at": "2026-09-22T09:30:01.260578Z",
+          "reasons": []
+        }
+      },
+      {
+        "trace_id": "addf1409-70ea-4877-99fe-0b9c571efb3c",
+        "outcome": "completed",
+        "timings": {
+          "request_ms": 1619,
+          "first_text_ms": 1612,
+          "provider_first_token_ms": null,
+          "history_ms": 1,
+          "history_count": 1,
+          "policy_decisions": 1,
+          "policy_R2_require_confirmation": 1,
+          "catalog_network_calls": 1,
+          "provider_ms": 1580,
+          "provider_count": 1,
+          "persistence_ms": 5,
+          "persistence_count": 1
+        },
+        "planning": {
+          "playbook": "playbook://commerce/optimize",
+          "version": "1.0.0",
+          "reason": "known_journey",
+          "mode": "read",
+          "skills": [
+            {
+              "step": "context",
+              "id": "skill://cart/context",
+              "version": "1.0.0",
+              "attempts": 1,
+              "completed": 1
+            },
+            {
+              "step": "schema",
+              "id": "skill://catalog/schema",
+              "version": "1.0.0",
+              "attempts": 1,
+              "completed": 1
+            },
+            {
+              "step": "interpret",
+              "id": "skill://reasoning/basket",
+              "version": "1.0.0",
+              "attempts": 1,
+              "completed": 1
+            },
+            {
+              "step": "quote",
+              "id": "skill://cart/quote-proposal",
+              "version": "1.0.0",
+              "attempts": 1,
+              "completed": 1
+            }
+          ],
+          "reserved": {
+            "schema_version": "1.0",
+            "tools": 3,
+            "models": 1,
+            "tokens": 65536,
+            "cost_micros": 100000,
+            "mutations": 0
+          },
+          "failed": false,
+          "industry": {
+            "schema_version": "1.0",
+            "id": "industry://commerce/common",
+            "version": "1.0.0",
+            "attributes": [],
+            "status": "schema_ready",
+            "policies": [
+              "verified_only"
+            ]
+          },
+          "reserved_model_cost_micros": 11834,
+          "reserved_tokens": 20585
+        },
+        "execution": {
+          "schema_version": "1.0",
+          "goal_id": "52de1992-162b-4ec0-a206-84038fcea5a4",
+          "revision": 1,
+          "state": "needs_input",
+          "verdict": "needs_input",
+          "playbook": "playbook://commerce/optimize",
+          "version": "1.0.0",
+          "proposal_id": "8f3d987f-1904-49cb-9688-66b95dfddd69",
+          "observed_at": "2026-09-22T09:25:03.879665Z",
+          "expires_at": "2026-09-22T09:30:03.876762Z",
+          "reasons": [
+            "unresolved_constraints"
+          ]
+        }
+      },
+      {
+        "trace_id": "426a262c-997f-4b45-8139-fbb374b675db",
+        "outcome": "completed",
+        "timings": {
+          "request_ms": 8,
+          "first_text_ms": 8,
+          "provider_first_token_ms": null,
+          "policy_decisions": 1,
+          "policy_R0_allow": 1,
+          "catalog_network_calls": 1,
+          "tool_ms": 7,
+          "tool_count": 1,
+          "meaning_requirements": 2,
+          "meaning_conflicts": 1,
+          "meaning_clarifications": 1,
+          "meaning_assumptions": 0
+        },
+        "planning": {
+          "playbook": "playbook://commerce/discovery",
+          "version": "1.0.0",
+          "reason": "known_journey",
+          "mode": "read",
+          "skills": [
+            {
+              "step": "schema",
+              "id": "skill://catalog/schema",
+              "version": "1.0.0",
+              "attempts": 1,
+              "completed": 1
+            },
+            {
+              "step": "interpret",
+              "id": "skill://reasoning/shopping",
+              "version": "1.0.0",
+              "attempts": 0,
+              "completed": 0
+            },
+            {
+              "step": "reference",
+              "id": "skill://catalog/facts",
+              "version": "1.0.0",
+              "attempts": 0,
+              "completed": 0
+            },
+            {
+              "step": "search",
+              "id": "skill://catalog/search",
+              "version": "1.0.0",
+              "attempts": 0,
+              "completed": 0
+            },
+            {
+              "step": "compare",
+              "id": "skill://catalog/compare",
+              "version": "1.0.0",
+              "attempts": 0,
+              "completed": 0
+            },
+            {
+              "step": "rank",
+              "id": "skill://ranking/candidates",
+              "version": "1.0.0",
+              "attempts": 0,
+              "completed": 0
+            }
+          ],
+          "reserved": {
+            "schema_version": "1.0",
+            "tools": 4,
+            "models": 1,
+            "tokens": 65536,
+            "cost_micros": 100000,
+            "mutations": 0
+          },
+          "failed": false,
+          "industry": {
+            "schema_version": "1.0",
+            "id": "industry://commerce/common",
+            "version": "1.0.0",
+            "attributes": [],
+            "status": "schema_ready",
+            "policies": [
+              "verified_only"
+            ]
+          },
+          "reserved_model_cost_micros": 0,
+          "reserved_tokens": 0
+        }
+      },
+      {
+        "trace_id": "aa4827cd-dc90-4f04-a9fc-46ad6fada976",
+        "outcome": "completed",
+        "timings": {
+          "request_ms": 4,
+          "first_text_ms": 4,
+          "provider_first_token_ms": null,
+          "policy_decisions": 1,
+          "policy_R0_allow": 1,
+          "catalog_network_calls": 1,
+          "tool_ms": 3,
+          "tool_count": 1,
+          "meaning_requirements": 2,
+          "meaning_conflicts": 1,
+          "meaning_clarifications": 1,
+          "meaning_assumptions": 0
+        },
+        "planning": {
+          "playbook": "playbook://commerce/discovery",
+          "version": "1.0.0",
+          "reason": "known_journey",
+          "mode": "read",
+          "skills": [
+            {
+              "step": "schema",
+              "id": "skill://catalog/schema",
+              "version": "1.0.0",
+              "attempts": 1,
+              "completed": 1
+            },
+            {
+              "step": "interpret",
+              "id": "skill://reasoning/shopping",
+              "version": "1.0.0",
+              "attempts": 0,
+              "completed": 0
+            },
+            {
+              "step": "reference",
+              "id": "skill://catalog/facts",
+              "version": "1.0.0",
+              "attempts": 0,
+              "completed": 0
+            },
+            {
+              "step": "search",
+              "id": "skill://catalog/search",
+              "version": "1.0.0",
+              "attempts": 0,
+              "completed": 0
+            },
+            {
+              "step": "compare",
+              "id": "skill://catalog/compare",
+              "version": "1.0.0",
+              "attempts": 0,
+              "completed": 0
+            },
+            {
+              "step": "rank",
+              "id": "skill://ranking/candidates",
+              "version": "1.0.0",
+              "attempts": 0,
+              "completed": 0
+            }
+          ],
+          "reserved": {
+            "schema_version": "1.0",
+            "tools": 4,
+            "models": 1,
+            "tokens": 65536,
+            "cost_micros": 100000,
+            "mutations": 0
+          },
+          "failed": false,
+          "industry": {
+            "schema_version": "1.0",
+            "id": "industry://commerce/common",
+            "version": "1.0.0",
+            "attributes": [],
+            "status": "schema_ready",
+            "policies": [
+              "verified_only"
+            ]
+          },
+          "reserved_model_cost_micros": 0,
+          "reserved_tokens": 0
+        }
+      },
+      {
+        "trace_id": "fb66e39a-f600-414b-93c6-99fc0d01ca70",
+        "outcome": "completed",
+        "timings": {
+          "request_ms": 0,
+          "first_text_ms": 0,
+          "provider_first_token_ms": null
+        }
+      },
+      {
+        "trace_id": "2bfe3e7d-5da3-4265-a380-9ddab81bbbe3",
+        "outcome": "completed",
+        "timings": {
+          "request_ms": 9,
+          "first_text_ms": 6,
+          "provider_first_token_ms": null,
+          "history_ms": 0,
+          "history_count": 1,
+          "tool_ms": 5,
+          "tool_count": 1,
+          "persistence_ms": 2,
+          "persistence_count": 1
+        },
+        "planning": {
+          "playbook": "playbook://commerce/cart",
+          "version": "1.0.0",
+          "reason": "known_journey",
+          "mode": "read",
+          "skills": [
+            {
+              "step": "read",
+              "id": "skill://cart/read",
+              "version": "1.0.0",
+              "attempts": 1,
+              "completed": 1
+            }
+          ],
+          "reserved": {
+            "schema_version": "1.0",
+            "tools": 1,
+            "models": 0,
+            "tokens": 0,
+            "cost_micros": 0,
+            "mutations": 0
+          },
+          "failed": false,
+          "industry": null,
+          "reserved_model_cost_micros": 0,
+          "reserved_tokens": 0
+        }
+      },
+      {
+        "trace_id": "a156ba67-2231-4ee9-9c0a-0d758283da70",
+        "outcome": "completed",
+        "timings": {
+          "request_ms": 9,
+          "first_text_ms": 6,
+          "provider_first_token_ms": null,
+          "history_ms": 0,
+          "history_count": 1,
+          "tool_ms": 5,
+          "tool_count": 1,
+          "persistence_ms": 2,
+          "persistence_count": 1
+        },
+        "planning": {
+          "playbook": "playbook://commerce/order",
+          "version": "1.0.0",
+          "reason": "known_journey",
+          "mode": "read",
+          "skills": [
+            {
+              "step": "read",
+              "id": "skill://order/read",
+              "version": "1.0.0",
+              "attempts": 1,
+              "completed": 1
+            }
+          ],
+          "reserved": {
+            "schema_version": "1.0",
+            "tools": 1,
+            "models": 0,
+            "tokens": 0,
+            "cost_micros": 0,
+            "mutations": 0
+          },
+          "failed": false,
+          "industry": null,
+          "reserved_model_cost_micros": 0,
+          "reserved_tokens": 0
+        }
+      }
+    ],
+    "checkpoints": [
+      {
+        "receipt": {
+          "state": "awaiting_confirmation",
+          "goal_id": "1fb43137-8f76-42c3-bc85-ad0132d18bcf",
+          "reasons": [],
+          "verdict": "pass",
+          "version": "1.0.0",
+          "playbook": "playbook://commerce/shop",
+          "revision": 1,
+          "expires_at": "2026-09-22T09:30:01.260578888Z",
+          "observed_at": "2026-09-22T09:25:01.262972638Z",
+          "proposal_id": "d23bd34f-2340-4529-805c-17087c729379",
+          "schema_version": "1.0"
+        },
+        "saved_by_customer": false,
+        "revalidations": 0,
+        "observation_count": 1,
+        "transitions": [
+          "created",
+          "planned",
+          "executing",
+          "verifying",
+          "awaiting_confirmation"
+        ]
+      },
+      {
+        "receipt": {
+          "state": "needs_input",
+          "goal_id": "52de1992-162b-4ec0-a206-84038fcea5a4",
+          "reasons": [
+            "unresolved_constraints"
+          ],
+          "verdict": "needs_input",
+          "version": "1.0.0",
+          "playbook": "playbook://commerce/optimize",
+          "revision": 1,
+          "expires_at": "2026-09-22T09:30:03.876762958Z",
+          "observed_at": "2026-09-22T09:25:03.879665125Z",
+          "proposal_id": "8f3d987f-1904-49cb-9688-66b95dfddd69",
+          "schema_version": "1.0"
+        },
+        "saved_by_customer": false,
+        "revalidations": 0,
+        "observation_count": 0,
+        "transitions": [
+          "created",
+          "planned",
+          "executing",
+          "verifying",
+          "needs_input"
+        ]
+      },
+      {
+        "receipt": {
+          "state": "awaiting_confirmation",
+          "goal_id": "05989520-c818-431e-b30e-424cac44e150",
+          "reasons": [],
+          "verdict": "pass",
+          "version": "1.0.0",
+          "playbook": "playbook://commerce/buy-again-ui",
+          "revision": 1,
+          "expires_at": "2026-09-22T09:30:04.452103584Z",
+          "observed_at": "2026-09-22T09:25:04.453187875Z",
+          "proposal_id": "6d19bce9-35de-4138-9b77-4042aa95a0e4",
+          "schema_version": "1.0"
+        },
+        "saved_by_customer": false,
+        "revalidations": 0,
+        "observation_count": 1,
+        "transitions": [
+          "created",
+          "planned",
+          "executing",
+          "verifying",
+          "awaiting_confirmation"
+        ]
+      },
+      {
+        "receipt": {
+          "state": "awaiting_confirmation",
+          "goal_id": "8f2dced3-0531-4b21-90d2-012e292676ff",
+          "reasons": [],
+          "verdict": "pass",
+          "version": "1.0.0",
+          "playbook": "playbook://commerce/buy-again-ui",
+          "revision": 3,
+          "expires_at": "2026-09-22T09:30:08.248016669Z",
+          "observed_at": "2026-09-22T09:25:08.248897127Z",
+          "proposal_id": "e0314fb7-47f1-41a7-bd24-85b466d70e3f",
+          "schema_version": "1.0"
+        },
+        "saved_by_customer": true,
+        "revalidations": 1,
+        "observation_count": 1,
+        "transitions": [
+          "created",
+          "planned",
+          "executing",
+          "verifying",
+          "awaiting_confirmation",
+          "replanning",
+          "planned",
+          "executing",
+          "verifying",
+          "awaiting_confirmation"
+        ]
+      },
+      {
+        "receipt": {
+          "state": "needs_input",
+          "goal_id": "a6d952d2-a509-4050-9d2e-31a3eaaf0696",
+          "reasons": [
+            "unresolved_constraints"
+          ],
+          "verdict": "needs_input",
+          "version": "1.0.0",
+          "playbook": "playbook://commerce/optimize",
+          "revision": 3,
+          "expires_at": "2026-09-22T09:30:07.596980002Z",
+          "observed_at": "2026-09-22T09:25:07.597492919Z",
+          "proposal_id": "dae00a0c-5a5c-40be-9398-669de79b3e43",
+          "schema_version": "1.0"
+        },
+        "saved_by_customer": true,
+        "revalidations": 1,
+        "observation_count": 0,
+        "transitions": [
+          "created",
+          "planned",
+          "executing",
+          "verifying",
+          "needs_input",
+          "replanning",
+          "planned",
+          "executing",
+          "verifying",
+          "needs_input"
+        ]
+      },
+      {
+        "receipt": {
+          "state": "awaiting_confirmation",
+          "goal_id": "886abdc1-9ed4-4959-8ae6-38b6200251af",
+          "reasons": [],
+          "verdict": "pass",
+          "version": "1.0.0",
+          "playbook": "playbook://commerce/shop",
+          "revision": 4,
+          "expires_at": "2026-09-22T09:32:30.299580221Z",
+          "observed_at": "2026-09-22T09:27:30.300471638Z",
+          "proposal_id": "5f9bc278-fafa-4b5d-b480-ba3eeccbfddd",
+          "schema_version": "1.0"
+        },
+        "saved_by_customer": true,
+        "revalidations": 2,
+        "observation_count": 1,
+        "transitions": [
+          "created",
+          "planned",
+          "executing",
+          "verifying",
+          "awaiting_confirmation",
+          "replanning",
+          "planned",
+          "executing",
+          "verifying",
+          "awaiting_confirmation",
+          "replanning",
+          "planned",
+          "executing",
+          "verifying",
+          "awaiting_confirmation"
+        ]
+      }
+    ],
+    "restart": {
+      "recovered_checkpoint_identical": true,
+      "new_proposal_after_revalidation": true,
+      "constraints_and_selections_preserved": true,
+      "cart_orders_payments_unchanged": true,
+      "checkpoint_before": {
+        "schema_version": "1.0",
+        "goal_id": "886abdc1-9ed4-4959-8ae6-38b6200251af",
+        "revision": 3,
+        "state": "awaiting_confirmation",
+        "verdict": "pass",
+        "playbook": "playbook://commerce/shop",
+        "version": "1.0.0",
+        "proposal_id": "720ed617-0ec7-474a-b25c-75593ab78e66",
+        "observed_at": "2026-09-22T09:25:06.948121502Z",
+        "expires_at": "2026-09-22T09:30:06.947311668Z",
+        "reasons": []
+      },
+      "checkpoint_after": {
+        "schema_version": "1.0",
+        "goal_id": "886abdc1-9ed4-4959-8ae6-38b6200251af",
+        "revision": 4,
+        "state": "awaiting_confirmation",
+        "verdict": "pass",
+        "playbook": "playbook://commerce/shop",
+        "version": "1.0.0",
+        "proposal_id": "5f9bc278-fafa-4b5d-b480-ba3eeccbfddd",
+        "observed_at": "2026-09-22T09:27:30.300471638Z",
+        "expires_at": "2026-09-22T09:32:30.299580221Z",
+        "reasons": []
+      },
+      "restarted_services": [
+        "api-gateway",
+        "ai-service"
+      ]
+    },
+    "production_changed": false
+  }
+}

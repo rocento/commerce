@@ -1,0 +1,329 @@
+{
+  "corpusHash": "52ce4fc346bd652ac2ca1f2c672f0b3f407d6834272ca2a464b12ae2a761c2f9",
+  "count": 50,
+  "intentCorrect": 21,
+  "statusCorrect": 22,
+  "dictionaryVersion": 2,
+  "notes": "Recorded before any v3 rule or engine changes. Fresh corpus authored by the implementer, not real-user data.",
+  "predictions": [
+    {
+      "text": "My bank card was billed two times for the same purchase",
+      "expected": "PAYMENT_DUPLICATE_CHARGE",
+      "intent": null,
+      "status": "UNKNOWN"
+    },
+    {
+      "text": "The same amount was taken from my account twice",
+      "expected": "PAYMENT_DUPLICATE_CHARGE",
+      "intent": null,
+      "status": "UNKNOWN"
+    },
+    {
+      "text": "There are two identical charges on my statement",
+      "expected": "PAYMENT_DUPLICATE_CHARGE",
+      "intent": null,
+      "status": "UNKNOWN"
+    },
+    {
+      "text": "I charged my phone twice yesterday",
+      "expected": null,
+      "intent": null,
+      "status": "UNKNOWN"
+    },
+    {
+      "text": "You did not charge my card twice",
+      "expected": null,
+      "intent": null,
+      "status": "UNKNOWN"
+    },
+    {
+      "text": "Tell me when these trainers become available again",
+      "expected": "STOCK_ALERT_CREATE",
+      "intent": null,
+      "status": "UNKNOWN"
+    },
+    {
+      "text": "Email me once this laptop is back on sale",
+      "expected": "STOCK_ALERT_CREATE",
+      "intent": null,
+      "status": "UNKNOWN"
+    },
+    {
+      "text": "Any idea when you will have more of these?",
+      "expected": "RESTOCK_QUERY",
+      "intent": null,
+      "status": "UNKNOWN"
+    },
+    {
+      "text": "When will these shoes be available again?",
+      "expected": "RESTOCK_QUERY",
+      "intent": null,
+      "status": "UNKNOWN"
+    },
+    {
+      "text": "Please stop sending me restock notifications",
+      "expected": "STOCK_ALERT_CANCEL",
+      "intent": null,
+      "status": "UNKNOWN"
+    },
+    {
+      "text": "Do not notify me when the shoes are back in stock",
+      "expected": null,
+      "intent": null,
+      "status": "UNKNOWN"
+    },
+    {
+      "text": "Can I eat this if I have a peanut allergy?",
+      "expected": "PRODUCT_ALLERGENS",
+      "intent": null,
+      "status": "UNKNOWN"
+    },
+    {
+      "text": "Are there any traces of dairy in this?",
+      "expected": "PRODUCT_ALLERGENS",
+      "intent": null,
+      "status": "UNKNOWN"
+    },
+    {
+      "text": "What ingredients does this contain?",
+      "expected": "PRODUCT_INGREDIENTS",
+      "intent": "PRODUCT_INGREDIENTS",
+      "status": "RESOLVED"
+    },
+    {
+      "text": "The battery runs for how many hours?",
+      "expected": "PRODUCT_BATTERY_LIFE",
+      "intent": null,
+      "status": "UNKNOWN"
+    },
+    {
+      "text": "How much time can I use it before recharging?",
+      "expected": "PRODUCT_BATTERY_LIFE",
+      "intent": "PRODUCT_USAGE",
+      "status": "RESOLVED"
+    },
+    {
+      "text": "Do you have a chart to help me pick a size?",
+      "expected": "PRODUCT_SIZE_GUIDE",
+      "intent": null,
+      "status": "UNKNOWN"
+    },
+    {
+      "text": "Would ordering fifty units make each one cheaper?",
+      "expected": "BULK_DISCOUNT",
+      "intent": null,
+      "status": "UNKNOWN"
+    },
+    {
+      "text": "Is the price lower for a large quantity?",
+      "expected": "BULK_DISCOUNT",
+      "intent": null,
+      "status": "UNKNOWN"
+    },
+    {
+      "text": "The parcel contained something different from what I bought",
+      "expected": "ORDER_WRONG_ITEM",
+      "intent": null,
+      "status": "UNKNOWN"
+    },
+    {
+      "text": "You sent the incorrect product",
+      "expected": "ORDER_WRONG_ITEM",
+      "intent": null,
+      "status": "UNKNOWN"
+    },
+    {
+      "text": "How long until the refund reaches my bank?",
+      "expected": "REFUND_TIMELINE",
+      "intent": null,
+      "status": "UNKNOWN"
+    },
+    {
+      "text": "My refund still has not arrived",
+      "expected": "REFUND_MISSING",
+      "intent": null,
+      "status": "UNKNOWN"
+    },
+    {
+      "text": "When should I expect to get my money back?",
+      "expected": "REFUND_TIMELINE",
+      "intent": null,
+      "status": "UNKNOWN"
+    },
+    {
+      "text": "The driver came while I was away",
+      "expected": "DELIVERY_FAILED_ATTEMPT",
+      "intent": null,
+      "status": "UNKNOWN"
+    },
+    {
+      "text": "Could you try delivering it again tomorrow?",
+      "expected": "DELIVERY_REATTEMPT",
+      "intent": null,
+      "status": "UNKNOWN"
+    },
+    {
+      "text": "No loyalty points were added after my last order",
+      "expected": "LOYALTY_MISSING_POINTS",
+      "intent": null,
+      "status": "UNKNOWN"
+    },
+    {
+      "text": "I earned points but they are not in my balance",
+      "expected": "LOYALTY_MISSING_POINTS",
+      "intent": null,
+      "status": "UNKNOWN"
+    },
+    {
+      "text": "My reward points expire when?",
+      "expected": "LOYALTY_POINTS_EXPIRY",
+      "intent": null,
+      "status": "UNKNOWN"
+    },
+    {
+      "text": "I need to speak with a person about my purchase",
+      "expected": "CONTACT_SUPPORT",
+      "intent": null,
+      "status": "UNKNOWN"
+    },
+    {
+      "text": "Can you send another copy of my order confirmation?",
+      "expected": "ORDER_CONFIRMATION_RESEND",
+      "intent": null,
+      "status": "UNKNOWN"
+    },
+    {
+      "text": "I want to return this because it arrived broken",
+      "expected": "ORDER_DAMAGED",
+      "intent": null,
+      "status": "UNKNOWN"
+    },
+    {
+      "text": "Is shipping free to my address?",
+      "expected": "DELIVERY_COST",
+      "intent": null,
+      "status": "UNKNOWN"
+    },
+    {
+      "text": "How do I clean these shoes?",
+      "expected": "PRODUCT_CARE",
+      "intent": "PRODUCT_CARE",
+      "status": "RESOLVED"
+    },
+    {
+      "text": "Could you let me see my saved favorites?",
+      "expected": "VIEW_WISHLIST",
+      "intent": "VIEW_WISHLIST",
+      "status": "RESOLVED"
+    },
+    {
+      "text": "I want to stop my recurring subscription",
+      "expected": "CANCEL_SUBSCRIPTION",
+      "intent": "CANCEL_SUBSCRIPTION",
+      "status": "RESOLVED"
+    },
+    {
+      "text": "Please pick the second product",
+      "expected": "SELECT_PRODUCT",
+      "intent": "SELECT_PRODUCT",
+      "status": "RESOLVED"
+    },
+    {
+      "text": "Put two of those in my basket",
+      "expected": "ADD_TO_CART",
+      "intent": "ADD_TO_CART",
+      "status": "RESOLVED"
+    },
+    {
+      "text": "Do not empty my basket",
+      "expected": null,
+      "intent": null,
+      "status": "UNKNOWN"
+    },
+    {
+      "text": "Do not cancel the order; I only want to track it",
+      "expected": "TRACK_ORDER",
+      "intent": "TRACK_ORDER",
+      "status": "RESOLVED"
+    },
+    {
+      "text": "Show me blue cotton shirts under $80 size m",
+      "expected": "PRODUCT_SEARCH",
+      "intent": "PRODUCT_SEARCH",
+      "status": "RESOLVED"
+    },
+    {
+      "text": "Find leather jackets above $200",
+      "expected": "PRODUCT_SEARCH",
+      "intent": "PRODUCT_SEARCH",
+      "status": "RESOLVED"
+    },
+    {
+      "text": "What is the capital of France?",
+      "expected": null,
+      "intent": null,
+      "status": "UNKNOWN"
+    },
+    {
+      "text": "Write a song about being charged twice",
+      "expected": null,
+      "intent": null,
+      "status": "UNKNOWN"
+    },
+    {
+      "text": "My laptop battery is not charged",
+      "expected": null,
+      "intent": null,
+      "status": "UNKNOWN"
+    },
+    {
+      "text": "I received all my loyalty points",
+      "expected": null,
+      "intent": null,
+      "status": "UNKNOWN"
+    },
+    {
+      "text": "I bought nuts at the store yesterday",
+      "expected": null,
+      "intent": null,
+      "status": "UNKNOWN"
+    },
+    {
+      "text": "The driver came and delivered everything successfully",
+      "expected": null,
+      "intent": null,
+      "status": "UNKNOWN"
+    },
+    {
+      "text": "Refund",
+      "expected": null,
+      "intent": null,
+      "status": "UNKNOWN"
+    },
+    {
+      "text": "Cancel and create a stock alert",
+      "expected": null,
+      "intent": null,
+      "status": "AMBIGUOUS"
+    }
+  ],
+  "originalCorpusHash": "f28fe75caba166052cfd8008172183c29bb1498864ce6fdb0d7d83965f95fcbd",
+  "targetCorrection": {
+    "date": "2026-10-07",
+    "changes": [
+      {
+        "text": "Show me blue cotton shirts under $80 size m",
+        "field": "entities.price.operator",
+        "previous": "<=",
+        "corrected": "<"
+      },
+      {
+        "text": "Find leather jackets above $200",
+        "field": "entities.price.operator",
+        "previous": ">=",
+        "corrected": ">"
+      }
+    ],
+    "note": "Only these two authored strict-comparison targets and their corpus hash were corrected. Recorded baseline predictions, intent/status counts and dictionary version remain unchanged."
+  }
+}

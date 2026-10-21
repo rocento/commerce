@@ -1,0 +1,3236 @@
+{
+  "category": {
+    "banner": null,
+    "entity_id": 6,
+    "id": "6096b5d1-d2a6-4827-b0a4-12ba706cee3d",
+    "images": {
+      "fc70b774-3a7c-429a-a16d-3ec3e2bb59c8": {
+        "alt": "Meat & Poultry — illustrative demo image",
+        "height": 320,
+        "id": "fc70b774-3a7c-429a-a16d-3ec3e2bb59c8",
+        "variants": [
+          {
+            "height": 320,
+            "width": 320
+          }
+        ],
+        "width": 320
+      }
+    },
+    "name": "Meat & Poultry",
+    "parent_id": null,
+    "slug": "grocery-meat-poultry",
+    "thumbnail": "fc70b774-3a7c-429a-a16d-3ec3e2bb59c8"
+  },
+  "existing_products": [
+    {
+      "product_type": "configurable",
+      "parent_id": null,
+      "variant_attributes": {},
+      "attribute_set_id": null,
+      "id": "2b6947ec-7470-4d38-9867-54fe16f8c1b3",
+      "entity_id": 87,
+      "sku": "GRO-SIZE-FAMILY-012",
+      "slug": "grocery-beef-steak",
+      "name": "Beef Steak",
+      "description": "Beef Steak. Choose your pack size. Price and availability depend on the selected size.",
+      "price": "8.00",
+      "currency": "USD",
+      "unit": "pack",
+      "category_id": "6096b5d1-d2a6-4827-b0a4-12ba706cee3d",
+      "category_ids": [
+        "6096b5d1-d2a6-4827-b0a4-12ba706cee3d"
+      ],
+      "attributes": {
+        "demo-thumbnail": "fc70b774-3a7c-429a-a16d-3ec3e2bb59c8",
+        "dish_type": [
+          "roast_dinners",
+          "stir_fries"
+        ],
+        "grocery_group": [
+          "meat"
+        ],
+        "ingredient_role": [
+          "main_ingredient"
+        ],
+        "meal_occasion": [
+          "lunch",
+          "dinner"
+        ],
+        "preparation_method": [
+          "grilling",
+          "roasting",
+          "sauteing"
+        ]
+      },
+      "media_ids": [
+        "893c8dc6-d754-4388-afba-dbf363904b17"
+      ],
+      "active": true,
+      "in_stock": true,
+      "updated_at": "2026-09-29T18:42:01.404149Z"
+    },
+    {
+      "product_type": "configurable",
+      "parent_id": null,
+      "variant_attributes": {},
+      "attribute_set_id": null,
+      "id": "fb0d9c21-cafc-46ca-b67a-ae46b937b442",
+      "entity_id": 82,
+      "sku": "GRO-SIZE-FAMILY-011",
+      "slug": "grocery-chicken-breast",
+      "name": "Chicken Breast",
+      "description": "Chicken Breast. Choose your pack size. Price and availability depend on the selected size.",
+      "price": "4.50",
+      "currency": "USD",
+      "unit": "pack",
+      "category_id": "6096b5d1-d2a6-4827-b0a4-12ba706cee3d",
+      "category_ids": [
+        "6096b5d1-d2a6-4827-b0a4-12ba706cee3d"
+      ],
+      "attributes": {
+        "demo-thumbnail": "28bae8bd-a127-47bd-a7cd-e35eb6d0fb8d",
+        "dish_type": [
+          "roast_dinners",
+          "stir_fries"
+        ],
+        "grocery_group": [
+          "meat"
+        ],
+        "ingredient_role": [
+          "main_ingredient"
+        ],
+        "meal_occasion": [
+          "lunch",
+          "dinner"
+        ],
+        "preparation_method": [
+          "grilling",
+          "roasting",
+          "sauteing"
+        ]
+      },
+      "media_ids": [
+        "fe77ef3b-48a1-4228-b06f-52aebad66ce5"
+      ],
+      "active": true,
+      "in_stock": true,
+      "updated_at": "2026-09-29T18:42:01.380148Z"
+    },
+    {
+      "product_type": "simple",
+      "parent_id": null,
+      "variant_attributes": {},
+      "attribute_set_id": null,
+      "id": "566a5d38-a27e-424a-887a-a27fea52c28f",
+      "entity_id": 101,
+      "sku": "GRO-NEW-20260929-017",
+      "slug": "grocery-ground-beef",
+      "name": "Ground Beef 500g",
+      "description": "Raw ground beef for kofta, burgers, and sauces. Keep refrigerated and cook thoroughly. Illustrative demo product photography.",
+      "price": "5.00",
+      "currency": "USD",
+      "unit": "pack",
+      "category_id": "6096b5d1-d2a6-4827-b0a4-12ba706cee3d",
+      "category_ids": [
+        "6096b5d1-d2a6-4827-b0a4-12ba706cee3d"
+      ],
+      "attributes": {
+        "dish_type": [
+          "roast_dinners",
+          "stir_fries"
+        ],
+        "grocery_group": [
+          "meat"
+        ],
+        "ingredient_role": [
+          "main_ingredient"
+        ],
+        "meal_occasion": [
+          "lunch",
+          "dinner"
+        ],
+        "preparation_method": [
+          "grilling",
+          "roasting",
+          "sauteing"
+        ]
+      },
+      "media_ids": [
+        "cd6b8595-d3e7-4941-8689-618bc16631ce"
+      ],
+      "active": true,
+      "in_stock": true,
+      "updated_at": "2026-09-29T18:42:00.993217Z"
+    },
+    {
+      "product_type": "simple",
+      "parent_id": null,
+      "variant_attributes": {},
+      "attribute_set_id": null,
+      "id": "5650e3b7-1363-4474-8847-33551b9358c1",
+      "entity_id": 65,
+      "sku": "GRO-NEW-20260929-016",
+      "slug": "grocery-chicken-drumsticks",
+      "name": "Chicken Drumsticks 1kg",
+      "description": "Raw chicken drumsticks for roasting, grilling, or stews. Keep refrigerated and cook thoroughly. Illustrative demo product photography.",
+      "price": "5.50",
+      "currency": "USD",
+      "unit": "pack",
+      "category_id": "6096b5d1-d2a6-4827-b0a4-12ba706cee3d",
+      "category_ids": [
+        "6096b5d1-d2a6-4827-b0a4-12ba706cee3d"
+      ],
+      "attributes": {
+        "dish_type": [
+          "roast_dinners",
+          "stir_fries"
+        ],
+        "grocery_group": [
+          "meat"
+        ],
+        "ingredient_role": [
+          "main_ingredient"
+        ],
+        "meal_occasion": [
+          "lunch",
+          "dinner"
+        ],
+        "preparation_method": [
+          "grilling",
+          "roasting",
+          "sauteing"
+        ]
+      },
+      "media_ids": [
+        "f5faf201-0fa8-483a-89c3-730e9f26bfac"
+      ],
+      "active": true,
+      "in_stock": true,
+      "updated_at": "2026-09-29T18:42:00.959576Z"
+    },
+    {
+      "product_type": "simple",
+      "parent_id": "2b6947ec-7470-4d38-9867-54fe16f8c1b3",
+      "variant_attributes": {
+        "grocery-pack-size": "1kg"
+      },
+      "attribute_set_id": null,
+      "id": "f280fe6e-c651-42db-9f57-d156dc079ddf",
+      "entity_id": 114,
+      "sku": "GRO-EXTRA-20260929-012",
+      "slug": "grocery-beef-steak-1kg",
+      "name": "Beef Steak 1kg",
+      "description": "Beef Steak 1kg. A convenient pack size for everyday shopping. Product image is illustrative; pack quantity is as stated in the product name.",
+      "price": "15.00",
+      "currency": "USD",
+      "unit": "pack",
+      "category_id": "6096b5d1-d2a6-4827-b0a4-12ba706cee3d",
+      "category_ids": [
+        "6096b5d1-d2a6-4827-b0a4-12ba706cee3d"
+      ],
+      "attributes": {
+        "dish_type": [
+          "roast_dinners",
+          "stir_fries"
+        ],
+        "grocery-pack-size": "1kg",
+        "grocery_group": [
+          "meat"
+        ],
+        "ingredient_role": [
+          "main_ingredient"
+        ],
+        "meal_occasion": [
+          "lunch",
+          "dinner"
+        ],
+        "preparation_method": [
+          "grilling",
+          "roasting",
+          "sauteing"
+        ]
+      },
+      "media_ids": [
+        "893c8dc6-d754-4388-afba-dbf363904b17"
+      ],
+      "active": true,
+      "in_stock": true,
+      "updated_at": "2026-09-29T18:42:00.358095Z"
+    },
+    {
+      "product_type": "simple",
+      "parent_id": "fb0d9c21-cafc-46ca-b67a-ae46b937b442",
+      "variant_attributes": {
+        "grocery-pack-size": "1kg"
+      },
+      "attribute_set_id": null,
+      "id": "31bd3cb8-8d4e-4591-890e-3ae41ad79d5f",
+      "entity_id": 135,
+      "sku": "GRO-EXTRA-20260929-011",
+      "slug": "grocery-chicken-breast-1kg",
+      "name": "Chicken Breast 1kg",
+      "description": "Chicken Breast 1kg. A convenient pack size for everyday shopping. Product image is illustrative; pack quantity is as stated in the product name.",
+      "price": "8.50",
+      "currency": "USD",
+      "unit": "pack",
+      "category_id": "6096b5d1-d2a6-4827-b0a4-12ba706cee3d",
+      "category_ids": [
+        "6096b5d1-d2a6-4827-b0a4-12ba706cee3d"
+      ],
+      "attributes": {
+        "dish_type": [
+          "roast_dinners",
+          "stir_fries"
+        ],
+        "grocery-pack-size": "1kg",
+        "grocery_group": [
+          "meat"
+        ],
+        "ingredient_role": [
+          "main_ingredient"
+        ],
+        "meal_occasion": [
+          "lunch",
+          "dinner"
+        ],
+        "preparation_method": [
+          "grilling",
+          "roasting",
+          "sauteing"
+        ]
+      },
+      "media_ids": [
+        "fe77ef3b-48a1-4228-b06f-52aebad66ce5"
+      ],
+      "active": true,
+      "in_stock": true,
+      "updated_at": "2026-09-29T18:42:00.206779Z"
+    },
+    {
+      "product_type": "simple",
+      "parent_id": "fb0d9c21-cafc-46ca-b67a-ae46b937b442",
+      "variant_attributes": {
+        "grocery-pack-size": "500g"
+      },
+      "attribute_set_id": null,
+      "id": "53e6d580-1627-486a-8d10-75077132ba2d",
+      "entity_id": 28,
+      "sku": "DEMO-GRO-WHITE-043",
+      "slug": "demo-grocery-white-chicken-breast",
+      "name": "Chicken Breast 500g",
+      "description": "Chicken Breast 500g. Two fresh raw boneless skinless chicken breast fillets, clean supermarket cuts. Illustrative demo product photography.",
+      "price": "4.50",
+      "currency": "USD",
+      "unit": "pack",
+      "category_id": "6096b5d1-d2a6-4827-b0a4-12ba706cee3d",
+      "category_ids": [
+        "6096b5d1-d2a6-4827-b0a4-12ba706cee3d"
+      ],
+      "attributes": {
+        "demo-thumbnail": "28bae8bd-a127-47bd-a7cd-e35eb6d0fb8d",
+        "dish_type": [
+          "roast_dinners",
+          "stir_fries"
+        ],
+        "grocery-pack-size": "500g",
+        "grocery_group": [
+          "meat"
+        ],
+        "ingredient_role": [
+          "main_ingredient"
+        ],
+        "meal_occasion": [
+          "lunch",
+          "dinner"
+        ],
+        "preparation_method": [
+          "grilling",
+          "roasting",
+          "sauteing"
+        ]
+      },
+      "media_ids": [
+        "fe77ef3b-48a1-4228-b06f-52aebad66ce5"
+      ],
+      "active": true,
+      "in_stock": true,
+      "updated_at": "2026-09-29T18:41:59.586002Z"
+    },
+    {
+      "product_type": "simple",
+      "parent_id": null,
+      "variant_attributes": {},
+      "attribute_set_id": null,
+      "id": "a9bf2cf7-d068-41f5-ad99-925f60682fd7",
+      "entity_id": 134,
+      "sku": "DEMO-GRO-WHITE-042",
+      "slug": "demo-grocery-white-lamb-chops",
+      "name": "Lamb Chops 500g",
+      "description": "Lamb Chops 500g. Three fresh raw lamb rib chops arranged neatly, clean butcher-prepared cuts. Illustrative demo product photography.",
+      "price": "9.50",
+      "currency": "USD",
+      "unit": "pack",
+      "category_id": "6096b5d1-d2a6-4827-b0a4-12ba706cee3d",
+      "category_ids": [
+        "6096b5d1-d2a6-4827-b0a4-12ba706cee3d"
+      ],
+      "attributes": {
+        "demo-thumbnail": "5a04b699-1f01-40f8-8aa0-284ccde9a5c3",
+        "dish_type": [
+          "roast_dinners",
+          "stir_fries"
+        ],
+        "grocery_group": [
+          "meat"
+        ],
+        "ingredient_role": [
+          "main_ingredient"
+        ],
+        "meal_occasion": [
+          "lunch",
+          "dinner"
+        ],
+        "preparation_method": [
+          "grilling",
+          "roasting",
+          "sauteing"
+        ]
+      },
+      "media_ids": [
+        "9e60c920-6474-4618-b26f-959aa06ce8ba"
+      ],
+      "active": true,
+      "in_stock": true,
+      "updated_at": "2026-09-29T18:41:59.547961Z"
+    },
+    {
+      "product_type": "simple",
+      "parent_id": "2b6947ec-7470-4d38-9867-54fe16f8c1b3",
+      "variant_attributes": {
+        "grocery-pack-size": "500g"
+      },
+      "attribute_set_id": null,
+      "id": "a8b05bbc-5635-4cf4-a9ab-f05adf4d22f1",
+      "entity_id": 37,
+      "sku": "DEMO-GRO-WHITE-041",
+      "slug": "demo-grocery-white-beef-steak",
+      "name": "Beef Steak 500g",
+      "description": "Beef Steak 500g. One fresh raw boneless beef ribeye steak with natural fine marbling, neatly trimmed supermarket cut. Illustrative demo product photography.",
+      "price": "8.00",
+      "currency": "USD",
+      "unit": "pack",
+      "category_id": "6096b5d1-d2a6-4827-b0a4-12ba706cee3d",
+      "category_ids": [
+        "6096b5d1-d2a6-4827-b0a4-12ba706cee3d"
+      ],
+      "attributes": {
+        "demo-thumbnail": "fc70b774-3a7c-429a-a16d-3ec3e2bb59c8",
+        "dish_type": [
+          "roast_dinners",
+          "stir_fries"
+        ],
+        "grocery-pack-size": "500g",
+        "grocery_group": [
+          "meat"
+        ],
+        "ingredient_role": [
+          "main_ingredient"
+        ],
+        "meal_occasion": [
+          "lunch",
+          "dinner"
+        ],
+        "preparation_method": [
+          "grilling",
+          "roasting",
+          "sauteing"
+        ]
+      },
+      "media_ids": [
+        "893c8dc6-d754-4388-afba-dbf363904b17"
+      ],
+      "active": true,
+      "in_stock": true,
+      "updated_at": "2026-09-29T18:41:59.505761Z"
+    }
+  ],
+  "all_names": [
+    "Apple Turnovers 3 Pack",
+    "Chocolate Chip Muffins 6 Pack",
+    "Cinnamon Rolls 6 Pack",
+    "English Muffins 6 Pack",
+    "Soft Pretzels 3 Pack",
+    "Brioche Burger Buns 6 Pack",
+    "Rosemary Focaccia 500g",
+    "Ciabatta Rolls 3 Pack",
+    "French Baguettes 3 Pack",
+    "Sourdough Bread 500g",
+    "Whole Mussels 1kg",
+    "Squid Rings 500g",
+    "Whole Sardines 500g",
+    "Mackerel Fillets 500g",
+    "Whole Sea Bass 600g",
+    "Tilapia Fillets 500g",
+    "Cod Fillets 500g",
+    "Baladi Bread 5 Loaves",
+    "Egyptian Rice 1kg",
+    "Fresh Oranges 1kg — Double Pack",
+    "Roumi Cheese 250g — Double Pack",
+    "Roma Tomatoes 1kg — Double Pack",
+    "Tahini Jar 350g",
+    "Baladi Ghee 500g",
+    "Bananas 1kg — Double Pack",
+    "Medjool Dates 400g",
+    "Dried Hibiscus 200g",
+    "Fresh Mint Bunch",
+    "Dried Fava Beans 500g — Double Pack",
+    "Egyptian Cucumbers 1kg — Double Pack",
+    "Whole Milk 1L — Double Pack",
+    "Cane Sugar 1kg — Double Pack",
+    "Egyptian Lemons 500g",
+    "Egyptian Cucumbers 1kg",
+    "Tahini Jar 350g — Double Pack",
+    "Plain Yogurt 500g",
+    "Fresh Mint Bunch — Double Pack",
+    "Baladi Bread 5 Loaves — Double Pack",
+    "Fresh Oranges 1kg",
+    "Bananas 1kg",
+    "Raw Almonds 250g",
+    "Fresh Strawberries 500g",
+    "Red Onions 1kg",
+    "Roumi Cheese 250g",
+    "Dried Fava Beans 500g",
+    "Dish Soap 650ml — Double Pack",
+    "Gala Apples 1kg — Double Pack",
+    "Dish Soap 650ml",
+    "Golden Potatoes 1kg",
+    "Cane Sugar 1kg",
+    "Egyptian Lemons 500g — Double Pack",
+    "Fresh Molokhia 250g",
+    "Gala Apples 1kg",
+    "Wildflower Honey 350g",
+    "Fresh Molokhia 250g — Double Pack",
+    "Fresh Carrots 500g",
+    "Red Lentils 500g",
+    "Penne Pasta 500g",
+    "Whole Milk 1L",
+    "Medjool Dates 400g — Double Pack",
+    "Egyptian Rice 1kg — Double Pack",
+    "Farm Eggs 6 Pack",
+    "Red Lentils 500g — Double Pack",
+    "Roma Tomatoes 1kg",
+    "Baladi Ghee 500g — Double Pack",
+    "Dried Hibiscus 200g — Double Pack",
+    "Olive Oil 500ml",
+    "Pistachios",
+    "Cashews",
+    "Butter Croissants",
+    "Feta Cheese",
+    "Cheddar Cheese",
+    "Pears",
+    "Red Grapes",
+    "Mangoes",
+    "Hazelnuts 250g",
+    "Dried Apricots 250g",
+    "Rolled Oats 500g",
+    "Oat Bread 1 Loaf",
+    "Sesame Bagels 4 Pack",
+    "Cream Cheese 200g",
+    "Fresh Mozzarella 125g",
+    "Peaches 500g",
+    "Pomegranates 2 Pack",
+    "Kiwi 4 Pack",
+    "Blueberries 125g",
+    "Pistachios 500g",
+    "Cashews 500g",
+    "Butter Croissants 6 Pack",
+    "Feta Cheese 500g",
+    "Cheddar Cheese 500g",
+    "Pears 500g",
+    "Red Grapes 1kg",
+    "Mangoes 500g",
+    "Walnuts 250g",
+    "Cashews 250g",
+    "Pistachios 250g",
+    "Ajwa Dates 400g",
+    "Sukkari Dates 400g",
+    "Honey 350g",
+    "Pears 1kg",
+    "Avocados 2 Pack",
+    "Pineapple 1 Whole",
+    "Watermelon 1 Whole",
+    "Mangoes 1kg",
+    "Raw Almonds 250g",
+    "Medjool Dates 400g",
+    "Butter Croissants 3 Pack",
+    "Sliced Bread 1 Loaf",
+    "Baladi Bread 5 Loaves",
+    "Cheddar Cheese 250g",
+    "Butter 200g",
+    "Feta Cheese 250g",
+    "Plain Yogurt 500g",
+    "Whole Milk 1L",
+    "Farm Eggs 6 Pack",
+    "Red Grapes 500g",
+    "Strawberries 500g",
+    "Oranges 1kg",
+    "Gala Apples 1kg",
+    "Bananas 1kg",
+    "Salmon Fillet",
+    "Beef Steak",
+    "Chicken Breast",
+    "Chickpeas",
+    "Basmati Rice",
+    "Zucchini",
+    "White Mushrooms",
+    "Peeled Shrimp 500g",
+    "Ground Beef 500g",
+    "Chicken Drumsticks 1kg",
+    "Tuna in Olive Oil 160g",
+    "Couscous 500g",
+    "Romaine Lettuce 1 Head",
+    "Sweet Potatoes 1kg",
+    "Green Beans 500g",
+    "Fresh Spinach 250g",
+    "Salmon Fillet 600g",
+    "Beef Steak 1kg",
+    "Chicken Breast 1kg",
+    "Chickpeas 1kg",
+    "Basmati Rice 2kg",
+    "Zucchini 500g",
+    "White Mushrooms 500g",
+    "Whole Sea Bream 500g",
+    "Salmon Fillet 300g",
+    "Chicken Breast 500g",
+    "Lamb Chops 500g",
+    "Beef Steak 500g",
+    "White Mushrooms 250g",
+    "Cauliflower 1 Head",
+    "Zucchini 1kg",
+    "Eggplants 1kg",
+    "Olive Oil 500ml",
+    "Chickpeas 500g",
+    "Red Lentils 500g",
+    "Penne Pasta 500g",
+    "Basmati Rice 1kg",
+    "Garlic 2 Bulbs",
+    "Broccoli 1 Head",
+    "Mixed Bell Peppers 3 Pack",
+    "Red Onions 1kg",
+    "Golden Potatoes 1kg",
+    "Carrots 500g",
+    "Cucumbers 1kg",
+    "Tomatoes 1kg",
+    "Lemons 500g",
+    "Enrichment Demo · Coffee Gift Box",
+    "Enrichment Demo · Mint Tea",
+    "Enrichment Demo · Olive Oil",
+    "Enrichment Demo · Medjool Dates"
+  ],
+  "definitions": [
+    {
+      "id": "d908fc94-b1e1-5175-ac8d-f437b6574da9",
+      "entity_id": 22,
+      "entity_type": "product",
+      "attribute_code": "meal_occasion_breakfast_priority",
+      "label": "Breakfast recommendation group",
+      "input_type": "select",
+      "scope": "global",
+      "is_required": false,
+      "is_unique": false,
+      "is_searchable": true,
+      "is_filterable": true,
+      "is_comparable": true,
+      "is_visible_on_front": true,
+      "used_for_promo_rules": false,
+      "used_for_configurations": false,
+      "swatch_type": "none",
+      "options": [
+        {
+          "label": "Bread first",
+          "value": "bread"
+        },
+        {
+          "label": "Cheese next",
+          "value": "cheese"
+        },
+        {
+          "label": "Optional additions",
+          "value": "addition"
+        }
+      ],
+      "version": 1,
+      "metadata": {
+        "description": "Merchant breakfast merchandising order. Bread and cheese lead; fruit and other additions follow. Not nutritional or dietary evidence.",
+        "status": "active",
+        "admin_visible": true,
+        "facetable": true,
+        "sortable": false,
+        "ai_queryable": true,
+        "ai_enrichable": false,
+        "source_policy": "semantic",
+        "unit": null,
+        "semantic_role": null,
+        "min": null,
+        "max": null,
+        "max_length": null,
+        "default_value": null,
+        "display_order": 0
+      }
+    },
+    {
+      "id": "c5a69398-0ee2-4ee3-97fe-1e70f2686d37",
+      "entity_id": 8,
+      "entity_type": "product",
+      "attribute_code": "country_of_manufacture",
+      "label": "Country of manufacture",
+      "input_type": "text",
+      "scope": "global",
+      "is_required": false,
+      "is_unique": false,
+      "is_searchable": false,
+      "is_filterable": false,
+      "is_comparable": false,
+      "is_visible_on_front": true,
+      "used_for_promo_rules": false,
+      "used_for_configurations": false,
+      "swatch_type": "none",
+      "options": [],
+      "version": 1,
+      "metadata": {
+        "description": "",
+        "status": "active",
+        "admin_visible": true,
+        "facetable": false,
+        "sortable": false,
+        "ai_queryable": true,
+        "ai_enrichable": false,
+        "source_policy": "factual",
+        "unit": null,
+        "semantic_role": null,
+        "min": null,
+        "max": null,
+        "max_length": 100,
+        "default_value": null,
+        "display_order": 20
+      }
+    },
+    {
+      "id": "b0298ad5-d5c7-51c9-80dd-0b81b0616ed4",
+      "entity_id": 15,
+      "entity_type": "product",
+      "attribute_code": "demo_enrichment_character",
+      "label": "Demo character",
+      "input_type": "text",
+      "scope": "global",
+      "is_required": false,
+      "is_unique": false,
+      "is_searchable": false,
+      "is_filterable": false,
+      "is_comparable": false,
+      "is_visible_on_front": false,
+      "used_for_promo_rules": false,
+      "used_for_configurations": false,
+      "swatch_type": "none",
+      "options": [],
+      "version": 1,
+      "metadata": {
+        "description": "",
+        "status": "active",
+        "admin_visible": true,
+        "facetable": false,
+        "sortable": false,
+        "ai_queryable": false,
+        "ai_enrichable": true,
+        "source_policy": "semantic",
+        "unit": null,
+        "semantic_role": null,
+        "min": null,
+        "max": null,
+        "max_length": null,
+        "default_value": null,
+        "display_order": 0
+      }
+    },
+    {
+      "id": "5cc4835b-8981-590d-b7b9-4290288e8d9f",
+      "entity_id": 14,
+      "entity_type": "product",
+      "attribute_code": "demo_enrichment_occasion",
+      "label": "Demo occasion",
+      "input_type": "single_select",
+      "scope": "global",
+      "is_required": false,
+      "is_unique": false,
+      "is_searchable": false,
+      "is_filterable": false,
+      "is_comparable": false,
+      "is_visible_on_front": false,
+      "used_for_promo_rules": false,
+      "used_for_configurations": false,
+      "swatch_type": "none",
+      "options": [
+        {
+          "label": "Everyday",
+          "value": "everyday"
+        },
+        {
+          "label": "Hosting",
+          "value": "hosting"
+        },
+        {
+          "label": "Gifting",
+          "value": "gifting"
+        }
+      ],
+      "version": 1,
+      "metadata": {
+        "description": "",
+        "status": "active",
+        "admin_visible": true,
+        "facetable": false,
+        "sortable": false,
+        "ai_queryable": false,
+        "ai_enrichable": true,
+        "source_policy": "semantic",
+        "unit": null,
+        "semantic_role": null,
+        "min": null,
+        "max": null,
+        "max_length": null,
+        "default_value": null,
+        "display_order": 0
+      }
+    },
+    {
+      "id": "f0eb6dff-f24c-5d72-88f3-0722e8c46e46",
+      "entity_id": 16,
+      "entity_type": "product",
+      "attribute_code": "demo_enrichment_pairings",
+      "label": "Demo pairings",
+      "input_type": "multi_select",
+      "scope": "global",
+      "is_required": false,
+      "is_unique": false,
+      "is_searchable": false,
+      "is_filterable": false,
+      "is_comparable": false,
+      "is_visible_on_front": false,
+      "used_for_promo_rules": false,
+      "used_for_configurations": false,
+      "swatch_type": "none",
+      "options": [
+        {
+          "label": "Tea",
+          "value": "tea"
+        },
+        {
+          "label": "Coffee",
+          "value": "coffee"
+        },
+        {
+          "label": "Salads",
+          "value": "salads"
+        },
+        {
+          "label": "Toast",
+          "value": "toast"
+        }
+      ],
+      "version": 1,
+      "metadata": {
+        "description": "",
+        "status": "active",
+        "admin_visible": true,
+        "facetable": false,
+        "sortable": false,
+        "ai_queryable": false,
+        "ai_enrichable": true,
+        "source_policy": "semantic",
+        "unit": null,
+        "semantic_role": null,
+        "min": null,
+        "max": null,
+        "max_length": null,
+        "default_value": null,
+        "display_order": 0
+      }
+    },
+    {
+      "id": "6cf7d30c-d10b-4167-b441-2284b7325fde",
+      "entity_id": 5,
+      "entity_type": "product",
+      "attribute_code": "demo-thumbnail",
+      "label": "Demo product thumbnail",
+      "input_type": "media_image",
+      "scope": "global",
+      "is_required": false,
+      "is_unique": false,
+      "is_searchable": false,
+      "is_filterable": false,
+      "is_comparable": false,
+      "is_visible_on_front": false,
+      "used_for_promo_rules": false,
+      "used_for_configurations": false,
+      "swatch_type": "none",
+      "options": [],
+      "version": 1,
+      "metadata": {
+        "description": "",
+        "status": "active",
+        "admin_visible": true,
+        "facetable": false,
+        "sortable": false,
+        "ai_queryable": false,
+        "ai_enrichable": false,
+        "source_policy": "factual",
+        "unit": null,
+        "semantic_role": null,
+        "min": null,
+        "max": null,
+        "max_length": null,
+        "default_value": null,
+        "display_order": 0
+      }
+    },
+    {
+      "id": "4292e697-a7eb-5cfe-a001-d0d94774ace1",
+      "entity_id": 21,
+      "entity_type": "product",
+      "attribute_code": "grocery_group",
+      "label": "Grocery group",
+      "input_type": "multi_select",
+      "scope": "global",
+      "is_required": false,
+      "is_unique": false,
+      "is_searchable": true,
+      "is_filterable": true,
+      "is_comparable": true,
+      "is_visible_on_front": true,
+      "used_for_promo_rules": false,
+      "used_for_configurations": false,
+      "swatch_type": "none",
+      "options": [
+        {
+          "label": "Fruit",
+          "value": "fruit"
+        },
+        {
+          "label": "Vegetables",
+          "value": "vegetables"
+        },
+        {
+          "label": "Dairy",
+          "value": "dairy"
+        },
+        {
+          "label": "Eggs",
+          "value": "eggs"
+        },
+        {
+          "label": "Bakery",
+          "value": "bakery"
+        },
+        {
+          "label": "Grains",
+          "value": "grains"
+        },
+        {
+          "label": "Legumes",
+          "value": "legumes"
+        },
+        {
+          "label": "Meat",
+          "value": "meat"
+        },
+        {
+          "label": "Seafood",
+          "value": "seafood"
+        },
+        {
+          "label": "Nuts",
+          "value": "nuts"
+        },
+        {
+          "label": "Dried Fruit",
+          "value": "dried_fruit"
+        },
+        {
+          "label": "Condiments",
+          "value": "condiments"
+        },
+        {
+          "label": "Beverages",
+          "value": "beverages"
+        },
+        {
+          "label": "Household",
+          "value": "household"
+        }
+      ],
+      "version": 1,
+      "metadata": {
+        "description": "Merchant-authored grocery categorization and suggested culinary uses; not nutrition, allergen safety, certification or preparation instructions.",
+        "status": "active",
+        "admin_visible": true,
+        "facetable": true,
+        "sortable": false,
+        "ai_queryable": true,
+        "ai_enrichable": false,
+        "source_policy": "semantic",
+        "unit": null,
+        "semantic_role": "classification",
+        "min": null,
+        "max": null,
+        "max_length": null,
+        "default_value": null,
+        "display_order": 0
+      }
+    },
+    {
+      "id": "f495d9fc-0aaf-5126-8b53-684d41bec88f",
+      "entity_id": 20,
+      "entity_type": "product",
+      "attribute_code": "ingredient_role",
+      "label": "Ingredient role",
+      "input_type": "multi_select",
+      "scope": "global",
+      "is_required": false,
+      "is_unique": false,
+      "is_searchable": true,
+      "is_filterable": true,
+      "is_comparable": true,
+      "is_visible_on_front": true,
+      "used_for_promo_rules": false,
+      "used_for_configurations": false,
+      "swatch_type": "none",
+      "options": [
+        {
+          "label": "Main Ingredient",
+          "value": "main_ingredient"
+        },
+        {
+          "label": "Side",
+          "value": "side"
+        },
+        {
+          "label": "Base",
+          "value": "base"
+        },
+        {
+          "label": "Seasoning",
+          "value": "seasoning"
+        },
+        {
+          "label": "Topping",
+          "value": "topping"
+        },
+        {
+          "label": "Spread",
+          "value": "spread"
+        },
+        {
+          "label": "Cooking Fat",
+          "value": "cooking_fat"
+        },
+        {
+          "label": "Sweetener",
+          "value": "sweetener"
+        }
+      ],
+      "version": 1,
+      "metadata": {
+        "description": "Merchant-authored grocery categorization and suggested culinary uses; not nutrition, allergen safety, certification or preparation instructions.",
+        "status": "active",
+        "admin_visible": true,
+        "facetable": true,
+        "sortable": false,
+        "ai_queryable": true,
+        "ai_enrichable": false,
+        "source_policy": "semantic",
+        "unit": null,
+        "semantic_role": null,
+        "min": null,
+        "max": null,
+        "max_length": null,
+        "default_value": null,
+        "display_order": 0
+      }
+    },
+    {
+      "id": "83ac6d0c-48f7-4bf3-b169-b2fa14f44c93",
+      "entity_id": 7,
+      "entity_type": "product",
+      "attribute_code": "manufacturer",
+      "label": "Manufacturer",
+      "input_type": "text",
+      "scope": "global",
+      "is_required": false,
+      "is_unique": false,
+      "is_searchable": true,
+      "is_filterable": false,
+      "is_comparable": false,
+      "is_visible_on_front": true,
+      "used_for_promo_rules": false,
+      "used_for_configurations": false,
+      "swatch_type": "none",
+      "options": [],
+      "version": 1,
+      "metadata": {
+        "description": "",
+        "status": "active",
+        "admin_visible": true,
+        "facetable": false,
+        "sortable": false,
+        "ai_queryable": true,
+        "ai_enrichable": false,
+        "source_policy": "factual",
+        "unit": null,
+        "semantic_role": null,
+        "min": null,
+        "max": null,
+        "max_length": 255,
+        "default_value": null,
+        "display_order": 10
+      }
+    },
+    {
+      "id": "9f7c2a01-95be-5584-9f7f-338b75774760",
+      "entity_id": 17,
+      "entity_type": "product",
+      "attribute_code": "meal_occasion",
+      "label": "Meal occasion",
+      "input_type": "multi_select",
+      "scope": "global",
+      "is_required": false,
+      "is_unique": false,
+      "is_searchable": true,
+      "is_filterable": true,
+      "is_comparable": true,
+      "is_visible_on_front": true,
+      "used_for_promo_rules": false,
+      "used_for_configurations": false,
+      "swatch_type": "none",
+      "options": [
+        {
+          "label": "Breakfast",
+          "value": "breakfast"
+        },
+        {
+          "label": "Lunch",
+          "value": "lunch"
+        },
+        {
+          "label": "Dinner",
+          "value": "dinner"
+        },
+        {
+          "label": "Snack",
+          "value": "snack"
+        },
+        {
+          "label": "Dessert",
+          "value": "dessert"
+        }
+      ],
+      "version": 1,
+      "metadata": {
+        "description": "Merchant-authored grocery categorization and suggested culinary uses; not nutrition, allergen safety, certification or preparation instructions.",
+        "status": "active",
+        "admin_visible": true,
+        "facetable": true,
+        "sortable": false,
+        "ai_queryable": true,
+        "ai_enrichable": false,
+        "source_policy": "semantic",
+        "unit": null,
+        "semantic_role": "intended_use",
+        "min": null,
+        "max": null,
+        "max_length": null,
+        "default_value": null,
+        "display_order": 0
+      }
+    },
+    {
+      "id": "53e434c7-87fe-4749-b837-9d8f6f88d3a6",
+      "entity_id": 12,
+      "entity_type": "product",
+      "attribute_code": "meta_description",
+      "label": "Meta description",
+      "input_type": "textarea",
+      "scope": "global",
+      "is_required": false,
+      "is_unique": false,
+      "is_searchable": false,
+      "is_filterable": false,
+      "is_comparable": false,
+      "is_visible_on_front": false,
+      "used_for_promo_rules": false,
+      "used_for_configurations": false,
+      "swatch_type": "none",
+      "options": [],
+      "version": 1,
+      "metadata": {
+        "description": "",
+        "status": "active",
+        "admin_visible": true,
+        "facetable": false,
+        "sortable": false,
+        "ai_queryable": false,
+        "ai_enrichable": false,
+        "source_policy": "factual",
+        "unit": null,
+        "semantic_role": null,
+        "min": null,
+        "max": null,
+        "max_length": 255,
+        "default_value": null,
+        "display_order": 30
+      }
+    },
+    {
+      "id": "115566a8-1996-4d35-bdeb-931094b71387",
+      "entity_id": 11,
+      "entity_type": "product",
+      "attribute_code": "meta_keyword",
+      "label": "Meta keywords",
+      "input_type": "textarea",
+      "scope": "global",
+      "is_required": false,
+      "is_unique": false,
+      "is_searchable": false,
+      "is_filterable": false,
+      "is_comparable": false,
+      "is_visible_on_front": false,
+      "used_for_promo_rules": false,
+      "used_for_configurations": false,
+      "swatch_type": "none",
+      "options": [],
+      "version": 1,
+      "metadata": {
+        "description": "",
+        "status": "active",
+        "admin_visible": true,
+        "facetable": false,
+        "sortable": false,
+        "ai_queryable": false,
+        "ai_enrichable": false,
+        "source_policy": "factual",
+        "unit": null,
+        "semantic_role": null,
+        "min": null,
+        "max": null,
+        "max_length": 1000,
+        "default_value": null,
+        "display_order": 20
+      }
+    },
+    {
+      "id": "3ecdfd12-5db6-4d89-ba21-0d10b39a4e71",
+      "entity_id": 10,
+      "entity_type": "product",
+      "attribute_code": "meta_title",
+      "label": "Meta title",
+      "input_type": "text",
+      "scope": "global",
+      "is_required": false,
+      "is_unique": false,
+      "is_searchable": false,
+      "is_filterable": false,
+      "is_comparable": false,
+      "is_visible_on_front": false,
+      "used_for_promo_rules": false,
+      "used_for_configurations": false,
+      "swatch_type": "none",
+      "options": [],
+      "version": 1,
+      "metadata": {
+        "description": "",
+        "status": "active",
+        "admin_visible": true,
+        "facetable": false,
+        "sortable": false,
+        "ai_queryable": false,
+        "ai_enrichable": false,
+        "source_policy": "factual",
+        "unit": null,
+        "semantic_role": null,
+        "min": null,
+        "max": null,
+        "max_length": 255,
+        "default_value": null,
+        "display_order": 10
+      }
+    },
+    {
+      "id": "68b4e8bf-1414-49fc-99ec-92f49638d376",
+      "entity_id": 13,
+      "entity_type": "product",
+      "attribute_code": "grocery-pack-size",
+      "label": "Pack size",
+      "input_type": "select",
+      "scope": "global",
+      "is_required": false,
+      "is_unique": false,
+      "is_searchable": true,
+      "is_filterable": true,
+      "is_comparable": true,
+      "is_visible_on_front": true,
+      "used_for_promo_rules": false,
+      "used_for_configurations": true,
+      "swatch_type": "none",
+      "options": [
+        {
+          "label": "1kg",
+          "value": "1kg"
+        },
+        {
+          "label": "250g",
+          "value": "250g"
+        },
+        {
+          "label": "2kg",
+          "value": "2kg"
+        },
+        {
+          "label": "3 Pack",
+          "value": "3 Pack"
+        },
+        {
+          "label": "300g",
+          "value": "300g"
+        },
+        {
+          "label": "500g",
+          "value": "500g"
+        },
+        {
+          "label": "6 Pack",
+          "value": "6 Pack"
+        },
+        {
+          "label": "600g",
+          "value": "600g"
+        }
+      ],
+      "version": 1,
+      "metadata": {
+        "description": "",
+        "status": "active",
+        "admin_visible": true,
+        "facetable": false,
+        "sortable": false,
+        "ai_queryable": true,
+        "ai_enrichable": false,
+        "source_policy": "factual",
+        "unit": null,
+        "semantic_role": null,
+        "min": null,
+        "max": null,
+        "max_length": null,
+        "default_value": null,
+        "display_order": 0
+      }
+    },
+    {
+      "id": "cfd80d8e-96d6-46a8-a951-e6c40a1a9a0e",
+      "entity_id": 6,
+      "entity_type": "product",
+      "attribute_code": "short_description",
+      "label": "Short description",
+      "input_type": "textarea",
+      "scope": "global",
+      "is_required": false,
+      "is_unique": false,
+      "is_searchable": true,
+      "is_filterable": false,
+      "is_comparable": false,
+      "is_visible_on_front": true,
+      "used_for_promo_rules": false,
+      "used_for_configurations": false,
+      "swatch_type": "none",
+      "options": [],
+      "version": 1,
+      "metadata": {
+        "description": "",
+        "status": "active",
+        "admin_visible": true,
+        "facetable": false,
+        "sortable": false,
+        "ai_queryable": true,
+        "ai_enrichable": false,
+        "source_policy": "factual",
+        "unit": null,
+        "semantic_role": null,
+        "min": null,
+        "max": null,
+        "max_length": 4000,
+        "default_value": null,
+        "display_order": 10
+      }
+    },
+    {
+      "id": "3396b838-16b6-5dc9-b893-ae2d919a8f76",
+      "entity_id": 18,
+      "entity_type": "product",
+      "attribute_code": "dish_type",
+      "label": "Suggested dishes",
+      "input_type": "multi_select",
+      "scope": "global",
+      "is_required": false,
+      "is_unique": false,
+      "is_searchable": true,
+      "is_filterable": true,
+      "is_comparable": true,
+      "is_visible_on_front": true,
+      "used_for_promo_rules": false,
+      "used_for_configurations": false,
+      "swatch_type": "none",
+      "options": [
+        {
+          "label": "Salads",
+          "value": "salads"
+        },
+        {
+          "label": "Soups",
+          "value": "soups"
+        },
+        {
+          "label": "Pasta Dishes",
+          "value": "pasta_dishes"
+        },
+        {
+          "label": "Rice Dishes",
+          "value": "rice_dishes"
+        },
+        {
+          "label": "Sandwiches",
+          "value": "sandwiches"
+        },
+        {
+          "label": "Stir Fries",
+          "value": "stir_fries"
+        },
+        {
+          "label": "Breakfast Bowls",
+          "value": "breakfast_bowls"
+        },
+        {
+          "label": "Smoothies",
+          "value": "smoothies"
+        },
+        {
+          "label": "Baking",
+          "value": "baking"
+        },
+        {
+          "label": "Desserts",
+          "value": "desserts"
+        },
+        {
+          "label": "Drinks",
+          "value": "drinks"
+        },
+        {
+          "label": "Roast Dinners",
+          "value": "roast_dinners"
+        }
+      ],
+      "version": 1,
+      "metadata": {
+        "description": "Merchant-authored grocery categorization and suggested culinary uses; not nutrition, allergen safety, certification or preparation instructions.",
+        "status": "active",
+        "admin_visible": true,
+        "facetable": true,
+        "sortable": false,
+        "ai_queryable": true,
+        "ai_enrichable": false,
+        "source_policy": "semantic",
+        "unit": null,
+        "semantic_role": "intended_use",
+        "min": null,
+        "max": null,
+        "max_length": null,
+        "default_value": null,
+        "display_order": 0
+      }
+    },
+    {
+      "id": "99021637-f738-5901-89e9-8d6d213c8b62",
+      "entity_id": 19,
+      "entity_type": "product",
+      "attribute_code": "preparation_method",
+      "label": "Suggested preparation",
+      "input_type": "multi_select",
+      "scope": "global",
+      "is_required": false,
+      "is_unique": false,
+      "is_searchable": true,
+      "is_filterable": true,
+      "is_comparable": true,
+      "is_visible_on_front": true,
+      "used_for_promo_rules": false,
+      "used_for_configurations": false,
+      "swatch_type": "none",
+      "options": [
+        {
+          "label": "Boiling",
+          "value": "boiling"
+        },
+        {
+          "label": "Roasting",
+          "value": "roasting"
+        },
+        {
+          "label": "Grilling",
+          "value": "grilling"
+        },
+        {
+          "label": "Sauteing",
+          "value": "sauteing"
+        },
+        {
+          "label": "Baking",
+          "value": "baking"
+        },
+        {
+          "label": "No Cook",
+          "value": "no_cook"
+        }
+      ],
+      "version": 1,
+      "metadata": {
+        "description": "Merchant-authored grocery categorization and suggested culinary uses; not nutrition, allergen safety, certification or preparation instructions.",
+        "status": "active",
+        "admin_visible": true,
+        "facetable": true,
+        "sortable": false,
+        "ai_queryable": true,
+        "ai_enrichable": false,
+        "source_policy": "semantic",
+        "unit": null,
+        "semantic_role": "intended_use",
+        "min": null,
+        "max": null,
+        "max_length": null,
+        "default_value": null,
+        "display_order": 0
+      }
+    },
+    {
+      "id": "d725944f-7e82-487f-bb13-215019862c73",
+      "entity_id": 9,
+      "entity_type": "product",
+      "attribute_code": "weight",
+      "label": "Weight (kg)",
+      "input_type": "measurement",
+      "scope": "global",
+      "is_required": false,
+      "is_unique": false,
+      "is_searchable": false,
+      "is_filterable": false,
+      "is_comparable": false,
+      "is_visible_on_front": false,
+      "used_for_promo_rules": false,
+      "used_for_configurations": false,
+      "swatch_type": "none",
+      "options": [],
+      "version": 1,
+      "metadata": {
+        "description": "",
+        "status": "active",
+        "admin_visible": true,
+        "facetable": false,
+        "sortable": false,
+        "ai_queryable": false,
+        "ai_enrichable": false,
+        "source_policy": "factual",
+        "unit": "kg",
+        "semantic_role": null,
+        "min": 0.0,
+        "max": null,
+        "max_length": null,
+        "default_value": null,
+        "display_order": 10
+      }
+    }
+  ],
+  "languages": {
+    "languages": [
+      {
+        "direction": "rtl",
+        "locale": "ar",
+        "name": "Arabic",
+        "native_name": "العربية",
+        "revision": 1
+      }
+    ],
+    "publication_available": false,
+    "source_locale": "en"
+  },
+  "sources": [
+    {
+      "address": "Ismailia demo branch",
+      "code": "branch-707f978b-1b6b-4dd1-8b4e-22bf25981c4a",
+      "contact_name": "",
+      "contact_phone": "",
+      "entity_id": 63,
+      "id": "bba8b87b-9c00-4b79-b677-3b245c4878bb",
+      "is_enabled": false,
+      "latitude": null,
+      "longitude": null,
+      "name": "Branch verification demo",
+      "priority": 0
+    },
+    {
+      "address": "Ismailia demo branch",
+      "code": "branch-a9d108ef-bb29-44dd-90af-e877d16caa91",
+      "contact_name": "",
+      "contact_phone": "",
+      "entity_id": 64,
+      "id": "dc655e9b-93cb-4cb4-899d-a2b898222a8f",
+      "is_enabled": false,
+      "latitude": null,
+      "longitude": null,
+      "name": "Checkout verification demo",
+      "priority": 0
+    },
+    {
+      "address": "",
+      "code": "default",
+      "contact_name": "",
+      "contact_phone": "",
+      "entity_id": 1,
+      "id": "00000000-0000-0000-0000-000000000001",
+      "is_enabled": true,
+      "latitude": null,
+      "longitude": null,
+      "name": "Default warehouse",
+      "priority": 0
+    },
+    {
+      "address": "10th of Ramadan, Sharqia — illustrative demo facility",
+      "code": "demo-eg-10th-of-ramadan-source-1",
+      "contact_name": "Demo fulfillment team",
+      "contact_phone": "",
+      "entity_id": 60,
+      "id": "345d0b5f-2c4f-4cac-9c51-87faafd4c72a",
+      "is_enabled": true,
+      "latitude": 30.29636,
+      "longitude": 31.74633,
+      "name": "10th of Ramadan — Grocery fulfillment primary",
+      "priority": 0
+    },
+    {
+      "address": "6th of October City, Giza — illustrative demo facility",
+      "code": "demo-eg-6th-of-october-city-source-1",
+      "contact_name": "Demo fulfillment team",
+      "contact_phone": "",
+      "entity_id": 53,
+      "id": "91e2ba52-1e44-47e0-986e-ccc1c1621bef",
+      "is_enabled": true,
+      "latitude": 29.94644,
+      "longitude": 30.91687,
+      "name": "6th of October City — Grocery fulfillment primary",
+      "priority": 0
+    },
+    {
+      "address": "Alexandria, Alexandria — illustrative demo facility",
+      "code": "demo-eg-alexandria-source-1",
+      "contact_name": "Demo fulfillment team",
+      "contact_phone": "",
+      "entity_id": 20,
+      "id": "69ea6a61-2496-4f1b-85f3-063758af97e6",
+      "is_enabled": true,
+      "latitude": 31.20176,
+      "longitude": 29.91582,
+      "name": "Alexandria — Grocery fulfillment primary",
+      "priority": 0
+    },
+    {
+      "address": "Arish, North Sinai — illustrative demo facility",
+      "code": "demo-eg-arish-source-1",
+      "contact_name": "Demo fulfillment team",
+      "contact_phone": "",
+      "entity_id": 46,
+      "id": "303f6f6c-9fd6-4586-be5e-6bf2fac29223",
+      "is_enabled": true,
+      "latitude": 31.13159,
+      "longitude": 33.79844,
+      "name": "Arish — Grocery fulfillment primary",
+      "priority": 0
+    },
+    {
+      "address": "Assiut, Assiut — illustrative demo facility",
+      "code": "demo-eg-assiut-source-1",
+      "contact_name": "Demo fulfillment team",
+      "contact_phone": "",
+      "entity_id": 42,
+      "id": "1d697aab-ec9a-4a74-b35e-919db1f8d00d",
+      "is_enabled": true,
+      "latitude": 27.18096,
+      "longitude": 31.18368,
+      "name": "Assiut — Grocery fulfillment primary",
+      "priority": 0
+    },
+    {
+      "address": "Aswan, Aswan — illustrative demo facility",
+      "code": "demo-eg-aswan-source-1",
+      "contact_name": "Demo fulfillment team",
+      "contact_phone": "",
+      "entity_id": 40,
+      "id": "97d1e125-0a4d-42b6-9698-b76572b09635",
+      "is_enabled": true,
+      "latitude": 24.09082,
+      "longitude": 32.89942,
+      "name": "Aswan — Grocery fulfillment primary",
+      "priority": 0
+    },
+    {
+      "address": "Banha, Qalyubia — illustrative demo facility",
+      "code": "demo-eg-banha-source-1",
+      "contact_name": "Demo fulfillment team",
+      "contact_phone": "",
+      "entity_id": 35,
+      "id": "a965106a-063f-4fa1-9eb6-c1369faed9b4",
+      "is_enabled": true,
+      "latitude": 30.45977,
+      "longitude": 31.1842,
+      "name": "Banha — Grocery fulfillment primary",
+      "priority": 0
+    },
+    {
+      "address": "Beni Suef, Beni Suef — illustrative demo facility",
+      "code": "demo-eg-beni-suef-source-1",
+      "contact_name": "Demo fulfillment team",
+      "contact_phone": "",
+      "entity_id": 43,
+      "id": "56e404d5-8435-4bb8-8cf9-d66f0eda247a",
+      "is_enabled": true,
+      "latitude": 29.07441,
+      "longitude": 31.09785,
+      "name": "Beni Suef — Grocery fulfillment primary",
+      "priority": 0
+    },
+    {
+      "address": "Cairo, Cairo — illustrative demo facility",
+      "code": "demo-eg-cairo-source-1",
+      "contact_name": "Demo fulfillment team",
+      "contact_phone": "",
+      "entity_id": 17,
+      "id": "10487ea5-265a-46ed-845e-543e3b650e11",
+      "is_enabled": true,
+      "latitude": 30.06263,
+      "longitude": 31.24967,
+      "name": "Cairo — Grocery fulfillment primary",
+      "priority": 0
+    },
+    {
+      "address": "Dahab, South Sinai — illustrative demo facility",
+      "code": "demo-eg-dahab-source-1",
+      "contact_name": "Demo fulfillment team",
+      "contact_phone": "",
+      "entity_id": 61,
+      "id": "498df5a9-9152-4b4d-8361-f45d869561e4",
+      "is_enabled": true,
+      "latitude": 28.48208,
+      "longitude": 34.49505,
+      "name": "Dahab — Grocery fulfillment primary",
+      "priority": 0
+    },
+    {
+      "address": "Damanhur, Beheira — illustrative demo facility",
+      "code": "demo-eg-damanhur-source-1",
+      "contact_name": "Demo fulfillment team",
+      "contact_phone": "",
+      "entity_id": 26,
+      "id": "f5cdd6f4-fa37-4e08-833a-928b553843d7",
+      "is_enabled": true,
+      "latitude": 31.03408,
+      "longitude": 30.46823,
+      "name": "Damanhur — Grocery fulfillment primary",
+      "priority": 0
+    },
+    {
+      "address": "Damietta, Damietta — illustrative demo facility",
+      "code": "demo-eg-damietta-source-1",
+      "contact_name": "Demo fulfillment team",
+      "contact_phone": "",
+      "entity_id": 47,
+      "id": "94ce2667-7afe-4c53-abb8-de6ec110a84b",
+      "is_enabled": true,
+      "latitude": 31.41648,
+      "longitude": 31.81332,
+      "name": "Damietta — Grocery fulfillment primary",
+      "priority": 0
+    },
+    {
+      "address": "Dokki, Giza (Demo)",
+      "code": "demo-eg-dokki-source-1",
+      "contact_name": "Demo fulfillment",
+      "contact_phone": "",
+      "entity_id": 11,
+      "id": "d3fa9737-d1c2-49f2-af75-41e2aa79e541",
+      "is_enabled": true,
+      "latitude": 30.0385,
+      "longitude": 31.2115,
+      "name": "Dokki demo primary",
+      "priority": 0
+    },
+    {
+      "address": "El Tor, South Sinai — illustrative demo facility",
+      "code": "demo-eg-el-tor-source-1",
+      "contact_name": "Demo fulfillment team",
+      "contact_phone": "",
+      "entity_id": 55,
+      "id": "ec0655ee-ddfd-4538-9151-3d037c83b00e",
+      "is_enabled": true,
+      "latitude": 28.24168,
+      "longitude": 33.6222,
+      "name": "El Tor — Grocery fulfillment primary",
+      "priority": 0
+    },
+    {
+      "address": "Fayoum, Fayoum — illustrative demo facility",
+      "code": "demo-eg-fayoum-source-1",
+      "contact_name": "Demo fulfillment team",
+      "contact_phone": "",
+      "entity_id": 27,
+      "id": "2ca9ba91-ddb8-426d-bfbe-61bb93dbf978",
+      "is_enabled": true,
+      "latitude": 29.30995,
+      "longitude": 30.8418,
+      "name": "Fayoum — Grocery fulfillment primary",
+      "priority": 0
+    },
+    {
+      "address": "Giza, Giza — illustrative demo facility",
+      "code": "demo-eg-giza-source-1",
+      "contact_name": "Demo fulfillment team",
+      "contact_phone": "",
+      "entity_id": 19,
+      "id": "5992eee5-7dcc-43ad-9e2d-19c6f39960b6",
+      "is_enabled": true,
+      "latitude": 30.00944,
+      "longitude": 31.20861,
+      "name": "Giza — Grocery fulfillment primary",
+      "priority": 0
+    },
+    {
+      "address": "Heliopolis, Cairo (Demo)",
+      "code": "demo-eg-heliopolis-source-1",
+      "contact_name": "Demo fulfillment",
+      "contact_phone": "",
+      "entity_id": 7,
+      "id": "fa9a2eaa-2b1e-43cd-b13d-d2e65c19089b",
+      "is_enabled": true,
+      "latitude": 30.0911,
+      "longitude": 31.3227,
+      "name": "Heliopolis demo primary",
+      "priority": 0
+    },
+    {
+      "address": "Helwan, Cairo — illustrative demo facility",
+      "code": "demo-eg-helwan-source-1",
+      "contact_name": "Demo fulfillment team",
+      "contact_phone": "",
+      "entity_id": 57,
+      "id": "58d317c8-77a5-441b-87e6-41be333b6fd3",
+      "is_enabled": true,
+      "latitude": 29.84144,
+      "longitude": 31.30084,
+      "name": "Helwan — Grocery fulfillment primary",
+      "priority": 0
+    },
+    {
+      "address": "Hurghada, Red Sea — illustrative demo facility",
+      "code": "demo-eg-hurghada-source-1",
+      "contact_name": "Demo fulfillment team",
+      "contact_phone": "",
+      "entity_id": 24,
+      "id": "4dfeeae0-37ce-40a8-8e35-d4ea0147cb6e",
+      "is_enabled": true,
+      "latitude": 27.25738,
+      "longitude": 33.81291,
+      "name": "Hurghada — Grocery fulfillment primary",
+      "priority": 0
+    },
+    {
+      "address": "Ismailia, Ismailia — illustrative demo facility",
+      "code": "demo-eg-ismailia-source-1",
+      "contact_name": "Demo fulfillment team",
+      "contact_phone": "",
+      "entity_id": 31,
+      "id": "fddb3da0-ea7c-412f-ac4d-828c61a59d24",
+      "is_enabled": true,
+      "latitude": 30.60427,
+      "longitude": 32.27225,
+      "name": "Ismailia — Grocery fulfillment primary",
+      "priority": 0
+    },
+    {
+      "address": "Kafr El Sheikh, Kafr El Sheikh — illustrative demo facility",
+      "code": "demo-eg-kafr-el-sheikh-source-1",
+      "contact_name": "Demo fulfillment team",
+      "contact_phone": "",
+      "entity_id": 48,
+      "id": "333c8d1e-0c0f-4355-badd-9a632ad296c3",
+      "is_enabled": true,
+      "latitude": 31.11174,
+      "longitude": 30.93991,
+      "name": "Kafr El Sheikh — Grocery fulfillment primary",
+      "priority": 0
+    },
+    {
+      "address": "Kharga, New Valley — illustrative demo facility",
+      "code": "demo-eg-kharga-source-1",
+      "contact_name": "Demo fulfillment team",
+      "contact_phone": "",
+      "entity_id": 36,
+      "id": "2a359c82-d3ea-4656-98d7-6a48561b1423",
+      "is_enabled": true,
+      "latitude": 25.45101,
+      "longitude": 30.54653,
+      "name": "Kharga — Grocery fulfillment primary",
+      "priority": 0
+    },
+    {
+      "address": "Luxor, Luxor — illustrative demo facility",
+      "code": "demo-eg-luxor-source-1",
+      "contact_name": "Demo fulfillment team",
+      "contact_phone": "",
+      "entity_id": 52,
+      "id": "1d7f563f-38c8-4d2f-b7d7-12aec493424b",
+      "is_enabled": true,
+      "latitude": 25.69893,
+      "longitude": 32.6421,
+      "name": "Luxor — Grocery fulfillment primary",
+      "priority": 0
+    },
+    {
+      "address": "Maadi, Cairo (Demo)",
+      "code": "demo-eg-maadi-source-1",
+      "contact_name": "Demo fulfillment",
+      "contact_phone": "",
+      "entity_id": 3,
+      "id": "e3285032-8eb0-4192-955c-a19e0c8df060",
+      "is_enabled": true,
+      "latitude": 29.9602,
+      "longitude": 31.2569,
+      "name": "Maadi demo primary",
+      "priority": 0
+    },
+    {
+      "address": "Mahalla El Kubra, Gharbia — illustrative demo facility",
+      "code": "demo-eg-mahalla-el-kubra-source-1",
+      "contact_name": "Demo fulfillment team",
+      "contact_phone": "",
+      "entity_id": 54,
+      "id": "ce036371-fa17-4006-b912-7717d89bf67a",
+      "is_enabled": true,
+      "latitude": 30.97063,
+      "longitude": 31.1669,
+      "name": "Mahalla El Kubra — Grocery fulfillment primary",
+      "priority": 0
+    },
+    {
+      "address": "Mansoura, Dakahlia — illustrative demo facility",
+      "code": "demo-eg-mansoura-source-1",
+      "contact_name": "Demo fulfillment team",
+      "contact_phone": "",
+      "entity_id": 22,
+      "id": "802a0623-29e7-435a-aa3a-64f93bb7b5e3",
+      "is_enabled": true,
+      "latitude": 31.03637,
+      "longitude": 31.38069,
+      "name": "Mansoura — Grocery fulfillment primary",
+      "priority": 0
+    },
+    {
+      "address": "Marsa Matrouh, Matrouh — illustrative demo facility",
+      "code": "demo-eg-marsa-matrouh-source-1",
+      "contact_name": "Demo fulfillment team",
+      "contact_phone": "",
+      "entity_id": 49,
+      "id": "0b07c877-d8b1-4547-aad3-49079f225989",
+      "is_enabled": true,
+      "latitude": 31.3529,
+      "longitude": 27.23725,
+      "name": "Marsa Matrouh — Grocery fulfillment primary",
+      "priority": 0
+    },
+    {
+      "address": "Minya, Minya — illustrative demo facility",
+      "code": "demo-eg-minya-source-1",
+      "contact_name": "Demo fulfillment team",
+      "contact_phone": "",
+      "entity_id": 34,
+      "id": "387f90d9-3ed7-419d-825c-6878112a4f18",
+      "is_enabled": true,
+      "latitude": 28.09193,
+      "longitude": 30.75813,
+      "name": "Minya — Grocery fulfillment primary",
+      "priority": 0
+    },
+    {
+      "address": "Nasr City, Cairo (Demo)",
+      "code": "demo-eg-nasr-city-source-1",
+      "contact_name": "Demo fulfillment",
+      "contact_phone": "",
+      "entity_id": 5,
+      "id": "a679962c-401c-4e2c-b425-5f3045bc78b6",
+      "is_enabled": true,
+      "latitude": 30.0566,
+      "longitude": 31.3301,
+      "name": "Nasr City demo primary",
+      "priority": 0
+    },
+    {
+      "address": "New Cairo (Demo)",
+      "code": "demo-eg-new-cairo-source-1",
+      "contact_name": "Demo fulfillment",
+      "contact_phone": "",
+      "entity_id": 9,
+      "id": "5a6a93a8-df6b-4571-856b-216fb376ad2f",
+      "is_enabled": true,
+      "latitude": 30.0074,
+      "longitude": 31.4913,
+      "name": "New Cairo demo primary",
+      "priority": 0
+    },
+    {
+      "address": "New Damietta, Damietta — illustrative demo facility",
+      "code": "demo-eg-new-damietta-source-1",
+      "contact_name": "Demo fulfillment team",
+      "contact_phone": "",
+      "entity_id": 50,
+      "id": "53dbd4c2-c3b4-45dc-8d85-71a78eca2e47",
+      "is_enabled": true,
+      "latitude": 31.43482,
+      "longitude": 31.67506,
+      "name": "New Damietta — Grocery fulfillment primary",
+      "priority": 0
+    },
+    {
+      "address": "Obour, Qalyubia — illustrative demo facility",
+      "code": "demo-eg-obour-source-1",
+      "contact_name": "Demo fulfillment team",
+      "contact_phone": "",
+      "entity_id": 58,
+      "id": "b6c7107a-3418-4e73-9632-092f87757761",
+      "is_enabled": true,
+      "latitude": 30.22886,
+      "longitude": 31.48149,
+      "name": "Obour — Grocery fulfillment primary",
+      "priority": 0
+    },
+    {
+      "address": "Port Said, Port Said — illustrative demo facility",
+      "code": "demo-eg-port-said-source-1",
+      "contact_name": "Demo fulfillment team",
+      "contact_phone": "",
+      "entity_id": 44,
+      "id": "56e0454e-f658-4ea4-a789-578b4dbdf3b4",
+      "is_enabled": true,
+      "latitude": 31.26531,
+      "longitude": 32.3019,
+      "name": "Port Said — Grocery fulfillment primary",
+      "priority": 0
+    },
+    {
+      "address": "Qena, Qena — illustrative demo facility",
+      "code": "demo-eg-qena-source-1",
+      "contact_name": "Demo fulfillment team",
+      "contact_phone": "",
+      "entity_id": 51,
+      "id": "0370a68b-1e9b-42ba-b5d1-5d908aa0210e",
+      "is_enabled": true,
+      "latitude": 26.16418,
+      "longitude": 32.72671,
+      "name": "Qena — Grocery fulfillment primary",
+      "priority": 0
+    },
+    {
+      "address": "Safaga, Red Sea — illustrative demo facility",
+      "code": "demo-eg-safaga-source-1",
+      "contact_name": "Demo fulfillment team",
+      "contact_phone": "",
+      "entity_id": 59,
+      "id": "9f65e54e-6043-44db-8cdf-4ef5a6b83e66",
+      "is_enabled": true,
+      "latitude": 26.74906,
+      "longitude": 33.93891,
+      "name": "Safaga — Grocery fulfillment primary",
+      "priority": 0
+    },
+    {
+      "address": "Sharm El Sheikh, South Sinai — illustrative demo facility",
+      "code": "demo-eg-sharm-el-sheikh-source-1",
+      "contact_name": "Demo fulfillment team",
+      "contact_phone": "",
+      "entity_id": 62,
+      "id": "da4ca892-4323-40a1-aae7-ab821623dd6b",
+      "is_enabled": true,
+      "latitude": 27.91582,
+      "longitude": 34.32995,
+      "name": "Sharm El Sheikh — Grocery fulfillment primary",
+      "priority": 0
+    },
+    {
+      "address": "Shebin El Kom, Monufia — illustrative demo facility",
+      "code": "demo-eg-shebin-el-kom-source-1",
+      "contact_name": "Demo fulfillment team",
+      "contact_phone": "",
+      "entity_id": 33,
+      "id": "3a21f92f-bc50-4ef7-8115-3ecc28fd63a9",
+      "is_enabled": true,
+      "latitude": 30.55258,
+      "longitude": 31.00904,
+      "name": "Shebin El Kom — Grocery fulfillment primary",
+      "priority": 0
+    },
+    {
+      "address": "Sheikh Zayed, Giza (Demo)",
+      "code": "demo-eg-sheikh-zayed-source-1",
+      "contact_name": "Demo fulfillment",
+      "contact_phone": "",
+      "entity_id": 13,
+      "id": "d0283471-9e6c-426b-be6e-e5158be1c2b2",
+      "is_enabled": true,
+      "latitude": 30.0181,
+      "longitude": 30.9725,
+      "name": "Sheikh Zayed demo primary",
+      "priority": 0
+    },
+    {
+      "address": "Smouha, Alexandria (Demo)",
+      "code": "demo-eg-smouha-source-1",
+      "contact_name": "Demo fulfillment",
+      "contact_phone": "",
+      "entity_id": 15,
+      "id": "f85e9d55-3dbe-4f6e-ad9b-fa0cb64d1831",
+      "is_enabled": true,
+      "latitude": 31.2163,
+      "longitude": 29.9424,
+      "name": "Smouha demo primary",
+      "priority": 0
+    },
+    {
+      "address": "Sohag, Sohag — illustrative demo facility",
+      "code": "demo-eg-sohag-source-1",
+      "contact_name": "Demo fulfillment team",
+      "contact_phone": "",
+      "entity_id": 45,
+      "id": "e20aed4c-15ab-499c-9e59-94c6b48edb1c",
+      "is_enabled": true,
+      "latitude": 26.55695,
+      "longitude": 31.69478,
+      "name": "Sohag — Grocery fulfillment primary",
+      "priority": 0
+    },
+    {
+      "address": "Suez, Suez — illustrative demo facility",
+      "code": "demo-eg-suez-source-1",
+      "contact_name": "Demo fulfillment team",
+      "contact_phone": "",
+      "entity_id": 39,
+      "id": "7120967c-df36-4565-aa95-77fa5fe1ff60",
+      "is_enabled": true,
+      "latitude": 29.97371,
+      "longitude": 32.52627,
+      "name": "Suez — Grocery fulfillment primary",
+      "priority": 0
+    },
+    {
+      "address": "Tanta, Gharbia — illustrative demo facility",
+      "code": "demo-eg-tanta-source-1",
+      "contact_name": "Demo fulfillment team",
+      "contact_phone": "",
+      "entity_id": 29,
+      "id": "75f5814a-dbc7-4f5d-8993-ab54a6ef5be5",
+      "is_enabled": true,
+      "latitude": 30.78847,
+      "longitude": 31.00192,
+      "name": "Tanta — Grocery fulfillment primary",
+      "priority": 0
+    },
+    {
+      "address": "Zagazig, Sharqia — illustrative demo facility",
+      "code": "demo-eg-zagazig-source-1",
+      "contact_name": "Demo fulfillment team",
+      "contact_phone": "",
+      "entity_id": 38,
+      "id": "cc12a272-abf0-45b7-b185-448c1abfea3f",
+      "is_enabled": true,
+      "latitude": 30.58768,
+      "longitude": 31.502,
+      "name": "Zagazig — Grocery fulfillment primary",
+      "priority": 0
+    },
+    {
+      "address": "",
+      "code": "demo-global",
+      "contact_name": "",
+      "contact_phone": "",
+      "entity_id": 65,
+      "id": "01a9bb43-c922-46eb-871f-4161a06ff336",
+      "is_enabled": true,
+      "latitude": null,
+      "longitude": null,
+      "name": "Demo global warehouse",
+      "priority": 0
+    },
+    {
+      "address": "gdgdg",
+      "code": "tt",
+      "contact_name": "gdfgdf",
+      "contact_phone": "",
+      "entity_id": 2,
+      "id": "81ddda57-7598-45d4-b5d8-12675e03a652",
+      "is_enabled": true,
+      "latitude": 30.044157200931046,
+      "longitude": 31.23825073242188,
+      "name": "fdgfdg",
+      "priority": 0
+    },
+    {
+      "address": "Dokki, Giza (Demo)",
+      "code": "demo-eg-dokki-source-2",
+      "contact_name": "Demo fulfillment",
+      "contact_phone": "",
+      "entity_id": 12,
+      "id": "2ce3d214-5a21-4b03-80cb-736b27065d32",
+      "is_enabled": true,
+      "latitude": 30.0385,
+      "longitude": 31.2115,
+      "name": "Dokki demo backup",
+      "priority": 10
+    },
+    {
+      "address": "Heliopolis, Cairo (Demo)",
+      "code": "demo-eg-heliopolis-source-2",
+      "contact_name": "Demo fulfillment",
+      "contact_phone": "",
+      "entity_id": 8,
+      "id": "672cd689-3008-499d-bbb9-6491c0105d2d",
+      "is_enabled": true,
+      "latitude": 30.0911,
+      "longitude": 31.3227,
+      "name": "Heliopolis demo backup",
+      "priority": 10
+    },
+    {
+      "address": "Maadi, Cairo (Demo)",
+      "code": "demo-eg-maadi-source-2",
+      "contact_name": "Demo fulfillment",
+      "contact_phone": "",
+      "entity_id": 4,
+      "id": "b4f5facf-87e3-4b52-9070-6d8f62eff08d",
+      "is_enabled": true,
+      "latitude": 29.9602,
+      "longitude": 31.2569,
+      "name": "Maadi demo backup",
+      "priority": 10
+    },
+    {
+      "address": "Nasr City, Cairo (Demo)",
+      "code": "demo-eg-nasr-city-source-2",
+      "contact_name": "Demo fulfillment",
+      "contact_phone": "",
+      "entity_id": 6,
+      "id": "5dc72504-a888-467f-8452-0356cd0159e1",
+      "is_enabled": true,
+      "latitude": 30.0566,
+      "longitude": 31.3301,
+      "name": "Nasr City demo backup",
+      "priority": 10
+    },
+    {
+      "address": "New Cairo (Demo)",
+      "code": "demo-eg-new-cairo-source-2",
+      "contact_name": "Demo fulfillment",
+      "contact_phone": "",
+      "entity_id": 10,
+      "id": "6cd5bb8f-f7f4-4a0c-a5b2-35f574415b05",
+      "is_enabled": true,
+      "latitude": 30.0074,
+      "longitude": 31.4913,
+      "name": "New Cairo demo backup",
+      "priority": 10
+    },
+    {
+      "address": "Sheikh Zayed, Giza (Demo)",
+      "code": "demo-eg-sheikh-zayed-source-2",
+      "contact_name": "Demo fulfillment",
+      "contact_phone": "",
+      "entity_id": 14,
+      "id": "5972cbd2-1019-469e-a778-7ef1ad293b45",
+      "is_enabled": true,
+      "latitude": 30.0181,
+      "longitude": 30.9725,
+      "name": "Sheikh Zayed demo backup",
+      "priority": 10
+    },
+    {
+      "address": "Smouha, Alexandria (Demo)",
+      "code": "demo-eg-smouha-source-2",
+      "contact_name": "Demo fulfillment",
+      "contact_phone": "",
+      "entity_id": 16,
+      "id": "b9fcd278-2008-4814-b2ab-4c7c4bd244a4",
+      "is_enabled": true,
+      "latitude": 31.2163,
+      "longitude": 29.9424,
+      "name": "Smouha demo backup",
+      "priority": 10
+    },
+    {
+      "address": "Alexandria, Alexandria — illustrative demo facility",
+      "code": "demo-eg-regional-alexandria",
+      "contact_name": "Demo fulfillment team",
+      "contact_phone": "",
+      "entity_id": 21,
+      "id": "d3e44a00-08e2-4903-80aa-5530308b4884",
+      "is_enabled": true,
+      "latitude": 31.20176,
+      "longitude": 29.91582,
+      "name": "Alexandria — Grocery fulfillment backup",
+      "priority": 100
+    },
+    {
+      "address": "Assiut, Assiut — illustrative demo facility",
+      "code": "demo-eg-regional-assiut",
+      "contact_name": "Demo fulfillment team",
+      "contact_phone": "",
+      "entity_id": 37,
+      "id": "9b028108-b076-4be8-a3d0-5f29fe6176bc",
+      "is_enabled": true,
+      "latitude": 27.18096,
+      "longitude": 31.18368,
+      "name": "Assiut — Grocery fulfillment backup",
+      "priority": 100
+    },
+    {
+      "address": "Cairo, Cairo — illustrative demo facility",
+      "code": "demo-eg-regional-cairo",
+      "contact_name": "Demo fulfillment team",
+      "contact_phone": "",
+      "entity_id": 18,
+      "id": "49fa3961-26e5-4c1c-a132-7abd8f06ce16",
+      "is_enabled": true,
+      "latitude": 30.06263,
+      "longitude": 31.24967,
+      "name": "Cairo — Grocery fulfillment backup",
+      "priority": 100
+    },
+    {
+      "address": "Hurghada, Red Sea — illustrative demo facility",
+      "code": "demo-eg-regional-hurghada",
+      "contact_name": "Demo fulfillment team",
+      "contact_phone": "",
+      "entity_id": 25,
+      "id": "e2f3fdf4-b399-489d-9ba4-48cd62ff0427",
+      "is_enabled": true,
+      "latitude": 27.25738,
+      "longitude": 33.81291,
+      "name": "Hurghada — Grocery fulfillment backup",
+      "priority": 100
+    },
+    {
+      "address": "Ismailia, Ismailia — illustrative demo facility",
+      "code": "demo-eg-regional-ismailia",
+      "contact_name": "Demo fulfillment team",
+      "contact_phone": "",
+      "entity_id": 32,
+      "id": "36a51dc0-ebb6-4ae4-a6e8-c1e112b427a3",
+      "is_enabled": true,
+      "latitude": 30.60427,
+      "longitude": 32.27225,
+      "name": "Ismailia — Grocery fulfillment backup",
+      "priority": 100
+    },
+    {
+      "address": "Luxor, Luxor — illustrative demo facility",
+      "code": "demo-eg-regional-luxor",
+      "contact_name": "Demo fulfillment team",
+      "contact_phone": "",
+      "entity_id": 41,
+      "id": "2bf08a49-7a2d-4d16-9821-f1eef676342d",
+      "is_enabled": true,
+      "latitude": 25.69893,
+      "longitude": 32.6421,
+      "name": "Luxor — Grocery fulfillment backup",
+      "priority": 100
+    },
+    {
+      "address": "Mansoura, Dakahlia — illustrative demo facility",
+      "code": "demo-eg-regional-mansoura",
+      "contact_name": "Demo fulfillment team",
+      "contact_phone": "",
+      "entity_id": 23,
+      "id": "ff230cc2-846a-42bd-9688-eee0f0543ede",
+      "is_enabled": true,
+      "latitude": 31.03637,
+      "longitude": 31.38069,
+      "name": "Mansoura — Grocery fulfillment backup",
+      "priority": 100
+    },
+    {
+      "address": "Minya, Minya — illustrative demo facility",
+      "code": "demo-eg-regional-minya",
+      "contact_name": "Demo fulfillment team",
+      "contact_phone": "",
+      "entity_id": 28,
+      "id": "f6612064-193a-486f-af6c-e2e299868931",
+      "is_enabled": true,
+      "latitude": 28.09193,
+      "longitude": 30.75813,
+      "name": "Minya — Grocery fulfillment backup",
+      "priority": 100
+    },
+    {
+      "address": "Sharm El Sheikh, South Sinai — illustrative demo facility",
+      "code": "demo-eg-regional-sharm-el-sheikh",
+      "contact_name": "Demo fulfillment team",
+      "contact_phone": "",
+      "entity_id": 56,
+      "id": "a70bebf6-842d-47b7-8f49-704fb1029fa7",
+      "is_enabled": true,
+      "latitude": 27.91582,
+      "longitude": 34.32995,
+      "name": "Sharm El Sheikh — Grocery fulfillment backup",
+      "priority": 100
+    },
+    {
+      "address": "Tanta, Gharbia — illustrative demo facility",
+      "code": "demo-eg-regional-tanta",
+      "contact_name": "Demo fulfillment team",
+      "contact_phone": "",
+      "entity_id": 30,
+      "id": "f8804add-e979-40d3-8fe7-ddde5326c231",
+      "is_enabled": true,
+      "latitude": 30.78847,
+      "longitude": 31.00192,
+      "name": "Tanta — Grocery fulfillment backup",
+      "priority": 100
+    }
+  ],
+  "stocks": [
+    {
+      "code": "default",
+      "entity_id": 1,
+      "id": "00000000-0000-0000-0000-000000000001",
+      "is_default": true,
+      "is_global": false,
+      "name": "Default stock",
+      "sources": [
+        {
+          "priority": 0,
+          "source_id": "00000000-0000-0000-0000-000000000001"
+        },
+        {
+          "priority": 0,
+          "source_id": "bba8b87b-9c00-4b79-b677-3b245c4878bb"
+        },
+        {
+          "priority": 0,
+          "source_id": "dc655e9b-93cb-4cb4-899d-a2b898222a8f"
+        },
+        {
+          "priority": 10,
+          "source_id": "81ddda57-7598-45d4-b5d8-12675e03a652"
+        }
+      ]
+    },
+    {
+      "code": "demo-eg-10th-of-ramadan",
+      "entity_id": 39,
+      "id": "ecd357d0-090f-460e-8f4b-dcdaa89e5f66",
+      "is_default": false,
+      "is_global": false,
+      "name": "10th of Ramadan demo stock",
+      "sources": [
+        {
+          "priority": 0,
+          "source_id": "345d0b5f-2c4f-4cac-9c51-87faafd4c72a"
+        },
+        {
+          "priority": 100,
+          "source_id": "36a51dc0-ebb6-4ae4-a6e8-c1e112b427a3"
+        }
+      ]
+    },
+    {
+      "code": "demo-eg-6th-of-october-city",
+      "entity_id": 36,
+      "id": "c7d8c587-2951-4f3c-89de-3ceb2fef53b4",
+      "is_default": false,
+      "is_global": false,
+      "name": "6th of October City demo stock",
+      "sources": [
+        {
+          "priority": 0,
+          "source_id": "91e2ba52-1e44-47e0-986e-ccc1c1621bef"
+        },
+        {
+          "priority": 100,
+          "source_id": "49fa3961-26e5-4c1c-a132-7abd8f06ce16"
+        }
+      ]
+    },
+    {
+      "code": "demo-eg-alexandria",
+      "entity_id": 11,
+      "id": "3a9faa44-69e3-48f7-ae69-6a943b28725e",
+      "is_default": false,
+      "is_global": false,
+      "name": "Alexandria demo stock",
+      "sources": [
+        {
+          "priority": 0,
+          "source_id": "69ea6a61-2496-4f1b-85f3-063758af97e6"
+        },
+        {
+          "priority": 100,
+          "source_id": "d3e44a00-08e2-4903-80aa-5530308b4884"
+        }
+      ]
+    },
+    {
+      "code": "demo-eg-arish",
+      "entity_id": 34,
+      "id": "49d99d94-370e-401b-814c-5e2e2708136a",
+      "is_default": false,
+      "is_global": false,
+      "name": "Arish demo stock",
+      "sources": [
+        {
+          "priority": 0,
+          "source_id": "303f6f6c-9fd6-4586-be5e-6bf2fac29223"
+        },
+        {
+          "priority": 100,
+          "source_id": "36a51dc0-ebb6-4ae4-a6e8-c1e112b427a3"
+        }
+      ]
+    },
+    {
+      "code": "demo-eg-assiut",
+      "entity_id": 25,
+      "id": "d0c228f1-a87e-493c-91a1-043550eae102",
+      "is_default": false,
+      "is_global": false,
+      "name": "Assiut demo stock",
+      "sources": [
+        {
+          "priority": 0,
+          "source_id": "1d697aab-ec9a-4a74-b35e-919db1f8d00d"
+        },
+        {
+          "priority": 100,
+          "source_id": "9b028108-b076-4be8-a3d0-5f29fe6176bc"
+        }
+      ]
+    },
+    {
+      "code": "demo-eg-aswan",
+      "entity_id": 24,
+      "id": "8fe7728d-3b41-453e-8a65-0db38d645290",
+      "is_default": false,
+      "is_global": false,
+      "name": "Aswan demo stock",
+      "sources": [
+        {
+          "priority": 0,
+          "source_id": "97d1e125-0a4d-42b6-9698-b76572b09635"
+        },
+        {
+          "priority": 100,
+          "source_id": "2bf08a49-7a2d-4d16-9821-f1eef676342d"
+        }
+      ]
+    },
+    {
+      "code": "demo-eg-banha",
+      "entity_id": 20,
+      "id": "b90c58e1-14b8-46e8-ae9e-df9a37b763c3",
+      "is_default": false,
+      "is_global": false,
+      "name": "Banha demo stock",
+      "sources": [
+        {
+          "priority": 0,
+          "source_id": "a965106a-063f-4fa1-9eb6-c1369faed9b4"
+        },
+        {
+          "priority": 100,
+          "source_id": "49fa3961-26e5-4c1c-a132-7abd8f06ce16"
+        }
+      ]
+    },
+    {
+      "code": "demo-eg-beni-suef",
+      "entity_id": 26,
+      "id": "24252cd2-b808-42c2-9419-554b3395dc6e",
+      "is_default": false,
+      "is_global": false,
+      "name": "Beni Suef demo stock",
+      "sources": [
+        {
+          "priority": 0,
+          "source_id": "56e404d5-8435-4bb8-8cf9-d66f0eda247a"
+        },
+        {
+          "priority": 100,
+          "source_id": "f6612064-193a-486f-af6c-e2e299868931"
+        }
+      ]
+    },
+    {
+      "code": "demo-eg-cairo",
+      "entity_id": 9,
+      "id": "ea952823-86a8-4643-98f3-9585269ec47b",
+      "is_default": false,
+      "is_global": false,
+      "name": "Cairo demo stock",
+      "sources": [
+        {
+          "priority": 0,
+          "source_id": "10487ea5-265a-46ed-845e-543e3b650e11"
+        },
+        {
+          "priority": 100,
+          "source_id": "49fa3961-26e5-4c1c-a132-7abd8f06ce16"
+        }
+      ]
+    },
+    {
+      "code": "demo-eg-dahab",
+      "entity_id": 43,
+      "id": "7f58a696-ab61-4de0-b4c4-f2c3357c54b4",
+      "is_default": false,
+      "is_global": false,
+      "name": "Dahab demo stock",
+      "sources": [
+        {
+          "priority": 0,
+          "source_id": "498df5a9-9152-4b4d-8361-f45d869561e4"
+        },
+        {
+          "priority": 100,
+          "source_id": "a70bebf6-842d-47b7-8f49-704fb1029fa7"
+        }
+      ]
+    },
+    {
+      "code": "demo-eg-damanhur",
+      "entity_id": 14,
+      "id": "4839d650-1b9a-4171-9404-bf67b191e592",
+      "is_default": false,
+      "is_global": false,
+      "name": "Damanhur demo stock",
+      "sources": [
+        {
+          "priority": 0,
+          "source_id": "f5cdd6f4-fa37-4e08-833a-928b553843d7"
+        },
+        {
+          "priority": 100,
+          "source_id": "d3e44a00-08e2-4903-80aa-5530308b4884"
+        }
+      ]
+    },
+    {
+      "code": "demo-eg-damietta",
+      "entity_id": 28,
+      "id": "e774fa7a-c47f-4831-addc-02234a2c3864",
+      "is_default": false,
+      "is_global": false,
+      "name": "Damietta demo stock",
+      "sources": [
+        {
+          "priority": 0,
+          "source_id": "94ce2667-7afe-4c53-abb8-de6ec110a84b"
+        },
+        {
+          "priority": 100,
+          "source_id": "ff230cc2-846a-42bd-9688-eee0f0543ede"
+        }
+      ]
+    },
+    {
+      "code": "demo-eg-dokki",
+      "entity_id": 6,
+      "id": "c558d9a2-d008-4b09-97b8-dee0c0329d09",
+      "is_default": false,
+      "is_global": false,
+      "name": "Dokki demo stock",
+      "sources": [
+        {
+          "priority": 0,
+          "source_id": "d3fa9737-d1c2-49f2-af75-41e2aa79e541"
+        },
+        {
+          "priority": 10,
+          "source_id": "2ce3d214-5a21-4b03-80cb-736b27065d32"
+        }
+      ]
+    },
+    {
+      "code": "demo-eg-el-tor",
+      "entity_id": 33,
+      "id": "86fc3ff4-cbaa-4fc7-ae84-debecffcc469",
+      "is_default": false,
+      "is_global": false,
+      "name": "El Tor demo stock",
+      "sources": [
+        {
+          "priority": 0,
+          "source_id": "ec0655ee-ddfd-4538-9151-3d037c83b00e"
+        },
+        {
+          "priority": 100,
+          "source_id": "a70bebf6-842d-47b7-8f49-704fb1029fa7"
+        }
+      ]
+    },
+    {
+      "code": "demo-eg-fayoum",
+      "entity_id": 15,
+      "id": "fd90cd46-de71-439f-9c5c-be516b3f6ac3",
+      "is_default": false,
+      "is_global": false,
+      "name": "Fayoum demo stock",
+      "sources": [
+        {
+          "priority": 0,
+          "source_id": "2ca9ba91-ddb8-426d-bfbe-61bb93dbf978"
+        },
+        {
+          "priority": 100,
+          "source_id": "f6612064-193a-486f-af6c-e2e299868931"
+        }
+      ]
+    },
+    {
+      "code": "demo-eg-giza",
+      "entity_id": 10,
+      "id": "7b5bf565-e7ce-44ef-9b2e-d63ae1d69b98",
+      "is_default": false,
+      "is_global": false,
+      "name": "Giza demo stock",
+      "sources": [
+        {
+          "priority": 0,
+          "source_id": "5992eee5-7dcc-43ad-9e2d-19c6f39960b6"
+        },
+        {
+          "priority": 100,
+          "source_id": "49fa3961-26e5-4c1c-a132-7abd8f06ce16"
+        }
+      ]
+    },
+    {
+      "code": "demo-eg-heliopolis",
+      "entity_id": 4,
+      "id": "3d38082b-13c3-40b3-834b-4ad824531d55",
+      "is_default": false,
+      "is_global": false,
+      "name": "Heliopolis demo stock",
+      "sources": [
+        {
+          "priority": 0,
+          "source_id": "fa9a2eaa-2b1e-43cd-b13d-d2e65c19089b"
+        },
+        {
+          "priority": 10,
+          "source_id": "672cd689-3008-499d-bbb9-6491c0105d2d"
+        }
+      ]
+    },
+    {
+      "code": "demo-eg-helwan",
+      "entity_id": 37,
+      "id": "9eddbebf-906d-49bc-8208-5627c6824864",
+      "is_default": false,
+      "is_global": false,
+      "name": "Helwan demo stock",
+      "sources": [
+        {
+          "priority": 0,
+          "source_id": "58d317c8-77a5-441b-87e6-41be333b6fd3"
+        },
+        {
+          "priority": 100,
+          "source_id": "49fa3961-26e5-4c1c-a132-7abd8f06ce16"
+        }
+      ]
+    },
+    {
+      "code": "demo-eg-hurghada",
+      "entity_id": 13,
+      "id": "a0004333-aede-4040-99ef-832ba6850365",
+      "is_default": false,
+      "is_global": false,
+      "name": "Hurghada demo stock",
+      "sources": [
+        {
+          "priority": 0,
+          "source_id": "4dfeeae0-37ce-40a8-8e35-d4ea0147cb6e"
+        },
+        {
+          "priority": 100,
+          "source_id": "e2f3fdf4-b399-489d-9ba4-48cd62ff0427"
+        }
+      ]
+    },
+    {
+      "code": "demo-eg-ismailia",
+      "entity_id": 17,
+      "id": "5a47661b-2dbc-41d2-84d9-1427ed3b30a8",
+      "is_default": false,
+      "is_global": false,
+      "name": "Ismailia demo stock",
+      "sources": [
+        {
+          "priority": 0,
+          "source_id": "fddb3da0-ea7c-412f-ac4d-828c61a59d24"
+        },
+        {
+          "priority": 100,
+          "source_id": "36a51dc0-ebb6-4ae4-a6e8-c1e112b427a3"
+        }
+      ]
+    },
+    {
+      "code": "demo-eg-kafr-el-sheikh",
+      "entity_id": 29,
+      "id": "d7cd438a-f4f4-49f2-b846-09ab3eac2256",
+      "is_default": false,
+      "is_global": false,
+      "name": "Kafr El Sheikh demo stock",
+      "sources": [
+        {
+          "priority": 0,
+          "source_id": "333c8d1e-0c0f-4355-badd-9a632ad296c3"
+        },
+        {
+          "priority": 100,
+          "source_id": "f8804add-e979-40d3-8fe7-ddde5326c231"
+        }
+      ]
+    },
+    {
+      "code": "demo-eg-kharga",
+      "entity_id": 21,
+      "id": "de05208b-29d0-45ec-a3e1-09dd4e6a9202",
+      "is_default": false,
+      "is_global": false,
+      "name": "Kharga demo stock",
+      "sources": [
+        {
+          "priority": 0,
+          "source_id": "2a359c82-d3ea-4656-98d7-6a48561b1423"
+        },
+        {
+          "priority": 100,
+          "source_id": "9b028108-b076-4be8-a3d0-5f29fe6176bc"
+        }
+      ]
+    },
+    {
+      "code": "demo-eg-luxor",
+      "entity_id": 35,
+      "id": "b6140d0d-8350-4f05-8571-1bc39d94028e",
+      "is_default": false,
+      "is_global": false,
+      "name": "Luxor demo stock",
+      "sources": [
+        {
+          "priority": 0,
+          "source_id": "1d7f563f-38c8-4d2f-b7d7-12aec493424b"
+        },
+        {
+          "priority": 100,
+          "source_id": "2bf08a49-7a2d-4d16-9821-f1eef676342d"
+        }
+      ]
+    },
+    {
+      "code": "demo-eg-maadi",
+      "entity_id": 2,
+      "id": "411a4a9f-32cf-4145-a347-4dd5bb4f5ae8",
+      "is_default": false,
+      "is_global": false,
+      "name": "Maadi demo stock",
+      "sources": [
+        {
+          "priority": 0,
+          "source_id": "e3285032-8eb0-4192-955c-a19e0c8df060"
+        },
+        {
+          "priority": 10,
+          "source_id": "b4f5facf-87e3-4b52-9070-6d8f62eff08d"
+        }
+      ]
+    },
+    {
+      "code": "demo-eg-mahalla-el-kubra",
+      "entity_id": 38,
+      "id": "a0cb4ac5-890f-4bf2-8e15-68c1aec78560",
+      "is_default": false,
+      "is_global": false,
+      "name": "Mahalla El Kubra demo stock",
+      "sources": [
+        {
+          "priority": 0,
+          "source_id": "ce036371-fa17-4006-b912-7717d89bf67a"
+        },
+        {
+          "priority": 100,
+          "source_id": "f8804add-e979-40d3-8fe7-ddde5326c231"
+        }
+      ]
+    },
+    {
+      "code": "demo-eg-mansoura",
+      "entity_id": 12,
+      "id": "63abe4f6-f9bf-41b4-aeea-ae7c9615e0ab",
+      "is_default": false,
+      "is_global": false,
+      "name": "Mansoura demo stock",
+      "sources": [
+        {
+          "priority": 0,
+          "source_id": "802a0623-29e7-435a-aa3a-64f93bb7b5e3"
+        },
+        {
+          "priority": 100,
+          "source_id": "ff230cc2-846a-42bd-9688-eee0f0543ede"
+        }
+      ]
+    },
+    {
+      "code": "demo-eg-marsa-matrouh",
+      "entity_id": 30,
+      "id": "3d4e69f0-5bae-4551-a281-44b60bf55761",
+      "is_default": false,
+      "is_global": false,
+      "name": "Marsa Matrouh demo stock",
+      "sources": [
+        {
+          "priority": 0,
+          "source_id": "0b07c877-d8b1-4547-aad3-49079f225989"
+        },
+        {
+          "priority": 100,
+          "source_id": "d3e44a00-08e2-4903-80aa-5530308b4884"
+        }
+      ]
+    },
+    {
+      "code": "demo-eg-minya",
+      "entity_id": 19,
+      "id": "0efac179-6ecd-47d5-a70e-e1d5619dd5d2",
+      "is_default": false,
+      "is_global": false,
+      "name": "Minya demo stock",
+      "sources": [
+        {
+          "priority": 0,
+          "source_id": "387f90d9-3ed7-419d-825c-6878112a4f18"
+        },
+        {
+          "priority": 100,
+          "source_id": "f6612064-193a-486f-af6c-e2e299868931"
+        }
+      ]
+    },
+    {
+      "code": "demo-eg-nasr-city",
+      "entity_id": 3,
+      "id": "c4908e4e-d5d3-42c0-808d-f915bd9f7841",
+      "is_default": false,
+      "is_global": false,
+      "name": "Nasr City demo stock",
+      "sources": [
+        {
+          "priority": 0,
+          "source_id": "a679962c-401c-4e2c-b425-5f3045bc78b6"
+        },
+        {
+          "priority": 10,
+          "source_id": "5dc72504-a888-467f-8452-0356cd0159e1"
+        }
+      ]
+    },
+    {
+      "code": "demo-eg-new-cairo",
+      "entity_id": 5,
+      "id": "edc82d70-81f5-440a-921b-3c23e01cacb8",
+      "is_default": false,
+      "is_global": false,
+      "name": "New Cairo demo stock",
+      "sources": [
+        {
+          "priority": 0,
+          "source_id": "5a6a93a8-df6b-4571-856b-216fb376ad2f"
+        },
+        {
+          "priority": 10,
+          "source_id": "6cd5bb8f-f7f4-4a0c-a5b2-35f574415b05"
+        }
+      ]
+    },
+    {
+      "code": "demo-eg-new-damietta",
+      "entity_id": 41,
+      "id": "425c264a-44a3-49b4-9c31-98867b8d1038",
+      "is_default": false,
+      "is_global": false,
+      "name": "New Damietta demo stock",
+      "sources": [
+        {
+          "priority": 0,
+          "source_id": "53dbd4c2-c3b4-45dc-8d85-71a78eca2e47"
+        },
+        {
+          "priority": 100,
+          "source_id": "ff230cc2-846a-42bd-9688-eee0f0543ede"
+        }
+      ]
+    },
+    {
+      "code": "demo-eg-obour",
+      "entity_id": 40,
+      "id": "d5d37175-1bed-40f8-b3cf-3d70fd44d641",
+      "is_default": false,
+      "is_global": false,
+      "name": "Obour demo stock",
+      "sources": [
+        {
+          "priority": 0,
+          "source_id": "b6c7107a-3418-4e73-9632-092f87757761"
+        },
+        {
+          "priority": 100,
+          "source_id": "49fa3961-26e5-4c1c-a132-7abd8f06ce16"
+        }
+      ]
+    },
+    {
+      "code": "demo-eg-port-said",
+      "entity_id": 27,
+      "id": "c4b2118b-5307-4acf-8ee8-e1b1e8e0bbd1",
+      "is_default": false,
+      "is_global": false,
+      "name": "Port Said demo stock",
+      "sources": [
+        {
+          "priority": 0,
+          "source_id": "56e0454e-f658-4ea4-a789-578b4dbdf3b4"
+        },
+        {
+          "priority": 100,
+          "source_id": "36a51dc0-ebb6-4ae4-a6e8-c1e112b427a3"
+        }
+      ]
+    },
+    {
+      "code": "demo-eg-qena",
+      "entity_id": 31,
+      "id": "1e0ed277-d401-421a-aab2-591ea4e87fcf",
+      "is_default": false,
+      "is_global": false,
+      "name": "Qena demo stock",
+      "sources": [
+        {
+          "priority": 0,
+          "source_id": "0370a68b-1e9b-42ba-b5d1-5d908aa0210e"
+        },
+        {
+          "priority": 100,
+          "source_id": "2bf08a49-7a2d-4d16-9821-f1eef676342d"
+        }
+      ]
+    },
+    {
+      "code": "demo-eg-safaga",
+      "entity_id": 42,
+      "id": "267b74d3-412f-497f-aa8b-227ede320633",
+      "is_default": false,
+      "is_global": false,
+      "name": "Safaga demo stock",
+      "sources": [
+        {
+          "priority": 0,
+          "source_id": "9f65e54e-6043-44db-8cdf-4ef5a6b83e66"
+        },
+        {
+          "priority": 100,
+          "source_id": "e2f3fdf4-b399-489d-9ba4-48cd62ff0427"
+        }
+      ]
+    },
+    {
+      "code": "demo-eg-sharm-el-sheikh",
+      "entity_id": 44,
+      "id": "34fe6ed4-2afe-454e-a901-69c9a9a73a68",
+      "is_default": false,
+      "is_global": false,
+      "name": "Sharm El Sheikh demo stock",
+      "sources": [
+        {
+          "priority": 0,
+          "source_id": "da4ca892-4323-40a1-aae7-ab821623dd6b"
+        },
+        {
+          "priority": 100,
+          "source_id": "a70bebf6-842d-47b7-8f49-704fb1029fa7"
+        }
+      ]
+    },
+    {
+      "code": "demo-eg-shebin-el-kom",
+      "entity_id": 18,
+      "id": "49952e26-629c-4ff6-b8c6-cfcc8041b4f3",
+      "is_default": false,
+      "is_global": false,
+      "name": "Shebin El Kom demo stock",
+      "sources": [
+        {
+          "priority": 0,
+          "source_id": "3a21f92f-bc50-4ef7-8115-3ecc28fd63a9"
+        },
+        {
+          "priority": 100,
+          "source_id": "f8804add-e979-40d3-8fe7-ddde5326c231"
+        }
+      ]
+    },
+    {
+      "code": "demo-eg-sheikh-zayed",
+      "entity_id": 7,
+      "id": "b6e7112b-86dc-4991-8ce7-d4611dccd07b",
+      "is_default": false,
+      "is_global": false,
+      "name": "Sheikh Zayed demo stock",
+      "sources": [
+        {
+          "priority": 0,
+          "source_id": "d0283471-9e6c-426b-be6e-e5158be1c2b2"
+        },
+        {
+          "priority": 10,
+          "source_id": "5972cbd2-1019-469e-a778-7ef1ad293b45"
+        }
+      ]
+    },
+    {
+      "code": "demo-eg-smouha",
+      "entity_id": 8,
+      "id": "cbd2208c-d9cb-4fbe-91ec-2de130853c08",
+      "is_default": false,
+      "is_global": false,
+      "name": "Smouha demo stock",
+      "sources": [
+        {
+          "priority": 0,
+          "source_id": "f85e9d55-3dbe-4f6e-ad9b-fa0cb64d1831"
+        },
+        {
+          "priority": 10,
+          "source_id": "b9fcd278-2008-4814-b2ab-4c7c4bd244a4"
+        }
+      ]
+    },
+    {
+      "code": "demo-eg-sohag",
+      "entity_id": 32,
+      "id": "231f3c13-056f-4657-a907-4cd98f040c77",
+      "is_default": false,
+      "is_global": false,
+      "name": "Sohag demo stock",
+      "sources": [
+        {
+          "priority": 0,
+          "source_id": "e20aed4c-15ab-499c-9e59-94c6b48edb1c"
+        },
+        {
+          "priority": 100,
+          "source_id": "9b028108-b076-4be8-a3d0-5f29fe6176bc"
+        }
+      ]
+    },
+    {
+      "code": "demo-eg-suez",
+      "entity_id": 23,
+      "id": "5e52212d-171b-4263-9753-1a93c5aad29f",
+      "is_default": false,
+      "is_global": false,
+      "name": "Suez demo stock",
+      "sources": [
+        {
+          "priority": 0,
+          "source_id": "7120967c-df36-4565-aa95-77fa5fe1ff60"
+        },
+        {
+          "priority": 100,
+          "source_id": "36a51dc0-ebb6-4ae4-a6e8-c1e112b427a3"
+        }
+      ]
+    },
+    {
+      "code": "demo-eg-tanta",
+      "entity_id": 16,
+      "id": "c83c282c-18cb-4679-b899-e95e86b30022",
+      "is_default": false,
+      "is_global": false,
+      "name": "Tanta demo stock",
+      "sources": [
+        {
+          "priority": 0,
+          "source_id": "75f5814a-dbc7-4f5d-8993-ab54a6ef5be5"
+        },
+        {
+          "priority": 100,
+          "source_id": "f8804add-e979-40d3-8fe7-ddde5326c231"
+        }
+      ]
+    },
+    {
+      "code": "demo-eg-zagazig",
+      "entity_id": 22,
+      "id": "a7d46cd5-c59a-4c25-8a0e-13f3b5ff1139",
+      "is_default": false,
+      "is_global": false,
+      "name": "Zagazig demo stock",
+      "sources": [
+        {
+          "priority": 0,
+          "source_id": "cc12a272-abf0-45b7-b185-448c1abfea3f"
+        },
+        {
+          "priority": 100,
+          "source_id": "36a51dc0-ebb6-4ae4-a6e8-c1e112b427a3"
+        }
+      ]
+    },
+    {
+      "code": "demo-global",
+      "entity_id": 45,
+      "id": "664973b4-2e3a-4200-9445-8a18a9b1ac70",
+      "is_default": false,
+      "is_global": true,
+      "name": "Global demo stock",
+      "sources": [
+        {
+          "priority": 0,
+          "source_id": "01a9bb43-c922-46eb-871f-4161a06ff336"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,1813 @@
+{
+  "schema_version": "1.0",
+  "skills": [
+    {
+      "id": "skill://catalog/schema",
+      "version": "1.0.0",
+      "input_contract": "catalog://get_catalog_schema-v1",
+      "output_contract": "catalog://result-v1",
+      "purpose": "Use the existing scoped get_catalog_schema operation.",
+      "intents": [
+        "schema"
+      ],
+      "ports": [
+        "catalog.get_catalog_schema"
+      ],
+      "max_calls": 1,
+      "requires": [],
+      "preconditions": [],
+      "postconditions": [
+        "typed_result"
+      ],
+      "cost_class": "remote_read",
+      "produces": [
+        "catalog_schema"
+      ],
+      "freshness_seconds": 30,
+      "timeout_ms": 5000,
+      "executor": "assistant",
+      "risk": "R0"
+    },
+    {
+      "id": "skill://catalog/search",
+      "version": "1.0.0",
+      "input_contract": "catalog://search_products-v1",
+      "output_contract": "catalog://result-v1",
+      "purpose": "Use the existing scoped search_products operation.",
+      "intents": [
+        "search"
+      ],
+      "ports": [
+        "catalog.search_products"
+      ],
+      "max_calls": 5,
+      "requires": [],
+      "preconditions": [],
+      "postconditions": [
+        "typed_result"
+      ],
+      "cost_class": "remote_read",
+      "produces": [
+        "catalog_candidates"
+      ],
+      "freshness_seconds": 30,
+      "timeout_ms": 5000,
+      "executor": "assistant",
+      "risk": "R0"
+    },
+    {
+      "id": "skill://catalog/facts",
+      "version": "1.0.0",
+      "input_contract": "catalog://get_product-v1",
+      "output_contract": "catalog://result-v1",
+      "purpose": "Use the existing scoped get_product operation.",
+      "intents": [
+        "facts"
+      ],
+      "ports": [
+        "catalog.get_product"
+      ],
+      "max_calls": 1,
+      "requires": [],
+      "preconditions": [],
+      "postconditions": [
+        "typed_result"
+      ],
+      "cost_class": "remote_read",
+      "produces": [
+        "current_catalog_facts"
+      ],
+      "freshness_seconds": 30,
+      "timeout_ms": 5000,
+      "executor": "assistant",
+      "risk": "R0"
+    },
+    {
+      "id": "skill://catalog/compare",
+      "version": "1.0.0",
+      "input_contract": "catalog://compare_products-v1",
+      "output_contract": "catalog://result-v1",
+      "purpose": "Use the existing scoped compare_products operation.",
+      "intents": [
+        "compare"
+      ],
+      "ports": [
+        "catalog.compare_products"
+      ],
+      "max_calls": 1,
+      "requires": [],
+      "preconditions": [],
+      "postconditions": [
+        "typed_result"
+      ],
+      "cost_class": "remote_read",
+      "produces": [
+        "current_catalog_facts"
+      ],
+      "freshness_seconds": 30,
+      "timeout_ms": 5000,
+      "executor": "assistant",
+      "risk": "R0"
+    },
+    {
+      "id": "skill://inventory/check",
+      "version": "1.0.0",
+      "input_contract": "catalog://get_product_inventory-v1",
+      "output_contract": "catalog://result-v1",
+      "purpose": "Use the existing scoped get_product_inventory operation.",
+      "intents": [
+        "check"
+      ],
+      "ports": [
+        "catalog.get_product_inventory"
+      ],
+      "max_calls": 1,
+      "requires": [],
+      "preconditions": [],
+      "postconditions": [
+        "typed_result"
+      ],
+      "cost_class": "remote_read",
+      "produces": [
+        "current_catalog_facts"
+      ],
+      "freshness_seconds": 30,
+      "timeout_ms": 5000,
+      "executor": "assistant",
+      "risk": "R0"
+    },
+    {
+      "id": "skill://pricing/quote",
+      "version": "1.0.0",
+      "input_contract": "catalog://get_product_price-v1",
+      "output_contract": "catalog://result-v1",
+      "purpose": "Use the existing scoped get_product_price operation.",
+      "intents": [
+        "quote"
+      ],
+      "ports": [
+        "catalog.get_product_price"
+      ],
+      "max_calls": 1,
+      "requires": [],
+      "preconditions": [],
+      "postconditions": [
+        "typed_result"
+      ],
+      "cost_class": "remote_read",
+      "produces": [
+        "current_catalog_facts"
+      ],
+      "freshness_seconds": 30,
+      "timeout_ms": 5000,
+      "executor": "assistant",
+      "risk": "R0"
+    },
+    {
+      "id": "skill://catalog/substitutes",
+      "version": "1.0.0",
+      "input_contract": "catalog://search_products-v1",
+      "output_contract": "catalog://result-v1",
+      "purpose": "Search bounded substitutes; enforce same category, currency and lower verified price.",
+      "intents": [
+        "substitutes"
+      ],
+      "ports": [
+        "catalog.search_products"
+      ],
+      "max_calls": 1,
+      "requires": [],
+      "preconditions": [],
+      "postconditions": [
+        "typed_result"
+      ],
+      "cost_class": "remote_read",
+      "produces": [
+        "catalog_candidates"
+      ],
+      "freshness_seconds": 30,
+      "timeout_ms": 5000,
+      "executor": "assistant",
+      "risk": "R0"
+    },
+    {
+      "id": "skill://reasoning/shopping",
+      "version": "1.0.0",
+      "input_contract": "planning://goal-v1",
+      "output_contract": "shopping://intent-v1",
+      "purpose": "Propose structured shopping intent; deterministic guards validate it.",
+      "intents": [
+        "shopping"
+      ],
+      "ports": [
+        "reasoning.shopping"
+      ],
+      "max_calls": 1,
+      "requires": [],
+      "preconditions": [
+        "catalog_schema"
+      ],
+      "postconditions": [
+        "typed_result"
+      ],
+      "cost_class": "model",
+      "produces": [
+        "typed_interpretation"
+      ],
+      "freshness_seconds": 30,
+      "timeout_ms": 20000,
+      "executor": "assistant",
+      "risk": "R0",
+      "token_reservation": 65536,
+      "cost_reservation_micros": 100000,
+      "fallback": "clarify"
+    },
+    {
+      "id": "skill://reasoning/basket",
+      "version": "1.0.0",
+      "input_contract": "planning://goal-v1",
+      "output_contract": "shopping://basket-plan-v1",
+      "purpose": "Propose bounded basket components using existing schema.",
+      "intents": [
+        "basket"
+      ],
+      "ports": [
+        "reasoning.basket"
+      ],
+      "max_calls": 1,
+      "requires": [],
+      "preconditions": [
+        "catalog_schema"
+      ],
+      "postconditions": [
+        "typed_result"
+      ],
+      "cost_class": "model",
+      "produces": [
+        "typed_interpretation"
+      ],
+      "freshness_seconds": 30,
+      "timeout_ms": 20000,
+      "executor": "assistant",
+      "risk": "R0",
+      "token_reservation": 65536,
+      "cost_reservation_micros": 100000,
+      "fallback": "clarify"
+    },
+    {
+      "id": "skill://ranking/candidates",
+      "version": "1.0.0",
+      "input_contract": "shopping://intent-v1",
+      "output_contract": "planning://receipt-v1",
+      "purpose": "Rank verified candidates without relaxing hard requirements.",
+      "intents": [
+        "candidates"
+      ],
+      "ports": [
+        "local.rank"
+      ],
+      "max_calls": 5,
+      "requires": [],
+      "preconditions": [
+        "catalog_candidates"
+      ],
+      "postconditions": [
+        "typed_result"
+      ],
+      "cost_class": "local",
+      "produces": [
+        "scoped_result"
+      ],
+      "freshness_seconds": 30,
+      "timeout_ms": 5000,
+      "executor": "assistant",
+      "risk": "R0"
+    },
+    {
+      "id": "skill://cart/context",
+      "version": "1.0.0",
+      "input_contract": "planning://task-v1",
+      "output_contract": "planning://receipt-v1",
+      "purpose": "Read scoped shopping task and authoritative current cart context.",
+      "intents": [
+        "context"
+      ],
+      "ports": [
+        "basket.context"
+      ],
+      "max_calls": 1,
+      "requires": [],
+      "preconditions": [],
+      "postconditions": [
+        "typed_result"
+      ],
+      "cost_class": "remote_read",
+      "produces": [
+        "scoped_result"
+      ],
+      "freshness_seconds": 30,
+      "timeout_ms": 5000,
+      "executor": "assistant",
+      "risk": "R0"
+    },
+    {
+      "id": "skill://cart/quote-proposal",
+      "version": "1.0.0",
+      "input_contract": "shopping://basket-plan-v1",
+      "output_contract": "shopping://proposal-ref-v1",
+      "purpose": "Ask Rust to calculate and save a reviewable proposal; never apply it.",
+      "intents": [
+        "quote-proposal"
+      ],
+      "ports": [
+        "basket.quote"
+      ],
+      "max_calls": 1,
+      "requires": [],
+      "preconditions": [],
+      "postconditions": [
+        "typed_result"
+      ],
+      "cost_class": "remote_read",
+      "produces": [
+        "scoped_result"
+      ],
+      "freshness_seconds": 30,
+      "timeout_ms": 5000,
+      "executor": "assistant",
+      "risk": "R0"
+    },
+    {
+      "id": "skill://cart/read",
+      "version": "1.0.0",
+      "input_contract": "catalog://get_catalog_schema-v1",
+      "output_contract": "commerce://cart-v1",
+      "purpose": "Read the authenticated scoped cart.",
+      "intents": [
+        "read"
+      ],
+      "ports": [
+        "commerce.cart"
+      ],
+      "max_calls": 1,
+      "requires": [
+        "authenticated"
+      ],
+      "preconditions": [],
+      "postconditions": [
+        "typed_result"
+      ],
+      "cost_class": "remote_read",
+      "produces": [
+        "scoped_result"
+      ],
+      "freshness_seconds": 30,
+      "timeout_ms": 5000,
+      "executor": "assistant",
+      "risk": "R0"
+    },
+    {
+      "id": "skill://order/read",
+      "version": "1.0.0",
+      "input_contract": "commerce://order-args-v1",
+      "output_contract": "commerce://order-v1",
+      "purpose": "Read an owned order through the existing signed facade.",
+      "intents": [
+        "read"
+      ],
+      "ports": [
+        "commerce.order"
+      ],
+      "max_calls": 1,
+      "requires": [
+        "authenticated",
+        "order_id"
+      ],
+      "preconditions": [],
+      "postconditions": [
+        "typed_result"
+      ],
+      "cost_class": "remote_read",
+      "produces": [
+        "scoped_result"
+      ],
+      "freshness_seconds": 30,
+      "timeout_ms": 5000,
+      "executor": "assistant",
+      "risk": "R0"
+    },
+    {
+      "id": "skill://delivery/check",
+      "version": "1.0.0",
+      "input_contract": "catalog://get_catalog_schema-v1",
+      "output_contract": "commerce://delivery-v1",
+      "purpose": "Read current delivery availability without promising a future slot.",
+      "intents": [
+        "check"
+      ],
+      "ports": [
+        "commerce.delivery"
+      ],
+      "max_calls": 1,
+      "requires": [],
+      "preconditions": [],
+      "postconditions": [
+        "typed_result"
+      ],
+      "cost_class": "remote_read",
+      "produces": [
+        "scoped_result"
+      ],
+      "freshness_seconds": 30,
+      "timeout_ms": 5000,
+      "executor": "assistant",
+      "risk": "R0"
+    },
+    {
+      "id": "skill://knowledge/approved",
+      "version": "1.0.0",
+      "input_contract": "planning://goal-v1",
+      "output_contract": "planning://receipt-v1",
+      "purpose": "Retrieve approved scoped knowledge; missing evidence remains unknown.",
+      "intents": [
+        "approved"
+      ],
+      "ports": [
+        "knowledge.approved"
+      ],
+      "max_calls": 1,
+      "requires": [],
+      "preconditions": [],
+      "postconditions": [
+        "typed_result"
+      ],
+      "cost_class": "remote_read",
+      "produces": [
+        "scoped_result"
+      ],
+      "freshness_seconds": 30,
+      "timeout_ms": 5000,
+      "executor": "assistant",
+      "risk": "R0"
+    },
+    {
+      "id": "skill://support/open",
+      "version": "1.0.0",
+      "input_contract": "planning://goal-v1",
+      "output_contract": "planning://receipt-v1",
+      "purpose": "Open the existing support form; submission requires its explicit UI confirmation.",
+      "intents": [
+        "open"
+      ],
+      "ports": [
+        "ui.support"
+      ],
+      "max_calls": 1,
+      "requires": [],
+      "preconditions": [],
+      "postconditions": [
+        "typed_result"
+      ],
+      "cost_class": "local",
+      "produces": [
+        "scoped_result"
+      ],
+      "freshness_seconds": 30,
+      "timeout_ms": 5000,
+      "executor": "rust_ui",
+      "risk": "R0"
+    },
+    {
+      "id": "skill://order/select",
+      "version": "1.0.0",
+      "input_contract": "planning://task-v1",
+      "output_contract": "planning://receipt-v1",
+      "purpose": "Select an owned past order using the existing Buy Again UI.",
+      "intents": [
+        "select"
+      ],
+      "ports": [
+        "ui.order-select"
+      ],
+      "max_calls": 1,
+      "requires": [
+        "authenticated"
+      ],
+      "preconditions": [],
+      "postconditions": [
+        "typed_result"
+      ],
+      "cost_class": "local",
+      "produces": [
+        "scoped_result"
+      ],
+      "freshness_seconds": 30,
+      "timeout_ms": 5000,
+      "executor": "rust_ui",
+      "risk": "R0"
+    },
+    {
+      "id": "skill://order/rebuild",
+      "version": "1.0.0",
+      "input_contract": "planning://task-v1",
+      "output_contract": "shopping://proposal-ref-v1",
+      "purpose": "Ask Rust to rebuild an owned order at current prices for review.",
+      "intents": [
+        "rebuild"
+      ],
+      "ports": [
+        "ui.order-rebuild"
+      ],
+      "max_calls": 1,
+      "requires": [
+        "authenticated"
+      ],
+      "preconditions": [],
+      "postconditions": [
+        "typed_result"
+      ],
+      "cost_class": "remote_read",
+      "produces": [
+        "scoped_result"
+      ],
+      "freshness_seconds": 30,
+      "timeout_ms": 5000,
+      "executor": "rust_ui",
+      "risk": "R0"
+    },
+    {
+      "id": "skill://cart/apply-approved",
+      "version": "1.0.0",
+      "input_contract": "planning://task-v1",
+      "output_contract": "planning://receipt-v1",
+      "purpose": "Apply only via the existing Rust idempotent revision-aware approved-proposal endpoint.",
+      "intents": [
+        "apply-approved"
+      ],
+      "ports": [
+        "ui.cart-apply"
+      ],
+      "max_calls": 1,
+      "requires": [
+        "authenticated",
+        "approved_proposal"
+      ],
+      "preconditions": [],
+      "postconditions": [
+        "typed_result"
+      ],
+      "cost_class": "mutation",
+      "produces": [
+        "scoped_result"
+      ],
+      "freshness_seconds": 30,
+      "timeout_ms": 5000,
+      "executor": "rust_ui",
+      "risk": "R2",
+      "confirmation": "explicit_intent",
+      "idempotency": "required",
+      "visibility": {
+        "required_scopes": [
+          "cart_write"
+        ]
+      },
+      "policy_action": "cart_apply"
+    },
+    {
+      "id": "skill://catalog/compound-facts",
+      "version": "1.0.0",
+      "input_contract": "catalog://get_product-v1",
+      "output_contract": "catalog://result-v1",
+      "purpose": "Read each compound action product through the existing scoped get_product operation.",
+      "intents": [
+        "facts"
+      ],
+      "ports": [
+        "catalog.get_product"
+      ],
+      "max_calls": 2,
+      "requires": [],
+      "preconditions": [],
+      "postconditions": [
+        "typed_result"
+      ],
+      "cost_class": "remote_read",
+      "produces": [
+        "current_catalog_facts"
+      ],
+      "freshness_seconds": 30,
+      "timeout_ms": 5000,
+      "executor": "assistant",
+      "risk": "R0"
+    },
+    {
+      "id": "skill://catalog/compound-execution-facts",
+      "version": "1.0.0",
+      "input_contract": "catalog://get_product-v1",
+      "output_contract": "catalog://result-v1",
+      "purpose": "Read each compound action product through the existing scoped get_product operation.",
+      "intents": [
+        "facts"
+      ],
+      "ports": [
+        "catalog.get_product"
+      ],
+      "max_calls": 3,
+      "requires": [],
+      "preconditions": [],
+      "postconditions": [
+        "typed_result"
+      ],
+      "cost_class": "remote_read",
+      "produces": [
+        "current_catalog_facts"
+      ],
+      "freshness_seconds": 30,
+      "timeout_ms": 5000,
+      "executor": "assistant",
+      "risk": "R0"
+    },
+    {
+      "id": "skill://commerce/compound-apply",
+      "version": "1.0.0",
+      "input_contract": "commerce://compound-dispatch-v1",
+      "output_contract": "commerce://compound-receipt-v1",
+      "purpose": "Apply one claimed compound operation through the receipted Rust authority.",
+      "intents": [
+        "cart_wishlist_execute"
+      ],
+      "ports": [
+        "commerce.compound_apply"
+      ],
+      "max_calls": 2,
+      "max_attempts": 1,
+      "requires": [
+        "authenticated",
+        "compound_write"
+      ],
+      "preconditions": [
+        "current_catalog_facts"
+      ],
+      "postconditions": [
+        "authoritative_receipt"
+      ],
+      "cost_class": "mutation",
+      "produces": [
+        "authoritative_receipt"
+      ],
+      "freshness_seconds": 30,
+      "timeout_ms": 5000,
+      "executor": "assistant",
+      "risk": "R2",
+      "confirmation": "explicit_intent",
+      "idempotency": "required",
+      "visibility": {
+        "required_scopes": [
+          "compound_write"
+        ]
+      },
+      "policy_action": "cart_apply"
+    }
+  ],
+  "procedures": [
+    {
+      "id": "playbook://commerce/discovery",
+      "version": "1.0.0",
+      "intents": [
+        "discovery"
+      ],
+      "requires": [],
+      "nodes": [
+        {
+          "id": "schema",
+          "skill": {
+            "id": "skill://catalog/schema",
+            "version": "1.0.0"
+          },
+          "depends_on": [],
+          "max_calls": 1,
+          "required": true
+        },
+        {
+          "id": "interpret",
+          "skill": {
+            "id": "skill://reasoning/shopping",
+            "version": "1.0.0"
+          },
+          "depends_on": [
+            "schema"
+          ],
+          "max_calls": 1,
+          "required": true
+        },
+        {
+          "id": "reference",
+          "skill": {
+            "id": "skill://catalog/facts",
+            "version": "1.0.0"
+          },
+          "depends_on": [
+            "interpret"
+          ],
+          "max_calls": 1,
+          "required": false
+        },
+        {
+          "id": "search",
+          "skill": {
+            "id": "skill://catalog/search",
+            "version": "1.0.0"
+          },
+          "depends_on": [
+            "interpret"
+          ],
+          "max_calls": 1,
+          "required": false
+        },
+        {
+          "id": "compare",
+          "skill": {
+            "id": "skill://catalog/compare",
+            "version": "1.0.0"
+          },
+          "depends_on": [
+            "interpret"
+          ],
+          "max_calls": 1,
+          "required": false
+        },
+        {
+          "id": "rank",
+          "skill": {
+            "id": "skill://ranking/candidates",
+            "version": "1.0.0"
+          },
+          "depends_on": [
+            "search"
+          ],
+          "max_calls": 1,
+          "required": false
+        }
+      ],
+      "policies": [
+        {
+          "id": "policy://commerce/authority",
+          "version": "1.0.0"
+        },
+        {
+          "id": "policy://commerce/default",
+          "version": "1.0.0"
+        }
+      ],
+      "verification": [
+        "all_hard_constraints",
+        "current_price_and_stock",
+        "no_implicit_mutation"
+      ],
+      "fallbacks": [
+        "clarify",
+        "browse"
+      ],
+      "mode": "read"
+    },
+    {
+      "id": "playbook://commerce/comparison",
+      "version": "1.0.0",
+      "intents": [
+        "comparison"
+      ],
+      "requires": [],
+      "nodes": [
+        {
+          "id": "schema",
+          "skill": {
+            "id": "skill://catalog/schema",
+            "version": "1.0.0"
+          },
+          "depends_on": [],
+          "max_calls": 1,
+          "required": true
+        },
+        {
+          "id": "interpret",
+          "skill": {
+            "id": "skill://reasoning/shopping",
+            "version": "1.0.0"
+          },
+          "depends_on": [
+            "schema"
+          ],
+          "max_calls": 1,
+          "required": true
+        },
+        {
+          "id": "compare",
+          "skill": {
+            "id": "skill://catalog/compare",
+            "version": "1.0.0"
+          },
+          "depends_on": [
+            "interpret"
+          ],
+          "max_calls": 1,
+          "required": true
+        }
+      ],
+      "policies": [
+        {
+          "id": "policy://commerce/authority",
+          "version": "1.0.0"
+        },
+        {
+          "id": "policy://commerce/default",
+          "version": "1.0.0"
+        }
+      ],
+      "verification": [
+        "all_hard_constraints",
+        "current_price_and_stock",
+        "no_implicit_mutation"
+      ],
+      "fallbacks": [
+        "clarify",
+        "browse"
+      ],
+      "mode": "read"
+    },
+    {
+      "id": "playbook://commerce/cheaper-alternative",
+      "version": "1.0.0",
+      "intents": [
+        "cheaper-alternative"
+      ],
+      "requires": [],
+      "nodes": [
+        {
+          "id": "schema",
+          "skill": {
+            "id": "skill://catalog/schema",
+            "version": "1.0.0"
+          },
+          "depends_on": [],
+          "max_calls": 1,
+          "required": true
+        },
+        {
+          "id": "interpret",
+          "skill": {
+            "id": "skill://reasoning/shopping",
+            "version": "1.0.0"
+          },
+          "depends_on": [
+            "schema"
+          ],
+          "max_calls": 1,
+          "required": true
+        },
+        {
+          "id": "reference",
+          "skill": {
+            "id": "skill://catalog/facts",
+            "version": "1.0.0"
+          },
+          "depends_on": [
+            "interpret"
+          ],
+          "max_calls": 1,
+          "required": true
+        },
+        {
+          "id": "search",
+          "skill": {
+            "id": "skill://catalog/substitutes",
+            "version": "1.0.0"
+          },
+          "depends_on": [
+            "reference"
+          ],
+          "max_calls": 1,
+          "required": true
+        },
+        {
+          "id": "rank",
+          "skill": {
+            "id": "skill://ranking/candidates",
+            "version": "1.0.0"
+          },
+          "depends_on": [
+            "search"
+          ],
+          "max_calls": 1,
+          "required": true
+        }
+      ],
+      "policies": [
+        {
+          "id": "policy://commerce/authority",
+          "version": "1.0.0"
+        },
+        {
+          "id": "policy://commerce/default",
+          "version": "1.0.0"
+        }
+      ],
+      "verification": [
+        "all_hard_constraints",
+        "current_price_and_stock",
+        "no_implicit_mutation"
+      ],
+      "fallbacks": [
+        "clarify",
+        "browse"
+      ],
+      "mode": "read"
+    },
+    {
+      "id": "playbook://commerce/shop",
+      "version": "1.0.0",
+      "intents": [
+        "shop"
+      ],
+      "requires": [
+        "basket_capability"
+      ],
+      "nodes": [
+        {
+          "id": "context",
+          "skill": {
+            "id": "skill://cart/context",
+            "version": "1.0.0"
+          },
+          "depends_on": [],
+          "max_calls": 1,
+          "required": true
+        },
+        {
+          "id": "schema",
+          "skill": {
+            "id": "skill://catalog/schema",
+            "version": "1.0.0"
+          },
+          "depends_on": [
+            "context"
+          ],
+          "max_calls": 1,
+          "required": true
+        },
+        {
+          "id": "interpret",
+          "skill": {
+            "id": "skill://reasoning/basket",
+            "version": "1.0.0"
+          },
+          "depends_on": [
+            "schema"
+          ],
+          "max_calls": 1,
+          "required": true
+        },
+        {
+          "id": "search",
+          "skill": {
+            "id": "skill://catalog/search",
+            "version": "1.0.0"
+          },
+          "depends_on": [
+            "interpret"
+          ],
+          "max_calls": 5,
+          "required": false
+        },
+        {
+          "id": "rank",
+          "skill": {
+            "id": "skill://ranking/candidates",
+            "version": "1.0.0"
+          },
+          "depends_on": [
+            "search"
+          ],
+          "max_calls": 5,
+          "required": false
+        },
+        {
+          "id": "quote",
+          "skill": {
+            "id": "skill://cart/quote-proposal",
+            "version": "1.0.0"
+          },
+          "depends_on": [
+            "interpret"
+          ],
+          "max_calls": 1,
+          "required": true
+        }
+      ],
+      "policies": [
+        {
+          "id": "policy://commerce/authority",
+          "version": "1.0.0"
+        },
+        {
+          "id": "policy://commerce/default",
+          "version": "1.0.0"
+        }
+      ],
+      "verification": [
+        "all_hard_constraints",
+        "current_price_and_stock",
+        "no_implicit_mutation"
+      ],
+      "fallbacks": [
+        "clarify",
+        "browse"
+      ],
+      "mode": "read"
+    },
+    {
+      "id": "playbook://commerce/optimize",
+      "version": "1.0.0",
+      "intents": [
+        "optimize"
+      ],
+      "requires": [
+        "basket_capability"
+      ],
+      "nodes": [
+        {
+          "id": "context",
+          "skill": {
+            "id": "skill://cart/context",
+            "version": "1.0.0"
+          },
+          "depends_on": [],
+          "max_calls": 1,
+          "required": true
+        },
+        {
+          "id": "schema",
+          "skill": {
+            "id": "skill://catalog/schema",
+            "version": "1.0.0"
+          },
+          "depends_on": [
+            "context"
+          ],
+          "max_calls": 1,
+          "required": true
+        },
+        {
+          "id": "interpret",
+          "skill": {
+            "id": "skill://reasoning/basket",
+            "version": "1.0.0"
+          },
+          "depends_on": [
+            "schema"
+          ],
+          "max_calls": 1,
+          "required": true
+        },
+        {
+          "id": "quote",
+          "skill": {
+            "id": "skill://cart/quote-proposal",
+            "version": "1.0.0"
+          },
+          "depends_on": [
+            "interpret"
+          ],
+          "max_calls": 1,
+          "required": true
+        }
+      ],
+      "policies": [
+        {
+          "id": "policy://commerce/authority",
+          "version": "1.0.0"
+        },
+        {
+          "id": "policy://commerce/default",
+          "version": "1.0.0"
+        }
+      ],
+      "verification": [
+        "all_hard_constraints",
+        "current_price_and_stock",
+        "no_implicit_mutation"
+      ],
+      "fallbacks": [
+        "clarify",
+        "browse"
+      ],
+      "mode": "read"
+    },
+    {
+      "id": "playbook://commerce/buy-again",
+      "version": "1.0.0",
+      "intents": [
+        "buy-again"
+      ],
+      "requires": [
+        "basket_capability"
+      ],
+      "nodes": [
+        {
+          "id": "context",
+          "skill": {
+            "id": "skill://cart/context",
+            "version": "1.0.0"
+          },
+          "depends_on": [],
+          "max_calls": 1,
+          "required": true
+        }
+      ],
+      "policies": [
+        {
+          "id": "policy://commerce/authority",
+          "version": "1.0.0"
+        },
+        {
+          "id": "policy://commerce/default",
+          "version": "1.0.0"
+        }
+      ],
+      "verification": [
+        "all_hard_constraints",
+        "current_price_and_stock",
+        "no_implicit_mutation"
+      ],
+      "fallbacks": [
+        "clarify",
+        "browse"
+      ],
+      "mode": "read"
+    },
+    {
+      "id": "playbook://commerce/buy-again-ui",
+      "version": "1.0.0",
+      "intents": [
+        "buy-again-ui"
+      ],
+      "requires": [
+        "authenticated"
+      ],
+      "nodes": [
+        {
+          "id": "select",
+          "skill": {
+            "id": "skill://order/select",
+            "version": "1.0.0"
+          },
+          "depends_on": [],
+          "max_calls": 1,
+          "required": true
+        },
+        {
+          "id": "rebuild",
+          "skill": {
+            "id": "skill://order/rebuild",
+            "version": "1.0.0"
+          },
+          "depends_on": [
+            "select"
+          ],
+          "max_calls": 1,
+          "required": true
+        }
+      ],
+      "policies": [
+        {
+          "id": "policy://commerce/authority",
+          "version": "1.0.0"
+        },
+        {
+          "id": "policy://commerce/default",
+          "version": "1.0.0"
+        }
+      ],
+      "verification": [
+        "all_hard_constraints",
+        "current_price_and_stock",
+        "no_implicit_mutation"
+      ],
+      "fallbacks": [
+        "clarify",
+        "browse"
+      ],
+      "mode": "read"
+    },
+    {
+      "id": "playbook://commerce/apply-approved",
+      "version": "1.0.0",
+      "intents": [
+        "apply-approved"
+      ],
+      "requires": [
+        "authenticated",
+        "approved_proposal"
+      ],
+      "nodes": [
+        {
+          "id": "apply",
+          "skill": {
+            "id": "skill://cart/apply-approved",
+            "version": "1.0.0"
+          },
+          "depends_on": [],
+          "max_calls": 1,
+          "required": true
+        }
+      ],
+      "policies": [
+        {
+          "id": "policy://commerce/authority",
+          "version": "1.0.0"
+        },
+        {
+          "id": "policy://commerce/default",
+          "version": "1.0.0"
+        }
+      ],
+      "verification": [
+        "all_hard_constraints",
+        "current_price_and_stock",
+        "no_implicit_mutation"
+      ],
+      "fallbacks": [
+        "clarify",
+        "browse"
+      ],
+      "mode": "action_proposal"
+    },
+    {
+      "id": "playbook://commerce/cart",
+      "version": "1.0.0",
+      "intents": [
+        "cart"
+      ],
+      "requires": [],
+      "nodes": [
+        {
+          "id": "read",
+          "skill": {
+            "id": "skill://cart/read",
+            "version": "1.0.0"
+          },
+          "depends_on": [],
+          "max_calls": 1,
+          "required": true
+        }
+      ],
+      "policies": [
+        {
+          "id": "policy://commerce/authority",
+          "version": "1.0.0"
+        },
+        {
+          "id": "policy://commerce/default",
+          "version": "1.0.0"
+        }
+      ],
+      "verification": [
+        "all_hard_constraints",
+        "current_price_and_stock",
+        "no_implicit_mutation"
+      ],
+      "fallbacks": [
+        "clarify",
+        "browse"
+      ],
+      "mode": "read"
+    },
+    {
+      "id": "playbook://commerce/order",
+      "version": "1.0.0",
+      "intents": [
+        "order"
+      ],
+      "requires": [],
+      "nodes": [
+        {
+          "id": "read",
+          "skill": {
+            "id": "skill://order/read",
+            "version": "1.0.0"
+          },
+          "depends_on": [],
+          "max_calls": 1,
+          "required": true
+        }
+      ],
+      "policies": [
+        {
+          "id": "policy://commerce/authority",
+          "version": "1.0.0"
+        },
+        {
+          "id": "policy://commerce/default",
+          "version": "1.0.0"
+        }
+      ],
+      "verification": [
+        "all_hard_constraints",
+        "current_price_and_stock",
+        "no_implicit_mutation"
+      ],
+      "fallbacks": [
+        "clarify",
+        "browse"
+      ],
+      "mode": "read"
+    },
+    {
+      "id": "playbook://commerce/delivery",
+      "version": "1.0.0",
+      "intents": [
+        "delivery"
+      ],
+      "requires": [],
+      "nodes": [
+        {
+          "id": "read",
+          "skill": {
+            "id": "skill://delivery/check",
+            "version": "1.0.0"
+          },
+          "depends_on": [],
+          "max_calls": 1,
+          "required": true
+        }
+      ],
+      "policies": [
+        {
+          "id": "policy://commerce/authority",
+          "version": "1.0.0"
+        },
+        {
+          "id": "policy://commerce/default",
+          "version": "1.0.0"
+        }
+      ],
+      "verification": [
+        "all_hard_constraints",
+        "current_price_and_stock",
+        "no_implicit_mutation"
+      ],
+      "fallbacks": [
+        "clarify",
+        "browse"
+      ],
+      "mode": "read"
+    },
+    {
+      "id": "playbook://commerce/support",
+      "version": "1.0.0",
+      "intents": [
+        "support"
+      ],
+      "requires": [],
+      "nodes": [
+        {
+          "id": "read",
+          "skill": {
+            "id": "skill://support/open",
+            "version": "1.0.0"
+          },
+          "depends_on": [],
+          "max_calls": 1,
+          "required": true
+        }
+      ],
+      "policies": [
+        {
+          "id": "policy://commerce/authority",
+          "version": "1.0.0"
+        },
+        {
+          "id": "policy://commerce/default",
+          "version": "1.0.0"
+        }
+      ],
+      "verification": [
+        "all_hard_constraints",
+        "current_price_and_stock",
+        "no_implicit_mutation"
+      ],
+      "fallbacks": [
+        "clarify",
+        "browse"
+      ],
+      "mode": "read"
+    },
+    {
+      "id": "playbook://commerce/knowledge",
+      "version": "1.0.0",
+      "intents": [
+        "knowledge"
+      ],
+      "requires": [],
+      "nodes": [
+        {
+          "id": "read",
+          "skill": {
+            "id": "skill://knowledge/approved",
+            "version": "1.0.0"
+          },
+          "depends_on": [],
+          "max_calls": 1,
+          "required": true
+        }
+      ],
+      "policies": [
+        {
+          "id": "policy://commerce/authority",
+          "version": "1.0.0"
+        },
+        {
+          "id": "policy://commerce/default",
+          "version": "1.0.0"
+        }
+      ],
+      "verification": [
+        "all_hard_constraints",
+        "current_price_and_stock",
+        "no_implicit_mutation"
+      ],
+      "fallbacks": [
+        "clarify",
+        "browse"
+      ],
+      "mode": "read"
+    },
+    {
+      "id": "playbook://commerce/purpose-discovery",
+      "version": "1.0.0",
+      "intents": [
+        "discovery"
+      ],
+      "requires": [],
+      "nodes": [
+        {
+          "id": "schema",
+          "skill": {
+            "id": "skill://catalog/schema",
+            "version": "1.0.0"
+          },
+          "depends_on": [],
+          "max_calls": 1,
+          "required": true
+        },
+        {
+          "id": "interpret",
+          "skill": {
+            "id": "skill://reasoning/shopping",
+            "version": "1.0.0"
+          },
+          "depends_on": [
+            "schema"
+          ],
+          "max_calls": 1,
+          "required": true
+        },
+        {
+          "id": "search",
+          "skill": {
+            "id": "skill://catalog/search",
+            "version": "1.0.0"
+          },
+          "depends_on": [
+            "interpret"
+          ],
+          "max_calls": 3,
+          "required": false
+        },
+        {
+          "id": "rank",
+          "skill": {
+            "id": "skill://ranking/candidates",
+            "version": "1.0.0"
+          },
+          "depends_on": [
+            "search"
+          ],
+          "max_calls": 1,
+          "required": false
+        }
+      ],
+      "policies": [
+        {
+          "id": "policy://commerce/authority",
+          "version": "1.0.0"
+        },
+        {
+          "id": "policy://commerce/default",
+          "version": "1.0.0"
+        }
+      ],
+      "verification": [
+        "all_hard_constraints",
+        "current_price_and_stock",
+        "no_implicit_mutation"
+      ],
+      "fallbacks": [
+        "clarify",
+        "browse"
+      ],
+      "mode": "read"
+    },
+    {
+      "id": "playbook://commerce/compound-review",
+      "version": "1.0.0",
+      "intents": [
+        "cart_wishlist_review"
+      ],
+      "requires": [
+        "authenticated"
+      ],
+      "nodes": [
+        {
+          "id": "lookup1",
+          "skill": {
+            "id": "skill://catalog/search",
+            "version": "1.0.0"
+          }
+        },
+        {
+          "id": "lookup2",
+          "skill": {
+            "id": "skill://catalog/search",
+            "version": "1.0.0"
+          },
+          "depends_on": [
+            "lookup1"
+          ]
+        },
+        {
+          "id": "product1",
+          "skill": {
+            "id": "skill://catalog/compound-facts",
+            "version": "1.0.0"
+          },
+          "depends_on": [
+            "lookup1",
+            "lookup2"
+          ]
+        },
+        {
+          "id": "product2",
+          "skill": {
+            "id": "skill://catalog/compound-facts",
+            "version": "1.0.0"
+          },
+          "depends_on": [
+            "lookup1",
+            "lookup2"
+          ]
+        }
+      ],
+      "policies": [
+        {
+          "id": "policy://commerce/authority",
+          "version": "1.0.0"
+        },
+        {
+          "id": "policy://commerce/default",
+          "version": "1.0.0"
+        }
+      ],
+      "verification": [
+        "complete_requested_actions",
+        "exact_catalog_identity",
+        "no_commerce_mutations"
+      ],
+      "fallbacks": [
+        "clarify"
+      ],
+      "mode": "read"
+    },
+    {
+      "id": "playbook://commerce/compound-execute",
+      "version": "1.0.0",
+      "intents": [
+        "cart_wishlist_execute"
+      ],
+      "requires": [
+        "authenticated",
+        "compound_write"
+      ],
+      "nodes": [
+        {
+          "id": "facts1",
+          "skill": {
+            "id": "skill://catalog/compound-execution-facts",
+            "version": "1.0.0"
+          },
+          "depends_on": []
+        },
+        {
+          "id": "facts2",
+          "skill": {
+            "id": "skill://catalog/compound-execution-facts",
+            "version": "1.0.0"
+          },
+          "depends_on": [
+            "facts1"
+          ]
+        },
+        {
+          "id": "write1",
+          "skill": {
+            "id": "skill://commerce/compound-apply",
+            "version": "1.0.0"
+          },
+          "depends_on": [
+            "facts1",
+            "facts2"
+          ]
+        },
+        {
+          "id": "refresh2",
+          "skill": {
+            "id": "skill://catalog/compound-execution-facts",
+            "version": "1.0.0"
+          },
+          "depends_on": [
+            "write1"
+          ]
+        },
+        {
+          "id": "write2",
+          "skill": {
+            "id": "skill://commerce/compound-apply",
+            "version": "1.0.0"
+          },
+          "depends_on": [
+            "refresh2"
+          ]
+        }
+      ],
+      "policies": [
+        {
+          "id": "policy://commerce/authority",
+          "version": "1.0.0"
+        },
+        {
+          "id": "policy://commerce/default",
+          "version": "1.0.0"
+        }
+      ],
+      "verification": [
+        "authoritative_receipt"
+      ],
+      "fallbacks": [
+        "review"
+      ],
+      "mode": "action_proposal"
+    },
+    {
+      "id": "playbook://commerce/category-discovery",
+      "version": "1.0.0",
+      "intents": [
+        "discovery"
+      ],
+      "requires": [],
+      "nodes": [
+        {
+          "id": "schema",
+          "skill": {
+            "id": "skill://catalog/schema",
+            "version": "1.0.0"
+          },
+          "depends_on": [],
+          "max_calls": 1,
+          "required": true
+        },
+        {
+          "id": "interpret",
+          "skill": {
+            "id": "skill://reasoning/shopping",
+            "version": "1.0.0"
+          },
+          "depends_on": [
+            "schema"
+          ],
+          "max_calls": 1,
+          "required": true
+        },
+        {
+          "id": "search",
+          "skill": {
+            "id": "skill://catalog/search",
+            "version": "1.0.0"
+          },
+          "depends_on": [
+            "interpret"
+          ],
+          "max_calls": 5,
+          "required": false
+        },
+        {
+          "id": "rank",
+          "skill": {
+            "id": "skill://ranking/candidates",
+            "version": "1.0.0"
+          },
+          "depends_on": [
+            "search"
+          ],
+          "max_calls": 1,
+          "required": false
+        }
+      ],
+      "policies": [
+        {
+          "id": "policy://commerce/authority",
+          "version": "1.0.0"
+        },
+        {
+          "id": "policy://commerce/default",
+          "version": "1.0.0"
+        }
+      ],
+      "verification": [
+        "all_hard_constraints",
+        "current_price_and_stock",
+        "no_implicit_mutation"
+      ],
+      "fallbacks": [
+        "clarify",
+        "browse"
+      ],
+      "mode": "read"
+    }
+  ],
+  "industries": [
+    {
+      "id": "industry://commerce/common",
+      "version": "1.0.0",
+      "attributes": [],
+      "status": "schema_ready",
+      "policies": [
+        "verified_only"
+      ]
+    },
+    {
+      "id": "industry://commerce/grocery",
+      "version": "1.0.0",
+      "attributes": [
+        "roast"
+      ],
+      "status": "dataset_validated",
+      "policies": [
+        "verified_only",
+        "no_inferred_dietary_claims"
+      ]
+    },
+    {
+      "id": "industry://commerce/jewelry",
+      "version": "1.0.0",
+      "attributes": [
+        "gemstone_color",
+        "metal",
+        "style"
+      ],
+      "status": "dataset_validated",
+      "policies": [
+        "verified_only",
+        "no_inferred_material_claims"
+      ]
+    },
+    {
+      "id": "industry://commerce/pharmacy",
+      "version": "1.0.0",
+      "attributes": [],
+      "status": "schema_ready",
+      "policies": [
+        "verified_only",
+        "requires_policy_review"
+      ]
+    },
+    {
+      "id": "industry://commerce/skincare",
+      "version": "1.0.0",
+      "attributes": [],
+      "status": "schema_ready",
+      "policies": [
+        "verified_only",
+        "requires_policy_review"
+      ]
+    },
+    {
+      "id": "industry://commerce/electronics",
+      "version": "1.0.0",
+      "attributes": [],
+      "status": "schema_ready",
+      "policies": [
+        "verified_only",
+        "requires_policy_review"
+      ]
+    }
+  ]
+}

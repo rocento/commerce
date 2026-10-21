@@ -1,0 +1,8 @@
+   Compiling api-gateway v0.1.0 (/Users/momar/Documents/commerce-ai/backend/crates/api-gateway)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 2.31s
+     Running tests/publication_rendering.rs (backend/target/debug/deps/publication_rendering-6d47f1b25fd40fa2)
+
+running 1 test
+test feed_freshness_real_html_jsonld_sitemap_pipeline ... ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 8 filtered out; finished in 2.33s

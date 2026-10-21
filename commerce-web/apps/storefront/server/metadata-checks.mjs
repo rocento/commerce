@@ -1,0 +1,7 @@
+import { test } from 'node:test';
+import assert from 'node:assert/strict';
+import { metadataHead } from './metadata.mjs';
+const snapshot={status:200,robots:'index, follow',site_name:'Merchant',locale:'ar-EG',origin:'https://shop.example.test/',canonical:{html:'https://shop.example.test/products/apples'},metadata:{title:'تفاح <script> & café',description:'Fresh "apples"',image:null},images:{}};
+test('social metadata escapes Unicode without truncating and shares canonical identity',()=>{const html=metadataHead(snapshot);assert.match(html,/تفاح &lt;script&gt; &amp; café/);assert.match(html,/og:locale" content="ar_EG"/);assert.equal(html.match(/rel="canonical"/g).length,1);assert.match(html,/og:url" content="https:\/\/shop.example.test\/products\/apples/);assert.ok(!html.includes('og:image'));});
+test('missing image and language-only locale do not invent a card image or country',()=>{const html=metadataHead({...snapshot,locale:'ar',metadata:{...snapshot.metadata,image:'missing'}});assert.ok(!html.includes('og:image'));assert.ok(!html.includes('og:locale'));assert.match(html,/twitter:card" content="summary"/);});
+test('error pages have no social claims or canonical',()=>{for(const status of [404,410]){const html=metadataHead({...snapshot,status,robots:'noindex, nofollow'});assert.ok(!html.includes('og:'));assert.ok(!html.includes('canonical'));assert.match(html,/noindex, nofollow/);}});

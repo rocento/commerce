@@ -1,0 +1,36 @@
+{
+  "scope": "Cart pricing, passive-cart follow-ups and turn-wide counted commerce reads",
+  "python_full": {
+    "passed": 3426,
+    "failed": 22,
+    "skipped": 10,
+    "warnings": 33,
+    "seconds": 162.27
+  },
+  "python_focused": {
+    "passed": 189
+  },
+  "isolated_rechecks": {
+    "intent_dispatch": 396,
+    "capability_manifest": 4
+  },
+  "node_full": {
+    "passed": 382,
+    "failed": 11,
+    "total": 393,
+    "loopback_allowed": true
+  },
+  "architecture": {
+    "unit_tests_passed": 45,
+    "subtests_passed": 462,
+    "checker": "passed"
+  },
+  "ruff": "changed Python sources and new tests passed",
+  "typescript": "passed",
+  "mypy": "blocked by contracts/requested_actions.py:153 no-any-return; 4 requested sources",
+  "limitations": [
+    "Shared checkout changed during validation; 18 dispatch and 2 manifest full-run failures did not reproduce in isolated file reruns. Full suite has not been rerun after those external edits.",
+    "Public-contract and evaluation comparison failures remain.",
+    "No deployment or live-provider validation."
+  ]
+}

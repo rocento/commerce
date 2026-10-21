@@ -1,0 +1,322 @@
+[
+  {
+    "store": "grocery",
+    "category_slug": "fresh-produce",
+    "name": "Fresh Produce",
+    "kind": "icon",
+    "file": "fresh-produce-icon.png",
+    "source": "/Users/momar/.codex/generated_images/01a0a53a-ed4f-7293-b0f4-f20158d76b81/exec-854d23a4-a30c-428b-9969-063340e440b8.png",
+    "prompt": "Use case: product-mockup. Asset type: square ecommerce category thumbnail icon. Primary request: Fresh Produce: ripe tomatoes, lemons and fresh leafy greens. Style: refined photorealistic studio still life, fresh grocery editorial, pale warm ivory backdrop, authentic natural textures and fresh colors. Composition: one compact recognizable centered arrangement, generous margins, readable at 48 pixels, plain ivory background, square canvas. Lighting: soft natural studio light and gentle shadows. No text, lettering, logo, watermark, people, border, or collage. Generate one final image.",
+    "generator": "built-in image_gen"
+  },
+  {
+    "store": "grocery",
+    "category_slug": "fresh-produce",
+    "name": "Fresh Produce",
+    "kind": "banner",
+    "file": "fresh-produce-banner.png",
+    "source": "/Users/momar/.codex/generated_images/01a0a53a-ed4f-7293-b0f4-f20158d76b81/exec-0dbea155-0494-4003-92f2-a908d2704e88.png",
+    "prompt": "Use case: product-mockup. Asset type: wide 3:1 ecommerce category page top banner. Primary request: Fresh Produce: ripe tomatoes, lemons and fresh leafy greens. Style: refined photorealistic studio still life, fresh grocery editorial, pale warm ivory backdrop, authentic natural textures and fresh colors. Composition: panoramic horizontal still life across lower middle with generous breathing room, all key objects inside central 80 percent, wide 3:1 canvas. Lighting: soft natural studio light and gentle shadows. No text, lettering, logo, watermark, people, border, or collage. Generate one final image.",
+    "generator": "built-in image_gen"
+  },
+  {
+    "store": "grocery",
+    "category_slug": "baladi-bakery",
+    "name": "Baladi Bakery",
+    "kind": "icon",
+    "file": "baladi-bakery-icon.png",
+    "source": "/Users/momar/.codex/generated_images/01a0a53a-ed4f-7293-b0f4-f20158d76b81/exec-aaefaf53-bedc-49c3-9869-3804957f2776.png",
+    "prompt": "Use case: product-mockup. Asset type: square ecommerce category thumbnail icon. Primary request: Baladi Bakery: rustic Egyptian round baladi flatbread. Style: refined photorealistic studio still life, fresh grocery editorial, pale warm ivory backdrop, authentic natural textures and fresh colors. Composition: one compact recognizable centered arrangement, generous margins, readable at 48 pixels, plain ivory background, square canvas. Lighting: soft natural studio light and gentle shadows. No text, lettering, logo, watermark, people, border, or collage. Generate one final image.",
+    "generator": "built-in image_gen"
+  },
+  {
+    "store": "grocery",
+    "category_slug": "baladi-bakery",
+    "name": "Baladi Bakery",
+    "kind": "banner",
+    "file": "baladi-bakery-banner.png",
+    "source": "/Users/momar/.codex/generated_images/01a0a53a-ed4f-7293-b0f4-f20158d76b81/exec-8240d183-6513-4095-b79a-cab0ad5b4771.png",
+    "prompt": "Use case: product-mockup. Asset type: wide 3:1 ecommerce category page top banner. Primary request: Baladi Bakery: rustic Egyptian round baladi flatbread. Style: refined photorealistic studio still life, fresh grocery editorial, pale warm ivory backdrop, authentic natural textures and fresh colors. Composition: panoramic horizontal still life across lower middle with generous breathing room, all key objects inside central 80 percent, wide 3:1 canvas. Lighting: soft natural studio light and gentle shadows. No text, lettering, logo, watermark, people, border, or collage. Generate one final image.",
+    "generator": "built-in image_gen"
+  },
+  {
+    "store": "grocery",
+    "category_slug": "egyptian-breakfast",
+    "name": "Egyptian Breakfast",
+    "kind": "icon",
+    "file": "egyptian-breakfast-icon.png",
+    "source": "/Users/momar/.codex/generated_images/01a0a53a-ed4f-7293-b0f4-f20158d76b81/exec-9191554a-fb84-47e0-9524-02b94923f115.png",
+    "prompt": "Use case: product-mockup. Asset type: square ecommerce category thumbnail icon. Primary request: Egyptian Breakfast: a ceramic bowl of ful medames, tahini and honey. Style: refined photorealistic studio still life, fresh grocery editorial, pale warm ivory backdrop, authentic natural textures and fresh colors. Composition: one compact recognizable centered arrangement, generous margins, readable at 48 pixels, plain ivory background, square canvas. Lighting: soft natural studio light and gentle shadows. No text, lettering, logo, watermark, people, border, or collage. Generate one final image.",
+    "generator": "built-in image_gen"
+  },
+  {
+    "store": "grocery",
+    "category_slug": "egyptian-breakfast",
+    "name": "Egyptian Breakfast",
+    "kind": "banner",
+    "file": "egyptian-breakfast-banner.png",
+    "source": "/Users/momar/.codex/generated_images/01a0a53a-ed4f-7293-b0f4-f20158d76b81/exec-505bb034-c697-4597-bf57-5f2ad0792233.png",
+    "prompt": "Use case: product-mockup. Asset type: wide 3:1 ecommerce category page top banner. Primary request: Egyptian Breakfast: a ceramic bowl of ful medames, tahini and honey. Style: refined photorealistic studio still life, fresh grocery editorial, pale warm ivory backdrop, authentic natural textures and fresh colors. Composition: panoramic horizontal still life across lower middle with generous breathing room, all key objects inside central 80 percent, wide 3:1 canvas. Lighting: soft natural studio light and gentle shadows. No text, lettering, logo, watermark, people, border, or collage. Generate one final image.",
+    "generator": "built-in image_gen"
+  },
+  {
+    "store": "grocery",
+    "category_slug": "pantry-staples",
+    "name": "Pantry Staples",
+    "kind": "icon",
+    "file": "pantry-staples-icon.png",
+    "source": "/Users/momar/.codex/generated_images/01a0a53a-ed4f-7293-b0f4-f20158d76b81/exec-04665602-3fae-4243-8c18-d3f1740d1b18.png",
+    "prompt": "Use case: product-mockup. Asset type: square ecommerce category thumbnail icon. Primary request: Pantry Staples: rice and red lentils in small linen sacks with an unbranded olive oil bottle. Style: refined photorealistic studio still life, fresh grocery editorial, pale warm ivory backdrop, authentic natural textures and fresh colors. Composition: one compact recognizable centered arrangement, generous margins, readable at 48 pixels, plain ivory background, square canvas. Lighting: soft natural studio light and gentle shadows. No text, lettering, logo, watermark, people, border, or collage. Generate one final image.",
+    "generator": "built-in image_gen"
+  },
+  {
+    "store": "grocery",
+    "category_slug": "pantry-staples",
+    "name": "Pantry Staples",
+    "kind": "banner",
+    "file": "pantry-staples-banner.png",
+    "source": "/Users/momar/.codex/generated_images/01a0a53a-ed4f-7293-b0f4-f20158d76b81/exec-3c01bb7e-dd04-4eaa-b31b-094c7b21a76c.png",
+    "prompt": "Use case: product-mockup. Asset type: wide 3:1 ecommerce category page top banner. Primary request: Pantry Staples: rice and red lentils in small linen sacks with an unbranded olive oil bottle. Style: refined photorealistic studio still life, fresh grocery editorial, pale warm ivory backdrop, authentic natural textures and fresh colors. Composition: panoramic horizontal still life across lower middle with generous breathing room, all key objects inside central 80 percent, wide 3:1 canvas. Lighting: soft natural studio light and gentle shadows. No text, lettering, logo, watermark, people, border, or collage. Generate one final image.",
+    "generator": "built-in image_gen"
+  },
+  {
+    "store": "grocery",
+    "category_slug": "cheese-dairy",
+    "name": "Cheese & Dairy",
+    "kind": "icon",
+    "file": "cheese-dairy-icon.png",
+    "source": "/Users/momar/.codex/generated_images/01a0a53a-ed4f-7293-b0f4-f20158d76b81/exec-22d55fff-7b47-4769-8bee-77860009422f.png",
+    "prompt": "Use case: product-mockup. Asset type: square ecommerce category thumbnail icon. Primary request: Cheese & Dairy: a glass milk bottle, cheese wedge and eggs. Style: refined photorealistic studio still life, fresh grocery editorial, pale warm ivory backdrop, authentic natural textures and fresh colors. Composition: one compact recognizable centered arrangement, generous margins, readable at 48 pixels, plain ivory background, square canvas. Lighting: soft natural studio light and gentle shadows. No text, lettering, logo, watermark, people, border, or collage. Generate one final image.",
+    "generator": "built-in image_gen"
+  },
+  {
+    "store": "grocery",
+    "category_slug": "cheese-dairy",
+    "name": "Cheese & Dairy",
+    "kind": "banner",
+    "file": "cheese-dairy-banner.png",
+    "source": "/Users/momar/.codex/generated_images/01a0a53a-ed4f-7293-b0f4-f20158d76b81/exec-e673ba45-84df-43e5-9ddc-f43419dea12c.png",
+    "prompt": "Use case: product-mockup. Asset type: wide 3:1 ecommerce category page top banner. Primary request: Cheese & Dairy: a glass milk bottle, cheese wedge and eggs. Style: refined photorealistic studio still life, fresh grocery editorial, pale warm ivory backdrop, authentic natural textures and fresh colors. Composition: panoramic horizontal still life across lower middle with generous breathing room, all key objects inside central 80 percent, wide 3:1 canvas. Lighting: soft natural studio light and gentle shadows. No text, lettering, logo, watermark, people, border, or collage. Generate one final image.",
+    "generator": "built-in image_gen"
+  },
+  {
+    "store": "grocery",
+    "category_slug": "dates-nuts-sweets",
+    "name": "Dates, Nuts & Sweets",
+    "kind": "icon",
+    "file": "dates-nuts-sweets-icon.png",
+    "source": "/Users/momar/.codex/generated_images/01a0a53a-ed4f-7293-b0f4-f20158d76b81/exec-7eed7a08-357a-459b-a001-8949c67f5e7b.png",
+    "prompt": "Use case: product-mockup. Asset type: square ecommerce category thumbnail icon. Primary request: Dates, Nuts & Sweets: Medjool dates, almonds and small baklava pieces. Style: refined photorealistic studio still life, fresh grocery editorial, pale warm ivory backdrop, authentic natural textures and fresh colors. Composition: one compact recognizable centered arrangement, generous margins, readable at 48 pixels, plain ivory background, square canvas. Lighting: soft natural studio light and gentle shadows. No text, lettering, logo, watermark, people, border, or collage. Generate one final image.",
+    "generator": "built-in image_gen"
+  },
+  {
+    "store": "grocery",
+    "category_slug": "dates-nuts-sweets",
+    "name": "Dates, Nuts & Sweets",
+    "kind": "banner",
+    "file": "dates-nuts-sweets-banner.png",
+    "source": "/Users/momar/.codex/generated_images/01a0a53a-ed4f-7293-b0f4-f20158d76b81/exec-04785852-045d-4c98-bdfc-09cd0830b883.png",
+    "prompt": "Use case: product-mockup. Asset type: wide 3:1 ecommerce category page top banner. Primary request: Dates, Nuts & Sweets: Medjool dates, almonds and small baklava pieces. Style: refined photorealistic studio still life, fresh grocery editorial, pale warm ivory backdrop, authentic natural textures and fresh colors. Composition: panoramic horizontal still life across lower middle with generous breathing room, all key objects inside central 80 percent, wide 3:1 canvas. Lighting: soft natural studio light and gentle shadows. No text, lettering, logo, watermark, people, border, or collage. Generate one final image.",
+    "generator": "built-in image_gen"
+  },
+  {
+    "store": "grocery",
+    "category_slug": "tea-cold-drinks",
+    "name": "Tea & Cold Drinks",
+    "kind": "icon",
+    "file": "tea-cold-drinks-icon.png",
+    "source": "/Users/momar/.codex/generated_images/01a0a53a-ed4f-7293-b0f4-f20158d76b81/exec-02b685be-9ba2-4fe8-9eae-f4fc50ca746d.png",
+    "prompt": "Use case: product-mockup. Asset type: square ecommerce category thumbnail icon. Primary request: Tea & Cold Drinks: a glass of amber tea and a glass of ruby hibiscus iced drink with mint. Style: refined photorealistic studio still life, fresh grocery editorial, pale warm ivory backdrop, authentic natural textures and fresh colors. Composition: one compact recognizable centered arrangement, generous margins, readable at 48 pixels, plain ivory background, square canvas. Lighting: soft natural studio light and gentle shadows. No text, lettering, logo, watermark, people, border, or collage. Generate one final image.",
+    "generator": "built-in image_gen"
+  },
+  {
+    "store": "grocery",
+    "category_slug": "tea-cold-drinks",
+    "name": "Tea & Cold Drinks",
+    "kind": "banner",
+    "file": "tea-cold-drinks-banner.png",
+    "source": "/Users/momar/.codex/generated_images/01a0a53a-ed4f-7293-b0f4-f20158d76b81/exec-b6a65432-5294-4fc4-88af-92c2d7d8262c.png",
+    "prompt": "Use case: product-mockup. Asset type: wide 3:1 ecommerce category page top banner. Primary request: Tea & Cold Drinks: a glass of amber tea and a glass of ruby hibiscus iced drink with mint. Style: refined photorealistic studio still life, fresh grocery editorial, pale warm ivory backdrop, authentic natural textures and fresh colors. Composition: panoramic horizontal still life across lower middle with generous breathing room, all key objects inside central 80 percent, wide 3:1 canvas. Lighting: soft natural studio light and gentle shadows. No text, lettering, logo, watermark, people, border, or collage. Generate one final image.",
+    "generator": "built-in image_gen"
+  },
+  {
+    "store": "grocery",
+    "category_slug": "household-basics",
+    "name": "Household Basics",
+    "kind": "icon",
+    "file": "household-basics-icon.png",
+    "source": "/Users/momar/.codex/generated_images/01a0a53a-ed4f-7293-b0f4-f20158d76b81/exec-810c1ea7-d2b5-4f4e-ba40-de12dd8fa318.png",
+    "prompt": "Use case: product-mockup. Asset type: square ecommerce category thumbnail icon. Primary request: Household Basics: unbranded dish soap pump bottle, folded cloth and wooden cleaning brush. Style: refined photorealistic studio still life, fresh grocery editorial, pale warm ivory backdrop, authentic natural textures and fresh colors. Composition: one compact recognizable centered arrangement, generous margins, readable at 48 pixels, plain ivory background, square canvas. Lighting: soft natural studio light and gentle shadows. No text, lettering, logo, watermark, people, border, or collage. Generate one final image.",
+    "generator": "built-in image_gen"
+  },
+  {
+    "store": "grocery",
+    "category_slug": "household-basics",
+    "name": "Household Basics",
+    "kind": "banner",
+    "file": "household-basics-banner.png",
+    "source": "/Users/momar/.codex/generated_images/01a0a53a-ed4f-7293-b0f4-f20158d76b81/exec-5b27edb0-1eb4-4815-a7e2-0d35d7f68b57.png",
+    "prompt": "Use case: product-mockup. Asset type: wide 3:1 ecommerce category page top banner. Primary request: Household Basics: unbranded dish soap pump bottle, folded cloth and wooden cleaning brush. Style: refined photorealistic studio still life, fresh grocery editorial, pale warm ivory backdrop, authentic natural textures and fresh colors. Composition: panoramic horizontal still life across lower middle with generous breathing room, all key objects inside central 80 percent, wide 3:1 canvas. Lighting: soft natural studio light and gentle shadows. No text, lettering, logo, watermark, people, border, or collage. Generate one final image.",
+    "generator": "built-in image_gen"
+  },
+  {
+    "store": "jewelry",
+    "category_slug": "jewelry-rings",
+    "name": "Rings",
+    "kind": "icon",
+    "file": "jewelry-rings-icon.png",
+    "source": "/Users/momar/.codex/generated_images/01a0a53a-ed4f-7293-b0f4-f20158d76b81/exec-9c0170a1-7e61-4921-ae5e-31f0d8241ccd.png",
+    "prompt": "Use case: product-mockup. Asset type: square ecommerce category thumbnail icon. Primary request: Rings: a gold solitaire diamond ring and a simple gold band. Style: refined photorealistic studio still life, luxury jewelry editorial, warm ivory stone and soft champagne tones, finely detailed polished metal. Composition: one compact recognizable centered arrangement, generous margins, readable at 48 pixels, plain ivory background, square canvas. Lighting: soft natural studio light and gentle shadows. No text, lettering, logo, watermark, people, border, or collage. Generate one final image.",
+    "generator": "built-in image_gen"
+  },
+  {
+    "store": "jewelry",
+    "category_slug": "jewelry-rings",
+    "name": "Rings",
+    "kind": "banner",
+    "file": "jewelry-rings-banner.png",
+    "source": "/Users/momar/.codex/generated_images/01a0a53a-ed4f-7293-b0f4-f20158d76b81/exec-cd31bc45-382f-4dfe-aa26-6acb1963a870.png",
+    "prompt": "Use case: product-mockup. Asset type: wide 3:1 ecommerce category page top banner. Primary request: Rings: a gold solitaire diamond ring and a simple gold band. Style: refined photorealistic studio still life, luxury jewelry editorial, warm ivory stone and soft champagne tones, finely detailed polished metal. Composition: panoramic horizontal still life across lower middle with generous breathing room, all key objects inside central 80 percent, wide 3:1 canvas. Lighting: soft natural studio light and gentle shadows. No text, lettering, logo, watermark, people, border, or collage. Generate one final image.",
+    "generator": "built-in image_gen"
+  },
+  {
+    "store": "jewelry",
+    "category_slug": "jewelry-earrings",
+    "name": "Earrings",
+    "kind": "icon",
+    "file": "jewelry-earrings-icon.png",
+    "source": "/Users/momar/.codex/generated_images/01a0a53a-ed4f-7293-b0f4-f20158d76b81/exec-2a040308-0c39-4e08-9401-38e1ad586cd6.png",
+    "prompt": "Use case: product-mockup. Asset type: square ecommerce category thumbnail icon. Primary request: Earrings: a pair of polished gold hoops and pearl stud earrings. Style: refined photorealistic studio still life, luxury jewelry editorial, warm ivory stone and soft champagne tones, finely detailed polished metal. Composition: one compact recognizable centered arrangement, generous margins, readable at 48 pixels, plain ivory background, square canvas. Lighting: soft natural studio light and gentle shadows. No text, lettering, logo, watermark, people, border, or collage. Generate one final image.",
+    "generator": "built-in image_gen"
+  },
+  {
+    "store": "jewelry",
+    "category_slug": "jewelry-earrings",
+    "name": "Earrings",
+    "kind": "banner",
+    "file": "jewelry-earrings-banner.png",
+    "source": "/Users/momar/.codex/generated_images/01a0a53a-ed4f-7293-b0f4-f20158d76b81/exec-b003ca3c-936f-41d3-8177-64ff26a85838.png",
+    "prompt": "Use case: product-mockup. Asset type: wide 3:1 ecommerce category page top banner. Primary request: Earrings: a pair of polished gold hoops and pearl stud earrings. Style: refined photorealistic studio still life, luxury jewelry editorial, warm ivory stone and soft champagne tones, finely detailed polished metal. Composition: panoramic horizontal still life across lower middle with generous breathing room, all key objects inside central 80 percent, wide 3:1 canvas. Lighting: soft natural studio light and gentle shadows. No text, lettering, logo, watermark, people, border, or collage. Generate one final image.",
+    "generator": "built-in image_gen"
+  },
+  {
+    "store": "jewelry",
+    "category_slug": "jewelry-necklaces",
+    "name": "Necklaces",
+    "kind": "icon",
+    "file": "jewelry-necklaces-icon.png",
+    "source": "/Users/momar/.codex/generated_images/01a0a53a-ed4f-7293-b0f4-f20158d76b81/exec-7b0d726c-c86f-46f5-a7b3-0b315fde131d.png",
+    "prompt": "Use case: product-mockup. Asset type: square ecommerce category thumbnail icon. Primary request: Necklaces: a fine gold chain with emerald pendant elegantly curved. Style: refined photorealistic studio still life, luxury jewelry editorial, warm ivory stone and soft champagne tones, finely detailed polished metal. Composition: one compact recognizable centered arrangement, generous margins, readable at 48 pixels, plain ivory background, square canvas. Lighting: soft natural studio light and gentle shadows. No text, lettering, logo, watermark, people, border, or collage. Generate one final image.",
+    "generator": "built-in image_gen"
+  },
+  {
+    "store": "jewelry",
+    "category_slug": "jewelry-necklaces",
+    "name": "Necklaces",
+    "kind": "banner",
+    "file": "jewelry-necklaces-banner.png",
+    "source": "/Users/momar/.codex/generated_images/01a0a53a-ed4f-7293-b0f4-f20158d76b81/exec-261c9c90-caee-4563-92d9-0676de153cde.png",
+    "prompt": "Use case: product-mockup. Asset type: wide 3:1 ecommerce category page top banner. Primary request: Necklaces: a fine gold chain with emerald pendant elegantly curved. Style: refined photorealistic studio still life, luxury jewelry editorial, warm ivory stone and soft champagne tones, finely detailed polished metal. Composition: panoramic horizontal still life across lower middle with generous breathing room, all key objects inside central 80 percent, wide 3:1 canvas. Lighting: soft natural studio light and gentle shadows. No text, lettering, logo, watermark, people, border, or collage. Generate one final image.",
+    "generator": "built-in image_gen"
+  },
+  {
+    "store": "jewelry",
+    "category_slug": "jewelry-bracelets",
+    "name": "Bracelets",
+    "kind": "icon",
+    "file": "jewelry-bracelets-icon.png",
+    "source": "/Users/momar/.codex/generated_images/01a0a53a-ed4f-7293-b0f4-f20158d76b81/exec-9c9a36f9-0e3f-4699-92d8-a6053522c663.png",
+    "prompt": "Use case: product-mockup. Asset type: square ecommerce category thumbnail icon. Primary request: Bracelets: a gold bangle and delicate pearl bracelet. Style: refined photorealistic studio still life, luxury jewelry editorial, warm ivory stone and soft champagne tones, finely detailed polished metal. Composition: one compact recognizable centered arrangement, generous margins, readable at 48 pixels, plain ivory background, square canvas. Lighting: soft natural studio light and gentle shadows. No text, lettering, logo, watermark, people, border, or collage. Generate one final image.",
+    "generator": "built-in image_gen"
+  },
+  {
+    "store": "jewelry",
+    "category_slug": "jewelry-bracelets",
+    "name": "Bracelets",
+    "kind": "banner",
+    "file": "jewelry-bracelets-banner.png",
+    "source": "/Users/momar/.codex/generated_images/01a0a53a-ed4f-7293-b0f4-f20158d76b81/exec-d2dca50c-68e8-401e-bade-8303b89f3e83.png",
+    "prompt": "Use case: product-mockup. Asset type: wide 3:1 ecommerce category page top banner. Primary request: Bracelets: a gold bangle and delicate pearl bracelet. Style: refined photorealistic studio still life, luxury jewelry editorial, warm ivory stone and soft champagne tones, finely detailed polished metal. Composition: panoramic horizontal still life across lower middle with generous breathing room, all key objects inside central 80 percent, wide 3:1 canvas. Lighting: soft natural studio light and gentle shadows. No text, lettering, logo, watermark, people, border, or collage. Generate one final image.",
+    "generator": "built-in image_gen"
+  },
+  {
+    "store": "jewelry",
+    "category_slug": "jewelry-accessories",
+    "name": "Jewelry Accessories",
+    "kind": "icon",
+    "file": "jewelry-accessories-icon.png",
+    "source": "/Users/momar/.codex/generated_images/01a0a53a-ed4f-7293-b0f4-f20158d76b81/exec-a00c0980-a596-4eb8-9570-b04340131fa8.png",
+    "prompt": "Use case: product-mockup. Asset type: square ecommerce category thumbnail icon. Primary request: Jewelry Accessories: a pearl gold brooch and pair of silver onyx cufflinks. Style: refined photorealistic studio still life, luxury jewelry editorial, warm ivory stone and soft champagne tones, finely detailed polished metal. Composition: one compact recognizable centered arrangement, generous margins, readable at 48 pixels, plain ivory background, square canvas. Lighting: soft natural studio light and gentle shadows. No text, lettering, logo, watermark, people, border, or collage. Generate one final image.",
+    "generator": "built-in image_gen"
+  },
+  {
+    "store": "jewelry",
+    "category_slug": "jewelry-accessories",
+    "name": "Jewelry Accessories",
+    "kind": "banner",
+    "file": "jewelry-accessories-banner.png",
+    "source": "/Users/momar/.codex/generated_images/01a0a53a-ed4f-7293-b0f4-f20158d76b81/exec-83f7ffdd-015d-4998-bf36-926f6f9ed84b.png",
+    "prompt": "Use case: product-mockup. Asset type: wide 3:1 ecommerce category page top banner. Primary request: Jewelry Accessories: a pearl gold brooch and pair of silver onyx cufflinks. Style: refined photorealistic studio still life, luxury jewelry editorial, warm ivory stone and soft champagne tones, finely detailed polished metal. Composition: panoramic horizontal still life across lower middle with generous breathing room, all key objects inside central 80 percent, wide 3:1 canvas. Lighting: soft natural studio light and gentle shadows. No text, lettering, logo, watermark, people, border, or collage. Generate one final image.",
+    "generator": "built-in image_gen"
+  },
+  {
+    "store": "jewelry",
+    "category_slug": "jewelry-collections",
+    "name": "Collections",
+    "kind": "icon",
+    "file": "jewelry-collections-icon.png",
+    "source": "/Users/momar/.codex/generated_images/01a0a53a-ed4f-7293-b0f4-f20158d76b81/exec-c400e6da-f166-4a4d-a1cd-34da6508fbb6.png",
+    "prompt": "Use case: product-mockup. Asset type: square ecommerce category thumbnail icon. Subject: Collections, coordinated emerald pendant, gold ring and earrings. Refined photorealistic luxury jewelry editorial, warm ivory stone and champagne tones, polished metal, soft studio light. Compact centered arrangement with generous margins, plain ivory background, readable at 48px. No text, logo, watermark, people or collage. One image.",
+    "generator": "built-in image_gen"
+  },
+  {
+    "store": "jewelry",
+    "category_slug": "jewelry-collections",
+    "name": "Collections",
+    "kind": "banner",
+    "file": "jewelry-collections-banner.png",
+    "source": "/Users/momar/.codex/generated_images/01a0a53a-ed4f-7293-b0f4-f20158d76b81/exec-55c81895-6238-41e5-aae8-cf892ebc81b3.png",
+    "prompt": "Use case: product-mockup. Asset type: wide 3:1 ecommerce category top banner. Subject: Collections, coordinated emerald pendant, gold ring and earrings. Refined photorealistic luxury jewelry editorial, warm ivory stone and champagne tones, polished metal, soft studio light. Panoramic still life with generous breathing room and objects fully in central 80 percent. No text, logo, watermark, people or collage. One image.",
+    "generator": "built-in image_gen"
+  },
+  {
+    "store": "jewelry",
+    "category_slug": "jewelry-gifts",
+    "name": "Gifts",
+    "kind": "icon",
+    "file": "jewelry-gifts-icon.png",
+    "source": "/Users/momar/.codex/generated_images/01a0a53a-ed4f-7293-b0f4-f20158d76b81/exec-6348584e-80e8-4a58-8f4d-d23e0ee6bf7f.png",
+    "prompt": "Use case: product-mockup. Asset type: square ecommerce category thumbnail icon. Subject: Gifts, an open ivory jewelry gift box holding a gold pendant, with a soft ribbon. Refined photorealistic luxury jewelry editorial, warm ivory stone and champagne tones, polished metal, soft studio light. Compact centered arrangement with generous margins, plain ivory background, readable at 48px. No text, logo, watermark, people or collage. One image.",
+    "generator": "built-in image_gen"
+  },
+  {
+    "store": "jewelry",
+    "category_slug": "jewelry-gifts",
+    "name": "Gifts",
+    "kind": "banner",
+    "file": "jewelry-gifts-banner.png",
+    "source": "/Users/momar/.codex/generated_images/01a0a53a-ed4f-7293-b0f4-f20158d76b81/exec-265689ef-de20-4ca5-a4ff-311180a17bc4.png",
+    "prompt": "Use case: product-mockup. Asset type: wide 3:1 ecommerce category top banner. Subject: Gifts, an open ivory jewelry gift box holding a gold pendant, with a soft ribbon. Refined photorealistic luxury jewelry editorial, warm ivory stone and champagne tones, polished metal, soft studio light. Panoramic still life with generous breathing room and objects fully in central 80 percent. No text, logo, watermark, people or collage. One image.",
+    "generator": "built-in image_gen"
+  },
+  {
+    "store": "jewelry",
+    "category_slug": "jewelry-new-arrivals",
+    "name": "New Arrivals",
+    "kind": "icon",
+    "file": "jewelry-new-arrivals-icon.png",
+    "source": "/Users/momar/.codex/generated_images/01a0a53a-ed4f-7293-b0f4-f20158d76b81/exec-520bfd72-73ba-4619-a34d-2376edb0d161.png",
+    "prompt": "Use case: product-mockup. Asset type: square ecommerce category thumbnail icon. Subject: New Arrivals, sculptural gold hoop earrings and a contemporary gold ring. Refined photorealistic luxury jewelry editorial, warm ivory stone and champagne tones, polished metal, soft studio light. Compact centered arrangement with generous margins, plain ivory background, readable at 48px. No text, logo, watermark, people or collage. One image.",
+    "generator": "built-in image_gen"
+  },
+  {
+    "store": "jewelry",
+    "category_slug": "jewelry-new-arrivals",
+    "name": "New Arrivals",
+    "kind": "banner",
+    "file": "jewelry-new-arrivals-banner.png",
+    "source": "/Users/momar/.codex/generated_images/01a0a53a-ed4f-7293-b0f4-f20158d76b81/exec-048c1a42-ff97-4a19-9281-091c27a4850b.png",
+    "prompt": "Use case: product-mockup. Asset type: wide 3:1 ecommerce category top banner. Subject: New Arrivals, sculptural gold hoop earrings and a contemporary gold ring. Refined photorealistic luxury jewelry editorial, warm ivory stone and champagne tones, polished metal, soft studio light. Panoramic still life with generous breathing room and objects fully in central 80 percent. No text, logo, watermark, people or collage. One image.",
+    "generator": "built-in image_gen"
+  }
+]

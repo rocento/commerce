@@ -1,0 +1,39 @@
+name: rocento-publication-release
+services:
+  postgres:
+    image: postgres:16-bookworm
+    environment:
+      POSTGRES_PASSWORD: synthetic-release-only
+    tmpfs: [/var/lib/postgresql/data]
+    healthcheck:
+      test: [CMD-SHELL, pg_isready -U postgres]
+      interval: 2s
+      timeout: 2s
+      retries: 30
+  verify:
+    build: .
+    working_dir: /workspace/backend
+    environment:
+      DATABASE_URL: postgres://postgres:synthetic-release-only@postgres:5432/postgres
+      NODE_ENV: production
+      PUBLICATION_ARTIFACT_DIR: /workspace/frontend/apps/storefront/.stage11-dist
+      PUBLICATION_SSR_ENTRY: /workspace/frontend/apps/storefront/.stage11-dist-server/entry-public-server.js
+      PUBLICATION_EVIDENCE_DIR: /evidence
+      STAGE11_RENDERER_ENTRY: /workspace/commerce-ai-docs/platform/seo-geo/Tests/stage11/renderer.mjs
+      STAGE11_CONTROL_FILE: /tmp/control.json
+      STAGE11_LABEL: linux-release
+      STAGE11_PROXY_REHEARSAL: /workspace/commerce-ai-docs/platform/seo-geo/Tests/stage11-release/proxy-rehearsal.mjs
+      STAGE11_REAL_PACING: "1"
+      STAGE11_RELEASE_BROWSER: /workspace/commerce-ai-docs/platform/seo-geo/Tests/stage11-release/browser-workload.mjs
+      CARGO_TARGET_DIR: /target
+    volumes:
+      - ../../../../..:/workspace:ro
+      - ../../Reports/evidence/stage11-release:/evidence
+      - cargo:/target
+      - registry:/usr/local/cargo
+    depends_on:
+      postgres: {condition: service_healthy}
+    command: [cargo, test, --release, -p, api-gateway, --test, publication_hardening, --, --include-ignored, --test-threads=1]
+volumes:
+  cargo:
+  registry:

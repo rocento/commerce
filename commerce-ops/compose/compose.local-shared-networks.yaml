@@ -1,0 +1,18 @@
+# Apply after compose.local.yaml when running all four local assistant tenants.
+# Networks are created by the consumer projects before attaching the shared DB.
+services:
+  ai-postgres:
+    networks:
+      jewelry-assistant: {aliases: [shared-ai-postgres]}
+      electronics-assistant: {aliases: [shared-ai-postgres]}
+      pharmacy-assistant: {aliases: [shared-ai-postgres]}
+networks:
+  jewelry-assistant:
+    external: true
+    name: commerce-jewelry_assistant-private
+  electronics-assistant:
+    external: true
+    name: commerce-electronics_assistant-private
+  pharmacy-assistant:
+    external: true
+    name: commerce-pharmacy_assistant-private

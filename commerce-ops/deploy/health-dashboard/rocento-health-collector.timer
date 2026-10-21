@@ -1,0 +1,9 @@
+[Unit]
+Description=Sample Rocento production health every minute
+[Timer]
+OnBootSec=30
+OnUnitActiveSec=60
+AccuracySec=3
+Unit=rocento-health-collector.service
+[Install]
+WantedBy=timers.target

@@ -1,0 +1,11 @@
+{
+  "index_bytes": 286394,
+  "index_entries": 2003,
+  "index_plus_three_partitions_ms": 706,
+  "products": 2000000,
+  "sample_partition_sizes": [
+    1000,
+    1000,
+    1000
+  ]
+}

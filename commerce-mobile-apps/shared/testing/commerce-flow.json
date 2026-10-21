@@ -1,0 +1,250 @@
+{
+  "ids": {
+    "customer": "70000000-0000-0000-0000-000000000001",
+    "product": "70000000-0000-0000-0000-000000000002",
+    "category": "70000000-0000-0000-0000-000000000003",
+    "location": "70000000-0000-0000-0000-000000000004",
+    "source": "70000000-0000-0000-0000-000000000005",
+    "quote": "70000000-0000-0000-0000-000000000006",
+    "order": "70000000-0000-0000-0000-000000000007",
+    "cart": "70000000-0000-0000-0000-000000000008",
+    "history": "70000000-0000-0000-0000-000000000009",
+    "variant": "70000000-0000-0000-0000-000000000010"
+  },
+  "auth": {
+    "customer": {
+      "id": "70000000-0000-0000-0000-000000000001",
+      "primary_identifier": "email",
+      "email": "native-fixture@example.test",
+      "mobile_number": null,
+      "verified": true
+    },
+    "access_token": "fixture-customer-token"
+  },
+  "customer": {
+    "id": "70000000-0000-0000-0000-000000000001",
+    "primary_identifier": "email",
+    "email": "native-fixture@example.test",
+    "mobile_number": null,
+    "verified": true
+  },
+  "product": {
+    "id": "70000000-0000-0000-0000-000000000002",
+    "name": "Fixture apples",
+    "description": "Isolated native acceptance product",
+    "price": "25.00",
+    "currency": "EGP",
+    "in_stock": true,
+    "product_type": "configurable",
+    "media_ids": []
+  },
+  "variant": {
+    "id": "70000000-0000-0000-0000-000000000010",
+    "name": "Fixture apples \u2014 1 kg",
+    "description": "Isolated native acceptance product",
+    "price": "25.00",
+    "currency": "EGP",
+    "in_stock": true,
+    "product_type": "simple",
+    "media_ids": []
+  },
+  "family": {
+    "children": [
+      {
+        "id": "70000000-0000-0000-0000-000000000010",
+        "name": "Fixture apples \u2014 1 kg",
+        "description": "Isolated native acceptance product",
+        "price": "25.00",
+        "currency": "EGP",
+        "in_stock": true,
+        "product_type": "simple",
+        "media_ids": []
+      }
+    ]
+  },
+  "categories": [
+    {
+      "id": "70000000-0000-0000-0000-000000000003",
+      "name": "Fixture fruit",
+      "slug": "grocery-fruit"
+    }
+  ],
+  "cart": {
+    "id": "70000000-0000-0000-0000-000000000008",
+    "items": [
+      {
+        "product_id": "70000000-0000-0000-0000-000000000010",
+        "name": "Fixture apples \u2014 1 kg",
+        "quantity": 1,
+        "reserved_quantity": 1,
+        "price": "25.00",
+        "line_total": "25.00"
+      }
+    ],
+    "subtotal": "25.00",
+    "currency": "EGP",
+    "fully_reserved": true
+  },
+  "empty_cart": {
+    "id": "70000000-0000-0000-0000-000000000008",
+    "items": [],
+    "subtotal": "0.00",
+    "currency": "EGP",
+    "fully_reserved": true
+  },
+  "location": {
+    "id": "70000000-0000-0000-0000-000000000004",
+    "label": "home",
+    "latitude": 30.0,
+    "longitude": 31.0,
+    "formatted_address": "Fixture delivery street",
+    "building": "1",
+    "floor": "2",
+    "apartment": "3",
+    "delivery_instructions": "",
+    "is_default": true
+  },
+  "locations": [
+    {
+      "id": "70000000-0000-0000-0000-000000000004",
+      "label": "home",
+      "latitude": 30.0,
+      "longitude": 31.0,
+      "formatted_address": "Fixture delivery street",
+      "building": "1",
+      "floor": "2",
+      "apartment": "3",
+      "delivery_instructions": "",
+      "is_default": true
+    }
+  ],
+  "coverage": {
+    "configured": true,
+    "deliverable": true
+  },
+  "availability": {
+    "methods": [
+      {
+        "type": "delivery",
+        "scheduling": false,
+        "asap": true
+      }
+    ]
+  },
+  "options": {
+    "groups": [
+      {
+        "source_id": "70000000-0000-0000-0000-000000000005",
+        "source_name": "Fixture Grocery",
+        "slots": []
+      }
+    ]
+  },
+  "plan": {
+    "id": "70000000-0000-0000-0000-000000000005",
+    "status": "HELD"
+  },
+  "quote": {
+    "id": "70000000-0000-0000-0000-000000000006",
+    "expires_at": "2030-01-01T00:00:00Z",
+    "snapshot": {
+      "subtotal": "25.00",
+      "discount_amount": "0.00",
+      "delivery_fee": "5.00",
+      "tax_amount": "0.00",
+      "total": "30.00",
+      "currency": "EGP",
+      "payment_method": "cash_on_delivery"
+    }
+  },
+  "order": {
+    "id": "70000000-0000-0000-0000-000000000007",
+    "number": 42,
+    "status": "placed",
+    "total": "30.00",
+    "currency": "EGP",
+    "created_at": "2026-10-11T00:00:00Z"
+  },
+  "detail": {
+    "order": {
+      "id": "70000000-0000-0000-0000-000000000007",
+      "number": 42,
+      "status": "placed",
+      "total": "30.00",
+      "currency": "EGP",
+      "created_at": "2026-10-11T00:00:00Z"
+    },
+    "history": [
+      {
+        "id": "70000000-0000-0000-0000-000000000009",
+        "status": "placed",
+        "created_at": "2026-10-11T00:00:00Z"
+      }
+    ]
+  },
+  "demo_home": [
+    {
+      "id": "8176762d-eaca-4306-9207-1349fd3dd06c",
+      "enabled": true,
+      "component": "product_collection",
+      "settings": {
+        "query": "",
+        "limit": 8
+      }
+    },
+    {
+      "id": "audio",
+      "enabled": true,
+      "component": "product_collection",
+      "settings": {
+        "query": "",
+        "limit": 8
+      }
+    },
+    {
+      "id": "essentials",
+      "enabled": true,
+      "component": "product_collection",
+      "settings": {
+        "query": "",
+        "limit": 8
+      }
+    },
+    {
+      "id": "featured",
+      "enabled": true,
+      "component": "product_collection",
+      "settings": {
+        "query": "",
+        "limit": 8
+      }
+    },
+    {
+      "id": "new-arrivals",
+      "enabled": true,
+      "component": "product_collection",
+      "settings": {
+        "query": "",
+        "limit": 8
+      }
+    },
+    {
+      "id": "section-7",
+      "enabled": true,
+      "component": "product_collection",
+      "settings": {
+        "query": "",
+        "limit": 8
+      }
+    },
+    {
+      "id": "section-9",
+      "enabled": true,
+      "component": "product_collection",
+      "settings": {
+        "query": "",
+        "limit": 8
+      }
+    }
+  ]
+}

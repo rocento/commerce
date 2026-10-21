@@ -1,0 +1,456 @@
+{
+  "schemaVersion": 1,
+  "language": "en",
+  "provenance": "Agent-authored contract regression labels reviewed against current resolver output. No independent holdout or customer-traffic accuracy claim.",
+  "limitations": [
+    "Authored contract regressions, not independent customer accuracy. No commerce execution is measured.",
+    "Full request means the exact labelled semantic projection; confidence, prose and debug fields are excluded. Routing thresholds are unchanged."
+  ],
+  "corpusSha256": "74cb87d3c1aeccbbe3c5124f8bd5a4bf498d57d0bdeab14dabcd8b5dbd473688",
+  "sourceSha256": "878663920846b2b9aed4c61f1aa043e6d29df247a89701547164f397b61895a4",
+  "dictionaryVersion": 8,
+  "generationFingerprint": "8b447e13fe4290e339afaafbd31771d7ea82be47f5baf426ae22456fe15e8be2",
+  "summary": {
+    "count": 12,
+    "passed": 12,
+    "failed": 0,
+    "fullRequestExactMatch": 1,
+    "dimensionAccuracy": {
+      "status": 1,
+      "intent": 1,
+      "entities": 1,
+      "requestedActions": 1,
+      "operations": 1,
+      "references": 1,
+      "issues": 1
+    },
+    "incorrectResolved": 0,
+    "falseResolved": 0,
+    "missedResolved": 0,
+    "abstained": 4,
+    "resolvedWholeRequestReliability": {
+      "count": 8,
+      "brierScore": 0.0011451249999999997,
+      "expectedCalibrationError": 0.015124999999999944,
+      "reliability": [
+        {
+          "lower": 0.9,
+          "upper": 1,
+          "count": 8,
+          "meanConfidence": 0.9848750000000001,
+          "accuracy": 1
+        }
+      ]
+    }
+  },
+  "byFamily": {
+    "ambiguity": {
+      "count": 1,
+      "passed": 1,
+      "failed": 0,
+      "fullRequestExactMatch": 1,
+      "dimensionAccuracy": {
+        "status": 1,
+        "intent": 1,
+        "entities": 1,
+        "requestedActions": 1,
+        "operations": 1,
+        "references": 1,
+        "issues": 1
+      },
+      "incorrectResolved": 0,
+      "falseResolved": 0,
+      "missedResolved": 0,
+      "abstained": 1,
+      "resolvedWholeRequestReliability": {
+        "count": 0,
+        "brierScore": 0,
+        "expectedCalibrationError": 0,
+        "reliability": []
+      }
+    },
+    "compound": {
+      "count": 2,
+      "passed": 2,
+      "failed": 0,
+      "fullRequestExactMatch": 1,
+      "dimensionAccuracy": {
+        "status": 1,
+        "intent": 1,
+        "entities": 1,
+        "requestedActions": 1,
+        "operations": 1,
+        "references": 1,
+        "issues": 1
+      },
+      "incorrectResolved": 0,
+      "falseResolved": 0,
+      "missedResolved": 0,
+      "abstained": 0,
+      "resolvedWholeRequestReliability": {
+        "count": 2,
+        "brierScore": 0,
+        "expectedCalibrationError": 0,
+        "reliability": [
+          {
+            "lower": 0.9,
+            "upper": 1,
+            "count": 2,
+            "meanConfidence": 1,
+            "accuracy": 1
+          }
+        ]
+      }
+    },
+    "conditions": {
+      "count": 1,
+      "passed": 1,
+      "failed": 0,
+      "fullRequestExactMatch": 1,
+      "dimensionAccuracy": {
+        "status": 1,
+        "intent": 1,
+        "entities": 1,
+        "requestedActions": 1,
+        "operations": 1,
+        "references": 1,
+        "issues": 1
+      },
+      "incorrectResolved": 0,
+      "falseResolved": 0,
+      "missedResolved": 0,
+      "abstained": 1,
+      "resolvedWholeRequestReliability": {
+        "count": 0,
+        "brierScore": 0,
+        "expectedCalibrationError": 0,
+        "reliability": []
+      }
+    },
+    "context": {
+      "count": 1,
+      "passed": 1,
+      "failed": 0,
+      "fullRequestExactMatch": 1,
+      "dimensionAccuracy": {
+        "status": 1,
+        "intent": 1,
+        "entities": 1,
+        "requestedActions": 1,
+        "operations": 1,
+        "references": 1,
+        "issues": 1
+      },
+      "incorrectResolved": 0,
+      "falseResolved": 0,
+      "missedResolved": 0,
+      "abstained": 0,
+      "resolvedWholeRequestReliability": {
+        "count": 1,
+        "brierScore": 0.000025000000000000045,
+        "expectedCalibrationError": 0.0050000000000000044,
+        "reliability": [
+          {
+            "lower": 0.9,
+            "upper": 1,
+            "count": 1,
+            "meanConfidence": 0.995,
+            "accuracy": 1
+          }
+        ]
+      }
+    },
+    "negation": {
+      "count": 1,
+      "passed": 1,
+      "failed": 0,
+      "fullRequestExactMatch": 1,
+      "dimensionAccuracy": {
+        "status": 1,
+        "intent": 1,
+        "entities": 1,
+        "requestedActions": 1,
+        "operations": 1,
+        "references": 1,
+        "issues": 1
+      },
+      "incorrectResolved": 0,
+      "falseResolved": 0,
+      "missedResolved": 0,
+      "abstained": 1,
+      "resolvedWholeRequestReliability": {
+        "count": 0,
+        "brierScore": 0,
+        "expectedCalibrationError": 0,
+        "reliability": []
+      }
+    },
+    "reads": {
+      "count": 1,
+      "passed": 1,
+      "failed": 0,
+      "fullRequestExactMatch": 1,
+      "dimensionAccuracy": {
+        "status": 1,
+        "intent": 1,
+        "entities": 1,
+        "requestedActions": 1,
+        "operations": 1,
+        "references": 1,
+        "issues": 1
+      },
+      "incorrectResolved": 0,
+      "falseResolved": 0,
+      "missedResolved": 0,
+      "abstained": 0,
+      "resolvedWholeRequestReliability": {
+        "count": 1,
+        "brierScore": 0.009024999999999995,
+        "expectedCalibrationError": 0.09499999999999997,
+        "reliability": [
+          {
+            "lower": 0.9,
+            "upper": 1,
+            "count": 1,
+            "meanConfidence": 0.905,
+            "accuracy": 1
+          }
+        ]
+      }
+    },
+    "references": {
+      "count": 1,
+      "passed": 1,
+      "failed": 0,
+      "fullRequestExactMatch": 1,
+      "dimensionAccuracy": {
+        "status": 1,
+        "intent": 1,
+        "entities": 1,
+        "requestedActions": 1,
+        "operations": 1,
+        "references": 1,
+        "issues": 1
+      },
+      "incorrectResolved": 0,
+      "falseResolved": 0,
+      "missedResolved": 0,
+      "abstained": 0,
+      "resolvedWholeRequestReliability": {
+        "count": 1,
+        "brierScore": 0.000025000000000000045,
+        "expectedCalibrationError": 0.0050000000000000044,
+        "reliability": [
+          {
+            "lower": 0.9,
+            "upper": 1,
+            "count": 1,
+            "meanConfidence": 0.995,
+            "accuracy": 1
+          }
+        ]
+      }
+    },
+    "search": {
+      "count": 2,
+      "passed": 2,
+      "failed": 0,
+      "fullRequestExactMatch": 1,
+      "dimensionAccuracy": {
+        "status": 1,
+        "intent": 1,
+        "entities": 1,
+        "requestedActions": 1,
+        "operations": 1,
+        "references": 1,
+        "issues": 1
+      },
+      "incorrectResolved": 0,
+      "falseResolved": 0,
+      "missedResolved": 0,
+      "abstained": 0,
+      "resolvedWholeRequestReliability": {
+        "count": 2,
+        "brierScore": 0.000025000000000000045,
+        "expectedCalibrationError": 0.0050000000000000044,
+        "reliability": [
+          {
+            "lower": 0.9,
+            "upper": 1,
+            "count": 2,
+            "meanConfidence": 0.995,
+            "accuracy": 1
+          }
+        ]
+      }
+    },
+    "unknown": {
+      "count": 1,
+      "passed": 1,
+      "failed": 0,
+      "fullRequestExactMatch": 1,
+      "dimensionAccuracy": {
+        "status": 1,
+        "intent": 1,
+        "entities": 1,
+        "requestedActions": 1,
+        "operations": 1,
+        "references": 1,
+        "issues": 1
+      },
+      "incorrectResolved": 0,
+      "falseResolved": 0,
+      "missedResolved": 0,
+      "abstained": 1,
+      "resolvedWholeRequestReliability": {
+        "count": 0,
+        "brierScore": 0,
+        "expectedCalibrationError": 0,
+        "reliability": []
+      }
+    },
+    "writes": {
+      "count": 1,
+      "passed": 1,
+      "failed": 0,
+      "fullRequestExactMatch": 1,
+      "dimensionAccuracy": {
+        "status": 1,
+        "intent": 1,
+        "entities": 1,
+        "requestedActions": 1,
+        "operations": 1,
+        "references": 1,
+        "issues": 1
+      },
+      "incorrectResolved": 0,
+      "falseResolved": 0,
+      "missedResolved": 0,
+      "abstained": 0,
+      "resolvedWholeRequestReliability": {
+        "count": 1,
+        "brierScore": 0.00003600000000000006,
+        "expectedCalibrationError": 0.006000000000000005,
+        "reliability": [
+          {
+            "lower": 0.9,
+            "upper": 1,
+            "count": 1,
+            "meanConfidence": 0.994,
+            "accuracy": 1
+          }
+        ]
+      }
+    }
+  },
+  "cases": [
+    {
+      "id": "cart-read",
+      "family": "reads",
+      "passed": true,
+      "errors": [],
+      "status": "RESOLVED",
+      "expectedStatus": "RESOLVED",
+      "confidence": 0.905
+    },
+    {
+      "id": "quoted-product",
+      "family": "search",
+      "passed": true,
+      "errors": [],
+      "status": "RESOLVED",
+      "expectedStatus": "RESOLVED",
+      "confidence": 0.995
+    },
+    {
+      "id": "price-bound",
+      "family": "search",
+      "passed": true,
+      "errors": [],
+      "status": "RESOLVED",
+      "expectedStatus": "RESOLVED",
+      "confidence": 0.995
+    },
+    {
+      "id": "price-correction",
+      "family": "context",
+      "passed": true,
+      "errors": [],
+      "status": "RESOLVED",
+      "expectedStatus": "RESOLVED",
+      "confidence": 0.995
+    },
+    {
+      "id": "quantity",
+      "family": "writes",
+      "passed": true,
+      "errors": [],
+      "status": "RESOLVED",
+      "expectedStatus": "RESOLVED",
+      "confidence": 0.994
+    },
+    {
+      "id": "negation",
+      "family": "negation",
+      "passed": true,
+      "errors": [],
+      "status": "UNKNOWN",
+      "expectedStatus": "UNKNOWN",
+      "confidence": 0
+    },
+    {
+      "id": "unrelated",
+      "family": "unknown",
+      "passed": true,
+      "errors": [],
+      "status": "UNKNOWN",
+      "expectedStatus": "UNKNOWN",
+      "confidence": 0
+    },
+    {
+      "id": "condition",
+      "family": "conditions",
+      "passed": true,
+      "errors": [],
+      "status": "NEEDS_CONTEXT",
+      "expectedStatus": "NEEDS_CONTEXT",
+      "confidence": 0
+    },
+    {
+      "id": "alternatives",
+      "family": "ambiguity",
+      "passed": true,
+      "errors": [],
+      "status": "AMBIGUOUS",
+      "expectedStatus": "AMBIGUOUS",
+      "confidence": 0
+    },
+    {
+      "id": "ordered-pair",
+      "family": "compound",
+      "passed": true,
+      "errors": [],
+      "status": "RESOLVED",
+      "expectedStatus": "RESOLVED",
+      "confidence": 1
+    },
+    {
+      "id": "reversed-destinations",
+      "family": "compound",
+      "passed": true,
+      "errors": [],
+      "status": "RESOLVED",
+      "expectedStatus": "RESOLVED",
+      "confidence": 1
+    },
+    {
+      "id": "order-reference",
+      "family": "references",
+      "passed": true,
+      "errors": [],
+      "status": "RESOLVED",
+      "expectedStatus": "RESOLVED",
+      "confidence": 0.995
+    }
+  ]
+}

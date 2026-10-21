@@ -1,0 +1,27 @@
+# Same application images and APIs; separate project volumes and service network.
+# docker compose -p commerce-electronics -f commerce-ops/compose/compose.yaml -f commerce-ops/compose/compose.electronics.yaml up -d --build
+name: commerce-electronics
+services:
+  postgres:
+    ports: !override ["127.0.0.1:56432:5432"]
+  clickhouse:
+    ports: !override ["127.0.0.1:59123:8123"]
+  nats:
+    ports: !override ["127.0.0.1:55222:4222", "127.0.0.1:59222:8222"]
+  meilisearch:
+    ports: !override ["127.0.0.1:58700:7700"]
+  minio:
+    ports: !override ["127.0.0.1:59100:9000", "127.0.0.1:59101:9001"]
+  api-gateway:
+    ports: !override ["127.0.0.1:59080:8080"]
+    environment:
+      STOREFRONT_URL: http://localhost:5373
+      ALLOWED_ORIGINS: http://localhost:5373,http://localhost:5374,http://127.0.0.1:5373,http://127.0.0.1:5374,http://localhost:5173,http://localhost:5174
+  storefront:
+    ports: !override ["127.0.0.1:5373:5173"]
+    environment:
+      VITE_SALES_CHANNEL: storefront
+  admin:
+    ports: !override ["127.0.0.1:5374:5174"]
+    environment:
+      VITE_STOREFRONT_URL: http://localhost:5373

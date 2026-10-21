@@ -1,0 +1,1695 @@
+[
+  {
+    "code": "PRICE_DROP",
+    "actions": [
+      "check",
+      "show",
+      "notify"
+    ],
+    "objects": [
+      "price drop",
+      "price drops"
+    ]
+  },
+  {
+    "code": "RESTOCK_QUERY",
+    "actions": [
+      "when",
+      "notify",
+      "check"
+    ],
+    "objects": [
+      "restock",
+      "back in stock"
+    ]
+  },
+  {
+    "code": "MODIFY_ORDER",
+    "actions": [
+      "modify",
+      "edit",
+      "change"
+    ],
+    "objects": [
+      "order"
+    ]
+  },
+  {
+    "code": "RETURN_ITEM",
+    "actions": [
+      "return",
+      "send back"
+    ],
+    "objects": [
+      "exchange",
+      "swap"
+    ]
+  },
+  {
+    "code": "RETURN_ORDER",
+    "actions": [
+      "return",
+      "send back"
+    ],
+    "objects": [
+      "order"
+    ]
+  },
+  {
+    "code": "EXCHANGE_ITEM",
+    "actions": [
+      "exchange",
+      "swap"
+    ],
+    "objects": [
+      "return",
+      "send back"
+    ]
+  },
+  {
+    "code": "RETURN_ELIGIBILITY",
+    "actions": [
+      "check",
+      "is this"
+    ],
+    "objects": [
+      "return eligibility",
+      "returnable"
+    ]
+  },
+  {
+    "code": "SAME_DAY_DELIVERY",
+    "actions": [
+      "check",
+      "select",
+      "show"
+    ],
+    "objects": [
+      "same day delivery"
+    ]
+  },
+  {
+    "code": "EXPRESS_DELIVERY",
+    "actions": [
+      "check",
+      "select",
+      "show"
+    ],
+    "objects": [
+      "express delivery"
+    ]
+  },
+  {
+    "code": "CHECK_POINTS",
+    "actions": [
+      "check",
+      "show"
+    ],
+    "objects": [
+      "points",
+      "point balance"
+    ]
+  },
+  {
+    "code": "REDEEM_POINTS",
+    "actions": [
+      "redeem",
+      "use"
+    ],
+    "objects": [
+      "points"
+    ]
+  },
+  {
+    "code": "CHECK_REWARD",
+    "actions": [
+      "check",
+      "show",
+      "list"
+    ],
+    "objects": [
+      "rewards",
+      "reward"
+    ]
+  },
+  {
+    "code": "CREATE_SUBSCRIPTION",
+    "actions": [
+      "create",
+      "start"
+    ],
+    "objects": [
+      "subscription"
+    ]
+  },
+  {
+    "code": "PAUSE_SUBSCRIPTION",
+    "actions": [
+      "pause",
+      "suspend"
+    ],
+    "objects": [
+      "subscription"
+    ]
+  },
+  {
+    "code": "CANCEL_SUBSCRIPTION",
+    "actions": [
+      "cancel",
+      "stop"
+    ],
+    "objects": [
+      "subscription"
+    ]
+  },
+  {
+    "code": "PRODUCT_VIDEO",
+    "actions": [
+      "show",
+      "play"
+    ],
+    "objects": [
+      "product video",
+      "demo video"
+    ]
+  },
+  {
+    "code": "PRODUCT_MANUAL",
+    "actions": [
+      "download",
+      "show",
+      "get"
+    ],
+    "objects": [
+      "product manual",
+      "user manual"
+    ]
+  },
+  {
+    "code": "PRODUCT_SERIAL_NUMBER",
+    "actions": [
+      "show",
+      "find"
+    ],
+    "objects": [
+      "serial number",
+      "serial code"
+    ]
+  },
+  {
+    "code": "PRODUCT_COUNTRY_RESTRICTIONS",
+    "actions": [
+      "show",
+      "check"
+    ],
+    "objects": [
+      "country restrictions",
+      "regional restrictions"
+    ]
+  },
+  {
+    "code": "PRODUCT_RECALL",
+    "actions": [
+      "check",
+      "show"
+    ],
+    "objects": [
+      "product recalls",
+      "recall notices"
+    ]
+  },
+  {
+    "code": "PRICE_MATCH_POLICY",
+    "actions": [
+      "show",
+      "check"
+    ],
+    "objects": [
+      "price match policy",
+      "price matching rules"
+    ]
+  },
+  {
+    "code": "REQUEST_PRICE_MATCH",
+    "actions": [
+      "request",
+      "submit"
+    ],
+    "objects": [
+      "price match",
+      "price matching"
+    ]
+  },
+  {
+    "code": "PRICE_HISTORY",
+    "actions": [
+      "show",
+      "check"
+    ],
+    "objects": [
+      "price history",
+      "historical prices"
+    ]
+  },
+  {
+    "code": "CHANGE_CURRENCY",
+    "actions": [
+      "change",
+      "select"
+    ],
+    "objects": [
+      "display currency",
+      "shopping currency"
+    ]
+  },
+  {
+    "code": "GIFT_CARD_BALANCE",
+    "actions": [
+      "check",
+      "show"
+    ],
+    "objects": [
+      "gift card balance",
+      "gift voucher balance"
+    ]
+  },
+  {
+    "code": "APPLY_GIFT_CARD",
+    "actions": [
+      "apply",
+      "use",
+      "redeem"
+    ],
+    "objects": [
+      "gift card",
+      "gift voucher"
+    ]
+  },
+  {
+    "code": "REMOVE_GIFT_CARD",
+    "actions": [
+      "remove",
+      "delete"
+    ],
+    "objects": [
+      "gift card",
+      "gift voucher"
+    ]
+  },
+  {
+    "code": "PREORDER_AVAILABILITY",
+    "actions": [
+      "check",
+      "show"
+    ],
+    "objects": [
+      "preorder availability",
+      "preorder options"
+    ]
+  },
+  {
+    "code": "CREATE_PREORDER",
+    "actions": [
+      "place",
+      "create"
+    ],
+    "objects": [
+      "preorder",
+      "advance order"
+    ]
+  },
+  {
+    "code": "CANCEL_PREORDER",
+    "actions": [
+      "cancel",
+      "stop"
+    ],
+    "objects": [
+      "preorder",
+      "advance order"
+    ]
+  },
+  {
+    "code": "PREORDER_RELEASE_DATE",
+    "actions": [
+      "check",
+      "show"
+    ],
+    "objects": [
+      "release date",
+      "launch date"
+    ]
+  },
+  {
+    "code": "BACKORDER_STATUS",
+    "actions": [
+      "check",
+      "track"
+    ],
+    "objects": [
+      "backorder status",
+      "backordered item"
+    ]
+  },
+  {
+    "code": "STOCK_ALERT_CREATE",
+    "actions": [
+      "create",
+      "enable"
+    ],
+    "objects": [
+      "stock alert",
+      "restock notification"
+    ]
+  },
+  {
+    "code": "STOCK_ALERT_CANCEL",
+    "actions": [
+      "cancel",
+      "disable"
+    ],
+    "objects": [
+      "stock alert",
+      "restock notification"
+    ]
+  },
+  {
+    "code": "STOCK_RESERVATION_CREATE",
+    "actions": [
+      "create",
+      "place"
+    ],
+    "objects": [
+      "stock reservation",
+      "item reservation"
+    ]
+  },
+  {
+    "code": "STOCK_RESERVATION_CANCEL",
+    "actions": [
+      "cancel",
+      "remove"
+    ],
+    "objects": [
+      "stock reservation",
+      "item reservation"
+    ]
+  },
+  {
+    "code": "PURCHASE_LIMIT",
+    "actions": [
+      "check",
+      "show"
+    ],
+    "objects": [
+      "purchase limit",
+      "quantity limit"
+    ]
+  },
+  {
+    "code": "CART_SAVE",
+    "actions": [
+      "save",
+      "store"
+    ],
+    "objects": [
+      "cart for later",
+      "basket for later"
+    ]
+  },
+  {
+    "code": "CART_RESTORE",
+    "actions": [
+      "restore",
+      "reload"
+    ],
+    "objects": [
+      "saved cart",
+      "saved basket"
+    ]
+  },
+  {
+    "code": "CART_SHARE",
+    "actions": [
+      "share",
+      "send"
+    ],
+    "objects": [
+      "cart link",
+      "basket link"
+    ]
+  },
+  {
+    "code": "CART_NOTE_ADD",
+    "actions": [
+      "add",
+      "write"
+    ],
+    "objects": [
+      "cart note",
+      "basket note"
+    ]
+  },
+  {
+    "code": "CART_NOTE_REMOVE",
+    "actions": [
+      "remove",
+      "delete"
+    ],
+    "objects": [
+      "cart note",
+      "basket note"
+    ]
+  },
+  {
+    "code": "WISHLIST_CREATE",
+    "actions": [
+      "create",
+      "start"
+    ],
+    "objects": [
+      "wishlist",
+      "new favorites list"
+    ]
+  },
+  {
+    "code": "WISHLIST_DELETE",
+    "actions": [
+      "delete",
+      "erase"
+    ],
+    "objects": [
+      "entire wishlist",
+      "favorites list"
+    ]
+  },
+  {
+    "code": "WISHLIST_RENAME",
+    "actions": [
+      "rename",
+      "change name of"
+    ],
+    "objects": [
+      "wishlist",
+      "favorites list"
+    ]
+  },
+  {
+    "code": "WISHLIST_SHARE",
+    "actions": [
+      "share",
+      "send"
+    ],
+    "objects": [
+      "wishlist link",
+      "favorites link"
+    ]
+  },
+  {
+    "code": "WISHLIST_PRIVACY",
+    "actions": [
+      "change",
+      "set"
+    ],
+    "objects": [
+      "wishlist privacy",
+      "favorites privacy"
+    ]
+  },
+  {
+    "code": "CHECKOUT_GUEST",
+    "actions": [
+      "start",
+      "use"
+    ],
+    "objects": [
+      "guest checkout",
+      "checkout as guest"
+    ]
+  },
+  {
+    "code": "CHECKOUT_BILLING_ADDRESS",
+    "actions": [
+      "change",
+      "update"
+    ],
+    "objects": [
+      "billing address",
+      "invoice address"
+    ]
+  },
+  {
+    "code": "CHECKOUT_CONTACT",
+    "actions": [
+      "change",
+      "update"
+    ],
+    "objects": [
+      "checkout contact",
+      "checkout phone number"
+    ]
+  },
+  {
+    "code": "CHECKOUT_INSTRUCTIONS",
+    "actions": [
+      "add",
+      "change"
+    ],
+    "objects": [
+      "checkout instructions",
+      "order instructions"
+    ]
+  },
+  {
+    "code": "CHECKOUT_GIFT_WRAP",
+    "actions": [
+      "add",
+      "select"
+    ],
+    "objects": [
+      "gift wrapping",
+      "gift wrap"
+    ]
+  },
+  {
+    "code": "CHECKOUT_REMOVE_GIFT_WRAP",
+    "actions": [
+      "remove",
+      "cancel"
+    ],
+    "objects": [
+      "gift wrapping",
+      "gift wrap"
+    ]
+  },
+  {
+    "code": "CHECKOUT_GIFT_RECEIPT",
+    "actions": [
+      "request",
+      "add"
+    ],
+    "objects": [
+      "gift receipt",
+      "gift invoice"
+    ]
+  },
+  {
+    "code": "CHECKOUT_INVOICE_DETAILS",
+    "actions": [
+      "change",
+      "update"
+    ],
+    "objects": [
+      "invoice details",
+      "tax invoice details"
+    ]
+  },
+  {
+    "code": "PAYMENT_CARD_ADD",
+    "actions": [
+      "add",
+      "save"
+    ],
+    "objects": [
+      "payment card",
+      "credit card"
+    ]
+  },
+  {
+    "code": "PAYMENT_CARD_REMOVE",
+    "actions": [
+      "remove",
+      "delete"
+    ],
+    "objects": [
+      "payment card",
+      "credit card"
+    ]
+  },
+  {
+    "code": "PAYMENT_CARD_UPDATE",
+    "actions": [
+      "update",
+      "change"
+    ],
+    "objects": [
+      "saved card details",
+      "payment card details"
+    ]
+  },
+  {
+    "code": "PAYMENT_DEFAULT",
+    "actions": [
+      "set",
+      "change"
+    ],
+    "objects": [
+      "default payment method",
+      "preferred payment method"
+    ]
+  },
+  {
+    "code": "PAYMENT_FAILED",
+    "actions": [
+      "help with",
+      "report"
+    ],
+    "objects": [
+      "failed payment",
+      "payment failure"
+    ]
+  },
+  {
+    "code": "PAYMENT_RETRY",
+    "actions": [
+      "retry",
+      "repeat"
+    ],
+    "objects": [
+      "payment",
+      "card payment"
+    ]
+  },
+  {
+    "code": "PAYMENT_RECEIPT",
+    "actions": [
+      "download",
+      "show"
+    ],
+    "objects": [
+      "payment receipt",
+      "transaction receipt"
+    ]
+  },
+  {
+    "code": "PAYMENT_INSTALLMENTS",
+    "actions": [
+      "show",
+      "check"
+    ],
+    "objects": [
+      "installment plans",
+      "payment installments"
+    ]
+  },
+  {
+    "code": "PAYMENT_BANK_TRANSFER",
+    "actions": [
+      "show",
+      "check"
+    ],
+    "objects": [
+      "bank transfer instructions",
+      "bank payment details"
+    ]
+  },
+  {
+    "code": "PAYMENT_DUPLICATE_CHARGE",
+    "actions": [
+      "report",
+      "dispute"
+    ],
+    "objects": [
+      "duplicate charge",
+      "double charge"
+    ]
+  },
+  {
+    "code": "PAYMENT_UNRECOGNIZED_CHARGE",
+    "actions": [
+      "report",
+      "dispute"
+    ],
+    "objects": [
+      "unrecognized charge",
+      "unknown charge"
+    ]
+  },
+  {
+    "code": "PAYMENT_AUTHORIZATION_HOLD",
+    "actions": [
+      "check",
+      "explain"
+    ],
+    "objects": [
+      "authorization hold",
+      "pending card hold"
+    ]
+  },
+  {
+    "code": "ORDER_INVOICE",
+    "actions": [
+      "download",
+      "show"
+    ],
+    "objects": [
+      "order invoice",
+      "purchase invoice"
+    ]
+  },
+  {
+    "code": "ORDER_RECEIPT",
+    "actions": [
+      "download",
+      "show"
+    ],
+    "objects": [
+      "order receipt",
+      "purchase receipt"
+    ]
+  },
+  {
+    "code": "ORDER_ADDRESS_CHANGE",
+    "actions": [
+      "change",
+      "update"
+    ],
+    "objects": [
+      "order delivery address",
+      "order shipping address"
+    ]
+  },
+  {
+    "code": "ORDER_PAYMENT_CHANGE",
+    "actions": [
+      "change",
+      "update"
+    ],
+    "objects": [
+      "order payment method",
+      "order payment option"
+    ]
+  },
+  {
+    "code": "ORDER_ITEM_ADD",
+    "actions": [
+      "add",
+      "include"
+    ],
+    "objects": [
+      "item to order",
+      "product to order"
+    ]
+  },
+  {
+    "code": "ORDER_ITEM_REMOVE",
+    "actions": [
+      "remove",
+      "delete"
+    ],
+    "objects": [
+      "item from order",
+      "product from order"
+    ]
+  },
+  {
+    "code": "ORDER_QUANTITY_CHANGE",
+    "actions": [
+      "change",
+      "update"
+    ],
+    "objects": [
+      "order quantity",
+      "ordered quantity"
+    ]
+  },
+  {
+    "code": "ORDER_MERGE_REQUEST",
+    "actions": [
+      "merge",
+      "combine"
+    ],
+    "objects": [
+      "orders",
+      "order shipments"
+    ]
+  },
+  {
+    "code": "ORDER_CONFIRMATION_RESEND",
+    "actions": [
+      "resend",
+      "send again"
+    ],
+    "objects": [
+      "order confirmation",
+      "purchase confirmation"
+    ]
+  },
+  {
+    "code": "ORDER_ARCHIVE",
+    "actions": [
+      "archive",
+      "hide"
+    ],
+    "objects": [
+      "order",
+      "completed order"
+    ]
+  },
+  {
+    "code": "ORDER_UNARCHIVE",
+    "actions": [
+      "unarchive",
+      "restore"
+    ],
+    "objects": [
+      "archived order",
+      "hidden order"
+    ]
+  },
+  {
+    "code": "ORDER_EXPORT",
+    "actions": [
+      "export",
+      "download"
+    ],
+    "objects": [
+      "order history",
+      "purchase history"
+    ]
+  },
+  {
+    "code": "RETURN_START",
+    "actions": [
+      "start",
+      "create"
+    ],
+    "objects": [
+      "return request",
+      "return authorization"
+    ]
+  },
+  {
+    "code": "RETURN_CANCEL",
+    "actions": [
+      "cancel",
+      "withdraw"
+    ],
+    "objects": [
+      "return request",
+      "return authorization"
+    ]
+  },
+  {
+    "code": "RETURN_STATUS",
+    "actions": [
+      "check",
+      "track"
+    ],
+    "objects": [
+      "return status",
+      "return progress"
+    ]
+  },
+  {
+    "code": "RETURN_LABEL",
+    "actions": [
+      "download",
+      "print"
+    ],
+    "objects": [
+      "return label",
+      "return shipping label"
+    ]
+  },
+  {
+    "code": "RETURN_LABEL_RESEND",
+    "actions": [
+      "resend",
+      "send again"
+    ],
+    "objects": [
+      "return label",
+      "return shipping label"
+    ]
+  },
+  {
+    "code": "RETURN_DROP_OFF",
+    "actions": [
+      "find",
+      "show"
+    ],
+    "objects": [
+      "return drop off",
+      "return dropoff locations"
+    ]
+  },
+  {
+    "code": "RETURN_PICKUP_SCHEDULE",
+    "actions": [
+      "schedule",
+      "book"
+    ],
+    "objects": [
+      "return pickup",
+      "collection for return"
+    ]
+  },
+  {
+    "code": "RETURN_PICKUP_CHANGE",
+    "actions": [
+      "change",
+      "reschedule"
+    ],
+    "objects": [
+      "return pickup",
+      "collection for return"
+    ]
+  },
+  {
+    "code": "RETURN_PICKUP_CANCEL",
+    "actions": [
+      "cancel",
+      "stop"
+    ],
+    "objects": [
+      "return pickup",
+      "collection for return"
+    ]
+  },
+  {
+    "code": "RETURN_WINDOW",
+    "actions": [
+      "check",
+      "show"
+    ],
+    "objects": [
+      "return window",
+      "return deadline"
+    ]
+  },
+  {
+    "code": "RETURN_SHIPPING_COST",
+    "actions": [
+      "check",
+      "show"
+    ],
+    "objects": [
+      "return shipping cost",
+      "return postage cost"
+    ]
+  },
+  {
+    "code": "RETURN_RESTOCKING_FEE",
+    "actions": [
+      "check",
+      "show"
+    ],
+    "objects": [
+      "restocking fee",
+      "return processing fee"
+    ]
+  },
+  {
+    "code": "REFUND_METHOD",
+    "actions": [
+      "check",
+      "show"
+    ],
+    "objects": [
+      "refund method",
+      "refund destination"
+    ]
+  },
+  {
+    "code": "REFUND_TIMELINE",
+    "actions": [
+      "check",
+      "show"
+    ],
+    "objects": [
+      "refund timeline",
+      "refund processing time"
+    ]
+  },
+  {
+    "code": "REFUND_MISSING",
+    "actions": [
+      "report",
+      "trace"
+    ],
+    "objects": [
+      "missing refund",
+      "overdue refund"
+    ]
+  },
+  {
+    "code": "REFUND_PARTIAL",
+    "actions": [
+      "request",
+      "check"
+    ],
+    "objects": [
+      "partial refund",
+      "partial reimbursement"
+    ]
+  },
+  {
+    "code": "EXCHANGE_STATUS",
+    "actions": [
+      "check",
+      "track"
+    ],
+    "objects": [
+      "exchange status",
+      "replacement status"
+    ]
+  },
+  {
+    "code": "EXCHANGE_CANCEL",
+    "actions": [
+      "cancel",
+      "withdraw"
+    ],
+    "objects": [
+      "exchange request",
+      "replacement request"
+    ]
+  },
+  {
+    "code": "EXCHANGE_SIZE",
+    "actions": [
+      "change",
+      "exchange"
+    ],
+    "objects": [
+      "item size",
+      "product size"
+    ]
+  },
+  {
+    "code": "EXCHANGE_COLOR",
+    "actions": [
+      "change",
+      "exchange"
+    ],
+    "objects": [
+      "item color",
+      "product color"
+    ]
+  },
+  {
+    "code": "DELIVERY_REATTEMPT",
+    "actions": [
+      "request",
+      "schedule"
+    ],
+    "objects": [
+      "redelivery",
+      "delivery reattempt"
+    ]
+  },
+  {
+    "code": "DELIVERY_SAFE_PLACE",
+    "actions": [
+      "set",
+      "change"
+    ],
+    "objects": [
+      "safe place",
+      "safe delivery location"
+    ]
+  },
+  {
+    "code": "DELIVERY_NEIGHBOR",
+    "actions": [
+      "select",
+      "change"
+    ],
+    "objects": [
+      "delivery neighbor",
+      "designated neighbor"
+    ]
+  },
+  {
+    "code": "DELIVERY_SIGNATURE",
+    "actions": [
+      "check",
+      "show"
+    ],
+    "objects": [
+      "signature requirement",
+      "delivery signature"
+    ]
+  },
+  {
+    "code": "DELIVERY_PROOF",
+    "actions": [
+      "show",
+      "request"
+    ],
+    "objects": [
+      "proof of delivery",
+      "delivery proof"
+    ]
+  },
+  {
+    "code": "DELIVERY_HOLD",
+    "actions": [
+      "request",
+      "place"
+    ],
+    "objects": [
+      "delivery hold",
+      "shipment hold"
+    ]
+  },
+  {
+    "code": "DELIVERY_HOLD_RELEASE",
+    "actions": [
+      "release",
+      "remove"
+    ],
+    "objects": [
+      "delivery hold",
+      "shipment hold"
+    ]
+  },
+  {
+    "code": "DELIVERY_REDIRECT",
+    "actions": [
+      "redirect",
+      "reroute"
+    ],
+    "objects": [
+      "shipment",
+      "parcel"
+    ]
+  },
+  {
+    "code": "DELIVERY_INTERNATIONAL",
+    "actions": [
+      "check",
+      "show"
+    ],
+    "objects": [
+      "international shipping",
+      "overseas delivery"
+    ]
+  },
+  {
+    "code": "DELIVERY_CUSTOMS",
+    "actions": [
+      "check",
+      "show"
+    ],
+    "objects": [
+      "customs fees",
+      "import duties"
+    ]
+  },
+  {
+    "code": "DELIVERY_INSURANCE",
+    "actions": [
+      "add",
+      "check"
+    ],
+    "objects": [
+      "shipping insurance",
+      "delivery insurance"
+    ]
+  },
+  {
+    "code": "DELIVERY_PACKAGING",
+    "actions": [
+      "check",
+      "show"
+    ],
+    "objects": [
+      "delivery packaging",
+      "shipping packaging"
+    ]
+  },
+  {
+    "code": "DELIVERY_CONTACT_DRIVER",
+    "actions": [
+      "contact",
+      "call"
+    ],
+    "objects": [
+      "delivery driver",
+      "courier driver"
+    ]
+  },
+  {
+    "code": "DELIVERY_NOTIFICATION_ENABLE",
+    "actions": [
+      "enable",
+      "activate"
+    ],
+    "objects": [
+      "delivery notifications",
+      "shipment notifications"
+    ]
+  },
+  {
+    "code": "DELIVERY_NOTIFICATION_DISABLE",
+    "actions": [
+      "disable",
+      "stop"
+    ],
+    "objects": [
+      "delivery notifications",
+      "shipment notifications"
+    ]
+  },
+  {
+    "code": "PICKUP_DEADLINE",
+    "actions": [
+      "check",
+      "show"
+    ],
+    "objects": [
+      "pickup deadline",
+      "collection deadline"
+    ]
+  },
+  {
+    "code": "PICKUP_EXTEND",
+    "actions": [
+      "extend",
+      "change"
+    ],
+    "objects": [
+      "pickup deadline",
+      "collection deadline"
+    ]
+  },
+  {
+    "code": "PICKUP_CANCEL",
+    "actions": [
+      "cancel",
+      "stop"
+    ],
+    "objects": [
+      "pickup order",
+      "collection order"
+    ]
+  },
+  {
+    "code": "PICKUP_PERSON_CHANGE",
+    "actions": [
+      "change",
+      "update"
+    ],
+    "objects": [
+      "pickup person",
+      "authorized collector"
+    ]
+  },
+  {
+    "code": "PICKUP_REQUIREMENTS",
+    "actions": [
+      "show",
+      "check"
+    ],
+    "objects": [
+      "pickup requirements",
+      "collection requirements"
+    ]
+  },
+  {
+    "code": "PICKUP_CODE",
+    "actions": [
+      "show",
+      "resend"
+    ],
+    "objects": [
+      "pickup code",
+      "collection code"
+    ]
+  },
+  {
+    "code": "PICKUP_CURBSIDE",
+    "actions": [
+      "check",
+      "select"
+    ],
+    "objects": [
+      "curbside pickup",
+      "drive up pickup"
+    ]
+  },
+  {
+    "code": "PICKUP_LOCKER",
+    "actions": [
+      "find",
+      "show"
+    ],
+    "objects": [
+      "pickup locker",
+      "collection locker"
+    ]
+  },
+  {
+    "code": "ACCOUNT_DELETE",
+    "actions": [
+      "delete",
+      "close"
+    ],
+    "objects": [
+      "customer account",
+      "shopping account"
+    ]
+  },
+  {
+    "code": "ACCOUNT_EMAIL_CHANGE",
+    "actions": [
+      "change",
+      "update"
+    ],
+    "objects": [
+      "account email",
+      "login email"
+    ]
+  },
+  {
+    "code": "ACCOUNT_PHONE_CHANGE",
+    "actions": [
+      "change",
+      "update"
+    ],
+    "objects": [
+      "account phone",
+      "contact phone"
+    ]
+  },
+  {
+    "code": "ACCOUNT_NAME_CHANGE",
+    "actions": [
+      "change",
+      "update"
+    ],
+    "objects": [
+      "account name",
+      "profile name"
+    ]
+  },
+  {
+    "code": "LOYALTY_JOIN",
+    "actions": [
+      "join",
+      "enroll in"
+    ],
+    "objects": [
+      "loyalty program",
+      "rewards program"
+    ]
+  },
+  {
+    "code": "LOYALTY_LEAVE",
+    "actions": [
+      "leave",
+      "quit"
+    ],
+    "objects": [
+      "loyalty program",
+      "rewards program"
+    ]
+  },
+  {
+    "code": "LOYALTY_TIER",
+    "actions": [
+      "check",
+      "show"
+    ],
+    "objects": [
+      "loyalty tier",
+      "membership tier"
+    ]
+  },
+  {
+    "code": "LOYALTY_BENEFITS",
+    "actions": [
+      "show",
+      "list"
+    ],
+    "objects": [
+      "loyalty benefits",
+      "member benefits"
+    ]
+  },
+  {
+    "code": "LOYALTY_POINTS_EXPIRY",
+    "actions": [
+      "check",
+      "show"
+    ],
+    "objects": [
+      "points expiry",
+      "rewards expiration"
+    ]
+  },
+  {
+    "code": "LOYALTY_MISSING_POINTS",
+    "actions": [
+      "report",
+      "claim"
+    ],
+    "objects": [
+      "missing points",
+      "uncredited points"
+    ]
+  },
+  {
+    "code": "LOYALTY_POINTS_HISTORY",
+    "actions": [
+      "show",
+      "check"
+    ],
+    "objects": [
+      "points history",
+      "reward transactions"
+    ]
+  },
+  {
+    "code": "LOYALTY_REFERRAL_CODE",
+    "actions": [
+      "show",
+      "get"
+    ],
+    "objects": [
+      "referral code",
+      "invite code"
+    ]
+  },
+  {
+    "code": "SUBSCRIPTION_RESUME",
+    "actions": [
+      "resume",
+      "restart"
+    ],
+    "objects": [
+      "subscription"
+    ]
+  },
+  {
+    "code": "SUBSCRIPTION_FREQUENCY",
+    "actions": [
+      "change",
+      "update"
+    ],
+    "objects": [
+      "subscription frequency",
+      "recurring delivery frequency"
+    ]
+  },
+  {
+    "code": "SUBSCRIPTION_QUANTITY",
+    "actions": [
+      "change",
+      "update"
+    ],
+    "objects": [
+      "subscription quantity",
+      "recurring item quantity"
+    ]
+  },
+  {
+    "code": "SUBSCRIPTION_NEXT_DATE",
+    "actions": [
+      "check",
+      "show"
+    ],
+    "objects": [
+      "next subscription date",
+      "next recurring delivery"
+    ]
+  },
+  {
+    "code": "SUBSCRIPTION_SKIP",
+    "actions": [
+      "skip",
+      "omit"
+    ],
+    "objects": [
+      "next subscription delivery",
+      "next recurring order"
+    ]
+  },
+  {
+    "code": "SUBSCRIPTION_ADDRESS",
+    "actions": [
+      "change",
+      "update"
+    ],
+    "objects": [
+      "subscription address",
+      "recurring delivery address"
+    ]
+  },
+  {
+    "code": "SUBSCRIPTION_PAYMENT",
+    "actions": [
+      "change",
+      "update"
+    ],
+    "objects": [
+      "subscription payment",
+      "recurring payment method"
+    ]
+  },
+  {
+    "code": "SUBSCRIPTION_LIST",
+    "actions": [
+      "show",
+      "list"
+    ],
+    "objects": [
+      "subscriptions",
+      "recurring orders"
+    ]
+  },
+  {
+    "code": "QUOTE_REQUEST",
+    "actions": [
+      "request",
+      "create"
+    ],
+    "objects": [
+      "purchase quote",
+      "price quotation"
+    ]
+  },
+  {
+    "code": "QUOTE_STATUS",
+    "actions": [
+      "check",
+      "show"
+    ],
+    "objects": [
+      "quote status",
+      "quotation status"
+    ]
+  },
+  {
+    "code": "QUOTE_ACCEPT",
+    "actions": [
+      "accept",
+      "approve"
+    ],
+    "objects": [
+      "purchase quote",
+      "price quotation"
+    ]
+  },
+  {
+    "code": "QUOTE_REJECT",
+    "actions": [
+      "reject",
+      "decline"
+    ],
+    "objects": [
+      "purchase quote",
+      "price quotation"
+    ]
+  },
+  {
+    "code": "PURCHASE_ORDER_UPLOAD",
+    "actions": [
+      "upload",
+      "submit"
+    ],
+    "objects": [
+      "purchase order document",
+      "po document"
+    ]
+  },
+  {
+    "code": "MINIMUM_ORDER_QUANTITY",
+    "actions": [
+      "check",
+      "show"
+    ],
+    "objects": [
+      "minimum order quantity",
+      "minimum purchase quantity"
+    ]
+  },
+  {
+    "code": "WHOLESALE_CATALOG",
+    "actions": [
+      "show",
+      "download"
+    ],
+    "objects": [
+      "wholesale catalog",
+      "trade catalog"
+    ]
+  },
+  {
+    "code": "PAYMENT_TERMS",
+    "actions": [
+      "show",
+      "check"
+    ],
+    "objects": [
+      "trade payment terms",
+      "invoice payment terms"
+    ]
+  },
+  {
+    "code": "SUPPORT_TICKET_CLOSE",
+    "actions": [
+      "close",
+      "resolve"
+    ],
+    "objects": [
+      "support ticket",
+      "support case"
+    ]
+  },
+  {
+    "code": "SUPPORT_TICKET_REOPEN",
+    "actions": [
+      "reopen",
+      "resume"
+    ],
+    "objects": [
+      "support ticket",
+      "support case"
+    ]
+  },
+  {
+    "code": "SUPPORT_ESCALATE",
+    "actions": [
+      "escalate",
+      "prioritize"
+    ],
+    "objects": [
+      "support ticket",
+      "support case"
+    ]
+  },
+  {
+    "code": "SUPPORT_CALLBACK",
+    "actions": [
+      "request",
+      "schedule"
+    ],
+    "objects": [
+      "support callback",
+      "customer service callback"
+    ]
+  }
+]

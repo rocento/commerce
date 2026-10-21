@@ -1,0 +1,12 @@
+{
+  "synthetic": true,
+  "verified_tls": true,
+  "generated_vhost": true,
+  "unknown_host": 421,
+  "missing_product": 404,
+  "replica_switch_and_rollback": 200,
+  "upstream_failure": 503,
+  "stale_html": false,
+  "recovery": 200,
+  "scope": "local Linux Nginx, not a live CDN"
+}

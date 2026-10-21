@@ -1,0 +1,152 @@
+{
+  "cases": 500000,
+  "turns": 566666,
+  "language_scope": "english",
+  "cases_sha256": "cfc05c6f1b9d3bc5c0a381b84c42457833e563cd8248ec856919fe03ab3ec8ab",
+  "outcome_changes_by_family": {
+    "wishlist_to_cart": 4164,
+    "cart_to_wishlist": 4198,
+    "compound_checkout": 4105,
+    "address_followup": 8447,
+    "product_followup": 2031
+  },
+  "route_changes_by_family": {
+    "wishlist_to_cart": 4164,
+    "cart_to_wishlist": 4198,
+    "compound_checkout": 4105,
+    "address_followup": 8447,
+    "product_followup": 2031
+  },
+  "catalog_plan_changes_by_family": {},
+  "regressions": [],
+  "outcomes": {
+    "passed": 408373,
+    "review": 83331,
+    "failed": 8296
+  },
+  "safety_violations": 0,
+  "quantity_family": {
+    "fallback_turns": 0,
+    "cases": 16667,
+    "passed": 16667
+  },
+  "examples": [
+    {
+      "family": "wishlist_to_cart",
+      "message": "take 12 pillowcases from my wishlist and put them in my cart",
+      "before": {
+        "category": "pillowcase",
+        "quantity": 12
+      },
+      "after": {
+        "category": "pillowcase",
+        "quantity": 12,
+        "sourceCollection": "wishlist",
+        "destination": "cart",
+        "productText": "pillowcases"
+      },
+      "catalog_plan": null
+    },
+    {
+      "family": "cart_to_wishlist",
+      "message": "take 49 water bottles from my cart and save them in my wishlist",
+      "before": {
+        "quantity": 49
+      },
+      "after": {
+        "quantity": 49,
+        "sourceCollection": "cart",
+        "destination": "wishlist",
+        "productText": "water bottles"
+      },
+      "catalog_plan": null
+    },
+    {
+      "family": "compound_checkout",
+      "message": "first add 30 tea kettles and 2 yogurt, then start checkout",
+      "before": {
+        "category": "kettle",
+        "quantity": 30,
+        "ordinal": 1
+      },
+      "after": {
+        "ordinal": 1,
+        "items": [
+          {
+            "quantity": 30,
+            "productText": "tea kettles"
+          },
+          {
+            "quantity": 2,
+            "productText": "yogurt"
+          }
+        ],
+        "line_items": [
+          {
+            "description": "tea kettles",
+            "quantity": 30
+          },
+          {
+            "description": "yogurt",
+            "quantity": 2
+          }
+        ]
+      },
+      "catalog_plan": null
+    },
+    {
+      "family": "address_followup",
+      "message": "I'd like to order 19 frozen peas; deliver them there",
+      "before": {
+        "order_reference": "19"
+      },
+      "after": {
+        "order_reference": "19",
+        "items": [
+          {
+            "quantity": 19,
+            "productText": "frozen peas"
+          }
+        ],
+        "delivery": {
+          "timezone": "Africa/Cairo"
+        }
+      },
+      "catalog_plan": null
+    },
+    {
+      "family": "product_followup",
+      "message": "I'd like 5 products added to my cart",
+      "before": {},
+      "after": {
+        "items": [
+          {
+            "quantity": 5,
+            "reference": "UNSPECIFIED"
+          }
+        ]
+      },
+      "catalog_plan": null
+    }
+  ],
+  "source_changes_during_run": [
+    "ai-service/app/commerce_action_engine/execution/language/proposals.py"
+  ],
+  "validation": {
+    "node_tests_passed": 77,
+    "python_tests_passed": 122,
+    "typecheck": "passed",
+    "architecture_check": "passed",
+    "current_python_tests_passed": 126
+  },
+  "paid_llm_calls": 0,
+  "baseline": "artifacts/shopping-evals/product-price-fix-500k-2026-09-23",
+  "candidate": "artifacts/shopping-evals/priority3-fix-500k-2026-09-23",
+  "current_gate_recheck": {
+    "turns": 566666,
+    "route_changes": [],
+    "catalog_plan_changes": 0,
+    "method": "same route plus catalog admission as benchmark"
+  },
+  "node_sources_stable_during_run": true
+}

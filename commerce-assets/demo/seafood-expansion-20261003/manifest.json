@@ -1,0 +1,255 @@
+{
+  "products": [
+    {
+      "sku": "GRO-SEAFOOD-20261003-001",
+      "slug": "grocery-cod-fillets-500g",
+      "name": "Cod Fillets 500g",
+      "price": "8.00",
+      "currency": "USD",
+      "unit": "pack",
+      "category": "grocery-fish-seafood",
+      "image": "cod.png",
+      "initial_quantity": 30,
+      "description": "Skinless cod fillets with mild white flesh. Pack size: 500g. Contains fish. Keep refrigerated and cook thoroughly before serving. Illustrative demo product photography.",
+      "attributes": {
+        "grocery-pack-size": "500g",
+        "grocery_group": [
+          "seafood"
+        ],
+        "ingredient_role": [
+          "main_ingredient"
+        ],
+        "meal_occasion": [
+          "lunch",
+          "dinner"
+        ],
+        "preparation_method": [
+          "baking",
+          "sauteing"
+        ],
+        "dish_type": [
+          "roast_dinners",
+          "rice_dishes"
+        ],
+        "short_description": "Skinless cod fillets with mild white flesh. 500g pack. Contains fish.",
+        "meta_title": "Cod Fillets 500g | Rocento Grocery",
+        "meta_description": "Skinless cod fillets with mild white flesh. Shop the 500g pack at Rocento Grocery."
+      }
+    },
+    {
+      "sku": "GRO-SEAFOOD-20261003-002",
+      "slug": "grocery-tilapia-fillets-500g",
+      "name": "Tilapia Fillets 500g",
+      "price": "5.50",
+      "currency": "USD",
+      "unit": "pack",
+      "category": "grocery-fish-seafood",
+      "image": "tilapia.png",
+      "initial_quantity": 30,
+      "description": "Skinless tilapia fillets for everyday fish meals. Pack size: 500g. Contains fish. Keep refrigerated and cook thoroughly before serving. Illustrative demo product photography.",
+      "attributes": {
+        "grocery-pack-size": "500g",
+        "grocery_group": [
+          "seafood"
+        ],
+        "ingredient_role": [
+          "main_ingredient"
+        ],
+        "meal_occasion": [
+          "lunch",
+          "dinner"
+        ],
+        "preparation_method": [
+          "grilling",
+          "baking"
+        ],
+        "dish_type": [
+          "rice_dishes",
+          "roast_dinners"
+        ],
+        "short_description": "Skinless tilapia fillets for everyday fish meals. 500g pack. Contains fish.",
+        "meta_title": "Tilapia Fillets 500g | Rocento Grocery",
+        "meta_description": "Skinless tilapia fillets for everyday fish meals. Shop the 500g pack at Rocento Grocery."
+      }
+    },
+    {
+      "sku": "GRO-SEAFOOD-20261003-003",
+      "slug": "grocery-whole-sea-bass-600g",
+      "name": "Whole Sea Bass 600g",
+      "price": "9.00",
+      "currency": "USD",
+      "unit": "pack",
+      "category": "grocery-fish-seafood",
+      "image": "sea-bass.png",
+      "initial_quantity": 30,
+      "description": "Whole sea bass, sold with bones, head and skin. Pack size: 600g. Contains fish. Keep refrigerated and cook thoroughly before serving. Illustrative demo product photography.",
+      "attributes": {
+        "grocery-pack-size": "600g",
+        "grocery_group": [
+          "seafood"
+        ],
+        "ingredient_role": [
+          "main_ingredient"
+        ],
+        "meal_occasion": [
+          "lunch",
+          "dinner"
+        ],
+        "preparation_method": [
+          "grilling",
+          "baking"
+        ],
+        "dish_type": [
+          "roast_dinners",
+          "rice_dishes"
+        ],
+        "short_description": "Whole sea bass, sold with bones, head and skin. 600g pack. Contains fish.",
+        "meta_title": "Whole Sea Bass 600g | Rocento Grocery",
+        "meta_description": "Whole sea bass, sold with bones, head and skin. Shop the 600g pack at Rocento Grocery."
+      }
+    },
+    {
+      "sku": "GRO-SEAFOOD-20261003-004",
+      "slug": "grocery-mackerel-fillets-500g",
+      "name": "Mackerel Fillets 500g",
+      "price": "6.50",
+      "currency": "USD",
+      "unit": "pack",
+      "category": "grocery-fish-seafood",
+      "image": "mackerel.png",
+      "initial_quantity": 30,
+      "description": "Skin-on mackerel fillets with a rich flavor. Pack size: 500g. Contains fish. Keep refrigerated and cook thoroughly before serving. Illustrative demo product photography.",
+      "attributes": {
+        "grocery-pack-size": "500g",
+        "grocery_group": [
+          "seafood"
+        ],
+        "ingredient_role": [
+          "main_ingredient"
+        ],
+        "meal_occasion": [
+          "lunch",
+          "dinner"
+        ],
+        "preparation_method": [
+          "grilling",
+          "baking"
+        ],
+        "dish_type": [
+          "rice_dishes",
+          "salads"
+        ],
+        "short_description": "Skin-on mackerel fillets with a rich flavor. 500g pack. Contains fish.",
+        "meta_title": "Mackerel Fillets 500g | Rocento Grocery",
+        "meta_description": "Skin-on mackerel fillets with a rich flavor. Shop the 500g pack at Rocento Grocery."
+      }
+    },
+    {
+      "sku": "GRO-SEAFOOD-20261003-005",
+      "slug": "grocery-whole-sardines-500g",
+      "name": "Whole Sardines 500g",
+      "price": "4.00",
+      "currency": "USD",
+      "unit": "pack",
+      "category": "grocery-fish-seafood",
+      "image": "sardines.png",
+      "initial_quantity": 30,
+      "description": "Whole sardines, sold with bones, heads and skin. Pack size: 500g. Contains fish. Keep refrigerated and cook thoroughly before serving. Illustrative demo product photography.",
+      "attributes": {
+        "grocery-pack-size": "500g",
+        "grocery_group": [
+          "seafood"
+        ],
+        "ingredient_role": [
+          "main_ingredient"
+        ],
+        "meal_occasion": [
+          "lunch",
+          "dinner"
+        ],
+        "preparation_method": [
+          "grilling",
+          "roasting"
+        ],
+        "dish_type": [
+          "salads",
+          "rice_dishes"
+        ],
+        "short_description": "Whole sardines, sold with bones, heads and skin. 500g pack. Contains fish.",
+        "meta_title": "Whole Sardines 500g | Rocento Grocery",
+        "meta_description": "Whole sardines, sold with bones, heads and skin. Shop the 500g pack at Rocento Grocery."
+      }
+    },
+    {
+      "sku": "GRO-SEAFOOD-20261003-006",
+      "slug": "grocery-squid-rings-500g",
+      "name": "Squid Rings 500g",
+      "price": "7.00",
+      "currency": "USD",
+      "unit": "pack",
+      "category": "grocery-fish-seafood",
+      "image": "squid.png",
+      "initial_quantity": 30,
+      "description": "Raw cleaned squid rings for seafood pasta and stir-fries. Pack size: 500g. Contains molluscs. Keep refrigerated and cook thoroughly before serving. Illustrative demo product photography.",
+      "attributes": {
+        "grocery-pack-size": "500g",
+        "grocery_group": [
+          "seafood"
+        ],
+        "ingredient_role": [
+          "main_ingredient"
+        ],
+        "meal_occasion": [
+          "lunch",
+          "dinner"
+        ],
+        "preparation_method": [
+          "sauteing",
+          "grilling"
+        ],
+        "dish_type": [
+          "pasta_dishes",
+          "stir_fries"
+        ],
+        "short_description": "Raw cleaned squid rings for seafood pasta and stir-fries. 500g pack. Contains molluscs.",
+        "meta_title": "Squid Rings 500g | Rocento Grocery",
+        "meta_description": "Raw cleaned squid rings for seafood pasta and stir-fries. Shop the 500g pack at Rocento Grocery."
+      }
+    },
+    {
+      "sku": "GRO-SEAFOOD-20261003-007",
+      "slug": "grocery-whole-mussels-1kg",
+      "name": "Whole Mussels 1kg",
+      "price": "8.50",
+      "currency": "USD",
+      "unit": "pack",
+      "category": "grocery-fish-seafood",
+      "image": "mussels.png",
+      "initial_quantity": 30,
+      "description": "Raw shell-on mussels for seafood soups and pasta. Pack size: 1kg. Contains molluscs. Keep refrigerated and cook thoroughly before serving. Illustrative demo product photography.",
+      "attributes": {
+        "grocery-pack-size": "1kg",
+        "grocery_group": [
+          "seafood"
+        ],
+        "ingredient_role": [
+          "main_ingredient"
+        ],
+        "meal_occasion": [
+          "lunch",
+          "dinner"
+        ],
+        "preparation_method": [
+          "boiling"
+        ],
+        "dish_type": [
+          "soups",
+          "pasta_dishes"
+        ],
+        "short_description": "Raw shell-on mussels for seafood soups and pasta. 1kg pack. Contains molluscs.",
+        "meta_title": "Whole Mussels 1kg | Rocento Grocery",
+        "meta_description": "Raw shell-on mussels for seafood soups and pasta. Shop the 1kg pack at Rocento Grocery."
+      }
+    }
+  ]
+}

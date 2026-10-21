@@ -1,0 +1,9 @@
+.venv
+__pycache__
+.pytest_cache
+# The action engine validates sentence evidence against the same active release.
+# Include only its compiled vocabulary, not the Node service or authoring files.
+app/commerce_language_engine/*
+!app/commerce_language_engine/data
+app/commerce_language_engine/data/*
+!app/commerce_language_engine/data/compiled.json

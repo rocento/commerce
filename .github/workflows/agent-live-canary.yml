@@ -1,0 +1,38 @@
+name: Commerce live provider canary
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '25 5 * * 1'
+permissions:
+  contents: read
+concurrency:
+  group: commerce-live-canary
+  cancel-in-progress: false
+jobs:
+  canary:
+    # Dedicated evaluation credentials only. Never run paid checks on pull requests.
+    if: vars.AGENT_LIVE_CANARY_ENABLED == 'true'
+    environment: agent-evaluation
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    defaults:
+      run:
+        working-directory: commerce-ops/scripts
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install -e '../../commerce-assistant-platform[dev]'
+      - name: Four-call English core-facade isolated snapshot canary
+        env:
+          OPENAI_API_KEY: ${{ secrets.AGENT_EVAL_OPENAI_API_KEY }}
+        run: python evaluation/agent-evals.py live --model gpt-4.1-mini --max-calls 4 --cap-micros 250000 --scope ../../commerce-assistant-platform/evals/lab/m02-english-scope.json --grounded-intent --commerce-core
+      - name: Paired live segment gate
+        if: always()
+        run: python evaluation/agent-evals.py compare --baseline ../../commerce-assistant-platform/evals/lab/english-live-baseline.json --candidate ../../commerce-artifacts/evaluation-lab/live/report.json --thresholds ../../commerce-assistant-platform/evals/lab/english-live-thresholds.json --output ../../commerce-artifacts/evaluation-lab/live-comparison.json
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: commerce-live-canary
+          path: commerce-artifacts/evaluation-lab/

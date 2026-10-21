@@ -1,0 +1,11 @@
+CREATE INDEX grid_cms_revisions_document ON cms.revisions(document_id,id);
+CREATE INDEX grid_cms_revisions_version ON cms.revisions(document_id,version,id);
+CREATE INDEX grid_cms_revisions_search ON cms.revisions USING gin(title gin_trgm_ops);
+CREATE INDEX grid_cms_releases_document ON cms.releases(document_id,id);
+CREATE INDEX grid_cms_releases_date ON cms.releases(document_id,created_at,id);
+ALTER TABLE admin_iam.export_jobs ADD COLUMN download_until timestamptz;
+CREATE INDEX export_expiry ON admin_iam.export_jobs(expires_at);
+CREATE INDEX grid_catalog_category_active_sku ON catalog.products(category_id,active,sku,id);
+CREATE INDEX grid_catalog_category_active_name ON catalog.products(category_id,active,name,id);
+CREATE INDEX export_running_heartbeat ON admin_iam.export_jobs(heartbeat_at) WHERE status='running';
+CREATE INDEX export_abandoned ON admin_iam.export_jobs(id) WHERE status IN ('failed','cancelled');

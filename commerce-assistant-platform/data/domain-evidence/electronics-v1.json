@@ -1,0 +1,485 @@
+{
+  "executor": "domain-evidence-v1",
+  "revision": 1,
+  "language": "en",
+  "sources": [
+    {
+      "reviewed_at": "2026-10-10T00:00:00Z",
+      "recheck_at": "2026-11-09T00:00:00Z",
+      "review_method": "ai_assisted",
+      "reviewer": "phase3-primary-source-review",
+      "state": "reviewed",
+      "id": "shotcut-faq-20261010",
+      "url": "https://shotcut.org/FAQ/",
+      "title": "Shotcut FAQ: minimum system requirements",
+      "document_ref": "sources/shotcut-review.md",
+      "document_sha256": "e493785e1c9106684e5a18b38bdc8eb9fac0eea4ba8155489ade7c9d0c483a98"
+    },
+    {
+      "reviewed_at": "2026-10-10T00:00:00Z",
+      "recheck_at": "2026-11-09T00:00:00Z",
+      "review_method": "ai_assisted",
+      "reviewer": "phase3-primary-source-review",
+      "state": "reviewed",
+      "id": "zoom-desktop-20261010",
+      "url": "https://support.zoom.com/hc/en/article?id=zm_kb&sysparm_article=KB0060748",
+      "title": "Zoom desktop system requirements",
+      "document_ref": "sources/zoom-review.md",
+      "document_sha256": "7b39b160391fb30e67eb14eb6e961d1844c6af8b3651aa465f40846b37a0518b"
+    }
+  ],
+  "profiles": [
+    {
+      "reviewed_at": "2026-10-10T00:00:00Z",
+      "recheck_at": "2026-11-09T00:00:00Z",
+      "review_method": "ai_assisted",
+      "reviewer": "phase3-primary-source-review",
+      "state": "reviewed",
+      "id": "shotcut-windows11-sd",
+      "domain": "electronics",
+      "activity_values": [
+        "video_editing"
+      ],
+      "product_terms": [
+        "laptop",
+        "laptops",
+        "notebook",
+        "notebooks"
+      ],
+      "label": "Shotcut on Windows 11: SD, CPU processing",
+      "conditions": [
+        "Shotcut desktop version covered by the reviewed FAQ",
+        "Windows 11, 64-bit",
+        "SD editing",
+        "CPU processing; GPU effects excluded"
+      ],
+      "limitations": "Checks documented hardware minima only. Codec support, project storage capacity, effects and editing speed remain unverified. Near-minimum systems may need proxy and preview scaling.",
+      "requirements": [
+        {
+          "id": "operating_system",
+          "attribute": "operating_system",
+          "label": "Operating system",
+          "operator": "eq",
+          "value": "Windows 11",
+          "unit": null,
+          "source_ids": [
+            "shotcut-faq-20261010"
+          ]
+        },
+        {
+          "id": "os_bits",
+          "attribute": "os_bits",
+          "label": "OS architecture",
+          "operator": "eq",
+          "value": 64,
+          "unit": "bits",
+          "source_ids": [
+            "shotcut-faq-20261010"
+          ]
+        },
+        {
+          "id": "cpu_architecture",
+          "attribute": "cpu_architecture",
+          "label": "CPU architecture",
+          "operator": "one_of",
+          "value": [
+            "x86_64",
+            "arm64"
+          ],
+          "unit": null,
+          "source_ids": [
+            "shotcut-faq-20261010"
+          ]
+        },
+        {
+          "id": "cpu_cores",
+          "attribute": "cpu_cores",
+          "label": "CPU cores",
+          "operator": "gte",
+          "value": 1,
+          "unit": "cores",
+          "source_ids": [
+            "shotcut-faq-20261010"
+          ]
+        },
+        {
+          "id": "ram",
+          "attribute": "ram",
+          "label": "RAM",
+          "operator": "gte",
+          "value": 4,
+          "unit": "GB",
+          "source_ids": [
+            "shotcut-faq-20261010"
+          ]
+        },
+        {
+          "id": "direct3d_11",
+          "attribute": "direct3d_11",
+          "label": "Direct3D 11 support",
+          "operator": "eq",
+          "value": true,
+          "unit": null,
+          "source_ids": [
+            "shotcut-faq-20261010"
+          ]
+        },
+        {
+          "id": "storage_present",
+          "attribute": "storage_present",
+          "label": "Storage included",
+          "operator": "eq",
+          "value": true,
+          "unit": null,
+          "source_ids": [
+            "shotcut-faq-20261010"
+          ]
+        },
+        {
+          "id": "cpu_clock",
+          "attribute": "cpu_clock",
+          "label": "CPU clock",
+          "operator": "gte",
+          "value": 2,
+          "unit": "GHz",
+          "source_ids": [
+            "shotcut-faq-20261010"
+          ]
+        }
+      ]
+    },
+    {
+      "reviewed_at": "2026-10-10T00:00:00Z",
+      "recheck_at": "2026-11-09T00:00:00Z",
+      "review_method": "ai_assisted",
+      "reviewer": "phase3-primary-source-review",
+      "state": "reviewed",
+      "id": "shotcut-windows11-hd",
+      "domain": "electronics",
+      "activity_values": [
+        "video_editing"
+      ],
+      "product_terms": [
+        "laptop",
+        "laptops",
+        "notebook",
+        "notebooks"
+      ],
+      "label": "Shotcut on Windows 11: HD, CPU processing",
+      "conditions": [
+        "Shotcut desktop version covered by the reviewed FAQ",
+        "Windows 11, 64-bit",
+        "HD editing",
+        "CPU processing; GPU effects excluded"
+      ],
+      "limitations": "Checks documented hardware minima only. Codec support, project storage capacity, effects and editing speed remain unverified. Near-minimum systems may need proxy and preview scaling.",
+      "requirements": [
+        {
+          "id": "operating_system",
+          "attribute": "operating_system",
+          "label": "Operating system",
+          "operator": "eq",
+          "value": "Windows 11",
+          "unit": null,
+          "source_ids": [
+            "shotcut-faq-20261010"
+          ]
+        },
+        {
+          "id": "os_bits",
+          "attribute": "os_bits",
+          "label": "OS architecture",
+          "operator": "eq",
+          "value": 64,
+          "unit": "bits",
+          "source_ids": [
+            "shotcut-faq-20261010"
+          ]
+        },
+        {
+          "id": "cpu_architecture",
+          "attribute": "cpu_architecture",
+          "label": "CPU architecture",
+          "operator": "one_of",
+          "value": [
+            "x86_64",
+            "arm64"
+          ],
+          "unit": null,
+          "source_ids": [
+            "shotcut-faq-20261010"
+          ]
+        },
+        {
+          "id": "cpu_cores",
+          "attribute": "cpu_cores",
+          "label": "CPU cores",
+          "operator": "gte",
+          "value": 4,
+          "unit": "cores",
+          "source_ids": [
+            "shotcut-faq-20261010"
+          ]
+        },
+        {
+          "id": "ram",
+          "attribute": "ram",
+          "label": "RAM",
+          "operator": "gte",
+          "value": 8,
+          "unit": "GB",
+          "source_ids": [
+            "shotcut-faq-20261010"
+          ]
+        },
+        {
+          "id": "direct3d_11",
+          "attribute": "direct3d_11",
+          "label": "Direct3D 11 support",
+          "operator": "eq",
+          "value": true,
+          "unit": null,
+          "source_ids": [
+            "shotcut-faq-20261010"
+          ]
+        },
+        {
+          "id": "storage_present",
+          "attribute": "storage_present",
+          "label": "Storage included",
+          "operator": "eq",
+          "value": true,
+          "unit": null,
+          "source_ids": [
+            "shotcut-faq-20261010"
+          ]
+        }
+      ]
+    },
+    {
+      "reviewed_at": "2026-10-10T00:00:00Z",
+      "recheck_at": "2026-11-09T00:00:00Z",
+      "review_method": "ai_assisted",
+      "reviewer": "phase3-primary-source-review",
+      "state": "reviewed",
+      "id": "shotcut-windows11-4k",
+      "domain": "electronics",
+      "activity_values": [
+        "video_editing"
+      ],
+      "product_terms": [
+        "laptop",
+        "laptops",
+        "notebook",
+        "notebooks"
+      ],
+      "label": "Shotcut on Windows 11: 4K, CPU processing",
+      "conditions": [
+        "Shotcut desktop version covered by the reviewed FAQ",
+        "Windows 11, 64-bit",
+        "4K editing",
+        "CPU processing; GPU effects excluded"
+      ],
+      "limitations": "Checks documented hardware minima only. Codec support, project storage capacity, effects and editing speed remain unverified. Near-minimum systems may need proxy and preview scaling.",
+      "requirements": [
+        {
+          "id": "operating_system",
+          "attribute": "operating_system",
+          "label": "Operating system",
+          "operator": "eq",
+          "value": "Windows 11",
+          "unit": null,
+          "source_ids": [
+            "shotcut-faq-20261010"
+          ]
+        },
+        {
+          "id": "os_bits",
+          "attribute": "os_bits",
+          "label": "OS architecture",
+          "operator": "eq",
+          "value": 64,
+          "unit": "bits",
+          "source_ids": [
+            "shotcut-faq-20261010"
+          ]
+        },
+        {
+          "id": "cpu_architecture",
+          "attribute": "cpu_architecture",
+          "label": "CPU architecture",
+          "operator": "one_of",
+          "value": [
+            "x86_64",
+            "arm64"
+          ],
+          "unit": null,
+          "source_ids": [
+            "shotcut-faq-20261010"
+          ]
+        },
+        {
+          "id": "cpu_cores",
+          "attribute": "cpu_cores",
+          "label": "CPU cores",
+          "operator": "gte",
+          "value": 8,
+          "unit": "cores",
+          "source_ids": [
+            "shotcut-faq-20261010"
+          ]
+        },
+        {
+          "id": "ram",
+          "attribute": "ram",
+          "label": "RAM",
+          "operator": "gte",
+          "value": 16,
+          "unit": "GB",
+          "source_ids": [
+            "shotcut-faq-20261010"
+          ]
+        },
+        {
+          "id": "direct3d_11",
+          "attribute": "direct3d_11",
+          "label": "Direct3D 11 support",
+          "operator": "eq",
+          "value": true,
+          "unit": null,
+          "source_ids": [
+            "shotcut-faq-20261010"
+          ]
+        },
+        {
+          "id": "storage_present",
+          "attribute": "storage_present",
+          "label": "Storage included",
+          "operator": "eq",
+          "value": true,
+          "unit": null,
+          "source_ids": [
+            "shotcut-faq-20261010"
+          ]
+        }
+      ]
+    },
+    {
+      "reviewed_at": "2026-10-10T00:00:00Z",
+      "recheck_at": "2026-11-09T00:00:00Z",
+      "review_method": "ai_assisted",
+      "reviewer": "phase3-primary-source-review",
+      "state": "reviewed",
+      "id": "zoom-windows11-basic-video",
+      "domain": "electronics",
+      "activity_values": [
+        "online_classes",
+        "video_calls"
+      ],
+      "product_terms": [
+        "laptop",
+        "laptops",
+        "notebook",
+        "notebooks"
+      ],
+      "label": "Zoom on Windows 11: basic video classes, included camera/audio",
+      "conditions": [
+        "Zoom desktop, 64-bit",
+        "Windows 11",
+        "Basic video classes",
+        "Camera, microphone and speakers included in the product"
+      ],
+      "limitations": "Checks the selected hardware profile only. Your internet connection, school software, managed-device permissions, advanced features and call quality remain unverified. Screen sharing can be slow on low-core-count laptops.",
+      "requirements": [
+        {
+          "id": "operating_system",
+          "attribute": "operating_system",
+          "label": "Operating system",
+          "operator": "eq",
+          "value": "Windows 11",
+          "unit": null,
+          "source_ids": [
+            "zoom-desktop-20261010"
+          ]
+        },
+        {
+          "id": "os_bits",
+          "attribute": "os_bits",
+          "label": "OS architecture",
+          "operator": "eq",
+          "value": 64,
+          "unit": "bits",
+          "source_ids": [
+            "zoom-desktop-20261010"
+          ]
+        },
+        {
+          "id": "cpu_cores",
+          "attribute": "cpu_cores",
+          "label": "CPU cores",
+          "operator": "gte",
+          "value": 2,
+          "unit": "cores",
+          "source_ids": [
+            "zoom-desktop-20261010"
+          ]
+        },
+        {
+          "id": "cpu_clock",
+          "attribute": "cpu_clock",
+          "label": "CPU clock",
+          "operator": "gte",
+          "value": 2,
+          "unit": "GHz",
+          "source_ids": [
+            "zoom-desktop-20261010"
+          ]
+        },
+        {
+          "id": "ram",
+          "attribute": "ram",
+          "label": "RAM",
+          "operator": "gte",
+          "value": 4,
+          "unit": "GB",
+          "source_ids": [
+            "zoom-desktop-20261010"
+          ]
+        },
+        {
+          "id": "camera_included",
+          "attribute": "camera_included",
+          "label": "Camera included",
+          "operator": "eq",
+          "value": true,
+          "unit": null,
+          "source_ids": [
+            "zoom-desktop-20261010"
+          ]
+        },
+        {
+          "id": "microphone_included",
+          "attribute": "microphone_included",
+          "label": "Microphone included",
+          "operator": "eq",
+          "value": true,
+          "unit": null,
+          "source_ids": [
+            "zoom-desktop-20261010"
+          ]
+        },
+        {
+          "id": "speakers_included",
+          "attribute": "speakers_included",
+          "label": "Speakers included",
+          "operator": "eq",
+          "value": true,
+          "unit": null,
+          "source_ids": [
+            "zoom-desktop-20261010"
+          ]
+        }
+      ]
+    }
+  ]
+}

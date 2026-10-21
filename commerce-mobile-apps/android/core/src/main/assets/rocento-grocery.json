@@ -1,0 +1,208 @@
+{
+  "brand": {
+    "dark": {
+      "background": "#181615",
+      "onPrimary": "#FFFFFF",
+      "primary": "#063c22",
+      "surface": "#282320",
+      "text": "#FAF8F7"
+    },
+    "density": "comfortable",
+    "displayName": "Grocery",
+    "fontToken": "system",
+    "light": {
+      "background": "#ffffff",
+      "onPrimary": "#FFFFFF",
+      "primary": "#063c22",
+      "surface": "#F1F4F0",
+      "text": "#17251d"
+    },
+    "logoAssetId": "b96b0c84-4d96-4df0-8718-5a8c44b1b119",
+    "radiusToken": "small"
+  },
+  "compatibility": {
+    "minIosRuntime": "1.3.0",
+    "minAndroidRuntime": "1.3.0"
+  },
+  "configVersion": 0,
+  "features": {
+    "locationPicker": false,
+    "reviews": false,
+    "wishlist": true
+  },
+  "localization": {
+    "defaultLocale": "en",
+    "messages": {
+      "ar": {
+        "demo_grocery_8176762d-eaca-4306-9207-1349fd3dd06c_heading": "الأكثر مبيعًا",
+        "demo_grocery_section-5": "طعام شهي كل يوم.",
+        "demo_grocery_section-5_alt": "فواكه وخضروات طازجة",
+        "demo_grocery_section-5_heading": "طعام شهي كل يوم.",
+        "demo_grocery_section-5_label": "تسوّق الآن",
+        "demo_grocery_section-5_text": "خضروات وفواكه طازجة وأساسيات المطبخ لمائدتك.",
+        "demo_grocery_section-6_heading": "تسوّق حسب الفئة",
+        "demo_grocery_section-7_heading": "مختارات طازجة",
+        "demo_grocery_section-8_heading": "اكتشف شيئًا جديدًا",
+        "demo_grocery_section-8_label": "تسوّق الآن",
+        "demo_grocery_section-9_heading": "المزيد لتكتشفه",
+        "section_23468e6b_title": "اكتشف مجموعتنا الجديدة",
+        "section_52dbfb86_title": "اكتشف مجموعتنا الجديدة",
+        "section_92f8b3f4_title": "اكتشف مجموعتنا الجديدة",
+        "section_a7ecdce4_title": "اكتشف مجموعتنا الجديدة",
+        "section_f58e7392_title": "اكتشف مجموعتنا الجديدة",
+        "welcome": "مرحباً بكم في روسنتو",
+        "grocery_breakfast_alt": "خبز طازج وبيض وحليب وعسل للفطور",
+        "grocery_breakfast_heading": "بداية ألذ ليومك.",
+        "grocery_breakfast_body": "كل مفضلات الفطور في سلة واحدة.",
+        "grocery_breakfast_label": "تسوّق الفطور"
+      },
+      "en": {
+        "demo_grocery_8176762d-eaca-4306-9207-1349fd3dd06c_heading": "Best sellers",
+        "demo_grocery_section-5": "Good food. Everyday.",
+        "demo_grocery_section-5_alt": "Fresh fruit and vegetables",
+        "demo_grocery_section-5_heading": "Good food. Everyday.",
+        "demo_grocery_section-5_label": "Shop now",
+        "demo_grocery_section-5_text": "Fresh produce and pantry favourites for your table.",
+        "demo_grocery_section-6_heading": "Shop by category",
+        "demo_grocery_section-7_heading": "Fresh picks",
+        "demo_grocery_section-8_heading": "Make room for something new",
+        "demo_grocery_section-8_label": "Shop now",
+        "demo_grocery_section-9_heading": "More to explore",
+        "section_23468e6b_title": "Explore our collection",
+        "section_52dbfb86_title": "Discover something new",
+        "section_92f8b3f4_title": "Discover something new",
+        "section_a7ecdce4_title": "Discover something new",
+        "section_f58e7392_title": "Discover something new",
+        "welcome": "Welcome to Rocento",
+        "grocery_breakfast_alt": "Fresh bread, eggs, milk and honey for breakfast",
+        "grocery_breakfast_heading": "A better start to your day.",
+        "grocery_breakfast_body": "Breakfast favourites, all in one basket.",
+        "grocery_breakfast_label": "Shop breakfast"
+      }
+    },
+    "rtlEnabled": true,
+    "supportedLocales": [
+      "en",
+      "ar"
+    ]
+  },
+  "navigation": {
+    "tabs": [
+      "home",
+      "categories",
+      "deals",
+      "account",
+      "cart"
+    ]
+  },
+  "schemaVersion": "1.0.0",
+  "screens": {
+    "home": {
+      "layout": "storefront",
+      "sections": [
+        {
+          "id": "demo_grocery_section-5",
+          "props": {
+            "accessibilityLabelKey": "demo_grocery_section-5_alt",
+            "action": {
+              "tab": "categories",
+              "type": "openTab"
+            },
+            "appearance": "editorial",
+            "bodyKey": "demo_grocery_section-5_text",
+            "headingKey": "demo_grocery_section-5_heading",
+            "imageAssetId": "d3d03c49-c514-40fc-b251-cc6bf3b71901",
+            "labelKey": "demo_grocery_section-5_label",
+            "layout": "portrait",
+            "imageFit": "cover",
+            "additionalImageAssetIds": [
+              "d3d03c49-c514-40fc-b251-cc6bf3b71904",
+              "d3d03c49-c514-40fc-b251-cc6bf3b71905"
+            ]
+          },
+          "type": "heroBanner"
+        },
+        {
+          "id": "demo_grocery_breakfast_banner",
+          "type": "heroBanner",
+          "props": {
+            "layout": "horizontal",
+            "imageFit": "cover",
+            "appearance": "campaign",
+            "imageAssetId": "d3d03c49-c514-40fc-b251-cc6bf3b71902",
+            "accessibilityLabelKey": "grocery_breakfast_alt",
+            "headingKey": "grocery_breakfast_heading",
+            "bodyKey": "grocery_breakfast_body",
+            "labelKey": "grocery_breakfast_label",
+            "action": {
+              "type": "openTab",
+              "tab": "categories"
+            }
+          }
+        },
+        {
+          "id": "demo_grocery_section-6",
+          "props": {
+            "appearance": "tiles",
+            "categoryIds": [
+              "369d5f8d-e6b6-4c02-b983-245f26ebb40f",
+              "7edd7367-5330-47c4-8fa9-73c18f23ea67",
+              "9c8a18ff-99d0-4004-b70b-367436f76387",
+              "6096b5d1-d2a6-4827-b0a4-12ba706cee3d",
+              "c10aec39-d2c5-422f-959a-bbc0c6dbfe58",
+              "85ab0fd5-8f9f-44e3-bd5c-e6f342567db4",
+              "e12ccbb1-74fd-4de5-8d63-84415596ecd1",
+              "e62867f7-b491-4cd1-89b9-564fc4524c5a"
+            ],
+            "titleKey": "demo_grocery_section-6_heading"
+          },
+          "type": "categoryGrid"
+        },
+        {
+          "id": "demo_grocery_section-7",
+          "props": {
+            "collectionId": "demo-feed-section-7",
+            "columns": 2,
+            "limit": 8,
+            "titleKey": "demo_grocery_section-7_heading"
+          },
+          "type": "productGrid"
+        },
+        {
+          "id": "demo_grocery_section-8",
+          "props": {
+            "action": {
+              "tab": "categories",
+              "type": "openTab"
+            },
+            "appearance": "campaign",
+            "labelKey": "demo_grocery_section-8_label",
+            "textKey": "demo_grocery_section-8_heading"
+          },
+          "type": "richText"
+        },
+        {
+          "id": "demo_grocery_section-9",
+          "props": {
+            "collectionId": "demo-feed-section-9",
+            "columns": 2,
+            "limit": 6,
+            "titleKey": "demo_grocery_section-9_heading"
+          },
+          "type": "productGrid"
+        },
+        {
+          "id": "demo_grocery_8176762d-eaca-4306-9207-1349fd3dd06c",
+          "props": {
+            "collectionId": "demo-feed-8176762d-eaca-4306-9207-1349fd3dd06c",
+            "columns": 2,
+            "limit": 8,
+            "titleKey": "demo_grocery_8176762d-eaca-4306-9207-1349fd3dd06c_heading"
+          },
+          "type": "productGrid"
+        }
+      ]
+    }
+  },
+  "tenantId": "312f9ac8-4888-4d35-92a0-e5fdb3bf59b8"
+}

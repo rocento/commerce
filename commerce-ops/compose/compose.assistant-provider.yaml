@@ -1,0 +1,39 @@
+# Optional real-provider overlay, after compose.assistant.yaml.
+services:
+  ai-service:
+    environment:
+      AI_EMBEDDING_MODEL: ${AI_EMBEDDING_MODEL:-}
+      AI_KNOWLEDGE_COLLECTIONS: ${AI_KNOWLEDGE_COLLECTIONS:-}
+      AI_INTENT_EXAMPLE_COLLECTION: ${AI_INTENT_EXAMPLE_COLLECTION:-}
+      AI_MODEL_PROVIDER: openai
+      AI_MODEL_NAME: ${AI_MODEL_NAME:-gpt-4.1-mini}
+      AI_MODEL_KEY_FILE: /run/secrets/model-api-key
+      AI_MODEL_URL: http://assistant-provider:8082/v1/responses
+      AI_MODEL_TIMEOUT_SECONDS: "20"
+      # One call handles a direct answer; a second is reserved for a verified tool round-trip.
+      AI_MODEL_MAX_CALLS_PER_TURN: ${AI_MODEL_MAX_CALLS_PER_TURN:-2}
+      # Zero leaves the guard disabled. Configure tenant/session limits in measured tokens.
+      AI_MODEL_DAILY_TOKEN_BUDGET: ${AI_MODEL_DAILY_TOKEN_BUDGET:-0}
+      AI_MODEL_SESSION_TOKEN_BUDGET: ${AI_MODEL_SESSION_TOKEN_BUDGET:-0}
+      # Operator-supplied USD microdollars per 1,000 tokens; zero means unconfigured.
+      AI_MODEL_INPUT_MICROS_PER_1K: ${AI_MODEL_INPUT_MICROS_PER_1K:-0}
+      AI_MODEL_OUTPUT_MICROS_PER_1K: ${AI_MODEL_OUTPUT_MICROS_PER_1K:-0}
+      # New optimization paths are opt-in until their demo evaluation is accepted.
+      AI_FEATURE_FLAGS: ${AI_FEATURE_FLAGS:-}
+    secrets: [model-api-key]
+  assistant-provider:
+    image: nginxinc/nginx-unprivileged:1.28-alpine
+    networks: [assistant-private, provider-egress]
+    volumes: ["../../commerce-ops/deploy/assistant/provider.conf:/etc/nginx/conf.d/default.conf:ro"]
+    read_only: true
+    tmpfs: ["/tmp:size=16m,noexec,nosuid"]
+    cap_drop: [ALL]
+    security_opt: [no-new-privileges:true]
+    mem_limit: 64m
+    cpus: 0.25
+    pids_limit: 32
+secrets:
+  model-api-key:
+    file: ${AI_MODEL_KEY_FILE:?Set the absolute path of your server-side key file}
+networks:
+  provider-egress: {}

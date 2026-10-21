@@ -1,0 +1,194 @@
+ Container rocento-publication-stage12a-postgres-1 Running
+ Container rocento-publication-stage12a-postgres-1 Waiting
+ Container rocento-publication-stage12a-postgres-1 Healthy
+ Container rocento-publication-stage12a-verify-run-28cfe245fcd8 Creating
+ Container rocento-publication-stage12a-verify-run-28cfe245fcd8 Created
+TAP version 13
+# Subtest: bounded admission rejects excess work, preserves liveness and recovers without caching
+ok 1 - bounded admission rejects excess work, preserves liveness and recovers without caching
+  ---
+  duration_ms: 345.110084
+  type: 'test'
+  ...
+# Subtest: fixed gateway never receives customer headers or attacker-selected destinations
+ok 2 - fixed gateway never receives customer headers or attacker-selected destinations
+  ---
+  duration_ms: 11.687625
+  type: 'test'
+  ...
+# Subtest: transport refuses oversized responses, respects cancellation and never follows redirects
+ok 3 - transport refuses oversized responses, respects cancellation and never follows redirects
+  ---
+  duration_ms: 48.320875
+  type: 'test'
+  ...
+# Subtest: meaningful server HTML, canonical, robots and structured facts detect regressions
+ok 4 - meaningful server HTML, canonical, robots and structured facts detect regressions
+  ---
+  duration_ms: 16.607583
+  type: 'test'
+  ...
+# Subtest: XML validator rejects malformed, foreign-host and forbidden XML
+ok 5 - XML validator rejects malformed, foreign-host and forbidden XML
+  ---
+  duration_ms: 0.389541
+  type: 'test'
+  ...
+# Subtest: redacted bounded counters and alert thresholds do not expose request secrets
+ok 6 - redacted bounded counters and alert thresholds do not expose request secrets
+  ---
+  duration_ms: 4.80175
+  type: 'test'
+  ...
+# Subtest: timeouts and redirect loops produce actionable findings without leaking transport details
+ok 7 - timeouts and redirect loops produce actionable findings without leaking transport details
+  ---
+  duration_ms: 3.130541
+  type: 'test'
+  ...
+# Subtest: real HTTP health endpoint requires secret; probes recover after a renderer failure
+ok 8 - real HTTP health endpoint requires secret; probes recover after a renderer failure
+  ---
+  duration_ms: 2095.433001
+  type: 'test'
+  ...
+# Subtest: canonical redirects retain bounded campaign claims without queries or secrets
+ok 9 - canonical redirects retain bounded campaign claims without queries or secrets
+  ---
+  duration_ms: 0.239584
+  type: 'test'
+  ...
+# Subtest: social metadata escapes Unicode without truncating and shares canonical identity
+ok 10 - social metadata escapes Unicode without truncating and shares canonical identity
+  ---
+  duration_ms: 2.303292
+  type: 'test'
+  ...
+# Subtest: missing image and language-only locale do not invent a card image or country
+ok 11 - missing image and language-only locale do not invent a card image or country
+  ---
+  duration_ms: 0.808042
+  type: 'test'
+  ...
+# Subtest: error pages have no social claims or canonical
+ok 12 - error pages have no social claims or canonical
+  ---
+  duration_ms: 0.235208
+  type: 'test'
+  ...
+# Subtest: anonymous content, no-store and identical robots; credentials never forwarded
+ok 13 - anonymous content, no-store and identical robots; credentials never forwarded
+  ---
+  duration_ms: 41.217917
+  type: 'test'
+  ...
+# {"event":"publication_response","installation_id":"one","route":"home","crawler":"none","status":"4xx","code":"unknown_canonical_host"}
+# Subtest: unknown URLs, invalid pagination, methods and spoofed hosts fail closed
+ok 14 - unknown URLs, invalid pagination, methods and spoofed hosts fail closed
+  ---
+  duration_ms: 18.529667
+  type: 'test'
+  ...
+# {"event":"publication_response","installation_id":"one","route":"home","crawler":"none","status":"5xx","code":"tenant_resolution_failure"}
+# {"event":"publication_response","installation_id":"one","route":"home","crawler":"none","status":"5xx","code":"tenant_resolution_failure"}
+# {"event":"publication_response","installation_id":"one","route":"home","crawler":"none","status":"5xx","code":"tenant_resolution_failure"}
+# {"event":"publication_response","installation_id":"one","route":"home","crawler":"none","status":"5xx","code":"render_failure"}
+# Subtest: mismatched installation/origin and unavailable backend produce 503, never empty success
+ok 15 - mismatched installation/origin and unavailable backend produce 503, never empty success
+  ---
+  duration_ms: 6.894417
+  type: 'test'
+  ...
+# Subtest: 404, approved 410 and single-hop 301 preserve status and noindex
+ok 16 - 404, approved 410 and single-hop 301 preserve status and noindex
+  ---
+  duration_ms: 7.087292
+  type: 'test'
+  ...
+# Subtest: query variants noindex and HEAD has no body
+ok 17 - query variants noindex and HEAD has no body
+  ---
+  duration_ms: 6.002334
+  type: 'test'
+  ...
+# Subtest: embedded state cannot close its script element
+ok 18 - embedded state cannot close its script element
+  ---
+  duration_ms: 0.116125
+  type: 'test'
+  ...
+# Subtest: startup rejects mismatched client/server artifacts before listening
+ok 19 - startup rejects mismatched client/server artifacts before listening
+  ---
+  duration_ms: 108.047375
+  type: 'test'
+  ...
+# {"event":"publication_response","installation_id":"one","route":"home","crawler":"none","status":"5xx","code":"render_failure"}
+# {"event":"publication_response","installation_id":"one","route":"home","crawler":"none","status":"5xx","code":"render_failure"}
+# {"event":"publication_response","installation_id":"one","route":"home","crawler":"none","status":"5xx","code":"render_failure"}
+# {"event":"publication_response","installation_id":"one","route":"home","crawler":"none","status":"5xx","code":"render_failure"}
+# {"event":"publication_response","installation_id":"one","route":"home","crawler":"none","status":"5xx","code":"render_failure"}
+# Subtest: canonical metadata and discovery placeholders share only the approved origin
+ok 20 - canonical metadata and discovery placeholders share only the approved origin
+  ---
+  duration_ms: 5.789041
+  type: 'test'
+  ...
+# Subtest: raw encoded dot segments cannot normalize into a private 200 shell
+ok 21 - raw encoded dot segments cannot normalize into a private 200 shell
+  ---
+  duration_ms: 6.06375
+  type: 'test'
+  ...
+# {"event":"publication_response","installation_id":"one","route":"sitemap","crawler":"none","status":"5xx","code":"sitemap_failure"}
+# Subtest: discovery artifacts require the installation binding and preserve XML and HEAD
+ok 22 - discovery artifacts require the installation binding and preserve XML and HEAD
+  ---
+  duration_ms: 8.100667
+  type: 'test'
+  ...
+# Subtest: JSON-LD survives hostile Unicode text without creating script elements
+ok 23 - JSON-LD survives hostile Unicode text without creating script elements
+  ---
+  duration_ms: 0.9525
+  type: 'test'
+  ...
+# Subtest: material price currency seller URL name and availability contradictions fail closed
+ok 24 - material price currency seller URL name and availability contradictions fail closed
+  ---
+  duration_ms: 0.260625
+  type: 'test'
+  ...
+# Subtest: missing and error structured data do not create fictitious product claims
+ok 25 - missing and error structured data do not create fictitious product claims
+  ---
+  duration_ms: 0.118125
+  type: 'test'
+  ...
+# Subtest: case, encoded ASCII, slash and tracking normalize before final resource redirect
+ok 26 - case, encoded ASCII, slash and tracking normalize before final resource redirect
+  ---
+  duration_ms: 1.075333
+  type: 'test'
+  ...
+# Subtest: ambiguous and unsupported paths/parameters fail closed
+ok 27 - ambiguous and unsupported paths/parameters fail closed
+  ---
+  duration_ms: 0.379709
+  type: 'test'
+  ...
+# Subtest: only bounded normalized relative destinations are allowed
+ok 28 - only bounded normalized relative destinations are allowed
+  ---
+  duration_ms: 0.168625
+  type: 'test'
+  ...
+1..28
+# tests 28
+# suites 0
+# pass 28
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 2284.683501

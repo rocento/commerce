@@ -1,0 +1,99 @@
+name: Agent gold evaluations
+on:
+  workflow_dispatch:
+  pull_request:
+    paths:
+      - 'commerce-assistant-platform/**'
+      - 'commerce-api/**'
+      - 'commerce-ops/scripts/agent-evals.py'
+      - 'commerce-ops/scripts/contracts/**'
+      - 'commerce-ops/scripts/evaluation/**'
+      - 'commerce-ops/scripts/tests/test_contract_generator_entrypoints.py'
+      - 'commerce-ops/scripts/tests/test_agent_evals.py'
+      - 'commerce-ops/scripts/generate_core_contracts.py'
+      - 'commerce-ops/scripts/generate_meaning_contracts.py'
+      - 'commerce-ops/scripts/generate_planning_contracts.py'
+      - 'commerce-ops/scripts/planning-evals.py'
+      - 'commerce-assistant-platform/contracts/commerce-planning/**'
+      - 'commerce-ops/scripts/meaning-evals.py'
+      - 'commerce-assistant-platform/contracts/commerce-meaning/**'
+      - 'commerce-api/rocento-api/crates/commerce-core-contracts/contract/**'
+      - 'commerce-web/packages/api-client/src/commerce-core*'
+      - '.github/workflows/agent-evals.yml'
+      - '.github/workflows/agent-live-canary.yml'
+permissions:
+  contents: read
+jobs:
+  gold:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    defaults:
+      run:
+        working-directory: commerce-ops/scripts
+    services:
+      postgres:
+        image: pgvector/pgvector:pg16
+        env:
+          POSTGRES_PASSWORD: eval-test-only
+        ports: ['5432:5432']
+        options: >-
+          --health-cmd "pg_isready -U postgres"
+          --health-interval 5s --health-timeout 5s --health-retries 15
+    env:
+      AGENT_EVAL_DATABASE_URL: postgres://postgres:eval-test-only@127.0.0.1:5432/postgres
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - uses: dtolnay/rust-toolchain@stable
+      - uses: Swatinem/rust-cache@v2
+        with:
+          workspaces: commerce-api/rocento-api
+      - run: python -m pip install -e '../../commerce-assistant-platform[dev]'
+      - run: python evaluation/agent-evals.py
+      - name: Frozen commerce baseline and segment regression gate
+        run: |
+          python evaluation/agent-evals.py replay --scope ../../commerce-assistant-platform/evals/lab/m02-english-scope.json --grounded-intent
+          python evaluation/agent-evals.py compare --baseline ../../commerce-assistant-platform/evals/lab/english-baseline.json --candidate ../../commerce-artifacts/evaluation-lab/replay/report.json --thresholds ../../commerce-assistant-platform/evals/lab/english-thresholds.json --output ../../commerce-artifacts/evaluation-lab/comparison.json
+          python evaluation/agent-evals.py replay --scope ../../commerce-assistant-platform/evals/lab/m02-english-scope.json --grounded-intent --commerce-core --output ../../commerce-artifacts/evaluation-lab/core
+          python evaluation/agent-evals.py compare --baseline ../../commerce-assistant-platform/evals/lab/english-baseline.json --candidate ../../commerce-artifacts/evaluation-lab/core/report.json --thresholds ../../commerce-assistant-platform/evals/lab/english-thresholds.json --output ../../commerce-artifacts/evaluation-lab/core-comparison.json
+      - name: Core dependency, registry, state and generated contract gates
+        run: |
+          python contracts/generate_core_contracts.py --check
+          python contracts/generate_meaning_contracts.py --check
+          python contracts/generate_planning_contracts.py --check
+          python evaluation/planning-evals.py
+          python evaluation/agent-evals.py replay --scope ../../commerce-assistant-platform/evals/lab/m02-english-scope.json --grounded-intent --commerce-core --commerce-meaning --commerce-planning --output ../../commerce-artifacts/evaluation-lab/planning
+          python evaluation/agent-evals.py compare --baseline ../../commerce-assistant-platform/evals/lab/english-baseline.json --candidate ../../commerce-artifacts/evaluation-lab/planning/report.json --thresholds ../../commerce-assistant-platform/evals/lab/english-thresholds.json --output ../../commerce-artifacts/evaluation-lab/planning-comparison.json
+          python evaluation/meaning-evals.py
+          python evaluation/agent-evals.py replay --scope ../../commerce-assistant-platform/evals/lab/m02-english-scope.json --grounded-intent --commerce-core --commerce-meaning --output ../../commerce-artifacts/evaluation-lab/meaning
+          python evaluation/agent-evals.py compare --baseline ../../commerce-assistant-platform/evals/lab/english-baseline.json --candidate ../../commerce-artifacts/evaluation-lab/meaning/report.json --thresholds ../../commerce-assistant-platform/evals/lab/english-thresholds.json --output ../../commerce-artifacts/evaluation-lab/meaning-comparison.json
+          cargo test --manifest-path ../../commerce-api/rocento-api/Cargo.toml -p commerce-core-contracts --locked
+      - name: Strategy rollout gates
+        working-directory: commerce-assistant-platform
+        run: python -m pytest tests/test_strategy_evals.py tests/test_singleflight.py tests/test_catalog_cache.py --junitxml=../commerce-artifacts/agent-evals/strategy.xml
+      - run: python evaluation/agent-performance.py
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: agent-evaluation-report
+          path: |
+            commerce-artifacts/agent-evals/
+            commerce-artifacts/agent-performance/
+            commerce-artifacts/evaluation-lab/
+  core-typescript:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - uses: pnpm/action-setup@v4
+        with:
+          version: '10.32.1'
+      - run: pnpm install --frozen-lockfile
+        working-directory: commerce-web
+      - run: pnpm exec vitest run packages/api-client/src/commerce-core.test.ts
+        working-directory: commerce-web

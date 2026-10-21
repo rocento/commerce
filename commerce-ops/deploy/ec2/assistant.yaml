@@ -1,0 +1,36 @@
+# Private service infrastructure is always available; the admin UI controls chat.
+# Apply after compose.assistant.yaml and compose.assistant-admin.yaml.
+services:
+  ai-health:
+    # Production probes call ai-service directly; retain this proxy only for explicit legacy use.
+    profiles: [legacy-ai-health]
+    ports: !reset []
+    restart: unless-stopped
+  ai-service:
+    restart: unless-stopped
+  ai-postgres:
+    restart: unless-stopped
+  assistant-ingress:
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "nginx", "-t"]
+      interval: 5s
+      timeout: 3s
+      retries: 6
+      start_period: 5s
+  assistant-tools:
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "nginx", "-t"]
+      interval: 5s
+      timeout: 3s
+      retries: 6
+      start_period: 5s
+  assistant-provider:
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "nginx", "-t"]
+      interval: 5s
+      timeout: 3s
+      retries: 6
+      start_period: 5s

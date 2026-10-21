@@ -1,0 +1,24 @@
+{
+  "unique_synthetic_phrases": 1000,
+  "structural_patterns": 100,
+  "initial_local_parser_passes": 684,
+  "deployed_parser_checks": {
+    "grocery": {
+      "passed": 1000,
+      "total": 1000
+    },
+    "jewelry": {
+      "passed": 1000,
+      "total": 1000
+    }
+  },
+  "language_regression_tests_passed": 39,
+  "backend_tests_passed": 148,
+  "live_stateful_checks_passed": 26,
+  "limitations": [
+    "Synthetic regression cases, not an unseen customer accuracy benchmark.",
+    "Parser PASS does not mean a mutation executed.",
+    "Ten explicit copy cases return unsupported guidance; copy-and-keep is not supported in chat.",
+    "One earlier Jewelry negation request timed out; the final retry completed and preserved the wishlist."
+  ]
+}

@@ -1,0 +1,31 @@
+import { test, expect } from '@playwright/test';
+test('CSV preview stays bound to its input and invalid replacement files clear old content', async ({ page }) => {
+  await page.route('**/api/**', route => route.fulfill({ json: [] }));
+  await page.route('**/api/v1/admin/me', route => route.fulfill({ json: { user: { id:'11111111-1111-4111-8111-111111111111',name:'Admin' },permissions:['*'] } }));
+  let release: (()=>void) | undefined;
+  const waiting = new Promise<void>(resolve => { release=resolve; });
+  await page.route('**/api/v1/admin/operations/catalog/import', async route => {
+    expect(route.request().postDataJSON().preview).toBe(true);
+    await waiting;
+    await route.fulfill({ json: { count:1,skus:['TEST'],preview:true,operation_id:'11111111-1111-4111-8111-111111111111' } });
+  });
+  await page.goto('/system/import');
+  const file = page.getByLabel('Choose CSV file');
+  const content = page.getByLabel('CSV content');
+  await expect(page.getByRole('link',{name:'Download CSV template'})).toHaveAttribute('download','catalog-import-template.csv');
+  await file.setInputFiles({name:'valid.csv',mimeType:'text/csv',buffer:Buffer.from('sku,name\nTEST,Tea')});
+  await expect(content).toHaveValue('sku,name\nTEST,Tea');
+  await page.getByLabel('Import reason').selectOption('__other');await page.getByLabel('Custom reason',{exact:true}).fill('Inventory preparation');
+  await page.getByRole('button',{name:'Validate and preview'}).click();
+  await expect(content).toBeDisabled();
+  await expect(file).toBeDisabled();
+  await expect(page.getByLabel('Import reason')).toBeDisabled();
+  release!();
+  await expect(page.getByRole('button',{name:'Apply 1 rows'})).toBeVisible();
+  await content.fill('edited');
+  await expect(page.getByRole('button',{name:'Apply 1 rows'})).toHaveCount(0);
+  await file.setInputFiles({name:'bad.csv',mimeType:'text/csv',buffer:Buffer.from([0xff,0xfe,0x61])});
+  await expect(content).toHaveValue('');
+  await expect(page.getByText('Could not read this file. Save it as UTF-8 CSV and try again.')).toBeVisible();
+  await expect(page.getByRole('button',{name:'Validate and preview'})).toBeDisabled();
+});

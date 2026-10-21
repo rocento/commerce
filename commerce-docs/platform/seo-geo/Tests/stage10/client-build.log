@@ -1,0 +1,21 @@
+vite v7.3.6 building client environment for production...
+transforming...
+✓ 448 modules transformed.
+rendering chunks...
+computing gzip size...
+.stage10-dist/public.html                            0.55 kB │ gzip:  0.32 kB
+.stage10-dist/index.html                             0.86 kB │ gzip:  0.40 kB
+.stage10-dist/assets/theme-default-BP_4Ao9p.png  1,742.01 kB
+.stage10-dist/assets/public-C1vZajYR.css             0.62 kB │ gzip:  0.35 kB
+.stage10-dist/assets/search-DrvJueiD.css            32.66 kB │ gzip: 10.27 kB
+.stage10-dist/assets/app-cPcSftJO.css               71.29 kB │ gzip: 14.44 kB
+.stage10-dist/assets/style-Lsyhwrys.css             86.43 kB │ gzip: 14.70 kB
+.stage10-dist/assets/search-widget-BWSjOg6Q.js       0.22 kB │ gzip:  0.19 kB
+.stage10-dist/assets/index-Bq4CysM8.js               2.53 kB │ gzip:  1.24 kB
+.stage10-dist/assets/public-DLd7XMQf.js             13.21 kB │ gzip:  4.13 kB
+.stage10-dist/assets/app-Bcu4gJU_.js               170.03 kB │ gzip: 46.55 kB
+.stage10-dist/assets/search-CPvyeCUU.js            209.72 kB │ gzip: 61.70 kB
+.stage10-dist/assets/style-s0HsvZ_P.js             289.80 kB │ gzip: 88.17 kB
+✓ built in 1.01s
+
+Exit status: 0

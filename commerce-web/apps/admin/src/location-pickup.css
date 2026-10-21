@@ -1,0 +1,45 @@
+.location-editor .form-card {
+  background: #fff;
+  border: 1px solid #e0e4e8;
+  border-radius: 14px;
+  padding: 24px;
+  margin-block: 24px;
+}
+.location-editor .form-card h2 { margin: 0 0 12px; }
+.location-editor fieldset { border: 0; padding: 0; margin: 18px 0; min-width: 0; }
+.location-editor legend.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+.location-pickup .checkbox { margin-bottom: 20px; }
+.location-pickup textarea {
+  box-sizing: border-box;
+  width: 100%;
+  min-height: 110px;
+  resize: vertical;
+  padding: 12px;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  font: inherit;
+  line-height: 1.5;
+}
+.location-pickup textarea:focus-visible { outline: 2px solid #dc7957; outline-offset: 2px; }
+.location-pickup [role="note"] {
+  border-inline-start: 3px solid #d99c39;
+  border-radius: 6px;
+  padding: 12px 16px;
+  background: #fff8eb;
+  color: #654c22;
+}
+.location-pickup .form-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 20px; }
+.location-pickup .reason-field { margin-top: 20px; }
+@media (max-width: 600px) {
+  .location-editor .form-card { padding: 18px; }
+  .location-pickup .form-actions > button { width: 100%; }
+}

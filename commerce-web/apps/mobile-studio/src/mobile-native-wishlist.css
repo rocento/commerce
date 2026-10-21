@@ -1,0 +1,18 @@
+/* Shared saved-product hierarchy implemented by SwiftUI and Compose. */
+.ms-native-phone .ms-native-wishlist h3 { margin:0 0 16px; font-size:24px; line-height:1.3; }
+.ms-native-phone .ms-native-wishlist .ms-wishlist-empty { padding:0; border:0; border-radius:0; background:transparent; margin:16px 0; }
+.ms-native-phone .ms-native-wishlist .ms-wishlist-empty p { font-size:16px; line-height:1.5; opacity:1; }
+.ms-native-phone .ms-native-wishlist .ms-wishlist-count { font-size:14px; font-weight:400; margin:16px 0; }
+.ms-native-phone .ms-native-wishlist .ms-wishlist-card { padding:0 0 16px; margin:16px 0; border:0; border-bottom:1px solid color-mix(in srgb,var(--phone-text) 15%,transparent); border-radius:0; background:transparent; }
+.ms-native-phone .ms-native-wishlist .ms-cart-product { display:flex; width:100%; padding:0; border:0; background:transparent; color:var(--phone-text); text-align:start; }
+.ms-native-phone .ms-native-wishlist .ms-wishlist-image { width:80px; height:80px; flex-basis:80px; border-radius:0; font-size:12px; }
+.ms-native-phone .ms-native-wishlist .ms-cart-product small { display:block; font-weight:400; }
+.ms-native-phone .ms-native-wishlist .ms-wishlist-availability { display:block; padding:0; border-radius:0; background:transparent; font-size:14px; margin:12px 0; }
+.ms-native-phone .ms-native-wishlist .ms-wishlist-card .ms-profile-actions { display:flex; flex-direction:column; align-items:flex-start; gap:12px; }
+.ms-native-phone .ms-native-wishlist .ms-wishlist-card .ms-profile-actions button,
+.ms-native-phone .ms-native-wishlist .ms-wishlist-empty button { width:auto; min-height:44px; padding:8px 0; border:0; border-radius:0; font:inherit; font-size:16px; background:transparent; color:var(--phone-primary); }
+.ms-native-phone.ms-android .ms-native-wishlist .ms-wishlist-card .ms-profile-actions .ms-cart-primary,
+.ms-native-phone.ms-android .ms-native-wishlist .ms-wishlist-empty .ms-cart-primary { background:var(--phone-primary); color:var(--phone-on-primary); padding:10px 24px; border-radius:24px; font-size:14px; }
+.ms-native-phone .ms-native-wishlist .ms-cart-note { margin-top:24px; font-size:12px; }
+
+.ms-native-phone .ms-product-detail .ms-wishlist-toggle { width:fit-content; padding:10px 12px; border:0; background:transparent; font-size:16px; }

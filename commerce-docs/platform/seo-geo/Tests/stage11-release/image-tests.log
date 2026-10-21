@@ -1,0 +1,59 @@
+   Compiling jobserver v0.1.35
+   Compiling cc v1.4.5
+   Compiling ring v0.17.14
+   Compiling libwebp-sys v0.9.6
+   Compiling rustls v0.23.44
+   Compiling rustls v0.21.12
+   Compiling rustls-webpki v0.103.15
+   Compiling jsonwebtoken v9.3.1
+   Compiling sct v0.7.1
+   Compiling rustls-webpki v0.101.7
+   Compiling webp v0.3.1
+   Compiling tokio-rustls v0.24.1
+   Compiling hyper-rustls v0.24.2
+   Compiling sqlx-core v0.8.6
+   Compiling tokio-rustls v0.26.5
+   Compiling attohttpc v0.28.5
+   Compiling async-nats v0.42.0
+   Compiling hyper-rustls v0.27.9
+   Compiling lettre v0.11.23
+   Compiling aws-creds v0.37.0
+   Compiling reqwest v0.12.28
+   Compiling rust-s3 v0.35.1
+   Compiling sqlx-postgres v0.8.6
+   Compiling opentelemetry-http v0.31.0
+   Compiling opentelemetry-otlp v0.31.1
+   Compiling infra-observability v0.1.0 (/Users/momar/Documents/commerce-ai/backend/crates/infra-observability)
+   Compiling infra-media v0.1.0 (/Users/momar/Documents/commerce-ai/backend/crates/infra-media)
+   Compiling sqlx-macros-core v0.8.6
+   Compiling sqlx-macros v0.8.6
+   Compiling sqlx v0.8.6
+   Compiling infra-events v0.1.0 (/Users/momar/Documents/commerce-ai/backend/crates/infra-events)
+   Compiling infra-auth v0.1.0 (/Users/momar/Documents/commerce-ai/backend/crates/infra-auth)
+   Compiling infra-db v0.1.0 (/Users/momar/Documents/commerce-ai/backend/crates/infra-db)
+   Compiling domain-inventory v0.1.0 (/Users/momar/Documents/commerce-ai/backend/crates/domain-inventory)
+   Compiling domain-admin-iam v0.1.0 (/Users/momar/Documents/commerce-ai/backend/crates/domain-admin-iam)
+   Compiling domain-attributes v0.1.0 (/Users/momar/Documents/commerce-ai/backend/crates/domain-attributes)
+   Compiling domain-payments v0.1.0 (/Users/momar/Documents/commerce-ai/backend/crates/domain-payments)
+   Compiling domain-theme v0.1.0 (/Users/momar/Documents/commerce-ai/backend/crates/domain-theme)
+   Compiling domain-fulfillment v0.1.0 (/Users/momar/Documents/commerce-ai/backend/crates/domain-fulfillment)
+   Compiling domain-tax v0.1.0 (/Users/momar/Documents/commerce-ai/backend/crates/domain-tax)
+   Compiling domain-cms v0.1.0 (/Users/momar/Documents/commerce-ai/backend/crates/domain-cms)
+   Compiling domain-reviews v0.1.0 (/Users/momar/Documents/commerce-ai/backend/crates/domain-reviews)
+   Compiling domain-catalog v0.1.0 (/Users/momar/Documents/commerce-ai/backend/crates/domain-catalog)
+   Compiling domain-customers v0.1.0 (/Users/momar/Documents/commerce-ai/backend/crates/domain-customers)
+   Compiling domain-pricing-promotions v0.1.0 (/Users/momar/Documents/commerce-ai/backend/crates/domain-pricing-promotions)
+   Compiling domain-orders v0.1.0 (/Users/momar/Documents/commerce-ai/backend/crates/domain-orders)
+   Compiling domain-support v0.1.0 (/Users/momar/Documents/commerce-ai/backend/crates/domain-support)
+   Compiling domain-search-client v0.1.0 (/Users/momar/Documents/commerce-ai/backend/crates/domain-search-client)
+   Compiling domain-cart-checkout v0.1.0 (/Users/momar/Documents/commerce-ai/backend/crates/domain-cart-checkout)
+   Compiling domain-admin-operations v0.1.0 (/Users/momar/Documents/commerce-ai/backend/crates/domain-admin-operations)
+   Compiling api-gateway v0.1.0 (/Users/momar/Documents/commerce-ai/backend/crates/api-gateway)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 18.84s
+     Running unittests src/lib.rs (backend/target/debug/deps/api_gateway-cf7092467cc444d0)
+
+running 2 tests
+test public_commerce::images::tests::dimensions_and_real_variants ... ok
+test public_commerce::images::tests::photographic_derivatives_bound_bytes_and_preserve_alpha ... ok
+
+test result: ok. 2 passed; 0 failed; 0 ignored; 0 measured; 24 filtered out; finished in 3.56s

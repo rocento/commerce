@@ -1,0 +1,100 @@
+TAP version 13
+# Subtest: social metadata escapes Unicode without truncating and shares canonical identity
+ok 1 - social metadata escapes Unicode without truncating and shares canonical identity
+  ---
+  duration_ms: 0.61625
+  type: 'test'
+  ...
+# Subtest: missing image and language-only locale do not invent a card image or country
+ok 2 - missing image and language-only locale do not invent a card image or country
+  ---
+  duration_ms: 0.177667
+  type: 'test'
+  ...
+# Subtest: error pages have no social claims or canonical
+ok 3 - error pages have no social claims or canonical
+  ---
+  duration_ms: 0.103083
+  type: 'test'
+  ...
+# Subtest: anonymous content, no-store and identical robots; credentials never forwarded
+ok 4 - anonymous content, no-store and identical robots; credentials never forwarded
+  ---
+  duration_ms: 17.452542
+  type: 'test'
+  ...
+# Subtest: unknown URLs, invalid pagination, methods and spoofed hosts fail closed
+ok 5 - unknown URLs, invalid pagination, methods and spoofed hosts fail closed
+  ---
+  duration_ms: 6.828708
+  type: 'test'
+  ...
+# Subtest: mismatched installation/origin and unavailable backend produce 503, never empty success
+ok 6 - mismatched installation/origin and unavailable backend produce 503, never empty success
+  ---
+  duration_ms: 4.702375
+  type: 'test'
+  ...
+# Subtest: 404, approved 410 and single-hop 301 preserve status and noindex
+ok 7 - 404, approved 410 and single-hop 301 preserve status and noindex
+  ---
+  duration_ms: 3.620125
+  type: 'test'
+  ...
+# Subtest: query variants noindex and HEAD has no body
+ok 8 - query variants noindex and HEAD has no body
+  ---
+  duration_ms: 2.480375
+  type: 'test'
+  ...
+# Subtest: embedded state cannot close its script element
+ok 9 - embedded state cannot close its script element
+  ---
+  duration_ms: 0.116083
+  type: 'test'
+  ...
+# Subtest: startup rejects mismatched client/server artifacts before listening
+ok 10 - startup rejects mismatched client/server artifacts before listening
+  ---
+  duration_ms: 34.234916
+  type: 'test'
+  ...
+# Subtest: canonical metadata and discovery placeholders share only the approved origin
+ok 11 - canonical metadata and discovery placeholders share only the approved origin
+  ---
+  duration_ms: 3.792917
+  type: 'test'
+  ...
+# Subtest: raw encoded dot segments cannot normalize into a private 200 shell
+ok 12 - raw encoded dot segments cannot normalize into a private 200 shell
+  ---
+  duration_ms: 2.392333
+  type: 'test'
+  ...
+# Subtest: case, encoded ASCII, slash and tracking normalize before final resource redirect
+ok 13 - case, encoded ASCII, slash and tracking normalize before final resource redirect
+  ---
+  duration_ms: 1.860125
+  type: 'test'
+  ...
+# Subtest: ambiguous and unsupported paths/parameters fail closed
+ok 14 - ambiguous and unsupported paths/parameters fail closed
+  ---
+  duration_ms: 0.442792
+  type: 'test'
+  ...
+# Subtest: only bounded normalized relative destinations are allowed
+ok 15 - only bounded normalized relative destinations are allowed
+  ---
+  duration_ms: 0.129583
+  type: 'test'
+  ...
+1..15
+# tests 15
+# suites 0
+# pass 15
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 130.432209

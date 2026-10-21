@@ -1,0 +1,49 @@
+Broken local documentation links:
+docs/README.md: shopping-assistant/README.md
+docs/Rocento-Agentic-Commerce-Plan/CURRENT-STATE.md: ../../ai-service/app/core
+docs/Rocento-Agentic-Commerce-Plan/CURRENT-STATE.md: ../../ai-service/app/baskets.py
+docs/archive/assistant-milestones/agent-m07-rich-responses.md: ../../../ai-service/app/catalog_tools.py
+docs/archive/assistant-milestones/agent-m07-rich-responses.md: ../../../ai-service/app/shopping.py
+docs/archive/assistant-milestones/agent-m07-rich-responses.md: ../../../ai-service/app/rich_responses.py
+docs/commerce-language-engine/README.md: ../shopping-assistant/03_language_engine.md
+docs/commerce-language-engine/database-and-context.md: ../shopping-assistant/03_language_engine.md
+docs/commerce-language-engine/english-coverage-improvement-plan.md: /Users/momar/Documents/commerce-ai/ai-service/app/commerce_action_engine/knowledge/intent_examples.py
+docs/commerce-language-engine-integration.md: shopping-assistant/README.md
+docs/commerce-language-engine-integration.md: shopping-assistant/03_language_engine.md
+docs/plans/dedicated-and-shared-hosting-study.md: ../../ai-service/app/security.py
+docs/qa/shopping-phrases-2026-09-29.md: /account/orders
+docs/reviews/assistant-status-2026-09-17.md: ../../ai-service/app/shopping.py
+docs/reviews/shopping-assistant-report-2026-09-21.md: ../../ai-service/app/settings.py
+docs/reviews/shopping-assistant-report-2026-09-21.md: ../../ai-service/app/store.py
+docs/shopping-assistant 3/commerce-language-engine/semantic-requests.md: ../../commerce-language-engine/src/semantic-clauses.ts
+docs/shopping-assistant 3/commerce-language-engine/semantic-requests.md: ../../commerce-language-engine/src/semantic-entities.ts
+docs/shopping-assistant 3/commerce-language-engine/semantic-requests.md: ../../commerce-language-engine/src/semantic-request.ts
+docs/shopping-assistant 3/commerce-language-engine/semantic-requests.md: ../../commerce-language-engine/src/semantic-types.ts
+docs/shopping-assistant 3/commerce-language-engine/semantic-requests.md: ../../commerce-language-engine/src/context.ts
+docs/shopping-assistant 3/commerce-language-engine/semantic-requests.md: ../../commerce-language-engine/src/engine.ts
+docs/shopping-assistant 3/commerce-language-engine/semantic-requests.md: ../../commerce-language-engine/scripts/context-demo.ts
+docs/shopping-assistant 3/commerce-language-engine/semantic-requests.md: ../../commerce-language-engine/tests/semantic-request.test.ts
+docs/shopping-assistant 3/commerce-language-engine/semantic-requests.md: ../../commerce-language-engine/tests/semantic-http.test.ts
+docs/shopping-assistant 3/shopping-assistant/02_customer_flows.md: ../fulfillment/plans-api.md
+docs/shopping-assistant 3/shopping-assistant/05_operations_and_source_map.md: ../../compose.language-engine.yaml
+docs/shopping-assistant 3/shopping-assistant/05_operations_and_source_map.md: ../../frontend/apps/storefront/src/assistant.tsx
+docs/shopping-assistant 3/shopping-assistant/05_operations_and_source_map.md: ../../frontend/apps/storefront/src/shopping.tsx
+docs/shopping-assistant 3/shopping-assistant/05_operations_and_source_map.md: ../../frontend/packages/api-client/src/assistant.ts
+docs/shopping-assistant 3/shopping-assistant/05_operations_and_source_map.md: ../../backend/crates/api-gateway/src/assistant.rs
+docs/shopping-assistant 3/shopping-assistant/05_operations_and_source_map.md: ../../backend/crates/api-gateway/src/assistant_catalog.rs
+docs/shopping-assistant 3/shopping-assistant/05_operations_and_source_map.md: ../../ai-service/app/catalog_tools.py
+docs/shopping-assistant 3/shopping-assistant/05_operations_and_source_map.md: ../../ai-service/app/main.py
+docs/shopping-assistant 3/shopping-assistant/05_operations_and_source_map.md: ../../ai-service/app/security.py
+docs/shopping-assistant 3/shopping-assistant/05_operations_and_source_map.md: ../../commerce-language-engine/src/server.ts
+docs/shopping-assistant 3/shopping-assistant/05_operations_and_source_map.md: ../../commerce-language-engine/src/engine.ts
+docs/shopping-assistant 3/shopping-assistant/05_operations_and_source_map.md: ../../ai-service/app/shopping.py
+docs/shopping-assistant 3/shopping-assistant/05_operations_and_source_map.md: ../../ai-service/app/runtime.py
+docs/shopping-assistant 3/shopping-assistant/05_operations_and_source_map.md: ../../ai-service/app/baskets.py
+docs/shopping-assistant 3/shopping-assistant/05_operations_and_source_map.md: ../../backend/crates/api-gateway/src/shopping.rs
+docs/shopping-assistant 3/shopping-assistant/05_operations_and_source_map.md: ../../backend/crates/domain-cart-checkout/src/shopping.rs
+docs/shopping-assistant 3/shopping-assistant/05_operations_and_source_map.md: ../../backend/crates/api-gateway/src/assistant_reorder.rs
+docs/shopping-assistant 3/shopping-assistant/05_operations_and_source_map.md: ../../ai-service/app/personalization.py
+docs/shopping-assistant 3/shopping-assistant/05_operations_and_source_map.md: ../../ai-service/app/knowledge.py
+docs/shopping-assistant 3/shopping-assistant/05_operations_and_source_map.md: ../../deploy/assistant/tools.conf
+docs/shopping-assistant 3/shopping-assistant/05_operations_and_source_map.md: ../rocento_fulfillment_milestone_md/README.md
+docs/shopping-assistant 3/shopping-assistant/05_operations_and_source_map.md: ../rocento_fulfillment_milestone_md/05_completion_report.md

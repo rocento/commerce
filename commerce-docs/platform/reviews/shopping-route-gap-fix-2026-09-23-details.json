@@ -1,0 +1,44 @@
+[
+  {
+    "template": "quoted_commands:0",
+    "before_route": "clarify",
+    "after_route": "search",
+    "count": 3477,
+    "message": "find \"add 33 socks to cart\"",
+    "before": {
+      "category": "socks",
+      "quantity": 33
+    },
+    "after": {
+      "productText": "add 33 socks to cart"
+    }
+  },
+  {
+    "template": "quoted_commands:1",
+    "before_route": "unmapped",
+    "after_route": "search",
+    "count": 4887,
+    "message": "search for \"cancel order 114238\"",
+    "before": {
+      "order_reference": "114238"
+    },
+    "after": {
+      "productText": "cancel order 114238"
+    }
+  },
+  {
+    "template": "quoted_commands:2",
+    "before_route": "search",
+    "after_route": "search",
+    "count": 1714,
+    "message": "show me \"remove 19 tomato sauce\"",
+    "before": {
+      "category": "tomato",
+      "quantity": 19,
+      "productText": "remove 19 tomato sauce"
+    },
+    "after": {
+      "productText": "remove 19 tomato sauce"
+    }
+  }
+]

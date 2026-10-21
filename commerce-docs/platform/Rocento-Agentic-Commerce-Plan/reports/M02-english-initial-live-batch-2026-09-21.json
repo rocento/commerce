@@ -1,0 +1,58 @@
+{
+  "runs": [
+    {
+      "run": 1,
+      "status": "passed",
+      "passed": 4,
+      "cases": 4,
+      "excluded": {
+        "grocery-live-budget-ar": "ar",
+        "grocery-live-budget-mixed": "mixed"
+      }
+    },
+    {
+      "run": 2,
+      "status": "passed",
+      "passed": 4,
+      "cases": 4,
+      "excluded": {
+        "grocery-live-budget-ar": "ar",
+        "grocery-live-budget-mixed": "mixed"
+      }
+    },
+    {
+      "run": 3,
+      "status": "passed",
+      "passed": 4,
+      "cases": 4,
+      "excluded": {
+        "grocery-live-budget-ar": "ar",
+        "grocery-live-budget-mixed": "mixed"
+      }
+    }
+  ],
+  "budget": {
+    "currency": "USD",
+    "cap_micros": 250000,
+    "reserved_micros": 83913,
+    "observed_cost_micros": 5891,
+    "max_calls": 12,
+    "calls": 12,
+    "pricing_reviewed": "2026-09-21",
+    "pricing_source": "https://developers.openai.com/api/docs/models/gpt-4.1-mini",
+    "input_usd_per_million": 0.4,
+    "output_usd_per_million": 1.6,
+    "reservation_basis": "UTF-8 payload byte bound plus 8192 tokens, uncached input and maximum output; no reservation refunds or retries. Provider-side billing is authoritative."
+  },
+  "budget_scope": "Shared across all three planned runs; reservations are not reset.",
+  "commerce_unchanged": true,
+  "scope": [
+    "catalog.products",
+    "customers.customers",
+    "cart_checkout.items",
+    "orders.orders",
+    "orders.order_items",
+    "payments.payment_transactions"
+  ],
+  "financial_tools": []
+}

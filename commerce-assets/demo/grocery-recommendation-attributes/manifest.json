@@ -1,0 +1,4241 @@
+{
+  "description": "Reviewed culinary-use suggestions for 150 existing grocery SKUs, including size families. Two dish-soap SKUs receive only household classification. Preserve all activation, stock, price, media and family state.",
+  "definitions": [
+    {
+      "id": "9f7c2a01-95be-5584-9f7f-338b75774760",
+      "entity_type": "product",
+      "attribute_code": "meal_occasion",
+      "label": "Meal occasion",
+      "input_type": "multi_select",
+      "scope": "global",
+      "is_required": false,
+      "is_unique": false,
+      "is_searchable": true,
+      "is_filterable": true,
+      "is_comparable": true,
+      "is_visible_on_front": true,
+      "used_for_promo_rules": false,
+      "used_for_configurations": false,
+      "swatch_type": "none",
+      "options": [
+        {
+          "value": "breakfast",
+          "label": "Breakfast"
+        },
+        {
+          "value": "lunch",
+          "label": "Lunch"
+        },
+        {
+          "value": "dinner",
+          "label": "Dinner"
+        },
+        {
+          "value": "snack",
+          "label": "Snack"
+        },
+        {
+          "value": "dessert",
+          "label": "Dessert"
+        }
+      ],
+      "version": 0,
+      "metadata": {
+        "status": "active",
+        "admin_visible": true,
+        "ai_queryable": true,
+        "ai_enrichable": false,
+        "facetable": true,
+        "source_policy": "semantic",
+        "semantic_role": "intended_use",
+        "description": "Merchant-authored grocery categorization and suggested culinary uses; not nutrition, allergen safety, certification or preparation instructions."
+      }
+    },
+    {
+      "id": "3396b838-16b6-5dc9-b893-ae2d919a8f76",
+      "entity_type": "product",
+      "attribute_code": "dish_type",
+      "label": "Suggested dishes",
+      "input_type": "multi_select",
+      "scope": "global",
+      "is_required": false,
+      "is_unique": false,
+      "is_searchable": true,
+      "is_filterable": true,
+      "is_comparable": true,
+      "is_visible_on_front": true,
+      "used_for_promo_rules": false,
+      "used_for_configurations": false,
+      "swatch_type": "none",
+      "options": [
+        {
+          "value": "salads",
+          "label": "Salads"
+        },
+        {
+          "value": "soups",
+          "label": "Soups"
+        },
+        {
+          "value": "pasta_dishes",
+          "label": "Pasta Dishes"
+        },
+        {
+          "value": "rice_dishes",
+          "label": "Rice Dishes"
+        },
+        {
+          "value": "sandwiches",
+          "label": "Sandwiches"
+        },
+        {
+          "value": "stir_fries",
+          "label": "Stir Fries"
+        },
+        {
+          "value": "breakfast_bowls",
+          "label": "Breakfast Bowls"
+        },
+        {
+          "value": "smoothies",
+          "label": "Smoothies"
+        },
+        {
+          "value": "baking",
+          "label": "Baking"
+        },
+        {
+          "value": "desserts",
+          "label": "Desserts"
+        },
+        {
+          "value": "drinks",
+          "label": "Drinks"
+        },
+        {
+          "value": "roast_dinners",
+          "label": "Roast Dinners"
+        }
+      ],
+      "version": 0,
+      "metadata": {
+        "status": "active",
+        "admin_visible": true,
+        "ai_queryable": true,
+        "ai_enrichable": false,
+        "facetable": true,
+        "source_policy": "semantic",
+        "semantic_role": "intended_use",
+        "description": "Merchant-authored grocery categorization and suggested culinary uses; not nutrition, allergen safety, certification or preparation instructions."
+      }
+    },
+    {
+      "id": "99021637-f738-5901-89e9-8d6d213c8b62",
+      "entity_type": "product",
+      "attribute_code": "preparation_method",
+      "label": "Suggested preparation",
+      "input_type": "multi_select",
+      "scope": "global",
+      "is_required": false,
+      "is_unique": false,
+      "is_searchable": true,
+      "is_filterable": true,
+      "is_comparable": true,
+      "is_visible_on_front": true,
+      "used_for_promo_rules": false,
+      "used_for_configurations": false,
+      "swatch_type": "none",
+      "options": [
+        {
+          "value": "boiling",
+          "label": "Boiling"
+        },
+        {
+          "value": "roasting",
+          "label": "Roasting"
+        },
+        {
+          "value": "grilling",
+          "label": "Grilling"
+        },
+        {
+          "value": "sauteing",
+          "label": "Sauteing"
+        },
+        {
+          "value": "baking",
+          "label": "Baking"
+        },
+        {
+          "value": "no_cook",
+          "label": "No Cook"
+        }
+      ],
+      "version": 0,
+      "metadata": {
+        "status": "active",
+        "admin_visible": true,
+        "ai_queryable": true,
+        "ai_enrichable": false,
+        "facetable": true,
+        "source_policy": "semantic",
+        "semantic_role": "intended_use",
+        "description": "Merchant-authored grocery categorization and suggested culinary uses; not nutrition, allergen safety, certification or preparation instructions."
+      }
+    },
+    {
+      "id": "f495d9fc-0aaf-5126-8b53-684d41bec88f",
+      "entity_type": "product",
+      "attribute_code": "ingredient_role",
+      "label": "Ingredient role",
+      "input_type": "multi_select",
+      "scope": "global",
+      "is_required": false,
+      "is_unique": false,
+      "is_searchable": true,
+      "is_filterable": true,
+      "is_comparable": true,
+      "is_visible_on_front": true,
+      "used_for_promo_rules": false,
+      "used_for_configurations": false,
+      "swatch_type": "none",
+      "options": [
+        {
+          "value": "main_ingredient",
+          "label": "Main Ingredient"
+        },
+        {
+          "value": "side",
+          "label": "Side"
+        },
+        {
+          "value": "base",
+          "label": "Base"
+        },
+        {
+          "value": "seasoning",
+          "label": "Seasoning"
+        },
+        {
+          "value": "topping",
+          "label": "Topping"
+        },
+        {
+          "value": "spread",
+          "label": "Spread"
+        },
+        {
+          "value": "cooking_fat",
+          "label": "Cooking Fat"
+        },
+        {
+          "value": "sweetener",
+          "label": "Sweetener"
+        }
+      ],
+      "version": 0,
+      "metadata": {
+        "status": "active",
+        "admin_visible": true,
+        "ai_queryable": true,
+        "ai_enrichable": false,
+        "facetable": true,
+        "source_policy": "semantic",
+        "semantic_role": null,
+        "description": "Merchant-authored grocery categorization and suggested culinary uses; not nutrition, allergen safety, certification or preparation instructions."
+      }
+    },
+    {
+      "id": "4292e697-a7eb-5cfe-a001-d0d94774ace1",
+      "entity_type": "product",
+      "attribute_code": "grocery_group",
+      "label": "Grocery group",
+      "input_type": "multi_select",
+      "scope": "global",
+      "is_required": false,
+      "is_unique": false,
+      "is_searchable": true,
+      "is_filterable": true,
+      "is_comparable": true,
+      "is_visible_on_front": true,
+      "used_for_promo_rules": false,
+      "used_for_configurations": false,
+      "swatch_type": "none",
+      "options": [
+        {
+          "value": "fruit",
+          "label": "Fruit"
+        },
+        {
+          "value": "vegetables",
+          "label": "Vegetables"
+        },
+        {
+          "value": "dairy",
+          "label": "Dairy"
+        },
+        {
+          "value": "eggs",
+          "label": "Eggs"
+        },
+        {
+          "value": "bakery",
+          "label": "Bakery"
+        },
+        {
+          "value": "grains",
+          "label": "Grains"
+        },
+        {
+          "value": "legumes",
+          "label": "Legumes"
+        },
+        {
+          "value": "meat",
+          "label": "Meat"
+        },
+        {
+          "value": "seafood",
+          "label": "Seafood"
+        },
+        {
+          "value": "nuts",
+          "label": "Nuts"
+        },
+        {
+          "value": "dried_fruit",
+          "label": "Dried Fruit"
+        },
+        {
+          "value": "condiments",
+          "label": "Condiments"
+        },
+        {
+          "value": "beverages",
+          "label": "Beverages"
+        },
+        {
+          "value": "household",
+          "label": "Household"
+        }
+      ],
+      "version": 0,
+      "metadata": {
+        "status": "active",
+        "admin_visible": true,
+        "ai_queryable": true,
+        "ai_enrichable": false,
+        "facetable": true,
+        "source_policy": "semantic",
+        "semantic_role": "classification",
+        "description": "Merchant-authored grocery categorization and suggested culinary uses; not nutrition, allergen safety, certification or preparation instructions."
+      }
+    }
+  ],
+  "products": [
+    {
+      "sku": "DEMO-GRO-50-001",
+      "name": "Bananas 1kg",
+      "slug": "demo-grocery-organic-bananas",
+      "attributes": {
+        "grocery_group": [
+          "fruit"
+        ],
+        "meal_occasion": [
+          "breakfast",
+          "snack",
+          "dessert"
+        ],
+        "dish_type": [
+          "breakfast_bowls",
+          "smoothies",
+          "desserts"
+        ],
+        "preparation_method": [
+          "no_cook"
+        ],
+        "ingredient_role": [
+          "main_ingredient",
+          "topping"
+        ]
+      }
+    },
+    {
+      "sku": "DEMO-GRO-50-002",
+      "name": "Gala Apples 1kg",
+      "slug": "demo-grocery-gala-apples",
+      "attributes": {
+        "grocery_group": [
+          "fruit"
+        ],
+        "meal_occasion": [
+          "breakfast",
+          "snack",
+          "dessert"
+        ],
+        "dish_type": [
+          "breakfast_bowls",
+          "smoothies",
+          "desserts"
+        ],
+        "preparation_method": [
+          "no_cook"
+        ],
+        "ingredient_role": [
+          "main_ingredient",
+          "topping"
+        ]
+      }
+    },
+    {
+      "sku": "DEMO-GRO-50-003",
+      "name": "Whole Milk 1L",
+      "slug": "demo-grocery-whole-milk",
+      "attributes": {
+        "grocery_group": [
+          "dairy"
+        ],
+        "meal_occasion": [
+          "breakfast",
+          "dessert"
+        ],
+        "dish_type": [
+          "breakfast_bowls",
+          "smoothies",
+          "baking",
+          "desserts"
+        ],
+        "preparation_method": [
+          "no_cook",
+          "baking"
+        ],
+        "ingredient_role": [
+          "base"
+        ]
+      }
+    },
+    {
+      "sku": "DEMO-GRO-50-004",
+      "name": "Baladi Bread 5 Loaves",
+      "slug": "demo-grocery-baladi-bread",
+      "attributes": {
+        "grocery_group": [
+          "bakery"
+        ],
+        "meal_occasion": [
+          "breakfast",
+          "lunch",
+          "dinner"
+        ],
+        "dish_type": [
+          "sandwiches"
+        ],
+        "preparation_method": [
+          "no_cook"
+        ],
+        "ingredient_role": [
+          "base",
+          "side"
+        ]
+      }
+    },
+    {
+      "sku": "DEMO-GRO-50-005",
+      "name": "Egyptian Rice 1kg",
+      "slug": "demo-grocery-egyptian-rice",
+      "attributes": {
+        "grocery_group": [
+          "grains"
+        ],
+        "meal_occasion": [
+          "lunch",
+          "dinner"
+        ],
+        "dish_type": [
+          "rice_dishes"
+        ],
+        "preparation_method": [
+          "boiling"
+        ],
+        "ingredient_role": [
+          "base"
+        ]
+      }
+    },
+    {
+      "sku": "DEMO-GRO-50-006",
+      "name": "Dried Fava Beans 500g",
+      "slug": "demo-grocery-dried-fava-beans",
+      "attributes": {
+        "grocery_group": [
+          "legumes"
+        ],
+        "meal_occasion": [
+          "lunch",
+          "dinner"
+        ],
+        "dish_type": [
+          "soups",
+          "salads",
+          "rice_dishes"
+        ],
+        "preparation_method": [
+          "boiling"
+        ],
+        "ingredient_role": [
+          "main_ingredient"
+        ]
+      }
+    },
+    {
+      "sku": "DEMO-GRO-50-007",
+      "name": "Fresh Molokhia 250g",
+      "slug": "demo-grocery-fresh-molokhia",
+      "attributes": {
+        "grocery_group": [
+          "vegetables"
+        ],
+        "meal_occasion": [
+          "lunch",
+          "dinner"
+        ],
+        "dish_type": [
+          "soups"
+        ],
+        "preparation_method": [
+          "boiling"
+        ],
+        "ingredient_role": [
+          "main_ingredient"
+        ]
+      }
+    },
+    {
+      "sku": "DEMO-GRO-50-008",
+      "name": "Roumi Cheese 250g",
+      "slug": "demo-grocery-roumi-cheese",
+      "attributes": {
+        "grocery_group": [
+          "dairy"
+        ],
+        "meal_occasion": [
+          "breakfast",
+          "lunch",
+          "dinner"
+        ],
+        "dish_type": [
+          "sandwiches",
+          "salads",
+          "pasta_dishes"
+        ],
+        "preparation_method": [
+          "no_cook",
+          "baking"
+        ],
+        "ingredient_role": [
+          "topping",
+          "main_ingredient"
+        ]
+      }
+    },
+    {
+      "sku": "DEMO-GRO-50-009",
+      "name": "Medjool Dates 400g",
+      "slug": "demo-grocery-medjool-dates",
+      "attributes": {
+        "grocery_group": [
+          "dried_fruit"
+        ],
+        "meal_occasion": [
+          "breakfast",
+          "snack",
+          "dessert"
+        ],
+        "dish_type": [
+          "breakfast_bowls",
+          "baking",
+          "desserts"
+        ],
+        "preparation_method": [
+          "no_cook",
+          "baking"
+        ],
+        "ingredient_role": [
+          "topping"
+        ]
+      }
+    },
+    {
+      "sku": "DEMO-GRO-50-010",
+      "name": "Tahini Jar 350g",
+      "slug": "demo-grocery-tahini-jar",
+      "attributes": {
+        "grocery_group": [
+          "condiments"
+        ],
+        "meal_occasion": [
+          "breakfast",
+          "lunch",
+          "dinner"
+        ],
+        "dish_type": [
+          "salads",
+          "sandwiches"
+        ],
+        "preparation_method": [
+          "no_cook"
+        ],
+        "ingredient_role": [
+          "spread",
+          "seasoning"
+        ]
+      }
+    },
+    {
+      "sku": "DEMO-GRO-50-011",
+      "name": "Baladi Ghee 500g",
+      "slug": "demo-grocery-baladi-ghee",
+      "attributes": {
+        "grocery_group": [
+          "condiments"
+        ],
+        "meal_occasion": [
+          "breakfast",
+          "lunch",
+          "dinner"
+        ],
+        "dish_type": [
+          "baking",
+          "roast_dinners"
+        ],
+        "preparation_method": [
+          "sauteing",
+          "baking",
+          "roasting"
+        ],
+        "ingredient_role": [
+          "cooking_fat"
+        ]
+      }
+    },
+    {
+      "sku": "DEMO-GRO-50-012",
+      "name": "Dried Hibiscus 200g",
+      "slug": "demo-grocery-karkadeh-hibiscus",
+      "attributes": {
+        "grocery_group": [
+          "beverages"
+        ],
+        "meal_occasion": [
+          "breakfast",
+          "lunch",
+          "dinner"
+        ],
+        "dish_type": [
+          "drinks"
+        ],
+        "preparation_method": [
+          "boiling"
+        ],
+        "ingredient_role": [
+          "main_ingredient"
+        ]
+      }
+    },
+    {
+      "sku": "DEMO-GRO-50-013",
+      "name": "Egyptian Cucumbers 1kg",
+      "slug": "demo-grocery-egyptian-cucumbers",
+      "attributes": {
+        "grocery_group": [
+          "vegetables"
+        ],
+        "meal_occasion": [
+          "lunch",
+          "dinner"
+        ],
+        "dish_type": [
+          "salads",
+          "sandwiches"
+        ],
+        "preparation_method": [
+          "no_cook"
+        ],
+        "ingredient_role": [
+          "side",
+          "topping"
+        ]
+      }
+    },
+    {
+      "sku": "DEMO-GRO-50-014",
+      "name": "Roma Tomatoes 1kg",
+      "slug": "demo-grocery-roma-tomatoes",
+      "attributes": {
+        "grocery_group": [
+          "vegetables"
+        ],
+        "meal_occasion": [
+          "lunch",
+          "dinner"
+        ],
+        "dish_type": [
+          "salads",
+          "sandwiches"
+        ],
+        "preparation_method": [
+          "no_cook"
+        ],
+        "ingredient_role": [
+          "side",
+          "topping"
+        ]
+      }
+    },
+    {
+      "sku": "DEMO-GRO-50-015",
+      "name": "Egyptian Lemons 500g",
+      "slug": "demo-grocery-egyptian-lemons",
+      "attributes": {
+        "grocery_group": [
+          "fruit"
+        ],
+        "meal_occasion": [
+          "lunch",
+          "dinner"
+        ],
+        "dish_type": [
+          "salads",
+          "drinks"
+        ],
+        "preparation_method": [
+          "no_cook"
+        ],
+        "ingredient_role": [
+          "seasoning"
+        ]
+      }
+    },
+    {
+      "sku": "DEMO-GRO-50-016",
+      "name": "Fresh Mint Bunch",
+      "slug": "demo-grocery-fresh-mint",
+      "attributes": {
+        "grocery_group": [
+          "vegetables"
+        ],
+        "meal_occasion": [
+          "lunch",
+          "dinner"
+        ],
+        "dish_type": [
+          "salads",
+          "drinks"
+        ],
+        "preparation_method": [
+          "no_cook"
+        ],
+        "ingredient_role": [
+          "seasoning"
+        ]
+      }
+    },
+    {
+      "sku": "DEMO-GRO-50-017",
+      "name": "Cane Sugar 1kg",
+      "slug": "demo-grocery-cane-sugar",
+      "attributes": {
+        "grocery_group": [
+          "condiments"
+        ],
+        "meal_occasion": [
+          "dessert"
+        ],
+        "dish_type": [
+          "baking",
+          "desserts",
+          "drinks"
+        ],
+        "preparation_method": [
+          "baking",
+          "no_cook"
+        ],
+        "ingredient_role": [
+          "sweetener"
+        ]
+      }
+    },
+    {
+      "sku": "DEMO-GRO-50-018",
+      "name": "Red Lentils 500g",
+      "slug": "demo-grocery-red-lentils",
+      "attributes": {
+        "grocery_group": [
+          "legumes"
+        ],
+        "meal_occasion": [
+          "lunch",
+          "dinner"
+        ],
+        "dish_type": [
+          "soups",
+          "salads",
+          "rice_dishes"
+        ],
+        "preparation_method": [
+          "boiling"
+        ],
+        "ingredient_role": [
+          "main_ingredient"
+        ]
+      }
+    },
+    {
+      "sku": "DEMO-GRO-50-019",
+      "name": "Dish Soap 650ml",
+      "slug": "demo-grocery-dish-soap",
+      "attributes": {
+        "grocery_group": [
+          "household"
+        ]
+      }
+    },
+    {
+      "sku": "DEMO-GRO-50-020",
+      "name": "Fresh Oranges 1kg",
+      "slug": "demo-grocery-fresh-oranges",
+      "attributes": {
+        "grocery_group": [
+          "fruit"
+        ],
+        "meal_occasion": [
+          "breakfast",
+          "snack",
+          "dessert"
+        ],
+        "dish_type": [
+          "breakfast_bowls",
+          "smoothies",
+          "desserts"
+        ],
+        "preparation_method": [
+          "no_cook"
+        ],
+        "ingredient_role": [
+          "main_ingredient",
+          "topping"
+        ]
+      }
+    },
+    {
+      "sku": "DEMO-GRO-50-021",
+      "name": "Fresh Strawberries 500g",
+      "slug": "demo-grocery-fresh-strawberries",
+      "attributes": {
+        "grocery_group": [
+          "fruit"
+        ],
+        "meal_occasion": [
+          "breakfast",
+          "snack",
+          "dessert"
+        ],
+        "dish_type": [
+          "breakfast_bowls",
+          "smoothies",
+          "desserts"
+        ],
+        "preparation_method": [
+          "no_cook"
+        ],
+        "ingredient_role": [
+          "main_ingredient",
+          "topping"
+        ]
+      }
+    },
+    {
+      "sku": "DEMO-GRO-50-022",
+      "name": "Golden Potatoes 1kg",
+      "slug": "demo-grocery-fresh-potatoes",
+      "attributes": {
+        "grocery_group": [
+          "vegetables"
+        ],
+        "meal_occasion": [
+          "lunch",
+          "dinner"
+        ],
+        "dish_type": [
+          "soups",
+          "roast_dinners"
+        ],
+        "preparation_method": [
+          "boiling",
+          "roasting",
+          "baking"
+        ],
+        "ingredient_role": [
+          "side",
+          "base"
+        ]
+      }
+    },
+    {
+      "sku": "DEMO-GRO-50-023",
+      "name": "Red Onions 1kg",
+      "slug": "demo-grocery-red-onions",
+      "attributes": {
+        "grocery_group": [
+          "vegetables"
+        ],
+        "meal_occasion": [
+          "lunch",
+          "dinner"
+        ],
+        "dish_type": [
+          "soups",
+          "rice_dishes",
+          "stir_fries"
+        ],
+        "preparation_method": [
+          "sauteing",
+          "roasting"
+        ],
+        "ingredient_role": [
+          "seasoning"
+        ]
+      }
+    },
+    {
+      "sku": "DEMO-GRO-50-024",
+      "name": "Fresh Carrots 500g",
+      "slug": "demo-grocery-fresh-carrots",
+      "attributes": {
+        "grocery_group": [
+          "vegetables"
+        ],
+        "meal_occasion": [
+          "lunch",
+          "dinner"
+        ],
+        "dish_type": [
+          "soups",
+          "stir_fries",
+          "roast_dinners"
+        ],
+        "preparation_method": [
+          "roasting",
+          "sauteing",
+          "boiling"
+        ],
+        "ingredient_role": [
+          "side",
+          "main_ingredient"
+        ]
+      }
+    },
+    {
+      "sku": "DEMO-GRO-50-025",
+      "name": "Farm Eggs 6 Pack",
+      "slug": "demo-grocery-farm-eggs",
+      "attributes": {
+        "grocery_group": [
+          "eggs"
+        ],
+        "meal_occasion": [
+          "breakfast",
+          "lunch",
+          "dinner"
+        ],
+        "dish_type": [
+          "sandwiches",
+          "salads",
+          "baking"
+        ],
+        "preparation_method": [
+          "boiling",
+          "sauteing",
+          "baking"
+        ],
+        "ingredient_role": [
+          "main_ingredient"
+        ]
+      }
+    },
+    {
+      "sku": "DEMO-GRO-50-026",
+      "name": "Plain Yogurt 500g",
+      "slug": "demo-grocery-plain-yogurt",
+      "attributes": {
+        "grocery_group": [
+          "dairy"
+        ],
+        "meal_occasion": [
+          "breakfast",
+          "snack",
+          "dessert"
+        ],
+        "dish_type": [
+          "breakfast_bowls",
+          "smoothies",
+          "desserts"
+        ],
+        "preparation_method": [
+          "no_cook"
+        ],
+        "ingredient_role": [
+          "base",
+          "topping"
+        ]
+      }
+    },
+    {
+      "sku": "DEMO-GRO-50-027",
+      "name": "Olive Oil 500ml",
+      "slug": "demo-grocery-olive-oil",
+      "attributes": {
+        "grocery_group": [
+          "condiments"
+        ],
+        "meal_occasion": [
+          "lunch",
+          "dinner"
+        ],
+        "dish_type": [
+          "salads",
+          "pasta_dishes",
+          "roast_dinners"
+        ],
+        "preparation_method": [
+          "no_cook",
+          "sauteing",
+          "roasting"
+        ],
+        "ingredient_role": [
+          "cooking_fat",
+          "seasoning"
+        ]
+      }
+    },
+    {
+      "sku": "DEMO-GRO-50-028",
+      "name": "Penne Pasta 500g",
+      "slug": "demo-grocery-penne-pasta",
+      "attributes": {
+        "grocery_group": [
+          "grains"
+        ],
+        "meal_occasion": [
+          "lunch",
+          "dinner"
+        ],
+        "dish_type": [
+          "pasta_dishes"
+        ],
+        "preparation_method": [
+          "boiling"
+        ],
+        "ingredient_role": [
+          "base"
+        ]
+      }
+    },
+    {
+      "sku": "DEMO-GRO-50-029",
+      "name": "Raw Almonds 250g",
+      "slug": "demo-grocery-raw-almonds",
+      "attributes": {
+        "grocery_group": [
+          "nuts"
+        ],
+        "meal_occasion": [
+          "breakfast",
+          "snack",
+          "dessert"
+        ],
+        "dish_type": [
+          "breakfast_bowls",
+          "salads",
+          "baking",
+          "desserts"
+        ],
+        "preparation_method": [
+          "no_cook",
+          "roasting"
+        ],
+        "ingredient_role": [
+          "topping"
+        ]
+      }
+    },
+    {
+      "sku": "DEMO-GRO-50-030",
+      "name": "Wildflower Honey 350g",
+      "slug": "demo-grocery-wildflower-honey",
+      "attributes": {
+        "grocery_group": [
+          "condiments"
+        ],
+        "meal_occasion": [
+          "breakfast",
+          "dessert"
+        ],
+        "dish_type": [
+          "breakfast_bowls",
+          "baking",
+          "desserts",
+          "drinks"
+        ],
+        "preparation_method": [
+          "no_cook",
+          "baking"
+        ],
+        "ingredient_role": [
+          "sweetener"
+        ]
+      }
+    },
+    {
+      "sku": "DEMO-GRO-50-031",
+      "name": "Bananas 1kg \u2014 Double Pack",
+      "slug": "demo-grocery-organic-bananas-double-pack",
+      "attributes": {
+        "grocery_group": [
+          "fruit"
+        ],
+        "meal_occasion": [
+          "breakfast",
+          "snack",
+          "dessert"
+        ],
+        "dish_type": [
+          "breakfast_bowls",
+          "smoothies",
+          "desserts"
+        ],
+        "preparation_method": [
+          "no_cook"
+        ],
+        "ingredient_role": [
+          "main_ingredient",
+          "topping"
+        ]
+      }
+    },
+    {
+      "sku": "DEMO-GRO-50-032",
+      "name": "Gala Apples 1kg \u2014 Double Pack",
+      "slug": "demo-grocery-gala-apples-double-pack",
+      "attributes": {
+        "grocery_group": [
+          "fruit"
+        ],
+        "meal_occasion": [
+          "breakfast",
+          "snack",
+          "dessert"
+        ],
+        "dish_type": [
+          "breakfast_bowls",
+          "smoothies",
+          "desserts"
+        ],
+        "preparation_method": [
+          "no_cook"
+        ],
+        "ingredient_role": [
+          "main_ingredient",
+          "topping"
+        ]
+      }
+    },
+    {
+      "sku": "DEMO-GRO-50-033",
+      "name": "Whole Milk 1L \u2014 Double Pack",
+      "slug": "demo-grocery-whole-milk-double-pack",
+      "attributes": {
+        "grocery_group": [
+          "dairy"
+        ],
+        "meal_occasion": [
+          "breakfast",
+          "dessert"
+        ],
+        "dish_type": [
+          "breakfast_bowls",
+          "smoothies",
+          "baking",
+          "desserts"
+        ],
+        "preparation_method": [
+          "no_cook",
+          "baking"
+        ],
+        "ingredient_role": [
+          "base"
+        ]
+      }
+    },
+    {
+      "sku": "DEMO-GRO-50-034",
+      "name": "Baladi Bread 5 Loaves \u2014 Double Pack",
+      "slug": "demo-grocery-baladi-bread-double-pack",
+      "attributes": {
+        "grocery_group": [
+          "bakery"
+        ],
+        "meal_occasion": [
+          "breakfast",
+          "lunch",
+          "dinner"
+        ],
+        "dish_type": [
+          "sandwiches"
+        ],
+        "preparation_method": [
+          "no_cook"
+        ],
+        "ingredient_role": [
+          "base",
+          "side"
+        ]
+      }
+    },
+    {
+      "sku": "DEMO-GRO-50-035",
+      "name": "Egyptian Rice 1kg \u2014 Double Pack",
+      "slug": "demo-grocery-egyptian-rice-double-pack",
+      "attributes": {
+        "grocery_group": [
+          "grains"
+        ],
+        "meal_occasion": [
+          "lunch",
+          "dinner"
+        ],
+        "dish_type": [
+          "rice_dishes"
+        ],
+        "preparation_method": [
+          "boiling"
+        ],
+        "ingredient_role": [
+          "base"
+        ]
+      }
+    },
+    {
+      "sku": "DEMO-GRO-50-036",
+      "name": "Dried Fava Beans 500g \u2014 Double Pack",
+      "slug": "demo-grocery-dried-fava-beans-double-pack",
+      "attributes": {
+        "grocery_group": [
+          "legumes"
+        ],
+        "meal_occasion": [
+          "lunch",
+          "dinner"
+        ],
+        "dish_type": [
+          "soups",
+          "salads",
+          "rice_dishes"
+        ],
+        "preparation_method": [
+          "boiling"
+        ],
+        "ingredient_role": [
+          "main_ingredient"
+        ]
+      }
+    },
+    {
+      "sku": "DEMO-GRO-50-037",
+      "name": "Fresh Molokhia 250g \u2014 Double Pack",
+      "slug": "demo-grocery-fresh-molokhia-double-pack",
+      "attributes": {
+        "grocery_group": [
+          "vegetables"
+        ],
+        "meal_occasion": [
+          "lunch",
+          "dinner"
+        ],
+        "dish_type": [
+          "soups"
+        ],
+        "preparation_method": [
+          "boiling"
+        ],
+        "ingredient_role": [
+          "main_ingredient"
+        ]
+      }
+    },
+    {
+      "sku": "DEMO-GRO-50-038",
+      "name": "Roumi Cheese 250g \u2014 Double Pack",
+      "slug": "demo-grocery-roumi-cheese-double-pack",
+      "attributes": {
+        "grocery_group": [
+          "dairy"
+        ],
+        "meal_occasion": [
+          "breakfast",
+          "lunch",
+          "dinner"
+        ],
+        "dish_type": [
+          "sandwiches",
+          "salads",
+          "pasta_dishes"
+        ],
+        "preparation_method": [
+          "no_cook",
+          "baking"
+        ],
+        "ingredient_role": [
+          "topping",
+          "main_ingredient"
+        ]
+      }
+    },
+    {
+      "sku": "DEMO-GRO-50-039",
+      "name": "Medjool Dates 400g \u2014 Double Pack",
+      "slug": "demo-grocery-medjool-dates-double-pack",
+      "attributes": {
+        "grocery_group": [
+          "dried_fruit"
+        ],
+        "meal_occasion": [
+          "breakfast",
+          "snack",
+          "dessert"
+        ],
+        "dish_type": [
+          "breakfast_bowls",
+          "baking",
+          "desserts"
+        ],
+        "preparation_method": [
+          "no_cook",
+          "baking"
+        ],
+        "ingredient_role": [
+          "topping"
+        ]
+      }
+    },
+    {
+      "sku": "DEMO-GRO-50-040",
+      "name": "Tahini Jar 350g \u2014 Double Pack",
+      "slug": "demo-grocery-tahini-jar-double-pack",
+      "attributes": {
+        "grocery_group": [
+          "condiments"
+        ],
+        "meal_occasion": [
+          "breakfast",
+          "lunch",
+          "dinner"
+        ],
+        "dish_type": [
+          "salads",
+          "sandwiches"
+        ],
+        "preparation_method": [
+          "no_cook"
+        ],
+        "ingredient_role": [
+          "spread",
+          "seasoning"
+        ]
+      }
+    },
+    {
+      "sku": "DEMO-GRO-50-041",
+      "name": "Baladi Ghee 500g \u2014 Double Pack",
+      "slug": "demo-grocery-baladi-ghee-double-pack",
+      "attributes": {
+        "grocery_group": [
+          "condiments"
+        ],
+        "meal_occasion": [
+          "breakfast",
+          "lunch",
+          "dinner"
+        ],
+        "dish_type": [
+          "baking",
+          "roast_dinners"
+        ],
+        "preparation_method": [
+          "sauteing",
+          "baking",
+          "roasting"
+        ],
+        "ingredient_role": [
+          "cooking_fat"
+        ]
+      }
+    },
+    {
+      "sku": "DEMO-GRO-50-042",
+      "name": "Dried Hibiscus 200g \u2014 Double Pack",
+      "slug": "demo-grocery-karkadeh-hibiscus-double-pack",
+      "attributes": {
+        "grocery_group": [
+          "beverages"
+        ],
+        "meal_occasion": [
+          "breakfast",
+          "lunch",
+          "dinner"
+        ],
+        "dish_type": [
+          "drinks"
+        ],
+        "preparation_method": [
+          "boiling"
+        ],
+        "ingredient_role": [
+          "main_ingredient"
+        ]
+      }
+    },
+    {
+      "sku": "DEMO-GRO-50-043",
+      "name": "Egyptian Cucumbers 1kg \u2014 Double Pack",
+      "slug": "demo-grocery-egyptian-cucumbers-double-pack",
+      "attributes": {
+        "grocery_group": [
+          "vegetables"
+        ],
+        "meal_occasion": [
+          "lunch",
+          "dinner"
+        ],
+        "dish_type": [
+          "salads",
+          "sandwiches"
+        ],
+        "preparation_method": [
+          "no_cook"
+        ],
+        "ingredient_role": [
+          "side",
+          "topping"
+        ]
+      }
+    },
+    {
+      "sku": "DEMO-GRO-50-044",
+      "name": "Roma Tomatoes 1kg \u2014 Double Pack",
+      "slug": "demo-grocery-roma-tomatoes-double-pack",
+      "attributes": {
+        "grocery_group": [
+          "vegetables"
+        ],
+        "meal_occasion": [
+          "lunch",
+          "dinner"
+        ],
+        "dish_type": [
+          "salads",
+          "sandwiches"
+        ],
+        "preparation_method": [
+          "no_cook"
+        ],
+        "ingredient_role": [
+          "side",
+          "topping"
+        ]
+      }
+    },
+    {
+      "sku": "DEMO-GRO-50-045",
+      "name": "Egyptian Lemons 500g \u2014 Double Pack",
+      "slug": "demo-grocery-egyptian-lemons-double-pack",
+      "attributes": {
+        "grocery_group": [
+          "fruit"
+        ],
+        "meal_occasion": [
+          "lunch",
+          "dinner"
+        ],
+        "dish_type": [
+          "salads",
+          "drinks"
+        ],
+        "preparation_method": [
+          "no_cook"
+        ],
+        "ingredient_role": [
+          "seasoning"
+        ]
+      }
+    },
+    {
+      "sku": "DEMO-GRO-50-046",
+      "name": "Fresh Mint Bunch \u2014 Double Pack",
+      "slug": "demo-grocery-fresh-mint-double-pack",
+      "attributes": {
+        "grocery_group": [
+          "vegetables"
+        ],
+        "meal_occasion": [
+          "lunch",
+          "dinner"
+        ],
+        "dish_type": [
+          "salads",
+          "drinks"
+        ],
+        "preparation_method": [
+          "no_cook"
+        ],
+        "ingredient_role": [
+          "seasoning"
+        ]
+      }
+    },
+    {
+      "sku": "DEMO-GRO-50-047",
+      "name": "Cane Sugar 1kg \u2014 Double Pack",
+      "slug": "demo-grocery-cane-sugar-double-pack",
+      "attributes": {
+        "grocery_group": [
+          "condiments"
+        ],
+        "meal_occasion": [
+          "dessert"
+        ],
+        "dish_type": [
+          "baking",
+          "desserts",
+          "drinks"
+        ],
+        "preparation_method": [
+          "baking",
+          "no_cook"
+        ],
+        "ingredient_role": [
+          "sweetener"
+        ]
+      }
+    },
+    {
+      "sku": "DEMO-GRO-50-048",
+      "name": "Red Lentils 500g \u2014 Double Pack",
+      "slug": "demo-grocery-red-lentils-double-pack",
+      "attributes": {
+        "grocery_group": [
+          "legumes"
+        ],
+        "meal_occasion": [
+          "lunch",
+          "dinner"
+        ],
+        "dish_type": [
+          "soups",
+          "salads",
+          "rice_dishes"
+        ],
+        "preparation_method": [
+          "boiling"
+        ],
+        "ingredient_role": [
+          "main_ingredient"
+        ]
+      }
+    },
+    {
+      "sku": "DEMO-GRO-50-049",
+      "name": "Dish Soap 650ml \u2014 Double Pack",
+      "slug": "demo-grocery-dish-soap-double-pack",
+      "attributes": {
+        "grocery_group": [
+          "household"
+        ]
+      }
+    },
+    {
+      "sku": "DEMO-GRO-50-050",
+      "name": "Fresh Oranges 1kg \u2014 Double Pack",
+      "slug": "demo-grocery-fresh-oranges-double-pack",
+      "attributes": {
+        "grocery_group": [
+          "fruit"
+        ],
+        "meal_occasion": [
+          "breakfast",
+          "snack",
+          "dessert"
+        ],
+        "dish_type": [
+          "breakfast_bowls",
+          "smoothies",
+          "desserts"
+        ],
+        "preparation_method": [
+          "no_cook"
+        ],
+        "ingredient_role": [
+          "main_ingredient",
+          "topping"
+        ]
+      }
+    },
+    {
+      "sku": "DEMO-GRO-WHITE-001",
+      "name": "Bananas 1kg",
+      "slug": "demo-grocery-white-bananas",
+      "attributes": {
+        "grocery_group": [
+          "fruit"
+        ],
+        "meal_occasion": [
+          "breakfast",
+          "snack",
+          "dessert"
+        ],
+        "dish_type": [
+          "breakfast_bowls",
+          "smoothies",
+          "desserts"
+        ],
+        "preparation_method": [
+          "no_cook"
+        ],
+        "ingredient_role": [
+          "main_ingredient",
+          "topping"
+        ]
+      }
+    },
+    {
+      "sku": "DEMO-GRO-WHITE-002",
+      "name": "Gala Apples 1kg",
+      "slug": "demo-grocery-white-gala-apples",
+      "attributes": {
+        "grocery_group": [
+          "fruit"
+        ],
+        "meal_occasion": [
+          "breakfast",
+          "snack",
+          "dessert"
+        ],
+        "dish_type": [
+          "breakfast_bowls",
+          "smoothies",
+          "desserts"
+        ],
+        "preparation_method": [
+          "no_cook"
+        ],
+        "ingredient_role": [
+          "main_ingredient",
+          "topping"
+        ]
+      }
+    },
+    {
+      "sku": "DEMO-GRO-WHITE-003",
+      "name": "Oranges 1kg",
+      "slug": "demo-grocery-white-oranges",
+      "attributes": {
+        "grocery_group": [
+          "fruit"
+        ],
+        "meal_occasion": [
+          "breakfast",
+          "snack",
+          "dessert"
+        ],
+        "dish_type": [
+          "breakfast_bowls",
+          "smoothies",
+          "desserts"
+        ],
+        "preparation_method": [
+          "no_cook"
+        ],
+        "ingredient_role": [
+          "main_ingredient",
+          "topping"
+        ]
+      }
+    },
+    {
+      "sku": "DEMO-GRO-WHITE-004",
+      "name": "Lemons 500g",
+      "slug": "demo-grocery-white-lemons",
+      "attributes": {
+        "grocery_group": [
+          "fruit"
+        ],
+        "meal_occasion": [
+          "lunch",
+          "dinner"
+        ],
+        "dish_type": [
+          "salads",
+          "drinks"
+        ],
+        "preparation_method": [
+          "no_cook"
+        ],
+        "ingredient_role": [
+          "seasoning"
+        ]
+      }
+    },
+    {
+      "sku": "DEMO-GRO-WHITE-005",
+      "name": "Strawberries 500g",
+      "slug": "demo-grocery-white-strawberries",
+      "attributes": {
+        "grocery_group": [
+          "fruit"
+        ],
+        "meal_occasion": [
+          "breakfast",
+          "snack",
+          "dessert"
+        ],
+        "dish_type": [
+          "breakfast_bowls",
+          "smoothies",
+          "desserts"
+        ],
+        "preparation_method": [
+          "no_cook"
+        ],
+        "ingredient_role": [
+          "main_ingredient",
+          "topping"
+        ]
+      }
+    },
+    {
+      "sku": "DEMO-GRO-WHITE-006",
+      "name": "Red Grapes 500g",
+      "slug": "demo-grocery-white-red-grapes",
+      "attributes": {
+        "grocery_group": [
+          "fruit"
+        ],
+        "meal_occasion": [
+          "breakfast",
+          "snack",
+          "dessert"
+        ],
+        "dish_type": [
+          "breakfast_bowls",
+          "smoothies",
+          "desserts"
+        ],
+        "preparation_method": [
+          "no_cook"
+        ],
+        "ingredient_role": [
+          "main_ingredient",
+          "topping"
+        ]
+      }
+    },
+    {
+      "sku": "DEMO-GRO-WHITE-007",
+      "name": "Tomatoes 1kg",
+      "slug": "demo-grocery-white-tomatoes",
+      "attributes": {
+        "grocery_group": [
+          "vegetables"
+        ],
+        "meal_occasion": [
+          "lunch",
+          "dinner"
+        ],
+        "dish_type": [
+          "salads",
+          "sandwiches"
+        ],
+        "preparation_method": [
+          "no_cook"
+        ],
+        "ingredient_role": [
+          "side",
+          "topping"
+        ]
+      }
+    },
+    {
+      "sku": "DEMO-GRO-WHITE-008",
+      "name": "Cucumbers 1kg",
+      "slug": "demo-grocery-white-cucumbers",
+      "attributes": {
+        "grocery_group": [
+          "vegetables"
+        ],
+        "meal_occasion": [
+          "lunch",
+          "dinner"
+        ],
+        "dish_type": [
+          "salads",
+          "sandwiches"
+        ],
+        "preparation_method": [
+          "no_cook"
+        ],
+        "ingredient_role": [
+          "side",
+          "topping"
+        ]
+      }
+    },
+    {
+      "sku": "DEMO-GRO-WHITE-009",
+      "name": "Carrots 500g",
+      "slug": "demo-grocery-white-carrots",
+      "attributes": {
+        "grocery_group": [
+          "vegetables"
+        ],
+        "meal_occasion": [
+          "lunch",
+          "dinner"
+        ],
+        "dish_type": [
+          "soups",
+          "stir_fries",
+          "roast_dinners"
+        ],
+        "preparation_method": [
+          "roasting",
+          "sauteing",
+          "boiling"
+        ],
+        "ingredient_role": [
+          "side",
+          "main_ingredient"
+        ]
+      }
+    },
+    {
+      "sku": "DEMO-GRO-WHITE-010",
+      "name": "Golden Potatoes 1kg",
+      "slug": "demo-grocery-white-potatoes",
+      "attributes": {
+        "grocery_group": [
+          "vegetables"
+        ],
+        "meal_occasion": [
+          "lunch",
+          "dinner"
+        ],
+        "dish_type": [
+          "soups",
+          "roast_dinners"
+        ],
+        "preparation_method": [
+          "boiling",
+          "roasting",
+          "baking"
+        ],
+        "ingredient_role": [
+          "side",
+          "base"
+        ]
+      }
+    },
+    {
+      "sku": "DEMO-GRO-WHITE-011",
+      "name": "Red Onions 1kg",
+      "slug": "demo-grocery-white-red-onions",
+      "attributes": {
+        "grocery_group": [
+          "vegetables"
+        ],
+        "meal_occasion": [
+          "lunch",
+          "dinner"
+        ],
+        "dish_type": [
+          "soups",
+          "rice_dishes",
+          "stir_fries"
+        ],
+        "preparation_method": [
+          "sauteing",
+          "roasting"
+        ],
+        "ingredient_role": [
+          "seasoning"
+        ]
+      }
+    },
+    {
+      "sku": "DEMO-GRO-WHITE-012",
+      "name": "Mixed Bell Peppers 3 Pack",
+      "slug": "demo-grocery-white-bell-peppers",
+      "attributes": {
+        "grocery_group": [
+          "vegetables"
+        ],
+        "meal_occasion": [
+          "lunch",
+          "dinner"
+        ],
+        "dish_type": [
+          "soups",
+          "stir_fries",
+          "roast_dinners"
+        ],
+        "preparation_method": [
+          "roasting",
+          "sauteing",
+          "boiling"
+        ],
+        "ingredient_role": [
+          "side",
+          "main_ingredient"
+        ]
+      }
+    },
+    {
+      "sku": "DEMO-GRO-WHITE-013",
+      "name": "Broccoli 1 Head",
+      "slug": "demo-grocery-white-broccoli",
+      "attributes": {
+        "grocery_group": [
+          "vegetables"
+        ],
+        "meal_occasion": [
+          "lunch",
+          "dinner"
+        ],
+        "dish_type": [
+          "soups",
+          "stir_fries",
+          "roast_dinners"
+        ],
+        "preparation_method": [
+          "roasting",
+          "sauteing",
+          "boiling"
+        ],
+        "ingredient_role": [
+          "side",
+          "main_ingredient"
+        ]
+      }
+    },
+    {
+      "sku": "DEMO-GRO-WHITE-014",
+      "name": "Garlic 2 Bulbs",
+      "slug": "demo-grocery-white-garlic",
+      "attributes": {
+        "grocery_group": [
+          "vegetables"
+        ],
+        "meal_occasion": [
+          "lunch",
+          "dinner"
+        ],
+        "dish_type": [
+          "soups",
+          "rice_dishes",
+          "stir_fries"
+        ],
+        "preparation_method": [
+          "sauteing",
+          "roasting"
+        ],
+        "ingredient_role": [
+          "seasoning"
+        ]
+      }
+    },
+    {
+      "sku": "DEMO-GRO-WHITE-015",
+      "name": "Farm Eggs 6 Pack",
+      "slug": "demo-grocery-white-eggs",
+      "attributes": {
+        "grocery_group": [
+          "eggs"
+        ],
+        "meal_occasion": [
+          "breakfast",
+          "lunch",
+          "dinner"
+        ],
+        "dish_type": [
+          "sandwiches",
+          "salads",
+          "baking"
+        ],
+        "preparation_method": [
+          "boiling",
+          "sauteing",
+          "baking"
+        ],
+        "ingredient_role": [
+          "main_ingredient"
+        ]
+      }
+    },
+    {
+      "sku": "DEMO-GRO-WHITE-016",
+      "name": "Whole Milk 1L",
+      "slug": "demo-grocery-white-whole-milk",
+      "attributes": {
+        "grocery_group": [
+          "dairy"
+        ],
+        "meal_occasion": [
+          "breakfast",
+          "dessert"
+        ],
+        "dish_type": [
+          "breakfast_bowls",
+          "smoothies",
+          "baking",
+          "desserts"
+        ],
+        "preparation_method": [
+          "no_cook",
+          "baking"
+        ],
+        "ingredient_role": [
+          "base"
+        ]
+      }
+    },
+    {
+      "sku": "DEMO-GRO-WHITE-017",
+      "name": "Plain Yogurt 500g",
+      "slug": "demo-grocery-white-yogurt",
+      "attributes": {
+        "grocery_group": [
+          "dairy"
+        ],
+        "meal_occasion": [
+          "breakfast",
+          "snack",
+          "dessert"
+        ],
+        "dish_type": [
+          "breakfast_bowls",
+          "smoothies",
+          "desserts"
+        ],
+        "preparation_method": [
+          "no_cook"
+        ],
+        "ingredient_role": [
+          "base",
+          "topping"
+        ]
+      }
+    },
+    {
+      "sku": "DEMO-GRO-WHITE-018",
+      "name": "Feta Cheese 250g",
+      "slug": "demo-grocery-white-feta-cheese",
+      "attributes": {
+        "grocery_group": [
+          "dairy"
+        ],
+        "meal_occasion": [
+          "breakfast",
+          "lunch",
+          "dinner"
+        ],
+        "dish_type": [
+          "sandwiches",
+          "salads",
+          "pasta_dishes"
+        ],
+        "preparation_method": [
+          "no_cook",
+          "baking"
+        ],
+        "ingredient_role": [
+          "topping",
+          "main_ingredient"
+        ]
+      }
+    },
+    {
+      "sku": "DEMO-GRO-WHITE-019",
+      "name": "Butter 200g",
+      "slug": "demo-grocery-white-butter",
+      "attributes": {
+        "grocery_group": [
+          "condiments"
+        ],
+        "meal_occasion": [
+          "breakfast",
+          "lunch",
+          "dinner"
+        ],
+        "dish_type": [
+          "baking",
+          "roast_dinners"
+        ],
+        "preparation_method": [
+          "sauteing",
+          "baking",
+          "roasting"
+        ],
+        "ingredient_role": [
+          "cooking_fat"
+        ]
+      }
+    },
+    {
+      "sku": "DEMO-GRO-WHITE-020",
+      "name": "Cheddar Cheese 250g",
+      "slug": "demo-grocery-white-cheddar-cheese",
+      "attributes": {
+        "grocery_group": [
+          "dairy"
+        ],
+        "meal_occasion": [
+          "breakfast",
+          "lunch",
+          "dinner"
+        ],
+        "dish_type": [
+          "sandwiches",
+          "salads",
+          "pasta_dishes"
+        ],
+        "preparation_method": [
+          "no_cook",
+          "baking"
+        ],
+        "ingredient_role": [
+          "topping",
+          "main_ingredient"
+        ]
+      }
+    },
+    {
+      "sku": "DEMO-GRO-WHITE-021",
+      "name": "Baladi Bread 5 Loaves",
+      "slug": "demo-grocery-white-baladi-bread",
+      "attributes": {
+        "grocery_group": [
+          "bakery"
+        ],
+        "meal_occasion": [
+          "breakfast",
+          "lunch",
+          "dinner"
+        ],
+        "dish_type": [
+          "sandwiches"
+        ],
+        "preparation_method": [
+          "no_cook"
+        ],
+        "ingredient_role": [
+          "base",
+          "side"
+        ]
+      }
+    },
+    {
+      "sku": "DEMO-GRO-WHITE-022",
+      "name": "Sliced Bread 1 Loaf",
+      "slug": "demo-grocery-white-sliced-bread",
+      "attributes": {
+        "grocery_group": [
+          "bakery"
+        ],
+        "meal_occasion": [
+          "breakfast",
+          "lunch",
+          "dinner"
+        ],
+        "dish_type": [
+          "sandwiches"
+        ],
+        "preparation_method": [
+          "no_cook"
+        ],
+        "ingredient_role": [
+          "base",
+          "side"
+        ]
+      }
+    },
+    {
+      "sku": "DEMO-GRO-WHITE-023",
+      "name": "Butter Croissants 3 Pack",
+      "slug": "demo-grocery-white-croissants",
+      "attributes": {
+        "grocery_group": [
+          "bakery"
+        ],
+        "meal_occasion": [
+          "breakfast",
+          "snack"
+        ],
+        "dish_type": [
+          "sandwiches"
+        ],
+        "preparation_method": [
+          "no_cook"
+        ],
+        "ingredient_role": [
+          "base"
+        ]
+      }
+    },
+    {
+      "sku": "DEMO-GRO-WHITE-024",
+      "name": "Basmati Rice 1kg",
+      "slug": "demo-grocery-white-basmati-rice",
+      "attributes": {
+        "grocery_group": [
+          "grains"
+        ],
+        "meal_occasion": [
+          "lunch",
+          "dinner"
+        ],
+        "dish_type": [
+          "rice_dishes"
+        ],
+        "preparation_method": [
+          "boiling"
+        ],
+        "ingredient_role": [
+          "base"
+        ]
+      }
+    },
+    {
+      "sku": "DEMO-GRO-WHITE-025",
+      "name": "Penne Pasta 500g",
+      "slug": "demo-grocery-white-penne-pasta",
+      "attributes": {
+        "grocery_group": [
+          "grains"
+        ],
+        "meal_occasion": [
+          "lunch",
+          "dinner"
+        ],
+        "dish_type": [
+          "pasta_dishes"
+        ],
+        "preparation_method": [
+          "boiling"
+        ],
+        "ingredient_role": [
+          "base"
+        ]
+      }
+    },
+    {
+      "sku": "DEMO-GRO-WHITE-026",
+      "name": "Red Lentils 500g",
+      "slug": "demo-grocery-white-red-lentils",
+      "attributes": {
+        "grocery_group": [
+          "legumes"
+        ],
+        "meal_occasion": [
+          "lunch",
+          "dinner"
+        ],
+        "dish_type": [
+          "soups",
+          "salads",
+          "rice_dishes"
+        ],
+        "preparation_method": [
+          "boiling"
+        ],
+        "ingredient_role": [
+          "main_ingredient"
+        ]
+      }
+    },
+    {
+      "sku": "DEMO-GRO-WHITE-027",
+      "name": "Chickpeas 500g",
+      "slug": "demo-grocery-white-chickpeas",
+      "attributes": {
+        "grocery_group": [
+          "legumes"
+        ],
+        "meal_occasion": [
+          "lunch",
+          "dinner"
+        ],
+        "dish_type": [
+          "soups",
+          "salads",
+          "rice_dishes"
+        ],
+        "preparation_method": [
+          "boiling"
+        ],
+        "ingredient_role": [
+          "main_ingredient"
+        ]
+      }
+    },
+    {
+      "sku": "DEMO-GRO-WHITE-028",
+      "name": "Medjool Dates 400g",
+      "slug": "demo-grocery-white-dates",
+      "attributes": {
+        "grocery_group": [
+          "dried_fruit"
+        ],
+        "meal_occasion": [
+          "breakfast",
+          "snack",
+          "dessert"
+        ],
+        "dish_type": [
+          "breakfast_bowls",
+          "baking",
+          "desserts"
+        ],
+        "preparation_method": [
+          "no_cook",
+          "baking"
+        ],
+        "ingredient_role": [
+          "topping"
+        ]
+      }
+    },
+    {
+      "sku": "DEMO-GRO-WHITE-029",
+      "name": "Raw Almonds 250g",
+      "slug": "demo-grocery-white-almonds",
+      "attributes": {
+        "grocery_group": [
+          "nuts"
+        ],
+        "meal_occasion": [
+          "breakfast",
+          "snack",
+          "dessert"
+        ],
+        "dish_type": [
+          "breakfast_bowls",
+          "salads",
+          "baking",
+          "desserts"
+        ],
+        "preparation_method": [
+          "no_cook",
+          "roasting"
+        ],
+        "ingredient_role": [
+          "topping"
+        ]
+      }
+    },
+    {
+      "sku": "DEMO-GRO-WHITE-030",
+      "name": "Olive Oil 500ml",
+      "slug": "demo-grocery-white-olive-oil",
+      "attributes": {
+        "grocery_group": [
+          "condiments"
+        ],
+        "meal_occasion": [
+          "lunch",
+          "dinner"
+        ],
+        "dish_type": [
+          "salads",
+          "pasta_dishes",
+          "roast_dinners"
+        ],
+        "preparation_method": [
+          "no_cook",
+          "sauteing",
+          "roasting"
+        ],
+        "ingredient_role": [
+          "cooking_fat",
+          "seasoning"
+        ]
+      }
+    },
+    {
+      "sku": "DEMO-GRO-WHITE-031",
+      "name": "Mangoes 1kg",
+      "slug": "demo-grocery-white-mangoes",
+      "attributes": {
+        "grocery_group": [
+          "fruit"
+        ],
+        "meal_occasion": [
+          "breakfast",
+          "snack",
+          "dessert"
+        ],
+        "dish_type": [
+          "breakfast_bowls",
+          "smoothies",
+          "desserts"
+        ],
+        "preparation_method": [
+          "no_cook"
+        ],
+        "ingredient_role": [
+          "main_ingredient",
+          "topping"
+        ]
+      }
+    },
+    {
+      "sku": "DEMO-GRO-WHITE-032",
+      "name": "Watermelon 1 Whole",
+      "slug": "demo-grocery-white-watermelon",
+      "attributes": {
+        "grocery_group": [
+          "fruit"
+        ],
+        "meal_occasion": [
+          "breakfast",
+          "snack",
+          "dessert"
+        ],
+        "dish_type": [
+          "breakfast_bowls",
+          "smoothies",
+          "desserts"
+        ],
+        "preparation_method": [
+          "no_cook"
+        ],
+        "ingredient_role": [
+          "main_ingredient",
+          "topping"
+        ]
+      }
+    },
+    {
+      "sku": "DEMO-GRO-WHITE-033",
+      "name": "Pineapple 1 Whole",
+      "slug": "demo-grocery-white-pineapple",
+      "attributes": {
+        "grocery_group": [
+          "fruit"
+        ],
+        "meal_occasion": [
+          "breakfast",
+          "snack",
+          "dessert"
+        ],
+        "dish_type": [
+          "breakfast_bowls",
+          "smoothies",
+          "desserts"
+        ],
+        "preparation_method": [
+          "no_cook"
+        ],
+        "ingredient_role": [
+          "main_ingredient",
+          "topping"
+        ]
+      }
+    },
+    {
+      "sku": "DEMO-GRO-WHITE-034",
+      "name": "Avocados 2 Pack",
+      "slug": "demo-grocery-white-avocados",
+      "attributes": {
+        "grocery_group": [
+          "fruit"
+        ],
+        "meal_occasion": [
+          "breakfast",
+          "lunch",
+          "dinner"
+        ],
+        "dish_type": [
+          "salads",
+          "sandwiches"
+        ],
+        "preparation_method": [
+          "no_cook"
+        ],
+        "ingredient_role": [
+          "topping",
+          "spread"
+        ]
+      }
+    },
+    {
+      "sku": "DEMO-GRO-WHITE-035",
+      "name": "Pears 1kg",
+      "slug": "demo-grocery-white-pears",
+      "attributes": {
+        "grocery_group": [
+          "fruit"
+        ],
+        "meal_occasion": [
+          "breakfast",
+          "snack",
+          "dessert"
+        ],
+        "dish_type": [
+          "breakfast_bowls",
+          "smoothies",
+          "desserts"
+        ],
+        "preparation_method": [
+          "no_cook"
+        ],
+        "ingredient_role": [
+          "main_ingredient",
+          "topping"
+        ]
+      }
+    },
+    {
+      "sku": "DEMO-GRO-WHITE-036",
+      "name": "Eggplants 1kg",
+      "slug": "demo-grocery-white-eggplants",
+      "attributes": {
+        "grocery_group": [
+          "vegetables"
+        ],
+        "meal_occasion": [
+          "lunch",
+          "dinner"
+        ],
+        "dish_type": [
+          "soups",
+          "stir_fries",
+          "roast_dinners"
+        ],
+        "preparation_method": [
+          "roasting",
+          "sauteing",
+          "boiling"
+        ],
+        "ingredient_role": [
+          "side",
+          "main_ingredient"
+        ]
+      }
+    },
+    {
+      "sku": "DEMO-GRO-WHITE-037",
+      "name": "Zucchini 1kg",
+      "slug": "demo-grocery-white-zucchini",
+      "attributes": {
+        "grocery_group": [
+          "vegetables"
+        ],
+        "meal_occasion": [
+          "lunch",
+          "dinner"
+        ],
+        "dish_type": [
+          "soups",
+          "stir_fries",
+          "roast_dinners"
+        ],
+        "preparation_method": [
+          "roasting",
+          "sauteing",
+          "boiling"
+        ],
+        "ingredient_role": [
+          "side",
+          "main_ingredient"
+        ]
+      }
+    },
+    {
+      "sku": "DEMO-GRO-WHITE-038",
+      "name": "Cauliflower 1 Head",
+      "slug": "demo-grocery-white-cauliflower",
+      "attributes": {
+        "grocery_group": [
+          "vegetables"
+        ],
+        "meal_occasion": [
+          "lunch",
+          "dinner"
+        ],
+        "dish_type": [
+          "soups",
+          "stir_fries",
+          "roast_dinners"
+        ],
+        "preparation_method": [
+          "roasting",
+          "sauteing",
+          "boiling"
+        ],
+        "ingredient_role": [
+          "side",
+          "main_ingredient"
+        ]
+      }
+    },
+    {
+      "sku": "DEMO-GRO-WHITE-039",
+      "name": "White Mushrooms 250g",
+      "slug": "demo-grocery-white-mushrooms",
+      "attributes": {
+        "grocery_group": [
+          "vegetables"
+        ],
+        "meal_occasion": [
+          "lunch",
+          "dinner"
+        ],
+        "dish_type": [
+          "soups",
+          "stir_fries",
+          "roast_dinners"
+        ],
+        "preparation_method": [
+          "roasting",
+          "sauteing",
+          "boiling"
+        ],
+        "ingredient_role": [
+          "side",
+          "main_ingredient"
+        ]
+      }
+    },
+    {
+      "sku": "DEMO-GRO-WHITE-040",
+      "name": "Honey 350g",
+      "slug": "demo-grocery-white-honey",
+      "attributes": {
+        "grocery_group": [
+          "condiments"
+        ],
+        "meal_occasion": [
+          "breakfast",
+          "dessert"
+        ],
+        "dish_type": [
+          "breakfast_bowls",
+          "baking",
+          "desserts",
+          "drinks"
+        ],
+        "preparation_method": [
+          "no_cook",
+          "baking"
+        ],
+        "ingredient_role": [
+          "sweetener"
+        ]
+      }
+    },
+    {
+      "sku": "DEMO-GRO-WHITE-041",
+      "name": "Beef Steak 500g",
+      "slug": "demo-grocery-white-beef-steak",
+      "attributes": {
+        "grocery_group": [
+          "meat"
+        ],
+        "meal_occasion": [
+          "lunch",
+          "dinner"
+        ],
+        "dish_type": [
+          "roast_dinners",
+          "stir_fries"
+        ],
+        "preparation_method": [
+          "grilling",
+          "roasting",
+          "sauteing"
+        ],
+        "ingredient_role": [
+          "main_ingredient"
+        ]
+      }
+    },
+    {
+      "sku": "DEMO-GRO-WHITE-042",
+      "name": "Lamb Chops 500g",
+      "slug": "demo-grocery-white-lamb-chops",
+      "attributes": {
+        "grocery_group": [
+          "meat"
+        ],
+        "meal_occasion": [
+          "lunch",
+          "dinner"
+        ],
+        "dish_type": [
+          "roast_dinners",
+          "stir_fries"
+        ],
+        "preparation_method": [
+          "grilling",
+          "roasting",
+          "sauteing"
+        ],
+        "ingredient_role": [
+          "main_ingredient"
+        ]
+      }
+    },
+    {
+      "sku": "DEMO-GRO-WHITE-043",
+      "name": "Chicken Breast 500g",
+      "slug": "demo-grocery-white-chicken-breast",
+      "attributes": {
+        "grocery_group": [
+          "meat"
+        ],
+        "meal_occasion": [
+          "lunch",
+          "dinner"
+        ],
+        "dish_type": [
+          "roast_dinners",
+          "stir_fries"
+        ],
+        "preparation_method": [
+          "grilling",
+          "roasting",
+          "sauteing"
+        ],
+        "ingredient_role": [
+          "main_ingredient"
+        ]
+      }
+    },
+    {
+      "sku": "DEMO-GRO-WHITE-044",
+      "name": "Salmon Fillet 300g",
+      "slug": "demo-grocery-white-salmon-fillet",
+      "attributes": {
+        "grocery_group": [
+          "seafood"
+        ],
+        "meal_occasion": [
+          "lunch",
+          "dinner"
+        ],
+        "dish_type": [
+          "roast_dinners",
+          "rice_dishes"
+        ],
+        "preparation_method": [
+          "grilling",
+          "baking"
+        ],
+        "ingredient_role": [
+          "main_ingredient"
+        ]
+      }
+    },
+    {
+      "sku": "DEMO-GRO-WHITE-045",
+      "name": "Whole Sea Bream 500g",
+      "slug": "demo-grocery-white-sea-bream",
+      "attributes": {
+        "grocery_group": [
+          "seafood"
+        ],
+        "meal_occasion": [
+          "lunch",
+          "dinner"
+        ],
+        "dish_type": [
+          "roast_dinners",
+          "rice_dishes"
+        ],
+        "preparation_method": [
+          "grilling",
+          "baking"
+        ],
+        "ingredient_role": [
+          "main_ingredient"
+        ]
+      }
+    },
+    {
+      "sku": "DEMO-GRO-WHITE-046",
+      "name": "Sukkari Dates 400g",
+      "slug": "demo-grocery-white-sukkari-dates",
+      "attributes": {
+        "grocery_group": [
+          "dried_fruit"
+        ],
+        "meal_occasion": [
+          "breakfast",
+          "snack",
+          "dessert"
+        ],
+        "dish_type": [
+          "breakfast_bowls",
+          "baking",
+          "desserts"
+        ],
+        "preparation_method": [
+          "no_cook",
+          "baking"
+        ],
+        "ingredient_role": [
+          "topping"
+        ]
+      }
+    },
+    {
+      "sku": "DEMO-GRO-WHITE-047",
+      "name": "Ajwa Dates 400g",
+      "slug": "demo-grocery-white-ajwa-dates",
+      "attributes": {
+        "grocery_group": [
+          "dried_fruit"
+        ],
+        "meal_occasion": [
+          "breakfast",
+          "snack",
+          "dessert"
+        ],
+        "dish_type": [
+          "breakfast_bowls",
+          "baking",
+          "desserts"
+        ],
+        "preparation_method": [
+          "no_cook",
+          "baking"
+        ],
+        "ingredient_role": [
+          "topping"
+        ]
+      }
+    },
+    {
+      "sku": "DEMO-GRO-WHITE-048",
+      "name": "Pistachios 250g",
+      "slug": "demo-grocery-white-pistachios",
+      "attributes": {
+        "grocery_group": [
+          "nuts"
+        ],
+        "meal_occasion": [
+          "breakfast",
+          "snack",
+          "dessert"
+        ],
+        "dish_type": [
+          "breakfast_bowls",
+          "salads",
+          "baking",
+          "desserts"
+        ],
+        "preparation_method": [
+          "no_cook",
+          "roasting"
+        ],
+        "ingredient_role": [
+          "topping"
+        ]
+      }
+    },
+    {
+      "sku": "DEMO-GRO-WHITE-049",
+      "name": "Cashews 250g",
+      "slug": "demo-grocery-white-cashews",
+      "attributes": {
+        "grocery_group": [
+          "nuts"
+        ],
+        "meal_occasion": [
+          "breakfast",
+          "snack",
+          "dessert"
+        ],
+        "dish_type": [
+          "breakfast_bowls",
+          "salads",
+          "baking",
+          "desserts"
+        ],
+        "preparation_method": [
+          "no_cook",
+          "roasting"
+        ],
+        "ingredient_role": [
+          "topping"
+        ]
+      }
+    },
+    {
+      "sku": "DEMO-GRO-WHITE-050",
+      "name": "Walnuts 250g",
+      "slug": "demo-grocery-white-walnuts",
+      "attributes": {
+        "grocery_group": [
+          "nuts"
+        ],
+        "meal_occasion": [
+          "breakfast",
+          "snack",
+          "dessert"
+        ],
+        "dish_type": [
+          "breakfast_bowls",
+          "salads",
+          "baking",
+          "desserts"
+        ],
+        "preparation_method": [
+          "no_cook",
+          "roasting"
+        ],
+        "ingredient_role": [
+          "topping"
+        ]
+      }
+    },
+    {
+      "sku": "GRO-EXTRA-20260929-001",
+      "name": "Mangoes 500g",
+      "slug": "grocery-mangoes-500g",
+      "attributes": {
+        "grocery_group": [
+          "fruit"
+        ],
+        "meal_occasion": [
+          "breakfast",
+          "snack",
+          "dessert"
+        ],
+        "dish_type": [
+          "breakfast_bowls",
+          "smoothies",
+          "desserts"
+        ],
+        "preparation_method": [
+          "no_cook"
+        ],
+        "ingredient_role": [
+          "main_ingredient",
+          "topping"
+        ]
+      }
+    },
+    {
+      "sku": "GRO-EXTRA-20260929-002",
+      "name": "Red Grapes 1kg",
+      "slug": "grocery-red-grapes-1kg",
+      "attributes": {
+        "grocery_group": [
+          "fruit"
+        ],
+        "meal_occasion": [
+          "breakfast",
+          "snack",
+          "dessert"
+        ],
+        "dish_type": [
+          "breakfast_bowls",
+          "smoothies",
+          "desserts"
+        ],
+        "preparation_method": [
+          "no_cook"
+        ],
+        "ingredient_role": [
+          "main_ingredient",
+          "topping"
+        ]
+      }
+    },
+    {
+      "sku": "GRO-EXTRA-20260929-003",
+      "name": "Pears 500g",
+      "slug": "grocery-pears-500g",
+      "attributes": {
+        "grocery_group": [
+          "fruit"
+        ],
+        "meal_occasion": [
+          "breakfast",
+          "snack",
+          "dessert"
+        ],
+        "dish_type": [
+          "breakfast_bowls",
+          "smoothies",
+          "desserts"
+        ],
+        "preparation_method": [
+          "no_cook"
+        ],
+        "ingredient_role": [
+          "main_ingredient",
+          "topping"
+        ]
+      }
+    },
+    {
+      "sku": "GRO-EXTRA-20260929-004",
+      "name": "White Mushrooms 500g",
+      "slug": "grocery-white-mushrooms-500g",
+      "attributes": {
+        "grocery_group": [
+          "vegetables"
+        ],
+        "meal_occasion": [
+          "lunch",
+          "dinner"
+        ],
+        "dish_type": [
+          "soups",
+          "stir_fries",
+          "roast_dinners"
+        ],
+        "preparation_method": [
+          "roasting",
+          "sauteing",
+          "boiling"
+        ],
+        "ingredient_role": [
+          "side",
+          "main_ingredient"
+        ]
+      }
+    },
+    {
+      "sku": "GRO-EXTRA-20260929-005",
+      "name": "Zucchini 500g",
+      "slug": "grocery-zucchini-500g",
+      "attributes": {
+        "grocery_group": [
+          "vegetables"
+        ],
+        "meal_occasion": [
+          "lunch",
+          "dinner"
+        ],
+        "dish_type": [
+          "soups",
+          "stir_fries",
+          "roast_dinners"
+        ],
+        "preparation_method": [
+          "roasting",
+          "sauteing",
+          "boiling"
+        ],
+        "ingredient_role": [
+          "side",
+          "main_ingredient"
+        ]
+      }
+    },
+    {
+      "sku": "GRO-EXTRA-20260929-006",
+      "name": "Cheddar Cheese 500g",
+      "slug": "grocery-cheddar-cheese-500g",
+      "attributes": {
+        "grocery_group": [
+          "dairy"
+        ],
+        "meal_occasion": [
+          "breakfast",
+          "lunch",
+          "dinner"
+        ],
+        "dish_type": [
+          "sandwiches",
+          "salads",
+          "pasta_dishes"
+        ],
+        "preparation_method": [
+          "no_cook",
+          "baking"
+        ],
+        "ingredient_role": [
+          "topping",
+          "main_ingredient"
+        ]
+      }
+    },
+    {
+      "sku": "GRO-EXTRA-20260929-007",
+      "name": "Feta Cheese 500g",
+      "slug": "grocery-feta-cheese-500g",
+      "attributes": {
+        "grocery_group": [
+          "dairy"
+        ],
+        "meal_occasion": [
+          "breakfast",
+          "lunch",
+          "dinner"
+        ],
+        "dish_type": [
+          "sandwiches",
+          "salads",
+          "pasta_dishes"
+        ],
+        "preparation_method": [
+          "no_cook",
+          "baking"
+        ],
+        "ingredient_role": [
+          "topping",
+          "main_ingredient"
+        ]
+      }
+    },
+    {
+      "sku": "GRO-EXTRA-20260929-008",
+      "name": "Butter Croissants 6 Pack",
+      "slug": "grocery-butter-croissants-6-pack",
+      "attributes": {
+        "grocery_group": [
+          "bakery"
+        ],
+        "meal_occasion": [
+          "breakfast",
+          "snack"
+        ],
+        "dish_type": [
+          "sandwiches"
+        ],
+        "preparation_method": [
+          "no_cook"
+        ],
+        "ingredient_role": [
+          "base"
+        ]
+      }
+    },
+    {
+      "sku": "GRO-EXTRA-20260929-009",
+      "name": "Basmati Rice 2kg",
+      "slug": "grocery-basmati-rice-2kg",
+      "attributes": {
+        "grocery_group": [
+          "grains"
+        ],
+        "meal_occasion": [
+          "lunch",
+          "dinner"
+        ],
+        "dish_type": [
+          "rice_dishes"
+        ],
+        "preparation_method": [
+          "boiling"
+        ],
+        "ingredient_role": [
+          "base"
+        ]
+      }
+    },
+    {
+      "sku": "GRO-EXTRA-20260929-010",
+      "name": "Chickpeas 1kg",
+      "slug": "grocery-chickpeas-1kg",
+      "attributes": {
+        "grocery_group": [
+          "legumes"
+        ],
+        "meal_occasion": [
+          "lunch",
+          "dinner"
+        ],
+        "dish_type": [
+          "soups",
+          "salads",
+          "rice_dishes"
+        ],
+        "preparation_method": [
+          "boiling"
+        ],
+        "ingredient_role": [
+          "main_ingredient"
+        ]
+      }
+    },
+    {
+      "sku": "GRO-EXTRA-20260929-011",
+      "name": "Chicken Breast 1kg",
+      "slug": "grocery-chicken-breast-1kg",
+      "attributes": {
+        "grocery_group": [
+          "meat"
+        ],
+        "meal_occasion": [
+          "lunch",
+          "dinner"
+        ],
+        "dish_type": [
+          "roast_dinners",
+          "stir_fries"
+        ],
+        "preparation_method": [
+          "grilling",
+          "roasting",
+          "sauteing"
+        ],
+        "ingredient_role": [
+          "main_ingredient"
+        ]
+      }
+    },
+    {
+      "sku": "GRO-EXTRA-20260929-012",
+      "name": "Beef Steak 1kg",
+      "slug": "grocery-beef-steak-1kg",
+      "attributes": {
+        "grocery_group": [
+          "meat"
+        ],
+        "meal_occasion": [
+          "lunch",
+          "dinner"
+        ],
+        "dish_type": [
+          "roast_dinners",
+          "stir_fries"
+        ],
+        "preparation_method": [
+          "grilling",
+          "roasting",
+          "sauteing"
+        ],
+        "ingredient_role": [
+          "main_ingredient"
+        ]
+      }
+    },
+    {
+      "sku": "GRO-EXTRA-20260929-013",
+      "name": "Salmon Fillet 600g",
+      "slug": "grocery-salmon-fillet-600g",
+      "attributes": {
+        "grocery_group": [
+          "seafood"
+        ],
+        "meal_occasion": [
+          "lunch",
+          "dinner"
+        ],
+        "dish_type": [
+          "roast_dinners",
+          "rice_dishes"
+        ],
+        "preparation_method": [
+          "grilling",
+          "baking"
+        ],
+        "ingredient_role": [
+          "main_ingredient"
+        ]
+      }
+    },
+    {
+      "sku": "GRO-EXTRA-20260929-014",
+      "name": "Cashews 500g",
+      "slug": "grocery-cashews-500g",
+      "attributes": {
+        "grocery_group": [
+          "nuts"
+        ],
+        "meal_occasion": [
+          "breakfast",
+          "snack",
+          "dessert"
+        ],
+        "dish_type": [
+          "breakfast_bowls",
+          "salads",
+          "baking",
+          "desserts"
+        ],
+        "preparation_method": [
+          "no_cook",
+          "roasting"
+        ],
+        "ingredient_role": [
+          "topping"
+        ]
+      }
+    },
+    {
+      "sku": "GRO-EXTRA-20260929-015",
+      "name": "Pistachios 500g",
+      "slug": "grocery-pistachios-500g",
+      "attributes": {
+        "grocery_group": [
+          "nuts"
+        ],
+        "meal_occasion": [
+          "breakfast",
+          "snack",
+          "dessert"
+        ],
+        "dish_type": [
+          "breakfast_bowls",
+          "salads",
+          "baking",
+          "desserts"
+        ],
+        "preparation_method": [
+          "no_cook",
+          "roasting"
+        ],
+        "ingredient_role": [
+          "topping"
+        ]
+      }
+    },
+    {
+      "sku": "GRO-NEW-20260929-001",
+      "name": "Blueberries 125g",
+      "slug": "grocery-blueberries",
+      "attributes": {
+        "grocery_group": [
+          "fruit"
+        ],
+        "meal_occasion": [
+          "breakfast",
+          "snack",
+          "dessert"
+        ],
+        "dish_type": [
+          "breakfast_bowls",
+          "smoothies",
+          "desserts"
+        ],
+        "preparation_method": [
+          "no_cook"
+        ],
+        "ingredient_role": [
+          "main_ingredient",
+          "topping"
+        ]
+      }
+    },
+    {
+      "sku": "GRO-NEW-20260929-002",
+      "name": "Kiwi 4 Pack",
+      "slug": "grocery-kiwi",
+      "attributes": {
+        "grocery_group": [
+          "fruit"
+        ],
+        "meal_occasion": [
+          "breakfast",
+          "snack",
+          "dessert"
+        ],
+        "dish_type": [
+          "breakfast_bowls",
+          "smoothies",
+          "desserts"
+        ],
+        "preparation_method": [
+          "no_cook"
+        ],
+        "ingredient_role": [
+          "main_ingredient",
+          "topping"
+        ]
+      }
+    },
+    {
+      "sku": "GRO-NEW-20260929-003",
+      "name": "Pomegranates 2 Pack",
+      "slug": "grocery-pomegranate",
+      "attributes": {
+        "grocery_group": [
+          "fruit"
+        ],
+        "meal_occasion": [
+          "breakfast",
+          "snack",
+          "dessert"
+        ],
+        "dish_type": [
+          "breakfast_bowls",
+          "smoothies",
+          "desserts"
+        ],
+        "preparation_method": [
+          "no_cook"
+        ],
+        "ingredient_role": [
+          "main_ingredient",
+          "topping"
+        ]
+      }
+    },
+    {
+      "sku": "GRO-NEW-20260929-004",
+      "name": "Peaches 500g",
+      "slug": "grocery-peaches",
+      "attributes": {
+        "grocery_group": [
+          "fruit"
+        ],
+        "meal_occasion": [
+          "breakfast",
+          "snack",
+          "dessert"
+        ],
+        "dish_type": [
+          "breakfast_bowls",
+          "smoothies",
+          "desserts"
+        ],
+        "preparation_method": [
+          "no_cook"
+        ],
+        "ingredient_role": [
+          "main_ingredient",
+          "topping"
+        ]
+      }
+    },
+    {
+      "sku": "GRO-NEW-20260929-005",
+      "name": "Fresh Spinach 250g",
+      "slug": "grocery-spinach",
+      "attributes": {
+        "grocery_group": [
+          "vegetables"
+        ],
+        "meal_occasion": [
+          "lunch",
+          "dinner"
+        ],
+        "dish_type": [
+          "salads",
+          "sandwiches"
+        ],
+        "preparation_method": [
+          "no_cook"
+        ],
+        "ingredient_role": [
+          "side",
+          "topping"
+        ]
+      }
+    },
+    {
+      "sku": "GRO-NEW-20260929-006",
+      "name": "Green Beans 500g",
+      "slug": "grocery-green-beans",
+      "attributes": {
+        "grocery_group": [
+          "vegetables"
+        ],
+        "meal_occasion": [
+          "lunch",
+          "dinner"
+        ],
+        "dish_type": [
+          "salads",
+          "stir_fries",
+          "roast_dinners"
+        ],
+        "preparation_method": [
+          "boiling",
+          "sauteing"
+        ],
+        "ingredient_role": [
+          "side"
+        ]
+      }
+    },
+    {
+      "sku": "GRO-NEW-20260929-007",
+      "name": "Sweet Potatoes 1kg",
+      "slug": "grocery-sweet-potatoes",
+      "attributes": {
+        "grocery_group": [
+          "vegetables"
+        ],
+        "meal_occasion": [
+          "lunch",
+          "dinner"
+        ],
+        "dish_type": [
+          "soups",
+          "roast_dinners"
+        ],
+        "preparation_method": [
+          "boiling",
+          "roasting",
+          "baking"
+        ],
+        "ingredient_role": [
+          "side",
+          "base"
+        ]
+      }
+    },
+    {
+      "sku": "GRO-NEW-20260929-008",
+      "name": "Romaine Lettuce 1 Head",
+      "slug": "grocery-lettuce",
+      "attributes": {
+        "grocery_group": [
+          "vegetables"
+        ],
+        "meal_occasion": [
+          "lunch",
+          "dinner"
+        ],
+        "dish_type": [
+          "salads",
+          "sandwiches"
+        ],
+        "preparation_method": [
+          "no_cook"
+        ],
+        "ingredient_role": [
+          "side",
+          "topping"
+        ]
+      }
+    },
+    {
+      "sku": "GRO-NEW-20260929-009",
+      "name": "Fresh Mozzarella 125g",
+      "slug": "grocery-mozzarella",
+      "attributes": {
+        "grocery_group": [
+          "dairy"
+        ],
+        "meal_occasion": [
+          "breakfast",
+          "lunch",
+          "dinner"
+        ],
+        "dish_type": [
+          "sandwiches",
+          "salads",
+          "pasta_dishes"
+        ],
+        "preparation_method": [
+          "no_cook",
+          "baking"
+        ],
+        "ingredient_role": [
+          "topping",
+          "main_ingredient"
+        ]
+      }
+    },
+    {
+      "sku": "GRO-NEW-20260929-010",
+      "name": "Cream Cheese 200g",
+      "slug": "grocery-cream-cheese",
+      "attributes": {
+        "grocery_group": [
+          "dairy"
+        ],
+        "meal_occasion": [
+          "breakfast",
+          "lunch",
+          "dinner"
+        ],
+        "dish_type": [
+          "sandwiches",
+          "salads",
+          "pasta_dishes"
+        ],
+        "preparation_method": [
+          "no_cook",
+          "baking"
+        ],
+        "ingredient_role": [
+          "topping",
+          "main_ingredient"
+        ]
+      }
+    },
+    {
+      "sku": "GRO-NEW-20260929-011",
+      "name": "Sesame Bagels 4 Pack",
+      "slug": "grocery-bagels",
+      "attributes": {
+        "grocery_group": [
+          "bakery"
+        ],
+        "meal_occasion": [
+          "breakfast",
+          "lunch",
+          "dinner"
+        ],
+        "dish_type": [
+          "sandwiches"
+        ],
+        "preparation_method": [
+          "no_cook"
+        ],
+        "ingredient_role": [
+          "base",
+          "side"
+        ]
+      }
+    },
+    {
+      "sku": "GRO-NEW-20260929-012",
+      "name": "Oat Bread 1 Loaf",
+      "slug": "grocery-oat-bread",
+      "attributes": {
+        "grocery_group": [
+          "bakery"
+        ],
+        "meal_occasion": [
+          "breakfast",
+          "lunch",
+          "dinner"
+        ],
+        "dish_type": [
+          "sandwiches"
+        ],
+        "preparation_method": [
+          "no_cook"
+        ],
+        "ingredient_role": [
+          "base",
+          "side"
+        ]
+      }
+    },
+    {
+      "sku": "GRO-NEW-20260929-013",
+      "name": "Rolled Oats 500g",
+      "slug": "grocery-rolled-oats",
+      "attributes": {
+        "grocery_group": [
+          "grains"
+        ],
+        "meal_occasion": [
+          "breakfast"
+        ],
+        "dish_type": [
+          "breakfast_bowls",
+          "baking"
+        ],
+        "preparation_method": [
+          "boiling",
+          "baking"
+        ],
+        "ingredient_role": [
+          "base"
+        ]
+      }
+    },
+    {
+      "sku": "GRO-NEW-20260929-014",
+      "name": "Couscous 500g",
+      "slug": "grocery-couscous",
+      "attributes": {
+        "grocery_group": [
+          "grains"
+        ],
+        "meal_occasion": [
+          "lunch",
+          "dinner"
+        ],
+        "dish_type": [
+          "salads",
+          "roast_dinners"
+        ],
+        "preparation_method": [
+          "boiling"
+        ],
+        "ingredient_role": [
+          "base",
+          "side"
+        ]
+      }
+    },
+    {
+      "sku": "GRO-NEW-20260929-015",
+      "name": "Tuna in Olive Oil 160g",
+      "slug": "grocery-tuna",
+      "attributes": {
+        "grocery_group": [
+          "seafood"
+        ],
+        "meal_occasion": [
+          "lunch",
+          "dinner"
+        ],
+        "dish_type": [
+          "salads",
+          "sandwiches",
+          "pasta_dishes"
+        ],
+        "preparation_method": [
+          "no_cook"
+        ],
+        "ingredient_role": [
+          "main_ingredient"
+        ]
+      }
+    },
+    {
+      "sku": "GRO-NEW-20260929-016",
+      "name": "Chicken Drumsticks 1kg",
+      "slug": "grocery-chicken-drumsticks",
+      "attributes": {
+        "grocery_group": [
+          "meat"
+        ],
+        "meal_occasion": [
+          "lunch",
+          "dinner"
+        ],
+        "dish_type": [
+          "roast_dinners",
+          "stir_fries"
+        ],
+        "preparation_method": [
+          "grilling",
+          "roasting",
+          "sauteing"
+        ],
+        "ingredient_role": [
+          "main_ingredient"
+        ]
+      }
+    },
+    {
+      "sku": "GRO-NEW-20260929-017",
+      "name": "Ground Beef 500g",
+      "slug": "grocery-ground-beef",
+      "attributes": {
+        "grocery_group": [
+          "meat"
+        ],
+        "meal_occasion": [
+          "lunch",
+          "dinner"
+        ],
+        "dish_type": [
+          "roast_dinners",
+          "stir_fries"
+        ],
+        "preparation_method": [
+          "grilling",
+          "roasting",
+          "sauteing"
+        ],
+        "ingredient_role": [
+          "main_ingredient"
+        ]
+      }
+    },
+    {
+      "sku": "GRO-NEW-20260929-018",
+      "name": "Peeled Shrimp 500g",
+      "slug": "grocery-shrimp",
+      "attributes": {
+        "grocery_group": [
+          "seafood"
+        ],
+        "meal_occasion": [
+          "lunch",
+          "dinner"
+        ],
+        "dish_type": [
+          "pasta_dishes",
+          "rice_dishes",
+          "stir_fries"
+        ],
+        "preparation_method": [
+          "sauteing",
+          "grilling",
+          "boiling"
+        ],
+        "ingredient_role": [
+          "main_ingredient"
+        ]
+      }
+    },
+    {
+      "sku": "GRO-NEW-20260929-019",
+      "name": "Dried Apricots 250g",
+      "slug": "grocery-dried-apricots",
+      "attributes": {
+        "grocery_group": [
+          "dried_fruit"
+        ],
+        "meal_occasion": [
+          "breakfast",
+          "snack",
+          "dessert"
+        ],
+        "dish_type": [
+          "breakfast_bowls",
+          "baking",
+          "desserts"
+        ],
+        "preparation_method": [
+          "no_cook",
+          "baking"
+        ],
+        "ingredient_role": [
+          "topping"
+        ]
+      }
+    },
+    {
+      "sku": "GRO-NEW-20260929-020",
+      "name": "Hazelnuts 250g",
+      "slug": "grocery-hazelnuts",
+      "attributes": {
+        "grocery_group": [
+          "nuts"
+        ],
+        "meal_occasion": [
+          "breakfast",
+          "snack",
+          "dessert"
+        ],
+        "dish_type": [
+          "breakfast_bowls",
+          "salads",
+          "baking",
+          "desserts"
+        ],
+        "preparation_method": [
+          "no_cook",
+          "roasting"
+        ],
+        "ingredient_role": [
+          "topping"
+        ]
+      }
+    },
+    {
+      "sku": "GRO-SIZE-FAMILY-001",
+      "name": "Mangoes",
+      "slug": "grocery-mangoes",
+      "attributes": {
+        "grocery_group": [
+          "fruit"
+        ],
+        "meal_occasion": [
+          "breakfast",
+          "snack",
+          "dessert"
+        ],
+        "dish_type": [
+          "breakfast_bowls",
+          "smoothies",
+          "desserts"
+        ],
+        "preparation_method": [
+          "no_cook"
+        ],
+        "ingredient_role": [
+          "main_ingredient",
+          "topping"
+        ]
+      }
+    },
+    {
+      "sku": "GRO-SIZE-FAMILY-002",
+      "name": "Red Grapes",
+      "slug": "grocery-red-grapes",
+      "attributes": {
+        "grocery_group": [
+          "fruit"
+        ],
+        "meal_occasion": [
+          "breakfast",
+          "snack",
+          "dessert"
+        ],
+        "dish_type": [
+          "breakfast_bowls",
+          "smoothies",
+          "desserts"
+        ],
+        "preparation_method": [
+          "no_cook"
+        ],
+        "ingredient_role": [
+          "main_ingredient",
+          "topping"
+        ]
+      }
+    },
+    {
+      "sku": "GRO-SIZE-FAMILY-003",
+      "name": "Pears",
+      "slug": "grocery-pears",
+      "attributes": {
+        "grocery_group": [
+          "fruit"
+        ],
+        "meal_occasion": [
+          "breakfast",
+          "snack",
+          "dessert"
+        ],
+        "dish_type": [
+          "breakfast_bowls",
+          "smoothies",
+          "desserts"
+        ],
+        "preparation_method": [
+          "no_cook"
+        ],
+        "ingredient_role": [
+          "main_ingredient",
+          "topping"
+        ]
+      }
+    },
+    {
+      "sku": "GRO-SIZE-FAMILY-004",
+      "name": "White Mushrooms",
+      "slug": "grocery-mushrooms",
+      "attributes": {
+        "grocery_group": [
+          "vegetables"
+        ],
+        "meal_occasion": [
+          "lunch",
+          "dinner"
+        ],
+        "dish_type": [
+          "soups",
+          "stir_fries",
+          "roast_dinners"
+        ],
+        "preparation_method": [
+          "roasting",
+          "sauteing",
+          "boiling"
+        ],
+        "ingredient_role": [
+          "side",
+          "main_ingredient"
+        ]
+      }
+    },
+    {
+      "sku": "GRO-SIZE-FAMILY-005",
+      "name": "Zucchini",
+      "slug": "grocery-zucchini",
+      "attributes": {
+        "grocery_group": [
+          "vegetables"
+        ],
+        "meal_occasion": [
+          "lunch",
+          "dinner"
+        ],
+        "dish_type": [
+          "soups",
+          "stir_fries",
+          "roast_dinners"
+        ],
+        "preparation_method": [
+          "roasting",
+          "sauteing",
+          "boiling"
+        ],
+        "ingredient_role": [
+          "side",
+          "main_ingredient"
+        ]
+      }
+    },
+    {
+      "sku": "GRO-SIZE-FAMILY-006",
+      "name": "Cheddar Cheese",
+      "slug": "grocery-cheddar-cheese",
+      "attributes": {
+        "grocery_group": [
+          "dairy"
+        ],
+        "meal_occasion": [
+          "breakfast",
+          "lunch",
+          "dinner"
+        ],
+        "dish_type": [
+          "sandwiches",
+          "salads",
+          "pasta_dishes"
+        ],
+        "preparation_method": [
+          "no_cook",
+          "baking"
+        ],
+        "ingredient_role": [
+          "topping",
+          "main_ingredient"
+        ]
+      }
+    },
+    {
+      "sku": "GRO-SIZE-FAMILY-007",
+      "name": "Feta Cheese",
+      "slug": "grocery-feta-cheese",
+      "attributes": {
+        "grocery_group": [
+          "dairy"
+        ],
+        "meal_occasion": [
+          "breakfast",
+          "lunch",
+          "dinner"
+        ],
+        "dish_type": [
+          "sandwiches",
+          "salads",
+          "pasta_dishes"
+        ],
+        "preparation_method": [
+          "no_cook",
+          "baking"
+        ],
+        "ingredient_role": [
+          "topping",
+          "main_ingredient"
+        ]
+      }
+    },
+    {
+      "sku": "GRO-SIZE-FAMILY-008",
+      "name": "Butter Croissants",
+      "slug": "grocery-croissants",
+      "attributes": {
+        "grocery_group": [
+          "bakery"
+        ],
+        "meal_occasion": [
+          "breakfast",
+          "snack"
+        ],
+        "dish_type": [
+          "sandwiches"
+        ],
+        "preparation_method": [
+          "no_cook"
+        ],
+        "ingredient_role": [
+          "base"
+        ]
+      }
+    },
+    {
+      "sku": "GRO-SIZE-FAMILY-009",
+      "name": "Basmati Rice",
+      "slug": "grocery-basmati-rice",
+      "attributes": {
+        "grocery_group": [
+          "grains"
+        ],
+        "meal_occasion": [
+          "lunch",
+          "dinner"
+        ],
+        "dish_type": [
+          "rice_dishes"
+        ],
+        "preparation_method": [
+          "boiling"
+        ],
+        "ingredient_role": [
+          "base"
+        ]
+      }
+    },
+    {
+      "sku": "GRO-SIZE-FAMILY-010",
+      "name": "Chickpeas",
+      "slug": "grocery-chickpeas",
+      "attributes": {
+        "grocery_group": [
+          "legumes"
+        ],
+        "meal_occasion": [
+          "lunch",
+          "dinner"
+        ],
+        "dish_type": [
+          "soups",
+          "salads",
+          "rice_dishes"
+        ],
+        "preparation_method": [
+          "boiling"
+        ],
+        "ingredient_role": [
+          "main_ingredient"
+        ]
+      }
+    },
+    {
+      "sku": "GRO-SIZE-FAMILY-011",
+      "name": "Chicken Breast",
+      "slug": "grocery-chicken-breast",
+      "attributes": {
+        "grocery_group": [
+          "meat"
+        ],
+        "meal_occasion": [
+          "lunch",
+          "dinner"
+        ],
+        "dish_type": [
+          "roast_dinners",
+          "stir_fries"
+        ],
+        "preparation_method": [
+          "grilling",
+          "roasting",
+          "sauteing"
+        ],
+        "ingredient_role": [
+          "main_ingredient"
+        ]
+      }
+    },
+    {
+      "sku": "GRO-SIZE-FAMILY-012",
+      "name": "Beef Steak",
+      "slug": "grocery-beef-steak",
+      "attributes": {
+        "grocery_group": [
+          "meat"
+        ],
+        "meal_occasion": [
+          "lunch",
+          "dinner"
+        ],
+        "dish_type": [
+          "roast_dinners",
+          "stir_fries"
+        ],
+        "preparation_method": [
+          "grilling",
+          "roasting",
+          "sauteing"
+        ],
+        "ingredient_role": [
+          "main_ingredient"
+        ]
+      }
+    },
+    {
+      "sku": "GRO-SIZE-FAMILY-013",
+      "name": "Salmon Fillet",
+      "slug": "grocery-salmon-fillet",
+      "attributes": {
+        "grocery_group": [
+          "seafood"
+        ],
+        "meal_occasion": [
+          "lunch",
+          "dinner"
+        ],
+        "dish_type": [
+          "roast_dinners",
+          "rice_dishes"
+        ],
+        "preparation_method": [
+          "grilling",
+          "baking"
+        ],
+        "ingredient_role": [
+          "main_ingredient"
+        ]
+      }
+    },
+    {
+      "sku": "GRO-SIZE-FAMILY-014",
+      "name": "Cashews",
+      "slug": "grocery-cashews",
+      "attributes": {
+        "grocery_group": [
+          "nuts"
+        ],
+        "meal_occasion": [
+          "breakfast",
+          "snack",
+          "dessert"
+        ],
+        "dish_type": [
+          "breakfast_bowls",
+          "salads",
+          "baking",
+          "desserts"
+        ],
+        "preparation_method": [
+          "no_cook",
+          "roasting"
+        ],
+        "ingredient_role": [
+          "topping"
+        ]
+      }
+    },
+    {
+      "sku": "GRO-SIZE-FAMILY-015",
+      "name": "Pistachios",
+      "slug": "grocery-pistachios",
+      "attributes": {
+        "grocery_group": [
+          "nuts"
+        ],
+        "meal_occasion": [
+          "breakfast",
+          "snack",
+          "dessert"
+        ],
+        "dish_type": [
+          "breakfast_bowls",
+          "salads",
+          "baking",
+          "desserts"
+        ],
+        "preparation_method": [
+          "no_cook",
+          "roasting"
+        ],
+        "ingredient_role": [
+          "topping"
+        ]
+      }
+    }
+  ]
+}

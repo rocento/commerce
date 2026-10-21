@@ -1,0 +1,7 @@
+# Commerce meaning v1
+
+Additive internal extension to M03's immutable `commerce-core/v1`. This namespace owns rich intent, requirement, conflict, clarification, policy and assessed-step contracts. Legacy core Constraint/Intent/PolicyDecision remain compatibility DTOs for the M03 facade; new meaning engines do not use them. Legacy provider DTOs are proposals translated at `app/commerce_action_engine/actions/shopping/meaning.py`, never authoritative policy input.
+
+Generate with `commerce-assistant-platform/.venv/bin/python commerce-ops/scripts/contracts/generate_meaning_contracts.py`; add `--check` in CI. Python, Rust and TypeScript consume the same wire fixtures. Wire validation enforces shape, closed fields, enum/version/type/size constraints. Cross-field semantic validation (value/unit compatibility, inference strength, conflict algebra, scope, confirmation and risk consistency) is enforced in the Python core and its acceptance suite, not asserted by the generic Rust/TypeScript wire validators. A wire-valid policy is never an execution credential.
+
+Money, quantity and timestamps use decimal strings with explicit units. Unsupported units fail closed; conversion is a later market-adapter concern. Explicit customer evidence is an offset into bounded user turns. It is never taken from product descriptions. Protected restrictions survive customer updates. The English adapter grounds catalog options and numeric prices; Arabic equivalence is deferred. Rust remains the source of current commerce facts and authorization.

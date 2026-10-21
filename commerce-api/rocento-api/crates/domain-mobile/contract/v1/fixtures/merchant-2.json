@@ -1,0 +1,87 @@
+{
+  "schemaVersion": "1.0.0",
+  "configVersion": 0,
+  "tenantId": "00000000-0000-0000-0000-000000000002",
+  "brand": {
+    "displayName": "Demo Boutique",
+    "logoAssetId": "10000000-0000-0000-0000-000000000002",
+    "light": {
+      "primary": "#673AB7",
+      "onPrimary": "#FFFFFF",
+      "background": "#FFFFFF",
+      "surface": "#F6F7FA",
+      "text": "#18202A"
+    },
+    "dark": {
+      "primary": "#85B6FF",
+      "onPrimary": "#111111",
+      "background": "#101217",
+      "surface": "#1C2027",
+      "text": "#F5F7FA"
+    },
+    "fontToken": "system",
+    "radiusToken": "medium",
+    "density": "comfortable"
+  },
+  "navigation": {
+    "tabs": [
+      "home",
+      "categories",
+      "cart",
+      "account"
+    ]
+  },
+  "screens": {
+    "home": {
+      "sections": [
+        {
+          "id": "hero_1",
+          "type": "heroBanner",
+          "props": {
+            "imageAssetId": "10000000-0000-0000-0000-000000000002",
+            "accessibilityLabelKey": "hero_label",
+            "action": {
+              "type": "openCategory",
+              "categoryId": "featured"
+            }
+          }
+        },
+        {
+          "id": "products_1",
+          "type": "productCarousel",
+          "props": {
+            "collectionId": "featured",
+            "titleKey": "featured_title"
+          }
+        }
+      ]
+    }
+  },
+  "features": {
+    "wishlist": true,
+    "locationPicker": true,
+    "reviews": false
+  },
+  "localization": {
+    "defaultLocale": "en",
+    "supportedLocales": [
+      "en",
+      "ar"
+    ],
+    "rtlEnabled": true,
+    "messages": {
+      "en": {
+        "hero_label": "Demo Boutique featured products",
+        "featured_title": "Featured products"
+      },
+      "ar": {
+        "hero_label": "منتجات مختارة",
+        "featured_title": "منتجات مميزة"
+      }
+    }
+  },
+  "compatibility": {
+    "minIosRuntime": "1.0.0",
+    "minAndroidRuntime": "1.0.0"
+  }
+}

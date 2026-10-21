@@ -1,0 +1,18 @@
+.store-shell .product-compare-button { background:transparent; color:inherit; border:1px solid #dedfd8; border-radius:8px; padding:7px 10px; margin:10px 0; font-size:12px; }
+.store-shell .product-compare-button[aria-pressed=true] { background:#eef2e9; border-color:#7e946d; }
+.store-shell .product-compare-button:disabled { opacity:.5; }
+.comparison-tray { position:fixed; left:50%; transform:translateX(-50%); bottom:16px; z-index:15; margin:16px auto; width:fit-content; max-width:calc(100% - 24px); padding:12px 18px; display:flex; gap:18px; align-items:center; border:1px solid #d8ded1; border-radius:14px; background:#f4f6f0; box-shadow:0 4px 20px #0001; }
+.comparison-tray a,.comparison-assistant { color:#35533c; font-weight:600; }
+.store-shell .comparison-tray button { background:transparent; color:inherit; padding:5px; border:0; }
+.comparison-page { max-width:1300px; margin:auto; padding:30px 24px 60px; }
+.comparison-page header { display:flex; justify-content:space-between; align-items:center; gap:20px; }
+.comparison-selection { display:flex; flex-wrap:wrap; gap:8px; margin:20px 0; }
+.comparison-table-wrap { overflow:auto; border:1px solid #dedfd8; border-radius:14px; margin:24px 0; }
+.comparison-table-wrap table { width:100%; border-collapse:collapse; }
+.comparison-table-wrap caption { text-align:start; padding:16px; font-size:13px; color:#6b7268; }
+.comparison-table-wrap th,.comparison-table-wrap td { padding:16px; min-width:180px; max-width:320px; border-bottom:1px solid #e5e7e0; text-align:start; vertical-align:top; overflow-wrap:anywhere; }
+.comparison-table-wrap th[scope=row] { min-width:140px; background:#f5f6f2; }
+.comparison-table-wrap img { display:block; width:100px; height:100px; object-fit:contain; margin-bottom:12px; }
+.comparison-assistant { display:inline-block; padding:14px 18px; border:1px solid #cbd5c1; border-radius:12px; }
+.comparison-note { color:#6b7268; font-size:13px; }
+@media(max-width:600px) { .comparison-page { padding:20px 12px; } .comparison-page header { align-items:flex-start; flex-direction:column; } .comparison-tray { gap:10px; font-size:12px; } }

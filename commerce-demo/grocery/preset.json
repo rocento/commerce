@@ -1,0 +1,1032 @@
+{
+  "id": "grocery",
+  "name": "Grocery Demo",
+  "channel": "storefront",
+  "categories": [
+    {
+      "slug": "grocery-fruit",
+      "name": "Fresh Fruit",
+      "thumbnail": "Grocery-Items/thumbnails/01-bananas.webp"
+    },
+    {
+      "slug": "grocery-vegetables",
+      "name": "Fresh Vegetables",
+      "thumbnail": "Grocery-Items/thumbnails/12-bell-peppers.webp"
+    },
+    {
+      "slug": "grocery-dairy-eggs",
+      "name": "Dairy & Eggs",
+      "thumbnail": "Grocery-Items/thumbnails/16-whole-milk.webp"
+    },
+    {
+      "slug": "grocery-bakery",
+      "name": "Bakery",
+      "thumbnail": "Grocery-Items/thumbnails/21-baladi-bread.webp"
+    },
+    {
+      "slug": "grocery-pantry",
+      "name": "Pantry Staples",
+      "thumbnail": "Grocery-Items/thumbnails/24-basmati-rice.webp"
+    },
+    {
+      "slug": "grocery-meat-poultry",
+      "name": "Meat & Poultry",
+      "thumbnail": "Grocery-Items/thumbnails/41-beef-steak.webp"
+    },
+    {
+      "slug": "grocery-fish-seafood",
+      "name": "Fish & Seafood",
+      "thumbnail": "Grocery-Items/thumbnails/44-salmon-fillet.webp"
+    },
+    {
+      "slug": "grocery-dates-nuts",
+      "name": "Dates & Nuts",
+      "thumbnail": "Grocery-Items/thumbnails/28-dates.webp"
+    }
+  ],
+  "products": [
+    {
+      "sku": "DEMO-GRO-WHITE-001",
+      "slug": "demo-grocery-white-bananas",
+      "name": "Bananas 1kg",
+      "category": "grocery-fruit",
+      "price": "1.50",
+      "unit": "pack",
+      "description": "Bananas 1kg. A small bunch of fresh ripe yellow bananas. Illustrative demo product photography.",
+      "images": [
+        "Grocery-Items/01-bananas.webp"
+      ],
+      "thumbnail": "Grocery-Items/thumbnails/01-bananas.webp",
+      "attributes": {},
+      "stock": 20
+    },
+    {
+      "sku": "DEMO-GRO-WHITE-002",
+      "slug": "demo-grocery-white-gala-apples",
+      "name": "Gala Apples 1kg",
+      "category": "grocery-fruit",
+      "price": "2.50",
+      "unit": "pack",
+      "description": "Gala Apples 1kg. Three fresh red and yellow gala apples, one in front and two behind. Illustrative demo product photography.",
+      "images": [
+        "Grocery-Items/02-gala-apples.webp"
+      ],
+      "thumbnail": "Grocery-Items/thumbnails/02-gala-apples.webp",
+      "attributes": {},
+      "stock": 20
+    },
+    {
+      "sku": "DEMO-GRO-WHITE-003",
+      "slug": "demo-grocery-white-oranges",
+      "name": "Oranges 1kg",
+      "category": "grocery-fruit",
+      "price": "2.00",
+      "unit": "pack",
+      "description": "Oranges 1kg. Three ripe oranges, one neatly cut orange half showing juicy segments. Illustrative demo product photography.",
+      "images": [
+        "Grocery-Items/03-oranges.webp"
+      ],
+      "thumbnail": "Grocery-Items/thumbnails/03-oranges.webp",
+      "attributes": {},
+      "stock": 20
+    },
+    {
+      "sku": "DEMO-GRO-WHITE-004",
+      "slug": "demo-grocery-white-lemons",
+      "name": "Lemons 500g",
+      "category": "grocery-fruit",
+      "price": "1.25",
+      "unit": "pack",
+      "description": "Lemons 500g. Three fresh yellow lemons, one lemon cut in half. Illustrative demo product photography.",
+      "images": [
+        "Grocery-Items/04-lemons.webp"
+      ],
+      "thumbnail": "Grocery-Items/thumbnails/04-lemons.webp",
+      "attributes": {},
+      "stock": 20
+    },
+    {
+      "sku": "DEMO-GRO-WHITE-005",
+      "slug": "demo-grocery-white-strawberries",
+      "name": "Strawberries 500g",
+      "category": "grocery-fruit",
+      "price": "3.00",
+      "unit": "pack",
+      "description": "Strawberries 500g. A small neat pile of eight ripe red strawberries with fresh green leaves, no container. Illustrative demo product photography.",
+      "images": [
+        "Grocery-Items/05-strawberries.webp"
+      ],
+      "thumbnail": "Grocery-Items/thumbnails/05-strawberries.webp",
+      "attributes": {},
+      "stock": 20
+    },
+    {
+      "sku": "DEMO-GRO-WHITE-006",
+      "slug": "demo-grocery-white-red-grapes",
+      "name": "Red Grapes 500g",
+      "category": "grocery-fruit",
+      "price": "2.75",
+      "unit": "pack",
+      "description": "Red Grapes 500g. A single full bunch of fresh red seedless grapes with a short natural stem. Illustrative demo product photography.",
+      "images": [
+        "Grocery-Items/06-red-grapes.webp"
+      ],
+      "thumbnail": "Grocery-Items/thumbnails/06-red-grapes.webp",
+      "attributes": {},
+      "stock": 20
+    },
+    {
+      "sku": "DEMO-GRO-WHITE-007",
+      "slug": "demo-grocery-white-tomatoes",
+      "name": "Tomatoes 1kg",
+      "category": "grocery-vegetables",
+      "price": "1.50",
+      "unit": "pack",
+      "description": "Tomatoes 1kg. Three ripe red tomatoes on a short green vine. Illustrative demo product photography.",
+      "images": [
+        "Grocery-Items/07-tomatoes.webp"
+      ],
+      "thumbnail": "Grocery-Items/thumbnails/07-tomatoes.webp",
+      "attributes": {},
+      "stock": 20
+    },
+    {
+      "sku": "DEMO-GRO-WHITE-008",
+      "slug": "demo-grocery-white-cucumbers",
+      "name": "Cucumbers 1kg",
+      "category": "grocery-vegetables",
+      "price": "1.50",
+      "unit": "pack",
+      "description": "Cucumbers 1kg. Two fresh small cucumbers with three round cucumber slices. Illustrative demo product photography.",
+      "images": [
+        "Grocery-Items/08-cucumbers.webp"
+      ],
+      "thumbnail": "Grocery-Items/thumbnails/08-cucumbers.webp",
+      "attributes": {},
+      "stock": 20
+    },
+    {
+      "sku": "DEMO-GRO-WHITE-009",
+      "slug": "demo-grocery-white-carrots",
+      "name": "Carrots 500g",
+      "category": "grocery-vegetables",
+      "price": "1.00",
+      "unit": "pack",
+      "description": "Carrots 500g. Three fresh orange carrots with short trimmed green tops. Illustrative demo product photography.",
+      "images": [
+        "Grocery-Items/09-carrots.webp"
+      ],
+      "thumbnail": "Grocery-Items/thumbnails/09-carrots.webp",
+      "attributes": {},
+      "stock": 20
+    },
+    {
+      "sku": "DEMO-GRO-WHITE-010",
+      "slug": "demo-grocery-white-potatoes",
+      "name": "Golden Potatoes 1kg",
+      "category": "grocery-vegetables",
+      "price": "1.50",
+      "unit": "pack",
+      "description": "Golden Potatoes 1kg. Three clean golden potatoes with natural skin. Illustrative demo product photography.",
+      "images": [
+        "Grocery-Items/10-potatoes.webp"
+      ],
+      "thumbnail": "Grocery-Items/thumbnails/10-potatoes.webp",
+      "attributes": {},
+      "stock": 20
+    },
+    {
+      "sku": "DEMO-GRO-WHITE-011",
+      "slug": "demo-grocery-white-red-onions",
+      "name": "Red Onions 1kg",
+      "category": "grocery-vegetables",
+      "price": "1.25",
+      "unit": "pack",
+      "description": "Red Onions 1kg. Two red onions and one neatly cut onion half. Illustrative demo product photography.",
+      "images": [
+        "Grocery-Items/11-red-onions.webp"
+      ],
+      "thumbnail": "Grocery-Items/thumbnails/11-red-onions.webp",
+      "attributes": {},
+      "stock": 20
+    },
+    {
+      "sku": "DEMO-GRO-WHITE-012",
+      "slug": "demo-grocery-white-bell-peppers",
+      "name": "Mixed Bell Peppers 3 Pack",
+      "category": "grocery-vegetables",
+      "price": "2.50",
+      "unit": "pack",
+      "description": "Mixed Bell Peppers 3 Pack. Three fresh bell peppers, one red, one yellow, one green. Illustrative demo product photography.",
+      "images": [
+        "Grocery-Items/12-bell-peppers.webp"
+      ],
+      "thumbnail": "Grocery-Items/thumbnails/12-bell-peppers.webp",
+      "attributes": {},
+      "stock": 20
+    },
+    {
+      "sku": "DEMO-GRO-WHITE-013",
+      "slug": "demo-grocery-white-broccoli",
+      "name": "Broccoli 1 Head",
+      "category": "grocery-vegetables",
+      "price": "2.00",
+      "unit": "pack",
+      "description": "Broccoli 1 Head. One fresh head of broccoli with a short visible stalk. Illustrative demo product photography.",
+      "images": [
+        "Grocery-Items/13-broccoli.webp"
+      ],
+      "thumbnail": "Grocery-Items/thumbnails/13-broccoli.webp",
+      "attributes": {},
+      "stock": 20
+    },
+    {
+      "sku": "DEMO-GRO-WHITE-014",
+      "slug": "demo-grocery-white-garlic",
+      "name": "Garlic 2 Bulbs",
+      "category": "grocery-vegetables",
+      "price": "1.00",
+      "unit": "pack",
+      "description": "Garlic 2 Bulbs. Two whole garlic bulbs and three peeled cloves. Illustrative demo product photography.",
+      "images": [
+        "Grocery-Items/14-garlic.webp"
+      ],
+      "thumbnail": "Grocery-Items/thumbnails/14-garlic.webp",
+      "attributes": {},
+      "stock": 20
+    },
+    {
+      "sku": "DEMO-GRO-WHITE-015",
+      "slug": "demo-grocery-white-eggs",
+      "name": "Farm Eggs 6 Pack",
+      "category": "grocery-dairy-eggs",
+      "price": "2.50",
+      "unit": "pack",
+      "description": "Farm Eggs 6 Pack. Six brown eggs in a small open natural pulp egg carton. Illustrative demo product photography.",
+      "images": [
+        "Grocery-Items/15-eggs.webp"
+      ],
+      "thumbnail": "Grocery-Items/thumbnails/15-eggs.webp",
+      "attributes": {},
+      "stock": 20
+    },
+    {
+      "sku": "DEMO-GRO-WHITE-016",
+      "slug": "demo-grocery-white-whole-milk",
+      "name": "Whole Milk 1L",
+      "category": "grocery-dairy-eggs",
+      "price": "1.75",
+      "unit": "pack",
+      "description": "Whole Milk 1L. One clear glass bottle of whole milk with a plain white screw cap and no label. Illustrative demo product photography.",
+      "images": [
+        "Grocery-Items/16-whole-milk.webp"
+      ],
+      "thumbnail": "Grocery-Items/thumbnails/16-whole-milk.webp",
+      "attributes": {},
+      "stock": 20
+    },
+    {
+      "sku": "DEMO-GRO-WHITE-017",
+      "slug": "demo-grocery-white-yogurt",
+      "name": "Plain Yogurt 500g",
+      "category": "grocery-dairy-eggs",
+      "price": "1.50",
+      "unit": "pack",
+      "description": "Plain Yogurt 500g. One plain white yogurt cup with an open foil lid showing smooth natural yogurt, unbranded. Illustrative demo product photography.",
+      "images": [
+        "Grocery-Items/17-yogurt.webp"
+      ],
+      "thumbnail": "Grocery-Items/thumbnails/17-yogurt.webp",
+      "attributes": {},
+      "stock": 20
+    },
+    {
+      "sku": "DEMO-GRO-WHITE-018",
+      "slug": "demo-grocery-white-feta-cheese",
+      "name": "Feta Cheese 250g",
+      "category": "grocery-dairy-eggs",
+      "price": "2.50",
+      "unit": "pack",
+      "description": "Feta Cheese 250g. One rectangular block of white feta cheese with three small cut cubes beside it. Illustrative demo product photography.",
+      "images": [
+        "Grocery-Items/18-feta-cheese.webp"
+      ],
+      "thumbnail": "Grocery-Items/thumbnails/18-feta-cheese.webp",
+      "attributes": {},
+      "stock": 20
+    },
+    {
+      "sku": "DEMO-GRO-WHITE-019",
+      "slug": "demo-grocery-white-butter",
+      "name": "Butter 200g",
+      "category": "grocery-dairy-eggs",
+      "price": "2.75",
+      "unit": "pack",
+      "description": "Butter 200g. One pale yellow block of butter resting on its neatly opened plain silver foil wrapper. Illustrative demo product photography.",
+      "images": [
+        "Grocery-Items/19-butter.webp"
+      ],
+      "thumbnail": "Grocery-Items/thumbnails/19-butter.webp",
+      "attributes": {},
+      "stock": 20
+    },
+    {
+      "sku": "DEMO-GRO-WHITE-020",
+      "slug": "demo-grocery-white-cheddar-cheese",
+      "name": "Cheddar Cheese 250g",
+      "category": "grocery-dairy-eggs",
+      "price": "3.00",
+      "unit": "pack",
+      "description": "Cheddar Cheese 250g. One golden cheddar cheese wedge with two rectangular slices beside it. Illustrative demo product photography.",
+      "images": [
+        "Grocery-Items/20-cheddar-cheese.webp"
+      ],
+      "thumbnail": "Grocery-Items/thumbnails/20-cheddar-cheese.webp",
+      "attributes": {},
+      "stock": 20
+    },
+    {
+      "sku": "DEMO-GRO-WHITE-021",
+      "slug": "demo-grocery-white-baladi-bread",
+      "name": "Baladi Bread 5 Loaves",
+      "category": "grocery-bakery",
+      "price": "1.00",
+      "unit": "pack",
+      "description": "Baladi Bread 5 Loaves. Three round egyptian baladi flatbreads stacked loosely, rustic whole wheat texture. Illustrative demo product photography.",
+      "images": [
+        "Grocery-Items/21-baladi-bread.webp"
+      ],
+      "thumbnail": "Grocery-Items/thumbnails/21-baladi-bread.webp",
+      "attributes": {},
+      "stock": 20
+    },
+    {
+      "sku": "DEMO-GRO-WHITE-022",
+      "slug": "demo-grocery-white-sliced-bread",
+      "name": "Sliced Bread 1 Loaf",
+      "category": "grocery-bakery",
+      "price": "1.75",
+      "unit": "pack",
+      "description": "Sliced Bread 1 Loaf. One small loaf of whole wheat sandwich bread with two slices leaning against it. Illustrative demo product photography.",
+      "images": [
+        "Grocery-Items/22-sliced-bread.webp"
+      ],
+      "thumbnail": "Grocery-Items/thumbnails/22-sliced-bread.webp",
+      "attributes": {},
+      "stock": 20
+    },
+    {
+      "sku": "DEMO-GRO-WHITE-023",
+      "slug": "demo-grocery-white-croissants",
+      "name": "Butter Croissants 3 Pack",
+      "category": "grocery-bakery",
+      "price": "3.00",
+      "unit": "pack",
+      "description": "Butter Croissants 3 Pack. Two golden flaky butter croissants. Illustrative demo product photography.",
+      "images": [
+        "Grocery-Items/23-croissants.webp"
+      ],
+      "thumbnail": "Grocery-Items/thumbnails/23-croissants.webp",
+      "attributes": {},
+      "stock": 20
+    },
+    {
+      "sku": "DEMO-GRO-WHITE-024",
+      "slug": "demo-grocery-white-basmati-rice",
+      "name": "Basmati Rice 1kg",
+      "category": "grocery-pantry",
+      "price": "3.00",
+      "unit": "pack",
+      "description": "Basmati Rice 1kg. One small clear glass bowl filled with uncooked white long-grain basmati rice. Illustrative demo product photography.",
+      "images": [
+        "Grocery-Items/24-basmati-rice.webp"
+      ],
+      "thumbnail": "Grocery-Items/thumbnails/24-basmati-rice.webp",
+      "attributes": {},
+      "stock": 20
+    },
+    {
+      "sku": "DEMO-GRO-WHITE-025",
+      "slug": "demo-grocery-white-penne-pasta",
+      "name": "Penne Pasta 500g",
+      "category": "grocery-pantry",
+      "price": "1.50",
+      "unit": "pack",
+      "description": "Penne Pasta 500g. A small clear glass bowl filled with uncooked golden penne pasta. Illustrative demo product photography.",
+      "images": [
+        "Grocery-Items/25-penne-pasta.webp"
+      ],
+      "thumbnail": "Grocery-Items/thumbnails/25-penne-pasta.webp",
+      "attributes": {},
+      "stock": 20
+    },
+    {
+      "sku": "DEMO-GRO-WHITE-026",
+      "slug": "demo-grocery-white-red-lentils",
+      "name": "Red Lentils 500g",
+      "category": "grocery-pantry",
+      "price": "1.75",
+      "unit": "pack",
+      "description": "Red Lentils 500g. A small clear glass bowl filled with dry orange red lentils. Illustrative demo product photography.",
+      "images": [
+        "Grocery-Items/26-red-lentils.webp"
+      ],
+      "thumbnail": "Grocery-Items/thumbnails/26-red-lentils.webp",
+      "attributes": {},
+      "stock": 20
+    },
+    {
+      "sku": "DEMO-GRO-WHITE-027",
+      "slug": "demo-grocery-white-chickpeas",
+      "name": "Chickpeas 500g",
+      "category": "grocery-pantry",
+      "price": "1.75",
+      "unit": "pack",
+      "description": "Chickpeas 500g. A small clear glass bowl filled with dry beige chickpeas. Illustrative demo product photography.",
+      "images": [
+        "Grocery-Items/27-chickpeas.webp"
+      ],
+      "thumbnail": "Grocery-Items/thumbnails/27-chickpeas.webp",
+      "attributes": {},
+      "stock": 20
+    },
+    {
+      "sku": "DEMO-GRO-WHITE-028",
+      "slug": "demo-grocery-white-dates",
+      "name": "Medjool Dates 400g",
+      "category": "grocery-dates-nuts",
+      "price": "4.00",
+      "unit": "pack",
+      "description": "Medjool Dates 400g. A neat small pile of glossy brown medjool dates. Illustrative demo product photography.",
+      "images": [
+        "Grocery-Items/28-dates.webp"
+      ],
+      "thumbnail": "Grocery-Items/thumbnails/28-dates.webp",
+      "attributes": {},
+      "stock": 20
+    },
+    {
+      "sku": "DEMO-GRO-WHITE-029",
+      "slug": "demo-grocery-white-almonds",
+      "name": "Raw Almonds 250g",
+      "category": "grocery-dates-nuts",
+      "price": "3.50",
+      "unit": "pack",
+      "description": "Raw Almonds 250g. A small clear glass bowl filled with raw whole almonds. Illustrative demo product photography.",
+      "images": [
+        "Grocery-Items/29-almonds.webp"
+      ],
+      "thumbnail": "Grocery-Items/thumbnails/29-almonds.webp",
+      "attributes": {},
+      "stock": 20
+    },
+    {
+      "sku": "DEMO-GRO-WHITE-030",
+      "slug": "demo-grocery-white-olive-oil",
+      "name": "Olive Oil 500ml",
+      "category": "grocery-pantry",
+      "price": "5.00",
+      "unit": "pack",
+      "description": "Olive Oil 500ml. One clear glass bottle filled with golden olive oil, plain dark green screw cap, unbranded with no label. Illustrative demo product photography.",
+      "images": [
+        "Grocery-Items/30-olive-oil.webp"
+      ],
+      "thumbnail": "Grocery-Items/thumbnails/30-olive-oil.webp",
+      "attributes": {},
+      "stock": 20
+    },
+    {
+      "sku": "DEMO-GRO-WHITE-031",
+      "slug": "demo-grocery-white-mangoes",
+      "name": "Mangoes 1kg",
+      "category": "grocery-fruit",
+      "price": "3.50",
+      "unit": "pack",
+      "description": "Mangoes 1kg. Two ripe yellow mangoes with one neatly cut mango cheek showing golden flesh. Illustrative demo product photography.",
+      "images": [
+        "Grocery-Items/31-mangoes.webp"
+      ],
+      "thumbnail": "Grocery-Items/thumbnails/31-mangoes.webp",
+      "attributes": {},
+      "stock": 20
+    },
+    {
+      "sku": "DEMO-GRO-WHITE-032",
+      "slug": "demo-grocery-white-watermelon",
+      "name": "Watermelon 1 Whole",
+      "category": "grocery-fruit",
+      "price": "5.00",
+      "unit": "pack",
+      "description": "Watermelon 1 Whole. One small whole green striped watermelon with a red watermelon wedge beside it. Illustrative demo product photography.",
+      "images": [
+        "Grocery-Items/32-watermelon.webp"
+      ],
+      "thumbnail": "Grocery-Items/thumbnails/32-watermelon.webp",
+      "attributes": {},
+      "stock": 20
+    },
+    {
+      "sku": "DEMO-GRO-WHITE-033",
+      "slug": "demo-grocery-white-pineapple",
+      "name": "Pineapple 1 Whole",
+      "category": "grocery-fruit",
+      "price": "3.50",
+      "unit": "pack",
+      "description": "Pineapple 1 Whole. One fresh whole pineapple with its green crown and two pineapple rings beside it. Illustrative demo product photography.",
+      "images": [
+        "Grocery-Items/33-pineapple.webp"
+      ],
+      "thumbnail": "Grocery-Items/thumbnails/33-pineapple.webp",
+      "attributes": {},
+      "stock": 20
+    },
+    {
+      "sku": "DEMO-GRO-WHITE-034",
+      "slug": "demo-grocery-white-avocados",
+      "name": "Avocados 2 Pack",
+      "category": "grocery-fruit",
+      "price": "3.00",
+      "unit": "pack",
+      "description": "Avocados 2 Pack. One whole ripe avocado and one half avocado with its brown pit. Illustrative demo product photography.",
+      "images": [
+        "Grocery-Items/34-avocados.webp"
+      ],
+      "thumbnail": "Grocery-Items/thumbnails/34-avocados.webp",
+      "attributes": {},
+      "stock": 20
+    },
+    {
+      "sku": "DEMO-GRO-WHITE-035",
+      "slug": "demo-grocery-white-pears",
+      "name": "Pears 1kg",
+      "category": "grocery-fruit",
+      "price": "2.75",
+      "unit": "pack",
+      "description": "Pears 1kg. Three fresh green bartlett pears. Illustrative demo product photography.",
+      "images": [
+        "Grocery-Items/35-pears.webp"
+      ],
+      "thumbnail": "Grocery-Items/thumbnails/35-pears.webp",
+      "attributes": {},
+      "stock": 20
+    },
+    {
+      "sku": "DEMO-GRO-WHITE-036",
+      "slug": "demo-grocery-white-eggplants",
+      "name": "Eggplants 1kg",
+      "category": "grocery-vegetables",
+      "price": "1.75",
+      "unit": "pack",
+      "description": "Eggplants 1kg. Two fresh glossy purple eggplants with green stems. Illustrative demo product photography.",
+      "images": [
+        "Grocery-Items/36-eggplants.webp"
+      ],
+      "thumbnail": "Grocery-Items/thumbnails/36-eggplants.webp",
+      "attributes": {},
+      "stock": 20
+    },
+    {
+      "sku": "DEMO-GRO-WHITE-037",
+      "slug": "demo-grocery-white-zucchini",
+      "name": "Zucchini 1kg",
+      "category": "grocery-vegetables",
+      "price": "1.75",
+      "unit": "pack",
+      "description": "Zucchini 1kg. Three small fresh green zucchini. Illustrative demo product photography.",
+      "images": [
+        "Grocery-Items/37-zucchini.webp"
+      ],
+      "thumbnail": "Grocery-Items/thumbnails/37-zucchini.webp",
+      "attributes": {},
+      "stock": 20
+    },
+    {
+      "sku": "DEMO-GRO-WHITE-038",
+      "slug": "demo-grocery-white-cauliflower",
+      "name": "Cauliflower 1 Head",
+      "category": "grocery-vegetables",
+      "price": "2.50",
+      "unit": "pack",
+      "description": "Cauliflower 1 Head. One fresh white cauliflower head framed by short green leaves. Illustrative demo product photography.",
+      "images": [
+        "Grocery-Items/38-cauliflower.webp"
+      ],
+      "thumbnail": "Grocery-Items/thumbnails/38-cauliflower.webp",
+      "attributes": {},
+      "stock": 20
+    },
+    {
+      "sku": "DEMO-GRO-WHITE-039",
+      "slug": "demo-grocery-white-mushrooms",
+      "name": "White Mushrooms 250g",
+      "category": "grocery-vegetables",
+      "price": "2.00",
+      "unit": "pack",
+      "description": "White Mushrooms 250g. A small neat cluster of six white button mushrooms, one sliced in half. Illustrative demo product photography.",
+      "images": [
+        "Grocery-Items/39-mushrooms.webp"
+      ],
+      "thumbnail": "Grocery-Items/thumbnails/39-mushrooms.webp",
+      "attributes": {},
+      "stock": 20
+    },
+    {
+      "sku": "DEMO-GRO-WHITE-040",
+      "slug": "demo-grocery-white-honey",
+      "name": "Honey 350g",
+      "category": "grocery-pantry",
+      "price": "4.00",
+      "unit": "pack",
+      "description": "Honey 350g. One plain clear glass jar of golden honey with a closed gold metal lid, no label. Illustrative demo product photography.",
+      "images": [
+        "Grocery-Items/40-honey.webp"
+      ],
+      "thumbnail": "Grocery-Items/thumbnails/40-honey.webp",
+      "attributes": {},
+      "stock": 20
+    },
+    {
+      "sku": "DEMO-GRO-WHITE-041",
+      "slug": "demo-grocery-white-beef-steak",
+      "name": "Beef Steak 500g",
+      "category": "grocery-meat-poultry",
+      "price": "8.00",
+      "unit": "pack",
+      "description": "Beef Steak 500g. One fresh raw boneless beef ribeye steak with natural fine marbling, neatly trimmed supermarket cut. Illustrative demo product photography.",
+      "images": [
+        "Grocery-Items/41-beef-steak.webp"
+      ],
+      "thumbnail": "Grocery-Items/thumbnails/41-beef-steak.webp",
+      "attributes": {},
+      "stock": 20
+    },
+    {
+      "sku": "DEMO-GRO-WHITE-042",
+      "slug": "demo-grocery-white-lamb-chops",
+      "name": "Lamb Chops 500g",
+      "category": "grocery-meat-poultry",
+      "price": "9.50",
+      "unit": "pack",
+      "description": "Lamb Chops 500g. Three fresh raw lamb rib chops arranged neatly, clean butcher-prepared cuts. Illustrative demo product photography.",
+      "images": [
+        "Grocery-Items/42-lamb-chops.webp"
+      ],
+      "thumbnail": "Grocery-Items/thumbnails/42-lamb-chops.webp",
+      "attributes": {},
+      "stock": 20
+    },
+    {
+      "sku": "DEMO-GRO-WHITE-043",
+      "slug": "demo-grocery-white-chicken-breast",
+      "name": "Chicken Breast 500g",
+      "category": "grocery-meat-poultry",
+      "price": "4.50",
+      "unit": "pack",
+      "description": "Chicken Breast 500g. Two fresh raw boneless skinless chicken breast fillets, clean supermarket cuts. Illustrative demo product photography.",
+      "images": [
+        "Grocery-Items/43-chicken-breast.webp"
+      ],
+      "thumbnail": "Grocery-Items/thumbnails/43-chicken-breast.webp",
+      "attributes": {},
+      "stock": 20
+    },
+    {
+      "sku": "DEMO-GRO-WHITE-044",
+      "slug": "demo-grocery-white-salmon-fillet",
+      "name": "Salmon Fillet 300g",
+      "category": "grocery-fish-seafood",
+      "price": "8.50",
+      "unit": "pack",
+      "description": "Salmon Fillet 300g. One fresh raw salmon fillet with vivid orange flesh and natural white fat lines, clean supermarket portion. Illustrative demo product photography.",
+      "images": [
+        "Grocery-Items/44-salmon-fillet.webp"
+      ],
+      "thumbnail": "Grocery-Items/thumbnails/44-salmon-fillet.webp",
+      "attributes": {},
+      "stock": 20
+    },
+    {
+      "sku": "DEMO-GRO-WHITE-045",
+      "slug": "demo-grocery-white-sea-bream",
+      "name": "Whole Sea Bream 500g",
+      "category": "grocery-fish-seafood",
+      "price": "6.00",
+      "unit": "pack",
+      "description": "Whole Sea Bream 500g. One fresh whole silver sea bream, clean intact market fish lying diagonally with all fins and tail visible. Illustrative demo product photography.",
+      "images": [
+        "Grocery-Items/45-sea-bream.webp"
+      ],
+      "thumbnail": "Grocery-Items/thumbnails/45-sea-bream.webp",
+      "attributes": {},
+      "stock": 20
+    },
+    {
+      "sku": "DEMO-GRO-WHITE-046",
+      "slug": "demo-grocery-white-sukkari-dates",
+      "name": "Sukkari Dates 400g",
+      "category": "grocery-dates-nuts",
+      "price": "3.50",
+      "unit": "pack",
+      "description": "Sukkari Dates 400g. A small neat pile of golden brown sukkari dates with natural softly wrinkled skins. Illustrative demo product photography.",
+      "images": [
+        "Grocery-Items/46-sukkari-dates.webp"
+      ],
+      "thumbnail": "Grocery-Items/thumbnails/46-sukkari-dates.webp",
+      "attributes": {},
+      "stock": 20
+    },
+    {
+      "sku": "DEMO-GRO-WHITE-047",
+      "slug": "demo-grocery-white-ajwa-dates",
+      "name": "Ajwa Dates 400g",
+      "category": "grocery-dates-nuts",
+      "price": "5.00",
+      "unit": "pack",
+      "description": "Ajwa Dates 400g. A small neat pile of dark brown almost black ajwa dates with naturally wrinkled skins. Illustrative demo product photography.",
+      "images": [
+        "Grocery-Items/47-ajwa-dates.webp"
+      ],
+      "thumbnail": "Grocery-Items/thumbnails/47-ajwa-dates.webp",
+      "attributes": {},
+      "stock": 20
+    },
+    {
+      "sku": "DEMO-GRO-WHITE-048",
+      "slug": "demo-grocery-white-pistachios",
+      "name": "Pistachios 250g",
+      "category": "grocery-dates-nuts",
+      "price": "5.00",
+      "unit": "pack",
+      "description": "Pistachios 250g. A small clear glass bowl filled with roasted pistachios in naturally split beige shells revealing green kernels. Illustrative demo product photography.",
+      "images": [
+        "Grocery-Items/48-pistachios.webp"
+      ],
+      "thumbnail": "Grocery-Items/thumbnails/48-pistachios.webp",
+      "attributes": {},
+      "stock": 20
+    },
+    {
+      "sku": "DEMO-GRO-WHITE-049",
+      "slug": "demo-grocery-white-cashews",
+      "name": "Cashews 250g",
+      "category": "grocery-dates-nuts",
+      "price": "4.00",
+      "unit": "pack",
+      "description": "Cashews 250g. A small clear glass bowl filled with plain whole ivory cashew nuts. Illustrative demo product photography.",
+      "images": [
+        "Grocery-Items/49-cashews.webp"
+      ],
+      "thumbnail": "Grocery-Items/thumbnails/49-cashews.webp",
+      "attributes": {},
+      "stock": 20
+    },
+    {
+      "sku": "DEMO-GRO-WHITE-050",
+      "slug": "demo-grocery-white-walnuts",
+      "name": "Walnuts 250g",
+      "category": "grocery-dates-nuts",
+      "price": "3.75",
+      "unit": "pack",
+      "description": "Walnuts 250g. A small clear glass bowl filled with shelled walnut halves showing natural textured golden brown kernels. Illustrative demo product photography.",
+      "images": [
+        "Grocery-Items/50-walnuts.webp"
+      ],
+      "thumbnail": "Grocery-Items/thumbnails/50-walnuts.webp",
+      "attributes": {},
+      "stock": 20
+    }
+  ],
+  "attributes": [
+    {
+      "entity_type": "product",
+      "attribute_code": "demo-thumbnail",
+      "label": "Demo product thumbnail",
+      "input_type": "media_image",
+      "scope": "global",
+      "is_required": false,
+      "is_unique": false,
+      "is_searchable": false,
+      "is_filterable": false,
+      "is_comparable": false,
+      "is_visible_on_front": false,
+      "used_for_promo_rules": false,
+      "used_for_configurations": false,
+      "swatch_type": "none",
+      "options": [],
+      "version": 0
+    }
+  ],
+  "families": [],
+  "retired_products": [
+    {
+      "sku": "DEMO-GRO-50-001",
+      "slug": "demo-grocery-organic-bananas"
+    },
+    {
+      "sku": "DEMO-GRO-50-002",
+      "slug": "demo-grocery-gala-apples"
+    },
+    {
+      "sku": "DEMO-GRO-50-003",
+      "slug": "demo-grocery-whole-milk"
+    },
+    {
+      "sku": "DEMO-GRO-50-004",
+      "slug": "demo-grocery-baladi-bread"
+    },
+    {
+      "sku": "DEMO-GRO-50-005",
+      "slug": "demo-grocery-egyptian-rice"
+    },
+    {
+      "sku": "DEMO-GRO-50-006",
+      "slug": "demo-grocery-dried-fava-beans"
+    },
+    {
+      "sku": "DEMO-GRO-50-007",
+      "slug": "demo-grocery-fresh-molokhia"
+    },
+    {
+      "sku": "DEMO-GRO-50-008",
+      "slug": "demo-grocery-roumi-cheese"
+    },
+    {
+      "sku": "DEMO-GRO-50-009",
+      "slug": "demo-grocery-medjool-dates"
+    },
+    {
+      "sku": "DEMO-GRO-50-010",
+      "slug": "demo-grocery-tahini-jar"
+    },
+    {
+      "sku": "DEMO-GRO-50-011",
+      "slug": "demo-grocery-baladi-ghee"
+    },
+    {
+      "sku": "DEMO-GRO-50-012",
+      "slug": "demo-grocery-karkadeh-hibiscus"
+    },
+    {
+      "sku": "DEMO-GRO-50-013",
+      "slug": "demo-grocery-egyptian-cucumbers"
+    },
+    {
+      "sku": "DEMO-GRO-50-014",
+      "slug": "demo-grocery-roma-tomatoes"
+    },
+    {
+      "sku": "DEMO-GRO-50-015",
+      "slug": "demo-grocery-egyptian-lemons"
+    },
+    {
+      "sku": "DEMO-GRO-50-016",
+      "slug": "demo-grocery-fresh-mint"
+    },
+    {
+      "sku": "DEMO-GRO-50-017",
+      "slug": "demo-grocery-cane-sugar"
+    },
+    {
+      "sku": "DEMO-GRO-50-018",
+      "slug": "demo-grocery-red-lentils"
+    },
+    {
+      "sku": "DEMO-GRO-50-019",
+      "slug": "demo-grocery-dish-soap"
+    },
+    {
+      "sku": "DEMO-GRO-50-020",
+      "slug": "demo-grocery-fresh-oranges"
+    },
+    {
+      "sku": "DEMO-GRO-50-021",
+      "slug": "demo-grocery-fresh-strawberries"
+    },
+    {
+      "sku": "DEMO-GRO-50-022",
+      "slug": "demo-grocery-fresh-potatoes"
+    },
+    {
+      "sku": "DEMO-GRO-50-023",
+      "slug": "demo-grocery-red-onions"
+    },
+    {
+      "sku": "DEMO-GRO-50-024",
+      "slug": "demo-grocery-fresh-carrots"
+    },
+    {
+      "sku": "DEMO-GRO-50-025",
+      "slug": "demo-grocery-farm-eggs"
+    },
+    {
+      "sku": "DEMO-GRO-50-026",
+      "slug": "demo-grocery-plain-yogurt"
+    },
+    {
+      "sku": "DEMO-GRO-50-027",
+      "slug": "demo-grocery-olive-oil"
+    },
+    {
+      "sku": "DEMO-GRO-50-028",
+      "slug": "demo-grocery-penne-pasta"
+    },
+    {
+      "sku": "DEMO-GRO-50-029",
+      "slug": "demo-grocery-raw-almonds"
+    },
+    {
+      "sku": "DEMO-GRO-50-030",
+      "slug": "demo-grocery-wildflower-honey"
+    },
+    {
+      "sku": "DEMO-GRO-50-031",
+      "slug": "demo-grocery-organic-bananas-double-pack"
+    },
+    {
+      "sku": "DEMO-GRO-50-032",
+      "slug": "demo-grocery-gala-apples-double-pack"
+    },
+    {
+      "sku": "DEMO-GRO-50-033",
+      "slug": "demo-grocery-whole-milk-double-pack"
+    },
+    {
+      "sku": "DEMO-GRO-50-034",
+      "slug": "demo-grocery-baladi-bread-double-pack"
+    },
+    {
+      "sku": "DEMO-GRO-50-035",
+      "slug": "demo-grocery-egyptian-rice-double-pack"
+    },
+    {
+      "sku": "DEMO-GRO-50-036",
+      "slug": "demo-grocery-dried-fava-beans-double-pack"
+    },
+    {
+      "sku": "DEMO-GRO-50-037",
+      "slug": "demo-grocery-fresh-molokhia-double-pack"
+    },
+    {
+      "sku": "DEMO-GRO-50-038",
+      "slug": "demo-grocery-roumi-cheese-double-pack"
+    },
+    {
+      "sku": "DEMO-GRO-50-039",
+      "slug": "demo-grocery-medjool-dates-double-pack"
+    },
+    {
+      "sku": "DEMO-GRO-50-040",
+      "slug": "demo-grocery-tahini-jar-double-pack"
+    },
+    {
+      "sku": "DEMO-GRO-50-041",
+      "slug": "demo-grocery-baladi-ghee-double-pack"
+    },
+    {
+      "sku": "DEMO-GRO-50-042",
+      "slug": "demo-grocery-karkadeh-hibiscus-double-pack"
+    },
+    {
+      "sku": "DEMO-GRO-50-043",
+      "slug": "demo-grocery-egyptian-cucumbers-double-pack"
+    },
+    {
+      "sku": "DEMO-GRO-50-044",
+      "slug": "demo-grocery-roma-tomatoes-double-pack"
+    },
+    {
+      "sku": "DEMO-GRO-50-045",
+      "slug": "demo-grocery-egyptian-lemons-double-pack"
+    },
+    {
+      "sku": "DEMO-GRO-50-046",
+      "slug": "demo-grocery-fresh-mint-double-pack"
+    },
+    {
+      "sku": "DEMO-GRO-50-047",
+      "slug": "demo-grocery-cane-sugar-double-pack"
+    },
+    {
+      "sku": "DEMO-GRO-50-048",
+      "slug": "demo-grocery-red-lentils-double-pack"
+    },
+    {
+      "sku": "DEMO-GRO-50-049",
+      "slug": "demo-grocery-dish-soap-double-pack"
+    },
+    {
+      "sku": "DEMO-GRO-50-050",
+      "slug": "demo-grocery-fresh-oranges-double-pack"
+    }
+  ],
+  "retired_categories": [
+    "fresh-produce",
+    "baladi-bakery",
+    "egyptian-breakfast",
+    "pantry-staples",
+    "cheese-dairy",
+    "dates-nuts-sweets",
+    "tea-cold-drinks",
+    "household-basics"
+  ]
+}

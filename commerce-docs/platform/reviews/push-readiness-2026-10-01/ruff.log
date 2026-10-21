@@ -1,0 +1,231 @@
+I001 [*] Import block is un-sorted or un-formatted
+  --> ai-service/app/commerce_action_engine/actions/shopping/selection.py:3:1
+   |
+ 1 |   """Rank verified catalog candidates for shopping requests."""
+ 2 |
+ 3 | / from decimal import Decimal
+ 4 | |
+ 5 | | from app.commerce_action_engine.actions.catalog.references import key
+ 6 | |
+ 7 | | from app.commerce_action_engine.actions.catalog import Product
+ 8 | | from app.commerce_action_engine.actions.shopping.constraints import (
+ 9 | |     matches_attribute,
+10 | |     mismatches,
+11 | | )
+12 | | from app.commerce_action_engine.actions.shopping.contracts import (
+13 | |     Constraint,
+14 | |     ShoppingIntent,
+15 | | )
+16 | | from app.commerce_action_engine.actions.shopping.personalization import (
+17 | |     excluded as personalization_excluded,
+18 | | )
+19 | | from app.commerce_action_engine.actions.shopping.personalization import (
+20 | |     rank as personalization_rank,
+21 | | )
+   | |_^
+help: Organize imports
+  |
+4 |
+  - from app.commerce_action_engine.actions.catalog.references import key
+  -
+5 | from app.commerce_action_engine.actions.catalog import Product
+6 + from app.commerce_action_engine.actions.catalog.references import key
+7 | from app.commerce_action_engine.actions.shopping.constraints import (
+  |
+
+I001 [*] Import block is un-sorted or un-formatted
+ --> ai-service/app/commerce_language_engine/scripts/generate-order-corpus.py:1:1
+  |
+1 | / import json, hashlib
+2 | | from pathlib import Path
+  | |________________________^
+3 |   root=Path(__file__).resolve().parent.parent / 'tests/fixtures/order-requests-v1'
+4 |   # Authored language frames and independently specified product/quantity labels.
+  |
+help: Organize imports
+  |
+  - import json, hashlib
+1 + import hashlib
+2 + import json
+3 | from pathlib import Path
+4 +
+5 | root=Path(__file__).resolve().parent.parent / 'tests/fixtures/order-requests-v1'
+  |
+
+C408 Unnecessary `dict()` call (rewrite as a literal)
+  --> ai-service/app/commerce_language_engine/scripts/generate-order-corpus.py:60:15
+   |
+58 | …me in enumerate(frames):
+59 | …tems,expected) in enumerate(variants):
+60 | …pend(dict(id=f'order-{f+1:02}-{v+1:02}',family=f'phrase-{f+1:02}',split='holdout' if f%5==4 else 'development',text=frame.format(items=items),expected=dict(kind='selection',items=[dict(productText=n,quantity=q) for n,q in expected])))
+   |       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+61 | …mily,frame) in enumerate(guards):
+62 | …me in enumerate(['bananas','apples','baladi','milk','eggs','chesse','rice','tomatos','yogurt','lemons']):
+   |
+help: Rewrite as a literal
+
+C408 Unnecessary `dict()` call (rewrite as a literal)
+  --> ai-service/app/commerce_language_engine/scripts/generate-order-corpus.py:60:161
+   |
+58 | …
+59 | …
+60 | …mat(items=items),expected=dict(kind='selection',items=[dict(productText=n,quantity=q) for n,q in expected])))
+   |                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+61 | …
+62 | …
+   |
+help: Rewrite as a literal
+
+C408 Unnecessary `dict()` call (rewrite as a literal)
+  --> ai-service/app/commerce_language_engine/scripts/generate-order-corpus.py:60:190
+   |
+58 | …
+59 | …
+60 | …items=items),expected=dict(kind='selection',items=[dict(productText=n,quantity=q) for n,q in expected])))
+   |                                                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+61 | …
+62 | …
+   |
+help: Rewrite as a literal
+
+C408 Unnecessary `dict()` call (rewrite as a literal)
+  --> ai-service/app/commerce_language_engine/scripts/generate-order-corpus.py:63:15
+   |
+61 | …mily,frame) in enumerate(guards):
+62 | …me in enumerate(['bananas','apples','baladi','milk','eggs','chesse','rice','tomatos','yogurt','lemons']):
+63 | …pend(dict(id=f'guard-{g+1:02}-{v+1:02}',family=family,split='holdout' if g%5==4 else 'development',text=frame.format(item=f'{v%3+1} {name}',name=name),expected=dict(kind='clarify')))
+   |       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+64 | …n(rows)==1000 and len({r['text'] for r in rows})==1000
+65 | …dict(version=1,count=1000,selection=700,clarification=300,language='English, including local product names and typos',provenance='Synthetic, assistant-authored 100 language frames crosse…
+   |
+help: Rewrite as a literal
+
+C408 Unnecessary `dict()` call (rewrite as a literal)
+  --> ai-service/app/commerce_language_engine/scripts/generate-order-corpus.py:63:170
+   |
+61 | …
+62 | …:
+63 | …frame.format(item=f'{v%3+1} {name}',name=name),expected=dict(kind='clarify')))
+   |                                                          ^^^^^^^^^^^^^^^^^^^^
+64 | …
+65 | …es and typos',provenance='Synthetic, assistant-authored 100 language frames crossed with 10 independently labeled baskets/products. N…
+   |
+help: Rewrite as a literal
+
+C408 Unnecessary `dict()` call (rewrite as a literal)
+  --> ai-service/app/commerce_language_engine/scripts/generate-order-corpus.py:65:10
+   |
+63 | …ws.append(dict(id=f'guard-{g+1:02}-{v+1:02}',family=family,split='holdout' if g%5==4 else 'development',text=frame.format(item=f'{v%3+1} {name}',name=name),expected=dict(kind='clarify')))
+64 | …rt len(rows)==1000 and len({r['text'] for r in rows})==1000
+65 | …fest=dict(version=1,count=1000,selection=700,clari…independent real-world benchmark.',sha256={})
+   |       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^…^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+66 | …split in ['development','holdout']:
+67 | …tent=''.join(json.dumps(r,ensure_ascii=False)+'\n' for r in rows if r['split']==split)
+   |
+help: Rewrite as a literal
+
+B023 Function definition does not bind loop variable `module`
+  --> ai-service/docs/architecture-checkpoint-2026-10-01/audit_imports.py:36:41
+   |
+34 |         def edge(self, target, node):
+35 |             if target in FILES and not self.typing:
+36 |                 EDGES.append({'source': module, 'target': target, 'line': node.lineno, 'deferred': bool(self.deferred)})
+   |                                         ^^^^^^
+37 |         def visit_Import(self, node):
+38 |             for alias in node.names:
+   |
+
+B023 Function definition does not bind loop variable `package`
+  --> ai-service/docs/architecture-checkpoint-2026-10-01/audit_imports.py:41:73
+   |
+39 |                 self.edge(alias.name, node)
+40 |         def visit_ImportFrom(self, node):
+41 |             base = resolve_name('.' * node.level + (node.module or ''), package) if node.level else node.module or ''
+   |                                                                         ^^^^^^^
+42 |             self.edge(base, node)
+43 |             for alias in node.names:
+   |
+
+I001 [*] Import block is un-sorted or un-formatted
+ --> ai-service/docs/architecture-checkpoint-2026-10-01/factory_budget_probe.py:3:1
+  |
+1 |   """Historical pre-fix diagnostic; current expectations live in tests/test_turn_read_budget.py."""
+2 |
+3 | / from dataclasses import replace
+4 | | import importlib
+5 | | import pytest
+6 | | from test_assistant import identity
+7 | | from test_assistant import test_order_card_grounding_and_sse as order_journey
+  | |_____________________________________________________________________________^
+8 |
+9 |   @pytest.mark.parametrize('planning',[False, True])
+  |
+help: Organize imports
+   |
+2  |
+3  + import importlib
+4  | from dataclasses import replace
+   - import importlib
+5  +
+6  | import pytest
+7  | from test_assistant import identity
+8  | from test_assistant import test_order_card_grounding_and_sse as order_journey
+9  |
+10 +
+11 | @pytest.mark.parametrize('planning',[False, True])
+   |
+
+F401 [*] `test_assistant.identity` imported but unused
+ --> ai-service/docs/architecture-checkpoint-2026-10-01/factory_budget_probe.py:6:28
+  |
+4 | import importlib
+5 | import pytest
+6 | from test_assistant import identity
+  |                            ^^^^^^^^
+7 | from test_assistant import test_order_card_grounding_and_sse as order_journey
+  |
+help: Remove unused import: `test_assistant.identity`
+  |
+5 | import pytest
+  - from test_assistant import identity
+6 | from test_assistant import test_order_card_grounding_and_sse as order_journey
+  |
+
+F811 Redefinition of unused `identity` from line 6
+  --> ai-service/docs/architecture-checkpoint-2026-10-01/factory_budget_probe.py:10:53
+   |
+ 9 | @pytest.mark.parametrize('planning',[False, True])
+10 | def test_prepared_factory_creates_separate_counters(identity,monkeypatch,planning):
+   |                                                     ^^^^^^^^ `identity` redefined here
+11 |     bootstrap=importlib.import_module('app.commerce_action_engine.application.bootstrap')
+12 |     original=bootstrap.HandleTurn
+   |
+  ::: ai-service/docs/architecture-checkpoint-2026-10-01/factory_budget_probe.py:6:28
+   |
+ 4 | import importlib
+ 5 | import pytest
+ 6 | from test_assistant import identity
+   |                            -------- previous definition of `identity` here
+ 7 | from test_assistant import test_order_card_grounding_and_sse as order_journey
+   |
+help: Remove definition: `identity`
+
+I001 [*] Import block is un-sorted or un-formatted
+ --> ai-service/docs/architecture-checkpoint-2026-10-01/render_workflow.py:2:1
+  |
+1 |   """Render the implemented workflow as a reproducible PNG using Pillow."""
+2 | / from pathlib import Path
+3 | | from PIL import Image, ImageDraw, ImageFont
+  | |___________________________________________^
+4 |
+5 |   OUT=Path(__file__).with_name('architecture-workflow.png')
+  |
+help: Organize imports
+  |
+2 | from pathlib import Path
+3 +
+4 | from PIL import Image, ImageDraw, ImageFont
+  |
+
+Found 14 errors.
+[*] 5 fixable with the `--fix` option (6 hidden fixes can be enabled with the `--unsafe-fixes` option).

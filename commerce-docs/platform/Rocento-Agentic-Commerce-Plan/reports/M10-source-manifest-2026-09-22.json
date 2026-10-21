@@ -1,0 +1,308 @@
+{
+  "base_commit": "4c4f392",
+  "staging_project": "rocento-shopping-stage-97710b3c",
+  "files": [
+    {
+      "path": "backend/migrations/20260922150000_market_commerce.sql",
+      "sha256": "2492db05baedc21421d1e3b1d803b3bcfd6ec93ed4864f0052ec4845c8566ae8",
+      "tracked_before_m10": false,
+      "staging_sha256": "2492db05baedc21421d1e3b1d803b3bcfd6ec93ed4864f0052ec4845c8566ae8",
+      "matches_staging_snapshot": true
+    },
+    {
+      "path": "backend/crates/domain-cart-checkout/src/market.rs",
+      "sha256": "97ec106a829806652e1c93f41f5fe507f187427f7b85e46b6535d29c4e510ab8",
+      "tracked_before_m10": false,
+      "staging_sha256": "97ec106a829806652e1c93f41f5fe507f187427f7b85e46b6535d29c4e510ab8",
+      "matches_staging_snapshot": true
+    },
+    {
+      "path": "backend/crates/domain-cart-checkout/src/lib.rs",
+      "sha256": "7b01c82847dbf0c686c2beab9e6546419722721493bdf4ba4ba895934d82c00e",
+      "tracked_before_m10": true,
+      "staging_sha256": "7b01c82847dbf0c686c2beab9e6546419722721493bdf4ba4ba895934d82c00e",
+      "matches_staging_snapshot": true
+    },
+    {
+      "path": "backend/crates/domain-cart-checkout/src/shopping.rs",
+      "sha256": "16c86862d889b8f48f548d7804ccac9398ed1af56357c692b1a8fcaff933a076",
+      "tracked_before_m10": true,
+      "staging_sha256": "16c86862d889b8f48f548d7804ccac9398ed1af56357c692b1a8fcaff933a076",
+      "matches_staging_snapshot": true
+    },
+    {
+      "path": "backend/crates/domain-cart-checkout/src/trust.rs",
+      "sha256": "361a03e0cb4fd3fff7266b97c51b011e326ea9de01df9d862101962fde3921d6",
+      "tracked_before_m10": true,
+      "staging_sha256": "361a03e0cb4fd3fff7266b97c51b011e326ea9de01df9d862101962fde3921d6",
+      "matches_staging_snapshot": true
+    },
+    {
+      "path": "backend/crates/domain-cart-checkout/src/checkout.rs",
+      "sha256": "5c16a6baf543b7c27a344b810fea326443b372d4028d706e4e9a5c64d4f4741d",
+      "tracked_before_m10": false,
+      "staging_sha256": "5c16a6baf543b7c27a344b810fea326443b372d4028d706e4e9a5c64d4f4741d",
+      "matches_staging_snapshot": true
+    },
+    {
+      "path": "backend/crates/domain-catalog/src/lib.rs",
+      "sha256": "e81102803ca000fa539a7aba1ee7d96c514f10cc2b72007488dab5c400d3ef1c",
+      "tracked_before_m10": true,
+      "staging_sha256": "e81102803ca000fa539a7aba1ee7d96c514f10cc2b72007488dab5c400d3ef1c",
+      "matches_staging_snapshot": true
+    },
+    {
+      "path": "backend/crates/domain-orders/src/lib.rs",
+      "sha256": "a4f4121187a9bf39326dba76f114086c700a3ea3d3aabf318d34daa88f70fdce",
+      "tracked_before_m10": false,
+      "staging_sha256": "a4f4121187a9bf39326dba76f114086c700a3ea3d3aabf318d34daa88f70fdce",
+      "matches_staging_snapshot": true
+    },
+    {
+      "path": "backend/crates/domain-fulfillment/src/lib.rs",
+      "sha256": "0fa0cb232bb9d276d25fe01e24681d79f4f298d61eaf023d1fdbb30b8bae6d6a",
+      "tracked_before_m10": false,
+      "staging_sha256": "0fa0cb232bb9d276d25fe01e24681d79f4f298d61eaf023d1fdbb30b8bae6d6a",
+      "matches_staging_snapshot": true
+    },
+    {
+      "path": "backend/crates/domain-fulfillment/src/market_delivery.rs",
+      "sha256": "7b820c3e030e1765f9ca9bda145e0ade9a5a04d3efcaa0bbceff3fb6df3d8c5c",
+      "tracked_before_m10": false,
+      "staging_sha256": "7b820c3e030e1765f9ca9bda145e0ade9a5a04d3efcaa0bbceff3fb6df3d8c5c",
+      "matches_staging_snapshot": true
+    },
+    {
+      "path": "backend/crates/api-gateway/src/cart.rs",
+      "sha256": "7e14e72caf2aae7e460b5d63374efa6fa4c93f07efbc58e7de36bc76f5c20c13",
+      "tracked_before_m10": false,
+      "staging_sha256": "7e14e72caf2aae7e460b5d63374efa6fa4c93f07efbc58e7de36bc76f5c20c13",
+      "matches_staging_snapshot": true
+    },
+    {
+      "path": "backend/crates/api-gateway/src/lib.rs",
+      "sha256": "8428446f6ca9d6327118bb3e9b08606f2a854da2095eb58b391a74da622e93d0",
+      "tracked_before_m10": true,
+      "staging_sha256": "8428446f6ca9d6327118bb3e9b08606f2a854da2095eb58b391a74da622e93d0",
+      "matches_staging_snapshot": true
+    },
+    {
+      "path": "backend/crates/api-gateway/src/market.rs",
+      "sha256": "982cedacfdc083781cff32d687a239cd11a9668e0ba3d81ed0d18e3e3d59cb4a",
+      "tracked_before_m10": false,
+      "staging_sha256": "982cedacfdc083781cff32d687a239cd11a9668e0ba3d81ed0d18e3e3d59cb4a",
+      "matches_staging_snapshot": true
+    },
+    {
+      "path": "backend/crates/api-gateway/src/assistant_baseline.rs",
+      "sha256": "1789abd2d6cfecb0c5ef1d2160abc2ffa3e9a8edd3babae5281d65ba2768f599",
+      "tracked_before_m10": false,
+      "staging_sha256": "1789abd2d6cfecb0c5ef1d2160abc2ffa3e9a8edd3babae5281d65ba2768f599",
+      "matches_staging_snapshot": true
+    },
+    {
+      "path": "backend/crates/api-gateway/openapi/generate_openapi.py",
+      "sha256": "71ffdb48d3a6a1b6a1474cec5ff4ac1e8d91e85e8f6cbf46dd1849eb81595077",
+      "tracked_before_m10": true,
+      "staging_sha256": "71ffdb48d3a6a1b6a1474cec5ff4ac1e8d91e85e8f6cbf46dd1849eb81595077",
+      "matches_staging_snapshot": true
+    },
+    {
+      "path": "backend/crates/api-gateway/openapi/market_contract.py",
+      "sha256": "96c9236ea1d9c71138f9a4febf2bc3547c8140401379775a6b459876ad8c5247",
+      "tracked_before_m10": false,
+      "staging_sha256": "96c9236ea1d9c71138f9a4febf2bc3547c8140401379775a6b459876ad8c5247",
+      "matches_staging_snapshot": true
+    },
+    {
+      "path": "backend/openapi.json",
+      "sha256": "7481e22ac62a67974cb470711f359f1bd2e44cdc40fb07ad38aa11dd908506a4",
+      "tracked_before_m10": true,
+      "staging_sha256": "7481e22ac62a67974cb470711f359f1bd2e44cdc40fb07ad38aa11dd908506a4",
+      "matches_staging_snapshot": true
+    },
+    {
+      "path": "ai-service/app/knowledge.py",
+      "sha256": "0e48e5b7189fbd13e42e2c221a1a6c422a30f78c0efa189926d044069ae3dc32",
+      "tracked_before_m10": false,
+      "staging_sha256": "0e48e5b7189fbd13e42e2c221a1a6c422a30f78c0efa189926d044069ae3dc32",
+      "matches_staging_snapshot": true
+    },
+    {
+      "path": "ai-service/app/knowledge_store.py",
+      "sha256": "35fa6541492e78b5e44acad6d8b2ef2bf918a407d4c730574a36cd869f098ca9",
+      "tracked_before_m10": false,
+      "staging_sha256": "35fa6541492e78b5e44acad6d8b2ef2bf918a407d4c730574a36cd869f098ca9",
+      "matches_staging_snapshot": true
+    },
+    {
+      "path": "ai-service/app/policy_answers.py",
+      "sha256": "f45b1943bccee0075c2562e55046d725ca5cd1a90923b35517eb0355dea9302e",
+      "tracked_before_m10": false,
+      "staging_sha256": "f45b1943bccee0075c2562e55046d725ca5cd1a90923b35517eb0355dea9302e",
+      "matches_staging_snapshot": true
+    },
+    {
+      "path": "ai-service/app/runtime.py",
+      "sha256": "014f2b6f9fe79220a2761eab7c4274fd563ee88464333c4e1be4e84707e8e206",
+      "tracked_before_m10": true,
+      "staging_sha256": "014f2b6f9fe79220a2761eab7c4274fd563ee88464333c4e1be4e84707e8e206",
+      "matches_staging_snapshot": true
+    },
+    {
+      "path": "ai-service/app/baskets.py",
+      "sha256": "21550102199e4570fc16fd6f4ae37197c821b53d24ed2370613aba9deb2afeaa",
+      "tracked_before_m10": true,
+      "staging_sha256": "21550102199e4570fc16fd6f4ae37197c821b53d24ed2370613aba9deb2afeaa",
+      "matches_staging_snapshot": true
+    },
+    {
+      "path": "ai-service/tests/test_knowledge.py",
+      "sha256": "dd7b39514c70c46842101517d92ccb39b9cf0aaa93dd9aa314ade6c289a895c4",
+      "tracked_before_m10": false,
+      "staging_sha256": "dd7b39514c70c46842101517d92ccb39b9cf0aaa93dd9aa314ade6c289a895c4",
+      "matches_staging_snapshot": true
+    },
+    {
+      "path": "ai-service/tests/test_knowledge_store.py",
+      "sha256": "23df74e835f55d3be994ba5998598384e5184eed30dc40ed27b51914d25ba5d0",
+      "tracked_before_m10": false,
+      "staging_sha256": "23df74e835f55d3be994ba5998598384e5184eed30dc40ed27b51914d25ba5d0",
+      "matches_staging_snapshot": true
+    },
+    {
+      "path": "ai-service/tests/test_market_basket.py",
+      "sha256": "d700b7141042572c65e2680e16a015255cf1993586c07a2d8d4ad979b8af0ff4",
+      "tracked_before_m10": false
+    },
+    {
+      "path": "ai-service/tests/test_market_policy.py",
+      "sha256": "53b03ef92a1bd69baa77c8197f7beacf7101b970d5be642429d05330389bafe4",
+      "tracked_before_m10": false,
+      "staging_sha256": "53b03ef92a1bd69baa77c8197f7beacf7101b970d5be642429d05330389bafe4",
+      "matches_staging_snapshot": true
+    },
+    {
+      "path": "ai-service/tests/test_baskets.py",
+      "sha256": "7ba7c5a1a7f5ff9db677d476eab1ba9b84740ab0bd096560e3f8237355c3695c",
+      "tracked_before_m10": false,
+      "staging_sha256": "16fe263f5c5320237c81feab56fba5dc7a9a6f07dcb8ebc44105ed9710d67f57",
+      "matches_staging_snapshot": false
+    },
+    {
+      "path": "ai-service/evals/suite.json",
+      "sha256": "2115e53d59b8516eace6a6b4283be3a22b4e2a004dbe78cfef54bd4e713d0618",
+      "tracked_before_m10": true,
+      "staging_sha256": "462b5fc86ab106005d4a6a4b33e0b421ee8c926e5deb2fa060d0509464afd8fe",
+      "matches_staging_snapshot": false
+    },
+    {
+      "path": "frontend/packages/api-client/src/identity.ts",
+      "sha256": "35a48cd4c6b52aa0801a34cd75063bea126cc17218b7cd679dd6f66f57ffd82c",
+      "tracked_before_m10": true,
+      "staging_sha256": "35a48cd4c6b52aa0801a34cd75063bea126cc17218b7cd679dd6f66f57ffd82c",
+      "matches_staging_snapshot": true
+    },
+    {
+      "path": "frontend/packages/api-client/src/schema.d.ts",
+      "sha256": "3c4f92560e542097835f12d8320cf2504b856bda08e64e820dc35fbbc4101db8",
+      "tracked_before_m10": true,
+      "staging_sha256": "3c4f92560e542097835f12d8320cf2504b856bda08e64e820dc35fbbc4101db8",
+      "matches_staging_snapshot": true
+    },
+    {
+      "path": "frontend/apps/storefront/src/shopping.tsx",
+      "sha256": "f3ff691d49322a559d1eecf14e91096c97877ec37407bea469e001c8b172ef5d",
+      "tracked_before_m10": true,
+      "staging_sha256": "f3ff691d49322a559d1eecf14e91096c97877ec37407bea469e001c8b172ef5d",
+      "matches_staging_snapshot": true
+    },
+    {
+      "path": "frontend/apps/storefront/src/orders.tsx",
+      "sha256": "d16aa128ee80f35aabf2f5bbc84ec6e17556d9621f686543a8144db31ed0eefb",
+      "tracked_before_m10": false,
+      "staging_sha256": "d16aa128ee80f35aabf2f5bbc84ec6e17556d9621f686543a8144db31ed0eefb",
+      "matches_staging_snapshot": true
+    },
+    {
+      "path": "frontend/apps/storefront/src/cart.tsx",
+      "sha256": "a1510f8bb0675630ed247157b25ddb3d3dc35143a1238996854ae19632f5e70f",
+      "tracked_before_m10": false,
+      "staging_sha256": "a1510f8bb0675630ed247157b25ddb3d3dc35143a1238996854ae19632f5e70f",
+      "matches_staging_snapshot": true
+    },
+    {
+      "path": "frontend/apps/storefront/src/checkout-logic.ts",
+      "sha256": "1e9072436cc6d63985f26b7d10c7f826c0c86c20bd788544b08a3862adabf2c9",
+      "tracked_before_m10": false,
+      "staging_sha256": "1e9072436cc6d63985f26b7d10c7f826c0c86c20bd788544b08a3862adabf2c9",
+      "matches_staging_snapshot": true
+    },
+    {
+      "path": "frontend/apps/storefront/src/checkout.tsx",
+      "sha256": "7542962c5044797f72a1eac148f91bdbb564a0cbba49256e542b0124ffbae6d8",
+      "tracked_before_m10": false,
+      "staging_sha256": "7542962c5044797f72a1eac148f91bdbb564a0cbba49256e542b0124ffbae6d8",
+      "matches_staging_snapshot": true
+    },
+    {
+      "path": "frontend/apps/storefront/src/market-money.ts",
+      "sha256": "8f2136a319ca1f74b7141c477fee8ae8f6c16e59e5262879e87cdc8fd148fea2",
+      "tracked_before_m10": false,
+      "staging_sha256": "8f2136a319ca1f74b7141c477fee8ae8f6c16e59e5262879e87cdc8fd148fea2",
+      "matches_staging_snapshot": true
+    },
+    {
+      "path": "frontend/apps/storefront/src/market-money.test.ts",
+      "sha256": "dd0ba3f9aa0226358aa72ff8b84f65224795249d81485e9d9e63fe480df30287",
+      "tracked_before_m10": false,
+      "staging_sha256": "dd0ba3f9aa0226358aa72ff8b84f65224795249d81485e9d9e63fe480df30287",
+      "matches_staging_snapshot": true
+    },
+    {
+      "path": "frontend/apps/storefront/src/product-types.tsx",
+      "sha256": "801e627a5607d201f7719d42dc3a08e075ce4ece8618e000c023eeab062f66dc",
+      "tracked_before_m10": false,
+      "staging_sha256": "801e627a5607d201f7719d42dc3a08e075ce4ece8618e000c023eeab062f66dc",
+      "matches_staging_snapshot": true
+    },
+    {
+      "path": "frontend/apps/storefront/src/community.tsx",
+      "sha256": "0ef5647cdce7a42d688acaa60c3cac90957f8cc90f94db5456b5065fa785b383",
+      "tracked_before_m10": false,
+      "staging_sha256": "0ef5647cdce7a42d688acaa60c3cac90957f8cc90f94db5456b5065fa785b383",
+      "matches_staging_snapshot": true
+    },
+    {
+      "path": "frontend/e2e/shopping-staging/m10-market.spec.ts",
+      "sha256": "910691f76ee59246ced3f98164ae327e7ab2f27e9b7fc345b1884c2fa97126c4",
+      "tracked_before_m10": false,
+      "staging_sha256": "910691f76ee59246ced3f98164ae327e7ab2f27e9b7fc345b1884c2fa97126c4",
+      "matches_staging_snapshot": true
+    },
+    {
+      "path": "backend/crates/api-gateway/tests/market.rs",
+      "sha256": "f3b3db95bfcc0ebd6f108eef54333856a77451c27d3cb466b881ddd7ce0eff1c",
+      "tracked_before_m10": false,
+      "staging_sha256": "a6322c9b4097a9d078c06bcc83e23f4f91c42ac901d4896ce8be16a8847396f1",
+      "matches_staging_snapshot": false
+    },
+    {
+      "path": "backend/crates/domain-fulfillment/tests/market_delivery.rs",
+      "sha256": "4017d52bcc56abae452828e235e26b9cfd3091309264a9c52745847d3c888e50",
+      "tracked_before_m10": false,
+      "staging_sha256": "4017d52bcc56abae452828e235e26b9cfd3091309264a9c52745847d3c888e50",
+      "matches_staging_snapshot": true
+    },
+    {
+      "path": "scripts/m10-market-acceptance.py",
+      "sha256": "9b782f8e9972d84943047731faddac348813762c5a5608c9a2979ae2bb7d9f10",
+      "tracked_before_m10": false
+    },
+    {
+      "path": "scripts/m10-migration-check.py",
+      "sha256": "43aa164d480fd847d460953bef1ff23de890f373159972b92464e6c2e136bdfb",
+      "tracked_before_m10": false
+    }
+  ]
+}

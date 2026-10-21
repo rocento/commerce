@@ -1,0 +1,27 @@
+{
+  "name": "@rocento/website",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "node scripts/prepare-api-docs.mjs && next dev --webpack --hostname 127.0.0.1 --port 5180",
+    "build": "node scripts/prepare-api-docs.mjs && next build --webpack",
+    "preview": "python3 -m http.server 5180 --bind 127.0.0.1 --directory out",
+    "typecheck": "tsc --noEmit",
+    "verify": "python3 scripts/verify-export.py",
+    "prepare:api-docs": "node scripts/prepare-api-docs.mjs"
+  },
+  "dependencies": {
+    "next": "^16.0.0",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0",
+    "react-markdown": "^10.1.0",
+    "swagger-ui-dist": "5.33.1"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.63.0",
+    "@types/react": "^19.2.0",
+    "@types/react-dom": "^19.2.0",
+    "typescript": "~5.9.3"
+  }
+}

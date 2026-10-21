@@ -1,0 +1,69 @@
+{
+  "request_id": "80000000-0000-0000-0000-000000000001",
+  "conversation_id": "80000000-0000-0000-0000-000000000002",
+  "product_id": "70000000-0000-0000-0000-000000000010",
+  "events": [
+    {
+      "version": "1",
+      "request_id": "80000000-0000-0000-0000-000000000001",
+      "sequence": 0,
+      "type": "progress",
+      "stage": "catalog"
+    },
+    {
+      "version": "1",
+      "request_id": "80000000-0000-0000-0000-000000000001",
+      "sequence": 1,
+      "type": "message.delta",
+      "text": "Here is a fresh pick. أهلاً!",
+      "response_source": "R"
+    },
+    {
+      "version": "1",
+      "request_id": "80000000-0000-0000-0000-000000000001",
+      "sequence": 2,
+      "type": "content.blocks",
+      "blocks": [
+        {
+          "kind": "product_card",
+          "title": "Recommended for you",
+          "products": [
+            {
+              "id": "70000000-0000-0000-0000-000000000010",
+              "name": "Fresh apples · تفاح طازج",
+              "image_id": null,
+              "price": "25.00",
+              "currency": "EGP",
+              "in_stock": true,
+              "route": "/products/70000000-0000-0000-0000-000000000010",
+              "attributes": [
+                {
+                  "name": "Pack",
+                  "value": "1 kg"
+                }
+              ],
+              "reasons": [
+                "Fresh fruit for your basket"
+              ],
+              "unmet": []
+            }
+          ],
+          "sources": [
+            {
+              "product_id": "70000000-0000-0000-0000-000000000010",
+              "route": "/products/70000000-0000-0000-0000-000000000010",
+              "kind": "catalog"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "version": "1",
+      "request_id": "80000000-0000-0000-0000-000000000001",
+      "sequence": 3,
+      "type": "done",
+      "saved": true
+    }
+  ]
+}

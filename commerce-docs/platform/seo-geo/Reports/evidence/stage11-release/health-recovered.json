@@ -1,0 +1,64 @@
+{
+  "findings": [
+    {
+      "code": "installation_binding",
+      "evidence": {
+        "matched": true
+      },
+      "observed_at": "2026-09-21T10:52:49.989122513Z",
+      "remediation": "Correct the operator's installation binding.",
+      "resource": "installation",
+      "severity": "Healthy"
+    },
+    {
+      "code": "effective_indexing",
+      "evidence": {
+        "environment": "production",
+        "state": "INDEXABLE"
+      },
+      "observed_at": "2026-09-21T10:52:49.989124555Z",
+      "remediation": "Review approved canonical origin, production environment, merchant preference and deployment noindex override.",
+      "resource": "https://shop.example.test/",
+      "severity": "Healthy"
+    },
+    {
+      "code": "feed_freshness",
+      "evidence": {
+        "failed_items": 0,
+        "freshness": {
+          "completed_generation": 4,
+          "generation": 4,
+          "lag_seconds": 0,
+          "last_completed_at": null,
+          "last_error": null
+        },
+        "stale_items": 0,
+        "threshold_seconds": 900
+      },
+      "observed_at": "2026-09-21T10:52:49.989337305Z",
+      "remediation": "Inspect feed item errors, worker availability and catalog throughput; repair and request reconciliation.",
+      "resource": "reference-v1",
+      "severity": "Healthy"
+    },
+    {
+      "code": "renderer_probe",
+      "evidence": "Not observed: private renderer probe URL/token is not configured.",
+      "observed_at": "2026-09-21T10:52:49.989484305Z",
+      "remediation": "Configure PUBLICATION_RENDERER_URL and PUBLICATION_OBSERVATION_TOKEN through operator-managed secrets.",
+      "resource": "https://shop.example.test/",
+      "severity": "Warning"
+    },
+    {
+      "code": "external_edge",
+      "evidence": "External CDN responses and verified crawler identity have not been observed by this local probe.",
+      "observed_at": "2026-09-21T10:52:49.989485305Z",
+      "remediation": "Review CDN access logs and externally probe the approved merchant domain.",
+      "resource": "https://shop.example.test/",
+      "severity": "Warning"
+    }
+  ],
+  "installation_id": "d6d030eb-14d3-43b3-b64d-0683ccb53856",
+  "observations": null,
+  "observed_at": "2026-09-21T10:52:49.989485930Z",
+  "scope": "Current database state; at most 100 redirects and a bounded local renderer sample. No score or ranking."
+}

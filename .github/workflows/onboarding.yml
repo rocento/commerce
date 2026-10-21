@@ -1,0 +1,30 @@
+name: Onboarding checks
+on: [push, pull_request]
+permissions:
+  contents: read
+defaults:
+  run:
+    working-directory: commerce-web
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: dtolnay/rust-toolchain@stable
+      - name: Check the standalone onboarding API package
+        run: cargo check --locked --manifest-path ../commerce-api/onboard-api/Cargo.toml
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 10.32.1
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: pnpm
+          cache-dependency-path: commerce-web/pnpm-lock.yaml
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm typecheck:onboarding
+      - run: pnpm typecheck:onboarding-staff
+      - run: pnpm build:onboarding
+      - run: pnpm build:onboarding-staff
+      - run: pnpm exec playwright install --with-deps chromium
+      - run: pnpm test:onboarding

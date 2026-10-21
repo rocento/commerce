@@ -1,0 +1,100 @@
+
+/Users/momar/Documents/commerce-ai/frontend/apps/admin/src/main.tsx
+  105:86  error  '_value' is defined but never used  @typescript-eslint/no-unused-vars
+
+/Users/momar/Documents/commerce-ai/frontend/apps/admin/src/replenishment.tsx
+  24:8  error  'navigate' is assigned a value but never used  @typescript-eslint/no-unused-vars
+
+/Users/momar/Documents/commerce-ai/frontend/apps/storefront/dist-server/entry-public-server.js
+   379:11  error    Unexpected aliasing of 'this' to local variable                                                        @typescript-eslint/no-this-alias
+   539:11  error    Unexpected aliasing of 'this' to local variable                                                        @typescript-eslint/no-this-alias
+   724:57  error    '_key' is defined but never used                                                                       @typescript-eslint/no-unused-vars
+   724:63  error    '_value' is defined but never used                                                                     @typescript-eslint/no-unused-vars
+   727:58  error    '_attributes' is defined but never used                                                                @typescript-eslint/no-unused-vars
+   730:53  error    '_name' is defined but never used                                                                      @typescript-eslint/no-unused-vars
+   730:60  error    '_attributes' is defined but never used                                                                @typescript-eslint/no-unused-vars
+   733:52  error    '_link' is defined but never used                                                                      @typescript-eslint/no-unused-vars
+   736:53  error    '_links' is defined but never used                                                                     @typescript-eslint/no-unused-vars
+   739:54  error    '_status' is defined but never used                                                                    @typescript-eslint/no-unused-vars
+   742:55  error    '_name' is defined but never used                                                                      @typescript-eslint/no-unused-vars
+   745:48  error    '_endTime' is defined but never used                                                                   @typescript-eslint/no-unused-vars
+   750:60  error    '_exception' is defined but never used                                                                 @typescript-eslint/no-unused-vars
+   750:72  error    '_time' is defined but never used                                                                      @typescript-eslint/no-unused-vars
+   850:55  error    '_name' is defined but never used                                                                      @typescript-eslint/no-unused-vars
+   850:62  error    '_options' is defined but never used                                                                   @typescript-eslint/no-unused-vars
+   850:72  error    '_context' is defined but never used                                                                   @typescript-eslint/no-unused-vars
+   850:82  error    '_fn' is defined but never used                                                                        @typescript-eslint/no-unused-vars
+   873:56  error    '_name' is defined but never used                                                                      @typescript-eslint/no-unused-vars
+   873:63  error    '_version' is defined but never used                                                                   @typescript-eslint/no-unused-vars
+   873:73  error    '_options' is defined but never used                                                                   @typescript-eslint/no-unused-vars
+   930:56  error    '_context' is defined but never used                                                                   @typescript-eslint/no-unused-vars
+   930:66  error    '_carrier' is defined but never used                                                                   @typescript-eslint/no-unused-vars
+   932:67  error    '_carrier' is defined but never used                                                                   @typescript-eslint/no-unused-vars
+  1533:12  error    'e' is defined but never used                                                                          @typescript-eslint/no-unused-vars
+  1712:55  error    '_' is defined but never used                                                                          @typescript-eslint/no-unused-vars
+  2262:11  error    '_span' is defined but never used                                                                      @typescript-eslint/no-unused-vars
+  2262:18  error    '_parentContext' is defined but never used                                                             @typescript-eslint/no-unused-vars
+  2661:3   error    Definition for rule '@typescript-eslint/ban-types' was not found                                       @typescript-eslint/ban-types
+  2663:11  error    Unexpected aliasing of 'this' to local variable                                                        @typescript-eslint/no-this-alias
+  3241:9   warning  Unused eslint-disable directive (no problems were reported from '@typescript-eslint/no-var-requires')
+  3242:11  error    A `require()` style import is forbidden                                                                @typescript-eslint/no-require-imports
+  3381:12  error    'e' is defined but never used                                                                          @typescript-eslint/no-unused-vars
+
+/Users/momar/Documents/commerce-ai/frontend/apps/storefront/server/hardening-checks.mjs
+  7:7  error  'html' is assigned a value but never used  @typescript-eslint/no-unused-vars
+
+/Users/momar/Documents/commerce-ai/frontend/apps/storefront/src/assistant-reorder.tsx
+  125:6  warning  React Hook useEffect has missing dependencies: 'run' and 'start'. Either include them or remove the dependency array  react-hooks/exhaustive-deps
+
+/Users/momar/Documents/commerce-ai/frontend/apps/storefront/src/assistant.tsx
+  281:24  error  'cartReady' is assigned a value but never used    @typescript-eslint/no-unused-vars
+  281:44  error  'cartSyncing' is assigned a value but never used  @typescript-eslint/no-unused-vars
+  281:64  error  'cartError' is assigned a value but never used    @typescript-eslint/no-unused-vars
+
+/Users/momar/Documents/commerce-ai/frontend/apps/storefront/src/catalog.tsx
+  87:7  error  'money' is assigned a value but never used  @typescript-eslint/no-unused-vars
+
+/Users/momar/Documents/commerce-ai/frontend/apps/storefront/src/checkout.tsx
+  172:6   warning  React Hook useEffect has a missing dependency: 'selected'. Either include it or remove the dependency array                         react-hooks/exhaustive-deps
+  186:97  warning  React Hook useEffect has missing dependencies: 'attempt' and 'quoteQuery.data'. Either include them or remove the dependency array  react-hooks/exhaustive-deps
+
+/Users/momar/Documents/commerce-ai/frontend/apps/storefront/src/comparison.tsx
+  54:6  warning  React Hook useEffect has a missing dependency: 'comparison'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+/Users/momar/Documents/commerce-ai/frontend/e2e/assistant/reorder.spec.ts
+  11:15  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+/Users/momar/Documents/commerce-ai/frontend/e2e/capacity/branch.spec.ts
+  6:17  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+/Users/momar/Documents/commerce-ai/frontend/e2e/capacity/fulfillment-fixes.spec.ts
+  7:33  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+/Users/momar/Documents/commerce-ai/frontend/e2e/shopping-staging/m07-discovery.spec.ts
+  9:27  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+/Users/momar/Documents/commerce-ai/frontend/e2e/shopping-staging/m08-memory.spec.ts
+   7:25   error  Unexpected any. Specify a different type         @typescript-eslint/no-explicit-any
+  12:28   error  Unexpected any. Specify a different type         @typescript-eslint/no-explicit-any
+  13:32   error  Unexpected any. Specify a different type         @typescript-eslint/no-explicit-any
+  41:39   error  Unexpected any. Specify a different type         @typescript-eslint/no-explicit-any
+  58:61   error  Unexpected any. Specify a different type         @typescript-eslint/no-explicit-any
+  62:41   error  Unexpected any. Specify a different type         @typescript-eslint/no-explicit-any
+  67:6    error  'data' is never reassigned. Use 'const' instead  prefer-const
+  68:50   error  Unexpected any. Specify a different type         @typescript-eslint/no-explicit-any
+  71:60   error  Unexpected any. Specify a different type         @typescript-eslint/no-explicit-any
+  84:41   error  Unexpected any. Specify a different type         @typescript-eslint/no-explicit-any
+  94:79   error  Unexpected any. Specify a different type         @typescript-eslint/no-explicit-any
+  99:151  error  Unexpected any. Specify a different type         @typescript-eslint/no-explicit-any
+
+/Users/momar/Documents/commerce-ai/frontend/e2e/shopping-staging/m09-trust.spec.ts
+    7:39  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+   22:90  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  115:67  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+/Users/momar/Documents/commerce-ai/frontend/e2e/shopping-staging/m10-market.spec.ts
+  7:30  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+✖ 64 problems (59 errors, 5 warnings)
+  1 error and 1 warning potentially fixable with the `--fix` option.
+

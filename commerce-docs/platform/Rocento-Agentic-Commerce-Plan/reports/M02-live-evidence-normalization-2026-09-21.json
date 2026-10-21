@@ -1,0 +1,7 @@
+{
+  "original_report_sha256": "849bacb541bae3b6903e620b0a008e4e6f0e58411596d8d17a2f2617d48546db",
+  "original_dataset_sha256": "a4007f98270833eb28a18f66edf853f65b63d50015af65bf791c85662436feec",
+  "canonical_dataset_sha256": "db49ec7326c12a0fcb49f9ec9234a840b638c47c86056300d3c7cb9cd3ea685b",
+  "change": "Sort unordered approved phrase sets before identity hashing. No case, assertion, observation, provider response, status, or timing changed. Original report retained. Provider snapshot response identity was not recorded in this initial canary; requested model alias was gpt-4.1-mini.",
+  "metric_label_change": "Per-completed-goal labels renamed to per-passed-scenario; numeric values unchanged. Scenario passes are not human goal completion."
+}

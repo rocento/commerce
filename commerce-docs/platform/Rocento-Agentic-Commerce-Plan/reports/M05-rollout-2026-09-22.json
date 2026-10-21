@@ -1,0 +1,1204 @@
+{
+  "old_ai_image": "sha256:924b77158fd2f94045e1c52de4f2ab2bf8cb4098d4ba8b736ebd5e7de77c2951",
+  "source_sha256": {
+    "main.py": "e8b6bea65e44bfc23737eb9fa338647b93c5af249529607f014b4acdadcb6ab1",
+    "settings.py": "900f33310dfeb49547ebe89923785e66967f2a03d8df539881be2e69775643d8",
+    "runtime.py": "6e1faa6b1d5b1b450c057c016b29d430bb7b8bbc69dfcecbb965ec937a7eb55f",
+    "shopping.py": "f3b3ba3f8c6948b40ab6462e464e17defee7ac2433f92e92bc0df2873128c8a3",
+    "baskets.py": "dad581b13a094f7be521aa4a02ef7e63a1bb8f956e8c73ac162c4a1a2d5354aa",
+    "telemetry.py": "6ec4625cb3a7e52ed33786db6179d730206d6d3f0b265185de6a22a80cdf54a2",
+    "baseline.py": "0e05c1aff340270d6258152a4a0f79fd5260565cd589c8dbc534c2a4455e80ec",
+    "adapters/core.py": "342fba2f4e0f1c7e2dc7e33abe53a5ce7f783567eaac9ee9b4b03b797dfff7a0",
+    "planning_library.py": "e028b2f988d58b80fe5a8b691df7f5a5f0567a4144f5c744dc13e004256559cd",
+    "planning_runtime.py": "98f877001d2992534c0e81c69148d199f7eceb9b400769ae1ada54b75dea29e5",
+    "planning_commerce.py": "5080764a0c265f8d6c1dd41eb8f1a740d5938833f2f32e0a58dbc215a633c4ac",
+    "planning_library.json": "cbad8c385b30d045a098d9c3e0a7e2b4534a9fa04bc1048cc051a2f4b39694d5",
+    "core/__init__.py": "7f83ec7f3705670b6a106f5911dfc23ee2000f8f6f8cb0e87335708eee0a776b",
+    "core/contracts.py": "e85fe72603efb5a469650b6f8c3abd9cde1af11b55838df6d8e069373791e542",
+    "core/intents.py": "1fb283522cf77e737fa33949a165a603057d616ecaab8a3aee4122d0c3fb3536",
+    "core/meaning.py": "8f24cf3e3907ee4956ba05fef31ddee7baf3ddb382f4e5046aec663e6b38e599",
+    "core/planning.py": "febd369bd2ef4bb22bd5815c6c81ee9292fa3d48d06d82b9a81d678463e32acc",
+    "core/policy.py": "667c9a971375c381ff1bce4654269f906dec3841c88b7aa9a498d446890149b5",
+    "core/ports.py": "33a42cf7d9f6de1a5a9b1fa346370c83ace71b669b0af80d110ae11c31b36546",
+    "core/reasoning.py": "d23208ecbb1dad64deac870a2ca650ca4ad29800b339ed183b70da0aad07c6bc",
+    "core/registry.py": "67506754f46c53b312ab3d01d2fa974b712221b9421a02c8f0cca9b4f4e2a549",
+    "core/state.py": "1f2f5a310738c94af9f8aa07cd867fa802e224ccc2d53ebbaff8089e3f97805c"
+  },
+  "feature_flags": [
+    "commerce_core",
+    "commerce_meaning",
+    "commerce_planning",
+    "grounded_intent",
+    "typed_errors"
+  ],
+  "commerce_before": {
+    "catalog.products": "5417a60fa93628d89d87c85b05acaae2",
+    "customers.customers": "0773bb39aef386fb7807a5c5cf38ea42",
+    "cart_checkout.items": "e31a23d88eca81fb7d25fe33a821d85c",
+    "orders.orders": "e20c7197cacd05963ab057bf8d959b73",
+    "orders.order_items": "dee4482522ce7370234dca812f8f0d8b",
+    "payments.payment_transactions": "23f69a412dee626f736e95b1b37f21ae"
+  },
+  "rollback_directory": "/Users/momar/Documents/commerce-ai/.local/shopping-staging/rocento-shopping-stage-9535d4d7/m05-rollback",
+  "new_ai_image": "sha256:f3d6b80bb45613ba4c4606ccc50b1c61fd2f9839c3039678641611405fe7ad2e",
+  "commerce_unchanged": true,
+  "verification": {
+    "commerce_unchanged": true,
+    "source_matches": true,
+    "traces": [
+      {
+        "trace_id": "3169ca57-171d-4f81-a35a-dfeedb4d8c6d",
+        "outcome": "completed",
+        "timings": {
+          "request_ms": 0,
+          "first_text_ms": 0,
+          "provider_first_token_ms": null
+        },
+        "core": {
+          "schema_version": "1.0",
+          "request_id": "3169ca57-171d-4f81-a35a-dfeedb4d8c6d",
+          "tenant_id": "0b597bc4-8eab-4e21-99b3-0c610a9ef7ba",
+          "store_id": "0b597bc4-8eab-4e21-99b3-0c610a9ef7ba",
+          "journey": "general",
+          "path": "deterministic",
+          "reason": "existing_deterministic",
+          "versions": [
+            {
+              "schema_version": "1.0",
+              "id": "policy://commerce/authority",
+              "version": "1.0.0",
+              "schema_major": 1
+            },
+            {
+              "schema_version": "1.0",
+              "id": "industry://commerce/common",
+              "version": "1.0.0",
+              "schema_major": 1
+            },
+            {
+              "schema_version": "1.0",
+              "id": "skill://shopping/general",
+              "version": "1.0.0",
+              "schema_major": 1
+            },
+            {
+              "schema_version": "1.0",
+              "id": "playbook://shopping/general",
+              "version": "1.0.0",
+              "schema_major": 1
+            }
+          ],
+          "deprecated": []
+        }
+      },
+      {
+        "trace_id": "fa6af553-4915-410d-bdf0-157697764020",
+        "outcome": "completed",
+        "timings": {
+          "request_ms": 0,
+          "first_text_ms": 0,
+          "provider_first_token_ms": null
+        },
+        "core": {
+          "schema_version": "1.0",
+          "request_id": "fa6af553-4915-410d-bdf0-157697764020",
+          "tenant_id": "0b597bc4-8eab-4e21-99b3-0c610a9ef7ba",
+          "store_id": "0b597bc4-8eab-4e21-99b3-0c610a9ef7ba",
+          "journey": "general",
+          "path": "deterministic",
+          "reason": "existing_deterministic",
+          "versions": [
+            {
+              "schema_version": "1.0",
+              "id": "policy://commerce/authority",
+              "version": "1.0.0",
+              "schema_major": 1
+            },
+            {
+              "schema_version": "1.0",
+              "id": "industry://commerce/common",
+              "version": "1.0.0",
+              "schema_major": 1
+            },
+            {
+              "schema_version": "1.0",
+              "id": "skill://shopping/general",
+              "version": "1.0.0",
+              "schema_major": 1
+            },
+            {
+              "schema_version": "1.0",
+              "id": "playbook://shopping/general",
+              "version": "1.0.0",
+              "schema_major": 1
+            }
+          ],
+          "deprecated": []
+        }
+      },
+      {
+        "trace_id": "4ad1f577-70fe-4eab-9d11-c6dfeee6cecf",
+        "outcome": "completed",
+        "timings": {
+          "request_ms": 1826,
+          "first_text_ms": 1826,
+          "provider_first_token_ms": null,
+          "policy_decisions": 1,
+          "policy_R0_allow": 1,
+          "catalog_network_calls": 2,
+          "tool_ms": 12,
+          "tool_count": 2,
+          "provider_ms": 1790,
+          "provider_count": 1,
+          "meaning_requirements": 2,
+          "meaning_conflicts": 0,
+          "meaning_clarifications": 0,
+          "meaning_assumptions": 1
+        },
+        "core": {
+          "schema_version": "1.0",
+          "request_id": "4ad1f577-70fe-4eab-9d11-c6dfeee6cecf",
+          "tenant_id": "0b597bc4-8eab-4e21-99b3-0c610a9ef7ba",
+          "store_id": "0b597bc4-8eab-4e21-99b3-0c610a9ef7ba",
+          "journey": "discovery",
+          "path": "core",
+          "reason": "core_selected",
+          "versions": [
+            {
+              "schema_version": "1.0",
+              "id": "policy://commerce/authority",
+              "version": "1.0.0",
+              "schema_major": 1
+            },
+            {
+              "schema_version": "1.0",
+              "id": "industry://commerce/common",
+              "version": "1.0.0",
+              "schema_major": 1
+            },
+            {
+              "schema_version": "1.0",
+              "id": "skill://shopping/discovery",
+              "version": "1.0.0",
+              "schema_major": 1
+            },
+            {
+              "schema_version": "1.0",
+              "id": "playbook://shopping/discovery",
+              "version": "1.0.0",
+              "schema_major": 1
+            },
+            {
+              "schema_version": "1.0",
+              "id": "provider://reasoning/default",
+              "version": "1.0.0",
+              "schema_major": 1
+            }
+          ],
+          "deprecated": []
+        },
+        "policy": [
+          {
+            "policy": "commerce/default",
+            "version": "1.0.0",
+            "outcome": "allow",
+            "reason": "verified",
+            "risk": "R0",
+            "confirmation": "none",
+            "expires_at": 1790066916,
+            "audit_ref": "43dc7bb1-2ddc-41a7-b1bf-7e6987dd7245/catalog_read/verified"
+          }
+        ],
+        "planning": {
+          "playbook": "playbook://commerce/discovery",
+          "version": "1.0.0",
+          "reason": "known_journey",
+          "mode": "read",
+          "skills": [
+            {
+              "step": "schema",
+              "id": "skill://catalog/schema",
+              "version": "1.0.0",
+              "attempts": 1,
+              "completed": 1
+            },
+            {
+              "step": "interpret",
+              "id": "skill://reasoning/shopping",
+              "version": "1.0.0",
+              "attempts": 1,
+              "completed": 1
+            },
+            {
+              "step": "reference",
+              "id": "skill://catalog/facts",
+              "version": "1.0.0",
+              "attempts": 0,
+              "completed": 0
+            },
+            {
+              "step": "search",
+              "id": "skill://catalog/search",
+              "version": "1.0.0",
+              "attempts": 1,
+              "completed": 1
+            },
+            {
+              "step": "compare",
+              "id": "skill://catalog/compare",
+              "version": "1.0.0",
+              "attempts": 0,
+              "completed": 0
+            },
+            {
+              "step": "rank",
+              "id": "skill://ranking/candidates",
+              "version": "1.0.0",
+              "attempts": 1,
+              "completed": 1
+            }
+          ],
+          "reserved": {
+            "schema_version": "1.0",
+            "tools": 4,
+            "models": 1,
+            "tokens": 65536,
+            "cost_micros": 100000,
+            "mutations": 0
+          },
+          "failed": false,
+          "industry": {
+            "schema_version": "1.0",
+            "id": "industry://commerce/common",
+            "version": "1.0.0",
+            "attributes": [],
+            "status": "schema_ready",
+            "policies": [
+              "verified_only"
+            ]
+          },
+          "reserved_model_cost_micros": 6922,
+          "reserved_tokens": 14231
+        }
+      },
+      {
+        "trace_id": "adf2bd06-d3f6-49eb-bb9b-f8231f4d7eb4",
+        "outcome": "completed",
+        "timings": {
+          "request_ms": 1849,
+          "first_text_ms": 1848,
+          "provider_first_token_ms": null,
+          "policy_decisions": 1,
+          "policy_R0_allow": 1,
+          "catalog_network_calls": 2,
+          "tool_ms": 14,
+          "tool_count": 2,
+          "provider_ms": 1829,
+          "provider_count": 1,
+          "meaning_requirements": 2,
+          "meaning_conflicts": 0,
+          "meaning_clarifications": 0,
+          "meaning_assumptions": 1
+        },
+        "core": {
+          "schema_version": "1.0",
+          "request_id": "adf2bd06-d3f6-49eb-bb9b-f8231f4d7eb4",
+          "tenant_id": "0b597bc4-8eab-4e21-99b3-0c610a9ef7ba",
+          "store_id": "0b597bc4-8eab-4e21-99b3-0c610a9ef7ba",
+          "journey": "discovery",
+          "path": "core",
+          "reason": "core_selected",
+          "versions": [
+            {
+              "schema_version": "1.0",
+              "id": "policy://commerce/authority",
+              "version": "1.0.0",
+              "schema_major": 1
+            },
+            {
+              "schema_version": "1.0",
+              "id": "industry://commerce/common",
+              "version": "1.0.0",
+              "schema_major": 1
+            },
+            {
+              "schema_version": "1.0",
+              "id": "skill://shopping/discovery",
+              "version": "1.0.0",
+              "schema_major": 1
+            },
+            {
+              "schema_version": "1.0",
+              "id": "playbook://shopping/discovery",
+              "version": "1.0.0",
+              "schema_major": 1
+            },
+            {
+              "schema_version": "1.0",
+              "id": "provider://reasoning/default",
+              "version": "1.0.0",
+              "schema_major": 1
+            }
+          ],
+          "deprecated": []
+        },
+        "policy": [
+          {
+            "policy": "commerce/default",
+            "version": "1.0.0",
+            "outcome": "allow",
+            "reason": "verified",
+            "risk": "R0",
+            "confirmation": "none",
+            "expires_at": 1790066918,
+            "audit_ref": "9611ca41-87cc-45a2-a9e6-7dca146fe91f/catalog_read/verified"
+          }
+        ],
+        "planning": {
+          "playbook": "playbook://commerce/discovery",
+          "version": "1.0.0",
+          "reason": "known_journey",
+          "mode": "read",
+          "skills": [
+            {
+              "step": "schema",
+              "id": "skill://catalog/schema",
+              "version": "1.0.0",
+              "attempts": 1,
+              "completed": 1
+            },
+            {
+              "step": "interpret",
+              "id": "skill://reasoning/shopping",
+              "version": "1.0.0",
+              "attempts": 1,
+              "completed": 1
+            },
+            {
+              "step": "reference",
+              "id": "skill://catalog/facts",
+              "version": "1.0.0",
+              "attempts": 0,
+              "completed": 0
+            },
+            {
+              "step": "search",
+              "id": "skill://catalog/search",
+              "version": "1.0.0",
+              "attempts": 1,
+              "completed": 1
+            },
+            {
+              "step": "compare",
+              "id": "skill://catalog/compare",
+              "version": "1.0.0",
+              "attempts": 0,
+              "completed": 0
+            },
+            {
+              "step": "rank",
+              "id": "skill://ranking/candidates",
+              "version": "1.0.0",
+              "attempts": 1,
+              "completed": 1
+            }
+          ],
+          "reserved": {
+            "schema_version": "1.0",
+            "tools": 4,
+            "models": 1,
+            "tokens": 65536,
+            "cost_micros": 100000,
+            "mutations": 0
+          },
+          "failed": false,
+          "industry": {
+            "schema_version": "1.0",
+            "id": "industry://commerce/common",
+            "version": "1.0.0",
+            "attributes": [],
+            "status": "schema_ready",
+            "policies": [
+              "verified_only"
+            ]
+          },
+          "reserved_model_cost_micros": 6926,
+          "reserved_tokens": 14242
+        }
+      },
+      {
+        "trace_id": "3d570c93-2313-4a81-a61b-b779a54f3e40",
+        "outcome": "completed",
+        "timings": {
+          "request_ms": 9880,
+          "first_text_ms": 9875,
+          "provider_first_token_ms": null,
+          "history_ms": 0,
+          "history_count": 1,
+          "policy_decisions": 1,
+          "policy_R2_require_confirmation": 1,
+          "catalog_network_calls": 2,
+          "provider_ms": 9824,
+          "provider_count": 1,
+          "meaning_requirements": 1,
+          "meaning_conflicts": 0,
+          "meaning_clarifications": 0,
+          "meaning_assumptions": 1,
+          "persistence_ms": 4,
+          "persistence_count": 1
+        },
+        "core": {
+          "schema_version": "1.0",
+          "request_id": "3d570c93-2313-4a81-a61b-b779a54f3e40",
+          "tenant_id": "0b597bc4-8eab-4e21-99b3-0c610a9ef7ba",
+          "store_id": "0b597bc4-8eab-4e21-99b3-0c610a9ef7ba",
+          "journey": "shop",
+          "path": "core",
+          "reason": "core_selected",
+          "versions": [
+            {
+              "schema_version": "1.0",
+              "id": "policy://commerce/authority",
+              "version": "1.0.0",
+              "schema_major": 1
+            },
+            {
+              "schema_version": "1.0",
+              "id": "industry://commerce/common",
+              "version": "1.0.0",
+              "schema_major": 1
+            },
+            {
+              "schema_version": "1.0",
+              "id": "skill://shopping/shop",
+              "version": "1.0.0",
+              "schema_major": 1
+            },
+            {
+              "schema_version": "1.0",
+              "id": "playbook://shopping/shop",
+              "version": "1.0.0",
+              "schema_major": 1
+            },
+            {
+              "schema_version": "1.0",
+              "id": "provider://reasoning/default",
+              "version": "1.0.0",
+              "schema_major": 1
+            }
+          ],
+          "deprecated": []
+        },
+        "policy": [
+          {
+            "policy": "commerce/default",
+            "version": "1.0.0",
+            "outcome": "require_confirmation",
+            "reason": "explicit_intent_missing",
+            "risk": "R2",
+            "confirmation": "explicit_intent",
+            "expires_at": 1790066920,
+            "audit_ref": "3960e16f-cdb1-4624-90e2-f971e6b2374f/cart_apply/explicit_intent_missing"
+          }
+        ],
+        "planning": {
+          "playbook": "playbook://commerce/shop",
+          "version": "1.0.0",
+          "reason": "validated_composition",
+          "mode": "read",
+          "skills": [
+            {
+              "step": "context",
+              "id": "skill://cart/context",
+              "version": "1.0.0",
+              "attempts": 1,
+              "completed": 1
+            },
+            {
+              "step": "schema",
+              "id": "skill://catalog/schema",
+              "version": "1.0.0",
+              "attempts": 1,
+              "completed": 1
+            },
+            {
+              "step": "interpret",
+              "id": "skill://reasoning/basket",
+              "version": "1.0.0",
+              "attempts": 1,
+              "completed": 1
+            },
+            {
+              "step": "search",
+              "id": "skill://catalog/search",
+              "version": "1.0.0",
+              "attempts": 1,
+              "completed": 1
+            },
+            {
+              "step": "rank",
+              "id": "skill://ranking/candidates",
+              "version": "1.0.0",
+              "attempts": 1,
+              "completed": 1
+            },
+            {
+              "step": "quote",
+              "id": "skill://cart/quote-proposal",
+              "version": "1.0.0",
+              "attempts": 1,
+              "completed": 1
+            }
+          ],
+          "reserved": {
+            "schema_version": "1.0",
+            "tools": 4,
+            "models": 1,
+            "tokens": 65536,
+            "cost_micros": 100000,
+            "mutations": 0
+          },
+          "failed": false,
+          "industry": {
+            "schema_version": "1.0",
+            "id": "industry://commerce/common",
+            "version": "1.0.0",
+            "attributes": [],
+            "status": "schema_ready",
+            "policies": [
+              "verified_only"
+            ]
+          },
+          "reserved_model_cost_micros": 11835,
+          "reserved_tokens": 20587
+        }
+      },
+      {
+        "trace_id": "6cb5d2a7-8c93-4d54-bfb1-1fbe1140f8a5",
+        "outcome": "completed",
+        "timings": {
+          "request_ms": 1839,
+          "first_text_ms": 1835,
+          "provider_first_token_ms": null,
+          "history_ms": 1,
+          "history_count": 1,
+          "policy_decisions": 1,
+          "policy_R2_require_confirmation": 1,
+          "catalog_network_calls": 1,
+          "provider_ms": 1812,
+          "provider_count": 1,
+          "persistence_ms": 3,
+          "persistence_count": 1
+        },
+        "core": {
+          "schema_version": "1.0",
+          "request_id": "6cb5d2a7-8c93-4d54-bfb1-1fbe1140f8a5",
+          "tenant_id": "0b597bc4-8eab-4e21-99b3-0c610a9ef7ba",
+          "store_id": "0b597bc4-8eab-4e21-99b3-0c610a9ef7ba",
+          "journey": "optimize",
+          "path": "core",
+          "reason": "core_selected",
+          "versions": [
+            {
+              "schema_version": "1.0",
+              "id": "policy://commerce/authority",
+              "version": "1.0.0",
+              "schema_major": 1
+            },
+            {
+              "schema_version": "1.0",
+              "id": "industry://commerce/common",
+              "version": "1.0.0",
+              "schema_major": 1
+            },
+            {
+              "schema_version": "1.0",
+              "id": "skill://shopping/optimize",
+              "version": "1.0.0",
+              "schema_major": 1
+            },
+            {
+              "schema_version": "1.0",
+              "id": "playbook://shopping/optimize",
+              "version": "1.0.0",
+              "schema_major": 1
+            },
+            {
+              "schema_version": "1.0",
+              "id": "provider://reasoning/default",
+              "version": "1.0.0",
+              "schema_major": 1
+            }
+          ],
+          "deprecated": []
+        },
+        "policy": [
+          {
+            "policy": "commerce/default",
+            "version": "1.0.0",
+            "outcome": "require_confirmation",
+            "reason": "explicit_intent_missing",
+            "risk": "R2",
+            "confirmation": "explicit_intent",
+            "expires_at": 1790066931,
+            "audit_ref": "342f8e70-1f0f-4a51-b727-0f76804ab6f0/cart_apply/explicit_intent_missing"
+          }
+        ],
+        "planning": {
+          "playbook": "playbook://commerce/optimize",
+          "version": "1.0.0",
+          "reason": "known_journey",
+          "mode": "read",
+          "skills": [
+            {
+              "step": "context",
+              "id": "skill://cart/context",
+              "version": "1.0.0",
+              "attempts": 1,
+              "completed": 1
+            },
+            {
+              "step": "schema",
+              "id": "skill://catalog/schema",
+              "version": "1.0.0",
+              "attempts": 1,
+              "completed": 1
+            },
+            {
+              "step": "interpret",
+              "id": "skill://reasoning/basket",
+              "version": "1.0.0",
+              "attempts": 1,
+              "completed": 1
+            },
+            {
+              "step": "quote",
+              "id": "skill://cart/quote-proposal",
+              "version": "1.0.0",
+              "attempts": 1,
+              "completed": 1
+            }
+          ],
+          "reserved": {
+            "schema_version": "1.0",
+            "tools": 3,
+            "models": 1,
+            "tokens": 65536,
+            "cost_micros": 100000,
+            "mutations": 0
+          },
+          "failed": false,
+          "industry": {
+            "schema_version": "1.0",
+            "id": "industry://commerce/common",
+            "version": "1.0.0",
+            "attributes": [],
+            "status": "schema_ready",
+            "policies": [
+              "verified_only"
+            ]
+          },
+          "reserved_model_cost_micros": 11834,
+          "reserved_tokens": 20585
+        }
+      },
+      {
+        "trace_id": "49de66be-a69b-40d1-b8f3-461fa0710431",
+        "outcome": "completed",
+        "timings": {
+          "request_ms": 4,
+          "first_text_ms": 4,
+          "provider_first_token_ms": null,
+          "policy_decisions": 1,
+          "policy_R0_allow": 1,
+          "catalog_network_calls": 1,
+          "tool_ms": 3,
+          "tool_count": 1,
+          "meaning_requirements": 2,
+          "meaning_conflicts": 1,
+          "meaning_clarifications": 1,
+          "meaning_assumptions": 0
+        },
+        "core": {
+          "schema_version": "1.0",
+          "request_id": "49de66be-a69b-40d1-b8f3-461fa0710431",
+          "tenant_id": "0b597bc4-8eab-4e21-99b3-0c610a9ef7ba",
+          "store_id": "0b597bc4-8eab-4e21-99b3-0c610a9ef7ba",
+          "journey": "discovery",
+          "path": "core",
+          "reason": "core_selected",
+          "versions": [
+            {
+              "schema_version": "1.0",
+              "id": "policy://commerce/authority",
+              "version": "1.0.0",
+              "schema_major": 1
+            },
+            {
+              "schema_version": "1.0",
+              "id": "industry://commerce/common",
+              "version": "1.0.0",
+              "schema_major": 1
+            },
+            {
+              "schema_version": "1.0",
+              "id": "skill://shopping/discovery",
+              "version": "1.0.0",
+              "schema_major": 1
+            },
+            {
+              "schema_version": "1.0",
+              "id": "playbook://shopping/discovery",
+              "version": "1.0.0",
+              "schema_major": 1
+            },
+            {
+              "schema_version": "1.0",
+              "id": "provider://reasoning/default",
+              "version": "1.0.0",
+              "schema_major": 1
+            }
+          ],
+          "deprecated": []
+        },
+        "policy": [
+          {
+            "policy": "commerce/default",
+            "version": "1.0.0",
+            "outcome": "allow",
+            "reason": "verified",
+            "risk": "R0",
+            "confirmation": "none",
+            "expires_at": 1790066934,
+            "audit_ref": "20d2cdbf-4be1-4248-9ffd-85a47978d40a/catalog_read/verified"
+          }
+        ],
+        "planning": {
+          "playbook": "playbook://commerce/discovery",
+          "version": "1.0.0",
+          "reason": "known_journey",
+          "mode": "read",
+          "skills": [
+            {
+              "step": "schema",
+              "id": "skill://catalog/schema",
+              "version": "1.0.0",
+              "attempts": 1,
+              "completed": 1
+            },
+            {
+              "step": "interpret",
+              "id": "skill://reasoning/shopping",
+              "version": "1.0.0",
+              "attempts": 0,
+              "completed": 0
+            },
+            {
+              "step": "reference",
+              "id": "skill://catalog/facts",
+              "version": "1.0.0",
+              "attempts": 0,
+              "completed": 0
+            },
+            {
+              "step": "search",
+              "id": "skill://catalog/search",
+              "version": "1.0.0",
+              "attempts": 0,
+              "completed": 0
+            },
+            {
+              "step": "compare",
+              "id": "skill://catalog/compare",
+              "version": "1.0.0",
+              "attempts": 0,
+              "completed": 0
+            },
+            {
+              "step": "rank",
+              "id": "skill://ranking/candidates",
+              "version": "1.0.0",
+              "attempts": 0,
+              "completed": 0
+            }
+          ],
+          "reserved": {
+            "schema_version": "1.0",
+            "tools": 4,
+            "models": 1,
+            "tokens": 65536,
+            "cost_micros": 100000,
+            "mutations": 0
+          },
+          "failed": false,
+          "industry": {
+            "schema_version": "1.0",
+            "id": "industry://commerce/common",
+            "version": "1.0.0",
+            "attributes": [],
+            "status": "schema_ready",
+            "policies": [
+              "verified_only"
+            ]
+          },
+          "reserved_model_cost_micros": 0,
+          "reserved_tokens": 0
+        }
+      },
+      {
+        "trace_id": "6e6901f9-032a-4494-9487-2ba5475d12b1",
+        "outcome": "completed",
+        "timings": {
+          "request_ms": 5,
+          "first_text_ms": 5,
+          "provider_first_token_ms": null,
+          "policy_decisions": 1,
+          "policy_R0_allow": 1,
+          "catalog_network_calls": 1,
+          "tool_ms": 4,
+          "tool_count": 1,
+          "meaning_requirements": 2,
+          "meaning_conflicts": 1,
+          "meaning_clarifications": 1,
+          "meaning_assumptions": 0
+        },
+        "core": {
+          "schema_version": "1.0",
+          "request_id": "6e6901f9-032a-4494-9487-2ba5475d12b1",
+          "tenant_id": "0b597bc4-8eab-4e21-99b3-0c610a9ef7ba",
+          "store_id": "0b597bc4-8eab-4e21-99b3-0c610a9ef7ba",
+          "journey": "discovery",
+          "path": "core",
+          "reason": "core_selected",
+          "versions": [
+            {
+              "schema_version": "1.0",
+              "id": "policy://commerce/authority",
+              "version": "1.0.0",
+              "schema_major": 1
+            },
+            {
+              "schema_version": "1.0",
+              "id": "industry://commerce/common",
+              "version": "1.0.0",
+              "schema_major": 1
+            },
+            {
+              "schema_version": "1.0",
+              "id": "skill://shopping/discovery",
+              "version": "1.0.0",
+              "schema_major": 1
+            },
+            {
+              "schema_version": "1.0",
+              "id": "playbook://shopping/discovery",
+              "version": "1.0.0",
+              "schema_major": 1
+            },
+            {
+              "schema_version": "1.0",
+              "id": "provider://reasoning/default",
+              "version": "1.0.0",
+              "schema_major": 1
+            }
+          ],
+          "deprecated": []
+        },
+        "policy": [
+          {
+            "policy": "commerce/default",
+            "version": "1.0.0",
+            "outcome": "allow",
+            "reason": "verified",
+            "risk": "R0",
+            "confirmation": "none",
+            "expires_at": 1790066934,
+            "audit_ref": "e3a82829-f551-48a0-827d-a826758a84d2/catalog_read/verified"
+          }
+        ],
+        "planning": {
+          "playbook": "playbook://commerce/discovery",
+          "version": "1.0.0",
+          "reason": "known_journey",
+          "mode": "read",
+          "skills": [
+            {
+              "step": "schema",
+              "id": "skill://catalog/schema",
+              "version": "1.0.0",
+              "attempts": 1,
+              "completed": 1
+            },
+            {
+              "step": "interpret",
+              "id": "skill://reasoning/shopping",
+              "version": "1.0.0",
+              "attempts": 0,
+              "completed": 0
+            },
+            {
+              "step": "reference",
+              "id": "skill://catalog/facts",
+              "version": "1.0.0",
+              "attempts": 0,
+              "completed": 0
+            },
+            {
+              "step": "search",
+              "id": "skill://catalog/search",
+              "version": "1.0.0",
+              "attempts": 0,
+              "completed": 0
+            },
+            {
+              "step": "compare",
+              "id": "skill://catalog/compare",
+              "version": "1.0.0",
+              "attempts": 0,
+              "completed": 0
+            },
+            {
+              "step": "rank",
+              "id": "skill://ranking/candidates",
+              "version": "1.0.0",
+              "attempts": 0,
+              "completed": 0
+            }
+          ],
+          "reserved": {
+            "schema_version": "1.0",
+            "tools": 4,
+            "models": 1,
+            "tokens": 65536,
+            "cost_micros": 100000,
+            "mutations": 0
+          },
+          "failed": false,
+          "industry": {
+            "schema_version": "1.0",
+            "id": "industry://commerce/common",
+            "version": "1.0.0",
+            "attributes": [],
+            "status": "schema_ready",
+            "policies": [
+              "verified_only"
+            ]
+          },
+          "reserved_model_cost_micros": 0,
+          "reserved_tokens": 0
+        }
+      },
+      {
+        "trace_id": "5ab92f4e-6056-4833-8d0c-de10c35ac87f",
+        "outcome": "completed",
+        "timings": {
+          "request_ms": 0,
+          "first_text_ms": 0,
+          "provider_first_token_ms": null
+        },
+        "core": {
+          "schema_version": "1.0",
+          "request_id": "5ab92f4e-6056-4833-8d0c-de10c35ac87f",
+          "tenant_id": "0b597bc4-8eab-4e21-99b3-0c610a9ef7ba",
+          "store_id": "0b597bc4-8eab-4e21-99b3-0c610a9ef7ba",
+          "journey": "cart",
+          "path": "deterministic",
+          "reason": "existing_deterministic",
+          "versions": [
+            {
+              "schema_version": "1.0",
+              "id": "policy://commerce/authority",
+              "version": "1.0.0",
+              "schema_major": 1
+            },
+            {
+              "schema_version": "1.0",
+              "id": "industry://commerce/common",
+              "version": "1.0.0",
+              "schema_major": 1
+            },
+            {
+              "schema_version": "1.0",
+              "id": "skill://shopping/cart",
+              "version": "1.0.0",
+              "schema_major": 1
+            },
+            {
+              "schema_version": "1.0",
+              "id": "playbook://shopping/cart",
+              "version": "1.0.0",
+              "schema_major": 1
+            }
+          ],
+          "deprecated": []
+        }
+      },
+      {
+        "trace_id": "73d7ce95-5c04-47d6-aef5-b7fa180566c9",
+        "outcome": "completed",
+        "timings": {
+          "request_ms": 9,
+          "first_text_ms": 6,
+          "provider_first_token_ms": null,
+          "history_ms": 0,
+          "history_count": 1,
+          "tool_ms": 4,
+          "tool_count": 1,
+          "persistence_ms": 3,
+          "persistence_count": 1
+        },
+        "core": {
+          "schema_version": "1.0",
+          "request_id": "73d7ce95-5c04-47d6-aef5-b7fa180566c9",
+          "tenant_id": "0b597bc4-8eab-4e21-99b3-0c610a9ef7ba",
+          "store_id": "0b597bc4-8eab-4e21-99b3-0c610a9ef7ba",
+          "journey": "cart",
+          "path": "deterministic",
+          "reason": "existing_deterministic",
+          "versions": [
+            {
+              "schema_version": "1.0",
+              "id": "policy://commerce/authority",
+              "version": "1.0.0",
+              "schema_major": 1
+            },
+            {
+              "schema_version": "1.0",
+              "id": "industry://commerce/common",
+              "version": "1.0.0",
+              "schema_major": 1
+            },
+            {
+              "schema_version": "1.0",
+              "id": "skill://shopping/cart",
+              "version": "1.0.0",
+              "schema_major": 1
+            },
+            {
+              "schema_version": "1.0",
+              "id": "playbook://shopping/cart",
+              "version": "1.0.0",
+              "schema_major": 1
+            }
+          ],
+          "deprecated": []
+        },
+        "planning": {
+          "playbook": "playbook://commerce/cart",
+          "version": "1.0.0",
+          "reason": "known_journey",
+          "mode": "read",
+          "skills": [
+            {
+              "step": "read",
+              "id": "skill://cart/read",
+              "version": "1.0.0",
+              "attempts": 1,
+              "completed": 1
+            }
+          ],
+          "reserved": {
+            "schema_version": "1.0",
+            "tools": 1,
+            "models": 0,
+            "tokens": 0,
+            "cost_micros": 0,
+            "mutations": 0
+          },
+          "failed": false,
+          "industry": null,
+          "reserved_model_cost_micros": 0,
+          "reserved_tokens": 0
+        }
+      },
+      {
+        "trace_id": "1b6d4c8b-d770-4257-b7ad-b0e16fa5a4f5",
+        "outcome": "completed",
+        "timings": {
+          "request_ms": 8,
+          "first_text_ms": 5,
+          "provider_first_token_ms": null,
+          "history_ms": 0,
+          "history_count": 1,
+          "tool_ms": 3,
+          "tool_count": 1,
+          "persistence_ms": 2,
+          "persistence_count": 1
+        },
+        "core": {
+          "schema_version": "1.0",
+          "request_id": "1b6d4c8b-d770-4257-b7ad-b0e16fa5a4f5",
+          "tenant_id": "0b597bc4-8eab-4e21-99b3-0c610a9ef7ba",
+          "store_id": "0b597bc4-8eab-4e21-99b3-0c610a9ef7ba",
+          "journey": "order",
+          "path": "deterministic",
+          "reason": "existing_deterministic",
+          "versions": [
+            {
+              "schema_version": "1.0",
+              "id": "policy://commerce/authority",
+              "version": "1.0.0",
+              "schema_major": 1
+            },
+            {
+              "schema_version": "1.0",
+              "id": "industry://commerce/common",
+              "version": "1.0.0",
+              "schema_major": 1
+            },
+            {
+              "schema_version": "1.0",
+              "id": "skill://shopping/order",
+              "version": "1.0.0",
+              "schema_major": 1
+            },
+            {
+              "schema_version": "1.0",
+              "id": "playbook://shopping/order",
+              "version": "1.0.0",
+              "schema_major": 1
+            }
+          ],
+          "deprecated": []
+        },
+        "planning": {
+          "playbook": "playbook://commerce/order",
+          "version": "1.0.0",
+          "reason": "known_journey",
+          "mode": "read",
+          "skills": [
+            {
+              "step": "read",
+              "id": "skill://order/read",
+              "version": "1.0.0",
+              "attempts": 1,
+              "completed": 1
+            }
+          ],
+          "reserved": {
+            "schema_version": "1.0",
+            "tools": 1,
+            "models": 0,
+            "tokens": 0,
+            "cost_micros": 0,
+            "mutations": 0
+          },
+          "failed": false,
+          "industry": null,
+          "reserved_model_cost_micros": 0,
+          "reserved_tokens": 0
+        }
+      }
+    ],
+    "zero_provider_clarifications": 2,
+    "browser_stats": {
+      "startTime": "2026-09-22T08:48:04.089Z",
+      "duration": 21904.517,
+      "expected": 12,
+      "skipped": 0,
+      "unexpected": 0,
+      "flaky": 0
+    },
+    "production_changed": false
+  }
+}

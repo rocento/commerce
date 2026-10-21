@@ -1,0 +1,81 @@
+{
+  "commerce_before": {
+    "catalog.products": "5417a60fa93628d89d87c85b05acaae2",
+    "customers.customers": "0773bb39aef386fb7807a5c5cf38ea42",
+    "cart_checkout.items": "e31a23d88eca81fb7d25fe33a821d85c",
+    "orders.orders": "e20c7197cacd05963ab057bf8d959b73",
+    "orders.order_items": "dee4482522ce7370234dca812f8f0d8b",
+    "payments.payment_transactions": "23f69a412dee626f736e95b1b37f21ae"
+  },
+  "source_sha256": {
+    "backend/crates/domain-cart-checkout/src/lib.rs": "01156b923cec5386c68d130a0cd759aeaf03148e081dd722754e7c8220552f28",
+    "backend/crates/domain-cart-checkout/src/shopping.rs": "c9d6fb174a517d48a70fd426ef871b9699a760e3ba32a90bad3f59f5683e77e5",
+    "backend/crates/domain-cart-checkout/src/trust.rs": "80ae3e5b0ccfd719331e89db191eeaf7c8271007a7ff0e392dd0300ee3a220a6",
+    "backend/crates/api-gateway/src/assistant.rs": "0a87140ccf32ddbbee7e4177ed47f425bf59f7fab6934405e9617dfe98d6e68c",
+    "backend/crates/api-gateway/src/assistant_trust.rs": "a49cf1554d30e99f49803fd0c6abe4d06a6980ab1c722e4b3439eddd2bd3d197",
+    "backend/migrations/20260922130000_agent_trust.sql": "3e298ca6c19a2812f1461e9123cd72c1a11c39d2356fe8798ad955e9ef8575a9",
+    "backend/openapi.json": "c0f23797556ffd3e3a510fcbb1a4441efdd0f5c14e032aa3c49d130872c4ff20"
+  },
+  "old_images": {
+    "api-gateway": "sha256:5996802031d24fb95437664c8546af7e7c23924a0063d0a6eb91b2eb4eb0af17",
+    "ai-service": "sha256:d51c32a919dcbe52746826b752e7da5be46d98306d9d8c1f8acabdb08eaefe45"
+  },
+  "rollback_directory": "/Users/momar/Documents/commerce-ai/.local/shopping-staging/rocento-shopping-stage-9535d4d7/m09-rollback",
+  "production_changed": false,
+  "feature": "cart_checkout.trust_configuration.enabled",
+  "new_images": {
+    "api-gateway": "sha256:a5a8695920a3355d860553323b8c9cf8fb0c3d80f87012a4558c809a5e514a37",
+    "ai-service": "sha256:d51c32a919dcbe52746826b752e7da5be46d98306d9d8c1f8acabdb08eaefe45"
+  },
+  "frontend_accepted_sha256": {
+    "frontend/apps/storefront/src/shopping.tsx": "7953d9c3d08e89a367f8ee147fdce2243f3c24ecbf7cfb5d1770b41b8925224e",
+    "frontend/apps/storefront/src/trust-controls.tsx": "ecac5b3408710b4990014413e154b69d57d4316ca8cb158eeec13fd850bf303a",
+    "frontend/packages/api-client/src/identity.ts": "950f1d23eeeae16d3e2a1ddf59cf25a52f4c3c82d2402cb961fa8fbcb0978479",
+    "frontend/packages/api-client/src/schema.d.ts": "5450c6c8151f1f78b4d482dc977aa0b2478f711e7776423c2a1247a7bdef2354"
+  },
+  "storefront_index_sha256": "4dbab6affe6e5d546bfb82d8d83e34a14f7640e9ab4cd9d4fab51111f3e6e9cb",
+  "commerce_after": {
+    "catalog.products": "5417a60fa93628d89d87c85b05acaae2",
+    "customers.customers": "0773bb39aef386fb7807a5c5cf38ea42",
+    "cart_checkout.items": "e31a23d88eca81fb7d25fe33a821d85c",
+    "orders.orders": "e20c7197cacd05963ab057bf8d959b73",
+    "orders.order_items": "dee4482522ce7370234dca812f8f0d8b",
+    "payments.payment_transactions": "23f69a412dee626f736e95b1b37f21ae"
+  },
+  "verification": {
+    "default_off_migration": true,
+    "signed_http_checks": 15,
+    "rust_baseline": 68,
+    "rust_final_m09": 5,
+    "rust_identity_assistant_shopping": 44,
+    "python_regression": 972,
+    "english_replay": 88,
+    "live_canaries": 4,
+    "live_canary_estimated_usd": 0.001997,
+    "live_canary_cap_usd": 0.05,
+    "browser_m01_m07": 17,
+    "browser_m08_focused": 3,
+    "browser_m09_final": 4,
+    "browser_mobile_overflow": false,
+    "process_restart": true,
+    "owner_status_and_revoke_while_disabled": true,
+    "six_commerce_fingerprints_unchanged": true,
+    "financial_actions_enabled": false,
+    "arabic_in_scope": false
+  },
+  "scope": "English engineering and isolated local synthetic pilot only",
+  "known_integration_findings": [
+    "Shared workspace delivery work was preserved; final Rust M09 checks used the frozen accepted staging source.",
+    "Parallel Rust tests can contend on the existing two-slot tool semaphore; serial rerun passed.",
+    "Two full browser runs returned a safe model clarification in the existing M08 personalization case; all three unchanged M08 cases passed in the focused run.",
+    "Guest acceptance cleanup was corrected to use product_id; the one remaining synthetic guest line and reservation were removed, restoring all pre-M09 commerce fingerprints."
+  ],
+  "repaired_generated_basket_definitions": [
+    "ShoppingGoal",
+    "BasketSelection",
+    "BasketDraft",
+    "BasketProposalLine",
+    "BasketQuotedItem",
+    "BasketProposal"
+  ]
+}

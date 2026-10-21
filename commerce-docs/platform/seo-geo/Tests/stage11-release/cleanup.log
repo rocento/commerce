@@ -1,0 +1,6 @@
+ Container rocento-publication-release-postgres-1 Stopping
+ Container rocento-publication-release-postgres-1 Stopped
+ Container rocento-publication-release-postgres-1 Removing
+ Container rocento-publication-release-postgres-1 Removed
+ Network rocento-publication-release_default Removing
+ Network rocento-publication-release_default Removed

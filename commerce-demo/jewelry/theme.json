@@ -1,0 +1,287 @@
+{
+  "schema_version": "theme/v1",
+  "tokens": {
+    "color.primary": "#083057",
+    "color.secondary": "#bda160",
+    "color.background": "#ffffff",
+    "color.surface": "#efefef",
+    "color.text": "#1c1c1c",
+    "color.muted": "#45474e",
+    "color.success": "#146c43",
+    "color.warning": "#946200",
+    "color.error": "#b42318",
+    "font.body": "Futura Now Headline",
+    "font.heading": "Futura Now Headline",
+    "spacing.xs": 4,
+    "spacing.sm": 8,
+    "spacing.md": 24,
+    "spacing.lg": 32,
+    "spacing.xl": 80,
+    "radius.default": 0,
+    "border.width": 1,
+    "shadow.default": "none",
+    "container.width": 1440,
+    "breakpoint.mobile": 640,
+    "breakpoint.desktop": 1024
+  },
+  "global": {
+    "top": [
+      {
+        "id": "editorial-presentation",
+        "component": "presentation",
+        "version": 1,
+        "enabled": true,
+        "settings": {
+          "style": "heritage"
+        }
+      },
+      {
+        "id": "announcement",
+        "component": "announcement",
+        "version": 1,
+        "enabled": true,
+        "settings": {
+          "text": "Considered design. Beautifully personal. Discover the collection."
+        }
+      },
+      {
+        "id": "header",
+        "component": "header",
+        "version": 1,
+        "enabled": true,
+        "settings": {
+          "brand": "Rocento"
+        }
+      },
+      {
+        "id": "navigation",
+        "component": "navigation",
+        "version": 1,
+        "enabled": true,
+        "settings": {}
+      },
+      {
+        "id": "catalog-filters",
+        "component": "catalog_filters",
+        "version": 1,
+        "enabled": true,
+        "settings": {
+          "layout": "horizontal"
+        }
+      }
+    ],
+    "bottom": [
+      {
+        "id": "footer-options",
+        "component": "footer_options",
+        "version": 1,
+        "enabled": true,
+        "settings": {
+          "style": "heritage",
+          "show_services": "on",
+          "service_1": "Thoughtfully selected",
+          "service_2": "Here to help",
+          "service_3": "Shop with confidence",
+          "show_brand": "on",
+          "copyright": "All rights reserved.",
+          "newsletter_title": "Stay in the know",
+          "newsletter_text": "Discover the latest news and collections.",
+          "newsletter_label": "Explore the latest",
+          "newsletter_href": "/search",
+          "show_newsletter": "off",
+          "column_1_heading": "Customer care",
+          "column_1_link_1_label": "Contact & support",
+          "column_1_link_1_href": "/support",
+          "column_1_link_2_label": "Your orders",
+          "column_1_link_2_href": "/account/orders",
+          "column_2_heading": "Your account",
+          "column_2_link_1_label": "My account",
+          "column_2_link_1_href": "/account",
+          "column_2_link_2_label": "Wishlist",
+          "column_2_link_2_href": "/account/wishlist",
+          "column_3_heading": "Discover",
+          "column_3_link_1_label": "Shop all",
+          "column_3_link_1_href": "/search",
+          "column_3_link_2_label": "Shopping assistant",
+          "column_3_link_2_href": "/assistant"
+        }
+      },
+      {
+        "id": "footer",
+        "component": "footer",
+        "version": 1,
+        "enabled": true,
+        "settings": {
+          "text": "AURELLE · Jewelry for the everyday and the extraordinary. Demo collection."
+        }
+      }
+    ]
+  },
+  "pages": {
+    "home": [
+      {
+        "id": "hero",
+        "component": "editorial_hero",
+        "version": 1,
+        "enabled": true,
+        "settings": {
+          "heading": "A little beauty.\nA lasting feeling.",
+          "text": "Quietly distinctive pieces to make your own. Discover modern heirlooms and the art of wearing them every day.",
+          "image": "asset:jewelry/gold-solitaire-ring.png",
+          "alt": "Illustrative gold solitaire ring on a warm ivory background",
+          "label": "Explore the collection",
+          "href": "/search",
+          "eyebrow": "AURELLE / THE EVERYDAY COLLECTION"
+        }
+      },
+      {
+        "id": "categories",
+        "component": "category_showcase",
+        "version": 1,
+        "enabled": true,
+        "settings": {
+          "heading": "Find your everyday signature",
+          "limit": 8
+        }
+      },
+      {
+        "id": "collection-intro",
+        "component": "banner",
+        "version": 1,
+        "enabled": true,
+        "settings": {
+          "heading": "Color, with a little character.",
+          "text": "Emerald greens, sapphire blues and warm gold tones. Discover the gemstone edit.",
+          "label": "Discover the gemstone edit",
+          "href": "category-link:jewelry-collections"
+        }
+      },
+      {
+        "id": "featured",
+        "component": "product_collection",
+        "version": 1,
+        "enabled": true,
+        "settings": {
+          "heading": "The gemstone edit",
+          "limit": 4,
+          "query": "",
+          "category": "category:jewelry-collections"
+        }
+      },
+      {
+        "id": "story",
+        "component": "image_text",
+        "version": 1,
+        "enabled": true,
+        "settings": {
+          "heading": "Small details.\nLasting impressions.",
+          "text": "Sculptural shapes, delicate settings and the quiet beauty of a considered design. Explore pieces that feel like part of your story.",
+          "image": "asset:jewelry/pearl-strand-necklace.png",
+          "alt": "Illustrative pearl strand necklace arranged on ivory",
+          "label": "Find your signature",
+          "href": "category-link:jewelry-necklaces",
+          "eyebrow": "THE ART OF THE EVERYDAY",
+          "image_side": "left"
+        }
+      },
+      {
+        "id": "new-arrivals",
+        "component": "product_collection",
+        "version": 1,
+        "enabled": true,
+        "settings": {
+          "heading": "A new chapter",
+          "limit": 4,
+          "query": "",
+          "category": "category:jewelry-new-arrivals"
+        }
+      },
+      {
+        "id": "gifts",
+        "component": "image_text",
+        "version": 1,
+        "enabled": true,
+        "settings": {
+          "heading": "For someone\nquite remarkable.",
+          "text": "A gesture of love. A moment to remember. Discover a gift that says it beautifully.",
+          "image": "asset:jewelry/pearl-gold-brooch.png",
+          "alt": "Illustrative pearl and gold brooch",
+          "label": "The gift edit",
+          "href": "category-link:jewelry-gifts",
+          "eyebrow": "THOUGHTFULLY CHOSEN",
+          "image_side": "right"
+        }
+      },
+      {
+        "id": "newsletter",
+        "component": "rich_text",
+        "version": 1,
+        "enabled": true,
+        "settings": {
+          "heading": "Letters from Aurelle",
+          "text": "Our newsletter is coming soon. In the meantime, create an account to save your favorite pieces and keep track of your orders."
+        }
+      },
+      {
+        "id": "account-invitation",
+        "component": "banner",
+        "version": 1,
+        "enabled": true,
+        "settings": {
+          "heading": "Make it personal.",
+          "text": "Your favorites, all in one place.",
+          "label": "Create your account",
+          "href": "/register"
+        }
+      }
+    ],
+    "category": [
+      {
+        "id": "section-10",
+        "component": "product_grid",
+        "version": 1,
+        "enabled": true,
+        "settings": {}
+      }
+    ],
+    "search": [
+      {
+        "id": "section-11",
+        "component": "product_grid",
+        "version": 1,
+        "enabled": true,
+        "settings": {}
+      }
+    ],
+    "product": [
+      {
+        "id": "section-12",
+        "component": "product_detail",
+        "version": 1,
+        "enabled": true,
+        "settings": {}
+      },
+      {
+        "id": "related",
+        "component": "product_collection",
+        "version": 1,
+        "enabled": true,
+        "settings": {
+          "heading": "Complete your collection",
+          "limit": 4,
+          "query": "",
+          "category": "category:jewelry-rings"
+        }
+      }
+    ],
+    "cart": [
+      {
+        "id": "section-14",
+        "component": "cart",
+        "version": 1,
+        "enabled": true,
+        "settings": {}
+      }
+    ]
+  }
+}

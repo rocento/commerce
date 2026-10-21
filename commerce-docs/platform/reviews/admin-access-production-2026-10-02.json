@@ -1,0 +1,84 @@
+{
+  "verified_at": "2026-10-01T22:25:15.603527+00:00",
+  "deployment_unit": "rocento-access-20261002",
+  "frontend_release": "/var/www/rocento/releases/release-uEBlyjZa",
+  "previous_frontend": "/var/www/rocento/releases/release-yMW78kg2",
+  "production_backup": "/var/log/rocento/access-20261002",
+  "migration": 20261002110000,
+  "stores": {
+    "grocery": {
+      "gateway": "healthy",
+      "migration": "applied",
+      "indexes": 3,
+      "authenticated_audit_filters": "passed",
+      "role_type_filters": "passed",
+      "invalid_date_validation": "passed",
+      "new_frontend_bundle": "passed"
+    },
+    "jewelry": {
+      "gateway": "healthy",
+      "migration": "applied",
+      "indexes": 3,
+      "authenticated_audit_filters": "passed",
+      "role_type_filters": "passed",
+      "invalid_date_validation": "passed",
+      "new_frontend_bundle": "passed"
+    },
+    "electronics": {
+      "gateway": "healthy",
+      "migration": "applied",
+      "indexes": 3,
+      "authenticated_audit_filters": "passed",
+      "role_type_filters": "passed",
+      "invalid_date_validation": "passed",
+      "new_frontend_bundle": "passed"
+    }
+  },
+  "source_manifest": [
+    {
+      "path": "frontend/apps/admin/src/main.tsx",
+      "sha256": "1d4d6ef47be372429fcf44b85877d49a1f749e68c28c57ce29f8d4a9638519af",
+      "before": "fcb92e16f68c878e4dd75d83b40bb5c441fe5c551ae935240a43384976b1b997"
+    },
+    {
+      "path": "frontend/apps/admin/src/grids.tsx",
+      "sha256": "b647019eaf43c35ddf6e3b51859e1d13bef4f531764d638d32fdd60504ffa956",
+      "before": "32a9575bda5475a95ae5451ade134a7d23a0ed9dd6a329b4274f8082be993add"
+    },
+    {
+      "path": "frontend/apps/admin/src/permission-tree.tsx",
+      "sha256": "8bc60effe7b5f2d176826033f669d3ba8b2559181caad2a1fc9aef3c7901410a",
+      "before": "b2d0aae0191409147457e64a4fee12ec5577796f66704b4f3664ec42eaa6d8ac"
+    },
+    {
+      "path": "frontend/apps/admin/src/access-review.ts",
+      "sha256": "7fcfa612c4a6157e558b99583159e701d3f8e4fb257a6c05515740a758d782de",
+      "before": null
+    },
+    {
+      "path": "frontend/apps/admin/src/access-management.css",
+      "sha256": "71ef2c1fd48ef29cfa063dba45f8f12c57cec78fa44a733771ab87c7e0625832",
+      "before": null
+    },
+    {
+      "path": "frontend/apps/admin/src/audit-log.tsx",
+      "sha256": "0e2a1fd88d8117ac9617f68c57a4b7391bed6dbcfb6dd7dc1f97e3c64be44ece",
+      "before": null
+    },
+    {
+      "path": "frontend/apps/admin/src/roles.tsx",
+      "sha256": "af1ff36fd375c49ce0af46522478ecfed8212f0f587d89f96c45cf539155aa6f",
+      "before": null
+    },
+    {
+      "path": "backend/crates/api-gateway/src/grids.rs",
+      "sha256": "cf6fbc2bf57ee94abd4ec8e6d5bdeb52b3fb9ca0c54b1be1f128f1b529d15c26",
+      "before": "176aa3fb8d7700131652246a88960861871adb523aeec2ff52497b87accc7563"
+    },
+    {
+      "path": "backend/migrations/20261002110000_audit_investigation_indexes.sql",
+      "sha256": "91e29f30c56b468fc7787811ba3f3a47982b8c98e45712553759b7f16995a57c",
+      "before": null
+    }
+  ]
+}

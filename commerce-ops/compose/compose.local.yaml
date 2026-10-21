@@ -1,0 +1,25 @@
+# Local single-merchant equivalent of live shared AI storage.
+# Keep ai-data attached to preserve the existing local assistant database.
+services:
+  ai-postgres:
+    networks:
+      assistant-private:
+        aliases: [shared-ai-postgres]
+    mem_limit: 1g
+    cpus: 2
+    pids_limit: 128
+  commerce-language-engine:
+    restart: unless-stopped
+    environment:
+      DATABASE_URL: ${LOCAL_LANGUAGE_DATABASE_URL:?Run commerce-ops/scripts/local-assistant-setup.py first}
+      CLE_SHARED_DATABASE: "true"
+      LANGUAGE_ENGINE_ADMIN_DATABASE: postgres
+    depends_on: !override
+      ai-postgres: {condition: service_healthy}
+    networks: !override [assistant-private]
+  ai-service:
+    environment:
+      AI_STORE_HOST: shared-ai-postgres
+      AI_STORE_USER: ${LOCAL_AI_STORE_USER:-ai_runtime}
+  ai-health:
+    profiles: !override [diagnostics]

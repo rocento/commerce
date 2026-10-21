@@ -1,0 +1,143 @@
+
+ RUN  v3.2.7 /private/tmp/rocento-stage12a-candidate/frontend
+
+ ✓ apps/admin/src/category-tree.test.ts (5 tests) 8ms
+ ✓ apps/storefront/src/cart-quantity.test.ts (9 tests) 9ms
+ ✓ apps/storefront/src/assistant-markdown.test.tsx (13 tests) 6ms
+ ❯ packages/api-client/src/demo-presets.test.ts (7 tests | 6 failed) 7ms
+   × demo preset contract compatibility > grocery resolves to a valid existing-engine configuration 3ms
+     → ENOENT: no such file or directory, open '/private/tmp/rocento-stage12a-candidate/demo-presets/grocery/theme.json'
+   × demo preset contract compatibility > jewelry resolves to a valid existing-engine configuration 0ms
+     → ENOENT: no such file or directory, open '/private/tmp/rocento-stage12a-candidate/demo-presets/jewelry/theme.json'
+   × demo preset contract compatibility > electronics resolves to a valid existing-engine configuration 0ms
+     → ENOENT: no such file or directory, open '/private/tmp/rocento-stage12a-candidate/demo-presets/electronics/theme.json'
+   × demo preset contract compatibility > Grocery changes only its documented palette, without editorial opt-ins 1ms
+     → ENOENT: no such file or directory, open '/private/tmp/rocento-stage12a-candidate/demo-presets/grocery/theme.json'
+   ✓ demo preset contract compatibility > all new capabilities are optional and accept existing setting types 1ms
+   × demo preset contract compatibility > uses the reference palette and locally hosted font choices 0ms
+     → ENOENT: no such file or directory, open '/private/tmp/rocento-stage12a-candidate/demo-presets/jewelry/theme.json'
+   × demo preset contract compatibility > retains required commerce slots in both presets 0ms
+     → ENOENT: no such file or directory, open '/private/tmp/rocento-stage12a-candidate/demo-presets/grocery/theme.json'
+ ✓ packages/api-client/src/assistant.test.ts (19 tests) 14ms
+ ✓ packages/api-client/src/themes.test.ts (10 tests) 13ms
+ ✓ apps/admin/src/effective-indexing-status.test.tsx (6 tests) 5ms
+ ✓ apps/storefront/src/discovery-attribution.test.ts (3 tests) 2ms
+ ✓ packages/api-client/src/index.test.ts (3 tests) 4ms
+ ✓ apps/storefront/src/theme-preview.test.ts (5 tests) 11ms
+ ✓ apps/storefront/src/checkout-logic.test.ts (4 tests) 14ms
+ ✓ apps/admin/src/merchant-assistant.test.tsx (1 test) 15ms
+ ✓ apps/storefront/src/theme-grid.test.ts (3 tests) 3ms
+ ✓ apps/storefront/src/delivery-geography.test.ts (2 tests) 335ms
+   ✓ Egypt delivery directory > has all 27 governorates, valid coordinates, unique places, and nonempty dependent city lists  333ms
+ ✓ apps/storefront/src/assistant-state.test.ts (5 tests) 3ms
+ ✓ apps/admin/src/permission-model.test.ts (5 tests) 2ms
+ ✓ apps/admin/src/merchant-questions.test.ts (2 tests) 2ms
+ ✓ apps/admin/src/msi-logic.test.ts (5 tests) 2ms
+ ✓ apps/admin/src/order-geo-logic.test.ts (3 tests) 2ms
+ ✓ packages/api-client/src/merchant.test.ts (2 tests) 2ms
+ ✓ apps/storefront/src/locations-logic.test.ts (5 tests) 2ms
+ ✓ apps/storefront/src/support-logic.test.ts (6 tests) 2ms
+ ✓ apps/admin/src/delivery-geometry.test.ts (4 tests) 3ms
+ ✓ apps/storefront/src/assistant-rich.test.tsx (5 tests) 9ms
+
+⎯⎯⎯⎯⎯⎯ Failed Suites 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  packages/api-client/src/commerce-core.test.ts [ packages/api-client/src/commerce-core.test.ts ]
+Error: ENOENT: no such file or directory, open '/private/tmp/rocento-stage12a-candidate/contracts/commerce-core/v1/schema.json'
+ ❯ load packages/api-client/src/commerce-core.test.ts:5:43
+      3| import { validatesCore } from "./commerce-core-validation";
+      4|
+      5| const load = (name: string) => JSON.parse(readFileSync(new URL(`../../…
+       |                                           ^
+      6| const schema = load("schema.json");
+      7| const fixtures: { id: string; contract: string; valid: boolean; value:…
+ ❯ packages/api-client/src/commerce-core.test.ts:6:16
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/7]⎯
+
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 6 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  packages/api-client/src/demo-presets.test.ts > demo preset contract compatibility > grocery resolves to a valid existing-engine configuration
+Error: ENOENT: no such file or directory, open '/private/tmp/rocento-stage12a-candidate/demo-presets/grocery/theme.json'
+ ❯ preset packages/api-client/src/demo-presets.test.ts:5:45
+      3| import { defaultTheme, validateTheme, themeContract } from './themes';
+      4|
+      5| const preset = (name: string) => JSON.parse(readFileSync(new URL(`../.…
+       |                                             ^
+      6| const resolve = (value: unknown): unknown => {
+      7|   if (Array.isArray(value)) return value.map(resolve);
+ ❯ packages/api-client/src/demo-presets.test.ts:15:34
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[2/7]⎯
+
+ FAIL  packages/api-client/src/demo-presets.test.ts > demo preset contract compatibility > jewelry resolves to a valid existing-engine configuration
+Error: ENOENT: no such file or directory, open '/private/tmp/rocento-stage12a-candidate/demo-presets/jewelry/theme.json'
+ ❯ preset packages/api-client/src/demo-presets.test.ts:5:45
+      3| import { defaultTheme, validateTheme, themeContract } from './themes';
+      4|
+      5| const preset = (name: string) => JSON.parse(readFileSync(new URL(`../.…
+       |                                             ^
+      6| const resolve = (value: unknown): unknown => {
+      7|   if (Array.isArray(value)) return value.map(resolve);
+ ❯ packages/api-client/src/demo-presets.test.ts:15:34
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[3/7]⎯
+
+ FAIL  packages/api-client/src/demo-presets.test.ts > demo preset contract compatibility > electronics resolves to a valid existing-engine configuration
+Error: ENOENT: no such file or directory, open '/private/tmp/rocento-stage12a-candidate/demo-presets/electronics/theme.json'
+ ❯ preset packages/api-client/src/demo-presets.test.ts:5:45
+      3| import { defaultTheme, validateTheme, themeContract } from './themes';
+      4|
+      5| const preset = (name: string) => JSON.parse(readFileSync(new URL(`../.…
+       |                                             ^
+      6| const resolve = (value: unknown): unknown => {
+      7|   if (Array.isArray(value)) return value.map(resolve);
+ ❯ packages/api-client/src/demo-presets.test.ts:15:34
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[4/7]⎯
+
+ FAIL  packages/api-client/src/demo-presets.test.ts > demo preset contract compatibility > Grocery changes only its documented palette, without editorial opt-ins
+Error: ENOENT: no such file or directory, open '/private/tmp/rocento-stage12a-candidate/demo-presets/grocery/theme.json'
+ ❯ preset packages/api-client/src/demo-presets.test.ts:5:45
+      3| import { defaultTheme, validateTheme, themeContract } from './themes';
+      4|
+      5| const preset = (name: string) => JSON.parse(readFileSync(new URL(`../.…
+       |                                             ^
+      6| const resolve = (value: unknown): unknown => {
+      7|   if (Array.isArray(value)) return value.map(resolve);
+ ❯ packages/api-client/src/demo-presets.test.ts:25:21
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[5/7]⎯
+
+ FAIL  packages/api-client/src/demo-presets.test.ts > demo preset contract compatibility > uses the reference palette and locally hosted font choices
+Error: ENOENT: no such file or directory, open '/private/tmp/rocento-stage12a-candidate/demo-presets/jewelry/theme.json'
+ ❯ preset packages/api-client/src/demo-presets.test.ts:5:45
+      3| import { defaultTheme, validateTheme, themeContract } from './themes';
+      4|
+      5| const preset = (name: string) => JSON.parse(readFileSync(new URL(`../.…
+       |                                             ^
+      6| const resolve = (value: unknown): unknown => {
+      7|   if (Array.isArray(value)) return value.map(resolve);
+ ❯ packages/api-client/src/demo-presets.test.ts:36:20
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[6/7]⎯
+
+ FAIL  packages/api-client/src/demo-presets.test.ts > demo preset contract compatibility > retains required commerce slots in both presets
+Error: ENOENT: no such file or directory, open '/private/tmp/rocento-stage12a-candidate/demo-presets/grocery/theme.json'
+ ❯ preset packages/api-client/src/demo-presets.test.ts:5:45
+      3| import { defaultTheme, validateTheme, themeContract } from './themes';
+      4|
+      5| const preset = (name: string) => JSON.parse(readFileSync(new URL(`../.…
+       |                                             ^
+      6| const resolve = (value: unknown): unknown => {
+      7|   if (Array.isArray(value)) return value.map(resolve);
+ ❯ packages/api-client/src/demo-presets.test.ts:45:22
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[7/7]⎯
+
+
+ Test Files  2 failed | 23 passed (25)
+      Tests  6 failed | 126 passed (132)
+   Start at  10:26:56
+   Duration  874ms (transform 994ms, setup 0ms, collect 3.58s, tests 475ms, environment 4ms, prepare 1.29s)

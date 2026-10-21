@@ -1,0 +1,8142 @@
+{
+  "budget-rules.escape.pattern.1": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": true
+  },
+  "budget-rules.escape.pattern.2": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": true
+  },
+  "budget-rules.escape.value.1": {
+    "kind": "value",
+    "valueShape": {
+      "type": "string"
+    },
+    "fragmentCaptures": 0
+  },
+  "budget-rules.validateBudgetRules.pattern.1": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "budget-rules.syntax.pattern.1": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "budget-rules.syntax.pattern.2": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "budget-rules.validateBudgetRules.value.1": {
+    "kind": "value",
+    "valueShape": {
+      "type": "string"
+    }
+  },
+  "budget-rules.validateBudgetRules.value.2": {
+    "kind": "value",
+    "valueShape": {
+      "type": "string"
+    }
+  },
+  "budget-rules.budgetSuffix.value.1": {
+    "kind": "value",
+    "valueShape": {
+      "type": "string"
+    },
+    "fragmentCaptures": 0
+  },
+  "budget-rules.budgetSuffix.pattern.1": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "budget-rules.budgetSuffix.pattern.2": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "budget-rules.start.pattern.1": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "budget-rules.tail.value.1": {
+    "kind": "value",
+    "valueShape": {
+      "type": "string"
+    }
+  },
+  "budget-rules.tail.value.2": {
+    "kind": "value",
+    "valueShape": {
+      "type": "string"
+    }
+  },
+  "budget-rules.tail.value.3": {
+    "kind": "value",
+    "valueShape": {
+      "type": "string"
+    }
+  },
+  "cart-clear-language.clearCartRequested.pattern.1": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "cart-clear-language.text.pattern.1": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "cart-clear-language.text.pattern.2": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": true
+  },
+  "cart-clear-language.clearCartRequested.pattern.2": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "cart-clear-language.clearCartRequested.pattern.3": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "cart-clear-language.cart.value.1": {
+    "kind": "value",
+    "valueShape": {
+      "type": "string"
+    },
+    "fragmentCaptures": 0
+  },
+  "cart-clear-language.all.value.1": {
+    "kind": "value",
+    "valueShape": {
+      "type": "string"
+    },
+    "fragmentCaptures": 0
+  },
+  "cart-clear-language.clear.value.1": {
+    "kind": "value",
+    "valueShape": {
+      "type": "string"
+    },
+    "fragmentCaptures": 0
+  },
+  "cart-clear-language.remove.value.1": {
+    "kind": "value",
+    "valueShape": {
+      "type": "string"
+    },
+    "fragmentCaptures": 0
+  },
+  "cart-clear-language.patterns.template.1": {
+    "kind": "template",
+    "arity": 2
+  },
+  "cart-clear-language.patterns.template.2": {
+    "kind": "template",
+    "arity": 3
+  },
+  "cart-clear-language.patterns.template.3": {
+    "kind": "template",
+    "arity": 2
+  },
+  "cart-clear-language.patterns.template.4": {
+    "kind": "template",
+    "arity": 1
+  },
+  "cart-clear-language.patterns.template.5": {
+    "kind": "template",
+    "arity": 2
+  },
+  "cart-clear-language.patterns.template.6": {
+    "kind": "template",
+    "arity": 2
+  },
+  "cart-clear-language.patterns.template.7": {
+    "kind": "template",
+    "arity": 1
+  },
+  "cart-clear-language.patterns.template.8": {
+    "kind": "template",
+    "arity": 1
+  },
+  "cart-pricing-language.cartPricingRequested.pattern.1": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "cart-pricing-language.cartPricingRequested.pattern.2": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "cart-pricing-language.value.pattern.1": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "cart-pricing-language.value.pattern.2": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "cart-pricing-language.metric.value.1": {
+    "kind": "value",
+    "valueShape": {
+      "type": "string"
+    },
+    "fragmentCaptures": 0
+  },
+  "cart-pricing-language.metrics.template.1": {
+    "kind": "template",
+    "arity": 2
+  },
+  "cart-pricing-language.cart.value.1": {
+    "kind": "value",
+    "valueShape": {
+      "type": "string"
+    },
+    "fragmentCaptures": 0
+  },
+  "cart-pricing-language.items.value.1": {
+    "kind": "value",
+    "valueShape": {
+      "type": "string"
+    },
+    "fragmentCaptures": 0
+  },
+  "cart-pricing-language.prefix.value.1": {
+    "kind": "value",
+    "valueShape": {
+      "type": "string"
+    },
+    "fragmentCaptures": 0
+  },
+  "cart-pricing-language.cartPricingRequested.template.1": {
+    "kind": "template",
+    "arity": 2
+  },
+  "cart-pricing-language.cartPricingRequested.template.2": {
+    "kind": "template",
+    "arity": 2
+  },
+  "cart-pricing-language.cartPricingRequested.template.3": {
+    "kind": "template",
+    "arity": 1
+  },
+  "cart-pricing-language.cartPricingRequested.template.4": {
+    "kind": "template",
+    "arity": 4
+  },
+  "cart-pricing-language.cartPricingRequested.template.5": {
+    "kind": "template",
+    "arity": 3
+  },
+  "cart-pricing-language.cartPricingRequested.template.6": {
+    "kind": "template",
+    "arity": 1
+  },
+  "cart-pricing-language.cartPricingRequested.template.7": {
+    "kind": "template",
+    "arity": 2
+  },
+  "clarification-replies.quantityMissing.pattern.1": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "clarification-replies.productMissing.pattern.1": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "clarification-replies.answer.pattern.1": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "clarification-replies.answer.pattern.2": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "clarification-replies.clarificationText.pattern.1": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "clarification-replies.code.pattern.1": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "clarification-replies.clarificationText.pattern.2": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "clarification-replies.value.pattern.1": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "clarification-replies.clarificationText.pattern.3": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "clarification-replies.clarificationText.pattern.4": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "clarification-replies.clarificationText.pattern.5": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "clarification-replies.reference.pattern.1": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "clarification.questions.template.1": {
+    "kind": "template",
+    "arity": 1
+  },
+  "clarification.label.pattern.1": {
+    "kind": "pattern",
+    "captures": 2,
+    "requiresGlobal": true
+  },
+  "clarification.label.pattern.2": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": true
+  },
+  "clarification.questions.template.2": {
+    "kind": "template",
+    "arity": 1
+  },
+  "collection-context.wrappers.value.1": {
+    "kind": "value",
+    "valueShape": {
+      "type": "string"
+    }
+  },
+  "commerce-fragments.commerceReadFragments.value.1": {
+    "kind": "value",
+    "valueShape": {
+      "type": "array",
+      "items": [
+        {
+          "type": "object",
+          "properties": {
+            "intent": {
+              "type": "string"
+            },
+            "text": {
+              "type": "string"
+            },
+            "aliases": {
+              "type": "array",
+              "items": [
+                {
+                  "type": "string"
+                }
+              ]
+            }
+          }
+        }
+      ]
+    }
+  },
+  "commerce-fragments.raw.pattern.1": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": true
+  },
+  "commerce-fragments.commerceFragment.pattern.1": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "commerce-fragments.phrase.pattern.1": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "commerce-fragments.phrase.pattern.2": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "commerce-fragments.commerceFragment.pattern.2": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "commerce-fragments.commerceFragment.value.1": {
+    "kind": "value",
+    "valueShape": {
+      "type": "record",
+      "values": {
+        "type": "string"
+      }
+    }
+  },
+  "commerce-fragments.commerceFragment.pattern.3": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "commerce-fragments.commerceFragment.value.2": {
+    "kind": "value",
+    "valueShape": {
+      "type": "record",
+      "values": {
+        "type": "string"
+      }
+    }
+  },
+  "commerce-fragments.commerceFragment.template.1": {
+    "kind": "template",
+    "arity": 1
+  },
+  "comparison-language.clearComparisonRequested.pattern.1": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "comparison-language.text.pattern.1": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "comparison-language.text.pattern.2": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": true
+  },
+  "comparison-language.clearComparisonRequested.pattern.2": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "comparison-language.clearComparisonRequested.pattern.3": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "comparison-language.compare.value.1": {
+    "kind": "value",
+    "valueShape": {
+      "type": "string"
+    },
+    "fragmentCaptures": 0
+  },
+  "comparison-language.list.template.1": {
+    "kind": "template",
+    "arity": 1
+  },
+  "comparison-language.all.value.1": {
+    "kind": "value",
+    "valueShape": {
+      "type": "string"
+    },
+    "fragmentCaptures": 0
+  },
+  "comparison-language.patterns.template.1": {
+    "kind": "template",
+    "arity": 1
+  },
+  "comparison-language.patterns.template.2": {
+    "kind": "template",
+    "arity": 2
+  },
+  "comparison-language.patterns.template.3": {
+    "kind": "template",
+    "arity": 1
+  },
+  "comparison-language.patterns.value.1": {
+    "kind": "value",
+    "valueShape": {
+      "type": "string"
+    },
+    "fragmentCaptures": 0
+  },
+  "comparison-language.patterns.template.4": {
+    "kind": "template",
+    "arity": 1
+  },
+  "comparison-language.patterns.template.5": {
+    "kind": "template",
+    "arity": 1
+  },
+  "comparison-language.patterns.value.2": {
+    "kind": "value",
+    "valueShape": {
+      "type": "string"
+    },
+    "fragmentCaptures": 0
+  },
+  "comparison-language.patterns.value.3": {
+    "kind": "value",
+    "valueShape": {
+      "type": "string"
+    },
+    "fragmentCaptures": 0
+  },
+  "comparison-operators.comparisonOperators.value.1": {
+    "kind": "value",
+    "valueShape": {
+      "type": "record",
+      "values": {
+        "type": "string"
+      }
+    }
+  },
+  "comparison-operators.comparisonPhrasePattern.value.1": {
+    "kind": "value",
+    "valueShape": {
+      "type": "string"
+    },
+    "fragmentCaptures": 0
+  },
+  "comparison-operators.key.pattern.1": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": true
+  },
+  "compound-clarification.compoundReply.pattern.1": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "compound-clarification.replacement.pattern.1": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "compound-clarification.text.value.1": {
+    "kind": "value",
+    "valueShape": {
+      "type": "object",
+      "properties": {
+        "status": {
+          "type": "string"
+        },
+        "intent": {
+          "type": "string"
+        },
+        "missing": {
+          "type": "array",
+          "items": [
+            {
+              "type": "string"
+            }
+          ]
+        },
+        "entities": {
+          "type": "object",
+          "properties": {}
+        }
+      }
+    }
+  },
+  "compound-language.destinations.value.1": {
+    "kind": "value",
+    "valueShape": {
+      "type": "array",
+      "items": [
+        {
+          "type": "string"
+        }
+      ]
+    }
+  },
+  "compound-language.connectors.value.1": {
+    "kind": "value",
+    "valueShape": {
+      "type": "array",
+      "items": [
+        {
+          "type": "string"
+        }
+      ]
+    }
+  },
+  "compound-language.reserved.value.1": {
+    "kind": "value",
+    "valueShape": {
+      "type": "string"
+    }
+  },
+  "compound-language.reserved.value.2": {
+    "kind": "value",
+    "valueShape": {
+      "type": "string"
+    }
+  },
+  "compound-language.reserved.value.3": {
+    "kind": "value",
+    "valueShape": {
+      "type": "string"
+    }
+  },
+  "compound-language.reserved.value.4": {
+    "kind": "value",
+    "valueShape": {
+      "type": "string"
+    }
+  },
+  "compound-language.reserved.value.5": {
+    "kind": "value",
+    "valueShape": {
+      "type": "string"
+    }
+  },
+  "compound-language.item.value.1": {
+    "kind": "value",
+    "valueShape": {
+      "type": "array",
+      "items": [
+        {
+          "type": "string"
+        }
+      ]
+    }
+  },
+  "compound-language.item.value.2": {
+    "kind": "value",
+    "valueShape": {
+      "type": "array",
+      "items": [
+        {
+          "type": "string"
+        }
+      ]
+    }
+  },
+  "compound-language.verb.value.1": {
+    "kind": "value",
+    "valueShape": {
+      "type": "array",
+      "items": [
+        {
+          "type": "string"
+        }
+      ]
+    }
+  },
+  "compound-language.destinationAt.value.1": {
+    "kind": "value",
+    "valueShape": {
+      "type": "array",
+      "items": [
+        {
+          "type": "string"
+        }
+      ]
+    }
+  },
+  "compound-language.destinationAt.value.2": {
+    "kind": "value",
+    "valueShape": {
+      "type": "array",
+      "items": [
+        {
+          "type": "string"
+        }
+      ]
+    }
+  },
+  "compound-language.destination.value.1": {
+    "kind": "value",
+    "valueShape": {
+      "type": "string"
+    }
+  },
+  "compound-language.destination.value.2": {
+    "kind": "value",
+    "valueShape": {
+      "type": "string"
+    }
+  },
+  "compound-language.clause.value.1": {
+    "kind": "value",
+    "valueShape": {
+      "type": "string"
+    }
+  },
+  "compound-language.source.pattern.1": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "compound-language.tokens.pattern.1": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": true
+  },
+  "compound-language.tokens.pattern.2": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": true
+  },
+  "compound-language.compoundRequest.value.1": {
+    "kind": "value",
+    "valueShape": {
+      "type": "array",
+      "items": [
+        {
+          "type": "string"
+        }
+      ]
+    }
+  },
+  "compound-language.compoundRequest.value.2": {
+    "kind": "value",
+    "valueShape": {
+      "type": "array",
+      "items": [
+        {
+          "type": "string"
+        }
+      ]
+    }
+  },
+  "compound-language.compoundRequest.value.3": {
+    "kind": "value",
+    "valueShape": {
+      "type": "string"
+    }
+  },
+  "compound-language.compoundRequest.value.4": {
+    "kind": "value",
+    "valueShape": {
+      "type": "array",
+      "items": [
+        {
+          "type": "string"
+        }
+      ]
+    }
+  },
+  "compound-language.compoundRequest.value.5": {
+    "kind": "value",
+    "valueShape": {
+      "type": "string"
+    }
+  },
+  "compound-language.compoundRequest.pattern.1": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "compound-language.requestedActions.template.1": {
+    "kind": "template",
+    "arity": 1
+  },
+  "compound-language.requestedActions.value.1": {
+    "kind": "value",
+    "valueShape": {
+      "type": "string"
+    }
+  },
+  "compound-language.requestedActions.value.2": {
+    "kind": "value",
+    "valueShape": {
+      "type": "record",
+      "values": {
+        "type": "string"
+      }
+    }
+  },
+  "compound-language.clauses.template.1": {
+    "kind": "template",
+    "arity": 1
+  },
+  "compound-language.actions.template.1": {
+    "kind": "template",
+    "arity": 1
+  },
+  "compound-language.relationships.template.1": {
+    "kind": "template",
+    "arity": 1
+  },
+  "compound-language.compoundRequest.value.6": {
+    "kind": "value",
+    "valueShape": {
+      "type": "record",
+      "values": {
+        "type": "string"
+      }
+    }
+  },
+  "contextual-language.searchHead.pattern.1": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "contextual-language.otherAction.pattern.1": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "contextual-language.collectionWrite.pattern.1": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "contextual-language.unsafeScope.pattern.1": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "contextual-language.broadValueRequest.pattern.1": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "contextual-language.budget.value.1": {
+    "kind": "value",
+    "valueShape": {
+      "type": "string"
+    }
+  },
+  "contextual-language.priceTail.value.1": {
+    "kind": "value",
+    "valueShape": {
+      "type": "string"
+    }
+  },
+  "contextual-language.price.value.1": {
+    "kind": "value",
+    "valueShape": {
+      "type": "string"
+    }
+  },
+  "contextual-language.price.value.2": {
+    "kind": "value",
+    "valueShape": {
+      "type": "string"
+    }
+  },
+  "contextual-language.price.value.3": {
+    "kind": "value",
+    "valueShape": {
+      "type": "string"
+    },
+    "fragmentCaptures": 0
+  },
+  "contextual-language.price.value.4": {
+    "kind": "value",
+    "valueShape": {
+      "type": "string"
+    },
+    "fragmentCaptures": 0
+  },
+  "contextual-language.exact.pattern.1": {
+    "kind": "pattern",
+    "captures": 1,
+    "requiresGlobal": false
+  },
+  "contextual-language.contextualShoppingSearch.pattern.1": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "contextual-language.contextualShoppingSearch.pattern.2": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "contextual-language.clean.pattern.1": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "contextual-language.clean.pattern.2": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "contextual-language.personAlternatives.value.1": {
+    "kind": "value",
+    "valueShape": {
+      "type": "string"
+    }
+  },
+  "contextual-language.contextualShoppingSearch.pattern.3": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": true
+  },
+  "contextual-language.contextualShoppingSearch.pattern.4": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "contextual-language.contextualShoppingSearch.pattern.5": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "contextual-language.contextualShoppingSearch.pattern.6": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": true
+  },
+  "contextual-language.contextualShoppingSearch.value.1": {
+    "kind": "value",
+    "valueShape": {
+      "type": "string"
+    }
+  },
+  "contextual-language.product.pattern.1": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "contextual-language.contextualShoppingSearch.pattern.7": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "contextual-language.contextualShoppingSearch.pattern.8": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "contextual-language.contextualShoppingSearch.pattern.9": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "contextual-language.coreText.value.1": {
+    "kind": "value",
+    "valueShape": {
+      "type": "string"
+    }
+  },
+  "contextual-language.question.template.1": {
+    "kind": "template",
+    "arity": 1
+  },
+  "contextual-language.question.template.2": {
+    "kind": "template",
+    "arity": 1
+  },
+  "contextual-language.question.template.3": {
+    "kind": "template",
+    "arity": 1
+  },
+  "contextual-language.question.template.4": {
+    "kind": "template",
+    "arity": 1
+  },
+  "contextual-language.question.template.5": {
+    "kind": "template",
+    "arity": 1
+  },
+  "contextual-language.contextualShoppingSearch.pattern.10": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "contextual-language.contextualShoppingSearch.pattern.11": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "conversation.spoken.pattern.1": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": true
+  },
+  "conversation.conversationIntent.pattern.1": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "conversation.conversationIntent.pattern.2": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "conversation.conversationIntent.pattern.3": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "correction-numbers.small.value.1": {
+    "kind": "value",
+    "valueShape": {
+      "type": "record",
+      "values": {
+        "type": "number"
+      }
+    }
+  },
+  "correction-numbers.tens.value.1": {
+    "kind": "value",
+    "valueShape": {
+      "type": "record",
+      "values": {
+        "type": "number"
+      }
+    }
+  },
+  "correction-numbers.belowThousand.value.1": {
+    "kind": "value",
+    "valueShape": {
+      "type": "string"
+    }
+  },
+  "correction-numbers.multiplier.value.1": {
+    "kind": "value",
+    "valueShape": {
+      "type": "string"
+    }
+  },
+  "correction-numbers.integer.pattern.1": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "correction-numbers.integer.pattern.2": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "correction-numbers.integer.pattern.3": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "correction-numbers.integer.pattern.4": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "correction-numbers.words.pattern.1": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "correction-numbers.scale.value.1": {
+    "kind": "value",
+    "valueShape": {
+      "type": "string"
+    }
+  },
+  "correction-numbers.integer.value.1": {
+    "kind": "value",
+    "valueShape": {
+      "type": "string"
+    }
+  },
+  "correction-numbers.decimal.pattern.1": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "correction-numbers.digits.pattern.1": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "correction-numbers.digits.pattern.2": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "correction-numbers.source.pattern.1": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": true
+  },
+  "correction-numbers.source.pattern.2": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "correction-numbers.correctionQuantity.pattern.1": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "correction-numbers.correctionQuantity.value.1": {
+    "kind": "value",
+    "valueShape": {
+      "type": "string"
+    }
+  },
+  "correction-numbers.currencyWords.pattern.1": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": true
+  },
+  "correction-numbers.fraction.pattern.1": {
+    "kind": "pattern",
+    "captures": 2,
+    "requiresGlobal": false
+  },
+  "correction-numbers.prefix.value.1": {
+    "kind": "value",
+    "valueShape": {
+      "type": "string"
+    }
+  },
+  "correction-numbers.suffix.value.1": {
+    "kind": "value",
+    "valueShape": {
+      "type": "string"
+    }
+  },
+  "correction-numbers.allowed.value.1": {
+    "kind": "value",
+    "valueShape": {
+      "type": "string"
+    }
+  },
+  "correction-numbers.amount.pattern.1": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "correction-numbers.source.pattern.3": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": true
+  },
+  "correction-numbers.correctionPrice.value.1": {
+    "kind": "value",
+    "valueShape": {
+      "type": "string"
+    }
+  },
+  "correction-numbers.correctionPrice.pattern.1": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": true
+  },
+  "correction-numbers.correctionPrice.template.1": {
+    "kind": "template",
+    "arity": 2
+  },
+  "correction-numbers.match.value.1": {
+    "kind": "value",
+    "valueShape": {
+      "type": "string"
+    }
+  },
+  "correction-numbers.match.value.2": {
+    "kind": "value",
+    "valueShape": {
+      "type": "string"
+    }
+  },
+  "correction-numbers.correctionPrice.value.2": {
+    "kind": "value",
+    "valueShape": {
+      "type": "string"
+    }
+  },
+  "discourse-boundary.exactQuotedProduct.pattern.1": {
+    "kind": "pattern",
+    "captures": 3,
+    "requiresGlobal": true
+  },
+  "discourse-boundary.malformedProduct.pattern.1": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "discourse-boundary.malformedProduct.pattern.2": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "discourse-boundary.malformedProduct.pattern.3": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "discourse-boundary.malformedProduct.pattern.4": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "discourse-boundary.prompt.pattern.1": {
+    "kind": "pattern",
+    "captures": 1,
+    "requiresGlobal": false
+  },
+  "discourse-boundary.literal.value.1": {
+    "kind": "value",
+    "valueShape": {
+      "type": "string"
+    },
+    "fragmentCaptures": 0
+  },
+  "discourse-boundary.literal.value.2": {
+    "kind": "value",
+    "valueShape": {
+      "type": "string"
+    },
+    "fragmentCaptures": 0
+  },
+  "engine.negated.value.1": {
+    "kind": "value",
+    "valueShape": {
+      "type": "array",
+      "items": [
+        {
+          "type": "string"
+        }
+      ]
+    }
+  },
+  "engine.negated.value.2": {
+    "kind": "value",
+    "valueShape": {
+      "type": "array",
+      "items": [
+        {
+          "type": "string"
+        }
+      ]
+    }
+  },
+  "engine.negated.value.3": {
+    "kind": "value",
+    "valueShape": {
+      "type": "string"
+    }
+  },
+  "engine.genericPhrases.value.1": {
+    "kind": "value",
+    "valueShape": {
+      "type": "string"
+    }
+  },
+  "engine.genericPhrases.value.2": {
+    "kind": "value",
+    "valueShape": {
+      "type": "string"
+    }
+  },
+  "engine.genericPhrases.value.3": {
+    "kind": "value",
+    "valueShape": {
+      "type": "string"
+    }
+  },
+  "engine.genericPhrases.value.4": {
+    "kind": "value",
+    "valueShape": {
+      "type": "string"
+    }
+  },
+  "engine.genericPhrases.value.5": {
+    "kind": "value",
+    "valueShape": {
+      "type": "string"
+    }
+  },
+  "engine.genericPhrases.value.6": {
+    "kind": "value",
+    "valueShape": {
+      "type": "string"
+    }
+  },
+  "engine.genericPhrases.value.7": {
+    "kind": "value",
+    "valueShape": {
+      "type": "string"
+    }
+  },
+  "engine.genericPhrases.value.8": {
+    "kind": "value",
+    "valueShape": {
+      "type": "string"
+    }
+  },
+  "engine.genericPhrases.value.9": {
+    "kind": "value",
+    "valueShape": {
+      "type": "string"
+    }
+  },
+  "engine.genericPhrases.value.10": {
+    "kind": "value",
+    "valueShape": {
+      "type": "string"
+    }
+  },
+  "engine.genericPhrases.value.11": {
+    "kind": "value",
+    "valueShape": {
+      "type": "string"
+    }
+  },
+  "engine.genericPhrases.value.12": {
+    "kind": "value",
+    "valueShape": {
+      "type": "string"
+    }
+  },
+  "engine.genericPhrases.value.13": {
+    "kind": "value",
+    "valueShape": {
+      "type": "string"
+    }
+  },
+  "engine.priceSearch.value.1": {
+    "kind": "value",
+    "valueShape": {
+      "type": "string"
+    }
+  },
+  "engine.generic.value.1": {
+    "kind": "value",
+    "valueShape": {
+      "type": "array",
+      "items": [
+        {
+          "type": "string"
+        }
+      ]
+    }
+  },
+  "engine.requestMarker.value.1": {
+    "kind": "value",
+    "valueShape": {
+      "type": "array",
+      "items": [
+        {
+          "type": "string"
+        }
+      ]
+    }
+  },
+  "engine.ordinalSelection.pattern.1": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "engine.transition.value.1": {
+    "kind": "value",
+    "valueShape": {
+      "type": "array",
+      "items": [
+        {
+          "type": "string"
+        }
+      ]
+    }
+  },
+  "engine.concreteArgument.pattern.1": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "engine.resolveFlat.value.1": {
+    "kind": "value",
+    "valueShape": {
+      "type": "array",
+      "items": [
+        {
+          "type": "string"
+        }
+      ]
+    }
+  },
+  "engine.resolveFlat.value.2": {
+    "kind": "value",
+    "valueShape": {
+      "type": "array",
+      "items": [
+        {
+          "type": "string"
+        }
+      ]
+    }
+  },
+  "engine.resolveFlat.value.3": {
+    "kind": "value",
+    "valueShape": {
+      "type": "array",
+      "items": [
+        {
+          "type": "string"
+        }
+      ]
+    }
+  },
+  "engine.resolveFlat.value.4": {
+    "kind": "value",
+    "valueShape": {
+      "type": "array",
+      "items": [
+        {
+          "type": "string"
+        }
+      ]
+    }
+  },
+  "engine.resolveFlat.value.5": {
+    "kind": "value",
+    "valueShape": {
+      "type": "string"
+    }
+  },
+  "engine.resolveFlat.value.6": {
+    "kind": "value",
+    "valueShape": {
+      "type": "array",
+      "items": [
+        {
+          "type": "string"
+        }
+      ]
+    }
+  },
+  "engine.resolveFlat.pattern.1": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "engine.resolveFlat.pattern.2": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "engine.resolveFlat.pattern.3": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "engine.priorActionFragment.pattern.1": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "engine.unrelatedPriorAction.pattern.1": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "engine.resolveRequest.value.2": {
+    "kind": "value",
+    "valueShape": {
+      "type": "array",
+      "items": [
+        {
+          "type": "string"
+        }
+      ]
+    }
+  },
+  "engine.resolveRequest.template.1": {
+    "kind": "template",
+    "arity": 1
+  },
+  "engine.resolveCommerce.value.1": {
+    "kind": "value",
+    "valueShape": {
+      "type": "object",
+      "properties": {
+        "status": {
+          "type": "string"
+        },
+        "needsClarification": {
+          "type": "boolean"
+        },
+        "unresolvedSlots": {
+          "type": "array",
+          "items": []
+        }
+      }
+    }
+  },
+  "engine.resolveCommerce.value.2": {
+    "kind": "value",
+    "valueShape": {
+      "type": "string"
+    }
+  },
+  "engine.resolveCommerce.value.3": {
+    "kind": "value",
+    "valueShape": {
+      "type": "object",
+      "properties": {
+        "status": {
+          "type": "string"
+        },
+        "needsClarification": {
+          "type": "boolean"
+        },
+        "unresolvedSlots": {
+          "type": "array",
+          "items": []
+        }
+      }
+    }
+  },
+  "engine.resolveCommerce.template.1": {
+    "kind": "template",
+    "arity": 1
+  },
+  "engine.legacyPurpose.value.1": {
+    "kind": "value",
+    "valueShape": {
+      "type": "array",
+      "items": [
+        {
+          "type": "string"
+        }
+      ]
+    }
+  },
+  "engine.literal.value.1": {
+    "kind": "value",
+    "valueShape": {
+      "type": "string"
+    }
+  },
+  "engine.resolveCommerce.value.4": {
+    "kind": "value",
+    "valueShape": {
+      "type": "object",
+      "properties": {
+        "status": {
+          "type": "string"
+        },
+        "needsClarification": {
+          "type": "boolean"
+        },
+        "unresolvedSlots": {
+          "type": "array",
+          "items": [
+            {
+              "type": "record",
+              "values": {
+                "type": "string"
+              }
+            }
+          ]
+        }
+      }
+    }
+  },
+  "engine.safeFragment.pattern.1": {
+    "kind": "pattern",
+    "captures": 1,
+    "requiresGlobal": false
+  },
+  "engine.resolveCommerce.value.5": {
+    "kind": "value",
+    "valueShape": {
+      "type": "string"
+    }
+  },
+  "engine.resolveCommerce.value.6": {
+    "kind": "value",
+    "valueShape": {
+      "type": "string"
+    }
+  },
+  "engine.resolveCommerce.value.7": {
+    "kind": "value",
+    "valueShape": {
+      "type": "object",
+      "properties": {
+        "status": {
+          "type": "string"
+        },
+        "needsClarification": {
+          "type": "boolean"
+        },
+        "unresolvedSlots": {
+          "type": "array",
+          "items": []
+        }
+      }
+    }
+  },
+  "engine.intent.pattern.1": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "engine.resolveCommerce.value.8": {
+    "kind": "value",
+    "valueShape": {
+      "type": "string"
+    }
+  },
+  "engine.message.value.1": {
+    "kind": "value",
+    "valueShape": {
+      "type": "string"
+    }
+  },
+  "engine.standard.value.1": {
+    "kind": "value",
+    "valueShape": {
+      "type": "array",
+      "items": [
+        {
+          "type": "string"
+        }
+      ]
+    }
+  },
+  "engine.merchantAttributes.value.1": {
+    "kind": "value",
+    "valueShape": {
+      "type": "array",
+      "items": [
+        {
+          "type": "string"
+        }
+      ]
+    }
+  },
+  "engine.resolveCommerce.value.9": {
+    "kind": "value",
+    "valueShape": {
+      "type": "object",
+      "properties": {
+        "status": {
+          "type": "string"
+        },
+        "needsClarification": {
+          "type": "boolean"
+        },
+        "unresolvedSlots": {
+          "type": "array",
+          "items": []
+        }
+      }
+    }
+  },
+  "engine.addressForm.pattern.1": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "engine.read.value.1": {
+    "kind": "value",
+    "valueShape": {
+      "type": "record",
+      "values": {
+        "type": "string"
+      }
+    }
+  },
+  "engine.resolveCommerce.pattern.1": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "engine.item.template.1": {
+    "kind": "template",
+    "arity": 1
+  },
+  "engine.resolveCommerce.value.10": {
+    "kind": "value",
+    "valueShape": {
+      "type": "string"
+    }
+  },
+  "engine.resolveCommerce.value.11": {
+    "kind": "value",
+    "valueShape": {
+      "type": "object",
+      "properties": {
+        "status": {
+          "type": "string"
+        },
+        "needsClarification": {
+          "type": "boolean"
+        },
+        "unresolvedSlots": {
+          "type": "array",
+          "items": []
+        }
+      }
+    }
+  },
+  "engine.message.value.2": {
+    "kind": "value",
+    "valueShape": {
+      "type": "string"
+    }
+  },
+  "engine.resolveCommerce.value.12": {
+    "kind": "value",
+    "valueShape": {
+      "type": "object",
+      "properties": {
+        "status": {
+          "type": "string"
+        },
+        "needsClarification": {
+          "type": "boolean"
+        },
+        "unresolvedSlots": {
+          "type": "array",
+          "items": []
+        }
+      }
+    }
+  },
+  "engine.resolveCommerce.pattern.2": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "engine.resolveCommerce.pattern.3": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "engine.message.value.3": {
+    "kind": "value",
+    "valueShape": {
+      "type": "string"
+    }
+  },
+  "engine.resolveCommerce.value.13": {
+    "kind": "value",
+    "valueShape": {
+      "type": "object",
+      "properties": {
+        "status": {
+          "type": "string"
+        },
+        "needsClarification": {
+          "type": "boolean"
+        },
+        "unresolvedSlots": {
+          "type": "array",
+          "items": [
+            {
+              "type": "record",
+              "values": {
+                "type": "string"
+              }
+            }
+          ]
+        }
+      }
+    }
+  },
+  "engine.resolveConstrained.value.1": {
+    "kind": "value",
+    "valueShape": {
+      "type": "object",
+      "properties": {
+        "status": {
+          "type": "string"
+        },
+        "needsClarification": {
+          "type": "boolean"
+        },
+        "unresolvedSlots": {
+          "type": "array",
+          "items": []
+        }
+      }
+    }
+  },
+  "engine.graph.value.1": {
+    "kind": "value",
+    "valueShape": {
+      "type": "object",
+      "properties": {
+        "nodes": {
+          "type": "array",
+          "items": [
+            {
+              "type": "record",
+              "values": {
+                "type": "string"
+              }
+            }
+          ]
+        },
+        "edges": {
+          "type": "array",
+          "items": []
+        },
+        "constraints": {
+          "type": "array",
+          "items": []
+        },
+        "truncated": {
+          "type": "boolean"
+        }
+      }
+    }
+  },
+  "engine.constraintNodes.template.1": {
+    "kind": "template",
+    "arity": 1
+  },
+  "engine.resolveConstrained.template.1": {
+    "kind": "template",
+    "arity": 1
+  },
+  "engine.resolveUnderstanding.pattern.1": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "engine.newRequest.pattern.1": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "engine.explicitCommerce.pattern.1": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "engine.message.value.4": {
+    "kind": "value",
+    "valueShape": {
+      "type": "string"
+    }
+  },
+  "engine.resolveUnderstanding.value.1": {
+    "kind": "value",
+    "valueShape": {
+      "type": "record",
+      "values": {
+        "type": "boolean"
+      }
+    }
+  },
+  "engine.message.template.1": {
+    "kind": "template",
+    "arity": 1
+  },
+  "engine.resolveUnderstanding.value.3": {
+    "kind": "value",
+    "valueShape": {
+      "type": "object",
+      "properties": {
+        "status": {
+          "type": "string"
+        },
+        "needsClarification": {
+          "type": "boolean"
+        },
+        "unresolvedSlots": {
+          "type": "array",
+          "items": [
+            {
+              "type": "record",
+              "values": {
+                "type": "string"
+              }
+            }
+          ]
+        }
+      }
+    }
+  },
+  "engine.resolveUnderstanding.value.4": {
+    "kind": "value",
+    "valueShape": {
+      "type": "record",
+      "values": {
+        "type": "boolean"
+      }
+    }
+  },
+  "engine.resolveWithProducts.pattern.1": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "engine.resolveWithProducts.pattern.2": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "engine.escaped.pattern.1": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": true
+  },
+  "engine.escaped.pattern.2": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": true
+  },
+  "engine.escaped.value.1": {
+    "kind": "value",
+    "valueShape": {
+      "type": "string"
+    },
+    "fragmentCaptures": 0
+  },
+  "engine.resolveCore.value.1": {
+    "kind": "value",
+    "valueShape": {
+      "type": "object",
+      "properties": {
+        "status": {
+          "type": "string"
+        },
+        "needsClarification": {
+          "type": "boolean"
+        },
+        "unresolvedSlots": {
+          "type": "array",
+          "items": []
+        }
+      }
+    }
+  },
+  "engine.message.value.5": {
+    "kind": "value",
+    "valueShape": {
+      "type": "string"
+    }
+  },
+  "engine.resolveCore.value.2": {
+    "kind": "value",
+    "valueShape": {
+      "type": "object",
+      "properties": {
+        "status": {
+          "type": "string"
+        },
+        "needsClarification": {
+          "type": "boolean"
+        },
+        "unresolvedSlots": {
+          "type": "array",
+          "items": []
+        }
+      }
+    }
+  },
+  "engine.resolveCore.value.3": {
+    "kind": "value",
+    "valueShape": {
+      "type": "object",
+      "properties": {
+        "status": {
+          "type": "string"
+        },
+        "needsClarification": {
+          "type": "boolean"
+        },
+        "unresolvedSlots": {
+          "type": "array",
+          "items": []
+        }
+      }
+    }
+  },
+  "engine.resolve.value.1": {
+    "kind": "value",
+    "valueShape": {
+      "type": "array",
+      "items": [
+        {
+          "type": "string"
+        }
+      ]
+    }
+  },
+  "entities.extract.pattern.1": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "entities.extract.value.1": {
+    "kind": "value",
+    "valueShape": {
+      "type": "string"
+    }
+  },
+  "entities.q.pattern.1": {
+    "kind": "pattern",
+    "captures": 1,
+    "requiresGlobal": false
+  },
+  "entities.range.value.1": {
+    "kind": "value",
+    "valueShape": {
+      "type": "string"
+    },
+    "fragmentCaptures": 0
+  },
+  "entities.range.value.2": {
+    "kind": "value",
+    "valueShape": {
+      "type": "string"
+    },
+    "fragmentCaptures": 0
+  },
+  "entities.p.value.1": {
+    "kind": "value",
+    "valueShape": {
+      "type": "string"
+    }
+  },
+  "entities.p.value.2": {
+    "kind": "value",
+    "valueShape": {
+      "type": "string"
+    }
+  },
+  "entities.m.pattern.1": {
+    "kind": "pattern",
+    "captures": 2,
+    "requiresGlobal": false
+  },
+  "entities.curr.pattern.1": {
+    "kind": "pattern",
+    "captures": 1,
+    "requiresGlobal": false
+  },
+  "entities.size.pattern.1": {
+    "kind": "pattern",
+    "captures": 1,
+    "requiresGlobal": false
+  },
+  "entities.ord.pattern.1": {
+    "kind": "pattern",
+    "captures": 1,
+    "requiresGlobal": false
+  },
+  "entities.extract.value.2": {
+    "kind": "value",
+    "valueShape": {
+      "type": "record",
+      "values": {
+        "type": "number"
+      }
+    }
+  },
+  "entities.ref.pattern.1": {
+    "kind": "pattern",
+    "captures": 2,
+    "requiresGlobal": false
+  },
+  "entities.extract.pattern.2": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "entities.promo.pattern.1": {
+    "kind": "pattern",
+    "captures": 1,
+    "requiresGlobal": false
+  },
+  "entities.date.pattern.1": {
+    "kind": "pattern",
+    "captures": 1,
+    "requiresGlobal": false
+  },
+  "entities.extract.pattern.3": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "entities.time.pattern.1": {
+    "kind": "pattern",
+    "captures": 1,
+    "requiresGlobal": false
+  },
+  "entities.slot.pattern.1": {
+    "kind": "pattern",
+    "captures": 1,
+    "requiresGlobal": false
+  },
+  "entities.extract.pattern.4": {
+    "kind": "pattern",
+    "captures": 1,
+    "requiresGlobal": false
+  },
+  "entities.orderSelection.pattern.1": {
+    "kind": "pattern",
+    "captures": 1,
+    "requiresGlobal": false
+  },
+  "entities.extract.value.3": {
+    "kind": "value",
+    "valueShape": {
+      "type": "array",
+      "items": [
+        {
+          "type": "string"
+        }
+      ]
+    }
+  },
+  "entities.extract.value.4": {
+    "kind": "value",
+    "valueShape": {
+      "type": "array",
+      "items": [
+        {
+          "type": "string"
+        }
+      ]
+    }
+  },
+  "entities.extract.pattern.5": {
+    "kind": "pattern",
+    "captures": 1,
+    "requiresGlobal": false
+  },
+  "entities.extract.value.5": {
+    "kind": "value",
+    "valueShape": {
+      "type": "string"
+    }
+  },
+  "evidence-requirements.rules.pattern.1": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": true
+  },
+  "evidence-requirements.rules.pattern.2": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": true
+  },
+  "evidence-requirements.rules.pattern.3": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": true
+  },
+  "evidence-requirements.rules.pattern.4": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": true
+  },
+  "evidence-requirements.rules.pattern.5": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": true
+  },
+  "evidence-requirements.rules.pattern.6": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": true
+  },
+  "evidence-requirements.rules.pattern.7": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": true
+  },
+  "evidence-requirements.rules.pattern.8": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": true
+  },
+  "evidence-requirements.rules.pattern.9": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": true
+  },
+  "evidence-requirements.quoted.pattern.1": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": true
+  },
+  "gift-language.giftSearch.pattern.1": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "gift-language.giftSearch.pattern.2": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "gift-language.clean.pattern.1": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "gift-language.body.pattern.1": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "gift-language.body.pattern.2": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "gift-language.product.value.1": {
+    "kind": "value",
+    "valueShape": {
+      "type": "string"
+    }
+  },
+  "gift-language.m.pattern.1": {
+    "kind": "pattern",
+    "captures": 1,
+    "requiresGlobal": false
+  },
+  "gift-language.giftSearch.pattern.3": {
+    "kind": "pattern",
+    "captures": 2,
+    "requiresGlobal": false
+  },
+  "gift-language.giftSearch.pattern.4": {
+    "kind": "pattern",
+    "captures": 2,
+    "requiresGlobal": false
+  },
+  "gift-language.recipientMatch.pattern.1": {
+    "kind": "pattern",
+    "captures": 3,
+    "requiresGlobal": false
+  },
+  "gift-language.occasionMatch.pattern.1": {
+    "kind": "pattern",
+    "captures": 3,
+    "requiresGlobal": false
+  },
+  "gift-language.giftSearch.pattern.5": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "gift-language.coreText.value.1": {
+    "kind": "value",
+    "valueShape": {
+      "type": "string"
+    }
+  },
+  "governed-read-language.governedRequest.pattern.1": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "governed-read-language.governedRequest.value.1": {
+    "kind": "value",
+    "valueShape": {
+      "type": "array",
+      "items": [
+        {
+          "type": "string"
+        }
+      ]
+    }
+  },
+  "intent-count.joiners.value.1": {
+    "kind": "value",
+    "valueShape": {
+      "type": "array",
+      "items": [
+        {
+          "type": "string"
+        }
+      ]
+    }
+  },
+  "intent-count.modifiers.value.1": {
+    "kind": "value",
+    "valueShape": {
+      "type": "array",
+      "items": [
+        {
+          "type": "string"
+        }
+      ]
+    }
+  },
+  "intent-count.destinations.value.1": {
+    "kind": "value",
+    "valueShape": {
+      "type": "array",
+      "items": [
+        {
+          "type": "string"
+        }
+      ]
+    }
+  },
+  "intent-count.completeFrame.value.1": {
+    "kind": "value",
+    "valueShape": {
+      "type": "array",
+      "items": [
+        {
+          "type": "string"
+        }
+      ]
+    }
+  },
+  "intent-count.domainOwned.value.1": {
+    "kind": "value",
+    "valueShape": {
+      "type": "string"
+    }
+  },
+  "intent-count.domainOwned.value.2": {
+    "kind": "value",
+    "valueShape": {
+      "type": "array",
+      "items": [
+        {
+          "type": "string"
+        }
+      ]
+    }
+  },
+  "intent-count.countIntents.pattern.1": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "intent-count.countIntents.pattern.2": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "intent-count.add.value.1": {
+    "kind": "value",
+    "valueShape": {
+      "type": "array",
+      "items": [
+        {
+          "type": "string"
+        }
+      ]
+    }
+  },
+  "intent-count.remove.value.1": {
+    "kind": "value",
+    "valueShape": {
+      "type": "array",
+      "items": [
+        {
+          "type": "string"
+        }
+      ]
+    }
+  },
+  "intent-count.head.value.1": {
+    "kind": "value",
+    "valueShape": {
+      "type": "string"
+    }
+  },
+  "intent-count.head.value.2": {
+    "kind": "value",
+    "valueShape": {
+      "type": "string"
+    }
+  },
+  "intent-count.read.pattern.1": {
+    "kind": "pattern",
+    "captures": 1,
+    "requiresGlobal": false
+  },
+  "intent-count.head.value.3": {
+    "kind": "value",
+    "valueShape": {
+      "type": "string"
+    }
+  },
+  "intent-count.head.pattern.1": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "intent-count.head.value.4": {
+    "kind": "value",
+    "valueShape": {
+      "type": "array",
+      "items": [
+        {
+          "type": "string"
+        }
+      ]
+    }
+  },
+  "intent-count.head.value.5": {
+    "kind": "value",
+    "valueShape": {
+      "type": "array",
+      "items": [
+        {
+          "type": "string"
+        }
+      ]
+    }
+  },
+  "intent-count.correction.value.1": {
+    "kind": "value",
+    "valueShape": {
+      "type": "array",
+      "items": [
+        {
+          "type": "string"
+        }
+      ]
+    }
+  },
+  "intent-count.start.value.1": {
+    "kind": "value",
+    "valueShape": {
+      "type": "array",
+      "items": [
+        {
+          "type": "string"
+        }
+      ]
+    }
+  },
+  "intent-count.start.value.2": {
+    "kind": "value",
+    "valueShape": {
+      "type": "string"
+    }
+  },
+  "intent-count.start.value.3": {
+    "kind": "value",
+    "valueShape": {
+      "type": "array",
+      "items": [
+        {
+          "type": "string"
+        }
+      ]
+    }
+  },
+  "intent-count.start.value.4": {
+    "kind": "value",
+    "valueShape": {
+      "type": "string"
+    }
+  },
+  "intent-count.start.value.5": {
+    "kind": "value",
+    "valueShape": {
+      "type": "string"
+    }
+  },
+  "intent-count.start.value.6": {
+    "kind": "value",
+    "valueShape": {
+      "type": "array",
+      "items": [
+        {
+          "type": "string"
+        }
+      ]
+    }
+  },
+  "intent-count.countIntents.value.1": {
+    "kind": "value",
+    "valueShape": {
+      "type": "array",
+      "items": [
+        {
+          "type": "string"
+        }
+      ]
+    }
+  },
+  "intent-count.destination.value.1": {
+    "kind": "value",
+    "valueShape": {
+      "type": "array",
+      "items": [
+        {
+          "type": "string"
+        }
+      ]
+    }
+  },
+  "intent-count.namedDestinations.value.1": {
+    "kind": "value",
+    "valueShape": {
+      "type": "array",
+      "items": [
+        {
+          "type": "string"
+        }
+      ]
+    }
+  },
+  "intent-count.countIntents.value.2": {
+    "kind": "value",
+    "valueShape": {
+      "type": "string"
+    }
+  },
+  "intent-count.countIntents.value.3": {
+    "kind": "value",
+    "valueShape": {
+      "type": "string"
+    }
+  },
+  "intent-count.countIntents.value.4": {
+    "kind": "value",
+    "valueShape": {
+      "type": "array",
+      "items": [
+        {
+          "type": "string"
+        }
+      ]
+    }
+  },
+  "intent-count.countIntents.value.5": {
+    "kind": "value",
+    "valueShape": {
+      "type": "array",
+      "items": [
+        {
+          "type": "string"
+        }
+      ]
+    }
+  },
+  "intent-count.countIntents.value.6": {
+    "kind": "value",
+    "valueShape": {
+      "type": "array",
+      "items": [
+        {
+          "type": "string"
+        }
+      ]
+    }
+  },
+  "intent-count.countIntents.pattern.3": {
+    "kind": "pattern",
+    "captures": 1,
+    "requiresGlobal": false
+  },
+  "intent-count.countIntents.pattern.4": {
+    "kind": "pattern",
+    "captures": 1,
+    "requiresGlobal": false
+  },
+  "intent-count.countIntents.value.7": {
+    "kind": "value",
+    "valueShape": {
+      "type": "array",
+      "items": [
+        {
+          "type": "string"
+        }
+      ]
+    }
+  },
+  "intent-count.countIntents.value.8": {
+    "kind": "value",
+    "valueShape": {
+      "type": "array",
+      "items": [
+        {
+          "type": "string"
+        }
+      ]
+    }
+  },
+  "intent-count.countIntents.value.9": {
+    "kind": "value",
+    "valueShape": {
+      "type": "array",
+      "items": [
+        {
+          "type": "string"
+        }
+      ]
+    }
+  },
+  "intent-count.countIntents.value.10": {
+    "kind": "value",
+    "valueShape": {
+      "type": "string"
+    }
+  },
+  "intent-count.countIntents.template.1": {
+    "kind": "template",
+    "arity": 1
+  },
+  "intent-count.countIntents.value.11": {
+    "kind": "value",
+    "valueShape": {
+      "type": "array",
+      "items": [
+        {
+          "type": "string"
+        }
+      ]
+    }
+  },
+  "intent-count.countIntents.value.12": {
+    "kind": "value",
+    "valueShape": {
+      "type": "array",
+      "items": [
+        {
+          "type": "string"
+        }
+      ]
+    }
+  },
+  "language-corrections.wrappers.value.1": {
+    "kind": "value",
+    "valueShape": {
+      "type": "string"
+    },
+    "fragmentCaptures": 0
+  },
+  "language-corrections.head.template.1": {
+    "kind": "template",
+    "arity": 1
+  },
+  "language-corrections.legacy.value.1": {
+    "kind": "value",
+    "valueShape": {
+      "type": "record",
+      "values": {
+        "type": "string"
+      }
+    }
+  },
+  "language-corrections.reference.template.1": {
+    "kind": "template",
+    "arity": 1
+  },
+  "language-corrections.scopedTokenCorrections.pattern.1": {
+    "kind": "pattern",
+    "captures": 1,
+    "requiresGlobal": true
+  },
+  "language-corrections.readWords.value.1": {
+    "kind": "value",
+    "valueShape": {
+      "type": "array",
+      "items": [
+        {
+          "type": "string"
+        }
+      ]
+    }
+  },
+  "language-corrections.correctionProposals.pattern.1": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "language-corrections.correctionProposals.value.1": {
+    "kind": "value",
+    "valueShape": {
+      "type": "string"
+    }
+  },
+  "language-corrections.tail.pattern.1": {
+    "kind": "pattern",
+    "captures": 2,
+    "requiresGlobal": false
+  },
+  "language-corrections.correctionProposals.value.2": {
+    "kind": "value",
+    "valueShape": {
+      "type": "array",
+      "items": [
+        {
+          "type": "string"
+        }
+      ]
+    }
+  },
+  "language-corrections.catalog.pattern.1": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "language-corrections.protectedWords.value.1": {
+    "kind": "value",
+    "valueShape": {
+      "type": "array",
+      "items": [
+        {
+          "type": "string"
+        }
+      ]
+    }
+  },
+  "language-corrections.tokens.pattern.1": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": true
+  },
+  "language-corrections.correctionProposals.pattern.2": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "language-corrections.scopedCatalogProposals.pattern.1": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "language-corrections.escaped.pattern.1": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": true
+  },
+  "normalize.normalize.pattern.1": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": true
+  },
+  "normalize.normalize.pattern.2": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": true
+  },
+  "normalize.normalize.pattern.3": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": true
+  },
+  "normalize.normalize.value.1": {
+    "kind": "value",
+    "valueShape": {
+      "type": "string"
+    }
+  },
+  "normalize.normalize.pattern.4": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": true
+  },
+  "normalize.normalize.value.2": {
+    "kind": "value",
+    "valueShape": {
+      "type": "string"
+    }
+  },
+  "normalize.normalize.pattern.5": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": true
+  },
+  "normalize.normalize.value.3": {
+    "kind": "value",
+    "valueShape": {
+      "type": "string"
+    }
+  },
+  "normalize.normalize.pattern.6": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": true
+  },
+  "normalize.normalize.value.4": {
+    "kind": "value",
+    "valueShape": {
+      "type": "string"
+    }
+  },
+  "normalize.normalize.pattern.7": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": true
+  },
+  "normalize.normalize.value.5": {
+    "kind": "value",
+    "valueShape": {
+      "type": "string"
+    }
+  },
+  "normalize.normalize.pattern.8": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": true
+  },
+  "normalize.normalize.value.6": {
+    "kind": "value",
+    "valueShape": {
+      "type": "string"
+    }
+  },
+  "normalize.normalize.pattern.9": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": true
+  },
+  "normalize.normalize.value.7": {
+    "kind": "value",
+    "valueShape": {
+      "type": "string"
+    }
+  },
+  "normalize.normalize.pattern.10": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": true
+  },
+  "normalize.normalize.value.8": {
+    "kind": "value",
+    "valueShape": {
+      "type": "string"
+    }
+  },
+  "normalize.normalize.pattern.11": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": true
+  },
+  "normalize.normalize.value.9": {
+    "kind": "value",
+    "valueShape": {
+      "type": "string"
+    }
+  },
+  "normalize.normalize.pattern.12": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": true
+  },
+  "normalize.normalize.value.10": {
+    "kind": "value",
+    "valueShape": {
+      "type": "string"
+    }
+  },
+  "normalize.normalize.pattern.13": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": true
+  },
+  "normalize.normalize.pattern.14": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": true
+  },
+  "normalize.normalize.pattern.15": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": true
+  },
+  "order-product-language.text.pattern.1": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": true
+  },
+  "order-product-language.politeCountList.pattern.1": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "order-product-language.orderProductRequest.pattern.1": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "order-product-language.orderProductRequest.value.1": {
+    "kind": "value",
+    "valueShape": {
+      "type": "string"
+    }
+  },
+  "order-product-language.explicitDesire.pattern.1": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "order-product-language.orderProductRequest.pattern.2": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "order-product-language.orderProductRequest.pattern.3": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "order-product-language.orderProductRequest.pattern.4": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "order-product-language.orderProductRequest.pattern.5": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "order-product-language.orderProductRequest.pattern.6": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "order-product-language.orderProductRequest.value.2": {
+    "kind": "value",
+    "valueShape": {
+      "type": "string"
+    }
+  },
+  "order-product-language.orderProductRequest.pattern.7": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "order-product-language.orderProductRequest.value.3": {
+    "kind": "value",
+    "valueShape": {
+      "type": "string"
+    }
+  },
+  "order-product-language.orderProductRequest.pattern.8": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "order-product-language.orderProductRequest.pattern.9": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "order-product-language.orderProductRequest.value.4": {
+    "kind": "value",
+    "valueShape": {
+      "type": "string"
+    }
+  },
+  "order-product-language.orderProductRequest.pattern.10": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "order-product-language.orderProductRequest.value.5": {
+    "kind": "value",
+    "valueShape": {
+      "type": "string"
+    }
+  },
+  "order-product-language.match.pattern.1": {
+    "kind": "pattern",
+    "captures": 1,
+    "requiresGlobal": false
+  },
+  "order-product-language.countFirst.pattern.1": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "order-product-language.products.pattern.1": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "order-product-language.orderProductRequest.pattern.11": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "order-product-language.orderProductRequest.pattern.12": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "order-product-language.products.pattern.2": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "order-product-language.products.pattern.3": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "order-product-language.desire.pattern.1": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "order-product-language.normalizeOrderQuantity.pattern.1": {
+    "kind": "pattern",
+    "captures": 2,
+    "requiresGlobal": false
+  },
+  "order-product-language.normalizeOrderQuantity.pattern.2": {
+    "kind": "pattern",
+    "captures": 2,
+    "requiresGlobal": false
+  },
+  "order-product-language.orderProductQueries.pattern.1": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "order-product-language.chunks.pattern.1": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "order-product-language.orderProductQueries.pattern.2": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "order-product-language.orderProductQueries.pattern.3": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "order-product-language.countedOrderList.pattern.1": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "order-product-language.orderRequestIssue.pattern.1": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "order-product-language.negated.pattern.1": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "order-product-language.clearThenOrder.pattern.1": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "order-product-language.orderRequestIssue.pattern.2": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "order-product-language.orderRequestIssue.pattern.3": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "order-product-language.orderRequestIssue.pattern.4": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "order-product-language.orderRequestIssue.pattern.5": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "price-language.currencyCode.value.1": {
+    "kind": "value",
+    "valueShape": {
+      "type": "string"
+    },
+    "fragmentCaptures": 0
+  },
+  "price-language.currencyNames.value.1": {
+    "kind": "value",
+    "valueShape": {
+      "type": "record",
+      "values": {
+        "type": "string"
+      }
+    }
+  },
+  "price-language.key.pattern.1": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": true
+  },
+  "price-language.number.value.1": {
+    "kind": "value",
+    "valueShape": {
+      "type": "string"
+    },
+    "fragmentCaptures": 0
+  },
+  "price-language.amount.value.1": {
+    "kind": "value",
+    "valueShape": {
+      "type": "string"
+    },
+    "fragmentCaptures": 0
+  },
+  "price-language.amount.value.2": {
+    "kind": "value",
+    "valueShape": {
+      "type": "string"
+    }
+  },
+  "price-language.amount.value.3": {
+    "kind": "value",
+    "valueShape": {
+      "type": "string"
+    }
+  },
+  "price-language.amount.value.4": {
+    "kind": "value",
+    "valueShape": {
+      "type": "string"
+    }
+  },
+  "price-language.boundary.value.1": {
+    "kind": "value",
+    "valueShape": {
+      "type": "string"
+    }
+  },
+  "price-language.boundary.value.2": {
+    "kind": "value",
+    "valueShape": {
+      "type": "string"
+    },
+    "fragmentCaptures": 0
+  },
+  "product-argument.words.pattern.1": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "product-argument.words.pattern.2": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "product-argument.productArgument.value.1": {
+    "kind": "value",
+    "valueShape": {
+      "type": "array",
+      "items": [
+        {
+          "type": "string"
+        }
+      ]
+    }
+  },
+  "product-argument.boundary.value.1": {
+    "kind": "value",
+    "valueShape": {
+      "type": "array",
+      "items": [
+        {
+          "type": "string"
+        }
+      ]
+    }
+  },
+  "product-argument.phrase.pattern.1": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "product-argument.phrase.pattern.2": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "product-argument.phrase.pattern.3": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "product-argument.productArgument.value.2": {
+    "kind": "value",
+    "valueShape": {
+      "type": "array",
+      "items": [
+        {
+          "type": "string"
+        }
+      ]
+    }
+  },
+  "product-argument.productArgument.value.3": {
+    "kind": "value",
+    "valueShape": {
+      "type": "array",
+      "items": [
+        {
+          "type": "string"
+        }
+      ]
+    }
+  },
+  "product-argument.content.value.1": {
+    "kind": "value",
+    "valueShape": {
+      "type": "array",
+      "items": [
+        {
+          "type": "string"
+        }
+      ]
+    }
+  },
+  "product-concepts.productConcepts.value.1": {
+    "kind": "value",
+    "valueShape": {
+      "type": "array",
+      "items": [
+        {
+          "type": "record",
+          "values": {
+            "type": "string"
+          }
+        },
+        {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "string"
+            },
+            "name": {
+              "type": "string"
+            },
+            "parent": {
+              "type": "string"
+            },
+            "kind": {
+              "type": "string"
+            },
+            "aliases": {
+              "type": "array",
+              "items": [
+                {
+                  "type": "string"
+                }
+              ]
+            }
+          }
+        }
+      ]
+    }
+  },
+  "product-concepts.packageUnits.value.1": {
+    "kind": "value",
+    "valueShape": {
+      "type": "record",
+      "values": {
+        "type": "string"
+      }
+    }
+  },
+  "product-facts-language.text.pattern.1": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "product-facts-language.text.pattern.2": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "product-facts-language.productFactRead.pattern.1": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "product-facts-language.productFactRead.pattern.2": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "product-facts-language.facts.value.1": {
+    "kind": "value",
+    "valueShape": {
+      "type": "record",
+      "values": {
+        "type": "string"
+      }
+    }
+  },
+  "product-facts-language.productFactRead.pattern.3": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "product-facts-language.productFactRead.pattern.4": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "product-facts-language.productFactRead.value.1": {
+    "kind": "value",
+    "valueShape": {
+      "type": "object",
+      "properties": {
+        "intent": {
+          "type": "string"
+        },
+        "entities": {
+          "type": "record",
+          "values": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  },
+  "product-facts-language.productFactRead.pattern.5": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "product-facts-language.productFactRead.value.2": {
+    "kind": "value",
+    "valueShape": {
+      "type": "object",
+      "properties": {
+        "intent": {
+          "type": "string"
+        },
+        "entities": {
+          "type": "record",
+          "values": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  },
+  "product-facts-language.patterns.template.1": {
+    "kind": "template",
+    "arity": 1
+  },
+  "product-facts-language.patterns.template.2": {
+    "kind": "template",
+    "arity": 1
+  },
+  "product-facts-language.patterns.value.1": {
+    "kind": "value",
+    "valueShape": {
+      "type": "string"
+    }
+  },
+  "product-facts-language.patterns.template.3": {
+    "kind": "template",
+    "arity": 1
+  },
+  "product-facts-language.patterns.pattern.1": {
+    "kind": "pattern",
+    "captures": 1,
+    "requiresGlobal": false
+  },
+  "product-facts-language.patterns.value.2": {
+    "kind": "value",
+    "valueShape": {
+      "type": "string"
+    }
+  },
+  "product-facts-language.patterns.pattern.2": {
+    "kind": "pattern",
+    "captures": 1,
+    "requiresGlobal": false
+  },
+  "product-facts-language.patterns.value.3": {
+    "kind": "value",
+    "valueShape": {
+      "type": "string"
+    }
+  },
+  "product-facts-language.patterns.pattern.3": {
+    "kind": "pattern",
+    "captures": 1,
+    "requiresGlobal": false
+  },
+  "product-facts-language.patterns.value.4": {
+    "kind": "value",
+    "valueShape": {
+      "type": "string"
+    }
+  },
+  "product-facts-language.patterns.pattern.4": {
+    "kind": "pattern",
+    "captures": 1,
+    "requiresGlobal": false
+  },
+  "product-facts-language.patterns.value.5": {
+    "kind": "value",
+    "valueShape": {
+      "type": "string"
+    }
+  },
+  "product-facts-language.patterns.pattern.5": {
+    "kind": "pattern",
+    "captures": 1,
+    "requiresGlobal": false
+  },
+  "product-facts-language.patterns.value.6": {
+    "kind": "value",
+    "valueShape": {
+      "type": "string"
+    }
+  },
+  "product-facts-language.patterns.pattern.6": {
+    "kind": "pattern",
+    "captures": 2,
+    "requiresGlobal": false
+  },
+  "product-facts-language.product.pattern.1": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "product-facts-language.productFactRead.pattern.6": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "product-facts-language.productFactRead.pattern.7": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "product-facts-language.productFactRead.pattern.8": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "product-facts-language.productFactRead.pattern.9": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "product-facts-language.reference.pattern.1": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "product-guidance.match.pattern.1": {
+    "kind": "pattern",
+    "captures": 1,
+    "requiresGlobal": false
+  },
+  "product-guidance.parts.pattern.1": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "product-guidance.items.value.1": {
+    "kind": "value",
+    "valueShape": {
+      "type": "string"
+    }
+  },
+  "product-guidance.countedProductGuidance.pattern.1": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "product-guidance.countedProductGuidance.pattern.2": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "product-guidance.text.pattern.1": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "product-guidance.productGuidance.pattern.1": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "product-guidance.productGuidance.value.1": {
+    "kind": "value",
+    "valueShape": {
+      "type": "object",
+      "properties": {
+        "query": {
+          "type": "string"
+        },
+        "quantity": {
+          "type": "number"
+        },
+        "action": {
+          "type": "string"
+        }
+      }
+    }
+  },
+  "product-guidance.match.pattern.2": {
+    "kind": "pattern",
+    "captures": 2,
+    "requiresGlobal": false
+  },
+  "product-guidance.productGuidance.value.2": {
+    "kind": "value",
+    "valueShape": {
+      "type": "string"
+    }
+  },
+  "product-guidance.productGuidance.pattern.2": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "product-guidance.productGuidance.pattern.3": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "product-guidance.query.pattern.1": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "product-guidance.productGuidance.pattern.4": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "product-guidance.productGuidance.pattern.5": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "product-guidance.words.value.1": {
+    "kind": "value",
+    "valueShape": {
+      "type": "record",
+      "values": {
+        "type": "number"
+      }
+    }
+  },
+  "product-guidance.word.pattern.1": {
+    "kind": "pattern",
+    "captures": 2,
+    "requiresGlobal": false
+  },
+  "product-guidance.count.pattern.1": {
+    "kind": "pattern",
+    "captures": 2,
+    "requiresGlobal": false
+  },
+  "product-guidance.productGuidance.pattern.6": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "product-guidance.productGuidance.pattern.7": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "product-guidance.productGuidance.pattern.8": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "product-guidance.productGuidance.pattern.9": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "product-guidance.productGuidance.pattern.10": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "product-guidance.productGuidance.value.3": {
+    "kind": "value",
+    "valueShape": {
+      "type": "string"
+    }
+  },
+  "product-guidance.orderProductGuidance.pattern.1": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "product-guidance.orderProductGuidance.pattern.2": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "product-guidance.orderProductGuidance.template.1": {
+    "kind": "template",
+    "arity": 1
+  },
+  "product-meaning.escape.pattern.1": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": true
+  },
+  "product-meaning.attributeBoundary.value.1": {
+    "kind": "value",
+    "valueShape": {
+      "type": "string"
+    },
+    "fragmentCaptures": 0
+  },
+  "product-meaning.openAttribute.value.1": {
+    "kind": "value",
+    "valueShape": {
+      "type": "string"
+    }
+  },
+  "product-meaning.openAttribute.value.2": {
+    "kind": "value",
+    "valueShape": {
+      "type": "string"
+    }
+  },
+  "product-meaning.compileProductConcepts.pattern.1": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "product-meaning.compileProductConcepts.value.1": {
+    "kind": "value",
+    "valueShape": {
+      "type": "string"
+    }
+  },
+  "product-meaning.productMeaning.pattern.1": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "product-meaning.productMeaning.value.1": {
+    "kind": "value",
+    "valueShape": {
+      "type": "string"
+    }
+  },
+  "product-meaning.match.value.1": {
+    "kind": "value",
+    "valueShape": {
+      "type": "string"
+    },
+    "fragmentCaptures": 0
+  },
+  "product-meaning.match.value.2": {
+    "kind": "value",
+    "valueShape": {
+      "type": "string"
+    },
+    "fragmentCaptures": 0
+  },
+  "product-meaning.productMeaning.value.2": {
+    "kind": "value",
+    "valueShape": {
+      "type": "string"
+    }
+  },
+  "product-meaning.productMeaning.value.3": {
+    "kind": "value",
+    "valueShape": {
+      "type": "array",
+      "items": [
+        {
+          "type": "string"
+        }
+      ]
+    }
+  },
+  "product-meaning.outside.value.1": {
+    "kind": "value",
+    "valueShape": {
+      "type": "string"
+    },
+    "fragmentCaptures": 0
+  },
+  "product-meaning.outside.value.2": {
+    "kind": "value",
+    "valueShape": {
+      "type": "string"
+    },
+    "fragmentCaptures": 0
+  },
+  "product-meaning.size.pattern.1": {
+    "kind": "pattern",
+    "captures": 1,
+    "requiresGlobal": false
+  },
+  "product-meaning.color.pattern.1": {
+    "kind": "pattern",
+    "captures": 1,
+    "requiresGlobal": false
+  },
+  "product-meaning.productMeaning.value.5": {
+    "kind": "value",
+    "valueShape": {
+      "type": "string"
+    }
+  },
+  "product-meaning.productMeaning.pattern.2": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "product-meaning.key.value.1": {
+    "kind": "value",
+    "valueShape": {
+      "type": "string"
+    }
+  },
+  "product-meaning.key.value.2": {
+    "kind": "value",
+    "valueShape": {
+      "type": "string"
+    }
+  },
+  "product-meaning.key.value.3": {
+    "kind": "value",
+    "valueShape": {
+      "type": "string"
+    }
+  },
+  "product-meaning.key.value.4": {
+    "kind": "value",
+    "valueShape": {
+      "type": "string"
+    }
+  },
+  "product-meaning.productMeaning.pattern.3": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "product-meaning.productMeaning.pattern.4": {
+    "kind": "pattern",
+    "captures": 2,
+    "requiresGlobal": true
+  },
+  "product-meaning.productMeaning.pattern.5": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "product-meaning.productMeaning.pattern.6": {
+    "kind": "pattern",
+    "captures": 3,
+    "requiresGlobal": true
+  },
+  "product-meaning.pack.pattern.1": {
+    "kind": "pattern",
+    "captures": 1,
+    "requiresGlobal": false
+  },
+  "product-meaning.productMeaning.pattern.7": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "purpose-language.purposeSearch.pattern.1": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "purpose-language.trimmed.pattern.1": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "purpose-language.preparation.pattern.1": {
+    "kind": "pattern",
+    "captures": 1,
+    "requiresGlobal": false
+  },
+  "purpose-language.purposeSearch.value.1": {
+    "kind": "value",
+    "valueShape": {
+      "type": "string"
+    }
+  },
+  "purpose-language.purposeSearch.value.2": {
+    "kind": "value",
+    "valueShape": {
+      "type": "string"
+    }
+  },
+  "purpose-language.match.pattern.1": {
+    "kind": "pattern",
+    "captures": 2,
+    "requiresGlobal": false
+  },
+  "purpose-language.purposeSearch.pattern.2": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "purpose-language.purposeSearch.pattern.3": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "purpose-language.purposeSearch.value.3": {
+    "kind": "value",
+    "valueShape": {
+      "type": "string"
+    }
+  },
+  "purpose-language.purposeSearch.pattern.4": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "purpose-language.purposeSearch.value.4": {
+    "kind": "value",
+    "valueShape": {
+      "type": "string"
+    }
+  },
+  "purpose-language.raw.pattern.1": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "purpose-language.negative.pattern.1": {
+    "kind": "pattern",
+    "captures": 1,
+    "requiresGlobal": false
+  },
+  "purpose-language.purposeSearch.pattern.5": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "purpose-language.purposeSearch.value.5": {
+    "kind": "value",
+    "valueShape": {
+      "type": "string"
+    }
+  },
+  "quantities.numbers.value.1": {
+    "kind": "value",
+    "valueShape": {
+      "type": "record",
+      "values": {
+        "type": "number"
+      }
+    }
+  },
+  "quantities.readNumber.pattern.1": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "quantities.readNumber.value.1": {
+    "kind": "value",
+    "valueShape": {
+      "type": "string"
+    }
+  },
+  "quantities.readNumber.value.2": {
+    "kind": "value",
+    "valueShape": {
+      "type": "string"
+    }
+  },
+  "quantities.readNumber.value.3": {
+    "kind": "value",
+    "valueShape": {
+      "type": "string"
+    }
+  },
+  "quantities.readNumber.value.4": {
+    "kind": "value",
+    "valueShape": {
+      "type": "string"
+    }
+  },
+  "quantities.quotedNumericProduct.pattern.1": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "quantities.quantityPrefix.value.1": {
+    "kind": "value",
+    "valueShape": {
+      "type": "array",
+      "items": [
+        {
+          "type": "string"
+        }
+      ]
+    }
+  },
+  "quantities.quantityPrefix.value.2": {
+    "kind": "value",
+    "valueShape": {
+      "type": "string"
+    }
+  },
+  "quantities.quantityPrefix.value.3": {
+    "kind": "value",
+    "valueShape": {
+      "type": "string"
+    }
+  },
+  "quantities.quantityPrefix.value.4": {
+    "kind": "value",
+    "valueShape": {
+      "type": "string"
+    }
+  },
+  "quantities.quantityPrefix.value.5": {
+    "kind": "value",
+    "valueShape": {
+      "type": "string"
+    }
+  },
+  "quantities.quantityPrefix.value.6": {
+    "kind": "value",
+    "valueShape": {
+      "type": "string"
+    }
+  },
+  "quantities.quantityPrefix.value.7": {
+    "kind": "value",
+    "valueShape": {
+      "type": "string"
+    }
+  },
+  "quantities.quantityPrefix.value.8": {
+    "kind": "value",
+    "valueShape": {
+      "type": "string"
+    }
+  },
+  "quantities.quantityPrefix.value.9": {
+    "kind": "value",
+    "valueShape": {
+      "type": "string"
+    }
+  },
+  "quantities.quantityPrefix.value.10": {
+    "kind": "value",
+    "valueShape": {
+      "type": "string"
+    }
+  },
+  "quantities.quantityPrefix.value.11": {
+    "kind": "value",
+    "valueShape": {
+      "type": "string"
+    }
+  },
+  "quantities.quantityPrefix.value.12": {
+    "kind": "value",
+    "valueShape": {
+      "type": "string"
+    }
+  },
+  "quantities.quantityPrefix.value.13": {
+    "kind": "value",
+    "valueShape": {
+      "type": "string"
+    }
+  },
+  "quantities.second.value.1": {
+    "kind": "value",
+    "valueShape": {
+      "type": "array",
+      "items": [
+        {
+          "type": "string"
+        }
+      ]
+    }
+  },
+  "quantities.quantityPrefix.value.14": {
+    "kind": "value",
+    "valueShape": {
+      "type": "array",
+      "items": [
+        {
+          "type": "string"
+        }
+      ]
+    }
+  },
+  "quantities.size.value.1": {
+    "kind": "value",
+    "valueShape": {
+      "type": "array",
+      "items": [
+        {
+          "type": "string"
+        }
+      ]
+    }
+  },
+  "question-language.escape.pattern.1": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": true
+  },
+  "question-language.escape.pattern.2": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": true
+  },
+  "question-language.escape.value.1": {
+    "kind": "value",
+    "valueShape": {
+      "type": "string"
+    },
+    "fragmentCaptures": 0
+  },
+  "question-language.escape.pattern.3": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": true
+  },
+  "question-language.questionIndex.pattern.1": {
+    "kind": "pattern",
+    "captures": 1,
+    "requiresGlobal": true
+  },
+  "question-language.questionIndex.value.1": {
+    "kind": "value",
+    "valueShape": {
+      "type": "string"
+    }
+  },
+  "question-language.questionIndex.value.2": {
+    "kind": "value",
+    "valueShape": {
+      "type": "string"
+    }
+  },
+  "question-language.preservesAliasWords.pattern.1": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "question-language.preservesAliasWords.pattern.2": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": true
+  },
+  "question-language.preservesAliasWords.pattern.3": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": true
+  },
+  "question-language.match.pattern.1": {
+    "kind": "pattern",
+    "captures": 2,
+    "requiresGlobal": false
+  },
+  "question-language.questionLeadIn.pattern.1": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "question-language.priceQualifier.value.1": {
+    "kind": "value",
+    "valueShape": {
+      "type": "string"
+    }
+  },
+  "question-language.priceQualifier.value.2": {
+    "kind": "value",
+    "valueShape": {
+      "type": "string"
+    }
+  },
+  "question-language.product.pattern.1": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "question-language.product.pattern.2": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "question-language.product.pattern.3": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "question-language.product.pattern.4": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "question-language.product.pattern.5": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "question-language.product.pattern.6": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "question-language.text.pattern.1": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "question-language.text.pattern.2": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "question-language.questionRead.pattern.1": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "question-language.discourse.pattern.1": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "question-language.core.pattern.1": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "question-language.marker.pattern.1": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "question-language.target.pattern.1": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "question-language.current.value.1": {
+    "kind": "value",
+    "valueShape": {
+      "type": "object",
+      "properties": {
+        "question": {
+          "type": "string"
+        },
+        "missing": {
+          "type": "array",
+          "items": [
+            {
+              "type": "string"
+            }
+          ]
+        },
+        "reason": {
+          "type": "string"
+        }
+      }
+    }
+  },
+  "question-language.current.template.1": {
+    "kind": "template",
+    "arity": 2
+  },
+  "quoted-search.commandPattern.value.1": {
+    "kind": "value",
+    "valueShape": {
+      "type": "string"
+    },
+    "fragmentCaptures": 0
+  },
+  "quoted-search.exact.value.1": {
+    "kind": "value",
+    "valueShape": {
+      "type": "string"
+    }
+  },
+  "quoted-search.exact.value.2": {
+    "kind": "value",
+    "valueShape": {
+      "type": "string"
+    }
+  },
+  "quoted-search.printed.value.1": {
+    "kind": "value",
+    "valueShape": {
+      "type": "string"
+    }
+  },
+  "quoted-search.printed.value.2": {
+    "kind": "value",
+    "valueShape": {
+      "type": "string"
+    }
+  },
+  "quoted-search.quotedSearch.pattern.1": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "quoted-search.match.pattern.1": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "quoted-search.productText.pattern.1": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": true
+  },
+  "quoted-search.productText.pattern.2": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "quoted-search.productText.pattern.3": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": true
+  },
+  "quoted-search.productText.pattern.4": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": true
+  },
+  "read-language.canonicalRead.pattern.1": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "read-language.canonicalRead.pattern.2": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "read-language.canonicalRead.value.1": {
+    "kind": "value",
+    "valueShape": {
+      "type": "record",
+      "values": {
+        "type": "string"
+      }
+    }
+  },
+  "read-language.order.pattern.1": {
+    "kind": "pattern",
+    "captures": 1,
+    "requiresGlobal": false
+  },
+  "read-language.service.pattern.1": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "read-language.service.pattern.2": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "read-language.canonicalRead.value.2": {
+    "kind": "value",
+    "valueShape": {
+      "type": "record",
+      "values": {
+        "type": "string"
+      }
+    }
+  },
+  "read-language.canonicalRead.pattern.3": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "read-language.canonicalRead.value.3": {
+    "kind": "value",
+    "valueShape": {
+      "type": "record",
+      "values": {
+        "type": "string"
+      }
+    }
+  },
+  "read-language.canonicalRead.pattern.4": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "read-language.canonicalRead.value.4": {
+    "kind": "value",
+    "valueShape": {
+      "type": "record",
+      "values": {
+        "type": "string"
+      }
+    }
+  },
+  "read-language.canonicalRead.pattern.5": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "read-language.canonicalRead.value.5": {
+    "kind": "value",
+    "valueShape": {
+      "type": "record",
+      "values": {
+        "type": "string"
+      }
+    }
+  },
+  "read-language.refund.pattern.1": {
+    "kind": "pattern",
+    "captures": 1,
+    "requiresGlobal": false
+  },
+  "read-language.canonicalRead.pattern.6": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "read-language.canonicalRead.value.6": {
+    "kind": "value",
+    "valueShape": {
+      "type": "record",
+      "values": {
+        "type": "string"
+      }
+    }
+  },
+  "read-language.followup.pattern.1": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "read-language.followup.pattern.2": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "read-language.canonicalRead.pattern.7": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "read-language.canonicalRead.value.7": {
+    "kind": "value",
+    "valueShape": {
+      "type": "record",
+      "values": {
+        "type": "string"
+      }
+    }
+  },
+  "read-language.canonicalRead.pattern.8": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "read-language.canonicalRead.value.8": {
+    "kind": "value",
+    "valueShape": {
+      "type": "record",
+      "values": {
+        "type": "string"
+      }
+    }
+  },
+  "read-language.canonicalRead.pattern.9": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "read-language.canonicalRead.value.9": {
+    "kind": "value",
+    "valueShape": {
+      "type": "record",
+      "values": {
+        "type": "string"
+      }
+    }
+  },
+  "read-language.canonicalRead.pattern.10": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "read-language.canonicalRead.value.10": {
+    "kind": "value",
+    "valueShape": {
+      "type": "record",
+      "values": {
+        "type": "string"
+      }
+    }
+  },
+  "read-language.canonicalRead.pattern.11": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "read-language.canonicalRead.value.11": {
+    "kind": "value",
+    "valueShape": {
+      "type": "record",
+      "values": {
+        "type": "string"
+      }
+    }
+  },
+  "read-language.canonicalRead.pattern.12": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "read-language.canonicalRead.value.12": {
+    "kind": "value",
+    "valueShape": {
+      "type": "record",
+      "values": {
+        "type": "string"
+      }
+    }
+  },
+  "read-language.canonicalRead.pattern.13": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "read-language.canonicalRead.value.13": {
+    "kind": "value",
+    "valueShape": {
+      "type": "record",
+      "values": {
+        "type": "string"
+      }
+    }
+  },
+  "read-language.canonicalRead.pattern.14": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "read-language.canonicalRead.value.14": {
+    "kind": "value",
+    "valueShape": {
+      "type": "record",
+      "values": {
+        "type": "string"
+      }
+    }
+  },
+  "read-language.canonicalRead.pattern.15": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "read-language.canonicalRead.value.15": {
+    "kind": "value",
+    "valueShape": {
+      "type": "object",
+      "properties": {
+        "text": {
+          "type": "string"
+        },
+        "intent": {
+          "type": "string"
+        },
+        "productText": {
+          "type": "string"
+        },
+        "discountRanking": {
+          "type": "boolean"
+        }
+      }
+    }
+  },
+  "read-language.canonicalRead.pattern.16": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "read-language.canonicalRead.value.16": {
+    "kind": "value",
+    "valueShape": {
+      "type": "object",
+      "properties": {
+        "text": {
+          "type": "string"
+        },
+        "intent": {
+          "type": "string"
+        },
+        "productText": {
+          "type": "string"
+        },
+        "discountRanking": {
+          "type": "boolean"
+        }
+      }
+    }
+  },
+  "read-language.canonicalRead.value.17": {
+    "kind": "value",
+    "valueShape": {
+      "type": "record",
+      "values": {
+        "type": "string"
+      }
+    }
+  },
+  "read-language.bestseller.pattern.1": {
+    "kind": "pattern",
+    "captures": 1,
+    "requiresGlobal": false
+  },
+  "read-language.bestseller.pattern.2": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": true
+  },
+  "read-language.bestseller.value.1": {
+    "kind": "value",
+    "valueShape": {
+      "type": "string"
+    }
+  },
+  "read-language.canonicalRead.pattern.17": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "read-language.canonicalRead.value.18": {
+    "kind": "value",
+    "valueShape": {
+      "type": "record",
+      "values": {
+        "type": "string"
+      }
+    }
+  },
+  "read-language.expensive.pattern.1": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "read-language.canonicalRead.value.19": {
+    "kind": "value",
+    "valueShape": {
+      "type": "record",
+      "values": {
+        "type": "string"
+      }
+    }
+  },
+  "read-language.tracking.pattern.1": {
+    "kind": "pattern",
+    "captures": 1,
+    "requiresGlobal": false
+  },
+  "read-language.canonicalRead.template.1": {
+    "kind": "template",
+    "arity": 1
+  },
+  "read-language.stock.pattern.1": {
+    "kind": "pattern",
+    "captures": 1,
+    "requiresGlobal": false
+  },
+  "read-language.canonicalRead.pattern.18": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "read-language.canonicalRead.pattern.19": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "recommendation-filters.match.pattern.1": {
+    "kind": "pattern",
+    "captures": 3,
+    "requiresGlobal": false
+  },
+  "recommendation-filters.value.pattern.1": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "recommendation-filters.recommendationFilters.pattern.1": {
+    "kind": "pattern",
+    "captures": 1,
+    "requiresGlobal": false
+  },
+  "recommendation-language.recommendationRequest.pattern.1": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "recommendation-language.recommendationRequest.pattern.2": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "recommendation-language.text.pattern.1": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "recommendation-language.text.pattern.2": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "recommendation-language.recommendationRequest.pattern.3": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "recommendation-language.recommendationRequest.pattern.4": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "recommendation-language.desire.pattern.1": {
+    "kind": "pattern",
+    "captures": 1,
+    "requiresGlobal": false
+  },
+  "recommendation-language.directDiscovery.pattern.1": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "recommendation-language.directDiscovery.pattern.2": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "recommendation-language.directDiscovery.pattern.3": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "recommendation-language.directDiscovery.pattern.4": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "recommendation-language.prefix.pattern.1": {
+    "kind": "pattern",
+    "captures": 1,
+    "requiresGlobal": false
+  },
+  "recommendation-language.wrappers.pattern.1": {
+    "kind": "pattern",
+    "captures": 1,
+    "requiresGlobal": false
+  },
+  "recommendation-language.wrappers.pattern.2": {
+    "kind": "pattern",
+    "captures": 1,
+    "requiresGlobal": false
+  },
+  "recommendation-language.wrappers.pattern.3": {
+    "kind": "pattern",
+    "captures": 1,
+    "requiresGlobal": false
+  },
+  "recommendation-language.wrappers.pattern.4": {
+    "kind": "pattern",
+    "captures": 1,
+    "requiresGlobal": false
+  },
+  "recommendation-language.wrappers.pattern.5": {
+    "kind": "pattern",
+    "captures": 1,
+    "requiresGlobal": false
+  },
+  "recommendation-language.wrappers.pattern.6": {
+    "kind": "pattern",
+    "captures": 1,
+    "requiresGlobal": false
+  },
+  "recommendation-language.suffix.pattern.1": {
+    "kind": "pattern",
+    "captures": 2,
+    "requiresGlobal": false
+  },
+  "recommendation-language.question.pattern.1": {
+    "kind": "pattern",
+    "captures": 2,
+    "requiresGlobal": false
+  },
+  "recommendation-language.purpose.pattern.1": {
+    "kind": "pattern",
+    "captures": 1,
+    "requiresGlobal": false
+  },
+  "recommendation-language.recommendationRequest.value.1": {
+    "kind": "value",
+    "valueShape": {
+      "type": "string"
+    }
+  },
+  "recommendation-language.recommendationRequest.pattern.5": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "recommendation-language.recommendationRequest.pattern.6": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "recommendation-language.recommendationRequest.pattern.7": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "recommendation-language.recommendationRequest.value.2": {
+    "kind": "value",
+    "valueShape": {
+      "type": "string"
+    }
+  },
+  "recommendation-language.occasion.pattern.1": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "recommendation-language.recommendationRequest.value.3": {
+    "kind": "value",
+    "valueShape": {
+      "type": "string"
+    }
+  },
+  "recommendation-language.canonical.pattern.1": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "recommendation-language.recommendationRequest.pattern.8": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "reference-resolution.phrases.pattern.1": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "relationship-grammar.determiners.value.1": {
+    "kind": "value",
+    "valueShape": {
+      "type": "array",
+      "items": [
+        {
+          "type": "string"
+        }
+      ]
+    }
+  },
+  "relationship-grammar.possessiveDeterminers.value.1": {
+    "kind": "value",
+    "valueShape": {
+      "type": "array",
+      "items": [
+        {
+          "type": "string"
+        }
+      ]
+    }
+  },
+  "relationship-grammar.ownedTarget.pattern.1": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "relationship-grammar.ownedTarget.value.1": {
+    "kind": "value",
+    "valueShape": {
+      "type": "string"
+    }
+  },
+  "relationship-grammar.targets.value.1": {
+    "kind": "value",
+    "valueShape": {
+      "type": "array",
+      "items": [
+        {
+          "type": "string"
+        }
+      ]
+    }
+  },
+  "relationship-grammar.targets.value.2": {
+    "kind": "value",
+    "valueShape": {
+      "type": "array",
+      "items": [
+        {
+          "type": "string"
+        }
+      ]
+    }
+  },
+  "relationship-grammar.beforeNot.value.1": {
+    "kind": "value",
+    "valueShape": {
+      "type": "string"
+    }
+  },
+  "relationship-grammar.coordinated.value.1": {
+    "kind": "value",
+    "valueShape": {
+      "type": "string"
+    }
+  },
+  "relationship-grammar.relationshipSuffix.value.1": {
+    "kind": "value",
+    "valueShape": {
+      "type": "string"
+    }
+  },
+  "relationship-grammar.relationshipSuffix.value.2": {
+    "kind": "value",
+    "valueShape": {
+      "type": "string"
+    }
+  },
+  "relationship-grammar.relationshipSuffix.value.3": {
+    "kind": "value",
+    "valueShape": {
+      "type": "array",
+      "items": [
+        {
+          "type": "string"
+        }
+      ]
+    }
+  },
+  "relationship-grammar.next.value.1": {
+    "kind": "value",
+    "valueShape": {
+      "type": "string"
+    }
+  },
+  "relationship-grammar.relationshipSuffix.value.4": {
+    "kind": "value",
+    "valueShape": {
+      "type": "string"
+    }
+  },
+  "relationship-grammar.relationshipSuffix.value.5": {
+    "kind": "value",
+    "valueShape": {
+      "type": "string"
+    }
+  },
+  "relationship-grammar.relationshipSuffix.value.6": {
+    "kind": "value",
+    "valueShape": {
+      "type": "string"
+    }
+  },
+  "relationship-grammar.ambiguousShort.pattern.1": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "relationship-grammar.ambiguousCountry.value.1": {
+    "kind": "value",
+    "valueShape": {
+      "type": "array",
+      "items": [
+        {
+          "type": "string"
+        }
+      ]
+    }
+  },
+  "request-constraints.prefix.pattern.1": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "request-constraints.quoted.pattern.1": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": true
+  },
+  "request-constraints.scope.pattern.1": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "request-constraints.scope.pattern.2": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "request-constraints.scope.pattern.3": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "request-constraints.scope.pattern.4": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "request-constraints.add.pattern.1": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "request-constraints.requestConstraints.pattern.1": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "request-constraints.condition.pattern.1": {
+    "kind": "pattern",
+    "captures": 1,
+    "requiresGlobal": true
+  },
+  "request-constraints.courtesy.pattern.1": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "request-constraints.exclusion.pattern.1": {
+    "kind": "pattern",
+    "captures": 1,
+    "requiresGlobal": true
+  },
+  "request-constraints.exclusion.pattern.2": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "request-constraints.exclusion.pattern.3": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "request-constraints.constraintQuestion.template.1": {
+    "kind": "template",
+    "arity": 4
+  },
+  "request-constraints.constraintQuestion.template.2": {
+    "kind": "template",
+    "arity": 1
+  },
+  "request-envelope.requestEnvelope.pattern.1": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "request-envelope.requestEnvelope.pattern.2": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "request-envelope.text.pattern.1": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "request-envelope.requestEnvelope.pattern.3": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "request-envelope.requestEnvelope.pattern.4": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "request-envelope.requestEnvelope.pattern.5": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "request-envelope.front.pattern.1": {
+    "kind": "pattern",
+    "captures": 2,
+    "requiresGlobal": false
+  },
+  "request-envelope.requestEnvelope.pattern.6": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "request-envelope.requestEnvelope.template.1": {
+    "kind": "template",
+    "arity": 2
+  },
+  "request-envelope.requestEnvelope.pattern.7": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "request-envelope.requestEnvelope.pattern.8": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "request-envelope.requestEnvelope.pattern.9": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "request-envelope.requestEnvelope.pattern.10": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "request-envelope.requestEnvelope.pattern.11": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "request-parser.boundaries.value.1": {
+    "kind": "value",
+    "valueShape": {
+      "type": "array",
+      "items": [
+        {
+          "type": "string"
+        }
+      ]
+    }
+  },
+  "request-parser.negated.value.1": {
+    "kind": "value",
+    "valueShape": {
+      "type": "array",
+      "items": [
+        {
+          "type": "string"
+        }
+      ]
+    }
+  },
+  "request-parser.action.value.1": {
+    "kind": "value",
+    "valueShape": {
+      "type": "array",
+      "items": [
+        {
+          "type": "string"
+        }
+      ]
+    }
+  },
+  "request-parser.parseRequest.value.1": {
+    "kind": "value",
+    "valueShape": {
+      "type": "string"
+    }
+  },
+  "request-parser.prepositions.value.1": {
+    "kind": "value",
+    "valueShape": {
+      "type": "string"
+    }
+  },
+  "request-parser.parseRequest.value.2": {
+    "kind": "value",
+    "valueShape": {
+      "type": "array",
+      "items": [
+        {
+          "type": "string"
+        }
+      ]
+    }
+  },
+  "request-parser.parseRequest.value.3": {
+    "kind": "value",
+    "valueShape": {
+      "type": "array",
+      "items": [
+        {
+          "type": "string"
+        }
+      ]
+    }
+  },
+  "request-parser.body.value.1": {
+    "kind": "value",
+    "valueShape": {
+      "type": "array",
+      "items": [
+        {
+          "type": "string"
+        }
+      ]
+    }
+  },
+  "request-parser.descriptor.pattern.1": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "request-parser.entities.value.1": {
+    "kind": "value",
+    "valueShape": {
+      "type": "string"
+    }
+  },
+  "request-parser.entities.value.2": {
+    "kind": "value",
+    "valueShape": {
+      "type": "array",
+      "items": [
+        {
+          "type": "string"
+        }
+      ]
+    }
+  },
+  "request-parser.parseRequest.pattern.1": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "request-parser.parseRequest.pattern.2": {
+    "kind": "pattern",
+    "captures": 1,
+    "requiresGlobal": false
+  },
+  "request-parser.parseRequest.value.4": {
+    "kind": "value",
+    "valueShape": {
+      "type": "array",
+      "items": [
+        {
+          "type": "string"
+        }
+      ]
+    }
+  },
+  "request-parser.parseRequest.pattern.3": {
+    "kind": "pattern",
+    "captures": 1,
+    "requiresGlobal": false
+  },
+  "request-parser.segments.pattern.1": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "request-parser.instructional.pattern.1": {
+    "kind": "pattern",
+    "captures": 1,
+    "requiresGlobal": false
+  },
+  "request-parser.bridge.value.1": {
+    "kind": "value",
+    "valueShape": {
+      "type": "array",
+      "items": [
+        {
+          "type": "string"
+        }
+      ]
+    }
+  },
+  "request-parser.genericDescription.pattern.1": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "request-parser.generic.pattern.1": {
+    "kind": "pattern",
+    "captures": 1,
+    "requiresGlobal": false
+  },
+  "request-parser.fulfillment.value.1": {
+    "kind": "value",
+    "valueShape": {
+      "type": "record",
+      "values": {
+        "type": "string"
+      }
+    }
+  },
+  "request-parser.fulfillment.value.2": {
+    "kind": "value",
+    "valueShape": {
+      "type": "record",
+      "values": {
+        "type": "string"
+      }
+    }
+  },
+  "saved-collection-language.requestText.pattern.1": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "saved-collection-language.requestText.pattern.2": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "saved-collection-language.requestText.pattern.3": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "saved-collection-language.requestText.pattern.4": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "saved-collection-language.requestText.pattern.5": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "saved-collection-language.saved.value.1": {
+    "kind": "value",
+    "valueShape": {
+      "type": "string"
+    },
+    "fragmentCaptures": 0
+  },
+  "saved-collection-language.recall.value.1": {
+    "kind": "value",
+    "valueShape": {
+      "type": "string"
+    },
+    "fragmentCaptures": 0
+  },
+  "saved-collection-language.patterns.template.1": {
+    "kind": "template",
+    "arity": 1
+  },
+  "saved-collection-language.patterns.template.2": {
+    "kind": "template",
+    "arity": 1
+  },
+  "saved-collection-language.patterns.template.3": {
+    "kind": "template",
+    "arity": 1
+  },
+  "saved-collection-language.patterns.template.4": {
+    "kind": "template",
+    "arity": 1
+  },
+  "saved-collection-language.patterns.template.5": {
+    "kind": "template",
+    "arity": 1
+  },
+  "saved-collection-language.patterns.template.6": {
+    "kind": "template",
+    "arity": 1
+  },
+  "saved-collection-language.patterns.template.7": {
+    "kind": "template",
+    "arity": 1
+  },
+  "saved-collection-language.patterns.template.8": {
+    "kind": "template",
+    "arity": 1
+  },
+  "saved-collection-language.patterns.value.1": {
+    "kind": "value",
+    "valueShape": {
+      "type": "string"
+    },
+    "fragmentCaptures": 0
+  },
+  "saved-collection-language.patterns.template.9": {
+    "kind": "template",
+    "arity": 1
+  },
+  "saved-collection-language.patterns.template.10": {
+    "kind": "template",
+    "arity": 1
+  },
+  "saved-collection-language.patterns.template.11": {
+    "kind": "template",
+    "arity": 1
+  },
+  "saved-collection-language.patterns.value.2": {
+    "kind": "value",
+    "valueShape": {
+      "type": "string"
+    },
+    "fragmentCaptures": 0
+  },
+  "saved-collection-language.text.pattern.1": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "saved-collection-language.text.pattern.2": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "saved-collection-language.savedCollectionChoice.pattern.1": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "saved-collection-language.savedCollectionChoice.value.1": {
+    "kind": "value",
+    "valueShape": {
+      "type": "record",
+      "values": {
+        "type": "string"
+      }
+    }
+  },
+  "saved-collection-language.savedCollectionChoice.pattern.2": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "saved-collection-language.savedCollectionChoice.value.2": {
+    "kind": "value",
+    "valueShape": {
+      "type": "record",
+      "values": {
+        "type": "string"
+      }
+    }
+  },
+  "search-attributes.attributeNames.value.1": {
+    "kind": "value",
+    "valueShape": {
+      "type": "string"
+    },
+    "fragmentCaptures": 0
+  },
+  "search-attributes.fieldName.value.1": {
+    "kind": "value",
+    "valueShape": {
+      "type": "string"
+    }
+  },
+  "search-attributes.attributeKey.value.1": {
+    "kind": "value",
+    "valueShape": {
+      "type": "record",
+      "values": {
+        "type": "string"
+      }
+    }
+  },
+  "search-attributes.value.pattern.1": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": true
+  },
+  "search-attributes.attributeValue.pattern.1": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "search-attributes.attributeValue.pattern.2": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "search-attributes.attributeValue.pattern.3": {
+    "kind": "pattern",
+    "captures": 1,
+    "requiresGlobal": false
+  },
+  "search-attributes.attributeValue.pattern.4": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "search-attributes.attributeValue.value.1": {
+    "kind": "value",
+    "valueShape": {
+      "type": "string"
+    }
+  },
+  "search-attributes.searchAttributes.pattern.1": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "search-attributes.first.value.1": {
+    "kind": "value",
+    "valueShape": {
+      "type": "string"
+    }
+  },
+  "search-attributes.first.value.2": {
+    "kind": "value",
+    "valueShape": {
+      "type": "string"
+    }
+  },
+  "search-attributes.match.value.1": {
+    "kind": "value",
+    "valueShape": {
+      "type": "string"
+    }
+  },
+  "search-attributes.match.value.2": {
+    "kind": "value",
+    "valueShape": {
+      "type": "string"
+    }
+  },
+  "search-attributes.key.pattern.1": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": true
+  },
+  "search-language.wrappers.value.1": {
+    "kind": "value",
+    "valueShape": {
+      "type": "string"
+    },
+    "fragmentCaptures": 0
+  },
+  "search-language.command.template.1": {
+    "kind": "template",
+    "arity": 1
+  },
+  "search-language.replacements.value.1": {
+    "kind": "value",
+    "valueShape": {
+      "type": "record",
+      "values": {
+        "type": "string"
+      }
+    }
+  },
+  "search-language.from.pattern.1": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "search-language.directNeedSearch.value.1": {
+    "kind": "value",
+    "valueShape": {
+      "type": "array",
+      "items": [
+        {
+          "type": "string"
+        }
+      ]
+    }
+  },
+  "search-language.directNeedSearch.value.2": {
+    "kind": "value",
+    "valueShape": {
+      "type": "array",
+      "items": [
+        {
+          "type": "string"
+        }
+      ]
+    }
+  },
+  "search-language.directNeedSearch.value.3": {
+    "kind": "value",
+    "valueShape": {
+      "type": "array",
+      "items": [
+        {
+          "type": "string"
+        }
+      ]
+    }
+  },
+  "search-language.directNeedSearch.pattern.1": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "search-language.directNeedSearch.pattern.2": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "search-language.directNeedSearch.pattern.3": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "search-updates.escape.pattern.1": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": true
+  },
+  "search-updates.range.value.1": {
+    "kind": "value",
+    "valueShape": {
+      "type": "string"
+    },
+    "fragmentCaptures": 0
+  },
+  "search-updates.range.value.2": {
+    "kind": "value",
+    "valueShape": {
+      "type": "string"
+    },
+    "fragmentCaptures": 0
+  },
+  "search-updates.bound.value.1": {
+    "kind": "value",
+    "valueShape": {
+      "type": "string"
+    }
+  },
+  "search-updates.pricePattern.value.1": {
+    "kind": "value",
+    "valueShape": {
+      "type": "string"
+    }
+  },
+  "search-updates.boundDirection.value.1": {
+    "kind": "value",
+    "valueShape": {
+      "type": "string"
+    }
+  },
+  "search-updates.purposeReply.pattern.1": {
+    "kind": "pattern",
+    "captures": 1,
+    "requiresGlobal": false
+  },
+  "search-updates.interpretation.value.1": {
+    "kind": "value",
+    "valueShape": {
+      "type": "string"
+    }
+  },
+  "search-updates.parsed.value.1": {
+    "kind": "value",
+    "valueShape": {
+      "type": "string"
+    }
+  },
+  "search-updates.searchUpdate.value.1": {
+    "kind": "value",
+    "valueShape": {
+      "type": "string"
+    }
+  },
+  "search-updates.refinement.pattern.1": {
+    "kind": "pattern",
+    "captures": 1,
+    "requiresGlobal": false
+  },
+  "search-updates.candidate.value.1": {
+    "kind": "value",
+    "valueShape": {
+      "type": "string"
+    }
+  },
+  "search-updates.candidate.value.2": {
+    "kind": "value",
+    "valueShape": {
+      "type": "string"
+    }
+  },
+  "search-updates.searchUpdate.pattern.1": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "search-updates.merchantEdit.pattern.1": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "search-updates.searchUpdate.pattern.2": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "search-updates.rest.pattern.1": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "search-updates.rest.pattern.2": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "search-updates.searchUpdate.pattern.3": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "search-updates.searchUpdate.pattern.4": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "search-updates.searchUpdate.pattern.5": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "search-updates.separator.value.1": {
+    "kind": "value",
+    "valueShape": {
+      "type": "string"
+    }
+  },
+  "search-updates.separator.value.2": {
+    "kind": "value",
+    "valueShape": {
+      "type": "string"
+    }
+  },
+  "search-updates.searchUpdate.pattern.6": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "search-updates.searchUpdate.pattern.7": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "search-updates.searchUpdate.pattern.8": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "search-updates.labeled.value.1": {
+    "kind": "value",
+    "valueShape": {
+      "type": "string"
+    }
+  },
+  "search-updates.merchant.pattern.1": {
+    "kind": "pattern",
+    "captures": 2,
+    "requiresGlobal": false
+  },
+  "search-updates.searchUpdate.value.2": {
+    "kind": "value",
+    "valueShape": {
+      "type": "array",
+      "items": [
+        {
+          "type": "string"
+        }
+      ]
+    }
+  },
+  "search-updates.key.pattern.1": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": true
+  },
+  "search-updates.searchUpdate.pattern.9": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "search-updates.q.pattern.1": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "search-updates.fieldOrder.value.1": {
+    "kind": "value",
+    "valueShape": {
+      "type": "array",
+      "items": [
+        {
+          "type": "string"
+        }
+      ]
+    }
+  },
+  "search-updates.fieldOrder.value.2": {
+    "kind": "value",
+    "valueShape": {
+      "type": "array",
+      "items": [
+        {
+          "type": "string"
+        }
+      ]
+    }
+  },
+  "search-updates.pattern.value.1": {
+    "kind": "value",
+    "valueShape": {
+      "type": "string"
+    },
+    "fragmentCaptures": 0
+  },
+  "search-updates.pattern.value.2": {
+    "kind": "value",
+    "valueShape": {
+      "type": "string"
+    },
+    "fragmentCaptures": 0
+  },
+  "search-updates.searchUpdate.pattern.10": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": true
+  },
+  "search-updates.searchUpdate.pattern.11": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": true
+  },
+  "search-updates.updatedSearch.pattern.1": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "search-updates.source.value.1": {
+    "kind": "value",
+    "valueShape": {
+      "type": "string"
+    }
+  },
+  "search-updates.updatedSearch.pattern.2": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "search-updates.updatedSearch.pattern.3": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": true
+  },
+  "search-updates.updatedSearch.value.1": {
+    "kind": "value",
+    "valueShape": {
+      "type": "string"
+    }
+  },
+  "search-updates.explicitCurrency.value.1": {
+    "kind": "value",
+    "valueShape": {
+      "type": "string"
+    },
+    "fragmentCaptures": 0
+  },
+  "search-updates.explicitCurrency.value.2": {
+    "kind": "value",
+    "valueShape": {
+      "type": "string"
+    },
+    "fragmentCaptures": 0
+  },
+  "search-updates.pair.value.1": {
+    "kind": "value",
+    "valueShape": {
+      "type": "string"
+    }
+  },
+  "search-updates.pair.value.2": {
+    "kind": "value",
+    "valueShape": {
+      "type": "string"
+    },
+    "fragmentCaptures": 1
+  },
+  "search-updates.priorBounds.value.1": {
+    "kind": "value",
+    "valueShape": {
+      "type": "string"
+    }
+  },
+  "search-updates.priorBounds.value.2": {
+    "kind": "value",
+    "valueShape": {
+      "type": "string"
+    }
+  },
+  "search-updates.declared.value.1": {
+    "kind": "value",
+    "valueShape": {
+      "type": "string"
+    },
+    "fragmentCaptures": 0
+  },
+  "search-updates.declared.value.2": {
+    "kind": "value",
+    "valueShape": {
+      "type": "string"
+    },
+    "fragmentCaptures": 0
+  },
+  "search-updates.updatedSearch.pattern.4": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "search-updates.lower.pattern.1": {
+    "kind": "pattern",
+    "captures": 1,
+    "requiresGlobal": false
+  },
+  "search-updates.upper.pattern.1": {
+    "kind": "pattern",
+    "captures": 1,
+    "requiresGlobal": false
+  },
+  "search-updates.updatedSearch.value.2": {
+    "kind": "value",
+    "valueShape": {
+      "type": "string"
+    }
+  },
+  "search-updates.updatedSearch.value.3": {
+    "kind": "value",
+    "valueShape": {
+      "type": "string"
+    }
+  },
+  "search-updates.match.pattern.1": {
+    "kind": "pattern",
+    "captures": 2,
+    "requiresGlobal": false
+  },
+  "search-updates.tokens.pattern.1": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "search-updates.updatedSearch.value.4": {
+    "kind": "value",
+    "valueShape": {
+      "type": "array",
+      "items": [
+        {
+          "type": "string"
+        }
+      ]
+    }
+  },
+  "search-updates.updatedSearch.pattern.5": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "search-updates.suffix.pattern.1": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": true
+  },
+  "search-updates.pattern.value.3": {
+    "kind": "value",
+    "valueShape": {
+      "type": "string"
+    },
+    "fragmentCaptures": 0
+  },
+  "search-updates.pattern.value.4": {
+    "kind": "value",
+    "valueShape": {
+      "type": "string"
+    },
+    "fragmentCaptures": 0
+  },
+  "search-updates.pattern.value.5": {
+    "kind": "value",
+    "valueShape": {
+      "type": "string"
+    },
+    "fragmentCaptures": 0
+  },
+  "search-updates.pattern.value.6": {
+    "kind": "value",
+    "valueShape": {
+      "type": "string"
+    },
+    "fragmentCaptures": 0
+  },
+  "search-updates.updatedSearch.value.5": {
+    "kind": "value",
+    "valueShape": {
+      "type": "string"
+    }
+  },
+  "search-updates.updatedSearch.value.6": {
+    "kind": "value",
+    "valueShape": {
+      "type": "string"
+    }
+  },
+  "search-updates.product.pattern.1": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": true
+  },
+  "search-updates.product.value.1": {
+    "kind": "value",
+    "valueShape": {
+      "type": "string"
+    },
+    "fragmentCaptures": 0
+  },
+  "search-updates.updatedSearch.pattern.6": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": true
+  },
+  "search-updates.updatedSearch.value.7": {
+    "kind": "value",
+    "valueShape": {
+      "type": "string"
+    }
+  },
+  "semantic-clauses.tokenize.pattern.1": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": true
+  },
+  "semantic-clauses.raw.pattern.1": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": true
+  },
+  "semantic-clauses.raw.pattern.2": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": true
+  },
+  "semantic-clauses.tokenize.value.1": {
+    "kind": "value",
+    "valueShape": {
+      "type": "record",
+      "values": {
+        "type": "boolean"
+      }
+    }
+  },
+  "semantic-clauses.wrapper.pattern.1": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "semantic-clauses.fillers.value.1": {
+    "kind": "value",
+    "valueShape": {
+      "type": "array",
+      "items": [
+        {
+          "type": "string"
+        }
+      ]
+    }
+  },
+  "semantic-clauses.articles.value.1": {
+    "kind": "value",
+    "valueShape": {
+      "type": "array",
+      "items": [
+        {
+          "type": "string"
+        }
+      ]
+    }
+  },
+  "semantic-clauses.head.pattern.1": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "semantic-clauses.head.pattern.2": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "semantic-clauses.priorPurchase.pattern.1": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "semantic-clauses.priorPurchase.pattern.2": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "semantic-clauses.head.value.1": {
+    "kind": "value",
+    "valueShape": {
+      "type": "array",
+      "items": [
+        {
+          "type": "string"
+        }
+      ]
+    }
+  },
+  "semantic-clauses.head.value.2": {
+    "kind": "value",
+    "valueShape": {
+      "type": "array",
+      "items": [
+        {
+          "type": "string"
+        }
+      ]
+    }
+  },
+  "semantic-clauses.head.value.3": {
+    "kind": "value",
+    "valueShape": {
+      "type": "array",
+      "items": [
+        {
+          "type": "string"
+        }
+      ]
+    }
+  },
+  "semantic-clauses.head.value.4": {
+    "kind": "value",
+    "valueShape": {
+      "type": "array",
+      "items": [
+        {
+          "type": "string"
+        }
+      ]
+    }
+  },
+  "semantic-clauses.head.value.5": {
+    "kind": "value",
+    "valueShape": {
+      "type": "string"
+    }
+  },
+  "semantic-clauses.head.value.6": {
+    "kind": "value",
+    "valueShape": {
+      "type": "array",
+      "items": [
+        {
+          "type": "string"
+        }
+      ]
+    }
+  },
+  "semantic-clauses.head.value.7": {
+    "kind": "value",
+    "valueShape": {
+      "type": "array",
+      "items": [
+        {
+          "type": "string"
+        }
+      ]
+    }
+  },
+  "semantic-clauses.head.value.8": {
+    "kind": "value",
+    "valueShape": {
+      "type": "array",
+      "items": [
+        {
+          "type": "string"
+        }
+      ]
+    }
+  },
+  "semantic-clauses.head.value.9": {
+    "kind": "value",
+    "valueShape": {
+      "type": "string"
+    }
+  },
+  "semantic-clauses.head.value.10": {
+    "kind": "value",
+    "valueShape": {
+      "type": "array",
+      "items": [
+        {
+          "type": "string"
+        }
+      ]
+    }
+  },
+  "semantic-clauses.head.value.11": {
+    "kind": "value",
+    "valueShape": {
+      "type": "string"
+    }
+  },
+  "semantic-clauses.head.value.12": {
+    "kind": "value",
+    "valueShape": {
+      "type": "string"
+    }
+  },
+  "semantic-clauses.head.value.13": {
+    "kind": "value",
+    "valueShape": {
+      "type": "array",
+      "items": [
+        {
+          "type": "string"
+        }
+      ]
+    }
+  },
+  "semantic-clauses.head.value.14": {
+    "kind": "value",
+    "valueShape": {
+      "type": "string"
+    }
+  },
+  "semantic-clauses.head.value.15": {
+    "kind": "value",
+    "valueShape": {
+      "type": "string"
+    }
+  },
+  "semantic-clauses.head.value.16": {
+    "kind": "value",
+    "valueShape": {
+      "type": "array",
+      "items": [
+        {
+          "type": "string"
+        }
+      ]
+    }
+  },
+  "semantic-clauses.head.value.17": {
+    "kind": "value",
+    "valueShape": {
+      "type": "string"
+    }
+  },
+  "semantic-clauses.head.value.18": {
+    "kind": "value",
+    "valueShape": {
+      "type": "string"
+    }
+  },
+  "semantic-clauses.head.value.19": {
+    "kind": "value",
+    "valueShape": {
+      "type": "array",
+      "items": [
+        {
+          "type": "string"
+        }
+      ]
+    }
+  },
+  "semantic-clauses.head.value.20": {
+    "kind": "value",
+    "valueShape": {
+      "type": "string"
+    }
+  },
+  "semantic-clauses.head.value.21": {
+    "kind": "value",
+    "valueShape": {
+      "type": "string"
+    }
+  },
+  "semantic-clauses.head.value.22": {
+    "kind": "value",
+    "valueShape": {
+      "type": "string"
+    }
+  },
+  "semantic-clauses.head.value.23": {
+    "kind": "value",
+    "valueShape": {
+      "type": "string"
+    }
+  },
+  "semantic-clauses.head.value.24": {
+    "kind": "value",
+    "valueShape": {
+      "type": "array",
+      "items": [
+        {
+          "type": "string"
+        }
+      ]
+    }
+  },
+  "semantic-clauses.head.value.25": {
+    "kind": "value",
+    "valueShape": {
+      "type": "string"
+    }
+  },
+  "semantic-clauses.head.value.26": {
+    "kind": "value",
+    "valueShape": {
+      "type": "string"
+    }
+  },
+  "semantic-clauses.head.value.27": {
+    "kind": "value",
+    "valueShape": {
+      "type": "array",
+      "items": [
+        {
+          "type": "string"
+        }
+      ]
+    }
+  },
+  "semantic-clauses.head.value.28": {
+    "kind": "value",
+    "valueShape": {
+      "type": "string"
+    }
+  },
+  "semantic-clauses.head.value.29": {
+    "kind": "value",
+    "valueShape": {
+      "type": "string"
+    }
+  },
+  "semantic-clauses.head.value.30": {
+    "kind": "value",
+    "valueShape": {
+      "type": "string"
+    }
+  },
+  "semantic-clauses.head.value.31": {
+    "kind": "value",
+    "valueShape": {
+      "type": "array",
+      "items": [
+        {
+          "type": "string"
+        }
+      ]
+    }
+  },
+  "semantic-clauses.head.value.32": {
+    "kind": "value",
+    "valueShape": {
+      "type": "array",
+      "items": [
+        {
+          "type": "string"
+        }
+      ]
+    }
+  },
+  "semantic-clauses.head.value.33": {
+    "kind": "value",
+    "valueShape": {
+      "type": "string"
+    }
+  },
+  "semantic-clauses.head.pattern.3": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "semantic-clauses.head.value.34": {
+    "kind": "value",
+    "valueShape": {
+      "type": "array",
+      "items": [
+        {
+          "type": "string"
+        }
+      ]
+    }
+  },
+  "semantic-clauses.head.value.35": {
+    "kind": "value",
+    "valueShape": {
+      "type": "string"
+    }
+  },
+  "semantic-clauses.head.pattern.4": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "semantic-clauses.head.value.36": {
+    "kind": "value",
+    "valueShape": {
+      "type": "string"
+    }
+  },
+  "semantic-clauses.head.value.37": {
+    "kind": "value",
+    "valueShape": {
+      "type": "array",
+      "items": [
+        {
+          "type": "string"
+        }
+      ]
+    }
+  },
+  "semantic-clauses.head.value.38": {
+    "kind": "value",
+    "valueShape": {
+      "type": "array",
+      "items": [
+        {
+          "type": "string"
+        }
+      ]
+    }
+  },
+  "semantic-clauses.head.value.39": {
+    "kind": "value",
+    "valueShape": {
+      "type": "array",
+      "items": [
+        {
+          "type": "string"
+        }
+      ]
+    }
+  },
+  "semantic-clauses.head.value.40": {
+    "kind": "value",
+    "valueShape": {
+      "type": "string"
+    }
+  },
+  "semantic-clauses.head.value.41": {
+    "kind": "value",
+    "valueShape": {
+      "type": "array",
+      "items": [
+        {
+          "type": "string"
+        }
+      ]
+    }
+  },
+  "semantic-clauses.hasUnparsedSentenceAction.pattern.1": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "semantic-clauses.hasUnparsedSentenceAction.value.1": {
+    "kind": "value",
+    "valueShape": {
+      "type": "array",
+      "items": [
+        {
+          "type": "string"
+        }
+      ]
+    }
+  },
+  "semantic-clauses.hasUnparsedSentenceAction.value.2": {
+    "kind": "value",
+    "valueShape": {
+      "type": "array",
+      "items": [
+        {
+          "type": "string"
+        }
+      ]
+    }
+  },
+  "semantic-clauses.hasUnparsedSentenceAction.value.3": {
+    "kind": "value",
+    "valueShape": {
+      "type": "string"
+    }
+  },
+  "semantic-clauses.hasUnparsedSentenceAction.value.4": {
+    "kind": "value",
+    "valueShape": {
+      "type": "string"
+    }
+  },
+  "semantic-clauses.hasUnparsedSentenceAction.value.5": {
+    "kind": "value",
+    "valueShape": {
+      "type": "array",
+      "items": [
+        {
+          "type": "string"
+        }
+      ]
+    }
+  },
+  "semantic-clauses.passiveCartRequest.pattern.1": {
+    "kind": "pattern",
+    "captures": 1,
+    "requiresGlobal": false
+  },
+  "semantic-clauses.clauses.pattern.1": {
+    "kind": "pattern",
+    "captures": 1,
+    "requiresGlobal": false
+  },
+  "semantic-clauses.clauses.pattern.2": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "semantic-clauses.clauses.pattern.3": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "semantic-clauses.added.value.1": {
+    "kind": "value",
+    "valueShape": {
+      "type": "string"
+    }
+  },
+  "semantic-clauses.like.value.1": {
+    "kind": "value",
+    "valueShape": {
+      "type": "string"
+    }
+  },
+  "semantic-clauses.clauses.value.1": {
+    "kind": "value",
+    "valueShape": {
+      "type": "array",
+      "items": [
+        {
+          "type": "string"
+        }
+      ]
+    }
+  },
+  "semantic-clauses.clauses.value.2": {
+    "kind": "value",
+    "valueShape": {
+      "type": "array",
+      "items": [
+        {
+          "type": "string"
+        }
+      ]
+    }
+  },
+  "semantic-clauses.clauses.value.3": {
+    "kind": "value",
+    "valueShape": {
+      "type": "string"
+    }
+  },
+  "semantic-clauses.clauses.value.4": {
+    "kind": "value",
+    "valueShape": {
+      "type": "array",
+      "items": [
+        {
+          "type": "string"
+        }
+      ]
+    }
+  },
+  "semantic-clauses.clauses.value.5": {
+    "kind": "value",
+    "valueShape": {
+      "type": "string"
+    }
+  },
+  "semantic-clauses.next.value.1": {
+    "kind": "value",
+    "valueShape": {
+      "type": "array",
+      "items": [
+        {
+          "type": "string"
+        }
+      ]
+    }
+  },
+  "semantic-clauses.next.value.2": {
+    "kind": "value",
+    "valueShape": {
+      "type": "array",
+      "items": [
+        {
+          "type": "string"
+        }
+      ]
+    }
+  },
+  "semantic-clauses.next.value.3": {
+    "kind": "value",
+    "valueShape": {
+      "type": "string"
+    }
+  },
+  "semantic-clauses.next.value.4": {
+    "kind": "value",
+    "valueShape": {
+      "type": "string"
+    }
+  },
+  "semantic-clauses.next.value.5": {
+    "kind": "value",
+    "valueShape": {
+      "type": "array",
+      "items": [
+        {
+          "type": "string"
+        }
+      ]
+    }
+  },
+  "semantic-clauses.leadingNegation.value.1": {
+    "kind": "value",
+    "valueShape": {
+      "type": "array",
+      "items": [
+        {
+          "type": "string"
+        }
+      ]
+    }
+  },
+  "semantic-clauses.clauses.value.6": {
+    "kind": "value",
+    "valueShape": {
+      "type": "array",
+      "items": [
+        {
+          "type": "string"
+        }
+      ]
+    }
+  },
+  "semantic-clauses.clauses.pattern.4": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "semantic-clauses.clauses.pattern.5": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "semantic-clauses.clauses.pattern.6": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "semantic-clauses.clauses.value.7": {
+    "kind": "value",
+    "valueShape": {
+      "type": "array",
+      "items": [
+        {
+          "type": "string"
+        }
+      ]
+    }
+  },
+  "semantic-clauses.clauses.pattern.7": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "semantic-clauses.clauses.value.8": {
+    "kind": "value",
+    "valueShape": {
+      "type": "array",
+      "items": [
+        {
+          "type": "string"
+        }
+      ]
+    }
+  },
+  "semantic-clauses.clauses.value.9": {
+    "kind": "value",
+    "valueShape": {
+      "type": "array",
+      "items": [
+        {
+          "type": "string"
+        }
+      ]
+    }
+  },
+  "semantic-clauses.clauses.template.1": {
+    "kind": "template",
+    "arity": 1
+  },
+  "semantic-entities.generic.pattern.1": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "semantic-entities.pronoun.pattern.1": {
+    "kind": "pattern",
+    "captures": 1,
+    "requiresGlobal": false
+  },
+  "semantic-entities.itemsFrom.value.1": {
+    "kind": "value",
+    "valueShape": {
+      "type": "array",
+      "items": [
+        {
+          "type": "string"
+        }
+      ]
+    }
+  },
+  "semantic-entities.stop.value.1": {
+    "kind": "value",
+    "valueShape": {
+      "type": "array",
+      "items": [
+        {
+          "type": "string"
+        }
+      ]
+    }
+  },
+  "semantic-entities.stop.value.2": {
+    "kind": "value",
+    "valueShape": {
+      "type": "array",
+      "items": [
+        {
+          "type": "string"
+        }
+      ]
+    }
+  },
+  "semantic-entities.stop.value.3": {
+    "kind": "value",
+    "valueShape": {
+      "type": "array",
+      "items": [
+        {
+          "type": "string"
+        }
+      ]
+    }
+  },
+  "semantic-entities.numberContinues.value.1": {
+    "kind": "value",
+    "valueShape": {
+      "type": "string"
+    }
+  },
+  "semantic-entities.itemsFrom.value.2": {
+    "kind": "value",
+    "valueShape": {
+      "type": "string"
+    }
+  },
+  "semantic-entities.itemsFrom.value.3": {
+    "kind": "value",
+    "valueShape": {
+      "type": "string"
+    }
+  },
+  "semantic-entities.itemsFrom.value.4": {
+    "kind": "value",
+    "valueShape": {
+      "type": "array",
+      "items": [
+        {
+          "type": "string"
+        }
+      ]
+    }
+  },
+  "semantic-entities.itemsFrom.value.5": {
+    "kind": "value",
+    "valueShape": {
+      "type": "string"
+    }
+  },
+  "semantic-entities.text.pattern.1": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": true
+  },
+  "semantic-entities.itemsFrom.pattern.1": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "semantic-entities.itemsFrom.pattern.2": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "semantic-entities.itemsFrom.value.6": {
+    "kind": "value",
+    "valueShape": {
+      "type": "record",
+      "values": {
+        "type": "string"
+      }
+    }
+  },
+  "semantic-entities.itemsFrom.value.7": {
+    "kind": "value",
+    "valueShape": {
+      "type": "record",
+      "values": {
+        "type": "string"
+      }
+    }
+  },
+  "semantic-entities.validDate.pattern.1": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "semantic-entities.deliveryFrom.pattern.1": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "semantic-entities.deliveryFrom.pattern.2": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "semantic-entities.deliveryFrom.pattern.3": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "semantic-entities.deliveryFrom.pattern.4": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "semantic-entities.relative.pattern.1": {
+    "kind": "pattern",
+    "captures": 1,
+    "requiresGlobal": false
+  },
+  "semantic-entities.deliveryFrom.pattern.5": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "semantic-entities.explicit.pattern.1": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "semantic-entities.period.pattern.1": {
+    "kind": "pattern",
+    "captures": 1,
+    "requiresGlobal": false
+  },
+  "semantic-entities.range.pattern.1": {
+    "kind": "pattern",
+    "captures": 4,
+    "requiresGlobal": false
+  },
+  "semantic-request.priceBound.value.1": {
+    "kind": "value",
+    "valueShape": {
+      "type": "string"
+    }
+  },
+  "semantic-request.priceBound.value.2": {
+    "kind": "value",
+    "valueShape": {
+      "type": "string"
+    }
+  },
+  "semantic-request.priceRange.value.1": {
+    "kind": "value",
+    "valueShape": {
+      "type": "string"
+    },
+    "fragmentCaptures": 0
+  },
+  "semantic-request.priceRange.value.2": {
+    "kind": "value",
+    "valueShape": {
+      "type": "string"
+    },
+    "fragmentCaptures": 0
+  },
+  "semantic-request.priceTail.value.1": {
+    "kind": "value",
+    "valueShape": {
+      "type": "string"
+    }
+  },
+  "semantic-request.action.template.1": {
+    "kind": "template",
+    "arity": 1
+  },
+  "semantic-request.addAction.template.1": {
+    "kind": "template",
+    "arity": 1
+  },
+  "semantic-request.orderReference.pattern.1": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "semantic-request.orderReference.pattern.2": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "semantic-request.orderReference.pattern.3": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "semantic-request.directOrder.pattern.1": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "semantic-request.directOrder.pattern.2": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "semantic-request.semanticRequest.pattern.1": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "semantic-request.numbered.pattern.1": {
+    "kind": "pattern",
+    "captures": 1,
+    "requiresGlobal": false
+  },
+  "semantic-request.ref.pattern.1": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "semantic-request.authorizedLookup.pattern.1": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "semantic-request.semanticRequest.value.1": {
+    "kind": "value",
+    "valueShape": {
+      "type": "record",
+      "values": {
+        "type": "string"
+      }
+    }
+  },
+  "semantic-request.semanticRequest.value.2": {
+    "kind": "value",
+    "valueShape": {
+      "type": "record",
+      "values": {
+        "type": "string"
+      }
+    }
+  },
+  "semantic-request.numbered.pattern.2": {
+    "kind": "pattern",
+    "captures": 1,
+    "requiresGlobal": false
+  },
+  "semantic-request.semanticRequest.value.3": {
+    "kind": "value",
+    "valueShape": {
+      "type": "record",
+      "values": {
+        "type": "string"
+      }
+    }
+  },
+  "semantic-request.wantsItems.pattern.1": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "semantic-request.semanticRequest.template.1": {
+    "kind": "template",
+    "arity": 1
+  },
+  "semantic-request.semanticRequest.pattern.2": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "semantic-request.priceAt.pattern.1": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": true
+  },
+  "semantic-request.routes.pattern.1": {
+    "kind": "pattern",
+    "captures": 1,
+    "requiresGlobal": true
+  },
+  "semantic-request.semanticRequest.template.2": {
+    "kind": "template",
+    "arity": 1
+  },
+  "semantic-request.semanticRequest.value.4": {
+    "kind": "value",
+    "valueShape": {
+      "type": "record",
+      "values": {
+        "type": "string"
+      }
+    }
+  },
+  "semantic-request.semanticRequest.template.3": {
+    "kind": "template",
+    "arity": 1
+  },
+  "semantic-request.semanticRequest.template.4": {
+    "kind": "template",
+    "arity": 1
+  },
+  "semantic-request.semanticRequest.template.5": {
+    "kind": "template",
+    "arity": 1
+  },
+  "semantic-request.semanticRequest.template.6": {
+    "kind": "template",
+    "arity": 1
+  },
+  "semantic-request.semanticRequest.template.7": {
+    "kind": "template",
+    "arity": 1
+  },
+  "semantic-request.semanticRequest.value.5": {
+    "kind": "value",
+    "valueShape": {
+      "type": "record",
+      "values": {
+        "type": "string"
+      }
+    }
+  },
+  "semantic-request.semanticRequest.value.6": {
+    "kind": "value",
+    "valueShape": {
+      "type": "string"
+    }
+  },
+  "semantic-request.semanticRequest.pattern.3": {
+    "kind": "pattern",
+    "captures": 1,
+    "requiresGlobal": false
+  },
+  "semantic-request.semanticRequest.pattern.4": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "semantic-request.question.value.1": {
+    "kind": "value",
+    "valueShape": {
+      "type": "string"
+    }
+  },
+  "semantic-request.question.value.2": {
+    "kind": "value",
+    "valueShape": {
+      "type": "string"
+    }
+  },
+  "semantic-request.question.value.3": {
+    "kind": "value",
+    "valueShape": {
+      "type": "string"
+    }
+  },
+  "semantic-request.semanticRequest.template.8": {
+    "kind": "template",
+    "arity": 1
+  },
+  "semantic-request.contextualRequest.pattern.1": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "semantic-request.contextualRequest.pattern.2": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "semantic-request.contextualRequest.value.1": {
+    "kind": "value",
+    "valueShape": {
+      "type": "array",
+      "items": [
+        {
+          "type": "string"
+        }
+      ]
+    }
+  },
+  "semantic-request.contextualRequest.value.2": {
+    "kind": "value",
+    "valueShape": {
+      "type": "array",
+      "items": [
+        {
+          "type": "string"
+        }
+      ]
+    }
+  },
+  "semantic-request.contextualRequest.pattern.3": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "semantic-request.contextualRequest.value.3": {
+    "kind": "value",
+    "valueShape": {
+      "type": "string"
+    }
+  },
+  "semantic-request.number.pattern.1": {
+    "kind": "pattern",
+    "captures": 1,
+    "requiresGlobal": false
+  },
+  "slot-resolution.getValue.value.1": {
+    "kind": "value",
+    "valueShape": {
+      "type": "record",
+      "values": {
+        "type": "string"
+      }
+    }
+  },
+  "slot-resolution.getValue.value.2": {
+    "kind": "value",
+    "valueShape": {
+      "type": "record",
+      "values": {
+        "type": "string"
+      }
+    }
+  },
+  "slot-resolution.getValue.value.3": {
+    "kind": "value",
+    "valueShape": {
+      "type": "record",
+      "values": {
+        "type": "string"
+      }
+    }
+  },
+  "slot-resolution.getValue.value.4": {
+    "kind": "value",
+    "valueShape": {
+      "type": "record",
+      "values": {
+        "type": "string"
+      }
+    }
+  },
+  "slot-resolution.getValue.value.5": {
+    "kind": "value",
+    "valueShape": {
+      "type": "string"
+    }
+  },
+  "slot-resolution.getValue.value.6": {
+    "kind": "value",
+    "valueShape": {
+      "type": "record",
+      "values": {
+        "type": "string"
+      }
+    }
+  },
+  "slot-resolution.getValue.value.7": {
+    "kind": "value",
+    "valueShape": {
+      "type": "record",
+      "values": {
+        "type": "string"
+      }
+    }
+  },
+  "slot-resolution.getValue.value.8": {
+    "kind": "value",
+    "valueShape": {
+      "type": "record",
+      "values": {
+        "type": "string"
+      }
+    }
+  },
+  "slot-resolution.getValue.value.9": {
+    "kind": "value",
+    "valueShape": {
+      "type": "record",
+      "values": {
+        "type": "string"
+      }
+    }
+  },
+  "slot-resolution.getValue.value.10": {
+    "kind": "value",
+    "valueShape": {
+      "type": "record",
+      "values": {
+        "type": "string"
+      }
+    }
+  },
+  "transfer-parser.articles.value.1": {
+    "kind": "value",
+    "valueShape": {
+      "type": "array",
+      "items": [
+        {
+          "type": "string"
+        }
+      ]
+    }
+  },
+  "transfer-parser.collection.pattern.1": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "transfer-parser.transferBridge.pattern.1": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "transfer-parser.sourcePrep.value.1": {
+    "kind": "value",
+    "valueShape": {
+      "type": "string"
+    }
+  },
+  "transfer-parser.transferFrame.value.1": {
+    "kind": "value",
+    "valueShape": {
+      "type": "string"
+    }
+  },
+  "transfer-parser.transferFrame.value.2": {
+    "kind": "value",
+    "valueShape": {
+      "type": "string"
+    }
+  },
+  "transfer-parser.transferFrame.value.3": {
+    "kind": "value",
+    "valueShape": {
+      "type": "array",
+      "items": [
+        {
+          "type": "string"
+        }
+      ]
+    }
+  },
+  "transfer-parser.transferFrame.value.4": {
+    "kind": "value",
+    "valueShape": {
+      "type": "array",
+      "items": [
+        {
+          "type": "string"
+        }
+      ]
+    }
+  },
+  "transfer-parser.transferFrame.value.5": {
+    "kind": "value",
+    "valueShape": {
+      "type": "array",
+      "items": [
+        {
+          "type": "string"
+        }
+      ]
+    }
+  },
+  "transfer-parser.transferFrame.value.6": {
+    "kind": "value",
+    "valueShape": {
+      "type": "array",
+      "items": [
+        {
+          "type": "string"
+        }
+      ]
+    }
+  },
+  "transfer-parser.transferFrame.pattern.1": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "transfer-parser.transferFrame.pattern.2": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "transfer-parser.transferFrame.pattern.3": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "transfer-parser.transferFrame.pattern.4": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "transfer-parser.parts.pattern.1": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "transfer-parser.boundary.value.1": {
+    "kind": "value",
+    "valueShape": {
+      "type": "array",
+      "items": [
+        {
+          "type": "string"
+        }
+      ]
+    }
+  },
+  "transfer-parser.transferFrame.pattern.5": {
+    "kind": "pattern",
+    "captures": 1,
+    "requiresGlobal": false
+  },
+  "transfer-parser.transferFrame.pattern.6": {
+    "kind": "pattern",
+    "captures": 1,
+    "requiresGlobal": false
+  },
+  "transfer-parser.transferReply.template.1": {
+    "kind": "template",
+    "arity": 5
+  },
+  "transfer-parser.transferReply.pattern.1": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "transfer-parser.transferReply.pattern.2": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "transfer-parser.transferReply.template.2": {
+    "kind": "template",
+    "arity": 2
+  },
+  "transfer-parser.transferReply.pattern.3": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "transfer-parser.transferReply.template.3": {
+    "kind": "template",
+    "arity": 5
+  },
+  "unsupported.escape.pattern.1": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": true
+  },
+  "unsupported.rules.template.1": {
+    "kind": "template",
+    "arity": 2
+  },
+  "unsupported.unsupportedIntents.pattern.1": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "unsupported.clause.pattern.1": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "unsupported.unsupportedIntents.pattern.2": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "unsupported.unsupportedIntents.pattern.3": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "utterance-language.unsafeText.pattern.1": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "utterance-language.unsafeText.pattern.2": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "utterance-language.span.pattern.1": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "utterance-language.span.pattern.2": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "utterance-language.shoppingDiscourse.pattern.1": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": true
+  },
+  "utterance-language.shoppingDiscourse.pattern.2": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "utterance-language.shoppingDiscourse.pattern.3": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "utterance-language.value.pattern.1": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "utterance-language.value.pattern.2": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": true
+  },
+  "utterance-language.rule.value.1": {
+    "kind": "value",
+    "valueShape": {
+      "type": "array",
+      "items": [
+        {
+          "type": "string"
+        }
+      ]
+    }
+  },
+  "utterance-language.recommendationReferenceFollowup.pattern.1": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "utterance-language.budgetSentence.pattern.1": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "utterance-language.budgetSentence.pattern.2": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": true
+  },
+  "utterance-language.source.pattern.1": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "utterance-language.escape.pattern.1": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": true
+  },
+  "utterance-language.normalized.value.1": {
+    "kind": "value",
+    "valueShape": {
+      "type": "string"
+    }
+  },
+  "utterance-language.normalized.value.2": {
+    "kind": "value",
+    "valueShape": {
+      "type": "string"
+    }
+  },
+  "utterance-language.price.value.1": {
+    "kind": "value",
+    "valueShape": {
+      "type": "string"
+    }
+  },
+  "wishlist-language.collection.value.1": {
+    "kind": "value",
+    "valueShape": {
+      "type": "string"
+    },
+    "fragmentCaptures": 0
+  },
+  "wishlist-language.cart.value.1": {
+    "kind": "value",
+    "valueShape": {
+      "type": "string"
+    },
+    "fragmentCaptures": 0
+  },
+  "wishlist-language.prefix.pattern.1": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "wishlist-language.wishlistReadOrCommand.value.1": {
+    "kind": "value",
+    "valueShape": {
+      "type": "record",
+      "values": {
+        "type": "string"
+      }
+    }
+  },
+  "wishlist-language.wishlistReadOrCommand.pattern.1": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "wishlist-language.text.pattern.1": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "wishlist-language.text.pattern.2": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "wishlist-language.wishlistReadOrCommand.pattern.2": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "wishlist-language.coll.template.1": {
+    "kind": "template",
+    "arity": 1
+  },
+  "wishlist-language.dst.template.1": {
+    "kind": "template",
+    "arity": 1
+  },
+  "wishlist-language.wishlistReadOrCommand.template.1": {
+    "kind": "template",
+    "arity": 1
+  },
+  "wishlist-language.wishlistReadOrCommand.pattern.3": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "wishlist-language.wishlistReadOrCommand.value.2": {
+    "kind": "value",
+    "valueShape": {
+      "type": "record",
+      "values": {
+        "type": "string"
+      }
+    }
+  },
+  "wishlist-language.wishlistReadOrCommand.template.2": {
+    "kind": "template",
+    "arity": 1
+  },
+  "wishlist-language.wishlistReadOrCommand.template.3": {
+    "kind": "template",
+    "arity": 1
+  },
+  "wishlist-language.wishlistReadOrCommand.value.3": {
+    "kind": "value",
+    "valueShape": {
+      "type": "record",
+      "values": {
+        "type": "string"
+      }
+    }
+  },
+  "wishlist-language.wishlistReadOrCommand.template.4": {
+    "kind": "template",
+    "arity": 2
+  },
+  "wishlist-language.m.template.1": {
+    "kind": "template",
+    "arity": 4
+  },
+  "wishlist-language.wishlistReadOrCommand.template.5": {
+    "kind": "template",
+    "arity": 3
+  },
+  "wishlist-language.wishlistReadOrCommand.template.6": {
+    "kind": "template",
+    "arity": 1
+  },
+  "wishlist-language.wishlistReadOrCommand.pattern.4": {
+    "kind": "pattern",
+    "captures": 1,
+    "requiresGlobal": false
+  },
+  "wishlist-language.wishlistReadOrCommand.pattern.5": {
+    "kind": "pattern",
+    "captures": 1,
+    "requiresGlobal": false
+  },
+  "wishlist-language.wishlistReadOrCommand.template.7": {
+    "kind": "template",
+    "arity": 1
+  },
+  "wishlist-language.wishlistReadOrCommand.template.8": {
+    "kind": "template",
+    "arity": 1
+  },
+  "wishlist-language.wishlistReadOrCommand.template.9": {
+    "kind": "template",
+    "arity": 1
+  },
+  "wishlist-language.wishlistReadOrCommand.pattern.6": {
+    "kind": "pattern",
+    "captures": 1,
+    "requiresGlobal": false
+  },
+  "wishlist-language.wishlistReadOrCommand.template.10": {
+    "kind": "template",
+    "arity": 1
+  },
+  "wishlist-language.candidates.pattern.1": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "wishlist-read-language.collection.value.1": {
+    "kind": "value",
+    "valueShape": {
+      "type": "string"
+    },
+    "fragmentCaptures": 0
+  },
+  "wishlist-read-language.ownedCollection.template.1": {
+    "kind": "template",
+    "arity": 1
+  },
+  "wishlist-read-language.personalCollection.template.1": {
+    "kind": "template",
+    "arity": 1
+  },
+  "wishlist-read-language.readVerb.value.1": {
+    "kind": "value",
+    "valueShape": {
+      "type": "string"
+    },
+    "fragmentCaptures": 0
+  },
+  "wishlist-read-language.savedThings.value.1": {
+    "kind": "value",
+    "valueShape": {
+      "type": "string"
+    },
+    "fragmentCaptures": 0
+  },
+  "wishlist-read-language.patterns.template.1": {
+    "kind": "template",
+    "arity": 1
+  },
+  "wishlist-read-language.patterns.template.2": {
+    "kind": "template",
+    "arity": 1
+  },
+  "wishlist-read-language.patterns.template.3": {
+    "kind": "template",
+    "arity": 1
+  },
+  "wishlist-read-language.patterns.template.4": {
+    "kind": "template",
+    "arity": 1
+  },
+  "wishlist-read-language.patterns.template.5": {
+    "kind": "template",
+    "arity": 1
+  },
+  "wishlist-read-language.patterns.template.6": {
+    "kind": "template",
+    "arity": 1
+  },
+  "wishlist-read-language.patterns.template.7": {
+    "kind": "template",
+    "arity": 1
+  },
+  "wishlist-read-language.patterns.template.8": {
+    "kind": "template",
+    "arity": 1
+  },
+  "wishlist-read-language.patterns.template.9": {
+    "kind": "template",
+    "arity": 1
+  },
+  "wishlist-read-language.patterns.template.10": {
+    "kind": "template",
+    "arity": 1
+  },
+  "wishlist-read-language.patterns.template.11": {
+    "kind": "template",
+    "arity": 1
+  },
+  "wishlist-read-language.patterns.template.12": {
+    "kind": "template",
+    "arity": 1
+  },
+  "wishlist-read-language.patterns.template.13": {
+    "kind": "template",
+    "arity": 1
+  },
+  "wishlist-read-language.patterns.template.14": {
+    "kind": "template",
+    "arity": 1
+  },
+  "wishlist-read-language.patterns.template.15": {
+    "kind": "template",
+    "arity": 1
+  },
+  "wishlist-read-language.patterns.template.16": {
+    "kind": "template",
+    "arity": 1
+  },
+  "wishlist-read-language.patterns.template.17": {
+    "kind": "template",
+    "arity": 1
+  },
+  "wishlist-read-language.patterns.template.18": {
+    "kind": "template",
+    "arity": 1
+  },
+  "wishlist-read-language.patterns.template.19": {
+    "kind": "template",
+    "arity": 1
+  },
+  "wishlist-read-language.patterns.template.20": {
+    "kind": "template",
+    "arity": 1
+  },
+  "wishlist-read-language.patterns.template.21": {
+    "kind": "template",
+    "arity": 2
+  },
+  "wishlist-read-language.patterns.template.22": {
+    "kind": "template",
+    "arity": 1
+  },
+  "wishlist-read-language.patterns.template.23": {
+    "kind": "template",
+    "arity": 1
+  },
+  "wishlist-read-language.patterns.template.24": {
+    "kind": "template",
+    "arity": 1
+  },
+  "wishlist-read-language.patterns.template.25": {
+    "kind": "template",
+    "arity": 1
+  },
+  "wishlist-read-language.patterns.template.26": {
+    "kind": "template",
+    "arity": 1
+  },
+  "wishlist-read-language.patterns.template.27": {
+    "kind": "template",
+    "arity": 1
+  },
+  "wishlist-read-language.patterns.template.28": {
+    "kind": "template",
+    "arity": 2
+  },
+  "wishlist-read-language.patterns.template.29": {
+    "kind": "template",
+    "arity": 2
+  },
+  "wishlist-read-language.patterns.template.30": {
+    "kind": "template",
+    "arity": 1
+  },
+  "wishlist-read-language.patterns.value.1": {
+    "kind": "value",
+    "valueShape": {
+      "type": "string"
+    },
+    "fragmentCaptures": 0
+  },
+  "wishlist-read-language.patterns.value.2": {
+    "kind": "value",
+    "valueShape": {
+      "type": "string"
+    },
+    "fragmentCaptures": 0
+  },
+  "wishlist-read-language.patterns.value.3": {
+    "kind": "value",
+    "valueShape": {
+      "type": "string"
+    },
+    "fragmentCaptures": 0
+  },
+  "wishlist-read-language.patterns.value.4": {
+    "kind": "value",
+    "valueShape": {
+      "type": "string"
+    },
+    "fragmentCaptures": 0
+  },
+  "wishlist-read-language.patterns.value.5": {
+    "kind": "value",
+    "valueShape": {
+      "type": "string"
+    },
+    "fragmentCaptures": 0
+  },
+  "wishlist-read-language.patterns.value.6": {
+    "kind": "value",
+    "valueShape": {
+      "type": "string"
+    },
+    "fragmentCaptures": 0
+  },
+  "wishlist-read-language.patterns.template.31": {
+    "kind": "template",
+    "arity": 1
+  },
+  "wishlist-read-language.wishlistReadRequested.pattern.1": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "wishlist-read-language.wishlistReadRequested.pattern.2": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "wishlist-read-language.wishlistReadRequested.pattern.3": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "wishlist-read-language.wishlistReadRequested.pattern.4": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "wishlist-read-language.wishlistReadRequested.pattern.5": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "request-envelope.conditionalTail.pattern.1": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "unsupported.inventory.value.1": {
+    "kind": "value",
+    "valueShape": {
+      "type": "array",
+      "items": [
+        {
+          "type": "object",
+          "properties": {
+            "code": {
+              "type": "string"
+            },
+            "actions": {
+              "type": "array",
+              "items": [
+                {
+                  "type": "string"
+                }
+              ]
+            },
+            "objects": {
+              "type": "array",
+              "items": [
+                {
+                  "type": "string"
+                }
+              ]
+            }
+          }
+        }
+      ]
+    }
+  },
+  "contextual-language.lexical.value.2": {
+    "kind": "value",
+    "valueShape": {
+      "type": "string"
+    }
+  },
+  "correction-numbers.lexical.value.1": {
+    "kind": "value",
+    "valueShape": {
+      "type": "string"
+    }
+  },
+  "correction-numbers.lexical.value.2": {
+    "kind": "value",
+    "valueShape": {
+      "type": "string"
+    }
+  },
+  "correction-numbers.lexical.value.3": {
+    "kind": "value",
+    "valueShape": {
+      "type": "string"
+    }
+  },
+  "correction-numbers.lexical.value.4": {
+    "kind": "value",
+    "valueShape": {
+      "type": "string"
+    }
+  },
+  "correction-numbers.lexical.value.5": {
+    "kind": "value",
+    "valueShape": {
+      "type": "string"
+    }
+  },
+  "correction-numbers.lexical.value.6": {
+    "kind": "value",
+    "valueShape": {
+      "type": "string"
+    }
+  },
+  "engine.lexical.value.5": {
+    "kind": "value",
+    "valueShape": {
+      "type": "string"
+    }
+  },
+  "gift-language.lexical.value.1": {
+    "kind": "value",
+    "valueShape": {
+      "type": "string"
+    }
+  },
+  "gift-language.lexical.value.2": {
+    "kind": "value",
+    "valueShape": {
+      "type": "string"
+    }
+  },
+  "gift-language.lexical.value.3": {
+    "kind": "value",
+    "valueShape": {
+      "type": "string"
+    }
+  },
+  "intent-count.lexical.value.3": {
+    "kind": "value",
+    "valueShape": {
+      "type": "string"
+    }
+  },
+  "intent-count.lexical.value.4": {
+    "kind": "value",
+    "valueShape": {
+      "type": "string"
+    }
+  },
+  "language-corrections.lexical.value.1": {
+    "kind": "value",
+    "valueShape": {
+      "type": "string"
+    }
+  },
+  "read-language.lexical.value.1": {
+    "kind": "value",
+    "valueShape": {
+      "type": "string"
+    }
+  },
+  "read-language.lexical.value.2": {
+    "kind": "value",
+    "valueShape": {
+      "type": "string"
+    }
+  },
+  "read-language.lexical.value.3": {
+    "kind": "value",
+    "valueShape": {
+      "type": "string"
+    }
+  },
+  "read-language.lexical.value.4": {
+    "kind": "value",
+    "valueShape": {
+      "type": "string"
+    }
+  },
+  "read-language.lexical.value.5": {
+    "kind": "value",
+    "valueShape": {
+      "type": "string"
+    }
+  },
+  "read-language.lexical.value.6": {
+    "kind": "value",
+    "valueShape": {
+      "type": "string"
+    }
+  },
+  "read-language.lexical.value.7": {
+    "kind": "value",
+    "valueShape": {
+      "type": "string"
+    }
+  },
+  "read-language.lexical.value.8": {
+    "kind": "value",
+    "valueShape": {
+      "type": "string"
+    }
+  },
+  "read-language.lexical.value.9": {
+    "kind": "value",
+    "valueShape": {
+      "type": "string"
+    }
+  },
+  "read-language.lexical.value.10": {
+    "kind": "value",
+    "valueShape": {
+      "type": "string"
+    }
+  },
+  "request-constraints.lexical.value.1": {
+    "kind": "value",
+    "valueShape": {
+      "type": "string"
+    }
+  },
+  "request-constraints.lexical.value.2": {
+    "kind": "value",
+    "valueShape": {
+      "type": "string"
+    }
+  },
+  "request-constraints.lexical.value.3": {
+    "kind": "value",
+    "valueShape": {
+      "type": "string"
+    }
+  },
+  "search-updates.lexical.value.1": {
+    "kind": "value",
+    "valueShape": {
+      "type": "string"
+    }
+  },
+  "semantic-entities.lexical.value.1": {
+    "kind": "value",
+    "valueShape": {
+      "type": "string"
+    }
+  },
+  "semantic-entities.lexical.value.2": {
+    "kind": "value",
+    "valueShape": {
+      "type": "string"
+    }
+  },
+  "semantic-entities.lexical.value.3": {
+    "kind": "value",
+    "valueShape": {
+      "type": "string"
+    }
+  },
+  "semantic-entities.lexical.value.4": {
+    "kind": "value",
+    "valueShape": {
+      "type": "string"
+    }
+  },
+  "semantic-request.lexical.value.1": {
+    "kind": "value",
+    "valueShape": {
+      "type": "string"
+    }
+  },
+  "transfer-parser.lexical.value.1": {
+    "kind": "value",
+    "valueShape": {
+      "type": "string"
+    }
+  },
+  "language-knowledge.utterancePrefix.pattern.1": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "language-knowledge.utteranceSuffix.pattern.1": {
+    "kind": "pattern",
+    "captures": 0,
+    "requiresGlobal": false
+  },
+  "engine.canonical.value.1": {
+    "kind": "value",
+    "valueShape": {
+      "type": "string"
+    }
+  },
+  "engine.canonical.value.2": {
+    "kind": "value",
+    "valueShape": {
+      "type": "string"
+    }
+  },
+  "engine.canonical.value.3": {
+    "kind": "value",
+    "valueShape": {
+      "type": "string"
+    }
+  },
+  "engine.canonical.value.4": {
+    "kind": "value",
+    "valueShape": {
+      "type": "string"
+    }
+  },
+  "correction-numbers.canonical.value.1": {
+    "kind": "value",
+    "valueShape": {
+      "type": "string"
+    }
+  },
+  "correction-numbers.canonical.value.2": {
+    "kind": "value",
+    "valueShape": {
+      "type": "string"
+    }
+  },
+  "correction-numbers.canonical.value.3": {
+    "kind": "value",
+    "valueShape": {
+      "type": "string"
+    }
+  },
+  "correction-numbers.canonical.value.4": {
+    "kind": "value",
+    "valueShape": {
+      "type": "string"
+    }
+  },
+  "read-language.canonical.value.1": {
+    "kind": "value",
+    "valueShape": {
+      "type": "string"
+    }
+  },
+  "recommendation-language.canonical.value.1": {
+    "kind": "value",
+    "valueShape": {
+      "type": "string"
+    }
+  },
+  "recommendation-language.canonical.value.2": {
+    "kind": "value",
+    "valueShape": {
+      "type": "string"
+    }
+  },
+  "recommendation-language.canonical.value.3": {
+    "kind": "value",
+    "valueShape": {
+      "type": "string"
+    }
+  },
+  "search-updates.canonical.value.1": {
+    "kind": "value",
+    "valueShape": {
+      "type": "string"
+    }
+  },
+  "search-updates.canonical.value.2": {
+    "kind": "value",
+    "valueShape": {
+      "type": "string"
+    }
+  },
+  "language-corrections.canonical.value.1": {
+    "kind": "value",
+    "valueShape": {
+      "type": "string"
+    }
+  },
+  "entities.canonical.value.1": {
+    "kind": "value",
+    "valueShape": {
+      "type": "string"
+    }
+  },
+  "rule-governance.canonical.value.1": {
+    "kind": "value",
+    "valueShape": {
+      "type": "array",
+      "items": [
+        {
+          "type": "string"
+        }
+      ]
+    }
+  },
+  "rule-governance.canonical.value.2": {
+    "kind": "value",
+    "valueShape": {
+      "type": "array",
+      "items": [
+        {
+          "type": "string"
+        }
+      ]
+    }
+  },
+  "intent-count.canonical.value.1": {
+    "kind": "value",
+    "valueShape": {
+      "type": "string"
+    }
+  }
+}

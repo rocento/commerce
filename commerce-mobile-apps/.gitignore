@@ -1,0 +1,11 @@
+**/.build/
+**/build/
+**/.gradle/
+**/.kotlin/
+**/.idea/
+**/*.xcresult/
+**/__pycache__/
+**/local.properties
+**/DerivedData/
+**/xcuserdata/
+**/.DS_Store

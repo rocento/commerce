@@ -1,0 +1,6 @@
+.store-shell .store-install { margin-block: 12px; font-size: 14px; line-height: 1.5; }
+.store-shell .store-install > button { min-height: 44px; padding: 8px 16px; border: 1px solid currentColor; border-radius: 8px; background: transparent; color: inherit; font: inherit; cursor: pointer; }
+.store-shell .store-install > button:focus-visible { outline: 2px solid currentColor; outline-offset: 3px; }
+.store-shell .store-install > button:disabled { opacity: .6; cursor: wait; }
+.store-shell .store-install p { max-width: 48ch; margin-block: 8px; font-size: 14px; line-height: 1.5; }
+@media (display-mode: standalone) { .store-install { display: none; } }

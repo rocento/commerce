@@ -1,0 +1,33 @@
+# Persistence and integrations
+
+PostgreSQL owns commerce state; [backend migrations](../../commerce-api/rocento-api/migrations) are embedded and applied at gateway startup. Installation-local records and authenticated scope are authoritative. SQLx migration history is forward-only: preserve applied versions and checksums, add corrective migrations, and validate upgrade paths against an isolated copy. The separate AI PostgreSQL store has its own migrations and credentials.
+
+Domain transactions keep related writes, audit records and outbox work together where required. Optimistic revisions reject stale edits. Request idempotency must be part of the specific operation contract; it cannot be inferred from an HTTP retry or a UI notification.
+
+NATS JetStream carries outbox events and consumers for commerce, shipments, orders, cart analytics and search. Durable receipts/recovery prevent consumers from treating every redelivery as a new action. Meilisearch is a derived index: authoritative product price/availability is refreshed from database views, and a queued reindex is not immediate indexed freshness.
+
+ClickHouse supports reporting/analytics. S3-compatible media uses MinIO locally and the configured object store in deployment. Original media and publication derivatives have separate lifecycle concerns; referenced theme media cannot be removed by ignoring those references. Publication derivative generation does not automatically rewrite every existing image.
+
+Every first dispatch of a shipment emits `shipment.dispatched` in the same transaction as its status, tracking and history updates. Idempotent retries emit no additional event. The first shipment also keeps the aggregate `order.shipped` event; its dispatch payload sets `notified_via_order_event=true`. The existing `shipment-notifications-v1` consumer processes that aggregate event, including historical pending events. The `shipment-notifications-v2` consumer handles subsequent dispatches and skips those already routed through the aggregate event. Separate durable receipts prevent redelivery from enqueuing the same notification twice, and existing v1 workers can coexist during an upgrade without duplicating the first notification. Later dispatches require the updated writer and v2 worker.
+
+## Notifications
+
+Local Mailpit mode queues verification deliveries without external SMTP. Console mode remains available. Notification challenge/job changes commit together; workers discard replaced, consumed or expired challenges. Delivery is retried with bounded attempts and timeouts, so a transport response is not proof of delivery or exactly-once email.
+
+SMTP and Mailpit modes queue order confirmations and shipment emails using the same durable job/receipt transaction and stable event-based Message-IDs. SMTP sends an HTML/plain-text multipart message; Mailpit receives both representations. Authentication emails keep their strict storefront-origin link validation. Console mode remains a development log adapter; SMTP does not provide SMS. Transport acceptance is not inbox delivery, and ambiguous SMTP failures can still cause duplicate delivery.
+
+The gateway's `commerce_notifications` module owns these consumers independently of ClickHouse and the analytics process. `order-notifications-v1` is both the order confirmation durable name and its PostgreSQL receipt namespace. Its `DeliverAll` policy processes retained events on first creation; it skips confirmations covered by committed legacy `order-facts-v1` receipts and commits its own receipt before acknowledging. Notification jobs use the original event ID, preserving enqueue deduplication during redelivery or mixed-version rollout. Existing `shipment-notifications-v1` and `shipment-notifications-v2` behavior and receipts are retained.
+
+Order analytics keeps the `order-facts-v1` durable cursor but uses `order-analytics-v2` receipts, committed only after projection. Analytics never marks a new event as handled in the legacy receipt namespace: that would falsely tell the notification consumer its confirmation had already been handled. Neither projection progress nor gateway readiness proves delivery to an external inbox. Preserve both independent consumers and all receipt history; follow the [coordinated rollout and rollback procedure](architecture.md#reporting-and-analytics-process-boundary) when changing versions.
+
+`email_templates` in the gateway owns the four installation-wide templates (`verify`, `reset`, `order`, `shipment`). Its authenticated `/v1/admin/email-templates` endpoints expose draft editing, sample-only preview, publishing, paginated publication history and restoring a publication into draft. Read, write and publish permissions are separate; browser mutations use the existing origin/request-marker protection. Saves, restores and publications require an expected revision and an audit reason, with state and audit records committed together. Publication snapshots are immutable; drafts never affect delivery. Initial reads use built-in defaults until content is saved and published.
+
+Content is structured plain text with an explicit variable allowlist, byte limits, single-line subjects and HTML escaping. Template authors cannot supply executable markup or change the authentication action destination. Required commerce details are protected. Preview uses synthetic data and does not send mail or read customer records. The worker chooses the published content when first preparing a queued email, then pins the rendered message in the sensitive job payload so subsequent committed retries do not pick up later publications. Normal terminal/expired-job scrubbing clears that payload. Existing challenge expiry, retry bounds, delivery timeouts and queue locking remain in effect.
+
+Use the configured `NOTIFICATION_MODE`, `MAILPIT_URL` and `NOTIFICATION_FROM` with a matching environment; production identity safeguards are checked during startup. [SMTP deployment notes](../../commerce-ops/deploy/aws-deploy/SMTP.md) own hosted mail setup.
+
+## Backup and rollback
+
+Shared [durability operations](../platform/operations/durability.md) and [durability deployment](../../commerce-ops/deploy/durability/README.md) own base backups, WAL and restore procedures. A source rollback is not a database restore. Preserve additive schema, orders, audit/outbox/consumer state and publication journals when rolling back binaries. Validate restored state and authoritative readiness before calling the installation recovered.
+
+Run migrations, imports, seeds and destructive failure exercises only against their identified intended environment. This documentation rewrite did not change data or verify a deployed backup/restore process.

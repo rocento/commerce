@@ -1,0 +1,11 @@
+# Grocery production app screenshots
+
+Refreshed on 2026-10-15 from the latest local Swift, Kotlin, and React Native source available during capture, including the three-card home carousel and manual/map delivery choices. All 35 PNGs are native simulator/emulator captures. Each app used the live Grocery API at `https://grocery.rocento.com/api`; React Native ran with demo, visual-QA and acceptance fixtures disabled. The Bakery listing, Butter Croissants detail, and Deals screens were checked against data loaded by the running apps.
+
+Swift was rebuilt as version 1.3.0 (build 5), Kotlin as build 5, and React Native as version 0.1.0 (build 1) with a fresh Metro bundle of the current source. These are local standalone builds, not claims about the latest App Store or Play Store release. Signing checks passed before installation. Swift and React Native used an iPhone 17 Pro simulator on iOS 26.2; Kotlin used an Android API 36 emulator.
+
+The three folders contain public, signed-out customer screens. `home.png` includes the app's bundled hero artwork; catalog names, product images, prices, category counts, and offers on the other commerce screens came from Grocery production. Cart and account captures show the guest state. `delivery-map.png` and `delivery-manual.png` show the new address-entry choices without saving an address. Authenticated order history, saved addresses, checkout, and other account-only screens are not included because no production customer session was available. No order, account, or support ticket was created.
+
+Screenshot names describe the visible screen. Images were visually reviewed for loaded content and development overlays; warning bars were dismissed through the app before capture. React Native's comparison table scrolls horizontally, so its initial viewport shows the first product column. Screenshots are not composited or retouched.
+
+[The capture manifest](manifest.json) records build identities, binary and screenshot hashes, source-inventory identity, and verification limits. Detailed local evidence is retained in `commerce-output/2026-10-15-apps-screens-refresh`. Concurrent app work was coordinated before final capture; only a Swift UI-test file changed during the final source-stability check.

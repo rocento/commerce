@@ -1,0 +1,95 @@
+.catalog-enrichment { --enrichment-muted: #6e6b64; }
+.enrichment-setup { display: grid; grid-template-columns: minmax(0, 1.65fr) minmax(260px, 1fr); gap: 22px; align-items: start; margin-bottom: 24px; }
+.enrichment-panel { min-width: 0; padding: 24px; border: 1px solid var(--line); border-radius: 10px; background: #fff; }
+.enrichment-section-heading { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px; }
+.catalog-enrichment h2, .enrichment-dialog h2 { margin: 5px 0 0; font-size: 20px; letter-spacing: -.02em; }
+.catalog-enrichment p, .enrichment-dialog p { font-size: 14px; line-height: 1.6; color: #605d57; }
+.enrichment-eyebrow { color: #9b4c34; text-transform: uppercase; letter-spacing: .09em; font-size: 11px; font-weight: 650; }
+.enrichment-search { display: flex; align-items: end; gap: 10px; margin-top: 20px; }
+.enrichment-search .field { flex: 1; min-width: 0; margin: 0; }
+.catalog-enrichment .field { color: #57534d; }
+.enrichment-search button { min-height: 44px; }
+.catalog-enrichment select { max-width: 100%; min-width: 0; text-overflow: ellipsis; }
+.enrichment-product-pagination, .enrichment-product-pagination > div, .enrichment-pagination, .enrichment-pagination > div { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px; }
+.enrichment-product-pagination { color: var(--enrichment-muted); }
+.enrichment-product-preview { margin-top: 20px; padding: 16px; border: 1px solid #e5e4e1; border-radius: 7px; background: #fafaf8; overflow-wrap: anywhere; }
+.enrichment-product-preview > div:first-child { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 10px; }
+.enrichment-product-preview a { font-size: 13px; }
+.enrichment-product-preview small { display: block; color: var(--enrichment-muted); margin: 6px 0; }
+.enrichment-product-preview details { margin: 12px 0; }
+.enrichment-product-preview details p { white-space: pre-wrap; }
+.enrichment-tags { display: flex; flex-wrap: wrap; gap: 6px; }
+.enrichment-tags span { padding: 4px 8px; border: 1px solid #e2dfd8; background: #fff; border-radius: 4px; font-size: 12px; }
+.enrichment-generate-action { margin-top: 22px; display: flex; flex-wrap: wrap; align-items: center; gap: 12px; }
+.enrichment-generate-action small { color: var(--enrichment-muted); }
+.enrichment-guide { padding: 24px; background: #f1f0ec; border: 1px solid #e4e2db; border-radius: 10px; }
+.enrichment-guide pre { background: #fff; border: 1px solid #e3e0d8; border-radius: 6px; padding: 14px; color: #6d5144; font-size: 13px; line-height: 1.9; overflow-x: auto; }
+.enrichment-guide ol { padding-left: 20px; margin: 22px 0; }
+.enrichment-guide li { padding-left: 5px; margin: 14px 0; font-size: 14px; }
+.enrichment-guide li::marker { color: #9b4c34; }
+.enrichment-guide li span { display: block; color: #6e6b64; font-size: 13px; margin-top: 3px; line-height: 1.5; }
+.catalog-enrichment summary, .enrichment-dialog summary { font-size: 12px; color: #6e6b64; cursor: pointer; }
+.enrichment-warning { border-left: 3px solid #ce9a45; padding: 10px 14px; background: #fff9ec; }
+.enrichment-queue-toolbar { display: flex; flex-wrap: wrap; align-items: center; gap: 18px; padding: 20px 0; margin-top: 6px; }
+.enrichment-queue-toolbar .field { width: 180px; margin: 0; }
+.enrichment-queue-toolbar > div { flex: 1; min-width: 140px; font-size: 14px; }
+.enrichment-queue-toolbar small { display: block; color: var(--enrichment-muted); margin-top: 5px; }
+.catalog-enrichment .table-wrap { max-height: none; }
+.catalog-enrichment table { table-layout: fixed; }
+.catalog-enrichment th:first-child { width: 28%; }
+.catalog-enrichment th:nth-child(2) { width: 37%; }
+.catalog-enrichment th:nth-child(3) { width: 24%; }
+.catalog-enrichment th:last-child { width: 11%; }
+.catalog-enrichment td { white-space: normal; vertical-align: top; overflow-wrap: anywhere; padding: 20px 16px; }
+.catalog-enrichment th { white-space: normal; position: static; }
+.catalog-enrichment td:first-child { position: static; }
+.catalog-enrichment td small { display: block; font-size: 12px; color: var(--enrichment-muted); margin: 6px 0; line-height: 1.5; }
+.enrichment-product-name { font-weight: 600; color: #3b3934; }
+.enrichment-proposed { padding: 10px 12px; margin: 14px 0 0; border-radius: 6px; background: #f6f5f1; border: 1px solid #eae7df; }
+.enrichment-proposed small { display: block; font-size: 12px; color: #6e6b64; margin: 0 0 5px !important; }
+.enrichment-proposed strong { display: block; font-size: 15px; line-height: 1.5; overflow-wrap: anywhere; }
+.enrichment-evidence { font-size: 13px; }
+.enrichment-evidence-heading { display: flex; flex-wrap: wrap; gap: 5px 10px; align-items: center; }
+.enrichment-evidence-heading strong { font-size: 12px; font-weight: 600; }
+.enrichment-evidence-heading > span { font-size: 11px; color: #327152; background: #edf6ef; padding: 3px 6px; border-radius: 4px; }
+.enrichment-evidence blockquote { margin: 10px 0; padding: 10px 12px; border-left: 3px solid #d9b29e; background: #faf7f3; color: #57493f; white-space: pre-wrap; overflow-wrap: anywhere; line-height: 1.6; }
+.enrichment-evidence > small { display: block; font-size: 12px; line-height: 1.5; color: #6e6b64; margin: 7px 0; }
+.enrichment-evidence details { margin-top: 10px; }
+.enrichment-status { display: inline-block; border-radius: 20px; padding: 5px 10px; font-size: 12px; font-weight: 600; }
+.enrichment-status--pending { background: #fff3d8; color: #8a641f; }
+.enrichment-status--approved { background: #eaf5ee; color: #26704b; }
+.enrichment-status--rejected { background: #f7ebe8; color: #995546; }
+.enrichment-muted { font-size: 12px; color: #6e6b64; }
+.enrichment-empty { padding: 44px 20px; text-align: center; border: 1px dashed #dedbd4; border-radius: 8px; background: #fcfcfa; }
+.enrichment-empty > span { display: inline-grid; place-items: center; width: 38px; height: 38px; border-radius: 50%; background: #eaf2eb; color: #39734c; font-size: 20px; }
+.enrichment-empty h3 { margin: 14px 0 6px; font-size: 16px; }
+.enrichment-empty p { margin: 0 auto; max-width: 46ch; }
+.enrichment-pagination { padding-top: 18px; color: #6e6b64; font-size: 13px; }
+.enrichment-pagination button { font-size: 12px; }
+.enrichment-dialog { width: min(560px, calc(100vw - 32px)); max-height: calc(100dvh - 40px); padding: 28px; border: 1px solid #e4e0d7; border-radius: 12px; color: #242320; overflow-y: auto; }
+.enrichment-dialog::backdrop { background: #201d195c; }
+.enrichment-dialog .enrichment-proposed { margin-bottom: 20px; }
+.enrichment-dialog footer { display: flex; justify-content: flex-end; flex-wrap: wrap; gap: 10px; margin-top: 22px; }
+.catalog-enrichment button:disabled, .enrichment-dialog button:disabled { cursor: not-allowed; }
+@media (max-width: 1050px) { .enrichment-setup { grid-template-columns: minmax(0, 1fr); } }
+@media (max-width: 800px) {
+ .catalog-enrichment .table-wrap { border: 0; overflow: visible; background: transparent; }
+ .catalog-enrichment table, .catalog-enrichment tbody { display: block; }
+ .catalog-enrichment thead { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); }
+ .catalog-enrichment tr { display: block; border: 1px solid var(--line); border-radius: 8px; margin-bottom: 14px; padding: 4px 16px; }
+ .catalog-enrichment td { display: block; padding: 12px 0; border-bottom: 1px solid #eeece6; }
+ .catalog-enrichment td:last-child { border: 0; display: flex; justify-content: space-between; align-items: center; }
+ .catalog-enrichment td::before { content: attr(data-label); display: block; font-size: 10px; text-transform: uppercase; letter-spacing: .06em; color: #77736c; font-weight: 600; margin-bottom: 8px; }
+}
+@media (max-width: 520px) {
+ .enrichment-panel, .enrichment-guide { padding: 18px; }
+ .enrichment-section-heading { align-items: flex-start; }
+ .enrichment-search { flex-wrap: wrap; }
+ .enrichment-search .field { flex-basis: 100%; }
+ .enrichment-search button, .enrichment-generate-action button { width: 100%; }
+ .enrichment-pagination > div { width: 100%; display: grid; grid-template-columns: 1fr 1fr; }
+ .enrichment-pagination button { white-space: normal; padding: 10px; }
+ .enrichment-dialog { padding: 22px; }
+}
+
+.enrichment-coverage { margin-top: 24px; overflow-wrap: anywhere; }

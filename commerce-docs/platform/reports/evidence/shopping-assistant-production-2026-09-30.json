@@ -1,0 +1,221 @@
+{
+  "verified_at": "2026-09-30T20:50:43.630592+00:00",
+  "host_files": {
+    "deploy/assistant/tools.conf": "match",
+    "deploy/ec2/server/ec2-up.sh": "match",
+    "deploy/ec2/server/ec2-deploy-ai.sh": "match",
+    "scripts/conversations-setup.py": "match",
+    "backend/crates/api-gateway/src/assistant_compound.rs": "match",
+    "backend/crates/api-gateway/src/assistant.rs": "match",
+    "ai-service/migrations/006_request_revisions.sql": "match",
+    "ai-service/migrations/007_compound_plans.sql": "match",
+    "frontend/apps/storefront/src/assistant.css": "match"
+  },
+  "stores": {
+    "grocery": {
+      "api-gateway": {
+        "image": "sha256:00570eebb1a0d5fbab71fdf7c196373c5bea17a9d7e711fa64456450b9f260f5",
+        "health": "healthy",
+        "restarts": 0
+      },
+      "compound_writes_enabled": false,
+      "ai-service": {
+        "image": "sha256:cbe93216a203bcc53e6307fff2bcdf02ef95d6eb28d6b693ae149b7f64f92836",
+        "health": "healthy",
+        "restarts": 0
+      },
+      "commerce-language-engine": {
+        "image": "sha256:3b7c5528911b0c219e9895430969eb1751f9e4c522a8646074da78fb2a0c3e19",
+        "health": "healthy",
+        "restarts": 0
+      },
+      "python_files": {
+        "checked": 194,
+        "mismatches": []
+      },
+      "node_files": {
+        "checked": 142,
+        "mismatches": []
+      },
+      "commerce_migrations": {
+        "count": 64,
+        "latest": "20260930110000",
+        "all_checksums_match": true
+      },
+      "assistant_tables": [
+        "compound_plans|t|t|t",
+        "request_revisions|t|t|t"
+      ],
+      "assistant_ready": {
+        "status": "ready",
+        "mode": "grounded-commerce",
+        "recommendations": "catalog-backed"
+      },
+      "language_smoke": {
+        "fingerprint": "8b447e13fe4290e339afaafbd31771d7ea82be47f5baf426ae22456fe15e8be2",
+        "status": "AMBIGUOUS",
+        "count": 2,
+        "version": 1,
+        "intents": [
+          "ADD_TO_CART",
+          "ADD_TO_WISHLIST"
+        ]
+      },
+      "language_database_release": "8b447e13fe4290e339afaafbd31771d7ea82be47f5baf426ae22456fe15e8be2",
+      "tool_proxy": "latest configuration mounted",
+      "gateway_ready": 200,
+      "private_receipt_unauthenticated": 401
+    },
+    "jewelry": {
+      "api-gateway": {
+        "image": "sha256:82a87fc5c169dc852de08dece18900109f9f0b7c5a8ba463b6c1fd9c89a7dcdd",
+        "health": "healthy",
+        "restarts": 0
+      },
+      "compound_writes_enabled": false,
+      "ai-service": {
+        "image": "sha256:4828268f78881db85d30ae0e4816c7baa2dd1e0ebb4a84ed96eb04b2f5303a14",
+        "health": "healthy",
+        "restarts": 0
+      },
+      "commerce-language-engine": {
+        "image": "sha256:5067a44a412186233a84834c1d48ed5375a0fec821e8988a67df661181511635",
+        "health": "healthy",
+        "restarts": 0
+      },
+      "python_files": {
+        "checked": 194,
+        "mismatches": []
+      },
+      "node_files": {
+        "checked": 142,
+        "mismatches": []
+      },
+      "commerce_migrations": {
+        "count": 64,
+        "latest": "20260930110000",
+        "all_checksums_match": true
+      },
+      "assistant_tables": [
+        "compound_plans|t|t|t",
+        "request_revisions|t|t|t"
+      ],
+      "assistant_ready": {
+        "status": "ready",
+        "mode": "grounded-commerce",
+        "recommendations": "catalog-backed"
+      },
+      "language_smoke": {
+        "fingerprint": "8b447e13fe4290e339afaafbd31771d7ea82be47f5baf426ae22456fe15e8be2",
+        "status": "AMBIGUOUS",
+        "count": 2,
+        "version": 1,
+        "intents": [
+          "ADD_TO_CART",
+          "ADD_TO_WISHLIST"
+        ]
+      },
+      "language_database_release": "8b447e13fe4290e339afaafbd31771d7ea82be47f5baf426ae22456fe15e8be2",
+      "tool_proxy": "latest configuration mounted",
+      "gateway_ready": 200,
+      "private_receipt_unauthenticated": 401
+    },
+    "electronics": {
+      "api-gateway": {
+        "image": "sha256:5e2d3981eeb30c9f931235aec461f4400b2c9b0cfcf4be0d94292816b1a40549",
+        "health": "healthy",
+        "restarts": 0
+      },
+      "compound_writes_enabled": false,
+      "ai-service": {
+        "image": "sha256:81840b345ce1db7cd80ae03a8f5398f39e35d3cbbbf975ef243e9118e1afb1d3",
+        "health": "healthy",
+        "restarts": 0
+      },
+      "commerce-language-engine": {
+        "image": "sha256:b271dd12e9c2b9cae73a9abb08c27e93d899d8925de382021c40f478f6ba719c",
+        "health": "healthy",
+        "restarts": 0
+      },
+      "python_files": {
+        "checked": 194,
+        "mismatches": []
+      },
+      "node_files": {
+        "checked": 142,
+        "mismatches": []
+      },
+      "commerce_migrations": {
+        "count": 64,
+        "latest": "20260930110000",
+        "all_checksums_match": true
+      },
+      "assistant_tables": [
+        "compound_plans|t|t|t",
+        "request_revisions|t|t|t"
+      ],
+      "assistant_ready": {
+        "status": "ready",
+        "mode": "grounded-commerce",
+        "recommendations": "model-unavailable"
+      },
+      "language_smoke": {
+        "fingerprint": "8b447e13fe4290e339afaafbd31771d7ea82be47f5baf426ae22456fe15e8be2",
+        "status": "AMBIGUOUS",
+        "count": 2,
+        "version": 1,
+        "intents": [
+          "ADD_TO_CART",
+          "ADD_TO_WISHLIST"
+        ]
+      },
+      "language_database_release": "8b447e13fe4290e339afaafbd31771d7ea82be47f5baf426ae22456fe15e8be2",
+      "tool_proxy": "latest configuration mounted",
+      "gateway_ready": 200,
+      "private_receipt_unauthenticated": 401
+    }
+  },
+  "frontend": {
+    "grocery": {
+      "assistant_page": 200,
+      "assistant_css_asset": "assets/assistant-Drl4pYJ2.css",
+      "css_sha256": "6b70b44268002179942e0c8f5924596b754f4e6df13377e64cc9ae7b531cd76f",
+      "matches_origin": true,
+      "shared_response_composer_column_css": "present"
+    },
+    "jewelry": {
+      "assistant_page": 200,
+      "assistant_css_asset": "assets/assistant-Drl4pYJ2.css",
+      "css_sha256": "6b70b44268002179942e0c8f5924596b754f4e6df13377e64cc9ae7b531cd76f",
+      "matches_origin": true,
+      "shared_response_composer_column_css": "present"
+    },
+    "electronics": {
+      "assistant_page": 200,
+      "assistant_css_asset": "assets/assistant-Drl4pYJ2.css",
+      "css_sha256": "6b70b44268002179942e0c8f5924596b754f4e6df13377e64cc9ae7b531cd76f",
+      "matches_origin": true,
+      "shared_response_composer_column_css": "present"
+    }
+  },
+  "deployment_log": "/var/log/rocento/deployments/2026-09-30T20-28-33Z.log",
+  "verification_log": "/var/log/rocento/deployments/2026-09-30T20-43-57Z.log",
+  "backup_path": "/var/log/rocento/pre-shopping-receipts-20260930T202008Z",
+  "provider_status": {
+    "grocery": {
+      "enabled": true,
+      "key_configured": true,
+      "source": "admin"
+    },
+    "jewelry": {
+      "enabled": true,
+      "key_configured": true,
+      "source": "admin"
+    },
+    "electronics": {
+      "enabled": false,
+      "key_configured": false,
+      "source": "default"
+    }
+  }
+}

@@ -1,0 +1,150 @@
+{
+  "schemaVersion": 1,
+  "id": "english-commerce-v1",
+  "revision": 1,
+  "language": "en",
+  "scope": "global",
+  "source": "authored-english-plan-stage02",
+  "reviewState": "approved",
+  "reviewedBy": "implementation-regression-review (not independent human review)",
+  "terms": [
+    {
+      "group": "OBJECT_RETURN_POLICY",
+      "surface": "return guidelines",
+      "sense": "OBJECT_RETURN_POLICY",
+      "sharedWith": []
+    },
+    {
+      "group": "OBJECT_RETURN_POLICY",
+      "surface": "returns guidelines",
+      "sense": "OBJECT_RETURN_POLICY",
+      "sharedWith": []
+    },
+    {
+      "group": "OBJECT_PAYMENT_METHODS",
+      "surface": "accepted forms of payment",
+      "sense": "OBJECT_PAYMENT_METHODS",
+      "sharedWith": []
+    },
+    {
+      "group": "OBJECT_PAYMENT_METHODS",
+      "surface": "supported ways to pay",
+      "sense": "OBJECT_PAYMENT_METHODS",
+      "sharedWith": []
+    },
+    {
+      "group": "OBJECT_PAYMENT_METHODS",
+      "surface": "payment alternatives",
+      "sense": "OBJECT_PAYMENT_METHODS",
+      "sharedWith": []
+    },
+    {
+      "group": "OBJECT_DELIVERY_COST",
+      "surface": "delivery pricing",
+      "sense": "OBJECT_DELIVERY_COST",
+      "sharedWith": []
+    },
+    {
+      "group": "OBJECT_DELIVERY_COST",
+      "surface": "shipping rates",
+      "sense": "OBJECT_DELIVERY_COST",
+      "sharedWith": []
+    },
+    {
+      "group": "OBJECT_DELIVERY_COST",
+      "surface": "delivery rates",
+      "sense": "OBJECT_DELIVERY_COST",
+      "sharedWith": []
+    },
+    {
+      "group": "OBJECT_STORE_HOURS",
+      "surface": "business opening times",
+      "sense": "OBJECT_STORE_HOURS",
+      "sharedWith": []
+    },
+    {
+      "group": "OBJECT_STORE_HOURS",
+      "surface": "shop trading hours",
+      "sense": "OBJECT_STORE_HOURS",
+      "sharedWith": []
+    },
+    {
+      "group": "OBJECT_STORE_HOURS",
+      "surface": "store trading hours",
+      "sense": "OBJECT_STORE_HOURS",
+      "sharedWith": []
+    },
+    {
+      "group": "OBJECT_SIZE_GUIDE",
+      "surface": "sizing reference",
+      "sense": "OBJECT_SIZE_GUIDE",
+      "sharedWith": []
+    },
+    {
+      "group": "OBJECT_SIZE_GUIDE",
+      "surface": "size conversion chart",
+      "sense": "OBJECT_SIZE_GUIDE",
+      "sharedWith": []
+    },
+    {
+      "group": "OBJECT_SIZE_GUIDE",
+      "surface": "fit measurement guide",
+      "sense": "OBJECT_SIZE_GUIDE",
+      "sharedWith": []
+    },
+    {
+      "group": "OBJECT_SAVED_ADDRESSES",
+      "surface": "saved postal addresses",
+      "sense": "OBJECT_SAVED_ADDRESSES",
+      "sharedWith": []
+    },
+    {
+      "group": "OBJECT_SAVED_ADDRESSES",
+      "surface": "my saved shipping locations",
+      "sense": "OBJECT_SAVED_ADDRESSES",
+      "sharedWith": []
+    },
+    {
+      "group": "OBJECT_SAVED_ADDRESSES",
+      "surface": "delivery addresses on my account",
+      "sense": "OBJECT_SAVED_ADDRESSES",
+      "sharedWith": []
+    },
+    {
+      "group": "OBJECT_ORDERS",
+      "surface": "previous order records",
+      "sense": "OBJECT_ORDERS",
+      "sharedWith": []
+    },
+    {
+      "group": "OBJECT_ORDERS",
+      "surface": "earlier order records",
+      "sense": "OBJECT_ORDERS",
+      "sharedWith": []
+    },
+    {
+      "group": "OBJECT_ORDERS",
+      "surface": "my past purchase history",
+      "sense": "OBJECT_ORDERS",
+      "sharedWith": []
+    },
+    {
+      "group": "OBJECT_REFUND",
+      "surface": "reimbursement tracking status",
+      "sense": "OBJECT_REFUND",
+      "sharedWith": []
+    },
+    {
+      "group": "OBJECT_REFUND",
+      "surface": "refund payout status",
+      "sense": "OBJECT_REFUND",
+      "sharedWith": []
+    },
+    {
+      "group": "OBJECT_REFUND",
+      "surface": "progress of my refund",
+      "sense": "OBJECT_REFUND",
+      "sharedWith": []
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+@font-face{font-family:"Cairo";src:url('./fonts/cairo.ttf') format('truetype');font-style:normal;font-weight:200 1000;font-display:swap}
+@font-face{font-family:"Noto Sans Arabic";src:url('./fonts/notosansarabic.ttf') format('truetype');font-style:normal;font-weight:100 900;font-display:swap}
+@font-face{font-family:"Tajawal";src:url('./fonts/tajawal-extralight.ttf') format('truetype');font-style:normal;font-weight:200;font-display:swap}
+@font-face{font-family:"Tajawal";src:url('./fonts/tajawal-light.ttf') format('truetype');font-style:normal;font-weight:300;font-display:swap}
+@font-face{font-family:"Tajawal";src:url('./fonts/tajawal-regular.ttf') format('truetype');font-style:normal;font-weight:400;font-display:swap}
+@font-face{font-family:"Tajawal";src:url('./fonts/tajawal-medium.ttf') format('truetype');font-style:normal;font-weight:500;font-display:swap}
+@font-face{font-family:"Tajawal";src:url('./fonts/tajawal-bold.ttf') format('truetype');font-style:normal;font-weight:700;font-display:swap}
+@font-face{font-family:"Tajawal";src:url('./fonts/tajawal-extrabold.ttf') format('truetype');font-style:normal;font-weight:800;font-display:swap}
+@font-face{font-family:"Tajawal";src:url('./fonts/tajawal-black.ttf') format('truetype');font-style:normal;font-weight:900;font-display:swap}

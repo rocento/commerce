@@ -1,0 +1,6 @@
+[
+  {"text":"find a laptop","intent":"PRODUCT_SEARCH","status":"RESOLVED","difficulty":"EASY","split":"test","source":"ci-installation-smoke-not-release-quality"},
+  {"text":"find a laptop under $400","intent":"PRODUCT_SEARCH","status":"RESOLVED","difficulty":"EASY","split":"test","source":"ci-installation-smoke-not-release-quality"},
+  {"text":"show my cart","intent":"VIEW_CART","status":"RESOLVED","difficulty":"EASY","split":"test","source":"ci-installation-smoke-not-release-quality"},
+  {"text":"show my wishlist","intent":"VIEW_WISHLIST","status":"RESOLVED","difficulty":"EASY","split":"test","source":"ci-installation-smoke-not-release-quality"}
+]

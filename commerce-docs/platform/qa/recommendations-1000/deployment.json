@@ -1,0 +1,26 @@
+[
+  {
+    "store": "grocery",
+    "service": "ai-service",
+    "image": "rocento-grocery-ai-service:recommendations-1000-20260930",
+    "rollback": "rocento-grocery-ai-service:before-recommendations-1000-20260930"
+  },
+  {
+    "store": "grocery",
+    "service": "commerce-language-engine",
+    "image": "rocento-grocery-commerce-language-engine:recommendations-1000-20260930",
+    "rollback": "rocento-grocery-commerce-language-engine:before-recommendations-1000-20260930"
+  },
+  {
+    "store": "jewelry",
+    "service": "ai-service",
+    "image": "rocento-jewelry-ai-service:recommendations-1000-20260930",
+    "rollback": "rocento-jewelry-ai-service:before-recommendations-1000-20260930"
+  },
+  {
+    "store": "jewelry",
+    "service": "commerce-language-engine",
+    "image": "rocento-jewelry-commerce-language-engine:recommendations-1000-20260930",
+    "rollback": "rocento-jewelry-commerce-language-engine:before-recommendations-1000-20260930"
+  }
+]

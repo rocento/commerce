@@ -1,0 +1,65 @@
+---
+{
+  "title": "Agentic Commerce",
+  "summary": "How agents can reason over commerce context while operating through explicit application boundaries.",
+  "author": "Rocento editorial",
+  "date": "2026-09-15",
+  "category": "Agents",
+  "tags": [
+    "AI agents",
+    "Controlled tools",
+    "Agentic commerce"
+  ]
+}
+---
+## Useful agents need bounded capabilities
+
+An agentic commerce system lets an AI assistant use application capabilities to help with a commerce task. The important design choice is the boundary around those capabilities: what the agent can read, what it can propose, and what requires a person's authorization.
+
+A conversational interface alone does not establish that boundary. The application must enforce it, independently of whatever the model says.
+
+## Ground answers in commerce facts
+
+Product discovery requires authoritative product identifiers, current prices and availability. Knowledge retrieval can explain a policy or a buying consideration, but it should not substitute for current catalog facts.
+
+Rocento's assistant preview uses scoped read-only tools through a commerce facade. Tenant and persona boundaries limit the available context. Approved knowledge retrieval is a separate source with its own provenance.
+
+## Separate reasoning from permission
+
+A model may propose a next step. That proposal is not authorization. The application must validate parameters and scope before carrying out any permitted capability.
+
+```text
+Customer request
+    ↓
+Agent reasoning
+    ↓
+Approved tool + scoped arguments
+    ↓
+Application authorization and validation
+    ↓
+Authoritative result
+```
+
+This conceptual sequence deliberately avoids a direct connection between a model and an unrestricted database. It also keeps commerce invariants in the application where ordinary user actions are validated.
+
+## Handle incomplete answers honestly
+
+A product search can return no matches. A service can be unavailable. A policy source can be missing. These cases should produce a clear limitation or a clarifying question, rather than fabricated products or confident guesses.
+
+For example, a request for a cheaper alternative needs a known reference product and a fresh price. If either is missing, asking for clarification is a useful outcome.
+
+## The current scope
+
+The Rocento assistant preview includes catalog-grounded shopping assistance and documented order-status and support flows. The agent commerce tools described here are read-only; this does not imply autonomous purchasing, inventory changes or merchant operations. Broader autonomous actions remain in development.
+
+Production use requires evaluation of answer quality, provider configuration, access controls and operational readiness for the intended deployment.
+
+## Evaluate the boundary as well as the answer
+
+Future evaluation should ask whether the system respects access scope, handles missing facts, preserves explicit customer constraints and accurately reports tool failures. Fluent wording is only one aspect of a useful assistant.
+
+## References and further reading
+
+- [Platform: AI agents](/platform/#agents)
+- [Platform: security boundaries](/platform/#security)
+- [From Commerce Data to Commerce Context](/knowledge/commerce-context/)

@@ -1,0 +1,446 @@
+[
+  {
+    "id": "apple-desire-1",
+    "intent": "PRODUCT_SEARCH",
+    "utterance": "I want apple",
+    "canonical_text": "show me apple",
+    "review": {
+      "version": 2,
+      "label": "positive",
+      "expected_status": "RESOLVED",
+      "slots": {
+        "productText": "apple"
+      },
+      "context_requirements": [],
+      "family": "apple-desire",
+      "split": "train",
+      "provenance": "authored",
+      "review_status": "approved"
+    }
+  },
+  {
+    "id": "apple-desire-2",
+    "intent": "PRODUCT_SEARCH",
+    "utterance": "I want an apple",
+    "canonical_text": "show me apple",
+    "review": {
+      "version": 2,
+      "label": "positive",
+      "expected_status": "RESOLVED",
+      "slots": {
+        "productText": "apple"
+      },
+      "context_requirements": [],
+      "family": "apple-desire",
+      "split": "train",
+      "provenance": "authored",
+      "review_status": "approved"
+    }
+  },
+  {
+    "id": "apple-desire-3",
+    "intent": "PRODUCT_SEARCH",
+    "utterance": "Could you help me look for apple?",
+    "canonical_text": "show me apple",
+    "review": {
+      "version": 2,
+      "label": "positive",
+      "expected_status": "RESOLVED",
+      "slots": {
+        "productText": "apple"
+      },
+      "context_requirements": [],
+      "family": "apple-desire",
+      "split": "train",
+      "provenance": "authored",
+      "review_status": "approved"
+    }
+  },
+  {
+    "id": "apples-budget-1",
+    "intent": "PRODUCT_SEARCH",
+    "utterance": "I want apples under $20",
+    "canonical_text": "show me apples under $20",
+    "review": {
+      "version": 2,
+      "label": "positive",
+      "expected_status": "RESOLVED",
+      "slots": {
+        "productText": "apples"
+      },
+      "context_requirements": [],
+      "family": "apples-budget",
+      "split": "train",
+      "provenance": "authored",
+      "review_status": "approved"
+    }
+  },
+  {
+    "id": "apples-budget-2",
+    "intent": "PRODUCT_SEARCH",
+    "utterance": "Find apples below $20",
+    "canonical_text": "show me apples under $20",
+    "review": {
+      "version": 2,
+      "label": "positive",
+      "expected_status": "RESOLVED",
+      "slots": {
+        "productText": "apples"
+      },
+      "context_requirements": [],
+      "family": "apples-budget",
+      "split": "train",
+      "provenance": "authored",
+      "review_status": "approved"
+    }
+  },
+  {
+    "id": "apples-budget-3",
+    "intent": "PRODUCT_SEARCH",
+    "utterance": "Looking for apples under $20",
+    "canonical_text": "show me apples under $20",
+    "review": {
+      "version": 2,
+      "label": "positive",
+      "expected_status": "RESOLVED",
+      "slots": {
+        "productText": "apples"
+      },
+      "context_requirements": [],
+      "family": "apples-budget",
+      "split": "train",
+      "provenance": "authored",
+      "review_status": "approved"
+    }
+  },
+  {
+    "id": "milk-desire-1",
+    "intent": "PRODUCT_SEARCH",
+    "utterance": "We want milk",
+    "canonical_text": "show me milk",
+    "review": {
+      "version": 2,
+      "label": "positive",
+      "expected_status": "RESOLVED",
+      "slots": {
+        "productText": "milk"
+      },
+      "context_requirements": [],
+      "family": "milk-desire",
+      "split": "train",
+      "provenance": "authored",
+      "review_status": "approved"
+    }
+  },
+  {
+    "id": "milk-desire-2",
+    "intent": "PRODUCT_SEARCH",
+    "utterance": "I need some milk",
+    "canonical_text": "show me milk",
+    "review": {
+      "version": 2,
+      "label": "positive",
+      "expected_status": "RESOLVED",
+      "slots": {
+        "productText": "milk"
+      },
+      "context_requirements": [],
+      "family": "milk-desire",
+      "split": "train",
+      "provenance": "authored",
+      "review_status": "approved"
+    }
+  },
+  {
+    "id": "milk-desire-3",
+    "intent": "PRODUCT_SEARCH",
+    "utterance": "Looking for milk",
+    "canonical_text": "show me milk",
+    "review": {
+      "version": 2,
+      "label": "positive",
+      "expected_status": "RESOLVED",
+      "slots": {
+        "productText": "milk"
+      },
+      "context_requirements": [],
+      "family": "milk-desire",
+      "split": "train",
+      "provenance": "authored",
+      "review_status": "approved"
+    }
+  },
+  {
+    "id": "dinner-purpose-1",
+    "intent": "PRODUCT_RECOMMEND",
+    "utterance": "I want dinner",
+    "canonical_text": "recommend products for dinner",
+    "review": {
+      "version": 2,
+      "label": "positive",
+      "expected_status": "RESOLVED",
+      "slots": {
+        "catalogPurpose": "dinner"
+      },
+      "context_requirements": [],
+      "family": "dinner-purpose",
+      "split": "train",
+      "provenance": "authored",
+      "review_status": "approved"
+    }
+  },
+  {
+    "id": "dinner-purpose-2",
+    "intent": "PRODUCT_RECOMMEND",
+    "utterance": "Need something for dinner",
+    "canonical_text": "recommend products for dinner",
+    "review": {
+      "version": 2,
+      "label": "positive",
+      "expected_status": "RESOLVED",
+      "slots": {
+        "catalogPurpose": "dinner"
+      },
+      "context_requirements": [],
+      "family": "dinner-purpose",
+      "split": "train",
+      "provenance": "authored",
+      "review_status": "approved"
+    }
+  },
+  {
+    "id": "dinner-purpose-3",
+    "intent": "PRODUCT_RECOMMEND",
+    "utterance": "Any ideas for dinner?",
+    "canonical_text": "recommend products for dinner",
+    "review": {
+      "version": 2,
+      "label": "positive",
+      "expected_status": "RESOLVED",
+      "slots": {
+        "catalogPurpose": "dinner"
+      },
+      "context_requirements": [],
+      "family": "dinner-purpose",
+      "split": "train",
+      "provenance": "authored",
+      "review_status": "approved"
+    }
+  },
+  {
+    "id": "breakfast-purpose-1",
+    "intent": "PRODUCT_RECOMMEND",
+    "utterance": "I want breakfast",
+    "canonical_text": "recommend products for breakfast",
+    "review": {
+      "version": 2,
+      "label": "positive",
+      "expected_status": "RESOLVED",
+      "slots": {
+        "catalogPurpose": "breakfast"
+      },
+      "context_requirements": [],
+      "family": "breakfast-purpose",
+      "split": "train",
+      "provenance": "authored",
+      "review_status": "approved"
+    }
+  },
+  {
+    "id": "breakfast-purpose-2",
+    "intent": "PRODUCT_RECOMMEND",
+    "utterance": "Need something for breakfast",
+    "canonical_text": "recommend products for breakfast",
+    "review": {
+      "version": 2,
+      "label": "positive",
+      "expected_status": "RESOLVED",
+      "slots": {
+        "catalogPurpose": "breakfast"
+      },
+      "context_requirements": [],
+      "family": "breakfast-purpose",
+      "split": "train",
+      "provenance": "authored",
+      "review_status": "approved"
+    }
+  },
+  {
+    "id": "breakfast-purpose-3",
+    "intent": "PRODUCT_RECOMMEND",
+    "utterance": "Any ideas for breakfast?",
+    "canonical_text": "recommend products for breakfast",
+    "review": {
+      "version": 2,
+      "label": "positive",
+      "expected_status": "RESOLVED",
+      "slots": {
+        "catalogPurpose": "breakfast"
+      },
+      "context_requirements": [],
+      "family": "breakfast-purpose",
+      "split": "train",
+      "provenance": "authored",
+      "review_status": "approved"
+    }
+  },
+  {
+    "id": "lunch-purpose-1",
+    "intent": "PRODUCT_RECOMMEND",
+    "utterance": "I want lunch",
+    "canonical_text": "recommend products for lunch",
+    "review": {
+      "version": 2,
+      "label": "positive",
+      "expected_status": "RESOLVED",
+      "slots": {
+        "catalogPurpose": "lunch"
+      },
+      "context_requirements": [],
+      "family": "lunch-purpose",
+      "split": "train",
+      "provenance": "authored",
+      "review_status": "approved"
+    }
+  },
+  {
+    "id": "lunch-purpose-2",
+    "intent": "PRODUCT_RECOMMEND",
+    "utterance": "Need something for lunch",
+    "canonical_text": "recommend products for lunch",
+    "review": {
+      "version": 2,
+      "label": "positive",
+      "expected_status": "RESOLVED",
+      "slots": {
+        "catalogPurpose": "lunch"
+      },
+      "context_requirements": [],
+      "family": "lunch-purpose",
+      "split": "train",
+      "provenance": "authored",
+      "review_status": "approved"
+    }
+  },
+  {
+    "id": "lunch-purpose-3",
+    "intent": "PRODUCT_RECOMMEND",
+    "utterance": "Any ideas for lunch?",
+    "canonical_text": "recommend products for lunch",
+    "review": {
+      "version": 2,
+      "label": "positive",
+      "expected_status": "RESOLVED",
+      "slots": {
+        "catalogPurpose": "lunch"
+      },
+      "context_requirements": [],
+      "family": "lunch-purpose",
+      "split": "train",
+      "provenance": "authored",
+      "review_status": "approved"
+    }
+  },
+  {
+    "id": "basket-total-discovery-1",
+    "intent": "CART_TOTAL",
+    "utterance": "How much is everything in my basket?",
+    "canonical_text": "show my cart total",
+    "review": {
+      "version": 2,
+      "label": "positive",
+      "expected_status": "RESOLVED",
+      "slots": {},
+      "context_requirements": [],
+      "family": "basket-total-discovery",
+      "split": "train",
+      "provenance": "authored",
+      "review_status": "approved"
+    }
+  },
+  {
+    "id": "basket-total-discovery-2",
+    "intent": "CART_TOTAL",
+    "utterance": "What does my cart cost?",
+    "canonical_text": "show my cart total",
+    "review": {
+      "version": 2,
+      "label": "positive",
+      "expected_status": "RESOLVED",
+      "slots": {},
+      "context_requirements": [],
+      "family": "basket-total-discovery",
+      "split": "train",
+      "provenance": "authored",
+      "review_status": "approved"
+    }
+  },
+  {
+    "id": "basket-total-discovery-3",
+    "intent": "CART_TOTAL",
+    "utterance": "Basket total please",
+    "canonical_text": "show my cart total",
+    "review": {
+      "version": 2,
+      "label": "positive",
+      "expected_status": "RESOLVED",
+      "slots": {},
+      "context_requirements": [],
+      "family": "basket-total-discovery",
+      "split": "train",
+      "provenance": "authored",
+      "review_status": "approved"
+    }
+  },
+  {
+    "id": "basket-view-discovery-1",
+    "intent": "VIEW_CART",
+    "utterance": "What have I put in my basket?",
+    "canonical_text": "show my cart",
+    "review": {
+      "version": 2,
+      "label": "positive",
+      "expected_status": "RESOLVED",
+      "slots": {},
+      "context_requirements": [],
+      "family": "basket-view-discovery",
+      "split": "train",
+      "provenance": "authored",
+      "review_status": "approved"
+    }
+  },
+  {
+    "id": "basket-view-discovery-2",
+    "intent": "VIEW_CART",
+    "utterance": "Let me see my shopping cart",
+    "canonical_text": "show my cart",
+    "review": {
+      "version": 2,
+      "label": "positive",
+      "expected_status": "RESOLVED",
+      "slots": {},
+      "context_requirements": [],
+      "family": "basket-view-discovery",
+      "split": "train",
+      "provenance": "authored",
+      "review_status": "approved"
+    }
+  },
+  {
+    "id": "basket-view-discovery-3",
+    "intent": "VIEW_CART",
+    "utterance": "Show the items in my cart",
+    "canonical_text": "show my cart",
+    "review": {
+      "version": 2,
+      "label": "positive",
+      "expected_status": "RESOLVED",
+      "slots": {},
+      "context_requirements": [],
+      "family": "basket-view-discovery",
+      "split": "train",
+      "provenance": "authored",
+      "review_status": "approved"
+    }
+  }
+]

@@ -1,0 +1,20 @@
+   Compiling api-gateway v0.1.0 (/Users/momar/Documents/commerce-ai/backend/crates/api-gateway)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 1.63s
+     Running unittests src/lib.rs (target/debug/deps/api_gateway-a0464ff086a93995)
+
+running 13 tests
+test public_commerce::policy::binding_tests::production_binding_cannot_select_another_database ... ok
+test public_commerce::metadata::tests::expansion_is_single_pass_and_preserves_unicode ... ok
+test public_commerce::discovery::tests::escapes_xml ... ok
+test public_commerce::facts::tests::conditional_price_and_composite_price_do_not_become_offers ... ok
+test public_commerce::discovery::tests::registry_has_separate_verified_controls ... ok
+test public_commerce::facts::tests::unsupported_currency_is_preserved_but_never_offered_or_converted ... ok
+test public_commerce::canonical::tests::adapters_share_one_identity_and_pagination_cannot_change_origin ... ok
+test public_commerce::metadata::tests::rejects_unknown_tokens_but_literal_override_braces_are_data ... ok
+test public_commerce::policy::tests::forwarded_hosts_never_authorize_or_change_origin ... ok
+test public_commerce::policy::tests::precedence_and_consistent_directives ... ok
+test public_commerce::entity::tests::validates_explicit_public_profile_without_guessing_contacts ... ok
+test public_commerce::policy::tests::origin_validation_rejects_nonpublic_and_unsafe_authorities ... ok
+test public_commerce::images::tests::dimensions_and_real_variants ... ok
+
+test result: ok. 13 passed; 0 failed; 0 ignored; 0 measured; 12 filtered out; finished in 0.96s

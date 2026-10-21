@@ -1,0 +1,32 @@
+html { color-scheme: light; }
+body { margin: 0; background: #fff; color: #242424; font-family: Arial, Helvetica, sans-serif; }
+.reference-header { padding: 24px 20px 12px; border-bottom: 1px solid #e6e2df; }
+.reference-header h1 { margin: 0 0 8px; font-size: 22px; }
+.reference-header p, #reference-status { color: #64615f; font-size: 14px; }
+.reference-header a { color: #963f28; }
+#reference-status, noscript { display: block; margin: 20px; }
+#reference-status[hidden] { display: none; }
+.swagger-ui .info { margin: 24px 0; }
+.swagger-ui .info .title { font-size: 24px; }
+.swagger-ui .wrapper { padding: 0 20px; }
+.swagger-ui .scheme-container { box-shadow: none; padding: 12px 0; background: #faf8f7; }
+.swagger-ui .schemes, .swagger-ui .schemes-server-container, .swagger-ui .servers { min-width: 0; max-width: 100%; }
+.swagger-ui .servers { width: 100%; }
+.swagger-ui .servers > label { display: block; max-width: 100%; }
+.swagger-ui .servers > label select { width: 100%; min-width: 0; max-width: 100%; }
+.swagger-ui .servers .computed-url { overflow-wrap: anywhere; }
+.swagger-ui .servers .computed-url code { white-space: normal; }
+.swagger-ui .servers-variables { max-width: 100%; }
+.swagger-ui .servers-variables table { width: 100%; table-layout: fixed; }
+.swagger-ui .servers-variables input { width: 100%; min-width: 0; }
+.swagger-ui .opblock-tag { font-size: 20px; }
+.swagger-ui .opblock .opblock-summary-path { overflow-wrap: anywhere; }
+.swagger-ui .btn:focus-visible, a:focus-visible { outline: 3px solid #a3472d; outline-offset: 3px; }
+@media (max-width: 600px) {
+  .swagger-ui .wrapper { padding: 0 10px; }
+  .swagger-ui .opblock .opblock-summary { flex-wrap: wrap; gap: 6px; }
+  .swagger-ui .opblock .opblock-summary-path { max-width: calc(100% - 90px); font-size: 12px; }
+  .swagger-ui .opblock .opblock-summary-description { flex-basis: 100%; }
+  .swagger-ui .opblock-body { overflow-x: auto; }
+  .reference-header { padding: 18px 10px; }
+}

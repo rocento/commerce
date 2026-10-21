@@ -1,0 +1,26 @@
+ Container rocento-publication-release-postgres-1 Running
+ Container rocento-publication-release-postgres-1 Waiting
+ Container rocento-publication-release-postgres-1 Healthy
+ Container rocento-publication-release-verify-run-7aa5f0bb79f5 Creating
+ Container rocento-publication-release-verify-run-7aa5f0bb79f5 Created
+   Compiling api-gateway v0.1.0 (/workspace/backend/crates/api-gateway)
+    Finished `release` profile [optimized] target(s) in 8.67s
+     Running unittests src/lib.rs (/target/release/deps/api_gateway-c71d4e4855431a0e)
+
+running 14 tests
+test public_commerce::discovery::tests::escapes_xml ... ok
+test public_commerce::canonical::tests::adapters_share_one_identity_and_pagination_cannot_change_origin ... ok
+test public_commerce::discovery::tests::registry_has_separate_verified_controls ... ok
+test public_commerce::facts::tests::conditional_price_and_composite_price_do_not_become_offers ... ok
+test public_commerce::entity::tests::validates_explicit_public_profile_without_guessing_contacts ... ok
+test public_commerce::facts::tests::unsupported_currency_is_preserved_but_never_offered_or_converted ... ok
+test public_commerce::metadata::tests::expansion_is_single_pass_and_preserves_unicode ... ok
+test public_commerce::metadata::tests::rejects_unknown_tokens_but_literal_override_braces_are_data ... ok
+test public_commerce::policy::binding_tests::production_binding_cannot_select_another_database ... ok
+test public_commerce::policy::tests::forwarded_hosts_never_authorize_or_change_origin ... ok
+test public_commerce::policy::tests::origin_validation_rejects_nonpublic_and_unsafe_authorities ... ok
+test public_commerce::policy::tests::precedence_and_consistent_directives ... ok
+test public_commerce::images::tests::dimensions_and_real_variants ... ok
+test public_commerce::images::tests::photographic_derivatives_bound_bytes_and_preserve_alpha ... ok
+
+test result: ok. 14 passed; 0 failed; 0 ignored; 0 measured; 12 filtered out; finished in 0.17s

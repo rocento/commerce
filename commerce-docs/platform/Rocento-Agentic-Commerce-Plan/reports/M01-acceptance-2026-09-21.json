@@ -1,0 +1,67 @@
+{
+  "milestone": "M01",
+  "status": "complete_in_isolated_staging",
+  "exit_gate": "pass",
+  "accepted_at": "2026-09-21T09:51:35.125444+00:00",
+  "browser_suite": {
+    "browser_run": "m01-fixed-final",
+    "passed": 10,
+    "failed": 0,
+    "flaky": 0,
+    "live_stack_scenarios": 8,
+    "deterministic_transport_fault_scenarios": 2,
+    "optimize_cart": "pass",
+    "shop_for_me": "pass",
+    "buy_again": "pass",
+    "stale_proposal_recovery": "pass",
+    "lost_committed_responses": "pass",
+    "saved_proposal_interruption": "pass",
+    "admin_readiness_and_journey": "pass",
+    "pilot_exact_guides_and_unknown": "pass",
+    "all_nine_error_recoveries": "pass",
+    "prestream_http_recovery": "pass",
+    "ai_crash_drill": {
+      "ai_killed_during_active_shopping_stream": true,
+      "bounded_interruption_seconds": 0.15,
+      "stream_event_types": [
+        "progress",
+        "progress"
+      ],
+      "checkout_quote_available_during_ai_outage": true,
+      "commerce_and_saved_proposals_preserved_across_restarts": true,
+      "provider_checks_after_restart": 4
+    },
+    "provider_schema_rich_card": {
+      "status": "pass",
+      "checked_at": "2026-09-21T09:46:18.033087Z",
+      "configuration_revision": "ffde83e7daca009c251ccf1d4d57a92ddde249162fbe04dd2ff5b751c3a88ba2",
+      "request_reference": "3e437881-f342-4009-a944-31b23c5affd4",
+      "message": "Live catalog tools, provider schemas and a catalog-grounded rich card passed. Full shopping journeys require separate acceptance.",
+      "duration_ms": 2743,
+      "input_tokens": 1125,
+      "output_tokens": 34
+    },
+    "receipt_survives_restart": true
+  },
+  "regressions": {
+    "python_passed": 347,
+    "python_skipped": 3,
+    "frontend_passed": 122,
+    "backend_postgres_passed": 44,
+    "backend_ignored_browser_case": 1,
+    "http_error_unit_passed": 1,
+    "deployment_and_preflight_passed": 13
+  },
+  "resolved_defect": {
+    "request": "Find cheaper equivalent coffee for my current cart. I allow substitutions, keep the exact quantities and selling units. Budget scope is merchandise only, in USD.",
+    "resolution": "New model identity locks require verbatim customer evidence; narrow quantity-only evidence is rejected, saved/explicit/mixed/uncertain identity locks remain protected. Missing or fabricated evidence requires clarification.",
+    "preliminary_live_optimize_runs": 3,
+    "final_live_optimize_runs": 1
+  },
+  "limits": [
+    "Isolated local Grocery staging; no production deployment.",
+    "Jewelry and Electronics explicitly not configured or accepted.",
+    "Workspace contains separate concurrent publication changes; exact tested artifact/source identities are recorded independently.",
+    "The completion report is versioned separately; existing implementation workspace changes are not swept into its documentation commit."
+  ]
+}

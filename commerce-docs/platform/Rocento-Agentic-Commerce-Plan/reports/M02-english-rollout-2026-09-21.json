@@ -1,0 +1,112 @@
+{
+  "version": "1",
+  "project": "rocento-shopping-stage-9535d4d7",
+  "old_ai_image": "sha256:f6b6e554eb269856dfd18cbe6aea544c6938dcdc149360e9195bfd1482a1434f",
+  "new_ai_image": "sha256:6c097e1960d57bde9fd6fe4fe37dd67a1af06e81156138191d4ecc2ebade93f9",
+  "feature_flags": [
+    "grounded_intent",
+    "typed_errors"
+  ],
+  "source_sha256": {
+    "main.py": "8f75df75d2d4aa832113a0be666be7fea95efb2770d47928b161ed245fe51b2d",
+    "runtime.py": "6351fe6a7ef13c791296109a64f463face1d3dfc94cf5e849488d7204746da01",
+    "settings.py": "74e6e18bee81a564ac55a0785b892706373276a9e4db314abbd0f7149f02b15e",
+    "shopping.py": "18bceee0bd2118214261a3971748e5b2b3f2235e3882d1d4fefaf911eea8bd55",
+    "shopping_intent.py": "da408f603e78ded0557f52e3e3872a50d30de3e50d34994121245ba20959bd96"
+  },
+  "commerce_unchanged": true,
+  "commerce_scope": [
+    "catalog.products",
+    "customers.customers",
+    "cart_checkout.items",
+    "orders.orders",
+    "orders.order_items",
+    "payments.payment_transactions"
+  ],
+  "readiness": {
+    "version": "1",
+    "tenant_id": "0b597bc4-8eab-4e21-99b3-0c610a9ef7ba",
+    "enabled": true,
+    "provider_configured": true,
+    "model": "gpt-4.1-mini",
+    "configuration_revision": "184b16c3995ed15699fa55865201701ec0fe7bc5c066db1fa3892e93fc902377",
+    "tool_schema_revision": "2a9fb9ccc55a6e6b06dd8d838ca4447b91936792d3284e9650cc2a018d80a4f4",
+    "feature_flags": [
+      "grounded_intent",
+      "typed_errors"
+    ],
+    "checks": [
+      {
+        "name": "provider",
+        "status": "pass",
+        "message": "Provider key configured; connectivity is a separate test."
+      },
+      {
+        "name": "assistant",
+        "status": "pass",
+        "message": "Assistant enabled."
+      },
+      {
+        "name": "tool_schemas",
+        "status": "pass",
+        "message": "All registered model tool schemas are strict closed objects."
+      },
+      {
+        "name": "catalog_tools",
+        "status": "pass",
+        "message": "Live catalog schema validated through the tool proxy."
+      },
+      {
+        "name": "knowledge",
+        "status": "pass",
+        "message": "Current tenant-scoped guides with dated source citations are loaded."
+      },
+      {
+        "name": "storage",
+        "status": "pass",
+        "message": "Assistant storage and acceptance path configured."
+      },
+      {
+        "name": "commerce_schema",
+        "status": "pass",
+        "message": "Customer journey migration is applied."
+      }
+    ],
+    "currency_modes": [
+      "USD"
+    ],
+    "quantity_modes": [
+      "whole_selling_units"
+    ],
+    "payment_modes": [
+      "cash_on_delivery"
+    ],
+    "delivery_modes": [
+      "area_availability",
+      "no_scheduled_slots"
+    ],
+    "knowledge_configured": true,
+    "last_acceptance": {
+      "status": "pass",
+      "checked_at": "2026-09-21T10:47:07.806861Z",
+      "configuration_revision": "184b16c3995ed15699fa55865201701ec0fe7bc5c066db1fa3892e93fc902377",
+      "request_reference": "6590a34d-c032-4d53-a327-e2e38d9577ce",
+      "message": "Live catalog tools, provider schemas and a catalog-grounded rich card passed. Full shopping journeys require separate acceptance.",
+      "duration_ms": 1247,
+      "input_tokens": 1125,
+      "output_tokens": 34
+    }
+  },
+  "browser": {
+    "stats": {
+      "startTime": "2026-09-21T10:48:30.856Z",
+      "duration": 6952.441,
+      "expected": 4,
+      "skipped": 0,
+      "unexpected": 0,
+      "flaky": 0
+    },
+    "source": "browser-acceptance-m02-english-accepted.json",
+    "sha256": "f4dfde898809088a26792aee23d613fad162689ea72b1b2a40d042df7a1db752"
+  }
+}

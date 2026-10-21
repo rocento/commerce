@@ -1,0 +1,20 @@
+   Compiling api-gateway v0.1.0 (/Users/momar/Documents/commerce-ai/backend/crates/api-gateway)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 2.11s
+     Running tests/publication_policy.rs (backend/target/debug/deps/publication_policy-ec3eaef121771a09)
+
+running 3 tests
+test real_http_policy_preferences_override_hosts_and_permissions ... ok
+test two_installations_cannot_change_each_others_policy ... ok
+test protected_environments_and_header_override_win_on_real_http ... ok
+
+test result: ok. 3 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 2.15s
+
+     Running tests/publication_rendering.rs (backend/target/debug/deps/publication_rendering-1981052cd808beef)
+
+running 4 tests
+test migration_backfills_legacy_rows_and_rejects_ambiguous_ownership ... ok
+test generated_slugs_unicode_collisions_and_deleted_categories ... ok
+test canonical_lifecycle_single_hop_and_query_policy ... ok
+test built_renderer_real_http_status_content_freshness_and_isolation ... ok
+
+test result: ok. 4 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 6.04s

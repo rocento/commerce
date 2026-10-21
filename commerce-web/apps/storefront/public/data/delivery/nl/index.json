@@ -1,0 +1,126 @@
+{
+  "schema_version": 1,
+  "country": {
+    "code": "NL",
+    "name": "Netherlands",
+    "name_ar": "هولندا"
+  },
+  "state_label": "Province",
+  "states": [
+    {
+      "code": "01",
+      "name": "Provincie Drenthe",
+      "name_ar": "",
+      "geonames_id": "2756631",
+      "city_count": 441,
+      "sha256": "d44773925b8068aef036eacc9922ef702b6302eeef129e41877806aec1cf2f3d"
+    },
+    {
+      "code": "16",
+      "name": "Provincie Flevoland",
+      "name_ar": "",
+      "geonames_id": "3319179",
+      "city_count": 28,
+      "sha256": "749d46f794e373784c36eaa12a788d8fc704a641f72918fe389098202b8fa0ed"
+    },
+    {
+      "code": "02",
+      "name": "Provincie Friesland",
+      "name_ar": "",
+      "geonames_id": "2755812",
+      "city_count": 783,
+      "sha256": "244f42290fffaf4a66a00a6173e9dc8d482f986fa6df928ec624206c22f164cc"
+    },
+    {
+      "code": "03",
+      "name": "Provincie Gelderland",
+      "name_ar": "",
+      "geonames_id": "2755634",
+      "city_count": 948,
+      "sha256": "89669082c9167c67b37458c3a795e273abd5dc0e652c56613d74fef3b6708577"
+    },
+    {
+      "code": "04",
+      "name": "Provincie Groningen",
+      "name_ar": "",
+      "geonames_id": "2755249",
+      "city_count": 618,
+      "sha256": "6776fffec1c5dcbca83fe105b6c3b6b7ed3f9a1fda17e1485f72e3aea25e06e8"
+    },
+    {
+      "code": "05",
+      "name": "Provincie Limburg",
+      "name_ar": "",
+      "geonames_id": "2751596",
+      "city_count": 880,
+      "sha256": "410087b87b30be0acf9c60a659d384fb084f484e304e42876a18399dc408b1a6"
+    },
+    {
+      "code": "06",
+      "name": "Provincie Noord-Brabant",
+      "name_ar": "",
+      "geonames_id": "2749990",
+      "city_count": 1604,
+      "sha256": "96d9ce6977b53ef3b3caea8d5714284252595e8c5142141863625251946f8610"
+    },
+    {
+      "code": "07",
+      "name": "Provincie Noord-Holland",
+      "name_ar": "",
+      "geonames_id": "2749879",
+      "city_count": 635,
+      "sha256": "d6fae115b26d753492ba6321cf6dd23872ba67af3df29eb629987ca06ff32532"
+    },
+    {
+      "code": "15",
+      "name": "Provincie Overijssel",
+      "name_ar": "",
+      "geonames_id": "2748838",
+      "city_count": 534,
+      "sha256": "8843c9a2d63c4bcaa1e42bf62f763251862b238191d5955eb026e534458090f6"
+    },
+    {
+      "code": "09",
+      "name": "Provincie Utrecht",
+      "name_ar": "",
+      "geonames_id": "2745909",
+      "city_count": 338,
+      "sha256": "0962041c009f11a9bc59230478fe34c493adde2bc465926eff8ec2d97b0308e6"
+    },
+    {
+      "code": "10",
+      "name": "Provincie Zeeland",
+      "name_ar": "",
+      "geonames_id": "2744011",
+      "city_count": 377,
+      "sha256": "e3372ea1f944225c454638f983f57268a2d0417d9df7c87e6939ef0ae6369362"
+    },
+    {
+      "code": "11",
+      "name": "Provincie Zuid-Holland",
+      "name_ar": "",
+      "geonames_id": "2743698",
+      "city_count": 598,
+      "sha256": "28db2f5b446af03a4c82489392512de5716a322757ce172d70e2759afaf3852e"
+    }
+  ],
+  "source": "https://download.geonames.org/export/dump/NL.zip",
+  "attribution": "GeoNames",
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "source_sha256": "84b94e0f22ef883b44f6f4639dcceb20515475c85959d15b33dbd3607c326486",
+  "source_latest_record_date": "2026-09-26",
+  "feature_codes": [
+    "PPL",
+    "PPLA",
+    "PPLA2",
+    "PPLA3",
+    "PPLA4",
+    "PPLC",
+    "PPLL",
+    "PPLX"
+  ],
+  "city_count": 7784,
+  "excluded": {
+    "unassigned_adm1": 1
+  }
+}

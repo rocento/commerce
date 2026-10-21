@@ -1,0 +1,1130 @@
+{
+  "$defs": {
+    "Action": {
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "maxLength": 128,
+          "minLength": 1,
+          "title": "Id",
+          "type": "string"
+        },
+        "intent": {
+          "maxLength": 128,
+          "minLength": 1,
+          "title": "Intent",
+          "type": "string"
+        },
+        "clauseId": {
+          "maxLength": 128,
+          "minLength": 1,
+          "title": "Clauseid",
+          "type": "string"
+        },
+        "operation": {
+          "maxLength": 128,
+          "minLength": 1,
+          "title": "Operation",
+          "type": "string"
+        },
+        "itemIndexes": {
+          "items": {
+            "maximum": 50,
+            "minimum": 0,
+            "type": "integer"
+          },
+          "maxItems": 51,
+          "title": "Itemindexes",
+          "type": "array"
+        }
+      },
+      "required": [
+        "id",
+        "intent",
+        "clauseId",
+        "operation"
+      ],
+      "title": "Action",
+      "type": "object"
+    },
+    "Clause": {
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "maxLength": 128,
+          "minLength": 1,
+          "title": "Id",
+          "type": "string"
+        },
+        "text": {
+          "maxLength": 4000,
+          "title": "Text",
+          "type": "string"
+        },
+        "start": {
+          "minimum": 0,
+          "title": "Start",
+          "type": "integer"
+        },
+        "end": {
+          "minimum": 0,
+          "title": "End",
+          "type": "integer"
+        },
+        "intent": {
+          "maxLength": 128,
+          "minLength": 1,
+          "title": "Intent",
+          "type": "string"
+        },
+        "connector": {
+          "maxLength": 100,
+          "title": "Connector",
+          "type": "string"
+        },
+        "negated": {
+          "title": "Negated",
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "id",
+        "text",
+        "start",
+        "end",
+        "intent",
+        "connector",
+        "negated"
+      ],
+      "title": "Clause",
+      "type": "object"
+    },
+    "JsonValue": {},
+    "Reference": {
+      "additionalProperties": false,
+      "description": "Linguistic bindings only, including references needing an authority lookup.",
+      "properties": {
+        "expression": {
+          "maxLength": 128,
+          "minLength": 1,
+          "title": "Expression",
+          "type": "string"
+        },
+        "kind": {
+          "enum": [
+            "product",
+            "order",
+            "address",
+            "result_set",
+            "action"
+          ],
+          "title": "Kind",
+          "type": "string"
+        },
+        "resolved": {
+          "title": "Resolved",
+          "type": "boolean"
+        },
+        "target": {
+          "anyOf": [
+            {
+              "maxLength": 250,
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Target"
+        },
+        "state": {
+          "anyOf": [
+            {
+              "enum": [
+                "RESOLVED",
+                "MISSING",
+                "AMBIGUOUS",
+                "INVALID",
+                "REFERENCE_PENDING",
+                "AUTHORITY_LOOKUP_REQUIRED",
+                "UNSUPPORTED"
+              ],
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "State"
+        },
+        "selectionStrategy": {
+          "anyOf": [
+            {
+              "maxLength": 128,
+              "minLength": 1,
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Selectionstrategy"
+        },
+        "candidates": {
+          "items": {
+            "$ref": "#/$defs/ReferenceCandidate"
+          },
+          "maxItems": 51,
+          "title": "Candidates",
+          "type": "array"
+        }
+      },
+      "required": [
+        "expression",
+        "kind",
+        "resolved"
+      ],
+      "title": "Reference",
+      "type": "object"
+    },
+    "ReferenceCandidate": {
+      "additionalProperties": false,
+      "properties": {
+        "kind": {
+          "maxLength": 128,
+          "minLength": 1,
+          "title": "Kind",
+          "type": "string"
+        },
+        "value": {
+          "maxLength": 4000,
+          "title": "Value",
+          "type": "string"
+        },
+        "industry": {
+          "anyOf": [
+            {
+              "maxLength": 128,
+              "minLength": 1,
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Industry"
+        },
+        "score": {
+          "maximum": 1,
+          "minimum": 0,
+          "title": "Score",
+          "type": "number"
+        }
+      },
+      "required": [
+        "kind",
+        "value",
+        "score"
+      ],
+      "title": "ReferenceCandidate",
+      "type": "object"
+    },
+    "Relationship": {
+      "additionalProperties": false,
+      "properties": {
+        "from": {
+          "maxLength": 128,
+          "minLength": 1,
+          "title": "From",
+          "type": "string"
+        },
+        "relation": {
+          "enum": [
+            "uses",
+            "precedes",
+            "modifies",
+            "refers_to"
+          ],
+          "title": "Relation",
+          "type": "string"
+        },
+        "to": {
+          "maxLength": 128,
+          "minLength": 1,
+          "title": "To",
+          "type": "string"
+        }
+      },
+      "required": [
+        "from",
+        "relation",
+        "to"
+      ],
+      "title": "Relationship",
+      "type": "object"
+    },
+    "RequestedAction": {
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "maxLength": 10,
+          "pattern": "^request[1-9][0-9]{0,2}$",
+          "title": "Id",
+          "type": "string"
+        },
+        "intent": {
+          "pattern": "^[A-Z][A-Z0-9_]{0,79}$",
+          "title": "Intent",
+          "type": "string"
+        },
+        "text": {
+          "maxLength": 4000,
+          "minLength": 1,
+          "title": "Text",
+          "type": "string"
+        },
+        "items": {
+          "items": {
+            "$ref": "#/$defs/RequestedItem"
+          },
+          "maxItems": 50,
+          "title": "Items",
+          "type": "array"
+        },
+        "after": {
+          "anyOf": [
+            {
+              "maxLength": 10,
+              "pattern": "^request[1-9][0-9]{0,2}$",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "After"
+        }
+      },
+      "required": [
+        "id",
+        "intent",
+        "text",
+        "items"
+      ],
+      "title": "RequestedAction",
+      "type": "object"
+    },
+    "RequestedItem": {
+      "additionalProperties": false,
+      "properties": {
+        "productText": {
+          "anyOf": [
+            {
+              "maxLength": 4000,
+              "minLength": 1,
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Producttext"
+        },
+        "quantity": {
+          "anyOf": [
+            {
+              "maximum": 1000000,
+              "minimum": 1,
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Quantity"
+        },
+        "unit": {
+          "anyOf": [
+            {
+              "enum": [
+                "kg",
+                "g",
+                "l",
+                "ml",
+                "litre",
+                "litres",
+                "kilogram",
+                "kilograms",
+                "packs",
+                "pack",
+                "pieces",
+                "piece"
+              ],
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Unit"
+        },
+        "reference": {
+          "anyOf": [
+            {
+              "maxLength": 4000,
+              "minLength": 1,
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Reference"
+        },
+        "resolvedFrom": {
+          "anyOf": [
+            {
+              "maxLength": 4000,
+              "minLength": 1,
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Resolvedfrom"
+        },
+        "selectionStrategy": {
+          "anyOf": [
+            {
+              "pattern": "^[A-Z][A-Z0-9_]{0,79}$",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Selectionstrategy"
+        }
+      },
+      "title": "RequestedItem",
+      "type": "object"
+    },
+    "ResolutionProvenance": {
+      "additionalProperties": false,
+      "properties": {
+        "releaseId": {
+          "anyOf": [
+            {
+              "maxLength": 128,
+              "minLength": 1,
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Releaseid"
+        },
+        "generationFingerprint": {
+          "pattern": "^[0-9a-f]{64}$",
+          "title": "Generationfingerprint",
+          "type": "string"
+        },
+        "runtimeVersion": {
+          "pattern": "^[0-9a-f]{64}$",
+          "title": "Runtimeversion",
+          "type": "string"
+        },
+        "normalizationVersion": {
+          "const": "english-v1",
+          "title": "Normalizationversion",
+          "type": "string"
+        },
+        "clauseSpanEncoding": {
+          "const": "utf-16-code-units",
+          "title": "Clausespanencoding",
+          "type": "string"
+        },
+        "evidenceSpanEncoding": {
+          "const": "unicode-code-points",
+          "title": "Evidencespanencoding",
+          "type": "string"
+        }
+      },
+      "required": [
+        "releaseId",
+        "generationFingerprint",
+        "runtimeVersion",
+        "normalizationVersion",
+        "clauseSpanEncoding",
+        "evidenceSpanEncoding"
+      ],
+      "title": "ResolutionProvenance",
+      "type": "object"
+    },
+    "ResolutionV2": {
+      "additionalProperties": false,
+      "description": "Execution-bearing result fields are closed; diagnostics live in the envelope.",
+      "properties": {
+        "requestedActionsVersion": {
+          "anyOf": [
+            {
+              "maximum": 1,
+              "minimum": 1,
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Requestedactionsversion"
+        },
+        "intentCount": {
+          "anyOf": [
+            {
+              "maximum": 32,
+              "minimum": 0,
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Intentcount"
+        },
+        "uniqueIntentCount": {
+          "anyOf": [
+            {
+              "maximum": 32,
+              "minimum": 0,
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Uniqueintentcount"
+        },
+        "intentCountStatus": {
+          "anyOf": [
+            {
+              "enum": [
+                "EXACT",
+                "NEEDS_CLARIFICATION"
+              ],
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Intentcountstatus"
+        },
+        "requestedActions": {
+          "anyOf": [
+            {
+              "items": {
+                "$ref": "#/$defs/RequestedAction"
+              },
+              "maxItems": 32,
+              "type": "array"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Requestedactions"
+        },
+        "requestedActionIssues": {
+          "anyOf": [
+            {
+              "items": {
+                "enum": [
+                  "UNRESOLVED_REQUEST",
+                  "UNRESOLVED_PRODUCT",
+                  "INVALID_QUANTITY",
+                  "ALTERNATIVE_ACTIONS",
+                  "CONDITIONAL_REQUEST",
+                  "REQUEST_LIMIT",
+                  "INTERPRETATION_CONFLICT"
+                ],
+                "type": "string"
+              },
+              "maxItems": 7,
+              "type": "array"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Requestedactionissues"
+        },
+        "status": {
+          "enum": [
+            "RESOLVED",
+            "NEEDS_CONTEXT",
+            "AMBIGUOUS",
+            "UNKNOWN",
+            "UNSUPPORTED",
+            "DENIED"
+          ],
+          "title": "Status",
+          "type": "string"
+        },
+        "intent": {
+          "anyOf": [
+            {
+              "maxLength": 128,
+              "minLength": 1,
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Intent"
+        },
+        "message": {
+          "maxLength": 1000,
+          "title": "Message",
+          "type": "string"
+        },
+        "confidence": {
+          "maximum": 1,
+          "minimum": 0,
+          "title": "Confidence",
+          "type": "number"
+        },
+        "confidenceLevel": {
+          "anyOf": [
+            {
+              "enum": [
+                "HIGH",
+                "MEDIUM",
+                "LOW",
+                "AMBIGUOUS"
+              ],
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Confidencelevel"
+        },
+        "entities": {
+          "additionalProperties": {
+            "$ref": "#/$defs/JsonValue"
+          },
+          "maxProperties": 64,
+          "title": "Entities",
+          "type": "object"
+        },
+        "requiresConfirmation": {
+          "default": false,
+          "title": "Requiresconfirmation",
+          "type": "boolean"
+        },
+        "requestType": {
+          "anyOf": [
+            {
+              "maxLength": 128,
+              "minLength": 1,
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Requesttype"
+        },
+        "missing": {
+          "items": {
+            "maxLength": 128,
+            "minLength": 1,
+            "type": "string"
+          },
+          "maxItems": 128,
+          "title": "Missing",
+          "type": "array"
+        },
+        "primaryIntent": {
+          "anyOf": [
+            {
+              "maxLength": 128,
+              "minLength": 1,
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Primaryintent"
+        },
+        "reason": {
+          "anyOf": [
+            {
+              "enum": [
+                "unsupported_capability",
+                "access_denied"
+              ],
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Reason"
+        },
+        "unsupportedIntents": {
+          "items": {
+            "maxLength": 128,
+            "minLength": 1,
+            "type": "string"
+          },
+          "maxItems": 32,
+          "title": "Unsupportedintents",
+          "type": "array"
+        },
+        "operations": {
+          "items": {
+            "maxLength": 128,
+            "minLength": 1,
+            "type": "string"
+          },
+          "maxItems": 66,
+          "title": "Operations",
+          "type": "array"
+        },
+        "references": {
+          "items": {
+            "$ref": "#/$defs/Reference"
+          },
+          "maxItems": 128,
+          "title": "References",
+          "type": "array"
+        },
+        "actions": {
+          "items": {
+            "$ref": "#/$defs/Action"
+          },
+          "maxItems": 66,
+          "title": "Actions",
+          "type": "array"
+        },
+        "clauses": {
+          "items": {
+            "$ref": "#/$defs/Clause"
+          },
+          "maxItems": 33,
+          "title": "Clauses",
+          "type": "array"
+        },
+        "relationships": {
+          "items": {
+            "$ref": "#/$defs/Relationship"
+          },
+          "maxItems": 256,
+          "title": "Relationships",
+          "type": "array"
+        },
+        "slots": {
+          "items": {
+            "$ref": "#/$defs/ResolvedSlot"
+          },
+          "maxItems": 64,
+          "title": "Slots",
+          "type": "array"
+        },
+        "ambiguities": {
+          "items": {
+            "$ref": "#/$defs/ResolvedAmbiguity"
+          },
+          "maxItems": 32,
+          "title": "Ambiguities",
+          "type": "array"
+        },
+        "graph": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/SemanticGraph"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "searchUpdate": {
+          "default": false,
+          "title": "Searchupdate",
+          "type": "boolean"
+        },
+        "clarificationReply": {
+          "default": false,
+          "title": "Clarificationreply",
+          "type": "boolean"
+        },
+        "compoundReply": {
+          "anyOf": [
+            {
+              "enum": [
+                "filled",
+                "replaced",
+                "cancelled",
+                "rejected"
+              ],
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Compoundreply"
+        },
+        "compoundInterpretationVersion": {
+          "anyOf": [
+            {
+              "maximum": 1,
+              "minimum": 1,
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Compoundinterpretationversion"
+        },
+        "interpretationText": {
+          "anyOf": [
+            {
+              "maxLength": 4000,
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Interpretationtext"
+        },
+        "clauseSourceText": {
+          "anyOf": [
+            {
+              "maxLength": 4000,
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Exact source addressed by UTF-16 clause offsets. Required when it differs from interpretationText or the request text; evidence keeps its original source.",
+          "title": "Clausesourcetext"
+        },
+        "context": {
+          "additionalProperties": {
+            "$ref": "#/$defs/JsonValue"
+          },
+          "maxProperties": 32,
+          "title": "Context",
+          "type": "object"
+        }
+      },
+      "required": [
+        "status",
+        "message",
+        "confidence"
+      ],
+      "title": "ResolutionV2",
+      "type": "object"
+    },
+    "ResolvedAmbiguity": {
+      "additionalProperties": false,
+      "properties": {
+        "span": {
+          "maxLength": 4000,
+          "title": "Span",
+          "type": "string"
+        },
+        "candidates": {
+          "items": {
+            "$ref": "#/$defs/ReferenceCandidate"
+          },
+          "maxItems": 128,
+          "title": "Candidates",
+          "type": "array"
+        },
+        "clarificationRequired": {
+          "title": "Clarificationrequired",
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "span",
+        "candidates",
+        "clarificationRequired"
+      ],
+      "title": "ResolvedAmbiguity",
+      "type": "object"
+    },
+    "ResolvedSlot": {
+      "additionalProperties": false,
+      "properties": {
+        "code": {
+          "maxLength": 128,
+          "minLength": 1,
+          "title": "Code",
+          "type": "string"
+        },
+        "state": {
+          "enum": [
+            "RESOLVED",
+            "MISSING",
+            "AMBIGUOUS",
+            "INVALID",
+            "REFERENCE_PENDING",
+            "AUTHORITY_LOOKUP_REQUIRED",
+            "UNSUPPORTED"
+          ],
+          "title": "State",
+          "type": "string"
+        },
+        "requirement": {
+          "maxLength": 128,
+          "minLength": 1,
+          "title": "Requirement",
+          "type": "string"
+        },
+        "source": {
+          "anyOf": [
+            {
+              "maxLength": 4000,
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Source"
+        },
+        "value": {
+          "$ref": "#/$defs/JsonValue",
+          "default": null
+        },
+        "candidates": {
+          "items": {
+            "$ref": "#/$defs/JsonValue"
+          },
+          "maxItems": 128,
+          "title": "Candidates",
+          "type": "array"
+        },
+        "confidence": {
+          "maximum": 1,
+          "minimum": 0,
+          "title": "Confidence",
+          "type": "number"
+        },
+        "requiresAuthorizationLookup": {
+          "title": "Requiresauthorizationlookup",
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "code",
+        "state",
+        "requirement",
+        "confidence",
+        "requiresAuthorizationLookup"
+      ],
+      "title": "ResolvedSlot",
+      "type": "object"
+    },
+    "SemanticGraph": {
+      "additionalProperties": false,
+      "properties": {
+        "nodes": {
+          "items": {
+            "$ref": "#/$defs/SemanticGraphNode"
+          },
+          "maxItems": 256,
+          "title": "Nodes",
+          "type": "array"
+        },
+        "edges": {
+          "items": {
+            "$ref": "#/$defs/SemanticGraphEdge"
+          },
+          "maxItems": 512,
+          "title": "Edges",
+          "type": "array"
+        },
+        "constraints": {
+          "items": {
+            "maxLength": 128,
+            "minLength": 1,
+            "type": "string"
+          },
+          "maxItems": 256,
+          "title": "Constraints",
+          "type": "array"
+        },
+        "truncated": {
+          "title": "Truncated",
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "nodes",
+        "edges",
+        "constraints",
+        "truncated"
+      ],
+      "title": "SemanticGraph",
+      "type": "object"
+    },
+    "SemanticGraphEdge": {
+      "additionalProperties": false,
+      "properties": {
+        "from": {
+          "maxLength": 128,
+          "minLength": 1,
+          "title": "From",
+          "type": "string"
+        },
+        "to": {
+          "maxLength": 128,
+          "minLength": 1,
+          "title": "To",
+          "type": "string"
+        },
+        "relation": {
+          "maxLength": 128,
+          "minLength": 1,
+          "title": "Relation",
+          "type": "string"
+        },
+        "ruleCode": {
+          "anyOf": [
+            {
+              "maxLength": 128,
+              "minLength": 1,
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Rulecode"
+        }
+      },
+      "required": [
+        "from",
+        "to",
+        "relation"
+      ],
+      "title": "SemanticGraphEdge",
+      "type": "object"
+    },
+    "SemanticGraphNode": {
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "maxLength": 128,
+          "minLength": 1,
+          "title": "Id",
+          "type": "string"
+        },
+        "kind": {
+          "maxLength": 128,
+          "minLength": 1,
+          "title": "Kind",
+          "type": "string"
+        },
+        "clauseId": {
+          "anyOf": [
+            {
+              "maxLength": 128,
+              "minLength": 1,
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Clauseid"
+        },
+        "value": {
+          "$ref": "#/$defs/JsonValue",
+          "default": null
+        }
+      },
+      "required": [
+        "id",
+        "kind"
+      ],
+      "title": "SemanticGraphNode",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "contractVersion": {
+      "const": 2,
+      "title": "Contractversion",
+      "type": "integer"
+    },
+    "provenance": {
+      "$ref": "#/$defs/ResolutionProvenance"
+    },
+    "result": {
+      "$ref": "#/$defs/ResolutionV2"
+    },
+    "diagnostics": {
+      "additionalProperties": {
+        "$ref": "#/$defs/JsonValue"
+      },
+      "maxProperties": 64,
+      "title": "Diagnostics",
+      "type": "object"
+    }
+  },
+  "required": [
+    "contractVersion",
+    "provenance",
+    "result"
+  ],
+  "title": "ResolutionEnvelope",
+  "type": "object",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:commerce-ai:language-resolution:v2"
+}

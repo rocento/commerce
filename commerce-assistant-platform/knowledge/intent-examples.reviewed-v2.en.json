@@ -1,0 +1,176 @@
+[
+  {
+    "id": "basket-peek-v2",
+    "intent": "VIEW_CART",
+    "utterance": "lemme peek inside the basket",
+    "canonical_text": "show my cart",
+    "review": {
+      "version": 2,
+      "label": "positive",
+      "expected_status": "RESOLVED",
+      "slots": {},
+      "context_requirements": [],
+      "family": "basket-peek-v2",
+      "split": "train",
+      "provenance": "synthetic",
+      "review_status": "approved"
+    }
+  },
+  {
+    "id": "search-price-v2",
+    "intent": "PRODUCT_SEARCH",
+    "utterance": "find me apples please",
+    "canonical_text": "find apples",
+    "review": {
+      "version": 2,
+      "label": "positive",
+      "expected_status": "RESOLVED",
+      "slots": {
+        "productText": "apples"
+      },
+      "context_requirements": [],
+      "family": "search-price-v2",
+      "split": "train",
+      "provenance": "synthetic",
+      "review_status": "approved"
+    }
+  },
+  {
+    "id": "cart-total-short-v2",
+    "intent": "CART_TOTAL",
+    "utterance": "basket cost pls",
+    "canonical_text": "what is my cart total",
+    "review": {
+      "version": 2,
+      "label": "positive",
+      "expected_status": "RESOLVED",
+      "slots": {},
+      "context_requirements": [],
+      "family": "cart-total-short-v2",
+      "split": "train",
+      "provenance": "synthetic",
+      "review_status": "approved"
+    }
+  },
+  {
+    "id": "wishlist-short-v2",
+    "intent": "VIEW_WISHLIST",
+    "utterance": "saved picks pls",
+    "canonical_text": "show my wishlist",
+    "review": {
+      "version": 2,
+      "label": "positive",
+      "expected_status": "RESOLVED",
+      "slots": {},
+      "context_requirements": [],
+      "family": "wishlist-short-v2",
+      "split": "train",
+      "provenance": "synthetic",
+      "review_status": "approved"
+    }
+  },
+  {
+    "id": "cart-context-v2",
+    "intent": "VIEW_CART",
+    "utterance": "same basket again",
+    "canonical_text": "show my cart",
+    "review": {
+      "version": 2,
+      "label": "positive",
+      "expected_status": "RESOLVED",
+      "slots": {},
+      "context_requirements": [
+        "CART_VISIBLE"
+      ],
+      "family": "cart-context-v2",
+      "split": "train",
+      "provenance": "synthetic",
+      "review_status": "approved"
+    }
+  },
+  {
+    "id": "negative-remove-v2",
+    "intent": "REMOVE_FROM_CART",
+    "utterance": "do not remove milk from cart",
+    "canonical_text": "do not remove milk from cart",
+    "review": {
+      "version": 2,
+      "label": "negative",
+      "expected_status": "NEEDS_CONTEXT",
+      "slots": {},
+      "context_requirements": [],
+      "family": "negative-remove-v2",
+      "split": "test",
+      "provenance": "synthetic",
+      "review_status": "approved"
+    }
+  },
+  {
+    "id": "negative-add-v2",
+    "intent": "ADD_TO_CART",
+    "utterance": "never add three apples",
+    "canonical_text": "never add three apples",
+    "review": {
+      "version": 2,
+      "label": "negative",
+      "expected_status": "NEEDS_CONTEXT",
+      "slots": {},
+      "context_requirements": [],
+      "family": "negative-add-v2",
+      "split": "validation",
+      "provenance": "synthetic",
+      "review_status": "approved"
+    }
+  },
+  {
+    "id": "ambiguous-write-v2",
+    "intent": "ADD_TO_CART",
+    "utterance": "add and remove shoes from cart",
+    "canonical_text": "add and remove shoes from cart",
+    "review": {
+      "version": 2,
+      "label": "ambiguous",
+      "expected_status": "AMBIGUOUS",
+      "slots": {},
+      "context_requirements": [],
+      "family": "ambiguous-write-v2",
+      "split": "test",
+      "provenance": "synthetic",
+      "review_status": "approved"
+    }
+  },
+  {
+    "id": "cart-reserved-v2",
+    "intent": "VIEW_CART",
+    "utterance": "can I inspect what is in my basket",
+    "canonical_text": "show my cart",
+    "review": {
+      "version": 2,
+      "label": "positive",
+      "expected_status": "RESOLVED",
+      "slots": {},
+      "context_requirements": [],
+      "family": "cart-reserved-v2",
+      "split": "test",
+      "provenance": "synthetic",
+      "review_status": "approved"
+    }
+  },
+  {
+    "id": "wishlist-typo-v2",
+    "intent": "VIEW_WISHLIST",
+    "utterance": "show my wishlsit pls",
+    "canonical_text": "show my wishlist",
+    "review": {
+      "version": 2,
+      "label": "positive",
+      "expected_status": "RESOLVED",
+      "slots": {},
+      "context_requirements": [],
+      "family": "wishlist-typo-v2",
+      "split": "validation",
+      "provenance": "synthetic",
+      "review_status": "approved"
+    }
+  }
+]

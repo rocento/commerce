@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "country": {
+    "code": "GB",
+    "name": "United Kingdom",
+    "name_ar": "المملكة المتحدة"
+  },
+  "state_label": "Constituent country",
+  "states": [
+    {
+      "code": "ENG",
+      "name": "England",
+      "name_ar": "",
+      "geonames_id": "6269131",
+      "city_count": 32545,
+      "sha256": "aa7971fc118bb80877c1dd7633b4f46a17e0f4a687894a0b2100d134d56bcac4"
+    },
+    {
+      "code": "NIR",
+      "name": "Northern Ireland",
+      "name_ar": "",
+      "geonames_id": "2641364",
+      "city_count": 669,
+      "sha256": "c0eda06f8fa7028b544427f556ccd498ccd50c2d080882421e742ac77d8cb98a"
+    },
+    {
+      "code": "SCT",
+      "name": "Scotland",
+      "name_ar": "",
+      "geonames_id": "2638360",
+      "city_count": 6665,
+      "sha256": "b0db3a36374a44362a45fb93126f826453330c661225d0d2c3d12ca51eea34a4"
+    },
+    {
+      "code": "WLS",
+      "name": "Wales",
+      "name_ar": "",
+      "geonames_id": "2634895",
+      "city_count": 3795,
+      "sha256": "c51d8a84a387b24b8269a5fd2a6ab5ba3fafcfefb2ebd8411af086d5c89b75eb"
+    }
+  ],
+  "source": "https://download.geonames.org/export/dump/GB.zip",
+  "attribution": "GeoNames",
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "source_sha256": "19a9a3b9b3ba62e3de57aec8aa3a4fa28c13a80dfd9a49e4703a1c0a687f65b9",
+  "source_latest_record_date": "2026-09-22",
+  "feature_codes": [
+    "PPL",
+    "PPLA",
+    "PPLA2",
+    "PPLA3",
+    "PPLA4",
+    "PPLC",
+    "PPLL",
+    "PPLX"
+  ],
+  "city_count": 43674,
+  "excluded": {
+    "unassigned_adm1": 6
+  }
+}

@@ -1,0 +1,291 @@
+{
+  "version": 1,
+  "cohort": "reserved-v1",
+  "limitations": "Rules frozen before these authored cohorts were executed. These are synthetic cohorts, not independent customer data. Families disjoint within this evaluation only; historical development tests are not a clean training partition.",
+  "cases": [
+    {
+      "text": "searrch AB-012",
+      "intent": "PRODUCT_SEARCH",
+      "status": "RESOLVED",
+      "edits": [
+        [
+          "searrch",
+          "search"
+        ]
+      ],
+      "family": "repeated-read-head",
+      "protected": [
+        "AB-012"
+      ]
+    },
+    {
+      "text": "searrch APL shoes",
+      "intent": "PRODUCT_SEARCH",
+      "status": "RESOLVED",
+      "edits": [
+        [
+          "searrch",
+          "search"
+        ]
+      ],
+      "family": "repeated-read-head",
+      "protected": [
+        "APL shoes"
+      ]
+    },
+    {
+      "text": "searrch organic tea",
+      "intent": "PRODUCT_SEARCH",
+      "status": "RESOLVED",
+      "edits": [
+        [
+          "searrch",
+          "search"
+        ]
+      ],
+      "family": "repeated-read-head",
+      "protected": [
+        "organic tea"
+      ]
+    },
+    {
+      "text": "searrch milk under 12.50 USD",
+      "intent": "PRODUCT_SEARCH",
+      "status": "RESOLVED",
+      "edits": [
+        [
+          "searrch",
+          "search"
+        ]
+      ],
+      "family": "repeated-read-head",
+      "protected": [
+        "milk under 12.50 USD"
+      ],
+      "price": 12.5
+    },
+    {
+      "text": "broowse AB-012",
+      "intent": "PRODUCT_SEARCH",
+      "status": "RESOLVED",
+      "edits": [
+        [
+          "broowse",
+          "browse"
+        ]
+      ],
+      "family": "repeated-read-head",
+      "protected": [
+        "AB-012"
+      ]
+    },
+    {
+      "text": "broowse APL shoes",
+      "intent": "PRODUCT_SEARCH",
+      "status": "RESOLVED",
+      "edits": [
+        [
+          "broowse",
+          "browse"
+        ]
+      ],
+      "family": "repeated-read-head",
+      "protected": [
+        "APL shoes"
+      ]
+    },
+    {
+      "text": "broowse organic tea",
+      "intent": "PRODUCT_SEARCH",
+      "status": "RESOLVED",
+      "edits": [
+        [
+          "broowse",
+          "browse"
+        ]
+      ],
+      "family": "repeated-read-head",
+      "protected": [
+        "organic tea"
+      ]
+    },
+    {
+      "text": "broowse milk under 12.50 USD",
+      "intent": "PRODUCT_SEARCH",
+      "status": "RESOLVED",
+      "edits": [
+        [
+          "broowse",
+          "browse"
+        ]
+      ],
+      "family": "repeated-read-head",
+      "protected": [
+        "milk under 12.50 USD"
+      ],
+      "price": 12.5
+    },
+    {
+      "text": "suggeest AB-012",
+      "intent": "PRODUCT_RECOMMEND",
+      "status": "RESOLVED",
+      "edits": [
+        [
+          "suggeest",
+          "suggest"
+        ]
+      ],
+      "family": "repeated-read-head",
+      "protected": [
+        "AB-012"
+      ]
+    },
+    {
+      "text": "suggeest APL shoes",
+      "intent": "PRODUCT_RECOMMEND",
+      "status": "RESOLVED",
+      "edits": [
+        [
+          "suggeest",
+          "suggest"
+        ]
+      ],
+      "family": "repeated-read-head",
+      "protected": [
+        "APL shoes"
+      ]
+    },
+    {
+      "text": "suggeest organic tea",
+      "intent": "PRODUCT_RECOMMEND",
+      "status": "RESOLVED",
+      "edits": [
+        [
+          "suggeest",
+          "suggest"
+        ]
+      ],
+      "family": "repeated-read-head",
+      "protected": [
+        "organic tea"
+      ]
+    },
+    {
+      "text": "suggeest milk under 12.50 USD",
+      "intent": "PRODUCT_RECOMMEND",
+      "status": "RESOLVED",
+      "edits": [
+        [
+          "suggeest",
+          "suggest"
+        ]
+      ],
+      "family": "repeated-read-head",
+      "protected": [
+        "milk under 12.50 USD"
+      ],
+      "price": 12.5
+    },
+    {
+      "text": "recommmend AB-012",
+      "intent": "PRODUCT_RECOMMEND",
+      "status": "RESOLVED",
+      "edits": [
+        [
+          "recommmend",
+          "recommend"
+        ]
+      ],
+      "family": "repeated-read-head",
+      "protected": [
+        "AB-012"
+      ]
+    },
+    {
+      "text": "recommmend APL shoes",
+      "intent": "PRODUCT_RECOMMEND",
+      "status": "RESOLVED",
+      "edits": [
+        [
+          "recommmend",
+          "recommend"
+        ]
+      ],
+      "family": "repeated-read-head",
+      "protected": [
+        "APL shoes"
+      ]
+    },
+    {
+      "text": "recommmend organic tea",
+      "intent": "PRODUCT_RECOMMEND",
+      "status": "RESOLVED",
+      "edits": [
+        [
+          "recommmend",
+          "recommend"
+        ]
+      ],
+      "family": "repeated-read-head",
+      "protected": [
+        "organic tea"
+      ]
+    },
+    {
+      "text": "recommmend milk under 12.50 USD",
+      "intent": "PRODUCT_RECOMMEND",
+      "status": "RESOLVED",
+      "edits": [
+        [
+          "recommmend",
+          "recommend"
+        ]
+      ],
+      "family": "repeated-read-head",
+      "protected": [
+        "milk under 12.50 USD"
+      ],
+      "price": 12.5
+    },
+    {
+      "text": "find AB-012",
+      "intent": "PRODUCT_SEARCH",
+      "status": "RESOLVED",
+      "edits": [],
+      "family": "literal-product-argument",
+      "protected": [
+        "AB-012"
+      ]
+    },
+    {
+      "text": "find mi ordar ad",
+      "intent": "PRODUCT_SEARCH",
+      "status": "RESOLVED",
+      "edits": [],
+      "family": "literal-product-argument",
+      "protected": [
+        "mi ordar ad"
+      ]
+    },
+    {
+      "text": "find APL shoes",
+      "intent": "PRODUCT_SEARCH",
+      "status": "RESOLVED",
+      "edits": [],
+      "family": "literal-product-argument",
+      "protected": [
+        "APL shoes"
+      ]
+    },
+    {
+      "text": "find broadway tea",
+      "intent": "PRODUCT_SEARCH",
+      "status": "RESOLVED",
+      "edits": [],
+      "family": "literal-product-argument",
+      "protected": [
+        "broadway tea"
+      ]
+    }
+  ]
+}

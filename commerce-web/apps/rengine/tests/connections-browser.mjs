@@ -1,0 +1,41 @@
+import {chromium} from '@playwright/test';
+import {mkdtempSync,writeFileSync,rmSync} from 'node:fs';
+import {tmpdir} from 'node:os';
+import {randomBytes} from 'node:crypto';
+import {once} from 'node:events';
+import assert from 'node:assert/strict';
+import {configuration} from '../config.mjs';
+import {createApp} from '../server.mjs';
+const dir=mkdtempSync(tmpdir()+'/rengine-settings-ui-');writeFileSync(dir+'/key',randomBytes(32));
+const config=configuration({RENGINE_VAULT_FILE:dir+'/data',RENGINE_VAULT_KEY_FILE:dir+'/key',RENGINE_OWNER_EMAIL:'owner@test.local'});
+const calls=[];
+const server=createApp(config,async(url,options)=>{
+ const path=new URL(url).pathname,store=Object.values(config.stores).find(s=>url.startsWith(s.gateway+'/'))?.name;
+ calls.push({store,path});
+ if(path.endsWith('/auth/login'))return new Response(JSON.stringify({permissions:['*']}),{headers:{'set-cookie':'admin_session=fixture'}});
+ if(path==='/v1/admin/me')return Response.json({permissions:['*']});
+ if(path==='/v1/admin/assistant/tracking/settings')return Response.json({enabled:true,editable:true});
+ if(path==='/v1/admin/assistant/tracking')return Response.json({items:[{request_id:'10000000-0000-4000-8000-000000000001',created_at:'2026-10-10T12:00:00Z',question_preview:store+' shopper',report_available:true,outcome:'completed'}],next_cursor:null,capture_enabled:true,retention_days:7});
+ if(path.startsWith('/v1/admin/assistant/tracking/'))return Response.json({events:[{stage:'customer_request',data:{message:store+' shopper'}}]});
+ return Response.json({status:'ok'});
+});
+server.listen(0,'127.0.0.1');await once(server,'listening');config.origin=`http://127.0.0.1:${server.address().port}`;
+let browser=await chromium.launchPersistentContext(dir+'/browser',{headless:true,viewport:{width:1512,height:1000}});
+try{
+ let page=await browser.newPage();const errors=[];page.on('pageerror',e=>errors.push(e.message));
+ await page.goto(`http://127.0.0.1:${server.address().port}`);await page.locator('#login-dialog').waitFor({state:'visible'});assert.equal(await page.locator('#login-demo').isVisible(),false);await page.locator('#email').fill('owner@test.local');await page.locator('#password').fill('secret');await page.locator('#login-submit').click();await page.locator('#login-dialog').waitFor({state:'hidden'});
+ await page.locator('[data-tab=settings]').click();await page.locator('.connection-card').first().waitFor();assert.equal(await page.locator('.connection-card').count(),4);
+ let jewelry=page.locator('.connection-card').filter({has:page.getByRole('heading',{name:'Jewelry',exact:true})});
+ await jewelry.getByLabel('Administrator email').fill('jewelry@test.local');await jewelry.getByLabel('Password',{exact:true}).fill('saved-secret');await jewelry.getByRole('button',{name:'Verify & save'}).click();await jewelry.getByText('Connected · account saved',{exact:true}).waitFor();assert.equal(await jewelry.locator('input[type=password]').inputValue(),'');
+ assert.match(await page.locator('#connection-count').innerText(),/2 of 4/);await page.locator('#logout').click();await page.locator('#password').fill('secret');await page.locator('#login-submit').click();await page.locator('#login-dialog').waitFor({state:'hidden'});await jewelry.getByText('Connected · account saved',{exact:true}).waitFor();assert.match(await page.locator('#connection-count').innerText(),/2 of 4/);
+ const cookies=await browser.cookies();assert.ok(cookies.find(cookie=>cookie.name==='rengine').expires>Date.now()/1000+29*86400);
+ await browser.close();browser=await chromium.launchPersistentContext(dir+'/browser',{headless:true,viewport:{width:1512,height:1000}});page=await browser.newPage();page.on('pageerror',e=>errors.push(e.message));await page.goto(config.origin);await page.locator('#connection-count').filter({hasText:'2 of 4'}).waitFor();assert.equal(await page.locator('#login-dialog').isVisible(),false);jewelry=page.locator('.connection-card').filter({has:page.getByRole('heading',{name:'Jewelry',exact:true})});
+ await page.reload();await page.locator('#connection-count').filter({hasText:'2 of 4'}).waitFor();await page.locator('[data-tab=settings]').click();await jewelry.getByText('Connected · account saved',{exact:true}).waitFor();
+ await page.screenshot({path:'/tmp/rengine-connections-desktop.png',fullPage:true});await page.setViewportSize({width:390,height:844});assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth),false);await page.screenshot({path:'/tmp/rengine-connections-mobile.png',fullPage:true});await page.setViewportSize({width:1512,height:1000});
+ await page.locator('[data-tab=traces]').click();await page.locator('.trace-link').nth(1).waitFor();assert.equal(await page.locator('.trace-link').count(),2);
+ await page.locator('#trace-rows tr').filter({hasText:'jewelry shopper'}).getByRole('button',{name:/View details/}).click();await page.locator('#trace-flow .journey-node').first().waitFor();assert.match(page.url(),/store=jewelry/);assert.equal(calls.filter(c=>c.path.endsWith('/10000000-0000-4000-8000-000000000001')).at(-1).store,'jewelry');
+ await page.locator('#trace-close').click();await page.locator('#trace-history').waitFor();await page.locator('#trace-demo').selectOption('jewelry');await page.waitForFunction(()=>document.querySelectorAll('.trace-link').length===1);assert.match(await page.locator('#trace-rows').innerText(),/jewelry shopper/);
+ await page.locator('[data-tab=settings]').click();await jewelry.getByRole('button',{name:'Remove saved account'}).click();await jewelry.getByText('Not configured',{exact:true}).waitFor();assert.match(await page.locator('#connection-count').innerText(),/1 of 4/);
+ await page.locator('#logout').click();await page.locator('#connection-count').filter({hasText:'No demos'}).waitFor();assert.equal(await page.locator('.connection-card').count(),0);assert.deepEqual(errors,[]);
+ console.log('Settings browser checks passed: encrypted account save, reload, all-demo history, demo-specific details, filter, removal, logout and responsive layout.');
+}finally{await browser.close();server.closeAllConnections();await new Promise(r=>server.close(r));rmSync(dir,{recursive:true,force:true});}

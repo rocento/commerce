@@ -1,0 +1,223 @@
+{
+  "version": "1.0.0",
+  "language": "en",
+  "judgment_source": "explicit synthetic engineering relevance judgments; merchant review pending",
+  "semantic_enabled": false,
+  "products": [
+    {
+      "key": "coffee",
+      "store": "grocery",
+      "name": "Dark roast coffee 500 g",
+      "price": "12",
+      "unit": "pack",
+      "synonyms": [
+        "morning brew",
+        "espresso supplies"
+      ]
+    },
+    {
+      "key": "tea",
+      "store": "grocery",
+      "name": "Caffeine free chamomile tea 20 bags",
+      "price": "8",
+      "unit": "pack",
+      "synonyms": [
+        "bedtime drink"
+      ]
+    },
+    {
+      "key": "milk",
+      "store": "grocery",
+      "name": "Unsweetened oat milk 1 L",
+      "price": "5",
+      "unit": "pack",
+      "synonyms": [
+        "plant based drink"
+      ]
+    },
+    {
+      "key": "rare",
+      "store": "grocery",
+      "name": "Saffron threads premium 1 g",
+      "price": "18",
+      "unit": "pack",
+      "synonyms": [
+        "paella spice"
+      ]
+    },
+    {
+      "key": "ring",
+      "store": "jewelry",
+      "name": "18K gold solitaire ring size 6",
+      "price": "400",
+      "unit": "each",
+      "synonyms": [
+        "engagement present"
+      ]
+    },
+    {
+      "key": "silver",
+      "store": "jewelry",
+      "name": "Sterling silver nickel free earrings",
+      "price": "45",
+      "unit": "each",
+      "synonyms": [
+        "sensitive ear gift"
+      ]
+    },
+    {
+      "key": "chain",
+      "store": "jewelry",
+      "name": "Sterling silver chain 2 mm",
+      "price": "60",
+      "unit": "each",
+      "synonyms": [
+        "pendant support"
+      ]
+    },
+    {
+      "key": "pendant",
+      "store": "jewelry",
+      "name": "Moon pendant compatible with 2 mm chain",
+      "price": "35",
+      "unit": "each",
+      "synonyms": [
+        "lunar ornament"
+      ]
+    }
+  ],
+  "cases": [
+    {
+      "id": "g-lexical",
+      "store": "grocery",
+      "query": "coffee",
+      "max_price": "20",
+      "grades": {
+        "coffee": 3
+      }
+    },
+    {
+      "id": "g-synonym",
+      "store": "grocery",
+      "query": "morning brew",
+      "max_price": "20",
+      "grades": {
+        "coffee": 3
+      }
+    },
+    {
+      "id": "g-long-tail",
+      "store": "grocery",
+      "query": "bedtime drink",
+      "max_price": "10",
+      "grades": {
+        "tea": 3
+      }
+    },
+    {
+      "id": "g-unit",
+      "store": "grocery",
+      "query": "oat milk 1 L",
+      "max_price": "5",
+      "grades": {
+        "milk": 3
+      }
+    },
+    {
+      "id": "g-spelling",
+      "store": "grocery",
+      "query": "chamomille tea",
+      "max_price": "10",
+      "grades": {
+        "tea": 3
+      }
+    },
+    {
+      "id": "g-rare",
+      "store": "grocery",
+      "query": "saffron",
+      "max_price": "18",
+      "grades": {
+        "rare": 3
+      }
+    },
+    {
+      "id": "g-price-boundary",
+      "store": "grocery",
+      "query": "coffee",
+      "max_price": "11.99",
+      "grades": {}
+    },
+    {
+      "id": "j-lexical",
+      "store": "jewelry",
+      "query": "gold ring",
+      "max_price": "400",
+      "grades": {
+        "ring": 3
+      }
+    },
+    {
+      "id": "j-synonym",
+      "store": "jewelry",
+      "query": "engagement present",
+      "max_price": "400",
+      "grades": {
+        "ring": 3
+      }
+    },
+    {
+      "id": "j-description",
+      "store": "jewelry",
+      "query": "sensitive ear gift",
+      "max_price": "50",
+      "grades": {
+        "silver": 3
+      }
+    },
+    {
+      "id": "j-exclusion-text",
+      "store": "jewelry",
+      "query": "nickel free earrings",
+      "max_price": "45",
+      "grades": {
+        "silver": 3
+      }
+    },
+    {
+      "id": "j-compatible-description",
+      "store": "jewelry",
+      "query": "pendant 2 mm chain",
+      "max_price": "40",
+      "grades": {
+        "pendant": 3
+      }
+    },
+    {
+      "id": "j-unit",
+      "store": "jewelry",
+      "query": "chain 2 mm",
+      "max_price": "60",
+      "grades": {
+        "chain": 3,
+        "pendant": 1
+      }
+    },
+    {
+      "id": "j-spelling",
+      "store": "jewelry",
+      "query": "solitair ring",
+      "max_price": "400",
+      "grades": {
+        "ring": 3
+      }
+    },
+    {
+      "id": "j-price-boundary",
+      "store": "jewelry",
+      "query": "gold ring",
+      "max_price": "399.99",
+      "grades": {}
+    }
+  ]
+}

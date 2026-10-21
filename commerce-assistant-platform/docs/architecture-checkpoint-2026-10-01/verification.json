@@ -1,0 +1,49 @@
+{
+  "date": "2026-10-01",
+  "scope": "Local architecture audit; no production behavior changes or deployment",
+  "python_suite": {
+    "passed": 3433,
+    "failed": 3,
+    "skipped": 10,
+    "warnings": 32,
+    "seconds": 157.06,
+    "command": ".venv/bin/python -m pytest -q --tb=short --disable-warnings",
+    "raw_log_retained": false
+  },
+  "node_suite": {
+    "passed": 377,
+    "failed": 16,
+    "tests": 393,
+    "command": "node --test tests/*.test.ts",
+    "functional_assertion_failures": 15,
+    "sandbox_bind_failures": 1
+  },
+  "http_recheck_outside_sandbox": {
+    "passed": 1,
+    "failed": 0
+  },
+  "architecture_tests": {
+    "passed": 45
+  },
+  "preflight_tests": {
+    "passed": 4
+  },
+  "factory_budget_probe": {
+    "passed": 2
+  },
+  "mypy": "8 sources passed",
+  "ruff": "adapters and bootstrap passed",
+  "architecture_checker": "passed",
+  "preflight": "passed; mounted proxies not_checked",
+  "capability_generation_check": "passed: 181 baseline, 9 examples",
+  "import_audit": {
+    "modules": 205,
+    "eager_scc_candidates": 0,
+    "deferred_scc_candidates": 1
+  },
+  "limitations": [
+    "Shared checkout changed concurrently; results are checkpoint observations, not an immutable release certification.",
+    "No browser, Rust, PostgreSQL integration, deployment or live-provider validation.",
+    "Static import analysis excludes dynamic imports, reexports and implicit parent initialization."
+  ]
+}

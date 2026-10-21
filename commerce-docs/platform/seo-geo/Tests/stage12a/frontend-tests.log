@@ -1,0 +1,34 @@
+
+ RUN  v3.2.7 /private/tmp/rocento-stage12a-candidate/frontend
+
+ ✓ packages/api-client/src/commerce-core.test.ts (384 tests) 15ms
+ ✓ apps/admin/src/effective-indexing-status.test.tsx (6 tests) 8ms
+ ✓ apps/storefront/src/cart-quantity.test.ts (9 tests) 62ms
+ ✓ apps/admin/src/category-tree.test.ts (5 tests) 10ms
+ ✓ apps/storefront/src/assistant-markdown.test.tsx (13 tests) 31ms
+ ✓ packages/api-client/src/themes.test.ts (10 tests) 9ms
+ ✓ packages/api-client/src/assistant.test.ts (19 tests) 19ms
+ ✓ packages/api-client/src/demo-presets.test.ts (7 tests) 18ms
+ ✓ apps/storefront/src/delivery-geography.test.ts (2 tests) 652ms
+   ✓ Egypt delivery directory > has all 27 governorates, valid coordinates, unique places, and nonempty dependent city lists  650ms
+ ✓ apps/admin/src/delivery-geometry.test.ts (4 tests) 2ms
+ ✓ apps/admin/src/permission-model.test.ts (5 tests) 3ms
+ ✓ apps/storefront/src/discovery-attribution.test.ts (3 tests) 3ms
+ ✓ apps/admin/src/order-geo-logic.test.ts (3 tests) 7ms
+ ✓ apps/storefront/src/checkout-logic.test.ts (4 tests) 16ms
+ ✓ apps/storefront/src/theme-grid.test.ts (3 tests) 5ms
+ ✓ apps/storefront/src/theme-preview.test.ts (5 tests) 10ms
+ ✓ apps/storefront/src/assistant-state.test.ts (5 tests) 5ms
+ ✓ apps/storefront/src/locations-logic.test.ts (5 tests) 5ms
+ ✓ apps/admin/src/merchant-assistant.test.tsx (1 test) 28ms
+ ✓ packages/api-client/src/index.test.ts (3 tests) 4ms
+ ✓ apps/storefront/src/support-logic.test.ts (6 tests) 6ms
+ ✓ apps/admin/src/merchant-questions.test.ts (2 tests) 8ms
+ ✓ packages/api-client/src/merchant.test.ts (2 tests) 4ms
+ ✓ apps/admin/src/msi-logic.test.ts (5 tests) 2ms
+ ✓ apps/storefront/src/assistant-rich.test.tsx (5 tests) 10ms
+
+ Test Files  25 passed (25)
+      Tests  516 passed (516)
+   Start at  10:28:26
+   Duration  2.26s (transform 3.12s, setup 0ms, collect 11.14s, tests 939ms, environment 2ms, prepare 2.56s)

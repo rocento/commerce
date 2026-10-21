@@ -1,0 +1,60 @@
+/* Shared header controls, isolated from editor form/fieldset styling. */
+.admin-page-heading-actions .market-editor-actions {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: flex-start;
+  gap: 16px;
+  max-width: 100%;
+}
+.admin-page-heading-actions .market-editor-actions > fieldset {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  min-width: 0;
+  flex: 0 1 270px;
+}
+.admin-page-heading-actions :is(.editor-market-scope, .editor-language-scope) {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 270px;
+  min-width: 0;
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: transparent;
+}
+.admin-page-heading-actions :is(.editor-market-scope, .editor-language-scope label) {
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 18px;
+  gap: 8px;
+}
+.admin-page-heading-actions :is(.editor-market-scope, .editor-language-scope) select {
+  box-sizing: border-box;
+  width: 100%;
+  height: 46px;
+  min-height: 46px;
+  margin: 0;
+  font-size: 13px;
+  font-weight: 400;
+}
+.admin-page-heading-actions :is(.editor-market-scope, .editor-language-scope) small {
+  max-width: none;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.5;
+  color: var(--muted, #6f6f69);
+}
+@media (max-width: 700px) {
+  .admin-page-heading-actions .market-editor-actions { flex-wrap: wrap; }
+  .admin-page-heading-actions .market-editor-actions,
+  .admin-page-heading-actions .market-editor-actions > fieldset,
+  .admin-page-heading-actions :is(.editor-market-scope, .editor-language-scope) {
+    width: 100%;
+  }
+  .admin-page-heading-actions .market-editor-actions > fieldset { flex-basis: 100%; }
+}

@@ -1,0 +1,1531 @@
+{
+  "id": "pharmacy",
+  "name": "NOIR ROSÉ · Pharmacy & Skincare Demo",
+  "channel": "storefront",
+  "categories": [
+    {
+      "slug": "skincare",
+      "name": "Skincare",
+      "thumbnail": "pharmacy/brands/estee-lauder-advanced-night-repair-synchronized-multi-recovery-complex.jpg"
+    },
+    {
+      "slug": "cleansers",
+      "name": "Cleansers",
+      "thumbnail": "pharmacy/brands/clinique-moisture-surgetm-exfoliating-glow-cleanser.png"
+    },
+    {
+      "slug": "face-body",
+      "name": "Face & Body",
+      "thumbnail": "pharmacy/brands/clarins-lip-comfort-oil.jpg"
+    },
+    {
+      "slug": "pharmacy-essentials",
+      "name": "Pharmacy Essentials",
+      "thumbnail": "pharmacy/brands/la-roche-posay-hyalu-b5-pure-hyaluronic-acid-serum.webp"
+    },
+    {
+      "slug": "serums",
+      "name": "Serums",
+      "thumbnail": "pharmacy/brands/skinceuticals-hydrating-b5-gel.webp"
+    },
+    {
+      "slug": "moisturizers",
+      "name": "Moisturizers",
+      "thumbnail": "pharmacy/brands/estee-lauder-revitalizing-supreme-night-power-bounce-creme.jpg"
+    },
+    {
+      "slug": "eye-lip-care",
+      "name": "Eye & Lip Care",
+      "thumbnail": "pharmacy/brands/clarins-lip-comfort-oil.jpg"
+    },
+    {
+      "slug": "hand-care",
+      "name": "Hand Care",
+      "thumbnail": "pharmacy/brands/clarins-hand-and-nail-treatment-cream.jpg"
+    }
+  ],
+  "products": [
+    {
+      "sku": "DEMO-PHR-BRAND-001",
+      "slug": "estee-lauder-advanced-night-repair-synchronized-multi-recovery-complex",
+      "name": "Estée Lauder Advanced Night Repair Synchronized Multi-Recovery Complex",
+      "category": "skincare",
+      "price": "85.00",
+      "unit": "each",
+      "description": "A facial serum from the Advanced Night Repair collection. Demo listing with an illustrative USD price; not a live stock or retail offer.",
+      "images": [
+        "pharmacy/brands/estee-lauder-advanced-night-repair-synchronized-multi-recovery-complex.jpg"
+      ],
+      "attributes": {
+        "brand": "Estée Lauder",
+        "product-kind": "Serum",
+        "care-area": "Face",
+        "texture": "Serum",
+        "collection": "Advanced Night Repair"
+      },
+      "stock": 60
+    },
+    {
+      "sku": "DEMO-PHR-BRAND-002",
+      "slug": "skinceuticals-hydrating-b5-gel",
+      "name": "SkinCeuticals Hydrating B5 Gel",
+      "category": "serums",
+      "price": "95.00",
+      "unit": "each",
+      "description": "A hydrating facial serum with vitamin B5 and hyaluronic acid. Demo listing with an illustrative USD price; not a live stock or retail offer.",
+      "images": [
+        "pharmacy/brands/skinceuticals-hydrating-b5-gel.webp"
+      ],
+      "attributes": {
+        "brand": "SkinCeuticals",
+        "product-kind": "Serum",
+        "care-area": "Face",
+        "texture": "Gel",
+        "collection": "Hydrating B5"
+      },
+      "stock": 60,
+      "previous_category": "skincare"
+    },
+    {
+      "sku": "DEMO-PHR-BRAND-003",
+      "slug": "clarins-double-serum",
+      "name": "Clarins Double Serum",
+      "category": "serums",
+      "price": "96.00",
+      "unit": "each",
+      "description": "A dual-phase facial serum in Clarins’ signature collection. Demo listing with an illustrative USD price; not a live stock or retail offer.",
+      "images": [
+        "pharmacy/brands/clarins-double-serum.jpg"
+      ],
+      "attributes": {
+        "brand": "Clarins",
+        "product-kind": "Serum",
+        "care-area": "Face",
+        "texture": "Serum",
+        "collection": "Double Serum"
+      },
+      "stock": 60,
+      "previous_category": "skincare"
+    },
+    {
+      "sku": "DEMO-PHR-BRAND-004",
+      "slug": "clinique-moisture-surgetm-exfoliating-glow-cleanser",
+      "name": "Clinique Moisture Surge™ Exfoliating Glow Cleanser",
+      "category": "cleansers",
+      "price": "32.00",
+      "unit": "each",
+      "description": "An exfoliating facial cleanser from the Moisture Surge collection. Demo listing with an illustrative USD price; not a live stock or retail offer.",
+      "images": [
+        "pharmacy/brands/clinique-moisture-surgetm-exfoliating-glow-cleanser.png"
+      ],
+      "attributes": {
+        "brand": "Clinique",
+        "product-kind": "Cleanser",
+        "care-area": "Face",
+        "texture": "Cleanser",
+        "collection": "Moisture Surge"
+      },
+      "stock": 60
+    },
+    {
+      "sku": "DEMO-PHR-BRAND-005",
+      "slug": "la-roche-posay-hyalu-b5-pure-hyaluronic-acid-serum",
+      "name": "La Roche-Posay Hyalu B5 Pure Hyaluronic Acid Serum",
+      "category": "pharmacy-essentials",
+      "price": "53.99",
+      "unit": "each",
+      "description": "A hyaluronic acid facial serum from the Hyalu B5 collection. Demo listing with an illustrative USD price; not a live stock or retail offer.",
+      "images": [
+        "pharmacy/brands/la-roche-posay-hyalu-b5-pure-hyaluronic-acid-serum.webp"
+      ],
+      "attributes": {
+        "brand": "La Roche-Posay",
+        "product-kind": "Serum",
+        "care-area": "Face",
+        "texture": "Serum",
+        "collection": "Hyalu B5"
+      },
+      "stock": 60
+    },
+    {
+      "sku": "DEMO-PHR-BRAND-006",
+      "slug": "estee-lauder-advanced-night-repair-recovery-treatment-essence",
+      "name": "Estée Lauder Advanced Night Repair Recovery Treatment Essence",
+      "category": "skincare",
+      "price": "85.00",
+      "unit": "each",
+      "description": "A treatment essence for a layered skincare ritual. Demo listing with an illustrative USD price; not a live stock or retail offer.",
+      "images": [
+        "pharmacy/brands/estee-lauder-advanced-night-repair-recovery-treatment-essence.jpg"
+      ],
+      "attributes": {
+        "brand": "Estée Lauder",
+        "product-kind": "Essence",
+        "care-area": "Face",
+        "texture": "Essence",
+        "collection": "Advanced Night Repair"
+      },
+      "stock": 60
+    },
+    {
+      "sku": "DEMO-PHR-BRAND-007",
+      "slug": "skinceuticals-gentle-cleanser",
+      "name": "SkinCeuticals Gentle Cleanser",
+      "category": "cleansers",
+      "price": "39.00",
+      "unit": "each",
+      "description": "A cream cleanser for a simple daily cleansing ritual. Demo listing with an illustrative USD price; not a live stock or retail offer.",
+      "images": [
+        "pharmacy/brands/skinceuticals-gentle-cleanser.webp"
+      ],
+      "attributes": {
+        "brand": "SkinCeuticals",
+        "product-kind": "Cleanser",
+        "care-area": "Face",
+        "texture": "Cleanser",
+        "collection": "Gentle Cleanser"
+      },
+      "stock": 60
+    },
+    {
+      "sku": "DEMO-PHR-BRAND-008",
+      "slug": "clarins-lip-comfort-oil",
+      "name": "Clarins Lip Comfort Oil",
+      "category": "eye-lip-care",
+      "price": "32.00",
+      "unit": "each",
+      "description": "A glossy lip oil with a cushioned finish. Demo listing with an illustrative USD price; not a live stock or retail offer.",
+      "images": [
+        "pharmacy/brands/clarins-lip-comfort-oil.jpg"
+      ],
+      "attributes": {
+        "brand": "Clarins",
+        "product-kind": "Lip care",
+        "care-area": "Lips",
+        "texture": "Oil",
+        "collection": "Lip Comfort"
+      },
+      "stock": 60,
+      "previous_category": "face-body"
+    },
+    {
+      "sku": "DEMO-PHR-BRAND-009",
+      "slug": "clinique-all-about-eyes-eye-cream",
+      "name": "Clinique All About Eyes™ Eye Cream",
+      "category": "eye-lip-care",
+      "price": "42.00",
+      "unit": "each",
+      "description": "An eye cream in the All About Eyes collection. Demo listing with an illustrative USD price; not a live stock or retail offer.",
+      "images": [
+        "pharmacy/brands/clinique-all-about-eyes-eye-cream.png"
+      ],
+      "attributes": {
+        "brand": "Clinique",
+        "product-kind": "Eye cream",
+        "care-area": "Eyes",
+        "texture": "Cream",
+        "collection": "All About Eyes"
+      },
+      "stock": 60,
+      "previous_category": "face-body"
+    },
+    {
+      "sku": "DEMO-PHR-BRAND-010",
+      "slug": "la-roche-posay-cicaplast-balm-b5",
+      "name": "La Roche-Posay Cicaplast Balm B5+",
+      "category": "pharmacy-essentials",
+      "price": "32.99",
+      "unit": "each",
+      "description": "A multipurpose balm from the Cicaplast care collection. Demo listing with an illustrative USD price; not a live stock or retail offer.",
+      "images": [
+        "pharmacy/brands/la-roche-posay-cicaplast-balm-b5.webp"
+      ],
+      "attributes": {
+        "brand": "La Roche-Posay",
+        "product-kind": "Balm",
+        "care-area": "Face & body",
+        "texture": "Balm",
+        "collection": "Cicaplast"
+      },
+      "stock": 60
+    },
+    {
+      "sku": "DEMO-PHR-BRAND-011",
+      "slug": "estee-lauder-revitalizing-supreme-night-power-bounce-creme",
+      "name": "Estée Lauder Revitalizing Supreme+ Night Power Bounce Creme",
+      "category": "moisturizers",
+      "price": "115.00",
+      "unit": "each",
+      "description": "A night cream from the Revitalizing Supreme+ collection. Demo listing with an illustrative USD price; not a live stock or retail offer.",
+      "images": [
+        "pharmacy/brands/estee-lauder-revitalizing-supreme-night-power-bounce-creme.jpg"
+      ],
+      "attributes": {
+        "brand": "Estée Lauder",
+        "product-kind": "Night cream",
+        "care-area": "Face",
+        "texture": "Cream",
+        "collection": "Revitalizing Supreme+"
+      },
+      "stock": 60,
+      "previous_category": "face-body"
+    },
+    {
+      "sku": "DEMO-PHR-BRAND-012",
+      "slug": "skinceuticals-resveratrol-b-e",
+      "name": "SkinCeuticals Resveratrol B E",
+      "category": "skincare",
+      "price": "175.00",
+      "unit": "each",
+      "description": "A nighttime antioxidant serum in a sleek pump bottle. Demo listing with an illustrative USD price; not a live stock or retail offer.",
+      "images": [
+        "pharmacy/brands/skinceuticals-resveratrol-b-e.webp"
+      ],
+      "attributes": {
+        "brand": "SkinCeuticals",
+        "product-kind": "Serum",
+        "care-area": "Face",
+        "texture": "Serum",
+        "collection": "Resveratrol B E"
+      },
+      "stock": 60
+    },
+    {
+      "sku": "DEMO-PHR-BRAND-013",
+      "slug": "clarins-hand-and-nail-treatment-cream",
+      "name": "Clarins Hand and Nail Treatment Cream",
+      "category": "hand-care",
+      "price": "32.00",
+      "unit": "each",
+      "description": "A hand cream for an everyday care ritual. Demo listing with an illustrative USD price; not a live stock or retail offer.",
+      "images": [
+        "pharmacy/brands/clarins-hand-and-nail-treatment-cream.jpg"
+      ],
+      "attributes": {
+        "brand": "Clarins",
+        "product-kind": "Hand cream",
+        "care-area": "Hands & nails",
+        "texture": "Cream",
+        "collection": "Hand and Nail Treatment"
+      },
+      "stock": 60,
+      "previous_category": "face-body"
+    },
+    {
+      "sku": "DEMO-PHR-BRAND-014",
+      "slug": "clinique-take-the-day-offtm-cleansing-balm",
+      "name": "Clinique Take The Day Off™ Cleansing Balm",
+      "category": "cleansers",
+      "price": "44.00",
+      "unit": "each",
+      "description": "A cleansing balm for your evening makeup-removal ritual. Demo listing with an illustrative USD price; not a live stock or retail offer.",
+      "images": [
+        "pharmacy/brands/clinique-take-the-day-offtm-cleansing-balm.png"
+      ],
+      "attributes": {
+        "brand": "Clinique",
+        "product-kind": "Cleansing balm",
+        "care-area": "Face",
+        "texture": "Balm",
+        "collection": "Take The Day Off"
+      },
+      "stock": 60
+    },
+    {
+      "sku": "DEMO-PHR-BRAND-015",
+      "slug": "la-roche-posay-toleriane-hydrating-gentle-facial-cleanser",
+      "name": "La Roche-Posay Toleriane Hydrating Gentle Facial Cleanser",
+      "category": "pharmacy-essentials",
+      "price": "19.99",
+      "unit": "each",
+      "description": "A facial cleanser from the Toleriane collection. Demo listing with an illustrative USD price; not a live stock or retail offer.",
+      "images": [
+        "pharmacy/brands/la-roche-posay-toleriane-hydrating-gentle-facial-cleanser.webp"
+      ],
+      "attributes": {
+        "brand": "La Roche-Posay",
+        "product-kind": "Cleanser",
+        "care-area": "Face",
+        "texture": "Cleanser",
+        "collection": "Toleriane"
+      },
+      "stock": 60
+    },
+    {
+      "sku": "DEMO-PHR-BRAND-016",
+      "slug": "estee-lauder-advanced-night-cleansing-balm",
+      "name": "Estée Lauder Advanced Night Cleansing Balm",
+      "category": "cleansers",
+      "price": "49.00",
+      "unit": "each",
+      "description": "A balm cleanser with an oil-infused texture. Demo listing with an illustrative USD price; not a live stock or retail offer.",
+      "images": [
+        "pharmacy/brands/estee-lauder-advanced-night-cleansing-balm.jpg"
+      ],
+      "attributes": {
+        "brand": "Estée Lauder",
+        "product-kind": "Cleansing balm",
+        "care-area": "Face",
+        "texture": "Balm",
+        "collection": "Advanced Night"
+      },
+      "stock": 60
+    },
+    {
+      "sku": "DEMO-PHR-BRAND-017",
+      "slug": "skinceuticals-phyto-corrective-gel",
+      "name": "SkinCeuticals Phyto Corrective Gel",
+      "category": "skincare",
+      "price": "85.00",
+      "unit": "each",
+      "description": "A hydrating botanical gel serum. Demo listing with an illustrative USD price; not a live stock or retail offer.",
+      "images": [
+        "pharmacy/brands/skinceuticals-phyto-corrective-gel.webp"
+      ],
+      "attributes": {
+        "brand": "SkinCeuticals",
+        "product-kind": "Serum",
+        "care-area": "Face",
+        "texture": "Gel",
+        "collection": "Phyto Corrective"
+      },
+      "stock": 60
+    },
+    {
+      "sku": "DEMO-PHR-BRAND-018",
+      "slug": "clarins-beauty-flash-balm",
+      "name": "Clarins Beauty Flash Balm",
+      "category": "face-body",
+      "price": "54.00",
+      "unit": "each",
+      "description": "A face balm for a luminous finishing touch. Demo listing with an illustrative USD price; not a live stock or retail offer.",
+      "images": [
+        "pharmacy/brands/clarins-beauty-flash-balm.jpg"
+      ],
+      "attributes": {
+        "brand": "Clarins",
+        "product-kind": "Balm",
+        "care-area": "Face",
+        "texture": "Balm",
+        "collection": "Beauty Flash"
+      },
+      "stock": 60
+    },
+    {
+      "sku": "DEMO-PHR-BRAND-019",
+      "slug": "clinique-moisture-surgetm-face-spray-thirsty-skin-relief",
+      "name": "Clinique Moisture Surge™ Face Spray Thirsty Skin Relief",
+      "category": "face-body",
+      "price": "36.00",
+      "unit": "each",
+      "description": "A facial mist from the Moisture Surge collection. Demo listing with an illustrative USD price; not a live stock or retail offer.",
+      "images": [
+        "pharmacy/brands/clinique-moisture-surgetm-face-spray-thirsty-skin-relief.png"
+      ],
+      "attributes": {
+        "brand": "Clinique",
+        "product-kind": "Face mist",
+        "care-area": "Face",
+        "texture": "Mist",
+        "collection": "Moisture Surge"
+      },
+      "stock": 60
+    },
+    {
+      "sku": "DEMO-PHR-BRAND-020",
+      "slug": "la-roche-posay-toleriane-double-repair-face-moisturizer-uv-spf-30",
+      "name": "La Roche-Posay Toleriane Double Repair Face Moisturizer UV SPF 30",
+      "category": "moisturizers",
+      "price": "25.99",
+      "unit": "each",
+      "description": "A daily facial moisturizer with SPF 30. Follow the product label for sunscreen directions. Demo listing with an illustrative USD price; not a live stock or retail offer.",
+      "images": [
+        "pharmacy/brands/la-roche-posay-toleriane-double-repair-face-moisturizer-uv-spf-30.webp"
+      ],
+      "attributes": {
+        "brand": "La Roche-Posay",
+        "product-kind": "Moisturizer",
+        "care-area": "Face",
+        "texture": "Cream",
+        "collection": "Toleriane"
+      },
+      "stock": 60,
+      "previous_category": "pharmacy-essentials"
+    },
+    {
+      "sku": "DEMO-PHR-BRAND-021",
+      "slug": "clinique-clarifying-lotion-1",
+      "name": "Clinique Clarifying Lotion 1",
+      "category": "skincare",
+      "price": "24.00",
+      "unit": "each",
+      "description": "Clarifying Lotion 1 from the Clinique Clarifying Lotion collection. Demo listing with an illustrative USD price; not a live stock or retail offer.",
+      "images": [
+        "pharmacy/brands/clinique-clarifying-lotion-1.png"
+      ],
+      "attributes": {
+        "brand": "Clinique",
+        "product-kind": "Essence",
+        "care-area": "Face",
+        "texture": "Essence",
+        "collection": "Clarifying Lotion"
+      },
+      "stock": 60
+    },
+    {
+      "sku": "DEMO-PHR-BRAND-022",
+      "slug": "estee-lauder-nutritious-radiant-essence-lotion",
+      "name": "Estée Lauder Nutritious Radiant Essence Lotion",
+      "category": "skincare",
+      "price": "48.00",
+      "unit": "each",
+      "description": "Nutritious Radiant Essence Lotion from the Estée Lauder Nutritious collection. Demo listing with an illustrative USD price; not a live stock or retail offer.",
+      "images": [
+        "pharmacy/brands/estee-lauder-nutritious-radiant-essence-lotion.jpg"
+      ],
+      "attributes": {
+        "brand": "Estée Lauder",
+        "product-kind": "Essence",
+        "care-area": "Face",
+        "texture": "Essence",
+        "collection": "Nutritious"
+      },
+      "stock": 60
+    },
+    {
+      "sku": "DEMO-PHR-BRAND-023",
+      "slug": "estee-lauder-re-nutriv-softening-lotion",
+      "name": "Estée Lauder Re-Nutriv Softening Lotion",
+      "category": "skincare",
+      "price": "75.00",
+      "unit": "each",
+      "description": "Re-Nutriv Softening Lotion from the Estée Lauder Re-Nutriv collection. Demo listing with an illustrative USD price; not a live stock or retail offer.",
+      "images": [
+        "pharmacy/brands/estee-lauder-re-nutriv-softening-lotion.jpg"
+      ],
+      "attributes": {
+        "brand": "Estée Lauder",
+        "product-kind": "Essence",
+        "care-area": "Face",
+        "texture": "Essence",
+        "collection": "Re-Nutriv"
+      },
+      "stock": 60
+    },
+    {
+      "sku": "DEMO-PHR-BRAND-024",
+      "slug": "clinique-all-about-clean-liquid-facial-soap",
+      "name": "Clinique All About Clean Liquid Facial Soap",
+      "category": "cleansers",
+      "price": "25.00",
+      "unit": "each",
+      "description": "All About Clean Liquid Facial Soap from the Clinique All About Clean collection. Demo listing with an illustrative USD price; not a live stock or retail offer.",
+      "images": [
+        "pharmacy/brands/clinique-all-about-clean-liquid-facial-soap.png"
+      ],
+      "attributes": {
+        "brand": "Clinique",
+        "product-kind": "Cleanser",
+        "care-area": "Face",
+        "texture": "Cleanser",
+        "collection": "All About Clean"
+      },
+      "stock": 60
+    },
+    {
+      "sku": "DEMO-PHR-BRAND-025",
+      "slug": "estee-lauder-daywear-glow-boost-gel-cleanser",
+      "name": "Estée Lauder DayWear Glow Boost Gel Cleanser",
+      "category": "cleansers",
+      "price": "32.00",
+      "unit": "each",
+      "description": "DayWear Glow Boost Gel Cleanser from the Estée Lauder DayWear collection. Demo listing with an illustrative USD price; not a live stock or retail offer.",
+      "images": [
+        "pharmacy/brands/estee-lauder-daywear-glow-boost-gel-cleanser.jpg"
+      ],
+      "attributes": {
+        "brand": "Estée Lauder",
+        "product-kind": "Cleanser",
+        "care-area": "Face",
+        "texture": "Gel",
+        "collection": "DayWear"
+      },
+      "stock": 60
+    },
+    {
+      "sku": "DEMO-PHR-BRAND-026",
+      "slug": "estee-lauder-nutritious-2-in-1-foam-cleanser",
+      "name": "Estée Lauder Nutritious 2-in-1 Foam Cleanser",
+      "category": "cleansers",
+      "price": "32.00",
+      "unit": "each",
+      "description": "Nutritious 2-in-1 Foam Cleanser from the Estée Lauder Nutritious collection. Demo listing with an illustrative USD price; not a live stock or retail offer.",
+      "images": [
+        "pharmacy/brands/estee-lauder-nutritious-2-in-1-foam-cleanser.jpg"
+      ],
+      "attributes": {
+        "brand": "Estée Lauder",
+        "product-kind": "Cleanser",
+        "care-area": "Face",
+        "texture": "Cleanser",
+        "collection": "Nutritious"
+      },
+      "stock": 60
+    },
+    {
+      "sku": "DEMO-PHR-BRAND-027",
+      "slug": "clinique-moisture-surge-body-hydrator",
+      "name": "Clinique Moisture Surge Body Hydrator",
+      "category": "face-body",
+      "price": "38.00",
+      "unit": "each",
+      "description": "Moisture Surge Body Hydrator from the Clinique Moisture Surge collection. Demo listing with an illustrative USD price; not a live stock or retail offer.",
+      "images": [
+        "pharmacy/brands/clinique-moisture-surge-body-hydrator.png"
+      ],
+      "attributes": {
+        "brand": "Clinique",
+        "product-kind": "Moisturizer",
+        "care-area": "Face & body",
+        "texture": "Cream",
+        "collection": "Moisture Surge"
+      },
+      "stock": 60
+    },
+    {
+      "sku": "DEMO-PHR-BRAND-028",
+      "slug": "clinique-deep-comfort-body-butter",
+      "name": "Clinique Deep Comfort Body Butter",
+      "category": "face-body",
+      "price": "40.00",
+      "unit": "each",
+      "description": "Deep Comfort Body Butter from the Clinique Deep Comfort collection. Demo listing with an illustrative USD price; not a live stock or retail offer.",
+      "images": [
+        "pharmacy/brands/clinique-deep-comfort-body-butter.png"
+      ],
+      "attributes": {
+        "brand": "Clinique",
+        "product-kind": "Moisturizer",
+        "care-area": "Face & body",
+        "texture": "Cream",
+        "collection": "Deep Comfort"
+      },
+      "stock": 60
+    },
+    {
+      "sku": "DEMO-PHR-BRAND-029",
+      "slug": "clinique-deep-comfort-body-lotion",
+      "name": "Clinique Deep Comfort Body Lotion",
+      "category": "face-body",
+      "price": "35.00",
+      "unit": "each",
+      "description": "Deep Comfort Body Lotion from the Clinique Deep Comfort collection. Demo listing with an illustrative USD price; not a live stock or retail offer.",
+      "images": [
+        "pharmacy/brands/clinique-deep-comfort-body-lotion.png"
+      ],
+      "attributes": {
+        "brand": "Clinique",
+        "product-kind": "Moisturizer",
+        "care-area": "Face & body",
+        "texture": "Cream",
+        "collection": "Deep Comfort"
+      },
+      "stock": 60
+    },
+    {
+      "sku": "DEMO-PHR-BRAND-030",
+      "slug": "clinique-redness-solutions-daily-relief-cream",
+      "name": "Clinique Redness Solutions Daily Relief Cream",
+      "category": "pharmacy-essentials",
+      "price": "60.00",
+      "unit": "each",
+      "description": "Redness Solutions Daily Relief Cream from the Clinique Redness Solutions collection. Demo listing with an illustrative USD price; not a live stock or retail offer.",
+      "images": [
+        "pharmacy/brands/clinique-redness-solutions-daily-relief-cream.png"
+      ],
+      "attributes": {
+        "brand": "Clinique",
+        "product-kind": "Moisturizer",
+        "care-area": "Face",
+        "texture": "Cream",
+        "collection": "Redness Solutions"
+      },
+      "stock": 60
+    },
+    {
+      "sku": "DEMO-PHR-BRAND-031",
+      "slug": "clinique-redness-solutions-daily-protective-base-spf-15",
+      "name": "Clinique Redness Solutions Daily Protective Base SPF 15",
+      "category": "pharmacy-essentials",
+      "price": "34.00",
+      "unit": "each",
+      "description": "Redness Solutions Daily Protective Base SPF 15 from the Clinique Redness Solutions collection. Demo listing with an illustrative USD price; not a live stock or retail offer.",
+      "images": [
+        "pharmacy/brands/clinique-redness-solutions-daily-protective-base-spf-15.png"
+      ],
+      "attributes": {
+        "brand": "Clinique",
+        "product-kind": "Moisturizer",
+        "care-area": "Face",
+        "texture": "Cream",
+        "collection": "Redness Solutions"
+      },
+      "stock": 60
+    },
+    {
+      "sku": "DEMO-PHR-BRAND-032",
+      "slug": "clinique-moisture-surge-active-glow-serum",
+      "name": "Clinique Moisture Surge Active Glow Serum",
+      "category": "serums",
+      "price": "48.00",
+      "unit": "each",
+      "description": "Moisture Surge Active Glow Serum from the Clinique Moisture Surge collection. Demo listing with an illustrative USD price; not a live stock or retail offer.",
+      "images": [
+        "pharmacy/brands/clinique-moisture-surge-active-glow-serum.png"
+      ],
+      "attributes": {
+        "brand": "Clinique",
+        "product-kind": "Serum",
+        "care-area": "Face",
+        "texture": "Serum",
+        "collection": "Moisture Surge"
+      },
+      "stock": 60
+    },
+    {
+      "sku": "DEMO-PHR-BRAND-033",
+      "slug": "estee-lauder-revitalizing-supreme-sculpting-serum",
+      "name": "Estée Lauder Revitalizing Supreme+ Sculpting Serum",
+      "category": "serums",
+      "price": "125.00",
+      "unit": "each",
+      "description": "Revitalizing Supreme+ Sculpting Serum from the Estée Lauder Revitalizing Supreme+ collection. Demo listing with an illustrative USD price; not a live stock or retail offer.",
+      "images": [
+        "pharmacy/brands/estee-lauder-revitalizing-supreme-sculpting-serum.jpg"
+      ],
+      "attributes": {
+        "brand": "Estée Lauder",
+        "product-kind": "Serum",
+        "care-area": "Face",
+        "texture": "Serum",
+        "collection": "Revitalizing Supreme+"
+      },
+      "stock": 60
+    },
+    {
+      "sku": "DEMO-PHR-BRAND-034",
+      "slug": "estee-lauder-nutritious-booster-drops-serum",
+      "name": "Estée Lauder Nutritious Booster Drops Serum",
+      "category": "serums",
+      "price": "42.00",
+      "unit": "each",
+      "description": "Nutritious Booster Drops Serum from the Estée Lauder Nutritious collection. Demo listing with an illustrative USD price; not a live stock or retail offer.",
+      "images": [
+        "pharmacy/brands/estee-lauder-nutritious-booster-drops-serum.jpg"
+      ],
+      "attributes": {
+        "brand": "Estée Lauder",
+        "product-kind": "Serum",
+        "care-area": "Face",
+        "texture": "Serum",
+        "collection": "Nutritious"
+      },
+      "stock": 60
+    },
+    {
+      "sku": "DEMO-PHR-BRAND-035",
+      "slug": "clinique-moisture-surge-100h-auto-replenishing-hydrator",
+      "name": "Clinique Moisture Surge 100H Auto-Replenishing Hydrator",
+      "category": "moisturizers",
+      "price": "46.00",
+      "unit": "each",
+      "description": "Moisture Surge 100H Auto-Replenishing Hydrator from the Clinique Moisture Surge collection. Demo listing with an illustrative USD price; not a live stock or retail offer.",
+      "images": [
+        "pharmacy/brands/clinique-moisture-surge-100h-auto-replenishing-hydrator.png"
+      ],
+      "attributes": {
+        "brand": "Clinique",
+        "product-kind": "Moisturizer",
+        "care-area": "Face",
+        "texture": "Gel",
+        "collection": "Moisture Surge"
+      },
+      "stock": 60
+    },
+    {
+      "sku": "DEMO-PHR-BRAND-036",
+      "slug": "estee-lauder-revitalizing-supreme-bright-radiance-power-soft-creme",
+      "name": "Estée Lauder Revitalizing Supreme+ Bright Radiance Power Soft Creme",
+      "category": "moisturizers",
+      "price": "105.00",
+      "unit": "each",
+      "description": "Revitalizing Supreme+ Bright Radiance Power Soft Creme from the Estée Lauder Revitalizing Supreme+ collection. Demo listing with an illustrative USD price; not a live stock or retail offer.",
+      "images": [
+        "pharmacy/brands/estee-lauder-revitalizing-supreme-bright-radiance-power-soft-creme.jpg"
+      ],
+      "attributes": {
+        "brand": "Estée Lauder",
+        "product-kind": "Moisturizer",
+        "care-area": "Face",
+        "texture": "Cream",
+        "collection": "Revitalizing Supreme+"
+      },
+      "stock": 60
+    },
+    {
+      "sku": "DEMO-PHR-BRAND-037",
+      "slug": "estee-lauder-advanced-night-repair-eye-supercharged-gel-creme",
+      "name": "Estée Lauder Advanced Night Repair Eye Supercharged Gel-Creme",
+      "category": "eye-lip-care",
+      "price": "72.00",
+      "unit": "each",
+      "description": "Advanced Night Repair Eye Supercharged Gel-Creme from the Estée Lauder Advanced Night Repair collection. Demo listing with an illustrative USD price; not a live stock or retail offer.",
+      "images": [
+        "pharmacy/brands/estee-lauder-advanced-night-repair-eye-supercharged-gel-creme.jpg"
+      ],
+      "attributes": {
+        "brand": "Estée Lauder",
+        "product-kind": "Eye cream",
+        "care-area": "Eyes",
+        "texture": "Cream",
+        "collection": "Advanced Night Repair"
+      },
+      "stock": 60
+    },
+    {
+      "sku": "DEMO-PHR-BRAND-038",
+      "slug": "clarins-lip-oil-balm",
+      "name": "Clarins Lip Oil Balm",
+      "category": "eye-lip-care",
+      "price": "30.00",
+      "unit": "each",
+      "description": "Lip Oil Balm from the Clarins Lip Oil Balm collection. Demo listing with an illustrative USD price; not a live stock or retail offer.",
+      "images": [
+        "pharmacy/brands/clarins-lip-oil-balm.jpg"
+      ],
+      "attributes": {
+        "brand": "Clarins",
+        "product-kind": "Lip care",
+        "care-area": "Lips",
+        "texture": "Balm",
+        "collection": "Lip Oil Balm"
+      },
+      "stock": 60
+    },
+    {
+      "sku": "DEMO-PHR-BRAND-039",
+      "slug": "clinique-deep-comfort-hand-and-cuticle-cream",
+      "name": "Clinique Deep Comfort Hand and Cuticle Cream",
+      "category": "hand-care",
+      "price": "28.00",
+      "unit": "each",
+      "description": "Deep Comfort Hand and Cuticle Cream from the Clinique Deep Comfort collection. Demo listing with an illustrative USD price; not a live stock or retail offer.",
+      "images": [
+        "pharmacy/brands/clinique-deep-comfort-hand-and-cuticle-cream.png"
+      ],
+      "attributes": {
+        "brand": "Clinique",
+        "product-kind": "Hand cream",
+        "care-area": "Hands & nails",
+        "texture": "Cream",
+        "collection": "Deep Comfort"
+      },
+      "stock": 60
+    },
+    {
+      "sku": "DEMO-PHR-BRAND-040",
+      "slug": "estee-lauder-re-nutriv-intensive-smoothing-hand-creme",
+      "name": "Estée Lauder Re-Nutriv Intensive Smoothing Hand Creme",
+      "category": "hand-care",
+      "price": "70.00",
+      "unit": "each",
+      "description": "Re-Nutriv Intensive Smoothing Hand Creme from the Estée Lauder Re-Nutriv collection. Demo listing with an illustrative USD price; not a live stock or retail offer.",
+      "images": [
+        "pharmacy/brands/estee-lauder-re-nutriv-intensive-smoothing-hand-creme.jpg"
+      ],
+      "attributes": {
+        "brand": "Estée Lauder",
+        "product-kind": "Hand cream",
+        "care-area": "Hands & nails",
+        "texture": "Cream",
+        "collection": "Re-Nutriv"
+      },
+      "stock": 60
+    }
+  ],
+  "attributes": [
+    {
+      "entity_type": "product",
+      "attribute_code": "brand",
+      "label": "Brand",
+      "input_type": "select",
+      "scope": "global",
+      "is_required": false,
+      "is_unique": false,
+      "is_searchable": true,
+      "is_filterable": true,
+      "is_comparable": true,
+      "is_visible_on_front": true,
+      "used_for_promo_rules": false,
+      "used_for_configurations": false,
+      "swatch_type": "none",
+      "options": [
+        {
+          "value": "Estée Lauder",
+          "label": "Estée Lauder"
+        },
+        {
+          "value": "SkinCeuticals",
+          "label": "SkinCeuticals"
+        },
+        {
+          "value": "Clarins",
+          "label": "Clarins"
+        },
+        {
+          "value": "Clinique",
+          "label": "Clinique"
+        },
+        {
+          "value": "La Roche-Posay",
+          "label": "La Roche-Posay"
+        }
+      ],
+      "version": 0,
+      "metadata": {
+        "ai_queryable": true,
+        "facetable": true,
+        "display_order": 0,
+        "status": "active"
+      }
+    },
+    {
+      "entity_type": "product",
+      "attribute_code": "product-kind",
+      "label": "Product type",
+      "input_type": "select",
+      "scope": "global",
+      "is_required": false,
+      "is_unique": false,
+      "is_searchable": true,
+      "is_filterable": true,
+      "is_comparable": true,
+      "is_visible_on_front": true,
+      "used_for_promo_rules": true,
+      "used_for_configurations": false,
+      "swatch_type": "none",
+      "options": [
+        {
+          "value": "Balm",
+          "label": "Balm"
+        },
+        {
+          "value": "Cleanser",
+          "label": "Cleanser"
+        },
+        {
+          "value": "Cleansing balm",
+          "label": "Cleansing balm"
+        },
+        {
+          "value": "Essence",
+          "label": "Essence"
+        },
+        {
+          "value": "Eye cream",
+          "label": "Eye cream"
+        },
+        {
+          "value": "Face mist",
+          "label": "Face mist"
+        },
+        {
+          "value": "Hand cream",
+          "label": "Hand cream"
+        },
+        {
+          "value": "Lip care",
+          "label": "Lip care"
+        },
+        {
+          "value": "Moisturizer",
+          "label": "Moisturizer"
+        },
+        {
+          "value": "Night cream",
+          "label": "Night cream"
+        },
+        {
+          "value": "Serum",
+          "label": "Serum"
+        }
+      ],
+      "version": 0,
+      "metadata": {
+        "ai_queryable": true,
+        "facetable": true,
+        "display_order": 1,
+        "status": "active",
+        "semantic_role": "classification"
+      }
+    },
+    {
+      "entity_type": "product",
+      "attribute_code": "care-area",
+      "label": "Care area",
+      "input_type": "select",
+      "scope": "global",
+      "is_required": false,
+      "is_unique": false,
+      "is_searchable": true,
+      "is_filterable": true,
+      "is_comparable": true,
+      "is_visible_on_front": true,
+      "used_for_promo_rules": true,
+      "used_for_configurations": false,
+      "swatch_type": "none",
+      "options": [
+        {
+          "value": "Eyes",
+          "label": "Eyes"
+        },
+        {
+          "value": "Face",
+          "label": "Face"
+        },
+        {
+          "value": "Face & body",
+          "label": "Face & body"
+        },
+        {
+          "value": "Hands & nails",
+          "label": "Hands & nails"
+        },
+        {
+          "value": "Lips",
+          "label": "Lips"
+        }
+      ],
+      "version": 0,
+      "metadata": {
+        "ai_queryable": true,
+        "facetable": true,
+        "display_order": 2,
+        "status": "active",
+        "semantic_role": null
+      }
+    },
+    {
+      "entity_type": "product",
+      "attribute_code": "texture",
+      "label": "Texture",
+      "input_type": "select",
+      "scope": "global",
+      "is_required": false,
+      "is_unique": false,
+      "is_searchable": true,
+      "is_filterable": true,
+      "is_comparable": true,
+      "is_visible_on_front": true,
+      "used_for_promo_rules": true,
+      "used_for_configurations": false,
+      "swatch_type": "none",
+      "options": [
+        {
+          "value": "Balm",
+          "label": "Balm"
+        },
+        {
+          "value": "Cleanser",
+          "label": "Cleanser"
+        },
+        {
+          "value": "Cream",
+          "label": "Cream"
+        },
+        {
+          "value": "Essence",
+          "label": "Essence"
+        },
+        {
+          "value": "Gel",
+          "label": "Gel"
+        },
+        {
+          "value": "Mist",
+          "label": "Mist"
+        },
+        {
+          "value": "Oil",
+          "label": "Oil"
+        },
+        {
+          "value": "Serum",
+          "label": "Serum"
+        }
+      ],
+      "version": 0,
+      "metadata": {
+        "ai_queryable": true,
+        "facetable": true,
+        "display_order": 3,
+        "status": "active",
+        "semantic_role": null
+      }
+    },
+    {
+      "entity_type": "product",
+      "attribute_code": "collection",
+      "label": "Collection",
+      "input_type": "select",
+      "scope": "global",
+      "is_required": false,
+      "is_unique": false,
+      "is_searchable": true,
+      "is_filterable": false,
+      "is_comparable": true,
+      "is_visible_on_front": true,
+      "used_for_promo_rules": true,
+      "used_for_configurations": false,
+      "swatch_type": "none",
+      "options": [
+        {
+          "value": "Advanced Night",
+          "label": "Advanced Night"
+        },
+        {
+          "value": "Advanced Night Repair",
+          "label": "Advanced Night Repair"
+        },
+        {
+          "value": "All About Eyes",
+          "label": "All About Eyes"
+        },
+        {
+          "value": "Beauty Flash",
+          "label": "Beauty Flash"
+        },
+        {
+          "value": "Cicaplast",
+          "label": "Cicaplast"
+        },
+        {
+          "value": "Double Serum",
+          "label": "Double Serum"
+        },
+        {
+          "value": "Gentle Cleanser",
+          "label": "Gentle Cleanser"
+        },
+        {
+          "value": "Hand and Nail Treatment",
+          "label": "Hand and Nail Treatment"
+        },
+        {
+          "value": "Hyalu B5",
+          "label": "Hyalu B5"
+        },
+        {
+          "value": "Hydrating B5",
+          "label": "Hydrating B5"
+        },
+        {
+          "value": "Lip Comfort",
+          "label": "Lip Comfort"
+        },
+        {
+          "value": "Moisture Surge",
+          "label": "Moisture Surge"
+        },
+        {
+          "value": "Phyto Corrective",
+          "label": "Phyto Corrective"
+        },
+        {
+          "value": "Resveratrol B E",
+          "label": "Resveratrol B E"
+        },
+        {
+          "value": "Revitalizing Supreme+",
+          "label": "Revitalizing Supreme+"
+        },
+        {
+          "value": "Take The Day Off",
+          "label": "Take The Day Off"
+        },
+        {
+          "value": "Toleriane",
+          "label": "Toleriane"
+        },
+        {
+          "value": "Clarifying Lotion",
+          "label": "Clarifying Lotion"
+        },
+        {
+          "value": "Nutritious",
+          "label": "Nutritious"
+        },
+        {
+          "value": "Re-Nutriv",
+          "label": "Re-Nutriv"
+        },
+        {
+          "value": "All About Clean",
+          "label": "All About Clean"
+        },
+        {
+          "value": "DayWear",
+          "label": "DayWear"
+        },
+        {
+          "value": "Deep Comfort",
+          "label": "Deep Comfort"
+        },
+        {
+          "value": "Redness Solutions",
+          "label": "Redness Solutions"
+        },
+        {
+          "value": "Lip Oil Balm",
+          "label": "Lip Oil Balm"
+        }
+      ],
+      "version": 0,
+      "metadata": {
+        "ai_queryable": true,
+        "facetable": false,
+        "display_order": 4,
+        "status": "active",
+        "semantic_role": null
+      }
+    }
+  ],
+  "families": [],
+  "retired_products": [
+    {
+      "sku": "DEMO-PHR-001",
+      "slug": "noir-rose-rose-dew-serum"
+    },
+    {
+      "sku": "DEMO-PHR-002",
+      "slug": "noir-rose-midnight-facial-oil"
+    },
+    {
+      "sku": "DEMO-PHR-003",
+      "slug": "noir-rose-velvet-face-cream"
+    },
+    {
+      "sku": "DEMO-PHR-004",
+      "slug": "noir-rose-the-evening-ritual-duo"
+    },
+    {
+      "sku": "DEMO-PHR-005",
+      "slug": "noir-rose-soft-rose-cleanser"
+    },
+    {
+      "sku": "DEMO-PHR-006",
+      "slug": "noir-rose-daily-cleansing-milk"
+    },
+    {
+      "sku": "DEMO-PHR-007",
+      "slug": "noir-rose-rose-hand-body-wash"
+    },
+    {
+      "sku": "DEMO-PHR-008",
+      "slug": "noir-rose-velvet-body-cream"
+    },
+    {
+      "sku": "DEMO-PHR-009",
+      "slug": "noir-rose-everyday-care-kit"
+    },
+    {
+      "sku": "DEMO-PHR-010",
+      "slug": "noir-rose-travel-care-kit"
+    },
+    {
+      "sku": "DEMO-PHR-011",
+      "slug": "noir-rose-home-care-essentials"
+    },
+    {
+      "sku": "DEMO-PHR-012",
+      "slug": "noir-rose-the-care-companion"
+    }
+  ],
+  "languages": [
+    {
+      "locale": "en",
+      "name": "English",
+      "native_name": "English",
+      "direction": "ltr"
+    },
+    {
+      "locale": "ar",
+      "name": "Arabic",
+      "native_name": "العربية",
+      "direction": "rtl"
+    }
+  ],
+  "translations": {
+    "ar": {
+      "products": {
+        "DEMO-PHR-BRAND-001": {
+          "name": "إستيه لودر أدفانسد نايت ريبير — سيروم العناية الليلية",
+          "description": "سيروم الوجه أدفانسد نايت ريبير من إستيه لودر، لإكمال روتين العناية المسائية. منتج للعرض التجريبي بسعر توضيحي بالدولار؛ لا يمثّل عرض بيع أو مخزوناً فعلياً."
+        },
+        "DEMO-PHR-BRAND-002": {
+          "name": "سكينسوتيكلز هيدريتنج B5 — جل مرطّب",
+          "description": "جل هيدريتنج B5 المرطّب من سكينسوتيكلز، بقوام خفيف للعناية اليومية. منتج للعرض التجريبي بسعر توضيحي بالدولار؛ لا يمثّل عرض بيع أو مخزوناً فعلياً."
+        },
+        "DEMO-PHR-BRAND-003": {
+          "name": "كلارنس دبل سيروم",
+          "description": "دبل سيروم من كلارنس، خطوة للعناية بالبشرة ضمن روتينك اليومي. منتج للعرض التجريبي بسعر توضيحي بالدولار؛ لا يمثّل عرض بيع أو مخزوناً فعلياً."
+        },
+        "DEMO-PHR-BRAND-004": {
+          "name": "كلينيك مويستشر سيرج — غسول مقشّر للإشراقة",
+          "description": "غسول مويستشر سيرج المقشّر من كلينيك لتنظيف البشرة. منتج للعرض التجريبي بسعر توضيحي بالدولار؛ لا يمثّل عرض بيع أو مخزوناً فعلياً."
+        },
+        "DEMO-PHR-BRAND-005": {
+          "name": "لاروش بوزيه هيالو B5 — سيروم حمض الهيالورونيك",
+          "description": "سيروم هيالو B5 بحمض الهيالورونيك من لاروش بوزيه. منتج للعرض التجريبي بسعر توضيحي بالدولار؛ لا يمثّل عرض بيع أو مخزوناً فعلياً."
+        },
+        "DEMO-PHR-BRAND-006": {
+          "name": "إستيه لودر أدفانسد نايت ريبير — إيسنس العناية",
+          "description": "إيسنس أدفانسد نايت ريبير من إستيه لودر لتحضير البشرة لروتين العناية. منتج للعرض التجريبي بسعر توضيحي بالدولار؛ لا يمثّل عرض بيع أو مخزوناً فعلياً."
+        },
+        "DEMO-PHR-BRAND-007": {
+          "name": "سكينسوتيكلز جنتل كلينزر — غسول لطيف",
+          "description": "غسول جنتل كلينزر اللطيف من سكينسوتيكلز للعناية اليومية بالوجه. منتج للعرض التجريبي بسعر توضيحي بالدولار؛ لا يمثّل عرض بيع أو مخزوناً فعلياً."
+        },
+        "DEMO-PHR-BRAND-008": {
+          "name": "كلارنس ليب كومفورت أويل — زيت الشفاه",
+          "description": "زيت ليب كومفورت من كلارنس للعناية بالشفاه ولمسة لامعة. منتج للعرض التجريبي بسعر توضيحي بالدولار؛ لا يمثّل عرض بيع أو مخزوناً فعلياً."
+        },
+        "DEMO-PHR-BRAND-009": {
+          "name": "كلينيك أول أباوت آيز — كريم العين",
+          "description": "كريم أول أباوت آيز من كلينيك للعناية بمنطقة حول العينين. منتج للعرض التجريبي بسعر توضيحي بالدولار؛ لا يمثّل عرض بيع أو مخزوناً فعلياً."
+        },
+        "DEMO-PHR-BRAND-010": {
+          "name": "لاروش بوزيه سيكابلاست — بلسم B5+",
+          "description": "بلسم سيكابلاست B5+ من لاروش بوزيه للعناية بالبشرة. منتج للعرض التجريبي بسعر توضيحي بالدولار؛ لا يمثّل عرض بيع أو مخزوناً فعلياً."
+        },
+        "DEMO-PHR-BRAND-011": {
+          "name": "إستيه لودر ريفيتالايزينغ سوبريم بلس — كريم الليل",
+          "description": "كريم الليل ريفيتالايزينغ سوبريم بلس من إستيه لودر للعناية المسائية. منتج للعرض التجريبي بسعر توضيحي بالدولار؛ لا يمثّل عرض بيع أو مخزوناً فعلياً."
+        },
+        "DEMO-PHR-BRAND-012": {
+          "name": "سكينسوتيكلز ريسفيراترول B E",
+          "description": "ريسفيراترول B E من سكينسوتيكلز للعناية الليلية بالبشرة. منتج للعرض التجريبي بسعر توضيحي بالدولار؛ لا يمثّل عرض بيع أو مخزوناً فعلياً."
+        },
+        "DEMO-PHR-BRAND-013": {
+          "name": "كلارنس كريم العناية باليدين والأظافر",
+          "description": "كريم كلارنس للعناية باليدين والأظافر، لروتين يومي بسيط. منتج للعرض التجريبي بسعر توضيحي بالدولار؛ لا يمثّل عرض بيع أو مخزوناً فعلياً."
+        },
+        "DEMO-PHR-BRAND-014": {
+          "name": "كلينيك تيك ذا داي أوف — بلسم التنظيف",
+          "description": "بلسم تيك ذا داي أوف من كلينيك لتنظيف الوجه وإزالة المكياج. منتج للعرض التجريبي بسعر توضيحي بالدولار؛ لا يمثّل عرض بيع أو مخزوناً فعلياً."
+        },
+        "DEMO-PHR-BRAND-015": {
+          "name": "لاروش بوزيه توليريان — غسول الوجه اللطيف المرطّب",
+          "description": "غسول توليريان اللطيف المرطّب من لاروش بوزيه لتنظيف الوجه. منتج للعرض التجريبي بسعر توضيحي بالدولار؛ لا يمثّل عرض بيع أو مخزوناً فعلياً."
+        },
+        "DEMO-PHR-BRAND-016": {
+          "name": "إستيه لودر أدفانسد نايت — بلسم التنظيف",
+          "description": "بلسم أدفانسد نايت للتنظيف من إستيه لودر، خطوة ضمن روتين المساء. منتج للعرض التجريبي بسعر توضيحي بالدولار؛ لا يمثّل عرض بيع أو مخزوناً فعلياً."
+        },
+        "DEMO-PHR-BRAND-017": {
+          "name": "سكينسوتيكلز فيتو كوريكتيف — جل العناية",
+          "description": "جل فيتو كوريكتيف من سكينسوتيكلز للعناية بالوجه. منتج للعرض التجريبي بسعر توضيحي بالدولار؛ لا يمثّل عرض بيع أو مخزوناً فعلياً."
+        },
+        "DEMO-PHR-BRAND-018": {
+          "name": "كلارنس بيوتي فلاش — بلسم الإشراقة",
+          "description": "بلسم بيوتي فلاش من كلارنس لإكمال روتين العناية والإشراقة. منتج للعرض التجريبي بسعر توضيحي بالدولار؛ لا يمثّل عرض بيع أو مخزوناً فعلياً."
+        },
+        "DEMO-PHR-BRAND-019": {
+          "name": "كلينيك مويستشر سيرج — رذاذ ترطيب الوجه",
+          "description": "رذاذ مويستشر سيرج من كلينيك لترطيب الوجه خلال اليوم. منتج للعرض التجريبي بسعر توضيحي بالدولار؛ لا يمثّل عرض بيع أو مخزوناً فعلياً."
+        },
+        "DEMO-PHR-BRAND-020": {
+          "name": "لاروش بوزيه توليريان دبل ريبير — مرطّب الوجه SPF 30",
+          "description": "مرطّب توليريان دبل ريبير من لاروش بوزيه بعامل حماية من الشمس SPF 30. منتج للعرض التجريبي بسعر توضيحي بالدولار؛ لا يمثّل عرض بيع أو مخزوناً فعلياً."
+        },
+        "DEMO-PHR-BRAND-021": {
+          "name": "كلينيك لوشن كلاريفاينغ 1",
+          "description": "كلينيك لوشن كلاريفاينغ 1 من مجموعة Clarifying Lotion. منتج للعرض التجريبي بسعر توضيحي بالدولار؛ لا يمثّل عرض بيع أو مخزوناً فعلياً."
+        },
+        "DEMO-PHR-BRAND-022": {
+          "name": "إستي لودر نيوتريشس لوشن الإيسنس راديانت",
+          "description": "إستي لودر نيوتريشس لوشن الإيسنس راديانت من مجموعة Nutritious. منتج للعرض التجريبي بسعر توضيحي بالدولار؛ لا يمثّل عرض بيع أو مخزوناً فعلياً."
+        },
+        "DEMO-PHR-BRAND-023": {
+          "name": "إستي لودر ري نوتريف لوشن التنعيم",
+          "description": "إستي لودر ري نوتريف لوشن التنعيم من مجموعة Re-Nutriv. منتج للعرض التجريبي بسعر توضيحي بالدولار؛ لا يمثّل عرض بيع أو مخزوناً فعلياً."
+        },
+        "DEMO-PHR-BRAND-024": {
+          "name": "كلينيك أول أباوت كلين صابون الوجه السائل",
+          "description": "كلينيك أول أباوت كلين صابون الوجه السائل من مجموعة All About Clean. منتج للعرض التجريبي بسعر توضيحي بالدولار؛ لا يمثّل عرض بيع أو مخزوناً فعلياً."
+        },
+        "DEMO-PHR-BRAND-025": {
+          "name": "إستي لودر داي وير غلو بوست جل تنظيف الوجه",
+          "description": "إستي لودر داي وير غلو بوست جل تنظيف الوجه من مجموعة DayWear. منتج للعرض التجريبي بسعر توضيحي بالدولار؛ لا يمثّل عرض بيع أو مخزوناً فعلياً."
+        },
+        "DEMO-PHR-BRAND-026": {
+          "name": "إستي لودر نيوتريشس منظف رغوي 2 في 1",
+          "description": "إستي لودر نيوتريشس منظف رغوي 2 في 1 من مجموعة Nutritious. منتج للعرض التجريبي بسعر توضيحي بالدولار؛ لا يمثّل عرض بيع أو مخزوناً فعلياً."
+        },
+        "DEMO-PHR-BRAND-027": {
+          "name": "كلينيك مويستشر سيرج مرطب الجسم",
+          "description": "كلينيك مويستشر سيرج مرطب الجسم من مجموعة Moisture Surge. منتج للعرض التجريبي بسعر توضيحي بالدولار؛ لا يمثّل عرض بيع أو مخزوناً فعلياً."
+        },
+        "DEMO-PHR-BRAND-028": {
+          "name": "كلينيك ديب كومفورت زبدة الجسم",
+          "description": "كلينيك ديب كومفورت زبدة الجسم من مجموعة Deep Comfort. منتج للعرض التجريبي بسعر توضيحي بالدولار؛ لا يمثّل عرض بيع أو مخزوناً فعلياً."
+        },
+        "DEMO-PHR-BRAND-029": {
+          "name": "كلينيك ديب كومفورت لوشن الجسم",
+          "description": "كلينيك ديب كومفورت لوشن الجسم من مجموعة Deep Comfort. منتج للعرض التجريبي بسعر توضيحي بالدولار؛ لا يمثّل عرض بيع أو مخزوناً فعلياً."
+        },
+        "DEMO-PHR-BRAND-030": {
+          "name": "كلينيك ريدنس سوليوشنز كريم ديلي ريليف",
+          "description": "كلينيك ريدنس سوليوشنز كريم ديلي ريليف من مجموعة Redness Solutions. منتج للعرض التجريبي بسعر توضيحي بالدولار؛ لا يمثّل عرض بيع أو مخزوناً فعلياً."
+        },
+        "DEMO-PHR-BRAND-031": {
+          "name": "كلينيك ريدنس سوليوشنز قاعدة يومية بعامل حماية 15",
+          "description": "كلينيك ريدنس سوليوشنز قاعدة يومية بعامل حماية 15 من مجموعة Redness Solutions. منتج للعرض التجريبي بسعر توضيحي بالدولار؛ لا يمثّل عرض بيع أو مخزوناً فعلياً."
+        },
+        "DEMO-PHR-BRAND-032": {
+          "name": "كلينيك مويستشر سيرج سيروم أكتيف غلو",
+          "description": "كلينيك مويستشر سيرج سيروم أكتيف غلو من مجموعة Moisture Surge. منتج للعرض التجريبي بسعر توضيحي بالدولار؛ لا يمثّل عرض بيع أو مخزوناً فعلياً."
+        },
+        "DEMO-PHR-BRAND-033": {
+          "name": "إستي لودر ريفيتالايزينغ سوبريم بلس سكالبتينغ سيروم",
+          "description": "إستي لودر ريفيتالايزينغ سوبريم بلس سكالبتينغ سيروم من مجموعة Revitalizing Supreme+. منتج للعرض التجريبي بسعر توضيحي بالدولار؛ لا يمثّل عرض بيع أو مخزوناً فعلياً."
+        },
+        "DEMO-PHR-BRAND-034": {
+          "name": "إستي لودر نيوتريشس سيروم بوستر دروبس",
+          "description": "إستي لودر نيوتريشس سيروم بوستر دروبس من مجموعة Nutritious. منتج للعرض التجريبي بسعر توضيحي بالدولار؛ لا يمثّل عرض بيع أو مخزوناً فعلياً."
+        },
+        "DEMO-PHR-BRAND-035": {
+          "name": "كلينيك مويستشر سيرج مرطب 100 ساعة",
+          "description": "كلينيك مويستشر سيرج مرطب 100 ساعة من مجموعة Moisture Surge. منتج للعرض التجريبي بسعر توضيحي بالدولار؛ لا يمثّل عرض بيع أو مخزوناً فعلياً."
+        },
+        "DEMO-PHR-BRAND-036": {
+          "name": "إستي لودر ريفيتالايزينغ سوبريم بلس برايت راديانس كريم",
+          "description": "إستي لودر ريفيتالايزينغ سوبريم بلس برايت راديانس كريم من مجموعة Revitalizing Supreme+. منتج للعرض التجريبي بسعر توضيحي بالدولار؛ لا يمثّل عرض بيع أو مخزوناً فعلياً."
+        },
+        "DEMO-PHR-BRAND-037": {
+          "name": "إستي لودر أدفانسد نايت ريبير جل كريم العين",
+          "description": "إستي لودر أدفانسد نايت ريبير جل كريم العين من مجموعة Advanced Night Repair. منتج للعرض التجريبي بسعر توضيحي بالدولار؛ لا يمثّل عرض بيع أو مخزوناً فعلياً."
+        },
+        "DEMO-PHR-BRAND-038": {
+          "name": "كلارنس ليب أويل بالم للشفاه",
+          "description": "كلارنس ليب أويل بالم للشفاه من مجموعة Lip Oil Balm. منتج للعرض التجريبي بسعر توضيحي بالدولار؛ لا يمثّل عرض بيع أو مخزوناً فعلياً."
+        },
+        "DEMO-PHR-BRAND-039": {
+          "name": "كلينيك ديب كومفورت كريم اليدين والجلد المحيط بالأظافر",
+          "description": "كلينيك ديب كومفورت كريم اليدين والجلد المحيط بالأظافر من مجموعة Deep Comfort. منتج للعرض التجريبي بسعر توضيحي بالدولار؛ لا يمثّل عرض بيع أو مخزوناً فعلياً."
+        },
+        "DEMO-PHR-BRAND-040": {
+          "name": "إستي لودر ري نوتريف كريم اليدين إنتنسيف سموذينغ",
+          "description": "إستي لودر ري نوتريف كريم اليدين إنتنسيف سموذينغ من مجموعة Re-Nutriv. منتج للعرض التجريبي بسعر توضيحي بالدولار؛ لا يمثّل عرض بيع أو مخزوناً فعلياً."
+        }
+      },
+      "categories": {
+        "skincare": {
+          "name": "العناية بالبشرة"
+        },
+        "cleansers": {
+          "name": "منظّفات البشرة"
+        },
+        "face-body": {
+          "name": "الوجه والجسم"
+        },
+        "pharmacy-essentials": {
+          "name": "أساسيات الصيدلية"
+        },
+        "serums": {
+          "name": "السيروم"
+        },
+        "moisturizers": {
+          "name": "المرطّبات"
+        },
+        "eye-lip-care": {
+          "name": "العناية بالعين والشفاه"
+        },
+        "hand-care": {
+          "name": "العناية باليدين"
+        }
+      },
+      "attributes": {
+        "brand": {
+          "label": "العلامة التجارية",
+          "option.Estée Lauder": "Estée Lauder",
+          "option.SkinCeuticals": "SkinCeuticals",
+          "option.Clarins": "Clarins",
+          "option.Clinique": "Clinique",
+          "option.La Roche-Posay": "La Roche-Posay"
+        },
+        "product-kind": {
+          "label": "نوع المنتج",
+          "option.Balm": "بلسم",
+          "option.Cleanser": "منظّف",
+          "option.Cleansing balm": "بلسم التنظيف",
+          "option.Essence": "إيسنس",
+          "option.Eye cream": "كريم العين",
+          "option.Face mist": "رذاذ الوجه",
+          "option.Hand cream": "كريم اليدين",
+          "option.Lip care": "العناية بالشفاه",
+          "option.Moisturizer": "مرطّب",
+          "option.Night cream": "كريم الليل",
+          "option.Serum": "سيروم"
+        },
+        "care-area": {
+          "label": "منطقة العناية",
+          "option.Eyes": "العينان",
+          "option.Face": "الوجه",
+          "option.Face & body": "الوجه والجسم",
+          "option.Hands & nails": "اليدان والأظافر",
+          "option.Lips": "الشفاه"
+        },
+        "texture": {
+          "label": "القوام",
+          "option.Balm": "بلسم",
+          "option.Cleanser": "منظّف",
+          "option.Cream": "كريم",
+          "option.Essence": "إيسنس",
+          "option.Gel": "جل",
+          "option.Mist": "رذاذ",
+          "option.Oil": "زيت",
+          "option.Serum": "سيروم"
+        },
+        "collection": {
+          "label": "المجموعة",
+          "option.Advanced Night": "Advanced Night",
+          "option.Advanced Night Repair": "Advanced Night Repair",
+          "option.All About Eyes": "All About Eyes",
+          "option.Beauty Flash": "Beauty Flash",
+          "option.Cicaplast": "Cicaplast",
+          "option.Double Serum": "Double Serum",
+          "option.Gentle Cleanser": "Gentle Cleanser",
+          "option.Hand and Nail Treatment": "Hand and Nail Treatment",
+          "option.Hyalu B5": "Hyalu B5",
+          "option.Hydrating B5": "Hydrating B5",
+          "option.Lip Comfort": "Lip Comfort",
+          "option.Moisture Surge": "Moisture Surge",
+          "option.Phyto Corrective": "Phyto Corrective",
+          "option.Resveratrol B E": "Resveratrol B E",
+          "option.Revitalizing Supreme+": "Revitalizing Supreme+",
+          "option.Take The Day Off": "Take The Day Off",
+          "option.Toleriane": "Toleriane",
+          "option.Clarifying Lotion": "Clarifying Lotion",
+          "option.Nutritious": "Nutritious",
+          "option.Re-Nutriv": "Re-Nutriv",
+          "option.All About Clean": "All About Clean",
+          "option.DayWear": "DayWear",
+          "option.Deep Comfort": "Deep Comfort",
+          "option.Redness Solutions": "Redness Solutions",
+          "option.Lip Oil Balm": "Lip Oil Balm"
+        }
+      }
+    }
+  }
+}

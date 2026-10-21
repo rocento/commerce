@@ -1,0 +1,55 @@
+/* Shared admin list controls. Scoped to avoid page-specific toolbar overrides. */
+.admin-body .grid-controls { background: #fff; border: 1px solid var(--line, #deded9); border-radius: 10px; padding: 0; margin: 18px 0 14px; overflow: hidden; }
+.grid-toolbar-main { display: flex; flex-wrap: wrap; align-items: end; justify-content: space-between; gap: 16px; padding: 18px 20px; }
+.grid-controls .grid-field { display: flex; flex-direction: column; gap: 7px; min-width: 140px; margin: 0; color: #595b60; font-size: 12px; font-weight: 600; letter-spacing: 0; }
+.grid-controls input:not([type=checkbox]), .grid-controls select { box-sizing: border-box; width: 100%; min-height: 40px; padding: 9px 12px; border: 1px solid #d6d8dc; border-radius: 6px; color: #282c34; background: #fff; font: inherit; font-size: 13px; font-weight: 400; }
+.grid-controls .grid-search { flex: 1 1 250px; max-width: 440px; }
+.grid-search-input { position: relative; display: flex; align-items: center; }
+.grid-search-input svg { position: absolute; left: 12px; color: #81858d; pointer-events: none; }
+.grid-controls .grid-search-input input { padding-left: 39px; }
+.grid-sort-controls { display: flex; flex-wrap: wrap; align-items: end; gap: 10px; }
+.grid-controls button { font-size: 12px; min-height: 38px; white-space: nowrap; }
+.grid-controls .grid-refresh { min-height: 40px; }
+.grid-controls button:disabled { opacity: .5; cursor: not-allowed; }
+.grid-controls .grid-filter-row { display: flex; flex-wrap: wrap; align-items: end; gap: 12px; padding: 0 20px 18px; }
+.grid-filter-row > form { display: flex; flex-wrap: wrap; align-items: end; gap: 12px; width: 100%; margin: 0; padding: 0; border: 0; background: none; }
+.grid-controls .grid-filter-row .field { margin: 0; min-width: 150px; font-size: 12px; gap: 7px; }
+.grid-controls .grid-filter-summary { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; border-top: 1px solid #eceef0; padding: 12px 20px; background: #fcfcfd; color: #696e78; font-size: 12px; }
+.grid-controls .grid-filter-chip { display: inline-flex; gap: 10px; align-items: center; min-height: 28px; max-width: 100%; white-space: normal; overflow-wrap: anywhere; padding: 4px 9px; background: #f1f4f9; border: 1px solid #dce3ed; color: #394b65; border-radius: 5px; font-weight: 500; text-align: left; }
+.grid-controls .grid-filter-chip:hover { background: #e5ebf4; }
+.grid-controls .grid-clear { padding: 4px 6px; min-height: 28px; background: transparent; border-color: transparent; color: var(--blue, #315dd7); }
+.grid-pagination { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 14px; padding: 12px 20px; border-top: 1px solid #eceef0; background: #fafbfc; }
+.grid-result-count { color: #6a707b; font-size: 12px; font-variant-numeric: tabular-nums; }
+.grid-page-actions, .grid-page-nav { display: flex; align-items: center; flex-wrap: wrap; gap: 6px; }
+.grid-controls .grid-page-size { min-width: 0; flex-direction: row; align-items: center; margin-right: 14px; }
+.grid-controls .grid-page-size select { width: 74px; min-height: 34px; padding: 6px 9px; }
+.grid-page-number { padding: 0 9px; font-size: 12px; font-weight: 600; font-variant-numeric: tabular-nums; color: #424954; }
+.grid-controls .grid-page-nav button { min-height: 34px; padding: 6px 10px; }
+.grid-error { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 14px 20px; border-top: 1px solid #efceca; background: #fff6f5; color: #9a3b32; font-size: 13px; }
+/* All admin tables use the same surface, headers, row rhythm and focus treatment. */
+.admin-body :is(.table-wrap, .stock-table-wrap) { border: 1px solid var(--line, #deded9); border-radius: 10px; background: #fff; overflow: auto; }
+.admin-body table { width: 100%; border-collapse: separate; border-spacing: 0; font-size: 13px; }
+.admin-body table :is(td, th) { padding: 14px 16px; border-bottom: 1px solid #eceef0; }
+.admin-body table thead th { background: #f7f8fa; color: #68707e; font-size: 11px; font-weight: 600; letter-spacing: .045em; }
+.admin-body table thead th:first-child { background: #f7f8fa; z-index: 3; }
+.admin-body table tbody tr:last-child td { border-bottom: 0; }
+.admin-body table tbody tr:hover td, .admin-body table tbody tr:focus-within td { background: #f6f8fb; }
+@media (max-width: 700px) {
+  .grid-toolbar-main { padding: 14px; gap: 14px; }
+  .grid-controls .grid-search { max-width: none; flex-basis: 100%; }
+  .grid-sort-controls { width: 100%; }
+  .grid-sort-controls .grid-field { flex: 1; min-width: 110px; }
+  .grid-refresh span { display: none; }
+  .grid-controls .grid-filter-row, .grid-controls .grid-filter-summary, .grid-pagination { padding: 12px 14px; }
+  .grid-controls .grid-filter-row .field, .grid-filter-row > .grid-field { flex: 1; min-width: 120px; }
+  .grid-page-actions { width: 100%; justify-content: space-between; gap: 10px; }
+  .grid-page-nav { flex-wrap: wrap; }
+  .grid-controls .grid-page-size { margin-right: 0; }
+  .grid-error { align-items: flex-start; padding: 14px; }
+}
+
+.grid-result-count { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 12px; }
+.grid-total { padding: 5px 10px; border-radius: 6px; background: #eaf0f8; color: #304866; font-size: 13px; font-weight: 600; }
+.grid-visible-range { color: #626b78; }
+.entity-id-cell { width: 96px; white-space: nowrap; font-variant-numeric: tabular-nums; color: #626b78; }
+.entity-id-label { display: block; color: #626b78; font-size: 12px; font-weight: 400; font-variant-numeric: tabular-nums; }

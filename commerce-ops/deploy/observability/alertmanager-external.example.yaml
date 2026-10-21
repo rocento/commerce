@@ -1,0 +1,22 @@
+# Optional deployment template. Replace placeholders only after authorizing real notifications.
+# Store this file outside source control after adding credentials.
+route:
+  receiver: operations
+  group_by: [alertname]
+  group_wait: 30s
+  group_interval: 5m
+  repeat_interval: 4h
+receivers:
+  - name: operations
+    slack_configs:
+      - api_url_file: /run/secrets/slack-webhook
+        channel: '#commerce-ops'
+        send_resolved: true
+    email_configs:
+      - to: ops@example.invalid
+        from: commerce@example.invalid
+        smarthost: smtp.example.invalid:587
+        auth_username: commerce
+        auth_password_file: /run/secrets/smtp-password
+        require_tls: true
+        send_resolved: true

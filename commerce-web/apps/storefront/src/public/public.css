@@ -1,0 +1,61 @@
+.public-breadcrumbs{display:flex;flex-wrap:wrap;gap:1rem;padding:1rem 2rem}.store-header form{display:flex;gap:.5rem}.store-header nav{display:flex;gap:1rem}nav[aria-label="Pagination"]{display:flex;gap:1rem;margin:2rem 0}.purchase-card .theme-cta{max-width:100%;white-space:normal;text-align:center}
+.theme-hero h2{font-size:48px;line-height:1.1;max-width:520px;overflow-wrap:anywhere;margin:0 0 20px}.theme-editorial-hero .theme-editorial-copy h2{font-size:clamp(38px,4.4vw,66px);font-weight:700;letter-spacing:-.055em}nav[aria-label="Subcategories"],nav[aria-label="Related guides"]{display:flex;flex-wrap:wrap;gap:1rem}
+
+/* The published header has its own markup; give every row room to shrink. */
+@media (max-width: 800px) {
+  #store-top .store-header {
+    display: flex;
+    flex-wrap: wrap;
+    height: auto;
+    gap: 12px;
+    padding: 16px;
+  }
+  #store-top .store-header .brand {
+    width: 100%;
+    min-width: 0;
+    max-width: 100%;
+    overflow-wrap: anywhere;
+  }
+  #store-top .store-header .brand img {
+    max-width: 100%;
+    height: auto;
+  }
+  #store-top .store-header .header-search-zone {
+    width: 100%;
+    flex-basis: 100%;
+    min-width: 0;
+    order: 2;
+  }
+  #store-top .store-header :is(.store-search, .search-bar) {
+    width: 100%;
+    min-width: 0;
+    max-width: 100%;
+  }
+  #store-top .store-header nav {
+    width: 100%;
+    flex-wrap: wrap;
+    gap: 8px 16px;
+    white-space: normal;
+    overflow: visible;
+  }
+  #store-top .store-header nav a {
+    display: inline-flex;
+    align-items: center;
+    min-height: 44px;
+  }
+  .public-breadcrumbs {
+    padding-inline: 16px;
+    overflow-wrap: anywhere;
+  }
+}
+
+/* Intrinsic dimensions reserve space; tile height follows its rendered width. */
+.product-card img,
+.theme-category-showcase img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1;
+}
+.product-card img { object-fit: cover; }
+.theme-category-showcase img { object-fit: contain; }

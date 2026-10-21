@@ -1,0 +1,32 @@
+{
+  "channels": [
+    {
+      "ai_assisted_sessions": 1,
+      "campaign_claim_sessions": 0,
+      "channel": "ai_perplexity",
+      "referrer_sessions": 1,
+      "sessions": 1
+    }
+  ],
+  "conversions": null,
+  "days": 30,
+  "from": "2026-08-23T07:30:23.626573802Z",
+  "revenue_authorized": false,
+  "sampling": "All accepted browser observations; ad blockers, disabled JS and missing purchase callbacks cause undercounting.",
+  "session_model": "first touch; last non-direct touch frozen at verified purchase callback",
+  "timezone": "UTC",
+  "top_landings": [
+    {
+      "path": "/",
+      "sessions": 1
+    }
+  ],
+  "top_products": [],
+  "trend": [
+    {
+      "day": "2026-09-22",
+      "recognized_ai_sessions": 1,
+      "sessions": 1
+    }
+  ]
+}

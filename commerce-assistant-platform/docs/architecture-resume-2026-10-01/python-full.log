@@ -1,0 +1,176 @@
+........................................................................ [  2%]
+........................................................................ [  4%]
+...........s...........................F.F.............................. [  6%]
+........................................................................ [  8%]
+........................................................................ [ 10%]
+........................................................................ [ 12%]
+........................................................................ [ 14%]
+........................................................................ [ 16%]
+........................................................................ [ 18%]
+........................................................................ [ 20%]
+........................................................................ [ 22%]
+..............................s......................................... [ 24%]
+........................................................................ [ 27%]
+.....................s.................................................. [ 29%]
+.................ss....................s................................ [ 31%]
+................................s....................................... [ 33%]
+........................................................................ [ 35%]
+........................................................................ [ 37%]
+................................F....................................... [ 39%]
+........................................................................ [ 41%]
+........................................................................ [ 43%]
+........................................................................ [ 45%]
+........................................................................ [ 47%]
+........................................................................ [ 49%]
+........................................................................ [ 52%]
+.............................................FFFFFFFFFFFFFFFFFF......... [ 54%]
+........................................................................ [ 56%]
+........................................................................ [ 58%]
+........................................................................ [ 60%]
+........................................................................ [ 62%]
+........................................................................ [ 64%]
+.s...................................................................... [ 66%]
+........................................................................ [ 68%]
+...................................................s.................... [ 70%]
+........................................................................ [ 72%]
+........................................................................ [ 74%]
+........................................................................ [ 77%]
+........................................................................ [ 79%]
+........................................................................ [ 81%]
+..........s............................................................. [ 83%]
+........................................................................ [ 85%]
+........................................................................ [ 87%]
+........................................................................ [ 89%]
+..........................................................F............. [ 91%]
+........................................................................ [ 93%]
+........................................................................ [ 95%]
+........................................................................ [ 97%]
+........................................................................ [ 99%]
+..                                                                       [100%]
+=================================== FAILURES ===================================
+____________________ test_generated_artifacts_match_source _____________________
+tests/test_capability_manifest.py:35: in test_generated_artifacts_match_source
+    assert (
+E   AssertionError: assert {'schema_vers...a', ...}, ...} == {'schema_vers...a', ...}, ...}
+E     
+E     Omitting 11 identical items, use -vv to show
+E     Differing items:
+E     {'source_sha256': {'ai-service/app/commerce_action_engine/actions/__init__.py': '1e08980f81a51e51ba4dfd1924c5590a342e5...e_action_engine/actions/catalog/bindings.py': '9a2b1eab7e6170d648b99b39e285baa142b410abad53a3a8db469f62ec9b7eda', ...}} != {'source_sha256': {'ai-service/app/commerce_action_engine/actions/__init__.py': '1e08980f81a51e51ba4dfd1924c5590a342e5...e_action_engine/actions/catalog/bindings.py': '9a2b1eab7e6170d648b99b39e285baa142b410abad53a3a8db469f62ec9b7eda', ...}}
+E     Use -v to get more diff
+____________________ test_new_unreviewed_route_is_rejected _____________________
+tests/test_capability_manifest.py:70: in test_new_unreviewed_route_is_rejected
+    original = inventory.route
+               ^^^^^^^^^^^^^^^
+E   AttributeError: module 'ai_capabilities' has no attribute 'route'
+_______________________ test_public_contracts_unchanged ________________________
+tests/test_enterprise_contracts.py:95: in test_public_contracts_unchanged
+    assert {
+E   AssertionError: assert {'AssistantPr...: 256}}}, ...} == {'AssistantPr...: 256}}}, ...}
+E     
+E     Omitting 46 identical items, use -vv to show
+E     Differing items:
+E     {'AssistantEvent': {'type': 'object', 'properties': {'response_source': {'type': 'string', 'enum': ['R', 'L']}, 'versi...teger', 'minimum': 0}, ...}, 'required': ['version', 'request_id', 'sequence', 'type'], 'additionalProperties': False}} != {'AssistantEvent': {'type': 'object', 'properties': {'response_source': {'type': 'string', 'enum': ['R', 'L']}, 'versi...teger', 'minimum': 0}, ...}, 'required': ['version', 'request_id', 'sequence', 'type'], 'additionalProperties': False}}
+E     Use -v to get more diff
+_ test_resolved_cart_action_reaches_executor_without_a_search_plan[None-ADD_TO_CART] _
+tests/test_intent_dispatch.py:185: in test_resolved_cart_action_reaches_executor_without_a_search_plan
+    monkeypatch.setattr(CommerceTools, "change_cart", change_cart)
+E   AttributeError: <module 'app.commerce_action_engine.execution.language.gate' from '/Users/momar/Documents/commerce-ai/ai-service/app/commerce_action_engine/execution/language/gate.py'> has no attribute 'shopping_plan'
+_ test_resolved_cart_action_reaches_executor_without_a_search_plan[None-ADD_TO_WISHLIST] _
+tests/test_intent_dispatch.py:185: in test_resolved_cart_action_reaches_executor_without_a_search_plan
+    monkeypatch.setattr(CommerceTools, "change_cart", change_cart)
+E   AttributeError: <module 'app.commerce_action_engine.execution.language.gate' from '/Users/momar/Documents/commerce-ai/ai-service/app/commerce_action_engine/execution/language/gate.py'> has no attribute 'shopping_plan'
+_ test_resolved_cart_action_reaches_executor_without_a_search_plan[None-CART_MOVE_TO_WISHLIST] _
+tests/test_intent_dispatch.py:185: in test_resolved_cart_action_reaches_executor_without_a_search_plan
+    monkeypatch.setattr(CommerceTools, "change_cart", change_cart)
+E   AttributeError: <module 'app.commerce_action_engine.execution.language.gate' from '/Users/momar/Documents/commerce-ai/ai-service/app/commerce_action_engine/execution/language/gate.py'> has no attribute 'shopping_plan'
+_ test_resolved_cart_action_reaches_executor_without_a_search_plan[None-CLEAR_CART] _
+tests/test_intent_dispatch.py:185: in test_resolved_cart_action_reaches_executor_without_a_search_plan
+    monkeypatch.setattr(CommerceTools, "change_cart", change_cart)
+E   AttributeError: <module 'app.commerce_action_engine.execution.language.gate' from '/Users/momar/Documents/commerce-ai/ai-service/app/commerce_action_engine/execution/language/gate.py'> has no attribute 'shopping_plan'
+_ test_resolved_cart_action_reaches_executor_without_a_search_plan[None-CONTINUE_CHECKOUT] _
+tests/test_intent_dispatch.py:185: in test_resolved_cart_action_reaches_executor_without_a_search_plan
+    monkeypatch.setattr(CommerceTools, "change_cart", change_cart)
+E   AttributeError: <module 'app.commerce_action_engine.execution.language.gate' from '/Users/momar/Documents/commerce-ai/ai-service/app/commerce_action_engine/execution/language/gate.py'> has no attribute 'shopping_plan'
+_ test_resolved_cart_action_reaches_executor_without_a_search_plan[None-CREATE_ORDER] _
+tests/test_intent_dispatch.py:185: in test_resolved_cart_action_reaches_executor_without_a_search_plan
+    monkeypatch.setattr(CommerceTools, "change_cart", change_cart)
+E   AttributeError: <module 'app.commerce_action_engine.execution.language.gate' from '/Users/momar/Documents/commerce-ai/ai-service/app/commerce_action_engine/execution/language/gate.py'> has no attribute 'shopping_plan'
+_ test_resolved_cart_action_reaches_executor_without_a_search_plan[None-REMOVE_FROM_CART] _
+tests/test_intent_dispatch.py:185: in test_resolved_cart_action_reaches_executor_without_a_search_plan
+    monkeypatch.setattr(CommerceTools, "change_cart", change_cart)
+E   AttributeError: <module 'app.commerce_action_engine.execution.language.gate' from '/Users/momar/Documents/commerce-ai/ai-service/app/commerce_action_engine/execution/language/gate.py'> has no attribute 'shopping_plan'
+_ test_resolved_cart_action_reaches_executor_without_a_search_plan[None-START_CHECKOUT] _
+tests/test_intent_dispatch.py:185: in test_resolved_cart_action_reaches_executor_without_a_search_plan
+    monkeypatch.setattr(CommerceTools, "change_cart", change_cart)
+E   AttributeError: <module 'app.commerce_action_engine.execution.language.gate' from '/Users/momar/Documents/commerce-ai/ai-service/app/commerce_action_engine/execution/language/gate.py'> has no attribute 'shopping_plan'
+_ test_resolved_cart_action_reaches_executor_without_a_search_plan[None-UPDATE_CART_QUANTITY] _
+tests/test_intent_dispatch.py:185: in test_resolved_cart_action_reaches_executor_without_a_search_plan
+    monkeypatch.setattr(CommerceTools, "change_cart", change_cart)
+E   AttributeError: <module 'app.commerce_action_engine.execution.language.gate' from '/Users/momar/Documents/commerce-ai/ai-service/app/commerce_action_engine/execution/language/gate.py'> has no attribute 'shopping_plan'
+_ test_resolved_cart_action_reaches_executor_without_a_search_plan[shop-ADD_TO_CART] _
+tests/test_intent_dispatch.py:185: in test_resolved_cart_action_reaches_executor_without_a_search_plan
+    monkeypatch.setattr(CommerceTools, "change_cart", change_cart)
+E   AttributeError: <module 'app.commerce_action_engine.execution.language.gate' from '/Users/momar/Documents/commerce-ai/ai-service/app/commerce_action_engine/execution/language/gate.py'> has no attribute 'shopping_plan'
+_ test_resolved_cart_action_reaches_executor_without_a_search_plan[shop-ADD_TO_WISHLIST] _
+tests/test_intent_dispatch.py:185: in test_resolved_cart_action_reaches_executor_without_a_search_plan
+    monkeypatch.setattr(CommerceTools, "change_cart", change_cart)
+E   AttributeError: <module 'app.commerce_action_engine.execution.language.gate' from '/Users/momar/Documents/commerce-ai/ai-service/app/commerce_action_engine/execution/language/gate.py'> has no attribute 'shopping_plan'
+_ test_resolved_cart_action_reaches_executor_without_a_search_plan[shop-CART_MOVE_TO_WISHLIST] _
+tests/test_intent_dispatch.py:185: in test_resolved_cart_action_reaches_executor_without_a_search_plan
+    monkeypatch.setattr(CommerceTools, "change_cart", change_cart)
+E   AttributeError: <module 'app.commerce_action_engine.execution.language.gate' from '/Users/momar/Documents/commerce-ai/ai-service/app/commerce_action_engine/execution/language/gate.py'> has no attribute 'shopping_plan'
+_ test_resolved_cart_action_reaches_executor_without_a_search_plan[shop-CLEAR_CART] _
+tests/test_intent_dispatch.py:185: in test_resolved_cart_action_reaches_executor_without_a_search_plan
+    monkeypatch.setattr(CommerceTools, "change_cart", change_cart)
+E   AttributeError: <module 'app.commerce_action_engine.execution.language.gate' from '/Users/momar/Documents/commerce-ai/ai-service/app/commerce_action_engine/execution/language/gate.py'> has no attribute 'shopping_plan'
+_ test_resolved_cart_action_reaches_executor_without_a_search_plan[shop-CONTINUE_CHECKOUT] _
+tests/test_intent_dispatch.py:185: in test_resolved_cart_action_reaches_executor_without_a_search_plan
+    monkeypatch.setattr(CommerceTools, "change_cart", change_cart)
+E   AttributeError: <module 'app.commerce_action_engine.execution.language.gate' from '/Users/momar/Documents/commerce-ai/ai-service/app/commerce_action_engine/execution/language/gate.py'> has no attribute 'shopping_plan'
+_ test_resolved_cart_action_reaches_executor_without_a_search_plan[shop-CREATE_ORDER] _
+tests/test_intent_dispatch.py:185: in test_resolved_cart_action_reaches_executor_without_a_search_plan
+    monkeypatch.setattr(CommerceTools, "change_cart", change_cart)
+E   AttributeError: <module 'app.commerce_action_engine.execution.language.gate' from '/Users/momar/Documents/commerce-ai/ai-service/app/commerce_action_engine/execution/language/gate.py'> has no attribute 'shopping_plan'
+_ test_resolved_cart_action_reaches_executor_without_a_search_plan[shop-REMOVE_FROM_CART] _
+tests/test_intent_dispatch.py:185: in test_resolved_cart_action_reaches_executor_without_a_search_plan
+    monkeypatch.setattr(CommerceTools, "change_cart", change_cart)
+E   AttributeError: <module 'app.commerce_action_engine.execution.language.gate' from '/Users/momar/Documents/commerce-ai/ai-service/app/commerce_action_engine/execution/language/gate.py'> has no attribute 'shopping_plan'
+_ test_resolved_cart_action_reaches_executor_without_a_search_plan[shop-START_CHECKOUT] _
+tests/test_intent_dispatch.py:185: in test_resolved_cart_action_reaches_executor_without_a_search_plan
+    monkeypatch.setattr(CommerceTools, "change_cart", change_cart)
+E   AttributeError: <module 'app.commerce_action_engine.execution.language.gate' from '/Users/momar/Documents/commerce-ai/ai-service/app/commerce_action_engine/execution/language/gate.py'> has no attribute 'shopping_plan'
+_ test_resolved_cart_action_reaches_executor_without_a_search_plan[shop-UPDATE_CART_QUANTITY] _
+tests/test_intent_dispatch.py:185: in test_resolved_cart_action_reaches_executor_without_a_search_plan
+    monkeypatch.setattr(CommerceTools, "change_cart", change_cart)
+E   AttributeError: <module 'app.commerce_action_engine.execution.language.gate' from '/Users/momar/Documents/commerce-ai/ai-service/app/commerce_action_engine/execution/language/gate.py'> has no attribute 'shopping_plan'
+___ test_english_scope_is_explicit_and_cannot_hide_missing_english_evidence ____
+tests/test_shopping_intent_regressions.py:234: in test_english_scope_is_explicit_and_cannot_hide_missing_english_evidence
+    compare(baseline, offline, thresholds_after_baseline(baseline))["status"]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+evals/lab/scoring.py:169: in compare
+    raise ValueError(
+E   ValueError: Comparison requires the same dataset, execution mode and explicit scope
+=========================== short test summary info ============================
+FAILED tests/test_capability_manifest.py::test_generated_artifacts_match_source
+FAILED tests/test_capability_manifest.py::test_new_unreviewed_route_is_rejected
+FAILED tests/test_enterprise_contracts.py::test_public_contracts_unchanged - ...
+FAILED tests/test_intent_dispatch.py::test_resolved_cart_action_reaches_executor_without_a_search_plan[None-ADD_TO_CART]
+FAILED tests/test_intent_dispatch.py::test_resolved_cart_action_reaches_executor_without_a_search_plan[None-ADD_TO_WISHLIST]
+FAILED tests/test_intent_dispatch.py::test_resolved_cart_action_reaches_executor_without_a_search_plan[None-CART_MOVE_TO_WISHLIST]
+FAILED tests/test_intent_dispatch.py::test_resolved_cart_action_reaches_executor_without_a_search_plan[None-CLEAR_CART]
+FAILED tests/test_intent_dispatch.py::test_resolved_cart_action_reaches_executor_without_a_search_plan[None-CONTINUE_CHECKOUT]
+FAILED tests/test_intent_dispatch.py::test_resolved_cart_action_reaches_executor_without_a_search_plan[None-CREATE_ORDER]
+FAILED tests/test_intent_dispatch.py::test_resolved_cart_action_reaches_executor_without_a_search_plan[None-REMOVE_FROM_CART]
+FAILED tests/test_intent_dispatch.py::test_resolved_cart_action_reaches_executor_without_a_search_plan[None-START_CHECKOUT]
+FAILED tests/test_intent_dispatch.py::test_resolved_cart_action_reaches_executor_without_a_search_plan[None-UPDATE_CART_QUANTITY]
+FAILED tests/test_intent_dispatch.py::test_resolved_cart_action_reaches_executor_without_a_search_plan[shop-ADD_TO_CART]
+FAILED tests/test_intent_dispatch.py::test_resolved_cart_action_reaches_executor_without_a_search_plan[shop-ADD_TO_WISHLIST]
+FAILED tests/test_intent_dispatch.py::test_resolved_cart_action_reaches_executor_without_a_search_plan[shop-CART_MOVE_TO_WISHLIST]
+FAILED tests/test_intent_dispatch.py::test_resolved_cart_action_reaches_executor_without_a_search_plan[shop-CLEAR_CART]
+FAILED tests/test_intent_dispatch.py::test_resolved_cart_action_reaches_executor_without_a_search_plan[shop-CONTINUE_CHECKOUT]
+FAILED tests/test_intent_dispatch.py::test_resolved_cart_action_reaches_executor_without_a_search_plan[shop-CREATE_ORDER]
+FAILED tests/test_intent_dispatch.py::test_resolved_cart_action_reaches_executor_without_a_search_plan[shop-REMOVE_FROM_CART]
+FAILED tests/test_intent_dispatch.py::test_resolved_cart_action_reaches_executor_without_a_search_plan[shop-START_CHECKOUT]
+FAILED tests/test_intent_dispatch.py::test_resolved_cart_action_reaches_executor_without_a_search_plan[shop-UPDATE_CART_QUANTITY]
+FAILED tests/test_shopping_intent_regressions.py::test_english_scope_is_explicit_and_cannot_hide_missing_english_evidence
+22 failed, 3426 passed, 10 skipped, 33 warnings in 162.27s (0:02:42)

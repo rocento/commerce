@@ -1,0 +1,10 @@
+{
+  "gate": "Blocked",
+  "errors": [
+    "No running merchant publication installation was observed"
+  ],
+  "inventory": {
+    "scope": "read-only local Docker topology and persisted installation identity; not CDN/IAM/field-performance verification",
+    "installations": []
+  }
+}

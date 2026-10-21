@@ -1,0 +1,9 @@
+ Container rocento-publication-stage12a-postgres-1 Running
+ Container rocento-publication-stage12a-postgres-1 Waiting
+ Container rocento-publication-stage12a-postgres-1 Healthy
+ Container rocento-publication-stage12a-verify-run-79f8ea53de8a Creating
+ Container rocento-publication-stage12a-verify-run-79f8ea53de8a Created
+v22.23.2
+rustc 1.94.1 (e408947bf 2026-03-25)
+Chromium 153.0.8010.52 built on Debian GNU/Linux 12 (bookworm)
+bda2f6fbf6778368d99c12d49536f248d200ecb6265f75df239cee1f5d88d836  /target/release/api-gateway

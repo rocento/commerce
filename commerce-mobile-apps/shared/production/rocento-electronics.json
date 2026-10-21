@@ -1,0 +1,225 @@
+{
+  "brand": {
+    "dark": {
+      "background": "#181615",
+      "onPrimary": "#FFFFFF",
+      "primary": "#c8102e",
+      "surface": "#282320",
+      "text": "#FAF8F7"
+    },
+    "density": "comfortable",
+    "displayName": "Electronics",
+    "fontToken": "system",
+    "light": {
+      "background": "#ffffff",
+      "onPrimary": "#FFFFFF",
+      "primary": "#c8102e",
+      "surface": "#f5f5f7",
+      "text": "#17181c"
+    },
+    "logoAssetId": "e26ca800-314f-4044-8ac6-d5cdc278a83a",
+    "radiusToken": "small"
+  },
+  "compatibility": {
+    "minAndroidRuntime": "1.2.0",
+    "minIosRuntime": "1.2.0"
+  },
+  "configVersion": 0,
+  "features": {
+    "locationPicker": false,
+    "reviews": false,
+    "wishlist": false
+  },
+  "localization": {
+    "defaultLocale": "en",
+    "messages": {
+      "ar": {
+        "categories": "تسوق حسب الفئة",
+        "demo_electronics_audio_heading": "Turn up the everyday.",
+        "demo_electronics_categories_heading": "What are you looking for?",
+        "demo_electronics_featured_heading": "Fresh tech. Great finds.",
+        "demo_electronics_help_heading": "Good tech starts with the right choice.",
+        "demo_electronics_help_label": "Help me choose",
+        "demo_electronics_help_text": "Not sure where to start? Tell our shopping assistant what matters to you.",
+        "demo_electronics_hero": "اكتشف مجموعتنا من الإلكترونيات",
+        "demo_electronics_hero_alt": "Illustrative unbranded phone studio product image",
+        "demo_electronics_hero_eyebrow": "THE NEXT EVERYDAY",
+        "demo_electronics_hero_heading": "Your next upgrade.\nA little more wow.",
+        "demo_electronics_hero_label": "Explore phones",
+        "demo_electronics_hero_text": "Meet the devices that make everyday life feel extraordinary. Start with the Pulse Phone collection.",
+        "demo_electronics_home": "اكتشف مجموعتنا من الإلكترونيات",
+        "demo_electronics_home_alt": "Illustrative unbranded appliance studio product image",
+        "demo_electronics_home_eyebrow": "MAKE YOURSELF AT HOME",
+        "demo_electronics_home_heading": "A smarter home.\nA simpler day.",
+        "demo_electronics_home_label": "Explore appliances",
+        "demo_electronics_home_text": "Everyday essentials, thoughtfully chosen. Explore the home appliance collection.",
+        "demo_electronics_work": "اكتشف مجموعتنا من الإلكترونيات",
+        "demo_electronics_work_alt": "Illustrative unbranded laptop studio product image",
+        "demo_electronics_work_eyebrow": "WORK. CREATE. UNWIND.",
+        "demo_electronics_work_heading": "More space for\nyour big ideas.",
+        "demo_electronics_work_label": "Explore computers",
+        "demo_electronics_work_text": "From your first coffee to your last open tab. Explore laptops for work, study and everything in between.",
+        "products": "اكتشف منتجاتنا",
+        "section_527cdc4a_title": "اكتشف مجموعتنا الجديدة",
+        "welcome": "مرحباً بكم في الإلكترونيات"
+      },
+      "en": {
+        "categories": "Shop by category",
+        "demo_electronics_audio_heading": "Turn up the everyday.",
+        "demo_electronics_categories_heading": "What are you looking for?",
+        "demo_electronics_featured_heading": "Fresh tech. Great finds.",
+        "demo_electronics_help_heading": "Good tech starts with the right choice.",
+        "demo_electronics_help_label": "Help me choose",
+        "demo_electronics_help_text": "Not sure where to start? Tell our shopping assistant what matters to you.",
+        "demo_electronics_hero": "Illustrative unbranded phone studio product image",
+        "demo_electronics_hero_alt": "Illustrative unbranded phone studio product image",
+        "demo_electronics_hero_eyebrow": "THE NEXT EVERYDAY",
+        "demo_electronics_hero_heading": "Your next upgrade.\nA little more wow.",
+        "demo_electronics_hero_label": "Explore phones",
+        "demo_electronics_hero_text": "Meet the devices that make everyday life feel extraordinary. Start with the Pulse Phone collection.",
+        "demo_electronics_home": "Illustrative unbranded appliance studio product image",
+        "demo_electronics_home_alt": "Illustrative unbranded appliance studio product image",
+        "demo_electronics_home_eyebrow": "MAKE YOURSELF AT HOME",
+        "demo_electronics_home_heading": "A smarter home.\nA simpler day.",
+        "demo_electronics_home_label": "Explore appliances",
+        "demo_electronics_home_text": "Everyday essentials, thoughtfully chosen. Explore the home appliance collection.",
+        "demo_electronics_work": "Illustrative unbranded laptop studio product image",
+        "demo_electronics_work_alt": "Illustrative unbranded laptop studio product image",
+        "demo_electronics_work_eyebrow": "WORK. CREATE. UNWIND.",
+        "demo_electronics_work_heading": "More space for\nyour big ideas.",
+        "demo_electronics_work_label": "Explore computers",
+        "demo_electronics_work_text": "From your first coffee to your last open tab. Explore laptops for work, study and everything in between.",
+        "products": "Cameras",
+        "section_527cdc4a_title": "Discover something new",
+        "welcome": "Welcome to Electronics"
+      }
+    },
+    "rtlEnabled": true,
+    "supportedLocales": [
+      "en",
+      "ar"
+    ]
+  },
+  "navigation": {
+    "tabs": [
+      "home",
+      "categories",
+      "deals",
+      "account",
+      "cart"
+    ]
+  },
+  "schemaVersion": "1.0.0",
+  "screens": {
+    "home": {
+      "layout": "storefront",
+      "sections": [
+        {
+          "id": "demo_electronics_hero",
+          "props": {
+            "accessibilityLabelKey": "demo_electronics_hero_alt",
+            "action": {
+              "categoryId": "3a99778e-bc06-4c0a-9db1-f405b9268f57",
+              "type": "openCategory"
+            },
+            "appearance": "editorial",
+            "bodyKey": "demo_electronics_hero_text",
+            "eyebrowKey": "demo_electronics_hero_eyebrow",
+            "headingKey": "demo_electronics_hero_heading",
+            "imageAssetId": "d7f8de25-7156-4b83-a313-f688b5b0e7bf",
+            "labelKey": "demo_electronics_hero_label"
+          },
+          "type": "heroBanner"
+        },
+        {
+          "id": "demo_electronics_categories",
+          "props": {
+            "appearance": "tiles",
+            "categoryIds": [
+              "3a99778e-bc06-4c0a-9db1-f405b9268f57",
+              "53e53e56-1988-43d0-b38e-f4b470f68d79",
+              "9a283d5b-5e32-45d2-8a89-4b7badcf6c6f",
+              "04457ff0-dc12-4954-a898-2101af8f8e04"
+            ],
+            "titleKey": "demo_electronics_categories_heading"
+          },
+          "type": "categoryGrid"
+        },
+        {
+          "id": "demo_electronics_featured",
+          "props": {
+            "collectionId": "demo-feed-featured",
+            "columns": 2,
+            "limit": 6,
+            "titleKey": "demo_electronics_featured_heading"
+          },
+          "type": "productGrid"
+        },
+        {
+          "id": "demo_electronics_help",
+          "props": {
+            "appearance": "campaign",
+            "headingKey": "demo_electronics_help_heading",
+            "labelKey": "demo_electronics_help_label",
+            "storefrontPath": "/assistant",
+            "textKey": "demo_electronics_help_text"
+          },
+          "type": "richText"
+        },
+        {
+          "id": "demo_electronics_work",
+          "props": {
+            "accessibilityLabelKey": "demo_electronics_work_alt",
+            "action": {
+              "categoryId": "414362d0-fbd8-469d-b0cf-0e7923993e72",
+              "type": "openCategory"
+            },
+            "appearance": "editorial",
+            "bodyKey": "demo_electronics_work_text",
+            "eyebrowKey": "demo_electronics_work_eyebrow",
+            "headingKey": "demo_electronics_work_heading",
+            "imageAssetId": "a27b964b-c1d9-44c2-91c6-88ae0f2f2a49",
+            "labelKey": "demo_electronics_work_label"
+          },
+          "type": "heroBanner"
+        },
+        {
+          "id": "demo_electronics_audio",
+          "props": {
+            "collectionId": "demo-feed-audio",
+            "columns": 2,
+            "limit": 6,
+            "titleKey": "demo_electronics_audio_heading"
+          },
+          "type": "productGrid"
+        },
+        {
+          "id": "demo_electronics_home",
+          "props": {
+            "accessibilityLabelKey": "demo_electronics_home_alt",
+            "action": {
+              "categoryId": "8174e8a4-2d5a-481b-b5b9-2c4f72987b16",
+              "type": "openCategory"
+            },
+            "appearance": "editorial",
+            "bodyKey": "demo_electronics_home_text",
+            "eyebrowKey": "demo_electronics_home_eyebrow",
+            "headingKey": "demo_electronics_home_heading",
+            "imageAssetId": "c2198e3a-40be-4609-bba6-b069d5fc00d8",
+            "labelKey": "demo_electronics_home_label"
+          },
+          "type": "heroBanner"
+        },
+        {
+          "id": "section_527cdc4a",
+          "props": {
+            "collectionId": "demo-feed-featured",
+            "titleKey": "section_527cdc4a_title"
+          },
+          "type": "productCarousel"
+        }
+      ]
+    }
+  },
+  "tenantId": "07cccc3d-6a89-5f7d-811c-c5ff9b1de2ca"
+}

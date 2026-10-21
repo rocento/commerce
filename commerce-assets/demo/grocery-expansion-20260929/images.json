@@ -1,0 +1,142 @@
+[
+  {
+    "file": "bagels.png",
+    "width": 1254,
+    "height": 1254,
+    "bytes": 1823514,
+    "sha256": "fa93b5ebfb1fadcbd70d738d5d1b7b9586f8360e0fc5c3c58d08c59843045621"
+  },
+  {
+    "file": "blueberries.png",
+    "width": 1254,
+    "height": 1254,
+    "bytes": 1417097,
+    "sha256": "f2a597463cddbebfb50b59b0810934f946d9b20610779c2d33588d24baa9299f"
+  },
+  {
+    "file": "chicken-drumsticks.png",
+    "width": 1254,
+    "height": 1254,
+    "bytes": 1295972,
+    "sha256": "c2777f7d124434612d314048a284982ad5bfce8e9ba0199b25f300c279d2ae27"
+  },
+  {
+    "file": "couscous.png",
+    "width": 1254,
+    "height": 1254,
+    "bytes": 1534015,
+    "sha256": "b0a8ee27059484184ad6817dce62f136b1a613668e5bd1e4cd0072447c0207ab"
+  },
+  {
+    "file": "cream-cheese.png",
+    "width": 1254,
+    "height": 1254,
+    "bytes": 1049276,
+    "sha256": "eb0e8578e506673afa470972e4fd402674d5947bb11dc3c613d862b5f7c561d5"
+  },
+  {
+    "file": "dried-apricots.png",
+    "width": 1254,
+    "height": 1254,
+    "bytes": 1612729,
+    "sha256": "ccb35978567110e796d83b55e9ab5a8e0f9723f19b885edf2c342d2839512701"
+  },
+  {
+    "file": "green-beans.png",
+    "width": 1254,
+    "height": 1254,
+    "bytes": 1420031,
+    "sha256": "ad9198d8f5057d5f059edcd57b22ac37580bebe3f8a3e5ba1ed777a827c7b064"
+  },
+  {
+    "file": "ground-beef.png",
+    "width": 1254,
+    "height": 1254,
+    "bytes": 1720806,
+    "sha256": "6065f8f257fc0ac4a9046eb76ecf1ed4750b6cf596e8230b00b229dd2ef887c3"
+  },
+  {
+    "file": "hazelnuts.png",
+    "width": 1254,
+    "height": 1254,
+    "bytes": 1318075,
+    "sha256": "86ef75aa13b84a93cb24338e26d16530cea6fd66a119fe8616853fbfdae00927"
+  },
+  {
+    "file": "kiwi.png",
+    "width": 1254,
+    "height": 1254,
+    "bytes": 1646085,
+    "sha256": "cb4fed8e8bb06ecacf621fbfba65983177e5bfd0aa3de0a9f9e8eff5f12057eb"
+  },
+  {
+    "file": "lettuce.png",
+    "width": 1254,
+    "height": 1254,
+    "bytes": 1661995,
+    "sha256": "a0157957bf8350c313a0d6008006f881ba1bdf26050862cadc5beff4ec075bca"
+  },
+  {
+    "file": "mozzarella.png",
+    "width": 1254,
+    "height": 1254,
+    "bytes": 1265354,
+    "sha256": "61be259a95e71b9977a2494868f99d4d7f47592289e561a6aa92f2f071d826f8"
+  },
+  {
+    "file": "oat-bread.png",
+    "width": 1254,
+    "height": 1254,
+    "bytes": 1702449,
+    "sha256": "666ee31e5487a7f5b0f40e5dc3056e6d79cbfdfec7cf284281da37eaf5efe4dd"
+  },
+  {
+    "file": "peaches.png",
+    "width": 1254,
+    "height": 1254,
+    "bytes": 1875588,
+    "sha256": "1dcb76ebc5c3d4bfdbf0982cc7c2ec75ce144e475d5cdfb03adb1ef4310d54e7"
+  },
+  {
+    "file": "pomegranate.png",
+    "width": 1254,
+    "height": 1254,
+    "bytes": 1762722,
+    "sha256": "f2e6c53eb456775a2a86d927153fa91511ce4ba5c76c83ff428689058d7b0117"
+  },
+  {
+    "file": "rolled-oats.png",
+    "width": 1254,
+    "height": 1254,
+    "bytes": 1645149,
+    "sha256": "9ad944c9580d1ad84e5898476acfb7499f5add30b734b6f0298623af025af9bc"
+  },
+  {
+    "file": "shrimp.png",
+    "width": 1254,
+    "height": 1254,
+    "bytes": 1334880,
+    "sha256": "8b4879e6f96b13b2117e18eaace2b96bbdbdd1ef37ee98bba78a154548555cb6"
+  },
+  {
+    "file": "spinach.png",
+    "width": 1254,
+    "height": 1254,
+    "bytes": 1870522,
+    "sha256": "c49ecbae5a2981c5985ac7de983ad7574dc3bcee5383eae774f35a96ec52dcf2"
+  },
+  {
+    "file": "sweet-potatoes.png",
+    "width": 1254,
+    "height": 1254,
+    "bytes": 1638132,
+    "sha256": "4dbe9a73da2ab7a50c8c162e5907535f598a4ed584a9314039d7ec17f02d00b3"
+  },
+  {
+    "file": "tuna.png",
+    "width": 1254,
+    "height": 1254,
+    "bytes": 1923730,
+    "sha256": "2a3a3ea0362eb89e138390d49130c1d585a7acce1f435f382322c13097a123fb"
+  }
+]

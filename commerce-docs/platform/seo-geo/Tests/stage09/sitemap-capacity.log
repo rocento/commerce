@@ -1,0 +1,9 @@
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 0.24s
+     Running tests/publication_discovery.rs (backend/target/debug/deps/publication_discovery-9b8ae3d1122f540b)
+
+running 1 test
+test two_million_product_capacity has been running for over 60 seconds
+{"index_bytes":286394,"index_entries":2003,"index_plus_three_partitions_ms":706,"products":2000000,"sample_partition_sizes":[1000,1000,1000]}
+test two_million_product_capacity ... ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 4 filtered out; finished in 157.92s

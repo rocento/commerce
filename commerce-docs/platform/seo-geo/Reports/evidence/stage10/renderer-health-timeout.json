@@ -1,0 +1,129 @@
+{
+  "installation_id": "00000000-0000-0000-0000-000000000001",
+  "origin": "https://shop.example.test/",
+  "scope": "Local renderer HTTP; one product, one sitemap partition, one image and one configured redirect; not an external CDN audit.",
+  "findings": [
+    {
+      "code": "robots",
+      "severity": "Error",
+      "resource": "https://shop.example.test/robots.txt",
+      "evidence": "Probe timed out, exceeded the size limit, or transport failed.",
+      "remediation": "Restore robots.txt and its approved-origin sitemap declaration.",
+      "observed_at": "2026-09-21T09:51:00.253Z"
+    },
+    {
+      "code": "sitemap",
+      "severity": "Healthy",
+      "resource": "https://shop.example.test/sitemap.xml",
+      "evidence": "HTTP 200; expected representation observed",
+      "remediation": "No action required.",
+      "observed_at": "2026-09-21T09:51:00.258Z"
+    },
+    {
+      "code": "sitemap_partition",
+      "severity": "Error",
+      "resource": "https://shop.example.test/products/apple",
+      "evidence": "HTTP 200; representation check failed",
+      "remediation": "Repair the first sampled sitemap partition.",
+      "observed_at": "2026-09-21T09:51:00.259Z"
+    },
+    {
+      "code": "real_404",
+      "severity": "Healthy",
+      "resource": "https://shop.example.test/products/rocento-health-missing-00000000-0000-0000-0000-000000000000",
+      "evidence": "HTTP 404; expected representation observed",
+      "remediation": "No action required.",
+      "observed_at": "2026-09-21T09:51:00.259Z"
+    },
+    {
+      "code": "product_response",
+      "severity": "Healthy",
+      "resource": "https://shop.example.test/products/apple",
+      "evidence": "HTTP 200; expected representation observed",
+      "remediation": "No action required.",
+      "observed_at": "2026-09-21T09:51:00.260Z"
+    },
+    {
+      "code": "product_html",
+      "severity": "Healthy",
+      "resource": "https://shop.example.test/products/apple",
+      "evidence": "Compared the sampled product name with the server-rendered H1.",
+      "remediation": "No action required.",
+      "observed_at": "2026-09-21T09:51:00.260Z"
+    },
+    {
+      "code": "canonical_tag",
+      "severity": "Healthy",
+      "resource": "https://shop.example.test/products/apple",
+      "evidence": "Expected exactly one canonical matching the approved snapshot URL.",
+      "remediation": "No action required.",
+      "observed_at": "2026-09-21T09:51:00.260Z"
+    },
+    {
+      "code": "robots_tag",
+      "severity": "Healthy",
+      "resource": "https://shop.example.test/products/apple",
+      "evidence": "Compared robots meta with effective snapshot policy.",
+      "remediation": "No action required.",
+      "observed_at": "2026-09-21T09:51:00.260Z"
+    },
+    {
+      "code": "structured_data",
+      "severity": "Healthy",
+      "resource": "https://shop.example.test/products/apple",
+      "evidence": "Parsed JSON-LD and compared it with snapshot product/offer facts.",
+      "remediation": "No action required.",
+      "observed_at": "2026-09-21T09:51:00.260Z"
+    },
+    {
+      "code": "robots_header",
+      "severity": "Healthy",
+      "resource": "https://shop.example.test/products/apple",
+      "evidence": "Compared response X-Robots-Tag with effective snapshot policy.",
+      "remediation": "No action required.",
+      "observed_at": "2026-09-21T09:51:00.260Z"
+    },
+    {
+      "code": "public_image",
+      "severity": "Warning",
+      "resource": "https://shop.example.test/products/apple",
+      "evidence": "No measured image on sampled product.",
+      "remediation": "Approve an accessible product image.",
+      "observed_at": "2026-09-21T09:51:00.260Z"
+    },
+    {
+      "code": "redirect_sample",
+      "severity": "Healthy",
+      "resource": "https://shop.example.test/",
+      "evidence": "No configured redirect was supplied for sampling.",
+      "remediation": "No action required.",
+      "observed_at": "2026-09-21T09:51:00.260Z"
+    },
+    {
+      "code": "crawler_errors",
+      "severity": "Warning",
+      "resource": "https://shop.example.test/",
+      "evidence": "0 error responses among 0 claimed crawler requests in the process window.",
+      "remediation": "Collect crawler observations or investigate 403/429/5xx responses in renderer and CDN logs.",
+      "observed_at": "2026-09-21T09:51:00.260Z"
+    }
+  ],
+  "observations": {
+    "installation_id": "00000000-0000-0000-0000-000000000001",
+    "observed_at": "2026-09-21T09:51:00.260Z",
+    "window_start": "2026-09-21T09:50:58.232Z",
+    "scope": "renderer process; claimed user agents, not verified bot identity; upstream CDN responses excluded",
+    "rows": [
+      {
+        "route": "product",
+        "crawler": "none",
+        "status": "3xx",
+        "code": "response",
+        "count": 1
+      }
+    ],
+    "crawler_requests": 0,
+    "crawler_errors": 0,
+    "alert": false
+  }
+}

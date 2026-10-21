@@ -1,0 +1,14 @@
+ALTER TABLE assistant.metrics ADD COLUMN IF NOT EXISTS exported_at timestamptz;
+CREATE TABLE IF NOT EXISTS assistant.deployment(singleton boolean PRIMARY KEY DEFAULT true CHECK(singleton), tenant_id uuid NOT NULL);
+INSERT INTO assistant.deployment(tenant_id) VALUES(:'tenant_id'::uuid) ON CONFLICT(singleton) DO NOTHING;
+REVOKE ALL ON assistant.deployment FROM ai_runtime;
+GRANT SELECT ON assistant.deployment TO ai_runtime;
+DROP POLICY conversations_owner ON assistant.conversations;
+DROP POLICY turns_owner ON assistant.turns;
+DROP POLICY metrics_tenant ON assistant.metrics;
+DROP POLICY documents_tenant ON assistant.documents;
+CREATE POLICY conversations_owner ON assistant.conversations USING(tenant_id=(SELECT tenant_id FROM assistant.deployment WHERE singleton) AND tenant_id=current_setting('assistant.tenant',true)::uuid AND customer_id=current_setting('assistant.customer',true)::uuid);
+CREATE POLICY turns_owner ON assistant.turns USING(tenant_id=(SELECT tenant_id FROM assistant.deployment WHERE singleton) AND tenant_id=current_setting('assistant.tenant',true)::uuid AND customer_id=current_setting('assistant.customer',true)::uuid);
+CREATE POLICY metrics_tenant ON assistant.metrics USING(tenant_id=(SELECT tenant_id FROM assistant.deployment WHERE singleton) AND tenant_id=current_setting('assistant.tenant',true)::uuid);
+CREATE POLICY documents_tenant ON assistant.documents USING(tenant_id=(SELECT tenant_id FROM assistant.deployment WHERE singleton) AND tenant_id=current_setting('assistant.tenant',true)::uuid);
+ALTER TABLE assistant.documents FORCE ROW LEVEL SECURITY;

@@ -1,0 +1,6 @@
+    Checking domain-catalog v0.1.0 (/Users/momar/Documents/commerce-ai/backend/crates/domain-catalog)
+    Checking domain-admin-operations v0.1.0 (/Users/momar/Documents/commerce-ai/backend/crates/domain-admin-operations)
+    Checking domain-cart-checkout v0.1.0 (/Users/momar/Documents/commerce-ai/backend/crates/domain-cart-checkout)
+    Checking domain-search-client v0.1.0 (/Users/momar/Documents/commerce-ai/backend/crates/domain-search-client)
+    Checking api-gateway v0.1.0 (/Users/momar/Documents/commerce-ai/backend/crates/api-gateway)
+    Finished `dev` profile [unoptimized + debuginfo] target(s) in 3.61s

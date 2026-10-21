@@ -1,0 +1,100 @@
+{
+  "rows": [
+    {
+      "isolated": true,
+      "status": 200,
+      "surface": "/",
+      "tenant": "A",
+      "xss_escaped": true
+    },
+    {
+      "isolated": true,
+      "status": 200,
+      "surface": "/products/apples",
+      "tenant": "A",
+      "xss_escaped": true
+    },
+    {
+      "isolated": true,
+      "status": 200,
+      "surface": "/categories/fruit",
+      "tenant": "A",
+      "xss_escaped": true
+    },
+    {
+      "isolated": true,
+      "status": 200,
+      "surface": "/pages/about",
+      "tenant": "A",
+      "xss_escaped": true
+    },
+    {
+      "identical": "product/category/media/CMS IDs, slug, SKU, locale, event/session IDs",
+      "isolated": true,
+      "surfaces": [
+        "metadata/canonical",
+        "JSON-LD",
+        "robots",
+        "sitemap/partitions",
+        "redirect",
+        "feed/export",
+        "media references, identical-key isolated object-store bytes and authorization",
+        "merchant/policies",
+        "health",
+        "analytics",
+        "no-store responses",
+        "durable background jobs"
+      ],
+      "tenant": "A"
+    },
+    {
+      "isolated": true,
+      "status": 200,
+      "surface": "/",
+      "tenant": "B",
+      "xss_escaped": true
+    },
+    {
+      "isolated": true,
+      "status": 200,
+      "surface": "/products/apples",
+      "tenant": "B",
+      "xss_escaped": true
+    },
+    {
+      "isolated": true,
+      "status": 200,
+      "surface": "/categories/fruit",
+      "tenant": "B",
+      "xss_escaped": true
+    },
+    {
+      "isolated": true,
+      "status": 200,
+      "surface": "/pages/about",
+      "tenant": "B",
+      "xss_escaped": true
+    },
+    {
+      "identical": "product/category/media/CMS IDs, slug, SKU, locale, event/session IDs",
+      "isolated": true,
+      "surfaces": [
+        "metadata/canonical",
+        "JSON-LD",
+        "robots",
+        "sitemap/partitions",
+        "redirect",
+        "feed/export",
+        "media references, identical-key isolated object-store bytes and authorization",
+        "merchant/policies",
+        "health",
+        "analytics",
+        "no-store responses",
+        "durable background jobs"
+      ],
+      "tenant": "B"
+    }
+  ],
+  "synthetic": true,
+  "withdrawal_and_worker_restart_isolated": true
+}

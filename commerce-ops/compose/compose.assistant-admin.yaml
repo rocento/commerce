@@ -1,0 +1,25 @@
+# OpenAI egress for admin-managed credentials; apply after compose.assistant.yaml.
+services:
+  ai-service:
+    environment:
+      AI_EMBEDDING_MODEL: ${AI_EMBEDDING_MODEL:-}
+      AI_KNOWLEDGE_COLLECTIONS: ${AI_KNOWLEDGE_COLLECTIONS:-}
+      AI_INTENT_EXAMPLE_COLLECTION: ${AI_INTENT_EXAMPLE_COLLECTION:-}
+      AI_SEMANTIC_RECOVERY_EMBEDDING_BUDGET: ${AI_SEMANTIC_RECOVERY_EMBEDDING_BUDGET:-0}
+      AI_MODEL_PROVIDER: disabled
+      AI_MODEL_NAME: ${AI_MODEL_NAME:-gpt-4.1-mini}
+      AI_MODEL_URL: http://assistant-provider:8082/v1/responses
+      AI_MODEL_TIMEOUT_SECONDS: "20"
+  assistant-provider:
+    image: nginxinc/nginx-unprivileged:1.28-alpine
+    networks: [assistant-private, provider-egress]
+    volumes: ["../../commerce-ops/deploy/assistant/provider.conf:/etc/nginx/conf.d/default.conf:ro"]
+    read_only: true
+    tmpfs: ["/tmp:size=16m,noexec,nosuid"]
+    cap_drop: [ALL]
+    security_opt: [no-new-privileges:true]
+    mem_limit: 64m
+    cpus: 0.25
+    pids_limit: 32
+networks:
+  provider-egress: {}

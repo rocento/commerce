@@ -1,0 +1,199 @@
+{
+  "cases": 500000,
+  "turns": 566666,
+  "language_scope": "english",
+  "cases_sha256": "cfc05c6f1b9d3bc5c0a381b84c42457833e563cd8248ec856919fe03ab3ec8ab",
+  "outcome_changes_by_family": {
+    "price_constraints": 4164,
+    "conversational_search": 4074,
+    "strict_minimum": 4118,
+    "unicode_currency": 4140
+  },
+  "route_changes_by_family": {},
+  "catalog_plan_changes_by_family": {
+    "price_constraints": 4164,
+    "conversational_search": 4074,
+    "strict_minimum": 4118
+  },
+  "regressions": [],
+  "outcomes": {
+    "passed": 385428,
+    "review": 83331,
+    "failed": 31241
+  },
+  "safety_violations": 0,
+  "quantity_family": {
+    "fallback_turns": 0,
+    "cases": 16667,
+    "passed": 16667
+  },
+  "examples": [
+    {
+      "family": "price_constraints",
+      "message": "show me cat food up to $3674",
+      "before": {
+        "price": {
+          "operator": "=",
+          "value": 3674,
+          "currency": "USD"
+        },
+        "productText": "cat food up to $3674"
+      },
+      "after": {
+        "price": {
+          "operator": "<=",
+          "value": 3674,
+          "currency": "USD"
+        },
+        "productText": "cat food"
+      },
+      "catalog_plan": {
+        "shopping": true,
+        "presentation": "search",
+        "query": "cat food",
+        "category": null,
+        "min_price": null,
+        "max_price": "3674",
+        "exclusive_min": false,
+        "exclusive_max": false,
+        "currency": "USD",
+        "brand": null,
+        "attributes": [],
+        "in_stock": false,
+        "intended_use": null,
+        "preferences": [],
+        "sort_by": null,
+        "cheaper": false,
+        "alternatives": false,
+        "clarification": null
+      }
+    },
+    {
+      "family": "conversational_search",
+      "message": "I'm trying to find veltronic modules for less than $2299.",
+      "before": {
+        "price": {
+          "operator": "<",
+          "value": 2299,
+          "currency": "USD"
+        },
+        "productText": "veltronic modules for"
+      },
+      "after": {
+        "price": {
+          "operator": "<",
+          "value": 2299,
+          "currency": "USD"
+        },
+        "productText": "veltronic modules"
+      },
+      "catalog_plan": {
+        "shopping": true,
+        "presentation": "search",
+        "query": "veltronic modules",
+        "category": null,
+        "min_price": null,
+        "max_price": "2299",
+        "exclusive_min": false,
+        "exclusive_max": true,
+        "currency": "USD",
+        "brand": null,
+        "attributes": [],
+        "in_stock": false,
+        "intended_use": null,
+        "preferences": [],
+        "sort_by": null,
+        "cheaper": false,
+        "alternatives": false,
+        "clarification": null
+      }
+    },
+    {
+      "family": "strict_minimum",
+      "message": "I need toilet paper costing more than $2721",
+      "before": {
+        "price": {
+          "operator": ">=",
+          "value": 2721,
+          "currency": "USD"
+        },
+        "productText": "toilet paper costing"
+      },
+      "after": {
+        "price": {
+          "operator": ">=",
+          "value": 2721,
+          "currency": "USD"
+        },
+        "productText": "toilet paper"
+      },
+      "catalog_plan": {
+        "shopping": true,
+        "presentation": "search",
+        "query": "toilet paper",
+        "category": null,
+        "min_price": "2721",
+        "max_price": null,
+        "exclusive_min": true,
+        "exclusive_max": false,
+        "currency": "USD",
+        "brand": null,
+        "attributes": [],
+        "in_stock": false,
+        "intended_use": null,
+        "preferences": [],
+        "sort_by": null,
+        "cheaper": false,
+        "alternatives": false,
+        "clarification": null
+      }
+    },
+    {
+      "family": "unicode_currency",
+      "message": "I need swim goggles under USD 4835",
+      "before": {
+        "currency": "USD",
+        "productText": "swim goggles"
+      },
+      "after": {
+        "price": {
+          "operator": "<=",
+          "value": 4835,
+          "currency": "USD"
+        },
+        "currency": "USD",
+        "productText": "swim goggles"
+      },
+      "catalog_plan": {
+        "shopping": true,
+        "presentation": "search",
+        "query": "swim goggles",
+        "category": null,
+        "min_price": null,
+        "max_price": "4835",
+        "exclusive_min": false,
+        "exclusive_max": true,
+        "currency": "USD",
+        "brand": null,
+        "attributes": [],
+        "in_stock": false,
+        "intended_use": null,
+        "preferences": [],
+        "sort_by": null,
+        "cheaper": false,
+        "alternatives": false,
+        "clarification": null
+      }
+    }
+  ],
+  "source_changes_during_run": [],
+  "validation": {
+    "node_tests_passed": 65,
+    "python_tests_passed": 108,
+    "typecheck": "passed",
+    "architecture_check": "passed"
+  },
+  "paid_llm_calls": 0,
+  "baseline": "artifacts/shopping-evals/invalid-quantity-fix-500k-2026-09-23",
+  "candidate": "artifacts/shopping-evals/product-price-fix-500k-2026-09-23"
+}

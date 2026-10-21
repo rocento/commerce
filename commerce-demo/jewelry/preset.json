@@ -1,0 +1,1229 @@
+{
+  "id": "jewelry",
+  "name": "Aurelle \u00b7 Jewelry Demo",
+  "channel": "storefront",
+  "categories": [
+    {
+      "slug": "jewelry-rings",
+      "name": "Rings",
+      "thumbnail": "jewelry/gold-solitaire-ring.png"
+    },
+    {
+      "slug": "jewelry-necklaces",
+      "name": "Necklaces",
+      "thumbnail": "jewelry/gold-chain-necklace.png"
+    },
+    {
+      "slug": "jewelry-earrings",
+      "name": "Earrings",
+      "thumbnail": "jewelry/gold-hoop-earrings.png"
+    },
+    {
+      "slug": "jewelry-bracelets",
+      "name": "Bracelets",
+      "thumbnail": "jewelry/gold-tennis-bracelet.png"
+    },
+    {
+      "slug": "jewelry-accessories",
+      "name": "Jewelry Accessories",
+      "thumbnail": "jewelry/gold-anklet.png"
+    },
+    {
+      "slug": "jewelry-collections",
+      "name": "Collections",
+      "thumbnail": "jewelry/gold-solitaire-ring.png"
+    },
+    {
+      "slug": "jewelry-gifts",
+      "name": "Gifts",
+      "thumbnail": "jewelry/gold-solitaire-ring.png"
+    },
+    {
+      "slug": "jewelry-new-arrivals",
+      "name": "New Arrivals",
+      "thumbnail": "jewelry/gold-solitaire-ring.png"
+    }
+  ],
+  "products": [
+    {
+      "sku": "DEMO-JWL-50-001",
+      "slug": "demo-jewelry-gold-solitaire-ring",
+      "name": "Gold Solitaire Ring \u2014 US Size 6",
+      "category": "jewelry-rings",
+      "price": "249.00",
+      "unit": "each",
+      "description": "Gold Solitaire Ring \u2014 US Size 6. Synthetic jewelry demo; materials and gemstones are illustrative, not certified specifications.",
+      "images": [
+        "jewelry/gold-solitaire-ring.png"
+      ],
+      "attributes": {
+        "material": "Illustrative jewelry alloy",
+        "metal": "Gold",
+        "color": "Warm gold",
+        "stone": "None",
+        "collection": "The everyday collection",
+        "size": "6"
+      },
+      "stock": 20
+    },
+    {
+      "sku": "DEMO-JWL-50-002",
+      "slug": "demo-jewelry-silver-halo-ring",
+      "name": "Silver Halo Ring \u2014 US Size 6",
+      "category": "jewelry-rings",
+      "price": "189.00",
+      "unit": "each",
+      "description": "Silver Halo Ring \u2014 US Size 6. Synthetic jewelry demo; materials and gemstones are illustrative, not certified specifications.",
+      "images": [
+        "jewelry/silver-halo-ring.png"
+      ],
+      "attributes": {
+        "material": "Illustrative jewelry alloy",
+        "metal": "Silver",
+        "color": "Silver",
+        "stone": "None",
+        "collection": "The everyday collection",
+        "size": "6"
+      },
+      "stock": 20
+    },
+    {
+      "sku": "DEMO-JWL-50-003",
+      "slug": "demo-jewelry-emerald-gold-ring",
+      "name": "Emerald Gold Ring \u2014 US Size 6",
+      "category": "jewelry-collections",
+      "price": "399.00",
+      "unit": "each",
+      "description": "Emerald Gold Ring \u2014 US Size 6. Synthetic jewelry demo; materials and gemstones are illustrative, not certified specifications.",
+      "images": [
+        "jewelry/emerald-gold-ring.png"
+      ],
+      "attributes": {
+        "material": "Illustrative jewelry alloy",
+        "metal": "Gold",
+        "color": "Warm gold",
+        "stone": "Emerald",
+        "collection": "The gemstone edit",
+        "size": "6"
+      },
+      "stock": 20
+    },
+    {
+      "sku": "DEMO-JWL-50-004",
+      "slug": "demo-jewelry-sapphire-silver-ring",
+      "name": "Sapphire Silver Ring \u2014 US Size 6",
+      "category": "jewelry-collections",
+      "price": "329.00",
+      "unit": "each",
+      "description": "Sapphire Silver Ring \u2014 US Size 6. Synthetic jewelry demo; materials and gemstones are illustrative, not certified specifications.",
+      "images": [
+        "jewelry/sapphire-silver-ring.png"
+      ],
+      "attributes": {
+        "material": "Illustrative jewelry alloy",
+        "metal": "Silver",
+        "color": "Silver",
+        "stone": "Sapphire",
+        "collection": "The gemstone edit",
+        "size": "6"
+      },
+      "stock": 20
+    },
+    {
+      "sku": "DEMO-JWL-50-005",
+      "slug": "demo-jewelry-ruby-gold-ring",
+      "name": "Ruby Gold Ring \u2014 US Size 6",
+      "category": "jewelry-collections",
+      "price": "349.00",
+      "unit": "each",
+      "description": "Ruby Gold Ring \u2014 US Size 6. Synthetic jewelry demo; materials and gemstones are illustrative, not certified specifications.",
+      "images": [
+        "jewelry/ruby-gold-ring.png"
+      ],
+      "attributes": {
+        "material": "Illustrative jewelry alloy",
+        "metal": "Gold",
+        "color": "Warm gold",
+        "stone": "Ruby",
+        "collection": "The gemstone edit",
+        "size": "6"
+      },
+      "stock": 20
+    },
+    {
+      "sku": "DEMO-JWL-50-006",
+      "slug": "demo-jewelry-rose-gold-band",
+      "name": "Rose Gold Band \u2014 US Size 6",
+      "category": "jewelry-rings",
+      "price": "99.00",
+      "unit": "each",
+      "description": "Rose Gold Band \u2014 US Size 6. Synthetic jewelry demo; materials and gemstones are illustrative, not certified specifications.",
+      "images": [
+        "jewelry/rose-gold-band.png"
+      ],
+      "attributes": {
+        "material": "Illustrative jewelry alloy",
+        "metal": "Rose gold",
+        "color": "Warm gold",
+        "stone": "None",
+        "collection": "The everyday collection",
+        "size": "6"
+      },
+      "stock": 20
+    },
+    {
+      "sku": "DEMO-JWL-50-007",
+      "slug": "demo-jewelry-gold-signet-ring",
+      "name": "Gold Signet Ring \u2014 US Size 6",
+      "category": "jewelry-rings",
+      "price": "219.00",
+      "unit": "each",
+      "description": "Gold Signet Ring \u2014 US Size 6. Synthetic jewelry demo; materials and gemstones are illustrative, not certified specifications.",
+      "images": [
+        "jewelry/gold-signet-ring.png"
+      ],
+      "attributes": {
+        "material": "Illustrative jewelry alloy",
+        "metal": "Gold",
+        "color": "Warm gold",
+        "stone": "None",
+        "collection": "The everyday collection",
+        "size": "6"
+      },
+      "stock": 20
+    },
+    {
+      "sku": "DEMO-JWL-50-008",
+      "slug": "demo-jewelry-silver-twist-ring",
+      "name": "Silver Twist Ring \u2014 US Size 6",
+      "category": "jewelry-rings",
+      "price": "89.00",
+      "unit": "each",
+      "description": "Silver Twist Ring \u2014 US Size 6. Synthetic jewelry demo; materials and gemstones are illustrative, not certified specifications.",
+      "images": [
+        "jewelry/silver-twist-ring.png"
+      ],
+      "attributes": {
+        "material": "Illustrative jewelry alloy",
+        "metal": "Silver",
+        "color": "Silver",
+        "stone": "None",
+        "collection": "The everyday collection",
+        "size": "6"
+      },
+      "stock": 20
+    },
+    {
+      "sku": "DEMO-JWL-50-009",
+      "slug": "demo-jewelry-gold-hoop-earrings",
+      "name": "Gold Hoop Earrings",
+      "category": "jewelry-earrings",
+      "price": "129.00",
+      "unit": "each",
+      "description": "Gold Hoop Earrings. Synthetic jewelry demo; materials and gemstones are illustrative, not certified specifications.",
+      "images": [
+        "jewelry/gold-hoop-earrings.png"
+      ],
+      "attributes": {
+        "material": "Illustrative jewelry alloy",
+        "metal": "Gold",
+        "color": "Warm gold",
+        "stone": "None",
+        "collection": "The everyday collection"
+      },
+      "stock": 20
+    },
+    {
+      "sku": "DEMO-JWL-50-010",
+      "slug": "demo-jewelry-pearl-stud-earrings",
+      "name": "Pearl Stud Earrings",
+      "category": "jewelry-gifts",
+      "price": "79.00",
+      "unit": "each",
+      "description": "Pearl Stud Earrings. Synthetic jewelry demo; materials and gemstones are illustrative, not certified specifications.",
+      "images": [
+        "jewelry/pearl-stud-earrings.png"
+      ],
+      "attributes": {
+        "material": "Illustrative jewelry alloy",
+        "metal": "Gold",
+        "color": "Warm gold",
+        "stone": "Pearl",
+        "collection": "The everyday collection"
+      },
+      "stock": 20
+    },
+    {
+      "sku": "DEMO-JWL-50-011",
+      "slug": "demo-jewelry-diamond-stud-earrings",
+      "name": "Diamond Stud Earrings",
+      "category": "jewelry-earrings",
+      "price": "199.00",
+      "unit": "each",
+      "description": "Diamond Stud Earrings. Synthetic jewelry demo; materials and gemstones are illustrative, not certified specifications.",
+      "images": [
+        "jewelry/diamond-stud-earrings.png"
+      ],
+      "attributes": {
+        "material": "Illustrative jewelry alloy",
+        "metal": "Gold",
+        "color": "Warm gold",
+        "stone": "Diamond",
+        "collection": "The everyday collection"
+      },
+      "stock": 20
+    },
+    {
+      "sku": "DEMO-JWL-50-012",
+      "slug": "demo-jewelry-emerald-drop-earrings",
+      "name": "Emerald Drop Earrings",
+      "category": "jewelry-earrings",
+      "price": "229.00",
+      "unit": "each",
+      "description": "Emerald Drop Earrings. Synthetic jewelry demo; materials and gemstones are illustrative, not certified specifications.",
+      "images": [
+        "jewelry/emerald-drop-earrings.png"
+      ],
+      "attributes": {
+        "material": "Illustrative jewelry alloy",
+        "metal": "Gold",
+        "color": "Warm gold",
+        "stone": "Emerald",
+        "collection": "The everyday collection"
+      },
+      "stock": 20
+    },
+    {
+      "sku": "DEMO-JWL-50-013",
+      "slug": "demo-jewelry-silver-huggie-earrings",
+      "name": "Silver Huggie Earrings",
+      "category": "jewelry-earrings",
+      "price": "59.00",
+      "unit": "each",
+      "description": "Silver Huggie Earrings. Synthetic jewelry demo; materials and gemstones are illustrative, not certified specifications.",
+      "images": [
+        "jewelry/silver-huggie-earrings.png"
+      ],
+      "attributes": {
+        "material": "Illustrative jewelry alloy",
+        "metal": "Silver",
+        "color": "Silver",
+        "stone": "None",
+        "collection": "The everyday collection"
+      },
+      "stock": 20
+    },
+    {
+      "sku": "DEMO-JWL-50-014",
+      "slug": "demo-jewelry-rose-gold-chain-earrings",
+      "name": "Rose Gold Chain Earrings",
+      "category": "jewelry-earrings",
+      "price": "89.00",
+      "unit": "each",
+      "description": "Rose Gold Chain Earrings. Synthetic jewelry demo; materials and gemstones are illustrative, not certified specifications.",
+      "images": [
+        "jewelry/rose-gold-chain-earrings.png"
+      ],
+      "attributes": {
+        "material": "Illustrative jewelry alloy",
+        "metal": "Rose gold",
+        "color": "Warm gold",
+        "stone": "None",
+        "collection": "The everyday collection"
+      },
+      "stock": 20
+    },
+    {
+      "sku": "DEMO-JWL-50-015",
+      "slug": "demo-jewelry-sapphire-cluster-earrings",
+      "name": "Sapphire Cluster Earrings",
+      "category": "jewelry-earrings",
+      "price": "179.00",
+      "unit": "each",
+      "description": "Sapphire Cluster Earrings. Synthetic jewelry demo; materials and gemstones are illustrative, not certified specifications.",
+      "images": [
+        "jewelry/sapphire-cluster-earrings.png"
+      ],
+      "attributes": {
+        "material": "Illustrative jewelry alloy",
+        "metal": "Gold",
+        "color": "Warm gold",
+        "stone": "Sapphire",
+        "collection": "The everyday collection"
+      },
+      "stock": 20
+    },
+    {
+      "sku": "DEMO-JWL-50-016",
+      "slug": "demo-jewelry-gold-chain-necklace",
+      "name": "Gold Chain Necklace \u2014 45cm",
+      "category": "jewelry-necklaces",
+      "price": "159.00",
+      "unit": "each",
+      "description": "Gold Chain Necklace \u2014 45cm. Synthetic jewelry demo; materials and gemstones are illustrative, not certified specifications.",
+      "images": [
+        "jewelry/gold-chain-necklace.png"
+      ],
+      "attributes": {
+        "material": "Illustrative jewelry alloy",
+        "metal": "Gold",
+        "color": "Warm gold",
+        "stone": "None",
+        "collection": "The everyday collection"
+      },
+      "stock": 20
+    },
+    {
+      "sku": "DEMO-JWL-50-017",
+      "slug": "demo-jewelry-pearl-strand-necklace",
+      "name": "Pearl Strand Necklace \u2014 45cm",
+      "category": "jewelry-new-arrivals",
+      "price": "149.00",
+      "unit": "each",
+      "description": "Pearl Strand Necklace \u2014 45cm. Synthetic jewelry demo; materials and gemstones are illustrative, not certified specifications.",
+      "images": [
+        "jewelry/pearl-strand-necklace.png"
+      ],
+      "attributes": {
+        "material": "Illustrative jewelry alloy",
+        "metal": "Gold",
+        "color": "Warm gold",
+        "stone": "Pearl",
+        "collection": "The everyday collection"
+      },
+      "stock": 20
+    },
+    {
+      "sku": "DEMO-JWL-50-018",
+      "slug": "demo-jewelry-heart-pendant-necklace",
+      "name": "Heart Pendant Necklace \u2014 45cm",
+      "category": "jewelry-necklaces",
+      "price": "109.00",
+      "unit": "each",
+      "description": "Heart Pendant Necklace \u2014 45cm. Synthetic jewelry demo; materials and gemstones are illustrative, not certified specifications.",
+      "images": [
+        "jewelry/heart-pendant-necklace.png"
+      ],
+      "attributes": {
+        "material": "Illustrative jewelry alloy",
+        "metal": "Gold",
+        "color": "Warm gold",
+        "stone": "None",
+        "collection": "The everyday collection"
+      },
+      "stock": 20
+    },
+    {
+      "sku": "DEMO-JWL-50-019",
+      "slug": "demo-jewelry-emerald-pendant-necklace",
+      "name": "Emerald Pendant Necklace \u2014 45cm",
+      "category": "jewelry-new-arrivals",
+      "price": "249.00",
+      "unit": "each",
+      "description": "Emerald Pendant Necklace \u2014 45cm. Synthetic jewelry demo; materials and gemstones are illustrative, not certified specifications.",
+      "images": [
+        "jewelry/emerald-pendant-necklace.png"
+      ],
+      "attributes": {
+        "material": "Illustrative jewelry alloy",
+        "metal": "Gold",
+        "color": "Warm gold",
+        "stone": "Emerald",
+        "collection": "The everyday collection"
+      },
+      "stock": 20
+    },
+    {
+      "sku": "DEMO-JWL-50-020",
+      "slug": "demo-jewelry-silver-moon-necklace",
+      "name": "Silver Moon Necklace \u2014 45cm",
+      "category": "jewelry-necklaces",
+      "price": "69.00",
+      "unit": "each",
+      "description": "Silver Moon Necklace \u2014 45cm. Synthetic jewelry demo; materials and gemstones are illustrative, not certified specifications.",
+      "images": [
+        "jewelry/silver-moon-necklace.png"
+      ],
+      "attributes": {
+        "material": "Illustrative jewelry alloy",
+        "metal": "Silver",
+        "color": "Silver",
+        "stone": "None",
+        "collection": "The everyday collection"
+      },
+      "stock": 20
+    },
+    {
+      "sku": "DEMO-JWL-50-021",
+      "slug": "demo-jewelry-diamond-pendant-necklace",
+      "name": "Diamond Pendant Necklace \u2014 45cm",
+      "category": "jewelry-necklaces",
+      "price": "199.00",
+      "unit": "each",
+      "description": "Diamond Pendant Necklace \u2014 45cm. Synthetic jewelry demo; materials and gemstones are illustrative, not certified specifications.",
+      "images": [
+        "jewelry/diamond-pendant-necklace.png"
+      ],
+      "attributes": {
+        "material": "Illustrative jewelry alloy",
+        "metal": "Gold",
+        "color": "Warm gold",
+        "stone": "Diamond",
+        "collection": "The everyday collection"
+      },
+      "stock": 20
+    },
+    {
+      "sku": "DEMO-JWL-50-022",
+      "slug": "demo-jewelry-gold-tennis-bracelet",
+      "name": "Gold Tennis Bracelet",
+      "category": "jewelry-bracelets",
+      "price": "299.00",
+      "unit": "each",
+      "description": "Gold Tennis Bracelet. Synthetic jewelry demo; materials and gemstones are illustrative, not certified specifications.",
+      "images": [
+        "jewelry/gold-tennis-bracelet.png"
+      ],
+      "attributes": {
+        "material": "Illustrative jewelry alloy",
+        "metal": "Gold",
+        "color": "Warm gold",
+        "stone": "None",
+        "collection": "The everyday collection"
+      },
+      "stock": 20
+    },
+    {
+      "sku": "DEMO-JWL-50-023",
+      "slug": "demo-jewelry-silver-cuff-bracelet",
+      "name": "Silver Cuff Bracelet",
+      "category": "jewelry-new-arrivals",
+      "price": "99.00",
+      "unit": "each",
+      "description": "Silver Cuff Bracelet. Synthetic jewelry demo; materials and gemstones are illustrative, not certified specifications.",
+      "images": [
+        "jewelry/silver-cuff-bracelet.png"
+      ],
+      "attributes": {
+        "material": "Illustrative jewelry alloy",
+        "metal": "Silver",
+        "color": "Silver",
+        "stone": "None",
+        "collection": "The everyday collection"
+      },
+      "stock": 20
+    },
+    {
+      "sku": "DEMO-JWL-50-024",
+      "slug": "demo-jewelry-gold-bangle-bracelet",
+      "name": "Gold Bangle Bracelet",
+      "category": "jewelry-bracelets",
+      "price": "199.00",
+      "unit": "each",
+      "description": "Gold Bangle Bracelet. Synthetic jewelry demo; materials and gemstones are illustrative, not certified specifications.",
+      "images": [
+        "jewelry/gold-bangle-bracelet.png"
+      ],
+      "attributes": {
+        "material": "Illustrative jewelry alloy",
+        "metal": "Gold",
+        "color": "Warm gold",
+        "stone": "None",
+        "collection": "The everyday collection"
+      },
+      "stock": 20
+    },
+    {
+      "sku": "DEMO-JWL-50-025",
+      "slug": "demo-jewelry-pearl-bracelet",
+      "name": "Pearl Bracelet",
+      "category": "jewelry-bracelets",
+      "price": "69.00",
+      "unit": "each",
+      "description": "Pearl Bracelet. Synthetic jewelry demo; materials and gemstones are illustrative, not certified specifications.",
+      "images": [
+        "jewelry/pearl-bracelet.png"
+      ],
+      "attributes": {
+        "material": "Illustrative jewelry alloy",
+        "metal": "Gold",
+        "color": "Warm gold",
+        "stone": "Pearl",
+        "collection": "The everyday collection"
+      },
+      "stock": 20
+    },
+    {
+      "sku": "DEMO-JWL-50-026",
+      "slug": "demo-jewelry-rose-gold-link-bracelet",
+      "name": "Rose Gold Link Bracelet",
+      "category": "jewelry-gifts",
+      "price": "139.00",
+      "unit": "each",
+      "description": "Rose Gold Link Bracelet. Synthetic jewelry demo; materials and gemstones are illustrative, not certified specifications.",
+      "images": [
+        "jewelry/rose-gold-link-bracelet.png"
+      ],
+      "attributes": {
+        "material": "Illustrative jewelry alloy",
+        "metal": "Rose gold",
+        "color": "Warm gold",
+        "stone": "None",
+        "collection": "The everyday collection"
+      },
+      "stock": 20
+    },
+    {
+      "sku": "DEMO-JWL-50-027",
+      "slug": "demo-jewelry-silver-charm-bracelet",
+      "name": "Silver Charm Bracelet",
+      "category": "jewelry-bracelets",
+      "price": "89.00",
+      "unit": "each",
+      "description": "Silver Charm Bracelet. Synthetic jewelry demo; materials and gemstones are illustrative, not certified specifications.",
+      "images": [
+        "jewelry/silver-charm-bracelet.png"
+      ],
+      "attributes": {
+        "material": "Illustrative jewelry alloy",
+        "metal": "Silver",
+        "color": "Silver",
+        "stone": "None",
+        "collection": "The everyday collection"
+      },
+      "stock": 20
+    },
+    {
+      "sku": "DEMO-JWL-50-028",
+      "slug": "demo-jewelry-gold-anklet",
+      "name": "Gold Anklet",
+      "category": "jewelry-accessories",
+      "price": "79.00",
+      "unit": "each",
+      "description": "Gold Anklet. Synthetic jewelry demo; materials and gemstones are illustrative, not certified specifications.",
+      "images": [
+        "jewelry/gold-anklet.png"
+      ],
+      "attributes": {
+        "material": "Illustrative jewelry alloy",
+        "metal": "Gold",
+        "color": "Warm gold",
+        "stone": "None",
+        "collection": "The everyday collection"
+      },
+      "stock": 20
+    },
+    {
+      "sku": "DEMO-JWL-50-029",
+      "slug": "demo-jewelry-pearl-gold-brooch",
+      "name": "Pearl Gold Brooch",
+      "category": "jewelry-gifts",
+      "price": "149.00",
+      "unit": "each",
+      "description": "Pearl Gold Brooch. Synthetic jewelry demo; materials and gemstones are illustrative, not certified specifications.",
+      "images": [
+        "jewelry/pearl-gold-brooch.png"
+      ],
+      "attributes": {
+        "material": "Illustrative jewelry alloy",
+        "metal": "Gold",
+        "color": "Warm gold",
+        "stone": "Pearl",
+        "collection": "The everyday collection"
+      },
+      "stock": 20
+    },
+    {
+      "sku": "DEMO-JWL-50-030",
+      "slug": "demo-jewelry-onyx-silver-cufflinks",
+      "name": "Onyx Silver Cufflinks",
+      "category": "jewelry-accessories",
+      "price": "119.00",
+      "unit": "each",
+      "description": "Onyx Silver Cufflinks. Synthetic jewelry demo; materials and gemstones are illustrative, not certified specifications.",
+      "images": [
+        "jewelry/onyx-silver-cufflinks.png"
+      ],
+      "attributes": {
+        "material": "Illustrative jewelry alloy",
+        "metal": "Silver",
+        "color": "Silver",
+        "stone": "Onyx",
+        "collection": "The everyday collection"
+      },
+      "stock": 20
+    },
+    {
+      "sku": "DEMO-JWL-50-031",
+      "slug": "demo-jewelry-gold-solitaire-ring-size-7",
+      "name": "Gold Solitaire Ring \u2014 US Size 7",
+      "category": "jewelry-rings",
+      "price": "249.00",
+      "unit": "each",
+      "description": "US ring size 7. Uses the same illustrative design image as the size 6 demo.",
+      "images": [
+        "jewelry/gold-solitaire-ring.png"
+      ],
+      "attributes": {
+        "material": "Illustrative jewelry alloy",
+        "metal": "Gold",
+        "color": "Warm gold",
+        "stone": "None",
+        "collection": "The everyday collection",
+        "size": "7"
+      },
+      "stock": 20
+    },
+    {
+      "sku": "DEMO-JWL-50-032",
+      "slug": "demo-jewelry-silver-halo-ring-size-7",
+      "name": "Silver Halo Ring \u2014 US Size 7",
+      "category": "jewelry-rings",
+      "price": "189.00",
+      "unit": "each",
+      "description": "US ring size 7. Uses the same illustrative design image as the size 6 demo.",
+      "images": [
+        "jewelry/silver-halo-ring.png"
+      ],
+      "attributes": {
+        "material": "Illustrative jewelry alloy",
+        "metal": "Silver",
+        "color": "Silver",
+        "stone": "None",
+        "collection": "The everyday collection",
+        "size": "7"
+      },
+      "stock": 20
+    },
+    {
+      "sku": "DEMO-JWL-50-033",
+      "slug": "demo-jewelry-emerald-gold-ring-size-7",
+      "name": "Emerald Gold Ring \u2014 US Size 7",
+      "category": "jewelry-rings",
+      "price": "399.00",
+      "unit": "each",
+      "description": "US ring size 7. Uses the same illustrative design image as the size 6 demo.",
+      "images": [
+        "jewelry/emerald-gold-ring.png"
+      ],
+      "attributes": {
+        "material": "Illustrative jewelry alloy",
+        "metal": "Gold",
+        "color": "Warm gold",
+        "stone": "Emerald",
+        "collection": "The everyday collection",
+        "size": "7"
+      },
+      "stock": 20
+    },
+    {
+      "sku": "DEMO-JWL-50-034",
+      "slug": "demo-jewelry-sapphire-silver-ring-size-7",
+      "name": "Sapphire Silver Ring \u2014 US Size 7",
+      "category": "jewelry-rings",
+      "price": "329.00",
+      "unit": "each",
+      "description": "US ring size 7. Uses the same illustrative design image as the size 6 demo.",
+      "images": [
+        "jewelry/sapphire-silver-ring.png"
+      ],
+      "attributes": {
+        "material": "Illustrative jewelry alloy",
+        "metal": "Silver",
+        "color": "Silver",
+        "stone": "Sapphire",
+        "collection": "The everyday collection",
+        "size": "7"
+      },
+      "stock": 20
+    },
+    {
+      "sku": "DEMO-JWL-50-035",
+      "slug": "demo-jewelry-ruby-gold-ring-size-7",
+      "name": "Ruby Gold Ring \u2014 US Size 7",
+      "category": "jewelry-rings",
+      "price": "349.00",
+      "unit": "each",
+      "description": "US ring size 7. Uses the same illustrative design image as the size 6 demo.",
+      "images": [
+        "jewelry/ruby-gold-ring.png"
+      ],
+      "attributes": {
+        "material": "Illustrative jewelry alloy",
+        "metal": "Gold",
+        "color": "Warm gold",
+        "stone": "Ruby",
+        "collection": "The everyday collection",
+        "size": "7"
+      },
+      "stock": 20
+    },
+    {
+      "sku": "DEMO-JWL-50-036",
+      "slug": "demo-jewelry-rose-gold-band-size-7",
+      "name": "Rose Gold Band \u2014 US Size 7",
+      "category": "jewelry-rings",
+      "price": "99.00",
+      "unit": "each",
+      "description": "US ring size 7. Uses the same illustrative design image as the size 6 demo.",
+      "images": [
+        "jewelry/rose-gold-band.png"
+      ],
+      "attributes": {
+        "material": "Illustrative jewelry alloy",
+        "metal": "Rose gold",
+        "color": "Warm gold",
+        "stone": "None",
+        "collection": "The everyday collection",
+        "size": "7"
+      },
+      "stock": 20
+    },
+    {
+      "sku": "DEMO-JWL-50-037",
+      "slug": "demo-jewelry-gold-signet-ring-size-7",
+      "name": "Gold Signet Ring \u2014 US Size 7",
+      "category": "jewelry-rings",
+      "price": "219.00",
+      "unit": "each",
+      "description": "US ring size 7. Uses the same illustrative design image as the size 6 demo.",
+      "images": [
+        "jewelry/gold-signet-ring.png"
+      ],
+      "attributes": {
+        "material": "Illustrative jewelry alloy",
+        "metal": "Gold",
+        "color": "Warm gold",
+        "stone": "None",
+        "collection": "The everyday collection",
+        "size": "7"
+      },
+      "stock": 20
+    },
+    {
+      "sku": "DEMO-JWL-50-038",
+      "slug": "demo-jewelry-silver-twist-ring-size-7",
+      "name": "Silver Twist Ring \u2014 US Size 7",
+      "category": "jewelry-rings",
+      "price": "89.00",
+      "unit": "each",
+      "description": "US ring size 7. Uses the same illustrative design image as the size 6 demo.",
+      "images": [
+        "jewelry/silver-twist-ring.png"
+      ],
+      "attributes": {
+        "material": "Illustrative jewelry alloy",
+        "metal": "Silver",
+        "color": "Silver",
+        "stone": "None",
+        "collection": "The everyday collection",
+        "size": "7"
+      },
+      "stock": 20
+    },
+    {
+      "sku": "DEMO-JWL-50-039",
+      "slug": "demo-jewelry-gold-solitaire-ring-size-8",
+      "name": "Gold Solitaire Ring \u2014 US Size 8",
+      "category": "jewelry-rings",
+      "price": "249.00",
+      "unit": "each",
+      "description": "US ring size 8. Uses the same illustrative design image as the size 6 demo.",
+      "images": [
+        "jewelry/gold-solitaire-ring.png"
+      ],
+      "attributes": {
+        "material": "Illustrative jewelry alloy",
+        "metal": "Gold",
+        "color": "Warm gold",
+        "stone": "None",
+        "collection": "The everyday collection",
+        "size": "8"
+      },
+      "stock": 20
+    },
+    {
+      "sku": "DEMO-JWL-50-040",
+      "slug": "demo-jewelry-silver-halo-ring-size-8",
+      "name": "Silver Halo Ring \u2014 US Size 8",
+      "category": "jewelry-rings",
+      "price": "189.00",
+      "unit": "each",
+      "description": "US ring size 8. Uses the same illustrative design image as the size 6 demo.",
+      "images": [
+        "jewelry/silver-halo-ring.png"
+      ],
+      "attributes": {
+        "material": "Illustrative jewelry alloy",
+        "metal": "Silver",
+        "color": "Silver",
+        "stone": "None",
+        "collection": "The everyday collection",
+        "size": "8"
+      },
+      "stock": 20
+    },
+    {
+      "sku": "DEMO-JWL-50-041",
+      "slug": "demo-jewelry-emerald-gold-ring-size-8",
+      "name": "Emerald Gold Ring \u2014 US Size 8",
+      "category": "jewelry-rings",
+      "price": "399.00",
+      "unit": "each",
+      "description": "US ring size 8. Uses the same illustrative design image as the size 6 demo.",
+      "images": [
+        "jewelry/emerald-gold-ring.png"
+      ],
+      "attributes": {
+        "material": "Illustrative jewelry alloy",
+        "metal": "Gold",
+        "color": "Warm gold",
+        "stone": "Emerald",
+        "collection": "The everyday collection",
+        "size": "8"
+      },
+      "stock": 20
+    },
+    {
+      "sku": "DEMO-JWL-50-042",
+      "slug": "demo-jewelry-sapphire-silver-ring-size-8",
+      "name": "Sapphire Silver Ring \u2014 US Size 8",
+      "category": "jewelry-rings",
+      "price": "329.00",
+      "unit": "each",
+      "description": "US ring size 8. Uses the same illustrative design image as the size 6 demo.",
+      "images": [
+        "jewelry/sapphire-silver-ring.png"
+      ],
+      "attributes": {
+        "material": "Illustrative jewelry alloy",
+        "metal": "Silver",
+        "color": "Silver",
+        "stone": "Sapphire",
+        "collection": "The everyday collection",
+        "size": "8"
+      },
+      "stock": 20
+    },
+    {
+      "sku": "DEMO-JWL-50-043",
+      "slug": "demo-jewelry-ruby-gold-ring-size-8",
+      "name": "Ruby Gold Ring \u2014 US Size 8",
+      "category": "jewelry-rings",
+      "price": "349.00",
+      "unit": "each",
+      "description": "US ring size 8. Uses the same illustrative design image as the size 6 demo.",
+      "images": [
+        "jewelry/ruby-gold-ring.png"
+      ],
+      "attributes": {
+        "material": "Illustrative jewelry alloy",
+        "metal": "Gold",
+        "color": "Warm gold",
+        "stone": "Ruby",
+        "collection": "The everyday collection",
+        "size": "8"
+      },
+      "stock": 20
+    },
+    {
+      "sku": "DEMO-JWL-50-044",
+      "slug": "demo-jewelry-rose-gold-band-size-8",
+      "name": "Rose Gold Band \u2014 US Size 8",
+      "category": "jewelry-rings",
+      "price": "99.00",
+      "unit": "each",
+      "description": "US ring size 8. Uses the same illustrative design image as the size 6 demo.",
+      "images": [
+        "jewelry/rose-gold-band.png"
+      ],
+      "attributes": {
+        "material": "Illustrative jewelry alloy",
+        "metal": "Rose gold",
+        "color": "Warm gold",
+        "stone": "None",
+        "collection": "The everyday collection",
+        "size": "8"
+      },
+      "stock": 20
+    },
+    {
+      "sku": "DEMO-JWL-50-045",
+      "slug": "demo-jewelry-gold-signet-ring-size-8",
+      "name": "Gold Signet Ring \u2014 US Size 8",
+      "category": "jewelry-rings",
+      "price": "219.00",
+      "unit": "each",
+      "description": "US ring size 8. Uses the same illustrative design image as the size 6 demo.",
+      "images": [
+        "jewelry/gold-signet-ring.png"
+      ],
+      "attributes": {
+        "material": "Illustrative jewelry alloy",
+        "metal": "Gold",
+        "color": "Warm gold",
+        "stone": "None",
+        "collection": "The everyday collection",
+        "size": "8"
+      },
+      "stock": 20
+    },
+    {
+      "sku": "DEMO-JWL-50-046",
+      "slug": "demo-jewelry-silver-twist-ring-size-8",
+      "name": "Silver Twist Ring \u2014 US Size 8",
+      "category": "jewelry-rings",
+      "price": "89.00",
+      "unit": "each",
+      "description": "US ring size 8. Uses the same illustrative design image as the size 6 demo.",
+      "images": [
+        "jewelry/silver-twist-ring.png"
+      ],
+      "attributes": {
+        "material": "Illustrative jewelry alloy",
+        "metal": "Silver",
+        "color": "Silver",
+        "stone": "None",
+        "collection": "The everyday collection",
+        "size": "8"
+      },
+      "stock": 20
+    },
+    {
+      "sku": "DEMO-JWL-50-047",
+      "slug": "demo-jewelry-gold-chain-necklace-50cm",
+      "name": "Gold Chain Necklace \u2014 50cm",
+      "category": "jewelry-necklaces",
+      "price": "159.00",
+      "unit": "each",
+      "description": "50cm necklace. Uses the same illustrative design image as the 45cm demo.",
+      "images": [
+        "jewelry/gold-chain-necklace.png"
+      ],
+      "attributes": {
+        "material": "Illustrative jewelry alloy",
+        "metal": "Gold",
+        "color": "Warm gold",
+        "stone": "None",
+        "collection": "The everyday collection"
+      },
+      "stock": 20
+    },
+    {
+      "sku": "DEMO-JWL-50-048",
+      "slug": "demo-jewelry-pearl-strand-necklace-50cm",
+      "name": "Pearl Strand Necklace \u2014 50cm",
+      "category": "jewelry-necklaces",
+      "price": "149.00",
+      "unit": "each",
+      "description": "50cm necklace. Uses the same illustrative design image as the 45cm demo.",
+      "images": [
+        "jewelry/pearl-strand-necklace.png"
+      ],
+      "attributes": {
+        "material": "Illustrative jewelry alloy",
+        "metal": "Gold",
+        "color": "Warm gold",
+        "stone": "Pearl",
+        "collection": "The everyday collection"
+      },
+      "stock": 20
+    },
+    {
+      "sku": "DEMO-JWL-50-049",
+      "slug": "demo-jewelry-heart-pendant-necklace-50cm",
+      "name": "Heart Pendant Necklace \u2014 50cm",
+      "category": "jewelry-necklaces",
+      "price": "109.00",
+      "unit": "each",
+      "description": "50cm necklace. Uses the same illustrative design image as the 45cm demo.",
+      "images": [
+        "jewelry/heart-pendant-necklace.png"
+      ],
+      "attributes": {
+        "material": "Illustrative jewelry alloy",
+        "metal": "Gold",
+        "color": "Warm gold",
+        "stone": "None",
+        "collection": "The everyday collection"
+      },
+      "stock": 20
+    },
+    {
+      "sku": "DEMO-JWL-50-050",
+      "slug": "demo-jewelry-emerald-pendant-necklace-50cm",
+      "name": "Emerald Pendant Necklace \u2014 50cm",
+      "category": "jewelry-necklaces",
+      "price": "249.00",
+      "unit": "each",
+      "description": "50cm necklace. Uses the same illustrative design image as the 45cm demo.",
+      "images": [
+        "jewelry/emerald-pendant-necklace.png"
+      ],
+      "attributes": {
+        "material": "Illustrative jewelry alloy",
+        "metal": "Gold",
+        "color": "Warm gold",
+        "stone": "Emerald",
+        "collection": "The everyday collection"
+      },
+      "stock": 20
+    },
+    {
+      "sku": "DEMO-JWL-SOLITAIRE",
+      "slug": "demo-jewelry-solitaire",
+      "name": "The Solitaire Ring",
+      "category": "jewelry-rings",
+      "price": "249.00",
+      "unit": "each",
+      "description": "An understated silhouette, made for everyday moments. Choose your ring size below. Illustrative demo jewelry; materials and stones are not certified.",
+      "images": [
+        "jewelry/gold-solitaire-ring.png"
+      ],
+      "attributes": {
+        "material": "Illustrative jewelry alloy",
+        "metal": "Gold",
+        "color": "Warm gold",
+        "stone": "None",
+        "collection": "The everyday collection"
+      },
+      "stock": 20
+    }
+  ],
+  "attributes": [
+    {
+      "entity_type": "product",
+      "attribute_code": "material",
+      "label": "Material",
+      "input_type": "text",
+      "scope": "global",
+      "is_required": false,
+      "is_unique": false,
+      "is_searchable": true,
+      "is_filterable": true,
+      "is_comparable": true,
+      "is_visible_on_front": true,
+      "used_for_promo_rules": false,
+      "used_for_configurations": false,
+      "swatch_type": "none",
+      "options": [],
+      "version": 0
+    },
+    {
+      "entity_type": "product",
+      "attribute_code": "metal",
+      "label": "Metal",
+      "input_type": "text",
+      "scope": "global",
+      "is_required": false,
+      "is_unique": false,
+      "is_searchable": true,
+      "is_filterable": true,
+      "is_comparable": true,
+      "is_visible_on_front": true,
+      "used_for_promo_rules": false,
+      "used_for_configurations": false,
+      "swatch_type": "none",
+      "options": [],
+      "version": 0
+    },
+    {
+      "entity_type": "product",
+      "attribute_code": "color",
+      "label": "Color",
+      "input_type": "text",
+      "scope": "global",
+      "is_required": false,
+      "is_unique": false,
+      "is_searchable": true,
+      "is_filterable": true,
+      "is_comparable": true,
+      "is_visible_on_front": true,
+      "used_for_promo_rules": false,
+      "used_for_configurations": false,
+      "swatch_type": "none",
+      "options": [],
+      "version": 0
+    },
+    {
+      "entity_type": "product",
+      "attribute_code": "stone",
+      "label": "Stone",
+      "input_type": "text",
+      "scope": "global",
+      "is_required": false,
+      "is_unique": false,
+      "is_searchable": true,
+      "is_filterable": true,
+      "is_comparable": true,
+      "is_visible_on_front": true,
+      "used_for_promo_rules": false,
+      "used_for_configurations": false,
+      "swatch_type": "none",
+      "options": [],
+      "version": 0
+    },
+    {
+      "entity_type": "product",
+      "attribute_code": "collection",
+      "label": "Collection",
+      "input_type": "text",
+      "scope": "global",
+      "is_required": false,
+      "is_unique": false,
+      "is_searchable": true,
+      "is_filterable": true,
+      "is_comparable": true,
+      "is_visible_on_front": true,
+      "used_for_promo_rules": false,
+      "used_for_configurations": false,
+      "swatch_type": "none",
+      "options": [],
+      "version": 0
+    },
+    {
+      "entity_type": "product",
+      "attribute_code": "size",
+      "label": "Size",
+      "input_type": "select",
+      "scope": "global",
+      "is_required": false,
+      "is_unique": false,
+      "is_searchable": true,
+      "is_filterable": true,
+      "is_comparable": true,
+      "is_visible_on_front": true,
+      "used_for_promo_rules": false,
+      "used_for_configurations": true,
+      "swatch_type": "none",
+      "options": [
+        {
+          "value": "6",
+          "label": "US 6"
+        },
+        {
+          "value": "7",
+          "label": "US 7"
+        },
+        {
+          "value": "8",
+          "label": "US 8"
+        }
+      ],
+      "version": 0
+    }
+  ],
+  "families": [
+    {
+      "parent": "DEMO-JWL-SOLITAIRE",
+      "attributes": [
+        "size"
+      ],
+      "children": [
+        "DEMO-JWL-50-001",
+        "DEMO-JWL-50-031",
+        "DEMO-JWL-50-039"
+      ]
+    }
+  ]
+}

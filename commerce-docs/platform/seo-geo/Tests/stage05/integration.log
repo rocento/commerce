@@ -1,0 +1,29 @@
+   Compiling api-gateway v0.1.0 (/Users/momar/Documents/commerce-ai/backend/crates/api-gateway)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 1.91s
+     Running tests/publication_metadata.rs (backend/target/debug/deps/publication_metadata-e23d8be9a5e19d5f)
+
+running 2 tests
+test image_eligibility_is_reference_based_and_revocable ... ok
+test real_media_bytes_variants_and_private_authorization ... ok
+
+test result: ok. 2 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 2.01s
+
+     Running tests/publication_policy.rs (backend/target/debug/deps/publication_policy-dc7220cc970d6fae)
+
+running 3 tests
+test real_http_policy_preferences_override_hosts_and_permissions ... ok
+test two_installations_cannot_change_each_others_policy ... ok
+test protected_environments_and_header_override_win_on_real_http ... ok
+
+test result: ok. 3 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 2.10s
+
+     Running tests/publication_rendering.rs (backend/target/debug/deps/publication_rendering-df15c6ff88249eba)
+
+running 5 tests
+test migration_backfills_legacy_rows_and_rejects_ambiguous_ownership ... ok
+test generated_slugs_unicode_collisions_and_deleted_categories ... ok
+test metadata_raw_html_semantics_and_revisioned_admin_preview ... ok
+test canonical_lifecycle_single_hop_and_query_policy ... ok
+test built_renderer_real_http_status_content_freshness_and_isolation ... ok
+
+test result: ok. 5 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 5.96s

@@ -1,0 +1,2 @@
+FROM pgvector/pgvector:pg16
+# Shared databases are restored and migrated by the operator, never by a demo.

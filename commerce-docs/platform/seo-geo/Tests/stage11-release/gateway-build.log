@@ -1,0 +1,6 @@
+ Container rocento-publication-release-postgres-1 Running
+ Container rocento-publication-release-postgres-1 Waiting
+ Container rocento-publication-release-postgres-1 Healthy
+ Container rocento-publication-release-verify-run-9424a893b34f Creating
+ Container rocento-publication-release-verify-run-9424a893b34f Created
+    Finished `release` profile [optimized] target(s) in 0.15s

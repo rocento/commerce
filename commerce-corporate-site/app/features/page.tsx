@@ -1,0 +1,3 @@
+import type { Metadata } from "next"; import { DiscoveryIndex } from "@/components/discovery-page"; import { features } from "@/lib/discovery";
+export const metadata:Metadata={title:"Commerce features",description:"Explore Rocento geofenced delivery, customer segmentation, multi-source inventory, targeted storefront themes, checkout and commerce analytics.",alternates:{canonical:"/features/"}};
+export default function Page(){return <DiscoveryIndex title="Commerce features" summary="Connect geofenced delivery, multi-source inventory and customer segmentation with flexible storefronts, checkout, operational reporting and grounded shopping assistance." items={features} section="features"/>}

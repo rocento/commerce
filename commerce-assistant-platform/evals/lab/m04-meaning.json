@@ -1,0 +1,364 @@
+{
+  "version": "1",
+  "revision": "m04-english-meaning-1",
+  "snapshots": [
+    {
+      "version": "1",
+      "id": "grocery-patterns-v1",
+      "store": "grocery",
+      "tenant_id": "00000000-0000-0000-0000-0000000003e8",
+      "source": "reviewed_synthetic_pattern",
+      "source_revision": "m02-curated-patterns-v1",
+      "observed_at": "2026-09-21T00:00:00Z",
+      "catalog_schema": {
+        "industry": "grocery",
+        "version": "m02-pattern-1",
+        "attributes": [
+          {
+            "code": "roast",
+            "label": "roast",
+            "data_type": "select",
+            "options": [
+              {
+                "code": "dark",
+                "label": "dark",
+                "labels": {}
+              },
+              {
+                "code": "light",
+                "label": "light",
+                "labels": {}
+              }
+            ],
+            "filterable": true,
+            "searchable": true,
+            "facetable": true,
+            "sortable": false,
+            "comparable": true,
+            "variant_axis": false,
+            "source_policy": "factual",
+            "semantic_role": null,
+            "unit": null,
+            "min": null,
+            "max": null
+          }
+        ]
+      },
+      "products": [
+        {
+          "id": "00000000-0000-0000-0000-0000000003e9",
+          "image_id": null,
+          "name": "Coffee 1",
+          "price": "20",
+          "currency": "USD",
+          "category_id": "00000000-0000-0000-0000-00000000044c",
+          "category_name": "coffee",
+          "product_type": "simple",
+          "attributes": [
+            {
+              "name": "roast",
+              "value": "\"dark\"",
+              "label": "",
+              "source": "VERIFIED",
+              "confidence": null,
+              "comparable": true
+            }
+          ],
+          "in_stock": true,
+          "route": "/products/00000000-0000-0000-0000-0000000003e9"
+        },
+        {
+          "id": "00000000-0000-0000-0000-0000000003ea",
+          "image_id": null,
+          "name": "Coffee 2",
+          "price": "30",
+          "currency": "USD",
+          "category_id": "00000000-0000-0000-0000-00000000044c",
+          "category_name": "coffee",
+          "product_type": "simple",
+          "attributes": [
+            {
+              "name": "roast",
+              "value": "\"light\"",
+              "label": "",
+              "source": "MERCHANT",
+              "confidence": null,
+              "comparable": true
+            }
+          ],
+          "in_stock": true,
+          "route": "/products/00000000-0000-0000-0000-0000000003ea"
+        },
+        {
+          "id": "00000000-0000-0000-0000-0000000003eb",
+          "image_id": null,
+          "name": "Coffee 3",
+          "price": "10",
+          "currency": "USD",
+          "category_id": "00000000-0000-0000-0000-00000000044c",
+          "category_name": "coffee",
+          "product_type": "simple",
+          "attributes": [
+            {
+              "name": "roast",
+              "value": "\"dark\"",
+              "label": "",
+              "source": "VERIFIED",
+              "confidence": null,
+              "comparable": true
+            }
+          ],
+          "in_stock": false,
+          "route": "/products/00000000-0000-0000-0000-0000000003eb"
+        },
+        {
+          "id": "00000000-0000-0000-0000-0000000003ec",
+          "image_id": null,
+          "name": "Coffee 4",
+          "price": "25",
+          "currency": "USD",
+          "category_id": "00000000-0000-0000-0000-00000000044c",
+          "category_name": "coffee",
+          "product_type": "simple",
+          "attributes": [
+            {
+              "name": "roast",
+              "value": "\"dark\"",
+              "label": "",
+              "source": "VERIFIED",
+              "confidence": null,
+              "comparable": true
+            }
+          ],
+          "in_stock": null,
+          "route": "/products/00000000-0000-0000-0000-0000000003ec"
+        },
+        {
+          "id": "00000000-0000-0000-0000-0000000003ed",
+          "image_id": null,
+          "name": "Coffee 5",
+          "price": "15",
+          "currency": "USD",
+          "category_id": "00000000-0000-0000-0000-00000000044c",
+          "category_name": "coffee",
+          "product_type": "simple",
+          "attributes": [
+            {
+              "name": "roast",
+              "value": "\"dark\"",
+              "label": "",
+              "source": "AI_INFERRED",
+              "confidence": null,
+              "comparable": true
+            }
+          ],
+          "in_stock": true,
+          "route": "/products/00000000-0000-0000-0000-0000000003ed"
+        }
+      ],
+      "policies": {
+        "schema_version": "2",
+        "tenant_id": "00000000-0000-0000-0000-0000000003e8",
+        "answers": [
+          {
+            "phrases": [
+              "How do I check my order?"
+            ],
+            "answer": "Sign in to view your own order status. A basket proposal is not a placed order.",
+            "source": {
+              "id": "guide:order-status",
+              "title": "Synthetic evaluation guide",
+              "revision": 1,
+              "approved_at": "2026-09-01T00:00:00Z",
+              "valid_until": "2026-10-01T00:00:00Z"
+            }
+          }
+        ],
+        "unknown_phrases": [
+          "Do you guarantee delivery today?",
+          "Can I return any item after 90 days?"
+        ]
+      }
+    }
+  ],
+  "cases": [
+    {
+      "id": "m04-soft-preference",
+      "snapshot": "grocery-patterns-v1",
+      "store": "grocery",
+      "language": "en",
+      "journey": "discovery",
+      "kind": "catalog",
+      "suite": "golden",
+      "turns": [
+        {
+          "message": "Find coffee up to $40, preferably dark",
+          "model_output": {
+            "shopping": true,
+            "query": "coffee",
+            "attributes": [
+              {
+                "name": "roast",
+                "value": "dark"
+              }
+            ]
+          },
+          "expected": {
+            "min_results": 1,
+            "ids": [
+              "00000000-0000-0000-0000-0000000003ea"
+            ],
+            "text_none": [
+              "Which",
+              "Please clarify",
+              "What kind"
+            ]
+          }
+        }
+      ],
+      "candidates": [
+        "00000000-0000-0000-0000-0000000003ea"
+      ]
+    },
+    {
+      "id": "m04-conflicting-budget",
+      "snapshot": "grocery-patterns-v1",
+      "store": "grocery",
+      "language": "en",
+      "journey": "discovery",
+      "kind": "catalog",
+      "suite": "golden",
+      "turns": [
+        {
+          "message": "Find coffee over $50 under $20",
+          "model_output": {
+            "shopping": true,
+            "query": "coffee",
+            "attributes": [
+              {
+                "name": "roast",
+                "value": "dark"
+              }
+            ]
+          },
+          "expected": {
+            "text_all": [
+              "requirements conflict",
+              "price"
+            ],
+            "max_calls": 0
+          }
+        }
+      ],
+      "candidates": [
+        "00000000-0000-0000-0000-0000000003ea"
+      ]
+    },
+    {
+      "id": "m04-conflicting-quantity",
+      "snapshot": "grocery-patterns-v1",
+      "store": "grocery",
+      "language": "en",
+      "journey": "discovery",
+      "kind": "catalog",
+      "suite": "golden",
+      "turns": [
+        {
+          "message": "Find coffee quantity at least 5 pieces quantity at most 2 pieces",
+          "model_output": {
+            "shopping": true,
+            "query": "coffee",
+            "attributes": [
+              {
+                "name": "roast",
+                "value": "dark"
+              }
+            ]
+          },
+          "expected": {
+            "text_all": [
+              "requirements conflict",
+              "quantity"
+            ],
+            "max_calls": 0
+          }
+        }
+      ],
+      "candidates": [
+        "00000000-0000-0000-0000-0000000003ea"
+      ]
+    },
+    {
+      "id": "m04-conflicting-delivery",
+      "snapshot": "grocery-patterns-v1",
+      "store": "grocery",
+      "language": "en",
+      "journey": "discovery",
+      "kind": "catalog",
+      "suite": "golden",
+      "turns": [
+        {
+          "message": "Find coffee delivery after 2026-10-10 delivery before 2026-10-09",
+          "model_output": {
+            "shopping": true,
+            "query": "coffee",
+            "attributes": [
+              {
+                "name": "roast",
+                "value": "dark"
+              }
+            ]
+          },
+          "expected": {
+            "text_all": [
+              "requirements conflict",
+              "delivery_at"
+            ],
+            "max_calls": 0
+          }
+        }
+      ],
+      "candidates": [
+        "00000000-0000-0000-0000-0000000003ea"
+      ]
+    },
+    {
+      "id": "m04-model-inference",
+      "snapshot": "grocery-patterns-v1",
+      "store": "grocery",
+      "language": "en",
+      "journey": "discovery",
+      "kind": "catalog",
+      "suite": "golden",
+      "turns": [
+        {
+          "message": "Find coffee",
+          "model_output": {
+            "shopping": true,
+            "query": "coffee",
+            "attributes": [
+              {
+                "name": "roast",
+                "value": "dark"
+              }
+            ]
+          },
+          "expected": {
+            "min_results": 1,
+            "ids": [
+              "00000000-0000-0000-0000-0000000003ea"
+            ],
+            "text_none": [
+              "Which",
+              "Please clarify",
+              "What kind"
+            ]
+          }
+        }
+      ],
+      "candidates": [
+        "00000000-0000-0000-0000-0000000003ea"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,96 @@
+{
+  "version": "1",
+  "dataset_sha256": "db49ec7326c12a0fcb49f9ec9234a840b638c47c86056300d3c7cb9cd3ea685b",
+  "runtime_sha256": "ecb40f5a95634aa41bffceea1062a4a9b9e67c94b75c8044e3688f0404c7a07d",
+  "status": "pending_human_review",
+  "judge": {
+    "enabled": false,
+    "provider": null,
+    "model": null,
+    "rubric_version": "1",
+    "repetitions": 0,
+    "variance": null,
+    "calibration": "No human labels yet; automated judging is disabled."
+  },
+  "rubric": {
+    "helpfulness": "0: no usable next step; 1: partly usable; 2: completes the stated goal or gives a necessary actionable clarification.",
+    "tradeoffs": "0: misleading/hidden constraint trade-off; 1: incomplete; 2: explains budget, fit, missing facts and alternatives when relevant.",
+    "over_questioning": "0: unnecessary/repeated questions; 1: partly redundant; 2: asks only for information required for a safe useful next step.",
+    "trust": "0: unsupported facts/promises or hidden action; 1: incomplete uncertainty/sources; 2: grounded, scoped, explicit uncertainty and customer control."
+  },
+  "promotion_rule": "A reviewer must verify the scoped observation, independently write expected assertions, add a regression case, and review the dataset diff. Never copy an answer to gold solely because the model produced it.",
+  "items": [
+    {
+      "case_id": "grocery-live-budget-en",
+      "status": "failed",
+      "failure_layers": [
+        "ranking"
+      ],
+      "assertions": [
+        "expected_selection_order"
+      ],
+      "trace_sha256": "3c29d587fbf7e76441ae815ff01405191b017491eda539e5bad53d6f1742d934",
+      "reviewer": null,
+      "reviewed_at": null,
+      "scores": null,
+      "evidence": null,
+      "resolution": null
+    },
+    {
+      "case_id": "grocery-live-budget-ar",
+      "status": "failed",
+      "failure_layers": [
+        "ranking"
+      ],
+      "assertions": [
+        "expected_selection_order"
+      ],
+      "trace_sha256": "feb2068e85cec5cb1ed778bfe833c947ee10aabaa5dd1c22b1c4602e2bab5c8e",
+      "reviewer": null,
+      "reviewed_at": null,
+      "scores": null,
+      "evidence": null,
+      "resolution": null
+    },
+    {
+      "case_id": "grocery-live-budget-mixed",
+      "status": "passed",
+      "failure_layers": [],
+      "assertions": [],
+      "trace_sha256": "d9375fbbdc6505bcd0998254fa3cbc752c05bbf35acb0c685220c43849bb1ffc",
+      "reviewer": null,
+      "reviewed_at": null,
+      "scores": null,
+      "evidence": null,
+      "resolution": null
+    },
+    {
+      "case_id": "grocery-live-comparison",
+      "status": "passed",
+      "failure_layers": [],
+      "assertions": [],
+      "trace_sha256": "e2f6fdf2c8054544cc42b71f32e5b00de55fef512c8a5340a614c1356118324f",
+      "reviewer": null,
+      "reviewed_at": null,
+      "scores": null,
+      "evidence": null,
+      "resolution": null
+    },
+    {
+      "case_id": "grocery-live-gift",
+      "status": "failed",
+      "failure_layers": [
+        "ranking"
+      ],
+      "assertions": [
+        "expected_selection_order"
+      ],
+      "trace_sha256": "7d4590a3c5ca26323d45d143f99384b2aa71947d813a93b4a1585e35645bdbef",
+      "reviewer": null,
+      "reviewed_at": null,
+      "scores": null,
+      "evidence": null,
+      "resolution": null
+    }
+  ]
+}

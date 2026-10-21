@@ -1,0 +1,134 @@
+{
+  "version": "1",
+  "observed_at": "2026-09-21T10:16:31.055987+00:00",
+  "store": "grocery",
+  "source": "rocento-shopping-stage-9535d4d7",
+  "scope": "Isolated synthetic staging, all retained commerce records; feedback window 24 hours.",
+  "limitations": [
+    "Synthetic rehearsals are not customer conversion evidence.",
+    "Cart deletion can remove proposal history.",
+    "Orders may occur before proposal application; only proposal creation timestamps exist.",
+    "No currencies are summed together."
+  ],
+  "metrics": {
+    "goal_completion_proxy": {
+      "numerator": 30,
+      "denominator": 43,
+      "fraction": 0.6976744186046512,
+      "status": "measured",
+      "definition": "Distinct tasks with an applied proposal / recorded tasks. Does not measure semantic goal completion."
+    },
+    "proposal_application": {
+      "numerator": 30,
+      "denominator": 69,
+      "fraction": 0.43478260869565216,
+      "status": "measured",
+      "definition": "Applied / created proposals, including revisions and blocked proposals; application is the recorded approval proxy."
+    },
+    "checkout_continuation_association": {
+      "numerator": 4,
+      "denominator": 4,
+      "fraction": 1.0,
+      "status": "measured",
+      "definition": "Applied carts with a later quote / applied carts. Proposal creation time is used because application time is not recorded."
+    },
+    "conversion_association": {
+      "numerator": 4,
+      "denominator": 4,
+      "fraction": 1.0,
+      "status": "measured",
+      "definition": "Applied carts linked to orders through quotes / applied carts; observational association, not causal AI attribution."
+    },
+    "cancellation_rate": {
+      "numerator": 0,
+      "denominator": 29,
+      "fraction": 0.0,
+      "status": "measured",
+      "definition": "Currently cancelled / all recorded orders in this isolated store."
+    },
+    "repeat_purchase": {
+      "numerator": 4,
+      "denominator": 4,
+      "fraction": 1.0,
+      "status": "measured",
+      "definition": "Customers with multiple recorded orders / customers with an order; no maturity window."
+    },
+    "satisfaction": {
+      "numerator": 0,
+      "denominator": 0,
+      "fraction": null,
+      "status": "no_observations",
+      "definition": "Helpful votes / received binary votes in the existing tenant-scoped 24-hour assistant report."
+    },
+    "feedback_coverage": {
+      "numerator": 0,
+      "denominator": 34,
+      "fraction": 0.0,
+      "status": "measured",
+      "definition": "Votes / recorded assistant turns in 24 hours; nonresponders are not assumed satisfied."
+    },
+    "semantic_goal_completion": {
+      "status": "unavailable",
+      "value": null,
+      "reason": "No goal outcome labels; completed turns are not completed goals."
+    },
+    "margin_aware_value": {
+      "status": "unavailable",
+      "value": null,
+      "reason": "No authoritative item cost snapshot is joined to assistant outcomes."
+    },
+    "return_rate": {
+      "status": "unavailable",
+      "value": null,
+      "reason": "Refund records do not establish a returns denominator or a return event."
+    },
+    "support_deflection": {
+      "status": "unavailable",
+      "value": null,
+      "reason": "No matched support counterfactual and resolution observation."
+    },
+    "incremental_conversion_lift": {
+      "status": "unavailable",
+      "value": null,
+      "reason": "No randomized assignment, control group or stable exposure-to-order attribution."
+    }
+  },
+  "counts": {
+    "tasks": 43,
+    "tasks_with_applied_proposal": 30,
+    "proposals": 69,
+    "applied_proposals": 30,
+    "applied_carts": 4,
+    "associated_quote_carts": 4,
+    "associated_order_carts": 4,
+    "orders": 29,
+    "cancelled_orders": 0,
+    "customers_with_orders": 4,
+    "repeat_customers": 4,
+    "order_value_by_currency": [
+      {
+        "currency": "USD",
+        "orders": 29,
+        "total": "547.00",
+        "average": "18.8620689655172414"
+      }
+    ],
+    "proposal_modes": [
+      {
+        "mode": "buy_again",
+        "proposals": 17,
+        "applied": 7
+      },
+      {
+        "mode": "optimize",
+        "proposals": 21,
+        "applied": 9
+      },
+      {
+        "mode": "shop",
+        "proposals": 31,
+        "applied": 14
+      }
+    ]
+  }
+}

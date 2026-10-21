@@ -1,0 +1,61 @@
+   Compiling infra-db v0.1.0 (/Users/momar/Documents/commerce-ai/backend/crates/infra-db)
+   Compiling api-gateway v0.1.0 (/Users/momar/Documents/commerce-ai/backend/crates/api-gateway)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 11.55s
+     Running tests/publication_discovery.rs (backend/target/debug/deps/publication_discovery-9b8ae3d1122f540b)
+
+running 5 tests
+test two_million_product_capacity ... ignored, explicit two-million-product capacity check
+test crawler_permissions_revision_and_audit ... ok
+test stale_partition_growth_fails_instead_of_truncating ... ok
+test partitions_eligibility_freshness_and_xml ... ok
+test policy_matrix_binding_and_provider_controls ... ok
+
+test result: ok. 4 passed; 0 failed; 1 ignored; 0 measured; 0 filtered out; finished in 2.78s
+
+     Running tests/publication_feeds.rs (backend/target/debug/deps/publication_feeds-02e2a15188bee706)
+
+running 9 tests
+test export_http_auth_csrf_full_incremental_watermarks_and_unpublication ... ok
+test permanent_item_error_does_not_stop_valid_delivery_and_retry_ceiling ... ok
+test retries_idempotency_out_of_order_loss_and_tombstone_recovery ... ok
+test variants_locale_currency_guard_and_binding ... ok
+test concurrent_change_fences_stale_snapshot ... ok
+test creation_price_availability_image_deletion_and_private_noop ... ok
+test automatic_worker_and_two_installation_isolation ... ok
+test bounded_catalog_scan_reaches_every_product ... ok
+test bounded_large_journal_pages ... ok
+
+test result: ok. 9 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 5.16s
+
+     Running tests/publication_metadata.rs (backend/target/debug/deps/publication_metadata-c3c6ab3b7aadb5ba)
+
+running 2 tests
+test image_eligibility_is_reference_based_and_revocable ... ok
+test real_media_bytes_variants_and_private_authorization ... ok
+
+test result: ok. 2 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 2.14s
+
+     Running tests/publication_policy.rs (backend/target/debug/deps/publication_policy-b3dfa342833babf2)
+
+running 4 tests
+test merchant_profile_permissions_validation_revisions_and_isolation ... ok
+test real_http_policy_preferences_override_hosts_and_permissions ... ok
+test two_installations_cannot_change_each_others_policy ... ok
+test protected_environments_and_header_override_win_on_real_http ... ok
+
+test result: ok. 4 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 2.26s
+
+     Running tests/publication_rendering.rs (backend/target/debug/deps/publication_rendering-6d47f1b25fd40fa2)
+
+running 9 tests
+test migration_backfills_legacy_rows_and_rejects_ambiguous_ownership ... ok
+test generated_slugs_unicode_collisions_and_deleted_categories ... ok
+test structured_variants_are_visible_independently_canonical_and_parent_scoped ... ok
+test structured_data_matches_public_facts_across_industries_and_pricing ... ok
+test metadata_raw_html_semantics_and_revisioned_admin_preview ... ok
+test merchant_entity_policies_guides_comparisons_and_revocation ... ok
+test canonical_lifecycle_single_hop_and_query_policy ... ok
+test feed_freshness_real_html_jsonld_sitemap_pipeline ... ok
+test built_renderer_real_http_status_content_freshness_and_isolation ... ok
+
+test result: ok. 9 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 2.77s

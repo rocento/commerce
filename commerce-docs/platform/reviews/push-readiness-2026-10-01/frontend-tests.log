@@ -1,0 +1,261 @@
+
+ RUN  v3.2.7 /Users/momar/Documents/commerce-ai/frontend
+
+ ✓ apps/admin/src/capacity-validation.test.ts (5 tests) 16ms
+ ✓ packages/api-client/src/commerce-core.test.ts (648 tests) 18ms
+ ✓ apps/storefront/src/product-price.test.tsx (7 tests) 15ms
+ ✓ apps/storefront/src/assistant-ticket-intent.test.ts (1069 tests) 29ms
+ ❯ packages/api-client/src/demo-presets.test.ts (7 tests | 1 failed) 10ms
+   ✓ demo preset contract compatibility > grocery resolves to a valid existing-engine configuration 3ms
+   ✓ demo preset contract compatibility > jewelry resolves to a valid existing-engine configuration 0ms
+   × demo preset contract compatibility > electronics resolves to a valid existing-engine configuration 4ms
+     → expected [ …(2) ] to deeply equal []
+   ✓ demo preset contract compatibility > Grocery changes only its documented palette, without editorial opt-ins 0ms
+   ✓ demo preset contract compatibility > all new capabilities are optional and accept existing setting types 1ms
+   ✓ demo preset contract compatibility > uses the reference palette and locally hosted font choices 0ms
+   ✓ demo preset contract compatibility > retains required commerce slots in both presets 0ms
+ ✓ packages/api-client/src/assistant.test.ts (32 tests) 14ms
+ ✓ apps/admin/src/category-tree.test.ts (5 tests) 8ms
+ ✓ apps/storefront/src/checkout-logic.test.ts (4 tests) 12ms
+ ✓ apps/storefront/src/storefront-bootstrap.test.ts (8 tests) 212ms
+ ✓ apps/storefront/src/reorder-logic.test.ts (6 tests) 8ms
+ ✓ apps/storefront/src/assistant-markdown.test.tsx (24 tests) 8ms
+stderr | apps/admin/src/catalog-enrichment.test.tsx > read-only reviewers see evidence and pagination without mutation controls
+Warning: useLayoutEffect does nothing on the server, because its effect cannot be encoded into the server renderer's output format. This will lead to a mismatch between the initial, non-hydrated UI and the intended UI. To avoid this, useLayoutEffect should only be used in components that render exclusively on the client. See https://reactjs.org/link/uselayouteffect-ssr for common fixes.
+    at MemoryRouter (/Users/momar/Documents/commerce-ai/frontend/node_modules/.pnpm/react-router@6.30.6_react@18.3.1/node_modules/react-router/dist/umd/react-router.development.js:1097:7)
+    at QueryClientProvider (file:///Users/momar/Documents/commerce-ai/frontend/node_modules/.pnpm/@tanstack+react-query@5.102.8_react@18.3.1/node_modules/@tanstack/react-query/build/modern/QueryClientProvider.js:12:32)
+Warning: useLayoutEffect does nothing on the server, because its effect cannot be encoded into the server renderer's output format. This will lead to a mismatch between the initial, non-hydrated UI and the intended UI. To avoid this, useLayoutEffect should only be used in components that render exclusively on the client. See https://reactjs.org/link/uselayouteffect-ssr for common fixes.
+    at LinkWithRef (/Users/momar/Documents/commerce-ai/frontend/node_modules/.pnpm/react-router-dom@6.30.6_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/react-router-dom/dist/umd/react-router-dom.development.js:807:9)
+    at div
+    at div
+    at PageHeader (/Users/momar/Documents/commerce-ai/frontend/apps/admin/src/page-header.tsx:6:23)
+    at main
+    at CatalogEnrichment (/Users/momar/Documents/commerce-ai/frontend/apps/admin/src/catalog-enrichment.tsx:200:30)
+    at Router (/Users/momar/Documents/commerce-ai/frontend/node_modules/.pnpm/react-router@6.30.6_react@18.3.1/node_modules/react-router/dist/umd/react-router.development.js:1203:17)
+    at MemoryRouter (/Users/momar/Documents/commerce-ai/frontend/node_modules/.pnpm/react-router@6.30.6_react@18.3.1/node_modules/react-router/dist/umd/react-router.development.js:1097:7)
+    at QueryClientProvider (file:///Users/momar/Documents/commerce-ai/frontend/node_modules/.pnpm/@tanstack+react-query@5.102.8_react@18.3.1/node_modules/@tanstack/react-query/build/modern/QueryClientProvider.js:12:32)
+Warning: useLayoutEffect does nothing on the server, because its effect cannot be encoded into the server renderer's output format. This will lead to a mismatch between the initial, non-hydrated UI and the intended UI. To avoid this, useLayoutEffect should only be used in components that render exclusively on the client. See https://reactjs.org/link/uselayouteffect-ssr for common fixes.
+    at LinkWithRef (/Users/momar/Documents/commerce-ai/frontend/node_modules/.pnpm/react-router-dom@6.30.6_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/react-router-dom/dist/umd/react-router-dom.development.js:807:9)
+    at td
+    at tr
+    at tbody
+    at table
+    at div
+    at section
+    at main
+    at CatalogEnrichment (/Users/momar/Documents/commerce-ai/frontend/apps/admin/src/catalog-enrichment.tsx:200:30)
+    at Router (/Users/momar/Documents/commerce-ai/frontend/node_modules/.pnpm/react-router@6.30.6_react@18.3.1/node_modules/react-router/dist/umd/react-router.development.js:1203:17)
+    at MemoryRouter (/Users/momar/Documents/commerce-ai/frontend/node_modules/.pnpm/react-router@6.30.6_react@18.3.1/node_modules/react-router/dist/umd/react-router.development.js:1097:7)
+    at QueryClientProvider (file:///Users/momar/Documents/commerce-ai/frontend/node_modules/.pnpm/@tanstack+react-query@5.102.8_react@18.3.1/node_modules/@tanstack/react-query/build/modern/QueryClientProvider.js:12:32)
+
+ ✓ apps/admin/src/catalog-enrichment.test.tsx (5 tests) 28ms
+ ✓ apps/storefront/src/cart-quantity.test.ts (9 tests) 11ms
+ ✓ apps/storefront/src/address-form.test.tsx (1 test) 9ms
+ ✓ apps/storefront/src/support-logic.test.ts (6 tests) 4ms
+ ✓ packages/api-client/src/themes.test.ts (11 tests) 8ms
+ ✓ apps/storefront/src/comparison.test.tsx (5 tests) 9ms
+ ✓ apps/storefront/src/assistant-product-guide.test.tsx (13 tests) 21ms
+ ✓ apps/storefront/src/delivery-geography.test.ts (6 tests) 497ms
+ ✓ apps/storefront/src/theme-preview.test.ts (5 tests) 10ms
+ ✓ apps/storefront/src/assistant-compound-choice.test.tsx (3 tests) 5ms
+ ✓ apps/storefront/src/assistant-rich.test.tsx (10 tests) 21ms
+ ✓ apps/storefront/src/assistant-product-layout.test.tsx (6 tests) 24ms
+ ✓ apps/admin/src/merchant-questions.test.ts (5 tests) 4ms
+ ✓ apps/storefront/src/theme-grid.test.ts (3 tests) 3ms
+ ✓ apps/storefront/src/cart-display.test.tsx (2 tests) 5ms
+ ✓ packages/api-client/src/assistant-delivery.test.ts (3 tests) 4ms
+ ✓ apps/storefront/src/assistant-selection.test.ts (5 tests) 3ms
+ ✓ apps/admin/src/overview-data.test.ts (3 tests) 2ms
+ ✓ apps/storefront/src/assistant-delivery.test.tsx (4 tests) 9ms
+ ✓ apps/storefront/src/assistant-checkout-intent.test.ts (60 tests) 3ms
+ ✓ packages/api-client/src/index.test.ts (3 tests) 4ms
+ ✓ apps/storefront/src/discovery-attribution.test.ts (3 tests) 2ms
+ ✓ apps/admin/src/permission-model.test.ts (5 tests) 2ms
+ ✓ apps/storefront/src/assistant-order-guide.test.tsx (2 tests) 4ms
+ ✓ apps/admin/src/order-geo-logic.test.ts (3 tests) 5ms
+ ✓ apps/storefront/src/assistant-discovery.test.ts (2 tests) 2ms
+ ✓ apps/storefront/src/assistant-comparison.test.ts (5 tests) 2ms
+ ✓ apps/admin/src/msi-logic.test.ts (5 tests) 2ms
+ ✓ apps/storefront/src/assistant-cart-pagination.test.ts (2 tests) 2ms
+ ✓ apps/admin/src/merchant-insights.test.ts (5 tests) 1ms
+ ✓ apps/admin/src/discovery-status.test.ts (9 tests) 2ms
+ ✓ apps/storefront/src/assistant-state.test.ts (7 tests) 2ms
+ ✓ packages/api-client/src/merchant.test.ts (3 tests) 2ms
+ ❯ apps/admin/src/effective-indexing-status.test.tsx (6 tests | 6 failed) 14ms
+   × effective indexing display > shows the API state INDEXABLE without deriving it from the enabled preference 7ms
+     → expected '<details class="form-card visibility-…' to contain '<strong>INDEXABLE</strong>'
+   × effective indexing display > shows the API state MERCHANT_DISABLED without deriving it from the enabled preference 2ms
+     → expected '<details class="form-card visibility-…' to contain '<strong>MERCHANT_DISABLED</strong>'
+   × effective indexing display > shows the API state BLOCKED_BY_ENVIRONMENT without deriving it from the enabled preference 1ms
+     → expected '<details class="form-card visibility-…' to contain '<strong>BLOCKED_BY_ENVIRONMENT</stron…'
+   × effective indexing display > shows the API state BLOCKED_BY_HEADER without deriving it from the enabled preference 1ms
+     → expected '<details class="form-card visibility-…' to contain '<strong>BLOCKED_BY_HEADER</strong>'
+   × effective indexing display > shows the API state DOMAIN_UNVERIFIED without deriving it from the enabled preference 1ms
+     → expected '<details class="form-card visibility-…' to contain '<strong>DOMAIN_UNVERIFIED</strong>'
+   × effective indexing display > shows the API state CONFIGURATION_ERROR without deriving it from the enabled preference 1ms
+     → expected '<details class="form-card visibility-…' to contain '<strong>CONFIGURATION_ERROR</strong>'
+ ✓ apps/storefront/src/assistant-ticket-navigation.test.ts (3 tests) 2ms
+ ✓ apps/storefront/src/catalog-price.test.ts (11 tests) 2ms
+ ✓ apps/admin/src/merchant-assistant.test.tsx (1 test) 14ms
+ ✓ apps/admin/src/delivery-geometry.test.ts (4 tests) 2ms
+ ✓ apps/storefront/src/checkout-replies.test.ts (11 tests) 2ms
+ ✓ apps/storefront/src/fulfillment-selection.test.ts (3 tests) 1ms
+ ✓ apps/storefront/src/market-money.test.ts (2 tests) 11ms
+ ✓ apps/storefront/src/locations-logic.test.ts (5 tests) 2ms
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 7 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  apps/admin/src/effective-indexing-status.test.tsx > effective indexing display > shows the API state INDEXABLE without deriving it from the enabled preference
+AssertionError: expected '<details class="form-card visibility-…' to contain '<strong>INDEXABLE</strong>'
+
+- Expected
++ Received
+
+- <strong>INDEXABLE</strong>
++ <details class="form-card visibility-card visibility-technical"><summary>View indexing details</summary><dl class="visibility-facts"><dt>Saved indexing preference</dt><dd>Allowed</dd><dt>Environment</dt><dd>production</dd><dt>Approved production domain</dt><dd>https://shop.example.test/</dd><dt>Response header (X-Robots-Tag)</dt><dd>index, follow</dd><dt>Page indexing directive</dt><dd>index, follow</dd><dt>Deployment indexing block</dt><dd>Inactive</dd><dt>External CDN headers</dt><dd>Not observed — verify the public response before launch.</dd><dt>Saved revision</dt><dd>9</dd></dl><details><summary>robots.txt policy</summary><pre>User-agent: *
++ Allow: /
++ </pre></details><p class="help">Operator action required</p><p class="help">Applies to public storefront pages. Private pages and APIs remain excluded from indexing. Unsaved preferences do not change the current status.</p></details>
+
+ ❯ apps/admin/src/effective-indexing-status.test.tsx:18:18
+     16|     };
+     17|     const html = renderToStaticMarkup(<EffectiveIndexingStatus policy=…
+     18|     expect(html).toContain(`<strong>${state}</strong>`);
+       |                  ^
+     19|     expect(html).toContain('saved revision 9');
+     20|     expect(html).toContain(policy.response_header);
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/7]⎯
+
+ FAIL  apps/admin/src/effective-indexing-status.test.tsx > effective indexing display > shows the API state MERCHANT_DISABLED without deriving it from the enabled preference
+AssertionError: expected '<details class="form-card visibility-…' to contain '<strong>MERCHANT_DISABLED</strong>'
+
+- Expected
++ Received
+
+- <strong>MERCHANT_DISABLED</strong>
++ <details class="form-card visibility-card visibility-technical"><summary>View indexing details</summary><dl class="visibility-facts"><dt>Saved indexing preference</dt><dd>Allowed</dd><dt>Environment</dt><dd>production</dd><dt>Approved production domain</dt><dd>https://shop.example.test/</dd><dt>Response header (X-Robots-Tag)</dt><dd>noindex, nofollow</dd><dt>Page indexing directive</dt><dd>noindex, nofollow</dd><dt>Deployment indexing block</dt><dd>Inactive</dd><dt>External CDN headers</dt><dd>Not observed — verify the public response before launch.</dd><dt>Saved revision</dt><dd>9</dd></dl><details><summary>robots.txt policy</summary><pre>User-agent: *
++ Allow: /
++ </pre></details><p class="help">Operator action required</p><p class="help">Applies to public storefront pages. Private pages and APIs remain excluded from indexing. Unsaved preferences do not change the current status.</p></details>
+
+ ❯ apps/admin/src/effective-indexing-status.test.tsx:18:18
+     16|     };
+     17|     const html = renderToStaticMarkup(<EffectiveIndexingStatus policy=…
+     18|     expect(html).toContain(`<strong>${state}</strong>`);
+       |                  ^
+     19|     expect(html).toContain('saved revision 9');
+     20|     expect(html).toContain(policy.response_header);
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[2/7]⎯
+
+ FAIL  apps/admin/src/effective-indexing-status.test.tsx > effective indexing display > shows the API state BLOCKED_BY_ENVIRONMENT without deriving it from the enabled preference
+AssertionError: expected '<details class="form-card visibility-…' to contain '<strong>BLOCKED_BY_ENVIRONMENT</stron…'
+
+- Expected
++ Received
+
+- <strong>BLOCKED_BY_ENVIRONMENT</strong>
++ <details class="form-card visibility-card visibility-technical"><summary>View indexing details</summary><dl class="visibility-facts"><dt>Saved indexing preference</dt><dd>Allowed</dd><dt>Environment</dt><dd>production</dd><dt>Approved production domain</dt><dd>https://shop.example.test/</dd><dt>Response header (X-Robots-Tag)</dt><dd>noindex, nofollow</dd><dt>Page indexing directive</dt><dd>noindex, nofollow</dd><dt>Deployment indexing block</dt><dd>Inactive</dd><dt>External CDN headers</dt><dd>Not observed — verify the public response before launch.</dd><dt>Saved revision</dt><dd>9</dd></dl><details><summary>robots.txt policy</summary><pre>User-agent: *
++ Allow: /
++ </pre></details><p class="help">Operator action required</p><p class="help">Applies to public storefront pages. Private pages and APIs remain excluded from indexing. Unsaved preferences do not change the current status.</p></details>
+
+ ❯ apps/admin/src/effective-indexing-status.test.tsx:18:18
+     16|     };
+     17|     const html = renderToStaticMarkup(<EffectiveIndexingStatus policy=…
+     18|     expect(html).toContain(`<strong>${state}</strong>`);
+       |                  ^
+     19|     expect(html).toContain('saved revision 9');
+     20|     expect(html).toContain(policy.response_header);
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[3/7]⎯
+
+ FAIL  apps/admin/src/effective-indexing-status.test.tsx > effective indexing display > shows the API state BLOCKED_BY_HEADER without deriving it from the enabled preference
+AssertionError: expected '<details class="form-card visibility-…' to contain '<strong>BLOCKED_BY_HEADER</strong>'
+
+- Expected
++ Received
+
+- <strong>BLOCKED_BY_HEADER</strong>
++ <details class="form-card visibility-card visibility-technical"><summary>View indexing details</summary><dl class="visibility-facts"><dt>Saved indexing preference</dt><dd>Allowed</dd><dt>Environment</dt><dd>production</dd><dt>Approved production domain</dt><dd>https://shop.example.test/</dd><dt>Response header (X-Robots-Tag)</dt><dd>noindex, nofollow</dd><dt>Page indexing directive</dt><dd>noindex, nofollow</dd><dt>Deployment indexing block</dt><dd>Active</dd><dt>External CDN headers</dt><dd>Not observed — verify the public response before launch.</dd><dt>Saved revision</dt><dd>9</dd></dl><details><summary>robots.txt policy</summary><pre>User-agent: *
++ Allow: /
++ </pre></details><p class="help">Operator action required</p><p class="help">Applies to public storefront pages. Private pages and APIs remain excluded from indexing. Unsaved preferences do not change the current status.</p></details>
+
+ ❯ apps/admin/src/effective-indexing-status.test.tsx:18:18
+     16|     };
+     17|     const html = renderToStaticMarkup(<EffectiveIndexingStatus policy=…
+     18|     expect(html).toContain(`<strong>${state}</strong>`);
+       |                  ^
+     19|     expect(html).toContain('saved revision 9');
+     20|     expect(html).toContain(policy.response_header);
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[4/7]⎯
+
+ FAIL  apps/admin/src/effective-indexing-status.test.tsx > effective indexing display > shows the API state DOMAIN_UNVERIFIED without deriving it from the enabled preference
+AssertionError: expected '<details class="form-card visibility-…' to contain '<strong>DOMAIN_UNVERIFIED</strong>'
+
+- Expected
++ Received
+
+- <strong>DOMAIN_UNVERIFIED</strong>
++ <details class="form-card visibility-card visibility-technical"><summary>View indexing details</summary><dl class="visibility-facts"><dt>Saved indexing preference</dt><dd>Allowed</dd><dt>Environment</dt><dd>production</dd><dt>Approved production domain</dt><dd>https://shop.example.test/</dd><dt>Response header (X-Robots-Tag)</dt><dd>noindex, nofollow</dd><dt>Page indexing directive</dt><dd>noindex, nofollow</dd><dt>Deployment indexing block</dt><dd>Inactive</dd><dt>External CDN headers</dt><dd>Not observed — verify the public response before launch.</dd><dt>Saved revision</dt><dd>9</dd></dl><details><summary>robots.txt policy</summary><pre>User-agent: *
++ Allow: /
++ </pre></details><p class="help">Operator action required</p><p class="help">Applies to public storefront pages. Private pages and APIs remain excluded from indexing. Unsaved preferences do not change the current status.</p></details>
+
+ ❯ apps/admin/src/effective-indexing-status.test.tsx:18:18
+     16|     };
+     17|     const html = renderToStaticMarkup(<EffectiveIndexingStatus policy=…
+     18|     expect(html).toContain(`<strong>${state}</strong>`);
+       |                  ^
+     19|     expect(html).toContain('saved revision 9');
+     20|     expect(html).toContain(policy.response_header);
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[5/7]⎯
+
+ FAIL  apps/admin/src/effective-indexing-status.test.tsx > effective indexing display > shows the API state CONFIGURATION_ERROR without deriving it from the enabled preference
+AssertionError: expected '<details class="form-card visibility-…' to contain '<strong>CONFIGURATION_ERROR</strong>'
+
+- Expected
++ Received
+
+- <strong>CONFIGURATION_ERROR</strong>
++ <details class="form-card visibility-card visibility-technical"><summary>View indexing details</summary><dl class="visibility-facts"><dt>Saved indexing preference</dt><dd>Allowed</dd><dt>Environment</dt><dd>production</dd><dt>Approved production domain</dt><dd>https://shop.example.test/</dd><dt>Response header (X-Robots-Tag)</dt><dd>noindex, nofollow</dd><dt>Page indexing directive</dt><dd>noindex, nofollow</dd><dt>Deployment indexing block</dt><dd>Inactive</dd><dt>External CDN headers</dt><dd>Not observed — verify the public response before launch.</dd><dt>Saved revision</dt><dd>9</dd></dl><details><summary>robots.txt policy</summary><pre>User-agent: *
++ Allow: /
++ </pre></details><p class="help">Operator action required</p><p class="help">Applies to public storefront pages. Private pages and APIs remain excluded from indexing. Unsaved preferences do not change the current status.</p></details>
+
+ ❯ apps/admin/src/effective-indexing-status.test.tsx:18:18
+     16|     };
+     17|     const html = renderToStaticMarkup(<EffectiveIndexingStatus policy=…
+     18|     expect(html).toContain(`<strong>${state}</strong>`);
+       |                  ^
+     19|     expect(html).toContain('saved revision 9');
+     20|     expect(html).toContain(policy.response_header);
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[6/7]⎯
+
+ FAIL  packages/api-client/src/demo-presets.test.ts > demo preset contract compatibility > electronics resolves to a valid existing-engine configuration
+AssertionError: expected [ …(2) ] to deeply equal []
+
+- Expected
++ Received
+
+- []
++ [
++   "Header options: missing or unknown settings",
++   "Header options: cart_display",
++ ]
+
+ ❯ packages/api-client/src/demo-presets.test.ts:15:50
+     13| describe('demo preset contract compatibility', () => {
+     14|   for (const name of ['grocery', 'jewelry', 'electronics']) it(`${name…
+     15|     expect(validateTheme(resolve(preset(name)))).toEqual([]);
+       |                                                  ^
+     16|   });
+     17|   it('Grocery changes only its documented palette, without editorial o…
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[7/7]⎯
+
+
+ Test Files  2 failed | 51 passed (53)
+      Tests  7 failed | 2073 passed (2080)
+   Start at  22:25:13
+   Duration  1.37s (transform 1.33s, setup 0ms, collect 5.88s, tests 1.11s, environment 5ms, prepare 1.95s)
+

@@ -1,0 +1,1182 @@
+{
+  "version": 1,
+  "recorded_on": "2026-10-14",
+  "scope": "Historical attachment metadata for maintained Markdown. Payloads were removed from output/ on 2026-10-14 at the user's request; no archive location was registered. Hashes identify the former files, not current availability or acceptance.",
+  "entries": [
+    {
+      "path": "output/android-native-preview-20261013/android-draft-updated.png",
+      "anchor": "evidence-d29a5e2adb7ffa45",
+      "kind": "file",
+      "availability": "unavailable",
+      "archive_location": null,
+      "recorded_on": "2026-10-14",
+      "referenced_by": [
+        "commerce-docs/mobile/history/android-native-preview-acceptance-2026-10-13.md"
+      ],
+      "bytes": 39536,
+      "sha256": "5b192a38d0d0b00b4b1d07ea7ac7196f831cfc676f42cb1d0b2f9a3636bc82c2",
+      "literal_source_references": [],
+      "retention_decision": "removed",
+      "dependency_review": "Literal source references scanned on 2026-10-14; dynamic consumers and external jobs are not ruled out.",
+      "removed_on": "2026-10-14"
+    },
+    {
+      "path": "output/android-native-preview-20261013/android-keyboard.png",
+      "anchor": "evidence-02503fed3fa1dc41",
+      "kind": "file",
+      "availability": "unavailable",
+      "archive_location": null,
+      "recorded_on": "2026-10-14",
+      "referenced_by": [
+        "commerce-docs/mobile/history/android-native-preview-acceptance-2026-10-13.md"
+      ],
+      "bytes": 66498,
+      "sha256": "05435782e9da6b98f8f75a47ae857fbf59a1955e9c8b8a073accdcddd27505fe",
+      "literal_source_references": [],
+      "retention_decision": "removed",
+      "dependency_review": "Literal source references scanned on 2026-10-14; dynamic consumers and external jobs are not ruled out.",
+      "removed_on": "2026-10-14"
+    },
+    {
+      "path": "output/android-native-preview-20261013/builder-android.png",
+      "anchor": "evidence-e1cb30739587d15a",
+      "kind": "file",
+      "availability": "unavailable",
+      "archive_location": null,
+      "recorded_on": "2026-10-14",
+      "referenced_by": [
+        "commerce-docs/mobile/history/android-native-preview-acceptance-2026-10-13.md"
+      ],
+      "bytes": 217215,
+      "sha256": "71d53509bf3c119a19644320c7835c40954c6f5470c1f4709ea2f12131c3c152",
+      "literal_source_references": [],
+      "retention_decision": "removed",
+      "dependency_review": "Literal source references scanned on 2026-10-14; dynamic consumers and external jobs are not ruled out.",
+      "removed_on": "2026-10-14"
+    },
+    {
+      "path": "output/android-native-preview-20261013/result.json",
+      "anchor": "evidence-1de79e3ce5369ea1",
+      "kind": "file",
+      "availability": "unavailable",
+      "archive_location": null,
+      "recorded_on": "2026-10-14",
+      "referenced_by": [
+        "commerce-docs/mobile/history/android-native-preview-acceptance-2026-10-13.md"
+      ],
+      "bytes": 214,
+      "sha256": "e03c54f3a04d6fd062ddb30827b6234e6ac140b8b68fabcc426b290f673a67b3",
+      "literal_source_references": [],
+      "retention_decision": "removed",
+      "dependency_review": "Literal source references scanned on 2026-10-14; dynamic consumers and external jobs are not ruled out.",
+      "removed_on": "2026-10-14"
+    },
+    {
+      "path": "output/db-driven-language-20261010/activation/verification.json",
+      "anchor": "evidence-e85d651906e1a9d0",
+      "kind": "file",
+      "availability": "unavailable",
+      "archive_location": null,
+      "recorded_on": "2026-10-14",
+      "referenced_by": [
+        "commerce-docs/ai-service/history/enterprise-knowledge-production-verification.md"
+      ],
+      "bytes": 8097,
+      "sha256": "9204977a567a64107832746edf71f86c90cb5bc58825f2ce2b6982184083cdab",
+      "literal_source_references": [],
+      "retention_decision": "removed",
+      "dependency_review": "Literal source references scanned on 2026-10-14; dynamic consumers and external jobs are not ruled out.",
+      "removed_on": "2026-10-14"
+    },
+    {
+      "path": "output/enterprise-knowledge-expansion-batch1-20261010/acceptance-lock.json",
+      "anchor": "evidence-eccc95d41073da65",
+      "kind": "file",
+      "availability": "unavailable",
+      "archive_location": null,
+      "recorded_on": "2026-10-14",
+      "referenced_by": [
+        "commerce-docs/ai-service/history/enterprise-knowledge-expansion-batch1.md"
+      ],
+      "bytes": 856,
+      "sha256": "9237108f9e5d59eefdc7994bb637a8b13a316621227725f161ee1d56a1c1e08a",
+      "literal_source_references": [],
+      "retention_decision": "removed",
+      "dependency_review": "Literal source references scanned on 2026-10-14; dynamic consumers and external jobs are not ruled out.",
+      "removed_on": "2026-10-14"
+    },
+    {
+      "path": "output/enterprise-knowledge-expansion-batch1-20261010/production-inventory.txt",
+      "anchor": "evidence-0fa32f5c766ad6c4",
+      "kind": "file",
+      "availability": "unavailable",
+      "archive_location": null,
+      "recorded_on": "2026-10-14",
+      "referenced_by": [
+        "commerce-docs/ai-service/history/enterprise-knowledge-expansion-batch1.md"
+      ],
+      "bytes": 181306,
+      "sha256": "a59eafba0e38d3aae2d4fcbb81b940beba31e89969d7286f1febe20f8f38d06b",
+      "literal_source_references": [],
+      "retention_decision": "removed",
+      "dependency_review": "Literal source references scanned on 2026-10-14; dynamic consumers and external jobs are not ruled out.",
+      "removed_on": "2026-10-14"
+    },
+    {
+      "path": "output/enterprise-knowledge-expansion-batch1-20261010/verification.json",
+      "anchor": "evidence-25d8bf88e0ec90ce",
+      "kind": "file",
+      "availability": "unavailable",
+      "archive_location": null,
+      "recorded_on": "2026-10-14",
+      "referenced_by": [
+        "commerce-docs/ai-service/history/enterprise-knowledge-expansion-batch1.md"
+      ],
+      "bytes": 6481,
+      "sha256": "6d48baee785433f1b4ab0562f9cee7538be4f54453503f6590ad7968de935e74",
+      "literal_source_references": [],
+      "retention_decision": "removed",
+      "dependency_review": "Literal source references scanned on 2026-10-14; dynamic consumers and external jobs are not ruled out.",
+      "removed_on": "2026-10-14"
+    },
+    {
+      "path": "output/enterprise-knowledge-phase0-20261010",
+      "anchor": "evidence-8c8273bc678d7156",
+      "kind": "directory",
+      "availability": "unavailable",
+      "archive_location": null,
+      "recorded_on": "2026-10-14",
+      "referenced_by": [
+        "commerce-docs/ai-service/history/enterprise-knowledge-phase0.md"
+      ],
+      "literal_source_references": [
+        "scripts/knowledge-baseline/lib.test.mjs",
+        "scripts/knowledge-baseline/rehearse-repaired-release.ts",
+        "scripts/knowledge-baseline/snapshot.mjs",
+        "scripts/knowledge-baseline/analyze.mjs",
+        "scripts/knowledge-baseline/prepare-benchmark.mjs",
+        "scripts/knowledge-baseline/verify.mjs",
+        "scripts/knowledge-baseline/approve-benchmark.mjs",
+        "scripts/knowledge-baseline/verify-phase2.mjs",
+        "scripts/knowledge-baseline/phase1-snapshot.mjs",
+        "scripts/knowledge-baseline/release-demo-order-admission.py",
+        "scripts/knowledge-baseline/verify-phase1.mjs",
+        "scripts/knowledge-baseline/diagnose-archived-release.mjs",
+        "scripts/knowledge-baseline/verify-phase2-repairs.mjs",
+        "scripts/knowledge-baseline/verify-phase3.py",
+        "scripts/knowledge-baseline/benchmark.mjs"
+      ],
+      "retention_decision": "removed",
+      "dependency_review": "Literal source references scanned on 2026-10-14; dynamic consumers and external jobs are not ruled out.",
+      "removed_on": "2026-10-14"
+    },
+    {
+      "path": "output/enterprise-knowledge-phase0-20261010/baseline-summary.json",
+      "anchor": "evidence-0dd13b7ee15f02d0",
+      "kind": "file",
+      "availability": "unavailable",
+      "archive_location": null,
+      "recorded_on": "2026-10-14",
+      "referenced_by": [
+        "commerce-docs/ai-service/history/enterprise-knowledge-phase0.md"
+      ],
+      "bytes": 12580,
+      "sha256": "bd1cee201d27fd16ba5fc885697ebea7317ab8abed28e1d75c31fa9826bea91a",
+      "literal_source_references": [],
+      "retention_decision": "removed",
+      "dependency_review": "Literal source references scanned on 2026-10-14; dynamic consumers and external jobs are not ruled out.",
+      "removed_on": "2026-10-14"
+    },
+    {
+      "path": "output/enterprise-knowledge-phase0-20261010/benchmark-approved.json",
+      "anchor": "evidence-84287ae03b7dd212",
+      "kind": "file",
+      "availability": "unavailable",
+      "archive_location": null,
+      "recorded_on": "2026-10-14",
+      "referenced_by": [
+        "commerce-docs/ai-service/history/enterprise-knowledge-phase0.md",
+        "commerce-docs/ai-service/history/enterprise-knowledge-plan-2026-10-14.md"
+      ],
+      "bytes": 45964,
+      "sha256": "c9c87e601639f3ec208891e2b5fe7bce6e8a82072a36c43b87d2d834910c07ab",
+      "literal_source_references": [
+        "scripts/knowledge-baseline/lib.test.mjs",
+        "scripts/knowledge-baseline/verify-phase3.py"
+      ],
+      "retention_decision": "removed",
+      "dependency_review": "Literal source references scanned on 2026-10-14; dynamic consumers and external jobs are not ruled out.",
+      "removed_on": "2026-10-14"
+    },
+    {
+      "path": "output/enterprise-knowledge-phase0-20261010/benchmark-review.md",
+      "anchor": "evidence-b84bd43678fcd273",
+      "kind": "file",
+      "availability": "unavailable",
+      "archive_location": null,
+      "recorded_on": "2026-10-14",
+      "referenced_by": [
+        "commerce-docs/ai-service/history/enterprise-knowledge-phase0.md",
+        "commerce-docs/ai-service/history/enterprise-knowledge-plan-2026-10-14.md"
+      ],
+      "bytes": 14816,
+      "sha256": "ff1d016c60a0a3774c916db0930d2f6d95efee0525ab6b270c4a8fb014467d4a",
+      "literal_source_references": [],
+      "retention_decision": "removed",
+      "dependency_review": "Literal source references scanned on 2026-10-14; dynamic consumers and external jobs are not ruled out.",
+      "removed_on": "2026-10-14"
+    },
+    {
+      "path": "output/enterprise-knowledge-phase0-20261010/case-classification.json",
+      "anchor": "evidence-7dcf291c556acbd7",
+      "kind": "file",
+      "availability": "unavailable",
+      "archive_location": null,
+      "recorded_on": "2026-10-14",
+      "referenced_by": [
+        "commerce-docs/ai-service/history/enterprise-knowledge-phase0.md"
+      ],
+      "bytes": 6121205,
+      "sha256": "d1ba7e8a845d10555a4867a79287957d894b7bb99e6d04593c94eb897cac47f5",
+      "literal_source_references": [],
+      "retention_decision": "removed",
+      "dependency_review": "Literal source references scanned on 2026-10-14; dynamic consumers and external jobs are not ruled out.",
+      "removed_on": "2026-10-14"
+    },
+    {
+      "path": "output/enterprise-knowledge-phase0-20261010/local-performance.json",
+      "anchor": "evidence-932ad00f7bd14249",
+      "kind": "file",
+      "availability": "unavailable",
+      "archive_location": null,
+      "recorded_on": "2026-10-14",
+      "referenced_by": [
+        "commerce-docs/ai-service/history/enterprise-knowledge-phase0.md"
+      ],
+      "bytes": 2534,
+      "sha256": "49bce3e22097fa09c08acc0cb79e85d6a6d33ca7fb750be1b53a179c9282a946",
+      "literal_source_references": [],
+      "retention_decision": "removed",
+      "dependency_review": "Literal source references scanned on 2026-10-14; dynamic consumers and external jobs are not ruled out.",
+      "removed_on": "2026-10-14"
+    },
+    {
+      "path": "output/enterprise-knowledge-phase0-20261010/offline-language-replay.json",
+      "anchor": "evidence-ed09ca8174becdf5",
+      "kind": "file",
+      "availability": "unavailable",
+      "archive_location": null,
+      "recorded_on": "2026-10-14",
+      "referenced_by": [
+        "commerce-docs/ai-service/history/enterprise-knowledge-phase0.md"
+      ],
+      "bytes": 6716900,
+      "sha256": "d13ed76585d4b5f97b2f044b03f3888f234a49a4ca07fff139e73f69555c86f4",
+      "literal_source_references": [
+        "scripts/knowledge-baseline/release-demo-order-admission.py"
+      ],
+      "retention_decision": "removed",
+      "dependency_review": "Literal source references scanned on 2026-10-14; dynamic consumers and external jobs are not ruled out.",
+      "removed_on": "2026-10-14"
+    },
+    {
+      "path": "output/enterprise-knowledge-phase0-20261010/production-inventory.json",
+      "anchor": "evidence-758da7b15f99165c",
+      "kind": "file",
+      "availability": "unavailable",
+      "archive_location": null,
+      "recorded_on": "2026-10-14",
+      "referenced_by": [
+        "commerce-docs/ai-service/history/enterprise-knowledge-phase0.md"
+      ],
+      "bytes": 235208,
+      "sha256": "8380dacc11c29f8c8bb34f5b7d4c55f83dbe6bbf82331e0b91fdbf389eb81b55",
+      "literal_source_references": [],
+      "retention_decision": "removed",
+      "dependency_review": "Literal source references scanned on 2026-10-14; dynamic consumers and external jobs are not ruled out.",
+      "removed_on": "2026-10-14"
+    },
+    {
+      "path": "output/enterprise-knowledge-phase0-20261010/production-runtime.jsonl",
+      "anchor": "evidence-77e7e4eb0ac10cd9",
+      "kind": "file",
+      "availability": "unavailable",
+      "archive_location": null,
+      "recorded_on": "2026-10-14",
+      "referenced_by": [
+        "commerce-docs/ai-service/history/enterprise-knowledge-phase0.md"
+      ],
+      "bytes": 5396,
+      "sha256": "76ff4b5868356ee40294997b46fa2c4e191a72024ac2680426000329dc2f6139",
+      "literal_source_references": [],
+      "retention_decision": "removed",
+      "dependency_review": "Literal source references scanned on 2026-10-14; dynamic consumers and external jobs are not ruled out.",
+      "removed_on": "2026-10-14"
+    },
+    {
+      "path": "output/enterprise-knowledge-phase0-20261010/release-inventory.json",
+      "anchor": "evidence-f08f761f9fad9527",
+      "kind": "file",
+      "availability": "unavailable",
+      "archive_location": null,
+      "recorded_on": "2026-10-14",
+      "referenced_by": [
+        "commerce-docs/ai-service/history/enterprise-knowledge-phase0.md"
+      ],
+      "bytes": 8734,
+      "sha256": "cd966f7eabc2163f72787e7449f543ebc76ab7b83824a1b6be670163e2c10563",
+      "literal_source_references": [],
+      "retention_decision": "removed",
+      "dependency_review": "Literal source references scanned on 2026-10-14; dynamic consumers and external jobs are not ruled out.",
+      "removed_on": "2026-10-14"
+    },
+    {
+      "path": "output/enterprise-knowledge-phase0-20261010/snapshot-manifest.json",
+      "anchor": "evidence-18c0f98285bcfac0",
+      "kind": "file",
+      "availability": "unavailable",
+      "archive_location": null,
+      "recorded_on": "2026-10-14",
+      "referenced_by": [
+        "commerce-docs/ai-service/history/enterprise-knowledge-phase0.md"
+      ],
+      "bytes": 18607,
+      "sha256": "8fd1bf138b0fe594dfd99e4f99a836fb96acb41867380b1299e68b2bf1fc8e45",
+      "literal_source_references": [],
+      "retention_decision": "removed",
+      "dependency_review": "Literal source references scanned on 2026-10-14; dynamic consumers and external jobs are not ruled out.",
+      "removed_on": "2026-10-14"
+    },
+    {
+      "path": "output/enterprise-knowledge-production-verification-20261010/exact-name-python-baseline.json",
+      "anchor": "evidence-bf1383c1d0f6e39a",
+      "kind": "file",
+      "availability": "unavailable",
+      "archive_location": null,
+      "recorded_on": "2026-10-14",
+      "referenced_by": [
+        "commerce-docs/ai-service/history/enterprise-knowledge-production-verification.md"
+      ],
+      "bytes": 127023,
+      "sha256": "d6e7b60852b6fa94e87b1ca8f3f9ef82bb5298554b22d870ffef0ba792957de7",
+      "literal_source_references": [],
+      "retention_decision": "removed",
+      "dependency_review": "Literal source references scanned on 2026-10-14; dynamic consumers and external jobs are not ruled out.",
+      "removed_on": "2026-10-14"
+    },
+    {
+      "path": "output/enterprise-knowledge-production-verification-20261010/verification.json",
+      "anchor": "evidence-29fde7b2632842fc",
+      "kind": "file",
+      "availability": "unavailable",
+      "archive_location": null,
+      "recorded_on": "2026-10-14",
+      "referenced_by": [
+        "commerce-docs/ai-service/history/enterprise-knowledge-production-verification.md"
+      ],
+      "bytes": 5064,
+      "sha256": "f350eca600e101d32e72367e40af5f6d29d33a47810f8bf8245154b58ae2d43b",
+      "literal_source_references": [],
+      "retention_decision": "removed",
+      "dependency_review": "Literal source references scanned on 2026-10-14; dynamic consumers and external jobs are not ruled out.",
+      "removed_on": "2026-10-14"
+    },
+    {
+      "path": "output/enterprise-knowledge-release-prep-20261010",
+      "anchor": "evidence-03508acd2a9b22a4",
+      "kind": "directory",
+      "availability": "unavailable",
+      "archive_location": null,
+      "recorded_on": "2026-10-14",
+      "referenced_by": [
+        "commerce-docs/ai-service/history/enterprise-knowledge-release-preparation.md"
+      ],
+      "literal_source_references": [
+        "scripts/knowledge-baseline/rehearse-release.ts",
+        "scripts/knowledge-baseline/rehearse-repaired-release.ts",
+        "scripts/knowledge-baseline/verify-release-preparation.mjs",
+        "scripts/knowledge-baseline/adjudicate-release-corpus.mjs",
+        "scripts/knowledge-baseline/freeze-release-repair.mjs",
+        "scripts/knowledge-baseline/diagnose-archived-release.mjs",
+        "scripts/knowledge-baseline/restore-production-backup-rehearsal.py",
+        "scripts/knowledge-baseline/verify-release-repair.mjs",
+        "scripts/knowledge-baseline/evaluate-release-preparation.mjs",
+        "scripts/knowledge-baseline/verify-failed-release-gate.mjs"
+      ],
+      "retention_decision": "removed",
+      "dependency_review": "Literal source references scanned on 2026-10-14; dynamic consumers and external jobs are not ruled out.",
+      "removed_on": "2026-10-14"
+    },
+    {
+      "path": "output/enterprise-knowledge-release-prep-20261010/archived-diagnostics/all-failures.jsonl",
+      "anchor": "evidence-f380b288bacf9b08",
+      "kind": "file",
+      "availability": "unavailable",
+      "archive_location": null,
+      "recorded_on": "2026-10-14",
+      "referenced_by": [
+        "commerce-docs/ai-service/history/enterprise-knowledge-release-preparation.md"
+      ],
+      "bytes": 2948603,
+      "sha256": "e767f812c148de9625807fbd928527dcd6a511b7c779ea50d1aefbb70395503c",
+      "literal_source_references": [
+        "scripts/knowledge-baseline/adjudicate-release-corpus.mjs",
+        "scripts/knowledge-baseline/verify-release-repair.mjs"
+      ],
+      "retention_decision": "removed",
+      "dependency_review": "Literal source references scanned on 2026-10-14; dynamic consumers and external jobs are not ruled out.",
+      "removed_on": "2026-10-14"
+    },
+    {
+      "path": "output/enterprise-knowledge-release-prep-20261010/archived-diagnostics/summary.json",
+      "anchor": "evidence-9d73b5c62b0cb05e",
+      "kind": "file",
+      "availability": "unavailable",
+      "archive_location": null,
+      "recorded_on": "2026-10-14",
+      "referenced_by": [
+        "commerce-docs/ai-service/history/enterprise-knowledge-release-preparation.md"
+      ],
+      "bytes": 26666,
+      "sha256": "8a3a27c2230e5ec134a646102d386090667268f65a82afc02a756ad1dac66afb",
+      "literal_source_references": [],
+      "retention_decision": "removed",
+      "dependency_review": "Literal source references scanned on 2026-10-14; dynamic consumers and external jobs are not ruled out.",
+      "removed_on": "2026-10-14"
+    },
+    {
+      "path": "output/enterprise-knowledge-release-prep-20261010/initial-archived-corpus.json",
+      "anchor": "evidence-49b08dd3d467f7ed",
+      "kind": "file",
+      "availability": "unavailable",
+      "archive_location": null,
+      "recorded_on": "2026-10-14",
+      "referenced_by": [
+        "commerce-docs/ai-service/history/enterprise-knowledge-release-preparation.md"
+      ],
+      "bytes": 19635,
+      "sha256": "d6dadc1e0fa7bff7d410df8b186de40003bd1c8aadb6e8d79548d5bb442f114e",
+      "literal_source_references": [],
+      "retention_decision": "removed",
+      "dependency_review": "Literal source references scanned on 2026-10-14; dynamic consumers and external jobs are not ruled out.",
+      "removed_on": "2026-10-14"
+    },
+    {
+      "path": "output/enterprise-knowledge-release-prep-20261010/live-catalog-verified/demo-validation.json",
+      "anchor": "evidence-a0adec6795134195",
+      "kind": "file",
+      "availability": "unavailable",
+      "archive_location": null,
+      "recorded_on": "2026-10-14",
+      "referenced_by": [
+        "commerce-docs/ai-service/history/enterprise-knowledge-release-preparation.md"
+      ],
+      "bytes": 384393,
+      "sha256": "da04ccba5baa117eb9817666d2a2378708c4297509820c5be609ab32f616aecb",
+      "literal_source_references": [],
+      "retention_decision": "removed",
+      "dependency_review": "Literal source references scanned on 2026-10-14; dynamic consumers and external jobs are not ruled out.",
+      "removed_on": "2026-10-14"
+    },
+    {
+      "path": "output/enterprise-knowledge-release-prep-20261010/production-images.txt",
+      "anchor": "evidence-af946b86d7aa9eb3",
+      "kind": "file",
+      "availability": "unavailable",
+      "archive_location": null,
+      "recorded_on": "2026-10-14",
+      "referenced_by": [
+        "commerce-docs/ai-service/history/enterprise-knowledge-release-preparation.md"
+      ],
+      "bytes": 1271,
+      "sha256": "31130dca5d0f177746b9ce19b9f1837732d7ac942a4d6e34a5221061ca1f7f6e",
+      "literal_source_references": [],
+      "retention_decision": "removed",
+      "dependency_review": "Literal source references scanned on 2026-10-14; dynamic consumers and external jobs are not ruled out.",
+      "removed_on": "2026-10-14"
+    },
+    {
+      "path": "output/enterprise-knowledge-release-prep-20261010/python-deployment-validation.json",
+      "anchor": "evidence-41fb3ecd4d683dfa",
+      "kind": "file",
+      "availability": "unavailable",
+      "archive_location": null,
+      "recorded_on": "2026-10-14",
+      "referenced_by": [
+        "commerce-docs/ai-service/history/enterprise-knowledge-release-preparation.md"
+      ],
+      "bytes": 2721,
+      "sha256": "ffe3e4e200a1ede75a6d6a74d8e5963aa1e1beecb6dc62fe02f93c9328163c4d",
+      "literal_source_references": [],
+      "retention_decision": "removed",
+      "dependency_review": "Literal source references scanned on 2026-10-14; dynamic consumers and external jobs are not ruled out.",
+      "removed_on": "2026-10-14"
+    },
+    {
+      "path": "output/enterprise-knowledge-release-prep-20261010/release-rehearsal.json",
+      "anchor": "evidence-97b85926d7c9f37b",
+      "kind": "file",
+      "availability": "unavailable",
+      "archive_location": null,
+      "recorded_on": "2026-10-14",
+      "referenced_by": [
+        "commerce-docs/ai-service/history/enterprise-knowledge-release-preparation.md"
+      ],
+      "bytes": 9594,
+      "sha256": "6277750f7342bdf6180f9988a8212988ed118b08aa5daab3217f96fbaf0ca652",
+      "literal_source_references": [],
+      "retention_decision": "removed",
+      "dependency_review": "Literal source references scanned on 2026-10-14; dynamic consumers and external jobs are not ruled out.",
+      "removed_on": "2026-10-14"
+    },
+    {
+      "path": "output/enterprise-knowledge-release-prep-20261010/rollback-backup.json",
+      "anchor": "evidence-82b9ac5005887f73",
+      "kind": "file",
+      "availability": "unavailable",
+      "archive_location": null,
+      "recorded_on": "2026-10-14",
+      "referenced_by": [
+        "commerce-docs/ai-service/history/enterprise-knowledge-release-preparation.md"
+      ],
+      "bytes": 1255,
+      "sha256": "de6e5b2a00b61b5ec60135ccd3e641ac49454061727e210fcef7939d38164d42",
+      "literal_source_references": [],
+      "retention_decision": "removed",
+      "dependency_review": "Literal source references scanned on 2026-10-14; dynamic consumers and external jobs are not ruled out.",
+      "removed_on": "2026-10-14"
+    },
+    {
+      "path": "output/enterprise-knowledge-release-prep-20261010/verification.json",
+      "anchor": "evidence-62184cb9447d6962",
+      "kind": "file",
+      "availability": "unavailable",
+      "archive_location": null,
+      "recorded_on": "2026-10-14",
+      "referenced_by": [
+        "commerce-docs/ai-service/history/enterprise-knowledge-release-preparation.md"
+      ],
+      "bytes": 2537,
+      "sha256": "c906ec49cf20ef3081988afc4fc2452d2d144837f99ee84b61cddb7ca0000443",
+      "literal_source_references": [],
+      "retention_decision": "removed",
+      "dependency_review": "Literal source references scanned on 2026-10-14; dynamic consumers and external jobs are not ruled out.",
+      "removed_on": "2026-10-14"
+    },
+    {
+      "path": "output/enterprise-knowledge-release-repair-20261010/benchmark-v4",
+      "anchor": "evidence-2575f3c866670f46",
+      "kind": "directory",
+      "availability": "unavailable",
+      "archive_location": null,
+      "recorded_on": "2026-10-14",
+      "referenced_by": [
+        "commerce-docs/ai-service/history/enterprise-knowledge-release-repair.md"
+      ],
+      "literal_source_references": [
+        "scripts/knowledge-baseline/freeze-release-repair.mjs"
+      ],
+      "retention_decision": "removed",
+      "dependency_review": "Literal source references scanned on 2026-10-14; dynamic consumers and external jobs are not ruled out.",
+      "removed_on": "2026-10-14"
+    },
+    {
+      "path": "output/enterprise-knowledge-release-repair-20261010/final",
+      "anchor": "evidence-c64cfced20a27c0b",
+      "kind": "directory",
+      "availability": "unavailable",
+      "archive_location": null,
+      "recorded_on": "2026-10-14",
+      "referenced_by": [
+        "commerce-docs/ai-service/history/enterprise-knowledge-release-repair.md"
+      ],
+      "literal_source_references": [
+        "scripts/knowledge-baseline/check-repair-images.py",
+        "scripts/knowledge-baseline/verify-release-repair.mjs"
+      ],
+      "retention_decision": "removed",
+      "dependency_review": "Literal source references scanned on 2026-10-14; dynamic consumers and external jobs are not ruled out.",
+      "removed_on": "2026-10-14"
+    },
+    {
+      "path": "output/enterprise-knowledge-release-repair-20261010/final/assistant-migration-decision.json",
+      "anchor": "evidence-231c55d4753a7f08",
+      "kind": "file",
+      "availability": "unavailable",
+      "archive_location": null,
+      "recorded_on": "2026-10-14",
+      "referenced_by": [
+        "commerce-docs/ai-service/history/enterprise-knowledge-plan-2026-10-14.md",
+        "commerce-docs/ai-service/history/enterprise-knowledge-release-publication.md",
+        "commerce-docs/ai-service/history/enterprise-knowledge-release-repair.md"
+      ],
+      "bytes": 2261,
+      "sha256": "b15e78aaa42bc85635475696dd95bb9909ebb00bdae3691090d178a6015c1d0c",
+      "literal_source_references": [],
+      "retention_decision": "removed",
+      "dependency_review": "Literal source references scanned on 2026-10-14; dynamic consumers and external jobs are not ruled out.",
+      "removed_on": "2026-10-14"
+    },
+    {
+      "path": "output/enterprise-knowledge-release-repair-20261010/final/performance-comparison.md",
+      "anchor": "evidence-d07b60b01e2dc621",
+      "kind": "file",
+      "availability": "unavailable",
+      "archive_location": null,
+      "recorded_on": "2026-10-14",
+      "referenced_by": [
+        "commerce-docs/ai-service/history/enterprise-knowledge-release-repair.md"
+      ],
+      "bytes": 3073,
+      "sha256": "fd79ca316d0d439b9f0aeeeec8cfdbd04c42a98c94c6515f9eb2fef608c7686d",
+      "literal_source_references": [],
+      "retention_decision": "removed",
+      "dependency_review": "Literal source references scanned on 2026-10-14; dynamic consumers and external jobs are not ruled out.",
+      "removed_on": "2026-10-14"
+    },
+    {
+      "path": "output/enterprise-knowledge-release-repair-20261010/final/python-production-overlay-handoff.json",
+      "anchor": "evidence-ff0e25e4f44a76b5",
+      "kind": "file",
+      "availability": "unavailable",
+      "archive_location": null,
+      "recorded_on": "2026-10-14",
+      "referenced_by": [
+        "commerce-docs/ai-service/history/enterprise-knowledge-release-repair.md"
+      ],
+      "bytes": 11972,
+      "sha256": "3b4a7e66a0b3f73502f5319f708a67c72494a8e1d41fbfe90ff29517c0cb51a5",
+      "literal_source_references": [],
+      "retention_decision": "removed",
+      "dependency_review": "Literal source references scanned on 2026-10-14; dynamic consumers and external jobs are not ruled out.",
+      "removed_on": "2026-10-14"
+    },
+    {
+      "path": "output/enterprise-knowledge-release-repair-20261010/final/verification.json",
+      "anchor": "evidence-8c5922b91d7b7efd",
+      "kind": "file",
+      "availability": "unavailable",
+      "archive_location": null,
+      "recorded_on": "2026-10-14",
+      "referenced_by": [
+        "commerce-docs/ai-service/history/enterprise-knowledge-release-repair.md"
+      ],
+      "bytes": 9231,
+      "sha256": "fdaad319acaf3dcfa398362b32732f50a01cdcd8c0ee1c034cb6e7680f403525",
+      "literal_source_references": [],
+      "retention_decision": "removed",
+      "dependency_review": "Literal source references scanned on 2026-10-14; dynamic consumers and external jobs are not ruled out.",
+      "removed_on": "2026-10-14"
+    },
+    {
+      "path": "output/ios-fps-20261014/android-paced-kotlin-60.png",
+      "anchor": "evidence-4ab2ad30c7ecf6c2",
+      "kind": "file",
+      "availability": "unavailable",
+      "archive_location": null,
+      "recorded_on": "2026-10-14",
+      "referenced_by": [
+        "commerce-docs/frontend/history/local-preview-60fps-2026-10-14.md"
+      ],
+      "bytes": 186913,
+      "sha256": "3606d2a428d712f4fa2b7804d49aabfd35e0f1355b39310c64bc7c4f82e9e855",
+      "literal_source_references": [],
+      "retention_decision": "removed",
+      "dependency_review": "Literal source references scanned on 2026-10-14; dynamic consumers and external jobs are not ruled out.",
+      "removed_on": "2026-10-14"
+    },
+    {
+      "path": "output/ios-fps-20261014/android-paced-react-native-60.png",
+      "anchor": "evidence-97b5c7390ed80ea6",
+      "kind": "file",
+      "availability": "unavailable",
+      "archive_location": null,
+      "recorded_on": "2026-10-14",
+      "referenced_by": [
+        "commerce-docs/frontend/history/local-preview-60fps-2026-10-14.md"
+      ],
+      "bytes": 195760,
+      "sha256": "cfc464f68e1bf1e9460ab3da7ed755295d60ed739e049219c74b569feb472051",
+      "literal_source_references": [],
+      "retention_decision": "removed",
+      "dependency_review": "Literal source references scanned on 2026-10-14; dynamic consumers and external jobs are not ruled out.",
+      "removed_on": "2026-10-14"
+    },
+    {
+      "path": "output/ios-fps-20261014/ios-60.png",
+      "anchor": "evidence-841bf04a92b71a95",
+      "kind": "file",
+      "availability": "unavailable",
+      "archive_location": null,
+      "recorded_on": "2026-10-14",
+      "referenced_by": [
+        "commerce-docs/frontend/history/local-preview-60fps-2026-10-14.md"
+      ],
+      "bytes": 206173,
+      "sha256": "29f6176be5a74c4a6b4e997fe3dedb8eed0003869bb0bc0639305d89d4e7400c",
+      "literal_source_references": [],
+      "retention_decision": "removed",
+      "dependency_review": "Literal source references scanned on 2026-10-14; dynamic consumers and external jobs are not ruled out.",
+      "removed_on": "2026-10-14"
+    },
+    {
+      "path": "output/ios-fps-20261014/summary.json",
+      "anchor": "evidence-5b410c88c6b26727",
+      "kind": "file",
+      "availability": "unavailable",
+      "archive_location": null,
+      "recorded_on": "2026-10-14",
+      "referenced_by": [
+        "commerce-docs/frontend/history/local-preview-60fps-2026-10-14.md"
+      ],
+      "bytes": 12900,
+      "sha256": "a5b97e1b603795349a39ba33c407c6cc57edf947a741b2650d20460a233a4fe7",
+      "literal_source_references": [],
+      "retention_decision": "removed",
+      "dependency_review": "Literal source references scanned on 2026-10-14; dynamic consumers and external jobs are not ruled out.",
+      "removed_on": "2026-10-14"
+    },
+    {
+      "path": "output/native-interactive-preview-20261013/builder-video.png",
+      "anchor": "evidence-5a359649d8b77ab3",
+      "kind": "file",
+      "availability": "unavailable",
+      "archive_location": null,
+      "recorded_on": "2026-10-14",
+      "referenced_by": [
+        "commerce-docs/mobile/history/native-interactive-preview-acceptance-2026-10-13.md"
+      ],
+      "bytes": 760688,
+      "sha256": "ec8f7d6c97ba9c77cf1829f9a0dd3c8a80260ab376dd22cab447b190205302c9",
+      "literal_source_references": [],
+      "retention_decision": "removed",
+      "dependency_review": "Literal source references scanned on 2026-10-14; dynamic consumers and external jobs are not ruled out.",
+      "removed_on": "2026-10-14"
+    },
+    {
+      "path": "output/native-interactive-preview-20261013/native-home.png",
+      "anchor": "evidence-b35dfa8ef5ab6a8a",
+      "kind": "file",
+      "availability": "unavailable",
+      "archive_location": null,
+      "recorded_on": "2026-10-14",
+      "referenced_by": [
+        "commerce-docs/mobile/history/native-interactive-preview-acceptance-2026-10-13.md"
+      ],
+      "bytes": 208644,
+      "sha256": "29efc94d61bc63a2f253a300d2c83fceb71f1744db8e0417c2103c22015749a2",
+      "literal_source_references": [],
+      "retention_decision": "removed",
+      "dependency_review": "Literal source references scanned on 2026-10-14; dynamic consumers and external jobs are not ruled out.",
+      "removed_on": "2026-10-14"
+    },
+    {
+      "path": "output/native-interactive-preview-20261013/native-interaction.webm",
+      "anchor": "evidence-01d90e95d4f4eb15",
+      "kind": "file",
+      "availability": "unavailable",
+      "archive_location": null,
+      "recorded_on": "2026-10-14",
+      "referenced_by": [
+        "commerce-docs/mobile/history/native-interactive-preview-acceptance-2026-10-13.md"
+      ],
+      "bytes": 2302634,
+      "sha256": "8ca1be79fa4c47253c428aaeab786f7be32a5b6a637d0cf3bf2852ec84c48db7",
+      "literal_source_references": [],
+      "retention_decision": "removed",
+      "dependency_review": "Literal source references scanned on 2026-10-14; dynamic consumers and external jobs are not ruled out.",
+      "removed_on": "2026-10-14"
+    },
+    {
+      "path": "output/native-interactive-preview-20261013/native-keyboard.png",
+      "anchor": "evidence-bd837157806a2ac7",
+      "kind": "file",
+      "availability": "unavailable",
+      "archive_location": null,
+      "recorded_on": "2026-10-14",
+      "referenced_by": [
+        "commerce-docs/mobile/history/native-interactive-preview-acceptance-2026-10-13.md"
+      ],
+      "bytes": 200585,
+      "sha256": "fda371908b74f12a62a08b8e146db152f50e4acdc7319ae78d161cbb8678c914",
+      "literal_source_references": [],
+      "retention_decision": "removed",
+      "dependency_review": "Literal source references scanned on 2026-10-14; dynamic consumers and external jobs are not ruled out.",
+      "removed_on": "2026-10-14"
+    },
+    {
+      "path": "output/native-interactive-preview-20261013/native-scrolled.png",
+      "anchor": "evidence-a107458a6dc6e310",
+      "kind": "file",
+      "availability": "unavailable",
+      "archive_location": null,
+      "recorded_on": "2026-10-14",
+      "referenced_by": [
+        "commerce-docs/mobile/history/native-interactive-preview-acceptance-2026-10-13.md"
+      ],
+      "bytes": 224008,
+      "sha256": "e3eb077e2d423bab004ef5917ed29f1d3382e1df6c4dbbd768bd5e27ff86309f",
+      "literal_source_references": [],
+      "retention_decision": "removed",
+      "dependency_review": "Literal source references scanned on 2026-10-14; dynamic consumers and external jobs are not ruled out.",
+      "removed_on": "2026-10-14"
+    },
+    {
+      "path": "output/native-interactive-preview-20261013/result.json",
+      "anchor": "evidence-3a1684ea65c9b289",
+      "kind": "file",
+      "availability": "unavailable",
+      "archive_location": null,
+      "recorded_on": "2026-10-14",
+      "referenced_by": [
+        "commerce-docs/mobile/history/native-interactive-preview-acceptance-2026-10-13.md"
+      ],
+      "bytes": 226,
+      "sha256": "f16cf00ea23521d613b514c2d7ee521b1cccf77b2ddae0c07204324b4e7f7abf",
+      "literal_source_references": [],
+      "retention_decision": "removed",
+      "dependency_review": "Literal source references scanned on 2026-10-14; dynamic consumers and external jobs are not ruled out.",
+      "removed_on": "2026-10-14"
+    },
+    {
+      "path": "output/native-interactive-preview-20261013/theme-sync/result.json",
+      "anchor": "evidence-27176a5a23ab963f",
+      "kind": "file",
+      "availability": "unavailable",
+      "archive_location": null,
+      "recorded_on": "2026-10-14",
+      "referenced_by": [
+        "commerce-docs/mobile/history/native-interactive-preview-acceptance-2026-10-13.md"
+      ],
+      "bytes": 543,
+      "sha256": "952a10f3c9ce552df9bd680e2164c56b0fb6b0012fd7c3ef788a37340de38efa",
+      "literal_source_references": [],
+      "retention_decision": "removed",
+      "dependency_review": "Literal source references scanned on 2026-10-14; dynamic consumers and external jobs are not ruled out.",
+      "removed_on": "2026-10-14"
+    },
+    {
+      "path": "output/native-preview-20261013/builder-after.png",
+      "anchor": "evidence-b6a7f2d76a8fae3b",
+      "kind": "file",
+      "availability": "unavailable",
+      "archive_location": null,
+      "recorded_on": "2026-10-14",
+      "referenced_by": [
+        "commerce-docs/mobile/history/native-preview-acceptance-2026-10-13.md"
+      ],
+      "bytes": 278770,
+      "sha256": "255020659cc969a7519ad7f707dc90277bde73d01aaed129e171ef26552a503c",
+      "literal_source_references": [],
+      "retention_decision": "removed",
+      "dependency_review": "Literal source references scanned on 2026-10-14; dynamic consumers and external jobs are not ruled out.",
+      "removed_on": "2026-10-14"
+    },
+    {
+      "path": "output/native-preview-20261013/native-offline.png",
+      "anchor": "evidence-4ac2bd3ac933c8b1",
+      "kind": "file",
+      "availability": "unavailable",
+      "archive_location": null,
+      "recorded_on": "2026-10-14",
+      "referenced_by": [
+        "commerce-docs/mobile/history/native-preview-acceptance-2026-10-13.md"
+      ],
+      "bytes": 138879,
+      "sha256": "a54be66e505c84d93d633fdb586898bfc86bb4a6e89b810caaa56c476d09084c",
+      "literal_source_references": [],
+      "retention_decision": "removed",
+      "dependency_review": "Literal source references scanned on 2026-10-14; dynamic consumers and external jobs are not ruled out.",
+      "removed_on": "2026-10-14"
+    },
+    {
+      "path": "output/native-preview-20261013/native-recovered.png",
+      "anchor": "evidence-deac4baa08270062",
+      "kind": "file",
+      "availability": "unavailable",
+      "archive_location": null,
+      "recorded_on": "2026-10-14",
+      "referenced_by": [
+        "commerce-docs/mobile/history/native-preview-acceptance-2026-10-13.md"
+      ],
+      "bytes": 137055,
+      "sha256": "1b5bcb378fec3da120d78dd2a9338b84b11dcedff92954a64ba517bd0b00cdcf",
+      "literal_source_references": [],
+      "retention_decision": "removed",
+      "dependency_review": "Literal source references scanned on 2026-10-14; dynamic consumers and external jobs are not ruled out.",
+      "removed_on": "2026-10-14"
+    },
+    {
+      "path": "output/native-preview-20261013/result.json",
+      "anchor": "evidence-62ba9d1276cff90a",
+      "kind": "file",
+      "availability": "unavailable",
+      "archive_location": null,
+      "recorded_on": "2026-10-14",
+      "referenced_by": [
+        "commerce-docs/mobile/history/native-preview-acceptance-2026-10-13.md"
+      ],
+      "bytes": 457,
+      "sha256": "cb5957dd351eb0a69c157342e1c3166b11293cd0be371321ad449cf1af7e1853",
+      "literal_source_references": [],
+      "retention_decision": "removed",
+      "dependency_review": "Literal source references scanned on 2026-10-14; dynamic consumers and external jobs are not ruled out.",
+      "removed_on": "2026-10-14"
+    },
+    {
+      "path": "output/native-preview-20261013/studio-signing-check.json",
+      "anchor": "evidence-1c8c7d053b350844",
+      "kind": "file",
+      "availability": "unavailable",
+      "archive_location": null,
+      "recorded_on": "2026-10-14",
+      "referenced_by": [
+        "commerce-docs/mobile/history/native-preview-acceptance-2026-10-13.md"
+      ],
+      "bytes": 679,
+      "sha256": "6f0fc9a3dc735eac9ae9499515bbec435f3f7bc9fb5c64eed76e94aa12a6be89",
+      "literal_source_references": [],
+      "retention_decision": "removed",
+      "dependency_review": "Literal source references scanned on 2026-10-14; dynamic consumers and external jobs are not ruled out.",
+      "removed_on": "2026-10-14"
+    },
+    {
+      "path": "output/native-worker-stream-20261013/builder-stream.png",
+      "anchor": "evidence-306a03360f92b7c0",
+      "kind": "file",
+      "availability": "unavailable",
+      "archive_location": null,
+      "recorded_on": "2026-10-14",
+      "referenced_by": [
+        "commerce-docs/mobile/history/native-worker-stream-acceptance-2026-10-13.md"
+      ],
+      "bytes": 278216,
+      "sha256": "cd1126bab2f26d597c4949ac8975c229b7602d08c8809993d55c4d93fb6aee37",
+      "literal_source_references": [],
+      "retention_decision": "removed",
+      "dependency_review": "Literal source references scanned on 2026-10-14; dynamic consumers and external jobs are not ruled out.",
+      "removed_on": "2026-10-14"
+    },
+    {
+      "path": "output/native-worker-stream-20261013/native-after.png",
+      "anchor": "evidence-57ae6c78f96494a7",
+      "kind": "file",
+      "availability": "unavailable",
+      "archive_location": null,
+      "recorded_on": "2026-10-14",
+      "referenced_by": [
+        "commerce-docs/mobile/history/native-worker-stream-acceptance-2026-10-13.md"
+      ],
+      "bytes": 137126,
+      "sha256": "ae58bdf082df0a94e780205c2c38a4b3ddd43aed5847d8a8b2256ba5817ed9f6",
+      "literal_source_references": [],
+      "retention_decision": "removed",
+      "dependency_review": "Literal source references scanned on 2026-10-14; dynamic consumers and external jobs are not ruled out.",
+      "removed_on": "2026-10-14"
+    },
+    {
+      "path": "output/native-worker-stream-20261013/native-before.png",
+      "anchor": "evidence-36dd421234aea601",
+      "kind": "file",
+      "availability": "unavailable",
+      "archive_location": null,
+      "recorded_on": "2026-10-14",
+      "referenced_by": [
+        "commerce-docs/mobile/history/native-worker-stream-acceptance-2026-10-13.md"
+      ],
+      "bytes": 3042779,
+      "sha256": "30a14944b90ac530e79c8ebe230b4c3220c86bf98523d0dd84c19db34b140f72",
+      "literal_source_references": [],
+      "retention_decision": "removed",
+      "dependency_review": "Literal source references scanned on 2026-10-14; dynamic consumers and external jobs are not ruled out.",
+      "removed_on": "2026-10-14"
+    },
+    {
+      "path": "output/native-worker-stream-20261013/result.json",
+      "anchor": "evidence-b75cf5435dced7b4",
+      "kind": "file",
+      "availability": "unavailable",
+      "archive_location": null,
+      "recorded_on": "2026-10-14",
+      "referenced_by": [
+        "commerce-docs/mobile/history/native-worker-stream-acceptance-2026-10-13.md"
+      ],
+      "bytes": 535,
+      "sha256": "e895fb4dc7eb67a63303ff2f01e86da06b49e1fdbeb62205631978f63e487881",
+      "literal_source_references": [],
+      "retention_decision": "removed",
+      "dependency_review": "Literal source references scanned on 2026-10-14; dynamic consumers and external jobs are not ruled out.",
+      "removed_on": "2026-10-14"
+    },
+    {
+      "path": "output/react-native-builder-preview-20261013/acceptance.json",
+      "anchor": "evidence-54c76a0fa72984c5",
+      "kind": "file",
+      "availability": "unavailable",
+      "archive_location": null,
+      "recorded_on": "2026-10-14",
+      "referenced_by": [
+        "commerce-deploy/native-preview/REACT_NATIVE.md"
+      ],
+      "bytes": 244,
+      "sha256": "bebeaaa72cb92924d8b19987c8135d0a1ea32824dec6e6ec1ccdf375f4424b1c",
+      "literal_source_references": [],
+      "retention_decision": "removed",
+      "dependency_review": "Literal source references scanned on 2026-10-14; dynamic consumers and external jobs are not ruled out.",
+      "removed_on": "2026-10-14"
+    },
+    {
+      "path": "output/react-native-builder-preview-20261013/android-edited.jpg",
+      "anchor": "evidence-9fd262919c8405d3",
+      "kind": "file",
+      "availability": "unavailable",
+      "archive_location": null,
+      "recorded_on": "2026-10-14",
+      "referenced_by": [
+        "deploy/native-preview/REACT_NATIVE.md"
+      ],
+      "bytes": 36093,
+      "sha256": "083cf406686aa2d457a357781a7244302c091417b8d4c863c01b081e83c0a691",
+      "literal_source_references": [],
+      "retention_decision": "removed",
+      "dependency_review": "Literal source references scanned on 2026-10-14; dynamic consumers and external jobs are not ruled out.",
+      "removed_on": "2026-10-14"
+    },
+    {
+      "path": "output/react-native-builder-preview-20261013/android-input.jpg",
+      "anchor": "evidence-c801451125cb935f",
+      "kind": "file",
+      "availability": "unavailable",
+      "archive_location": null,
+      "recorded_on": "2026-10-14",
+      "referenced_by": [
+        "deploy/native-preview/REACT_NATIVE.md"
+      ],
+      "bytes": 50825,
+      "sha256": "78c2d3115a7e86e4551753dc7427784f3815e8861ea185537ce8605029ad57cd",
+      "literal_source_references": [],
+      "retention_decision": "removed",
+      "dependency_review": "Literal source references scanned on 2026-10-14; dynamic consumers and external jobs are not ruled out.",
+      "removed_on": "2026-10-14"
+    },
+    {
+      "path": "output/react-native-builder-preview-20261013/ios-edited.jpg",
+      "anchor": "evidence-7c59c469d8e72e10",
+      "kind": "file",
+      "availability": "unavailable",
+      "archive_location": null,
+      "recorded_on": "2026-10-14",
+      "referenced_by": [
+        "deploy/native-preview/REACT_NATIVE.md"
+      ],
+      "bytes": 90238,
+      "sha256": "c2784ea3b79d2579e99bb547c6560272f08ee3c9466dd000c844432460450a04",
+      "literal_source_references": [],
+      "retention_decision": "removed",
+      "dependency_review": "Literal source references scanned on 2026-10-14; dynamic consumers and external jobs are not ruled out.",
+      "removed_on": "2026-10-14"
+    },
+    {
+      "path": "output/react-native-builder-preview-20261013/ios-input.jpg",
+      "anchor": "evidence-aa17f5612219a120",
+      "kind": "file",
+      "availability": "unavailable",
+      "archive_location": null,
+      "recorded_on": "2026-10-14",
+      "referenced_by": [
+        "deploy/native-preview/REACT_NATIVE.md"
+      ],
+      "bytes": 81148,
+      "sha256": "71f33555a592e5a1f98ae8192d5b87f138215e66256c52a36485a089df7a432d",
+      "literal_source_references": [],
+      "retention_decision": "removed",
+      "dependency_review": "Literal source references scanned on 2026-10-14; dynamic consumers and external jobs are not ruled out.",
+      "removed_on": "2026-10-14"
+    },
+    {
+      "path": "output/react-native-builder-sections-20261014/acceptance.json",
+      "anchor": "evidence-fa18b5655013722f",
+      "kind": "file",
+      "availability": "unavailable",
+      "archive_location": null,
+      "recorded_on": "2026-10-14",
+      "referenced_by": [
+        "deploy/native-preview/REACT_NATIVE.md"
+      ],
+      "bytes": 843,
+      "sha256": "54d7ae32d42105b3d5219d211def435040203afc824beb833e34410dbdb35b30",
+      "literal_source_references": [],
+      "retention_decision": "removed",
+      "dependency_review": "Literal source references scanned on 2026-10-14; dynamic consumers and external jobs are not ruled out.",
+      "removed_on": "2026-10-14"
+    },
+    {
+      "path": "output/react-native-builder-sections-20261014/android-sections-scroll-4.jpg",
+      "anchor": "evidence-65d8208e3a2ba335",
+      "kind": "file",
+      "availability": "unavailable",
+      "archive_location": null,
+      "recorded_on": "2026-10-14",
+      "referenced_by": [
+        "deploy/native-preview/REACT_NATIVE.md"
+      ],
+      "bytes": 50457,
+      "sha256": "f38752dae46baffd011db726a717d471378249ffd88a5a018c704f6775f6eb5c",
+      "literal_source_references": [],
+      "retention_decision": "removed",
+      "dependency_review": "Literal source references scanned on 2026-10-14; dynamic consumers and external jobs are not ruled out.",
+      "removed_on": "2026-10-14"
+    },
+    {
+      "path": "output/react-native-builder-sections-20261014/android-sections-top.jpg",
+      "anchor": "evidence-557d2f47913976e5",
+      "kind": "file",
+      "availability": "unavailable",
+      "archive_location": null,
+      "recorded_on": "2026-10-14",
+      "referenced_by": [
+        "deploy/native-preview/REACT_NATIVE.md"
+      ],
+      "bytes": 62272,
+      "sha256": "89389216f4b32bb05fb7091a66831add8f7b780b3f3abcbd5de98e185fa11287",
+      "literal_source_references": [],
+      "retention_decision": "removed",
+      "dependency_review": "Literal source references scanned on 2026-10-14; dynamic consumers and external jobs are not ruled out.",
+      "removed_on": "2026-10-14"
+    },
+    {
+      "path": "output/react-native-builder-sections-20261014/ios-sections-scroll-3.jpg",
+      "anchor": "evidence-5c161d2ac75d5916",
+      "kind": "file",
+      "availability": "unavailable",
+      "archive_location": null,
+      "recorded_on": "2026-10-14",
+      "referenced_by": [
+        "deploy/native-preview/REACT_NATIVE.md"
+      ],
+      "bytes": 81310,
+      "sha256": "d7f02a9d8187c4d64034879eff9c3b501034f0b3830398e6f6119412775918af",
+      "literal_source_references": [],
+      "retention_decision": "removed",
+      "dependency_review": "Literal source references scanned on 2026-10-14; dynamic consumers and external jobs are not ruled out.",
+      "removed_on": "2026-10-14"
+    },
+    {
+      "path": "output/react-native-builder-sections-20261014/ios-sections-top.jpg",
+      "anchor": "evidence-0d682718b454f338",
+      "kind": "file",
+      "availability": "unavailable",
+      "archive_location": null,
+      "recorded_on": "2026-10-14",
+      "referenced_by": [
+        "deploy/native-preview/REACT_NATIVE.md"
+      ],
+      "bytes": 102732,
+      "sha256": "dfeed43cb11c6dba94c567bc08cc936acdf188de72c1cdf98bfe0bb16073eb70",
+      "literal_source_references": [],
+      "retention_decision": "removed",
+      "dependency_review": "Literal source references scanned on 2026-10-14; dynamic consumers and external jobs are not ruled out.",
+      "removed_on": "2026-10-14"
+    }
+  ]
+}

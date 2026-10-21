@@ -1,0 +1,12 @@
+   Compiling api-gateway v0.1.0 (/Users/momar/Documents/commerce-ai/backend/crates/api-gateway)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 1.64s
+     Running tests/publication_discovery.rs (backend/target/debug/deps/publication_discovery-9b8ae3d1122f540b)
+
+running 5 tests
+test two_million_product_capacity ... ignored, explicit two-million-product capacity check
+test partitions_eligibility_freshness_and_xml ... ok
+test crawler_permissions_revision_and_audit ... ok
+test stale_partition_growth_fails_instead_of_truncating ... ok
+test policy_matrix_binding_and_provider_controls ... ok
+
+test result: ok. 4 passed; 0 failed; 1 ignored; 0 measured; 0 filtered out; finished in 3.58s

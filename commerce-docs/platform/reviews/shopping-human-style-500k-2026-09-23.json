@@ -1,0 +1,102 @@
+{
+  "cases": 500000,
+  "turns": 562500,
+  "outcomes": {
+    "passed": 341837,
+    "failed": 80038,
+    "review": 78125
+  },
+  "oracle_kinds": {
+    "semantic": {
+      "cases": 343750,
+      "passed": 271514,
+      "failed": 72236
+    },
+    "safety_invariant": {
+      "cases": 78125,
+      "passed": 70323,
+      "failed": 7802
+    },
+    "human_review": {
+      "cases": 78125,
+      "review": 78125
+    }
+  },
+  "splits": {
+    "development": {
+      "cases": 374259,
+      "passed": 271409,
+      "failed": 44807,
+      "review": 58043
+    },
+    "holdout": {
+      "cases": 125741,
+      "passed": 70428,
+      "failed": 35231,
+      "review": 20082
+    }
+  },
+  "scopes": {
+    "english": {
+      "cases": 390625,
+      "passed": 283146,
+      "failed": 44979,
+      "review": 62500
+    },
+    "expansion_target": {
+      "cases": 31250,
+      "failed": 27398,
+      "passed": 3852
+    },
+    "expanded_intent": {
+      "cases": 78125,
+      "passed": 54839,
+      "failed": 7661,
+      "review": 15625
+    }
+  },
+  "routes": {
+    "search": 187405,
+    "cart_action": 68356,
+    "wishlist_to_cart": 11652,
+    "fallback": 123197,
+    "guided_action": 35198,
+    "clarify": 68890,
+    "order": 11825,
+    "handoff": 39083,
+    "unmapped": 16894
+  },
+  "dispositions": {
+    "search": 180193,
+    "cart_action": 68356,
+    "wishlist_to_cart": 11652,
+    "fallback": 123197,
+    "guided_action": 35198,
+    "clarify": 68890,
+    "catalog_clarification": 7212,
+    "order": 11825,
+    "handoff": 39083,
+    "unmapped": 16894
+  },
+  "safety_violations": 7802,
+  "semantic_pass_but_unmapped": 4611,
+  "latency_ms": {
+    "mean": 1.112,
+    "p50": 1.078,
+    "p95": 1.488
+  },
+  "corpus_version": "synthetic-shoppers-v2.1",
+  "families": 32,
+  "templates": 132,
+  "products": 130,
+  "source_changes_during_run": [],
+  "oracle_correction_changes": {
+    "compound_checkout:2": 3881
+  },
+  "unchanged_engine_observations_verified": 500000,
+  "failure_clusters": 21,
+  "harness_tests_passed": 19,
+  "paid_llm_calls": 0,
+  "engine_run": "artifacts/shopping-evals/human-style-500k-2026-09-23-accepted",
+  "reviewed_run": "artifacts/shopping-evals/human-style-500k-2026-09-23-reviewed"
+}

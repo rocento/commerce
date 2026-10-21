@@ -1,0 +1,5 @@
+
+.ms-android-server { display: grid; gap: .5rem; padding: .75rem; margin-top: .75rem; border: 1px solid var(--ms-border, #dce3df); border-radius: 8px; }
+.ms-android-server p { margin: 0; }
+.ms-android-server-actions { display: flex; flex-wrap: wrap; gap: .5rem; }
+.ms-android-server small { line-height: 1.5; }

@@ -1,0 +1,44 @@
+{
+  "AssistantCaptureInput": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": ["enabled"],
+    "properties": {"enabled": {"type": "boolean"}}
+  },
+  "AssistantCaptureStatus": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": ["enabled", "editable", "source"],
+    "properties": {
+      "enabled": {"type": "boolean"},
+      "editable": {"type": "boolean"},
+      "source": {"type": "string"}
+    }
+  },
+  "AssistantLiveEvent": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": ["sequence", "request_id", "kind", "data"],
+    "properties": {
+      "sequence": {"type": "integer", "minimum": 0},
+      "request_id": {"type": "string", "format": "uuid"},
+      "kind": {"type": "string", "enum": ["stage", "finished"]},
+      "data": {}
+    }
+  },
+  "AssistantLiveBatch": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": ["cursor", "reset", "capture_enabled", "events"],
+    "properties": {
+      "cursor": {"type": "string"},
+      "reset": {"type": "boolean"},
+      "capture_enabled": {"type": "boolean"},
+      "events": {
+        "type": "array",
+        "maxItems": 128,
+        "items": {"$ref": "#/components/schemas/AssistantLiveEvent"}
+      }
+    }
+  }
+}

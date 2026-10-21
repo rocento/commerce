@@ -1,0 +1,62 @@
+{
+  "base_commit": "829c673",
+  "sources": [
+    {
+      "path": "backend/Cargo.lock",
+      "sha256": "9424133b4e6dcf1645ea31c98ef55942c8dcc339c04c732a029c2b72c15ee8af"
+    },
+    {
+      "path": "backend/crates/api-gateway/Cargo.toml",
+      "sha256": "a11ab4be7443fe16b1379f0046b5c20e12dc2129e201766b433fbc2e8f596507"
+    },
+    {
+      "path": "backend/crates/api-gateway/src/public_commerce/facts.rs",
+      "sha256": "335a4beb2fd07cc1bf6724990ff38498761ab2ae9fb714e3e82e4f46003991a6"
+    },
+    {
+      "path": "backend/crates/api-gateway/src/public_commerce/images.rs",
+      "sha256": "faf1535037e2d0cbfdc383209083bc444678fbe39d59de480455174845c00d1a"
+    },
+    {
+      "path": "backend/crates/api-gateway/src/public_commerce/mod.rs",
+      "sha256": "e869adb33e94fb2213b934faaac7ea2d86ece915e65fc3b36eeea2004fea0556"
+    },
+    {
+      "path": "backend/crates/api-gateway/src/public_commerce/snapshot.rs",
+      "sha256": "2facd65248d33783e2569721a49bf42b48eea5b063e2be6c37ddfacfe463e80c"
+    },
+    {
+      "path": "backend/crates/api-gateway/tests/publication_rendering.rs",
+      "sha256": "c834b9a4d33dc181cb9f319ab8ff005afd97e101e62293e2a4592ff908732d49"
+    },
+    {
+      "path": "backend/crates/domain-catalog/src/public.rs",
+      "sha256": "9cb8016ceb73cd08018c5ff9057dc907ef62f2bcf1e55bae7ef4e6523f76d59b"
+    },
+    {
+      "path": "frontend/apps/storefront/server/publication.mjs",
+      "sha256": "cb9b72f50e406090e9116961bded6da0841e6943fa6f414a1c153eaf3fc0d65d"
+    },
+    {
+      "path": "frontend/apps/storefront/server/structured-data.mjs",
+      "sha256": "5282b69b58923b65b39f2e556f2033751f08dae14f9b2a775e19fdca94c9a97e"
+    },
+    {
+      "path": "frontend/apps/storefront/server/structured-data-checks.mjs",
+      "sha256": "b230b684f312f5c61a70ccc66f95e241a8f704ae8c0568728fc5040648dd381e"
+    },
+    {
+      "path": "frontend/apps/storefront/src/public/page.tsx",
+      "sha256": "49f8425dce0ea1fa182b72f2f0a2d16f2d3330f148cb7e8367634088ebfd4086"
+    },
+    {
+      "path": "frontend/apps/storefront/src/public/types.ts",
+      "sha256": "343ca58d56424cd09a7a50e84df6541686e65000528f784aa4b08ba5dd84fc10"
+    }
+  ],
+  "excluded_concurrent_files": [
+    "backend/openapi.json",
+    "frontend/packages/api-client/src/schema.d.ts",
+    "frontend/apps/storefront/src/theme-sections.tsx"
+  ]
+}

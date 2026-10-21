@@ -1,0 +1,755 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://rocento.com/contracts/mobile-experience/v1/schema.json",
+  "title": "Rocento Mobile Experience v1",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "schemaVersion": {
+      "type": "string",
+      "enum": [
+        "1.0.0"
+      ]
+    },
+    "configVersion": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 2147483647
+    },
+    "tenantId": {
+      "$ref": "#/$defs/Uuid"
+    },
+    "brand": {
+      "$ref": "#/$defs/Brand"
+    },
+    "navigation": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "tabs": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": [
+              "home",
+              "categories",
+              "deals",
+              "cart",
+              "account",
+              "wishlist"
+            ]
+          },
+          "minItems": 2,
+          "maxItems": 5,
+          "uniqueItems": true
+        },
+        "icons": {
+          "type": "object",
+          "maxProperties": 5,
+          "propertyNames": {
+            "type": "string",
+            "enum": [
+              "home",
+              "categories",
+              "deals",
+              "cart",
+              "account",
+              "wishlist"
+            ]
+          },
+          "additionalProperties": {
+            "type": "string",
+            "enum": [
+              "home",
+              "categories",
+              "deals",
+              "cart",
+              "account",
+              "wishlist",
+              "location"
+            ]
+          }
+        }
+      },
+      "required": [
+        "tabs"
+      ]
+    },
+    "screens": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "home": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "sections": {
+              "type": "array",
+              "items": {
+                "$ref": "#/$defs/Section"
+              },
+              "minItems": 1,
+              "maxItems": 30
+            },
+            "layout": {
+              "type": "string",
+              "enum": [
+                "standard",
+                "storefront"
+              ]
+            }
+          },
+          "required": [
+            "sections"
+          ]
+        },
+        "product": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "showWishlist": {
+              "type": "boolean"
+            },
+            "showCompare": {
+              "type": "boolean"
+            }
+          }
+        }
+      },
+      "required": [
+        "home"
+      ]
+    },
+    "features": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "wishlist": {
+          "type": "boolean"
+        },
+        "locationPicker": {
+          "type": "boolean"
+        },
+        "reviews": {
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "wishlist",
+        "locationPicker",
+        "reviews"
+      ]
+    },
+    "localization": {
+      "$ref": "#/$defs/Localization"
+    },
+    "compatibility": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "minIosRuntime": {
+          "$ref": "#/$defs/RuntimeVersion"
+        },
+        "minAndroidRuntime": {
+          "$ref": "#/$defs/RuntimeVersion"
+        }
+      },
+      "required": [
+        "minIosRuntime",
+        "minAndroidRuntime"
+      ]
+    }
+  },
+  "required": [
+    "schemaVersion",
+    "configVersion",
+    "tenantId",
+    "brand",
+    "navigation",
+    "screens",
+    "features",
+    "localization",
+    "compatibility"
+  ],
+  "$defs": {
+    "Id": {
+      "type": "string",
+      "pattern": "^[a-zA-Z0-9_-]{1,80}$"
+    },
+    "Uuid": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$"
+    },
+    "RuntimeVersion": {
+      "type": "string",
+      "pattern": "^(0|[1-9][0-9]{0,5})\\.(0|[1-9][0-9]{0,5})\\.(0|[1-9][0-9]{0,5})$"
+    },
+    "Palette": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "primary": {
+          "type": "string",
+          "pattern": "^#[0-9A-Fa-f]{6}$"
+        },
+        "onPrimary": {
+          "type": "string",
+          "pattern": "^#[0-9A-Fa-f]{6}$"
+        },
+        "background": {
+          "type": "string",
+          "pattern": "^#[0-9A-Fa-f]{6}$"
+        },
+        "surface": {
+          "type": "string",
+          "pattern": "^#[0-9A-Fa-f]{6}$"
+        },
+        "text": {
+          "type": "string",
+          "pattern": "^#[0-9A-Fa-f]{6}$"
+        }
+      },
+      "required": [
+        "primary",
+        "onPrimary",
+        "background",
+        "surface",
+        "text"
+      ]
+    },
+    "Action": {
+      "oneOf": [
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "type": {
+              "type": "string",
+              "enum": [
+                "openCategory"
+              ]
+            },
+            "categoryId": {
+              "$ref": "#/$defs/Id"
+            }
+          },
+          "required": [
+            "type",
+            "categoryId"
+          ]
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "type": {
+              "type": "string",
+              "enum": [
+                "openProduct"
+              ]
+            },
+            "productId": {
+              "$ref": "#/$defs/Id"
+            }
+          },
+          "required": [
+            "type",
+            "productId"
+          ]
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "type": {
+              "type": "string",
+              "enum": [
+                "openTab"
+              ]
+            },
+            "tab": {
+              "type": "string",
+              "enum": [
+                "home",
+                "categories",
+                "deals",
+                "cart",
+                "account",
+                "wishlist"
+              ]
+            }
+          },
+          "required": [
+            "type",
+            "tab"
+          ]
+        }
+      ]
+    },
+    "heroBanner": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "$ref": "#/$defs/Id"
+        },
+        "type": {
+          "type": "string",
+          "enum": [
+            "heroBanner"
+          ]
+        },
+        "props": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "imageAssetId": {
+              "$ref": "#/$defs/Uuid"
+            },
+            "accessibilityLabelKey": {
+              "$ref": "#/$defs/Id"
+            },
+            "action": {
+              "$ref": "#/$defs/Action"
+            },
+            "headingKey": {
+              "$ref": "#/$defs/Id"
+            },
+            "bodyKey": {
+              "$ref": "#/$defs/Id"
+            },
+            "eyebrowKey": {
+              "$ref": "#/$defs/Id"
+            },
+            "labelKey": {
+              "$ref": "#/$defs/Id"
+            },
+            "appearance": {
+              "type": "string",
+              "enum": [
+                "editorial",
+                "campaign"
+              ]
+            },
+            "storefrontPath": {
+              "type": "string",
+              "pattern": "^/(search|assistant|register|account|categories/[a-zA-Z0-9_-]+)$",
+              "maxLength": 160
+            },
+            "layout": {
+              "type": "string",
+              "enum": [
+                "horizontal",
+                "portrait"
+              ]
+            },
+            "imageFit": {
+              "type": "string",
+              "enum": [
+                "cover",
+                "contain"
+              ]
+            },
+            "additionalImageAssetIds": {
+              "type": "array",
+              "items": {
+                "$ref": "#/$defs/Uuid"
+              },
+              "minItems": 0,
+              "maxItems": 7,
+              "uniqueItems": true
+            }
+          },
+          "required": [
+            "imageAssetId",
+            "accessibilityLabelKey",
+            "action"
+          ]
+        }
+      },
+      "required": [
+        "id",
+        "type",
+        "props"
+      ]
+    },
+    "productGrid": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "$ref": "#/$defs/Id"
+        },
+        "type": {
+          "type": "string",
+          "enum": [
+            "productGrid"
+          ]
+        },
+        "props": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "collectionId": {
+              "$ref": "#/$defs/Id"
+            },
+            "titleKey": {
+              "$ref": "#/$defs/Id"
+            },
+            "columns": {
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 2
+            },
+            "limit": {
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 24
+            }
+          },
+          "required": [
+            "collectionId",
+            "titleKey",
+            "columns"
+          ]
+        }
+      },
+      "required": [
+        "id",
+        "type",
+        "props"
+      ]
+    },
+    "productCarousel": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "$ref": "#/$defs/Id"
+        },
+        "type": {
+          "type": "string",
+          "enum": [
+            "productCarousel"
+          ]
+        },
+        "props": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "collectionId": {
+              "$ref": "#/$defs/Id"
+            },
+            "titleKey": {
+              "$ref": "#/$defs/Id"
+            },
+            "limit": {
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 24
+            }
+          },
+          "required": [
+            "collectionId",
+            "titleKey"
+          ]
+        }
+      },
+      "required": [
+        "id",
+        "type",
+        "props"
+      ]
+    },
+    "categoryGrid": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "$ref": "#/$defs/Id"
+        },
+        "type": {
+          "type": "string",
+          "enum": [
+            "categoryGrid"
+          ]
+        },
+        "props": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "categoryIds": {
+              "type": "array",
+              "items": {
+                "$ref": "#/$defs/Id"
+              },
+              "minItems": 1,
+              "maxItems": 12,
+              "uniqueItems": true
+            },
+            "titleKey": {
+              "$ref": "#/$defs/Id"
+            },
+            "appearance": {
+              "type": "string",
+              "enum": [
+                "list",
+                "tiles"
+              ]
+            }
+          },
+          "required": [
+            "categoryIds",
+            "titleKey"
+          ]
+        }
+      },
+      "required": [
+        "id",
+        "type",
+        "props"
+      ]
+    },
+    "richText": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "$ref": "#/$defs/Id"
+        },
+        "type": {
+          "type": "string",
+          "enum": [
+            "richText"
+          ]
+        },
+        "props": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "textKey": {
+              "$ref": "#/$defs/Id"
+            },
+            "headingKey": {
+              "$ref": "#/$defs/Id"
+            },
+            "bodyKey": {
+              "$ref": "#/$defs/Id"
+            },
+            "eyebrowKey": {
+              "$ref": "#/$defs/Id"
+            },
+            "labelKey": {
+              "$ref": "#/$defs/Id"
+            },
+            "appearance": {
+              "type": "string",
+              "enum": [
+                "editorial",
+                "campaign"
+              ]
+            },
+            "action": {
+              "$ref": "#/$defs/Action"
+            },
+            "storefrontPath": {
+              "type": "string",
+              "pattern": "^/(search|assistant|register|account|categories/[a-zA-Z0-9_-]+)$",
+              "maxLength": 160
+            }
+          },
+          "required": [
+            "textKey"
+          ]
+        }
+      },
+      "required": [
+        "id",
+        "type",
+        "props"
+      ]
+    },
+    "spacer": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "$ref": "#/$defs/Id"
+        },
+        "type": {
+          "type": "string",
+          "enum": [
+            "spacer"
+          ]
+        },
+        "props": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "size": {
+              "type": "string",
+              "enum": [
+                "small",
+                "medium",
+                "large"
+              ]
+            }
+          },
+          "required": [
+            "size"
+          ]
+        }
+      },
+      "required": [
+        "id",
+        "type",
+        "props"
+      ]
+    },
+    "Section": {
+      "oneOf": [
+        {
+          "$ref": "#/$defs/heroBanner"
+        },
+        {
+          "$ref": "#/$defs/productGrid"
+        },
+        {
+          "$ref": "#/$defs/productCarousel"
+        },
+        {
+          "$ref": "#/$defs/categoryGrid"
+        },
+        {
+          "$ref": "#/$defs/richText"
+        },
+        {
+          "$ref": "#/$defs/spacer"
+        }
+      ]
+    },
+    "Brand": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "displayName": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 80,
+          "pattern": "^[^<>\\u0000-\\u0009\\u000B-\\u001F]+$"
+        },
+        "logoAssetId": {
+          "$ref": "#/$defs/Uuid"
+        },
+        "light": {
+          "$ref": "#/$defs/Palette"
+        },
+        "dark": {
+          "$ref": "#/$defs/Palette"
+        },
+        "fontToken": {
+          "type": "string",
+          "enum": [
+            "system"
+          ]
+        },
+        "radiusToken": {
+          "type": "string",
+          "enum": [
+            "none",
+            "small",
+            "medium",
+            "large"
+          ]
+        },
+        "density": {
+          "type": "string",
+          "enum": [
+            "compact",
+            "comfortable"
+          ]
+        }
+      },
+      "required": [
+        "displayName",
+        "logoAssetId",
+        "light",
+        "dark",
+        "fontToken",
+        "radiusToken",
+        "density"
+      ]
+    },
+    "Localization": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "defaultLocale": {
+          "type": "string",
+          "enum": [
+            "en",
+            "ar"
+          ]
+        },
+        "supportedLocales": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": [
+              "en",
+              "ar"
+            ]
+          },
+          "minItems": 1,
+          "maxItems": 2,
+          "uniqueItems": true
+        },
+        "rtlEnabled": {
+          "type": "boolean"
+        },
+        "messages": {
+          "type": "object",
+          "minProperties": 1,
+          "maxProperties": 2,
+          "additionalProperties": false,
+          "properties": {
+            "en": {
+              "type": "object",
+              "minProperties": 1,
+              "maxProperties": 200,
+              "propertyNames": {
+                "$ref": "#/$defs/Id"
+              },
+              "additionalProperties": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 2000,
+                "pattern": "^[^<>\\u0000-\\u0009\\u000B-\\u001F]+$"
+              }
+            },
+            "ar": {
+              "type": "object",
+              "minProperties": 1,
+              "maxProperties": 200,
+              "propertyNames": {
+                "$ref": "#/$defs/Id"
+              },
+              "additionalProperties": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 2000,
+                "pattern": "^[^<>\\u0000-\\u0009\\u000B-\\u001F]+$"
+              }
+            }
+          }
+        }
+      },
+      "required": [
+        "defaultLocale",
+        "supportedLocales",
+        "rtlEnabled",
+        "messages"
+      ]
+    }
+  }
+}

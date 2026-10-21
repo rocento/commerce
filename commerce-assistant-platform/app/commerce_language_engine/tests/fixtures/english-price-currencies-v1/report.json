@@ -1,0 +1,344 @@
+{
+  "schemaVersion": 1,
+  "language": "en",
+  "provenance": "Agent-authored English currency regression labels, with explicit expected semantics reviewed against the current wire contract. Not customer traffic or an independent accuracy holdout. Catalog strictness and conflicting currencies are tested separately through the Python execution boundary.",
+  "limitations": [
+    "Authored contract regressions, not independent customer accuracy. No commerce execution is measured.",
+    "Full request means the exact labelled semantic projection; confidence, prose and debug fields are excluded. Routing thresholds are unchanged."
+  ],
+  "corpusSha256": "cac5014c173364b011eb9e56901e2596c29994f6799f042c5b03f93d130c3c4c",
+  "sourceSha256": "6e1b1bf80794c507ed1f1c07dd30abce90e6986bacf73d0e481a8d5c72632ac6",
+  "dictionaryVersion": 8,
+  "generationFingerprint": "8b447e13fe4290e339afaafbd31771d7ea82be47f5baf426ae22456fe15e8be2",
+  "summary": {
+    "count": 18,
+    "passed": 18,
+    "failed": 0,
+    "fullRequestExactMatch": 1,
+    "dimensionAccuracy": {
+      "status": 1,
+      "intent": 1,
+      "entities": 1,
+      "requestedActions": 1,
+      "operations": 1,
+      "references": 1,
+      "issues": 1
+    },
+    "incorrectResolved": 0,
+    "falseResolved": 0,
+    "missedResolved": 0,
+    "abstained": 0,
+    "resolvedWholeRequestReliability": {
+      "count": 18,
+      "brierScore": 0.000025000000000000052,
+      "expectedCalibrationError": 0.0050000000000002265,
+      "reliability": [
+        {
+          "lower": 0.9,
+          "upper": 1,
+          "count": 18,
+          "meanConfidence": 0.9949999999999998,
+          "accuracy": 1
+        }
+      ]
+    }
+  },
+  "byFamily": {
+    "correction": {
+      "count": 1,
+      "passed": 1,
+      "failed": 0,
+      "fullRequestExactMatch": 1,
+      "dimensionAccuracy": {
+        "status": 1,
+        "intent": 1,
+        "entities": 1,
+        "requestedActions": 1,
+        "operations": 1,
+        "references": 1,
+        "issues": 1
+      },
+      "incorrectResolved": 0,
+      "falseResolved": 0,
+      "missedResolved": 0,
+      "abstained": 0,
+      "resolvedWholeRequestReliability": {
+        "count": 1,
+        "brierScore": 0.000025000000000000045,
+        "expectedCalibrationError": 0.0050000000000000044,
+        "reliability": [
+          {
+            "lower": 0.9,
+            "upper": 1,
+            "count": 1,
+            "meanConfidence": 0.995,
+            "accuracy": 1
+          }
+        ]
+      }
+    },
+    "literal": {
+      "count": 1,
+      "passed": 1,
+      "failed": 0,
+      "fullRequestExactMatch": 1,
+      "dimensionAccuracy": {
+        "status": 1,
+        "intent": 1,
+        "entities": 1,
+        "requestedActions": 1,
+        "operations": 1,
+        "references": 1,
+        "issues": 1
+      },
+      "incorrectResolved": 0,
+      "falseResolved": 0,
+      "missedResolved": 0,
+      "abstained": 0,
+      "resolvedWholeRequestReliability": {
+        "count": 1,
+        "brierScore": 0.000025000000000000045,
+        "expectedCalibrationError": 0.0050000000000000044,
+        "reliability": [
+          {
+            "lower": 0.9,
+            "upper": 1,
+            "count": 1,
+            "meanConfidence": 0.995,
+            "accuracy": 1
+          }
+        ]
+      }
+    },
+    "named_currency": {
+      "count": 14,
+      "passed": 14,
+      "failed": 0,
+      "fullRequestExactMatch": 1,
+      "dimensionAccuracy": {
+        "status": 1,
+        "intent": 1,
+        "entities": 1,
+        "requestedActions": 1,
+        "operations": 1,
+        "references": 1,
+        "issues": 1
+      },
+      "incorrectResolved": 0,
+      "falseResolved": 0,
+      "missedResolved": 0,
+      "abstained": 0,
+      "resolvedWholeRequestReliability": {
+        "count": 14,
+        "brierScore": 0.00002500000000000005,
+        "expectedCalibrationError": 0.0050000000000002265,
+        "reliability": [
+          {
+            "lower": 0.9,
+            "upper": 1,
+            "count": 14,
+            "meanConfidence": 0.9949999999999998,
+            "accuracy": 1
+          }
+        ]
+      }
+    },
+    "range": {
+      "count": 2,
+      "passed": 2,
+      "failed": 0,
+      "fullRequestExactMatch": 1,
+      "dimensionAccuracy": {
+        "status": 1,
+        "intent": 1,
+        "entities": 1,
+        "requestedActions": 1,
+        "operations": 1,
+        "references": 1,
+        "issues": 1
+      },
+      "incorrectResolved": 0,
+      "falseResolved": 0,
+      "missedResolved": 0,
+      "abstained": 0,
+      "resolvedWholeRequestReliability": {
+        "count": 2,
+        "brierScore": 0.000025000000000000045,
+        "expectedCalibrationError": 0.0050000000000000044,
+        "reliability": [
+          {
+            "lower": 0.9,
+            "upper": 1,
+            "count": 2,
+            "meanConfidence": 0.995,
+            "accuracy": 1
+          }
+        ]
+      }
+    }
+  },
+  "cases": [
+    {
+      "id": "suffix-usd",
+      "family": "named_currency",
+      "passed": true,
+      "errors": [],
+      "status": "RESOLVED",
+      "expectedStatus": "RESOLVED",
+      "confidence": 0.995
+    },
+    {
+      "id": "suffix-eur",
+      "family": "named_currency",
+      "passed": true,
+      "errors": [],
+      "status": "RESOLVED",
+      "expectedStatus": "RESOLVED",
+      "confidence": 0.995
+    },
+    {
+      "id": "suffix-gbp",
+      "family": "named_currency",
+      "passed": true,
+      "errors": [],
+      "status": "RESOLVED",
+      "expectedStatus": "RESOLVED",
+      "confidence": 0.995
+    },
+    {
+      "id": "suffix-egp",
+      "family": "named_currency",
+      "passed": true,
+      "errors": [],
+      "status": "RESOLVED",
+      "expectedStatus": "RESOLVED",
+      "confidence": 0.995
+    },
+    {
+      "id": "suffix-kwd",
+      "family": "named_currency",
+      "passed": true,
+      "errors": [],
+      "status": "RESOLVED",
+      "expectedStatus": "RESOLVED",
+      "confidence": 0.995
+    },
+    {
+      "id": "suffix-jpy",
+      "family": "named_currency",
+      "passed": true,
+      "errors": [],
+      "status": "RESOLVED",
+      "expectedStatus": "RESOLVED",
+      "confidence": 0.995
+    },
+    {
+      "id": "suffix-sar",
+      "family": "named_currency",
+      "passed": true,
+      "errors": [],
+      "status": "RESOLVED",
+      "expectedStatus": "RESOLVED",
+      "confidence": 0.995
+    },
+    {
+      "id": "suffix-aed",
+      "family": "named_currency",
+      "passed": true,
+      "errors": [],
+      "status": "RESOLVED",
+      "expectedStatus": "RESOLVED",
+      "confidence": 0.995
+    },
+    {
+      "id": "suffix-aud",
+      "family": "named_currency",
+      "passed": true,
+      "errors": [],
+      "status": "RESOLVED",
+      "expectedStatus": "RESOLVED",
+      "confidence": 0.995
+    },
+    {
+      "id": "suffix-cad",
+      "family": "named_currency",
+      "passed": true,
+      "errors": [],
+      "status": "RESOLVED",
+      "expectedStatus": "RESOLVED",
+      "confidence": 0.995
+    },
+    {
+      "id": "suffix-bhd",
+      "family": "named_currency",
+      "passed": true,
+      "errors": [],
+      "status": "RESOLVED",
+      "expectedStatus": "RESOLVED",
+      "confidence": 0.995
+    },
+    {
+      "id": "suffix-omr",
+      "family": "named_currency",
+      "passed": true,
+      "errors": [],
+      "status": "RESOLVED",
+      "expectedStatus": "RESOLVED",
+      "confidence": 0.995
+    },
+    {
+      "id": "suffix-chf",
+      "family": "named_currency",
+      "passed": true,
+      "errors": [],
+      "status": "RESOLVED",
+      "expectedStatus": "RESOLVED",
+      "confidence": 0.995
+    },
+    {
+      "id": "prefix-decimal",
+      "family": "named_currency",
+      "passed": true,
+      "errors": [],
+      "status": "RESOLVED",
+      "expectedStatus": "RESOLVED",
+      "confidence": 0.995
+    },
+    {
+      "id": "range-both",
+      "family": "range",
+      "passed": true,
+      "errors": [],
+      "status": "RESOLVED",
+      "expectedStatus": "RESOLVED",
+      "confidence": 0.995
+    },
+    {
+      "id": "range-last",
+      "family": "range",
+      "passed": true,
+      "errors": [],
+      "status": "RESOLVED",
+      "expectedStatus": "RESOLVED",
+      "confidence": 0.995
+    },
+    {
+      "id": "quoted-name",
+      "family": "literal",
+      "passed": true,
+      "errors": [],
+      "status": "RESOLVED",
+      "expectedStatus": "RESOLVED",
+      "confidence": 0.995
+    },
+    {
+      "id": "inherited-range-edit",
+      "family": "correction",
+      "passed": true,
+      "errors": [],
+      "status": "RESOLVED",
+      "expectedStatus": "RESOLVED",
+      "confidence": 0.995
+    }
+  ]
+}

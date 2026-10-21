@@ -1,0 +1,37 @@
+[
+  {
+    "path": "node-forge/lib/rsa.js",
+    "before": "fd4740238145ec26470eb3f06a627c72039538ce1307dbdce40521f94dfd0a50",
+    "after": "c65caaa8c6e6a4ddb46721b518c4df8ddf6358eec3446587c2e9e54f66921412",
+    "old": "obj.value.length !== 2) {",
+    "replacement": "obj.value.length !== 2 ||\n            obj.value[0].value.length < 1 || obj.value[0].value.length > 2) {"
+  },
+  {
+    "path": "braces/lib/parse.js",
+    "before": "e572166565f15fa6ad9865ae49d678218e32aabfd1b3720f6d0d43d39800d310",
+    "after": "19b0c957c2f7dee3f926365e1de27937abc9ec4fa86ef6b7fc0c787a9f6d2bf2",
+    "old": "      stack.push(block);",
+    "replacement": "      if (stack.length >= 128) throw new RangeError('Brace nesting exceeds supported depth');\n      stack.push(block);"
+  },
+  {
+    "path": "braces/lib/compile.js",
+    "before": "dc98f22eee3d511785d92a00758d5f0d48efed5f5813bdecc2de430c529b5c9f",
+    "after": "d1ed6d3e6cc55e7033f531cfc9dfa9ba6823934b4310e39e84ca578be7cdee92",
+    "old": "const compile = (ast, options = {}) => {",
+    "replacement": "const compile = (ast, options = {}) => {\n  const pending = [[ast, 0]];\n  const seen = new Set();\n  while (pending.length) {\n    const [node, depth] = pending.pop();\n    if (!node || typeof node !== 'object') continue;\n    if (depth > 128 || seen.has(node)) throw new RangeError('Brace nesting exceeds supported depth');\n    seen.add(node);\n    if (Array.isArray(node.nodes)) for (const child of node.nodes) pending.push([child, depth + 1]);\n  }\n"
+  },
+  {
+    "path": "braces/lib/expand.js",
+    "before": "41ccc196ebfa7b7781a634e721eb744e4e7bcb54cba427a7e3d6806a1b9e58f7",
+    "after": "6865e858b64bc389379c0a2f72cc6e83f450c23169817fd378d6a5600a9e46b1",
+    "old": "const expand = (ast, options = {}) => {",
+    "replacement": "const expand = (ast, options = {}) => {\n  const pending = [[ast, 0]];\n  const seen = new Set();\n  while (pending.length) {\n    const [node, depth] = pending.pop();\n    if (!node || typeof node !== 'object') continue;\n    if (depth > 128 || seen.has(node)) throw new RangeError('Brace nesting exceeds supported depth');\n    seen.add(node);\n    if (Array.isArray(node.nodes)) for (const child of node.nodes) pending.push([child, depth + 1]);\n  }\n"
+  },
+  {
+    "path": "braces/lib/stringify.js",
+    "before": "379f22d77bfa1478341ccd49c5e4267464aabcbba03558bab332aac23fc6f23a",
+    "after": "d9e0538ecd83006eb55cc08f4a767f0dc5086875c4f8268a65363d4fd74df379",
+    "old": "module.exports = (ast, options = {}) => {",
+    "replacement": "module.exports = (ast, options = {}) => {\n  const pending = [[ast, 0]];\n  const seen = new Set();\n  while (pending.length) {\n    const [node, depth] = pending.pop();\n    if (!node || typeof node !== 'object') continue;\n    if (depth > 128 || seen.has(node)) throw new RangeError('Brace nesting exceeds supported depth');\n    seen.add(node);\n    if (Array.isArray(node.nodes)) for (const child of node.nodes) pending.push([child, depth + 1]);\n  }\n"
+  }
+]

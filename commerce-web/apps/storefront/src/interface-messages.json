@@ -1,0 +1,8770 @@
+{
+  "version": 1,
+  "messages": [
+    {
+      "key": "common.loading",
+      "group": "common",
+      "en": {
+        "other": "Loading…"
+      },
+      "ar": {
+        "other": "جارٍ التحميل…"
+      }
+    },
+    {
+      "key": "common.retry",
+      "group": "common",
+      "en": {
+        "other": "Try again"
+      },
+      "ar": {
+        "other": "حاول مرة أخرى"
+      }
+    },
+    {
+      "key": "common.save",
+      "group": "common",
+      "en": {
+        "other": "Save"
+      },
+      "ar": {
+        "other": "حفظ"
+      }
+    },
+    {
+      "key": "common.cancel",
+      "group": "common",
+      "en": {
+        "other": "Cancel"
+      },
+      "ar": {
+        "other": "إلغاء"
+      }
+    },
+    {
+      "key": "common.close",
+      "group": "common",
+      "en": {
+        "other": "Close"
+      },
+      "ar": {
+        "other": "إغلاق"
+      }
+    },
+    {
+      "key": "common.back",
+      "group": "common",
+      "en": {
+        "other": "Back"
+      },
+      "ar": {
+        "other": "رجوع"
+      }
+    },
+    {
+      "key": "common.continue",
+      "group": "common",
+      "en": {
+        "other": "Continue"
+      },
+      "ar": {
+        "other": "متابعة"
+      }
+    },
+    {
+      "key": "common.remove",
+      "group": "common",
+      "en": {
+        "other": "Remove"
+      },
+      "ar": {
+        "other": "إزالة"
+      }
+    },
+    {
+      "key": "common.edit",
+      "group": "common",
+      "en": {
+        "other": "Edit"
+      },
+      "ar": {
+        "other": "تعديل"
+      }
+    },
+    {
+      "key": "navigation.home",
+      "group": "navigation",
+      "en": {
+        "other": "Home"
+      },
+      "ar": {
+        "other": "الرئيسية"
+      }
+    },
+    {
+      "key": "navigation.shop",
+      "group": "navigation",
+      "en": {
+        "other": "Shop"
+      },
+      "ar": {
+        "other": "تسوق"
+      }
+    },
+    {
+      "key": "navigation.account",
+      "group": "navigation",
+      "en": {
+        "other": "My account"
+      },
+      "ar": {
+        "other": "حسابي"
+      }
+    },
+    {
+      "key": "navigation.orders",
+      "group": "navigation",
+      "en": {
+        "other": "My orders"
+      },
+      "ar": {
+        "other": "طلباتي"
+      }
+    },
+    {
+      "key": "navigation.sign_in",
+      "group": "navigation",
+      "en": {
+        "other": "Sign in"
+      },
+      "ar": {
+        "other": "تسجيل الدخول"
+      }
+    },
+    {
+      "key": "navigation.sign_out",
+      "group": "navigation",
+      "en": {
+        "other": "Sign out"
+      },
+      "ar": {
+        "other": "تسجيل الخروج"
+      }
+    },
+    {
+      "key": "navigation.wishlist",
+      "group": "navigation",
+      "en": {
+        "other": "Wishlist"
+      },
+      "ar": {
+        "other": "المفضلة"
+      }
+    },
+    {
+      "key": "search.label",
+      "group": "search",
+      "en": {
+        "other": "Search products"
+      },
+      "ar": {
+        "other": "البحث عن المنتجات"
+      }
+    },
+    {
+      "key": "search.placeholder",
+      "group": "search",
+      "en": {
+        "other": "Search products, brands and essentials"
+      },
+      "ar": {
+        "other": "ابحث عن المنتجات والعلامات التجارية واحتياجاتك"
+      }
+    },
+    {
+      "key": "search.no_results",
+      "group": "search",
+      "en": {
+        "other": "No products found"
+      },
+      "ar": {
+        "other": "لم يتم العثور على منتجات"
+      }
+    },
+    {
+      "key": "search.clear",
+      "group": "search",
+      "en": {
+        "other": "Clear search"
+      },
+      "ar": {
+        "other": "مسح البحث"
+      }
+    },
+    {
+      "key": "search.filters",
+      "group": "search",
+      "en": {
+        "other": "Filters"
+      },
+      "ar": {
+        "other": "عوامل التصفية"
+      }
+    },
+    {
+      "key": "search.sort",
+      "group": "search",
+      "en": {
+        "other": "Sort by"
+      },
+      "ar": {
+        "other": "ترتيب حسب"
+      }
+    },
+    {
+      "key": "product.in_stock",
+      "group": "product",
+      "en": {
+        "other": "In stock"
+      },
+      "ar": {
+        "other": "متوفر"
+      }
+    },
+    {
+      "key": "product.out_of_stock",
+      "group": "product",
+      "en": {
+        "other": "Out of stock"
+      },
+      "ar": {
+        "other": "غير متوفر"
+      }
+    },
+    {
+      "key": "product.quantity",
+      "group": "product",
+      "en": {
+        "other": "Quantity"
+      },
+      "ar": {
+        "other": "الكمية"
+      }
+    },
+    {
+      "key": "product.description",
+      "group": "product",
+      "en": {
+        "other": "Description"
+      },
+      "ar": {
+        "other": "الوصف"
+      }
+    },
+    {
+      "key": "product.choose_options",
+      "group": "product",
+      "en": {
+        "other": "Choose options"
+      },
+      "ar": {
+        "other": "اختر الخيارات"
+      }
+    },
+    {
+      "key": "product.save",
+      "group": "product",
+      "en": {
+        "other": "Save to wishlist"
+      },
+      "ar": {
+        "other": "إضافة إلى المفضلة"
+      }
+    },
+    {
+      "key": "product.compare",
+      "group": "product",
+      "en": {
+        "other": "Compare"
+      },
+      "ar": {
+        "other": "مقارنة"
+      }
+    },
+    {
+      "key": "cart.add",
+      "group": "cart",
+      "en": {
+        "other": "Add to cart"
+      },
+      "ar": {
+        "other": "أضف إلى السلة"
+      }
+    },
+    {
+      "key": "cart.title",
+      "group": "cart",
+      "en": {
+        "other": "Your cart"
+      },
+      "ar": {
+        "other": "سلة التسوق"
+      }
+    },
+    {
+      "key": "cart.empty",
+      "group": "cart",
+      "en": {
+        "other": "Your cart is empty"
+      },
+      "ar": {
+        "other": "سلة التسوق فارغة"
+      }
+    },
+    {
+      "key": "cart.continue_shopping",
+      "group": "cart",
+      "en": {
+        "other": "Continue shopping"
+      },
+      "ar": {
+        "other": "متابعة التسوق"
+      }
+    },
+    {
+      "key": "cart.subtotal",
+      "group": "cart",
+      "en": {
+        "other": "Subtotal"
+      },
+      "ar": {
+        "other": "المجموع الفرعي"
+      }
+    },
+    {
+      "key": "cart.total",
+      "group": "cart",
+      "en": {
+        "other": "Total"
+      },
+      "ar": {
+        "other": "الإجمالي"
+      }
+    },
+    {
+      "key": "cart.discount",
+      "group": "cart",
+      "en": {
+        "other": "Discount"
+      },
+      "ar": {
+        "other": "الخصم"
+      }
+    },
+    {
+      "key": "cart.delivery",
+      "group": "cart",
+      "en": {
+        "other": "Delivery"
+      },
+      "ar": {
+        "other": "التوصيل"
+      }
+    },
+    {
+      "key": "cart.tax",
+      "group": "cart",
+      "en": {
+        "other": "Tax"
+      },
+      "ar": {
+        "other": "الضريبة"
+      }
+    },
+    {
+      "key": "cart.checkout",
+      "group": "cart",
+      "en": {
+        "other": "Checkout"
+      },
+      "ar": {
+        "other": "إتمام الشراء"
+      }
+    },
+    {
+      "key": "cart.remove_item",
+      "group": "cart",
+      "en": {
+        "other": "Remove {name}"
+      },
+      "ar": {
+        "other": "إزالة {name}"
+      }
+    },
+    {
+      "key": "cart.added",
+      "group": "cart",
+      "en": {
+        "other": "{name} added to your cart"
+      },
+      "ar": {
+        "other": "تمت إضافة {name} إلى سلة التسوق"
+      }
+    },
+    {
+      "key": "checkout.title",
+      "group": "checkout",
+      "en": {
+        "other": "Checkout"
+      },
+      "ar": {
+        "other": "إتمام الشراء"
+      }
+    },
+    {
+      "key": "checkout.secure",
+      "group": "checkout",
+      "en": {
+        "other": "Secure checkout"
+      },
+      "ar": {
+        "other": "دفع آمن"
+      }
+    },
+    {
+      "key": "checkout.order_summary",
+      "group": "checkout",
+      "en": {
+        "other": "Order summary"
+      },
+      "ar": {
+        "other": "ملخص الطلب"
+      }
+    },
+    {
+      "key": "checkout.show_summary",
+      "group": "checkout",
+      "en": {
+        "other": "Show order summary"
+      },
+      "ar": {
+        "other": "عرض ملخص الطلب"
+      }
+    },
+    {
+      "key": "checkout.hide_summary",
+      "group": "checkout",
+      "en": {
+        "other": "Hide order summary"
+      },
+      "ar": {
+        "other": "إخفاء ملخص الطلب"
+      }
+    },
+    {
+      "key": "checkout.delivery_address",
+      "group": "checkout",
+      "en": {
+        "other": "Delivery address"
+      },
+      "ar": {
+        "other": "عنوان التوصيل"
+      }
+    },
+    {
+      "key": "checkout.payment",
+      "group": "checkout",
+      "en": {
+        "other": "Payment"
+      },
+      "ar": {
+        "other": "الدفع"
+      }
+    },
+    {
+      "key": "checkout.continue_payment",
+      "group": "checkout",
+      "en": {
+        "other": "Continue to payment"
+      },
+      "ar": {
+        "other": "المتابعة إلى الدفع"
+      }
+    },
+    {
+      "key": "checkout.place_order",
+      "group": "checkout",
+      "en": {
+        "other": "Place order"
+      },
+      "ar": {
+        "other": "تأكيد الطلب"
+      }
+    },
+    {
+      "key": "checkout.processing",
+      "group": "checkout",
+      "en": {
+        "other": "Processing your order…"
+      },
+      "ar": {
+        "other": "جارٍ معالجة طلبك…"
+      }
+    },
+    {
+      "key": "checkout.coupon",
+      "group": "checkout",
+      "en": {
+        "other": "Discount code"
+      },
+      "ar": {
+        "other": "رمز الخصم"
+      }
+    },
+    {
+      "key": "checkout.apply_coupon",
+      "group": "checkout",
+      "en": {
+        "other": "Apply"
+      },
+      "ar": {
+        "other": "تطبيق"
+      }
+    },
+    {
+      "key": "checkout.cash_on_delivery",
+      "group": "checkout",
+      "en": {
+        "other": "Cash on delivery"
+      },
+      "ar": {
+        "other": "الدفع عند الاستلام"
+      }
+    },
+    {
+      "key": "checkout.pickup",
+      "group": "checkout",
+      "en": {
+        "other": "Pickup"
+      },
+      "ar": {
+        "other": "الاستلام"
+      }
+    },
+    {
+      "key": "checkout.confirmed",
+      "group": "checkout",
+      "en": {
+        "other": "Order {order_number} confirmed"
+      },
+      "ar": {
+        "other": "تم تأكيد الطلب {order_number}"
+      }
+    },
+    {
+      "key": "address.full_name",
+      "group": "address",
+      "en": {
+        "other": "Full name"
+      },
+      "ar": {
+        "other": "الاسم الكامل"
+      }
+    },
+    {
+      "key": "address.phone",
+      "group": "address",
+      "en": {
+        "other": "Phone number"
+      },
+      "ar": {
+        "other": "رقم الهاتف"
+      }
+    },
+    {
+      "key": "address.email",
+      "group": "address",
+      "en": {
+        "other": "Email address"
+      },
+      "ar": {
+        "other": "البريد الإلكتروني"
+      }
+    },
+    {
+      "key": "address.city",
+      "group": "address",
+      "en": {
+        "other": "City"
+      },
+      "ar": {
+        "other": "المدينة"
+      }
+    },
+    {
+      "key": "address.street",
+      "group": "address",
+      "en": {
+        "other": "Street address"
+      },
+      "ar": {
+        "other": "عنوان الشارع"
+      }
+    },
+    {
+      "key": "address.instructions",
+      "group": "address",
+      "en": {
+        "other": "Delivery instructions"
+      },
+      "ar": {
+        "other": "تعليمات التوصيل"
+      }
+    },
+    {
+      "key": "validation.required",
+      "group": "validation",
+      "en": {
+        "other": "This field is required"
+      },
+      "ar": {
+        "other": "هذا الحقل مطلوب"
+      }
+    },
+    {
+      "key": "validation.email",
+      "group": "validation",
+      "en": {
+        "other": "Enter a valid email address"
+      },
+      "ar": {
+        "other": "أدخل بريدًا إلكترونيًا صالحًا"
+      }
+    },
+    {
+      "key": "validation.phone",
+      "group": "validation",
+      "en": {
+        "other": "Enter a valid phone number"
+      },
+      "ar": {
+        "other": "أدخل رقم هاتف صالحًا"
+      }
+    },
+    {
+      "key": "validation.minimum",
+      "group": "validation",
+      "en": {
+        "other": "Enter at least {minimum} characters"
+      },
+      "ar": {
+        "other": "أدخل {minimum} أحرف على الأقل"
+      }
+    },
+    {
+      "key": "account.welcome",
+      "group": "account",
+      "en": {
+        "other": "Welcome, {name}"
+      },
+      "ar": {
+        "other": "مرحبًا، {name}"
+      }
+    },
+    {
+      "key": "cart.item_count",
+      "group": "cart",
+      "plural": "count",
+      "en": {
+        "one": "{count} item",
+        "other": "{count} items"
+      },
+      "ar": {
+        "zero": "لا توجد عناصر",
+        "one": "عنصر واحد",
+        "two": "عنصران",
+        "few": "{count} عناصر",
+        "many": "{count} عنصرًا",
+        "other": "{count} عنصر"
+      }
+    },
+    {
+      "key": "search.result_count",
+      "group": "search",
+      "plural": "count",
+      "en": {
+        "one": "{count} result",
+        "other": "{count} results"
+      },
+      "ar": {
+        "zero": "لا توجد نتائج",
+        "one": "نتيجة واحدة",
+        "two": "نتيجتان",
+        "few": "{count} نتائج",
+        "many": "{count} نتيجةً",
+        "other": "{count} نتيجة"
+      }
+    },
+    {
+      "key": "storefront.main",
+      "group": "storefront",
+      "en": {
+        "other": "Main"
+      },
+      "ar": {
+        "other": "الرئيسية"
+      }
+    },
+    {
+      "key": "storefront.shop_all",
+      "group": "storefront",
+      "en": {
+        "other": "Shop all"
+      },
+      "ar": {
+        "other": "تسوق الكل"
+      }
+    },
+    {
+      "key": "storefront.help_me_choose",
+      "group": "storefront",
+      "en": {
+        "other": "Help me choose"
+      },
+      "ar": {
+        "other": "ساعدني في الاختيار"
+      }
+    },
+    {
+      "key": "storefront.support",
+      "group": "storefront",
+      "en": {
+        "other": "Support"
+      },
+      "ar": {
+        "other": "الدعم"
+      }
+    },
+    {
+      "key": "storefront.shopping_assistant",
+      "group": "storefront",
+      "en": {
+        "other": "Shopping assistant"
+      },
+      "ar": {
+        "other": "مساعد التسوق"
+      }
+    },
+    {
+      "key": "storefront.assistant",
+      "group": "storefront",
+      "en": {
+        "other": "Assistant"
+      },
+      "ar": {
+        "other": "المساعد"
+      }
+    },
+    {
+      "key": "storefront.shopper_tools",
+      "group": "storefront",
+      "en": {
+        "other": "Shopper tools"
+      },
+      "ar": {
+        "other": "أدوات التسوق"
+      }
+    },
+    {
+      "key": "storefront.search",
+      "group": "storefront",
+      "en": {
+        "other": "Search"
+      },
+      "ar": {
+        "other": "بحث"
+      }
+    },
+    {
+      "key": "storefront.account",
+      "group": "storefront",
+      "en": {
+        "other": "Account"
+      },
+      "ar": {
+        "other": "الحساب"
+      }
+    },
+    {
+      "key": "storefront.create_account",
+      "group": "storefront",
+      "en": {
+        "other": "Create account"
+      },
+      "ar": {
+        "other": "إنشاء حساب"
+      }
+    },
+    {
+      "key": "storefront.loading_your_account",
+      "group": "storefront",
+      "en": {
+        "other": "Loading your account…"
+      },
+      "ar": {
+        "other": "جارٍ تحميل حسابك…"
+      }
+    },
+    {
+      "key": "storefront.loading_page",
+      "group": "storefront",
+      "en": {
+        "other": "Loading page…"
+      },
+      "ar": {
+        "other": "جارٍ تحميل الصفحة…"
+      }
+    },
+    {
+      "key": "storefront.page_not_found",
+      "group": "storefront",
+      "en": {
+        "other": "Page not found"
+      },
+      "ar": {
+        "other": "الصفحة غير موجودة"
+      }
+    },
+    {
+      "key": "storefront.return_home",
+      "group": "storefront",
+      "en": {
+        "other": "Return home"
+      },
+      "ar": {
+        "other": "العودة للرئيسية"
+      }
+    },
+    {
+      "key": "storefront.mobile_navigation",
+      "group": "storefront",
+      "en": {
+        "other": "Mobile navigation"
+      },
+      "ar": {
+        "other": "التنقل على الهاتف"
+      }
+    },
+    {
+      "key": "storefront.login",
+      "group": "storefront",
+      "en": {
+        "other": "Login"
+      },
+      "ar": {
+        "other": "تسجيل الدخول"
+      }
+    },
+    {
+      "key": "storefront.sign_up",
+      "group": "storefront",
+      "en": {
+        "other": "Sign up"
+      },
+      "ar": {
+        "other": "إنشاء حساب"
+      }
+    },
+    {
+      "key": "storefront.enter_your_email_and_password_to_login",
+      "group": "storefront",
+      "en": {
+        "other": "Enter your email and password to login:"
+      },
+      "ar": {
+        "other": "أدخل بريدك الإلكتروني وكلمة المرور لتسجيل الدخول:"
+      }
+    },
+    {
+      "key": "storefront.please_fill_in_the_information_below",
+      "group": "storefront",
+      "en": {
+        "other": "Please fill in the information below:"
+      },
+      "ar": {
+        "other": "يرجى إدخال المعلومات التالية:"
+      }
+    },
+    {
+      "key": "storefront.e_mail",
+      "group": "storefront",
+      "en": {
+        "other": "E-mail"
+      },
+      "ar": {
+        "other": "البريد الإلكتروني"
+      }
+    },
+    {
+      "key": "storefront.password",
+      "group": "storefront",
+      "en": {
+        "other": "Password"
+      },
+      "ar": {
+        "other": "كلمة المرور"
+      }
+    },
+    {
+      "key": "storefront.use_at_least_12_characters",
+      "group": "storefront",
+      "en": {
+        "other": "Use at least 12 characters."
+      },
+      "ar": {
+        "other": "استخدم 12 حرفًا على الأقل."
+      }
+    },
+    {
+      "key": "storefront.please_wait",
+      "group": "storefront",
+      "en": {
+        "other": "Please wait…"
+      },
+      "ar": {
+        "other": "يرجى الانتظار…"
+      }
+    },
+    {
+      "key": "storefront.forgot_your_password",
+      "group": "storefront",
+      "en": {
+        "other": "Forgot your password?"
+      },
+      "ar": {
+        "other": "نسيت كلمة المرور؟"
+      }
+    },
+    {
+      "key": "storefront.don_t_have_an_account",
+      "group": "storefront",
+      "en": {
+        "other": "Don't have an account?"
+      },
+      "ar": {
+        "other": "ليس لديك حساب؟"
+      }
+    },
+    {
+      "key": "storefront.already_have_an_account",
+      "group": "storefront",
+      "en": {
+        "other": "Already have an account?"
+      },
+      "ar": {
+        "other": "لديك حساب بالفعل؟"
+      }
+    },
+    {
+      "key": "storefront.account_security",
+      "group": "storefront",
+      "en": {
+        "other": "ACCOUNT SECURITY"
+      },
+      "ar": {
+        "other": "أمان الحساب"
+      }
+    },
+    {
+      "key": "storefront.email_or_mobile_number",
+      "group": "storefront",
+      "en": {
+        "other": "Email or mobile number"
+      },
+      "ar": {
+        "other": "البريد الإلكتروني أو رقم الهاتف"
+      }
+    },
+    {
+      "key": "storefront.verification_code_or_token",
+      "group": "storefront",
+      "en": {
+        "other": "Verification code or token"
+      },
+      "ar": {
+        "other": "رمز التحقق"
+      }
+    },
+    {
+      "key": "storefront.new_password",
+      "group": "storefront",
+      "en": {
+        "other": "New password"
+      },
+      "ar": {
+        "other": "كلمة المرور الجديدة"
+      }
+    },
+    {
+      "key": "storefront.send_reset_instructions",
+      "group": "storefront",
+      "en": {
+        "other": "Send reset instructions"
+      },
+      "ar": {
+        "other": "إرسال تعليمات إعادة التعيين"
+      }
+    },
+    {
+      "key": "storefront.verify_account",
+      "group": "storefront",
+      "en": {
+        "other": "Verify account"
+      },
+      "ar": {
+        "other": "تأكيد الحساب"
+      }
+    },
+    {
+      "key": "storefront.update_password",
+      "group": "storefront",
+      "en": {
+        "other": "Update password"
+      },
+      "ar": {
+        "other": "تحديث كلمة المرور"
+      }
+    },
+    {
+      "key": "storefront.resend_verification",
+      "group": "storefront",
+      "en": {
+        "other": "Resend verification"
+      },
+      "ar": {
+        "other": "إعادة إرسال رمز التحقق"
+      }
+    },
+    {
+      "key": "storefront.enter_reset_code",
+      "group": "storefront",
+      "en": {
+        "other": "Enter reset code"
+      },
+      "ar": {
+        "other": "أدخل رمز إعادة التعيين"
+      }
+    },
+    {
+      "key": "storefront.continue_to_sign_in",
+      "group": "storefront",
+      "en": {
+        "other": "Continue to sign in"
+      },
+      "ar": {
+        "other": "المتابعة لتسجيل الدخول"
+      }
+    },
+    {
+      "key": "storefront.my_account",
+      "group": "storefront",
+      "en": {
+        "other": "MY ACCOUNT"
+      },
+      "ar": {
+        "other": "حسابي"
+      }
+    },
+    {
+      "key": "storefront.your_details_in_one_place",
+      "group": "storefront",
+      "en": {
+        "other": "Your details, in one place."
+      },
+      "ar": {
+        "other": "بياناتك في مكان واحد."
+      }
+    },
+    {
+      "key": "storefront.verified_account",
+      "group": "storefront",
+      "en": {
+        "other": "Verified account"
+      },
+      "ar": {
+        "other": "حساب مؤكد"
+      }
+    },
+    {
+      "key": "storefront.verification_needed",
+      "group": "storefront",
+      "en": {
+        "other": "Verification needed"
+      },
+      "ar": {
+        "other": "يلزم تأكيد الحساب"
+      }
+    },
+    {
+      "key": "storefront.account_navigation",
+      "group": "storefront",
+      "en": {
+        "other": "Account navigation"
+      },
+      "ar": {
+        "other": "التنقل في الحساب"
+      }
+    },
+    {
+      "key": "storefront.account_verification_needed",
+      "group": "storefront",
+      "en": {
+        "other": "Account verification needed"
+      },
+      "ar": {
+        "other": "يلزم تأكيد الحساب"
+      }
+    },
+    {
+      "key": "storefront.need_help_contact_support",
+      "group": "storefront",
+      "en": {
+        "other": "Need help? Contact support"
+      },
+      "ar": {
+        "other": "تحتاج مساعدة؟ تواصل مع الدعم"
+      }
+    },
+    {
+      "key": "storefront.your_places",
+      "group": "storefront",
+      "en": {
+        "other": "YOUR PLACES"
+      },
+      "ar": {
+        "other": "عناوينك"
+      }
+    },
+    {
+      "key": "storefront.category_not_found",
+      "group": "storefront",
+      "en": {
+        "other": "Category not found"
+      },
+      "ar": {
+        "other": "القسم غير موجود"
+      }
+    },
+    {
+      "key": "storefront.account_overview",
+      "group": "storefront",
+      "en": {
+        "other": "Overview"
+      },
+      "ar": {
+        "other": "نظرة عامة"
+      }
+    },
+    {
+      "key": "storefront.account_orders",
+      "group": "storefront",
+      "en": {
+        "other": "Orders"
+      },
+      "ar": {
+        "other": "الطلبات"
+      }
+    },
+    {
+      "key": "storefront.account_support_requests",
+      "group": "storefront",
+      "en": {
+        "other": "Support requests"
+      },
+      "ar": {
+        "other": "طلبات الدعم"
+      }
+    },
+    {
+      "key": "storefront.saved_locations",
+      "group": "storefront",
+      "en": {
+        "other": "Saved locations"
+      },
+      "ar": {
+        "other": "العناوين المحفوظة"
+      }
+    },
+    {
+      "key": "storefront.add_location",
+      "group": "storefront",
+      "en": {
+        "other": "Add location"
+      },
+      "ar": {
+        "other": "إضافة عنوان"
+      }
+    },
+    {
+      "key": "storefront.loading_locations",
+      "group": "storefront",
+      "en": {
+        "other": "Loading locations…"
+      },
+      "ar": {
+        "other": "جارٍ تحميل العناوين…"
+      }
+    },
+    {
+      "key": "storefront.where_should_we_deliver",
+      "group": "storefront",
+      "en": {
+        "other": "Where should we deliver?"
+      },
+      "ar": {
+        "other": "أين نوصّل طلبك؟"
+      }
+    },
+    {
+      "key": "storefront.work",
+      "group": "storefront",
+      "en": {
+        "other": "Work"
+      },
+      "ar": {
+        "other": "العمل"
+      }
+    },
+    {
+      "key": "storefront.default",
+      "group": "storefront",
+      "en": {
+        "other": "Default"
+      },
+      "ar": {
+        "other": "الافتراضي"
+      }
+    },
+    {
+      "key": "storefront.make_default",
+      "group": "storefront",
+      "en": {
+        "other": "Make default"
+      },
+      "ar": {
+        "other": "تعيين كافتراضي"
+      }
+    },
+    {
+      "key": "storefront.remove_this_saved_location",
+      "group": "storefront",
+      "en": {
+        "other": "Remove this saved location?"
+      },
+      "ar": {
+        "other": "هل تريد حذف هذا العنوان المحفوظ؟"
+      }
+    },
+    {
+      "key": "storefront.remove_location",
+      "group": "storefront",
+      "en": {
+        "other": "Remove location"
+      },
+      "ar": {
+        "other": "حذف العنوان"
+      }
+    },
+    {
+      "key": "storefront.keep_it",
+      "group": "storefront",
+      "en": {
+        "other": "Keep it"
+      },
+      "ar": {
+        "other": "الاحتفاظ به"
+      }
+    },
+    {
+      "key": "storefront.edit_location",
+      "group": "storefront",
+      "en": {
+        "other": "Edit location"
+      },
+      "ar": {
+        "other": "تعديل العنوان"
+      }
+    },
+    {
+      "key": "storefront.add_a_location",
+      "group": "storefront",
+      "en": {
+        "other": "Add a location"
+      },
+      "ar": {
+        "other": "إضافة عنوان"
+      }
+    },
+    {
+      "key": "storefront.saving",
+      "group": "storefront",
+      "en": {
+        "other": "Saving…"
+      },
+      "ar": {
+        "other": "جارٍ الحفظ…"
+      }
+    },
+    {
+      "key": "storefront.save_location",
+      "group": "storefront",
+      "en": {
+        "other": "Save location"
+      },
+      "ar": {
+        "other": "حفظ العنوان"
+      }
+    },
+    {
+      "key": "storefront.delivery_details",
+      "group": "storefront",
+      "en": {
+        "other": "DELIVERY DETAILS"
+      },
+      "ar": {
+        "other": "تفاصيل التوصيل"
+      }
+    },
+    {
+      "key": "storefront.add_a_new_location",
+      "group": "storefront",
+      "en": {
+        "other": "Add a new location"
+      },
+      "ar": {
+        "other": "إضافة عنوان جديد"
+      }
+    },
+    {
+      "key": "storefront.cart",
+      "group": "storefront",
+      "en": {
+        "other": "Cart"
+      },
+      "ar": {
+        "other": "السلة"
+      }
+    },
+    {
+      "key": "storefront.items",
+      "group": "storefront",
+      "en": {
+        "other": "items"
+      },
+      "ar": {
+        "other": "منتجات"
+      }
+    },
+    {
+      "key": "storefront.close_cart",
+      "group": "storefront",
+      "en": {
+        "other": "Close cart"
+      },
+      "ar": {
+        "other": "إغلاق السلة"
+      }
+    },
+    {
+      "key": "storefront.cart_items",
+      "group": "storefront",
+      "en": {
+        "other": "Cart items"
+      },
+      "ar": {
+        "other": "منتجات السلة"
+      }
+    },
+    {
+      "key": "storefront.loading_your_cart",
+      "group": "storefront",
+      "en": {
+        "other": "Loading your cart…"
+      },
+      "ar": {
+        "other": "جارٍ تحميل سلتك…"
+      }
+    },
+    {
+      "key": "storefront.your_cart_is_empty",
+      "group": "storefront",
+      "en": {
+        "other": "Your cart is empty."
+      },
+      "ar": {
+        "other": "سلتك فارغة."
+      }
+    },
+    {
+      "key": "storefront.add_something_you_love_to_get_started",
+      "group": "storefront",
+      "en": {
+        "other": "Add something you love to get started."
+      },
+      "ar": {
+        "other": "ابدأ بإضافة ما تحب إلى سلتك."
+      }
+    },
+    {
+      "key": "storefront.quantity_in_cart",
+      "group": "storefront",
+      "en": {
+        "other": "Quantity in cart"
+      },
+      "ar": {
+        "other": "الكمية في السلة"
+      }
+    },
+    {
+      "key": "storefront.some_items_need_availability_checked_review_your_cart",
+      "group": "storefront",
+      "en": {
+        "other": "Some items need availability checked. Review your cart."
+      },
+      "ar": {
+        "other": "يلزم التحقق من توفر بعض المنتجات. راجع سلتك."
+      }
+    },
+    {
+      "key": "storefront.subtotal_after_discounts",
+      "group": "storefront",
+      "en": {
+        "other": "Subtotal after discounts"
+      },
+      "ar": {
+        "other": "المجموع الفرعي بعد الخصومات"
+      }
+    },
+    {
+      "key": "storefront.delivery_and_tax_are_calculated_at_checkout",
+      "group": "storefront",
+      "en": {
+        "other": "Delivery and tax are calculated at checkout."
+      },
+      "ar": {
+        "other": "تُحسب رسوم التوصيل والضرائب عند إتمام الطلب."
+      }
+    },
+    {
+      "key": "storefront.updating_your_cart",
+      "group": "storefront",
+      "en": {
+        "other": "Updating your cart…"
+      },
+      "ar": {
+        "other": "جارٍ تحديث سلتك…"
+      }
+    },
+    {
+      "key": "storefront.continue_to_checkout",
+      "group": "storefront",
+      "en": {
+        "other": "Continue to checkout"
+      },
+      "ar": {
+        "other": "المتابعة لإتمام الطلب"
+      }
+    },
+    {
+      "key": "storefront.view_full_cart",
+      "group": "storefront",
+      "en": {
+        "other": "View full cart"
+      },
+      "ar": {
+        "other": "عرض السلة كاملة"
+      }
+    },
+    {
+      "key": "storefront.choose_delivery_address",
+      "group": "storefront",
+      "en": {
+        "other": "Choose delivery address"
+      },
+      "ar": {
+        "other": "اختر عنوان التوصيل"
+      }
+    },
+    {
+      "key": "storefront.quantity_in_your_cart",
+      "group": "storefront",
+      "en": {
+        "other": "Quantity in your cart"
+      },
+      "ar": {
+        "other": "الكمية في سلتك"
+      }
+    },
+    {
+      "key": "storefront.increase_quantity",
+      "group": "storefront",
+      "en": {
+        "other": "Increase quantity"
+      },
+      "ar": {
+        "other": "زيادة الكمية"
+      }
+    },
+    {
+      "key": "storefront.unavailable_in_your_area",
+      "group": "storefront",
+      "en": {
+        "other": "Unavailable in your area"
+      },
+      "ar": {
+        "other": "غير متوفر في منطقتك"
+      }
+    },
+    {
+      "key": "storefront.checking_availability",
+      "group": "storefront",
+      "en": {
+        "other": "Checking availability…"
+      },
+      "ar": {
+        "other": "جارٍ التحقق من التوفر…"
+      }
+    },
+    {
+      "key": "storefront.adding",
+      "group": "storefront",
+      "en": {
+        "other": "Adding…"
+      },
+      "ar": {
+        "other": "جارٍ الإضافة…"
+      }
+    },
+    {
+      "key": "storefront.view_your_cart",
+      "group": "storefront",
+      "en": {
+        "other": "View your cart"
+      },
+      "ar": {
+        "other": "عرض سلتك"
+      }
+    },
+    {
+      "key": "storefront.image_unavailable",
+      "group": "storefront",
+      "en": {
+        "other": "Image unavailable"
+      },
+      "ar": {
+        "other": "الصورة غير متوفرة"
+      }
+    },
+    {
+      "key": "storefront.only",
+      "group": "storefront",
+      "en": {
+        "other": "Only"
+      },
+      "ar": {
+        "other": "المتاح فقط"
+      }
+    },
+    {
+      "key": "storefront.units_available_for_this_cart",
+      "group": "storefront",
+      "en": {
+        "other": "units available for this cart."
+      },
+      "ar": {
+        "other": "وحدات لهذه السلة."
+      }
+    },
+    {
+      "key": "storefront.reserve_again",
+      "group": "storefront",
+      "en": {
+        "other": "Reserve again"
+      },
+      "ar": {
+        "other": "الحجز مجددًا"
+      }
+    },
+    {
+      "key": "storefront.update",
+      "group": "storefront",
+      "en": {
+        "other": "Update"
+      },
+      "ar": {
+        "other": "تحديث"
+      }
+    },
+    {
+      "key": "storefront.coupon",
+      "group": "storefront",
+      "en": {
+        "other": "Coupon"
+      },
+      "ar": {
+        "other": "قسيمة خصم"
+      }
+    },
+    {
+      "key": "storefront.coupon_code",
+      "group": "storefront",
+      "en": {
+        "other": "Coupon code"
+      },
+      "ar": {
+        "other": "رمز الخصم"
+      }
+    },
+    {
+      "key": "storefront.enter_a_code",
+      "group": "storefront",
+      "en": {
+        "other": "Enter a code"
+      },
+      "ar": {
+        "other": "أدخل الرمز"
+      }
+    },
+    {
+      "key": "storefront.apply_coupon",
+      "group": "storefront",
+      "en": {
+        "other": "Apply coupon"
+      },
+      "ar": {
+        "other": "تطبيق الخصم"
+      }
+    },
+    {
+      "key": "storefront.selected",
+      "group": "storefront",
+      "en": {
+        "other": "Selected:"
+      },
+      "ar": {
+        "other": "المحدد:"
+      }
+    },
+    {
+      "key": "storefront.remove_coupon",
+      "group": "storefront",
+      "en": {
+        "other": "Remove coupon"
+      },
+      "ar": {
+        "other": "إزالة القسيمة"
+      }
+    },
+    {
+      "key": "storefront.shopping_cart",
+      "group": "storefront",
+      "en": {
+        "other": "Shopping cart"
+      },
+      "ar": {
+        "other": "سلة التسوق"
+      }
+    },
+    {
+      "key": "storefront.saving_your_latest_quantities",
+      "group": "storefront",
+      "en": {
+        "other": "Saving your latest quantities…"
+      },
+      "ar": {
+        "other": "جارٍ حفظ الكميات الجديدة…"
+      }
+    },
+    {
+      "key": "storefront.opening_your_cart",
+      "group": "storefront",
+      "en": {
+        "other": "Opening your cart…"
+      },
+      "ar": {
+        "other": "جارٍ فتح سلتك…"
+      }
+    },
+    {
+      "key": "storefront.your_shopping_cart_is_empty",
+      "group": "storefront",
+      "en": {
+        "other": "Your shopping cart is empty"
+      },
+      "ar": {
+        "other": "سلة التسوق فارغة"
+      }
+    },
+    {
+      "key": "storefront.find_something_you_love_and_add_it_to_your_cart",
+      "group": "storefront",
+      "en": {
+        "other": "Find something you love and add it to your cart."
+      },
+      "ar": {
+        "other": "اختر ما تحب وأضفه إلى سلتك."
+      }
+    },
+    {
+      "key": "storefront.start_shopping",
+      "group": "storefront",
+      "en": {
+        "other": "Start shopping"
+      },
+      "ar": {
+        "other": "ابدأ التسوق"
+      }
+    },
+    {
+      "key": "storefront.total_before_delivery_and_tax",
+      "group": "storefront",
+      "en": {
+        "other": "Total before delivery & tax"
+      },
+      "ar": {
+        "other": "الإجمالي قبل التوصيل والضرائب"
+      }
+    },
+    {
+      "key": "storefront.delivery_and_tax_are_calculated_at_checkout_offers_are_rechecked_before_ordering",
+      "group": "storefront",
+      "en": {
+        "other": "Delivery and tax are calculated at checkout. Offers are rechecked before ordering."
+      },
+      "ar": {
+        "other": "تُحسب رسوم التوصيل والضرائب عند إتمام الطلب. تُراجع العروض قبل تأكيد الطلب."
+      }
+    },
+    {
+      "key": "storefront.sign_in_to_continue",
+      "group": "storefront",
+      "en": {
+        "other": "Sign in to continue"
+      },
+      "ar": {
+        "other": "سجّل الدخول للمتابعة"
+      }
+    },
+    {
+      "key": "storefront.sign_in_or_register_to_choose_delivery_and_place_your_order",
+      "group": "storefront",
+      "en": {
+        "other": "Sign in or register to choose delivery and place your order."
+      },
+      "ar": {
+        "other": "سجّل الدخول أو أنشئ حسابًا لاختيار التوصيل وإرسال طلبك."
+      }
+    },
+    {
+      "key": "storefront.continue_browsing",
+      "group": "storefront",
+      "en": {
+        "other": "Continue browsing"
+      },
+      "ar": {
+        "other": "متابعة التصفح"
+      }
+    },
+    {
+      "key": "storefront.return_to_cart",
+      "group": "storefront",
+      "en": {
+        "other": "Return to cart"
+      },
+      "ar": {
+        "other": "العودة إلى السلة"
+      }
+    },
+    {
+      "key": "storefront.hide",
+      "group": "storefront",
+      "en": {
+        "other": "Hide"
+      },
+      "ar": {
+        "other": "إخفاء"
+      }
+    },
+    {
+      "key": "storefront.show",
+      "group": "storefront",
+      "en": {
+        "other": "Show"
+      },
+      "ar": {
+        "other": "عرض"
+      }
+    },
+    {
+      "key": "storefront.order_summary",
+      "group": "storefront",
+      "en": {
+        "other": "order summary"
+      },
+      "ar": {
+        "other": "ملخص الطلب"
+      }
+    },
+    {
+      "key": "storefront.edit_cart",
+      "group": "storefront",
+      "en": {
+        "other": "Edit cart"
+      },
+      "ar": {
+        "other": "تعديل السلة"
+      }
+    },
+    {
+      "key": "storefront.subtotal",
+      "group": "storefront",
+      "en": {
+        "other": "Subtotal ·"
+      },
+      "ar": {
+        "other": "المجموع الفرعي ·"
+      }
+    },
+    {
+      "key": "storefront.free",
+      "group": "storefront",
+      "en": {
+        "other": "Free"
+      },
+      "ar": {
+        "other": "مجانًا"
+      }
+    },
+    {
+      "key": "storefront.calculated_before_payment",
+      "group": "storefront",
+      "en": {
+        "other": "Calculated before payment"
+      },
+      "ar": {
+        "other": "يُحسب قبل الدفع"
+      }
+    },
+    {
+      "key": "storefront.taxes",
+      "group": "storefront",
+      "en": {
+        "other": "Taxes"
+      },
+      "ar": {
+        "other": "الضرائب"
+      }
+    },
+    {
+      "key": "storefront.at_pickup",
+      "group": "storefront",
+      "en": {
+        "other": "at pickup"
+      },
+      "ar": {
+        "other": "عند الاستلام من الفرع"
+      }
+    },
+    {
+      "key": "storefront.on_delivery",
+      "group": "storefront",
+      "en": {
+        "other": "on delivery"
+      },
+      "ar": {
+        "other": "عند التوصيل"
+      }
+    },
+    {
+      "key": "storefront.shipping_discounts_and_taxes_are_confirmed_before_you_place_your_order",
+      "group": "storefront",
+      "en": {
+        "other": "Shipping, discounts and taxes are confirmed before you place your order."
+      },
+      "ar": {
+        "other": "تُؤكد رسوم الشحن والخصومات والضرائب قبل إرسال طلبك."
+      }
+    },
+    {
+      "key": "storefront.we_couldn_t_load_your_cart_refresh_the_page_to_try_again",
+      "group": "storefront",
+      "en": {
+        "other": "We couldn’t load your cart. Refresh the page to try again."
+      },
+      "ar": {
+        "other": "تعذر تحميل سلتك. حدّث الصفحة للمحاولة مجددًا."
+      }
+    },
+    {
+      "key": "storefront.your_order_is_only_submitted_when_you_confirm_it",
+      "group": "storefront",
+      "en": {
+        "other": "Your order is only submitted when you confirm it."
+      },
+      "ar": {
+        "other": "لن يُرسل طلبك إلا بعد تأكيدك."
+      }
+    },
+    {
+      "key": "storefront.checkout_conversation",
+      "group": "storefront",
+      "en": {
+        "other": "Checkout conversation"
+      },
+      "ar": {
+        "other": "محادثة إتمام الطلب"
+      }
+    },
+    {
+      "key": "storefront.need_help",
+      "group": "storefront",
+      "en": {
+        "other": "Need help?"
+      },
+      "ar": {
+        "other": "تحتاج مساعدة؟"
+      }
+    },
+    {
+      "key": "storefront.you",
+      "group": "storefront",
+      "en": {
+        "other": "You"
+      },
+      "ar": {
+        "other": "أنت"
+      }
+    },
+    {
+      "key": "storefront.rocento_assistant",
+      "group": "storefront",
+      "en": {
+        "other": "Rocento assistant"
+      },
+      "ar": {
+        "other": "مساعد روسنتو"
+      }
+    },
+    {
+      "key": "storefront.contact",
+      "group": "storefront",
+      "en": {
+        "other": "Contact"
+      },
+      "ar": {
+        "other": "بيانات الاتصال"
+      }
+    },
+    {
+      "key": "storefront.sign_in_to_complete_your_order",
+      "group": "storefront",
+      "en": {
+        "other": "Sign in to complete your order"
+      },
+      "ar": {
+        "other": "سجّل الدخول لإتمام طلبك"
+      }
+    },
+    {
+      "key": "storefront.your_cart_stays_with_you_sign_in_or_create_an_account_to_save_your_address_and_track_your_delivery",
+      "group": "storefront",
+      "en": {
+        "other": "Your cart stays with you. Sign in or create an account to save your address and track your delivery."
+      },
+      "ar": {
+        "other": "تظل سلتك محفوظة. سجّل الدخول أو أنشئ حسابًا لحفظ عنوانك وتتبع طلبك."
+      }
+    },
+    {
+      "key": "storefront.sign_in_to_checkout",
+      "group": "storefront",
+      "en": {
+        "other": "Sign in to checkout"
+      },
+      "ar": {
+        "other": "سجّل الدخول لإتمام الطلب"
+      }
+    },
+    {
+      "key": "storefront.create_an_account",
+      "group": "storefront",
+      "en": {
+        "other": "Create an account"
+      },
+      "ar": {
+        "other": "إنشاء حساب"
+      }
+    },
+    {
+      "key": "storefront.delivery_question",
+      "group": "storefront",
+      "en": {
+        "other": "Delivery question"
+      },
+      "ar": {
+        "other": "اختيار طريقة الاستلام"
+      }
+    },
+    {
+      "key": "storefront.how_would_you_like_to_receive_your_order",
+      "group": "storefront",
+      "en": {
+        "other": "How would you like to receive your order?"
+      },
+      "ar": {
+        "other": "كيف تفضل استلام طلبك؟"
+      }
+    },
+    {
+      "key": "storefront.confirmed_delivery",
+      "group": "storefront",
+      "en": {
+        "other": "Confirmed delivery"
+      },
+      "ar": {
+        "other": "تم تأكيد التوصيل"
+      }
+    },
+    {
+      "key": "storefront.payment_question",
+      "group": "storefront",
+      "en": {
+        "other": "Payment question"
+      },
+      "ar": {
+        "other": "اختيار طريقة الدفع"
+      }
+    },
+    {
+      "key": "storefront.how_would_you_like_to_pay",
+      "group": "storefront",
+      "en": {
+        "other": "How would you like to pay?"
+      },
+      "ar": {
+        "other": "كيف تفضل الدفع؟"
+      }
+    },
+    {
+      "key": "storefront.confirmed_payment",
+      "group": "storefront",
+      "en": {
+        "other": "Confirmed payment"
+      },
+      "ar": {
+        "other": "تم تأكيد طريقة الدفع"
+      }
+    },
+    {
+      "key": "storefront.cash_payment_confirmed",
+      "group": "storefront",
+      "en": {
+        "other": "Cash payment confirmed."
+      },
+      "ar": {
+        "other": "تم تأكيد الدفع نقدًا."
+      }
+    },
+    {
+      "key": "storefront.order_confirmation",
+      "group": "storefront",
+      "en": {
+        "other": "Order confirmation"
+      },
+      "ar": {
+        "other": "تأكيد الطلب"
+      }
+    },
+    {
+      "key": "storefront.your_order_is_confirmed",
+      "group": "storefront",
+      "en": {
+        "other": "Your order is confirmed"
+      },
+      "ar": {
+        "other": "تم تأكيد طلبك"
+      }
+    },
+    {
+      "key": "storefront.we_received_your_order_you_can_view_it_and_track_its_status_below",
+      "group": "storefront",
+      "en": {
+        "other": "We received your order. You can view it and track its status below."
+      },
+      "ar": {
+        "other": "استلمنا طلبك. يمكنك عرضه وتتبع حالته أدناه."
+      }
+    },
+    {
+      "key": "storefront.total",
+      "group": "storefront",
+      "en": {
+        "other": "Total:"
+      },
+      "ar": {
+        "other": "الإجمالي:"
+      }
+    },
+    {
+      "key": "storefront.view_order",
+      "group": "storefront",
+      "en": {
+        "other": "View order"
+      },
+      "ar": {
+        "other": "عرض الطلب"
+      }
+    },
+    {
+      "key": "storefront.order_confirmed",
+      "group": "storefront",
+      "en": {
+        "other": "Order confirmed"
+      },
+      "ar": {
+        "other": "تم تأكيد الطلب"
+      }
+    },
+    {
+      "key": "storefront.we_received_your_order_and_saved_it_to_your_account_you_can_track_status_updates_from_your_order_pag",
+      "group": "storefront",
+      "en": {
+        "other": "We received your order and saved it to your account. You can track status updates from your order page."
+      },
+      "ar": {
+        "other": "استلمنا طلبك وحفظناه في حسابك. يمكنك تتبع حالته من صفحة الطلب."
+      }
+    },
+    {
+      "key": "storefront.verify_your_contact_details",
+      "group": "storefront",
+      "en": {
+        "other": "Verify your contact details"
+      },
+      "ar": {
+        "other": "أكّد بيانات الاتصال"
+      }
+    },
+    {
+      "key": "storefront.verify_your_email_or_mobile_number_to_finish_checking_out_your_cart_is_saved",
+      "group": "storefront",
+      "en": {
+        "other": "Verify your email or mobile number to finish checking out. Your cart is saved."
+      },
+      "ar": {
+        "other": "أكّد بريدك الإلكتروني أو رقم هاتفك لإتمام الطلب. سلتك محفوظة."
+      }
+    },
+    {
+      "key": "storefront.check_your_previous_order",
+      "group": "storefront",
+      "en": {
+        "other": "Check your previous order"
+      },
+      "ar": {
+        "other": "راجع طلبك السابق"
+      }
+    },
+    {
+      "key": "storefront.view_your_orders",
+      "group": "storefront",
+      "en": {
+        "other": "View your orders"
+      },
+      "ar": {
+        "other": "عرض طلباتك"
+      }
+    },
+    {
+      "key": "storefront.confirm_your_saved_submission",
+      "group": "storefront",
+      "en": {
+        "other": "Confirm your saved submission"
+      },
+      "ar": {
+        "other": "تأكيد طلبك المحفوظ"
+      }
+    },
+    {
+      "key": "storefront.your_last_submission_is_saved_retry_confirmation_to_receive_the_same_order_safely_even_if_the_connec",
+      "group": "storefront",
+      "en": {
+        "other": "Your last submission is saved. Retry confirmation to receive the same order safely, even if the connection was interrupted."
+      },
+      "ar": {
+        "other": "طلبك الأخير محفوظ. أعد محاولة التأكيد لاسترجاع الطلب نفسه بأمان حتى لو انقطع الاتصال."
+      }
+    },
+    {
+      "key": "storefront.check_your_orders",
+      "group": "storefront",
+      "en": {
+        "other": "Check your orders"
+      },
+      "ar": {
+        "other": "راجع طلباتك"
+      }
+    },
+    {
+      "key": "storefront.we_couldn_t_confirm_your_order",
+      "group": "storefront",
+      "en": {
+        "other": "We couldn’t confirm your order"
+      },
+      "ar": {
+        "other": "تعذر تأكيد طلبك"
+      }
+    },
+    {
+      "key": "storefront.keep_this_page_open_and_retry_confirmation_your_saved_submission_will_be_reused",
+      "group": "storefront",
+      "en": {
+        "other": "Keep this page open and retry confirmation. Your saved submission will be reused."
+      },
+      "ar": {
+        "other": "اترك الصفحة مفتوحة وأعد محاولة التأكيد. سنستخدم طلبك المحفوظ."
+      }
+    },
+    {
+      "key": "storefront.some_checkout_details_couldn_t_load",
+      "group": "storefront",
+      "en": {
+        "other": "Some checkout details couldn’t load"
+      },
+      "ar": {
+        "other": "تعذر تحميل بعض تفاصيل الطلب"
+      }
+    },
+    {
+      "key": "storefront.retry_loading_details",
+      "group": "storefront",
+      "en": {
+        "other": "Retry loading details"
+      },
+      "ar": {
+        "other": "إعادة تحميل التفاصيل"
+      }
+    },
+    {
+      "key": "storefront.add_something_you_love_before_checking_out",
+      "group": "storefront",
+      "en": {
+        "other": "Add something you love before checking out."
+      },
+      "ar": {
+        "other": "أضف ما تحب قبل إتمام الطلب."
+      }
+    },
+    {
+      "key": "storefront.pickup_question",
+      "group": "storefront",
+      "en": {
+        "other": "Pickup question"
+      },
+      "ar": {
+        "other": "مكان الاستلام"
+      }
+    },
+    {
+      "key": "storefront.where_would_you_like_to_collect_your_order",
+      "group": "storefront",
+      "en": {
+        "other": "Where would you like to collect your order?"
+      },
+      "ar": {
+        "other": "من أين تفضل استلام طلبك؟"
+      }
+    },
+    {
+      "key": "storefront.verified",
+      "group": "storefront",
+      "en": {
+        "other": "✓ Verified"
+      },
+      "ar": {
+        "other": "✓ مؤكد"
+      }
+    },
+    {
+      "key": "storefront.order_updates_will_be_sent_to_your_account_contact",
+      "group": "storefront",
+      "en": {
+        "other": "Order updates will be sent to your account contact."
+      },
+      "ar": {
+        "other": "ستصلك تحديثات الطلب عبر بيانات الاتصال المسجلة في حسابك."
+      }
+    },
+    {
+      "key": "storefront.collect_from_a_pickup_location",
+      "group": "storefront",
+      "en": {
+        "other": "Collect from a pickup location"
+      },
+      "ar": {
+        "other": "الاستلام من نقطة استلام"
+      }
+    },
+    {
+      "key": "storefront.delivered_to_your_address",
+      "group": "storefront",
+      "en": {
+        "other": "Delivered to your address"
+      },
+      "ar": {
+        "other": "التوصيل إلى عنوانك"
+      }
+    },
+    {
+      "key": "storefront.where_should_we_deliver_your_order",
+      "group": "storefront",
+      "en": {
+        "other": "Where should we deliver your order?"
+      },
+      "ar": {
+        "other": "إلى أين نوصّل طلبك؟"
+      }
+    },
+    {
+      "key": "storefront.use_saved_address",
+      "group": "storefront",
+      "en": {
+        "other": "Use saved address"
+      },
+      "ar": {
+        "other": "استخدام عنوان محفوظ"
+      }
+    },
+    {
+      "key": "storefront.new_address",
+      "group": "storefront",
+      "en": {
+        "other": "+ New address"
+      },
+      "ar": {
+        "other": "+ عنوان جديد"
+      }
+    },
+    {
+      "key": "storefront.loading_saved_addresses",
+      "group": "storefront",
+      "en": {
+        "other": "Loading saved addresses…"
+      },
+      "ar": {
+        "other": "جارٍ تحميل العناوين المحفوظة…"
+      }
+    },
+    {
+      "key": "storefront.edit_selected_address",
+      "group": "storefront",
+      "en": {
+        "other": "Edit selected address"
+      },
+      "ar": {
+        "other": "تعديل العنوان المحدد"
+      }
+    },
+    {
+      "key": "storefront.use_this_address",
+      "group": "storefront",
+      "en": {
+        "other": "Use this address"
+      },
+      "ar": {
+        "other": "استخدام هذا العنوان"
+      }
+    },
+    {
+      "key": "storefront.edit_delivery_address",
+      "group": "storefront",
+      "en": {
+        "other": "Edit delivery address"
+      },
+      "ar": {
+        "other": "تعديل عنوان التوصيل"
+      }
+    },
+    {
+      "key": "storefront.add_delivery_address",
+      "group": "storefront",
+      "en": {
+        "other": "Add delivery address"
+      },
+      "ar": {
+        "other": "إضافة عنوان توصيل"
+      }
+    },
+    {
+      "key": "storefront.saving_address",
+      "group": "storefront",
+      "en": {
+        "other": "Saving address…"
+      },
+      "ar": {
+        "other": "جارٍ حفظ العنوان…"
+      }
+    },
+    {
+      "key": "storefront.selected_address",
+      "group": "storefront",
+      "en": {
+        "other": "Selected address"
+      },
+      "ar": {
+        "other": "العنوان المحدد"
+      }
+    },
+    {
+      "key": "storefront.deliver_to",
+      "group": "storefront",
+      "en": {
+        "other": "Deliver to"
+      },
+      "ar": {
+        "other": "التوصيل إلى"
+      }
+    },
+    {
+      "key": "storefront.change",
+      "group": "storefront",
+      "en": {
+        "other": "Change"
+      },
+      "ar": {
+        "other": "تغيير"
+      }
+    },
+    {
+      "key": "storefront.add_a_gift_message",
+      "group": "storefront",
+      "en": {
+        "other": "Add a gift message"
+      },
+      "ar": {
+        "other": "إضافة رسالة هدية"
+      }
+    },
+    {
+      "key": "storefront.optional",
+      "group": "storefront",
+      "en": {
+        "other": "Optional"
+      },
+      "ar": {
+        "other": "اختياري"
+      }
+    },
+    {
+      "key": "storefront.gift_message",
+      "group": "storefront",
+      "en": {
+        "other": "Gift message"
+      },
+      "ar": {
+        "other": "رسالة الهدية"
+      }
+    },
+    {
+      "key": "storefront.a_little_note_for_the_recipient",
+      "group": "storefront",
+      "en": {
+        "other": "A little note for the recipient"
+      },
+      "ar": {
+        "other": "رسالة قصيرة للمستلم"
+      }
+    },
+    {
+      "key": "storefront.please_shorten_your_gift_message",
+      "group": "storefront",
+      "en": {
+        "other": "Please shorten your gift message."
+      },
+      "ar": {
+        "other": "يرجى تقصير رسالة الهدية."
+      }
+    },
+    {
+      "key": "storefront.your_selection_expired_please_confirm_availability_again",
+      "group": "storefront",
+      "en": {
+        "other": "Your selection expired. Please confirm availability again."
+      },
+      "ar": {
+        "other": "انتهت صلاحية اختيارك. أكّد التوفر مجددًا."
+      }
+    },
+    {
+      "key": "storefront.pickup_details",
+      "group": "storefront",
+      "en": {
+        "other": "Pickup details"
+      },
+      "ar": {
+        "other": "تفاصيل الاستلام"
+      }
+    },
+    {
+      "key": "storefront.delivery_method",
+      "group": "storefront",
+      "en": {
+        "other": "Delivery method"
+      },
+      "ar": {
+        "other": "طريقة التوصيل"
+      }
+    },
+    {
+      "key": "storefront.collect_when_your_order_is_marked_ready",
+      "group": "storefront",
+      "en": {
+        "other": "Collect when your order is marked ready"
+      },
+      "ar": {
+        "other": "استلم طلبك عندما يصبح جاهزًا"
+      }
+    },
+    {
+      "key": "storefront.delivered_to_your_selected_address",
+      "group": "storefront",
+      "en": {
+        "other": "Delivered to your selected address"
+      },
+      "ar": {
+        "other": "التوصيل إلى عنوانك المحدد"
+      }
+    },
+    {
+      "key": "storefront.choose_a_pickup_location_to_check_availability",
+      "group": "storefront",
+      "en": {
+        "other": "Choose a pickup location to check availability."
+      },
+      "ar": {
+        "other": "اختر نقطة استلام للتحقق من التوفر."
+      }
+    },
+    {
+      "key": "storefront.confirming_shipping_and_availability",
+      "group": "storefront",
+      "en": {
+        "other": "Confirming shipping and availability…"
+      },
+      "ar": {
+        "other": "جارٍ تأكيد الشحن والتوفر…"
+      }
+    },
+    {
+      "key": "storefront.enter_your_address_to_see_shipping_options",
+      "group": "storefront",
+      "en": {
+        "other": "Enter your address to see shipping options."
+      },
+      "ar": {
+        "other": "أدخل عنوانك لعرض خيارات الشحن."
+      }
+    },
+    {
+      "key": "storefront.some_items_are_no_longer_fully_reserved_review_availability_in_your_cart_before_placing_your_order",
+      "group": "storefront",
+      "en": {
+        "other": "Some items are no longer fully reserved. Review availability in your cart before placing your order."
+      },
+      "ar": {
+        "other": "لم تعد بعض المنتجات محجوزة بالكامل. راجع توفر المنتجات في سلتك قبل إرسال الطلب."
+      }
+    },
+    {
+      "key": "storefront.review_cart_availability",
+      "group": "storefront",
+      "en": {
+        "other": "Review cart availability"
+      },
+      "ar": {
+        "other": "مراجعة توفر منتجات السلة"
+      }
+    },
+    {
+      "key": "storefront.recheck_availability_and_total",
+      "group": "storefront",
+      "en": {
+        "other": "Recheck availability and total"
+      },
+      "ar": {
+        "other": "إعادة التحقق من التوفر والإجمالي"
+      }
+    },
+    {
+      "key": "storefront.review_cart",
+      "group": "storefront",
+      "en": {
+        "other": "Review cart"
+      },
+      "ar": {
+        "other": "مراجعة السلة"
+      }
+    },
+    {
+      "key": "storefront.your_order_total_has_expired",
+      "group": "storefront",
+      "en": {
+        "other": "Your order total has expired."
+      },
+      "ar": {
+        "other": "انتهت صلاحية إجمالي طلبك."
+      }
+    },
+    {
+      "key": "storefront.refresh_total",
+      "group": "storefront",
+      "en": {
+        "other": "Refresh total"
+      },
+      "ar": {
+        "other": "تحديث الإجمالي"
+      }
+    },
+    {
+      "key": "storefront.you_ll_review_payment_before_placing_your_order",
+      "group": "storefront",
+      "en": {
+        "other": "You’ll review payment before placing your order."
+      },
+      "ar": {
+        "other": "ستراجع طريقة الدفع قبل إرسال طلبك."
+      }
+    },
+    {
+      "key": "storefront.change_pickup",
+      "group": "storefront",
+      "en": {
+        "other": "Change pickup"
+      },
+      "ar": {
+        "other": "تغيير الاستلام"
+      }
+    },
+    {
+      "key": "storefront.change_delivery",
+      "group": "storefront",
+      "en": {
+        "other": "Change delivery"
+      },
+      "ar": {
+        "other": "تغيير التوصيل"
+      }
+    },
+    {
+      "key": "storefront.cash",
+      "group": "storefront",
+      "en": {
+        "other": "Cash"
+      },
+      "ar": {
+        "other": "نقدًا"
+      }
+    },
+    {
+      "key": "storefront.is_available_no_payment_is_collected_online",
+      "group": "storefront",
+      "en": {
+        "other": "is available. No payment is collected online."
+      },
+      "ar": {
+        "other": "متاح. لا يتم تحصيل أي مبلغ عبر الإنترنت."
+      }
+    },
+    {
+      "key": "storefront.continue_to_review",
+      "group": "storefront",
+      "en": {
+        "other": "Continue to review"
+      },
+      "ar": {
+        "other": "المتابعة للمراجعة"
+      }
+    },
+    {
+      "key": "storefront.or_reply_cash_to_continue",
+      "group": "storefront",
+      "en": {
+        "other": "Or reply “cash” to continue."
+      },
+      "ar": {
+        "other": "أو أرسل «cash» للمتابعة."
+      }
+    },
+    {
+      "key": "storefront.we_could_not_update_your_total",
+      "group": "storefront",
+      "en": {
+        "other": "We could not update your total."
+      },
+      "ar": {
+        "other": "تعذر تحديث الإجمالي."
+      }
+    },
+    {
+      "key": "storefront.your_total_has_expired",
+      "group": "storefront",
+      "en": {
+        "other": "Your total has expired."
+      },
+      "ar": {
+        "other": "انتهت صلاحية الإجمالي."
+      }
+    },
+    {
+      "key": "storefront.your_payment_choice_is_recorded_below",
+      "group": "storefront",
+      "en": {
+        "other": "Your payment choice is recorded below."
+      },
+      "ar": {
+        "other": "طريقة الدفع المختارة مسجلة أدناه."
+      }
+    },
+    {
+      "key": "storefront.change_payment",
+      "group": "storefront",
+      "en": {
+        "other": "Change payment"
+      },
+      "ar": {
+        "other": "تغيير طريقة الدفع"
+      }
+    },
+    {
+      "key": "storefront.pay_when_you_receive_your_order",
+      "group": "storefront",
+      "en": {
+        "other": "Pay when you receive your order."
+      },
+      "ar": {
+        "other": "ادفع عند استلام طلبك."
+      }
+    },
+    {
+      "key": "storefront.cash_at_pickup",
+      "group": "storefront",
+      "en": {
+        "other": "Cash at pickup"
+      },
+      "ar": {
+        "other": "الدفع نقدًا عند الاستلام من الفرع"
+      }
+    },
+    {
+      "key": "storefront.cod",
+      "group": "storefront",
+      "en": {
+        "other": "COD"
+      },
+      "ar": {
+        "other": "الدفع عند الاستلام"
+      }
+    },
+    {
+      "key": "storefront.no_card_details_needed_please_have_the_order_total_ready_when_you_receive_your_order",
+      "group": "storefront",
+      "en": {
+        "other": "No card details needed. Please have the order total ready when you receive your order."
+      },
+      "ar": {
+        "other": "لا حاجة لبيانات بطاقة. يرجى تجهيز قيمة الطلب عند استلامه."
+      }
+    },
+    {
+      "key": "storefront.review_your_order",
+      "group": "storefront",
+      "en": {
+        "other": "Review your order"
+      },
+      "ar": {
+        "other": "مراجعة طلبك"
+      }
+    },
+    {
+      "key": "storefront.review_your_items_and_final_total_then_select_place_order",
+      "group": "storefront",
+      "en": {
+        "other": "Review your items and final total, then select Place order."
+      },
+      "ar": {
+        "other": "راجع المنتجات والإجمالي النهائي، ثم اختر إرسال الطلب."
+      }
+    },
+    {
+      "key": "storefront.scheduled_for",
+      "group": "storefront",
+      "en": {
+        "other": "Scheduled for"
+      },
+      "ar": {
+        "other": "الموعد المحدد"
+      }
+    },
+    {
+      "key": "storefront.the_order_details_changed_confirm_payment_again_before_placing_the_order",
+      "group": "storefront",
+      "en": {
+        "other": "The order details changed. Confirm payment again before placing the order."
+      },
+      "ar": {
+        "other": "تغيرت تفاصيل الطلب. أكّد طريقة الدفع مجددًا قبل إرسال الطلب."
+      }
+    },
+    {
+      "key": "storefront.confirm_your_order",
+      "group": "storefront",
+      "en": {
+        "other": "Confirm your order"
+      },
+      "ar": {
+        "other": "أكّد طلبك"
+      }
+    },
+    {
+      "key": "storefront.retry_below_to_confirm_the_same_submission",
+      "group": "storefront",
+      "en": {
+        "other": "Retry below to confirm the same submission."
+      },
+      "ar": {
+        "other": "أعد المحاولة أدناه لتأكيد الطلب نفسه."
+      }
+    },
+    {
+      "key": "storefront.i_confirm_cash_at_pickup_after_my_total_is_calculated",
+      "group": "storefront",
+      "en": {
+        "other": "I confirm cash at pickup after my total is calculated."
+      },
+      "ar": {
+        "other": "أوافق على الدفع نقدًا عند الاستلام من الفرع بعد حساب الإجمالي."
+      }
+    },
+    {
+      "key": "storefront.i_confirm_cash_on_delivery_after_my_total_is_calculated",
+      "group": "storefront",
+      "en": {
+        "other": "I confirm cash on delivery after my total is calculated."
+      },
+      "ar": {
+        "other": "أوافق على الدفع نقدًا عند التوصيل بعد حساب الإجمالي."
+      }
+    },
+    {
+      "key": "storefront.your_reviewed_total_has_expired_refresh_it_before_placing_your_order",
+      "group": "storefront",
+      "en": {
+        "other": "Your reviewed total has expired. Refresh it before placing your order."
+      },
+      "ar": {
+        "other": "انتهت صلاحية الإجمالي الذي راجعته. حدّثه قبل إرسال طلبك."
+      }
+    },
+    {
+      "key": "storefront.confirming_your_order",
+      "group": "storefront",
+      "en": {
+        "other": "Confirming your order…"
+      },
+      "ar": {
+        "other": "جارٍ تأكيد طلبك…"
+      }
+    },
+    {
+      "key": "storefront.retry_order_confirmation",
+      "group": "storefront",
+      "en": {
+        "other": "Retry order confirmation"
+      },
+      "ar": {
+        "other": "إعادة محاولة تأكيد الطلب"
+      }
+    },
+    {
+      "key": "storefront.retrying_will_not_create_a_second_order",
+      "group": "storefront",
+      "en": {
+        "other": "Retrying will not create a second order."
+      },
+      "ar": {
+        "other": "إعادة المحاولة لن تنشئ طلبًا آخر."
+      }
+    },
+    {
+      "key": "storefront.review_your_details_and_total_above_no_money_is_collected_until_pickup",
+      "group": "storefront",
+      "en": {
+        "other": "Review your details and total above. No money is collected until pickup."
+      },
+      "ar": {
+        "other": "راجع بياناتك والإجمالي أعلاه. لن يُحصّل أي مبلغ قبل الاستلام من الفرع."
+      }
+    },
+    {
+      "key": "storefront.review_your_details_and_total_above_no_money_is_collected_until_delivery",
+      "group": "storefront",
+      "en": {
+        "other": "Review your details and total above. No money is collected until delivery."
+      },
+      "ar": {
+        "other": "راجع بياناتك والإجمالي أعلاه. لن يُحصّل أي مبلغ قبل التوصيل."
+      }
+    },
+    {
+      "key": "storefront.loading_checkout",
+      "group": "storefront",
+      "en": {
+        "other": "Loading checkout"
+      },
+      "ar": {
+        "other": "جارٍ تحميل إتمام الطلب"
+      }
+    },
+    {
+      "key": "storefront.loading_checkout_details",
+      "group": "storefront",
+      "en": {
+        "other": "Loading checkout details…"
+      },
+      "ar": {
+        "other": "جارٍ تحميل تفاصيل الطلب…"
+      }
+    },
+    {
+      "key": "storefront.matching_products",
+      "group": "storefront",
+      "en": {
+        "other": "Matching products"
+      },
+      "ar": {
+        "other": "المنتجات المطابقة"
+      }
+    },
+    {
+      "key": "storefront.explore_products",
+      "group": "storefront",
+      "en": {
+        "other": "Explore products"
+      },
+      "ar": {
+        "other": "استكشف المنتجات"
+      }
+    },
+    {
+      "key": "storefront.find_your_next_essential",
+      "group": "storefront",
+      "en": {
+        "other": "Find your next essential"
+      },
+      "ar": {
+        "other": "اعثر على ما تحتاجه"
+      }
+    },
+    {
+      "key": "storefront.available_picks_from_our_catalog",
+      "group": "storefront",
+      "en": {
+        "other": "Available picks from our catalog"
+      },
+      "ar": {
+        "other": "اختيارات متوفرة من متجرنا"
+      }
+    },
+    {
+      "key": "storefront.searching_products",
+      "group": "storefront",
+      "en": {
+        "other": "Searching products…"
+      },
+      "ar": {
+        "other": "جارٍ البحث عن المنتجات…"
+      }
+    },
+    {
+      "key": "storefront.search_is_temporarily_unavailable",
+      "group": "storefront",
+      "en": {
+        "other": "Search is temporarily unavailable."
+      },
+      "ar": {
+        "other": "البحث غير متاح مؤقتًا."
+      }
+    },
+    {
+      "key": "storefront.suggested_products",
+      "group": "storefront",
+      "en": {
+        "other": "Suggested products"
+      },
+      "ar": {
+        "other": "منتجات مقترحة"
+      }
+    },
+    {
+      "key": "storefront.available",
+      "group": "storefront",
+      "en": {
+        "other": "Available"
+      },
+      "ar": {
+        "other": "متوفر"
+      }
+    },
+    {
+      "key": "storefront.currently_unavailable",
+      "group": "storefront",
+      "en": {
+        "other": "Currently unavailable"
+      },
+      "ar": {
+        "other": "غير متوفر حاليًا"
+      }
+    },
+    {
+      "key": "storefront.options_available",
+      "group": "storefront",
+      "en": {
+        "other": "Options available"
+      },
+      "ar": {
+        "other": "تتوفر خيارات"
+      }
+    },
+    {
+      "key": "storefront.view_options",
+      "group": "storefront",
+      "en": {
+        "other": "View options"
+      },
+      "ar": {
+        "other": "عرض الخيارات"
+      }
+    },
+    {
+      "key": "storefront.to_browse_enter_to_open_esc_to_close",
+      "group": "storefront",
+      "en": {
+        "other": "↑ ↓ to browse · Enter to open · Esc to close"
+      },
+      "ar": {
+        "other": "↑ ↓ للتصفح · Enter للفتح · Esc للإغلاق"
+      }
+    },
+    {
+      "key": "storefront.view_all_results",
+      "group": "storefront",
+      "en": {
+        "other": "View all results"
+      },
+      "ar": {
+        "other": "عرض كل النتائج"
+      }
+    },
+    {
+      "key": "storefront.browse_all_products",
+      "group": "storefront",
+      "en": {
+        "other": "Browse all products"
+      },
+      "ar": {
+        "other": "تصفح كل المنتجات"
+      }
+    },
+    {
+      "key": "storefront.saved_addresses",
+      "group": "storefront",
+      "en": {
+        "other": "Saved addresses"
+      },
+      "ar": {
+        "other": "العناوين المحفوظة"
+      }
+    },
+    {
+      "key": "storefront.deliver_here",
+      "group": "storefront",
+      "en": {
+        "other": "Deliver here"
+      },
+      "ar": {
+        "other": "التوصيل هنا"
+      }
+    },
+    {
+      "key": "storefront.select_address",
+      "group": "storefront",
+      "en": {
+        "other": "Select address"
+      },
+      "ar": {
+        "other": "اختر عنوانًا"
+      }
+    },
+    {
+      "key": "storefront.loading_map",
+      "group": "storefront",
+      "en": {
+        "other": "Loading map…"
+      },
+      "ar": {
+        "other": "جارٍ تحميل الخريطة…"
+      }
+    },
+    {
+      "key": "storefront.choose_how_to_set_your_location",
+      "group": "storefront",
+      "en": {
+        "other": "Choose how to set your location"
+      },
+      "ar": {
+        "other": "اختر طريقة تحديد موقعك"
+      }
+    },
+    {
+      "key": "storefront.select_one_option_then_add_your_street_and_building_details",
+      "group": "storefront",
+      "en": {
+        "other": "Select one option, then add your street and building details."
+      },
+      "ar": {
+        "other": "اختر طريقة، ثم أضف تفاصيل الشارع والمبنى."
+      }
+    },
+    {
+      "key": "storefront.delivery_location_method",
+      "group": "storefront",
+      "en": {
+        "other": "Delivery location method"
+      },
+      "ar": {
+        "other": "طريقة تحديد موقع التوصيل"
+      }
+    },
+    {
+      "key": "storefront.pin_your_building_entrance",
+      "group": "storefront",
+      "en": {
+        "other": "Pin your building entrance"
+      },
+      "ar": {
+        "other": "حدد مدخل المبنى على الخريطة"
+      }
+    },
+    {
+      "key": "storefront.use_the_map_or_your_current_location",
+      "group": "storefront",
+      "en": {
+        "other": "Use the map or your current location"
+      },
+      "ar": {
+        "other": "استخدم الخريطة أو موقعك الحالي"
+      }
+    },
+    {
+      "key": "storefront.choose_your_neighborhood",
+      "group": "storefront",
+      "en": {
+        "other": "Choose your neighborhood"
+      },
+      "ar": {
+        "other": "اختر منطقتك"
+      }
+    },
+    {
+      "key": "storefront.country_region_and_city",
+      "group": "storefront",
+      "en": {
+        "other": "Country, region and city"
+      },
+      "ar": {
+        "other": "الدولة والمنطقة والمدينة"
+      }
+    },
+    {
+      "key": "storefront.country",
+      "group": "storefront",
+      "en": {
+        "other": "Country"
+      },
+      "ar": {
+        "other": "الدولة"
+      }
+    },
+    {
+      "key": "storefront.choose_country",
+      "group": "storefront",
+      "en": {
+        "other": "Choose country"
+      },
+      "ar": {
+        "other": "اختر الدولة"
+      }
+    },
+    {
+      "key": "storefront.loading_regions",
+      "group": "storefront",
+      "en": {
+        "other": "Loading regions…"
+      },
+      "ar": {
+        "other": "جارٍ تحميل المناطق…"
+      }
+    },
+    {
+      "key": "storefront.the_location_list_could_not_be_loaded_retry_or_choose_a_map_pin",
+      "group": "storefront",
+      "en": {
+        "other": "The location list could not be loaded. Retry or choose a map pin."
+      },
+      "ar": {
+        "other": "تعذر تحميل قائمة المواقع. أعد المحاولة أو حدد موقعًا على الخريطة."
+      }
+    },
+    {
+      "key": "storefront.retry_location_list",
+      "group": "storefront",
+      "en": {
+        "other": "Retry location list"
+      },
+      "ar": {
+        "other": "إعادة تحميل قائمة المواقع"
+      }
+    },
+    {
+      "key": "storefront.no_pin_is_needed_for_this_option_availability_uses_an_approximate_area_location_your_street_and_buil",
+      "group": "storefront",
+      "en": {
+        "other": "No pin is needed for this option. Availability uses an approximate area location; your street and building details guide the driver."
+      },
+      "ar": {
+        "other": "لا يلزم تحديد نقطة على الخريطة لهذا الخيار. يُحدد التوفر حسب الموقع التقريبي للمنطقة، وتساعد تفاصيل الشارع والمبنى السائق في الوصول."
+      }
+    },
+    {
+      "key": "storefront.location_data",
+      "group": "storefront",
+      "en": {
+        "other": "Location data:"
+      },
+      "ar": {
+        "other": "بيانات المواقع:"
+      }
+    },
+    {
+      "key": "storefront.includes_cities_towns_villages_and_neighborhoods",
+      "group": "storefront",
+      "en": {
+        "other": ". Includes cities, towns, villages and neighborhoods."
+      },
+      "ar": {
+        "other": ". تشمل المدن والبلدات والقرى والأحياء."
+      }
+    },
+    {
+      "key": "storefront.browse_products_in_this_area",
+      "group": "storefront",
+      "en": {
+        "other": "Browse products in this area"
+      },
+      "ar": {
+        "other": "تصفح المنتجات في هذه المنطقة"
+      }
+    },
+    {
+      "key": "storefront.add_your_street_address_before_ordering",
+      "group": "storefront",
+      "en": {
+        "other": "Add your street address before ordering."
+      },
+      "ar": {
+        "other": "أضف عنوان الشارع قبل الطلب."
+      }
+    },
+    {
+      "key": "storefront.add_your_address_details",
+      "group": "storefront",
+      "en": {
+        "other": "Add your address details"
+      },
+      "ar": {
+        "other": "أضف تفاصيل عنوانك"
+      }
+    },
+    {
+      "key": "storefront.include_your_street_and_building_then_any_details_that_help_your_driver_find_you",
+      "group": "storefront",
+      "en": {
+        "other": "Include your street and building, then any details that help your driver find you."
+      },
+      "ar": {
+        "other": "أدخل الشارع والمبنى وأي تفاصيل تساعد السائق في الوصول إليك."
+      }
+    },
+    {
+      "key": "storefront.save_this_address_as",
+      "group": "storefront",
+      "en": {
+        "other": "Save this address as"
+      },
+      "ar": {
+        "other": "احفظ هذا العنوان باسم"
+      }
+    },
+    {
+      "key": "storefront.other",
+      "group": "storefront",
+      "en": {
+        "other": "Other"
+      },
+      "ar": {
+        "other": "آخر"
+      }
+    },
+    {
+      "key": "storefront.custom_label",
+      "group": "storefront",
+      "en": {
+        "other": "Custom label"
+      },
+      "ar": {
+        "other": "اسم مخصص"
+      }
+    },
+    {
+      "key": "storefront.enter_map_coordinates_manually",
+      "group": "storefront",
+      "en": {
+        "other": "Enter map coordinates manually"
+      },
+      "ar": {
+        "other": "إدخال إحداثيات الخريطة يدويًا"
+      }
+    },
+    {
+      "key": "storefront.use_as_default_location",
+      "group": "storefront",
+      "en": {
+        "other": "Use as default location"
+      },
+      "ar": {
+        "other": "استخدامه كعنوان افتراضي"
+      }
+    },
+    {
+      "key": "storefront.not_deliverable_here_yet",
+      "group": "storefront",
+      "en": {
+        "other": "Not deliverable here yet"
+      },
+      "ar": {
+        "other": "التوصيل غير متاح هنا حاليًا"
+      }
+    },
+    {
+      "key": "storefront.delivery_location",
+      "group": "storefront",
+      "en": {
+        "other": "DELIVERY LOCATION"
+      },
+      "ar": {
+        "other": "موقع التوصيل"
+      }
+    },
+    {
+      "key": "storefront.add_a_new_delivery_address",
+      "group": "storefront",
+      "en": {
+        "other": "Add a new delivery address"
+      },
+      "ar": {
+        "other": "إضافة عنوان توصيل جديد"
+      }
+    },
+    {
+      "key": "storefront.my_addresses",
+      "group": "storefront",
+      "en": {
+        "other": "My addresses"
+      },
+      "ar": {
+        "other": "عناويني"
+      }
+    },
+    {
+      "key": "storefront.set_your_address_to_see_the_products_available_near_you_and_help_your_driver_find_the_right_entrance",
+      "group": "storefront",
+      "en": {
+        "other": "Set your address to see the products available near you and help your driver find the right entrance."
+      },
+      "ar": {
+        "other": "حدد عنوانك لعرض المنتجات المتوفرة بالقرب منك ومساعدة السائق في الوصول إلى المدخل الصحيح."
+      }
+    },
+    {
+      "key": "storefront.save_your_delivery_location",
+      "group": "storefront",
+      "en": {
+        "other": "Save your delivery location"
+      },
+      "ar": {
+        "other": "حفظ موقع التوصيل"
+      }
+    },
+    {
+      "key": "storefront.use_a_saved_address",
+      "group": "storefront",
+      "en": {
+        "other": "Use a saved address"
+      },
+      "ar": {
+        "other": "استخدام عنوان محفوظ"
+      }
+    },
+    {
+      "key": "storefront.use_saved_location",
+      "group": "storefront",
+      "en": {
+        "other": "Use saved location"
+      },
+      "ar": {
+        "other": "استخدام موقع محفوظ"
+      }
+    },
+    {
+      "key": "storefront.manage_saved_locations",
+      "group": "storefront",
+      "en": {
+        "other": "Manage saved locations"
+      },
+      "ar": {
+        "other": "إدارة العناوين المحفوظة"
+      }
+    },
+    {
+      "key": "storefront.loading_your_addresses",
+      "group": "storefront",
+      "en": {
+        "other": "Loading your addresses…"
+      },
+      "ar": {
+        "other": "جارٍ تحميل عناوينك…"
+      }
+    },
+    {
+      "key": "storefront.you_have_no_saved_addresses_yet",
+      "group": "storefront",
+      "en": {
+        "other": "You have no saved addresses yet."
+      },
+      "ar": {
+        "other": "ليس لديك عناوين محفوظة بعد."
+      }
+    },
+    {
+      "key": "storefront.to_see_your_saved_addresses",
+      "group": "storefront",
+      "en": {
+        "other": "to see your saved addresses."
+      },
+      "ar": {
+        "other": "لعرض عناوينك المحفوظة."
+      }
+    },
+    {
+      "key": "storefront.your_address_is_kept_for_this_visit_sign_in_to_save_it_to_your_account_and_place_an_order",
+      "group": "storefront",
+      "en": {
+        "other": "Your address is kept for this visit. Sign in to save it to your account and place an order."
+      },
+      "ar": {
+        "other": "عنوانك محفوظ لهذه الزيارة. سجّل الدخول لحفظه في حسابك وإرسال طلب."
+      }
+    },
+    {
+      "key": "storefront.saving_your_address",
+      "group": "storefront",
+      "en": {
+        "other": "Saving your address…"
+      },
+      "ar": {
+        "other": "جارٍ حفظ عنوانك…"
+      }
+    },
+    {
+      "key": "storefront.save_delivery_address",
+      "group": "storefront",
+      "en": {
+        "other": "Save delivery address"
+      },
+      "ar": {
+        "other": "حفظ عنوان التوصيل"
+      }
+    },
+    {
+      "key": "storefront.use_this_delivery_address",
+      "group": "storefront",
+      "en": {
+        "other": "Use this delivery address"
+      },
+      "ar": {
+        "other": "استخدام عنوان التوصيل هذا"
+      }
+    },
+    {
+      "key": "storefront.not_now",
+      "group": "storefront",
+      "en": {
+        "other": "Not now"
+      },
+      "ar": {
+        "other": "ليس الآن"
+      }
+    },
+    {
+      "key": "storefront.your_delivery_location",
+      "group": "storefront",
+      "en": {
+        "other": "Your delivery location"
+      },
+      "ar": {
+        "other": "موقع التوصيل الخاص بك"
+      }
+    },
+    {
+      "key": "storefront.add_your_street_address",
+      "group": "storefront",
+      "en": {
+        "other": "Add your street address"
+      },
+      "ar": {
+        "other": "أضف عنوان الشارع"
+      }
+    },
+    {
+      "key": "storefront.your_building_details_will_appear_here",
+      "group": "storefront",
+      "en": {
+        "other": "Your building details will appear here."
+      },
+      "ar": {
+        "other": "ستظهر تفاصيل المبنى هنا."
+      }
+    },
+    {
+      "key": "storefront.choose_your_delivery_location",
+      "group": "storefront",
+      "en": {
+        "other": "Choose your delivery location"
+      },
+      "ar": {
+        "other": "اختر موقع التوصيل"
+      }
+    },
+    {
+      "key": "storefront.checking_this_location",
+      "group": "storefront",
+      "en": {
+        "other": "Checking this location…"
+      },
+      "ar": {
+        "other": "جارٍ التحقق من هذا الموقع…"
+      }
+    },
+    {
+      "key": "storefront.availability_could_not_be_checked",
+      "group": "storefront",
+      "en": {
+        "other": "Availability could not be checked"
+      },
+      "ar": {
+        "other": "تعذر التحقق من التوفر"
+      }
+    },
+    {
+      "key": "storefront.delivery_coverage_is_not_set_up_yet",
+      "group": "storefront",
+      "en": {
+        "other": "Delivery coverage is not set up yet"
+      },
+      "ar": {
+        "other": "لم تُحدد تغطية التوصيل بعد"
+      }
+    },
+    {
+      "key": "storefront.this_location_is_inside_a_delivery_area",
+      "group": "storefront",
+      "en": {
+        "other": "This location is inside a delivery area"
+      },
+      "ar": {
+        "other": "هذا الموقع ضمن منطقة التوصيل"
+      }
+    },
+    {
+      "key": "storefront.this_location_is_outside_our_delivery_areas",
+      "group": "storefront",
+      "en": {
+        "other": "This location is outside our delivery areas"
+      },
+      "ar": {
+        "other": "هذا الموقع خارج مناطق التوصيل"
+      }
+    },
+    {
+      "key": "storefront.choose_your_country_region_and_city_or_pin_your_building_entrance",
+      "group": "storefront",
+      "en": {
+        "other": "Choose your country, region and city, or pin your building entrance."
+      },
+      "ar": {
+        "other": "اختر الدولة والمنطقة والمدينة، أو حدد مدخل المبنى على الخريطة."
+      }
+    },
+    {
+      "key": "storefront.you_can_save_your_address_and_check_availability_again_later",
+      "group": "storefront",
+      "en": {
+        "other": "You can save your address and check availability again later."
+      },
+      "ar": {
+        "other": "يمكنك حفظ عنوانك والتحقق من التوفر لاحقًا."
+      }
+    },
+    {
+      "key": "storefront.you_can_save_this_address_but_ordering_here_is_not_currently_available_check_your_selected_city_or_p",
+      "group": "storefront",
+      "en": {
+        "other": "You can save this address, but ordering here is not currently available. Check your selected city or pin."
+      },
+      "ar": {
+        "other": "يمكنك حفظ هذا العنوان، لكن الطلب غير متاح هنا حاليًا. راجع المدينة أو الموقع المحدد."
+      }
+    },
+    {
+      "key": "storefront.saving_this_address_updates_the_products_you_can_shop_neighborhood_availability_is_based_on_an_appro",
+      "group": "storefront",
+      "en": {
+        "other": "Saving this address updates the products you can shop. Neighborhood availability is based on an approximate area location."
+      },
+      "ar": {
+        "other": "حفظ هذا العنوان يحدّث المنتجات التي يمكنك تسوقها. يُحدد التوفر في الحي بناءً على موقع تقريبي للمنطقة."
+      }
+    },
+    {
+      "key": "storefront.two_ways_to_choose",
+      "group": "storefront",
+      "en": {
+        "other": "Two ways to choose"
+      },
+      "ar": {
+        "other": "طريقتان للاختيار"
+      }
+    },
+    {
+      "key": "storefront.to_select_a_country_region_and_city_without_using_the_map",
+      "group": "storefront",
+      "en": {
+        "other": "to select a country, region and city without using the map."
+      },
+      "ar": {
+        "other": "لاختيار الدولة والمنطقة والمدينة دون استخدام الخريطة."
+      }
+    },
+    {
+      "key": "storefront.or_pin_your_entrance",
+      "group": "storefront",
+      "en": {
+        "other": "Or pin your entrance"
+      },
+      "ar": {
+        "other": "أو حدد مدخل المبنى"
+      }
+    },
+    {
+      "key": "storefront.to_give_the_driver_an_exact_map_location",
+      "group": "storefront",
+      "en": {
+        "other": "to give the driver an exact map location."
+      },
+      "ar": {
+        "other": "لتزويد السائق بموقع دقيق على الخريطة."
+      }
+    },
+    {
+      "key": "storefront.your_address_details",
+      "group": "storefront",
+      "en": {
+        "other": "Your address details"
+      },
+      "ar": {
+        "other": "تفاصيل عنوانك"
+      }
+    },
+    {
+      "key": "storefront.tell_the_driver_the_building_floor_and_apartment",
+      "group": "storefront",
+      "en": {
+        "other": "tell the driver the building, floor, and apartment."
+      },
+      "ar": {
+        "other": "توضح للسائق المبنى والطابق والشقة."
+      }
+    },
+    {
+      "key": "storefront.currently_used_for_shopping",
+      "group": "storefront",
+      "en": {
+        "other": "Currently used for shopping"
+      },
+      "ar": {
+        "other": "المستخدم حاليًا للتسوق"
+      }
+    },
+    {
+      "key": "storefront.need_help_with_your_address",
+      "group": "storefront",
+      "en": {
+        "other": "Need help with your address?"
+      },
+      "ar": {
+        "other": "تحتاج مساعدة بخصوص عنوانك؟"
+      }
+    },
+    {
+      "key": "storefront.pickup_location_time",
+      "group": "storefront",
+      "en": {
+        "other": "Pickup location & time"
+      },
+      "ar": {
+        "other": "مكان وموعد الاستلام"
+      }
+    },
+    {
+      "key": "storefront.delivery_options",
+      "group": "storefront",
+      "en": {
+        "other": "Delivery options"
+      },
+      "ar": {
+        "other": "خيارات التوصيل"
+      }
+    },
+    {
+      "key": "storefront.delivery_availability",
+      "group": "storefront",
+      "en": {
+        "other": "Delivery availability"
+      },
+      "ar": {
+        "other": "توفر التوصيل"
+      }
+    },
+    {
+      "key": "storefront.choose_a_pickup_location",
+      "group": "storefront",
+      "en": {
+        "other": "Choose a pickup location"
+      },
+      "ar": {
+        "other": "اختر نقطة استلام"
+      }
+    },
+    {
+      "key": "storefront.estimated_preparation",
+      "group": "storefront",
+      "en": {
+        "other": "Estimated preparation:"
+      },
+      "ar": {
+        "other": "وقت التجهيز المتوقع:"
+      }
+    },
+    {
+      "key": "storefront.minutes_availability_is_confirmed_below",
+      "group": "storefront",
+      "en": {
+        "other": "minutes. Availability is confirmed below."
+      },
+      "ar": {
+        "other": "دقيقة. يُؤكد التوفر أدناه."
+      }
+    },
+    {
+      "key": "storefront.collect_here",
+      "group": "storefront",
+      "en": {
+        "other": "Collect here"
+      },
+      "ar": {
+        "other": "الاستلام هنا"
+      }
+    },
+    {
+      "key": "storefront.select_location",
+      "group": "storefront",
+      "en": {
+        "other": "Select location"
+      },
+      "ar": {
+        "other": "اختر الموقع"
+      }
+    },
+    {
+      "key": "storefront.delivery_location_2",
+      "group": "storefront",
+      "en": {
+        "other": "Delivery location"
+      },
+      "ar": {
+        "other": "موقع التوصيل"
+      }
+    },
+    {
+      "key": "storefront.choose_a_location",
+      "group": "storefront",
+      "en": {
+        "other": "Choose a location"
+      },
+      "ar": {
+        "other": "اختر موقعًا"
+      }
+    },
+    {
+      "key": "storefront.delivery_timing",
+      "group": "storefront",
+      "en": {
+        "other": "Delivery timing"
+      },
+      "ar": {
+        "other": "موعد التوصيل"
+      }
+    },
+    {
+      "key": "storefront.as_soon_as_possible",
+      "group": "storefront",
+      "en": {
+        "other": "As soon as possible"
+      },
+      "ar": {
+        "other": "في أقرب وقت ممكن"
+      }
+    },
+    {
+      "key": "storefront.choose_a_window",
+      "group": "storefront",
+      "en": {
+        "other": "Choose a window"
+      },
+      "ar": {
+        "other": "اختر فترة زمنية"
+      }
+    },
+    {
+      "key": "storefront.date",
+      "group": "storefront",
+      "en": {
+        "other": "Date"
+      },
+      "ar": {
+        "other": "التاريخ"
+      }
+    },
+    {
+      "key": "storefront.no_pickup_locations_can_fulfill_your_cart_right_now",
+      "group": "storefront",
+      "en": {
+        "other": "No pickup locations can fulfill your cart right now."
+      },
+      "ar": {
+        "other": "لا توجد نقاط استلام يمكنها تلبية طلبك حاليًا."
+      }
+    },
+    {
+      "key": "storefront.checking_stock_and_availability",
+      "group": "storefront",
+      "en": {
+        "other": "Checking stock and availability…"
+      },
+      "ar": {
+        "other": "جارٍ التحقق من المخزون والتوفر…"
+      }
+    },
+    {
+      "key": "storefront.no_common_windows_try_another_date",
+      "group": "storefront",
+      "en": {
+        "other": "No common windows. Try another date."
+      },
+      "ar": {
+        "other": "لا توجد فترات مشتركة. جرب تاريخًا آخر."
+      }
+    },
+    {
+      "key": "storefront.ready_asap_after_preparation",
+      "group": "storefront",
+      "en": {
+        "other": "Ready ASAP after preparation."
+      },
+      "ar": {
+        "other": "جاهز في أقرب وقت بعد التجهيز."
+      }
+    },
+    {
+      "key": "storefront.delivery_as_soon_as_possible",
+      "group": "storefront",
+      "en": {
+        "other": "Delivery as soon as possible."
+      },
+      "ar": {
+        "other": "التوصيل في أقرب وقت ممكن."
+      }
+    },
+    {
+      "key": "storefront.checking",
+      "group": "storefront",
+      "en": {
+        "other": "Checking…"
+      },
+      "ar": {
+        "other": "جارٍ التحقق…"
+      }
+    },
+    {
+      "key": "storefront.retry_availability",
+      "group": "storefront",
+      "en": {
+        "other": "Retry availability"
+      },
+      "ar": {
+        "other": "إعادة التحقق من التوفر"
+      }
+    },
+    {
+      "key": "storefront.confirm_pickup_location_and_time",
+      "group": "storefront",
+      "en": {
+        "other": "Confirm pickup location and time"
+      },
+      "ar": {
+        "other": "تأكيد مكان وموعد الاستلام"
+      }
+    },
+    {
+      "key": "storefront.confirm_delivery_availability",
+      "group": "storefront",
+      "en": {
+        "other": "Confirm delivery availability"
+      },
+      "ar": {
+        "other": "تأكيد توفر التوصيل"
+      }
+    },
+    {
+      "key": "storefront.preparing_your_total",
+      "group": "storefront",
+      "en": {
+        "other": "Preparing your total…"
+      },
+      "ar": {
+        "other": "جارٍ حساب الإجمالي…"
+      }
+    },
+    {
+      "key": "storefront.delivery_window",
+      "group": "storefront",
+      "en": {
+        "other": "Delivery window"
+      },
+      "ar": {
+        "other": "فترة التوصيل"
+      }
+    },
+    {
+      "key": "storefront.choose_an_available_time_your_window_is_held_temporarily_while_you_complete_checkout",
+      "group": "storefront",
+      "en": {
+        "other": "Choose an available time. Your window is held temporarily while you complete checkout."
+      },
+      "ar": {
+        "other": "اختر موعدًا متاحًا. يُحجز موعدك مؤقتًا أثناء إتمام الطلب."
+      }
+    },
+    {
+      "key": "storefront.delivery_date",
+      "group": "storefront",
+      "en": {
+        "other": "Delivery date"
+      },
+      "ar": {
+        "other": "تاريخ التوصيل"
+      }
+    },
+    {
+      "key": "storefront.window_reserved",
+      "group": "storefront",
+      "en": {
+        "other": "Window reserved ·"
+      },
+      "ar": {
+        "other": "الفترة محجوزة ·"
+      }
+    },
+    {
+      "key": "storefront.minutes_remaining",
+      "group": "storefront",
+      "en": {
+        "other": "minutes remaining"
+      },
+      "ar": {
+        "other": "دقائق متبقية"
+      }
+    },
+    {
+      "key": "storefront.your_delivery_hold_expired_select_a_window_again_before_confirming_your_order",
+      "group": "storefront",
+      "en": {
+        "other": "Your delivery hold expired. Select a window again before confirming your order."
+      },
+      "ar": {
+        "other": "انتهت صلاحية حجز التوصيل. اختر فترة مجددًا قبل تأكيد طلبك."
+      }
+    },
+    {
+      "key": "storefront.checking_delivery_availability",
+      "group": "storefront",
+      "en": {
+        "other": "Checking delivery availability…"
+      },
+      "ar": {
+        "other": "جارٍ التحقق من توفر التوصيل…"
+      }
+    },
+    {
+      "key": "storefront.no_delivery_windows_are_available_on_this_date_try_another_day",
+      "group": "storefront",
+      "en": {
+        "other": "No delivery windows are available on this date. Try another day."
+      },
+      "ar": {
+        "other": "لا توجد فترات توصيل متاحة في هذا التاريخ. جرب يومًا آخر."
+      }
+    },
+    {
+      "key": "storefront.no_limit",
+      "group": "storefront",
+      "en": {
+        "other": "No limit"
+      },
+      "ar": {
+        "other": "بلا حد"
+      }
+    },
+    {
+      "key": "storefront.minimum_price_slider",
+      "group": "storefront",
+      "en": {
+        "other": "Minimum price slider"
+      },
+      "ar": {
+        "other": "شريط الحد الأدنى للسعر"
+      }
+    },
+    {
+      "key": "storefront.maximum_price_slider",
+      "group": "storefront",
+      "en": {
+        "other": "Maximum price slider"
+      },
+      "ar": {
+        "other": "شريط الحد الأقصى للسعر"
+      }
+    },
+    {
+      "key": "storefront.from",
+      "group": "storefront",
+      "en": {
+        "other": "From ($)"
+      },
+      "ar": {
+        "other": "من ($)"
+      }
+    },
+    {
+      "key": "storefront.minimum_price",
+      "group": "storefront",
+      "en": {
+        "other": "Minimum price"
+      },
+      "ar": {
+        "other": "الحد الأدنى للسعر"
+      }
+    },
+    {
+      "key": "storefront.to",
+      "group": "storefront",
+      "en": {
+        "other": "To ($)"
+      },
+      "ar": {
+        "other": "إلى ($)"
+      }
+    },
+    {
+      "key": "storefront.maximum_price",
+      "group": "storefront",
+      "en": {
+        "other": "Maximum price"
+      },
+      "ar": {
+        "other": "الحد الأقصى للسعر"
+      }
+    },
+    {
+      "key": "storefront.original_price",
+      "group": "storefront",
+      "en": {
+        "other": "Original price:"
+      },
+      "ar": {
+        "other": "السعر الأصلي:"
+      }
+    },
+    {
+      "key": "storefront.off",
+      "group": "storefront",
+      "en": {
+        "other": "% off"
+      },
+      "ar": {
+        "other": "٪ خصم"
+      }
+    },
+    {
+      "key": "storefront.you_save",
+      "group": "storefront",
+      "en": {
+        "other": "You save"
+      },
+      "ar": {
+        "other": "توفر"
+      }
+    },
+    {
+      "key": "storefront.shop_categories",
+      "group": "storefront",
+      "en": {
+        "other": "Shop categories"
+      },
+      "ar": {
+        "other": "تسوق حسب الفئة"
+      }
+    },
+    {
+      "key": "storefront.breadcrumb",
+      "group": "storefront",
+      "en": {
+        "other": "Breadcrumb"
+      },
+      "ar": {
+        "other": "مسار التصفح"
+      }
+    },
+    {
+      "key": "storefront.sold_individually",
+      "group": "storefront",
+      "en": {
+        "other": "Sold individually"
+      },
+      "ar": {
+        "other": "يباع منفردًا"
+      }
+    },
+    {
+      "key": "storefront.choose_your_items",
+      "group": "storefront",
+      "en": {
+        "other": "Choose your items"
+      },
+      "ar": {
+        "other": "اختر منتجاتك"
+      }
+    },
+    {
+      "key": "storefront.choose_a_size",
+      "group": "storefront",
+      "en": {
+        "other": "Choose a size"
+      },
+      "ar": {
+        "other": "اختر المقاس"
+      }
+    },
+    {
+      "key": "storefront.available_to_order",
+      "group": "storefront",
+      "en": {
+        "other": "Available to order"
+      },
+      "ar": {
+        "other": "متاح للطلب"
+      }
+    },
+    {
+      "key": "storefront.check_availability",
+      "group": "storefront",
+      "en": {
+        "other": "Check availability"
+      },
+      "ar": {
+        "other": "تحقق من التوفر"
+      }
+    },
+    {
+      "key": "storefront.view_product",
+      "group": "storefront",
+      "en": {
+        "other": "View product ↗"
+      },
+      "ar": {
+        "other": "عرض المنتج ↗"
+      }
+    },
+    {
+      "key": "storefront.hide_filters",
+      "group": "storefront",
+      "en": {
+        "other": "Hide filters"
+      },
+      "ar": {
+        "other": "إخفاء الفلاتر"
+      }
+    },
+    {
+      "key": "storefront.show_filters",
+      "group": "storefront",
+      "en": {
+        "other": "Show filters"
+      },
+      "ar": {
+        "other": "عرض الفلاتر"
+      }
+    },
+    {
+      "key": "storefront.product_filters",
+      "group": "storefront",
+      "en": {
+        "other": "Product filters"
+      },
+      "ar": {
+        "other": "فلاتر المنتجات"
+      }
+    },
+    {
+      "key": "storefront.filter_products",
+      "group": "storefront",
+      "en": {
+        "other": "Filter products"
+      },
+      "ar": {
+        "other": "تصفية المنتجات"
+      }
+    },
+    {
+      "key": "storefront.updates_automatically",
+      "group": "storefront",
+      "en": {
+        "other": "Updates automatically"
+      },
+      "ar": {
+        "other": "يُحدّث تلقائيًا"
+      }
+    },
+    {
+      "key": "storefront.category",
+      "group": "storefront",
+      "en": {
+        "other": "Category"
+      },
+      "ar": {
+        "other": "الفئة"
+      }
+    },
+    {
+      "key": "storefront.all_categories",
+      "group": "storefront",
+      "en": {
+        "other": "All categories"
+      },
+      "ar": {
+        "other": "كل الفئات"
+      }
+    },
+    {
+      "key": "storefront.in_stock_only",
+      "group": "storefront",
+      "en": {
+        "other": "In stock only"
+      },
+      "ar": {
+        "other": "المتوفر فقط"
+      }
+    },
+    {
+      "key": "storefront.reset_all_filters",
+      "group": "storefront",
+      "en": {
+        "other": "Reset all filters"
+      },
+      "ar": {
+        "other": "إعادة تعيين كل الفلاتر"
+      }
+    },
+    {
+      "key": "storefront.products",
+      "group": "storefront",
+      "en": {
+        "other": "Products"
+      },
+      "ar": {
+        "other": "المنتجات"
+      }
+    },
+    {
+      "key": "storefront.all_products",
+      "group": "storefront",
+      "en": {
+        "other": "All products"
+      },
+      "ar": {
+        "other": "كل المنتجات"
+      }
+    },
+    {
+      "key": "storefront.updating_products",
+      "group": "storefront",
+      "en": {
+        "other": "Updating products…"
+      },
+      "ar": {
+        "other": "جارٍ تحديث المنتجات…"
+      }
+    },
+    {
+      "key": "storefront.finding_your_favorites",
+      "group": "storefront",
+      "en": {
+        "other": "Finding your favorites…"
+      },
+      "ar": {
+        "other": "جارٍ البحث عن اختياراتك…"
+      }
+    },
+    {
+      "key": "storefront.try_another_search_or_widen_your_filters",
+      "group": "storefront",
+      "en": {
+        "other": "Try another search or widen your filters."
+      },
+      "ar": {
+        "other": "جرب بحثًا آخر أو وسّع نطاق الفلاتر."
+      }
+    },
+    {
+      "key": "storefront.previous",
+      "group": "storefront",
+      "en": {
+        "other": "Previous"
+      },
+      "ar": {
+        "other": "السابق"
+      }
+    },
+    {
+      "key": "storefront.page",
+      "group": "storefront",
+      "en": {
+        "other": "Page"
+      },
+      "ar": {
+        "other": "الصفحة"
+      }
+    },
+    {
+      "key": "storefront.next",
+      "group": "storefront",
+      "en": {
+        "other": "Next"
+      },
+      "ar": {
+        "other": "التالي"
+      }
+    },
+    {
+      "key": "storefront.loading_product",
+      "group": "storefront",
+      "en": {
+        "other": "Loading product"
+      },
+      "ar": {
+        "other": "جارٍ تحميل المنتج"
+      }
+    },
+    {
+      "key": "storefront.product_gallery",
+      "group": "storefront",
+      "en": {
+        "other": "Product gallery"
+      },
+      "ar": {
+        "other": "صور المنتج"
+      }
+    },
+    {
+      "key": "storefront.choose_your_items_below",
+      "group": "storefront",
+      "en": {
+        "other": "Choose your items below"
+      },
+      "ar": {
+        "other": "اختر منتجاتك أدناه"
+      }
+    },
+    {
+      "key": "storefront.technical_description",
+      "group": "storefront",
+      "en": {
+        "other": "Technical description"
+      },
+      "ar": {
+        "other": "الوصف الفني"
+      }
+    },
+    {
+      "key": "storefront.customer_care",
+      "group": "storefront",
+      "en": {
+        "other": "Customer care"
+      },
+      "ar": {
+        "other": "خدمة العملاء"
+      }
+    },
+    {
+      "key": "storefront.need_help_choosing_your_piece_or_finding_the_right_size",
+      "group": "storefront",
+      "en": {
+        "other": "Need help choosing your piece or finding the right size?"
+      },
+      "ar": {
+        "other": "تحتاج مساعدة في الاختيار أو إيجاد المقاس المناسب؟"
+      }
+    },
+    {
+      "key": "storefront.ask_our_assistant",
+      "group": "storefront",
+      "en": {
+        "other": "Ask our assistant"
+      },
+      "ar": {
+        "other": "اسأل مساعدنا"
+      }
+    },
+    {
+      "key": "storefront.contact_customer_care",
+      "group": "storefront",
+      "en": {
+        "other": "Contact customer care"
+      },
+      "ar": {
+        "other": "تواصل مع خدمة العملاء"
+      }
+    },
+    {
+      "key": "storefront.model",
+      "group": "storefront",
+      "en": {
+        "other": "Model"
+      },
+      "ar": {
+        "other": "الطراز"
+      }
+    },
+    {
+      "key": "storefront.select_the_option_that_suits_you",
+      "group": "storefront",
+      "en": {
+        "other": "Select the option that suits you"
+      },
+      "ar": {
+        "other": "اختر الخيار المناسب لك"
+      }
+    },
+    {
+      "key": "storefront.product_information",
+      "group": "storefront",
+      "en": {
+        "other": "Product information"
+      },
+      "ar": {
+        "other": "معلومات المنتج"
+      }
+    },
+    {
+      "key": "storefront.specifications",
+      "group": "storefront",
+      "en": {
+        "other": "Specifications"
+      },
+      "ar": {
+        "other": "المواصفات"
+      }
+    },
+    {
+      "key": "storefront.customer_reviews",
+      "group": "storefront",
+      "en": {
+        "other": "Customer reviews"
+      },
+      "ar": {
+        "other": "تقييمات العملاء"
+      }
+    },
+    {
+      "key": "storefront.product_overview",
+      "group": "storefront",
+      "en": {
+        "other": "Product overview"
+      },
+      "ar": {
+        "other": "نبذة عن المنتج"
+      }
+    },
+    {
+      "key": "storefront.find_your_perfect_fit",
+      "group": "storefront",
+      "en": {
+        "other": "Find your perfect fit"
+      },
+      "ar": {
+        "other": "اعثر على ما يناسبك"
+      }
+    },
+    {
+      "key": "storefront.ask_about_features_compare_your_options_or_get_help_choosing",
+      "group": "storefront",
+      "en": {
+        "other": "Ask about features, compare your options, or get help choosing."
+      },
+      "ar": {
+        "other": "اسأل عن المزايا أو قارن الخيارات أو احصل على مساعدة في الاختيار."
+      }
+    },
+    {
+      "key": "storefront.ask_the_shopping_assistant",
+      "group": "storefront",
+      "en": {
+        "other": "Ask the shopping assistant ↗"
+      },
+      "ar": {
+        "other": "اسأل مساعد التسوق ↗"
+      }
+    },
+    {
+      "key": "storefront.purchase_options",
+      "group": "storefront",
+      "en": {
+        "other": "Purchase options"
+      },
+      "ar": {
+        "other": "خيارات الشراء"
+      }
+    },
+    {
+      "key": "storefront.check_availability_for_your_area",
+      "group": "storefront",
+      "en": {
+        "other": "Check availability for your area"
+      },
+      "ar": {
+        "other": "تحقق من التوفر في منطقتك"
+      }
+    },
+    {
+      "key": "storefront.pay_in_full",
+      "group": "storefront",
+      "en": {
+        "other": "Pay in full"
+      },
+      "ar": {
+        "other": "الدفع بالكامل"
+      }
+    },
+    {
+      "key": "storefront.price",
+      "group": "storefront",
+      "en": {
+        "other": "Price"
+      },
+      "ar": {
+        "other": "السعر"
+      }
+    },
+    {
+      "key": "storefront.delivery_availability_2",
+      "group": "storefront",
+      "en": {
+        "other": "Delivery & availability"
+      },
+      "ar": {
+        "other": "التوصيل والتوفر"
+      }
+    },
+    {
+      "key": "storefront.set_your_delivery_location_to_see_availability_for_your_area",
+      "group": "storefront",
+      "en": {
+        "other": "Set your delivery location to see availability for your area."
+      },
+      "ar": {
+        "other": "حدد موقع التوصيل لمعرفة التوفر في منطقتك."
+      }
+    },
+    {
+      "key": "storefront.set_delivery_location",
+      "group": "storefront",
+      "en": {
+        "other": "Set delivery location"
+      },
+      "ar": {
+        "other": "تحديد موقع التوصيل"
+      }
+    },
+    {
+      "key": "storefront.review_your_items_and_final_total_before_placing_your_order",
+      "group": "storefront",
+      "en": {
+        "other": "Review your items and final total before placing your order."
+      },
+      "ar": {
+        "other": "راجع المنتجات والإجمالي النهائي قبل إرسال الطلب."
+      }
+    },
+    {
+      "key": "storefront.the_details",
+      "group": "storefront",
+      "en": {
+        "other": "THE DETAILS"
+      },
+      "ar": {
+        "other": "التفاصيل"
+      }
+    },
+    {
+      "key": "storefront.technical_specifications",
+      "group": "storefront",
+      "en": {
+        "other": "Technical specifications"
+      },
+      "ar": {
+        "other": "المواصفات الفنية"
+      }
+    },
+    {
+      "key": "storefront.model_sku",
+      "group": "storefront",
+      "en": {
+        "other": "Model / SKU"
+      },
+      "ar": {
+        "other": "الطراز / رمز المنتج"
+      }
+    },
+    {
+      "key": "storefront.loading_your_store",
+      "group": "storefront",
+      "en": {
+        "other": "Loading your store"
+      },
+      "ar": {
+        "other": "جارٍ تحميل متجرك"
+      }
+    },
+    {
+      "key": "storefront.storefront_unavailable",
+      "group": "storefront",
+      "en": {
+        "other": "Storefront unavailable"
+      },
+      "ar": {
+        "other": "المتجر غير متاح"
+      }
+    },
+    {
+      "key": "storefront.we_could_not_load_this_storefront_please_refresh_and_try_again",
+      "group": "storefront",
+      "en": {
+        "other": "We could not load this storefront. Please refresh and try again."
+      },
+      "ar": {
+        "other": "تعذر تحميل المتجر. حدّث الصفحة وحاول مجددًا."
+      }
+    },
+    {
+      "key": "storefront.shopping_city",
+      "group": "storefront",
+      "en": {
+        "other": "Shopping city"
+      },
+      "ar": {
+        "other": "مدينة التسوق"
+      }
+    },
+    {
+      "key": "storefront.no_city_preference",
+      "group": "storefront",
+      "en": {
+        "other": "No city preference"
+      },
+      "ar": {
+        "other": "بلا مدينة مفضلة"
+      }
+    },
+    {
+      "key": "storefront.loading_products",
+      "group": "storefront",
+      "en": {
+        "other": "Loading products..."
+      },
+      "ar": {
+        "other": "جارٍ تحميل المنتجات…"
+      }
+    },
+    {
+      "key": "storefront.products_are_temporarily_unavailable",
+      "group": "storefront",
+      "en": {
+        "other": "Products are temporarily unavailable."
+      },
+      "ar": {
+        "other": "المنتجات غير متاحة مؤقتًا."
+      }
+    },
+    {
+      "key": "storefront.no_best_sellers_for_this_period_yet",
+      "group": "storefront",
+      "en": {
+        "other": "No best sellers for this period yet."
+      },
+      "ar": {
+        "other": "لا توجد منتجات أكثر مبيعًا لهذه الفترة بعد."
+      }
+    },
+    {
+      "key": "storefront.categories_are_temporarily_unavailable",
+      "group": "storefront",
+      "en": {
+        "other": "Categories are temporarily unavailable."
+      },
+      "ar": {
+        "other": "الفئات غير متاحة مؤقتًا."
+      }
+    },
+    {
+      "key": "storefront.preview_order_disabled",
+      "group": "storefront",
+      "en": {
+        "other": "Order placement is disabled in this language preview."
+      },
+      "ar": {
+        "other": "إرسال الطلبات غير متاح في معاينة اللغة."
+      }
+    },
+    {
+      "key": "checkout.consent_pickup",
+      "group": "checkout",
+      "en": {
+        "other": "I confirm payment of {total} in cash at pickup."
+      },
+      "ar": {
+        "other": "أوافق على دفع {total} نقدًا عند الاستلام من الفرع."
+      }
+    },
+    {
+      "key": "checkout.consent_delivery",
+      "group": "checkout",
+      "en": {
+        "other": "I confirm payment of {total} in cash on delivery."
+      },
+      "ar": {
+        "other": "أوافق على دفع {total} نقدًا عند التوصيل."
+      }
+    },
+    {
+      "key": "validation.invalid",
+      "group": "validation",
+      "en": {
+        "other": "Please enter a valid value."
+      },
+      "ar": {
+        "other": "يرجى إدخال قيمة صحيحة."
+      }
+    },
+    {
+      "key": "search.no_matches",
+      "group": "search",
+      "en": {
+        "other": "No products found for “{query}”. Try a shorter term or check the spelling."
+      },
+      "ar": {
+        "other": "لم نعثر على منتجات تطابق «{query}». جرب عبارة أقصر أو تحقق من الإملاء."
+      }
+    },
+    {
+      "key": "checkout.reserved_until",
+      "group": "checkout",
+      "en": {
+        "other": "Fulfillment reserved until {time}"
+      },
+      "ar": {
+        "other": "الاستلام أو التوصيل محجوز حتى {time}"
+      }
+    },
+    {
+      "key": "checkout.scheduled_for",
+      "group": "checkout",
+      "en": {
+        "other": "Scheduled for {time}"
+      },
+      "ar": {
+        "other": "الموعد المحدد: {time}"
+      }
+    },
+    {
+      "key": "cart.reserved_until",
+      "group": "cart",
+      "en": {
+        "other": "Reserved until {time}"
+      },
+      "ar": {
+        "other": "محجوز حتى {time}"
+      }
+    },
+    {
+      "key": "product.discounted_price",
+      "group": "product",
+      "en": {
+        "other": "Discounted price: "
+      },
+      "ar": {
+        "other": "السعر بعد الخصم: "
+      }
+    },
+    {
+      "key": "product.unit_each",
+      "group": "product",
+      "en": {
+        "other": "each"
+      },
+      "ar": {
+        "other": "قطعة"
+      }
+    },
+    {
+      "key": "product.price_label",
+      "group": "product",
+      "en": {
+        "other": "Price: "
+      },
+      "ar": {
+        "other": "السعر: "
+      }
+    },
+    {
+      "key": "checkout.cash_pickup_note",
+      "group": "checkout",
+      "en": {
+        "other": "Cash at pickup. No payment is collected online."
+      },
+      "ar": {
+        "other": "الدفع نقدًا عند الاستلام من الفرع. لا يتم تحصيل أي مبلغ عبر الإنترنت."
+      }
+    },
+    {
+      "key": "checkout.cash_delivery_note",
+      "group": "checkout",
+      "en": {
+        "other": "Cash on delivery. No payment is collected online."
+      },
+      "ar": {
+        "other": "الدفع نقدًا عند التوصيل. لا يتم تحصيل أي مبلغ عبر الإنترنت."
+      }
+    },
+    {
+      "key": "address.building_value",
+      "group": "address",
+      "en": {
+        "other": "Building {value}"
+      },
+      "ar": {
+        "other": "المبنى {value}"
+      }
+    },
+    {
+      "key": "address.floor_value",
+      "group": "address",
+      "en": {
+        "other": "Floor {value}"
+      },
+      "ar": {
+        "other": "الطابق {value}"
+      }
+    },
+    {
+      "key": "address.apartment_value",
+      "group": "address",
+      "en": {
+        "other": "Apartment {value}"
+      },
+      "ar": {
+        "other": "الشقة {value}"
+      }
+    },
+    {
+      "key": "cart.quantity_value",
+      "group": "cart",
+      "en": {
+        "other": "Quantity {count}"
+      },
+      "ar": {
+        "other": "الكمية {count}"
+      }
+    },
+    {
+      "key": "product.choose_variant",
+      "group": "product",
+      "en": {
+        "other": "Choose variant"
+      },
+      "ar": {
+        "other": "اختر النوع"
+      }
+    },
+    {
+      "key": "product.choose_option",
+      "group": "product",
+      "en": {
+        "other": "Choose an option"
+      },
+      "ar": {
+        "other": "اختر خيارًا"
+      }
+    },
+    {
+      "key": "product.no_variants",
+      "group": "product",
+      "en": {
+        "other": "No available variants."
+      },
+      "ar": {
+        "other": "لا توجد أنواع متاحة."
+      }
+    },
+    {
+      "key": "product.loading_choices",
+      "group": "product",
+      "en": {
+        "other": "Loading product choices…"
+      },
+      "ar": {
+        "other": "جارٍ تحميل خيارات المنتج…"
+      }
+    },
+    {
+      "key": "product.essentials",
+      "group": "product",
+      "en": {
+        "other": "Choose your essentials"
+      },
+      "ar": {
+        "other": "اختر احتياجاتك"
+      }
+    },
+    {
+      "key": "product.build_basket",
+      "group": "product",
+      "en": {
+        "other": "Build your basket"
+      },
+      "ar": {
+        "other": "كوّن سلتك"
+      }
+    },
+    {
+      "key": "product.basket_help",
+      "group": "product",
+      "en": {
+        "other": "Choose one item per group. Items are priced and fulfilled individually; all choices are added together."
+      },
+      "ar": {
+        "other": "اختر منتجًا من كل مجموعة. يُحسب سعر كل منتج ويُجهز بشكل منفصل، وتُضاف كل اختياراتك معًا."
+      }
+    },
+    {
+      "key": "product.choose_item",
+      "group": "product",
+      "en": {
+        "other": "Choose an item"
+      },
+      "ar": {
+        "other": "اختر منتجًا"
+      }
+    },
+    {
+      "key": "product.add_basket",
+      "group": "product",
+      "en": {
+        "other": "Add basket to cart"
+      },
+      "ar": {
+        "other": "أضف المجموعة إلى السلة"
+      }
+    },
+    {
+      "key": "product.basket_added",
+      "group": "product",
+      "en": {
+        "other": "Your basket items were added to the cart."
+      },
+      "ar": {
+        "other": "أُضيفت منتجات المجموعة إلى السلة."
+      }
+    },
+    {
+      "key": "product.selected_total",
+      "group": "product",
+      "en": {
+        "other": "Selected items: {total}"
+      },
+      "ar": {
+        "other": "المنتجات المختارة: {total}"
+      }
+    },
+    {
+      "key": "product.sold_per",
+      "group": "product",
+      "en": {
+        "other": "Sold per {unit}"
+      },
+      "ar": {
+        "other": "يباع لكل {unit}"
+      }
+    },
+    {
+      "key": "product.view_image",
+      "group": "product",
+      "en": {
+        "other": "View image {count}"
+      },
+      "ar": {
+        "other": "عرض الصورة {count}"
+      }
+    },
+    {
+      "key": "search.per_unit",
+      "group": "search",
+      "en": {
+        "other": "Per {unit} · {availability}"
+      },
+      "ar": {
+        "other": "لكل {unit} · {availability}"
+      }
+    },
+    {
+      "key": "search.results_for",
+      "group": "search",
+      "en": {
+        "other": "Results for “{query}”"
+      },
+      "ar": {
+        "other": "نتائج البحث عن «{query}»"
+      }
+    },
+    {
+      "key": "search.sort_products",
+      "group": "search",
+      "en": {
+        "other": "Sort products"
+      },
+      "ar": {
+        "other": "ترتيب المنتجات"
+      }
+    },
+    {
+      "key": "search.recommended",
+      "group": "search",
+      "en": {
+        "other": "Recommended"
+      },
+      "ar": {
+        "other": "مقترح"
+      }
+    },
+    {
+      "key": "search.price_asc",
+      "group": "search",
+      "en": {
+        "other": "Price: low to high"
+      },
+      "ar": {
+        "other": "السعر: من الأقل إلى الأعلى"
+      }
+    },
+    {
+      "key": "search.price_desc",
+      "group": "search",
+      "en": {
+        "other": "Price: high to low"
+      },
+      "ar": {
+        "other": "السعر: من الأعلى إلى الأقل"
+      }
+    },
+    {
+      "key": "search.name_asc",
+      "group": "search",
+      "en": {
+        "other": "Name: A to Z"
+      },
+      "ar": {
+        "other": "الاسم: تصاعديًا"
+      }
+    },
+    {
+      "key": "search.name_desc",
+      "group": "search",
+      "en": {
+        "other": "Name: Z to A"
+      },
+      "ar": {
+        "other": "الاسم: تنازليًا"
+      }
+    },
+    {
+      "key": "search.attribute_asc",
+      "group": "search",
+      "en": {
+        "other": "{attribute}: ascending"
+      },
+      "ar": {
+        "other": "{attribute}: تصاعديًا"
+      }
+    },
+    {
+      "key": "search.attribute_desc",
+      "group": "search",
+      "en": {
+        "other": "{attribute}: descending"
+      },
+      "ar": {
+        "other": "{attribute}: تنازليًا"
+      }
+    },
+    {
+      "key": "search.any_attribute",
+      "group": "search",
+      "en": {
+        "other": "Any {attribute}"
+      },
+      "ar": {
+        "other": "أي {attribute}"
+      }
+    },
+    {
+      "key": "search.exact_attribute",
+      "group": "search",
+      "en": {
+        "other": "Exact {attribute}{unit}"
+      },
+      "ar": {
+        "other": "{attribute} المحدد{unit}"
+      }
+    },
+    {
+      "key": "common.yes",
+      "group": "common",
+      "en": {
+        "other": "Yes"
+      },
+      "ar": {
+        "other": "نعم"
+      }
+    },
+    {
+      "key": "common.no",
+      "group": "common",
+      "en": {
+        "other": "No"
+      },
+      "ar": {
+        "other": "لا"
+      }
+    },
+    {
+      "key": "search.no_price_limit",
+      "group": "search",
+      "en": {
+        "other": "No price limit"
+      },
+      "ar": {
+        "other": "بلا حد للسعر"
+      }
+    },
+    {
+      "key": "cart.quantity_for",
+      "group": "cart",
+      "en": {
+        "other": "Quantity for {name}"
+      },
+      "ar": {
+        "other": "كمية {name}"
+      }
+    },
+    {
+      "key": "cart.decrease_product",
+      "group": "cart",
+      "en": {
+        "other": "Decrease {name}"
+      },
+      "ar": {
+        "other": "تقليل كمية {name}"
+      }
+    },
+    {
+      "key": "cart.increase_product",
+      "group": "cart",
+      "en": {
+        "other": "Increase {name}"
+      },
+      "ar": {
+        "other": "زيادة كمية {name}"
+      }
+    },
+    {
+      "key": "cart.view_product",
+      "group": "cart",
+      "en": {
+        "other": "View {name}"
+      },
+      "ar": {
+        "other": "عرض {name}"
+      }
+    },
+    {
+      "key": "cart.cart_quantity_for",
+      "group": "cart",
+      "en": {
+        "other": "Cart quantity for {name}"
+      },
+      "ar": {
+        "other": "كمية {name} في السلة"
+      }
+    },
+    {
+      "key": "cart.cart_quantity",
+      "group": "cart",
+      "en": {
+        "other": "Cart quantity"
+      },
+      "ar": {
+        "other": "الكمية في السلة"
+      }
+    },
+    {
+      "key": "cart.remove_product",
+      "group": "cart",
+      "en": {
+        "other": "Remove from cart"
+      },
+      "ar": {
+        "other": "إزالة من السلة"
+      }
+    },
+    {
+      "key": "cart.decrease_quantity",
+      "group": "cart",
+      "en": {
+        "other": "Decrease quantity"
+      },
+      "ar": {
+        "other": "تقليل الكمية"
+      }
+    },
+    {
+      "key": "cart.add_product",
+      "group": "cart",
+      "en": {
+        "other": "Add {name} to cart"
+      },
+      "ar": {
+        "other": "أضف {name} إلى السلة"
+      }
+    },
+    {
+      "key": "cart.in_cart_saving",
+      "group": "cart",
+      "en": {
+        "other": "{count} in cart. Saving…"
+      },
+      "ar": {
+        "other": "الكمية في السلة: {count}. جارٍ الحفظ…"
+      }
+    },
+    {
+      "key": "cart.in_cart",
+      "group": "cart",
+      "en": {
+        "other": "{count} in cart"
+      },
+      "ar": {
+        "other": "الكمية في السلة: {count}"
+      }
+    },
+    {
+      "key": "cart.low_stock",
+      "group": "cart",
+      "en": {
+        "other": "Low stock — only {count} available"
+      },
+      "ar": {
+        "other": "مخزون محدود — الكمية المتاحة: {count}"
+      }
+    },
+    {
+      "key": "cart.available_units",
+      "group": "cart",
+      "en": {
+        "other": "{count} units available"
+      },
+      "ar": {
+        "other": "الكمية المتاحة: {count}"
+      }
+    },
+    {
+      "key": "cart.added_notice",
+      "group": "cart",
+      "en": {
+        "other": "Added to your cart. Stock is reserved for a limited time."
+      },
+      "ar": {
+        "other": "أُضيف المنتج إلى سلتك. المخزون محجوز لفترة محدودة."
+      }
+    },
+    {
+      "key": "cart.reservation_help",
+      "group": "cart",
+      "en": {
+        "other": "Your items are held temporarily while you browse. You can build a cart without signing in."
+      },
+      "ar": {
+        "other": "تُحجز منتجاتك مؤقتًا أثناء التصفح. يمكنك تكوين سلتك دون تسجيل الدخول."
+      }
+    },
+    {
+      "key": "cart.partial_reservation",
+      "group": "cart",
+      "en": {
+        "other": "{reserved} of {quantity} reserved. Update quantity to reserve available stock."
+      },
+      "ar": {
+        "other": "تم حجز {reserved} من أصل {quantity}. حدّث الكمية لحجز المخزون المتاح."
+      }
+    },
+    {
+      "key": "cart.available_for_cart",
+      "group": "cart",
+      "en": {
+        "other": "Only {count} units available for this cart."
+      },
+      "ar": {
+        "other": "الكمية المتاحة لهذه السلة: {count} فقط."
+      }
+    },
+    {
+      "key": "cart.merged_reservations",
+      "group": "cart",
+      "en": {
+        "other": "Some reservations expired or could not be restored when carts were merged. Your items are saved; update their quantities to reserve stock again."
+      },
+      "ar": {
+        "other": "انتهت صلاحية بعض الحجوزات أو تعذر استعادتها عند دمج السلال. منتجاتك محفوظة؛ حدّث كمياتها لحجز المخزون مجددًا."
+      }
+    },
+    {
+      "key": "cart.account_saved",
+      "group": "cart",
+      "en": {
+        "other": "Your cart is saved to your account. Reservations still expire at the times shown."
+      },
+      "ar": {
+        "other": "سلتك محفوظة في حسابك. تظل الحجوزات صالحة حتى المواعيد الموضحة."
+      }
+    },
+    {
+      "key": "cart.reservation_pending",
+      "group": "cart",
+      "en": {
+        "other": "Reservation pending"
+      },
+      "ar": {
+        "other": "الحجز قيد الانتظار"
+      }
+    },
+    {
+      "key": "checkout.delivery_response",
+      "group": "checkout",
+      "en": {
+        "other": "Delivery options response"
+      },
+      "ar": {
+        "other": "الرد على خيارات التوصيل"
+      }
+    },
+    {
+      "key": "checkout.brand_home",
+      "group": "checkout",
+      "en": {
+        "other": "{brand} home"
+      },
+      "ar": {
+        "other": "الصفحة الرئيسية لـ {brand}"
+      }
+    },
+    {
+      "key": "fulfillment.scheduled_delivery",
+      "group": "fulfillment",
+      "en": {
+        "other": "scheduled delivery"
+      },
+      "ar": {
+        "other": "توصيل في موعد محدد"
+      }
+    },
+    {
+      "key": "fulfillment.asap_delivery",
+      "group": "fulfillment",
+      "en": {
+        "other": "asap delivery"
+      },
+      "ar": {
+        "other": "توصيل في أقرب وقت"
+      }
+    },
+    {
+      "key": "fulfillment.pickup",
+      "group": "fulfillment",
+      "en": {
+        "other": "pickup"
+      },
+      "ar": {
+        "other": "استلام من الفرع"
+      }
+    },
+    {
+      "key": "fulfillment.scheduled_pickup",
+      "group": "fulfillment",
+      "en": {
+        "other": "scheduled pickup"
+      },
+      "ar": {
+        "other": "استلام في موعد محدد"
+      }
+    },
+    {
+      "key": "fulfillment.preparation",
+      "group": "fulfillment",
+      "en": {
+        "other": "Estimated preparation: {minutes} minutes. Availability is confirmed below."
+      },
+      "ar": {
+        "other": "وقت التجهيز المتوقع: {minutes} دقيقة. يُؤكد التوفر أدناه."
+      }
+    },
+    {
+      "key": "fulfillment.hold_remaining",
+      "group": "fulfillment",
+      "en": {
+        "other": "Window reserved · {minutes} minutes remaining"
+      },
+      "ar": {
+        "other": "الفترة محجوزة · الوقت المتبقي بالدقائق: {minutes}"
+      }
+    },
+    {
+      "key": "fulfillment.choose_another",
+      "group": "fulfillment",
+      "en": {
+        "other": "Please choose another delivery window."
+      },
+      "ar": {
+        "other": "يرجى اختيار فترة توصيل أخرى."
+      }
+    },
+    {
+      "key": "fulfillment.retry",
+      "group": "fulfillment",
+      "en": {
+        "other": "Please retry availability."
+      },
+      "ar": {
+        "other": "يرجى إعادة التحقق من التوفر."
+      }
+    },
+    {
+      "key": "address.latitude",
+      "group": "address",
+      "en": {
+        "other": "Latitude"
+      },
+      "ar": {
+        "other": "خط العرض"
+      }
+    },
+    {
+      "key": "address.longitude",
+      "group": "address",
+      "en": {
+        "other": "Longitude"
+      },
+      "ar": {
+        "other": "خط الطول"
+      }
+    },
+    {
+      "key": "address.building",
+      "group": "address",
+      "en": {
+        "other": "Building"
+      },
+      "ar": {
+        "other": "المبنى"
+      }
+    },
+    {
+      "key": "address.floor",
+      "group": "address",
+      "en": {
+        "other": "Floor"
+      },
+      "ar": {
+        "other": "الطابق"
+      }
+    },
+    {
+      "key": "address.apartment",
+      "group": "address",
+      "en": {
+        "other": "Apartment"
+      },
+      "ar": {
+        "other": "الشقة"
+      }
+    },
+    {
+      "key": "address.state_region",
+      "group": "address",
+      "en": {
+        "other": "State / Region"
+      },
+      "ar": {
+        "other": "الولاية / المنطقة"
+      }
+    },
+    {
+      "key": "address.state",
+      "group": "address",
+      "en": {
+        "other": "State"
+      },
+      "ar": {
+        "other": "الولاية"
+      }
+    },
+    {
+      "key": "address.region",
+      "group": "address",
+      "en": {
+        "other": "Region"
+      },
+      "ar": {
+        "other": "المنطقة"
+      }
+    },
+    {
+      "key": "address.governorate",
+      "group": "address",
+      "en": {
+        "other": "Governorate"
+      },
+      "ar": {
+        "other": "المحافظة"
+      }
+    },
+    {
+      "key": "address.province",
+      "group": "address",
+      "en": {
+        "other": "Province"
+      },
+      "ar": {
+        "other": "المقاطعة"
+      }
+    },
+    {
+      "key": "address.choose_region",
+      "group": "address",
+      "en": {
+        "other": "Choose {region}"
+      },
+      "ar": {
+        "other": "اختر {region}"
+      }
+    },
+    {
+      "key": "address.region_first",
+      "group": "address",
+      "en": {
+        "other": "Choose {region} first"
+      },
+      "ar": {
+        "other": "اختر {region} أولًا"
+      }
+    },
+    {
+      "key": "address.loading_cities",
+      "group": "address",
+      "en": {
+        "other": "Loading cities..."
+      },
+      "ar": {
+        "other": "جارٍ تحميل المدن…"
+      }
+    },
+    {
+      "key": "address.search_city",
+      "group": "address",
+      "en": {
+        "other": "Search city or neighborhood"
+      },
+      "ar": {
+        "other": "ابحث عن مدينة أو حي"
+      }
+    },
+    {
+      "key": "address.city_label",
+      "group": "address",
+      "en": {
+        "other": "City / Town / Neighborhood"
+      },
+      "ar": {
+        "other": "المدينة / البلدة / الحي"
+      }
+    },
+    {
+      "key": "address.city_options",
+      "group": "address",
+      "en": {
+        "other": "Cities and neighborhoods"
+      },
+      "ar": {
+        "other": "المدن والأحياء"
+      }
+    },
+    {
+      "key": "address.select_city",
+      "group": "address",
+      "en": {
+        "other": "Choose a city or neighborhood from the list."
+      },
+      "ar": {
+        "other": "اختر مدينة أو حيًا من القائمة."
+      }
+    },
+    {
+      "key": "address.more_cities",
+      "group": "address",
+      "en": {
+        "other": "Showing the first 60 matches. Type more of the place name to narrow the list."
+      },
+      "ar": {
+        "other": "تُعرض أول 60 نتيجة. اكتب جزءًا أكبر من اسم المكان لتقليل النتائج."
+      }
+    },
+    {
+      "key": "address.no_cities",
+      "group": "address",
+      "en": {
+        "other": "No matching locations"
+      },
+      "ar": {
+        "other": "لا توجد مواقع مطابقة"
+      }
+    },
+    {
+      "key": "address.example",
+      "group": "address",
+      "en": {
+        "other": "e.g. 15 Road 9, Maadi, Cairo"
+      },
+      "ar": {
+        "other": "مثال: 15 شارع 9، المعادي، القاهرة"
+      }
+    },
+    {
+      "key": "address.map_help",
+      "group": "address",
+      "en": {
+        "other": "Tap your building on the map, or drag the pin to the entrance your driver should use."
+      },
+      "ar": {
+        "other": "اضغط على المبنى في الخريطة، أو اسحب العلامة إلى المدخل المناسب للسائق."
+      }
+    },
+    {
+      "key": "address.map",
+      "group": "address",
+      "en": {
+        "other": "Delivery location map"
+      },
+      "ar": {
+        "other": "خريطة موقع التوصيل"
+      }
+    },
+    {
+      "key": "address.pin_center",
+      "group": "address",
+      "en": {
+        "other": "Pin map center"
+      },
+      "ar": {
+        "other": "تحديد مركز الخريطة"
+      }
+    },
+    {
+      "key": "address.locating",
+      "group": "address",
+      "en": {
+        "other": "Finding location…"
+      },
+      "ar": {
+        "other": "جارٍ تحديد الموقع…"
+      }
+    },
+    {
+      "key": "address.current_location",
+      "group": "address",
+      "en": {
+        "other": "Use my current location"
+      },
+      "ar": {
+        "other": "استخدام موقعي الحالي"
+      }
+    },
+    {
+      "key": "address.permission",
+      "group": "address",
+      "en": {
+        "other": "Your browser will ask for permission before using your current location."
+      },
+      "ar": {
+        "other": "سيطلب المتصفح إذنك قبل استخدام موقعك الحالي."
+      }
+    },
+    {
+      "key": "address.map_unavailable",
+      "group": "address",
+      "en": {
+        "other": "Map tiles are unavailable. You can still enter coordinates below."
+      },
+      "ar": {
+        "other": "الخريطة غير متاحة. يمكنك إدخال الإحداثيات أدناه."
+      }
+    },
+    {
+      "key": "address.location_unavailable",
+      "group": "address",
+      "en": {
+        "other": "Location access is not available in this browser."
+      },
+      "ar": {
+        "other": "تحديد الموقع غير متاح في هذا المتصفح."
+      }
+    },
+    {
+      "key": "address.location_denied",
+      "group": "address",
+      "en": {
+        "other": "Could not access your location. Drop a pin or enter coordinates instead."
+      },
+      "ar": {
+        "other": "تعذر الوصول إلى موقعك. حدد نقطة على الخريطة أو أدخل الإحداثيات."
+      }
+    },
+    {
+      "key": "address.delivery_pin",
+      "group": "address",
+      "en": {
+        "other": "Delivery pin"
+      },
+      "ar": {
+        "other": "علامة موقع التوصيل"
+      }
+    },
+    {
+      "key": "address.zoom_in",
+      "group": "address",
+      "en": {
+        "other": "Zoom in"
+      },
+      "ar": {
+        "other": "تكبير"
+      }
+    },
+    {
+      "key": "address.zoom_out",
+      "group": "address",
+      "en": {
+        "other": "Zoom out"
+      },
+      "ar": {
+        "other": "تصغير"
+      }
+    },
+    {
+      "key": "address.choose_before_saving",
+      "group": "address",
+      "en": {
+        "other": "Choose a country, region and city, or place a pin before saving."
+      },
+      "ar": {
+        "other": "اختر الدولة والمنطقة والمدينة، أو حدد نقطة على الخريطة قبل الحفظ."
+      }
+    },
+    {
+      "key": "checkout.total_expired_error",
+      "group": "checkout",
+      "en": {
+        "other": "Your total has expired. Refresh it and confirm the updated amount."
+      },
+      "ar": {
+        "other": "انتهت صلاحية الإجمالي. حدّثه وأكّد المبلغ الجديد."
+      }
+    },
+    {
+      "key": "checkout.storage_error",
+      "group": "checkout",
+      "en": {
+        "other": "Allow browser session storage to submit your order safely, then try again. No order was sent."
+      },
+      "ar": {
+        "other": "اسمح بتخزين بيانات الجلسة في المتصفح لإرسال طلبك بأمان، ثم أعد المحاولة. لم يُرسل أي طلب."
+      }
+    },
+    {
+      "key": "checkout.confirm_error",
+      "group": "checkout",
+      "en": {
+        "other": "We couldn’t confirm your order. Please retry."
+      },
+      "ar": {
+        "other": "تعذر تأكيد طلبك. يرجى إعادة المحاولة."
+      }
+    },
+    {
+      "key": "checkout.saved_error",
+      "group": "checkout",
+      "en": {
+        "other": "Your saved checkout could not be read. Check your orders or contact support before trying again."
+      },
+      "ar": {
+        "other": "تعذر قراءة الطلب المحفوظ. راجع طلباتك أو تواصل مع الدعم قبل إعادة المحاولة."
+      }
+    },
+    {
+      "key": "checkout.saved_unavailable",
+      "group": "checkout",
+      "en": {
+        "other": "Your saved checkout is unavailable. Please check your orders before continuing."
+      },
+      "ar": {
+        "other": "الطلب المحفوظ غير متاح. يرجى مراجعة طلباتك قبل المتابعة."
+      }
+    },
+    {
+      "key": "validation.range_minimum",
+      "group": "validation",
+      "en": {
+        "other": "Enter a value of at least {minimum}."
+      },
+      "ar": {
+        "other": "أدخل قيمة لا تقل عن {minimum}."
+      }
+    },
+    {
+      "key": "validation.range_maximum",
+      "group": "validation",
+      "en": {
+        "other": "Enter a value no greater than {maximum}."
+      },
+      "ar": {
+        "other": "أدخل قيمة لا تزيد عن {maximum}."
+      }
+    },
+    {
+      "key": "validation.step",
+      "group": "validation",
+      "en": {
+        "other": "Enter a valid quantity."
+      },
+      "ar": {
+        "other": "أدخل كمية صحيحة."
+      }
+    },
+    {
+      "key": "search.product_count",
+      "group": "search",
+      "plural": "count",
+      "en": {
+        "one": "{count} product",
+        "other": "{count} products"
+      },
+      "ar": {
+        "zero": "لا توجد منتجات ({count})",
+        "one": "منتج واحد ({count})",
+        "two": "منتجان ({count})",
+        "few": "{count} منتجات",
+        "many": "{count} منتجًا",
+        "other": "{count} منتج"
+      }
+    },
+    {
+      "key": "search.products_found",
+      "group": "search",
+      "plural": "count",
+      "en": {
+        "one": "{count} product found",
+        "other": "{count} products found"
+      },
+      "ar": {
+        "zero": "لا توجد منتجات ({count})",
+        "one": "منتج واحد ({count})",
+        "two": "منتجان ({count})",
+        "few": "{count} منتجات",
+        "many": "{count} منتجًا",
+        "other": "{count} منتج"
+      }
+    },
+    {
+      "key": "address.state_district",
+      "group": "address",
+      "en": {
+        "other": "State / District"
+      },
+      "ar": {
+        "other": "الولاية / المقاطعة"
+      }
+    },
+    {
+      "key": "address.constituent_country",
+      "group": "address",
+      "en": {
+        "other": "Constituent country"
+      },
+      "ar": {
+        "other": "الدولة المكوّنة"
+      }
+    },
+    {
+      "key": "wishlist.sign_in",
+      "group": "wishlist",
+      "en": {
+        "other": "Sign in to save to wishlist"
+      },
+      "ar": {
+        "other": "سجّل الدخول للحفظ في المفضلة"
+      }
+    },
+    {
+      "key": "wishlist.remove",
+      "group": "wishlist",
+      "en": {
+        "other": "Remove from wishlist"
+      },
+      "ar": {
+        "other": "إزالة من المفضلة"
+      }
+    },
+    {
+      "key": "wishlist.save",
+      "group": "wishlist",
+      "en": {
+        "other": "Save to wishlist"
+      },
+      "ar": {
+        "other": "حفظ في المفضلة"
+      }
+    },
+    {
+      "key": "wishlist.remove_icon",
+      "group": "wishlist",
+      "en": {
+        "other": "♥ Remove from wishlist"
+      },
+      "ar": {
+        "other": "♥ إزالة من المفضلة"
+      }
+    },
+    {
+      "key": "wishlist.save_icon",
+      "group": "wishlist",
+      "en": {
+        "other": "♡ Save to wishlist"
+      },
+      "ar": {
+        "other": "♡ حفظ في المفضلة"
+      }
+    },
+    {
+      "key": "wishlist.removed",
+      "group": "wishlist",
+      "en": {
+        "other": "Removed from your wishlist."
+      },
+      "ar": {
+        "other": "أُزيل المنتج من مفضلتك."
+      }
+    },
+    {
+      "key": "wishlist.saved",
+      "group": "wishlist",
+      "en": {
+        "other": "Saved to your wishlist."
+      },
+      "ar": {
+        "other": "حُفظ المنتج في مفضلتك."
+      }
+    },
+    {
+      "key": "reviews.loading",
+      "group": "reviews",
+      "en": {
+        "other": "Loading reviews…"
+      },
+      "ar": {
+        "other": "جارٍ تحميل التقييمات…"
+      }
+    },
+    {
+      "key": "reviews.empty",
+      "group": "reviews",
+      "en": {
+        "other": "No reviews yet. Be the first to share your experience."
+      },
+      "ar": {
+        "other": "لا توجد تقييمات بعد. كن أول من يشارك تجربته."
+      }
+    },
+    {
+      "key": "reviews.pages",
+      "group": "reviews",
+      "en": {
+        "other": "Review pages"
+      },
+      "ar": {
+        "other": "صفحات التقييمات"
+      }
+    },
+    {
+      "key": "reviews.previous",
+      "group": "reviews",
+      "en": {
+        "other": "Previous reviews"
+      },
+      "ar": {
+        "other": "التقييمات السابقة"
+      }
+    },
+    {
+      "key": "reviews.next",
+      "group": "reviews",
+      "en": {
+        "other": "Next reviews"
+      },
+      "ar": {
+        "other": "التقييمات التالية"
+      }
+    },
+    {
+      "key": "reviews.submitted",
+      "group": "reviews",
+      "en": {
+        "other": "Review submitted for moderation. It will appear after approval."
+      },
+      "ar": {
+        "other": "أُرسل تقييمك للمراجعة. سيظهر بعد الموافقة عليه."
+      }
+    },
+    {
+      "key": "reviews.edit",
+      "group": "reviews",
+      "en": {
+        "other": "Edit your review"
+      },
+      "ar": {
+        "other": "تعديل تقييمك"
+      }
+    },
+    {
+      "key": "reviews.write",
+      "group": "reviews",
+      "en": {
+        "other": "Write a review"
+      },
+      "ar": {
+        "other": "اكتب تقييمًا"
+      }
+    },
+    {
+      "key": "reviews.moderation",
+      "group": "reviews",
+      "en": {
+        "other": "Reviews are moderated. Editing an approved review sends it back for approval."
+      },
+      "ar": {
+        "other": "تخضع التقييمات للمراجعة. تعديل تقييم معتمد يعيده للمراجعة."
+      }
+    },
+    {
+      "key": "reviews.name",
+      "group": "reviews",
+      "en": {
+        "other": "Public display name"
+      },
+      "ar": {
+        "other": "الاسم الظاهر للجميع"
+      }
+    },
+    {
+      "key": "reviews.rating",
+      "group": "reviews",
+      "en": {
+        "other": "Rating"
+      },
+      "ar": {
+        "other": "التقييم"
+      }
+    },
+    {
+      "key": "reviews.title",
+      "group": "reviews",
+      "en": {
+        "other": "Review title"
+      },
+      "ar": {
+        "other": "عنوان التقييم"
+      }
+    },
+    {
+      "key": "reviews.body",
+      "group": "reviews",
+      "en": {
+        "other": "Your review"
+      },
+      "ar": {
+        "other": "تقييمك"
+      }
+    },
+    {
+      "key": "reviews.submit",
+      "group": "reviews",
+      "en": {
+        "other": "Submit for moderation"
+      },
+      "ar": {
+        "other": "إرسال للمراجعة"
+      }
+    },
+    {
+      "key": "reviews.verify",
+      "group": "reviews",
+      "en": {
+        "other": "Verify your account to write a review"
+      },
+      "ar": {
+        "other": "أكّد حسابك لكتابة تقييم"
+      }
+    },
+    {
+      "key": "reviews.sign_in",
+      "group": "reviews",
+      "en": {
+        "other": "Sign in to write a review"
+      },
+      "ar": {
+        "other": "سجّل الدخول لكتابة تقييم"
+      }
+    },
+    {
+      "key": "reviews.stars",
+      "group": "reviews",
+      "en": {
+        "other": "{rating} out of 5 stars"
+      },
+      "ar": {
+        "other": "{rating} من 5 نجوم"
+      }
+    },
+    {
+      "key": "reviews.rating_value",
+      "group": "reviews",
+      "en": {
+        "other": "{rating} out of 5"
+      },
+      "ar": {
+        "other": "{rating} من 5"
+      }
+    },
+    {
+      "key": "reviews.status",
+      "group": "reviews",
+      "en": {
+        "other": "Status: {status}"
+      },
+      "ar": {
+        "other": "الحالة: {status}"
+      }
+    },
+    {
+      "key": "comparison.add",
+      "group": "comparison",
+      "en": {
+        "other": "Add {name} to comparison"
+      },
+      "ar": {
+        "other": "أضف {name} للمقارنة"
+      }
+    },
+    {
+      "key": "comparison.remove",
+      "group": "comparison",
+      "en": {
+        "other": "Remove {name} from comparison"
+      },
+      "ar": {
+        "other": "إزالة {name} من المقارنة"
+      }
+    },
+    {
+      "key": "comparison.selected",
+      "group": "comparison",
+      "en": {
+        "other": "✓ Selected for comparison"
+      },
+      "ar": {
+        "other": "✓ محدد للمقارنة"
+      }
+    },
+    {
+      "key": "comparison.compare",
+      "group": "comparison",
+      "en": {
+        "other": "⇄ Compare"
+      },
+      "ar": {
+        "other": "⇄ مقارنة"
+      }
+    },
+    {
+      "key": "comparison.selection",
+      "group": "comparison",
+      "en": {
+        "other": "Selected products for comparison"
+      },
+      "ar": {
+        "other": "المنتجات المحددة للمقارنة"
+      }
+    },
+    {
+      "key": "comparison.count",
+      "group": "comparison",
+      "en": {
+        "other": "{count} of {limit} selected"
+      },
+      "ar": {
+        "other": "تم تحديد {count} من {limit}"
+      }
+    },
+    {
+      "key": "comparison.products",
+      "group": "comparison",
+      "en": {
+        "other": "Compare products"
+      },
+      "ar": {
+        "other": "مقارنة المنتجات"
+      }
+    },
+    {
+      "key": "common.clear",
+      "group": "common",
+      "en": {
+        "other": "Clear"
+      },
+      "ar": {
+        "other": "مسح"
+      }
+    },
+    {
+      "key": "common.dismiss_notification",
+      "group": "common",
+      "en": {
+        "other": "Dismiss notification"
+      },
+      "ar": {
+        "other": "إغلاق الإشعار"
+      }
+    },
+    {
+      "key": "error.product_quantity",
+      "group": "error",
+      "en": {
+        "other": "Product is unavailable or quantity is invalid"
+      },
+      "ar": {
+        "other": "المنتج غير متاح أو الكمية غير صحيحة"
+      }
+    },
+    {
+      "key": "error.quantity_large",
+      "group": "error",
+      "en": {
+        "other": "Quantity too large"
+      },
+      "ar": {
+        "other": "الكمية أكبر من المسموح"
+      }
+    },
+    {
+      "key": "error.quantity_invalid",
+      "group": "error",
+      "en": {
+        "other": "Quantity is invalid"
+      },
+      "ar": {
+        "other": "الكمية غير صحيحة"
+      }
+    },
+    {
+      "key": "error.invalid_quantity",
+      "group": "error",
+      "en": {
+        "other": "Invalid quantity"
+      },
+      "ar": {
+        "other": "كمية غير صحيحة"
+      }
+    },
+    {
+      "key": "error.cart_limit",
+      "group": "error",
+      "en": {
+        "other": "A cart can contain at most 200 different products"
+      },
+      "ar": {
+        "other": "يمكن أن تحتوي السلة على 200 منتج مختلف كحد أقصى"
+      }
+    },
+    {
+      "key": "error.product_not_in_cart",
+      "group": "error",
+      "en": {
+        "other": "Product is not in your cart"
+      },
+      "ar": {
+        "other": "المنتج غير موجود في سلتك"
+      }
+    },
+    {
+      "key": "error.remove_quantity",
+      "group": "error",
+      "en": {
+        "other": "Removal exceeds the quantity in your cart"
+      },
+      "ar": {
+        "other": "الكمية المطلوب حذفها تتجاوز الكمية في السلة"
+      }
+    },
+    {
+      "key": "error.reservation_incomplete",
+      "group": "error",
+      "en": {
+        "other": "Reservation expired or incomplete. Return to your cart and reserve again."
+      },
+      "ar": {
+        "other": "انتهت صلاحية الحجز أو لم يكتمل. عد إلى السلة واحجز المنتجات مجددًا."
+      }
+    },
+    {
+      "key": "error.review_expired",
+      "group": "error",
+      "en": {
+        "other": "Checkout review expired or unavailable. Review your order again."
+      },
+      "ar": {
+        "other": "انتهت صلاحية مراجعة الطلب أو أصبحت غير متاحة. راجع طلبك مجددًا."
+      }
+    },
+    {
+      "key": "error.area_changed",
+      "group": "error",
+      "en": {
+        "other": "Delivery area changed or is not covered. Select this location and reserve your cart again."
+      },
+      "ar": {
+        "other": "تغيرت منطقة التوصيل أو أصبحت خارج التغطية. اختر هذا الموقع واحجز منتجات السلة مجددًا."
+      }
+    },
+    {
+      "key": "error.request_failed",
+      "group": "error",
+      "en": {
+        "other": "Request failed"
+      },
+      "ar": {
+        "other": "تعذر إتمام الطلب"
+      }
+    },
+    {
+      "key": "error.fetch_failed",
+      "group": "error",
+      "en": {
+        "other": "Failed to fetch"
+      },
+      "ar": {
+        "other": "تعذر الاتصال بالخدمة"
+      }
+    },
+    {
+      "key": "error.network",
+      "group": "error",
+      "en": {
+        "other": "NetworkError when attempting to fetch resource."
+      },
+      "ar": {
+        "other": "تعذر الاتصال بالخدمة"
+      }
+    },
+    {
+      "key": "error.update_item",
+      "group": "error",
+      "en": {
+        "other": "Couldn't update this item."
+      },
+      "ar": {
+        "other": "تعذر تحديث هذا المنتج."
+      }
+    },
+    {
+      "key": "error.retry",
+      "group": "error",
+      "en": {
+        "other": "Please try again."
+      },
+      "ar": {
+        "other": "يرجى المحاولة مجددًا."
+      }
+    },
+    {
+      "key": "address.home",
+      "group": "address",
+      "en": {
+        "other": "Home"
+      },
+      "ar": {
+        "other": "المنزل"
+      }
+    },
+    {
+      "key": "product.banner",
+      "group": "product",
+      "en": {
+        "other": "{name} banner"
+      },
+      "ar": {
+        "other": "لافتة {name}"
+      }
+    },
+    {
+      "key": "catalog.explore",
+      "group": "catalog",
+      "en": {
+        "other": "EXPLORE THE CATALOG"
+      },
+      "ar": {
+        "other": "استكشف المتجر"
+      }
+    },
+    {
+      "key": "catalog.collection",
+      "group": "catalog",
+      "en": {
+        "other": "EXPLORE OUR COLLECTION"
+      },
+      "ar": {
+        "other": "استكشف مجموعتنا"
+      }
+    },
+    {
+      "key": "catalog.explore_products",
+      "group": "catalog",
+      "en": {
+        "other": "Explore our products"
+      },
+      "ar": {
+        "other": "استكشف منتجاتنا"
+      }
+    },
+    {
+      "key": "catalog.good_food",
+      "group": "catalog",
+      "en": {
+        "other": "GOOD FOOD. EVERY DAY."
+      },
+      "ar": {
+        "other": "طعام طيب. كل يوم."
+      }
+    },
+    {
+      "key": "catalog.fresh_finds",
+      "group": "catalog",
+      "en": {
+        "other": "Fresh finds."
+      },
+      "ar": {
+        "other": "اختيارات طازجة."
+      }
+    },
+    {
+      "key": "catalog.everyday_favorites",
+      "group": "catalog",
+      "en": {
+        "other": "Everyday favorites."
+      },
+      "ar": {
+        "other": "مفضلات كل يوم."
+      }
+    },
+    {
+      "key": "catalog.fruit_pantry",
+      "group": "catalog",
+      "en": {
+        "other": "From the fruit bowl to the pantry."
+      },
+      "ar": {
+        "other": "من الفواكه إلى احتياجات المطبخ."
+      }
+    },
+    {
+      "key": "catalog.simple_things",
+      "group": "catalog",
+      "en": {
+        "other": "Find the simple things that make your day."
+      },
+      "ar": {
+        "other": "اعثر على الأشياء البسيطة التي تسعد يومك."
+      }
+    },
+    {
+      "key": "catalog.explore_shelves",
+      "group": "catalog",
+      "en": {
+        "other": "Explore the shelves"
+      },
+      "ar": {
+        "other": "استكشف المنتجات"
+      }
+    },
+    {
+      "key": "catalog.little_goodness",
+      "group": "catalog",
+      "en": {
+        "other": "A little goodness"
+      },
+      "ar": {
+        "other": "شيء من الخير"
+      }
+    },
+    {
+      "key": "catalog.every_basket",
+      "group": "catalog",
+      "en": {
+        "other": "in every basket."
+      },
+      "ar": {
+        "other": "في كل سلة."
+      }
+    },
+    {
+      "key": "catalog.explore_electronics",
+      "group": "catalog",
+      "en": {
+        "other": "Explore electronics"
+      },
+      "ar": {
+        "other": "استكشف الإلكترونيات"
+      }
+    },
+    {
+      "key": "catalog.tech_life",
+      "group": "catalog",
+      "en": {
+        "other": "TECH THAT FITS YOUR LIFE"
+      },
+      "ar": {
+        "other": "تقنية تناسب حياتك"
+      }
+    },
+    {
+      "key": "catalog.smarter_day",
+      "group": "catalog",
+      "en": {
+        "other": "A smarter everyday starts here."
+      },
+      "ar": {
+        "other": "حياة يومية أذكى تبدأ هنا."
+      }
+    },
+    {
+      "key": "catalog.tech_intro",
+      "group": "catalog",
+      "en": {
+        "other": "Explore phones, laptops, audio and home essentials. Find the details that make the difference."
+      },
+      "ar": {
+        "other": "استكشف الهواتف والحواسيب والأجهزة الصوتية واحتياجات المنزل. تعرّف على التفاصيل التي تصنع الفرق."
+      }
+    },
+    {
+      "key": "catalog.tech_categories",
+      "group": "catalog",
+      "en": {
+        "other": "Browse electronics categories"
+      },
+      "ar": {
+        "other": "تصفح فئات الإلكترونيات"
+      }
+    },
+    {
+      "key": "catalog.category_favorite",
+      "group": "catalog",
+      "en": {
+        "other": "Find your next favorite in {category}."
+      },
+      "ar": {
+        "other": "اعثر على اختيارك المفضل في {category}."
+      }
+    },
+    {
+      "key": "catalog.everyday_goodness",
+      "group": "catalog",
+      "en": {
+        "other": "EVERYDAY GOODNESS"
+      },
+      "ar": {
+        "other": "خير كل يوم"
+      }
+    },
+    {
+      "key": "catalog.electronics",
+      "group": "catalog",
+      "en": {
+        "other": "ELECTRONICS"
+      },
+      "ar": {
+        "other": "الإلكترونيات"
+      }
+    },
+    {
+      "key": "catalog.grocery",
+      "group": "catalog",
+      "en": {
+        "other": "GROCERY"
+      },
+      "ar": {
+        "other": "البقالة"
+      }
+    },
+    {
+      "key": "catalog.demo_disclaimer",
+      "group": "catalog",
+      "en": {
+        "other": "Illustrative demo products. Specifications and prices are sample data."
+      },
+      "ar": {
+        "other": "منتجات توضيحية تجريبية. المواصفات والأسعار بيانات نموذجية."
+      }
+    },
+    {
+      "key": "wishlist.loading",
+      "group": "wishlist",
+      "en": {
+        "other": "Wishlist loading"
+      },
+      "ar": {
+        "other": "جارٍ تحميل المفضلة"
+      }
+    },
+    {
+      "key": "wishlist.saved_count",
+      "group": "wishlist",
+      "plural": "count",
+      "en": {
+        "one": "{count} saved item",
+        "other": "{count} saved items"
+      },
+      "ar": {
+        "zero": "لا توجد منتجات محفوظة ({count})",
+        "one": "منتج واحد محفوظ ({count})",
+        "two": "منتجان محفوظان ({count})",
+        "few": "{count} منتجات محفوظة",
+        "many": "{count} منتجًا محفوظًا",
+        "other": "{count} منتج محفوظ"
+      }
+    },
+    {
+      "key": "account.add_your_first_location_and_keep_the_little_details_ready",
+      "group": "account",
+      "en": {
+        "other": "Add your first location and keep the little details ready."
+      },
+      "ar": {
+        "other": "أضف عنوانك الأول واحفظ التفاصيل لتسهيل التوصيل."
+      }
+    },
+    {
+      "key": "account.enter_the_details_once_so_every_delivery_reaches_the_right_door",
+      "group": "account",
+      "en": {
+        "other": "Enter the details once, so every delivery reaches the right door."
+      },
+      "ar": {
+        "other": "أدخل التفاصيل مرة واحدة لتصل كل طلباتك إلى العنوان الصحيح."
+      }
+    },
+    {
+      "key": "account.personal_details",
+      "group": "account",
+      "en": {
+        "other": "Personal details"
+      },
+      "ar": {
+        "other": "البيانات الشخصية"
+      }
+    },
+    {
+      "key": "account.first_name",
+      "group": "account",
+      "en": {
+        "other": "First name"
+      },
+      "ar": {
+        "other": "الاسم الأول"
+      }
+    },
+    {
+      "key": "account.last_name",
+      "group": "account",
+      "en": {
+        "other": "Last name"
+      },
+      "ar": {
+        "other": "اسم العائلة"
+      }
+    },
+    {
+      "key": "account.date_of_birth",
+      "group": "account",
+      "en": {
+        "other": "Date of birth"
+      },
+      "ar": {
+        "other": "تاريخ الميلاد"
+      }
+    },
+    {
+      "key": "account.gender",
+      "group": "account",
+      "en": {
+        "other": "Gender"
+      },
+      "ar": {
+        "other": "النوع"
+      }
+    },
+    {
+      "key": "account.not_set",
+      "group": "account",
+      "en": {
+        "other": "Not set"
+      },
+      "ar": {
+        "other": "غير محدد"
+      }
+    },
+    {
+      "key": "account.female",
+      "group": "account",
+      "en": {
+        "other": "Female"
+      },
+      "ar": {
+        "other": "أنثى"
+      }
+    },
+    {
+      "key": "account.male",
+      "group": "account",
+      "en": {
+        "other": "Male"
+      },
+      "ar": {
+        "other": "ذكر"
+      }
+    },
+    {
+      "key": "account.prefer_not_to_say",
+      "group": "account",
+      "en": {
+        "other": "Prefer not to say"
+      },
+      "ar": {
+        "other": "أفضل عدم الإفصاح"
+      }
+    },
+    {
+      "key": "account.save_personal_details",
+      "group": "account",
+      "en": {
+        "other": "Save personal details"
+      },
+      "ar": {
+        "other": "حفظ البيانات الشخصية"
+      }
+    },
+    {
+      "key": "account.your_details_were_saved",
+      "group": "account",
+      "en": {
+        "other": "Your details were saved."
+      },
+      "ar": {
+        "other": "تم حفظ بياناتك."
+      }
+    },
+    {
+      "key": "account.floor_floor",
+      "group": "account",
+      "en": {
+        "other": "Floor {floor}"
+      },
+      "ar": {
+        "other": "الطابق {floor}"
+      }
+    },
+    {
+      "key": "account.apt_apartment",
+      "group": "account",
+      "en": {
+        "other": "Apt {apartment}"
+      },
+      "ar": {
+        "other": "الشقة {apartment}"
+      }
+    },
+    {
+      "key": "wishlist.your_wishlist",
+      "group": "wishlist",
+      "en": {
+        "other": "Your wishlist"
+      },
+      "ar": {
+        "other": "قائمة رغباتك"
+      }
+    },
+    {
+      "key": "wishlist.sign_in_to_view_your_wishlist",
+      "group": "wishlist",
+      "en": {
+        "other": "Sign in to view your wishlist"
+      },
+      "ar": {
+        "other": "سجّل الدخول لعرض قائمة رغباتك"
+      }
+    },
+    {
+      "key": "wishlist.loading_wishlist",
+      "group": "wishlist",
+      "en": {
+        "other": "Loading wishlist…"
+      },
+      "ar": {
+        "other": "جارٍ تحميل قائمة الرغبات…"
+      }
+    },
+    {
+      "key": "wishlist.your_wishlist_is_empty_save_favorites_from_any_product_page",
+      "group": "wishlist",
+      "en": {
+        "other": "Your wishlist is empty. Save favorites from any product page."
+      },
+      "ar": {
+        "other": "قائمة رغباتك فارغة. احفظ منتجاتك المفضلة من صفحة أي منتج."
+      }
+    },
+    {
+      "key": "wishlist.product_unavailable",
+      "group": "wishlist",
+      "en": {
+        "other": "Product unavailable"
+      },
+      "ar": {
+        "other": "المنتج غير متاح"
+      }
+    },
+    {
+      "key": "orders.your_purchases",
+      "group": "orders",
+      "en": {
+        "other": "YOUR PURCHASES"
+      },
+      "ar": {
+        "other": "مشترياتك"
+      }
+    },
+    {
+      "key": "orders.your_orders",
+      "group": "orders",
+      "en": {
+        "other": "Your orders"
+      },
+      "ar": {
+        "other": "طلباتك"
+      }
+    },
+    {
+      "key": "orders.loading_orders",
+      "group": "orders",
+      "en": {
+        "other": "Loading orders…"
+      },
+      "ar": {
+        "other": "جارٍ تحميل الطلبات…"
+      }
+    },
+    {
+      "key": "orders.no_orders_yet",
+      "group": "orders",
+      "en": {
+        "other": "No orders yet."
+      },
+      "ar": {
+        "other": "لا توجد طلبات بعد."
+      }
+    },
+    {
+      "key": "orders.browse_groceries",
+      "group": "orders",
+      "en": {
+        "other": "Browse groceries"
+      },
+      "ar": {
+        "other": "تصفح المنتجات"
+      }
+    },
+    {
+      "key": "orders.thank_you_your_order_has_been_placed",
+      "group": "orders",
+      "en": {
+        "other": "Thank you. Your order has been placed."
+      },
+      "ar": {
+        "other": "شكرًا لك. تم تأكيد طلبك."
+      }
+    },
+    {
+      "key": "orders.order_number",
+      "group": "orders",
+      "en": {
+        "other": "Order #{number}"
+      },
+      "ar": {
+        "other": "الطلب رقم {number}"
+      }
+    },
+    {
+      "key": "orders.gift_message_message",
+      "group": "orders",
+      "en": {
+        "other": "Gift message: {message}"
+      },
+      "ar": {
+        "other": "رسالة الهدية: {message}"
+      }
+    },
+    {
+      "key": "orders.ask_about_this_order",
+      "group": "orders",
+      "en": {
+        "other": "Ask about this order"
+      },
+      "ar": {
+        "other": "استفسر عن هذا الطلب"
+      }
+    },
+    {
+      "key": "orders.your_items",
+      "group": "orders",
+      "en": {
+        "other": "Your items"
+      },
+      "ar": {
+        "other": "منتجاتك"
+      }
+    },
+    {
+      "key": "orders.per_selling_unit_historical_snapshot",
+      "group": "orders",
+      "en": {
+        "other": "per selling unit · historical snapshot"
+      },
+      "ar": {
+        "other": "لكل وحدة بيع · بيانات وقت الطلب"
+      }
+    },
+    {
+      "key": "orders.legacy_order_full_option_and_pack_facts_were_not_recorded",
+      "group": "orders",
+      "en": {
+        "other": "Legacy order: full option and pack facts were not recorded."
+      },
+      "ar": {
+        "other": "طلب سابق: لم تُسجّل جميع تفاصيل الخيارات والعبوة."
+      }
+    },
+    {
+      "key": "orders.market_country_currency",
+      "group": "orders",
+      "en": {
+        "other": "Market: {country} · {currency}"
+      },
+      "ar": {
+        "other": "السوق: {country} · {currency}"
+      }
+    },
+    {
+      "key": "orders.items_amount",
+      "group": "orders",
+      "en": {
+        "other": "Items: {amount}"
+      },
+      "ar": {
+        "other": "المنتجات: {amount}"
+      }
+    },
+    {
+      "key": "orders.delivery_amount",
+      "group": "orders",
+      "en": {
+        "other": "Delivery: {amount}"
+      },
+      "ar": {
+        "other": "التوصيل: {amount}"
+      }
+    },
+    {
+      "key": "orders.tax_name_amount",
+      "group": "orders",
+      "en": {
+        "other": "Tax ({name}): {amount}"
+      },
+      "ar": {
+        "other": "الضريبة ({name}): {amount}"
+      }
+    },
+    {
+      "key": "orders.total_amount",
+      "group": "orders",
+      "en": {
+        "other": "Total: {amount}"
+      },
+      "ar": {
+        "other": "الإجمالي: {amount}"
+      }
+    },
+    {
+      "key": "orders.cash_collected_on_date",
+      "group": "orders",
+      "en": {
+        "other": "Cash collected on {date}"
+      },
+      "ar": {
+        "other": "تم تحصيل المبلغ النقدي في {date}"
+      }
+    },
+    {
+      "key": "orders.cash_has_not_been_collected",
+      "group": "orders",
+      "en": {
+        "other": "Cash has not been collected."
+      },
+      "ar": {
+        "other": "لم يُحصّل المبلغ النقدي."
+      }
+    },
+    {
+      "key": "orders.cash_is_due_when_you_receive_your_order",
+      "group": "orders",
+      "en": {
+        "other": "Cash is due when you receive your order."
+      },
+      "ar": {
+        "other": "يُدفع المبلغ النقدي عند استلام طلبك."
+      }
+    },
+    {
+      "key": "orders.manual_refund_recorded_amount",
+      "group": "orders",
+      "en": {
+        "other": "Manual refund recorded: {amount}"
+      },
+      "ar": {
+        "other": "تم تسجيل استرداد يدوي: {amount}"
+      }
+    },
+    {
+      "key": "orders.collect_when_marked_ready",
+      "group": "orders",
+      "en": {
+        "other": "Collect when marked ready"
+      },
+      "ar": {
+        "other": "استلم الطلب عند الإشعار بأنه جاهز"
+      }
+    },
+    {
+      "key": "orders.delivery_as_soon_as_possible",
+      "group": "orders",
+      "en": {
+        "other": "Delivery as soon as possible"
+      },
+      "ar": {
+        "other": "التوصيل في أقرب وقت ممكن"
+      }
+    },
+    {
+      "key": "orders.tracking_reference",
+      "group": "orders",
+      "en": {
+        "other": "Tracking reference:"
+      },
+      "ar": {
+        "other": "رقم التتبع:"
+      }
+    },
+    {
+      "key": "orders.order_item",
+      "group": "orders",
+      "en": {
+        "other": "Order item"
+      },
+      "ar": {
+        "other": "منتج في الطلب"
+      }
+    },
+    {
+      "key": "orders.order_progress",
+      "group": "orders",
+      "en": {
+        "other": "Order progress"
+      },
+      "ar": {
+        "other": "تقدم الطلب"
+      }
+    },
+    {
+      "key": "orders.loading_order",
+      "group": "orders",
+      "en": {
+        "other": "Loading order…"
+      },
+      "ar": {
+        "other": "جارٍ تحميل الطلب…"
+      }
+    },
+    {
+      "key": "orders.currency_unavailable",
+      "group": "orders",
+      "en": {
+        "other": "currency unavailable"
+      },
+      "ar": {
+        "other": "العملة غير متاحة"
+      }
+    },
+    {
+      "key": "orders.image_unavailable_for_name",
+      "group": "orders",
+      "en": {
+        "other": "Image unavailable for {name}"
+      },
+      "ar": {
+        "other": "الصورة غير متاحة للمنتج {name}"
+      }
+    },
+    {
+      "key": "orders.pickup_location",
+      "group": "orders",
+      "en": {
+        "other": "Pickup location"
+      },
+      "ar": {
+        "other": "مكان الاستلام"
+      }
+    },
+    {
+      "key": "orders.shipment",
+      "group": "orders",
+      "en": {
+        "other": "Shipment"
+      },
+      "ar": {
+        "other": "شحنة"
+      }
+    },
+    {
+      "key": "orders.hide_details",
+      "group": "orders",
+      "en": {
+        "other": "Hide details ↑"
+      },
+      "ar": {
+        "other": "إخفاء التفاصيل ↑"
+      }
+    },
+    {
+      "key": "orders.details",
+      "group": "orders",
+      "en": {
+        "other": "Details ↓"
+      },
+      "ar": {
+        "other": "التفاصيل ↓"
+      }
+    },
+    {
+      "key": "orders.hide_details_for_order_number_in_chat",
+      "group": "orders",
+      "en": {
+        "other": "Hide details for order #{number} in chat"
+      },
+      "ar": {
+        "other": "إخفاء تفاصيل الطلب رقم {number} في المحادثة"
+      }
+    },
+    {
+      "key": "orders.view_details_for_order_number_in_chat",
+      "group": "orders",
+      "en": {
+        "other": "View details for order #{number} in chat"
+      },
+      "ar": {
+        "other": "عرض تفاصيل الطلب رقم {number} في المحادثة"
+      }
+    },
+    {
+      "key": "support.ticket_conversation",
+      "group": "support",
+      "en": {
+        "other": "Ticket conversation"
+      },
+      "ar": {
+        "other": "محادثة الدعم"
+      }
+    },
+    {
+      "key": "support.support_case_created",
+      "group": "support",
+      "en": {
+        "other": "SUPPORT CASE CREATED"
+      },
+      "ar": {
+        "other": "تم إنشاء طلب الدعم"
+      }
+    },
+    {
+      "key": "support.ticket_number_is_open",
+      "group": "support",
+      "en": {
+        "other": "Ticket #{number} is open"
+      },
+      "ar": {
+        "other": "تم فتح تذكرة الدعم رقم {number}"
+      }
+    },
+    {
+      "key": "support.your_message_has_been_received_keep_your_ticket_number_for_reference",
+      "group": "support",
+      "en": {
+        "other": "Your message has been received. Keep your ticket number for reference."
+      },
+      "ar": {
+        "other": "تم استلام رسالتك. احتفظ برقم التذكرة للرجوع إليه."
+      }
+    },
+    {
+      "key": "support.status",
+      "group": "support",
+      "en": {
+        "other": "Status"
+      },
+      "ar": {
+        "other": "الحالة"
+      }
+    },
+    {
+      "key": "support.priority",
+      "group": "support",
+      "en": {
+        "other": "Priority"
+      },
+      "ar": {
+        "other": "الأولوية"
+      }
+    },
+    {
+      "key": "support.next_action",
+      "group": "support",
+      "en": {
+        "other": "Next action"
+      },
+      "ar": {
+        "other": "الخطوة التالية"
+      }
+    },
+    {
+      "key": "support.track_in_ai_assistance",
+      "group": "support",
+      "en": {
+        "other": "Track in AI assistance"
+      },
+      "ar": {
+        "other": "تابع عبر المساعد الذكي"
+      }
+    },
+    {
+      "key": "support.view_your_ticket_and_replies",
+      "group": "support",
+      "en": {
+        "other": "View your ticket and replies"
+      },
+      "ar": {
+        "other": "عرض تذكرتك والردود"
+      }
+    },
+    {
+      "key": "support.our_team_can_follow_up_using_the_contact_details_you_provided",
+      "group": "support",
+      "en": {
+        "other": "Our team can follow up using the contact details you provided."
+      },
+      "ar": {
+        "other": "يمكن لفريقنا التواصل معك عبر بيانات الاتصال التي قدمتها."
+      }
+    },
+    {
+      "key": "support.open_a_support_ticket",
+      "group": "support",
+      "en": {
+        "other": "Open a support ticket"
+      },
+      "ar": {
+        "other": "فتح تذكرة دعم"
+      }
+    },
+    {
+      "key": "support.how_can_we_help",
+      "group": "support",
+      "en": {
+        "other": "How can we help?"
+      },
+      "ar": {
+        "other": "كيف يمكننا مساعدتك؟"
+      }
+    },
+    {
+      "key": "support.regarding",
+      "group": "support",
+      "en": {
+        "other": "Regarding"
+      },
+      "ar": {
+        "other": "بخصوص"
+      }
+    },
+    {
+      "key": "support.your_order",
+      "group": "support",
+      "en": {
+        "other": "your order"
+      },
+      "ar": {
+        "other": "طلبك"
+      }
+    },
+    {
+      "key": "support.subject",
+      "group": "support",
+      "en": {
+        "other": "Subject"
+      },
+      "ar": {
+        "other": "الموضوع"
+      }
+    },
+    {
+      "key": "support.briefly_describe_your_issue",
+      "group": "support",
+      "en": {
+        "other": "Briefly describe your issue"
+      },
+      "ar": {
+        "other": "صف المشكلة باختصار"
+      }
+    },
+    {
+      "key": "support.message",
+      "group": "support",
+      "en": {
+        "other": "Message"
+      },
+      "ar": {
+        "other": "الرسالة"
+      }
+    },
+    {
+      "key": "support.count_2_000_characters",
+      "group": "support",
+      "en": {
+        "other": "{count} / 2,000 characters"
+      },
+      "ar": {
+        "other": "{count} / 2,000 حرف"
+      }
+    },
+    {
+      "key": "support.your_name",
+      "group": "support",
+      "en": {
+        "other": "Your name"
+      },
+      "ar": {
+        "other": "اسمك"
+      }
+    },
+    {
+      "key": "support.you_example_com_or_201012345678",
+      "group": "support",
+      "en": {
+        "other": "you@example.com or +201012345678"
+      },
+      "ar": {
+        "other": "you@example.com أو +201012345678"
+      }
+    },
+    {
+      "key": "support.your_message_is_saved_for_retry_you_will_not_receive_a_duplicate_ticket",
+      "group": "support",
+      "en": {
+        "other": "Your message is saved for retry. You will not receive a duplicate ticket."
+      },
+      "ar": {
+        "other": "تم حفظ رسالتك لإعادة المحاولة. لن تُنشأ تذكرة مكررة."
+      }
+    },
+    {
+      "key": "support.view_your_existing_tickets",
+      "group": "support",
+      "en": {
+        "other": "View your existing tickets"
+      },
+      "ar": {
+        "other": "عرض تذاكر الدعم الحالية"
+      }
+    },
+    {
+      "key": "support.your_support_tickets",
+      "group": "support",
+      "en": {
+        "other": "Your support tickets"
+      },
+      "ar": {
+        "other": "تذاكر الدعم الخاصة بك"
+      }
+    },
+    {
+      "key": "support.sign_in_to_view_your_tickets",
+      "group": "support",
+      "en": {
+        "other": "Sign in to view your tickets"
+      },
+      "ar": {
+        "other": "سجّل الدخول لعرض تذاكر الدعم"
+      }
+    },
+    {
+      "key": "support.support_center",
+      "group": "support",
+      "en": {
+        "other": "SUPPORT CENTER"
+      },
+      "ar": {
+        "other": "مركز الدعم"
+      }
+    },
+    {
+      "key": "support.ticket_number",
+      "group": "support",
+      "en": {
+        "other": "Ticket #{number}"
+      },
+      "ar": {
+        "other": "التذكرة رقم {number}"
+      }
+    },
+    {
+      "key": "support.count_recent_tickets",
+      "group": "support",
+      "en": {
+        "other": "{count} recent tickets"
+      },
+      "ar": {
+        "other": "{count} تذاكر حديثة"
+      }
+    },
+    {
+      "key": "support.open_a_ticket",
+      "group": "support",
+      "en": {
+        "other": "Open a ticket"
+      },
+      "ar": {
+        "other": "فتح تذكرة"
+      }
+    },
+    {
+      "key": "support.linked_order",
+      "group": "support",
+      "en": {
+        "other": "Linked order"
+      },
+      "ar": {
+        "other": "الطلب المرتبط"
+      }
+    },
+    {
+      "key": "support.reply",
+      "group": "support",
+      "en": {
+        "other": "Reply"
+      },
+      "ar": {
+        "other": "الرد"
+      }
+    },
+    {
+      "key": "support.sending",
+      "group": "support",
+      "en": {
+        "other": "Sending..."
+      },
+      "ar": {
+        "other": "جارٍ الإرسال…"
+      }
+    },
+    {
+      "key": "support.send_reply",
+      "group": "support",
+      "en": {
+        "other": "Send reply"
+      },
+      "ar": {
+        "other": "إرسال الرد"
+      }
+    },
+    {
+      "key": "support.submitting",
+      "group": "support",
+      "en": {
+        "other": "Submitting..."
+      },
+      "ar": {
+        "other": "جارٍ الإرسال…"
+      }
+    },
+    {
+      "key": "support.retry_saved_submission",
+      "group": "support",
+      "en": {
+        "other": "Retry saved submission"
+      },
+      "ar": {
+        "other": "إعادة إرسال الرسالة المحفوظة"
+      }
+    },
+    {
+      "key": "support.open_ticket",
+      "group": "support",
+      "en": {
+        "other": "Open ticket"
+      },
+      "ar": {
+        "other": "فتح التذكرة"
+      }
+    },
+    {
+      "key": "support.could_not_submit_ticket",
+      "group": "support",
+      "en": {
+        "other": "Could not submit ticket"
+      },
+      "ar": {
+        "other": "تعذر إرسال التذكرة"
+      }
+    },
+    {
+      "key": "support.reply_failed",
+      "group": "support",
+      "en": {
+        "other": "Reply failed"
+      },
+      "ar": {
+        "other": "تعذر إرسال الرد"
+      }
+    },
+    {
+      "key": "support.completed",
+      "group": "support",
+      "en": {
+        "other": "Completed"
+      },
+      "ar": {
+        "other": "مكتمل"
+      }
+    },
+    {
+      "key": "support.priority_response",
+      "group": "support",
+      "en": {
+        "other": "Priority response"
+      },
+      "ar": {
+        "other": "استجابة ذات أولوية"
+      }
+    },
+    {
+      "key": "support.standard_response",
+      "group": "support",
+      "en": {
+        "other": "Standard response"
+      },
+      "ar": {
+        "other": "استجابة عادية"
+      }
+    },
+    {
+      "key": "support.awaiting_first_response",
+      "group": "support",
+      "en": {
+        "other": "Awaiting first response"
+      },
+      "ar": {
+        "other": "في انتظار الرد الأول"
+      }
+    },
+    {
+      "key": "support.team_is_investigating",
+      "group": "support",
+      "en": {
+        "other": "Team is investigating"
+      },
+      "ar": {
+        "other": "الفريق يراجع المشكلة"
+      }
+    },
+    {
+      "key": "support.review_resolution",
+      "group": "support",
+      "en": {
+        "other": "Review resolution"
+      },
+      "ar": {
+        "other": "راجع الحل"
+      }
+    },
+    {
+      "key": "support.closed",
+      "group": "support",
+      "en": {
+        "other": "Closed"
+      },
+      "ar": {
+        "other": "مغلق"
+      }
+    },
+    {
+      "key": "content.page_unavailable",
+      "group": "content",
+      "en": {
+        "other": "Page unavailable"
+      },
+      "ar": {
+        "other": "الصفحة غير متاحة"
+      }
+    },
+    {
+      "key": "orders.status.placed",
+      "group": "orders",
+      "en": {
+        "other": "placed"
+      },
+      "ar": {
+        "other": "تم تأكيد الطلب"
+      }
+    },
+    {
+      "key": "orders.status.confirmed",
+      "group": "orders",
+      "en": {
+        "other": "confirmed"
+      },
+      "ar": {
+        "other": "مؤكد"
+      }
+    },
+    {
+      "key": "orders.status.fulfilling",
+      "group": "orders",
+      "en": {
+        "other": "fulfilling"
+      },
+      "ar": {
+        "other": "جارٍ التجهيز"
+      }
+    },
+    {
+      "key": "orders.status.shipped",
+      "group": "orders",
+      "en": {
+        "other": "shipped"
+      },
+      "ar": {
+        "other": "تم الشحن"
+      }
+    },
+    {
+      "key": "orders.status.delivered",
+      "group": "orders",
+      "en": {
+        "other": "delivered"
+      },
+      "ar": {
+        "other": "تم التوصيل"
+      }
+    },
+    {
+      "key": "orders.status.delivery_failed",
+      "group": "orders",
+      "en": {
+        "other": "delivery failed"
+      },
+      "ar": {
+        "other": "تعذر التوصيل"
+      }
+    },
+    {
+      "key": "orders.status.cancelled",
+      "group": "orders",
+      "en": {
+        "other": "cancelled"
+      },
+      "ar": {
+        "other": "ملغي"
+      }
+    },
+    {
+      "key": "orders.status.pickup_ready",
+      "group": "orders",
+      "en": {
+        "other": "pickup ready"
+      },
+      "ar": {
+        "other": "جاهز للاستلام"
+      }
+    },
+    {
+      "key": "orders.status.picked_up",
+      "group": "orders",
+      "en": {
+        "other": "picked up"
+      },
+      "ar": {
+        "other": "تم الاستلام"
+      }
+    },
+    {
+      "key": "orders.status.cash_collected",
+      "group": "orders",
+      "en": {
+        "other": "cash collected"
+      },
+      "ar": {
+        "other": "تم تحصيل المبلغ"
+      }
+    },
+    {
+      "key": "orders.status.pending",
+      "group": "orders",
+      "en": {
+        "other": "pending"
+      },
+      "ar": {
+        "other": "قيد الانتظار"
+      }
+    },
+    {
+      "key": "orders.status.dispatched",
+      "group": "orders",
+      "en": {
+        "other": "dispatched"
+      },
+      "ar": {
+        "other": "تم الإرسال"
+      }
+    },
+    {
+      "key": "support.value.open",
+      "group": "support",
+      "en": {
+        "other": "open"
+      },
+      "ar": {
+        "other": "مفتوح"
+      }
+    },
+    {
+      "key": "support.value.in_progress",
+      "group": "support",
+      "en": {
+        "other": "in progress"
+      },
+      "ar": {
+        "other": "قيد المعالجة"
+      }
+    },
+    {
+      "key": "support.value.resolved",
+      "group": "support",
+      "en": {
+        "other": "resolved"
+      },
+      "ar": {
+        "other": "تم الحل"
+      }
+    },
+    {
+      "key": "support.value.closed",
+      "group": "support",
+      "en": {
+        "other": "closed"
+      },
+      "ar": {
+        "other": "مغلق"
+      }
+    },
+    {
+      "key": "support.value.high",
+      "group": "support",
+      "en": {
+        "other": "high"
+      },
+      "ar": {
+        "other": "عالية"
+      }
+    },
+    {
+      "key": "support.value.normal",
+      "group": "support",
+      "en": {
+        "other": "normal"
+      },
+      "ar": {
+        "other": "عادية"
+      }
+    },
+    {
+      "key": "support.value.low",
+      "group": "support",
+      "en": {
+        "other": "low"
+      },
+      "ar": {
+        "other": "منخفضة"
+      }
+    },
+    {
+      "key": "support.value.customer",
+      "group": "support",
+      "en": {
+        "other": "customer"
+      },
+      "ar": {
+        "other": "العميل"
+      }
+    },
+    {
+      "key": "support.value.admin",
+      "group": "support",
+      "en": {
+        "other": "admin"
+      },
+      "ar": {
+        "other": "فريق الدعم"
+      }
+    },
+    {
+      "key": "support.value.system",
+      "group": "support",
+      "en": {
+        "other": "system"
+      },
+      "ar": {
+        "other": "النظام"
+      }
+    },
+    {
+      "key": "support.value.assistant",
+      "group": "support",
+      "en": {
+        "other": "assistant"
+      },
+      "ar": {
+        "other": "المساعد"
+      }
+    },
+    {
+      "key": "support.value.order_issue",
+      "group": "support",
+      "en": {
+        "other": "order issue"
+      },
+      "ar": {
+        "other": "مشكلة في الطلب"
+      }
+    },
+    {
+      "key": "support.value.product_question",
+      "group": "support",
+      "en": {
+        "other": "product question"
+      },
+      "ar": {
+        "other": "استفسار عن منتج"
+      }
+    },
+    {
+      "key": "support.value.complaint",
+      "group": "support",
+      "en": {
+        "other": "complaint"
+      },
+      "ar": {
+        "other": "شكوى"
+      }
+    },
+    {
+      "key": "support.value.payment_dispute",
+      "group": "support",
+      "en": {
+        "other": "payment dispute"
+      },
+      "ar": {
+        "other": "مشكلة في الدفع"
+      }
+    },
+    {
+      "key": "support.value.other",
+      "group": "support",
+      "en": {
+        "other": "other"
+      },
+      "ar": {
+        "other": "أخرى"
+      }
+    },
+    {
+      "key": "public.pagination",
+      "group": "public",
+      "en": {
+        "other": "Pagination"
+      },
+      "ar": {
+        "other": "صفحات النتائج"
+      }
+    },
+    {
+      "key": "public.previous_page",
+      "group": "public",
+      "en": {
+        "other": "Previous page"
+      },
+      "ar": {
+        "other": "الصفحة السابقة"
+      }
+    },
+    {
+      "key": "public.page_page",
+      "group": "public",
+      "en": {
+        "other": "Page {page}"
+      },
+      "ar": {
+        "other": "الصفحة {page}"
+      }
+    },
+    {
+      "key": "public.next_page",
+      "group": "public",
+      "en": {
+        "other": "Next page"
+      },
+      "ar": {
+        "other": "الصفحة التالية"
+      }
+    },
+    {
+      "key": "public.return_to_the_store",
+      "group": "public",
+      "en": {
+        "other": "Return to the store"
+      },
+      "ar": {
+        "other": "العودة إلى المتجر"
+      }
+    },
+    {
+      "key": "public.browse_our_catalog",
+      "group": "public",
+      "en": {
+        "other": "Browse our catalog"
+      },
+      "ar": {
+        "other": "تصفح منتجاتنا"
+      }
+    },
+    {
+      "key": "public.subcategories",
+      "group": "public",
+      "en": {
+        "other": "Subcategories"
+      },
+      "ar": {
+        "other": "الفئات الفرعية"
+      }
+    },
+    {
+      "key": "public.related_guides",
+      "group": "public",
+      "en": {
+        "other": "Related guides"
+      },
+      "ar": {
+        "other": "أدلة ذات صلة"
+      }
+    },
+    {
+      "key": "public.catalog_price_final_pricing_is_confirmed_in_your_cart",
+      "group": "public",
+      "en": {
+        "other": "Catalog price. Final pricing is confirmed in your cart."
+      },
+      "ar": {
+        "other": "سعر الكتالوج. يتم تأكيد السعر النهائي في سلة التسوق."
+      }
+    },
+    {
+      "key": "public.choose_options_and_add_to_cart",
+      "group": "public",
+      "en": {
+        "other": "Choose options and add to cart"
+      },
+      "ar": {
+        "other": "اختر الخيارات وأضف إلى السلة"
+      }
+    },
+    {
+      "key": "public.sold_by_brand",
+      "group": "public",
+      "en": {
+        "other": "Sold by {brand}"
+      },
+      "ar": {
+        "other": "يباع بواسطة {brand}"
+      }
+    },
+    {
+      "key": "public.sku",
+      "group": "public",
+      "en": {
+        "other": "SKU:"
+      },
+      "ar": {
+        "other": "رمز المنتج:"
+      }
+    },
+    {
+      "key": "public.product_family",
+      "group": "public",
+      "en": {
+        "other": "Product family:"
+      },
+      "ar": {
+        "other": "مجموعة المنتج:"
+      }
+    },
+    {
+      "key": "public.variants_vary_by",
+      "group": "public",
+      "en": {
+        "other": "Variants vary by:"
+      },
+      "ar": {
+        "other": "تختلف الخيارات حسب:"
+      }
+    },
+    {
+      "key": "public.more_in_this_category",
+      "group": "public",
+      "en": {
+        "other": "More in this category"
+      },
+      "ar": {
+        "other": "المزيد من هذه الفئة"
+      }
+    },
+    {
+      "key": "public.merchant_information",
+      "group": "public",
+      "en": {
+        "other": "Merchant information"
+      },
+      "ar": {
+        "other": "معلومات التاجر"
+      }
+    },
+    {
+      "key": "public.about_brand",
+      "group": "public",
+      "en": {
+        "other": "About {brand}"
+      },
+      "ar": {
+        "other": "عن {brand}"
+      }
+    },
+    {
+      "key": "public.business_name",
+      "group": "public",
+      "en": {
+        "other": "Business name:"
+      },
+      "ar": {
+        "other": "اسم النشاط التجاري:"
+      }
+    },
+    {
+      "key": "public.public_locations",
+      "group": "public",
+      "en": {
+        "other": "Public locations"
+      },
+      "ar": {
+        "other": "مواقع المتجر"
+      }
+    },
+    {
+      "key": "public.delivery_areas",
+      "group": "public",
+      "en": {
+        "other": "Delivery areas"
+      },
+      "ar": {
+        "other": "مناطق التوصيل"
+      }
+    },
+    {
+      "key": "public.availability_and_final_delivery_terms_depend_on_your_selected_location_and_items",
+      "group": "public",
+      "en": {
+        "other": "Availability and final delivery terms depend on your selected location and items."
+      },
+      "ar": {
+        "other": "يعتمد التوفر وشروط التوصيل النهائية على عنوانك والمنتجات المختارة."
+      }
+    },
+    {
+      "key": "public.merchant_policies_and_guides",
+      "group": "public",
+      "en": {
+        "other": "Merchant policies and guides"
+      },
+      "ar": {
+        "other": "سياسات التاجر وأدلته"
+      }
+    },
+    {
+      "key": "public.policies_and_guides",
+      "group": "public",
+      "en": {
+        "other": "Policies and guides"
+      },
+      "ar": {
+        "other": "السياسات والأدلة"
+      }
+    },
+    {
+      "key": "public.effective",
+      "group": "public",
+      "en": {
+        "other": "— effective"
+      },
+      "ar": {
+        "other": "— ساري من"
+      }
+    },
+    {
+      "key": "public.merchant_social_profiles",
+      "group": "public",
+      "en": {
+        "other": "Merchant social profiles"
+      },
+      "ar": {
+        "other": "حسابات التاجر على منصات التواصل"
+      }
+    },
+    {
+      "key": "public.published_by",
+      "group": "public",
+      "en": {
+        "other": "Published by"
+      },
+      "ar": {
+        "other": "نُشر بواسطة"
+      }
+    },
+    {
+      "key": "public.content_updated",
+      "group": "public",
+      "en": {
+        "other": "· Content updated"
+      },
+      "ar": {
+        "other": "· تم تحديث المحتوى"
+      }
+    },
+    {
+      "key": "public.effective_from",
+      "group": "public",
+      "en": {
+        "other": "Effective from"
+      },
+      "ar": {
+        "other": "ساري من"
+      }
+    },
+    {
+      "key": "public.catalog_comparison",
+      "group": "public",
+      "en": {
+        "other": "Catalog comparison"
+      },
+      "ar": {
+        "other": "مقارنة المنتجات"
+      }
+    },
+    {
+      "key": "public.current_public_catalog_facts_missing_specifications_are_not_inferred",
+      "group": "public",
+      "en": {
+        "other": "Current public catalog facts. Missing specifications are not inferred."
+      },
+      "ar": {
+        "other": "بيانات المنتجات الحالية. لا نفترض المواصفات غير المتوفرة."
+      }
+    },
+    {
+      "key": "public.products_sold_by_brand",
+      "group": "public",
+      "en": {
+        "other": "Products sold by {brand}"
+      },
+      "ar": {
+        "other": "منتجات يبيعها {brand}"
+      }
+    },
+    {
+      "key": "public.fact",
+      "group": "public",
+      "en": {
+        "other": "Fact"
+      },
+      "ar": {
+        "other": "المواصفة"
+      }
+    },
+    {
+      "key": "public.public_price",
+      "group": "public",
+      "en": {
+        "other": "Public price"
+      },
+      "ar": {
+        "other": "السعر المعروض"
+      }
+    },
+    {
+      "key": "public.choose_options_for_pricing",
+      "group": "public",
+      "en": {
+        "other": "Choose options for pricing"
+      },
+      "ar": {
+        "other": "اختر الخيارات لعرض السعر"
+      }
+    },
+    {
+      "key": "public.this_page_has_been_permanently_removed",
+      "group": "public",
+      "en": {
+        "other": "This page has been permanently removed"
+      },
+      "ar": {
+        "other": "تم حذف هذه الصفحة نهائيًا"
+      }
+    },
+    {
+      "key": "public.customer_service",
+      "group": "public",
+      "en": {
+        "other": "Customer service"
+      },
+      "ar": {
+        "other": "خدمة العملاء"
+      }
+    },
+    {
+      "key": "public.not_provided",
+      "group": "public",
+      "en": {
+        "other": "Not provided"
+      },
+      "ar": {
+        "other": "غير متوفر"
+      }
+    },
+    {
+      "key": "search.active_filters",
+      "group": "search",
+      "en": {
+        "other": "Active filters"
+      },
+      "ar": {
+        "other": "عوامل التصفية النشطة"
+      }
+    },
+    {
+      "key": "search.shopping_by",
+      "group": "search",
+      "en": {
+        "other": "Shopping by"
+      },
+      "ar": {
+        "other": "التصفية حسب"
+      }
+    },
+    {
+      "key": "search.remove_filter",
+      "group": "search",
+      "en": {
+        "other": "Remove {attribute}: {value}"
+      },
+      "ar": {
+        "other": "إزالة {attribute}: {value}"
+      }
+    },
+    {
+      "key": "notifications.title",
+      "group": "notifications",
+      "en": {
+        "other": "Notifications"
+      },
+      "ar": {
+        "other": "الإشعارات"
+      }
+    },
+    {
+      "key": "notifications.open_unread",
+      "group": "notifications",
+      "en": {
+        "other": "Notifications, {count} unread"
+      },
+      "ar": {
+        "other": "الإشعارات، {count} غير مقروءة"
+      }
+    },
+    {
+      "key": "notifications.close",
+      "group": "notifications",
+      "en": {
+        "other": "Close notifications"
+      },
+      "ar": {
+        "other": "إغلاق الإشعارات"
+      }
+    },
+    {
+      "key": "notifications.eyebrow",
+      "group": "notifications",
+      "en": {
+        "other": "YOUR STORE UPDATES"
+      },
+      "ar": {
+        "other": "آخر أخبار متجرك"
+      }
+    },
+    {
+      "key": "notifications.customer_hint",
+      "group": "notifications",
+      "en": {
+        "other": "Personal updates and the latest from our store."
+      },
+      "ar": {
+        "other": "تحديثات تهمك وآخر أخبار متجرنا."
+      }
+    },
+    {
+      "key": "notifications.guest_hint",
+      "group": "notifications",
+      "en": {
+        "other": "The latest from our store. Sign in for your personal updates."
+      },
+      "ar": {
+        "other": "آخر أخبار متجرنا. سجّل دخولك للاطلاع على تحديثاتك الشخصية."
+      }
+    },
+    {
+      "key": "notifications.filter",
+      "group": "notifications",
+      "en": {
+        "other": "Filter notifications"
+      },
+      "ar": {
+        "other": "تصفية الإشعارات"
+      }
+    },
+    {
+      "key": "notifications.all",
+      "group": "notifications",
+      "en": {
+        "other": "All"
+      },
+      "ar": {
+        "other": "الكل"
+      }
+    },
+    {
+      "key": "notifications.unread",
+      "group": "notifications",
+      "en": {
+        "other": "Unread"
+      },
+      "ar": {
+        "other": "غير المقروءة"
+      }
+    },
+    {
+      "key": "notifications.mark_all",
+      "group": "notifications",
+      "en": {
+        "other": "Mark all as read"
+      },
+      "ar": {
+        "other": "تحديد الكل كمقروء"
+      }
+    },
+    {
+      "key": "notifications.loading",
+      "group": "notifications",
+      "en": {
+        "other": "Loading your notifications…"
+      },
+      "ar": {
+        "other": "جارٍ تحميل إشعاراتك…"
+      }
+    },
+    {
+      "key": "notifications.caught_up",
+      "group": "notifications",
+      "en": {
+        "other": "You’re all caught up"
+      },
+      "ar": {
+        "other": "اطّلعت على جميع الإشعارات"
+      }
+    },
+    {
+      "key": "notifications.caught_up_hint",
+      "group": "notifications",
+      "en": {
+        "other": "You have no unread notifications."
+      },
+      "ar": {
+        "other": "ليس لديك إشعارات غير مقروءة."
+      }
+    },
+    {
+      "key": "notifications.empty_title",
+      "group": "notifications",
+      "en": {
+        "other": "A little quiet for now"
+      },
+      "ar": {
+        "other": "لا توجد إشعارات حاليًا"
+      }
+    },
+    {
+      "key": "notifications.empty_hint",
+      "group": "notifications",
+      "en": {
+        "other": "Store news and useful updates will appear here."
+      },
+      "ar": {
+        "other": "ستظهر هنا أخبار المتجر والتحديثات التي تهمك."
+      }
+    },
+    {
+      "key": "notifications.personal",
+      "group": "notifications",
+      "en": {
+        "other": "For you"
+      },
+      "ar": {
+        "other": "لك"
+      }
+    },
+    {
+      "key": "notifications.store_news",
+      "group": "notifications",
+      "en": {
+        "other": "Store news"
+      },
+      "ar": {
+        "other": "أخبار المتجر"
+      }
+    },
+    {
+      "key": "notifications.mark_read",
+      "group": "notifications",
+      "en": {
+        "other": "Mark read"
+      },
+      "ar": {
+        "other": "تحديد كمقروء"
+      }
+    },
+    {
+      "key": "notifications.mark_unread",
+      "group": "notifications",
+      "en": {
+        "other": "Mark unread"
+      },
+      "ar": {
+        "other": "تحديد كغير مقروء"
+      }
+    },
+    {
+      "key": "notifications.marked_read",
+      "group": "notifications",
+      "en": {
+        "other": "Notification marked as read."
+      },
+      "ar": {
+        "other": "تم تحديد الإشعار كمقروء."
+      }
+    },
+    {
+      "key": "notifications.marked_unread",
+      "group": "notifications",
+      "en": {
+        "other": "Notification marked as unread."
+      },
+      "ar": {
+        "other": "تم تحديد الإشعار كغير مقروء."
+      }
+    },
+    {
+      "key": "notifications.all_marked_read",
+      "group": "notifications",
+      "en": {
+        "other": "Notifications in this view have been marked as read."
+      },
+      "ar": {
+        "other": "تم تحديد الإشعارات في هذا العرض كمقروءة."
+      }
+    },
+    {
+      "key": "notifications.expires",
+      "group": "notifications",
+      "en": {
+        "other": "Available until {date}"
+      },
+      "ar": {
+        "other": "متاح حتى {date}"
+      }
+    },
+    {
+      "key": "notifications.load_older",
+      "group": "notifications",
+      "en": {
+        "other": "Load older notifications"
+      },
+      "ar": {
+        "other": "تحميل إشعارات أقدم"
+      }
+    },
+    {
+      "key": "notifications.footer_hint",
+      "group": "notifications",
+      "en": {
+        "other": "Updates stay here until they expire or are removed."
+      },
+      "ar": {
+        "other": "تبقى التحديثات هنا حتى انتهاء صلاحيتها أو إزالتها."
+      }
+    },
+    {
+      "key": "notifications.refresh",
+      "group": "notifications",
+      "en": {
+        "other": "Refresh"
+      },
+      "ar": {
+        "other": "تحديث"
+      }
+    },
+    {
+      "key": "notifications.load_error",
+      "group": "notifications",
+      "en": {
+        "other": "We couldn’t load your notifications. Please try again."
+      },
+      "ar": {
+        "other": "تعذّر تحميل إشعاراتك. يُرجى المحاولة مرة أخرى."
+      }
+    },
+    {
+      "key": "notifications.update_error",
+      "group": "notifications",
+      "en": {
+        "other": "We couldn’t update this notification. Please try again."
+      },
+      "ar": {
+        "other": "تعذّر تحديث هذا الإشعار. يُرجى المحاولة مرة أخرى."
+      }
+    },
+    {
+      "key": "notifications.unavailable",
+      "group": "notifications",
+      "en": {
+        "other": "This notification has expired or is no longer available."
+      },
+      "ar": {
+        "other": "انتهت صلاحية هذا الإشعار أو لم يعد متاحًا."
+      }
+    },
+    {
+      "key": "notifications.session_error",
+      "group": "notifications",
+      "en": {
+        "other": "Notifications are unavailable. Retry your session."
+      },
+      "ar": {
+        "other": "الإشعارات غير متاحة. أعد المحاولة لاستعادة جلستك."
+      }
+    },
+    {
+      "key": "notifications.retry_session",
+      "group": "notifications",
+      "en": {
+        "other": "Retry notifications"
+      },
+      "ar": {
+        "other": "إعادة محاولة تحميل الإشعارات"
+      }
+    },
+    {
+      "key": "notifications.view_offer",
+      "group": "notifications",
+      "en": {
+        "other": "View offer"
+      },
+      "ar": {
+        "other": "عرض العرض"
+      }
+    },
+    {
+      "key": "notifications.dismiss_offer",
+      "group": "notifications",
+      "en": {
+        "other": "Dismiss offer"
+      },
+      "ar": {
+        "other": "إغلاق العرض"
+      }
+    }
+  ]
+}

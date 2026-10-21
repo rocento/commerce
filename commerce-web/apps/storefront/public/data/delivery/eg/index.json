@@ -1,0 +1,188 @@
+{
+  "country": {
+    "code": "EG",
+    "name": "Egypt",
+    "name_ar": "مصر"
+  },
+  "states": [
+    {
+      "code": "06",
+      "name": "Alexandria",
+      "name_ar": "الإسكندرية",
+      "city_count": 258
+    },
+    {
+      "code": "17",
+      "name": "Assiut",
+      "name_ar": "أسيوط",
+      "city_count": 293
+    },
+    {
+      "code": "16",
+      "name": "Aswan",
+      "name_ar": "أسوان",
+      "city_count": 178
+    },
+    {
+      "code": "03",
+      "name": "Beheira",
+      "name_ar": "البحيرة",
+      "city_count": 1912
+    },
+    {
+      "code": "18",
+      "name": "Beni Suef",
+      "name_ar": "بني سويف",
+      "city_count": 223
+    },
+    {
+      "code": "11",
+      "name": "Cairo",
+      "name_ar": "القاهرة",
+      "city_count": 257
+    },
+    {
+      "code": "01",
+      "name": "Dakahlia",
+      "name_ar": "الدقهلية",
+      "city_count": 1145
+    },
+    {
+      "code": "20",
+      "name": "Damietta",
+      "name_ar": "دمياط",
+      "city_count": 181
+    },
+    {
+      "code": "04",
+      "name": "Fayoum",
+      "name_ar": "الفيوم",
+      "city_count": 625
+    },
+    {
+      "code": "05",
+      "name": "Gharbia",
+      "name_ar": "الغربية",
+      "city_count": 634
+    },
+    {
+      "code": "08",
+      "name": "Giza",
+      "name_ar": "الجيزة",
+      "city_count": 312
+    },
+    {
+      "code": "07",
+      "name": "Ismailia",
+      "name_ar": "الإسماعيلية",
+      "city_count": 101
+    },
+    {
+      "code": "21",
+      "name": "Kafr El Sheikh",
+      "name_ar": "كفر الشيخ",
+      "city_count": 1219
+    },
+    {
+      "code": "28",
+      "name": "Luxor",
+      "name_ar": "الأقصر",
+      "city_count": 39
+    },
+    {
+      "code": "22",
+      "name": "Matrouh",
+      "name_ar": "مطروح",
+      "city_count": 112
+    },
+    {
+      "code": "10",
+      "name": "Minya",
+      "name_ar": "المنيا",
+      "city_count": 488
+    },
+    {
+      "code": "09",
+      "name": "Monufia",
+      "name_ar": "المنوفية",
+      "city_count": 613
+    },
+    {
+      "code": "13",
+      "name": "New Valley",
+      "name_ar": "الوادي الجديد",
+      "city_count": 98
+    },
+    {
+      "code": "27",
+      "name": "North Sinai",
+      "name_ar": "شمال سيناء",
+      "city_count": 112
+    },
+    {
+      "code": "19",
+      "name": "Port Said",
+      "name_ar": "بورسعيد",
+      "city_count": 49
+    },
+    {
+      "code": "12",
+      "name": "Qalyubia",
+      "name_ar": "القليوبية",
+      "city_count": 324
+    },
+    {
+      "code": "23",
+      "name": "Qena",
+      "name_ar": "قنا",
+      "city_count": 330
+    },
+    {
+      "code": "02",
+      "name": "Red Sea",
+      "name_ar": "البحر الأحمر",
+      "city_count": 150
+    },
+    {
+      "code": "14",
+      "name": "Sharqia",
+      "name_ar": "الشرقية",
+      "city_count": 2001
+    },
+    {
+      "code": "24",
+      "name": "Sohag",
+      "name_ar": "سوهاج",
+      "city_count": 307
+    },
+    {
+      "code": "26",
+      "name": "South Sinai",
+      "name_ar": "جنوب سيناء",
+      "city_count": 27
+    },
+    {
+      "code": "15",
+      "name": "Suez",
+      "name_ar": "السويس",
+      "city_count": 35
+    }
+  ],
+  "source": "https://download.geonames.org/export/dump/EG.zip",
+  "attribution": "GeoNames",
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "source_sha256": "64cc64065406da7377f12bf896f3ce1078e64286c5ee661c590d8ccae01fba48",
+  "source_latest_record_date": "2026-09-14",
+  "feature_codes": [
+    "PPL",
+    "PPLA",
+    "PPLA2",
+    "PPLA3",
+    "PPLA4",
+    "PPLC",
+    "PPLL",
+    "PPLX"
+  ],
+  "city_count": 12023,
+  "excluded_without_valid_governorate": 22
+}

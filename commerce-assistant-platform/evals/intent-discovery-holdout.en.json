@@ -1,0 +1,84 @@
+[
+  {
+    "id": "apple-singular",
+    "text": "Please I want apple",
+    "intent": "PRODUCT_SEARCH",
+    "slots": {
+      "productText": "apple"
+    }
+  },
+  {
+    "id": "apples-plural",
+    "text": "We want apples",
+    "intent": "PRODUCT_SEARCH",
+    "slots": {
+      "productText": "apples"
+    }
+  },
+  {
+    "id": "milk-polite",
+    "text": "I want some milk please",
+    "intent": "PRODUCT_SEARCH",
+    "slots": {
+      "productText": "milk"
+    }
+  },
+  {
+    "id": "budget-different",
+    "text": "I want apples under $12",
+    "intent": "PRODUCT_SEARCH",
+    "slots": {
+      "productText": "apples",
+      "price": {
+        "operator": "<",
+        "value": 12,
+        "currency": "USD"
+      }
+    }
+  },
+  {
+    "id": "dinner-polite",
+    "text": "Please I want dinner",
+    "intent": "PRODUCT_RECOMMEND",
+    "slots": {
+      "catalogPurpose": "dinner"
+    }
+  },
+  {
+    "id": "breakfast-team",
+    "text": "We want breakfast",
+    "intent": "PRODUCT_RECOMMEND",
+    "slots": {
+      "catalogPurpose": "breakfast"
+    }
+  },
+  {
+    "id": "lunch-need",
+    "text": "I need lunch",
+    "intent": "PRODUCT_RECOMMEND",
+    "slots": {
+      "catalogPurpose": "lunch"
+    }
+  },
+  {
+    "id": "negated",
+    "text": "I do not want apple",
+    "intent": null,
+    "status": "UNKNOWN",
+    "slots": {}
+  },
+  {
+    "id": "service",
+    "text": "I need some help",
+    "intent": null,
+    "status": "UNKNOWN",
+    "slots": {}
+  },
+  {
+    "id": "refund",
+    "text": "I need a refund",
+    "intent": null,
+    "status": "UNKNOWN",
+    "slots": {}
+  }
+]

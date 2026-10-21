@@ -1,0 +1,19 @@
+[Unit]
+Description=Collect sanitized read-only Rocento health checks
+After=docker.service network-online.target
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/python3 /opt/rocento/commerce-api/health-api/collector.py
+TimeoutStartSec=55
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=strict
+ProtectHome=true
+ReadWritePaths=/var/lib/rocento-health
+ProtectKernelTunables=true
+ProtectKernelModules=true
+ProtectControlGroups=true
+MemoryMax=192M
+TasksMax=96
+Nice=10
+UMask=0022

@@ -1,0 +1,333 @@
+{
+  "generator": "built-in image_gen",
+  "jobs": [
+    {
+      "slug": "fresh-oranges",
+      "name": "Fresh Oranges",
+      "collection": "grocery",
+      "subject": "three ripe oranges, one cut in half showing juicy flesh",
+      "path": "assets/demo/fresh-oranges.png",
+      "prompt": "Use case: product-mockup. Create one square photorealistic grocery store catalog product image. Subject: three ripe oranges, one cut in half showing juicy flesh. Plain warm ivory seamless background (#f3f4ed). Soft natural studio lighting and realistic fresh food textures. Center the entire product within the frame with generous clean margins and a subtle grounded shadow. Single product listing image, no collage. No text, logos, labels, watermark, hands, people, price tags, display stands, or unrelated props."
+    },
+    {
+      "slug": "fresh-strawberries",
+      "name": "Fresh Strawberries",
+      "collection": "grocery",
+      "subject": "a neat small pile of fresh ripe red strawberries with green leaves",
+      "path": "assets/demo/fresh-strawberries.png",
+      "prompt": "Use case: product-mockup. Create one square photorealistic grocery store catalog product image. Subject: a neat small pile of fresh ripe red strawberries with green leaves. Plain warm ivory seamless background (#f3f4ed). Soft natural studio lighting and realistic fresh food textures. Center the entire product within the frame with generous clean margins and a subtle grounded shadow. Single product listing image, no collage. No text, logos, labels, watermark, hands, people, price tags, display stands, or unrelated props."
+    },
+    {
+      "slug": "fresh-potatoes",
+      "name": "Fresh Potatoes",
+      "collection": "grocery",
+      "subject": "four fresh golden potatoes with realistic lightly earthy skins",
+      "path": "assets/demo/fresh-potatoes.png",
+      "prompt": "Use case: product-mockup. Create one square photorealistic grocery store catalog product image. Subject: four fresh golden potatoes with realistic lightly earthy skins. Plain warm ivory seamless background (#f3f4ed). Soft natural studio lighting and realistic fresh food textures. Center the entire product within the frame with generous clean margins and a subtle grounded shadow. Single product listing image, no collage. No text, logos, labels, watermark, hands, people, price tags, display stands, or unrelated props."
+    },
+    {
+      "slug": "red-onions",
+      "name": "Red Onions",
+      "collection": "grocery",
+      "subject": "three red onions, one cut in half showing purple rings",
+      "path": "assets/demo/red-onions.png",
+      "prompt": "Use case: product-mockup. Create one square photorealistic grocery store catalog product image. Subject: three red onions, one cut in half showing purple rings. Plain warm ivory seamless background (#f3f4ed). Soft natural studio lighting and realistic fresh food textures. Center the entire product within the frame with generous clean margins and a subtle grounded shadow. Single product listing image, no collage. No text, logos, labels, watermark, hands, people, price tags, display stands, or unrelated props."
+    },
+    {
+      "slug": "fresh-carrots",
+      "name": "Fresh Carrots",
+      "collection": "grocery",
+      "subject": "a tidy bunch of five fresh orange carrots with short leafy green tops",
+      "path": "assets/demo/fresh-carrots.png",
+      "prompt": "Use case: product-mockup. Create one square photorealistic grocery store catalog product image. Subject: a tidy bunch of five fresh orange carrots with short leafy green tops. Plain warm ivory seamless background (#f3f4ed). Soft natural studio lighting and realistic fresh food textures. Center the entire product within the frame with generous clean margins and a subtle grounded shadow. Single product listing image, no collage. No text, logos, labels, watermark, hands, people, price tags, display stands, or unrelated props."
+    },
+    {
+      "slug": "farm-eggs",
+      "name": "Farm Eggs",
+      "collection": "grocery",
+      "subject": "six brown chicken eggs in an open plain molded paper egg carton",
+      "path": "assets/demo/farm-eggs.png",
+      "prompt": "Use case: product-mockup. Create one square photorealistic grocery store catalog product image. Subject: six brown chicken eggs in an open plain molded paper egg carton. Plain warm ivory seamless background (#f3f4ed). Soft natural studio lighting and realistic fresh food textures. Center the entire product within the frame with generous clean margins and a subtle grounded shadow. Single product listing image, no collage. No text, logos, labels, watermark, hands, people, price tags, display stands, or unrelated props."
+    },
+    {
+      "slug": "plain-yogurt",
+      "name": "Plain Yogurt",
+      "collection": "grocery",
+      "subject": "a clear glass jar filled with thick plain white yogurt, open with a simple lid beside it",
+      "path": "assets/demo/plain-yogurt.png",
+      "prompt": "Use case: product-mockup. Create one square photorealistic grocery store catalog product image. Subject: a clear glass jar filled with thick plain white yogurt, open with a simple lid beside it. Plain warm ivory seamless background (#f3f4ed). Soft natural studio lighting and realistic fresh food textures. Center the entire product within the frame with generous clean margins and a subtle grounded shadow. Single product listing image, no collage. No text, logos, labels, watermark, hands, people, price tags, display stands, or unrelated props."
+    },
+    {
+      "slug": "olive-oil",
+      "name": "Olive Oil",
+      "collection": "grocery",
+      "subject": "one unbranded clear glass bottle of golden-green olive oil with a simple dark cap",
+      "path": "assets/demo/olive-oil.png",
+      "prompt": "Use case: product-mockup. Create one square photorealistic grocery store catalog product image. Subject: one unbranded clear glass bottle of golden-green olive oil with a simple dark cap. Plain warm ivory seamless background (#f3f4ed). Soft natural studio lighting and realistic fresh food textures. Center the entire product within the frame with generous clean margins and a subtle grounded shadow. Single product listing image, no collage. No text, logos, labels, watermark, hands, people, price tags, display stands, or unrelated props."
+    },
+    {
+      "slug": "penne-pasta",
+      "name": "Penne Pasta",
+      "collection": "grocery",
+      "subject": "dry golden penne pasta in an open unbranded kraft paper bag with a small spill",
+      "path": "assets/demo/penne-pasta.png",
+      "prompt": "Use case: product-mockup. Create one square photorealistic grocery store catalog product image. Subject: dry golden penne pasta in an open unbranded kraft paper bag with a small spill. Plain warm ivory seamless background (#f3f4ed). Soft natural studio lighting and realistic fresh food textures. Center the entire product within the frame with generous clean margins and a subtle grounded shadow. Single product listing image, no collage. No text, logos, labels, watermark, hands, people, price tags, display stands, or unrelated props."
+    },
+    {
+      "slug": "raw-almonds",
+      "name": "Raw Almonds",
+      "collection": "grocery",
+      "subject": "a neat mound of whole raw almonds with natural brown skins",
+      "path": "assets/demo/raw-almonds.png",
+      "prompt": "Use case: product-mockup. Create one square photorealistic grocery store catalog product image. Subject: a neat mound of whole raw almonds with natural brown skins. Plain warm ivory seamless background (#f3f4ed). Soft natural studio lighting and realistic fresh food textures. Center the entire product within the frame with generous clean margins and a subtle grounded shadow. Single product listing image, no collage. No text, logos, labels, watermark, hands, people, price tags, display stands, or unrelated props."
+    },
+    {
+      "slug": "wildflower-honey",
+      "name": "Wildflower Honey",
+      "collection": "grocery",
+      "subject": "a clear glass jar filled with amber honey and a plain gold metal lid",
+      "path": "assets/demo/wildflower-honey.png",
+      "prompt": "Use case: product-mockup. Create one square photorealistic grocery store catalog product image. Subject: a clear glass jar filled with amber honey and a plain gold metal lid. Plain warm ivory seamless background (#f3f4ed). Soft natural studio lighting and realistic fresh food textures. Center the entire product within the frame with generous clean margins and a subtle grounded shadow. Single product listing image, no collage. No text, logos, labels, watermark, hands, people, price tags, display stands, or unrelated props."
+    },
+    {
+      "slug": "gold-solitaire-ring",
+      "name": "Gold Solitaire Ring",
+      "collection": "jewelry",
+      "subject": "one polished yellow gold solitaire ring with a round brilliant clear diamond in a six-prong setting",
+      "path": "assets/demo/jewelry/gold-solitaire-ring.png",
+      "prompt": "Use case: product-mockup. Create one square photorealistic jewelry store catalog product image. Subject: one polished yellow gold solitaire ring with a round brilliant clear diamond in a six-prong setting. Plain warm ivory seamless background (#f3f4ed). Premium studio macro photography with crisp realistic metal reflections, accurate gemstone facets, restrained natural sparkle, and soft diffused lighting. Center the entire product within the frame with generous clean margins and a subtle grounded shadow. Single product listing image, no collage. No text, logos, labels, watermark, hands, people, price tags, display stands, or unrelated props."
+    },
+    {
+      "slug": "silver-halo-ring",
+      "name": "Silver Halo Ring",
+      "collection": "jewelry",
+      "subject": "one polished silver ring with a round clear center stone surrounded by a delicate halo of smaller clear stones",
+      "path": "assets/demo/jewelry/silver-halo-ring.png",
+      "prompt": "Use case: product-mockup. Create one square photorealistic jewelry store catalog product image. Subject: one polished silver ring with a round clear center stone surrounded by a delicate halo of smaller clear stones. Plain warm ivory seamless background (#f3f4ed). Premium studio macro photography with crisp realistic metal reflections, accurate gemstone facets, restrained natural sparkle, and soft diffused lighting. Center the entire product within the frame with generous clean margins and a subtle grounded shadow. Single product listing image, no collage. No text, logos, labels, watermark, hands, people, price tags, display stands, or unrelated props."
+    },
+    {
+      "slug": "emerald-gold-ring",
+      "name": "Emerald Gold Ring",
+      "collection": "jewelry",
+      "subject": "one yellow gold ring with a rectangular emerald-green center gemstone and two small clear side stones",
+      "path": "assets/demo/jewelry/emerald-gold-ring.png",
+      "prompt": "Use case: product-mockup. Create one square photorealistic jewelry store catalog product image. Subject: one yellow gold ring with a rectangular emerald-green center gemstone and two small clear side stones. Plain warm ivory seamless background (#f3f4ed). Premium studio macro photography with crisp realistic metal reflections, accurate gemstone facets, restrained natural sparkle, and soft diffused lighting. Center the entire product within the frame with generous clean margins and a subtle grounded shadow. Single product listing image, no collage. No text, logos, labels, watermark, hands, people, price tags, display stands, or unrelated props."
+    },
+    {
+      "slug": "sapphire-silver-ring",
+      "name": "Sapphire Silver Ring",
+      "collection": "jewelry",
+      "subject": "one silver ring with an oval deep blue sapphire center gemstone and small clear side stones",
+      "path": "assets/demo/jewelry/sapphire-silver-ring.png",
+      "prompt": "Use case: product-mockup. Create one square photorealistic jewelry store catalog product image. Subject: one silver ring with an oval deep blue sapphire center gemstone and small clear side stones. Plain warm ivory seamless background (#f3f4ed). Premium studio macro photography with crisp realistic metal reflections, accurate gemstone facets, restrained natural sparkle, and soft diffused lighting. Center the entire product within the frame with generous clean margins and a subtle grounded shadow. Single product listing image, no collage. No text, logos, labels, watermark, hands, people, price tags, display stands, or unrelated props."
+    },
+    {
+      "slug": "ruby-gold-ring",
+      "name": "Ruby Gold Ring",
+      "collection": "jewelry",
+      "subject": "one yellow gold ring with an oval rich red ruby center gemstone",
+      "path": "assets/demo/jewelry/ruby-gold-ring.png",
+      "prompt": "Use case: product-mockup. Create one square photorealistic jewelry store catalog product image. Subject: one yellow gold ring with an oval rich red ruby center gemstone. Plain warm ivory seamless background (#f3f4ed). Premium studio macro photography with crisp realistic metal reflections, accurate gemstone facets, restrained natural sparkle, and soft diffused lighting. Center the entire product within the frame with generous clean margins and a subtle grounded shadow. Single product listing image, no collage. No text, logos, labels, watermark, hands, people, price tags, display stands, or unrelated props."
+    },
+    {
+      "slug": "rose-gold-band",
+      "name": "Rose Gold Band",
+      "collection": "jewelry",
+      "subject": "one simple polished rose gold wedding band with a smooth rounded profile",
+      "path": "assets/demo/jewelry/rose-gold-band.png",
+      "prompt": "Use case: product-mockup. Create one square photorealistic jewelry store catalog product image. Subject: one simple polished rose gold wedding band with a smooth rounded profile. Plain warm ivory seamless background (#f3f4ed). Premium studio macro photography with crisp realistic metal reflections, accurate gemstone facets, restrained natural sparkle, and soft diffused lighting. Center the entire product within the frame with generous clean margins and a subtle grounded shadow. Single product listing image, no collage. No text, logos, labels, watermark, hands, people, price tags, display stands, or unrelated props."
+    },
+    {
+      "slug": "gold-signet-ring",
+      "name": "Gold Signet Ring",
+      "collection": "jewelry",
+      "subject": "one polished yellow gold signet ring with a smooth blank oval face, no engraving",
+      "path": "assets/demo/jewelry/gold-signet-ring.png",
+      "prompt": "Use case: product-mockup. Create one square photorealistic jewelry store catalog product image. Subject: one polished yellow gold signet ring with a smooth blank oval face, no engraving. Plain warm ivory seamless background (#f3f4ed). Premium studio macro photography with crisp realistic metal reflections, accurate gemstone facets, restrained natural sparkle, and soft diffused lighting. Center the entire product within the frame with generous clean margins and a subtle grounded shadow. Single product listing image, no collage. No text, logos, labels, watermark, hands, people, price tags, display stands, or unrelated props."
+    },
+    {
+      "slug": "silver-twist-ring",
+      "name": "Silver Twist Ring",
+      "collection": "jewelry",
+      "subject": "one polished silver ring formed from two elegantly intertwined bands",
+      "path": "assets/demo/jewelry/silver-twist-ring.png",
+      "prompt": "Use case: product-mockup. Create one square photorealistic jewelry store catalog product image. Subject: one polished silver ring formed from two elegantly intertwined bands. Plain warm ivory seamless background (#f3f4ed). Premium studio macro photography with crisp realistic metal reflections, accurate gemstone facets, restrained natural sparkle, and soft diffused lighting. Center the entire product within the frame with generous clean margins and a subtle grounded shadow. Single product listing image, no collage. No text, logos, labels, watermark, hands, people, price tags, display stands, or unrelated props."
+    },
+    {
+      "slug": "gold-hoop-earrings",
+      "name": "Gold Hoop Earrings",
+      "collection": "jewelry",
+      "subject": "a matching pair of medium polished yellow gold hoop earrings, both closures visible",
+      "path": "assets/demo/jewelry/gold-hoop-earrings.png",
+      "prompt": "Use case: product-mockup. Create one square photorealistic jewelry store catalog product image. Subject: a matching pair of medium polished yellow gold hoop earrings, both closures visible. Plain warm ivory seamless background (#f3f4ed). Premium studio macro photography with crisp realistic metal reflections, accurate gemstone facets, restrained natural sparkle, and soft diffused lighting. Center the entire product within the frame with generous clean margins and a subtle grounded shadow. Single product listing image, no collage. No text, logos, labels, watermark, hands, people, price tags, display stands, or unrelated props."
+    },
+    {
+      "slug": "pearl-stud-earrings",
+      "name": "Pearl Stud Earrings",
+      "collection": "jewelry",
+      "subject": "a matching pair of lustrous white round pearl stud earrings with tiny yellow gold fittings",
+      "path": "assets/demo/jewelry/pearl-stud-earrings.png",
+      "prompt": "Use case: product-mockup. Create one square photorealistic jewelry store catalog product image. Subject: a matching pair of lustrous white round pearl stud earrings with tiny yellow gold fittings. Plain warm ivory seamless background (#f3f4ed). Premium studio macro photography with crisp realistic metal reflections, accurate gemstone facets, restrained natural sparkle, and soft diffused lighting. Center the entire product within the frame with generous clean margins and a subtle grounded shadow. Single product listing image, no collage. No text, logos, labels, watermark, hands, people, price tags, display stands, or unrelated props."
+    },
+    {
+      "slug": "diamond-stud-earrings",
+      "name": "Diamond Stud Earrings",
+      "collection": "jewelry",
+      "subject": "a matching pair of round brilliant clear diamond stud earrings in four-prong silver settings",
+      "path": "assets/demo/jewelry/diamond-stud-earrings.png",
+      "prompt": "Use case: product-mockup. Create one square photorealistic jewelry store catalog product image. Subject: a matching pair of round brilliant clear diamond stud earrings in four-prong silver settings. Plain warm ivory seamless background (#f3f4ed). Premium studio macro photography with crisp realistic metal reflections, accurate gemstone facets, restrained natural sparkle, and soft diffused lighting. Center the entire product within the frame with generous clean margins and a subtle grounded shadow. Single product listing image, no collage. No text, logos, labels, watermark, hands, people, price tags, display stands, or unrelated props."
+    },
+    {
+      "slug": "emerald-drop-earrings",
+      "name": "Emerald Drop Earrings",
+      "collection": "jewelry",
+      "subject": "a matching pair of yellow gold drop earrings with pear-shaped emerald-green gemstones",
+      "path": "assets/demo/jewelry/emerald-drop-earrings.png",
+      "prompt": "Use case: product-mockup. Create one square photorealistic jewelry store catalog product image. Subject: a matching pair of yellow gold drop earrings with pear-shaped emerald-green gemstones. Plain warm ivory seamless background (#f3f4ed). Premium studio macro photography with crisp realistic metal reflections, accurate gemstone facets, restrained natural sparkle, and soft diffused lighting. Center the entire product within the frame with generous clean margins and a subtle grounded shadow. Single product listing image, no collage. No text, logos, labels, watermark, hands, people, price tags, display stands, or unrelated props."
+    },
+    {
+      "slug": "silver-huggie-earrings",
+      "name": "Silver Huggie Earrings",
+      "collection": "jewelry",
+      "subject": "a matching pair of small polished silver huggie hoop earrings",
+      "path": "assets/demo/jewelry/silver-huggie-earrings.png",
+      "prompt": "Use case: product-mockup. Create one square photorealistic jewelry store catalog product image. Subject: a matching pair of small polished silver huggie hoop earrings. Plain warm ivory seamless background (#f3f4ed). Premium studio macro photography with crisp realistic metal reflections, accurate gemstone facets, restrained natural sparkle, and soft diffused lighting. Center the entire product within the frame with generous clean margins and a subtle grounded shadow. Single product listing image, no collage. No text, logos, labels, watermark, hands, people, price tags, display stands, or unrelated props."
+    },
+    {
+      "slug": "rose-gold-chain-earrings",
+      "name": "Rose Gold Chain Earrings",
+      "collection": "jewelry",
+      "subject": "a matching pair of delicate rose gold threader earrings with slender dangling chains",
+      "path": "assets/demo/jewelry/rose-gold-chain-earrings.png",
+      "prompt": "Use case: product-mockup. Create one square photorealistic jewelry store catalog product image. Subject: a matching pair of delicate rose gold threader earrings with slender dangling chains. Plain warm ivory seamless background (#f3f4ed). Premium studio macro photography with crisp realistic metal reflections, accurate gemstone facets, restrained natural sparkle, and soft diffused lighting. Center the entire product within the frame with generous clean margins and a subtle grounded shadow. Single product listing image, no collage. No text, logos, labels, watermark, hands, people, price tags, display stands, or unrelated props."
+    },
+    {
+      "slug": "sapphire-cluster-earrings",
+      "name": "Sapphire Cluster Earrings",
+      "collection": "jewelry",
+      "subject": "a matching pair of blue sapphire flower cluster stud earrings with small clear gemstone petals in silver",
+      "path": "assets/demo/jewelry/sapphire-cluster-earrings.png",
+      "prompt": "Use case: product-mockup. Create one square photorealistic jewelry store catalog product image. Subject: a matching pair of blue sapphire flower cluster stud earrings with small clear gemstone petals in silver. Plain warm ivory seamless background (#f3f4ed). Premium studio macro photography with crisp realistic metal reflections, accurate gemstone facets, restrained natural sparkle, and soft diffused lighting. Center the entire product within the frame with generous clean margins and a subtle grounded shadow. Single product listing image, no collage. No text, logos, labels, watermark, hands, people, price tags, display stands, or unrelated props."
+    },
+    {
+      "slug": "gold-chain-necklace",
+      "name": "Gold Chain Necklace",
+      "collection": "jewelry",
+      "subject": "one delicate polished yellow gold cable chain necklace arranged in a complete elegant oval with clasp visible",
+      "path": "assets/demo/jewelry/gold-chain-necklace.png",
+      "prompt": "Use case: product-mockup. Create one square photorealistic jewelry store catalog product image. Subject: one delicate polished yellow gold cable chain necklace arranged in a complete elegant oval with clasp visible. Plain warm ivory seamless background (#f3f4ed). Premium studio macro photography with crisp realistic metal reflections, accurate gemstone facets, restrained natural sparkle, and soft diffused lighting. Center the entire product within the frame with generous clean margins and a subtle grounded shadow. Single product listing image, no collage. No text, logos, labels, watermark, hands, people, price tags, display stands, or unrelated props."
+    },
+    {
+      "slug": "pearl-strand-necklace",
+      "name": "Pearl Strand Necklace",
+      "collection": "jewelry",
+      "subject": "one strand of evenly sized lustrous white pearls arranged in a complete oval with a small gold clasp",
+      "path": "assets/demo/jewelry/pearl-strand-necklace.png",
+      "prompt": "Use case: product-mockup. Create one square photorealistic jewelry store catalog product image. Subject: one strand of evenly sized lustrous white pearls arranged in a complete oval with a small gold clasp. Plain warm ivory seamless background (#f3f4ed). Premium studio macro photography with crisp realistic metal reflections, accurate gemstone facets, restrained natural sparkle, and soft diffused lighting. Center the entire product within the frame with generous clean margins and a subtle grounded shadow. Single product listing image, no collage. No text, logos, labels, watermark, hands, people, price tags, display stands, or unrelated props."
+    },
+    {
+      "slug": "heart-pendant-necklace",
+      "name": "Heart Pendant Necklace",
+      "collection": "jewelry",
+      "subject": "one delicate rose gold chain necklace with a small polished heart pendant, entire necklace arranged neatly in an oval",
+      "path": "assets/demo/jewelry/heart-pendant-necklace.png",
+      "prompt": "Use case: product-mockup. Create one square photorealistic jewelry store catalog product image. Subject: one delicate rose gold chain necklace with a small polished heart pendant, entire necklace arranged neatly in an oval. Plain warm ivory seamless background (#f3f4ed). Premium studio macro photography with crisp realistic metal reflections, accurate gemstone facets, restrained natural sparkle, and soft diffused lighting. Center the entire product within the frame with generous clean margins and a subtle grounded shadow. Single product listing image, no collage. No text, logos, labels, watermark, hands, people, price tags, display stands, or unrelated props."
+    },
+    {
+      "slug": "emerald-pendant-necklace",
+      "name": "Emerald Pendant Necklace",
+      "collection": "jewelry",
+      "subject": "one yellow gold chain necklace with a rectangular emerald-green pendant, entire chain arranged in an oval",
+      "path": "assets/demo/jewelry/emerald-pendant-necklace.png",
+      "prompt": "Use case: product-mockup. Create one square photorealistic jewelry store catalog product image. Subject: one yellow gold chain necklace with a rectangular emerald-green pendant, entire chain arranged in an oval. Plain warm ivory seamless background (#f3f4ed). Premium studio macro photography with crisp realistic metal reflections, accurate gemstone facets, restrained natural sparkle, and soft diffused lighting. Center the entire product within the frame with generous clean margins and a subtle grounded shadow. Single product listing image, no collage. No text, logos, labels, watermark, hands, people, price tags, display stands, or unrelated props."
+    },
+    {
+      "slug": "silver-moon-necklace",
+      "name": "Silver Moon Necklace",
+      "collection": "jewelry",
+      "subject": "one delicate silver chain necklace with a polished crescent moon pendant, entire chain arranged in an oval",
+      "path": "assets/demo/jewelry/silver-moon-necklace.png",
+      "prompt": "Use case: product-mockup. Create one square photorealistic jewelry store catalog product image. Subject: one delicate silver chain necklace with a polished crescent moon pendant, entire chain arranged in an oval. Plain warm ivory seamless background (#f3f4ed). Premium studio macro photography with crisp realistic metal reflections, accurate gemstone facets, restrained natural sparkle, and soft diffused lighting. Center the entire product within the frame with generous clean margins and a subtle grounded shadow. Single product listing image, no collage. No text, logos, labels, watermark, hands, people, price tags, display stands, or unrelated props."
+    },
+    {
+      "slug": "diamond-pendant-necklace",
+      "name": "Diamond Pendant Necklace",
+      "collection": "jewelry",
+      "subject": "one fine silver chain necklace with a single round brilliant clear stone pendant, entire chain arranged in an oval",
+      "path": "assets/demo/jewelry/diamond-pendant-necklace.png",
+      "prompt": "Use case: product-mockup. Create one square photorealistic jewelry store catalog product image. Subject: one fine silver chain necklace with a single round brilliant clear stone pendant, entire chain arranged in an oval. Plain warm ivory seamless background (#f3f4ed). Premium studio macro photography with crisp realistic metal reflections, accurate gemstone facets, restrained natural sparkle, and soft diffused lighting. Center the entire product within the frame with generous clean margins and a subtle grounded shadow. Single product listing image, no collage. No text, logos, labels, watermark, hands, people, price tags, display stands, or unrelated props."
+    },
+    {
+      "slug": "gold-tennis-bracelet",
+      "name": "Gold Tennis Bracelet",
+      "collection": "jewelry",
+      "subject": "one yellow gold tennis bracelet with a continuous row of small round clear gemstones arranged in a neat oval",
+      "path": "assets/demo/jewelry/gold-tennis-bracelet.png",
+      "prompt": "Use case: product-mockup. Create one square photorealistic jewelry store catalog product image. Subject: one yellow gold tennis bracelet with a continuous row of small round clear gemstones arranged in a neat oval. Plain warm ivory seamless background (#f3f4ed). Premium studio macro photography with crisp realistic metal reflections, accurate gemstone facets, restrained natural sparkle, and soft diffused lighting. Center the entire product within the frame with generous clean margins and a subtle grounded shadow. Single product listing image, no collage. No text, logos, labels, watermark, hands, people, price tags, display stands, or unrelated props."
+    },
+    {
+      "slug": "silver-cuff-bracelet",
+      "name": "Silver Cuff Bracelet",
+      "collection": "jewelry",
+      "subject": "one sculptural polished silver open cuff bracelet with smooth rounded ends",
+      "path": "assets/demo/jewelry/silver-cuff-bracelet.png",
+      "prompt": "Use case: product-mockup. Create one square photorealistic jewelry store catalog product image. Subject: one sculptural polished silver open cuff bracelet with smooth rounded ends. Plain warm ivory seamless background (#f3f4ed). Premium studio macro photography with crisp realistic metal reflections, accurate gemstone facets, restrained natural sparkle, and soft diffused lighting. Center the entire product within the frame with generous clean margins and a subtle grounded shadow. Single product listing image, no collage. No text, logos, labels, watermark, hands, people, price tags, display stands, or unrelated props."
+    },
+    {
+      "slug": "gold-bangle-bracelet",
+      "name": "Gold Bangle Bracelet",
+      "collection": "jewelry",
+      "subject": "one polished yellow gold rigid round bangle bracelet",
+      "path": "assets/demo/jewelry/gold-bangle-bracelet.png",
+      "prompt": "Use case: product-mockup. Create one square photorealistic jewelry store catalog product image. Subject: one polished yellow gold rigid round bangle bracelet. Plain warm ivory seamless background (#f3f4ed). Premium studio macro photography with crisp realistic metal reflections, accurate gemstone facets, restrained natural sparkle, and soft diffused lighting. Center the entire product within the frame with generous clean margins and a subtle grounded shadow. Single product listing image, no collage. No text, logos, labels, watermark, hands, people, price tags, display stands, or unrelated props."
+    },
+    {
+      "slug": "pearl-bracelet",
+      "name": "Pearl Bracelet",
+      "collection": "jewelry",
+      "subject": "one bracelet of lustrous white round pearls with a small yellow gold clasp arranged in a circle",
+      "path": "assets/demo/jewelry/pearl-bracelet.png",
+      "prompt": "Use case: product-mockup. Create one square photorealistic jewelry store catalog product image. Subject: one bracelet of lustrous white round pearls with a small yellow gold clasp arranged in a circle. Plain warm ivory seamless background (#f3f4ed). Premium studio macro photography with crisp realistic metal reflections, accurate gemstone facets, restrained natural sparkle, and soft diffused lighting. Center the entire product within the frame with generous clean margins and a subtle grounded shadow. Single product listing image, no collage. No text, logos, labels, watermark, hands, people, price tags, display stands, or unrelated props."
+    },
+    {
+      "slug": "rose-gold-link-bracelet",
+      "name": "Rose Gold Link Bracelet",
+      "collection": "jewelry",
+      "subject": "one polished rose gold bracelet with elongated paperclip links and a lobster clasp arranged in an oval",
+      "path": "assets/demo/jewelry/rose-gold-link-bracelet.png",
+      "prompt": "Use case: product-mockup. Create one square photorealistic jewelry store catalog product image. Subject: one polished rose gold bracelet with elongated paperclip links and a lobster clasp arranged in an oval. Plain warm ivory seamless background (#f3f4ed). Premium studio macro photography with crisp realistic metal reflections, accurate gemstone facets, restrained natural sparkle, and soft diffused lighting. Center the entire product within the frame with generous clean margins and a subtle grounded shadow. Single product listing image, no collage. No text, logos, labels, watermark, hands, people, price tags, display stands, or unrelated props."
+    },
+    {
+      "slug": "silver-charm-bracelet",
+      "name": "Silver Charm Bracelet",
+      "collection": "jewelry",
+      "subject": "one polished silver chain bracelet with three small charms: a star, a heart, and a round blank disc, arranged in an oval",
+      "path": "assets/demo/jewelry/silver-charm-bracelet.png",
+      "prompt": "Use case: product-mockup. Create one square photorealistic jewelry store catalog product image. Subject: one polished silver chain bracelet with three small charms: a star, a heart, and a round blank disc, arranged in an oval. Plain warm ivory seamless background (#f3f4ed). Premium studio macro photography with crisp realistic metal reflections, accurate gemstone facets, restrained natural sparkle, and soft diffused lighting. Center the entire product within the frame with generous clean margins and a subtle grounded shadow. Single product listing image, no collage. No text, logos, labels, watermark, hands, people, price tags, display stands, or unrelated props."
+    },
+    {
+      "slug": "gold-anklet",
+      "name": "Gold Anklet",
+      "collection": "jewelry",
+      "subject": "one fine yellow gold anklet chain with five small evenly spaced gold beads and a lobster clasp, arranged in an oval",
+      "path": "assets/demo/jewelry/gold-anklet.png",
+      "prompt": "Use case: product-mockup. Create one square photorealistic jewelry store catalog product image. Subject: one fine yellow gold anklet chain with five small evenly spaced gold beads and a lobster clasp, arranged in an oval. Plain warm ivory seamless background (#f3f4ed). Premium studio macro photography with crisp realistic metal reflections, accurate gemstone facets, restrained natural sparkle, and soft diffused lighting. Center the entire product within the frame with generous clean margins and a subtle grounded shadow. Single product listing image, no collage. No text, logos, labels, watermark, hands, people, price tags, display stands, or unrelated props."
+    },
+    {
+      "slug": "pearl-gold-brooch",
+      "name": "Pearl Gold Brooch",
+      "collection": "jewelry",
+      "subject": "one elegant yellow gold leaf-shaped brooch with three small white pearl accents",
+      "path": "assets/demo/jewelry/pearl-gold-brooch.png",
+      "prompt": "Use case: product-mockup. Create one square photorealistic jewelry store catalog product image. Subject: one elegant yellow gold leaf-shaped brooch with three small white pearl accents. Plain warm ivory seamless background (#f3f4ed). Premium studio macro photography with crisp realistic metal reflections, accurate gemstone facets, restrained natural sparkle, and soft diffused lighting. Center the entire product within the frame with generous clean margins and a subtle grounded shadow. Single product listing image, no collage. No text, logos, labels, watermark, hands, people, price tags, display stands, or unrelated props."
+    },
+    {
+      "slug": "onyx-silver-cufflinks",
+      "name": "Onyx Silver Cufflinks",
+      "collection": "jewelry",
+      "subject": "a matching pair of polished silver cufflinks with square black onyx faces, one angled to show its fastening",
+      "path": "assets/demo/jewelry/onyx-silver-cufflinks.png",
+      "prompt": "Use case: product-mockup. Create one square photorealistic jewelry store catalog product image. Subject: a matching pair of polished silver cufflinks with square black onyx faces, one angled to show its fastening. Plain warm ivory seamless background (#f3f4ed). Premium studio macro photography with crisp realistic metal reflections, accurate gemstone facets, restrained natural sparkle, and soft diffused lighting. Center the entire product within the frame with generous clean margins and a subtle grounded shadow. Single product listing image, no collage. No text, logos, labels, watermark, hands, people, price tags, display stands, or unrelated props."
+    }
+  ]
+}

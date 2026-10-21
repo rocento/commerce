@@ -1,0 +1,118 @@
+TAP version 13
+# Subtest: social metadata escapes Unicode without truncating and shares canonical identity
+ok 1 - social metadata escapes Unicode without truncating and shares canonical identity
+  ---
+  duration_ms: 0.673833
+  type: 'test'
+  ...
+# Subtest: missing image and language-only locale do not invent a card image or country
+ok 2 - missing image and language-only locale do not invent a card image or country
+  ---
+  duration_ms: 0.141375
+  type: 'test'
+  ...
+# Subtest: error pages have no social claims or canonical
+ok 3 - error pages have no social claims or canonical
+  ---
+  duration_ms: 0.089791
+  type: 'test'
+  ...
+# Subtest: anonymous content, no-store and identical robots; credentials never forwarded
+ok 4 - anonymous content, no-store and identical robots; credentials never forwarded
+  ---
+  duration_ms: 18.444417
+  type: 'test'
+  ...
+# Subtest: unknown URLs, invalid pagination, methods and spoofed hosts fail closed
+ok 5 - unknown URLs, invalid pagination, methods and spoofed hosts fail closed
+  ---
+  duration_ms: 7.742959
+  type: 'test'
+  ...
+# Subtest: mismatched installation/origin and unavailable backend produce 503, never empty success
+ok 6 - mismatched installation/origin and unavailable backend produce 503, never empty success
+  ---
+  duration_ms: 5.138916
+  type: 'test'
+  ...
+# Subtest: 404, approved 410 and single-hop 301 preserve status and noindex
+ok 7 - 404, approved 410 and single-hop 301 preserve status and noindex
+  ---
+  duration_ms: 3.3615
+  type: 'test'
+  ...
+# Subtest: query variants noindex and HEAD has no body
+ok 8 - query variants noindex and HEAD has no body
+  ---
+  duration_ms: 3.2705
+  type: 'test'
+  ...
+# Subtest: embedded state cannot close its script element
+ok 9 - embedded state cannot close its script element
+  ---
+  duration_ms: 0.141792
+  type: 'test'
+  ...
+# Subtest: startup rejects mismatched client/server artifacts before listening
+ok 10 - startup rejects mismatched client/server artifacts before listening
+  ---
+  duration_ms: 35.394291
+  type: 'test'
+  ...
+# Subtest: canonical metadata and discovery placeholders share only the approved origin
+ok 11 - canonical metadata and discovery placeholders share only the approved origin
+  ---
+  duration_ms: 4.17925
+  type: 'test'
+  ...
+# Subtest: raw encoded dot segments cannot normalize into a private 200 shell
+ok 12 - raw encoded dot segments cannot normalize into a private 200 shell
+  ---
+  duration_ms: 2.883792
+  type: 'test'
+  ...
+# Subtest: JSON-LD survives hostile Unicode text without creating script elements
+ok 13 - JSON-LD survives hostile Unicode text without creating script elements
+  ---
+  duration_ms: 3.082292
+  type: 'test'
+  ...
+# Subtest: material price currency seller URL name and availability contradictions fail closed
+ok 14 - material price currency seller URL name and availability contradictions fail closed
+  ---
+  duration_ms: 0.270042
+  type: 'test'
+  ...
+# Subtest: missing and error structured data do not create fictitious product claims
+ok 15 - missing and error structured data do not create fictitious product claims
+  ---
+  duration_ms: 0.260792
+  type: 'test'
+  ...
+# Subtest: case, encoded ASCII, slash and tracking normalize before final resource redirect
+ok 16 - case, encoded ASCII, slash and tracking normalize before final resource redirect
+  ---
+  duration_ms: 2.285041
+  type: 'test'
+  ...
+# Subtest: ambiguous and unsupported paths/parameters fail closed
+ok 17 - ambiguous and unsupported paths/parameters fail closed
+  ---
+  duration_ms: 0.437417
+  type: 'test'
+  ...
+# Subtest: only bounded normalized relative destinations are allowed
+ok 18 - only bounded normalized relative destinations are allowed
+  ---
+  duration_ms: 0.140291
+  type: 'test'
+  ...
+1..18
+# tests 18
+# suites 0
+# pass 18
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 137.498834

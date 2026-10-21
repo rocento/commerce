@@ -1,0 +1,82 @@
+TAP version 13
+# Subtest: anonymous content, no-store and identical robots; credentials never forwarded
+ok 1 - anonymous content, no-store and identical robots; credentials never forwarded
+  ---
+  duration_ms: 17.931833
+  type: 'test'
+  ...
+# Subtest: unknown URLs, invalid pagination, methods and spoofed hosts fail closed
+ok 2 - unknown URLs, invalid pagination, methods and spoofed hosts fail closed
+  ---
+  duration_ms: 6.116833
+  type: 'test'
+  ...
+# Subtest: mismatched installation/origin and unavailable backend produce 503, never empty success
+ok 3 - mismatched installation/origin and unavailable backend produce 503, never empty success
+  ---
+  duration_ms: 9.050833
+  type: 'test'
+  ...
+# Subtest: 404, approved 410 and single-hop 301 preserve status and noindex
+ok 4 - 404, approved 410 and single-hop 301 preserve status and noindex
+  ---
+  duration_ms: 2.823167
+  type: 'test'
+  ...
+# Subtest: query variants noindex and HEAD has no body
+ok 5 - query variants noindex and HEAD has no body
+  ---
+  duration_ms: 2.015334
+  type: 'test'
+  ...
+# Subtest: embedded state cannot close its script element
+ok 6 - embedded state cannot close its script element
+  ---
+  duration_ms: 0.084625
+  type: 'test'
+  ...
+# Subtest: startup rejects mismatched client/server artifacts before listening
+ok 7 - startup rejects mismatched client/server artifacts before listening
+  ---
+  duration_ms: 36.546625
+  type: 'test'
+  ...
+# Subtest: canonical metadata and discovery placeholders share only the approved origin
+ok 8 - canonical metadata and discovery placeholders share only the approved origin
+  ---
+  duration_ms: 4.347292
+  type: 'test'
+  ...
+# Subtest: raw encoded dot segments cannot normalize into a private 200 shell
+ok 9 - raw encoded dot segments cannot normalize into a private 200 shell
+  ---
+  duration_ms: 1.83925
+  type: 'test'
+  ...
+# Subtest: case, encoded ASCII, slash and tracking normalize before final resource redirect
+ok 10 - case, encoded ASCII, slash and tracking normalize before final resource redirect
+  ---
+  duration_ms: 4.803666
+  type: 'test'
+  ...
+# Subtest: ambiguous and unsupported paths/parameters fail closed
+ok 11 - ambiguous and unsupported paths/parameters fail closed
+  ---
+  duration_ms: 0.369875
+  type: 'test'
+  ...
+# Subtest: only bounded normalized relative destinations are allowed
+ok 12 - only bounded normalized relative destinations are allowed
+  ---
+  duration_ms: 0.112458
+  type: 'test'
+  ...
+1..12
+# tests 12
+# suites 0
+# pass 12
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 135.90325

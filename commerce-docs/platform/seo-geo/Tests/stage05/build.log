@@ -1,0 +1,26 @@
+vite v7.3.6 building client environment for production...
+transforming...
+✓ 444 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/public.html                            0.55 kB │ gzip:  0.32 kB
+dist/index.html                             0.86 kB │ gzip:  0.41 kB
+dist/assets/theme-default-BP_4Ao9p.png  1,742.01 kB
+dist/assets/public-C1vZajYR.css             0.62 kB │ gzip:  0.35 kB
+dist/assets/search-DrvJueiD.css            32.66 kB │ gzip: 10.27 kB
+dist/assets/app-CwW6g2m3.css               68.32 kB │ gzip: 13.99 kB
+dist/assets/style-B2FgKGue.css             83.12 kB │ gzip: 14.07 kB
+dist/assets/search-widget-CbzFpwpv.js       0.22 kB │ gzip:  0.19 kB
+dist/assets/index-DO8r7yeR.js               2.52 kB │ gzip:  1.24 kB
+dist/assets/public-D4soOF8u.js              8.57 kB │ gzip:  2.90 kB
+dist/assets/app-5pax1G9f.js               175.22 kB │ gzip: 46.70 kB
+dist/assets/search-BpWBD3Fz.js            209.67 kB │ gzip: 61.67 kB
+dist/assets/style-sPbS8pAE.js             269.78 kB │ gzip: 83.93 kB
+✓ built in 1.04s
+vite v7.3.6 building ssr environment for production...
+transforming...
+✓ 358 modules transformed.
+rendering chunks...
+dist-server/assets/search-widget-B3Id1F7W.js    9.62 kB
+dist-server/entry-public-server.js            174.04 kB
+✓ built in 420ms

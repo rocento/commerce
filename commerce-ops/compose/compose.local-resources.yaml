@@ -1,0 +1,10 @@
+# Shopping-first profile for four demos sharing the default 8 GiB Docker VM.
+# Opt in to background analytics or admin with --profile analytics/--profile admin.
+services:
+  clickhouse:
+    profiles: [analytics]
+    cpus: 0.5
+  analytics-worker:
+    profiles: [analytics]
+  admin:
+    profiles: [admin]

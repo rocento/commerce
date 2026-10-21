@@ -1,0 +1,16 @@
+ Container rocento-publication-release-postgres-1 Running
+ Container rocento-publication-release-postgres-1 Waiting
+ Container rocento-publication-release-postgres-1 Healthy
+ Container rocento-publication-release-verify-run-edf9cc576807 Creating
+ Container rocento-publication-release-verify-run-edf9cc576807 Created
+   Compiling api-gateway v0.1.0 (/workspace/backend/crates/api-gateway)
+    Finished `release` profile [optimized] target(s) in 5.80s
+     Running tests/publication_hardening.rs (/target/release/deps/publication_hardening-00248ef409925927)
+
+running 4 tests
+test admin_authorization_audit_and_fixed_probe_target ... ok
+test complete_tenant_matrix_xss_privacy_and_background_restart ... ok
+test database_timeout_and_recovery ... ok
+test measured_large_catalog ... ok
+
+test result: ok. 4 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 10.40s

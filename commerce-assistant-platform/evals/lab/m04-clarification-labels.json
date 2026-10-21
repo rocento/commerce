@@ -1,0 +1,7 @@
+{
+  "m04-soft-preference": false,
+  "m04-conflicting-budget": true,
+  "m04-conflicting-quantity": true,
+  "m04-conflicting-delivery": true,
+  "m04-model-inference": false
+}

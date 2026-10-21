@@ -1,0 +1,2634 @@
+{
+  "id": "electronics",
+  "name": "Rocento · Electronics Demo",
+  "channel": "storefront",
+  "categories": [
+    {
+      "slug": "electronics-phones",
+      "name": "Phones",
+      "thumbnail": "electronics/phone.png"
+    },
+    {
+      "slug": "electronics-computers",
+      "name": "Laptops & computers",
+      "thumbnail": "electronics/laptop.png"
+    },
+    {
+      "slug": "electronics-audio",
+      "name": "Headphones & audio",
+      "thumbnail": "electronics/headphones.png"
+    },
+    {
+      "slug": "electronics-appliances",
+      "name": "Home appliances",
+      "thumbnail": "electronics/appliance.png"
+    },
+    {
+      "slug": "electronics-gaming",
+      "name": "Gaming consoles",
+      "thumbnail": "electronics/official/014.jpg"
+    },
+    {
+      "slug": "electronics-cameras",
+      "name": "Cameras",
+      "thumbnail": "electronics/official/019.png"
+    },
+    {
+      "slug": "electronics-tablets",
+      "name": "Tablets"
+    },
+    {
+      "slug": "electronics-accessories",
+      "name": "Computer accessories"
+    },
+    {
+      "slug": "electronics-home-entertainment",
+      "name": "Home entertainment"
+    }
+  ],
+  "products": [
+    {
+      "sku": "DEMO-ELE-BRAND-001",
+      "slug": "electronics-iphone-13-128-gb",
+      "name": "Apple iPhone 13 — 128 GB",
+      "category": "electronics-phones",
+      "price": "499.00",
+      "unit": "each",
+      "description": "A compact everyday iPhone with an OLED display and A15 Bionic chip. Demo price in USD and illustrative stock; not a live offer. Product photo may show a different finish.\n\nProduct image: Apple official product imagery. https://support.apple.com/en-us/111872",
+      "images": [
+        "electronics/official/001.png"
+      ],
+      "attributes": {
+        "brand": "Apple",
+        "model": "iPhone 13",
+        "storage": "128 GB",
+        "display": "6.1-inch OLED",
+        "processor": "Apple A15 Bionic",
+        "connectivity": "5G / Wi-Fi"
+      },
+      "stock": 20
+    },
+    {
+      "sku": "DEMO-ELE-BRAND-002",
+      "slug": "electronics-iphone-15-128-gb",
+      "name": "Apple iPhone 15 — 128 GB",
+      "category": "electronics-phones",
+      "price": "649.00",
+      "unit": "each",
+      "description": "An iPhone with Dynamic Island, a 48 MP main camera and USB-C connectivity. Demo price in USD and illustrative stock; not a live offer. Product photo may show a different finish.\n\nProduct image: Apple official product imagery. https://support.apple.com/en-mide/111831",
+      "images": [
+        "electronics/official/002.png"
+      ],
+      "attributes": {
+        "brand": "Apple",
+        "model": "iPhone 15",
+        "storage": "128 GB",
+        "display": "6.1-inch OLED",
+        "processor": "Apple A16 Bionic",
+        "connectivity": "5G / USB-C"
+      },
+      "stock": 20
+    },
+    {
+      "sku": "DEMO-ELE-BRAND-003",
+      "slug": "electronics-galaxy-s23-128-gb",
+      "name": "Samsung Galaxy S23 — 128 GB",
+      "category": "electronics-phones",
+      "price": "599.00",
+      "unit": "each",
+      "description": "A pocket-friendly Galaxy phone with a 6.1-inch AMOLED display and 5G. Demo price in USD and illustrative stock; not a live offer. Product photo may show a different finish.\n\nProduct image: Samsung official product imagery. https://www.samsung.com/au/smartphones/galaxy-s/galaxy-s23-phantom-black-128gb-sm-s911bzkaats/",
+      "images": [
+        "electronics/official/003.png"
+      ],
+      "attributes": {
+        "brand": "Samsung",
+        "model": "Galaxy S23",
+        "storage": "128 GB",
+        "memory": "8 GB",
+        "display": "6.1-inch AMOLED",
+        "connectivity": "5G / Wi-Fi"
+      },
+      "stock": 20
+    },
+    {
+      "sku": "DEMO-ELE-BRAND-004",
+      "slug": "electronics-galaxy-s23-256-gb",
+      "name": "Samsung Galaxy S23 — 256 GB",
+      "category": "electronics-phones",
+      "price": "659.00",
+      "unit": "each",
+      "description": "The 256 GB Galaxy S23 configuration adds more room for apps, photos and files. Demo price in USD and illustrative stock; not a live offer. Product photo may show a different finish.\n\nProduct image: Samsung official product imagery. https://www.samsung.com/au/smartphones/galaxy-s/galaxy-s23-phantom-black-128gb-sm-s911bzkaats/",
+      "images": [
+        "electronics/official/003.png"
+      ],
+      "attributes": {
+        "brand": "Samsung",
+        "model": "Galaxy S23",
+        "storage": "256 GB",
+        "memory": "8 GB",
+        "display": "6.1-inch AMOLED",
+        "connectivity": "5G / Wi-Fi"
+      },
+      "stock": 20
+    },
+    {
+      "sku": "DEMO-ELE-BRAND-005",
+      "slug": "electronics-pixel-7-128-gb",
+      "name": "Google Pixel 7 — 128 GB",
+      "category": "electronics-phones",
+      "price": "449.00",
+      "unit": "each",
+      "description": "A Google Tensor G2 phone with a 50 MP main camera for everyday photography. Demo price in USD and illustrative stock; not a live offer. Product photo may show a different finish.\n\nProduct image: Google official product imagery. https://partnermarketinghub.withgoogle.com/brands/google-pixel/pixel-7/overview/",
+      "images": [
+        "electronics/official/005.jpg"
+      ],
+      "attributes": {
+        "brand": "Google",
+        "model": "Pixel 7",
+        "storage": "128 GB",
+        "memory": "8 GB",
+        "processor": "Google Tensor G2",
+        "connectivity": "5G / Wi-Fi"
+      },
+      "stock": 20
+    },
+    {
+      "sku": "DEMO-ELE-BRAND-006",
+      "slug": "electronics-oneplus-9-pro-256-gb",
+      "name": "OnePlus 9 Pro — 256 GB",
+      "category": "electronics-phones",
+      "price": "429.00",
+      "unit": "each",
+      "description": "A OnePlus flagship with a 120 Hz AMOLED display and Snapdragon 888 processor. Demo price in USD and illustrative stock; not a live offer. Product photo may show a different finish.\n\nProduct image: OnePlus official product imagery. https://www.oneplus.com/us/9-pro/specs",
+      "images": [
+        "electronics/official/006.png"
+      ],
+      "attributes": {
+        "brand": "OnePlus",
+        "model": "9 Pro",
+        "storage": "256 GB",
+        "memory": "12 GB",
+        "processor": "Snapdragon 888",
+        "display": "6.7-inch AMOLED",
+        "connectivity": "5G / Wi-Fi"
+      },
+      "stock": 20
+    },
+    {
+      "sku": "DEMO-ELE-BRAND-007",
+      "slug": "electronics-xiaomi-mi-11-128-gb",
+      "name": "Xiaomi Mi 11 — 128 GB",
+      "category": "electronics-phones",
+      "price": "399.00",
+      "unit": "each",
+      "description": "A large-screen Xiaomi phone with a 108 MP main camera and Snapdragon 888. Demo price in USD and illustrative stock; not a live offer. Product photo may show a different finish.\n\nProduct image: Xiaomi official product imagery. https://www.mi.com/global/product/mi-11/specs/",
+      "images": [
+        "electronics/official/007.png"
+      ],
+      "attributes": {
+        "brand": "Xiaomi",
+        "model": "Mi 11",
+        "storage": "128 GB",
+        "memory": "8 GB",
+        "processor": "Snapdragon 888",
+        "display": "6.81-inch AMOLED",
+        "connectivity": "5G / Wi-Fi"
+      },
+      "stock": 20
+    },
+    {
+      "sku": "DEMO-ELE-BRAND-008",
+      "slug": "electronics-macbook-air-m1-256-gb-ssd",
+      "name": "Apple MacBook Air M1 (2020) — 256 GB SSD",
+      "category": "electronics-computers",
+      "price": "749.00",
+      "unit": "each",
+      "description": "A fanless notebook for study and everyday work, powered by Apple M1. Demo price in USD and illustrative stock; not a live offer. Product photo may show a different finish.\n\nProduct image: Apple official product imagery. https://support.apple.com/en-ie/111883",
+      "images": [
+        "electronics/official/008.png"
+      ],
+      "attributes": {
+        "brand": "Apple",
+        "model": "MacBook Air M1 (2020)",
+        "storage": "256 GB SSD",
+        "memory": "8 GB",
+        "processor": "Apple M1",
+        "display": "13.3-inch Retina",
+        "connectivity": "Wi-Fi / Bluetooth"
+      },
+      "stock": 20
+    },
+    {
+      "sku": "DEMO-ELE-BRAND-009",
+      "slug": "electronics-macbook-air-m1-512-gb-ssd",
+      "name": "Apple MacBook Air M1 (2020) — 512 GB SSD",
+      "category": "electronics-computers",
+      "price": "899.00",
+      "unit": "each",
+      "description": "The 512 GB SSD configuration offers extra local space for documents and creative projects. Demo price in USD and illustrative stock; not a live offer. Product photo may show a different finish.\n\nProduct image: Apple official product imagery. https://support.apple.com/en-ie/111883",
+      "images": [
+        "electronics/official/008.png"
+      ],
+      "attributes": {
+        "brand": "Apple",
+        "model": "MacBook Air M1 (2020)",
+        "storage": "512 GB SSD",
+        "memory": "8 GB",
+        "processor": "Apple M1",
+        "display": "13.3-inch Retina",
+        "connectivity": "Wi-Fi / Bluetooth"
+      },
+      "stock": 20
+    },
+    {
+      "sku": "DEMO-ELE-BRAND-010",
+      "slug": "electronics-thinkpad-x1-carbon",
+      "name": "Lenovo ThinkPad X1 Carbon (1st Gen)",
+      "category": "electronics-computers",
+      "price": "299.00",
+      "unit": "each",
+      "description": "A classic 14-inch business ultrabook with the ThinkPad keyboard and TrackPoint. This is the first-generation model. Demo price in USD and illustrative stock; not a live offer. Product photo may show a different finish.\n\nProduct image: Lenovo official product imagery. https://psref.lenovo.com/syspool/Sys/PDF/withdrawnbook/ThinkPad_X1_Carbon_1st_Gen.pdf",
+      "images": [
+        "electronics/official/010.jpg"
+      ],
+      "attributes": {
+        "brand": "Lenovo",
+        "model": "ThinkPad X1 Carbon (1st Gen)",
+        "display": "14-inch HD+",
+        "device_type": "Laptop",
+        "connectivity": "Wi-Fi / Bluetooth"
+      },
+      "stock": 20
+    },
+    {
+      "sku": "DEMO-ELE-BRAND-011",
+      "slug": "electronics-sony-wh-1000xm3",
+      "name": "Sony WH-1000XM3",
+      "category": "electronics-audio",
+      "price": "199.00",
+      "unit": "each",
+      "description": "Wireless over-ear headphones with active noise cancellation for focused listening. Demo price in USD and illustrative stock; not a live offer. Product photo may show a different finish.\n\nProduct image: Sony official product imagery. https://helpguide.sony.net/mdr/wh1000xm3/v1/en/index.html",
+      "images": [
+        "electronics/official/011.png"
+      ],
+      "attributes": {
+        "brand": "Sony",
+        "model": "WH-1000XM3",
+        "device_type": "Over-ear headphones",
+        "noise_cancellation": "Active noise cancellation",
+        "connectivity": "Bluetooth / USB-C",
+        "battery": "Up to 30 hours"
+      },
+      "stock": 20
+    },
+    {
+      "sku": "DEMO-ELE-BRAND-012",
+      "slug": "electronics-bose-qc35-ii",
+      "name": "Bose QuietComfort 35 II",
+      "category": "electronics-audio",
+      "price": "179.00",
+      "unit": "each",
+      "description": "Wireless noise-cancelling headphones with a foldable over-ear design. Demo price in USD and illustrative stock; not a live offer. Product photo may show a different finish.\n\nProduct image: Bose official product imagery. https://www.bose.com/p/quietcomfort-35-wireless-headphones-ii/QC35II-HEADPHONEARN-BLK-WW.html",
+      "images": [
+        "electronics/official/012.jpg"
+      ],
+      "attributes": {
+        "brand": "Bose",
+        "model": "QuietComfort 35 II",
+        "device_type": "Over-ear headphones",
+        "noise_cancellation": "Active noise cancellation",
+        "connectivity": "Bluetooth",
+        "battery": "Up to 20 hours"
+      },
+      "stock": 20
+    },
+    {
+      "sku": "DEMO-ELE-BRAND-013",
+      "slug": "electronics-airpods-pro",
+      "name": "Apple AirPods Pro (1st Gen)",
+      "category": "electronics-audio",
+      "price": "149.00",
+      "unit": "each",
+      "description": "First-generation AirPods Pro with active noise cancellation and Transparency mode. Demo price in USD and illustrative stock; not a live offer. Product photo may show a different finish.\n\nProduct image: Apple official product imagery. https://support.apple.com/en-us/111861",
+      "images": [
+        "electronics/official/013.png"
+      ],
+      "attributes": {
+        "brand": "Apple",
+        "model": "AirPods Pro (1st Gen)",
+        "device_type": "Wireless earbuds",
+        "noise_cancellation": "Active noise cancellation",
+        "connectivity": "Bluetooth",
+        "processor": "Apple H1"
+      },
+      "stock": 20
+    },
+    {
+      "sku": "DEMO-ELE-BRAND-014",
+      "slug": "electronics-nintendo-switch-32-gb",
+      "name": "Nintendo Switch — 32 GB",
+      "category": "electronics-gaming",
+      "price": "279.00",
+      "unit": "each",
+      "description": "A hybrid console with detachable Joy-Con controllers for handheld and TV play. Demo price in USD and illustrative stock; not a live offer. Product photo may show a different finish.\n\nProduct image: Nintendo official product imagery. https://www.nintendo.com/us/gaming-systems/switch/system/",
+      "images": [
+        "electronics/official/014.jpg"
+      ],
+      "attributes": {
+        "brand": "Nintendo",
+        "model": "Switch",
+        "storage": "32 GB",
+        "device_type": "Hybrid game console",
+        "display": "6.2-inch LCD",
+        "connectivity": "Wi-Fi / HDMI"
+      },
+      "stock": 20
+    },
+    {
+      "sku": "DEMO-ELE-BRAND-015",
+      "slug": "electronics-switch-lite-32-gb",
+      "name": "Nintendo Switch Lite — 32 GB",
+      "category": "electronics-gaming",
+      "price": "199.00",
+      "unit": "each",
+      "description": "A compact handheld-only Switch with built-in controls. TV output is not supported. Demo price in USD and illustrative stock; not a live offer. Product photo may show a different finish.\n\nProduct image: Nintendo official product imagery. https://www.nintendo.com/us/gaming-systems/switch/lite/",
+      "images": [
+        "electronics/official/015.jpg"
+      ],
+      "attributes": {
+        "brand": "Nintendo",
+        "model": "Switch Lite",
+        "storage": "32 GB",
+        "device_type": "Handheld game console",
+        "display": "5.5-inch LCD",
+        "connectivity": "Wi-Fi"
+      },
+      "stock": 20
+    },
+    {
+      "sku": "DEMO-ELE-BRAND-016",
+      "slug": "electronics-ps5-825-gb-ssd",
+      "name": "Sony PlayStation 5 (Original Disc Edition) — 825 GB SSD",
+      "category": "electronics-gaming",
+      "price": "449.00",
+      "unit": "each",
+      "description": "The original disc-edition PS5 with an SSD and DualSense controller. Demo price in USD and illustrative stock; not a live offer. Product photo may show a different finish.\n\nProduct image: Sony official product imagery. https://blog.playstation.com/2020/06/11/ps5-showcase-recap-everything-you-need-to-know/",
+      "images": [
+        "electronics/official/016.jpg"
+      ],
+      "attributes": {
+        "brand": "Sony",
+        "model": "PlayStation 5 (Original Disc Edition)",
+        "storage": "825 GB SSD",
+        "device_type": "Home game console",
+        "connectivity": "Wi-Fi / HDMI",
+        "disc_drive": "Ultra HD Blu-ray"
+      },
+      "stock": 20
+    },
+    {
+      "sku": "DEMO-ELE-BRAND-017",
+      "slug": "electronics-xbox-series-x-1-tb-ssd",
+      "name": "Microsoft Xbox Series X — 1 TB SSD",
+      "category": "electronics-gaming",
+      "price": "449.00",
+      "unit": "each",
+      "description": "The 1 TB Series X console with a disc drive and Xbox wireless controller. Demo price in USD and illustrative stock; not a live offer. Product photo may show a different finish.\n\nProduct image: Microsoft official product imagery. https://www.xbox.com/en-us/consoles/xbox-series-x",
+      "images": [
+        "electronics/official/017.png"
+      ],
+      "attributes": {
+        "brand": "Microsoft",
+        "model": "Xbox Series X",
+        "storage": "1 TB SSD",
+        "device_type": "Home game console",
+        "connectivity": "Wi-Fi / HDMI",
+        "disc_drive": "Ultra HD Blu-ray"
+      },
+      "stock": 20
+    },
+    {
+      "sku": "DEMO-ELE-BRAND-018",
+      "slug": "electronics-xbox-series-s-512-gb-ssd",
+      "name": "Microsoft Xbox Series S — 512 GB SSD",
+      "category": "electronics-gaming",
+      "price": "279.00",
+      "unit": "each",
+      "description": "A compact all-digital Xbox console. Disc-based games are not supported. Demo price in USD and illustrative stock; not a live offer. Product photo may show a different finish.\n\nProduct image: Microsoft official product imagery. https://www.xbox.com/en-us/consoles/xbox-series-s",
+      "images": [
+        "electronics/official/018.png"
+      ],
+      "attributes": {
+        "brand": "Microsoft",
+        "model": "Xbox Series S",
+        "storage": "512 GB SSD",
+        "device_type": "Digital game console",
+        "connectivity": "Wi-Fi / HDMI",
+        "disc_drive": "No disc drive"
+      },
+      "stock": 20
+    },
+    {
+      "sku": "DEMO-ELE-BRAND-019",
+      "slug": "electronics-canon-eos-r5",
+      "name": "Canon EOS R5 (Body)",
+      "category": "electronics-cameras",
+      "price": "2499.00",
+      "unit": "each",
+      "description": "A full-frame mirrorless camera with a 45 MP sensor and Canon RF mount. Body-only demo listing; lenses are not included. Demo price in USD and illustrative stock; not a live offer. Product photo may show a different finish.\n\nProduct image: Canon official product imagery. https://asia.canon/en/consumer/eos-r5/body/specification",
+      "images": [
+        "electronics/official/019.png"
+      ],
+      "attributes": {
+        "brand": "Canon",
+        "model": "EOS R5 (Body)",
+        "device_type": "Mirrorless camera",
+        "sensor": "45 MP full-frame",
+        "lens_mount": "Canon RF",
+        "video": "8K",
+        "connectivity": "Wi-Fi / Bluetooth"
+      },
+      "stock": 20
+    },
+    {
+      "sku": "DEMO-ELE-BRAND-020",
+      "slug": "electronics-nikon-z6",
+      "name": "Nikon Z 6 (Body)",
+      "category": "electronics-cameras",
+      "price": "1199.00",
+      "unit": "each",
+      "description": "A full-frame mirrorless camera with a 24.5 MP sensor and Nikon Z mount. Body only; lenses are not included. Demo price in USD and illustrative stock; not a live offer. Product photo may show a different finish.\n\nProduct image: Nikon official product imagery. https://www.nikonusa.com/press-room/nikon-introduces-the-new-nikon",
+      "images": [
+        "electronics/official/020.jpg"
+      ],
+      "attributes": {
+        "brand": "Nikon",
+        "model": "Z 6 (Body)",
+        "device_type": "Mirrorless camera",
+        "sensor": "24.5 MP full-frame",
+        "lens_mount": "Nikon Z",
+        "video": "4K UHD",
+        "connectivity": "Wi-Fi / Bluetooth"
+      },
+      "stock": 20
+    },
+    {
+      "sku": "DEMO-ELE-BRAND-021",
+      "slug": "electronics-apple-iphone-14-128-gb",
+      "name": "Apple iPhone 14 — 128 GB",
+      "category": "electronics-phones",
+      "price": "599.00",
+      "unit": "each",
+      "description": "A 6.1-inch OLED smartphone with A15 Bionic, dual 12 MP cameras and 5G connectivity. Manufacturer image shows the available finishes. Demo price in USD and illustrative stock; not a live offer.",
+      "images": [
+        "electronics/expansion-20261005/021.webp"
+      ],
+      "attributes": {
+        "brand": "Apple",
+        "model": "iPhone 14",
+        "storage": "128 GB",
+        "display": "6.1-inch OLED",
+        "processor": "Apple A15 Bionic",
+        "connectivity": "5G / Wi-Fi 6 / Bluetooth 5.3",
+        "device_type": "Smartphone"
+      },
+      "stock": 1000
+    },
+    {
+      "sku": "DEMO-ELE-BRAND-022",
+      "slug": "electronics-apple-iphone-14-plus-128-gb",
+      "name": "Apple iPhone 14 Plus — 128 GB",
+      "category": "electronics-phones",
+      "price": "699.00",
+      "unit": "each",
+      "description": "A larger 6.7-inch OLED iPhone with A15 Bionic, dual 12 MP cameras and 5G. Manufacturer image shows the iPhone 14 family finishes. Demo price in USD and illustrative stock; not a live offer.",
+      "images": [
+        "electronics/expansion-20261005/022.webp"
+      ],
+      "attributes": {
+        "brand": "Apple",
+        "model": "iPhone 14 Plus",
+        "storage": "128 GB",
+        "display": "6.7-inch OLED",
+        "processor": "Apple A15 Bionic",
+        "connectivity": "5G / Wi-Fi 6 / Bluetooth 5.3",
+        "device_type": "Smartphone"
+      },
+      "stock": 1000
+    },
+    {
+      "sku": "DEMO-ELE-BRAND-023",
+      "slug": "electronics-apple-iphone-se-3rd-gen-64-gb",
+      "name": "Apple iPhone SE (3rd Gen) — 64 GB",
+      "category": "electronics-phones",
+      "price": "349.00",
+      "unit": "each",
+      "description": "A compact 4.7-inch iPhone with Touch ID, A15 Bionic and 5G. Manufacturer image shows available finishes. Demo price in USD and illustrative stock; not a live offer.",
+      "images": [
+        "electronics/expansion-20261005/023.webp"
+      ],
+      "attributes": {
+        "brand": "Apple",
+        "model": "iPhone SE (3rd Gen)",
+        "storage": "64 GB",
+        "display": "4.7-inch Retina HD LCD",
+        "processor": "Apple A15 Bionic",
+        "connectivity": "5G / Wi-Fi 6 / Bluetooth 5.0",
+        "device_type": "Smartphone"
+      },
+      "stock": 1000
+    },
+    {
+      "sku": "DEMO-ELE-BRAND-024",
+      "slug": "electronics-apple-ipad-10th-gen-wi-fi-64-gb",
+      "name": "Apple iPad (10th Gen) Wi-Fi — 64 GB",
+      "category": "electronics-tablets",
+      "price": "349.00",
+      "unit": "each",
+      "description": "A 10.9-inch Liquid Retina tablet with A14 Bionic, USB-C and a landscape front camera. Wi-Fi model; manufacturer image shows available finishes. Demo price in USD and illustrative stock; not a live offer.",
+      "images": [
+        "electronics/expansion-20261005/024.webp"
+      ],
+      "attributes": {
+        "brand": "Apple",
+        "model": "iPad (10th Gen)",
+        "storage": "64 GB",
+        "display": "10.9-inch Liquid Retina",
+        "processor": "Apple A14 Bionic",
+        "connectivity": "Wi-Fi 6 / Bluetooth 5.2 / USB-C",
+        "device_type": "Tablet"
+      },
+      "stock": 1000
+    },
+    {
+      "sku": "DEMO-ELE-BRAND-025",
+      "slug": "electronics-apple-ipad-mini-6th-gen-wi-fi-64-gb",
+      "name": "Apple iPad mini (6th Gen) Wi-Fi — 64 GB",
+      "category": "electronics-tablets",
+      "price": "449.00",
+      "unit": "each",
+      "description": "A portable 8.3-inch Liquid Retina tablet with A15 Bionic and USB-C. Wi-Fi model; manufacturer image shows available finishes. Demo price in USD and illustrative stock; not a live offer.",
+      "images": [
+        "electronics/expansion-20261005/025.webp"
+      ],
+      "attributes": {
+        "brand": "Apple",
+        "model": "iPad mini (6th Gen)",
+        "storage": "64 GB",
+        "display": "8.3-inch Liquid Retina",
+        "processor": "Apple A15 Bionic",
+        "connectivity": "Wi-Fi 6 / Bluetooth 5.0 / USB-C",
+        "device_type": "Tablet"
+      },
+      "stock": 1000
+    },
+    {
+      "sku": "DEMO-ELE-BRAND-026",
+      "slug": "electronics-apple-macbook-air-m2-2022-8-gb-256-gb-ssd",
+      "name": "Apple MacBook Air M2 (2022) — 8 GB / 256 GB SSD",
+      "category": "electronics-computers",
+      "price": "999.00",
+      "unit": "each",
+      "description": "A fanless 13.6-inch laptop with an 8-core CPU, 8-core GPU and MagSafe 3 charging. This configuration has 8 GB unified memory and a 256 GB SSD. Manufacturer image shows finish options. Demo price in USD and illustrative stock; not a live offer.",
+      "images": [
+        "electronics/expansion-20261005/026.webp"
+      ],
+      "attributes": {
+        "brand": "Apple",
+        "model": "MacBook Air M2 (2022)",
+        "storage": "256 GB SSD",
+        "memory": "8 GB",
+        "processor": "Apple M2",
+        "display": "13.6-inch Liquid Retina",
+        "device_type": "Laptop",
+        "connectivity": "Wi-Fi 6 / Bluetooth 5.3 / Thunderbolt 3"
+      },
+      "stock": 1000
+    },
+    {
+      "sku": "DEMO-ELE-BRAND-027",
+      "slug": "electronics-apple-mac-mini-m2-2023-8-gb-256-gb-ssd",
+      "name": "Apple Mac mini M2 (2023) — 8 GB / 256 GB SSD",
+      "category": "electronics-computers",
+      "price": "599.00",
+      "unit": "each",
+      "description": "A compact desktop with Apple M2, an 8-core CPU, a 10-core GPU and two Thunderbolt 4 ports. Monitor, keyboard and mouse are sold separately. Demo price in USD and illustrative stock; not a live offer.",
+      "images": [
+        "electronics/expansion-20261005/027.webp"
+      ],
+      "attributes": {
+        "brand": "Apple",
+        "model": "Mac mini M2 (2023)",
+        "storage": "256 GB SSD",
+        "memory": "8 GB",
+        "processor": "Apple M2",
+        "connectivity": "Wi-Fi 6E / Bluetooth 5.3 / Gigabit Ethernet",
+        "device_type": "Desktop computer",
+        "color": "Silver"
+      },
+      "stock": 1000
+    },
+    {
+      "sku": "DEMO-ELE-BRAND-028",
+      "slug": "electronics-apple-tv-4k-3rd-gen-wi-fi-64-gb",
+      "name": "Apple TV 4K (3rd Gen) Wi-Fi — 64 GB",
+      "category": "electronics-home-entertainment",
+      "price": "129.00",
+      "unit": "each",
+      "description": "A 4K streaming player powered by A15 Bionic, with HDR10+, Dolby Vision and a USB-C Siri Remote. Wi-Fi edition without Ethernet; streaming subscriptions are separate. Demo price in USD and illustrative stock; not a live offer.",
+      "images": [
+        "electronics/expansion-20261005/028.webp"
+      ],
+      "attributes": {
+        "brand": "Apple",
+        "model": "Apple TV 4K (3rd Gen)",
+        "storage": "64 GB",
+        "processor": "Apple A15 Bionic",
+        "connectivity": "Wi-Fi 6 / Bluetooth 5.0 / HDMI 2.1",
+        "device_type": "Streaming media player",
+        "video": "4K HDR up to 60 fps"
+      },
+      "stock": 1000
+    },
+    {
+      "sku": "DEMO-ELE-BRAND-029",
+      "slug": "electronics-logitech-lift-vertical-mouse-off-white",
+      "name": "Logitech Lift Vertical Mouse — Off-white",
+      "category": "electronics-accessories",
+      "price": "79.99",
+      "unit": "each",
+      "description": "A right-handed vertical mouse with a 57-degree grip, quiet clicks and a 4,000 DPI optical sensor. Connect by Bluetooth or the included Logi Bolt receiver. Demo price in USD and illustrative stock; not a live offer.",
+      "images": [
+        "electronics/expansion-20261005/029.webp"
+      ],
+      "attributes": {
+        "brand": "Logitech",
+        "model": "Lift",
+        "device_type": "Vertical wireless mouse",
+        "color": "Off-white",
+        "connectivity": "Bluetooth LE / Logi Bolt",
+        "sensor": "Optical, up to 4000 DPI",
+        "battery": "Up to 24 months (1 AA; usage dependent)"
+      },
+      "stock": 1000
+    },
+    {
+      "sku": "DEMO-ELE-BRAND-030",
+      "slug": "electronics-logitech-mx-mechanical-mini-tactile-quiet-us-english",
+      "name": "Logitech MX Mechanical Mini — Tactile Quiet, US English",
+      "category": "electronics-accessories",
+      "price": "159.99",
+      "unit": "each",
+      "description": "A compact wireless mechanical keyboard with low-profile Tactile Quiet switches, smart backlighting and USB-C charging. US English key layout. Demo price in USD and illustrative stock; not a live offer.",
+      "images": [
+        "electronics/expansion-20261005/030.webp"
+      ],
+      "attributes": {
+        "brand": "Logitech",
+        "model": "MX Mechanical Mini",
+        "device_type": "Mechanical keyboard",
+        "connectivity": "Bluetooth LE / Logi Bolt",
+        "color": "Graphite",
+        "keyboard_layout": "US English",
+        "switch_type": "Tactile Quiet",
+        "battery": "Up to 15 days with backlight (usage dependent)"
+      },
+      "stock": 1000
+    },
+    {
+      "sku": "DEMO-ELE-BRAND-031",
+      "slug": "electronics-sony-wh-ch720n-black",
+      "name": "Sony WH-CH720N — Black",
+      "category": "electronics-audio",
+      "price": "149.99",
+      "unit": "each",
+      "description": "Lightweight over-ear headphones with active noise cancellation, multipoint Bluetooth and a 3.5 mm wired input. Up to 35 hours of music playback with noise cancellation on. Demo price in USD and illustrative stock; not a live offer.",
+      "images": [
+        "electronics/expansion-20261005/031.webp"
+      ],
+      "attributes": {
+        "brand": "Sony",
+        "model": "WH-CH720N",
+        "device_type": "Over-ear headphones",
+        "color": "Black",
+        "connectivity": "Bluetooth 5.2 / 3.5 mm",
+        "noise_cancellation": "Active noise cancellation",
+        "battery": "Up to 35 hours (ANC on)"
+      },
+      "stock": 1000
+    },
+    {
+      "sku": "DEMO-ELE-BRAND-032",
+      "slug": "electronics-apple-airpods-3-with-lightning-charging-case",
+      "name": "Apple AirPods 3 with Lightning Charging Case",
+      "category": "electronics-audio",
+      "price": "169.00",
+      "unit": "each",
+      "description": "Wireless earbuds with the H1 chip, Adaptive EQ and personalized spatial audio on compatible Apple devices. Up to 6 hours of listening per charge and up to 30 hours with the case. Demo price in USD and illustrative stock; not a live offer.",
+      "images": [
+        "electronics/expansion-20261005/032.webp"
+      ],
+      "attributes": {
+        "brand": "Apple",
+        "model": "AirPods 3",
+        "device_type": "Wireless earbuds",
+        "processor": "Apple H1",
+        "connectivity": "Bluetooth 5.0",
+        "battery": "Up to 6 hours; 30 hours with case",
+        "color": "White",
+        "noise_cancellation": "No active noise cancellation"
+      },
+      "stock": 1000
+    },
+    {
+      "sku": "DEMO-ELE-BRAND-033",
+      "slug": "electronics-logitech-mx-master-3s-bluetooth-edition-black",
+      "name": "Logitech MX Master 3S Bluetooth Edition — Black",
+      "category": "electronics-accessories",
+      "price": "99.99",
+      "unit": "each",
+      "description": "A precision wireless mouse with quiet clicks, an 8,000 DPI sensor and MagSpeed scrolling. Bluetooth Edition; a Logi Bolt receiver is not included. Demo price in USD and illustrative stock; not a live offer.",
+      "images": [
+        "electronics/expansion-20261005/033.webp"
+      ],
+      "attributes": {
+        "brand": "Logitech",
+        "model": "MX Master 3S Bluetooth Edition",
+        "device_type": "Wireless mouse",
+        "sensor": "Optical, up to 8000 DPI",
+        "connectivity": "Bluetooth LE; Logi Bolt compatible",
+        "color": "Black",
+        "battery": "Up to 70 days (usage dependent)"
+      },
+      "stock": 1000
+    },
+    {
+      "sku": "DEMO-ELE-BRAND-034",
+      "slug": "electronics-logitech-mx-anywhere-3s-black",
+      "name": "Logitech MX Anywhere 3S — Black",
+      "category": "electronics-accessories",
+      "price": "89.99",
+      "unit": "each",
+      "description": "A compact wireless mouse with an 8,000 DPI sensor, quiet clicks and USB-C charging. Pair with up to three devices; Logi Bolt receiver sold separately. Demo price in USD and illustrative stock; not a live offer.",
+      "images": [
+        "electronics/expansion-20261005/034.webp"
+      ],
+      "attributes": {
+        "brand": "Logitech",
+        "model": "MX Anywhere 3S",
+        "device_type": "Wireless mouse",
+        "sensor": "Optical, up to 8000 DPI",
+        "connectivity": "Bluetooth LE; Logi Bolt compatible",
+        "color": "Black",
+        "battery": "Up to 70 days (usage dependent)"
+      },
+      "stock": 1000
+    },
+    {
+      "sku": "DEMO-ELE-BRAND-035",
+      "slug": "electronics-logitech-mx-keys-mini-graphite-us-english",
+      "name": "Logitech MX Keys Mini — Graphite, US English",
+      "category": "electronics-accessories",
+      "price": "99.99",
+      "unit": "each",
+      "description": "A compact wireless keyboard with smart backlighting, rounded key dishes and USB-C charging. US English layout; Logi Bolt receiver sold separately. Demo price in USD and illustrative stock; not a live offer.",
+      "images": [
+        "electronics/expansion-20261005/035.webp"
+      ],
+      "attributes": {
+        "brand": "Logitech",
+        "model": "MX Keys Mini",
+        "device_type": "Wireless keyboard",
+        "color": "Graphite",
+        "connectivity": "Bluetooth LE; Logi Bolt compatible",
+        "keyboard_layout": "US English",
+        "battery": "Up to 10 days with backlight (usage dependent)"
+      },
+      "stock": 1000
+    },
+    {
+      "sku": "DEMO-ELE-BRAND-036",
+      "slug": "electronics-logitech-c920s-pro-hd-webcam",
+      "name": "Logitech C920s Pro HD Webcam",
+      "category": "electronics-accessories",
+      "price": "69.99",
+      "unit": "each",
+      "description": "A Full HD webcam with autofocus, stereo microphones and a privacy shutter. Records up to 1080p at 30 fps with a 78-degree diagonal field of view. Demo price in USD and illustrative stock; not a live offer.",
+      "images": [
+        "electronics/expansion-20261005/036.webp"
+      ],
+      "attributes": {
+        "brand": "Logitech",
+        "model": "C920s",
+        "device_type": "Webcam",
+        "connectivity": "USB-A",
+        "video": "1080p at 30 fps",
+        "field_of_view": "78 degrees diagonal",
+        "color": "Black"
+      },
+      "stock": 1000
+    },
+    {
+      "sku": "DEMO-ELE-BRAND-037",
+      "slug": "electronics-canon-eos-r50-rf-s-18-45mm-lens-kit",
+      "name": "Canon EOS R50 + RF-S 18–45mm Lens Kit",
+      "category": "electronics-cameras",
+      "price": "799.00",
+      "unit": "each",
+      "description": "A 24.2 MP APS-C mirrorless camera with Dual Pixel CMOS AF II, a vari-angle screen and the RF-S 18–45mm F4.5–6.3 IS STM lens. Demo price in USD and illustrative stock; not a live offer.",
+      "images": [
+        "electronics/expansion-20261005/037.webp"
+      ],
+      "attributes": {
+        "brand": "Canon",
+        "model": "EOS R50",
+        "device_type": "Mirrorless camera",
+        "sensor": "24.2 MP APS-C CMOS",
+        "lens_mount": "Canon RF",
+        "included_lens": "RF-S 18–45mm F4.5–6.3 IS STM",
+        "video": "4K up to 30 fps",
+        "burst_rate": "12 fps electronic first-curtain; 15 fps electronic",
+        "connectivity": "Wi-Fi / Bluetooth",
+        "color": "Black"
+      },
+      "stock": 1000
+    },
+    {
+      "sku": "DEMO-ELE-BRAND-038",
+      "slug": "electronics-canon-eos-r10-rf-s-18-45mm-lens-kit",
+      "name": "Canon EOS R10 + RF-S 18–45mm Lens Kit",
+      "category": "electronics-cameras",
+      "price": "1099.00",
+      "unit": "each",
+      "description": "A 24.2 MP APS-C mirrorless camera with Dual Pixel CMOS AF II, a vari-angle screen and the RF-S 18–45mm F4.5–6.3 IS STM lens. Demo price in USD and illustrative stock; not a live offer.",
+      "images": [
+        "electronics/expansion-20261005/038.webp"
+      ],
+      "attributes": {
+        "brand": "Canon",
+        "model": "EOS R10",
+        "device_type": "Mirrorless camera",
+        "sensor": "24.2 MP APS-C CMOS",
+        "lens_mount": "Canon RF",
+        "included_lens": "RF-S 18–45mm F4.5–6.3 IS STM",
+        "video": "4K up to 60 fps (cropped at 60 fps)",
+        "burst_rate": "15 fps mechanical; 23 fps electronic",
+        "connectivity": "Wi-Fi / Bluetooth",
+        "color": "Black"
+      },
+      "stock": 1000
+    },
+    {
+      "sku": "DEMO-ELE-BRAND-039",
+      "slug": "electronics-samsung-galaxy-s24-8-gb-256-gb-onyx-black",
+      "name": "Samsung Galaxy S24 — 8 GB / 256 GB, Onyx Black",
+      "category": "electronics-phones",
+      "price": "799.00",
+      "unit": "each",
+      "description": "A 6.2-inch Dynamic AMOLED 2X phone with adaptive refresh up to 120 Hz, a 50 MP main camera and a 4,000 mAh typical battery. International SM-S921B configuration. Demo price in USD and illustrative stock; not a live offer.",
+      "images": [
+        "electronics/expansion-20261005/039.webp"
+      ],
+      "attributes": {
+        "brand": "Samsung",
+        "model": "Galaxy S24",
+        "storage": "256 GB",
+        "memory": "8 GB",
+        "display": "6.2-inch Dynamic AMOLED 2X, up to 120 Hz",
+        "connectivity": "5G / Wi-Fi 6E / Bluetooth 5.3",
+        "battery": "4000 mAh (typical)",
+        "color": "Onyx Black",
+        "device_type": "Smartphone"
+      },
+      "stock": 1000
+    },
+    {
+      "sku": "DEMO-ELE-BRAND-040",
+      "slug": "electronics-samsung-galaxy-s24-ultra-12-gb-256-gb-titanium-gray",
+      "name": "Samsung Galaxy S24 Ultra — 12 GB / 256 GB, Titanium Gray",
+      "category": "electronics-phones",
+      "price": "1299.00",
+      "unit": "each",
+      "description": "A 6.8-inch Dynamic AMOLED 2X phone with a 200 MP main camera, integrated S Pen and a 5,000 mAh typical battery. International SM-S928B configuration. Demo price in USD and illustrative stock; not a live offer.",
+      "images": [
+        "electronics/expansion-20261005/040.webp"
+      ],
+      "attributes": {
+        "brand": "Samsung",
+        "model": "Galaxy S24 Ultra",
+        "storage": "256 GB",
+        "memory": "12 GB",
+        "display": "6.8-inch Dynamic AMOLED 2X, up to 120 Hz",
+        "processor": "Snapdragon 8 Gen 3 for Galaxy",
+        "connectivity": "5G / Wi-Fi 7 / Bluetooth 5.3",
+        "battery": "5000 mAh (typical)",
+        "color": "Titanium Gray",
+        "device_type": "Smartphone"
+      },
+      "stock": 1000
+    }
+  ],
+  "attributes": [
+    {
+      "entity_type": "product",
+      "attribute_code": "brand",
+      "label": "Brand",
+      "input_type": "select",
+      "scope": "global",
+      "is_required": false,
+      "is_unique": false,
+      "is_searchable": true,
+      "is_filterable": true,
+      "is_comparable": true,
+      "is_visible_on_front": true,
+      "used_for_promo_rules": false,
+      "used_for_configurations": false,
+      "swatch_type": "none",
+      "options": [
+        {
+          "value": "Apple",
+          "label": "Apple"
+        },
+        {
+          "value": "Bose",
+          "label": "Bose"
+        },
+        {
+          "value": "Canon",
+          "label": "Canon"
+        },
+        {
+          "value": "Google",
+          "label": "Google"
+        },
+        {
+          "value": "HomeWash",
+          "label": "HomeWash"
+        },
+        {
+          "value": "Lenovo",
+          "label": "Lenovo"
+        },
+        {
+          "value": "Microsoft",
+          "label": "Microsoft"
+        },
+        {
+          "value": "Nikon",
+          "label": "Nikon"
+        },
+        {
+          "value": "Nintendo",
+          "label": "Nintendo"
+        },
+        {
+          "value": "OnePlus",
+          "label": "OnePlus"
+        },
+        {
+          "value": "Pulse",
+          "label": "Pulse"
+        },
+        {
+          "value": "Samsung",
+          "label": "Samsung"
+        },
+        {
+          "value": "Sony",
+          "label": "Sony"
+        },
+        {
+          "value": "Sound One",
+          "label": "Sound One"
+        },
+        {
+          "value": "Studio",
+          "label": "Studio"
+        },
+        {
+          "value": "Xiaomi",
+          "label": "Xiaomi"
+        },
+        {
+          "value": "Logitech",
+          "label": "Logitech"
+        }
+      ],
+      "version": 0
+    },
+    {
+      "entity_type": "product",
+      "attribute_code": "storage",
+      "label": "Storage",
+      "input_type": "select",
+      "scope": "global",
+      "is_required": false,
+      "is_unique": false,
+      "is_searchable": true,
+      "is_filterable": true,
+      "is_comparable": true,
+      "is_visible_on_front": true,
+      "used_for_promo_rules": false,
+      "used_for_configurations": false,
+      "swatch_type": "none",
+      "options": [
+        {
+          "value": "1 TB SSD",
+          "label": "1 TB SSD"
+        },
+        {
+          "value": "128 GB",
+          "label": "128 GB"
+        },
+        {
+          "value": "256 GB",
+          "label": "256 GB"
+        },
+        {
+          "value": "256 GB SSD",
+          "label": "256 GB SSD"
+        },
+        {
+          "value": "32 GB",
+          "label": "32 GB"
+        },
+        {
+          "value": "512 GB SSD",
+          "label": "512 GB SSD"
+        },
+        {
+          "value": "825 GB SSD",
+          "label": "825 GB SSD"
+        },
+        {
+          "value": "64 GB",
+          "label": "64 GB"
+        }
+      ],
+      "version": 0
+    },
+    {
+      "entity_type": "product",
+      "attribute_code": "display",
+      "label": "Display",
+      "input_type": "select",
+      "scope": "global",
+      "is_required": false,
+      "is_unique": false,
+      "is_searchable": true,
+      "is_filterable": false,
+      "is_comparable": true,
+      "is_visible_on_front": true,
+      "used_for_promo_rules": false,
+      "used_for_configurations": false,
+      "swatch_type": "none",
+      "options": [
+        {
+          "value": "13.3-inch Retina",
+          "label": "13.3-inch Retina"
+        },
+        {
+          "value": "14-inch HD+",
+          "label": "14-inch HD+"
+        },
+        {
+          "value": "14-inch IPS",
+          "label": "14-inch IPS"
+        },
+        {
+          "value": "5.5-inch LCD",
+          "label": "5.5-inch LCD"
+        },
+        {
+          "value": "6.1-inch AMOLED",
+          "label": "6.1-inch AMOLED"
+        },
+        {
+          "value": "6.1-inch OLED",
+          "label": "6.1-inch OLED"
+        },
+        {
+          "value": "6.2-inch LCD",
+          "label": "6.2-inch LCD"
+        },
+        {
+          "value": "6.4-inch OLED",
+          "label": "6.4-inch OLED"
+        },
+        {
+          "value": "6.7-inch AMOLED",
+          "label": "6.7-inch AMOLED"
+        },
+        {
+          "value": "6.81-inch AMOLED",
+          "label": "6.81-inch AMOLED"
+        },
+        {
+          "value": "10.9-inch Liquid Retina",
+          "label": "10.9-inch Liquid Retina"
+        },
+        {
+          "value": "13.6-inch Liquid Retina",
+          "label": "13.6-inch Liquid Retina"
+        },
+        {
+          "value": "4.7-inch Retina HD LCD",
+          "label": "4.7-inch Retina HD LCD"
+        },
+        {
+          "value": "6.2-inch Dynamic AMOLED 2X, up to 120 Hz",
+          "label": "6.2-inch Dynamic AMOLED 2X, up to 120 Hz"
+        },
+        {
+          "value": "6.7-inch OLED",
+          "label": "6.7-inch OLED"
+        },
+        {
+          "value": "6.8-inch Dynamic AMOLED 2X, up to 120 Hz",
+          "label": "6.8-inch Dynamic AMOLED 2X, up to 120 Hz"
+        },
+        {
+          "value": "8.3-inch Liquid Retina",
+          "label": "8.3-inch Liquid Retina"
+        }
+      ],
+      "version": 0
+    },
+    {
+      "entity_type": "product",
+      "attribute_code": "connectivity",
+      "label": "Connectivity",
+      "input_type": "select",
+      "scope": "global",
+      "is_required": false,
+      "is_unique": false,
+      "is_searchable": true,
+      "is_filterable": false,
+      "is_comparable": true,
+      "is_visible_on_front": true,
+      "used_for_promo_rules": false,
+      "used_for_configurations": false,
+      "swatch_type": "none",
+      "options": [
+        {
+          "value": "5G / USB-C",
+          "label": "5G / USB-C"
+        },
+        {
+          "value": "5G / Wi-Fi",
+          "label": "5G / Wi-Fi"
+        },
+        {
+          "value": "Bluetooth",
+          "label": "Bluetooth"
+        },
+        {
+          "value": "Bluetooth / USB-C",
+          "label": "Bluetooth / USB-C"
+        },
+        {
+          "value": "Wi-Fi",
+          "label": "Wi-Fi"
+        },
+        {
+          "value": "Wi-Fi / Bluetooth",
+          "label": "Wi-Fi / Bluetooth"
+        },
+        {
+          "value": "Wi-Fi / HDMI",
+          "label": "Wi-Fi / HDMI"
+        },
+        {
+          "value": "5G / Wi-Fi 6 / Bluetooth 5.0",
+          "label": "5G / Wi-Fi 6 / Bluetooth 5.0"
+        },
+        {
+          "value": "5G / Wi-Fi 6 / Bluetooth 5.3",
+          "label": "5G / Wi-Fi 6 / Bluetooth 5.3"
+        },
+        {
+          "value": "5G / Wi-Fi 6E / Bluetooth 5.3",
+          "label": "5G / Wi-Fi 6E / Bluetooth 5.3"
+        },
+        {
+          "value": "5G / Wi-Fi 7 / Bluetooth 5.3",
+          "label": "5G / Wi-Fi 7 / Bluetooth 5.3"
+        },
+        {
+          "value": "Bluetooth 5.0",
+          "label": "Bluetooth 5.0"
+        },
+        {
+          "value": "Bluetooth 5.2 / 3.5 mm",
+          "label": "Bluetooth 5.2 / 3.5 mm"
+        },
+        {
+          "value": "Bluetooth LE / Logi Bolt",
+          "label": "Bluetooth LE / Logi Bolt"
+        },
+        {
+          "value": "Bluetooth LE; Logi Bolt compatible",
+          "label": "Bluetooth LE; Logi Bolt compatible"
+        },
+        {
+          "value": "USB-A",
+          "label": "USB-A"
+        },
+        {
+          "value": "Wi-Fi 6 / Bluetooth 5.0 / HDMI 2.1",
+          "label": "Wi-Fi 6 / Bluetooth 5.0 / HDMI 2.1"
+        },
+        {
+          "value": "Wi-Fi 6 / Bluetooth 5.0 / USB-C",
+          "label": "Wi-Fi 6 / Bluetooth 5.0 / USB-C"
+        },
+        {
+          "value": "Wi-Fi 6 / Bluetooth 5.2 / USB-C",
+          "label": "Wi-Fi 6 / Bluetooth 5.2 / USB-C"
+        },
+        {
+          "value": "Wi-Fi 6 / Bluetooth 5.3 / Thunderbolt 3",
+          "label": "Wi-Fi 6 / Bluetooth 5.3 / Thunderbolt 3"
+        },
+        {
+          "value": "Wi-Fi 6E / Bluetooth 5.3 / Gigabit Ethernet",
+          "label": "Wi-Fi 6E / Bluetooth 5.3 / Gigabit Ethernet"
+        }
+      ],
+      "version": 0
+    },
+    {
+      "entity_type": "product",
+      "attribute_code": "color",
+      "label": "Color",
+      "input_type": "select",
+      "scope": "global",
+      "is_required": false,
+      "is_unique": false,
+      "is_searchable": true,
+      "is_filterable": true,
+      "is_comparable": true,
+      "is_visible_on_front": true,
+      "used_for_promo_rules": false,
+      "used_for_configurations": false,
+      "swatch_type": "none",
+      "options": [
+        {
+          "value": "Crimson",
+          "label": "Crimson"
+        },
+        {
+          "value": "Graphite",
+          "label": "Graphite"
+        },
+        {
+          "value": "Silver",
+          "label": "Silver"
+        },
+        {
+          "value": "Black",
+          "label": "Black"
+        },
+        {
+          "value": "Off-white",
+          "label": "Off-white"
+        },
+        {
+          "value": "Onyx Black",
+          "label": "Onyx Black"
+        },
+        {
+          "value": "Titanium Gray",
+          "label": "Titanium Gray"
+        },
+        {
+          "value": "White",
+          "label": "White"
+        }
+      ],
+      "version": 0
+    },
+    {
+      "entity_type": "product",
+      "attribute_code": "battery",
+      "label": "Battery",
+      "input_type": "select",
+      "scope": "global",
+      "is_required": false,
+      "is_unique": false,
+      "is_searchable": true,
+      "is_filterable": false,
+      "is_comparable": true,
+      "is_visible_on_front": true,
+      "used_for_promo_rules": false,
+      "used_for_configurations": false,
+      "swatch_type": "none",
+      "options": [
+        {
+          "value": "4500 mAh",
+          "label": "4500 mAh"
+        },
+        {
+          "value": "Up to 20 hours",
+          "label": "Up to 20 hours"
+        },
+        {
+          "value": "Up to 30 hours",
+          "label": "Up to 30 hours"
+        },
+        {
+          "value": "4000 mAh (typical)",
+          "label": "4000 mAh (typical)"
+        },
+        {
+          "value": "5000 mAh (typical)",
+          "label": "5000 mAh (typical)"
+        },
+        {
+          "value": "Up to 10 days with backlight (usage dependent)",
+          "label": "Up to 10 days with backlight (usage dependent)"
+        },
+        {
+          "value": "Up to 15 days with backlight (usage dependent)",
+          "label": "Up to 15 days with backlight (usage dependent)"
+        },
+        {
+          "value": "Up to 24 months (1 AA; usage dependent)",
+          "label": "Up to 24 months (1 AA; usage dependent)"
+        },
+        {
+          "value": "Up to 35 hours (ANC on)",
+          "label": "Up to 35 hours (ANC on)"
+        },
+        {
+          "value": "Up to 6 hours; 30 hours with case",
+          "label": "Up to 6 hours; 30 hours with case"
+        },
+        {
+          "value": "Up to 70 days (usage dependent)",
+          "label": "Up to 70 days (usage dependent)"
+        }
+      ],
+      "version": 0
+    },
+    {
+      "entity_type": "product",
+      "attribute_code": "memory",
+      "label": "Memory",
+      "input_type": "select",
+      "scope": "global",
+      "is_required": false,
+      "is_unique": false,
+      "is_searchable": true,
+      "is_filterable": false,
+      "is_comparable": true,
+      "is_visible_on_front": true,
+      "used_for_promo_rules": false,
+      "used_for_configurations": false,
+      "swatch_type": "none",
+      "options": [
+        {
+          "value": "12 GB",
+          "label": "12 GB"
+        },
+        {
+          "value": "16 GB",
+          "label": "16 GB"
+        },
+        {
+          "value": "8 GB",
+          "label": "8 GB"
+        }
+      ],
+      "version": 0
+    },
+    {
+      "entity_type": "product",
+      "attribute_code": "noise_cancellation",
+      "label": "Noise cancellation",
+      "input_type": "select",
+      "scope": "global",
+      "is_required": false,
+      "is_unique": false,
+      "is_searchable": true,
+      "is_filterable": false,
+      "is_comparable": true,
+      "is_visible_on_front": true,
+      "used_for_promo_rules": false,
+      "used_for_configurations": false,
+      "swatch_type": "none",
+      "options": [
+        {
+          "value": "Active noise cancellation",
+          "label": "Active noise cancellation"
+        },
+        {
+          "value": "No active noise cancellation",
+          "label": "No active noise cancellation"
+        }
+      ],
+      "version": 0
+    },
+    {
+      "entity_type": "product",
+      "attribute_code": "included",
+      "label": "In the box",
+      "input_type": "select",
+      "scope": "global",
+      "is_required": false,
+      "is_unique": false,
+      "is_searchable": true,
+      "is_filterable": false,
+      "is_comparable": true,
+      "is_visible_on_front": true,
+      "used_for_promo_rules": false,
+      "used_for_configurations": false,
+      "swatch_type": "none",
+      "options": [
+        {
+          "value": "Headphones, charging cable",
+          "label": "Headphones, charging cable"
+        },
+        {
+          "value": "Headphones, charging cable, travel case",
+          "label": "Headphones, charging cable, travel case"
+        }
+      ],
+      "version": 0
+    },
+    {
+      "entity_type": "product",
+      "attribute_code": "capacity",
+      "label": "Capacity",
+      "input_type": "select",
+      "scope": "global",
+      "is_required": false,
+      "is_unique": false,
+      "is_searchable": true,
+      "is_filterable": true,
+      "is_comparable": true,
+      "is_visible_on_front": true,
+      "used_for_promo_rules": false,
+      "used_for_configurations": false,
+      "swatch_type": "none",
+      "options": [
+        {
+          "value": "8 kg",
+          "label": "8 kg"
+        },
+        {
+          "value": "9 kg",
+          "label": "9 kg"
+        }
+      ],
+      "version": 0
+    },
+    {
+      "entity_type": "product",
+      "attribute_code": "spin_speed",
+      "label": "Spin speed",
+      "input_type": "select",
+      "scope": "global",
+      "is_required": false,
+      "is_unique": false,
+      "is_searchable": true,
+      "is_filterable": false,
+      "is_comparable": true,
+      "is_visible_on_front": true,
+      "used_for_promo_rules": false,
+      "used_for_configurations": false,
+      "swatch_type": "none",
+      "options": [
+        {
+          "value": "1200 rpm",
+          "label": "1200 rpm"
+        },
+        {
+          "value": "1400 rpm",
+          "label": "1400 rpm"
+        }
+      ],
+      "version": 0
+    },
+    {
+      "entity_type": "product",
+      "attribute_code": "loading_type",
+      "label": "Loading type",
+      "input_type": "select",
+      "scope": "global",
+      "is_required": false,
+      "is_unique": false,
+      "is_searchable": true,
+      "is_filterable": false,
+      "is_comparable": true,
+      "is_visible_on_front": true,
+      "used_for_promo_rules": false,
+      "used_for_configurations": false,
+      "swatch_type": "none",
+      "options": [
+        {
+          "value": "Front loading",
+          "label": "Front loading"
+        }
+      ],
+      "version": 0
+    },
+    {
+      "entity_type": "product",
+      "attribute_code": "programs",
+      "label": "Wash programs",
+      "input_type": "select",
+      "scope": "global",
+      "is_required": false,
+      "is_unique": false,
+      "is_searchable": true,
+      "is_filterable": false,
+      "is_comparable": true,
+      "is_visible_on_front": true,
+      "used_for_promo_rules": false,
+      "used_for_configurations": false,
+      "swatch_type": "none",
+      "options": [
+        {
+          "value": "12 wash programs",
+          "label": "12 wash programs"
+        },
+        {
+          "value": "14 wash programs",
+          "label": "14 wash programs"
+        }
+      ],
+      "version": 0
+    },
+    {
+      "entity_type": "product",
+      "attribute_code": "model",
+      "label": "Model",
+      "input_type": "select",
+      "scope": "global",
+      "is_required": false,
+      "is_unique": false,
+      "is_searchable": true,
+      "is_filterable": false,
+      "is_comparable": true,
+      "is_visible_on_front": true,
+      "used_for_promo_rules": false,
+      "used_for_configurations": false,
+      "swatch_type": "none",
+      "options": [
+        {
+          "value": "9 Pro",
+          "label": "9 Pro"
+        },
+        {
+          "value": "AirPods Pro (1st Gen)",
+          "label": "AirPods Pro (1st Gen)"
+        },
+        {
+          "value": "EOS R5 (Body)",
+          "label": "EOS R5 (Body)"
+        },
+        {
+          "value": "Galaxy S23",
+          "label": "Galaxy S23"
+        },
+        {
+          "value": "MacBook Air M1 (2020)",
+          "label": "MacBook Air M1 (2020)"
+        },
+        {
+          "value": "Mi 11",
+          "label": "Mi 11"
+        },
+        {
+          "value": "Pixel 7",
+          "label": "Pixel 7"
+        },
+        {
+          "value": "PlayStation 5 (Original Disc Edition)",
+          "label": "PlayStation 5 (Original Disc Edition)"
+        },
+        {
+          "value": "QuietComfort 35 II",
+          "label": "QuietComfort 35 II"
+        },
+        {
+          "value": "Switch",
+          "label": "Switch"
+        },
+        {
+          "value": "Switch Lite",
+          "label": "Switch Lite"
+        },
+        {
+          "value": "ThinkPad X1 Carbon (1st Gen)",
+          "label": "ThinkPad X1 Carbon (1st Gen)"
+        },
+        {
+          "value": "WH-1000XM3",
+          "label": "WH-1000XM3"
+        },
+        {
+          "value": "Xbox Series S",
+          "label": "Xbox Series S"
+        },
+        {
+          "value": "Xbox Series X",
+          "label": "Xbox Series X"
+        },
+        {
+          "value": "Z 6 (Body)",
+          "label": "Z 6 (Body)"
+        },
+        {
+          "value": "iPhone 13",
+          "label": "iPhone 13"
+        },
+        {
+          "value": "iPhone 15",
+          "label": "iPhone 15"
+        },
+        {
+          "value": "AirPods 3",
+          "label": "AirPods 3"
+        },
+        {
+          "value": "Apple TV 4K (3rd Gen)",
+          "label": "Apple TV 4K (3rd Gen)"
+        },
+        {
+          "value": "C920s",
+          "label": "C920s"
+        },
+        {
+          "value": "EOS R10",
+          "label": "EOS R10"
+        },
+        {
+          "value": "EOS R50",
+          "label": "EOS R50"
+        },
+        {
+          "value": "Galaxy S24",
+          "label": "Galaxy S24"
+        },
+        {
+          "value": "Galaxy S24 Ultra",
+          "label": "Galaxy S24 Ultra"
+        },
+        {
+          "value": "Lift",
+          "label": "Lift"
+        },
+        {
+          "value": "MX Anywhere 3S",
+          "label": "MX Anywhere 3S"
+        },
+        {
+          "value": "MX Keys Mini",
+          "label": "MX Keys Mini"
+        },
+        {
+          "value": "MX Master 3S Bluetooth Edition",
+          "label": "MX Master 3S Bluetooth Edition"
+        },
+        {
+          "value": "MX Mechanical Mini",
+          "label": "MX Mechanical Mini"
+        },
+        {
+          "value": "Mac mini M2 (2023)",
+          "label": "Mac mini M2 (2023)"
+        },
+        {
+          "value": "MacBook Air M2 (2022)",
+          "label": "MacBook Air M2 (2022)"
+        },
+        {
+          "value": "WH-CH720N",
+          "label": "WH-CH720N"
+        },
+        {
+          "value": "iPad (10th Gen)",
+          "label": "iPad (10th Gen)"
+        },
+        {
+          "value": "iPad mini (6th Gen)",
+          "label": "iPad mini (6th Gen)"
+        },
+        {
+          "value": "iPhone 14",
+          "label": "iPhone 14"
+        },
+        {
+          "value": "iPhone 14 Plus",
+          "label": "iPhone 14 Plus"
+        },
+        {
+          "value": "iPhone SE (3rd Gen)",
+          "label": "iPhone SE (3rd Gen)"
+        }
+      ],
+      "version": 0
+    },
+    {
+      "entity_type": "product",
+      "attribute_code": "processor",
+      "label": "Processor",
+      "input_type": "select",
+      "scope": "global",
+      "is_required": false,
+      "is_unique": false,
+      "is_searchable": true,
+      "is_filterable": false,
+      "is_comparable": true,
+      "is_visible_on_front": true,
+      "used_for_promo_rules": false,
+      "used_for_configurations": false,
+      "swatch_type": "none",
+      "options": [
+        {
+          "value": "Apple A15 Bionic",
+          "label": "Apple A15 Bionic"
+        },
+        {
+          "value": "Apple A16 Bionic",
+          "label": "Apple A16 Bionic"
+        },
+        {
+          "value": "Apple H1",
+          "label": "Apple H1"
+        },
+        {
+          "value": "Apple M1",
+          "label": "Apple M1"
+        },
+        {
+          "value": "Google Tensor G2",
+          "label": "Google Tensor G2"
+        },
+        {
+          "value": "Snapdragon 888",
+          "label": "Snapdragon 888"
+        },
+        {
+          "value": "Apple A14 Bionic",
+          "label": "Apple A14 Bionic"
+        },
+        {
+          "value": "Apple M2",
+          "label": "Apple M2"
+        },
+        {
+          "value": "Snapdragon 8 Gen 3 for Galaxy",
+          "label": "Snapdragon 8 Gen 3 for Galaxy"
+        }
+      ],
+      "version": 0
+    },
+    {
+      "entity_type": "product",
+      "attribute_code": "device_type",
+      "label": "Device type",
+      "input_type": "select",
+      "scope": "global",
+      "is_required": false,
+      "is_unique": false,
+      "is_searchable": true,
+      "is_filterable": true,
+      "is_comparable": true,
+      "is_visible_on_front": true,
+      "used_for_promo_rules": false,
+      "used_for_configurations": false,
+      "swatch_type": "none",
+      "options": [
+        {
+          "value": "Digital game console",
+          "label": "Digital game console"
+        },
+        {
+          "value": "Handheld game console",
+          "label": "Handheld game console"
+        },
+        {
+          "value": "Home game console",
+          "label": "Home game console"
+        },
+        {
+          "value": "Hybrid game console",
+          "label": "Hybrid game console"
+        },
+        {
+          "value": "Laptop",
+          "label": "Laptop"
+        },
+        {
+          "value": "Mirrorless camera",
+          "label": "Mirrorless camera"
+        },
+        {
+          "value": "Over-ear headphones",
+          "label": "Over-ear headphones"
+        },
+        {
+          "value": "Wireless earbuds",
+          "label": "Wireless earbuds"
+        },
+        {
+          "value": "Desktop computer",
+          "label": "Desktop computer"
+        },
+        {
+          "value": "Mechanical keyboard",
+          "label": "Mechanical keyboard"
+        },
+        {
+          "value": "Smartphone",
+          "label": "Smartphone"
+        },
+        {
+          "value": "Streaming media player",
+          "label": "Streaming media player"
+        },
+        {
+          "value": "Tablet",
+          "label": "Tablet"
+        },
+        {
+          "value": "Vertical wireless mouse",
+          "label": "Vertical wireless mouse"
+        },
+        {
+          "value": "Webcam",
+          "label": "Webcam"
+        },
+        {
+          "value": "Wireless keyboard",
+          "label": "Wireless keyboard"
+        },
+        {
+          "value": "Wireless mouse",
+          "label": "Wireless mouse"
+        }
+      ],
+      "version": 0
+    },
+    {
+      "entity_type": "product",
+      "attribute_code": "disc_drive",
+      "label": "Disc drive",
+      "input_type": "select",
+      "scope": "global",
+      "is_required": false,
+      "is_unique": false,
+      "is_searchable": true,
+      "is_filterable": false,
+      "is_comparable": true,
+      "is_visible_on_front": true,
+      "used_for_promo_rules": false,
+      "used_for_configurations": false,
+      "swatch_type": "none",
+      "options": [
+        {
+          "value": "No disc drive",
+          "label": "No disc drive"
+        },
+        {
+          "value": "Ultra HD Blu-ray",
+          "label": "Ultra HD Blu-ray"
+        }
+      ],
+      "version": 0
+    },
+    {
+      "entity_type": "product",
+      "attribute_code": "sensor",
+      "label": "Sensor",
+      "input_type": "select",
+      "scope": "global",
+      "is_required": false,
+      "is_unique": false,
+      "is_searchable": true,
+      "is_filterable": false,
+      "is_comparable": true,
+      "is_visible_on_front": true,
+      "used_for_promo_rules": false,
+      "used_for_configurations": false,
+      "swatch_type": "none",
+      "options": [
+        {
+          "value": "24.5 MP full-frame",
+          "label": "24.5 MP full-frame"
+        },
+        {
+          "value": "45 MP full-frame",
+          "label": "45 MP full-frame"
+        },
+        {
+          "value": "24.2 MP APS-C CMOS",
+          "label": "24.2 MP APS-C CMOS"
+        },
+        {
+          "value": "Optical, up to 4000 DPI",
+          "label": "Optical, up to 4000 DPI"
+        },
+        {
+          "value": "Optical, up to 8000 DPI",
+          "label": "Optical, up to 8000 DPI"
+        }
+      ],
+      "version": 0
+    },
+    {
+      "entity_type": "product",
+      "attribute_code": "lens_mount",
+      "label": "Lens mount",
+      "input_type": "select",
+      "scope": "global",
+      "is_required": false,
+      "is_unique": false,
+      "is_searchable": true,
+      "is_filterable": false,
+      "is_comparable": true,
+      "is_visible_on_front": true,
+      "used_for_promo_rules": false,
+      "used_for_configurations": false,
+      "swatch_type": "none",
+      "options": [
+        {
+          "value": "Canon RF",
+          "label": "Canon RF"
+        },
+        {
+          "value": "Nikon Z",
+          "label": "Nikon Z"
+        }
+      ],
+      "version": 0
+    },
+    {
+      "entity_type": "product",
+      "attribute_code": "video",
+      "label": "Video recording",
+      "input_type": "select",
+      "scope": "global",
+      "is_required": false,
+      "is_unique": false,
+      "is_searchable": true,
+      "is_filterable": false,
+      "is_comparable": true,
+      "is_visible_on_front": true,
+      "used_for_promo_rules": false,
+      "used_for_configurations": false,
+      "swatch_type": "none",
+      "options": [
+        {
+          "value": "4K UHD",
+          "label": "4K UHD"
+        },
+        {
+          "value": "8K",
+          "label": "8K"
+        },
+        {
+          "value": "1080p at 30 fps",
+          "label": "1080p at 30 fps"
+        },
+        {
+          "value": "4K HDR up to 60 fps",
+          "label": "4K HDR up to 60 fps"
+        },
+        {
+          "value": "4K up to 30 fps",
+          "label": "4K up to 30 fps"
+        },
+        {
+          "value": "4K up to 60 fps (cropped at 60 fps)",
+          "label": "4K up to 60 fps (cropped at 60 fps)"
+        }
+      ],
+      "version": 0
+    },
+    {
+      "entity_type": "product",
+      "attribute_code": "burst_rate",
+      "label": "Continuous shooting",
+      "input_type": "select",
+      "scope": "global",
+      "is_required": false,
+      "is_unique": false,
+      "is_searchable": true,
+      "is_filterable": false,
+      "is_comparable": true,
+      "is_visible_on_front": true,
+      "used_for_promo_rules": false,
+      "used_for_configurations": false,
+      "swatch_type": "none",
+      "options": [
+        {
+          "value": "12 fps electronic first-curtain; 15 fps electronic",
+          "label": "12 fps electronic first-curtain; 15 fps electronic"
+        },
+        {
+          "value": "15 fps mechanical; 23 fps electronic",
+          "label": "15 fps mechanical; 23 fps electronic"
+        }
+      ],
+      "version": 0
+    },
+    {
+      "entity_type": "product",
+      "attribute_code": "field_of_view",
+      "label": "Field of view",
+      "input_type": "select",
+      "scope": "global",
+      "is_required": false,
+      "is_unique": false,
+      "is_searchable": true,
+      "is_filterable": false,
+      "is_comparable": true,
+      "is_visible_on_front": true,
+      "used_for_promo_rules": false,
+      "used_for_configurations": false,
+      "swatch_type": "none",
+      "options": [
+        {
+          "value": "78 degrees diagonal",
+          "label": "78 degrees diagonal"
+        }
+      ],
+      "version": 0
+    },
+    {
+      "entity_type": "product",
+      "attribute_code": "included_lens",
+      "label": "Included lens",
+      "input_type": "select",
+      "scope": "global",
+      "is_required": false,
+      "is_unique": false,
+      "is_searchable": true,
+      "is_filterable": false,
+      "is_comparable": true,
+      "is_visible_on_front": true,
+      "used_for_promo_rules": false,
+      "used_for_configurations": false,
+      "swatch_type": "none",
+      "options": [
+        {
+          "value": "RF-S 18–45mm F4.5–6.3 IS STM",
+          "label": "RF-S 18–45mm F4.5–6.3 IS STM"
+        }
+      ],
+      "version": 0
+    },
+    {
+      "entity_type": "product",
+      "attribute_code": "keyboard_layout",
+      "label": "Keyboard layout",
+      "input_type": "select",
+      "scope": "global",
+      "is_required": false,
+      "is_unique": false,
+      "is_searchable": true,
+      "is_filterable": false,
+      "is_comparable": true,
+      "is_visible_on_front": true,
+      "used_for_promo_rules": false,
+      "used_for_configurations": false,
+      "swatch_type": "none",
+      "options": [
+        {
+          "value": "US English",
+          "label": "US English"
+        }
+      ],
+      "version": 0
+    },
+    {
+      "entity_type": "product",
+      "attribute_code": "switch_type",
+      "label": "Key switches",
+      "input_type": "select",
+      "scope": "global",
+      "is_required": false,
+      "is_unique": false,
+      "is_searchable": true,
+      "is_filterable": false,
+      "is_comparable": true,
+      "is_visible_on_front": true,
+      "used_for_promo_rules": false,
+      "used_for_configurations": false,
+      "swatch_type": "none",
+      "options": [
+        {
+          "value": "Tactile Quiet",
+          "label": "Tactile Quiet"
+        }
+      ],
+      "version": 0
+    }
+  ],
+  "families": [],
+  "languages": [
+    {
+      "locale": "en",
+      "name": "English",
+      "native_name": "English",
+      "direction": "ltr"
+    },
+    {
+      "locale": "ar",
+      "name": "Arabic",
+      "native_name": "العربية",
+      "direction": "rtl"
+    }
+  ],
+  "translations": {
+    "ar": {
+      "products": {
+        "DEMO-ELE-BRAND-001": {
+          "name": "آبل آيفون 13 — 128 جيجابايت",
+          "description": "هاتف للاستخدام اليومي بشاشة OLED ومعالج A15 Bionic. السعر بالدولار والمخزون للعرض التجريبي فقط، وليسا عرض بيع فعلياً. قد تُظهر الصورة لوناً مختلفاً.\n\nصورة المنتج: الصورة الرسمية من Apple. https://support.apple.com/en-us/111872"
+        },
+        "DEMO-ELE-BRAND-002": {
+          "name": "آبل آيفون 15 — 128 جيجابايت",
+          "description": "هاتف مزوّد بميزة الجزيرة الديناميكية وكاميرا رئيسية بدقة 48 ميجابكسل ومنفذ USB-C. السعر بالدولار والمخزون للعرض التجريبي فقط، وليسا عرض بيع فعلياً. قد تُظهر الصورة لوناً مختلفاً.\n\nصورة المنتج: الصورة الرسمية من Apple. https://support.apple.com/en-mide/111831"
+        },
+        "DEMO-ELE-BRAND-003": {
+          "name": "سامسونج جالكسي S23 — 128 جيجابايت",
+          "description": "هاتف جالكسي بحجم عملي وشاشة AMOLED بقياس 6.1 بوصة واتصال 5G. السعر بالدولار والمخزون للعرض التجريبي فقط، وليسا عرض بيع فعلياً. قد تُظهر الصورة لوناً مختلفاً.\n\nصورة المنتج: الصورة الرسمية من Samsung. https://www.samsung.com/au/smartphones/galaxy-s/galaxy-s23-phantom-black-128gb-sm-s911bzkaats/"
+        },
+        "DEMO-ELE-BRAND-004": {
+          "name": "سامسونج جالكسي S23 — 256 جيجابايت",
+          "description": "إصدار جالكسي S23 بسعة 256 جيجابايت يمنحك مساحة أوسع للتطبيقات والصور والملفات. السعر بالدولار والمخزون للعرض التجريبي فقط، وليسا عرض بيع فعلياً. قد تُظهر الصورة لوناً مختلفاً.\n\nصورة المنتج: الصورة الرسمية من Samsung. https://www.samsung.com/au/smartphones/galaxy-s/galaxy-s23-phantom-black-128gb-sm-s911bzkaats/"
+        },
+        "DEMO-ELE-BRAND-005": {
+          "name": "جوجل بيكسل 7 — 128 جيجابايت",
+          "description": "هاتف بمعالج Google Tensor G2 وكاميرا رئيسية بدقة 50 ميجابكسل للتصوير اليومي. السعر بالدولار والمخزون للعرض التجريبي فقط، وليسا عرض بيع فعلياً. قد تُظهر الصورة لوناً مختلفاً.\n\nصورة المنتج: الصورة الرسمية من Google. https://partnermarketinghub.withgoogle.com/brands/google-pixel/pixel-7/overview/"
+        },
+        "DEMO-ELE-BRAND-006": {
+          "name": "ون بلس 9 برو — 256 جيجابايت",
+          "description": "هاتف ون بلس بشاشة AMOLED بتردد 120 هرتز ومعالج Snapdragon 888. السعر بالدولار والمخزون للعرض التجريبي فقط، وليسا عرض بيع فعلياً. قد تُظهر الصورة لوناً مختلفاً.\n\nصورة المنتج: الصورة الرسمية من OnePlus. https://www.oneplus.com/us/9-pro/specs"
+        },
+        "DEMO-ELE-BRAND-007": {
+          "name": "شاومي مي 11 — 128 جيجابايت",
+          "description": "هاتف شاومي بشاشة كبيرة وكاميرا رئيسية بدقة 108 ميجابكسل ومعالج Snapdragon 888. السعر بالدولار والمخزون للعرض التجريبي فقط، وليسا عرض بيع فعلياً. قد تُظهر الصورة لوناً مختلفاً.\n\nصورة المنتج: الصورة الرسمية من Xiaomi. https://www.mi.com/global/product/mi-11/specs/"
+        },
+        "DEMO-ELE-BRAND-008": {
+          "name": "آبل ماك بوك إير M1 إصدار 2020 — 256 جيجابايت SSD",
+          "description": "حاسوب محمول بدون مروحة للدراسة والعمل اليومي، يعمل بمعالج Apple M1. السعر بالدولار والمخزون للعرض التجريبي فقط، وليسا عرض بيع فعلياً. قد تُظهر الصورة لوناً مختلفاً.\n\nصورة المنتج: الصورة الرسمية من Apple. https://support.apple.com/en-ie/111883"
+        },
+        "DEMO-ELE-BRAND-009": {
+          "name": "آبل ماك بوك إير M1 إصدار 2020 — 512 جيجابايت SSD",
+          "description": "إصدار بقرص SSD بسعة 512 جيجابايت يوفر مساحة إضافية للمستندات والمشروعات الإبداعية. السعر بالدولار والمخزون للعرض التجريبي فقط، وليسا عرض بيع فعلياً. قد تُظهر الصورة لوناً مختلفاً.\n\nصورة المنتج: الصورة الرسمية من Apple. https://support.apple.com/en-ie/111883"
+        },
+        "DEMO-ELE-BRAND-010": {
+          "name": "لينوفو ثينك باد X1 كاربون الجيل الأول",
+          "description": "حاسوب أعمال كلاسيكي بقياس 14 بوصة ولوحة مفاتيح ثينك باد ومؤشر TrackPoint. هذا هو طراز الجيل الأول. السعر بالدولار والمخزون للعرض التجريبي فقط، وليسا عرض بيع فعلياً. قد تُظهر الصورة لوناً مختلفاً.\n\nصورة المنتج: الصورة الرسمية من Lenovo. https://psref.lenovo.com/syspool/Sys/PDF/withdrawnbook/ThinkPad_X1_Carbon_1st_Gen.pdf"
+        },
+        "DEMO-ELE-BRAND-011": {
+          "name": "سوني WH-1000XM3",
+          "description": "سماعات لاسلكية تغطي الأذن مع إلغاء نشط للضوضاء لتجربة استماع أكثر تركيزاً. السعر بالدولار والمخزون للعرض التجريبي فقط، وليسا عرض بيع فعلياً. قد تُظهر الصورة لوناً مختلفاً.\n\nصورة المنتج: الصورة الرسمية من Sony. https://helpguide.sony.net/mdr/wh1000xm3/v1/en/index.html"
+        },
+        "DEMO-ELE-BRAND-012": {
+          "name": "بوز كوايت كومفورت 35 II",
+          "description": "سماعات لاسلكية بتصميم قابل للطي يغطي الأذن وميزة إلغاء الضوضاء. السعر بالدولار والمخزون للعرض التجريبي فقط، وليسا عرض بيع فعلياً. قد تُظهر الصورة لوناً مختلفاً.\n\nصورة المنتج: الصورة الرسمية من Bose. https://www.bose.com/p/quietcomfort-35-wireless-headphones-ii/QC35II-HEADPHONEARN-BLK-WW.html"
+        },
+        "DEMO-ELE-BRAND-013": {
+          "name": "آبل إيربودز برو الجيل الأول",
+          "description": "سماعات إيربودز برو من الجيل الأول، مع إلغاء نشط للضوضاء ونمط الشفافية. السعر بالدولار والمخزون للعرض التجريبي فقط، وليسا عرض بيع فعلياً. قد تُظهر الصورة لوناً مختلفاً.\n\nصورة المنتج: الصورة الرسمية من Apple. https://support.apple.com/en-us/111861"
+        },
+        "DEMO-ELE-BRAND-014": {
+          "name": "نينتندو سويتش — 32 جيجابايت",
+          "description": "جهاز ألعاب هجين مع وحدات تحكم Joy-Con قابلة للفصل، للعب المحمول أو عبر التلفاز. السعر بالدولار والمخزون للعرض التجريبي فقط، وليسا عرض بيع فعلياً. قد تُظهر الصورة لوناً مختلفاً.\n\nصورة المنتج: الصورة الرسمية من Nintendo. https://www.nintendo.com/us/gaming-systems/switch/system/"
+        },
+        "DEMO-ELE-BRAND-015": {
+          "name": "نينتندو سويتش لايت — 32 جيجابايت",
+          "description": "جهاز سويتش محمول مدمج بوحدات تحكم مدمجة. لا يدعم توصيل الصورة بالتلفاز. السعر بالدولار والمخزون للعرض التجريبي فقط، وليسا عرض بيع فعلياً. قد تُظهر الصورة لوناً مختلفاً.\n\nصورة المنتج: الصورة الرسمية من Nintendo. https://www.nintendo.com/us/gaming-systems/switch/lite/"
+        },
+        "DEMO-ELE-BRAND-016": {
+          "name": "سوني بلايستيشن 5 الإصدار الأصلي بالأقراص — 825 جيجابايت SSD",
+          "description": "جهاز PS5 الأصلي بإصدار الأقراص، مع تخزين SSD ووحدة تحكم DualSense. السعر بالدولار والمخزون للعرض التجريبي فقط، وليسا عرض بيع فعلياً. قد تُظهر الصورة لوناً مختلفاً.\n\nصورة المنتج: الصورة الرسمية من Sony. https://blog.playstation.com/2020/06/11/ps5-showcase-recap-everything-you-need-to-know/"
+        },
+        "DEMO-ELE-BRAND-017": {
+          "name": "مايكروسوفت إكس بوكس سيريس X — 1 تيرابايت SSD",
+          "description": "جهاز سيريس X بسعة 1 تيرابايت وقارئ أقراص ووحدة تحكم إكس بوكس لاسلكية. السعر بالدولار والمخزون للعرض التجريبي فقط، وليسا عرض بيع فعلياً. قد تُظهر الصورة لوناً مختلفاً.\n\nصورة المنتج: الصورة الرسمية من Microsoft. https://www.xbox.com/en-us/consoles/xbox-series-x"
+        },
+        "DEMO-ELE-BRAND-018": {
+          "name": "مايكروسوفت إكس بوكس سيريس S — 512 جيجابايت SSD",
+          "description": "جهاز إكس بوكس رقمي بالكامل بتصميم مدمج. لا يدعم تشغيل الألعاب من الأقراص. السعر بالدولار والمخزون للعرض التجريبي فقط، وليسا عرض بيع فعلياً. قد تُظهر الصورة لوناً مختلفاً.\n\nصورة المنتج: الصورة الرسمية من Microsoft. https://www.xbox.com/en-us/consoles/xbox-series-s"
+        },
+        "DEMO-ELE-BRAND-019": {
+          "name": "كانون EOS R5 هيكل كاميرا",
+          "description": "كاميرا بدون مرآة بمستشعر كامل الإطار بدقة 45 ميجابكسل وحامل عدسات Canon RF. العرض التجريبي لهيكل الكاميرا فقط ولا يشمل العدسات. السعر بالدولار والمخزون للعرض التجريبي فقط، وليسا عرض بيع فعلياً. قد تُظهر الصورة لوناً مختلفاً.\n\nصورة المنتج: الصورة الرسمية من Canon. https://asia.canon/en/consumer/eos-r5/body/specification"
+        },
+        "DEMO-ELE-BRAND-020": {
+          "name": "نيكون Z 6 هيكل كاميرا",
+          "description": "كاميرا بدون مرآة بمستشعر كامل الإطار بدقة 24.5 ميجابكسل وحامل عدسات Nikon Z. يشمل العرض الهيكل فقط دون عدسات. السعر بالدولار والمخزون للعرض التجريبي فقط، وليسا عرض بيع فعلياً. قد تُظهر الصورة لوناً مختلفاً.\n\nصورة المنتج: الصورة الرسمية من Nikon. https://www.nikonusa.com/press-room/nikon-introduces-the-new-nikon"
+        },
+        "DEMO-ELE-BRAND-021": {
+          "name": "آبل آيفون 14 — 128 جيجابايت",
+          "description": "هاتف بشاشة OLED مقاس 6.1 بوصة ومعالج A15 Bionic وكاميرتين بدقة 12 ميجابكسل واتصال 5G. تُظهر الصورة الرسمية الألوان المتاحة. السعر بالدولار والمخزون للعرض التجريبي فقط، وليسا عرض بيع فعلياً."
+        },
+        "DEMO-ELE-BRAND-022": {
+          "name": "آبل آيفون 14 بلس — 128 جيجابايت",
+          "description": "آيفون بشاشة OLED كبيرة مقاس 6.7 بوصة ومعالج A15 Bionic وكاميرتين بدقة 12 ميجابكسل واتصال 5G. تُظهر الصورة الرسمية ألوان عائلة آيفون 14. السعر بالدولار والمخزون للعرض التجريبي فقط، وليسا عرض بيع فعلياً."
+        },
+        "DEMO-ELE-BRAND-023": {
+          "name": "آبل آيفون SE الجيل الثالث — 64 جيجابايت",
+          "description": "آيفون صغير بشاشة 4.7 بوصة وبصمة Touch ID ومعالج A15 Bionic واتصال 5G. تُظهر الصورة الرسمية الألوان المتاحة. السعر بالدولار والمخزون للعرض التجريبي فقط، وليسا عرض بيع فعلياً."
+        },
+        "DEMO-ELE-BRAND-024": {
+          "name": "آبل آيباد الجيل العاشر واي فاي — 64 جيجابايت",
+          "description": "جهاز لوحي بشاشة Liquid Retina مقاس 10.9 بوصة ومعالج A14 Bionic ومنفذ USB-C وكاميرا أمامية أفقية. إصدار واي فاي؛ تُظهر الصورة الرسمية الألوان المتاحة. السعر بالدولار والمخزون للعرض التجريبي فقط، وليسا عرض بيع فعلياً."
+        },
+        "DEMO-ELE-BRAND-025": {
+          "name": "آبل آيباد ميني الجيل السادس واي فاي — 64 جيجابايت",
+          "description": "جهاز لوحي محمول بشاشة Liquid Retina مقاس 8.3 بوصة ومعالج A15 Bionic ومنفذ USB-C. إصدار واي فاي؛ تُظهر الصورة الرسمية الألوان المتاحة. السعر بالدولار والمخزون للعرض التجريبي فقط، وليسا عرض بيع فعلياً."
+        },
+        "DEMO-ELE-BRAND-026": {
+          "name": "آبل ماك بوك إير M2 موديل 2022 — ذاكرة 8 جيجابايت وSSD بسعة 256 جيجابايت",
+          "description": "حاسوب محمول بدون مروحة بشاشة 13.6 بوصة ومعالج مركزي من 8 أنوية ومعالج رسومي من 8 أنوية وشحن MagSafe 3. يأتي بذاكرة موحدة 8 جيجابايت وSSD بسعة 256 جيجابايت. تُظهر الصورة خيارات الألوان. السعر بالدولار والمخزون للعرض التجريبي فقط، وليسا عرض بيع فعلياً."
+        },
+        "DEMO-ELE-BRAND-027": {
+          "name": "آبل ماك ميني M2 موديل 2023 — ذاكرة 8 جيجابايت وSSD بسعة 256 جيجابايت",
+          "description": "حاسوب مكتبي صغير بمعالج Apple M2 ومعالج مركزي من 8 أنوية ومعالج رسومي من 10 أنوية ومنفذي Thunderbolt 4. تُباع الشاشة ولوحة المفاتيح والفأرة بشكل منفصل. السعر بالدولار والمخزون للعرض التجريبي فقط، وليسا عرض بيع فعلياً."
+        },
+        "DEMO-ELE-BRAND-028": {
+          "name": "آبل تي في 4K الجيل الثالث واي فاي — 64 جيجابايت",
+          "description": "مشغل بث بدقة 4K ومعالج A15 Bionic ودعم HDR10+ وDolby Vision وريموت Siri بمنفذ USB-C. إصدار واي فاي بدون إيثرنت؛ اشتراكات خدمات البث منفصلة. السعر بالدولار والمخزون للعرض التجريبي فقط، وليسا عرض بيع فعلياً."
+        },
+        "DEMO-ELE-BRAND-029": {
+          "name": "لوجيتك Lift فأرة عمودية — أبيض مائل للكريمي",
+          "description": "فأرة عمودية لليد اليمنى بزاوية إمساك 57 درجة ونقرات هادئة ومستشعر بصري بدقة 4000 DPI. تتصل عبر البلوتوث أو مستقبل Logi Bolt المرفق. السعر بالدولار والمخزون للعرض التجريبي فقط، وليسا عرض بيع فعلياً."
+        },
+        "DEMO-ELE-BRAND-030": {
+          "name": "لوجيتك MX Mechanical Mini — مفاتيح لمسية هادئة وتخطيط إنجليزي أمريكي",
+          "description": "لوحة مفاتيح ميكانيكية لاسلكية صغيرة بمفاتيح لمسية هادئة منخفضة الارتفاع وإضاءة ذكية وشحن USB-C. تخطيط المفاتيح إنجليزي أمريكي. السعر بالدولار والمخزون للعرض التجريبي فقط، وليسا عرض بيع فعلياً."
+        },
+        "DEMO-ELE-BRAND-031": {
+          "name": "سوني WH-CH720N — أسود",
+          "description": "سماعات فوق الأذن خفيفة مع إلغاء ضوضاء نشط وبلوتوث متعدد الأجهزة ومدخل سلكي 3.5 مم. حتى 35 ساعة من تشغيل الموسيقى مع تفعيل إلغاء الضوضاء. السعر بالدولار والمخزون للعرض التجريبي فقط، وليسا عرض بيع فعلياً."
+        },
+        "DEMO-ELE-BRAND-032": {
+          "name": "آبل إيربودز 3 مع علبة شحن Lightning",
+          "description": "سماعات لاسلكية بمعالج H1 ومعادل صوت تكيفي وصوت مكاني مخصص على أجهزة آبل المتوافقة. حتى 6 ساعات استماع للشحنة وحتى 30 ساعة مع العلبة. السعر بالدولار والمخزون للعرض التجريبي فقط، وليسا عرض بيع فعلياً."
+        },
+        "DEMO-ELE-BRAND-033": {
+          "name": "لوجيتك MX Master 3S إصدار بلوتوث — أسود",
+          "description": "فأرة لاسلكية دقيقة بنقرات هادئة ومستشعر 8000 DPI وتمرير MagSpeed. إصدار بلوتوث؛ مستقبل Logi Bolt غير مرفق. السعر بالدولار والمخزون للعرض التجريبي فقط، وليسا عرض بيع فعلياً."
+        },
+        "DEMO-ELE-BRAND-034": {
+          "name": "لوجيتك MX Anywhere 3S — أسود",
+          "description": "فأرة لاسلكية صغيرة بمستشعر 8000 DPI ونقرات هادئة وشحن USB-C. تقترن بما يصل إلى ثلاثة أجهزة؛ مستقبل Logi Bolt يُباع منفصلاً. السعر بالدولار والمخزون للعرض التجريبي فقط، وليسا عرض بيع فعلياً."
+        },
+        "DEMO-ELE-BRAND-035": {
+          "name": "لوجيتك MX Keys Mini — جرافيت وتخطيط إنجليزي أمريكي",
+          "description": "لوحة مفاتيح لاسلكية صغيرة بإضاءة ذكية ومفاتيح مقعرة وشحن USB-C. تخطيط إنجليزي أمريكي؛ مستقبل Logi Bolt يُباع منفصلاً. السعر بالدولار والمخزون للعرض التجريبي فقط، وليسا عرض بيع فعلياً."
+        },
+        "DEMO-ELE-BRAND-036": {
+          "name": "لوجيتك C920s كاميرا ويب عالية الدقة",
+          "description": "كاميرا ويب Full HD بتركيز تلقائي وميكروفونات ستيريو وغطاء للخصوصية. تسجل بدقة تصل إلى 1080p بسرعة 30 إطاراً في الثانية ومجال رؤية قطري 78 درجة. السعر بالدولار والمخزون للعرض التجريبي فقط، وليسا عرض بيع فعلياً."
+        },
+        "DEMO-ELE-BRAND-037": {
+          "name": "كانون EOS R50 مع عدسة RF-S مقاس 18–45 مم",
+          "description": "كاميرا بدون مرآة بمستشعر APS-C بدقة 24.2 ميجابكسل وتركيز Dual Pixel CMOS AF II وشاشة متغيرة الزاوية وعدسة RF-S مقاس 18–45 مم بفتحة F4.5–6.3 IS STM. السعر بالدولار والمخزون للعرض التجريبي فقط، وليسا عرض بيع فعلياً."
+        },
+        "DEMO-ELE-BRAND-038": {
+          "name": "كانون EOS R10 مع عدسة RF-S مقاس 18–45 مم",
+          "description": "كاميرا بدون مرآة بمستشعر APS-C بدقة 24.2 ميجابكسل وتركيز Dual Pixel CMOS AF II وشاشة متغيرة الزاوية وعدسة RF-S مقاس 18–45 مم بفتحة F4.5–6.3 IS STM. السعر بالدولار والمخزون للعرض التجريبي فقط، وليسا عرض بيع فعلياً."
+        },
+        "DEMO-ELE-BRAND-039": {
+          "name": "سامسونج جالاكسي S24 — ذاكرة 8 جيجابايت وتخزين 256 جيجابايت، أسود أونيكس",
+          "description": "هاتف بشاشة Dynamic AMOLED 2X مقاس 6.2 بوصة وتحديث تكيفي حتى 120 هرتز وكاميرا رئيسية 50 ميجابكسل وبطارية بسعة نموذجية 4000 ملّي أمبير ساعة. الإصدار الدولي SM-S921B. السعر بالدولار والمخزون للعرض التجريبي فقط، وليسا عرض بيع فعلياً."
+        },
+        "DEMO-ELE-BRAND-040": {
+          "name": "سامسونج جالاكسي S24 ألترا — ذاكرة 12 جيجابايت وتخزين 256 جيجابايت، رمادي تيتانيوم",
+          "description": "هاتف بشاشة Dynamic AMOLED 2X مقاس 6.8 بوصة وكاميرا رئيسية 200 ميجابكسل وقلم S Pen مدمج وبطارية بسعة نموذجية 5000 ملّي أمبير ساعة. الإصدار الدولي SM-S928B. السعر بالدولار والمخزون للعرض التجريبي فقط، وليسا عرض بيع فعلياً."
+        }
+      },
+      "categories": {
+        "electronics-phones": {
+          "name": "الهواتف"
+        },
+        "electronics-computers": {
+          "name": "الحواسيب المحمولة"
+        },
+        "electronics-audio": {
+          "name": "السماعات والصوتيات"
+        },
+        "electronics-appliances": {
+          "name": "الأجهزة المنزلية"
+        },
+        "electronics-gaming": {
+          "name": "أجهزة الألعاب"
+        },
+        "electronics-cameras": {
+          "name": "الكاميرات"
+        },
+        "electronics-tablets": {
+          "name": "الأجهزة اللوحية"
+        },
+        "electronics-accessories": {
+          "name": "ملحقات الكمبيوتر"
+        },
+        "electronics-home-entertainment": {
+          "name": "الترفيه المنزلي"
+        }
+      },
+      "attributes": {
+        "brand": {
+          "label": "العلامة التجارية",
+          "option.Apple": "آبل",
+          "option.Bose": "بوز",
+          "option.Canon": "كانون",
+          "option.Google": "جوجل",
+          "option.HomeWash": "HomeWash",
+          "option.Lenovo": "لينوفو",
+          "option.Microsoft": "مايكروسوفت",
+          "option.Nikon": "نيكون",
+          "option.Nintendo": "نينتندو",
+          "option.OnePlus": "ون بلس",
+          "option.Pulse": "Pulse",
+          "option.Samsung": "سامسونج",
+          "option.Sony": "سوني",
+          "option.Sound One": "Sound One",
+          "option.Studio": "Studio",
+          "option.Xiaomi": "شاومي",
+          "option.Logitech": "لوجيتك"
+        },
+        "model": {
+          "label": "الطراز",
+          "option.9 Pro": "9 Pro",
+          "option.AirPods Pro (1st Gen)": "AirPods Pro (1st Gen)",
+          "option.EOS R5 (Body)": "EOS R5 (Body)",
+          "option.Galaxy S23": "Galaxy S23",
+          "option.MacBook Air M1 (2020)": "MacBook Air M1 (2020)",
+          "option.Mi 11": "Mi 11",
+          "option.Pixel 7": "Pixel 7",
+          "option.PlayStation 5 (Original Disc Edition)": "PlayStation 5 (Original Disc Edition)",
+          "option.QuietComfort 35 II": "QuietComfort 35 II",
+          "option.Switch": "Switch",
+          "option.Switch Lite": "Switch Lite",
+          "option.ThinkPad X1 Carbon (1st Gen)": "ThinkPad X1 Carbon (1st Gen)",
+          "option.WH-1000XM3": "WH-1000XM3",
+          "option.Xbox Series S": "Xbox Series S",
+          "option.Xbox Series X": "Xbox Series X",
+          "option.Z 6 (Body)": "Z 6 (Body)",
+          "option.iPhone 13": "iPhone 13",
+          "option.iPhone 15": "iPhone 15",
+          "option.AirPods 3": "AirPods 3",
+          "option.Apple TV 4K (3rd Gen)": "Apple TV 4K (3rd Gen)",
+          "option.C920s": "C920s",
+          "option.EOS R10": "EOS R10",
+          "option.EOS R50": "EOS R50",
+          "option.Galaxy S24": "Galaxy S24",
+          "option.Galaxy S24 Ultra": "Galaxy S24 Ultra",
+          "option.Lift": "Lift",
+          "option.MX Anywhere 3S": "MX Anywhere 3S",
+          "option.MX Keys Mini": "MX Keys Mini",
+          "option.MX Master 3S Bluetooth Edition": "MX Master 3S Bluetooth Edition",
+          "option.MX Mechanical Mini": "MX Mechanical Mini",
+          "option.Mac mini M2 (2023)": "Mac mini M2 (2023)",
+          "option.MacBook Air M2 (2022)": "MacBook Air M2 (2022)",
+          "option.WH-CH720N": "WH-CH720N",
+          "option.iPad (10th Gen)": "iPad (10th Gen)",
+          "option.iPad mini (6th Gen)": "iPad mini (6th Gen)",
+          "option.iPhone 14": "iPhone 14",
+          "option.iPhone 14 Plus": "iPhone 14 Plus",
+          "option.iPhone SE (3rd Gen)": "iPhone SE (3rd Gen)"
+        },
+        "storage": {
+          "label": "سعة التخزين",
+          "option.1 TB SSD": "1 تيرابايت SSD",
+          "option.128 GB": "128 جيجابايت",
+          "option.256 GB": "256 جيجابايت",
+          "option.256 GB SSD": "256 جيجابايت SSD",
+          "option.32 GB": "32 جيجابايت",
+          "option.512 GB SSD": "512 جيجابايت SSD",
+          "option.825 GB SSD": "825 جيجابايت SSD",
+          "option.64 GB": "64 جيجابايت"
+        },
+        "display": {
+          "label": "الشاشة",
+          "option.13.3-inch Retina": "13.3 بوصة Retina",
+          "option.14-inch HD+": "14 بوصة HD+",
+          "option.14-inch IPS": "14 بوصة IPS",
+          "option.5.5-inch LCD": "5.5 بوصة LCD",
+          "option.6.1-inch AMOLED": "6.1 بوصة AMOLED",
+          "option.6.1-inch OLED": "6.1 بوصة OLED",
+          "option.6.2-inch LCD": "6.2 بوصة LCD",
+          "option.6.4-inch OLED": "6.4 بوصة OLED",
+          "option.6.7-inch AMOLED": "6.7 بوصة AMOLED",
+          "option.6.81-inch AMOLED": "6.81 بوصة AMOLED",
+          "option.10.9-inch Liquid Retina": "Liquid Retina مقاس 10.9 بوصة",
+          "option.13.6-inch Liquid Retina": "Liquid Retina مقاس 13.6 بوصة",
+          "option.4.7-inch Retina HD LCD": "Retina HD LCD مقاس 4.7 بوصة",
+          "option.6.2-inch Dynamic AMOLED 2X, up to 120 Hz": "Dynamic AMOLED 2X مقاس 6.2 بوصة حتى 120 هرتز",
+          "option.6.7-inch OLED": "OLED مقاس 6.7 بوصة",
+          "option.6.8-inch Dynamic AMOLED 2X, up to 120 Hz": "Dynamic AMOLED 2X مقاس 6.8 بوصة حتى 120 هرتز",
+          "option.8.3-inch Liquid Retina": "Liquid Retina مقاس 8.3 بوصة"
+        },
+        "connectivity": {
+          "label": "الاتصال",
+          "option.5G / USB-C": "5G / USB-C",
+          "option.5G / Wi-Fi": "5G / Wi-Fi",
+          "option.Bluetooth": "Bluetooth",
+          "option.Bluetooth / USB-C": "Bluetooth / USB-C",
+          "option.Wi-Fi": "Wi-Fi",
+          "option.Wi-Fi / Bluetooth": "Wi-Fi / Bluetooth",
+          "option.Wi-Fi / HDMI": "Wi-Fi / HDMI",
+          "option.5G / Wi-Fi 6 / Bluetooth 5.0": "5G / واي فاي 6 / بلوتوث 5.0",
+          "option.5G / Wi-Fi 6 / Bluetooth 5.3": "5G / واي فاي 6 / بلوتوث 5.3",
+          "option.5G / Wi-Fi 6E / Bluetooth 5.3": "5G / واي فاي 6E / بلوتوث 5.3",
+          "option.5G / Wi-Fi 7 / Bluetooth 5.3": "5G / واي فاي 7 / بلوتوث 5.3",
+          "option.Bluetooth 5.0": "بلوتوث 5.0",
+          "option.Bluetooth 5.2 / 3.5 mm": "بلوتوث 5.2 / 3.5 مم",
+          "option.Bluetooth LE / Logi Bolt": "بلوتوث منخفض الطاقة / Logi Bolt",
+          "option.Bluetooth LE; Logi Bolt compatible": "بلوتوث منخفض الطاقة؛ متوافق مع Logi Bolt",
+          "option.USB-A": "USB-A",
+          "option.Wi-Fi 6 / Bluetooth 5.0 / HDMI 2.1": "واي فاي 6 / بلوتوث 5.0 / HDMI 2.1",
+          "option.Wi-Fi 6 / Bluetooth 5.0 / USB-C": "واي فاي 6 / بلوتوث 5.0 / USB-C",
+          "option.Wi-Fi 6 / Bluetooth 5.2 / USB-C": "واي فاي 6 / بلوتوث 5.2 / USB-C",
+          "option.Wi-Fi 6 / Bluetooth 5.3 / Thunderbolt 3": "واي فاي 6 / بلوتوث 5.3 / Thunderbolt 3",
+          "option.Wi-Fi 6E / Bluetooth 5.3 / Gigabit Ethernet": "واي فاي 6E / بلوتوث 5.3 / إيثرنت جيجابت"
+        },
+        "color": {
+          "label": "اللون",
+          "option.Crimson": "قرمزي",
+          "option.Graphite": "جرافيت",
+          "option.Silver": "فضي",
+          "option.Black": "أسود",
+          "option.Off-white": "أبيض مائل للكريمي",
+          "option.Onyx Black": "أسود أونيكس",
+          "option.Titanium Gray": "رمادي تيتانيوم",
+          "option.White": "أبيض"
+        },
+        "battery": {
+          "label": "البطارية",
+          "option.4500 mAh": "4500 ملّي أمبير ساعة",
+          "option.Up to 20 hours": "حتى 20 ساعة",
+          "option.Up to 30 hours": "حتى 30 ساعة",
+          "option.4000 mAh (typical)": "4000 ملّي أمبير ساعة؛ سعة نموذجية",
+          "option.5000 mAh (typical)": "5000 ملّي أمبير ساعة؛ سعة نموذجية",
+          "option.Up to 10 days with backlight (usage dependent)": "حتى 10 أيام مع الإضاءة؛ حسب الاستخدام",
+          "option.Up to 15 days with backlight (usage dependent)": "حتى 15 يوماً مع الإضاءة؛ حسب الاستخدام",
+          "option.Up to 24 months (1 AA; usage dependent)": "حتى 24 شهراً ببطارية AA واحدة؛ حسب الاستخدام",
+          "option.Up to 35 hours (ANC on)": "حتى 35 ساعة مع إلغاء الضوضاء",
+          "option.Up to 6 hours; 30 hours with case": "حتى 6 ساعات؛ 30 ساعة مع العلبة",
+          "option.Up to 70 days (usage dependent)": "حتى 70 يوماً؛ حسب الاستخدام"
+        },
+        "memory": {
+          "label": "الذاكرة العشوائية",
+          "option.12 GB": "12 جيجابايت",
+          "option.16 GB": "16 جيجابايت",
+          "option.8 GB": "8 جيجابايت"
+        },
+        "noise_cancellation": {
+          "label": "إلغاء الضوضاء",
+          "option.Active noise cancellation": "إلغاء نشط للضوضاء",
+          "option.No active noise cancellation": "بدون إلغاء ضوضاء نشط"
+        },
+        "included": {
+          "label": "محتويات العبوة",
+          "option.Headphones, charging cable": "سماعات وكابل شحن",
+          "option.Headphones, charging cable, travel case": "سماعات وكابل شحن وحقيبة سفر"
+        },
+        "capacity": {
+          "label": "السعة",
+          "option.8 kg": "8 كجم",
+          "option.9 kg": "9 كجم"
+        },
+        "spin_speed": {
+          "label": "سرعة العصر",
+          "option.1200 rpm": "1200 دورة/دقيقة",
+          "option.1400 rpm": "1400 دورة/دقيقة"
+        },
+        "loading_type": {
+          "label": "نوع التحميل",
+          "option.Front loading": "تحميل أمامي"
+        },
+        "programs": {
+          "label": "برامج الغسيل",
+          "option.12 wash programs": "12 برنامج غسيل",
+          "option.14 wash programs": "14 برنامج غسيل"
+        },
+        "processor": {
+          "label": "المعالج",
+          "option.Apple A15 Bionic": "Apple A15 Bionic",
+          "option.Apple A16 Bionic": "Apple A16 Bionic",
+          "option.Apple H1": "Apple H1",
+          "option.Apple M1": "Apple M1",
+          "option.Google Tensor G2": "Google Tensor G2",
+          "option.Snapdragon 888": "Snapdragon 888",
+          "option.Apple A14 Bionic": "Apple A14 Bionic",
+          "option.Apple M2": "Apple M2",
+          "option.Snapdragon 8 Gen 3 for Galaxy": "Snapdragon 8 Gen 3 for Galaxy"
+        },
+        "device_type": {
+          "label": "نوع الجهاز",
+          "option.Digital game console": "جهاز ألعاب رقمي",
+          "option.Handheld game console": "جهاز ألعاب محمول",
+          "option.Home game console": "جهاز ألعاب منزلي",
+          "option.Hybrid game console": "جهاز ألعاب هجين",
+          "option.Laptop": "حاسوب محمول",
+          "option.Mirrorless camera": "كاميرا بدون مرآة",
+          "option.Over-ear headphones": "سماعات تغطي الأذن",
+          "option.Wireless earbuds": "سماعات أذن لاسلكية",
+          "option.Desktop computer": "حاسوب مكتبي",
+          "option.Mechanical keyboard": "لوحة مفاتيح ميكانيكية",
+          "option.Smartphone": "هاتف ذكي",
+          "option.Streaming media player": "مشغل وسائط للبث",
+          "option.Tablet": "جهاز لوحي",
+          "option.Vertical wireless mouse": "فأرة لاسلكية عمودية",
+          "option.Webcam": "كاميرا ويب",
+          "option.Wireless keyboard": "لوحة مفاتيح لاسلكية",
+          "option.Wireless mouse": "فأرة لاسلكية"
+        },
+        "disc_drive": {
+          "label": "قارئ الأقراص",
+          "option.No disc drive": "بدون قارئ أقراص",
+          "option.Ultra HD Blu-ray": "Ultra HD Blu-ray"
+        },
+        "sensor": {
+          "label": "المستشعر",
+          "option.24.5 MP full-frame": "24.5 ميجابكسل كامل الإطار",
+          "option.45 MP full-frame": "45 ميجابكسل كامل الإطار",
+          "option.24.2 MP APS-C CMOS": "APS-C CMOS بدقة 24.2 ميجابكسل",
+          "option.Optical, up to 4000 DPI": "بصري حتى 4000 DPI",
+          "option.Optical, up to 8000 DPI": "بصري حتى 8000 DPI"
+        },
+        "lens_mount": {
+          "label": "حامل العدسات",
+          "option.Canon RF": "Canon RF",
+          "option.Nikon Z": "Nikon Z"
+        },
+        "video": {
+          "label": "تسجيل الفيديو",
+          "option.4K UHD": "4K UHD",
+          "option.8K": "8K",
+          "option.1080p at 30 fps": "1080p بسرعة 30 إطاراً في الثانية",
+          "option.4K HDR up to 60 fps": "4K HDR حتى 60 إطاراً في الثانية",
+          "option.4K up to 30 fps": "4K حتى 30 إطاراً في الثانية",
+          "option.4K up to 60 fps (cropped at 60 fps)": "4K حتى 60 إطاراً في الثانية مع قص عند 60"
+        },
+        "burst_rate": {
+          "label": "التصوير المتتابع",
+          "option.12 fps electronic first-curtain; 15 fps electronic": "12 إطاراً/ث بالغالق الإلكتروني الأمامي؛ 15 إلكترونياً",
+          "option.15 fps mechanical; 23 fps electronic": "15 إطاراً/ث بالغالق الميكانيكي؛ 23 إلكترونياً"
+        },
+        "field_of_view": {
+          "label": "مجال الرؤية",
+          "option.78 degrees diagonal": "78 درجة قطرياً"
+        },
+        "included_lens": {
+          "label": "العدسة المرفقة",
+          "option.RF-S 18–45mm F4.5–6.3 IS STM": "RF-S مقاس 18–45 مم F4.5–6.3 IS STM"
+        },
+        "keyboard_layout": {
+          "label": "تخطيط لوحة المفاتيح",
+          "option.US English": "إنجليزي أمريكي"
+        },
+        "switch_type": {
+          "label": "نوع مفاتيح اللوحة",
+          "option.Tactile Quiet": "لمسية هادئة"
+        }
+      }
+    }
+  },
+  "retired_products": [
+    {
+      "sku": "DEMO-ELE-001",
+      "slug": "electronics-phones-1"
+    },
+    {
+      "sku": "DEMO-ELE-002",
+      "slug": "electronics-phones-2"
+    },
+    {
+      "sku": "DEMO-ELE-003",
+      "slug": "electronics-computers-1"
+    },
+    {
+      "sku": "DEMO-ELE-004",
+      "slug": "electronics-computers-2"
+    },
+    {
+      "sku": "DEMO-ELE-005",
+      "slug": "electronics-audio-1"
+    },
+    {
+      "sku": "DEMO-ELE-006",
+      "slug": "electronics-audio-2"
+    },
+    {
+      "sku": "DEMO-ELE-007",
+      "slug": "electronics-appliances-1"
+    },
+    {
+      "sku": "DEMO-ELE-008",
+      "slug": "electronics-appliances-2"
+    }
+  ]
+}

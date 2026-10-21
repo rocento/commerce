@@ -1,0 +1,562 @@
+{
+  "schemaVersion": 1,
+  "language": "en",
+  "provenance": "Agent-authored English currency regression labels, with explicit expected semantics reviewed against the current wire contract. Not customer traffic or an independent accuracy holdout. Catalog strictness and conflicting currencies are tested separately through the Python execution boundary.",
+  "cases": [
+    {
+      "id": "suffix-usd",
+      "family": "named_currency",
+      "messages": [
+        "find shoes below 50 US dollars"
+      ],
+      "expected": {
+        "status": "RESOLVED",
+        "intent": "PRODUCT_SEARCH",
+        "entities": {
+          "category": "shoes",
+          "price": {
+            "operator": "<=",
+            "value": 50,
+            "currency": "USD"
+          },
+          "productText": "shoes"
+        },
+        "requestedActions": [
+          {
+            "id": "request1",
+            "intent": "PRODUCT_SEARCH",
+            "items": [],
+            "after": null
+          }
+        ],
+        "operations": [],
+        "references": [],
+        "issues": []
+      }
+    },
+    {
+      "id": "suffix-eur",
+      "family": "named_currency",
+      "messages": [
+        "find shoes below 50 euros"
+      ],
+      "expected": {
+        "status": "RESOLVED",
+        "intent": "PRODUCT_SEARCH",
+        "entities": {
+          "category": "shoes",
+          "price": {
+            "operator": "<=",
+            "value": 50,
+            "currency": "EUR"
+          },
+          "productText": "shoes"
+        },
+        "requestedActions": [
+          {
+            "id": "request1",
+            "intent": "PRODUCT_SEARCH",
+            "items": [],
+            "after": null
+          }
+        ],
+        "operations": [],
+        "references": [],
+        "issues": []
+      }
+    },
+    {
+      "id": "suffix-gbp",
+      "family": "named_currency",
+      "messages": [
+        "find shoes below 50 British pounds"
+      ],
+      "expected": {
+        "status": "RESOLVED",
+        "intent": "PRODUCT_SEARCH",
+        "entities": {
+          "category": "shoes",
+          "price": {
+            "operator": "<=",
+            "value": 50,
+            "currency": "GBP"
+          },
+          "productText": "shoes"
+        },
+        "requestedActions": [
+          {
+            "id": "request1",
+            "intent": "PRODUCT_SEARCH",
+            "items": [],
+            "after": null
+          }
+        ],
+        "operations": [],
+        "references": [],
+        "issues": []
+      }
+    },
+    {
+      "id": "suffix-egp",
+      "family": "named_currency",
+      "messages": [
+        "find shoes below 50 Egyptian pounds"
+      ],
+      "expected": {
+        "status": "RESOLVED",
+        "intent": "PRODUCT_SEARCH",
+        "entities": {
+          "category": "shoes",
+          "price": {
+            "operator": "<=",
+            "value": 50,
+            "currency": "EGP"
+          },
+          "productText": "shoes"
+        },
+        "requestedActions": [
+          {
+            "id": "request1",
+            "intent": "PRODUCT_SEARCH",
+            "items": [],
+            "after": null
+          }
+        ],
+        "operations": [],
+        "references": [],
+        "issues": []
+      }
+    },
+    {
+      "id": "suffix-kwd",
+      "family": "named_currency",
+      "messages": [
+        "find shoes below 50 Kuwaiti dinars"
+      ],
+      "expected": {
+        "status": "RESOLVED",
+        "intent": "PRODUCT_SEARCH",
+        "entities": {
+          "category": "shoes",
+          "price": {
+            "operator": "<=",
+            "value": 50,
+            "currency": "KWD"
+          },
+          "productText": "shoes"
+        },
+        "requestedActions": [
+          {
+            "id": "request1",
+            "intent": "PRODUCT_SEARCH",
+            "items": [],
+            "after": null
+          }
+        ],
+        "operations": [],
+        "references": [],
+        "issues": []
+      }
+    },
+    {
+      "id": "suffix-jpy",
+      "family": "named_currency",
+      "messages": [
+        "find shoes below 50 Japanese yen"
+      ],
+      "expected": {
+        "status": "RESOLVED",
+        "intent": "PRODUCT_SEARCH",
+        "entities": {
+          "category": "shoes",
+          "price": {
+            "operator": "<=",
+            "value": 50,
+            "currency": "JPY"
+          },
+          "productText": "shoes"
+        },
+        "requestedActions": [
+          {
+            "id": "request1",
+            "intent": "PRODUCT_SEARCH",
+            "items": [],
+            "after": null
+          }
+        ],
+        "operations": [],
+        "references": [],
+        "issues": []
+      }
+    },
+    {
+      "id": "suffix-sar",
+      "family": "named_currency",
+      "messages": [
+        "find shoes below 50 Saudi riyals"
+      ],
+      "expected": {
+        "status": "RESOLVED",
+        "intent": "PRODUCT_SEARCH",
+        "entities": {
+          "category": "shoes",
+          "price": {
+            "operator": "<=",
+            "value": 50,
+            "currency": "SAR"
+          },
+          "productText": "shoes"
+        },
+        "requestedActions": [
+          {
+            "id": "request1",
+            "intent": "PRODUCT_SEARCH",
+            "items": [],
+            "after": null
+          }
+        ],
+        "operations": [],
+        "references": [],
+        "issues": []
+      }
+    },
+    {
+      "id": "suffix-aed",
+      "family": "named_currency",
+      "messages": [
+        "find shoes below 50 UAE dirhams"
+      ],
+      "expected": {
+        "status": "RESOLVED",
+        "intent": "PRODUCT_SEARCH",
+        "entities": {
+          "category": "shoes",
+          "price": {
+            "operator": "<=",
+            "value": 50,
+            "currency": "AED"
+          },
+          "productText": "shoes"
+        },
+        "requestedActions": [
+          {
+            "id": "request1",
+            "intent": "PRODUCT_SEARCH",
+            "items": [],
+            "after": null
+          }
+        ],
+        "operations": [],
+        "references": [],
+        "issues": []
+      }
+    },
+    {
+      "id": "suffix-aud",
+      "family": "named_currency",
+      "messages": [
+        "find shoes below 50 Australian dollars"
+      ],
+      "expected": {
+        "status": "RESOLVED",
+        "intent": "PRODUCT_SEARCH",
+        "entities": {
+          "category": "shoes",
+          "price": {
+            "operator": "<=",
+            "value": 50,
+            "currency": "AUD"
+          },
+          "productText": "shoes"
+        },
+        "requestedActions": [
+          {
+            "id": "request1",
+            "intent": "PRODUCT_SEARCH",
+            "items": [],
+            "after": null
+          }
+        ],
+        "operations": [],
+        "references": [],
+        "issues": []
+      }
+    },
+    {
+      "id": "suffix-cad",
+      "family": "named_currency",
+      "messages": [
+        "find shoes below 50 Canadian dollars"
+      ],
+      "expected": {
+        "status": "RESOLVED",
+        "intent": "PRODUCT_SEARCH",
+        "entities": {
+          "category": "shoes",
+          "price": {
+            "operator": "<=",
+            "value": 50,
+            "currency": "CAD"
+          },
+          "productText": "shoes"
+        },
+        "requestedActions": [
+          {
+            "id": "request1",
+            "intent": "PRODUCT_SEARCH",
+            "items": [],
+            "after": null
+          }
+        ],
+        "operations": [],
+        "references": [],
+        "issues": []
+      }
+    },
+    {
+      "id": "suffix-bhd",
+      "family": "named_currency",
+      "messages": [
+        "find shoes below 50 Bahraini dinars"
+      ],
+      "expected": {
+        "status": "RESOLVED",
+        "intent": "PRODUCT_SEARCH",
+        "entities": {
+          "category": "shoes",
+          "price": {
+            "operator": "<=",
+            "value": 50,
+            "currency": "BHD"
+          },
+          "productText": "shoes"
+        },
+        "requestedActions": [
+          {
+            "id": "request1",
+            "intent": "PRODUCT_SEARCH",
+            "items": [],
+            "after": null
+          }
+        ],
+        "operations": [],
+        "references": [],
+        "issues": []
+      }
+    },
+    {
+      "id": "suffix-omr",
+      "family": "named_currency",
+      "messages": [
+        "find shoes below 50 Omani rials"
+      ],
+      "expected": {
+        "status": "RESOLVED",
+        "intent": "PRODUCT_SEARCH",
+        "entities": {
+          "category": "shoes",
+          "price": {
+            "operator": "<=",
+            "value": 50,
+            "currency": "OMR"
+          },
+          "productText": "shoes"
+        },
+        "requestedActions": [
+          {
+            "id": "request1",
+            "intent": "PRODUCT_SEARCH",
+            "items": [],
+            "after": null
+          }
+        ],
+        "operations": [],
+        "references": [],
+        "issues": []
+      }
+    },
+    {
+      "id": "suffix-chf",
+      "family": "named_currency",
+      "messages": [
+        "find shoes below 50 Swiss francs"
+      ],
+      "expected": {
+        "status": "RESOLVED",
+        "intent": "PRODUCT_SEARCH",
+        "entities": {
+          "category": "shoes",
+          "price": {
+            "operator": "<=",
+            "value": 50,
+            "currency": "CHF"
+          },
+          "productText": "shoes"
+        },
+        "requestedActions": [
+          {
+            "id": "request1",
+            "intent": "PRODUCT_SEARCH",
+            "items": [],
+            "after": null
+          }
+        ],
+        "operations": [],
+        "references": [],
+        "issues": []
+      }
+    },
+    {
+      "id": "prefix-decimal",
+      "family": "named_currency",
+      "messages": [
+        "find copper fasteners for less than Canadian dollars 31.75"
+      ],
+      "expected": {
+        "status": "RESOLVED",
+        "intent": "PRODUCT_SEARCH",
+        "entities": {
+          "price": {
+            "operator": "<",
+            "value": 31.75,
+            "currency": "CAD"
+          },
+          "productText": "copper fasteners"
+        },
+        "requestedActions": [
+          {
+            "id": "request1",
+            "intent": "PRODUCT_SEARCH",
+            "items": [],
+            "after": null
+          }
+        ],
+        "operations": [],
+        "references": [],
+        "issues": []
+      }
+    },
+    {
+      "id": "range-both",
+      "family": "range",
+      "messages": [
+        "find shoes between 20 euros and 50 euros"
+      ],
+      "expected": {
+        "status": "RESOLVED",
+        "intent": "PRODUCT_SEARCH",
+        "entities": {
+          "category": "shoes",
+          "price": {
+            "operator": "BETWEEN",
+            "min": 20,
+            "max": 50,
+            "currency": "EUR"
+          },
+          "productText": "shoes"
+        },
+        "requestedActions": [
+          {
+            "id": "request1",
+            "intent": "PRODUCT_SEARCH",
+            "items": [],
+            "after": null
+          }
+        ],
+        "operations": [],
+        "references": [],
+        "issues": []
+      }
+    },
+    {
+      "id": "range-last",
+      "family": "range",
+      "messages": [
+        "find shoes between 20 and 50 euros"
+      ],
+      "expected": {
+        "status": "RESOLVED",
+        "intent": "PRODUCT_SEARCH",
+        "entities": {
+          "category": "shoes",
+          "price": {
+            "operator": "BETWEEN",
+            "min": 20,
+            "max": 50,
+            "currency": "EUR"
+          },
+          "productText": "shoes"
+        },
+        "requestedActions": [
+          {
+            "id": "request1",
+            "intent": "PRODUCT_SEARCH",
+            "items": [],
+            "after": null
+          }
+        ],
+        "operations": [],
+        "references": [],
+        "issues": []
+      }
+    },
+    {
+      "id": "quoted-name",
+      "family": "literal",
+      "messages": [
+        "find \"Shoes under 50 euros\""
+      ],
+      "expected": {
+        "status": "RESOLVED",
+        "intent": "PRODUCT_SEARCH",
+        "entities": {
+          "productText": "shoes under 50 euros"
+        },
+        "requestedActions": [
+          {
+            "id": "request1",
+            "intent": "PRODUCT_SEARCH",
+            "items": [],
+            "after": null
+          }
+        ],
+        "operations": [],
+        "references": [],
+        "issues": []
+      }
+    },
+    {
+      "id": "inherited-range-edit",
+      "family": "correction",
+      "messages": [
+        "find shoes between 20 and 50 euros",
+        "budget 40"
+      ],
+      "expected": {
+        "status": "RESOLVED",
+        "intent": "PRODUCT_SEARCH",
+        "entities": {
+          "category": "shoes",
+          "price": {
+            "operator": ">=",
+            "value": 20,
+            "currency": "EUR"
+          },
+          "currency": "EUR",
+          "productText": "shoes"
+        },
+        "requestedActions": [
+          {
+            "id": "request1",
+            "intent": "PRODUCT_SEARCH",
+            "items": [],
+            "after": null
+          }
+        ],
+        "operations": [],
+        "references": [],
+        "issues": []
+      }
+    }
+  ]
+}

@@ -1,0 +1,394 @@
+{
+  "version": "1",
+  "mode": "live",
+  "dataset_revision": "commerce-lab-2026-09-21-v1",
+  "dataset_sha256": "db49ec7326c12a0fcb49f9ec9234a840b638c47c86056300d3c7cb9cd3ea685b",
+  "runtime_sha256": "86e8de538d5702ae26b0043c230347ee126a5d4b7473af11c8362ee238a1d1a3",
+  "created_at": "2026-09-21T10:42:38.086298Z",
+  "model": "gpt-4.1-mini",
+  "status": "failed",
+  "results": [
+    {
+      "id": "grocery-live-budget-en",
+      "store": "grocery",
+      "language": "en",
+      "journey": "discovery",
+      "suite": "catalog_grounded",
+      "status": "passed",
+      "failures": [],
+      "latency_ms": 1638,
+      "provider_calls": 1,
+      "input_tokens": 911,
+      "output_tokens": 75,
+      "cost_micros": 485,
+      "tool_calls": [
+        "get_catalog_schema",
+        "search_products"
+      ],
+      "trace": [
+        {
+          "turn": 1,
+          "error": null,
+          "answer": "Matches to your verified constraints:\n- Staging Coffee 1 kg — 6.00 USD. In stock. /products/22e94f06-b83d-41b4-ba3c-002d7a4afbc4\nChecked a bounded candidate set. Prices are current catalog prices; checkout may add tax and delivery.",
+          "extracted": {
+            "shopping": true,
+            "presentation": "search",
+            "query": "Staging Coffee",
+            "category": "coffee",
+            "min_price": null,
+            "max_price": "10",
+            "exclusive_max": true,
+            "currency": "USD",
+            "brand": null,
+            "attributes": [],
+            "in_stock": true,
+            "intended_use": null,
+            "preferences": [],
+            "cheaper": false,
+            "alternatives": false,
+            "clarification": null
+          },
+          "provider_models": [
+            "gpt-4.1-mini-2025-04-14"
+          ],
+          "draft": null,
+          "product_ids": [
+            "22e94f06-b83d-41b4-ba3c-002d7a4afbc4"
+          ],
+          "planner_methods": []
+        }
+      ]
+    },
+    {
+      "id": "grocery-live-comparison",
+      "store": "grocery",
+      "language": "en",
+      "journey": "comparison",
+      "suite": "journey",
+      "status": "passed",
+      "failures": [],
+      "latency_ms": 1466,
+      "provider_calls": 1,
+      "input_tokens": 954,
+      "output_tokens": 71,
+      "cost_micros": 496,
+      "tool_calls": [
+        "get_catalog_schema",
+        "compare_products"
+      ],
+      "trace": [
+        {
+          "turn": 1,
+          "error": null,
+          "answer": "Product comparison:\nStaging Coffee 1 kg: 10.00 USD. /products/44aedd09-dc2b-4f25-a636-e855e730112a\nStaging Coffee 1 kg: 6.00 USD. /products/22e94f06-b83d-41b4-ba3c-002d7a4afbc4\nCurrent price: 10.00 USD | 6.00 USD\nAvailability: In stock | In stock\nChecked a bounded candidate set. Prices are current catalog prices; checkout may add tax and delivery.",
+          "extracted": {
+            "shopping": true,
+            "presentation": "compare",
+            "query": "",
+            "category": null,
+            "min_price": null,
+            "max_price": null,
+            "exclusive_max": false,
+            "currency": null,
+            "brand": null,
+            "attributes": [],
+            "in_stock": false,
+            "intended_use": null,
+            "preferences": [],
+            "cheaper": false,
+            "alternatives": false,
+            "clarification": null
+          },
+          "provider_models": [
+            "gpt-4.1-mini-2025-04-14"
+          ],
+          "draft": null,
+          "product_ids": [
+            "44aedd09-dc2b-4f25-a636-e855e730112a",
+            "22e94f06-b83d-41b4-ba3c-002d7a4afbc4"
+          ],
+          "planner_methods": []
+        }
+      ]
+    },
+    {
+      "id": "grocery-live-clarification",
+      "store": "grocery",
+      "language": "en",
+      "journey": "discovery",
+      "suite": "conversation",
+      "status": "passed",
+      "failures": [],
+      "latency_ms": 1237,
+      "provider_calls": 1,
+      "input_tokens": 909,
+      "output_tokens": 75,
+      "cost_micros": 484,
+      "tool_calls": [
+        "get_catalog_schema"
+      ],
+      "trace": [
+        {
+          "turn": 1,
+          "error": null,
+          "answer": "Which currency should I use for your budget?",
+          "extracted": {
+            "shopping": true,
+            "presentation": "search",
+            "query": "Staging Coffee",
+            "category": "coffee",
+            "min_price": null,
+            "max_price": "5",
+            "exclusive_max": true,
+            "currency": null,
+            "brand": null,
+            "attributes": [],
+            "in_stock": false,
+            "intended_use": null,
+            "preferences": [],
+            "cheaper": false,
+            "alternatives": false,
+            "clarification": null
+          },
+          "provider_models": [
+            "gpt-4.1-mini-2025-04-14"
+          ],
+          "draft": null,
+          "product_ids": [],
+          "planner_methods": []
+        }
+      ]
+    },
+    {
+      "id": "grocery-live-gift",
+      "store": "grocery",
+      "language": "en",
+      "journey": "gift",
+      "suite": "journey",
+      "status": "failed",
+      "failures": [
+        {
+          "assertion": "expected_selection_order",
+          "layer": "ranking",
+          "safety": false
+        }
+      ],
+      "latency_ms": 1415,
+      "provider_calls": 1,
+      "input_tokens": 914,
+      "output_tokens": 77,
+      "cost_micros": 489,
+      "tool_calls": [
+        "get_catalog_schema",
+        "search_products"
+      ],
+      "trace": [
+        {
+          "turn": 1,
+          "error": null,
+          "answer": "No verified matches in the checked catalog candidates.\nChecked a bounded candidate set. Prices are current catalog prices; checkout may add tax and delivery.",
+          "extracted": {
+            "shopping": true,
+            "presentation": "recommend",
+            "query": "Staging Coffee gift",
+            "category": "gift set",
+            "min_price": null,
+            "max_price": "6",
+            "exclusive_max": false,
+            "currency": "USD",
+            "brand": null,
+            "attributes": [],
+            "in_stock": true,
+            "intended_use": null,
+            "preferences": [],
+            "cheaper": false,
+            "alternatives": false,
+            "clarification": null
+          },
+          "provider_models": [
+            "gpt-4.1-mini-2025-04-14"
+          ],
+          "draft": null,
+          "product_ids": [],
+          "planner_methods": []
+        }
+      ]
+    }
+  ],
+  "segments": {
+    "journey:comparison": {
+      "passed": 1,
+      "executed": 1,
+      "total": 1,
+      "quarantined": 0,
+      "not_run": 0,
+      "pass_fraction": 1.0,
+      "wilson_95": [
+        0.20654931437723745,
+        1
+      ],
+      "safety_failures": 0,
+      "p95_ms": 1466,
+      "provider_calls_per_passed_scenario": 1.0,
+      "cost_micros_per_passed_scenario": 496.0
+    },
+    "journey:discovery": {
+      "passed": 2,
+      "executed": 2,
+      "total": 2,
+      "quarantined": 0,
+      "not_run": 0,
+      "pass_fraction": 1.0,
+      "wilson_95": [
+        0.34238022750665303,
+        1
+      ],
+      "safety_failures": 0,
+      "p95_ms": 1638,
+      "provider_calls_per_passed_scenario": 1.0,
+      "cost_micros_per_passed_scenario": 484.5
+    },
+    "journey:gift": {
+      "passed": 0,
+      "executed": 1,
+      "total": 1,
+      "quarantined": 0,
+      "not_run": 0,
+      "pass_fraction": 0.0,
+      "wilson_95": [
+        0,
+        0.7934506856227626
+      ],
+      "safety_failures": 0,
+      "p95_ms": 1415,
+      "provider_calls_per_passed_scenario": null,
+      "cost_micros_per_passed_scenario": null
+    },
+    "language:en": {
+      "passed": 3,
+      "executed": 4,
+      "total": 4,
+      "quarantined": 0,
+      "not_run": 0,
+      "pass_fraction": 0.75,
+      "wilson_95": [
+        0.30064184258240184,
+        0.9544127391902995
+      ],
+      "safety_failures": 0,
+      "p95_ms": 1638,
+      "provider_calls_per_passed_scenario": 1.3333333333333333,
+      "cost_micros_per_passed_scenario": 651.3333333333334
+    },
+    "store:grocery": {
+      "passed": 3,
+      "executed": 4,
+      "total": 4,
+      "quarantined": 0,
+      "not_run": 0,
+      "pass_fraction": 0.75,
+      "wilson_95": [
+        0.30064184258240184,
+        0.9544127391902995
+      ],
+      "safety_failures": 0,
+      "p95_ms": 1638,
+      "provider_calls_per_passed_scenario": 1.3333333333333333,
+      "cost_micros_per_passed_scenario": 651.3333333333334
+    },
+    "store_language:grocery:en": {
+      "passed": 3,
+      "executed": 4,
+      "total": 4,
+      "quarantined": 0,
+      "not_run": 0,
+      "pass_fraction": 0.75,
+      "wilson_95": [
+        0.30064184258240184,
+        0.9544127391902995
+      ],
+      "safety_failures": 0,
+      "p95_ms": 1638,
+      "provider_calls_per_passed_scenario": 1.3333333333333333,
+      "cost_micros_per_passed_scenario": 651.3333333333334
+    },
+    "suite:catalog_grounded": {
+      "passed": 1,
+      "executed": 1,
+      "total": 1,
+      "quarantined": 0,
+      "not_run": 0,
+      "pass_fraction": 1.0,
+      "wilson_95": [
+        0.20654931437723745,
+        1
+      ],
+      "safety_failures": 0,
+      "p95_ms": 1638,
+      "provider_calls_per_passed_scenario": 1.0,
+      "cost_micros_per_passed_scenario": 485.0
+    },
+    "suite:conversation": {
+      "passed": 1,
+      "executed": 1,
+      "total": 1,
+      "quarantined": 0,
+      "not_run": 0,
+      "pass_fraction": 1.0,
+      "wilson_95": [
+        0.20654931437723745,
+        1
+      ],
+      "safety_failures": 0,
+      "p95_ms": 1237,
+      "provider_calls_per_passed_scenario": 1.0,
+      "cost_micros_per_passed_scenario": 484.0
+    },
+    "suite:journey": {
+      "passed": 1,
+      "executed": 2,
+      "total": 2,
+      "quarantined": 0,
+      "not_run": 0,
+      "pass_fraction": 0.5,
+      "wilson_95": [
+        0.09453120573423074,
+        0.9054687942657693
+      ],
+      "safety_failures": 0,
+      "p95_ms": 1466,
+      "provider_calls_per_passed_scenario": 2.0,
+      "cost_micros_per_passed_scenario": 985.0
+    }
+  },
+  "live_stores": {
+    "grocery": "canary_selected",
+    "jewelry": "not_configured",
+    "electronics": "not_configured"
+  },
+  "budget": {
+    "currency": "USD",
+    "cap_micros": 166087,
+    "reserved_micros": 27971,
+    "observed_cost_micros": 1954,
+    "max_calls": 4,
+    "calls": 4,
+    "pricing_reviewed": "2026-09-21",
+    "pricing_source": "https://developers.openai.com/api/docs/models/gpt-4.1-mini",
+    "input_usd_per_million": 0.4,
+    "output_usd_per_million": 1.6,
+    "reservation_basis": "UTF-8 payload byte bound plus 8192 tokens, uncached input and maximum output; no reservation refunds or retries. Provider-side billing is authoritative."
+  },
+  "retrieval_revision": "dataset-frozen-observations",
+  "retrieval_sha256": null,
+  "runtime_features": [
+    "grounded_intent"
+  ],
+  "scope_id": "m02-english-v1",
+  "scope_sha256": "84ec9c0c7e275cb39d1fdc5a7cf03f7cabf9f9c0963dfa5f0b96a05dc30acf0c",
+  "scope_reason": "User explicitly excluded Arabic from the current stage. Arabic, Egyptian Arabic and Arabic-containing mixed-language cases remain archived but are deferred from current acceptance and paid canaries. English and English-typo cases remain required.",
+  "excluded_cases": {
+    "grocery-live-budget-ar": "ar",
+    "grocery-live-budget-mixed": "mixed"
+  }
+}

@@ -1,0 +1,27 @@
+[package]
+name = "domain-cart-checkout"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+
+[dependencies]
+domain-pricing-promotions = { path = "../domain-pricing-promotions" }
+tokio.workspace = true
+serde.workspace = true
+serde_json.workspace = true
+sqlx.workspace = true
+uuid.workspace = true
+chrono.workspace = true
+rust_decimal.workspace = true
+tracing.workspace = true
+infra-auth = { path = "../infra-auth" }
+infra-events = { path = "../infra-events" }
+domain-inventory = { path = "../domain-inventory" }
+domain-catalog = { path = "../domain-catalog" }
+domain-orders = { path = "../domain-orders" }
+domain-payments = { path = "../domain-payments" }
+domain-customers = { path = "../domain-customers" }
+domain-tax = { path = "../domain-tax" }
+domain-fulfillment = { path = "../domain-fulfillment" }
+domain-reviews = { path = "../domain-reviews" }
+infra-observability = { path = "../infra-observability" }

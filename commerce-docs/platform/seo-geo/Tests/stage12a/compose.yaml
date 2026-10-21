@@ -1,0 +1,40 @@
+name: rocento-publication-stage12a
+services:
+  postgres:
+    image: postgres:16-bookworm
+    environment:
+      POSTGRES_PASSWORD: synthetic-stage12a-only
+    tmpfs: [/var/lib/postgresql/data]
+    healthcheck:
+      test: [CMD-SHELL, pg_isready -U postgres]
+      interval: 2s
+      timeout: 2s
+      retries: 30
+  verify:
+    image: rocento-publication-release-verify
+    working_dir: /workspace/backend
+    environment:
+      DATABASE_URL: postgres://postgres:synthetic-stage12a-only@postgres:5432/postgres
+      NODE_ENV: production
+      PUBLICATION_ARTIFACT_DIR: /workspace/frontend/apps/storefront/dist
+      PUBLICATION_SSR_ENTRY: /workspace/frontend/apps/storefront/dist-server/entry-public-server.js
+      PUBLICATION_EVIDENCE_DIR: /evidence
+      STAGE11_RENDERER_ENTRY: ${STAGE11_RENDERER_ENTRY:-/workspace/commerce-ai-docs/platform/seo-geo/Tests/stage11/renderer.mjs}
+      STAGE11_CONTROL_FILE: /tmp/stage12a-control.json
+      STAGE11_LABEL: stage12a-linux
+      CARGO_TARGET_DIR: /target
+    volumes:
+      - /tmp/rocento-stage12a-candidate:/workspace:ro
+      - ../../../../../frontend:/Users/momar/Documents/commerce-ai/frontend:ro
+      - ../../Reports/evidence/stage12a:/evidence
+      - cargo:/target
+      - registry:/usr/local/cargo
+    depends_on:
+      postgres: {condition: service_healthy}
+volumes:
+  cargo:
+    external: true
+    name: rocento-publication-release_cargo
+  registry:
+    external: true
+    name: rocento-publication-release_registry

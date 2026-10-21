@@ -1,0 +1,121 @@
+{
+  "cases": 500000,
+  "turns": 566666,
+  "outcomes": {
+    "passed": 360649,
+    "failed": 56020,
+    "review": 83331
+  },
+  "oracle_kinds": {
+    "semantic": {
+      "cases": 333336,
+      "passed": 285599,
+      "failed": 47737
+    },
+    "safety_invariant": {
+      "cases": 83333,
+      "passed": 75050,
+      "failed": 8283
+    },
+    "human_review": {
+      "cases": 83331,
+      "review": 83331
+    }
+  },
+  "splits": {
+    "development": {
+      "cases": 374261,
+      "passed": 289754,
+      "failed": 22811,
+      "review": 61696
+    },
+    "holdout": {
+      "cases": 125739,
+      "passed": 70895,
+      "review": 21635,
+      "failed": 33209
+    }
+  },
+  "routes": {
+    "search": 195789,
+    "cart_action": 72827,
+    "wishlist_to_cart": 12503,
+    "fallback": 102112,
+    "guided_action": 37448,
+    "clarify": 73621,
+    "order": 12514,
+    "handoff": 41700,
+    "unmapped": 18152
+  },
+  "dispositions": {
+    "search": 188287,
+    "cart_action": 72827,
+    "wishlist_to_cart": 12503,
+    "fallback": 102112,
+    "guided_action": 37448,
+    "clarify": 73621,
+    "catalog_clarification": 7502,
+    "order": 12514,
+    "handoff": 41700,
+    "unmapped": 18152
+  },
+  "safety_violations": 8283,
+  "semantic_pass_but_unmapped": 4887,
+  "latency_ms": {
+    "mean": 1.132,
+    "p50": 1.097,
+    "p95": 1.509
+  },
+  "language_scope": "english",
+  "corpus_version": "synthetic-shoppers-v2.2",
+  "audit": {
+    "conversations": 500000,
+    "turns": 566666,
+    "families": 30,
+    "templates": 124,
+    "languages": {
+      "en": 500000
+    },
+    "arabic_script_messages": 0,
+    "mixed_language_families": 0,
+    "unique_ids": 500000,
+    "template_split_leaks": 0,
+    "family_counts": {
+      "search": 16667,
+      "conversational_search": 16667,
+      "typos": 16667,
+      "price_constraints": 16667,
+      "add_cart": 16667,
+      "remove_cart": 16667,
+      "wishlist_to_cart": 16667,
+      "cart_to_wishlist": 16667,
+      "negation": 16667,
+      "conflicting_actions": 16667,
+      "compound_checkout": 16667,
+      "address_followup": 16667,
+      "product_followup": 16667,
+      "requirements_review": 16667,
+      "strict_minimum": 16667,
+      "price_ranges": 16667,
+      "quoted_identity": 16667,
+      "punctuation": 16667,
+      "quantity_limits": 16667,
+      "order_tracking": 16667,
+      "order_cancellation": 16666,
+      "coupons": 16666,
+      "stock_queries": 16666,
+      "product_comparisons": 16666,
+      "context_corrections_review": 16666,
+      "unsupported_conditions_review": 16666,
+      "quoted_commands": 16666,
+      "negated_search": 16666,
+      "device_requirements_review": 16666,
+      "unicode_currency": 16666
+    }
+  },
+  "harness_tests_passed": 19,
+  "paid_llm_calls": 0,
+  "source_changes_during_run": [],
+  "run": "artifacts/shopping-evals/english-only-500k-2026-09-23",
+  "failure_groups": 14
+}

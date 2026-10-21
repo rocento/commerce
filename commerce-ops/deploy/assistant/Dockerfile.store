@@ -1,0 +1,4 @@
+FROM pgvector/pgvector:pg16
+# Copy scripts into the image: host bind mounts may be marked noexec.
+COPY --chmod=0644 commerce-ops/deploy/assistant/init-store.sh /docker-entrypoint-initdb.d/001-init.sh
+COPY commerce-assistant-platform/migrations /migrations

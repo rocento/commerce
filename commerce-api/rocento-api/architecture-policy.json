@@ -1,0 +1,223 @@
+{
+  "version": 1,
+  "crates": {
+    "api-gateway": {
+      "layer": "composition",
+      "allowed_internal": [
+        "domain-admin-iam",
+        "domain-admin-operations",
+        "domain-attributes",
+        "domain-cart-checkout",
+        "domain-catalog",
+        "domain-cms",
+        "domain-customers",
+        "domain-fulfillment",
+        "domain-inventory",
+        "domain-mobile",
+        "domain-orders",
+        "domain-payments",
+        "domain-pricing-promotions",
+        "domain-reviews",
+        "domain-search-client",
+        "domain-support",
+        "domain-tax",
+        "domain-theme",
+        "infra-auth",
+        "infra-db",
+        "infra-events",
+        "infra-media",
+        "infra-observability",
+        "shared-kernel"
+      ]
+    },
+    "commerce-core-contracts": {
+      "layer": "contracts",
+      "allowed_internal": []
+    },
+    "domain-admin-iam": {
+      "layer": "domain",
+      "allowed_internal": [
+        "infra-auth",
+        "infra-events"
+      ]
+    },
+    "domain-admin-operations": {
+      "layer": "domain",
+      "allowed_internal": [
+        "domain-admin-iam",
+        "domain-catalog",
+        "domain-inventory",
+        "infra-auth",
+        "infra-events"
+      ]
+    },
+    "domain-attributes": {
+      "layer": "domain",
+      "allowed_internal": [
+        "infra-auth",
+        "infra-events"
+      ]
+    },
+    "domain-cart-checkout": {
+      "layer": "domain",
+      "allowed_internal": [
+        "domain-catalog",
+        "domain-customers",
+        "domain-fulfillment",
+        "domain-inventory",
+        "domain-orders",
+        "domain-payments",
+        "domain-pricing-promotions",
+        "domain-reviews",
+        "domain-tax",
+        "infra-auth",
+        "infra-events",
+        "infra-observability"
+      ]
+    },
+    "domain-catalog": {
+      "layer": "domain",
+      "allowed_internal": [
+        "domain-attributes",
+        "infra-auth",
+        "infra-events"
+      ]
+    },
+    "domain-cms": {
+      "layer": "domain",
+      "allowed_internal": [
+        "domain-admin-iam",
+        "domain-inventory",
+        "infra-auth",
+        "infra-events"
+      ]
+    },
+    "domain-customers": {
+      "layer": "domain",
+      "allowed_internal": [
+        "domain-attributes",
+        "infra-auth",
+        "infra-events"
+      ]
+    },
+    "domain-fulfillment": {
+      "layer": "domain",
+      "allowed_internal": [
+        "domain-admin-iam",
+        "domain-inventory",
+        "infra-auth",
+        "infra-events",
+        "infra-observability"
+      ]
+    },
+    "domain-inventory": {
+      "layer": "domain",
+      "allowed_internal": [
+        "infra-auth",
+        "infra-db",
+        "infra-events",
+        "infra-observability"
+      ]
+    },
+    "domain-mobile": {
+      "layer": "domain",
+      "allowed_internal": []
+    },
+    "domain-orders": {
+      "layer": "domain",
+      "allowed_internal": [
+        "domain-admin-iam",
+        "domain-fulfillment",
+        "domain-inventory",
+        "domain-payments",
+        "infra-auth",
+        "infra-events"
+      ]
+    },
+    "domain-payments": {
+      "layer": "domain",
+      "allowed_internal": [
+        "infra-auth",
+        "infra-events"
+      ]
+    },
+    "domain-pricing-promotions": {
+      "layer": "domain",
+      "allowed_internal": [
+        "domain-admin-iam",
+        "domain-attributes",
+        "domain-inventory",
+        "infra-auth",
+        "infra-events"
+      ]
+    },
+    "domain-reviews": {
+      "layer": "domain",
+      "allowed_internal": [
+        "domain-admin-iam",
+        "domain-inventory",
+        "infra-auth",
+        "infra-events"
+      ]
+    },
+    "domain-search-client": {
+      "layer": "adapter",
+      "allowed_internal": [
+        "domain-catalog",
+        "domain-inventory",
+        "infra-auth",
+        "infra-events"
+      ]
+    },
+    "domain-support": {
+      "layer": "domain",
+      "allowed_internal": [
+        "domain-admin-iam",
+        "domain-orders",
+        "infra-auth",
+        "infra-events"
+      ]
+    },
+    "domain-tax": {
+      "layer": "domain",
+      "allowed_internal": [
+        "domain-admin-iam",
+        "domain-inventory",
+        "infra-auth",
+        "infra-events"
+      ]
+    },
+    "domain-theme": {
+      "layer": "domain",
+      "allowed_internal": [
+        "domain-admin-iam"
+      ]
+    },
+    "infra-auth": {
+      "layer": "infrastructure",
+      "allowed_internal": []
+    },
+    "infra-db": {
+      "layer": "infrastructure",
+      "allowed_internal": [
+        "infra-observability"
+      ]
+    },
+    "infra-events": {
+      "layer": "infrastructure",
+      "allowed_internal": []
+    },
+    "infra-media": {
+      "layer": "infrastructure",
+      "allowed_internal": []
+    },
+    "infra-observability": {
+      "layer": "infrastructure",
+      "allowed_internal": []
+    },
+    "shared-kernel": {
+      "layer": "contracts",
+      "allowed_internal": []
+    }
+  }
+}

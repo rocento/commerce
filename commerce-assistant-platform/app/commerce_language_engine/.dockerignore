@@ -1,0 +1,8 @@
+node_modules
+.git
+.env
+.env.*
+data/*
+!data/.gitkeep
+!data/compiled.json
+!data/deployment-release.json.gz

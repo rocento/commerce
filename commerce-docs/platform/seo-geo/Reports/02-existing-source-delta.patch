@@ -1,0 +1,374 @@
+--- a/backend/crates/api-gateway/openapi/discoverability_contract.py
++++ b/backend/crates/api-gateway/openapi/discoverability_contract.py
+@@ -19,0 +20,15 @@
++
++    policy_fields = {
++        'installation_id': {'type':'string','format':'uuid','nullable':True},
++        'settings_revision': {'type':'integer'},
++        'merchant_preference': {'type':'boolean'},
++        'state': {'type':'string','enum':['INDEXABLE','MERCHANT_DISABLED','BLOCKED_BY_ENVIRONMENT','BLOCKED_BY_HEADER','DOMAIN_UNVERIFIED','CONFIGURATION_ERROR']},
++        'environment': {'type':'string'},
++        'canonical_origin': {'type':'string','nullable':True},
++        'response_header': {'type':'string'}, 'robots_meta': {'type':'string'}, 'robots_txt': {'type':'string'},
++        'deployment_override': {'type':'boolean'},
++        'external_headers': {'type':'string','enum':['NOT_OBSERVED']},
++        'warnings': {'type':'array','items':{'type':'string'}},
++    }
++    schemas['EffectiveIndexingPolicy'] = {'type':'object','additionalProperties':False,'required':list(policy_fields),'properties':policy_fields}
++    endpoint('/v1/admin/discovery/effective','get','EffectiveIndexingPolicy',auth='adminSession')
+--- a/backend/crates/api-gateway/src/discoverability.rs
++++ b/backend/crates/api-gateway/src/discoverability.rs
+@@ -18,0 +19 @@
++    pub deployment: crate::public_commerce::policy::Deployment,
+@@ -21 +22 @@
+-#[derive(Clone, Serialize, FromRow)]
++#[derive(Clone, Serialize, Deserialize, FromRow)]
+@@ -126,0 +128,6 @@
++    router_with_deployment(identity, Default::default())
++}
++pub fn router_with_deployment(
++    identity: identity::App,
++    deployment: crate::public_commerce::policy::Deployment,
++) -> Router {
+@@ -130 +137,103 @@
+-        .with_state(App { identity })
++        .route("/v1/admin/discovery/effective", get(effective))
++        .route("/robots.txt", get(robots))
++        .fallback(shell)
++        .layer(axum::middleware::from_fn_with_state(
++            identity.clone(),
++            identity::policy,
++        ))
++        .layer(axum::middleware::from_fn(publication_headers))
++        .with_state(App {
++            identity,
++            deployment,
++        })
++}
++async fn publication_headers(
++    request: axum::extract::Request,
++    next: axum::middleware::Next,
++) -> axum::response::Response {
++    let mut response = next.run(request).await;
++    let headers = response.headers_mut();
++    headers.insert("cache-control", "no-store".parse().unwrap());
++    if !headers.contains_key("x-robots-tag") {
++        headers.insert("x-robots-tag", "noindex, nofollow".parse().unwrap());
++    }
++    response
++}
++async fn effective(
++    State(a): State<App>,
++    headers: HeaderMap,
++) -> Result<Json<crate::public_commerce::policy::EffectivePolicy>, ApiError> {
++    let who = a
++        .identity
++        .admins
++        .authenticate(identity::cookie(&headers, "admin_session"))
++        .await?;
++    who.require("discovery.read")?;
++    let Json(settings) = public(State(a.clone())).await?;
++    Ok(Json(a.deployment.resolve(&settings)))
++}
++fn blocked(status: axum::http::StatusCode) -> axum::response::Response {
++    use axum::response::IntoResponse;
++    (
++        status,
++        [
++            ("x-robots-tag", "noindex, nofollow"),
++            ("cache-control", "no-store"),
++        ],
++        "Publication unavailable",
++    )
++        .into_response()
++}
++async fn robots(State(a): State<App>, headers: HeaderMap) -> axum::response::Response {
++    use axum::{http::StatusCode, response::IntoResponse};
++    if !a.deployment.accepts_host(&headers) {
++        return blocked(StatusCode::MISDIRECTED_REQUEST);
++    }
++    match public(State(a.clone())).await {
++        Ok(Json(settings)) => (
++            [("content-type", "text/plain; charset=utf-8")],
++            a.deployment.resolve(&settings).robots_txt,
++        )
++            .into_response(),
++        Err(_) => blocked(StatusCode::SERVICE_UNAVAILABLE),
++    }
++}
++async fn shell(State(a): State<App>, request: axum::extract::Request) -> axum::response::Response {
++    use axum::{http::StatusCode, response::IntoResponse};
++    if !a.deployment.accepts_host(request.headers()) {
++        return blocked(StatusCode::MISDIRECTED_REQUEST);
++    }
++    if request.method() != axum::http::Method::GET && request.method() != axum::http::Method::HEAD {
++        return blocked(StatusCode::METHOD_NOT_ALLOWED);
++    }
++    // Never turn an unknown API request into a storefront document.
++    if request.uri().path().starts_with("/v1/") || request.uri().path().starts_with("/api/") {
++        return blocked(StatusCode::NOT_FOUND);
++    }
++    let Some(template) = &a.deployment.html else {
++        return blocked(StatusCode::SERVICE_UNAVAILABLE);
++    };
++    let Ok(Json(settings)) = public(State(a.clone())).await else {
++        return blocked(StatusCode::SERVICE_UNAVAILABLE);
++    };
++    let policy = a.deployment.resolve(&settings);
++    let directive = if crate::public_commerce::policy::public_page(request.uri().path())
++        && request.uri().query().is_none()
++    {
++        policy.robots_meta
++    } else {
++        "noindex, nofollow"
++    };
++    let html = template.replacen(
++        "</head>",
++        &format!("<meta name=\"robots\" content=\"{directive}\"/></head>"),
++        1,
++    );
++    (
++        [
++            ("content-type", "text/html; charset=utf-8"),
++            ("x-robots-tag", directive),
++        ],
++        html,
++    )
++        .into_response()
+@@ -161,0 +271,7 @@
++    if !a.deployment.validate_canonical(i.canonical_url.as_deref()) {
++        return Err(Error::Invalid(
++            "Canonical URL must be a root HTTPS public DNS origin approved for this installation"
++                .into(),
++        )
++        .into());
++    }
+--- a/backend/crates/api-gateway/src/lib.rs
++++ b/backend/crates/api-gateway/src/lib.rs
+@@ -4 +3,0 @@
+-pub mod shopping;
+@@ -7,0 +7 @@
++pub mod shopping;
+@@ -78,0 +79,2 @@
++
++pub mod public_commerce;
+--- a/backend/crates/api-gateway/src/main.rs
++++ b/backend/crates/api-gateway/src/main.rs
+@@ -19,0 +20,2 @@
++        let publication =
++            api_gateway::public_commerce::policy::Deployment::from_environment(&pool).await?;
+@@ -22 +24,3 @@
+-            &std::env::var("APP_ENV").unwrap_or_default(), &notification_mode)?;
++            &std::env::var("APP_ENV").unwrap_or_default(),
++            &notification_mode,
++        )?;
+@@ -131 +135,4 @@
+-            .merge(api_gateway::discoverability::router(identity.clone()))
++            .merge(api_gateway::discoverability::router_with_deployment(
++                identity.clone(),
++                publication,
++            ))
+@@ -168,0 +176,3 @@
++    router = router.layer(axum::middleware::from_fn(
++        api_gateway::public_commerce::policy::api_headers,
++    ));
+--- a/backend/openapi.json
++++ b/backend/openapi.json
+@@ -10566,0 +10567,32 @@
++          }
++        ]
++      }
++    },
++    "/v1/admin/discovery/effective": {
++      "get": {
++        "operationId": "get_v1_admin_discovery_effective",
++        "responses": {
++          "200": {
++            "description": "Success",
++            "content": {
++              "application/json": {
++                "schema": {
++                  "$ref": "#/components/schemas/EffectiveIndexingPolicy"
++                }
++              }
++            }
++          },
++          "default": {
++            "description": "Request failed",
++            "content": {
++              "application/json": {
++                "schema": {
++                  "$ref": "#/components/schemas/Error"
++                }
++              }
++            }
++          }
++        },
++        "security": [
++          {
++            "adminSession": []
+@@ -20540,0 +20573,73 @@
++      },
++      "EffectiveIndexingPolicy": {
++        "type": "object",
++        "additionalProperties": false,
++        "required": [
++          "installation_id",
++          "settings_revision",
++          "merchant_preference",
++          "state",
++          "environment",
++          "canonical_origin",
++          "response_header",
++          "robots_meta",
++          "robots_txt",
++          "deployment_override",
++          "external_headers",
++          "warnings"
++        ],
++        "properties": {
++          "installation_id": {
++            "type": "string",
++            "format": "uuid",
++            "nullable": true
++          },
++          "settings_revision": {
++            "type": "integer"
++          },
++          "merchant_preference": {
++            "type": "boolean"
++          },
++          "state": {
++            "type": "string",
++            "enum": [
++              "INDEXABLE",
++              "MERCHANT_DISABLED",
++              "BLOCKED_BY_ENVIRONMENT",
++              "BLOCKED_BY_HEADER",
++              "DOMAIN_UNVERIFIED",
++              "CONFIGURATION_ERROR"
++            ]
++          },
++          "environment": {
++            "type": "string"
++          },
++          "canonical_origin": {
++            "type": "string",
++            "nullable": true
++          },
++          "response_header": {
++            "type": "string"
++          },
++          "robots_meta": {
++            "type": "string"
++          },
++          "robots_txt": {
++            "type": "string"
++          },
++          "deployment_override": {
++            "type": "boolean"
++          },
++          "external_headers": {
++            "type": "string",
++            "enum": [
++              "NOT_OBSERVED"
++            ]
++          },
++          "warnings": {
++            "type": "array",
++            "items": {
++              "type": "string"
++            }
++          }
++        }
+--- a/frontend/apps/admin/src/discoverability-settings.tsx
++++ b/frontend/apps/admin/src/discoverability-settings.tsx
+@@ -0,0 +1 @@
++import { EffectiveIndexingStatus } from "./effective-indexing-status";
+@@ -4 +5 @@
+-import { discoverabilityApi, type DiscoverySettings } from "@commerce/api-client";
++import { effectiveIndexingPolicy, discoverabilityApi, type DiscoverySettings } from "@commerce/api-client";
+@@ -13,0 +15 @@
++ const policy=useQuery({queryKey:["effective-indexing-policy"],queryFn:effectiveIndexingPolicy,refetchInterval:30000});
+@@ -15,0 +18 @@
++  {policy.data?<EffectiveIndexingStatus policy={policy.data}/>:policy.error?<Notice error>Effective indexing state unavailable. Do not infer it from saved preferences.</Notice>:<p role="status">Checking effective indexing policy…</p>}
+@@ -22 +25 @@
+- async function submit(e:FormEvent){e.preventDefault();if(!canWrite||busy)return;setBusy(true);setError("");setNotice("");try{const {revision,updated_at,...values}=form;void updated_at;const saved=await discoverabilityApi.save({...values,expected_revision:revision});setForm(saved);cache.setQueryData(["discoverability-settings"],saved);setNotice("Discoverability settings saved for this client.");}catch(x){setError(x instanceof Error?x.message:"Unable to save settings.");}finally{setBusy(false)}}
++ async function submit(e:FormEvent){e.preventDefault();if(!canWrite||busy)return;setBusy(true);setError("");setNotice("");try{const {revision,updated_at,...values}=form;void updated_at;const saved=await discoverabilityApi.save({...values,expected_revision:revision});setForm(saved);cache.setQueryData(["discoverability-settings"],saved);await cache.invalidateQueries({queryKey:["effective-indexing-policy"]});setNotice("Discoverability settings saved for this client.");}catch(x){setError(x instanceof Error?x.message:"Unable to save settings.");}finally{setBusy(false)}}
+--- a/frontend/packages/api-client/src/discoverability.ts
++++ b/frontend/packages/api-client/src/discoverability.ts
+@@ -17,0 +18,7 @@
++
++export type EffectiveIndexingPolicy = import('./schema').components['schemas']['EffectiveIndexingPolicy'];
++export async function effectiveIndexingPolicy(): Promise<EffectiveIndexingPolicy> {
++  const response = await fetch('/api/v1/admin/discovery/effective', { credentials: 'include', cache: 'no-store' });
++  if (!response.ok) throw new ApiError('Unable to load effective indexing policy', response.status);
++  return response.json() as Promise<EffectiveIndexingPolicy>;
++}
+--- a/frontend/packages/api-client/src/schema.d.ts
++++ b/frontend/packages/api-client/src/schema.d.ts
+@@ -2544,0 +2545,16 @@
++        delete?: never;
++        options?: never;
++        head?: never;
++        patch?: never;
++        trace?: never;
++    };
++    "/v1/admin/discovery/effective": {
++        parameters: {
++            query?: never;
++            header?: never;
++            path?: never;
++            cookie?: never;
++        };
++        get: operations["get_v1_admin_discovery_effective"];
++        put?: never;
++        post?: never;
+@@ -4888,0 +4905,17 @@
++        EffectiveIndexingPolicy: {
++            /** Format: uuid */
++            installation_id: string | null;
++            settings_revision: number;
++            merchant_preference: boolean;
++            /** @enum {string} */
++            state: "INDEXABLE" | "MERCHANT_DISABLED" | "BLOCKED_BY_ENVIRONMENT" | "BLOCKED_BY_HEADER" | "DOMAIN_UNVERIFIED" | "CONFIGURATION_ERROR";
++            environment: string;
++            canonical_origin: string | null;
++            response_header: string;
++            robots_meta: string;
++            robots_txt: string;
++            deployment_override: boolean;
++            /** @enum {string} */
++            external_headers: "NOT_OBSERVED";
++            warnings: string[];
++        };
+@@ -11885,0 +11919,29 @@
++    get_v1_admin_discovery_effective: {
++        parameters: {
++            query?: never;
++            header?: never;
++            path?: never;
++            cookie?: never;
++        };
++        requestBody?: never;
++        responses: {
++            /** @description Success */
++            200: {
++                headers: {
++                    [name: string]: unknown;
++                };
++                content: {
++                    "application/json": components["schemas"]["EffectiveIndexingPolicy"];
++                };
++            };
++            /** @description Request failed */
++            default: {
++                headers: {
++                    [name: string]: unknown;
++                };
++                content: {
++                    "application/json": components["schemas"]["Error"];
++                };
++            };
++        };
++    };

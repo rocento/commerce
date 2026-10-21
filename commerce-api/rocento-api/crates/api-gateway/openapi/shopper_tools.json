@@ -1,0 +1,1154 @@
+{
+  "schemas": {
+    "ShopperAttribute": {
+      "additionalProperties": false,
+      "properties": {
+        "comparable": {
+          "type": "boolean"
+        },
+        "confidence": {
+          "maximum": 1,
+          "minimum": 0,
+          "nullable": true,
+          "type": "number"
+        },
+        "label": {
+          "maxLength": 120,
+          "type": "string"
+        },
+        "name": {
+          "maxLength": 100,
+          "type": "string"
+        },
+        "source": {
+          "enum": [
+            "VERIFIED",
+            "MERCHANT",
+            "IMPORTED",
+            "DERIVED",
+            "AI_INFERRED"
+          ],
+          "type": "string"
+        },
+        "value": {
+          "maxLength": 250,
+          "type": "string"
+        }
+      },
+      "required": [
+        "name",
+        "value"
+      ],
+      "type": "object"
+    },
+    "ShopperCatalogFacet": {
+      "additionalProperties": false,
+      "properties": {
+        "code": {
+          "maxLength": 64,
+          "type": "string"
+        },
+        "covered_count": {
+          "minimum": 0,
+          "type": "integer"
+        },
+        "data_type": {
+          "maxLength": 30,
+          "type": "string"
+        },
+        "label": {
+          "maxLength": 120,
+          "type": "string"
+        },
+        "unit": {
+          "nullable": true,
+          "type": "string"
+        },
+        "values": {
+          "items": {
+            "$ref": "#/components/schemas/ShopperCatalogFacetValue"
+          },
+          "maxItems": 24,
+          "type": "array"
+        },
+        "values_complete": {
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "code",
+        "label",
+        "data_type",
+        "covered_count",
+        "values",
+        "values_complete"
+      ],
+      "type": "object"
+    },
+    "ShopperCatalogFacetValue": {
+      "additionalProperties": false,
+      "properties": {
+        "count": {
+          "minimum": 0,
+          "type": "integer"
+        },
+        "label": {
+          "maxLength": 120,
+          "type": "string"
+        },
+        "value": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "boolean"
+            },
+            {
+              "type": "integer"
+            },
+            {
+              "type": "number"
+            }
+          ]
+        }
+      },
+      "required": [
+        "value",
+        "label",
+        "count"
+      ],
+      "type": "object"
+    },
+    "ShopperCatalogPriceRange": {
+      "additionalProperties": false,
+      "properties": {
+        "count": {
+          "minimum": 0,
+          "type": "integer"
+        },
+        "currency": {
+          "pattern": "^[A-Z]{3}$",
+          "type": "string"
+        },
+        "max": {
+          "pattern": "^\\d{1,12}(\\.\\d{1,6})?$",
+          "type": "string"
+        },
+        "min": {
+          "pattern": "^\\d{1,12}(\\.\\d{1,6})?$",
+          "type": "string"
+        }
+      },
+      "required": [
+        "currency",
+        "min",
+        "max",
+        "count"
+      ],
+      "type": "object"
+    },
+    "ShopperCatalogProfile": {
+      "additionalProperties": false,
+      "properties": {
+        "candidate_count": {
+          "minimum": 0,
+          "type": "integer"
+        },
+        "complete": {
+          "type": "boolean"
+        },
+        "facets": {
+          "items": {
+            "$ref": "#/components/schemas/ShopperCatalogFacet"
+          },
+          "maxItems": 30,
+          "type": "array"
+        },
+        "facets_complete": {
+          "type": "boolean"
+        },
+        "matched_count": {
+          "minimum": 0,
+          "type": "integer"
+        },
+        "prices": {
+          "items": {
+            "$ref": "#/components/schemas/ShopperCatalogPriceRange"
+          },
+          "maxItems": 20,
+          "type": "array"
+        },
+        "revision": {
+          "maxLength": 200,
+          "minLength": 1,
+          "type": "string"
+        },
+        "scope": {
+          "enum": [
+            "current_sellable_catalog",
+            "current_sellable_category"
+          ],
+          "type": "string"
+        }
+      },
+      "required": [
+        "revision",
+        "scope",
+        "complete",
+        "candidate_count",
+        "matched_count",
+        "facets",
+        "facets_complete",
+        "prices"
+      ],
+      "type": "object"
+    },
+    "ShopperCatalogResult": {
+      "additionalProperties": false,
+      "properties": {
+        "catalog_profile": {
+          "$ref": "#/components/schemas/ShopperCatalogProfile",
+          "nullable": true
+        },
+        "catalog_schema": {
+          "$ref": "#/components/schemas/ShopperCatalogSchema",
+          "nullable": true
+        },
+        "category": {
+          "$ref": "#/components/schemas/ShopperCategory",
+          "nullable": true
+        },
+        "default_currency": {
+          "nullable": true,
+          "pattern": "^[A-Z]{3}$",
+          "type": "string"
+        },
+        "discovery": {
+          "$ref": "#/components/schemas/ShopperDiscoveryReport",
+          "nullable": true
+        },
+        "products": {
+          "items": {
+            "$ref": "#/components/schemas/ShopperProduct"
+          },
+          "maxItems": 8,
+          "type": "array"
+        }
+      },
+      "required": [
+        "products",
+        "category"
+      ],
+      "type": "object"
+    },
+    "ShopperCatalogSchema": {
+      "additionalProperties": false,
+      "properties": {
+        "attributes": {
+          "items": {
+            "$ref": "#/components/schemas/ShopperSchemaAttribute"
+          },
+          "maxItems": 100,
+          "type": "array"
+        },
+        "categories": {
+          "items": {
+            "$ref": "#/components/schemas/ShopperSchemaCategory"
+          },
+          "maxItems": 200,
+          "type": "array"
+        },
+        "categories_complete": {
+          "type": "boolean"
+        },
+        "industry": {
+          "nullable": true,
+          "type": "string"
+        },
+        "version": {
+          "maxLength": 200,
+          "type": "string"
+        }
+      },
+      "required": [
+        "industry",
+        "version",
+        "attributes"
+      ],
+      "type": "object"
+    },
+    "ShopperCategory": {
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "format": "uuid",
+          "type": "string"
+        },
+        "name": {
+          "maxLength": 1000,
+          "type": "string"
+        },
+        "parent_id": {
+          "format": "uuid",
+          "nullable": true,
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "name",
+        "parent_id"
+      ],
+      "type": "object"
+    },
+    "ShopperCategoryArgs": {
+      "additionalProperties": false,
+      "properties": {
+        "category_id": {
+          "pattern": "^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$",
+          "type": "string"
+        }
+      },
+      "required": [
+        "category_id"
+      ],
+      "type": "object"
+    },
+    "ShopperCompareArgs": {
+      "additionalProperties": false,
+      "properties": {
+        "product_ids": {
+          "items": {
+            "pattern": "^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$",
+            "type": "string"
+          },
+          "maxItems": 5,
+          "minItems": 2,
+          "type": "array"
+        }
+      },
+      "required": [
+        "product_ids"
+      ],
+      "type": "object"
+    },
+    "ShopperContribution": {
+      "additionalProperties": false,
+      "properties": {
+        "code": {
+          "maxLength": 64,
+          "minLength": 1,
+          "pattern": "^[a-z_]+$",
+          "type": "string"
+        },
+        "points": {
+          "maximum": 10000,
+          "minimum": -10000,
+          "type": "integer"
+        }
+      },
+      "required": [
+        "code",
+        "points"
+      ],
+      "type": "object"
+    },
+    "ShopperDiscovery": {
+      "additionalProperties": false,
+      "properties": {
+        "contributions": {
+          "items": {
+            "$ref": "#/components/schemas/ShopperContribution"
+          },
+          "maxItems": 10,
+          "type": "array"
+        },
+        "merchant_boost": {
+          "maximum": 10,
+          "minimum": 0,
+          "type": "integer"
+        },
+        "offer": {
+          "$ref": "#/components/schemas/ShopperOffer"
+        },
+        "rank": {
+          "maximum": 8,
+          "minimum": 1,
+          "type": "integer"
+        },
+        "relationships": {
+          "items": {
+            "$ref": "#/components/schemas/ShopperRelationship"
+          },
+          "maxItems": 10,
+          "type": "array"
+        },
+        "schema_version": {
+          "const": "1.0.0",
+          "type": "string"
+        },
+        "score": {
+          "maximum": 100000,
+          "minimum": -100000,
+          "type": "integer"
+        },
+        "sponsored": {
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "schema_version",
+        "rank",
+        "score",
+        "contributions",
+        "sponsored",
+        "merchant_boost",
+        "offer",
+        "relationships"
+      ],
+      "type": "object"
+    },
+    "ShopperDiscoveryReport": {
+      "additionalProperties": false,
+      "properties": {
+        "eligible": {
+          "maximum": 40,
+          "minimum": 0,
+          "type": "integer"
+        },
+        "evaluated": {
+          "maximum": 40,
+          "minimum": 0,
+          "type": "integer"
+        },
+        "exhaustive": {
+          "const": false,
+          "type": "boolean"
+        },
+        "lexical_candidates": {
+          "maximum": 20,
+          "minimum": 0,
+          "type": "integer"
+        },
+        "outcome": {
+          "enum": [
+            "bounded_no_candidates",
+            "current_facts_filtered",
+            "availability_unknown",
+            "matches"
+          ],
+          "type": "string"
+        },
+        "ranker": {
+          "maxLength": 200,
+          "type": "string"
+        },
+        "relation_candidates": {
+          "maximum": 20,
+          "minimum": 0,
+          "type": "integer"
+        },
+        "retrieval": {
+          "maxLength": 200,
+          "type": "string"
+        },
+        "returned": {
+          "maximum": 8,
+          "minimum": 0,
+          "type": "integer"
+        },
+        "schema_version": {
+          "const": "1.0.0",
+          "type": "string"
+        },
+        "semantic_enabled": {
+          "const": false,
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "schema_version",
+        "retrieval",
+        "ranker",
+        "lexical_candidates",
+        "relation_candidates",
+        "evaluated",
+        "eligible",
+        "returned",
+        "exhaustive",
+        "semantic_enabled",
+        "outcome"
+      ],
+      "type": "object"
+    },
+    "ShopperOffer": {
+      "additionalProperties": false,
+      "properties": {
+        "category_id": {
+          "format": "uuid",
+          "type": "string"
+        },
+        "currency": {
+          "maxLength": 3,
+          "minLength": 3,
+          "type": "string"
+        },
+        "expires_at": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "in_stock": {
+          "nullable": true,
+          "type": "boolean"
+        },
+        "observed_at": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "parent_id": {
+          "format": "uuid",
+          "nullable": true,
+          "type": "string"
+        },
+        "price": {
+          "pattern": "^\\d{1,12}(\\.\\d{1,6})?$",
+          "type": "string"
+        },
+        "product_id": {
+          "format": "uuid",
+          "type": "string"
+        },
+        "selling_unit": {
+          "maxLength": 100,
+          "type": "string"
+        }
+      },
+      "required": [
+        "product_id",
+        "parent_id",
+        "category_id",
+        "price",
+        "currency",
+        "selling_unit",
+        "in_stock",
+        "observed_at",
+        "expires_at"
+      ],
+      "type": "object"
+    },
+    "ShopperProduct": {
+      "additionalProperties": false,
+      "properties": {
+        "attributes": {
+          "items": {
+            "$ref": "#/components/schemas/ShopperAttribute"
+          },
+          "maxItems": 20,
+          "type": "array"
+        },
+        "category_id": {
+          "format": "uuid",
+          "type": "string"
+        },
+        "category_ids": {
+          "items": {
+            "format": "uuid",
+            "type": "string"
+          },
+          "maxItems": 50,
+          "type": "array"
+        },
+        "category_name": {
+          "maxLength": 1000,
+          "type": "string"
+        },
+        "category_names": {
+          "items": {
+            "type": "string"
+          },
+          "maxItems": 50,
+          "type": "array"
+        },
+        "currency": {
+          "maxLength": 3,
+          "minLength": 3,
+          "type": "string"
+        },
+        "discovery": {
+          "$ref": "#/components/schemas/ShopperDiscovery",
+          "nullable": true
+        },
+        "id": {
+          "format": "uuid",
+          "type": "string"
+        },
+        "image_id": {
+          "format": "uuid",
+          "nullable": true,
+          "type": "string"
+        },
+        "in_stock": {
+          "nullable": true,
+          "type": "boolean"
+        },
+        "name": {
+          "maxLength": 1000,
+          "type": "string"
+        },
+        "price": {
+          "pattern": "^\\d{1,12}(\\.\\d{1,6})?$",
+          "type": "string"
+        },
+        "product_type": {
+          "maxLength": 50,
+          "type": "string"
+        },
+        "route": {
+          "pattern": "^/products/[0-9a-fA-F-]{36}$",
+          "type": "string"
+        },
+        "sku": {
+          "maxLength": 200,
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "name",
+        "price",
+        "currency",
+        "category_id",
+        "product_type",
+        "attributes",
+        "in_stock",
+        "route"
+      ],
+      "type": "object"
+    },
+    "ShopperProductArgs": {
+      "additionalProperties": false,
+      "properties": {
+        "product_id": {
+          "pattern": "^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$",
+          "type": "string"
+        }
+      },
+      "required": [
+        "product_id"
+      ],
+      "type": "object"
+    },
+    "ShopperRelationship": {
+      "additionalProperties": false,
+      "properties": {
+        "dimensions": {
+          "additionalProperties": {
+            "type": "string"
+          },
+          "maxProperties": 10,
+          "type": "object"
+        },
+        "expires_at": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "id": {
+          "format": "uuid",
+          "type": "string"
+        },
+        "product_id": {
+          "format": "uuid",
+          "type": "string"
+        },
+        "relation": {
+          "enum": [
+            "belongs_to",
+            "variant_of",
+            "compatible_with",
+            "incompatible_with",
+            "substitutes",
+            "complements",
+            "required_accessory",
+            "used_for",
+            "occasion",
+            "contains",
+            "excludes",
+            "selling_unit",
+            "policy_restriction",
+            "synonym"
+          ],
+          "type": "string"
+        },
+        "reviewed": {
+          "const": true,
+          "type": "boolean"
+        },
+        "source": {
+          "enum": [
+            "merchant",
+            "imported",
+            "generated"
+          ],
+          "type": "string"
+        },
+        "target_product_id": {
+          "format": "uuid",
+          "nullable": true,
+          "type": "string"
+        },
+        "updated_at": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "value": {
+          "maxLength": 160,
+          "minLength": 1,
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "product_id",
+        "relation",
+        "target_product_id",
+        "value",
+        "dimensions",
+        "source",
+        "reviewed",
+        "updated_at",
+        "expires_at"
+      ],
+      "type": "object"
+    },
+    "ShopperSchemaArgs": {
+      "additionalProperties": false,
+      "properties": {},
+      "type": "object"
+    },
+    "ShopperSchemaAttribute": {
+      "additionalProperties": false,
+      "properties": {
+        "code": {
+          "maxLength": 64,
+          "type": "string"
+        },
+        "comparable": {
+          "type": "boolean"
+        },
+        "data_type": {
+          "maxLength": 30,
+          "type": "string"
+        },
+        "description": {
+          "maxLength": 500,
+          "type": "string"
+        },
+        "facetable": {
+          "type": "boolean"
+        },
+        "filterable": {
+          "type": "boolean"
+        },
+        "label": {
+          "maxLength": 120,
+          "type": "string"
+        },
+        "max": {
+          "nullable": true,
+          "type": "number"
+        },
+        "min": {
+          "nullable": true,
+          "type": "number"
+        },
+        "options": {
+          "items": {
+            "$ref": "#/components/schemas/ShopperSchemaOption"
+          },
+          "maxItems": 100,
+          "type": "array"
+        },
+        "searchable": {
+          "type": "boolean"
+        },
+        "semantic_role": {
+          "nullable": true,
+          "type": "string"
+        },
+        "sortable": {
+          "type": "boolean"
+        },
+        "source_policy": {
+          "enum": [
+            "factual",
+            "semantic",
+            "trusted_only"
+          ],
+          "type": "string"
+        },
+        "unit": {
+          "nullable": true,
+          "type": "string"
+        },
+        "variant_axis": {
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "code",
+        "label",
+        "data_type",
+        "options",
+        "filterable",
+        "searchable",
+        "facetable",
+        "sortable",
+        "comparable",
+        "variant_axis",
+        "source_policy",
+        "unit",
+        "min",
+        "max"
+      ],
+      "type": "object"
+    },
+    "ShopperSchemaCategory": {
+      "additionalProperties": false,
+      "properties": {
+        "aliases": {
+          "items": {
+            "type": "string"
+          },
+          "maxItems": 12,
+          "type": "array"
+        },
+        "id": {
+          "format": "uuid",
+          "type": "string"
+        },
+        "name": {
+          "maxLength": 1000,
+          "type": "string"
+        },
+        "parent_id": {
+          "format": "uuid",
+          "nullable": true,
+          "type": "string"
+        },
+        "sellable_count": {
+          "minimum": 0,
+          "type": "integer"
+        }
+      },
+      "required": [
+        "id",
+        "name"
+      ],
+      "type": "object"
+    },
+    "ShopperSchemaOption": {
+      "additionalProperties": false,
+      "properties": {
+        "code": {
+          "maxLength": 100,
+          "type": "string"
+        },
+        "label": {
+          "maxLength": 120,
+          "type": "string"
+        },
+        "labels": {
+          "additionalProperties": {
+            "type": "string"
+          },
+          "maxProperties": 20,
+          "type": "object"
+        }
+      },
+      "required": [
+        "code",
+        "label"
+      ],
+      "type": "object"
+    },
+    "ShopperSearchArgs": {
+      "additionalProperties": false,
+      "properties": {
+        "attributes": {
+          "additionalProperties": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "boolean"
+              },
+              {
+                "type": "integer"
+              },
+              {
+                "type": "number"
+              }
+            ]
+          },
+          "maxProperties": 20,
+          "type": "object"
+        },
+        "category_id": {
+          "nullable": true,
+          "pattern": "^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$",
+          "type": "string"
+        },
+        "currency": {
+          "nullable": true,
+          "pattern": "^[A-Z]{3}$",
+          "type": "string"
+        },
+        "excluded_product_ids": {
+          "items": {
+            "pattern": "^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$",
+            "type": "string"
+          },
+          "maxItems": 20,
+          "type": "array"
+        },
+        "exclusive_max": {
+          "type": "boolean"
+        },
+        "exclusive_min": {
+          "type": "boolean"
+        },
+        "in_stock": {
+          "type": "boolean"
+        },
+        "max_price": {
+          "nullable": true,
+          "pattern": "^\\d{1,12}(\\.\\d{1,6})?$",
+          "type": "string"
+        },
+        "min_price": {
+          "nullable": true,
+          "pattern": "^\\d{1,12}(\\.\\d{1,6})?$",
+          "type": "string"
+        },
+        "predicates": {
+          "items": {
+            "$ref": "#/components/schemas/ShopperSearchPredicate"
+          },
+          "maxItems": 20,
+          "type": "array"
+        },
+        "query": {
+          "maxLength": 200,
+          "minLength": 1,
+          "type": "string"
+        }
+      },
+      "required": [
+        "query"
+      ],
+      "type": "object"
+    },
+    "ShopperSearchPredicate": {
+      "additionalProperties": false,
+      "properties": {
+        "name": {
+          "maxLength": 64,
+          "minLength": 1,
+          "type": "string"
+        },
+        "operator": {
+          "enum": [
+            "eq",
+            "neq",
+            "lt",
+            "lte",
+            "gt",
+            "gte",
+            "contains"
+          ],
+          "type": "string"
+        },
+        "value": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "boolean"
+            },
+            {
+              "type": "integer"
+            },
+            {
+              "type": "number"
+            }
+          ]
+        }
+      },
+      "required": [
+        "name",
+        "operator",
+        "value"
+      ],
+      "type": "object"
+    },
+    "ShopperToolRequest": {
+      "oneOf": [
+        {
+          "additionalProperties": false,
+          "properties": {
+            "arguments": {
+              "$ref": "#/components/schemas/ShopperSchemaArgs"
+            },
+            "name": {
+              "enum": [
+                "get_catalog_schema"
+              ],
+              "type": "string"
+            }
+          },
+          "required": [
+            "name",
+            "arguments"
+          ],
+          "type": "object"
+        },
+        {
+          "additionalProperties": false,
+          "properties": {
+            "arguments": {
+              "$ref": "#/components/schemas/ShopperSearchArgs"
+            },
+            "name": {
+              "enum": [
+                "search_products"
+              ],
+              "type": "string"
+            }
+          },
+          "required": [
+            "name",
+            "arguments"
+          ],
+          "type": "object"
+        },
+        {
+          "additionalProperties": false,
+          "properties": {
+            "arguments": {
+              "$ref": "#/components/schemas/ShopperProductArgs"
+            },
+            "name": {
+              "enum": [
+                "get_product"
+              ],
+              "type": "string"
+            }
+          },
+          "required": [
+            "name",
+            "arguments"
+          ],
+          "type": "object"
+        },
+        {
+          "additionalProperties": false,
+          "properties": {
+            "arguments": {
+              "$ref": "#/components/schemas/ShopperProductArgs"
+            },
+            "name": {
+              "enum": [
+                "get_product_attributes"
+              ],
+              "type": "string"
+            }
+          },
+          "required": [
+            "name",
+            "arguments"
+          ],
+          "type": "object"
+        },
+        {
+          "additionalProperties": false,
+          "properties": {
+            "arguments": {
+              "$ref": "#/components/schemas/ShopperProductArgs"
+            },
+            "name": {
+              "enum": [
+                "get_product_price"
+              ],
+              "type": "string"
+            }
+          },
+          "required": [
+            "name",
+            "arguments"
+          ],
+          "type": "object"
+        },
+        {
+          "additionalProperties": false,
+          "properties": {
+            "arguments": {
+              "$ref": "#/components/schemas/ShopperProductArgs"
+            },
+            "name": {
+              "enum": [
+                "get_product_inventory"
+              ],
+              "type": "string"
+            }
+          },
+          "required": [
+            "name",
+            "arguments"
+          ],
+          "type": "object"
+        },
+        {
+          "additionalProperties": false,
+          "properties": {
+            "arguments": {
+              "$ref": "#/components/schemas/ShopperCategoryArgs"
+            },
+            "name": {
+              "enum": [
+                "get_category"
+              ],
+              "type": "string"
+            }
+          },
+          "required": [
+            "name",
+            "arguments"
+          ],
+          "type": "object"
+        },
+        {
+          "additionalProperties": false,
+          "properties": {
+            "arguments": {
+              "$ref": "#/components/schemas/ShopperCompareArgs"
+            },
+            "name": {
+              "enum": [
+                "compare_products"
+              ],
+              "type": "string"
+            }
+          },
+          "required": [
+            "name",
+            "arguments"
+          ],
+          "type": "object"
+        }
+      ]
+    }
+  }
+}

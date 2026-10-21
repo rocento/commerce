@@ -1,0 +1,233 @@
+[WebServer] (node:15521) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] (node:15523) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 45 tests using 1 worker
+
+(node:15525) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   1 [desktop] › e2e/assistant/addresses.spec.ts:32:1 › saved address cards show the default, full address and delivery details (323ms)
+  ✓   2 [desktop] › e2e/assistant/addresses.spec.ts:44:1 › address failures can be retried and an empty list offers adding an address (505ms)
+  ✓   3 [desktop] › e2e/assistant/addresses.spec.ts:55:1 › deletion requires confirmation and refreshes the remaining default address (604ms)
+  ✓   4 [desktop] › e2e/assistant/addresses.spec.ts:80:1 › failed deletion preserves the address and retry can delete the last address (604ms)
+  ✓   5 [desktop] › e2e/assistant/baskets.spec.ts:65:64 › shop: review, edit, requote, approve, then trusted checkout (1.7s)
+  ✓   6 [desktop] › e2e/assistant/baskets.spec.ts:65:64 › optimize: review, edit, requote, approve, then trusted checkout (3.3s)
+  ✓   7 [desktop] › e2e/assistant/baskets.spec.ts:65:64 › buy_again: review, edit, requote, approve, then trusted checkout (1.7s)
+  ✓   8 [desktop] › e2e/assistant/baskets.spec.ts:105:1 › lost cart-update response reconciles committed status without duplicating items (1.2s)
+  ✓   9 [desktop] › e2e/assistant/baskets.spec.ts:116:1 › proposal selection and requote are operable from the keyboard (204ms)
+  ✓  10 [desktop] › e2e/assistant/checkout-address-conversation.spec.ts:10:42 › address conversation with preselected address: false (1.2s)
+  ✓  11 [desktop] › e2e/assistant/checkout-address-conversation.spec.ts:10:42 › address conversation with preselected address: true (1.3s)
+  ✓  12 [desktop] › e2e/assistant/checkout-handoff.spec.ts:11:2 › checkout handoff: local (287ms)
+  ✓  13 [desktop] › e2e/assistant/checkout-handoff.spec.ts:11:2 › checkout handoff: rag (279ms)
+  ✓  14 [desktop] › e2e/assistant/checkout-handoff.spec.ts:11:2 › checkout handoff: engine (279ms)
+  ✓  15 [desktop] › e2e/assistant/checkout-handoff.spec.ts:11:2 › checkout handoff: text-only (245ms)
+  ✓  16 [desktop] › e2e/assistant/checkout-handoff.spec.ts:11:2 › checkout handoff: error (248ms)
+  ✓  17 [desktop] › e2e/assistant/checkout-handoff.spec.ts:11:2 › checkout handoff: interrupted (264ms)
+  ✓  18 [desktop] › e2e/assistant/checkout.spec.ts:9:77 › complete a product order using buttons with explicit payment confirmation (2.9s)
+  ✓  19 [desktop] › e2e/assistant/checkout.spec.ts:9:77 › complete a product order using replies with explicit payment confirmation (2.5s)
+  ✓  20 [desktop] › e2e/assistant/checkout.spec.ts:9:77 › complete a product order using expired with explicit payment confirmation (2.2s)
+  ✓  21 [desktop] › e2e/assistant/checkout.spec.ts:9:77 › complete a product order using retry with explicit payment confirmation (2.6s)
+  ✓  22 [desktop] › e2e/assistant/clarification.spec.ts:16:3 › clarification preserves context via inline (503ms)
+  ✓  23 [desktop] › e2e/assistant/clarification.spec.ts:16:3 › clarification preserves context via composer (386ms)
+  ✓  24 [desktop] › e2e/assistant/clarification.spec.ts:16:3 › clarification preserves context via different request (640ms)
+  ✓  25 [desktop] › e2e/assistant/clarification.spec.ts:50:1 › ordinary question-mark prose does not create a clarification form (250ms)
+  ✓  26 [desktop] › e2e/assistant/navigation.spec.ts:21:1 › icon rail opens searchable history, restores chats and starts a new conversation (398ms)
+  ✓  27 [desktop] › e2e/assistant/navigation.spec.ts:58:1 › guest history explains sign-in without requesting private conversations (169ms)
+  ✘  28 [desktop] › e2e/assistant/order-cart-choice.spec.ts:12:71 › multi-product order with existing cart: keep (6.1s)
+(node:15583) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  29 [desktop] › e2e/assistant/order-cart-choice.spec.ts:12:71 › multi-product order with existing cart: clear (1.8s)
+  ✓  30 [desktop] › e2e/assistant/order-cart-choice.spec.ts:12:71 › multi-product order with existing cart: failed (506ms)
+  ✓  31 [desktop] › e2e/assistant/order-cart-choice.spec.ts:12:71 › multi-product order with existing cart: changed (508ms)
+  ✓  32 [desktop] › e2e/assistant/reorder.spec.ts:8:131 › reorder empty (518ms)
+  ✓  33 [desktop] › e2e/assistant/reorder.spec.ts:8:131 › reorder keep (566ms)
+  ✓  34 [desktop] › e2e/assistant/reorder.spec.ts:8:131 › reorder replace (567ms)
+  ✓  35 [desktop] › e2e/assistant/reorder.spec.ts:8:131 › reorder changed-address (1.4s)
+  ✓  36 [desktop] › e2e/assistant/reorder.spec.ts:8:131 › reorder retry (981ms)
+  ✓  37 [desktop] › e2e/assistant/reorder.spec.ts:8:131 › reorder changed-cart (593ms)
+  ✓  38 [desktop] › e2e/assistant/reorder.spec.ts:8:131 › reorder clear-failure (633ms)
+  ✓  39 [desktop] › e2e/assistant/reorder.spec.ts:8:131 › reorder unavailable (536ms)
+  ✘  40 [desktop] › e2e/assistant/shopping.spec.ts:23:1 › assistant adds a catalog item from chat and updates the cart count (30.0s)
+(node:15661) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  41 [desktop] › e2e/assistant/shopping.spec.ts:68:1 › assistant confirms cart additions without animation when reduced motion is enabled (30.0s)
+(node:15675) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  42 [desktop] › e2e/assistant/shopping.spec.ts:90:1 › assistant does not confirm a failed cart addition (30.0s)
+(node:15709) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  43 [desktop] › e2e/assistant/shopping.spec.ts:100:1 › order shortcut displays orders and verified tracking inside chat (593ms)
+  ✘  44 [desktop] › e2e/assistant/shopping.spec.ts:151:1 › guests get an in-chat sign-in prompt without requesting private orders (5.2s)
+(node:15716) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  45 [desktop] › e2e/assistant/shopping.spec.ts:162:1 › order loading failures can be retried and empty orders stay in chat (5.2s)
+
+
+  1) [desktop] › e2e/assistant/order-cart-choice.spec.ts:12:71 › multi-product order with existing cart: keep 
+
+    Error: expect(locator).toHaveText(expected) failed
+
+    Locator: locator('.assistant-order-product').first().getByRole('status')
+    Expected: "2 × Bananas in cart"
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toHaveText" locator('.assistant-order-product').first().getByRole('status') with timeout 5000ms
+      - waiting for locator('.assistant-order-product').first().getByRole('status')
+
+
+      90 |    await plan.getByRole('textbox', {name:'Search product 2', exact:true}).fill('apples ');
+      91 |    await plan.getByRole('button', {name:'Find products', exact:true}).click();
+    > 92 |    await expect(guides.first().getByRole('status')).toHaveText('2 × Bananas in cart');
+         |                                                     ^
+      93 |    expect(additions).toEqual([0]);
+      94 |    await expect(guides).toHaveCount(3);
+      95 |   }
+        at /private/tmp/commerce-release-20261001-34Lhz0/frontend/e2e/assistant/order-cart-choice.spec.ts:92:53
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/assistant/order-cart-choice-multi-pr-b6205-der-with-existing-cart-keep-desktop/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/assistant/order-cart-choice-multi-pr-b6205-der-with-existing-cart-keep-desktop/error-context.md
+
+  2) [desktop] › e2e/assistant/shopping.spec.ts:23:1 › assistant adds a catalog item from chat and updates the cart count 
+
+    Test timeout of 30000ms exceeded.
+
+    Error: locator.click: Test timeout of 30000ms exceeded.
+    Call log:
+      - waiting for getByRole('button', { name: 'Find something good' })
+
+
+      45 |   });
+      46 |   await page.goto('/assistant');
+    > 47 |   await page.getByRole('button', { name: 'Find something good' }).click();
+         |                                                                   ^
+      48 |   await page.getByRole('button', { name: 'Add Red apples to cart' }).click();
+      49 |   await expect.poll(() => quantity).toBe(1);
+      50 |   expect(update).toEqual({ quantity: 1 });
+        at /private/tmp/commerce-release-20261001-34Lhz0/frontend/e2e/assistant/shopping.spec.ts:47:67
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/assistant/shopping-assistant-adds-a--9fa47--and-updates-the-cart-count-desktop/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/assistant/shopping-assistant-adds-a--9fa47--and-updates-the-cart-count-desktop/error-context.md
+
+  3) [desktop] › e2e/assistant/shopping.spec.ts:68:1 › assistant confirms cart additions without animation when reduced motion is enabled 
+
+    Test timeout of 30000ms exceeded.
+
+    Error: locator.click: Test timeout of 30000ms exceeded.
+    Call log:
+      - waiting for getByRole('button', { name: 'Find something good' })
+
+
+      78 |   });
+      79 |   await page.goto('/assistant');
+    > 80 |   await page.getByRole('button', { name: 'Find something good' }).click();
+         |                                                                   ^
+      81 |   await expect(page.getByRole('region', { name: 'Item added to cart' })).toHaveCount(0);
+      82 |   await page.getByRole('button', { name: 'Add Red apples to cart' }).click();
+      83 |   const confirmation = page.getByRole('region', { name: 'Item added to cart' });
+        at /private/tmp/commerce-release-20261001-34Lhz0/frontend/e2e/assistant/shopping.spec.ts:80:67
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/assistant/shopping-assistant-confirm-00e8a-n-reduced-motion-is-enabled-desktop/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/assistant/shopping-assistant-confirm-00e8a-n-reduced-motion-is-enabled-desktop/error-context.md
+
+  4) [desktop] › e2e/assistant/shopping.spec.ts:90:1 › assistant does not confirm a failed cart addition 
+
+    Test timeout of 30000ms exceeded.
+
+    Error: locator.click: Test timeout of 30000ms exceeded.
+    Call log:
+      - waiting for getByRole('button', { name: 'Find something good' })
+
+
+      91 |   await page.route(`**/api/v1/cart/items/${id}`, route => route.fulfill({ status: 409, json: { error: 'Not enough stock' } }));
+      92 |   await page.goto('/assistant');
+    > 93 |   await page.getByRole('button', { name: 'Find something good' }).click();
+         |                                                                   ^
+      94 |   await page.getByRole('button', { name: 'Add Red apples to cart' }).click();
+      95 |   await expect(page.getByRole('alert')).toBeVisible();
+      96 |   await expect(page.getByRole('link', { name: 'Cart 0', exact: true })).toBeVisible();
+        at /private/tmp/commerce-release-20261001-34Lhz0/frontend/e2e/assistant/shopping.spec.ts:93:67
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/assistant/shopping-assistant-does-not-confirm-a-failed-cart-addition-desktop/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/assistant/shopping-assistant-does-not-confirm-a-failed-cart-addition-desktop/error-context.md
+
+  5) [desktop] › e2e/assistant/shopping.spec.ts:151:1 › guests get an in-chat sign-in prompt without requesting private orders 
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: getByRole('link', { name: 'Sign in to view your orders' })
+    Expected: visible
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeVisible" getByRole('link', { name: 'Sign in to view your orders' }) with timeout 5000ms
+      - waiting for getByRole('link', { name: 'Sign in to view your orders' })
+
+
+      155 |   await page.goto('/assistant');
+      156 |   await page.getByRole('button', { name: 'Orders', exact: true }).click();
+    > 157 |   await expect(page.getByRole('link', { name: 'Sign in to view your orders' })).toBeVisible();
+          |                                                                                 ^
+      158 |   expect(orderRequests).toBe(0);
+      159 |   await expect(page).toHaveURL(/\/assistant$/);
+      160 | });
+        at /private/tmp/commerce-release-20261001-34Lhz0/frontend/e2e/assistant/shopping.spec.ts:157:81
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/assistant/shopping-guests-get-an-in--97bad-t-requesting-private-orders-desktop/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/assistant/shopping-guests-get-an-in--97bad-t-requesting-private-orders-desktop/error-context.md
+
+  6) [desktop] › e2e/assistant/shopping.spec.ts:162:1 › order loading failures can be retried and empty orders stay in chat 
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: getByText('Your orders could not be loaded.')
+    Expected: visible
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeVisible" getByText('Your orders could not be loaded.') with timeout 5000ms
+      - waiting for getByText('Your orders could not be loaded.')
+
+
+      168 |   await expect(page.getByRole('textbox', { name: 'Your message' })).toBeVisible();
+      169 |   await page.getByRole('button', { name: 'Orders', exact: true }).click();
+    > 170 |   await expect(page.getByText('Your orders could not be loaded.')).toBeVisible();
+          |                                                                    ^
+      171 |   fail = false;
+      172 |   await page.getByRole('button', { name: 'Try again', exact: true }).click();
+      173 |   await expect(page.getByText('You haven’t placed any orders yet.')).toBeVisible();
+        at /private/tmp/commerce-release-20261001-34Lhz0/frontend/e2e/assistant/shopping.spec.ts:170:68
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/assistant/shopping-order-loading-fai-344aa-d-empty-orders-stay-in-chat-desktop/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/assistant/shopping-order-loading-fai-344aa-d-empty-orders-stay-in-chat-desktop/error-context.md
+
+  6 failed
+    [desktop] › e2e/assistant/order-cart-choice.spec.ts:12:71 › multi-product order with existing cart: keep 
+    [desktop] › e2e/assistant/shopping.spec.ts:23:1 › assistant adds a catalog item from chat and updates the cart count 
+    [desktop] › e2e/assistant/shopping.spec.ts:68:1 › assistant confirms cart additions without animation when reduced motion is enabled 
+    [desktop] › e2e/assistant/shopping.spec.ts:90:1 › assistant does not confirm a failed cart addition 
+    [desktop] › e2e/assistant/shopping.spec.ts:151:1 › guests get an in-chat sign-in prompt without requesting private orders 
+    [desktop] › e2e/assistant/shopping.spec.ts:162:1 › order loading failures can be retried and empty orders stay in chat 
+  39 passed (2.4m)

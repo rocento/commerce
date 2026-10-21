@@ -1,0 +1,92 @@
+[
+  [
+    "PRODUCT_RIPENESS",
+    "GROCERY",
+    "produce ripeness|fruit ripeness|ripeness level"
+  ],
+  [
+    "PRODUCT_HARVEST_DATE",
+    "GROCERY",
+    "harvest date|date of harvest|harvesting date"
+  ],
+  [
+    "ALTERATION_SERVICE",
+    "FASHION",
+    "alteration service|tailoring service|clothing alterations"
+  ],
+  [
+    "FOOTWEAR_WIDTH",
+    "FASHION",
+    "shoe width|footwear width|width fitting"
+  ],
+  [
+    "FRAGRANCE_NOTES",
+    "BEAUTY",
+    "fragrance notes|perfume notes|scent notes"
+  ],
+  [
+    "SKIN_TYPE_SUITABILITY",
+    "BEAUTY",
+    "skin type suitability|suitable skin types|skin type recommendations"
+  ],
+  [
+    "PRESCRIPTION_REQUIREMENT",
+    "PHARMACY",
+    "prescription requirement|prescription requirements|prescription policy"
+  ],
+  [
+    "PHARMACIST_AVAILABILITY",
+    "PHARMACY",
+    "pharmacist availability|pharmacist hours|pharmacy consultation hours"
+  ],
+  [
+    "REFURBISHED_GRADE",
+    "ELECTRONICS",
+    "refurbishment grade|refurbished condition grade|refurbished grading"
+  ],
+  [
+    "FIRMWARE_VERSION",
+    "ELECTRONICS",
+    "firmware version|installed firmware version|firmware revision"
+  ],
+  [
+    "ENGRAVING_SERVICE",
+    "JEWELRY",
+    "engraving service|personal engraving|jewelry engraving options"
+  ],
+  [
+    "RING_RESIZING",
+    "JEWELRY",
+    "ring resizing service|ring resizing options|ring size adjustment service"
+  ],
+  [
+    "FURNITURE_DISASSEMBLY",
+    "HOME",
+    "furniture disassembly service|furniture dismantling service|bed dismantling service"
+  ],
+  [
+    "OLD_FURNITURE_COLLECTION",
+    "HOME",
+    "old furniture collection|old furniture removal service|used furniture collection"
+  ],
+  [
+    "VEHICLE_FITMENT",
+    "AUTOMOTIVE",
+    "vehicle fitment|car fitment|vehicle fitment guide"
+  ],
+  [
+    "PART_CORE_DEPOSIT",
+    "AUTOMOTIVE",
+    "part core deposit|refundable core charge|replacement part core charge"
+  ],
+  [
+    "SAFETY_DATA_SHEET",
+    "B2B",
+    "safety data sheet|safety data sheets|material safety data sheet"
+  ],
+  [
+    "CASE_PACK_QUANTITY",
+    "B2B",
+    "case pack quantity|units per carton|units per case"
+  ]
+]

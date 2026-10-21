@@ -1,0 +1,17 @@
+{
+  "total": 1000,
+  "baseline_passed": 698,
+  "language_passed": 1000,
+  "runtime_passed": 1000,
+  "runtime_outcomes": {
+    "products": 924,
+    "clarification": 76
+  },
+  "live_requests": 20,
+  "corpus_sha256": "7cc4dc76a3ca1f7549969df8d5d3508144f101b349cdcd28d12649ff91f41a19",
+  "deployed_language_passed": {
+    "grocery": 1000,
+    "jewelry": 1000
+  },
+  "live_http_errors": 0
+}

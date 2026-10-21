@@ -1,0 +1,51 @@
+name: Transactional durability qualification
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  local-recovery-matrix:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    env:
+      CARGO_BUILD_JOBS: 2
+    steps:
+      - uses: actions/checkout@v4
+      - uses: dtolnay/rust-toolchain@stable
+      - uses: Swatinem/rust-cache@v2
+        with:
+          workspaces: commerce-api/rocento-api
+      - name: Prepare synthetic test configuration
+        run: |
+          cp .env.example .env
+          mkdir -p evidence
+      - name: Build the candidate and compile test dependencies
+        run: |
+          cargo build --manifest-path commerce-api/rocento-api/Cargo.toml -p api-gateway --bin api-gateway --bin seed-admin --locked
+          cargo test --manifest-path commerce-api/rocento-api/Cargo.toml -p infra-db --lib --no-run --locked
+          cargo test --manifest-path commerce-api/rocento-api/Cargo.toml -p api-gateway --test orders --test cart_inventory --no-run --locked
+      - name: Database guard and checkout regressions
+        shell: bash
+        run: python3 commerce-ops/scripts/release/m14-unit.py | tee evidence/regressions.txt
+      - name: Complete HTTP commerce journey and customer isolation
+        shell: bash
+        run: python3 commerce-ops/scripts/release/system-qa-http.py | tee evidence/http-journey.txt
+      - name: Restart and volume persistence
+        shell: bash
+        run: python3 commerce-ops/scripts/release/m14-durability.py | tee evidence/storage.txt
+      - name: Graceful shutdown
+        shell: bash
+        run: python3 commerce-ops/scripts/release/m14-shutdown.py | tee evidence/shutdown.txt
+      - name: Checkout, replay, WAL restore and fenced failover
+        shell: bash
+        run: python3 commerce-ops/scripts/release/m14-recovery.py | tee evidence/recovery.txt
+      - name: Preserve non-secret qualification results
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: durability-${{ github.sha }}
+          path: |
+            evidence/*.txt
+            .local/m14/*/recovery-result.json
+          include-hidden-files: true
+          retention-days: 14

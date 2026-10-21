@@ -1,0 +1,168 @@
+{
+  "version": 1,
+  "catalog": [
+    {
+      "number": 1,
+      "name": "Black runner 42",
+      "price": "99"
+    },
+    {
+      "number": 2,
+      "name": "Budget runner 42",
+      "price": "79"
+    },
+    {
+      "number": 3,
+      "name": "Boundary runner",
+      "price": "120"
+    },
+    {
+      "number": 4,
+      "name": "Unavailable runner",
+      "price": "60",
+      "in_stock": false
+    },
+    {
+      "number": 5,
+      "name": "Unknown availability",
+      "price": "65",
+      "in_stock": null
+    },
+    {
+      "number": 6,
+      "name": "Wrong size",
+      "price": "70",
+      "attributes": [
+        {
+          "name": "size",
+          "value": "41"
+        },
+        {
+          "name": "color",
+          "value": "\"black\""
+        }
+      ]
+    },
+    {
+      "number": 7,
+      "name": "Configurable parent",
+      "price": "1",
+      "product_type": "configurable"
+    }
+  ],
+  "cases": [
+    {
+      "id": "budget-stock-variant",
+      "message": "black shoes size 42 in stock under $120",
+      "plan": {},
+      "catalog": [
+        1,
+        2,
+        3,
+        4,
+        6
+      ],
+      "ids": [
+        2,
+        1
+      ],
+      "tools": [
+        "get_catalog_schema",
+        "search_products"
+      ],
+      "text": "Matches to your verified constraints:",
+      "verified": [
+        "size=42 [MERCHANT]",
+        "color=black [MERCHANT]"
+      ]
+    },
+    {
+      "id": "no-exact-match",
+      "message": "black shoes size 42 in stock under $50",
+      "plan": {},
+      "catalog": [
+        1,
+        2,
+        4,
+        5,
+        7
+      ],
+      "ids": [],
+      "tools": [
+        "get_catalog_schema",
+        "search_products"
+      ],
+      "text": "I couldn’t find products matching your request in this store."
+    },
+    {
+      "id": "ambiguous-currency",
+      "message": "shoes under 50",
+      "plan": {
+        "max_price": "50"
+      },
+      "catalog": [
+        1,
+        2
+      ],
+      "ids": [],
+      "tools": [
+        "get_catalog_schema"
+      ],
+      "text": "Which currency"
+    },
+    {
+      "id": "followup-missing-reference",
+      "message": "similar but cheaper",
+      "plan": {
+        "cheaper": true
+      },
+      "catalog": [
+        1,
+        2
+      ],
+      "ids": [],
+      "tools": [
+        "get_catalog_schema"
+      ],
+      "text": "paste one product link"
+    },
+    {
+      "id": "exclusive-price-boundary",
+      "message": "shoes under $120",
+      "plan": {
+        "max_price": "999",
+        "currency": "USD"
+      },
+      "catalog": [
+        1,
+        2,
+        3
+      ],
+      "ids": [
+        2,
+        1
+      ],
+      "tools": [
+        "get_catalog_schema",
+        "search_products"
+      ],
+      "text": "99 USD"
+    },
+    {
+      "id": "stock-and-parent-not-sellable",
+      "message": "shoes in stock under $120",
+      "plan": {},
+      "catalog": [
+        4,
+        5,
+        7
+      ],
+      "ids": [],
+      "tools": [
+        "get_catalog_schema",
+        "search_products"
+      ],
+      "text": "I couldn’t find products matching your request in this store."
+    }
+  ]
+}

@@ -1,0 +1,3955 @@
+[
+  {
+    "id": "13dad5fd-ad72-5e0f-ab5f-521417a9ea1a",
+    "code": "general",
+    "name": "General Commerce",
+    "description": "Recommended general catalog attributes. Customize before applying.",
+    "status": "active",
+    "version": 1,
+    "metadata": {
+      "platform_template": true
+    },
+    "template": []
+  },
+  {
+    "id": "3104247c-e69a-5fbc-b4b9-aa256f261a69",
+    "code": "jewelry",
+    "name": "Jewelry",
+    "description": "Recommended jewelry catalog attributes. Customize before applying.",
+    "status": "active",
+    "version": 1,
+    "metadata": {
+      "platform_template": true
+    },
+    "template": [
+      {
+        "group": "Specifications",
+        "definition": {
+          "id": "00000000-0000-0000-0000-000000000000",
+          "entity_type": "product",
+          "attribute_code": "jewelry_type",
+          "label": "Jewelry Type",
+          "input_type": "select",
+          "scope": "global",
+          "is_required": false,
+          "is_unique": false,
+          "is_searchable": true,
+          "is_filterable": true,
+          "is_comparable": true,
+          "is_visible_on_front": true,
+          "used_for_promo_rules": false,
+          "used_for_configurations": false,
+          "swatch_type": "none",
+          "options": [
+            {
+              "value": "ring",
+              "label": "Ring",
+              "labels": {}
+            },
+            {
+              "value": "necklace",
+              "label": "Necklace",
+              "labels": {}
+            },
+            {
+              "value": "bracelet",
+              "label": "Bracelet",
+              "labels": {}
+            },
+            {
+              "value": "earrings",
+              "label": "Earrings",
+              "labels": {}
+            },
+            {
+              "value": "brooch",
+              "label": "Brooch",
+              "labels": {}
+            }
+          ],
+          "version": 0,
+          "metadata": {
+            "ai_queryable": true,
+            "ai_enrichable": false,
+            "source_policy": "factual",
+            "unit": null,
+            "display_order": 0,
+            "facetable": true,
+            "semantic_role": "classification"
+          }
+        }
+      },
+      {
+        "group": "Material",
+        "definition": {
+          "id": "00000000-0000-0000-0000-000000000000",
+          "entity_type": "product",
+          "attribute_code": "metal",
+          "label": "Metal",
+          "input_type": "select",
+          "scope": "global",
+          "is_required": false,
+          "is_unique": false,
+          "is_searchable": true,
+          "is_filterable": true,
+          "is_comparable": true,
+          "is_visible_on_front": true,
+          "used_for_promo_rules": false,
+          "used_for_configurations": false,
+          "swatch_type": "none",
+          "options": [
+            {
+              "value": "gold",
+              "label": "Gold",
+              "labels": {}
+            },
+            {
+              "value": "silver",
+              "label": "Silver",
+              "labels": {}
+            },
+            {
+              "value": "platinum",
+              "label": "Platinum",
+              "labels": {}
+            }
+          ],
+          "version": 0,
+          "metadata": {
+            "ai_queryable": true,
+            "ai_enrichable": false,
+            "source_policy": "factual",
+            "unit": null,
+            "display_order": 1,
+            "facetable": true
+          }
+        }
+      },
+      {
+        "group": "Material",
+        "definition": {
+          "id": "00000000-0000-0000-0000-000000000000",
+          "entity_type": "product",
+          "attribute_code": "metal_color",
+          "label": "Metal Color",
+          "input_type": "select",
+          "scope": "global",
+          "is_required": false,
+          "is_unique": false,
+          "is_searchable": true,
+          "is_filterable": true,
+          "is_comparable": true,
+          "is_visible_on_front": true,
+          "used_for_promo_rules": false,
+          "used_for_configurations": false,
+          "swatch_type": "none",
+          "options": [
+            {
+              "value": "yellow",
+              "label": "Yellow",
+              "labels": {}
+            },
+            {
+              "value": "white",
+              "label": "White",
+              "labels": {}
+            },
+            {
+              "value": "rose",
+              "label": "Rose",
+              "labels": {}
+            }
+          ],
+          "version": 0,
+          "metadata": {
+            "ai_queryable": true,
+            "ai_enrichable": false,
+            "source_policy": "factual",
+            "unit": null,
+            "display_order": 2,
+            "facetable": true
+          }
+        }
+      },
+      {
+        "group": "Material",
+        "definition": {
+          "id": "00000000-0000-0000-0000-000000000000",
+          "entity_type": "product",
+          "attribute_code": "metal_purity",
+          "label": "Metal Purity",
+          "input_type": "select",
+          "scope": "global",
+          "is_required": false,
+          "is_unique": false,
+          "is_searchable": true,
+          "is_filterable": true,
+          "is_comparable": true,
+          "is_visible_on_front": true,
+          "used_for_promo_rules": false,
+          "used_for_configurations": false,
+          "swatch_type": "none",
+          "options": [
+            {
+              "value": "9k",
+              "label": "9K",
+              "labels": {}
+            },
+            {
+              "value": "14k",
+              "label": "14K",
+              "labels": {}
+            },
+            {
+              "value": "18k",
+              "label": "18K",
+              "labels": {}
+            },
+            {
+              "value": "22k",
+              "label": "22K",
+              "labels": {}
+            },
+            {
+              "value": "24k",
+              "label": "24K",
+              "labels": {}
+            },
+            {
+              "value": "925",
+              "label": "925",
+              "labels": {}
+            }
+          ],
+          "version": 0,
+          "metadata": {
+            "ai_queryable": true,
+            "ai_enrichable": false,
+            "source_policy": "factual",
+            "unit": null,
+            "display_order": 3,
+            "facetable": true
+          }
+        }
+      },
+      {
+        "group": "Gemstone",
+        "definition": {
+          "id": "00000000-0000-0000-0000-000000000000",
+          "entity_type": "product",
+          "attribute_code": "gemstone",
+          "label": "Gemstone",
+          "input_type": "select",
+          "scope": "global",
+          "is_required": false,
+          "is_unique": false,
+          "is_searchable": true,
+          "is_filterable": true,
+          "is_comparable": true,
+          "is_visible_on_front": true,
+          "used_for_promo_rules": false,
+          "used_for_configurations": false,
+          "swatch_type": "none",
+          "options": [
+            {
+              "value": "ruby",
+              "label": "Ruby",
+              "labels": {}
+            },
+            {
+              "value": "diamond",
+              "label": "Diamond",
+              "labels": {}
+            },
+            {
+              "value": "emerald",
+              "label": "Emerald",
+              "labels": {}
+            },
+            {
+              "value": "sapphire",
+              "label": "Sapphire",
+              "labels": {}
+            },
+            {
+              "value": "pearl",
+              "label": "Pearl",
+              "labels": {}
+            },
+            {
+              "value": "none",
+              "label": "None",
+              "labels": {}
+            }
+          ],
+          "version": 0,
+          "metadata": {
+            "ai_queryable": true,
+            "ai_enrichable": false,
+            "source_policy": "factual",
+            "unit": null,
+            "display_order": 4,
+            "facetable": true
+          }
+        }
+      },
+      {
+        "group": "Gemstone",
+        "definition": {
+          "id": "00000000-0000-0000-0000-000000000000",
+          "entity_type": "product",
+          "attribute_code": "gemstone_color",
+          "label": "Gemstone Color",
+          "input_type": "select",
+          "scope": "global",
+          "is_required": false,
+          "is_unique": false,
+          "is_searchable": true,
+          "is_filterable": true,
+          "is_comparable": true,
+          "is_visible_on_front": true,
+          "used_for_promo_rules": false,
+          "used_for_configurations": false,
+          "swatch_type": "none",
+          "options": [
+            {
+              "value": "red",
+              "label": "Red",
+              "labels": {}
+            },
+            {
+              "value": "blue",
+              "label": "Blue",
+              "labels": {}
+            },
+            {
+              "value": "green",
+              "label": "Green",
+              "labels": {}
+            },
+            {
+              "value": "white",
+              "label": "White",
+              "labels": {}
+            },
+            {
+              "value": "black",
+              "label": "Black",
+              "labels": {}
+            },
+            {
+              "value": "pink",
+              "label": "Pink",
+              "labels": {}
+            },
+            {
+              "value": "purple",
+              "label": "Purple",
+              "labels": {}
+            }
+          ],
+          "version": 0,
+          "metadata": {
+            "ai_queryable": true,
+            "ai_enrichable": false,
+            "source_policy": "factual",
+            "unit": null,
+            "display_order": 5,
+            "facetable": true
+          }
+        }
+      },
+      {
+        "group": "Gemstone",
+        "definition": {
+          "id": "00000000-0000-0000-0000-000000000000",
+          "entity_type": "product",
+          "attribute_code": "gemstone_shape",
+          "label": "Gemstone Shape",
+          "input_type": "select",
+          "scope": "global",
+          "is_required": false,
+          "is_unique": false,
+          "is_searchable": true,
+          "is_filterable": true,
+          "is_comparable": true,
+          "is_visible_on_front": true,
+          "used_for_promo_rules": false,
+          "used_for_configurations": false,
+          "swatch_type": "none",
+          "options": [
+            {
+              "value": "round",
+              "label": "Round",
+              "labels": {}
+            },
+            {
+              "value": "oval",
+              "label": "Oval",
+              "labels": {}
+            },
+            {
+              "value": "pear",
+              "label": "Pear",
+              "labels": {}
+            },
+            {
+              "value": "emerald",
+              "label": "Emerald",
+              "labels": {}
+            }
+          ],
+          "version": 0,
+          "metadata": {
+            "ai_queryable": true,
+            "ai_enrichable": false,
+            "source_policy": "factual",
+            "unit": null,
+            "display_order": 6,
+            "facetable": true
+          }
+        }
+      },
+      {
+        "group": "Gemstone",
+        "definition": {
+          "id": "00000000-0000-0000-0000-000000000000",
+          "entity_type": "product",
+          "attribute_code": "carat_weight",
+          "label": "Carat Weight",
+          "input_type": "measurement",
+          "scope": "global",
+          "is_required": false,
+          "is_unique": false,
+          "is_searchable": true,
+          "is_filterable": true,
+          "is_comparable": true,
+          "is_visible_on_front": true,
+          "used_for_promo_rules": false,
+          "used_for_configurations": false,
+          "swatch_type": "none",
+          "options": [],
+          "version": 0,
+          "metadata": {
+            "ai_queryable": true,
+            "ai_enrichable": false,
+            "source_policy": "factual",
+            "unit": "ct",
+            "display_order": 7,
+            "facetable": true
+          }
+        }
+      },
+      {
+        "group": "Specifications",
+        "definition": {
+          "id": "00000000-0000-0000-0000-000000000000",
+          "entity_type": "product",
+          "attribute_code": "ring_size",
+          "label": "Ring Size",
+          "input_type": "text",
+          "scope": "global",
+          "is_required": false,
+          "is_unique": false,
+          "is_searchable": true,
+          "is_filterable": true,
+          "is_comparable": true,
+          "is_visible_on_front": true,
+          "used_for_promo_rules": false,
+          "used_for_configurations": false,
+          "swatch_type": "none",
+          "options": [],
+          "version": 0,
+          "metadata": {
+            "ai_queryable": true,
+            "ai_enrichable": false,
+            "source_policy": "factual",
+            "unit": null,
+            "display_order": 8,
+            "facetable": true
+          }
+        }
+      },
+      {
+        "group": "Specifications",
+        "definition": {
+          "id": "00000000-0000-0000-0000-000000000000",
+          "entity_type": "product",
+          "attribute_code": "chain_length",
+          "label": "Chain Length",
+          "input_type": "measurement",
+          "scope": "global",
+          "is_required": false,
+          "is_unique": false,
+          "is_searchable": true,
+          "is_filterable": true,
+          "is_comparable": true,
+          "is_visible_on_front": true,
+          "used_for_promo_rules": false,
+          "used_for_configurations": false,
+          "swatch_type": "none",
+          "options": [],
+          "version": 0,
+          "metadata": {
+            "ai_queryable": true,
+            "ai_enrichable": false,
+            "source_policy": "factual",
+            "unit": "cm",
+            "display_order": 9,
+            "facetable": true
+          }
+        }
+      },
+      {
+        "group": "Style & preferences",
+        "definition": {
+          "id": "00000000-0000-0000-0000-000000000000",
+          "entity_type": "product",
+          "attribute_code": "style",
+          "label": "Style",
+          "input_type": "multiselect",
+          "scope": "global",
+          "is_required": false,
+          "is_unique": false,
+          "is_searchable": true,
+          "is_filterable": true,
+          "is_comparable": true,
+          "is_visible_on_front": true,
+          "used_for_promo_rules": false,
+          "used_for_configurations": false,
+          "swatch_type": "none",
+          "options": [
+            {
+              "value": "luxury",
+              "label": "Luxury",
+              "labels": {}
+            },
+            {
+              "value": "minimalist",
+              "label": "Minimalist",
+              "labels": {}
+            },
+            {
+              "value": "elegant",
+              "label": "Elegant",
+              "labels": {}
+            },
+            {
+              "value": "casual",
+              "label": "Casual",
+              "labels": {}
+            },
+            {
+              "value": "premium",
+              "label": "Premium",
+              "labels": {}
+            },
+            {
+              "value": "everyday",
+              "label": "Everyday",
+              "labels": {}
+            },
+            {
+              "value": "formal",
+              "label": "Formal",
+              "labels": {}
+            },
+            {
+              "value": "classic",
+              "label": "Classic",
+              "labels": {}
+            },
+            {
+              "value": "modern",
+              "label": "Modern",
+              "labels": {}
+            }
+          ],
+          "version": 0,
+          "metadata": {
+            "ai_queryable": true,
+            "ai_enrichable": true,
+            "source_policy": "semantic",
+            "unit": null,
+            "display_order": 10,
+            "facetable": true
+          }
+        }
+      },
+      {
+        "group": "Style & preferences",
+        "definition": {
+          "id": "00000000-0000-0000-0000-000000000000",
+          "entity_type": "product",
+          "attribute_code": "occasion",
+          "label": "Occasion",
+          "input_type": "multiselect",
+          "scope": "global",
+          "is_required": false,
+          "is_unique": false,
+          "is_searchable": true,
+          "is_filterable": true,
+          "is_comparable": true,
+          "is_visible_on_front": true,
+          "used_for_promo_rules": false,
+          "used_for_configurations": false,
+          "swatch_type": "none",
+          "options": [
+            {
+              "value": "wedding",
+              "label": "Wedding",
+              "labels": {}
+            },
+            {
+              "value": "evening",
+              "label": "Evening",
+              "labels": {}
+            },
+            {
+              "value": "everyday",
+              "label": "Everyday",
+              "labels": {}
+            },
+            {
+              "value": "gift",
+              "label": "Gift",
+              "labels": {}
+            }
+          ],
+          "version": 0,
+          "metadata": {
+            "ai_queryable": true,
+            "ai_enrichable": true,
+            "source_policy": "semantic",
+            "unit": null,
+            "display_order": 11,
+            "facetable": true
+          }
+        }
+      },
+      {
+        "group": "Specifications",
+        "definition": {
+          "id": "00000000-0000-0000-0000-000000000000",
+          "entity_type": "product",
+          "attribute_code": "collection",
+          "label": "Collection",
+          "input_type": "text",
+          "scope": "global",
+          "is_required": false,
+          "is_unique": false,
+          "is_searchable": true,
+          "is_filterable": true,
+          "is_comparable": true,
+          "is_visible_on_front": true,
+          "used_for_promo_rules": false,
+          "used_for_configurations": false,
+          "swatch_type": "none",
+          "options": [],
+          "version": 0,
+          "metadata": {
+            "ai_queryable": true,
+            "ai_enrichable": false,
+            "source_policy": "factual",
+            "unit": null,
+            "display_order": 12,
+            "facetable": true
+          }
+        }
+      },
+      {
+        "group": "Material",
+        "definition": {
+          "id": "00000000-0000-0000-0000-000000000000",
+          "entity_type": "product",
+          "attribute_code": "finish",
+          "label": "Finish",
+          "input_type": "text",
+          "scope": "global",
+          "is_required": false,
+          "is_unique": false,
+          "is_searchable": true,
+          "is_filterable": true,
+          "is_comparable": true,
+          "is_visible_on_front": true,
+          "used_for_promo_rules": false,
+          "used_for_configurations": false,
+          "swatch_type": "none",
+          "options": [],
+          "version": 0,
+          "metadata": {
+            "ai_queryable": true,
+            "ai_enrichable": false,
+            "source_policy": "factual",
+            "unit": null,
+            "display_order": 13,
+            "facetable": true
+          }
+        }
+      },
+      {
+        "group": "Specifications",
+        "definition": {
+          "id": "00000000-0000-0000-0000-000000000000",
+          "entity_type": "product",
+          "attribute_code": "certification",
+          "label": "Certification",
+          "input_type": "text",
+          "scope": "global",
+          "is_required": false,
+          "is_unique": false,
+          "is_searchable": true,
+          "is_filterable": true,
+          "is_comparable": true,
+          "is_visible_on_front": true,
+          "used_for_promo_rules": false,
+          "used_for_configurations": false,
+          "swatch_type": "none",
+          "options": [],
+          "version": 0,
+          "metadata": {
+            "ai_queryable": true,
+            "ai_enrichable": false,
+            "source_policy": "factual",
+            "unit": null,
+            "display_order": 14,
+            "facetable": true
+          }
+        }
+      }
+    ]
+  },
+  {
+    "id": "7ea40c2e-16d1-5018-b13e-9c6c8457db29",
+    "code": "skincare",
+    "name": "Skincare",
+    "description": "Recommended skincare catalog attributes. Customize before applying.",
+    "status": "active",
+    "version": 1,
+    "metadata": {
+      "platform_template": true
+    },
+    "template": [
+      {
+        "group": "Specifications",
+        "definition": {
+          "id": "00000000-0000-0000-0000-000000000000",
+          "entity_type": "product",
+          "attribute_code": "product_type",
+          "label": "Product Type",
+          "input_type": "text",
+          "scope": "global",
+          "is_required": false,
+          "is_unique": false,
+          "is_searchable": true,
+          "is_filterable": true,
+          "is_comparable": true,
+          "is_visible_on_front": true,
+          "used_for_promo_rules": false,
+          "used_for_configurations": false,
+          "swatch_type": "none",
+          "options": [],
+          "version": 0,
+          "metadata": {
+            "ai_queryable": true,
+            "ai_enrichable": false,
+            "source_policy": "factual",
+            "unit": null,
+            "display_order": 0,
+            "facetable": true,
+            "semantic_role": "classification"
+          }
+        }
+      },
+      {
+        "group": "Specifications",
+        "definition": {
+          "id": "00000000-0000-0000-0000-000000000000",
+          "entity_type": "product",
+          "attribute_code": "skin_type",
+          "label": "Skin Type",
+          "input_type": "multiselect",
+          "scope": "global",
+          "is_required": false,
+          "is_unique": false,
+          "is_searchable": true,
+          "is_filterable": true,
+          "is_comparable": true,
+          "is_visible_on_front": true,
+          "used_for_promo_rules": false,
+          "used_for_configurations": false,
+          "swatch_type": "none",
+          "options": [
+            {
+              "value": "dry",
+              "label": "Dry",
+              "labels": {}
+            },
+            {
+              "value": "oily",
+              "label": "Oily",
+              "labels": {}
+            },
+            {
+              "value": "combination",
+              "label": "Combination",
+              "labels": {}
+            },
+            {
+              "value": "normal",
+              "label": "Normal",
+              "labels": {}
+            },
+            {
+              "value": "sensitive",
+              "label": "Sensitive",
+              "labels": {}
+            }
+          ],
+          "version": 0,
+          "metadata": {
+            "ai_queryable": true,
+            "ai_enrichable": false,
+            "source_policy": "factual",
+            "unit": null,
+            "display_order": 1,
+            "facetable": true
+          }
+        }
+      },
+      {
+        "group": "Specifications",
+        "definition": {
+          "id": "00000000-0000-0000-0000-000000000000",
+          "entity_type": "product",
+          "attribute_code": "skin_concern",
+          "label": "Skin Concern",
+          "input_type": "multiselect",
+          "scope": "global",
+          "is_required": false,
+          "is_unique": false,
+          "is_searchable": true,
+          "is_filterable": true,
+          "is_comparable": true,
+          "is_visible_on_front": true,
+          "used_for_promo_rules": false,
+          "used_for_configurations": false,
+          "swatch_type": "none",
+          "options": [
+            {
+              "value": "dryness",
+              "label": "Dryness",
+              "labels": {}
+            },
+            {
+              "value": "oiliness",
+              "label": "Oiliness",
+              "labels": {}
+            },
+            {
+              "value": "blemishes",
+              "label": "Blemishes",
+              "labels": {}
+            },
+            {
+              "value": "dullness",
+              "label": "Dullness",
+              "labels": {}
+            }
+          ],
+          "version": 0,
+          "metadata": {
+            "ai_queryable": true,
+            "ai_enrichable": false,
+            "source_policy": "factual",
+            "unit": null,
+            "display_order": 2,
+            "facetable": true
+          }
+        }
+      },
+      {
+        "group": "Specifications",
+        "definition": {
+          "id": "00000000-0000-0000-0000-000000000000",
+          "entity_type": "product",
+          "attribute_code": "active_ingredients",
+          "label": "Active Ingredients",
+          "input_type": "text",
+          "scope": "global",
+          "is_required": false,
+          "is_unique": false,
+          "is_searchable": true,
+          "is_filterable": true,
+          "is_comparable": true,
+          "is_visible_on_front": true,
+          "used_for_promo_rules": false,
+          "used_for_configurations": false,
+          "swatch_type": "none",
+          "options": [],
+          "version": 0,
+          "metadata": {
+            "ai_queryable": true,
+            "ai_enrichable": false,
+            "source_policy": "trusted_only",
+            "unit": null,
+            "display_order": 3,
+            "facetable": true
+          }
+        }
+      },
+      {
+        "group": "Specifications",
+        "definition": {
+          "id": "00000000-0000-0000-0000-000000000000",
+          "entity_type": "product",
+          "attribute_code": "key_ingredients",
+          "label": "Key Ingredients",
+          "input_type": "text",
+          "scope": "global",
+          "is_required": false,
+          "is_unique": false,
+          "is_searchable": true,
+          "is_filterable": true,
+          "is_comparable": true,
+          "is_visible_on_front": true,
+          "used_for_promo_rules": false,
+          "used_for_configurations": false,
+          "swatch_type": "none",
+          "options": [],
+          "version": 0,
+          "metadata": {
+            "ai_queryable": true,
+            "ai_enrichable": false,
+            "source_policy": "trusted_only",
+            "unit": null,
+            "display_order": 4,
+            "facetable": true
+          }
+        }
+      },
+      {
+        "group": "Specifications",
+        "definition": {
+          "id": "00000000-0000-0000-0000-000000000000",
+          "entity_type": "product",
+          "attribute_code": "ingredients",
+          "label": "Ingredients",
+          "input_type": "textarea",
+          "scope": "global",
+          "is_required": false,
+          "is_unique": false,
+          "is_searchable": false,
+          "is_filterable": false,
+          "is_comparable": true,
+          "is_visible_on_front": true,
+          "used_for_promo_rules": false,
+          "used_for_configurations": false,
+          "swatch_type": "none",
+          "options": [],
+          "version": 0,
+          "metadata": {
+            "ai_queryable": true,
+            "ai_enrichable": false,
+            "source_policy": "trusted_only",
+            "unit": null,
+            "display_order": 5,
+            "facetable": false
+          }
+        }
+      },
+      {
+        "group": "Specifications",
+        "definition": {
+          "id": "00000000-0000-0000-0000-000000000000",
+          "entity_type": "product",
+          "attribute_code": "ingredient_free_from",
+          "label": "Ingredient Free From",
+          "input_type": "text",
+          "scope": "global",
+          "is_required": false,
+          "is_unique": false,
+          "is_searchable": true,
+          "is_filterable": true,
+          "is_comparable": true,
+          "is_visible_on_front": true,
+          "used_for_promo_rules": false,
+          "used_for_configurations": false,
+          "swatch_type": "none",
+          "options": [],
+          "version": 0,
+          "metadata": {
+            "ai_queryable": true,
+            "ai_enrichable": false,
+            "source_policy": "factual",
+            "unit": null,
+            "display_order": 6,
+            "facetable": true
+          }
+        }
+      },
+      {
+        "group": "Specifications",
+        "definition": {
+          "id": "00000000-0000-0000-0000-000000000000",
+          "entity_type": "product",
+          "attribute_code": "texture",
+          "label": "Texture",
+          "input_type": "text",
+          "scope": "global",
+          "is_required": false,
+          "is_unique": false,
+          "is_searchable": true,
+          "is_filterable": true,
+          "is_comparable": true,
+          "is_visible_on_front": true,
+          "used_for_promo_rules": false,
+          "used_for_configurations": false,
+          "swatch_type": "none",
+          "options": [],
+          "version": 0,
+          "metadata": {
+            "ai_queryable": true,
+            "ai_enrichable": false,
+            "source_policy": "factual",
+            "unit": null,
+            "display_order": 7,
+            "facetable": true
+          }
+        }
+      },
+      {
+        "group": "Specifications",
+        "definition": {
+          "id": "00000000-0000-0000-0000-000000000000",
+          "entity_type": "product",
+          "attribute_code": "formulation",
+          "label": "Formulation",
+          "input_type": "text",
+          "scope": "global",
+          "is_required": false,
+          "is_unique": false,
+          "is_searchable": true,
+          "is_filterable": true,
+          "is_comparable": true,
+          "is_visible_on_front": true,
+          "used_for_promo_rules": false,
+          "used_for_configurations": false,
+          "swatch_type": "none",
+          "options": [],
+          "version": 0,
+          "metadata": {
+            "ai_queryable": true,
+            "ai_enrichable": false,
+            "source_policy": "factual",
+            "unit": null,
+            "display_order": 8,
+            "facetable": true
+          }
+        }
+      },
+      {
+        "group": "Specifications",
+        "definition": {
+          "id": "00000000-0000-0000-0000-000000000000",
+          "entity_type": "product",
+          "attribute_code": "spf",
+          "label": "Spf",
+          "input_type": "integer",
+          "scope": "global",
+          "is_required": false,
+          "is_unique": false,
+          "is_searchable": true,
+          "is_filterable": true,
+          "is_comparable": true,
+          "is_visible_on_front": true,
+          "used_for_promo_rules": false,
+          "used_for_configurations": false,
+          "swatch_type": "none",
+          "options": [],
+          "version": 0,
+          "metadata": {
+            "ai_queryable": true,
+            "ai_enrichable": false,
+            "source_policy": "trusted_only",
+            "unit": null,
+            "display_order": 9,
+            "facetable": true
+          }
+        }
+      },
+      {
+        "group": "Specifications",
+        "definition": {
+          "id": "00000000-0000-0000-0000-000000000000",
+          "entity_type": "product",
+          "attribute_code": "pa_rating",
+          "label": "Pa Rating",
+          "input_type": "text",
+          "scope": "global",
+          "is_required": false,
+          "is_unique": false,
+          "is_searchable": true,
+          "is_filterable": true,
+          "is_comparable": true,
+          "is_visible_on_front": true,
+          "used_for_promo_rules": false,
+          "used_for_configurations": false,
+          "swatch_type": "none",
+          "options": [],
+          "version": 0,
+          "metadata": {
+            "ai_queryable": true,
+            "ai_enrichable": false,
+            "source_policy": "trusted_only",
+            "unit": null,
+            "display_order": 10,
+            "facetable": true
+          }
+        }
+      },
+      {
+        "group": "Specifications",
+        "definition": {
+          "id": "00000000-0000-0000-0000-000000000000",
+          "entity_type": "product",
+          "attribute_code": "application_area",
+          "label": "Application Area",
+          "input_type": "text",
+          "scope": "global",
+          "is_required": false,
+          "is_unique": false,
+          "is_searchable": true,
+          "is_filterable": true,
+          "is_comparable": true,
+          "is_visible_on_front": true,
+          "used_for_promo_rules": false,
+          "used_for_configurations": false,
+          "swatch_type": "none",
+          "options": [],
+          "version": 0,
+          "metadata": {
+            "ai_queryable": true,
+            "ai_enrichable": false,
+            "source_policy": "factual",
+            "unit": null,
+            "display_order": 11,
+            "facetable": true
+          }
+        }
+      },
+      {
+        "group": "Specifications",
+        "definition": {
+          "id": "00000000-0000-0000-0000-000000000000",
+          "entity_type": "product",
+          "attribute_code": "usage_time",
+          "label": "Usage Time",
+          "input_type": "text",
+          "scope": "global",
+          "is_required": false,
+          "is_unique": false,
+          "is_searchable": true,
+          "is_filterable": true,
+          "is_comparable": true,
+          "is_visible_on_front": true,
+          "used_for_promo_rules": false,
+          "used_for_configurations": false,
+          "swatch_type": "none",
+          "options": [],
+          "version": 0,
+          "metadata": {
+            "ai_queryable": true,
+            "ai_enrichable": false,
+            "source_policy": "factual",
+            "unit": null,
+            "display_order": 12,
+            "facetable": true
+          }
+        }
+      },
+      {
+        "group": "Specifications",
+        "definition": {
+          "id": "00000000-0000-0000-0000-000000000000",
+          "entity_type": "product",
+          "attribute_code": "fragrance",
+          "label": "Fragrance",
+          "input_type": "text",
+          "scope": "global",
+          "is_required": false,
+          "is_unique": false,
+          "is_searchable": true,
+          "is_filterable": true,
+          "is_comparable": true,
+          "is_visible_on_front": true,
+          "used_for_promo_rules": false,
+          "used_for_configurations": false,
+          "swatch_type": "none",
+          "options": [],
+          "version": 0,
+          "metadata": {
+            "ai_queryable": true,
+            "ai_enrichable": false,
+            "source_policy": "factual",
+            "unit": null,
+            "display_order": 13,
+            "facetable": true
+          }
+        }
+      },
+      {
+        "group": "Specifications",
+        "definition": {
+          "id": "00000000-0000-0000-0000-000000000000",
+          "entity_type": "product",
+          "attribute_code": "non_comedogenic",
+          "label": "Non Comedogenic",
+          "input_type": "boolean",
+          "scope": "global",
+          "is_required": false,
+          "is_unique": false,
+          "is_searchable": true,
+          "is_filterable": true,
+          "is_comparable": true,
+          "is_visible_on_front": true,
+          "used_for_promo_rules": false,
+          "used_for_configurations": false,
+          "swatch_type": "none",
+          "options": [],
+          "version": 0,
+          "metadata": {
+            "ai_queryable": true,
+            "ai_enrichable": false,
+            "source_policy": "trusted_only",
+            "unit": null,
+            "display_order": 14,
+            "facetable": true
+          }
+        }
+      },
+      {
+        "group": "Specifications",
+        "definition": {
+          "id": "00000000-0000-0000-0000-000000000000",
+          "entity_type": "product",
+          "attribute_code": "hypoallergenic",
+          "label": "Hypoallergenic",
+          "input_type": "boolean",
+          "scope": "global",
+          "is_required": false,
+          "is_unique": false,
+          "is_searchable": true,
+          "is_filterable": true,
+          "is_comparable": true,
+          "is_visible_on_front": true,
+          "used_for_promo_rules": false,
+          "used_for_configurations": false,
+          "swatch_type": "none",
+          "options": [],
+          "version": 0,
+          "metadata": {
+            "ai_queryable": true,
+            "ai_enrichable": false,
+            "source_policy": "trusted_only",
+            "unit": null,
+            "display_order": 15,
+            "facetable": true
+          }
+        }
+      },
+      {
+        "group": "Specifications",
+        "definition": {
+          "id": "00000000-0000-0000-0000-000000000000",
+          "entity_type": "product",
+          "attribute_code": "dermatologist_tested",
+          "label": "Dermatologist Tested",
+          "input_type": "boolean",
+          "scope": "global",
+          "is_required": false,
+          "is_unique": false,
+          "is_searchable": true,
+          "is_filterable": true,
+          "is_comparable": true,
+          "is_visible_on_front": true,
+          "used_for_promo_rules": false,
+          "used_for_configurations": false,
+          "swatch_type": "none",
+          "options": [],
+          "version": 0,
+          "metadata": {
+            "ai_queryable": true,
+            "ai_enrichable": false,
+            "source_policy": "trusted_only",
+            "unit": null,
+            "display_order": 16,
+            "facetable": true
+          }
+        }
+      },
+      {
+        "group": "Specifications",
+        "definition": {
+          "id": "00000000-0000-0000-0000-000000000000",
+          "entity_type": "product",
+          "attribute_code": "volume",
+          "label": "Volume",
+          "input_type": "measurement",
+          "scope": "global",
+          "is_required": false,
+          "is_unique": false,
+          "is_searchable": true,
+          "is_filterable": true,
+          "is_comparable": true,
+          "is_visible_on_front": true,
+          "used_for_promo_rules": false,
+          "used_for_configurations": false,
+          "swatch_type": "none",
+          "options": [],
+          "version": 0,
+          "metadata": {
+            "ai_queryable": true,
+            "ai_enrichable": false,
+            "source_policy": "factual",
+            "unit": "ml",
+            "display_order": 17,
+            "facetable": true
+          }
+        }
+      }
+    ]
+  },
+  {
+    "id": "8b5c8502-73a3-544f-9bb0-6c765988de9d",
+    "code": "pharmacy",
+    "name": "Pharmacy",
+    "description": "Recommended pharmacy catalog attributes. Customize before applying.",
+    "status": "active",
+    "version": 1,
+    "metadata": {
+      "platform_template": true
+    },
+    "template": [
+      {
+        "group": "Specifications",
+        "definition": {
+          "id": "00000000-0000-0000-0000-000000000000",
+          "entity_type": "product",
+          "attribute_code": "product_type",
+          "label": "Product Type",
+          "input_type": "text",
+          "scope": "global",
+          "is_required": false,
+          "is_unique": false,
+          "is_searchable": true,
+          "is_filterable": true,
+          "is_comparable": true,
+          "is_visible_on_front": true,
+          "used_for_promo_rules": false,
+          "used_for_configurations": false,
+          "swatch_type": "none",
+          "options": [],
+          "version": 0,
+          "metadata": {
+            "ai_queryable": true,
+            "ai_enrichable": false,
+            "source_policy": "trusted_only",
+            "unit": null,
+            "display_order": 0,
+            "facetable": true,
+            "semantic_role": "classification"
+          }
+        }
+      },
+      {
+        "group": "Specifications",
+        "definition": {
+          "id": "00000000-0000-0000-0000-000000000000",
+          "entity_type": "product",
+          "attribute_code": "active_ingredient",
+          "label": "Active Ingredient",
+          "input_type": "text",
+          "scope": "global",
+          "is_required": false,
+          "is_unique": false,
+          "is_searchable": true,
+          "is_filterable": true,
+          "is_comparable": true,
+          "is_visible_on_front": true,
+          "used_for_promo_rules": false,
+          "used_for_configurations": false,
+          "swatch_type": "none",
+          "options": [],
+          "version": 0,
+          "metadata": {
+            "ai_queryable": true,
+            "ai_enrichable": false,
+            "source_policy": "trusted_only",
+            "unit": null,
+            "display_order": 1,
+            "facetable": true
+          }
+        }
+      },
+      {
+        "group": "Specifications",
+        "definition": {
+          "id": "00000000-0000-0000-0000-000000000000",
+          "entity_type": "product",
+          "attribute_code": "strength",
+          "label": "Strength",
+          "input_type": "text",
+          "scope": "global",
+          "is_required": false,
+          "is_unique": false,
+          "is_searchable": true,
+          "is_filterable": true,
+          "is_comparable": true,
+          "is_visible_on_front": true,
+          "used_for_promo_rules": false,
+          "used_for_configurations": false,
+          "swatch_type": "none",
+          "options": [],
+          "version": 0,
+          "metadata": {
+            "ai_queryable": true,
+            "ai_enrichable": false,
+            "source_policy": "trusted_only",
+            "unit": null,
+            "display_order": 2,
+            "facetable": true
+          }
+        }
+      },
+      {
+        "group": "Specifications",
+        "definition": {
+          "id": "00000000-0000-0000-0000-000000000000",
+          "entity_type": "product",
+          "attribute_code": "dosage_form",
+          "label": "Dosage Form",
+          "input_type": "select",
+          "scope": "global",
+          "is_required": false,
+          "is_unique": false,
+          "is_searchable": true,
+          "is_filterable": true,
+          "is_comparable": true,
+          "is_visible_on_front": true,
+          "used_for_promo_rules": false,
+          "used_for_configurations": false,
+          "swatch_type": "none",
+          "options": [
+            {
+              "value": "tablet",
+              "label": "Tablet",
+              "labels": {}
+            },
+            {
+              "value": "capsule",
+              "label": "Capsule",
+              "labels": {}
+            },
+            {
+              "value": "liquid",
+              "label": "Liquid",
+              "labels": {}
+            },
+            {
+              "value": "cream",
+              "label": "Cream",
+              "labels": {}
+            },
+            {
+              "value": "gel",
+              "label": "Gel",
+              "labels": {}
+            }
+          ],
+          "version": 0,
+          "metadata": {
+            "ai_queryable": true,
+            "ai_enrichable": false,
+            "source_policy": "trusted_only",
+            "unit": null,
+            "display_order": 3,
+            "facetable": true
+          }
+        }
+      },
+      {
+        "group": "Specifications",
+        "definition": {
+          "id": "00000000-0000-0000-0000-000000000000",
+          "entity_type": "product",
+          "attribute_code": "route_of_administration",
+          "label": "Route Of Administration",
+          "input_type": "text",
+          "scope": "global",
+          "is_required": false,
+          "is_unique": false,
+          "is_searchable": true,
+          "is_filterable": true,
+          "is_comparable": true,
+          "is_visible_on_front": true,
+          "used_for_promo_rules": false,
+          "used_for_configurations": false,
+          "swatch_type": "none",
+          "options": [],
+          "version": 0,
+          "metadata": {
+            "ai_queryable": true,
+            "ai_enrichable": false,
+            "source_policy": "trusted_only",
+            "unit": null,
+            "display_order": 4,
+            "facetable": true
+          }
+        }
+      },
+      {
+        "group": "Specifications",
+        "definition": {
+          "id": "00000000-0000-0000-0000-000000000000",
+          "entity_type": "product",
+          "attribute_code": "pack_size",
+          "label": "Pack Size",
+          "input_type": "text",
+          "scope": "global",
+          "is_required": false,
+          "is_unique": false,
+          "is_searchable": true,
+          "is_filterable": true,
+          "is_comparable": true,
+          "is_visible_on_front": true,
+          "used_for_promo_rules": false,
+          "used_for_configurations": false,
+          "swatch_type": "none",
+          "options": [],
+          "version": 0,
+          "metadata": {
+            "ai_queryable": true,
+            "ai_enrichable": false,
+            "source_policy": "trusted_only",
+            "unit": null,
+            "display_order": 5,
+            "facetable": true
+          }
+        }
+      },
+      {
+        "group": "Specifications",
+        "definition": {
+          "id": "00000000-0000-0000-0000-000000000000",
+          "entity_type": "product",
+          "attribute_code": "age_group",
+          "label": "Age Group",
+          "input_type": "text",
+          "scope": "global",
+          "is_required": false,
+          "is_unique": false,
+          "is_searchable": true,
+          "is_filterable": true,
+          "is_comparable": true,
+          "is_visible_on_front": true,
+          "used_for_promo_rules": false,
+          "used_for_configurations": false,
+          "swatch_type": "none",
+          "options": [],
+          "version": 0,
+          "metadata": {
+            "ai_queryable": true,
+            "ai_enrichable": false,
+            "source_policy": "trusted_only",
+            "unit": null,
+            "display_order": 6,
+            "facetable": true
+          }
+        }
+      },
+      {
+        "group": "Specifications",
+        "definition": {
+          "id": "00000000-0000-0000-0000-000000000000",
+          "entity_type": "product",
+          "attribute_code": "therapeutic_category",
+          "label": "Therapeutic Category",
+          "input_type": "text",
+          "scope": "global",
+          "is_required": false,
+          "is_unique": false,
+          "is_searchable": true,
+          "is_filterable": true,
+          "is_comparable": true,
+          "is_visible_on_front": true,
+          "used_for_promo_rules": false,
+          "used_for_configurations": false,
+          "swatch_type": "none",
+          "options": [],
+          "version": 0,
+          "metadata": {
+            "ai_queryable": true,
+            "ai_enrichable": false,
+            "source_policy": "trusted_only",
+            "unit": null,
+            "display_order": 7,
+            "facetable": true
+          }
+        }
+      },
+      {
+        "group": "Specifications",
+        "definition": {
+          "id": "00000000-0000-0000-0000-000000000000",
+          "entity_type": "product",
+          "attribute_code": "intended_use",
+          "label": "Intended Use",
+          "input_type": "text",
+          "scope": "global",
+          "is_required": false,
+          "is_unique": false,
+          "is_searchable": true,
+          "is_filterable": true,
+          "is_comparable": true,
+          "is_visible_on_front": true,
+          "used_for_promo_rules": false,
+          "used_for_configurations": false,
+          "swatch_type": "none",
+          "options": [],
+          "version": 0,
+          "metadata": {
+            "ai_queryable": true,
+            "ai_enrichable": false,
+            "source_policy": "trusted_only",
+            "unit": null,
+            "display_order": 8,
+            "facetable": true
+          }
+        }
+      },
+      {
+        "group": "Specifications",
+        "definition": {
+          "id": "00000000-0000-0000-0000-000000000000",
+          "entity_type": "product",
+          "attribute_code": "storage_conditions",
+          "label": "Storage Conditions",
+          "input_type": "textarea",
+          "scope": "global",
+          "is_required": false,
+          "is_unique": false,
+          "is_searchable": false,
+          "is_filterable": false,
+          "is_comparable": true,
+          "is_visible_on_front": true,
+          "used_for_promo_rules": false,
+          "used_for_configurations": false,
+          "swatch_type": "none",
+          "options": [],
+          "version": 0,
+          "metadata": {
+            "ai_queryable": true,
+            "ai_enrichable": false,
+            "source_policy": "trusted_only",
+            "unit": null,
+            "display_order": 9,
+            "facetable": false
+          }
+        }
+      },
+      {
+        "group": "Specifications",
+        "definition": {
+          "id": "00000000-0000-0000-0000-000000000000",
+          "entity_type": "product",
+          "attribute_code": "manufacturer",
+          "label": "Manufacturer",
+          "input_type": "text",
+          "scope": "global",
+          "is_required": false,
+          "is_unique": false,
+          "is_searchable": true,
+          "is_filterable": true,
+          "is_comparable": true,
+          "is_visible_on_front": true,
+          "used_for_promo_rules": false,
+          "used_for_configurations": false,
+          "swatch_type": "none",
+          "options": [],
+          "version": 0,
+          "metadata": {
+            "ai_queryable": true,
+            "ai_enrichable": false,
+            "source_policy": "trusted_only",
+            "unit": null,
+            "display_order": 10,
+            "facetable": true
+          }
+        }
+      },
+      {
+        "group": "Specifications",
+        "definition": {
+          "id": "00000000-0000-0000-0000-000000000000",
+          "entity_type": "product",
+          "attribute_code": "prescription_status",
+          "label": "Prescription Status",
+          "input_type": "select",
+          "scope": "global",
+          "is_required": false,
+          "is_unique": false,
+          "is_searchable": true,
+          "is_filterable": true,
+          "is_comparable": true,
+          "is_visible_on_front": true,
+          "used_for_promo_rules": false,
+          "used_for_configurations": false,
+          "swatch_type": "none",
+          "options": [
+            {
+              "value": "prescription_required",
+              "label": "Prescription Required",
+              "labels": {}
+            },
+            {
+              "value": "non_prescription",
+              "label": "Non Prescription",
+              "labels": {}
+            }
+          ],
+          "version": 0,
+          "metadata": {
+            "ai_queryable": true,
+            "ai_enrichable": false,
+            "source_policy": "trusted_only",
+            "unit": null,
+            "display_order": 11,
+            "facetable": true
+          }
+        }
+      },
+      {
+        "group": "Specifications",
+        "definition": {
+          "id": "00000000-0000-0000-0000-000000000000",
+          "entity_type": "product",
+          "attribute_code": "warnings",
+          "label": "Warnings",
+          "input_type": "textarea",
+          "scope": "global",
+          "is_required": false,
+          "is_unique": false,
+          "is_searchable": false,
+          "is_filterable": false,
+          "is_comparable": true,
+          "is_visible_on_front": true,
+          "used_for_promo_rules": false,
+          "used_for_configurations": false,
+          "swatch_type": "none",
+          "options": [],
+          "version": 0,
+          "metadata": {
+            "ai_queryable": true,
+            "ai_enrichable": false,
+            "source_policy": "trusted_only",
+            "unit": null,
+            "display_order": 12,
+            "facetable": false
+          }
+        }
+      }
+    ]
+  },
+  {
+    "id": "e9df8dfb-b0ef-5f2b-9f67-5d18be2d437b",
+    "code": "fashion",
+    "name": "Fashion",
+    "description": "Recommended fashion catalog attributes. Customize before applying.",
+    "status": "active",
+    "version": 1,
+    "metadata": {
+      "platform_template": true
+    },
+    "template": [
+      {
+        "group": "Specifications",
+        "definition": {
+          "id": "00000000-0000-0000-0000-000000000000",
+          "entity_type": "product",
+          "attribute_code": "color",
+          "label": "Color",
+          "input_type": "select",
+          "scope": "global",
+          "is_required": false,
+          "is_unique": false,
+          "is_searchable": true,
+          "is_filterable": true,
+          "is_comparable": true,
+          "is_visible_on_front": true,
+          "used_for_promo_rules": false,
+          "used_for_configurations": true,
+          "swatch_type": "none",
+          "options": [
+            {
+              "value": "red",
+              "label": "Red",
+              "labels": {}
+            },
+            {
+              "value": "blue",
+              "label": "Blue",
+              "labels": {}
+            },
+            {
+              "value": "green",
+              "label": "Green",
+              "labels": {}
+            },
+            {
+              "value": "black",
+              "label": "Black",
+              "labels": {}
+            },
+            {
+              "value": "white",
+              "label": "White",
+              "labels": {}
+            },
+            {
+              "value": "pink",
+              "label": "Pink",
+              "labels": {}
+            },
+            {
+              "value": "purple",
+              "label": "Purple",
+              "labels": {}
+            },
+            {
+              "value": "orange",
+              "label": "Orange",
+              "labels": {}
+            },
+            {
+              "value": "yellow",
+              "label": "Yellow",
+              "labels": {}
+            },
+            {
+              "value": "brown",
+              "label": "Brown",
+              "labels": {}
+            },
+            {
+              "value": "grey",
+              "label": "Grey",
+              "labels": {}
+            }
+          ],
+          "version": 0,
+          "metadata": {
+            "ai_queryable": true,
+            "ai_enrichable": false,
+            "source_policy": "factual",
+            "unit": null,
+            "display_order": 0,
+            "facetable": true
+          }
+        }
+      },
+      {
+        "group": "Specifications",
+        "definition": {
+          "id": "00000000-0000-0000-0000-000000000000",
+          "entity_type": "product",
+          "attribute_code": "color_family",
+          "label": "Color Family",
+          "input_type": "select",
+          "scope": "global",
+          "is_required": false,
+          "is_unique": false,
+          "is_searchable": true,
+          "is_filterable": true,
+          "is_comparable": true,
+          "is_visible_on_front": true,
+          "used_for_promo_rules": false,
+          "used_for_configurations": false,
+          "swatch_type": "none",
+          "options": [
+            {
+              "value": "red",
+              "label": "Red",
+              "labels": {}
+            },
+            {
+              "value": "blue",
+              "label": "Blue",
+              "labels": {}
+            },
+            {
+              "value": "green",
+              "label": "Green",
+              "labels": {}
+            },
+            {
+              "value": "black",
+              "label": "Black",
+              "labels": {}
+            },
+            {
+              "value": "white",
+              "label": "White",
+              "labels": {}
+            },
+            {
+              "value": "pink",
+              "label": "Pink",
+              "labels": {}
+            },
+            {
+              "value": "purple",
+              "label": "Purple",
+              "labels": {}
+            },
+            {
+              "value": "orange",
+              "label": "Orange",
+              "labels": {}
+            },
+            {
+              "value": "yellow",
+              "label": "Yellow",
+              "labels": {}
+            },
+            {
+              "value": "brown",
+              "label": "Brown",
+              "labels": {}
+            },
+            {
+              "value": "grey",
+              "label": "Grey",
+              "labels": {}
+            }
+          ],
+          "version": 0,
+          "metadata": {
+            "ai_queryable": true,
+            "ai_enrichable": false,
+            "source_policy": "factual",
+            "unit": null,
+            "display_order": 1,
+            "facetable": true
+          }
+        }
+      },
+      {
+        "group": "Specifications",
+        "definition": {
+          "id": "00000000-0000-0000-0000-000000000000",
+          "entity_type": "product",
+          "attribute_code": "size",
+          "label": "Size",
+          "input_type": "text",
+          "scope": "global",
+          "is_required": false,
+          "is_unique": false,
+          "is_searchable": true,
+          "is_filterable": true,
+          "is_comparable": true,
+          "is_visible_on_front": true,
+          "used_for_promo_rules": false,
+          "used_for_configurations": false,
+          "swatch_type": "none",
+          "options": [],
+          "version": 0,
+          "metadata": {
+            "ai_queryable": true,
+            "ai_enrichable": false,
+            "source_policy": "factual",
+            "unit": null,
+            "display_order": 2,
+            "facetable": true
+          }
+        }
+      },
+      {
+        "group": "Specifications",
+        "definition": {
+          "id": "00000000-0000-0000-0000-000000000000",
+          "entity_type": "product",
+          "attribute_code": "size_system",
+          "label": "Size System",
+          "input_type": "select",
+          "scope": "global",
+          "is_required": false,
+          "is_unique": false,
+          "is_searchable": true,
+          "is_filterable": true,
+          "is_comparable": true,
+          "is_visible_on_front": true,
+          "used_for_promo_rules": false,
+          "used_for_configurations": false,
+          "swatch_type": "none",
+          "options": [
+            {
+              "value": "eu",
+              "label": "Eu",
+              "labels": {}
+            },
+            {
+              "value": "uk",
+              "label": "Uk",
+              "labels": {}
+            },
+            {
+              "value": "us",
+              "label": "Us",
+              "labels": {}
+            },
+            {
+              "value": "international",
+              "label": "International",
+              "labels": {}
+            }
+          ],
+          "version": 0,
+          "metadata": {
+            "ai_queryable": true,
+            "ai_enrichable": false,
+            "source_policy": "factual",
+            "unit": null,
+            "display_order": 3,
+            "facetable": true
+          }
+        }
+      },
+      {
+        "group": "Specifications",
+        "definition": {
+          "id": "00000000-0000-0000-0000-000000000000",
+          "entity_type": "product",
+          "attribute_code": "material",
+          "label": "Material",
+          "input_type": "text",
+          "scope": "global",
+          "is_required": false,
+          "is_unique": false,
+          "is_searchable": true,
+          "is_filterable": true,
+          "is_comparable": true,
+          "is_visible_on_front": true,
+          "used_for_promo_rules": false,
+          "used_for_configurations": false,
+          "swatch_type": "none",
+          "options": [],
+          "version": 0,
+          "metadata": {
+            "ai_queryable": true,
+            "ai_enrichable": false,
+            "source_policy": "factual",
+            "unit": null,
+            "display_order": 4,
+            "facetable": true
+          }
+        }
+      },
+      {
+        "group": "Specifications",
+        "definition": {
+          "id": "00000000-0000-0000-0000-000000000000",
+          "entity_type": "product",
+          "attribute_code": "fabric",
+          "label": "Fabric",
+          "input_type": "text",
+          "scope": "global",
+          "is_required": false,
+          "is_unique": false,
+          "is_searchable": true,
+          "is_filterable": true,
+          "is_comparable": true,
+          "is_visible_on_front": true,
+          "used_for_promo_rules": false,
+          "used_for_configurations": false,
+          "swatch_type": "none",
+          "options": [],
+          "version": 0,
+          "metadata": {
+            "ai_queryable": true,
+            "ai_enrichable": false,
+            "source_policy": "factual",
+            "unit": null,
+            "display_order": 5,
+            "facetable": true
+          }
+        }
+      },
+      {
+        "group": "Specifications",
+        "definition": {
+          "id": "00000000-0000-0000-0000-000000000000",
+          "entity_type": "product",
+          "attribute_code": "fit",
+          "label": "Fit",
+          "input_type": "select",
+          "scope": "global",
+          "is_required": false,
+          "is_unique": false,
+          "is_searchable": true,
+          "is_filterable": true,
+          "is_comparable": true,
+          "is_visible_on_front": true,
+          "used_for_promo_rules": false,
+          "used_for_configurations": false,
+          "swatch_type": "none",
+          "options": [
+            {
+              "value": "regular",
+              "label": "Regular",
+              "labels": {}
+            },
+            {
+              "value": "slim",
+              "label": "Slim",
+              "labels": {}
+            },
+            {
+              "value": "relaxed",
+              "label": "Relaxed",
+              "labels": {}
+            }
+          ],
+          "version": 0,
+          "metadata": {
+            "ai_queryable": true,
+            "ai_enrichable": false,
+            "source_policy": "factual",
+            "unit": null,
+            "display_order": 6,
+            "facetable": true
+          }
+        }
+      },
+      {
+        "group": "Specifications",
+        "definition": {
+          "id": "00000000-0000-0000-0000-000000000000",
+          "entity_type": "product",
+          "attribute_code": "pattern",
+          "label": "Pattern",
+          "input_type": "text",
+          "scope": "global",
+          "is_required": false,
+          "is_unique": false,
+          "is_searchable": true,
+          "is_filterable": true,
+          "is_comparable": true,
+          "is_visible_on_front": true,
+          "used_for_promo_rules": false,
+          "used_for_configurations": false,
+          "swatch_type": "none",
+          "options": [],
+          "version": 0,
+          "metadata": {
+            "ai_queryable": true,
+            "ai_enrichable": false,
+            "source_policy": "factual",
+            "unit": null,
+            "display_order": 7,
+            "facetable": true
+          }
+        }
+      },
+      {
+        "group": "Style & preferences",
+        "definition": {
+          "id": "00000000-0000-0000-0000-000000000000",
+          "entity_type": "product",
+          "attribute_code": "style",
+          "label": "Style",
+          "input_type": "multiselect",
+          "scope": "global",
+          "is_required": false,
+          "is_unique": false,
+          "is_searchable": true,
+          "is_filterable": true,
+          "is_comparable": true,
+          "is_visible_on_front": true,
+          "used_for_promo_rules": false,
+          "used_for_configurations": false,
+          "swatch_type": "none",
+          "options": [
+            {
+              "value": "luxury",
+              "label": "Luxury",
+              "labels": {}
+            },
+            {
+              "value": "minimalist",
+              "label": "Minimalist",
+              "labels": {}
+            },
+            {
+              "value": "elegant",
+              "label": "Elegant",
+              "labels": {}
+            },
+            {
+              "value": "casual",
+              "label": "Casual",
+              "labels": {}
+            },
+            {
+              "value": "premium",
+              "label": "Premium",
+              "labels": {}
+            },
+            {
+              "value": "everyday",
+              "label": "Everyday",
+              "labels": {}
+            },
+            {
+              "value": "formal",
+              "label": "Formal",
+              "labels": {}
+            },
+            {
+              "value": "classic",
+              "label": "Classic",
+              "labels": {}
+            },
+            {
+              "value": "modern",
+              "label": "Modern",
+              "labels": {}
+            }
+          ],
+          "version": 0,
+          "metadata": {
+            "ai_queryable": true,
+            "ai_enrichable": true,
+            "source_policy": "semantic",
+            "unit": null,
+            "display_order": 8,
+            "facetable": true
+          }
+        }
+      },
+      {
+        "group": "Specifications",
+        "definition": {
+          "id": "00000000-0000-0000-0000-000000000000",
+          "entity_type": "product",
+          "attribute_code": "gender",
+          "label": "Gender",
+          "input_type": "text",
+          "scope": "global",
+          "is_required": false,
+          "is_unique": false,
+          "is_searchable": true,
+          "is_filterable": true,
+          "is_comparable": true,
+          "is_visible_on_front": true,
+          "used_for_promo_rules": false,
+          "used_for_configurations": false,
+          "swatch_type": "none",
+          "options": [],
+          "version": 0,
+          "metadata": {
+            "ai_queryable": true,
+            "ai_enrichable": false,
+            "source_policy": "factual",
+            "unit": null,
+            "display_order": 9,
+            "facetable": true
+          }
+        }
+      },
+      {
+        "group": "Specifications",
+        "definition": {
+          "id": "00000000-0000-0000-0000-000000000000",
+          "entity_type": "product",
+          "attribute_code": "age_group",
+          "label": "Age Group",
+          "input_type": "text",
+          "scope": "global",
+          "is_required": false,
+          "is_unique": false,
+          "is_searchable": true,
+          "is_filterable": true,
+          "is_comparable": true,
+          "is_visible_on_front": true,
+          "used_for_promo_rules": false,
+          "used_for_configurations": false,
+          "swatch_type": "none",
+          "options": [],
+          "version": 0,
+          "metadata": {
+            "ai_queryable": true,
+            "ai_enrichable": false,
+            "source_policy": "factual",
+            "unit": null,
+            "display_order": 10,
+            "facetable": true
+          }
+        }
+      },
+      {
+        "group": "Specifications",
+        "definition": {
+          "id": "00000000-0000-0000-0000-000000000000",
+          "entity_type": "product",
+          "attribute_code": "season",
+          "label": "Season",
+          "input_type": "text",
+          "scope": "global",
+          "is_required": false,
+          "is_unique": false,
+          "is_searchable": true,
+          "is_filterable": true,
+          "is_comparable": true,
+          "is_visible_on_front": true,
+          "used_for_promo_rules": false,
+          "used_for_configurations": false,
+          "swatch_type": "none",
+          "options": [],
+          "version": 0,
+          "metadata": {
+            "ai_queryable": true,
+            "ai_enrichable": false,
+            "source_policy": "factual",
+            "unit": null,
+            "display_order": 11,
+            "facetable": true
+          }
+        }
+      },
+      {
+        "group": "Style & preferences",
+        "definition": {
+          "id": "00000000-0000-0000-0000-000000000000",
+          "entity_type": "product",
+          "attribute_code": "occasion",
+          "label": "Occasion",
+          "input_type": "multiselect",
+          "scope": "global",
+          "is_required": false,
+          "is_unique": false,
+          "is_searchable": true,
+          "is_filterable": true,
+          "is_comparable": true,
+          "is_visible_on_front": true,
+          "used_for_promo_rules": false,
+          "used_for_configurations": false,
+          "swatch_type": "none",
+          "options": [
+            {
+              "value": "wedding",
+              "label": "Wedding",
+              "labels": {}
+            },
+            {
+              "value": "evening",
+              "label": "Evening",
+              "labels": {}
+            },
+            {
+              "value": "everyday",
+              "label": "Everyday",
+              "labels": {}
+            },
+            {
+              "value": "gift",
+              "label": "Gift",
+              "labels": {}
+            }
+          ],
+          "version": 0,
+          "metadata": {
+            "ai_queryable": true,
+            "ai_enrichable": true,
+            "source_policy": "semantic",
+            "unit": null,
+            "display_order": 12,
+            "facetable": true
+          }
+        }
+      },
+      {
+        "group": "Specifications",
+        "definition": {
+          "id": "00000000-0000-0000-0000-000000000000",
+          "entity_type": "product",
+          "attribute_code": "closure_type",
+          "label": "Closure Type",
+          "input_type": "text",
+          "scope": "global",
+          "is_required": false,
+          "is_unique": false,
+          "is_searchable": true,
+          "is_filterable": true,
+          "is_comparable": true,
+          "is_visible_on_front": true,
+          "used_for_promo_rules": false,
+          "used_for_configurations": false,
+          "swatch_type": "none",
+          "options": [],
+          "version": 0,
+          "metadata": {
+            "ai_queryable": true,
+            "ai_enrichable": false,
+            "source_policy": "factual",
+            "unit": null,
+            "display_order": 13,
+            "facetable": true
+          }
+        }
+      }
+    ]
+  },
+  {
+    "id": "a5e143f8-40e1-5df8-9007-d537b8d486c9",
+    "code": "electronics",
+    "name": "Electronics",
+    "description": "Recommended electronics catalog attributes. Customize before applying.",
+    "status": "active",
+    "version": 1,
+    "metadata": {
+      "platform_template": true
+    },
+    "template": [
+      {
+        "group": "Specifications",
+        "definition": {
+          "id": "00000000-0000-0000-0000-000000000000",
+          "entity_type": "product",
+          "attribute_code": "device_type",
+          "label": "Device Type",
+          "input_type": "text",
+          "scope": "global",
+          "is_required": false,
+          "is_unique": false,
+          "is_searchable": true,
+          "is_filterable": true,
+          "is_comparable": true,
+          "is_visible_on_front": true,
+          "used_for_promo_rules": false,
+          "used_for_configurations": false,
+          "swatch_type": "none",
+          "options": [],
+          "version": 0,
+          "metadata": {
+            "ai_queryable": true,
+            "ai_enrichable": false,
+            "source_policy": "factual",
+            "unit": null,
+            "display_order": 0,
+            "facetable": true,
+            "semantic_role": "classification"
+          }
+        }
+      },
+      {
+        "group": "Specifications",
+        "definition": {
+          "id": "00000000-0000-0000-0000-000000000000",
+          "entity_type": "product",
+          "attribute_code": "brand",
+          "label": "Brand",
+          "input_type": "text",
+          "scope": "global",
+          "is_required": false,
+          "is_unique": false,
+          "is_searchable": true,
+          "is_filterable": true,
+          "is_comparable": true,
+          "is_visible_on_front": true,
+          "used_for_promo_rules": false,
+          "used_for_configurations": false,
+          "swatch_type": "none",
+          "options": [],
+          "version": 0,
+          "metadata": {
+            "ai_queryable": true,
+            "ai_enrichable": false,
+            "source_policy": "factual",
+            "unit": null,
+            "display_order": 1,
+            "facetable": true
+          }
+        }
+      },
+      {
+        "group": "Specifications",
+        "definition": {
+          "id": "00000000-0000-0000-0000-000000000000",
+          "entity_type": "product",
+          "attribute_code": "model",
+          "label": "Model",
+          "input_type": "text",
+          "scope": "global",
+          "is_required": false,
+          "is_unique": false,
+          "is_searchable": true,
+          "is_filterable": true,
+          "is_comparable": true,
+          "is_visible_on_front": true,
+          "used_for_promo_rules": false,
+          "used_for_configurations": false,
+          "swatch_type": "none",
+          "options": [],
+          "version": 0,
+          "metadata": {
+            "ai_queryable": true,
+            "ai_enrichable": false,
+            "source_policy": "factual",
+            "unit": null,
+            "display_order": 2,
+            "facetable": true
+          }
+        }
+      },
+      {
+        "group": "Specifications",
+        "definition": {
+          "id": "00000000-0000-0000-0000-000000000000",
+          "entity_type": "product",
+          "attribute_code": "processor",
+          "label": "Processor",
+          "input_type": "text",
+          "scope": "global",
+          "is_required": false,
+          "is_unique": false,
+          "is_searchable": true,
+          "is_filterable": true,
+          "is_comparable": true,
+          "is_visible_on_front": true,
+          "used_for_promo_rules": false,
+          "used_for_configurations": false,
+          "swatch_type": "none",
+          "options": [],
+          "version": 0,
+          "metadata": {
+            "ai_queryable": true,
+            "ai_enrichable": false,
+            "source_policy": "factual",
+            "unit": null,
+            "display_order": 3,
+            "facetable": true
+          }
+        }
+      },
+      {
+        "group": "Specifications",
+        "definition": {
+          "id": "00000000-0000-0000-0000-000000000000",
+          "entity_type": "product",
+          "attribute_code": "ram",
+          "label": "Ram",
+          "input_type": "text",
+          "scope": "global",
+          "is_required": false,
+          "is_unique": false,
+          "is_searchable": true,
+          "is_filterable": true,
+          "is_comparable": true,
+          "is_visible_on_front": true,
+          "used_for_promo_rules": false,
+          "used_for_configurations": false,
+          "swatch_type": "none",
+          "options": [],
+          "version": 0,
+          "metadata": {
+            "ai_queryable": true,
+            "ai_enrichable": false,
+            "source_policy": "factual",
+            "unit": null,
+            "display_order": 4,
+            "facetable": true
+          }
+        }
+      },
+      {
+        "group": "Specifications",
+        "definition": {
+          "id": "00000000-0000-0000-0000-000000000000",
+          "entity_type": "product",
+          "attribute_code": "storage",
+          "label": "Storage",
+          "input_type": "text",
+          "scope": "global",
+          "is_required": false,
+          "is_unique": false,
+          "is_searchable": true,
+          "is_filterable": true,
+          "is_comparable": true,
+          "is_visible_on_front": true,
+          "used_for_promo_rules": false,
+          "used_for_configurations": false,
+          "swatch_type": "none",
+          "options": [],
+          "version": 0,
+          "metadata": {
+            "ai_queryable": true,
+            "ai_enrichable": false,
+            "source_policy": "factual",
+            "unit": null,
+            "display_order": 5,
+            "facetable": true
+          }
+        }
+      },
+      {
+        "group": "Specifications",
+        "definition": {
+          "id": "00000000-0000-0000-0000-000000000000",
+          "entity_type": "product",
+          "attribute_code": "screen_size",
+          "label": "Screen Size",
+          "input_type": "measurement",
+          "scope": "global",
+          "is_required": false,
+          "is_unique": false,
+          "is_searchable": true,
+          "is_filterable": true,
+          "is_comparable": true,
+          "is_visible_on_front": true,
+          "used_for_promo_rules": false,
+          "used_for_configurations": false,
+          "swatch_type": "none",
+          "options": [],
+          "version": 0,
+          "metadata": {
+            "ai_queryable": true,
+            "ai_enrichable": false,
+            "source_policy": "factual",
+            "unit": "in",
+            "display_order": 6,
+            "facetable": true
+          }
+        }
+      },
+      {
+        "group": "Specifications",
+        "definition": {
+          "id": "00000000-0000-0000-0000-000000000000",
+          "entity_type": "product",
+          "attribute_code": "resolution",
+          "label": "Resolution",
+          "input_type": "text",
+          "scope": "global",
+          "is_required": false,
+          "is_unique": false,
+          "is_searchable": true,
+          "is_filterable": true,
+          "is_comparable": true,
+          "is_visible_on_front": true,
+          "used_for_promo_rules": false,
+          "used_for_configurations": false,
+          "swatch_type": "none",
+          "options": [],
+          "version": 0,
+          "metadata": {
+            "ai_queryable": true,
+            "ai_enrichable": false,
+            "source_policy": "factual",
+            "unit": null,
+            "display_order": 7,
+            "facetable": true
+          }
+        }
+      },
+      {
+        "group": "Specifications",
+        "definition": {
+          "id": "00000000-0000-0000-0000-000000000000",
+          "entity_type": "product",
+          "attribute_code": "battery_capacity",
+          "label": "Battery Capacity",
+          "input_type": "measurement",
+          "scope": "global",
+          "is_required": false,
+          "is_unique": false,
+          "is_searchable": true,
+          "is_filterable": true,
+          "is_comparable": true,
+          "is_visible_on_front": true,
+          "used_for_promo_rules": false,
+          "used_for_configurations": false,
+          "swatch_type": "none",
+          "options": [],
+          "version": 0,
+          "metadata": {
+            "ai_queryable": true,
+            "ai_enrichable": false,
+            "source_policy": "factual",
+            "unit": "mAh",
+            "display_order": 8,
+            "facetable": true
+          }
+        }
+      },
+      {
+        "group": "Specifications",
+        "definition": {
+          "id": "00000000-0000-0000-0000-000000000000",
+          "entity_type": "product",
+          "attribute_code": "operating_system",
+          "label": "Operating System",
+          "input_type": "text",
+          "scope": "global",
+          "is_required": false,
+          "is_unique": false,
+          "is_searchable": true,
+          "is_filterable": true,
+          "is_comparable": true,
+          "is_visible_on_front": true,
+          "used_for_promo_rules": false,
+          "used_for_configurations": false,
+          "swatch_type": "none",
+          "options": [],
+          "version": 0,
+          "metadata": {
+            "ai_queryable": true,
+            "ai_enrichable": false,
+            "source_policy": "factual",
+            "unit": null,
+            "display_order": 9,
+            "facetable": true
+          }
+        }
+      },
+      {
+        "group": "Specifications",
+        "definition": {
+          "id": "00000000-0000-0000-0000-000000000000",
+          "entity_type": "product",
+          "attribute_code": "connectivity",
+          "label": "Connectivity",
+          "input_type": "text",
+          "scope": "global",
+          "is_required": false,
+          "is_unique": false,
+          "is_searchable": true,
+          "is_filterable": true,
+          "is_comparable": true,
+          "is_visible_on_front": true,
+          "used_for_promo_rules": false,
+          "used_for_configurations": false,
+          "swatch_type": "none",
+          "options": [],
+          "version": 0,
+          "metadata": {
+            "ai_queryable": true,
+            "ai_enrichable": false,
+            "source_policy": "factual",
+            "unit": null,
+            "display_order": 10,
+            "facetable": true
+          }
+        }
+      },
+      {
+        "group": "Specifications",
+        "definition": {
+          "id": "00000000-0000-0000-0000-000000000000",
+          "entity_type": "product",
+          "attribute_code": "ports",
+          "label": "Ports",
+          "input_type": "text",
+          "scope": "global",
+          "is_required": false,
+          "is_unique": false,
+          "is_searchable": true,
+          "is_filterable": true,
+          "is_comparable": true,
+          "is_visible_on_front": true,
+          "used_for_promo_rules": false,
+          "used_for_configurations": false,
+          "swatch_type": "none",
+          "options": [],
+          "version": 0,
+          "metadata": {
+            "ai_queryable": true,
+            "ai_enrichable": false,
+            "source_policy": "factual",
+            "unit": null,
+            "display_order": 11,
+            "facetable": true
+          }
+        }
+      },
+      {
+        "group": "Specifications",
+        "definition": {
+          "id": "00000000-0000-0000-0000-000000000000",
+          "entity_type": "product",
+          "attribute_code": "color",
+          "label": "Color",
+          "input_type": "select",
+          "scope": "global",
+          "is_required": false,
+          "is_unique": false,
+          "is_searchable": true,
+          "is_filterable": true,
+          "is_comparable": true,
+          "is_visible_on_front": true,
+          "used_for_promo_rules": false,
+          "used_for_configurations": true,
+          "swatch_type": "none",
+          "options": [
+            {
+              "value": "red",
+              "label": "Red",
+              "labels": {}
+            },
+            {
+              "value": "blue",
+              "label": "Blue",
+              "labels": {}
+            },
+            {
+              "value": "green",
+              "label": "Green",
+              "labels": {}
+            },
+            {
+              "value": "black",
+              "label": "Black",
+              "labels": {}
+            },
+            {
+              "value": "white",
+              "label": "White",
+              "labels": {}
+            },
+            {
+              "value": "pink",
+              "label": "Pink",
+              "labels": {}
+            },
+            {
+              "value": "purple",
+              "label": "Purple",
+              "labels": {}
+            },
+            {
+              "value": "orange",
+              "label": "Orange",
+              "labels": {}
+            },
+            {
+              "value": "yellow",
+              "label": "Yellow",
+              "labels": {}
+            },
+            {
+              "value": "brown",
+              "label": "Brown",
+              "labels": {}
+            },
+            {
+              "value": "grey",
+              "label": "Grey",
+              "labels": {}
+            }
+          ],
+          "version": 0,
+          "metadata": {
+            "ai_queryable": true,
+            "ai_enrichable": false,
+            "source_policy": "factual",
+            "unit": null,
+            "display_order": 12,
+            "facetable": true
+          }
+        }
+      },
+      {
+        "group": "Specifications",
+        "definition": {
+          "id": "00000000-0000-0000-0000-000000000000",
+          "entity_type": "product",
+          "attribute_code": "warranty",
+          "label": "Warranty",
+          "input_type": "text",
+          "scope": "global",
+          "is_required": false,
+          "is_unique": false,
+          "is_searchable": true,
+          "is_filterable": true,
+          "is_comparable": true,
+          "is_visible_on_front": true,
+          "used_for_promo_rules": false,
+          "used_for_configurations": false,
+          "swatch_type": "none",
+          "options": [],
+          "version": 0,
+          "metadata": {
+            "ai_queryable": true,
+            "ai_enrichable": false,
+            "source_policy": "factual",
+            "unit": null,
+            "display_order": 13,
+            "facetable": true
+          }
+        }
+      },
+      {
+        "group": "Specifications",
+        "definition": {
+          "id": "00000000-0000-0000-0000-000000000000",
+          "entity_type": "product",
+          "attribute_code": "compatibility",
+          "label": "Compatibility",
+          "input_type": "text",
+          "scope": "global",
+          "is_required": false,
+          "is_unique": false,
+          "is_searchable": true,
+          "is_filterable": true,
+          "is_comparable": true,
+          "is_visible_on_front": true,
+          "used_for_promo_rules": false,
+          "used_for_configurations": false,
+          "swatch_type": "none",
+          "options": [],
+          "version": 0,
+          "metadata": {
+            "ai_queryable": true,
+            "ai_enrichable": false,
+            "source_policy": "factual",
+            "unit": null,
+            "display_order": 14,
+            "facetable": true
+          }
+        }
+      }
+    ]
+  },
+  {
+    "id": "281fb65c-9cb3-5f90-92ca-e31ea0b91eda",
+    "code": "beauty",
+    "name": "Beauty",
+    "description": "Recommended beauty catalog attributes. Customize before applying.",
+    "status": "active",
+    "version": 1,
+    "metadata": {
+      "platform_template": true
+    },
+    "template": [
+      {
+        "group": "Specifications",
+        "definition": {
+          "id": "00000000-0000-0000-0000-000000000000",
+          "entity_type": "product",
+          "attribute_code": "product_type",
+          "label": "Product Type",
+          "input_type": "text",
+          "scope": "global",
+          "is_required": false,
+          "is_unique": false,
+          "is_searchable": true,
+          "is_filterable": true,
+          "is_comparable": true,
+          "is_visible_on_front": true,
+          "used_for_promo_rules": false,
+          "used_for_configurations": false,
+          "swatch_type": "none",
+          "options": [],
+          "version": 0,
+          "metadata": {
+            "ai_queryable": true,
+            "ai_enrichable": false,
+            "source_policy": "factual",
+            "unit": null,
+            "display_order": 0,
+            "facetable": true,
+            "semantic_role": "classification"
+          }
+        }
+      },
+      {
+        "group": "Specifications",
+        "definition": {
+          "id": "00000000-0000-0000-0000-000000000000",
+          "entity_type": "product",
+          "attribute_code": "color",
+          "label": "Color",
+          "input_type": "select",
+          "scope": "global",
+          "is_required": false,
+          "is_unique": false,
+          "is_searchable": true,
+          "is_filterable": true,
+          "is_comparable": true,
+          "is_visible_on_front": true,
+          "used_for_promo_rules": false,
+          "used_for_configurations": true,
+          "swatch_type": "none",
+          "options": [
+            {
+              "value": "red",
+              "label": "Red",
+              "labels": {}
+            },
+            {
+              "value": "blue",
+              "label": "Blue",
+              "labels": {}
+            },
+            {
+              "value": "green",
+              "label": "Green",
+              "labels": {}
+            },
+            {
+              "value": "black",
+              "label": "Black",
+              "labels": {}
+            },
+            {
+              "value": "white",
+              "label": "White",
+              "labels": {}
+            },
+            {
+              "value": "pink",
+              "label": "Pink",
+              "labels": {}
+            },
+            {
+              "value": "purple",
+              "label": "Purple",
+              "labels": {}
+            },
+            {
+              "value": "orange",
+              "label": "Orange",
+              "labels": {}
+            },
+            {
+              "value": "yellow",
+              "label": "Yellow",
+              "labels": {}
+            },
+            {
+              "value": "brown",
+              "label": "Brown",
+              "labels": {}
+            },
+            {
+              "value": "grey",
+              "label": "Grey",
+              "labels": {}
+            }
+          ],
+          "version": 0,
+          "metadata": {
+            "ai_queryable": true,
+            "ai_enrichable": false,
+            "source_policy": "factual",
+            "unit": null,
+            "display_order": 1,
+            "facetable": true
+          }
+        }
+      },
+      {
+        "group": "Specifications",
+        "definition": {
+          "id": "00000000-0000-0000-0000-000000000000",
+          "entity_type": "product",
+          "attribute_code": "skin_type",
+          "label": "Skin Type",
+          "input_type": "multiselect",
+          "scope": "global",
+          "is_required": false,
+          "is_unique": false,
+          "is_searchable": true,
+          "is_filterable": true,
+          "is_comparable": true,
+          "is_visible_on_front": true,
+          "used_for_promo_rules": false,
+          "used_for_configurations": false,
+          "swatch_type": "none",
+          "options": [
+            {
+              "value": "dry",
+              "label": "Dry",
+              "labels": {}
+            },
+            {
+              "value": "oily",
+              "label": "Oily",
+              "labels": {}
+            },
+            {
+              "value": "combination",
+              "label": "Combination",
+              "labels": {}
+            },
+            {
+              "value": "normal",
+              "label": "Normal",
+              "labels": {}
+            },
+            {
+              "value": "sensitive",
+              "label": "Sensitive",
+              "labels": {}
+            }
+          ],
+          "version": 0,
+          "metadata": {
+            "ai_queryable": true,
+            "ai_enrichable": false,
+            "source_policy": "factual",
+            "unit": null,
+            "display_order": 2,
+            "facetable": true
+          }
+        }
+      },
+      {
+        "group": "Material",
+        "definition": {
+          "id": "00000000-0000-0000-0000-000000000000",
+          "entity_type": "product",
+          "attribute_code": "finish",
+          "label": "Finish",
+          "input_type": "text",
+          "scope": "global",
+          "is_required": false,
+          "is_unique": false,
+          "is_searchable": true,
+          "is_filterable": true,
+          "is_comparable": true,
+          "is_visible_on_front": true,
+          "used_for_promo_rules": false,
+          "used_for_configurations": false,
+          "swatch_type": "none",
+          "options": [],
+          "version": 0,
+          "metadata": {
+            "ai_queryable": true,
+            "ai_enrichable": false,
+            "source_policy": "factual",
+            "unit": null,
+            "display_order": 3,
+            "facetable": true
+          }
+        }
+      },
+      {
+        "group": "Specifications",
+        "definition": {
+          "id": "00000000-0000-0000-0000-000000000000",
+          "entity_type": "product",
+          "attribute_code": "texture",
+          "label": "Texture",
+          "input_type": "text",
+          "scope": "global",
+          "is_required": false,
+          "is_unique": false,
+          "is_searchable": true,
+          "is_filterable": true,
+          "is_comparable": true,
+          "is_visible_on_front": true,
+          "used_for_promo_rules": false,
+          "used_for_configurations": false,
+          "swatch_type": "none",
+          "options": [],
+          "version": 0,
+          "metadata": {
+            "ai_queryable": true,
+            "ai_enrichable": false,
+            "source_policy": "factual",
+            "unit": null,
+            "display_order": 4,
+            "facetable": true
+          }
+        }
+      },
+      {
+        "group": "Specifications",
+        "definition": {
+          "id": "00000000-0000-0000-0000-000000000000",
+          "entity_type": "product",
+          "attribute_code": "fragrance",
+          "label": "Fragrance",
+          "input_type": "text",
+          "scope": "global",
+          "is_required": false,
+          "is_unique": false,
+          "is_searchable": true,
+          "is_filterable": true,
+          "is_comparable": true,
+          "is_visible_on_front": true,
+          "used_for_promo_rules": false,
+          "used_for_configurations": false,
+          "swatch_type": "none",
+          "options": [],
+          "version": 0,
+          "metadata": {
+            "ai_queryable": true,
+            "ai_enrichable": false,
+            "source_policy": "factual",
+            "unit": null,
+            "display_order": 5,
+            "facetable": true
+          }
+        }
+      },
+      {
+        "group": "Specifications",
+        "definition": {
+          "id": "00000000-0000-0000-0000-000000000000",
+          "entity_type": "product",
+          "attribute_code": "volume",
+          "label": "Volume",
+          "input_type": "measurement",
+          "scope": "global",
+          "is_required": false,
+          "is_unique": false,
+          "is_searchable": true,
+          "is_filterable": true,
+          "is_comparable": true,
+          "is_visible_on_front": true,
+          "used_for_promo_rules": false,
+          "used_for_configurations": false,
+          "swatch_type": "none",
+          "options": [],
+          "version": 0,
+          "metadata": {
+            "ai_queryable": true,
+            "ai_enrichable": false,
+            "source_policy": "factual",
+            "unit": "ml",
+            "display_order": 6,
+            "facetable": true
+          }
+        }
+      },
+      {
+        "group": "Specifications",
+        "definition": {
+          "id": "00000000-0000-0000-0000-000000000000",
+          "entity_type": "product",
+          "attribute_code": "ingredients",
+          "label": "Ingredients",
+          "input_type": "textarea",
+          "scope": "global",
+          "is_required": false,
+          "is_unique": false,
+          "is_searchable": false,
+          "is_filterable": false,
+          "is_comparable": true,
+          "is_visible_on_front": true,
+          "used_for_promo_rules": false,
+          "used_for_configurations": false,
+          "swatch_type": "none",
+          "options": [],
+          "version": 0,
+          "metadata": {
+            "ai_queryable": true,
+            "ai_enrichable": false,
+            "source_policy": "trusted_only",
+            "unit": null,
+            "display_order": 7,
+            "facetable": false
+          }
+        }
+      },
+      {
+        "group": "Style & preferences",
+        "definition": {
+          "id": "00000000-0000-0000-0000-000000000000",
+          "entity_type": "product",
+          "attribute_code": "style",
+          "label": "Style",
+          "input_type": "multiselect",
+          "scope": "global",
+          "is_required": false,
+          "is_unique": false,
+          "is_searchable": true,
+          "is_filterable": true,
+          "is_comparable": true,
+          "is_visible_on_front": true,
+          "used_for_promo_rules": false,
+          "used_for_configurations": false,
+          "swatch_type": "none",
+          "options": [
+            {
+              "value": "luxury",
+              "label": "Luxury",
+              "labels": {}
+            },
+            {
+              "value": "minimalist",
+              "label": "Minimalist",
+              "labels": {}
+            },
+            {
+              "value": "elegant",
+              "label": "Elegant",
+              "labels": {}
+            },
+            {
+              "value": "casual",
+              "label": "Casual",
+              "labels": {}
+            },
+            {
+              "value": "premium",
+              "label": "Premium",
+              "labels": {}
+            },
+            {
+              "value": "everyday",
+              "label": "Everyday",
+              "labels": {}
+            },
+            {
+              "value": "formal",
+              "label": "Formal",
+              "labels": {}
+            },
+            {
+              "value": "classic",
+              "label": "Classic",
+              "labels": {}
+            },
+            {
+              "value": "modern",
+              "label": "Modern",
+              "labels": {}
+            }
+          ],
+          "version": 0,
+          "metadata": {
+            "ai_queryable": true,
+            "ai_enrichable": true,
+            "source_policy": "semantic",
+            "unit": null,
+            "display_order": 8,
+            "facetable": true
+          }
+        }
+      }
+    ]
+  },
+  {
+    "id": "8da8c3ef-94ed-5d9b-89d7-ba1425162fba",
+    "code": "grocery",
+    "name": "Grocery",
+    "description": "Recommended grocery catalog attributes. Customize before applying.",
+    "status": "active",
+    "version": 1,
+    "metadata": {
+      "platform_template": true
+    },
+    "template": [
+      {
+        "group": "Specifications",
+        "definition": {
+          "id": "00000000-0000-0000-0000-000000000000",
+          "entity_type": "product",
+          "attribute_code": "product_type",
+          "label": "Product Type",
+          "input_type": "text",
+          "scope": "global",
+          "is_required": false,
+          "is_unique": false,
+          "is_searchable": true,
+          "is_filterable": true,
+          "is_comparable": true,
+          "is_visible_on_front": true,
+          "used_for_promo_rules": false,
+          "used_for_configurations": false,
+          "swatch_type": "none",
+          "options": [],
+          "version": 0,
+          "metadata": {
+            "ai_queryable": true,
+            "ai_enrichable": false,
+            "source_policy": "factual",
+            "unit": null,
+            "display_order": 0,
+            "facetable": true,
+            "semantic_role": "classification"
+          }
+        }
+      },
+      {
+        "group": "Specifications",
+        "definition": {
+          "id": "00000000-0000-0000-0000-000000000000",
+          "entity_type": "product",
+          "attribute_code": "brand",
+          "label": "Brand",
+          "input_type": "text",
+          "scope": "global",
+          "is_required": false,
+          "is_unique": false,
+          "is_searchable": true,
+          "is_filterable": true,
+          "is_comparable": true,
+          "is_visible_on_front": true,
+          "used_for_promo_rules": false,
+          "used_for_configurations": false,
+          "swatch_type": "none",
+          "options": [],
+          "version": 0,
+          "metadata": {
+            "ai_queryable": true,
+            "ai_enrichable": false,
+            "source_policy": "factual",
+            "unit": null,
+            "display_order": 1,
+            "facetable": true
+          }
+        }
+      },
+      {
+        "group": "Specifications",
+        "definition": {
+          "id": "00000000-0000-0000-0000-000000000000",
+          "entity_type": "product",
+          "attribute_code": "dietary_preferences",
+          "label": "Dietary Preferences",
+          "input_type": "text",
+          "scope": "global",
+          "is_required": false,
+          "is_unique": false,
+          "is_searchable": true,
+          "is_filterable": true,
+          "is_comparable": true,
+          "is_visible_on_front": true,
+          "used_for_promo_rules": false,
+          "used_for_configurations": false,
+          "swatch_type": "none",
+          "options": [],
+          "version": 0,
+          "metadata": {
+            "ai_queryable": true,
+            "ai_enrichable": false,
+            "source_policy": "factual",
+            "unit": null,
+            "display_order": 2,
+            "facetable": true
+          }
+        }
+      },
+      {
+        "group": "Specifications",
+        "definition": {
+          "id": "00000000-0000-0000-0000-000000000000",
+          "entity_type": "product",
+          "attribute_code": "allergens",
+          "label": "Allergens",
+          "input_type": "text",
+          "scope": "global",
+          "is_required": false,
+          "is_unique": false,
+          "is_searchable": true,
+          "is_filterable": true,
+          "is_comparable": true,
+          "is_visible_on_front": true,
+          "used_for_promo_rules": false,
+          "used_for_configurations": false,
+          "swatch_type": "none",
+          "options": [],
+          "version": 0,
+          "metadata": {
+            "ai_queryable": true,
+            "ai_enrichable": false,
+            "source_policy": "trusted_only",
+            "unit": null,
+            "display_order": 3,
+            "facetable": true
+          }
+        }
+      },
+      {
+        "group": "Specifications",
+        "definition": {
+          "id": "00000000-0000-0000-0000-000000000000",
+          "entity_type": "product",
+          "attribute_code": "ingredients",
+          "label": "Ingredients",
+          "input_type": "textarea",
+          "scope": "global",
+          "is_required": false,
+          "is_unique": false,
+          "is_searchable": false,
+          "is_filterable": false,
+          "is_comparable": true,
+          "is_visible_on_front": true,
+          "used_for_promo_rules": false,
+          "used_for_configurations": false,
+          "swatch_type": "none",
+          "options": [],
+          "version": 0,
+          "metadata": {
+            "ai_queryable": true,
+            "ai_enrichable": false,
+            "source_policy": "trusted_only",
+            "unit": null,
+            "display_order": 4,
+            "facetable": false
+          }
+        }
+      },
+      {
+        "group": "Specifications",
+        "definition": {
+          "id": "00000000-0000-0000-0000-000000000000",
+          "entity_type": "product",
+          "attribute_code": "origin",
+          "label": "Origin",
+          "input_type": "text",
+          "scope": "global",
+          "is_required": false,
+          "is_unique": false,
+          "is_searchable": true,
+          "is_filterable": true,
+          "is_comparable": true,
+          "is_visible_on_front": true,
+          "used_for_promo_rules": false,
+          "used_for_configurations": false,
+          "swatch_type": "none",
+          "options": [],
+          "version": 0,
+          "metadata": {
+            "ai_queryable": true,
+            "ai_enrichable": false,
+            "source_policy": "factual",
+            "unit": null,
+            "display_order": 5,
+            "facetable": true
+          }
+        }
+      },
+      {
+        "group": "Specifications",
+        "definition": {
+          "id": "00000000-0000-0000-0000-000000000000",
+          "entity_type": "product",
+          "attribute_code": "storage_conditions",
+          "label": "Storage Conditions",
+          "input_type": "textarea",
+          "scope": "global",
+          "is_required": false,
+          "is_unique": false,
+          "is_searchable": false,
+          "is_filterable": false,
+          "is_comparable": true,
+          "is_visible_on_front": true,
+          "used_for_promo_rules": false,
+          "used_for_configurations": false,
+          "swatch_type": "none",
+          "options": [],
+          "version": 0,
+          "metadata": {
+            "ai_queryable": true,
+            "ai_enrichable": false,
+            "source_policy": "factual",
+            "unit": null,
+            "display_order": 6,
+            "facetable": false
+          }
+        }
+      },
+      {
+        "group": "Specifications",
+        "definition": {
+          "id": "00000000-0000-0000-0000-000000000000",
+          "entity_type": "product",
+          "attribute_code": "weight",
+          "label": "Weight",
+          "input_type": "measurement",
+          "scope": "global",
+          "is_required": false,
+          "is_unique": false,
+          "is_searchable": true,
+          "is_filterable": true,
+          "is_comparable": true,
+          "is_visible_on_front": true,
+          "used_for_promo_rules": false,
+          "used_for_configurations": false,
+          "swatch_type": "none",
+          "options": [],
+          "version": 0,
+          "metadata": {
+            "ai_queryable": true,
+            "ai_enrichable": false,
+            "source_policy": "factual",
+            "unit": "g",
+            "display_order": 7,
+            "facetable": true
+          }
+        }
+      },
+      {
+        "group": "Specifications",
+        "definition": {
+          "id": "00000000-0000-0000-0000-000000000000",
+          "entity_type": "product",
+          "attribute_code": "organic",
+          "label": "Organic",
+          "input_type": "boolean",
+          "scope": "global",
+          "is_required": false,
+          "is_unique": false,
+          "is_searchable": true,
+          "is_filterable": true,
+          "is_comparable": true,
+          "is_visible_on_front": true,
+          "used_for_promo_rules": false,
+          "used_for_configurations": false,
+          "swatch_type": "none",
+          "options": [],
+          "version": 0,
+          "metadata": {
+            "ai_queryable": true,
+            "ai_enrichable": false,
+            "source_policy": "factual",
+            "unit": null,
+            "display_order": 8,
+            "facetable": true
+          }
+        }
+      }
+    ]
+  },
+  {
+    "id": "f8893bec-637a-5d07-b88e-1e163da587c8",
+    "code": "home",
+    "name": "Home",
+    "description": "Recommended home catalog attributes. Customize before applying.",
+    "status": "active",
+    "version": 1,
+    "metadata": {
+      "platform_template": true
+    },
+    "template": [
+      {
+        "group": "Specifications",
+        "definition": {
+          "id": "00000000-0000-0000-0000-000000000000",
+          "entity_type": "product",
+          "attribute_code": "product_type",
+          "label": "Product Type",
+          "input_type": "text",
+          "scope": "global",
+          "is_required": false,
+          "is_unique": false,
+          "is_searchable": true,
+          "is_filterable": true,
+          "is_comparable": true,
+          "is_visible_on_front": true,
+          "used_for_promo_rules": false,
+          "used_for_configurations": false,
+          "swatch_type": "none",
+          "options": [],
+          "version": 0,
+          "metadata": {
+            "ai_queryable": true,
+            "ai_enrichable": false,
+            "source_policy": "factual",
+            "unit": null,
+            "display_order": 0,
+            "facetable": true,
+            "semantic_role": "classification"
+          }
+        }
+      },
+      {
+        "group": "Specifications",
+        "definition": {
+          "id": "00000000-0000-0000-0000-000000000000",
+          "entity_type": "product",
+          "attribute_code": "material",
+          "label": "Material",
+          "input_type": "text",
+          "scope": "global",
+          "is_required": false,
+          "is_unique": false,
+          "is_searchable": true,
+          "is_filterable": true,
+          "is_comparable": true,
+          "is_visible_on_front": true,
+          "used_for_promo_rules": false,
+          "used_for_configurations": false,
+          "swatch_type": "none",
+          "options": [],
+          "version": 0,
+          "metadata": {
+            "ai_queryable": true,
+            "ai_enrichable": false,
+            "source_policy": "factual",
+            "unit": null,
+            "display_order": 1,
+            "facetable": true
+          }
+        }
+      },
+      {
+        "group": "Specifications",
+        "definition": {
+          "id": "00000000-0000-0000-0000-000000000000",
+          "entity_type": "product",
+          "attribute_code": "color",
+          "label": "Color",
+          "input_type": "select",
+          "scope": "global",
+          "is_required": false,
+          "is_unique": false,
+          "is_searchable": true,
+          "is_filterable": true,
+          "is_comparable": true,
+          "is_visible_on_front": true,
+          "used_for_promo_rules": false,
+          "used_for_configurations": true,
+          "swatch_type": "none",
+          "options": [
+            {
+              "value": "red",
+              "label": "Red",
+              "labels": {}
+            },
+            {
+              "value": "blue",
+              "label": "Blue",
+              "labels": {}
+            },
+            {
+              "value": "green",
+              "label": "Green",
+              "labels": {}
+            },
+            {
+              "value": "black",
+              "label": "Black",
+              "labels": {}
+            },
+            {
+              "value": "white",
+              "label": "White",
+              "labels": {}
+            },
+            {
+              "value": "pink",
+              "label": "Pink",
+              "labels": {}
+            },
+            {
+              "value": "purple",
+              "label": "Purple",
+              "labels": {}
+            },
+            {
+              "value": "orange",
+              "label": "Orange",
+              "labels": {}
+            },
+            {
+              "value": "yellow",
+              "label": "Yellow",
+              "labels": {}
+            },
+            {
+              "value": "brown",
+              "label": "Brown",
+              "labels": {}
+            },
+            {
+              "value": "grey",
+              "label": "Grey",
+              "labels": {}
+            }
+          ],
+          "version": 0,
+          "metadata": {
+            "ai_queryable": true,
+            "ai_enrichable": false,
+            "source_policy": "factual",
+            "unit": null,
+            "display_order": 2,
+            "facetable": true
+          }
+        }
+      },
+      {
+        "group": "Specifications",
+        "definition": {
+          "id": "00000000-0000-0000-0000-000000000000",
+          "entity_type": "product",
+          "attribute_code": "dimensions",
+          "label": "Dimensions",
+          "input_type": "text",
+          "scope": "global",
+          "is_required": false,
+          "is_unique": false,
+          "is_searchable": true,
+          "is_filterable": true,
+          "is_comparable": true,
+          "is_visible_on_front": true,
+          "used_for_promo_rules": false,
+          "used_for_configurations": false,
+          "swatch_type": "none",
+          "options": [],
+          "version": 0,
+          "metadata": {
+            "ai_queryable": true,
+            "ai_enrichable": false,
+            "source_policy": "factual",
+            "unit": null,
+            "display_order": 3,
+            "facetable": true
+          }
+        }
+      },
+      {
+        "group": "Style & preferences",
+        "definition": {
+          "id": "00000000-0000-0000-0000-000000000000",
+          "entity_type": "product",
+          "attribute_code": "room",
+          "label": "Room",
+          "input_type": "text",
+          "scope": "global",
+          "is_required": false,
+          "is_unique": false,
+          "is_searchable": true,
+          "is_filterable": true,
+          "is_comparable": true,
+          "is_visible_on_front": true,
+          "used_for_promo_rules": false,
+          "used_for_configurations": false,
+          "swatch_type": "none",
+          "options": [],
+          "version": 0,
+          "metadata": {
+            "ai_queryable": true,
+            "ai_enrichable": true,
+            "source_policy": "semantic",
+            "unit": null,
+            "display_order": 4,
+            "facetable": true
+          }
+        }
+      },
+      {
+        "group": "Style & preferences",
+        "definition": {
+          "id": "00000000-0000-0000-0000-000000000000",
+          "entity_type": "product",
+          "attribute_code": "style",
+          "label": "Style",
+          "input_type": "multiselect",
+          "scope": "global",
+          "is_required": false,
+          "is_unique": false,
+          "is_searchable": true,
+          "is_filterable": true,
+          "is_comparable": true,
+          "is_visible_on_front": true,
+          "used_for_promo_rules": false,
+          "used_for_configurations": false,
+          "swatch_type": "none",
+          "options": [
+            {
+              "value": "luxury",
+              "label": "Luxury",
+              "labels": {}
+            },
+            {
+              "value": "minimalist",
+              "label": "Minimalist",
+              "labels": {}
+            },
+            {
+              "value": "elegant",
+              "label": "Elegant",
+              "labels": {}
+            },
+            {
+              "value": "casual",
+              "label": "Casual",
+              "labels": {}
+            },
+            {
+              "value": "premium",
+              "label": "Premium",
+              "labels": {}
+            },
+            {
+              "value": "everyday",
+              "label": "Everyday",
+              "labels": {}
+            },
+            {
+              "value": "formal",
+              "label": "Formal",
+              "labels": {}
+            },
+            {
+              "value": "classic",
+              "label": "Classic",
+              "labels": {}
+            },
+            {
+              "value": "modern",
+              "label": "Modern",
+              "labels": {}
+            }
+          ],
+          "version": 0,
+          "metadata": {
+            "ai_queryable": true,
+            "ai_enrichable": true,
+            "source_policy": "semantic",
+            "unit": null,
+            "display_order": 5,
+            "facetable": true
+          }
+        }
+      },
+      {
+        "group": "Material",
+        "definition": {
+          "id": "00000000-0000-0000-0000-000000000000",
+          "entity_type": "product",
+          "attribute_code": "finish",
+          "label": "Finish",
+          "input_type": "text",
+          "scope": "global",
+          "is_required": false,
+          "is_unique": false,
+          "is_searchable": true,
+          "is_filterable": true,
+          "is_comparable": true,
+          "is_visible_on_front": true,
+          "used_for_promo_rules": false,
+          "used_for_configurations": false,
+          "swatch_type": "none",
+          "options": [],
+          "version": 0,
+          "metadata": {
+            "ai_queryable": true,
+            "ai_enrichable": false,
+            "source_policy": "factual",
+            "unit": null,
+            "display_order": 6,
+            "facetable": true
+          }
+        }
+      }
+    ]
+  }
+]

@@ -1,0 +1,3 @@
+import { SiteIcon } from "@/components/site-icon";
+import Link from "next/link";
+export function StatusPage({eyebrow,title,summary,sections}:{eyebrow:string;title:string;summary:string;sections:{title:string;body:string}[]}){return <><header className="page-hero container"><p className="eyebrow"><span>01</span>{eyebrow}</p><h1>{title}</h1><p>{summary}</p></header><div className="container page-content status-sections">{sections.map((s,i)=><section key={s.title}><p className="eyebrow"><span>{String(i+2).padStart(2,"0")}</span>OVERVIEW</p><h2>{s.title}</h2><p>{s.body}</p></section>)}<Link className="button primary" href="/docs/getting-started/">Plan your evaluation <span><SiteIcon /></span></Link></div></>}

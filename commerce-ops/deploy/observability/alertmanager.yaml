@@ -1,0 +1,11 @@
+route:
+  receiver: local-review
+  group_by: [alertname]
+  group_wait: 10s
+  group_interval: 1m
+  repeat_interval: 4h
+receivers:
+  - name: local-review
+    webhook_configs:
+      - url: http://alert-receiver:9094/alerts
+        send_resolved: true

@@ -1,0 +1,773 @@
+{
+  "synthetic": true,
+  "browser": "153.0.8010.12",
+  "network": "localhost fixed-host proxy, no throttling",
+  "samples_per_page_per_viewport": 3,
+  "field_INP_verified": false,
+  "results": [
+    {
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "path": "/",
+      "sample": 0,
+      "metrics": {
+        "lcp": 92,
+        "cls": 0.0001235300925925926,
+        "interaction_durations": [
+          40,
+          40,
+          40
+        ],
+        "interaction_ids": [
+          5822,
+          5822,
+          5822
+        ],
+        "ttfb_ms": 26.399999998509884,
+        "document_transfer_bytes": 29722,
+        "dom_nodes": 261,
+        "inp_candidate_ms": 40,
+        "interpretation": "Short scripted interaction candidate; not field INP. Events under 16ms may not be reported."
+      },
+      "page_errors": []
+    },
+    {
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "path": "/",
+      "sample": 1,
+      "metrics": {
+        "lcp": 40,
+        "cls": 0.0001235300925925926,
+        "interaction_durations": [
+          48,
+          48,
+          48,
+          40,
+          40
+        ],
+        "interaction_ids": [
+          6161,
+          6161,
+          6161,
+          6168,
+          6168
+        ],
+        "ttfb_ms": 13.800000000745058,
+        "document_transfer_bytes": 29722,
+        "dom_nodes": 261,
+        "inp_candidate_ms": 48,
+        "interpretation": "Short scripted interaction candidate; not field INP. Events under 16ms may not be reported."
+      },
+      "page_errors": []
+    },
+    {
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "path": "/",
+      "sample": 2,
+      "metrics": {
+        "lcp": 44,
+        "cls": 0.0001235300925925926,
+        "interaction_durations": [
+          40,
+          40,
+          40,
+          32,
+          32
+        ],
+        "interaction_ids": [
+          8432,
+          8432,
+          8432,
+          8439,
+          8439
+        ],
+        "ttfb_ms": 17.800000000745058,
+        "document_transfer_bytes": 29722,
+        "dom_nodes": 261,
+        "inp_candidate_ms": 40,
+        "interpretation": "Short scripted interaction candidate; not field INP. Events under 16ms may not be reported."
+      },
+      "page_errors": []
+    },
+    {
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "path": "/products/apples",
+      "sample": 0,
+      "metrics": {
+        "lcp": 68,
+        "cls": 0.0001235300925925926,
+        "interaction_durations": [
+          48,
+          48,
+          48,
+          40,
+          40
+        ],
+        "interaction_ids": [
+          5385,
+          5385,
+          5385,
+          5392,
+          5392
+        ],
+        "ttfb_ms": 27.399999998509884,
+        "document_transfer_bytes": 126967,
+        "dom_nodes": 853,
+        "inp_candidate_ms": 48,
+        "interpretation": "Short scripted interaction candidate; not field INP. Events under 16ms may not be reported."
+      },
+      "page_errors": []
+    },
+    {
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "path": "/products/apples",
+      "sample": 1,
+      "metrics": {
+        "lcp": 64,
+        "cls": 0.0001235300925925926,
+        "interaction_durations": [
+          40,
+          40,
+          40,
+          40,
+          32
+        ],
+        "interaction_ids": [
+          9138,
+          9138,
+          9138,
+          9145,
+          9145
+        ],
+        "ttfb_ms": 25,
+        "document_transfer_bytes": 126967,
+        "dom_nodes": 853,
+        "inp_candidate_ms": 40,
+        "interpretation": "Short scripted interaction candidate; not field INP. Events under 16ms may not be reported."
+      },
+      "page_errors": []
+    },
+    {
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "path": "/products/apples",
+      "sample": 2,
+      "metrics": {
+        "lcp": 56,
+        "cls": 0.0001235300925925926,
+        "interaction_durations": [
+          32,
+          32,
+          32,
+          32,
+          32
+        ],
+        "interaction_ids": [
+          576,
+          576,
+          576,
+          583,
+          583
+        ],
+        "ttfb_ms": 25.099999997764826,
+        "document_transfer_bytes": 126967,
+        "dom_nodes": 853,
+        "inp_candidate_ms": 32,
+        "interpretation": "Short scripted interaction candidate; not field INP. Events under 16ms may not be reported."
+      },
+      "page_errors": []
+    },
+    {
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "path": "/categories/fruit",
+      "sample": 0,
+      "metrics": {
+        "lcp": 36,
+        "cls": 0.0001235300925925926,
+        "interaction_durations": [
+          40,
+          40,
+          40,
+          32,
+          32
+        ],
+        "interaction_ids": [
+          2179,
+          2179,
+          2179,
+          2186,
+          2186
+        ],
+        "ttfb_ms": 11.5,
+        "document_transfer_bytes": 23585,
+        "dom_nodes": 196,
+        "inp_candidate_ms": 40,
+        "interpretation": "Short scripted interaction candidate; not field INP. Events under 16ms may not be reported."
+      },
+      "page_errors": []
+    },
+    {
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "path": "/categories/fruit",
+      "sample": 1,
+      "metrics": {
+        "lcp": 36,
+        "cls": 0.0001235300925925926,
+        "interaction_durations": [
+          40,
+          40,
+          40,
+          40,
+          40
+        ],
+        "interaction_ids": [
+          9577,
+          9577,
+          9577,
+          9584,
+          9584
+        ],
+        "ttfb_ms": 15,
+        "document_transfer_bytes": 23585,
+        "dom_nodes": 196,
+        "inp_candidate_ms": 40,
+        "interpretation": "Short scripted interaction candidate; not field INP. Events under 16ms may not be reported."
+      },
+      "page_errors": []
+    },
+    {
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "path": "/categories/fruit",
+      "sample": 2,
+      "metrics": {
+        "lcp": 40,
+        "cls": 0.0001235300925925926,
+        "interaction_durations": [
+          40,
+          40,
+          40,
+          32,
+          32
+        ],
+        "interaction_ids": [
+          2710,
+          2710,
+          2710,
+          2717,
+          2717
+        ],
+        "ttfb_ms": 14,
+        "document_transfer_bytes": 23585,
+        "dom_nodes": 196,
+        "inp_candidate_ms": 40,
+        "interpretation": "Short scripted interaction candidate; not field INP. Events under 16ms may not be reported."
+      },
+      "page_errors": []
+    },
+    {
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "path": "/pages/about",
+      "sample": 0,
+      "metrics": {
+        "lcp": 32,
+        "cls": 0.0001235300925925926,
+        "interaction_durations": [
+          40,
+          40,
+          40,
+          32,
+          32
+        ],
+        "interaction_ids": [
+          3026,
+          3026,
+          3026,
+          3033,
+          3033
+        ],
+        "ttfb_ms": 9.699999999254942,
+        "document_transfer_bytes": 11038,
+        "dom_nodes": 95,
+        "inp_candidate_ms": 40,
+        "interpretation": "Short scripted interaction candidate; not field INP. Events under 16ms may not be reported."
+      },
+      "page_errors": []
+    },
+    {
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "path": "/pages/about",
+      "sample": 1,
+      "metrics": {
+        "lcp": 40,
+        "cls": 0.0001235300925925926,
+        "interaction_durations": [
+          40,
+          40,
+          40,
+          32,
+          32
+        ],
+        "interaction_ids": [
+          4783,
+          4783,
+          4783,
+          4790,
+          4790
+        ],
+        "ttfb_ms": 10.100000001490116,
+        "document_transfer_bytes": 11038,
+        "dom_nodes": 95,
+        "inp_candidate_ms": 40,
+        "interpretation": "Short scripted interaction candidate; not field INP. Events under 16ms may not be reported."
+      },
+      "page_errors": []
+    },
+    {
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "path": "/pages/about",
+      "sample": 2,
+      "metrics": {
+        "lcp": 32,
+        "cls": 0.0001235300925925926,
+        "interaction_durations": [
+          40,
+          40,
+          40,
+          32,
+          32
+        ],
+        "interaction_ids": [
+          4831,
+          4831,
+          4831,
+          4838,
+          4838
+        ],
+        "ttfb_ms": 9.699999999254942,
+        "document_transfer_bytes": 11038,
+        "dom_nodes": 95,
+        "inp_candidate_ms": 40,
+        "interpretation": "Short scripted interaction candidate; not field INP. Events under 16ms may not be reported."
+      },
+      "page_errors": []
+    },
+    {
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "path": "/",
+      "sample": 0,
+      "metrics": {
+        "lcp": 64,
+        "cls": 0.010966734799308191,
+        "interaction_durations": [
+          40,
+          40,
+          40,
+          32,
+          32
+        ],
+        "interaction_ids": [
+          469,
+          469,
+          469,
+          476,
+          476
+        ],
+        "ttfb_ms": 11.599999997764826,
+        "document_transfer_bytes": 29722,
+        "dom_nodes": 261,
+        "inp_candidate_ms": 40,
+        "interpretation": "Short scripted interaction candidate; not field INP. Events under 16ms may not be reported."
+      },
+      "page_errors": []
+    },
+    {
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "path": "/",
+      "sample": 1,
+      "metrics": {
+        "lcp": 40,
+        "cls": 0.010966734799308191,
+        "interaction_durations": [
+          40,
+          40,
+          40,
+          32,
+          32
+        ],
+        "interaction_ids": [
+          6501,
+          6501,
+          6501,
+          6508,
+          6508
+        ],
+        "ttfb_ms": 17.200000002980232,
+        "document_transfer_bytes": 29722,
+        "dom_nodes": 261,
+        "inp_candidate_ms": 40,
+        "interpretation": "Short scripted interaction candidate; not field INP. Events under 16ms may not be reported."
+      },
+      "page_errors": []
+    },
+    {
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "path": "/",
+      "sample": 2,
+      "metrics": {
+        "lcp": 36,
+        "cls": 0.010966734799308191,
+        "interaction_durations": [
+          40,
+          40,
+          40,
+          32,
+          32
+        ],
+        "interaction_ids": [
+          6658,
+          6658,
+          6658,
+          6665,
+          6665
+        ],
+        "ttfb_ms": 12.200000002980232,
+        "document_transfer_bytes": 29722,
+        "dom_nodes": 261,
+        "inp_candidate_ms": 40,
+        "interpretation": "Short scripted interaction candidate; not field INP. Events under 16ms may not be reported."
+      },
+      "page_errors": []
+    },
+    {
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "path": "/products/apples",
+      "sample": 0,
+      "metrics": {
+        "lcp": 56,
+        "cls": 0.010966734799308191,
+        "interaction_durations": [
+          40,
+          40,
+          40,
+          32,
+          32
+        ],
+        "interaction_ids": [
+          240,
+          240,
+          240,
+          247,
+          247
+        ],
+        "ttfb_ms": 27.099999997764826,
+        "document_transfer_bytes": 126967,
+        "dom_nodes": 853,
+        "inp_candidate_ms": 40,
+        "interpretation": "Short scripted interaction candidate; not field INP. Events under 16ms may not be reported."
+      },
+      "page_errors": []
+    },
+    {
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "path": "/products/apples",
+      "sample": 1,
+      "metrics": {
+        "lcp": 48,
+        "cls": 0.010966734799308191,
+        "interaction_durations": [
+          40,
+          40,
+          40,
+          32,
+          32
+        ],
+        "interaction_ids": [
+          4201,
+          4201,
+          4201,
+          4208,
+          4208
+        ],
+        "ttfb_ms": 22.900000002235174,
+        "document_transfer_bytes": 126967,
+        "dom_nodes": 853,
+        "inp_candidate_ms": 40,
+        "interpretation": "Short scripted interaction candidate; not field INP. Events under 16ms may not be reported."
+      },
+      "page_errors": []
+    },
+    {
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "path": "/products/apples",
+      "sample": 2,
+      "metrics": {
+        "lcp": 48,
+        "cls": 0.010966734799308191,
+        "interaction_durations": [
+          40,
+          40,
+          40,
+          32,
+          32
+        ],
+        "interaction_ids": [
+          5923,
+          5923,
+          5923,
+          5930,
+          5930
+        ],
+        "ttfb_ms": 21.5,
+        "document_transfer_bytes": 126967,
+        "dom_nodes": 853,
+        "inp_candidate_ms": 40,
+        "interpretation": "Short scripted interaction candidate; not field INP. Events under 16ms may not be reported."
+      },
+      "page_errors": []
+    },
+    {
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "path": "/categories/fruit",
+      "sample": 0,
+      "metrics": {
+        "lcp": 36,
+        "cls": 0.010966734799308191,
+        "interaction_durations": [
+          40,
+          40,
+          40,
+          32,
+          32
+        ],
+        "interaction_ids": [
+          338,
+          338,
+          338,
+          345,
+          345
+        ],
+        "ttfb_ms": 12,
+        "document_transfer_bytes": 23585,
+        "dom_nodes": 196,
+        "inp_candidate_ms": 40,
+        "interpretation": "Short scripted interaction candidate; not field INP. Events under 16ms may not be reported."
+      },
+      "page_errors": []
+    },
+    {
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "path": "/categories/fruit",
+      "sample": 1,
+      "metrics": {
+        "lcp": 40,
+        "cls": 0.010966734799308191,
+        "interaction_durations": [
+          40,
+          40,
+          40,
+          32,
+          32
+        ],
+        "interaction_ids": [
+          8048,
+          8048,
+          8048,
+          8055,
+          8055
+        ],
+        "ttfb_ms": 16.5,
+        "document_transfer_bytes": 23585,
+        "dom_nodes": 196,
+        "inp_candidate_ms": 40,
+        "interpretation": "Short scripted interaction candidate; not field INP. Events under 16ms may not be reported."
+      },
+      "page_errors": []
+    },
+    {
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "path": "/categories/fruit",
+      "sample": 2,
+      "metrics": {
+        "lcp": 40,
+        "cls": 0.010966734799308191,
+        "interaction_durations": [
+          40,
+          40,
+          40,
+          32,
+          32
+        ],
+        "interaction_ids": [
+          6273,
+          6273,
+          6273,
+          6280,
+          6280
+        ],
+        "ttfb_ms": 15.600000001490116,
+        "document_transfer_bytes": 23585,
+        "dom_nodes": 196,
+        "inp_candidate_ms": 40,
+        "interpretation": "Short scripted interaction candidate; not field INP. Events under 16ms may not be reported."
+      },
+      "page_errors": []
+    },
+    {
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "path": "/pages/about",
+      "sample": 0,
+      "metrics": {
+        "lcp": 36,
+        "cls": 0.009741729486344388,
+        "interaction_durations": [
+          40,
+          40,
+          40,
+          32,
+          32
+        ],
+        "interaction_ids": [
+          9409,
+          9409,
+          9409,
+          9416,
+          9416
+        ],
+        "ttfb_ms": 13.800000000745058,
+        "document_transfer_bytes": 11038,
+        "dom_nodes": 95,
+        "inp_candidate_ms": 40,
+        "interpretation": "Short scripted interaction candidate; not field INP. Events under 16ms may not be reported."
+      },
+      "page_errors": []
+    },
+    {
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "path": "/pages/about",
+      "sample": 1,
+      "metrics": {
+        "lcp": 40,
+        "cls": 0.009741729486344388,
+        "interaction_durations": [
+          40,
+          40,
+          40,
+          32,
+          32
+        ],
+        "interaction_ids": [
+          1460,
+          1460,
+          1460,
+          1467,
+          1467
+        ],
+        "ttfb_ms": 15.5,
+        "document_transfer_bytes": 11038,
+        "dom_nodes": 95,
+        "inp_candidate_ms": 40,
+        "interpretation": "Short scripted interaction candidate; not field INP. Events under 16ms may not be reported."
+      },
+      "page_errors": []
+    },
+    {
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "path": "/pages/about",
+      "sample": 2,
+      "metrics": {
+        "lcp": 36,
+        "cls": 0.009741729486344388,
+        "interaction_durations": [
+          40,
+          40,
+          40,
+          40,
+          32
+        ],
+        "interaction_ids": [
+          7817,
+          7817,
+          7817,
+          7824,
+          7824
+        ],
+        "ttfb_ms": 14.300000000745058,
+        "document_transfer_bytes": 11038,
+        "dom_nodes": 95,
+        "inp_candidate_ms": 40,
+        "interpretation": "Short scripted interaction candidate; not field INP. Events under 16ms may not be reported."
+      },
+      "page_errors": []
+    }
+  ]
+}

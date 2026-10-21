@@ -1,0 +1,2 @@
+import { defineConfig } from '@playwright/test';
+export default defineConfig({testDir:'./e2e/checkout',testMatch:process.env.INTERFACE_BASELINE ? 'checkout.spec.ts' : 'interface-preview.spec.ts',outputDir:process.env.INTERFACE_BASELINE?'test-results/checkout-baseline':'test-results/interface-preview',timeout:30000,workers:1,reporter:'list',use:{baseURL:'http://127.0.0.1:5273',viewport:{width:1440,height:1100},screenshot:'only-on-failure'}});

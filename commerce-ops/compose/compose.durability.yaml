@@ -1,0 +1,68 @@
+# Opt-in single-host reference topology; see deploy/durability/README.md before adoption.
+# Production must place the standby and backup/archive storage in separate failure domains.
+services:
+  postgres:
+    entrypoint: ["sh", "/opt/durability/primary.sh"]
+    command: []
+    environment:
+      REPLICATION_PASSWORD: ${REPLICATION_PASSWORD:?Set a dedicated replication password}
+    volumes:
+      - ../../commerce-ops/deploy/durability:/opt/durability:ro
+      - postgres-archive:/archive
+  postgres-standby:
+    image: postgres:16-bookworm
+    entrypoint: ["sh", "/opt/durability/standby.sh"]
+    restart: unless-stopped
+    stop_grace_period: 60s
+    environment:
+      PGDATA: /var/lib/postgresql/data
+      POSTGRES_USER: ${POSTGRES_USER:-commerce}
+      POSTGRES_DB: ${POSTGRES_DB:-commerce}
+      REPLICATION_PASSWORD: ${REPLICATION_PASSWORD:?Set a dedicated replication password}
+    volumes:
+      - postgres-standby-data:/var/lib/postgresql/data
+      - ../../commerce-ops/deploy/durability:/opt/durability:ro
+    depends_on:
+      postgres: {condition: service_healthy}
+    healthcheck:
+      test: ["CMD-SHELL", "test \"$$(psql -U $$POSTGRES_USER -d $$POSTGRES_DB -Atc 'SELECT pg_is_in_recovery()')\" = t"]
+      interval: 5s
+      timeout: 5s
+      retries: 30
+      start_period: 30s
+  postgres-sync:
+    image: postgres:16-bookworm
+    entrypoint: ["sh", "/opt/durability/enable-sync.sh"]
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER:-commerce}
+      POSTGRES_DB: ${POSTGRES_DB:-commerce}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+    volumes: ["../../commerce-ops/deploy/durability:/opt/durability:ro"]
+    depends_on:
+      postgres-standby: {condition: service_healthy}
+  postgres-backup:
+    image: postgres:16-bookworm
+    entrypoint: ["sh", "/opt/durability/schedule-backups.sh"]
+    restart: unless-stopped
+    stop_grace_period: 30s
+    environment:
+      REPLICATION_PASSWORD: ${REPLICATION_PASSWORD:?Set a dedicated replication password}
+      BACKUP_INTERVAL_SECONDS: ${BACKUP_INTERVAL_SECONDS:-21600}
+    volumes:
+      - postgres-backups:/backups
+      - ../../commerce-ops/deploy/durability:/opt/durability:ro
+    depends_on:
+      postgres-sync: {condition: service_completed_successfully}
+    healthcheck:
+      test: ["CMD", "sh", "/opt/durability/backup-health.sh"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      start_period: 120s
+  api-gateway:
+    depends_on:
+      postgres-sync: {condition: service_completed_successfully}
+volumes:
+  postgres-standby-data:
+  postgres-archive:
+  postgres-backups:

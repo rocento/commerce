@@ -1,0 +1,6500 @@
+[
+  {
+    "name": "search",
+    "text": "show me black Adidas running shoes under $150 size 43",
+    "context": {},
+    "response": {
+      "status": "RESOLVED",
+      "message": "Understood\u2014you want to find products.",
+      "text": "show me black Adidas running shoes under $150 size 43",
+      "normalizedText": "show me black adidas running shoes under $150 size 43",
+      "intent": "PRODUCT_SEARCH",
+      "confidence": 0.916,
+      "confidenceLevel": "HIGH",
+      "entities": {
+        "category": "running_shoes",
+        "brand": "Adidas",
+        "color": "black",
+        "price": {
+          "operator": "<=",
+          "value": 150,
+          "currency": "USD"
+        },
+        "size": "43",
+        "productText": "black adidas running shoes"
+      },
+      "matchedSemanticGroups": [
+        "ACTION_SEARCH",
+        "ACTION_WHAT",
+        "ACTION_WHAT_11",
+        "ACTION_HOW_19",
+        "ACTION_WHAT_23",
+        "ACTION_WHAT_32",
+        "ACTION_WHAT_34",
+        "ACTION_CHECK_36",
+        "ACTION_CHECK_38",
+        "ACTION_CHECK_45",
+        "ACTION_CHECK_47",
+        "ACTION_VIEW",
+        "ACTION_SHOW",
+        "ACTION_SHOW_74",
+        "ACTION_CHECK_93",
+        "ACTION_FIND",
+        "ACTION_WHERE_109",
+        "ACTION_SHOW_OR_READ_OR_LIST",
+        "ACTION_SHOW_OR_VIEW",
+        "ACTION_SHOW_OR_PLAY",
+        "ACTION_DOWNLOAD_OR_SHOW_OR_GET",
+        "ACTION_SHOW_OR_OPEN",
+        "ACTION_SHOW_OR_FIND",
+        "ACTION_SHOW_OR_LIST",
+        "ACTION_CALCULATE_OR_CHECK_OR_SHOW",
+        "ACTION_DOWNLOAD_OR_SHOW",
+        "ACTION_SHOW_OR_SEND",
+        "ACTION_SHOW_OR_REQUEST",
+        "ACTION_SHOW_OR_RESEND",
+        "ACTION_SHOW_OR_GET",
+        "ACTION_INFORMATION_QUESTION",
+        "ACTION_INDUSTRY_INFORMATION",
+        "COLOR_BLACK",
+        "DURATION_CONCEPT",
+        "OCCASION_CONCEPT",
+        "PRICE_MAX_OPERATOR",
+        "OBJECT_SIZES"
+      ],
+      "evidence": [
+        {
+          "group": "ACTION_SEARCH",
+          "kind": "REQUIRED",
+          "score": 4
+        },
+        {
+          "group": "PRODUCT_ARGUMENT",
+          "kind": "REQUIRED",
+          "score": 4
+        },
+        {
+          "group": "ACTION_SEARCH",
+          "kind": "RELATIONSHIP",
+          "score": 5
+        }
+      ],
+      "negativeEvidence": [],
+      "context": {
+        "input": {},
+        "next": {
+          "previousIntent": "PRODUCT_SEARCH",
+          "states": [
+            "PRODUCT_RESULTS_VISIBLE"
+          ],
+          "selectedItems": [
+            {
+              "productText": "black adidas running shoes"
+            }
+          ]
+        }
+      },
+      "alternatives": [
+        {
+          "intent": "ACCOUNT_ADDRESS_LIST",
+          "rule": "primary",
+          "score": -1,
+          "evidence": [
+            {
+              "group": "ACTION_SHOW_OR_LIST",
+              "kind": "REQUIRED",
+              "score": 4
+            }
+          ],
+          "penalties": [
+            {
+              "group": "OBJECT_SAVED_ADDRESSES",
+              "kind": "MISSING_REQUIRED_INTENT_SIGNAL",
+              "score": -5
+            }
+          ],
+          "contextBoost": 0,
+          "missing": [
+            "OBJECT_SAVED_ADDRESSES"
+          ],
+          "probability": 0.0008349798359774147
+        },
+        {
+          "intent": "BULK_DISCOUNT",
+          "rule": "primary",
+          "score": -1,
+          "evidence": [
+            {
+              "group": "ACTION_CHECK_47",
+              "kind": "REQUIRED",
+              "score": 4
+            }
+          ],
+          "penalties": [
+            {
+              "group": "OBJECT_BULK_DISCOUNTS",
+              "kind": "MISSING_REQUIRED_INTENT_SIGNAL",
+              "score": -5
+            }
+          ],
+          "contextBoost": 0,
+          "missing": [
+            "OBJECT_BULK_DISCOUNTS"
+          ],
+          "probability": 0.0008349798359774147
+        },
+        {
+          "intent": "BUNDLE_PRICE",
+          "rule": "primary",
+          "score": -1,
+          "evidence": [
+            {
+              "group": "ACTION_CHECK_47",
+              "kind": "REQUIRED",
+              "score": 4
+            }
+          ],
+          "penalties": [
+            {
+              "group": "OBJECT_BUNDLE_PRICE",
+              "kind": "MISSING_REQUIRED_INTENT_SIGNAL",
+              "score": -5
+            }
+          ],
+          "contextBoost": 0,
+          "missing": [
+            "OBJECT_BUNDLE_PRICE"
+          ],
+          "probability": 0.0008349798359774147
+        }
+      ],
+      "requiresConfirmation": false,
+      "debug": {
+        "score": 13,
+        "probability": 0.9156665747519885,
+        "confidence": 0.9156665747519885,
+        "scoreMargin": 14,
+        "probabilityMargin": 0.9148315949160111,
+        "evidenceStrength": 1,
+        "separationConfidence": 1,
+        "config": {
+          "weights": {
+            "required": 4,
+            "relationship": 5,
+            "optional": 1,
+            "generic": 0.25,
+            "context": 3
+          },
+          "penalties": {
+            "contradiction": 6,
+            "negatedAction": 8,
+            "missingRequired": 5
+          },
+          "temperature": 2,
+          "minScore": 6,
+          "minConfidence": 0.7,
+          "minScoreMargin": 2,
+          "minProbabilityMargin": 0.15,
+          "targetStrongScore": 12,
+          "targetMargin": 5
+        },
+        "tokens": [
+          "show",
+          "me",
+          "black",
+          "adidas",
+          "running",
+          "shoes",
+          "under",
+          "$150",
+          "size",
+          "43"
+        ],
+        "matchedPhrases": [
+          {
+            "group": "ACTION_SEARCH",
+            "phrase": "show",
+            "start": 0,
+            "end": 1,
+            "negated": false,
+            "fuzzy": false
+          },
+          {
+            "group": "ACTION_SEARCH",
+            "phrase": "show me",
+            "start": 0,
+            "end": 2,
+            "negated": false,
+            "fuzzy": false
+          },
+          {
+            "group": "ACTION_WHAT",
+            "phrase": "show",
+            "start": 0,
+            "end": 1,
+            "negated": false,
+            "fuzzy": false
+          },
+          {
+            "group": "ACTION_WHAT_11",
+            "phrase": "show",
+            "start": 0,
+            "end": 1,
+            "negated": false,
+            "fuzzy": false
+          },
+          {
+            "group": "ACTION_HOW_19",
+            "phrase": "show",
+            "start": 0,
+            "end": 1,
+            "negated": false,
+            "fuzzy": false
+          },
+          {
+            "group": "ACTION_WHAT_23",
+            "phrase": "show",
+            "start": 0,
+            "end": 1,
+            "negated": false,
+            "fuzzy": false
+          },
+          {
+            "group": "ACTION_WHAT_32",
+            "phrase": "show",
+            "start": 0,
+            "end": 1,
+            "negated": false,
+            "fuzzy": false
+          },
+          {
+            "group": "ACTION_WHAT_34",
+            "phrase": "show",
+            "start": 0,
+            "end": 1,
+            "negated": false,
+            "fuzzy": false
+          },
+          {
+            "group": "ACTION_CHECK_36",
+            "phrase": "show",
+            "start": 0,
+            "end": 1,
+            "negated": false,
+            "fuzzy": false
+          },
+          {
+            "group": "ACTION_CHECK_38",
+            "phrase": "show",
+            "start": 0,
+            "end": 1,
+            "negated": false,
+            "fuzzy": false
+          },
+          {
+            "group": "ACTION_CHECK_45",
+            "phrase": "show",
+            "start": 0,
+            "end": 1,
+            "negated": false,
+            "fuzzy": false
+          },
+          {
+            "group": "ACTION_CHECK_47",
+            "phrase": "show",
+            "start": 0,
+            "end": 1,
+            "negated": false,
+            "fuzzy": false
+          },
+          {
+            "group": "ACTION_VIEW",
+            "phrase": "show",
+            "start": 0,
+            "end": 1,
+            "negated": false,
+            "fuzzy": false
+          },
+          {
+            "group": "ACTION_SHOW",
+            "phrase": "show",
+            "start": 0,
+            "end": 1,
+            "negated": false,
+            "fuzzy": false
+          },
+          {
+            "group": "ACTION_SHOW_74",
+            "phrase": "show",
+            "start": 0,
+            "end": 1,
+            "negated": false,
+            "fuzzy": false
+          },
+          {
+            "group": "ACTION_CHECK_93",
+            "phrase": "show",
+            "start": 0,
+            "end": 1,
+            "negated": false,
+            "fuzzy": false
+          },
+          {
+            "group": "ACTION_FIND",
+            "phrase": "show",
+            "start": 0,
+            "end": 1,
+            "negated": false,
+            "fuzzy": false
+          },
+          {
+            "group": "ACTION_WHERE_109",
+            "phrase": "show",
+            "start": 0,
+            "end": 1,
+            "negated": false,
+            "fuzzy": false
+          },
+          {
+            "group": "ACTION_SHOW_OR_READ_OR_LIST",
+            "phrase": "show",
+            "start": 0,
+            "end": 1,
+            "negated": false,
+            "fuzzy": false
+          },
+          {
+            "group": "ACTION_SHOW_OR_VIEW",
+            "phrase": "show",
+            "start": 0,
+            "end": 1,
+            "negated": false,
+            "fuzzy": false
+          },
+          {
+            "group": "ACTION_SHOW_OR_PLAY",
+            "phrase": "show",
+            "start": 0,
+            "end": 1,
+            "negated": false,
+            "fuzzy": false
+          },
+          {
+            "group": "ACTION_DOWNLOAD_OR_SHOW_OR_GET",
+            "phrase": "show",
+            "start": 0,
+            "end": 1,
+            "negated": false,
+            "fuzzy": false
+          },
+          {
+            "group": "ACTION_SHOW_OR_OPEN",
+            "phrase": "show",
+            "start": 0,
+            "end": 1,
+            "negated": false,
+            "fuzzy": false
+          },
+          {
+            "group": "ACTION_SHOW_OR_FIND",
+            "phrase": "show",
+            "start": 0,
+            "end": 1,
+            "negated": false,
+            "fuzzy": false
+          },
+          {
+            "group": "ACTION_SHOW_OR_LIST",
+            "phrase": "show",
+            "start": 0,
+            "end": 1,
+            "negated": false,
+            "fuzzy": false
+          },
+          {
+            "group": "ACTION_CALCULATE_OR_CHECK_OR_SHOW",
+            "phrase": "show",
+            "start": 0,
+            "end": 1,
+            "negated": false,
+            "fuzzy": false
+          },
+          {
+            "group": "ACTION_DOWNLOAD_OR_SHOW",
+            "phrase": "show",
+            "start": 0,
+            "end": 1,
+            "negated": false,
+            "fuzzy": false
+          },
+          {
+            "group": "ACTION_SHOW_OR_SEND",
+            "phrase": "show",
+            "start": 0,
+            "end": 1,
+            "negated": false,
+            "fuzzy": false
+          },
+          {
+            "group": "ACTION_SHOW_OR_REQUEST",
+            "phrase": "show",
+            "start": 0,
+            "end": 1,
+            "negated": false,
+            "fuzzy": false
+          },
+          {
+            "group": "ACTION_SHOW_OR_RESEND",
+            "phrase": "show",
+            "start": 0,
+            "end": 1,
+            "negated": false,
+            "fuzzy": false
+          },
+          {
+            "group": "ACTION_SHOW_OR_GET",
+            "phrase": "show",
+            "start": 0,
+            "end": 1,
+            "negated": false,
+            "fuzzy": false
+          },
+          {
+            "group": "ACTION_INFORMATION_QUESTION",
+            "phrase": "show",
+            "start": 0,
+            "end": 1,
+            "negated": false,
+            "fuzzy": false
+          },
+          {
+            "group": "ACTION_INDUSTRY_INFORMATION",
+            "phrase": "show",
+            "start": 0,
+            "end": 1,
+            "negated": false,
+            "fuzzy": false
+          },
+          {
+            "group": "COLOR_BLACK",
+            "phrase": "black",
+            "start": 2,
+            "end": 3,
+            "negated": false,
+            "fuzzy": false
+          },
+          {
+            "group": "DURATION_CONCEPT",
+            "phrase": "running",
+            "start": 4,
+            "end": 5,
+            "negated": false,
+            "fuzzy": false
+          },
+          {
+            "group": "OCCASION_CONCEPT",
+            "phrase": "running",
+            "start": 4,
+            "end": 5,
+            "negated": false,
+            "fuzzy": false
+          },
+          {
+            "group": "PRICE_MAX_OPERATOR",
+            "phrase": "under",
+            "start": 6,
+            "end": 7,
+            "negated": false,
+            "fuzzy": false
+          },
+          {
+            "group": "OBJECT_SIZES",
+            "phrase": "size",
+            "start": 8,
+            "end": 9,
+            "negated": false,
+            "fuzzy": false
+          }
+        ],
+        "suppressedPrefixes": [],
+        "actionFrames": [],
+        "contextualFrames": [],
+        "candidates": [
+          {
+            "intent": "PRODUCT_SEARCH",
+            "rule": "primary",
+            "score": 13,
+            "evidence": [
+              {
+                "group": "ACTION_SEARCH",
+                "kind": "REQUIRED",
+                "score": 4
+              },
+              {
+                "group": "PRODUCT_ARGUMENT",
+                "kind": "REQUIRED",
+                "score": 4
+              },
+              {
+                "group": "ACTION_SEARCH",
+                "kind": "RELATIONSHIP",
+                "score": 5
+              }
+            ],
+            "penalties": [],
+            "contextBoost": 0,
+            "missing": [],
+            "probability": 0.9156665747519885
+          },
+          {
+            "intent": "ACCOUNT_ADDRESS_LIST",
+            "rule": "primary",
+            "score": -1,
+            "evidence": [
+              {
+                "group": "ACTION_SHOW_OR_LIST",
+                "kind": "REQUIRED",
+                "score": 4
+              }
+            ],
+            "penalties": [
+              {
+                "group": "OBJECT_SAVED_ADDRESSES",
+                "kind": "MISSING_REQUIRED_INTENT_SIGNAL",
+                "score": -5
+              }
+            ],
+            "contextBoost": 0,
+            "missing": [
+              "OBJECT_SAVED_ADDRESSES"
+            ],
+            "probability": 0.0008349798359774147
+          },
+          {
+            "intent": "BULK_DISCOUNT",
+            "rule": "primary",
+            "score": -1,
+            "evidence": [
+              {
+                "group": "ACTION_CHECK_47",
+                "kind": "REQUIRED",
+                "score": 4
+              }
+            ],
+            "penalties": [
+              {
+                "group": "OBJECT_BULK_DISCOUNTS",
+                "kind": "MISSING_REQUIRED_INTENT_SIGNAL",
+                "score": -5
+              }
+            ],
+            "contextBoost": 0,
+            "missing": [
+              "OBJECT_BULK_DISCOUNTS"
+            ],
+            "probability": 0.0008349798359774147
+          },
+          {
+            "intent": "BUNDLE_PRICE",
+            "rule": "primary",
+            "score": -1,
+            "evidence": [
+              {
+                "group": "ACTION_CHECK_47",
+                "kind": "REQUIRED",
+                "score": 4
+              }
+            ],
+            "penalties": [
+              {
+                "group": "OBJECT_BUNDLE_PRICE",
+                "kind": "MISSING_REQUIRED_INTENT_SIGNAL",
+                "score": -5
+              }
+            ],
+            "contextBoost": 0,
+            "missing": [
+              "OBJECT_BUNDLE_PRICE"
+            ],
+            "probability": 0.0008349798359774147
+          },
+          {
+            "intent": "CART_ITEM_COUNT",
+            "rule": "primary",
+            "score": -1,
+            "evidence": [
+              {
+                "group": "ACTION_CHECK_47",
+                "kind": "REQUIRED",
+                "score": 4
+              }
+            ],
+            "penalties": [
+              {
+                "group": "OBJECT_CART_ITEM_COUNT",
+                "kind": "MISSING_REQUIRED_INTENT_SIGNAL",
+                "score": -5
+              }
+            ],
+            "contextBoost": 0,
+            "missing": [
+              "OBJECT_CART_ITEM_COUNT"
+            ],
+            "probability": 0.0008349798359774147
+          },
+          {
+            "intent": "CART_TOTAL",
+            "rule": "primary",
+            "score": -1,
+            "evidence": [
+              {
+                "group": "ACTION_CHECK_47",
+                "kind": "REQUIRED",
+                "score": 4
+              }
+            ],
+            "penalties": [
+              {
+                "group": "OBJECT_CART_TOTAL",
+                "kind": "MISSING_REQUIRED_INTENT_SIGNAL",
+                "score": -5
+              }
+            ],
+            "contextBoost": 0,
+            "missing": [
+              "OBJECT_CART_TOTAL"
+            ],
+            "probability": 0.0008349798359774147
+          },
+          {
+            "intent": "CASE_PACK_QUANTITY",
+            "rule": "primary",
+            "score": -1,
+            "evidence": [
+              {
+                "group": "ACTION_INDUSTRY_INFORMATION",
+                "kind": "REQUIRED",
+                "score": 4
+              }
+            ],
+            "penalties": [
+              {
+                "group": "OBJECT_CASE_PACK_QUANTITY",
+                "kind": "MISSING_REQUIRED_INTENT_SIGNAL",
+                "score": -5
+              }
+            ],
+            "contextBoost": 0,
+            "missing": [
+              "OBJECT_CASE_PACK_QUANTITY"
+            ],
+            "probability": 0.0008349798359774147
+          },
+          {
+            "intent": "CHECK_PRICE",
+            "rule": "primary",
+            "score": -1,
+            "evidence": [
+              {
+                "group": "ACTION_WHAT_32",
+                "kind": "REQUIRED",
+                "score": 4
+              }
+            ],
+            "penalties": [
+              {
+                "group": "OBJECT_PRICE",
+                "kind": "MISSING_REQUIRED_INTENT_SIGNAL",
+                "score": -5
+              }
+            ],
+            "contextBoost": 0,
+            "missing": [
+              "OBJECT_PRICE"
+            ],
+            "probability": 0.0008349798359774147
+          },
+          {
+            "intent": "CHECK_PROMOTION",
+            "rule": "primary",
+            "score": -1,
+            "evidence": [
+              {
+                "group": "ACTION_CHECK_38",
+                "kind": "REQUIRED",
+                "score": 4
+              }
+            ],
+            "penalties": [
+              {
+                "group": "OBJECT_PROMOTIONS",
+                "kind": "MISSING_REQUIRED_INTENT_SIGNAL",
+                "score": -5
+              }
+            ],
+            "contextBoost": 0,
+            "missing": [
+              "OBJECT_PROMOTIONS"
+            ],
+            "probability": 0.0008349798359774147
+          },
+          {
+            "intent": "CHECK_STOCK",
+            "rule": "primary",
+            "score": -1,
+            "evidence": [
+              {
+                "group": "ACTION_CHECK_45",
+                "kind": "REQUIRED",
+                "score": 4
+              }
+            ],
+            "penalties": [
+              {
+                "group": "OBJECT_STOCK",
+                "kind": "MISSING_REQUIRED_INTENT_SIGNAL",
+                "score": -5
+              }
+            ],
+            "contextBoost": 0,
+            "missing": [
+              "OBJECT_STOCK"
+            ],
+            "probability": 0.0008349798359774147
+          },
+          {
+            "intent": "CHECK_STORE_STOCK",
+            "rule": "primary",
+            "score": -1,
+            "evidence": [
+              {
+                "group": "ACTION_CHECK_47",
+                "kind": "REQUIRED",
+                "score": 4
+              }
+            ],
+            "penalties": [
+              {
+                "group": "OBJECT_STORE_STOCK",
+                "kind": "MISSING_REQUIRED_INTENT_SIGNAL",
+                "score": -5
+              }
+            ],
+            "contextBoost": 0,
+            "missing": [
+              "OBJECT_STORE_STOCK"
+            ],
+            "probability": 0.0008349798359774147
+          },
+          {
+            "intent": "CHECK_VARIANT_STOCK",
+            "rule": "primary",
+            "score": -1,
+            "evidence": [
+              {
+                "group": "ACTION_CHECK_47",
+                "kind": "REQUIRED",
+                "score": 4
+              }
+            ],
+            "penalties": [
+              {
+                "group": "OBJECT_VARIANT_STOCK",
+                "kind": "MISSING_REQUIRED_INTENT_SIGNAL",
+                "score": -5
+              }
+            ],
+            "contextBoost": 0,
+            "missing": [
+              "OBJECT_VARIANT_STOCK"
+            ],
+            "probability": 0.0008349798359774147
+          },
+          {
+            "intent": "CHECKOUT_TOTAL",
+            "rule": "primary",
+            "score": -1,
+            "evidence": [
+              {
+                "group": "ACTION_CHECK_47",
+                "kind": "REQUIRED",
+                "score": 4
+              }
+            ],
+            "penalties": [
+              {
+                "group": "OBJECT_CHECKOUT_TOTAL",
+                "kind": "MISSING_REQUIRED_INTENT_SIGNAL",
+                "score": -5
+              }
+            ],
+            "contextBoost": 0,
+            "missing": [
+              "OBJECT_CHECKOUT_TOTAL"
+            ],
+            "probability": 0.0008349798359774147
+          },
+          {
+            "intent": "COMPARE_SIZE",
+            "rule": "primary",
+            "score": -1,
+            "evidence": [
+              {
+                "group": "OBJECT_SIZES",
+                "kind": "REQUIRED",
+                "score": 4
+              }
+            ],
+            "penalties": [
+              {
+                "group": "ACTION_COMPARE",
+                "kind": "MISSING_REQUIRED_INTENT_SIGNAL",
+                "score": -5
+              }
+            ],
+            "contextBoost": 0,
+            "missing": [
+              "ACTION_COMPARE"
+            ],
+            "probability": 0.0008349798359774147
+          },
+          {
+            "intent": "COUPON_COMBINATION",
+            "rule": "primary",
+            "score": -1,
+            "evidence": [
+              {
+                "group": "ACTION_CHECK_47",
+                "kind": "REQUIRED",
+                "score": 4
+              }
+            ],
+            "penalties": [
+              {
+                "group": "OBJECT_COUPON_STACKING",
+                "kind": "MISSING_REQUIRED_INTENT_SIGNAL",
+                "score": -5
+              }
+            ],
+            "contextBoost": 0,
+            "missing": [
+              "OBJECT_COUPON_STACKING"
+            ],
+            "probability": 0.0008349798359774147
+          },
+          {
+            "intent": "COUPON_EXPIRY",
+            "rule": "primary",
+            "score": -1,
+            "evidence": [
+              {
+                "group": "ACTION_CHECK_47",
+                "kind": "REQUIRED",
+                "score": 4
+              }
+            ],
+            "penalties": [
+              {
+                "group": "OBJECT_COUPON_EXPIRY",
+                "kind": "MISSING_REQUIRED_INTENT_SIGNAL",
+                "score": -5
+              }
+            ],
+            "contextBoost": 0,
+            "missing": [
+              "OBJECT_COUPON_EXPIRY"
+            ],
+            "probability": 0.0008349798359774147
+          },
+          {
+            "intent": "COUPON_TERMS",
+            "rule": "primary",
+            "score": -1,
+            "evidence": [
+              {
+                "group": "ACTION_CHECK_47",
+                "kind": "REQUIRED",
+                "score": 4
+              }
+            ],
+            "penalties": [
+              {
+                "group": "OBJECT_COUPON_TERMS",
+                "kind": "MISSING_REQUIRED_INTENT_SIGNAL",
+                "score": -5
+              }
+            ],
+            "contextBoost": 0,
+            "missing": [
+              "OBJECT_COUPON_TERMS"
+            ],
+            "probability": 0.0008349798359774147
+          },
+          {
+            "intent": "CURRENCY_OPTIONS",
+            "rule": "primary",
+            "score": -1,
+            "evidence": [
+              {
+                "group": "ACTION_SHOW_OR_LIST",
+                "kind": "REQUIRED",
+                "score": 4
+              }
+            ],
+            "penalties": [
+              {
+                "group": "OBJECT_SUPPORTED_CURRENCIES",
+                "kind": "MISSING_REQUIRED_INTENT_SIGNAL",
+                "score": -5
+              }
+            ],
+            "contextBoost": 0,
+            "missing": [
+              "OBJECT_SUPPORTED_CURRENCIES"
+            ],
+            "probability": 0.0008349798359774147
+          },
+          {
+            "intent": "DELIVERY_AREA",
+            "rule": "primary",
+            "score": -1,
+            "evidence": [
+              {
+                "group": "ACTION_CHECK_47",
+                "kind": "REQUIRED",
+                "score": 4
+              }
+            ],
+            "penalties": [
+              {
+                "group": "OBJECT_DELIVERY_AREA",
+                "kind": "MISSING_REQUIRED_INTENT_SIGNAL",
+                "score": -5
+              }
+            ],
+            "contextBoost": 0,
+            "missing": [
+              "OBJECT_DELIVERY_AREA"
+            ],
+            "probability": 0.0008349798359774147
+          },
+          {
+            "intent": "DELIVERY_CARRIER",
+            "rule": "primary",
+            "score": -1,
+            "evidence": [
+              {
+                "group": "ACTION_CHECK_47",
+                "kind": "REQUIRED",
+                "score": 4
+              }
+            ],
+            "penalties": [
+              {
+                "group": "OBJECT_DELIVERY_CARRIER",
+                "kind": "MISSING_REQUIRED_INTENT_SIGNAL",
+                "score": -5
+              }
+            ],
+            "contextBoost": 0,
+            "missing": [
+              "OBJECT_DELIVERY_CARRIER"
+            ],
+            "probability": 0.0008349798359774147
+          },
+          {
+            "intent": "DELIVERY_COST",
+            "rule": "primary",
+            "score": -1,
+            "evidence": [
+              {
+                "group": "ACTION_WHAT_23",
+                "kind": "REQUIRED",
+                "score": 4
+              }
+            ],
+            "penalties": [
+              {
+                "group": "OBJECT_DELIVERY_COST",
+                "kind": "MISSING_REQUIRED_INTENT_SIGNAL",
+                "score": -5
+              }
+            ],
+            "contextBoost": 0,
+            "missing": [
+              "OBJECT_DELIVERY_COST"
+            ],
+            "probability": 0.0008349798359774147
+          },
+          {
+            "intent": "DELIVERY_DATE",
+            "rule": "primary",
+            "score": -1,
+            "evidence": [
+              {
+                "group": "ACTION_WHAT_23",
+                "kind": "REQUIRED",
+                "score": 4
+              }
+            ],
+            "penalties": [
+              {
+                "group": "OBJECT_DELIVERY_DATE",
+                "kind": "MISSING_REQUIRED_INTENT_SIGNAL",
+                "score": -5
+              }
+            ],
+            "contextBoost": 0,
+            "missing": [
+              "OBJECT_DELIVERY_DATE"
+            ],
+            "probability": 0.0008349798359774147
+          },
+          {
+            "intent": "DELIVERY_TIME",
+            "rule": "primary",
+            "score": -1,
+            "evidence": [
+              {
+                "group": "ACTION_WHAT_23",
+                "kind": "REQUIRED",
+                "score": 4
+              }
+            ],
+            "penalties": [
+              {
+                "group": "OBJECT_DELIVERY_TIME",
+                "kind": "MISSING_REQUIRED_INTENT_SIGNAL",
+                "score": -5
+              }
+            ],
+            "contextBoost": 0,
+            "missing": [
+              "OBJECT_DELIVERY_TIME"
+            ],
+            "probability": 0.0008349798359774147
+          },
+          {
+            "intent": "DELIVERY_TRACKING_LINK",
+            "rule": "primary",
+            "score": -1,
+            "evidence": [
+              {
+                "group": "ACTION_SHOW_OR_SEND",
+                "kind": "REQUIRED",
+                "score": 4
+              }
+            ],
+            "penalties": [
+              {
+                "group": "OBJECT_TRACKING_LINK",
+                "kind": "MISSING_REQUIRED_INTENT_SIGNAL",
+                "score": -5
+              }
+            ],
+            "contextBoost": 0,
+            "missing": [
+              "OBJECT_TRACKING_LINK"
+            ],
+            "probability": 0.0008349798359774147
+          },
+          {
+            "intent": "EMPLOYEE_DISCOUNT",
+            "rule": "primary",
+            "score": -1,
+            "evidence": [
+              {
+                "group": "ACTION_CHECK_47",
+                "kind": "REQUIRED",
+                "score": 4
+              }
+            ],
+            "penalties": [
+              {
+                "group": "OBJECT_EMPLOYEE_DISCOUNT",
+                "kind": "MISSING_REQUIRED_INTENT_SIGNAL",
+                "score": -5
+              }
+            ],
+            "contextBoost": 0,
+            "missing": [
+              "OBJECT_EMPLOYEE_DISCOUNT"
+            ],
+            "probability": 0.0008349798359774147
+          },
+          {
+            "intent": "FIND_PICKUP_LOCATION",
+            "rule": "primary",
+            "score": -1,
+            "evidence": [
+              {
+                "group": "ACTION_FIND",
+                "kind": "REQUIRED",
+                "score": 4
+              }
+            ],
+            "penalties": [
+              {
+                "group": "OBJECT_PICKUP_LOCATIONS",
+                "kind": "MISSING_REQUIRED_INTENT_SIGNAL",
+                "score": -5
+              }
+            ],
+            "contextBoost": 0,
+            "missing": [
+              "OBJECT_PICKUP_LOCATIONS"
+            ],
+            "probability": 0.0008349798359774147
+          },
+          {
+            "intent": "FIRMWARE_VERSION",
+            "rule": "primary",
+            "score": -1,
+            "evidence": [
+              {
+                "group": "ACTION_INDUSTRY_INFORMATION",
+                "kind": "REQUIRED",
+                "score": 4
+              }
+            ],
+            "penalties": [
+              {
+                "group": "OBJECT_FIRMWARE_VERSION",
+                "kind": "MISSING_REQUIRED_INTENT_SIGNAL",
+                "score": -5
+              }
+            ],
+            "contextBoost": 0,
+            "missing": [
+              "OBJECT_FIRMWARE_VERSION"
+            ],
+            "probability": 0.0008349798359774147
+          },
+          {
+            "intent": "FOOTWEAR_WIDTH",
+            "rule": "primary",
+            "score": -1,
+            "evidence": [
+              {
+                "group": "ACTION_INDUSTRY_INFORMATION",
+                "kind": "REQUIRED",
+                "score": 4
+              }
+            ],
+            "penalties": [
+              {
+                "group": "OBJECT_FOOTWEAR_WIDTH",
+                "kind": "MISSING_REQUIRED_INTENT_SIGNAL",
+                "score": -5
+              }
+            ],
+            "contextBoost": 0,
+            "missing": [
+              "OBJECT_FOOTWEAR_WIDTH"
+            ],
+            "probability": 0.0008349798359774147
+          },
+          {
+            "intent": "FRAGRANCE_NOTES",
+            "rule": "primary",
+            "score": -1,
+            "evidence": [
+              {
+                "group": "ACTION_INDUSTRY_INFORMATION",
+                "kind": "REQUIRED",
+                "score": 4
+              }
+            ],
+            "penalties": [
+              {
+                "group": "OBJECT_FRAGRANCE_NOTES",
+                "kind": "MISSING_REQUIRED_INTENT_SIGNAL",
+                "score": -5
+              }
+            ],
+            "contextBoost": 0,
+            "missing": [
+              "OBJECT_FRAGRANCE_NOTES"
+            ],
+            "probability": 0.0008349798359774147
+          },
+          {
+            "intent": "MEMBER_PRICE",
+            "rule": "primary",
+            "score": -1,
+            "evidence": [
+              {
+                "group": "ACTION_CHECK_47",
+                "kind": "REQUIRED",
+                "score": 4
+              }
+            ],
+            "penalties": [
+              {
+                "group": "OBJECT_MEMBER_PRICE",
+                "kind": "MISSING_REQUIRED_INTENT_SIGNAL",
+                "score": -5
+              }
+            ],
+            "contextBoost": 0,
+            "missing": [
+              "OBJECT_MEMBER_PRICE"
+            ],
+            "probability": 0.0008349798359774147
+          },
+          {
+            "intent": "ORDER_CANCEL_ELIGIBILITY",
+            "rule": "primary",
+            "score": -1,
+            "evidence": [
+              {
+                "group": "ACTION_CHECK_47",
+                "kind": "REQUIRED",
+                "score": 4
+              }
+            ],
+            "penalties": [
+              {
+                "group": "OBJECT_CANCELLATION_ELIGIBILITY",
+                "kind": "MISSING_REQUIRED_INTENT_SIGNAL",
+                "score": -5
+              }
+            ],
+            "contextBoost": 0,
+            "missing": [
+              "OBJECT_CANCELLATION_ELIGIBILITY"
+            ],
+            "probability": 0.0008349798359774147
+          },
+          {
+            "intent": "ORDER_CANCEL_STATUS",
+            "rule": "primary",
+            "score": -1,
+            "evidence": [
+              {
+                "group": "ACTION_CHECK_47",
+                "kind": "REQUIRED",
+                "score": 4
+              }
+            ],
+            "penalties": [
+              {
+                "group": "OBJECT_CANCELLATION_STATUS",
+                "kind": "MISSING_REQUIRED_INTENT_SIGNAL",
+                "score": -5
+              }
+            ],
+            "contextBoost": 0,
+            "missing": [
+              "OBJECT_CANCELLATION_STATUS"
+            ],
+            "probability": 0.0008349798359774147
+          },
+          {
+            "intent": "ORDER_DETAILS",
+            "rule": "primary",
+            "score": -1,
+            "evidence": [
+              {
+                "group": "ACTION_SHOW_74",
+                "kind": "REQUIRED",
+                "score": 4
+              }
+            ],
+            "penalties": [
+              {
+                "group": "OBJECT_ORDER",
+                "kind": "MISSING_REQUIRED_INTENT_SIGNAL",
+                "score": -5
+              }
+            ],
+            "contextBoost": 0,
+            "missing": [
+              "OBJECT_ORDER"
+            ],
+            "probability": 0.0008349798359774147
+          },
+          {
+            "intent": "ORDER_HISTORY",
+            "rule": "primary",
+            "score": -1,
+            "evidence": [
+              {
+                "group": "ACTION_SHOW",
+                "kind": "REQUIRED",
+                "score": 4
+              }
+            ],
+            "penalties": [
+              {
+                "group": "OBJECT_ORDERS",
+                "kind": "MISSING_REQUIRED_INTENT_SIGNAL",
+                "score": -5
+              }
+            ],
+            "contextBoost": 0,
+            "missing": [
+              "OBJECT_ORDERS"
+            ],
+            "probability": 0.0008349798359774147
+          },
+          {
+            "intent": "PAYMENT_METHODS",
+            "rule": "primary",
+            "score": -1,
+            "evidence": [
+              {
+                "group": "ACTION_SHOW_OR_LIST",
+                "kind": "REQUIRED",
+                "score": 4
+              }
+            ],
+            "penalties": [
+              {
+                "group": "OBJECT_PAYMENT_METHODS",
+                "kind": "MISSING_REQUIRED_INTENT_SIGNAL",
+                "score": -5
+              }
+            ],
+            "contextBoost": 0,
+            "missing": [
+              "OBJECT_PAYMENT_METHODS"
+            ],
+            "probability": 0.0008349798359774147
+          },
+          {
+            "intent": "PAYMENT_STATUS",
+            "rule": "primary",
+            "score": -1,
+            "evidence": [
+              {
+                "group": "ACTION_CHECK_47",
+                "kind": "REQUIRED",
+                "score": 4
+              }
+            ],
+            "penalties": [
+              {
+                "group": "OBJECT_PAYMENT_STATUS",
+                "kind": "MISSING_REQUIRED_INTENT_SIGNAL",
+                "score": -5
+              }
+            ],
+            "contextBoost": 0,
+            "missing": [
+              "OBJECT_PAYMENT_STATUS"
+            ],
+            "probability": 0.0008349798359774147
+          },
+          {
+            "intent": "PICKUP_READY",
+            "rule": "primary",
+            "score": -1,
+            "evidence": [
+              {
+                "group": "ACTION_CHECK_47",
+                "kind": "REQUIRED",
+                "score": 4
+              }
+            ],
+            "penalties": [
+              {
+                "group": "OBJECT_READY_FOR_PICKUP",
+                "kind": "MISSING_REQUIRED_INTENT_SIGNAL",
+                "score": -5
+              }
+            ],
+            "contextBoost": 0,
+            "missing": [
+              "OBJECT_READY_FOR_PICKUP"
+            ],
+            "probability": 0.0008349798359774147
+          },
+          {
+            "intent": "PICKUP_STATUS",
+            "rule": "primary",
+            "score": -1,
+            "evidence": [
+              {
+                "group": "ACTION_CHECK_47",
+                "kind": "REQUIRED",
+                "score": 4
+              }
+            ],
+            "penalties": [
+              {
+                "group": "OBJECT_PICKUP_STATUS",
+                "kind": "MISSING_REQUIRED_INTENT_SIGNAL",
+                "score": -5
+              }
+            ],
+            "contextBoost": 0,
+            "missing": [
+              "OBJECT_PICKUP_STATUS"
+            ],
+            "probability": 0.0008349798359774147
+          },
+          {
+            "intent": "PICKUP_TIME",
+            "rule": "primary",
+            "score": -1,
+            "evidence": [
+              {
+                "group": "ACTION_WHAT_23",
+                "kind": "REQUIRED",
+                "score": 4
+              }
+            ],
+            "penalties": [
+              {
+                "group": "OBJECT_PICKUP_TIME",
+                "kind": "MISSING_REQUIRED_INTENT_SIGNAL",
+                "score": -5
+              }
+            ],
+            "contextBoost": 0,
+            "missing": [
+              "OBJECT_PICKUP_TIME"
+            ],
+            "probability": 0.0008349798359774147
+          },
+          {
+            "intent": "PRESCRIPTION_REQUIREMENT",
+            "rule": "primary",
+            "score": -1,
+            "evidence": [
+              {
+                "group": "ACTION_INDUSTRY_INFORMATION",
+                "kind": "REQUIRED",
+                "score": 4
+              }
+            ],
+            "penalties": [
+              {
+                "group": "OBJECT_PRESCRIPTION_REQUIREMENT",
+                "kind": "MISSING_REQUIRED_INTENT_SIGNAL",
+                "score": -5
+              }
+            ],
+            "contextBoost": 0,
+            "missing": [
+              "OBJECT_PRESCRIPTION_REQUIREMENT"
+            ],
+            "probability": 0.0008349798359774147
+          },
+          {
+            "intent": "PRICE_RANGE",
+            "rule": "primary",
+            "score": -1,
+            "evidence": [
+              {
+                "group": "ACTION_WHAT_34",
+                "kind": "REQUIRED",
+                "score": 4
+              }
+            ],
+            "penalties": [
+              {
+                "group": "OBJECT_PRICE_RANGE",
+                "kind": "MISSING_REQUIRED_INTENT_SIGNAL",
+                "score": -5
+              }
+            ],
+            "contextBoost": 0,
+            "missing": [
+              "OBJECT_PRICE_RANGE"
+            ],
+            "probability": 0.0008349798359774147
+          },
+          {
+            "intent": "PRODUCT_ACCESSORIES",
+            "rule": "primary",
+            "score": -1,
+            "evidence": [
+              {
+                "group": "ACTION_SHOW_OR_LIST",
+                "kind": "REQUIRED",
+                "score": 4
+              }
+            ],
+            "penalties": [
+              {
+                "group": "OBJECT_COMPATIBLE_ACCESSORIES",
+                "kind": "MISSING_REQUIRED_INTENT_SIGNAL",
+                "score": -5
+              }
+            ],
+            "contextBoost": 0,
+            "missing": [
+              "OBJECT_COMPATIBLE_ACCESSORIES"
+            ],
+            "probability": 0.0008349798359774147
+          },
+          {
+            "intent": "PRODUCT_ALLERGENS",
+            "rule": "primary",
+            "score": -1,
+            "evidence": [
+              {
+                "group": "ACTION_CHECK_38",
+                "kind": "REQUIRED",
+                "score": 4
+              }
+            ],
+            "penalties": [
+              {
+                "group": "OBJECT_ALLERGENS",
+                "kind": "MISSING_REQUIRED_INTENT_SIGNAL",
+                "score": -5
+              }
+            ],
+            "contextBoost": 0,
+            "missing": [
+              "OBJECT_ALLERGENS"
+            ],
+            "probability": 0.0008349798359774147
+          },
+          {
+            "intent": "PRODUCT_ASSEMBLY",
+            "rule": "primary",
+            "score": -1,
+            "evidence": [
+              {
+                "group": "ACTION_CHECK_47",
+                "kind": "REQUIRED",
+                "score": 4
+              }
+            ],
+            "penalties": [
+              {
+                "group": "OBJECT_ASSEMBLY_INSTRUCTIONS",
+                "kind": "MISSING_REQUIRED_INTENT_SIGNAL",
+                "score": -5
+              }
+            ],
+            "contextBoost": 0,
+            "missing": [
+              "OBJECT_ASSEMBLY_INSTRUCTIONS"
+            ],
+            "probability": 0.0008349798359774147
+          },
+          {
+            "intent": "PRODUCT_ATTRIBUTE",
+            "rule": "primary",
+            "score": -1,
+            "evidence": [
+              {
+                "group": "ACTION_WHAT",
+                "kind": "REQUIRED",
+                "score": 4
+              }
+            ],
+            "penalties": [
+              {
+                "group": "OBJECT_ATTRIBUTES",
+                "kind": "MISSING_REQUIRED_INTENT_SIGNAL",
+                "score": -5
+              }
+            ],
+            "contextBoost": 0,
+            "missing": [
+              "OBJECT_ATTRIBUTES"
+            ],
+            "probability": 0.0008349798359774147
+          },
+          {
+            "intent": "PRODUCT_BARCODE",
+            "rule": "primary",
+            "score": -1,
+            "evidence": [
+              {
+                "group": "ACTION_SHOW_OR_FIND",
+                "kind": "REQUIRED",
+                "score": 4
+              }
+            ],
+            "penalties": [
+              {
+                "group": "OBJECT_BARCODE",
+                "kind": "MISSING_REQUIRED_INTENT_SIGNAL",
+                "score": -5
+              }
+            ],
+            "contextBoost": 0,
+            "missing": [
+              "OBJECT_BARCODE"
+            ],
+            "probability": 0.0008349798359774147
+          },
+          {
+            "intent": "PRODUCT_BATTERY_LIFE",
+            "rule": "primary",
+            "score": -1,
+            "evidence": [
+              {
+                "group": "ACTION_WHAT_23",
+                "kind": "REQUIRED",
+                "score": 4
+              }
+            ],
+            "penalties": [
+              {
+                "group": "OBJECT_BATTERY_LIFE",
+                "kind": "MISSING_REQUIRED_INTENT_SIGNAL",
+                "score": -5
+              }
+            ],
+            "contextBoost": 0,
+            "missing": [
+              "OBJECT_BATTERY_LIFE"
+            ],
+            "probability": 0.0008349798359774147
+          },
+          {
+            "intent": "PRODUCT_CARE",
+            "rule": "primary",
+            "score": -1,
+            "evidence": [
+              {
+                "group": "ACTION_HOW_19",
+                "kind": "REQUIRED",
+                "score": 4
+              }
+            ],
+            "penalties": [
+              {
+                "group": "OBJECT_WASH",
+                "kind": "MISSING_REQUIRED_INTENT_SIGNAL",
+                "score": -5
+              }
+            ],
+            "contextBoost": 0,
+            "missing": [
+              "OBJECT_WASH"
+            ],
+            "probability": 0.0008349798359774147
+          },
+          {
+            "intent": "PRODUCT_CERTIFICATION",
+            "rule": "primary",
+            "score": -1,
+            "evidence": [
+              {
+                "group": "ACTION_CHECK_47",
+                "kind": "REQUIRED",
+                "score": 4
+              }
+            ],
+            "penalties": [
+              {
+                "group": "OBJECT_PRODUCT_CERTIFICATIONS",
+                "kind": "MISSING_REQUIRED_INTENT_SIGNAL",
+                "score": -5
+              }
+            ],
+            "contextBoost": 0,
+            "missing": [
+              "OBJECT_PRODUCT_CERTIFICATIONS"
+            ],
+            "probability": 0.0008349798359774147
+          },
+          {
+            "intent": "PRODUCT_CHARGING",
+            "rule": "primary",
+            "score": -1,
+            "evidence": [
+              {
+                "group": "ACTION_CHECK_47",
+                "kind": "REQUIRED",
+                "score": 4
+              }
+            ],
+            "penalties": [
+              {
+                "group": "OBJECT_CHARGING_INSTRUCTIONS",
+                "kind": "MISSING_REQUIRED_INTENT_SIGNAL",
+                "score": -5
+              }
+            ],
+            "contextBoost": 0,
+            "missing": [
+              "OBJECT_CHARGING_INSTRUCTIONS"
+            ],
+            "probability": 0.0008349798359774147
+          },
+          {
+            "intent": "PRODUCT_CONNECTIVITY",
+            "rule": "primary",
+            "score": -1,
+            "evidence": [
+              {
+                "group": "ACTION_CHECK_47",
+                "kind": "REQUIRED",
+                "score": 4
+              }
+            ],
+            "penalties": [
+              {
+                "group": "OBJECT_CONNECTIVITY_OPTIONS",
+                "kind": "MISSING_REQUIRED_INTENT_SIGNAL",
+                "score": -5
+              }
+            ],
+            "contextBoost": 0,
+            "missing": [
+              "OBJECT_CONNECTIVITY_OPTIONS"
+            ],
+            "probability": 0.0008349798359774147
+          },
+          {
+            "intent": "PRODUCT_DIMENSIONS",
+            "rule": "primary",
+            "score": -1,
+            "evidence": [
+              {
+                "group": "ACTION_WHAT",
+                "kind": "REQUIRED",
+                "score": 4
+              }
+            ],
+            "penalties": [
+              {
+                "group": "OBJECT_DIMENSIONS",
+                "kind": "MISSING_REQUIRED_INTENT_SIGNAL",
+                "score": -5
+              }
+            ],
+            "contextBoost": 0,
+            "missing": [
+              "OBJECT_DIMENSIONS"
+            ],
+            "probability": 0.0008349798359774147
+          },
+          {
+            "intent": "PRODUCT_ENERGY_RATING",
+            "rule": "primary",
+            "score": -1,
+            "evidence": [
+              {
+                "group": "ACTION_CHECK_47",
+                "kind": "REQUIRED",
+                "score": 4
+              }
+            ],
+            "penalties": [
+              {
+                "group": "OBJECT_ENERGY_RATING",
+                "kind": "MISSING_REQUIRED_INTENT_SIGNAL",
+                "score": -5
+              }
+            ],
+            "contextBoost": 0,
+            "missing": [
+              "OBJECT_ENERGY_RATING"
+            ],
+            "probability": 0.0008349798359774147
+          },
+          {
+            "intent": "PRODUCT_EXPIRY",
+            "rule": "primary",
+            "score": -1,
+            "evidence": [
+              {
+                "group": "ACTION_WHAT_23",
+                "kind": "REQUIRED",
+                "score": 4
+              }
+            ],
+            "penalties": [
+              {
+                "group": "OBJECT_EXPIRY_DATE",
+                "kind": "MISSING_REQUIRED_INTENT_SIGNAL",
+                "score": -5
+              }
+            ],
+            "contextBoost": 0,
+            "missing": [
+              "OBJECT_EXPIRY_DATE"
+            ],
+            "probability": 0.0008349798359774147
+          },
+          {
+            "intent": "PRODUCT_FABRIC_COMPOSITION",
+            "rule": "primary",
+            "score": -1,
+            "evidence": [
+              {
+                "group": "ACTION_CHECK_47",
+                "kind": "REQUIRED",
+                "score": 4
+              }
+            ],
+            "penalties": [
+              {
+                "group": "OBJECT_FABRIC_COMPOSITION",
+                "kind": "MISSING_REQUIRED_INTENT_SIGNAL",
+                "score": -5
+              }
+            ],
+            "contextBoost": 0,
+            "missing": [
+              "OBJECT_FABRIC_COMPOSITION"
+            ],
+            "probability": 0.0008349798359774147
+          },
+          {
+            "intent": "PRODUCT_FIT",
+            "rule": "primary",
+            "score": -1,
+            "evidence": [
+              {
+                "group": "ACTION_CHECK_47",
+                "kind": "REQUIRED",
+                "score": 4
+              }
+            ],
+            "penalties": [
+              {
+                "group": "OBJECT_FIT_INFORMATION",
+                "kind": "MISSING_REQUIRED_INTENT_SIGNAL",
+                "score": -5
+              }
+            ],
+            "contextBoost": 0,
+            "missing": [
+              "OBJECT_FIT_INFORMATION"
+            ],
+            "probability": 0.0008349798359774147
+          },
+          {
+            "intent": "PRODUCT_GEMSTONE",
+            "rule": "primary",
+            "score": -1,
+            "evidence": [
+              {
+                "group": "ACTION_CHECK_47",
+                "kind": "REQUIRED",
+                "score": 4
+              }
+            ],
+            "penalties": [
+              {
+                "group": "OBJECT_GEMSTONE_DETAILS",
+                "kind": "MISSING_REQUIRED_INTENT_SIGNAL",
+                "score": -5
+              }
+            ],
+            "contextBoost": 0,
+            "missing": [
+              "OBJECT_GEMSTONE_DETAILS"
+            ],
+            "probability": 0.0008349798359774147
+          },
+          {
+            "intent": "PRODUCT_HARVEST_DATE",
+            "rule": "primary",
+            "score": -1,
+            "evidence": [
+              {
+                "group": "ACTION_INDUSTRY_INFORMATION",
+                "kind": "REQUIRED",
+                "score": 4
+              }
+            ],
+            "penalties": [
+              {
+                "group": "OBJECT_PRODUCT_HARVEST_DATE",
+                "kind": "MISSING_REQUIRED_INTENT_SIGNAL",
+                "score": -5
+              }
+            ],
+            "contextBoost": 0,
+            "missing": [
+              "OBJECT_PRODUCT_HARVEST_DATE"
+            ],
+            "probability": 0.0008349798359774147
+          },
+          {
+            "intent": "PRODUCT_INGREDIENTS",
+            "rule": "primary",
+            "score": -1,
+            "evidence": [
+              {
+                "group": "ACTION_WHAT_11",
+                "kind": "REQUIRED",
+                "score": 4
+              }
+            ],
+            "penalties": [
+              {
+                "group": "OBJECT_INGREDIENTS",
+                "kind": "MISSING_REQUIRED_INTENT_SIGNAL",
+                "score": -5
+              }
+            ],
+            "contextBoost": 0,
+            "missing": [
+              "OBJECT_INGREDIENTS"
+            ],
+            "probability": 0.0008349798359774147
+          },
+          {
+            "intent": "PRODUCT_INSTALLATION",
+            "rule": "primary",
+            "score": -1,
+            "evidence": [
+              {
+                "group": "ACTION_CHECK_47",
+                "kind": "REQUIRED",
+                "score": 4
+              }
+            ],
+            "penalties": [
+              {
+                "group": "OBJECT_INSTALLATION_INSTRUCTIONS",
+                "kind": "MISSING_REQUIRED_INTENT_SIGNAL",
+                "score": -5
+              }
+            ],
+            "contextBoost": 0,
+            "missing": [
+              "OBJECT_INSTALLATION_INSTRUCTIONS"
+            ],
+            "probability": 0.0008349798359774147
+          },
+          {
+            "intent": "PRODUCT_MATERIAL",
+            "rule": "primary",
+            "score": -1,
+            "evidence": [
+              {
+                "group": "ACTION_WHAT",
+                "kind": "REQUIRED",
+                "score": 4
+              }
+            ],
+            "penalties": [
+              {
+                "group": "OBJECT_MATERIAL",
+                "kind": "MISSING_REQUIRED_INTENT_SIGNAL",
+                "score": -5
+              }
+            ],
+            "contextBoost": 0,
+            "missing": [
+              "OBJECT_MATERIAL"
+            ],
+            "probability": 0.0008349798359774147
+          },
+          {
+            "intent": "PRODUCT_METAL_PURITY",
+            "rule": "primary",
+            "score": -1,
+            "evidence": [
+              {
+                "group": "ACTION_CHECK_47",
+                "kind": "REQUIRED",
+                "score": 4
+              }
+            ],
+            "penalties": [
+              {
+                "group": "OBJECT_METAL_PURITY",
+                "kind": "MISSING_REQUIRED_INTENT_SIGNAL",
+                "score": -5
+              }
+            ],
+            "contextBoost": 0,
+            "missing": [
+              "OBJECT_METAL_PURITY"
+            ],
+            "probability": 0.0008349798359774147
+          },
+          {
+            "intent": "PRODUCT_MODEL_NUMBER",
+            "rule": "primary",
+            "score": -1,
+            "evidence": [
+              {
+                "group": "ACTION_SHOW_OR_FIND",
+                "kind": "REQUIRED",
+                "score": 4
+              }
+            ],
+            "penalties": [
+              {
+                "group": "OBJECT_MODEL_NUMBER",
+                "kind": "MISSING_REQUIRED_INTENT_SIGNAL",
+                "score": -5
+              }
+            ],
+            "contextBoost": 0,
+            "missing": [
+              "OBJECT_MODEL_NUMBER"
+            ],
+            "probability": 0.0008349798359774147
+          },
+          {
+            "intent": "PRODUCT_NET_WEIGHT",
+            "rule": "primary",
+            "score": -1,
+            "evidence": [
+              {
+                "group": "ACTION_WHAT_23",
+                "kind": "REQUIRED",
+                "score": 4
+              }
+            ],
+            "penalties": [
+              {
+                "group": "OBJECT_NET_WEIGHT",
+                "kind": "MISSING_REQUIRED_INTENT_SIGNAL",
+                "score": -5
+              }
+            ],
+            "contextBoost": 0,
+            "missing": [
+              "OBJECT_NET_WEIGHT"
+            ],
+            "probability": 0.0008349798359774147
+          },
+          {
+            "intent": "PRODUCT_NETWORK_SUPPORT",
+            "rule": "primary",
+            "score": -1,
+            "evidence": [
+              {
+                "group": "ACTION_CHECK_47",
+                "kind": "REQUIRED",
+                "score": 4
+              }
+            ],
+            "penalties": [
+              {
+                "group": "OBJECT_SUPPORTED_NETWORKS",
+                "kind": "MISSING_REQUIRED_INTENT_SIGNAL",
+                "score": -5
+              }
+            ],
+            "contextBoost": 0,
+            "missing": [
+              "OBJECT_SUPPORTED_NETWORKS"
+            ],
+            "probability": 0.0008349798359774147
+          },
+          {
+            "intent": "PRODUCT_NUTRITION",
+            "rule": "primary",
+            "score": -1,
+            "evidence": [
+              {
+                "group": "ACTION_CHECK_47",
+                "kind": "REQUIRED",
+                "score": 4
+              }
+            ],
+            "penalties": [
+              {
+                "group": "OBJECT_NUTRITION_FACTS",
+                "kind": "MISSING_REQUIRED_INTENT_SIGNAL",
+                "score": -5
+              }
+            ],
+            "contextBoost": 0,
+            "missing": [
+              "OBJECT_NUTRITION_FACTS"
+            ],
+            "probability": 0.0008349798359774147
+          },
+          {
+            "intent": "PRODUCT_OPERATING_SYSTEM",
+            "rule": "primary",
+            "score": -1,
+            "evidence": [
+              {
+                "group": "ACTION_CHECK_47",
+                "kind": "REQUIRED",
+                "score": 4
+              }
+            ],
+            "penalties": [
+              {
+                "group": "OBJECT_OPERATING_SYSTEM",
+                "kind": "MISSING_REQUIRED_INTENT_SIGNAL",
+                "score": -5
+              }
+            ],
+            "contextBoost": 0,
+            "missing": [
+              "OBJECT_OPERATING_SYSTEM"
+            ],
+            "probability": 0.0008349798359774147
+          },
+          {
+            "intent": "PRODUCT_PACK_CONTENTS",
+            "rule": "primary",
+            "score": -1,
+            "evidence": [
+              {
+                "group": "ACTION_CHECK_38",
+                "kind": "REQUIRED",
+                "score": 4
+              }
+            ],
+            "penalties": [
+              {
+                "group": "OBJECT_PACK_CONTENTS",
+                "kind": "MISSING_REQUIRED_INTENT_SIGNAL",
+                "score": -5
+              }
+            ],
+            "contextBoost": 0,
+            "missing": [
+              "OBJECT_PACK_CONTENTS"
+            ],
+            "probability": 0.0008349798359774147
+          },
+          {
+            "intent": "PRODUCT_PHOTOS",
+            "rule": "primary",
+            "score": -1,
+            "evidence": [
+              {
+                "group": "ACTION_SHOW_OR_VIEW",
+                "kind": "REQUIRED",
+                "score": 4
+              }
+            ],
+            "penalties": [
+              {
+                "group": "OBJECT_PRODUCT_PHOTOS",
+                "kind": "MISSING_REQUIRED_INTENT_SIGNAL",
+                "score": -5
+              }
+            ],
+            "contextBoost": 0,
+            "missing": [
+              "OBJECT_PRODUCT_PHOTOS"
+            ],
+            "probability": 0.0008349798359774147
+          },
+          {
+            "intent": "PRODUCT_PROCESSOR",
+            "rule": "primary",
+            "score": -1,
+            "evidence": [
+              {
+                "group": "ACTION_CHECK_47",
+                "kind": "REQUIRED",
+                "score": 4
+              }
+            ],
+            "penalties": [
+              {
+                "group": "OBJECT_PROCESSOR_DETAILS",
+                "kind": "MISSING_REQUIRED_INTENT_SIGNAL",
+                "score": -5
+              }
+            ],
+            "contextBoost": 0,
+            "missing": [
+              "OBJECT_PROCESSOR_DETAILS"
+            ],
+            "probability": 0.0008349798359774147
+          },
+          {
+            "intent": "PRODUCT_RATING",
+            "rule": "primary",
+            "score": -1,
+            "evidence": [
+              {
+                "group": "ACTION_WHAT_23",
+                "kind": "REQUIRED",
+                "score": 4
+              }
+            ],
+            "penalties": [
+              {
+                "group": "OBJECT_PRODUCT_RATING",
+                "kind": "MISSING_REQUIRED_INTENT_SIGNAL",
+                "score": -5
+              }
+            ],
+            "contextBoost": 0,
+            "missing": [
+              "OBJECT_PRODUCT_RATING"
+            ],
+            "probability": 0.0008349798359774147
+          },
+          {
+            "intent": "PRODUCT_RESOLUTION",
+            "rule": "primary",
+            "score": -1,
+            "evidence": [
+              {
+                "group": "ACTION_CHECK_47",
+                "kind": "REQUIRED",
+                "score": 4
+              }
+            ],
+            "penalties": [
+              {
+                "group": "OBJECT_DISPLAY_RESOLUTION",
+                "kind": "MISSING_REQUIRED_INTENT_SIGNAL",
+                "score": -5
+              }
+            ],
+            "contextBoost": 0,
+            "missing": [
+              "OBJECT_DISPLAY_RESOLUTION"
+            ],
+            "probability": 0.0008349798359774147
+          },
+          {
+            "intent": "PRODUCT_REVIEWS",
+            "rule": "primary",
+            "score": -1,
+            "evidence": [
+              {
+                "group": "ACTION_SHOW_OR_READ_OR_LIST",
+                "kind": "REQUIRED",
+                "score": 4
+              }
+            ],
+            "penalties": [
+              {
+                "group": "OBJECT_PRODUCT_REVIEWS",
+                "kind": "MISSING_REQUIRED_INTENT_SIGNAL",
+                "score": -5
+              }
+            ],
+            "contextBoost": 0,
+            "missing": [
+              "OBJECT_PRODUCT_REVIEWS"
+            ],
+            "probability": 0.0008349798359774147
+          },
+          {
+            "intent": "PRODUCT_RIPENESS",
+            "rule": "primary",
+            "score": -1,
+            "evidence": [
+              {
+                "group": "ACTION_INDUSTRY_INFORMATION",
+                "kind": "REQUIRED",
+                "score": 4
+              }
+            ],
+            "penalties": [
+              {
+                "group": "OBJECT_PRODUCT_RIPENESS",
+                "kind": "MISSING_REQUIRED_INTENT_SIGNAL",
+                "score": -5
+              }
+            ],
+            "contextBoost": 0,
+            "missing": [
+              "OBJECT_PRODUCT_RIPENESS"
+            ],
+            "probability": 0.0008349798359774147
+          },
+          {
+            "intent": "PRODUCT_SAFETY",
+            "rule": "primary",
+            "score": -1,
+            "evidence": [
+              {
+                "group": "ACTION_CHECK_47",
+                "kind": "REQUIRED",
+                "score": 4
+              }
+            ],
+            "penalties": [
+              {
+                "group": "OBJECT_SAFETY_INSTRUCTIONS",
+                "kind": "MISSING_REQUIRED_INTENT_SIGNAL",
+                "score": -5
+              }
+            ],
+            "contextBoost": 0,
+            "missing": [
+              "OBJECT_SAFETY_INSTRUCTIONS"
+            ],
+            "probability": 0.0008349798359774147
+          },
+          {
+            "intent": "PRODUCT_SERVING_SIZE",
+            "rule": "primary",
+            "score": -1,
+            "evidence": [
+              {
+                "group": "ACTION_WHAT_23",
+                "kind": "REQUIRED",
+                "score": 4
+              }
+            ],
+            "penalties": [
+              {
+                "group": "OBJECT_SERVING_SIZE",
+                "kind": "MISSING_REQUIRED_INTENT_SIGNAL",
+                "score": -5
+              }
+            ],
+            "contextBoost": 0,
+            "missing": [
+              "OBJECT_SERVING_SIZE"
+            ],
+            "probability": 0.0008349798359774147
+          },
+          {
+            "intent": "PRODUCT_SHELF_LIFE",
+            "rule": "primary",
+            "score": -1,
+            "evidence": [
+              {
+                "group": "ACTION_WHAT_23",
+                "kind": "REQUIRED",
+                "score": 4
+              }
+            ],
+            "penalties": [
+              {
+                "group": "OBJECT_SHELF_LIFE",
+                "kind": "MISSING_REQUIRED_INTENT_SIGNAL",
+                "score": -5
+              }
+            ],
+            "contextBoost": 0,
+            "missing": [
+              "OBJECT_SHELF_LIFE"
+            ],
+            "probability": 0.0008349798359774147
+          },
+          {
+            "intent": "PRODUCT_SIZE_GUIDE",
+            "rule": "primary",
+            "score": -1,
+            "evidence": [
+              {
+                "group": "ACTION_SHOW_OR_OPEN",
+                "kind": "REQUIRED",
+                "score": 4
+              }
+            ],
+            "penalties": [
+              {
+                "group": "OBJECT_SIZE_GUIDE",
+                "kind": "MISSING_REQUIRED_INTENT_SIGNAL",
+                "score": -5
+              }
+            ],
+            "contextBoost": 0,
+            "missing": [
+              "OBJECT_SIZE_GUIDE"
+            ],
+            "probability": 0.0008349798359774147
+          },
+          {
+            "intent": "PRODUCT_SPARE_PARTS",
+            "rule": "primary",
+            "score": -1,
+            "evidence": [
+              {
+                "group": "ACTION_SHOW_OR_FIND",
+                "kind": "REQUIRED",
+                "score": 4
+              }
+            ],
+            "penalties": [
+              {
+                "group": "OBJECT_SPARE_PARTS",
+                "kind": "MISSING_REQUIRED_INTENT_SIGNAL",
+                "score": -5
+              }
+            ],
+            "contextBoost": 0,
+            "missing": [
+              "OBJECT_SPARE_PARTS"
+            ],
+            "probability": 0.0008349798359774147
+          },
+          {
+            "intent": "PRODUCT_STORAGE",
+            "rule": "primary",
+            "score": -1,
+            "evidence": [
+              {
+                "group": "ACTION_CHECK_47",
+                "kind": "REQUIRED",
+                "score": 4
+              }
+            ],
+            "penalties": [
+              {
+                "group": "OBJECT_STORAGE_INSTRUCTIONS",
+                "kind": "MISSING_REQUIRED_INTENT_SIGNAL",
+                "score": -5
+              }
+            ],
+            "contextBoost": 0,
+            "missing": [
+              "OBJECT_STORAGE_INSTRUCTIONS"
+            ],
+            "probability": 0.0008349798359774147
+          },
+          {
+            "intent": "PRODUCT_STORAGE_CAPACITY",
+            "rule": "primary",
+            "score": -1,
+            "evidence": [
+              {
+                "group": "ACTION_CHECK_47",
+                "kind": "REQUIRED",
+                "score": 4
+              }
+            ],
+            "penalties": [
+              {
+                "group": "OBJECT_STORAGE_CAPACITY",
+                "kind": "MISSING_REQUIRED_INTENT_SIGNAL",
+                "score": -5
+              }
+            ],
+            "contextBoost": 0,
+            "missing": [
+              "OBJECT_STORAGE_CAPACITY"
+            ],
+            "probability": 0.0008349798359774147
+          },
+          {
+            "intent": "PRODUCT_VARIANTS",
+            "rule": "primary",
+            "score": -1,
+            "evidence": [
+              {
+                "group": "ACTION_WHAT_11",
+                "kind": "REQUIRED",
+                "score": 4
+              }
+            ],
+            "penalties": [
+              {
+                "group": "OBJECT_VARIANTS",
+                "kind": "MISSING_REQUIRED_INTENT_SIGNAL",
+                "score": -5
+              }
+            ],
+            "contextBoost": 0,
+            "missing": [
+              "OBJECT_VARIANTS"
+            ],
+            "probability": 0.0008349798359774147
+          },
+          {
+            "intent": "PRODUCT_WARRANTY",
+            "rule": "primary",
+            "score": -1,
+            "evidence": [
+              {
+                "group": "ACTION_WHAT_23",
+                "kind": "REQUIRED",
+                "score": 4
+              }
+            ],
+            "penalties": [
+              {
+                "group": "OBJECT_WARRANTY",
+                "kind": "MISSING_REQUIRED_INTENT_SIGNAL",
+                "score": -5
+              }
+            ],
+            "contextBoost": 0,
+            "missing": [
+              "OBJECT_WARRANTY"
+            ],
+            "probability": 0.0008349798359774147
+          },
+          {
+            "intent": "PRODUCT_WATER_RESISTANCE",
+            "rule": "primary",
+            "score": -1,
+            "evidence": [
+              {
+                "group": "ACTION_CHECK_47",
+                "kind": "REQUIRED",
+                "score": 4
+              }
+            ],
+            "penalties": [
+              {
+                "group": "OBJECT_WATER_RESISTANCE",
+                "kind": "MISSING_REQUIRED_INTENT_SIGNAL",
+                "score": -5
+              }
+            ],
+            "contextBoost": 0,
+            "missing": [
+              "OBJECT_WATER_RESISTANCE"
+            ],
+            "probability": 0.0008349798359774147
+          },
+          {
+            "intent": "REFURBISHED_GRADE",
+            "rule": "primary",
+            "score": -1,
+            "evidence": [
+              {
+                "group": "ACTION_INDUSTRY_INFORMATION",
+                "kind": "REQUIRED",
+                "score": 4
+              }
+            ],
+            "penalties": [
+              {
+                "group": "OBJECT_REFURBISHED_GRADE",
+                "kind": "MISSING_REQUIRED_INTENT_SIGNAL",
+                "score": -5
+              }
+            ],
+            "contextBoost": 0,
+            "missing": [
+              "OBJECT_REFURBISHED_GRADE"
+            ],
+            "probability": 0.0008349798359774147
+          },
+          {
+            "intent": "RETURN_POLICY",
+            "rule": "primary",
+            "score": -1,
+            "evidence": [
+              {
+                "group": "ACTION_WHAT_34",
+                "kind": "REQUIRED",
+                "score": 4
+              }
+            ],
+            "penalties": [
+              {
+                "group": "OBJECT_RETURN_POLICY",
+                "kind": "MISSING_REQUIRED_INTENT_SIGNAL",
+                "score": -5
+              }
+            ],
+            "contextBoost": 0,
+            "missing": [
+              "OBJECT_RETURN_POLICY"
+            ],
+            "probability": 0.0008349798359774147
+          },
+          {
+            "intent": "SAFETY_DATA_SHEET",
+            "rule": "primary",
+            "score": -1,
+            "evidence": [
+              {
+                "group": "ACTION_INDUSTRY_INFORMATION",
+                "kind": "REQUIRED",
+                "score": 4
+              }
+            ],
+            "penalties": [
+              {
+                "group": "OBJECT_SAFETY_DATA_SHEET",
+                "kind": "MISSING_REQUIRED_INTENT_SIGNAL",
+                "score": -5
+              }
+            ],
+            "contextBoost": 0,
+            "missing": [
+              "OBJECT_SAFETY_DATA_SHEET"
+            ],
+            "probability": 0.0008349798359774147
+          },
+          {
+            "intent": "SALE_END_DATE",
+            "rule": "primary",
+            "score": -1,
+            "evidence": [
+              {
+                "group": "ACTION_CHECK_47",
+                "kind": "REQUIRED",
+                "score": 4
+              }
+            ],
+            "penalties": [
+              {
+                "group": "OBJECT_SALE_END_DATE",
+                "kind": "MISSING_REQUIRED_INTENT_SIGNAL",
+                "score": -5
+              }
+            ],
+            "contextBoost": 0,
+            "missing": [
+              "OBJECT_SALE_END_DATE"
+            ],
+            "probability": 0.0008349798359774147
+          },
+          {
+            "intent": "SERVICE_AREA",
+            "rule": "primary",
+            "score": -1,
+            "evidence": [
+              {
+                "group": "ACTION_WHAT_23",
+                "kind": "REQUIRED",
+                "score": 4
+              }
+            ],
+            "penalties": [
+              {
+                "group": "OBJECT_SERVICE_AREA",
+                "kind": "MISSING_REQUIRED_INTENT_SIGNAL",
+                "score": -5
+              }
+            ],
+            "contextBoost": 0,
+            "missing": [
+              "OBJECT_SERVICE_AREA"
+            ],
+            "probability": 0.0008349798359774147
+          },
+          {
+            "intent": "SKIN_TYPE_SUITABILITY",
+            "rule": "primary",
+            "score": -1,
+            "evidence": [
+              {
+                "group": "ACTION_INDUSTRY_INFORMATION",
+                "kind": "REQUIRED",
+                "score": 4
+              }
+            ],
+            "penalties": [
+              {
+                "group": "OBJECT_SKIN_TYPE_SUITABILITY",
+                "kind": "MISSING_REQUIRED_INTENT_SIGNAL",
+                "score": -5
+              }
+            ],
+            "contextBoost": 0,
+            "missing": [
+              "OBJECT_SKIN_TYPE_SUITABILITY"
+            ],
+            "probability": 0.0008349798359774147
+          },
+          {
+            "intent": "STORE_HOURS",
+            "rule": "primary",
+            "score": -1,
+            "evidence": [
+              {
+                "group": "ACTION_WHAT_23",
+                "kind": "REQUIRED",
+                "score": 4
+              }
+            ],
+            "penalties": [
+              {
+                "group": "OBJECT_STORE_HOURS",
+                "kind": "MISSING_REQUIRED_INTENT_SIGNAL",
+                "score": -5
+              }
+            ],
+            "contextBoost": 0,
+            "missing": [
+              "OBJECT_STORE_HOURS"
+            ],
+            "probability": 0.0008349798359774147
+          },
+          {
+            "intent": "STORE_LOCATION",
+            "rule": "primary",
+            "score": -1,
+            "evidence": [
+              {
+                "group": "ACTION_WHERE_109",
+                "kind": "REQUIRED",
+                "score": 4
+              }
+            ],
+            "penalties": [
+              {
+                "group": "OBJECT_STORE_LOCATION",
+                "kind": "MISSING_REQUIRED_INTENT_SIGNAL",
+                "score": -5
+              }
+            ],
+            "contextBoost": 0,
+            "missing": [
+              "OBJECT_STORE_LOCATION"
+            ],
+            "probability": 0.0008349798359774147
+          },
+          {
+            "intent": "STUDENT_DISCOUNT",
+            "rule": "primary",
+            "score": -1,
+            "evidence": [
+              {
+                "group": "ACTION_CHECK_47",
+                "kind": "REQUIRED",
+                "score": 4
+              }
+            ],
+            "penalties": [
+              {
+                "group": "OBJECT_STUDENT_DISCOUNT",
+                "kind": "MISSING_REQUIRED_INTENT_SIGNAL",
+                "score": -5
+              }
+            ],
+            "contextBoost": 0,
+            "missing": [
+              "OBJECT_STUDENT_DISCOUNT"
+            ],
+            "probability": 0.0008349798359774147
+          },
+          {
+            "intent": "SUPPORT_CHAT_HISTORY",
+            "rule": "primary",
+            "score": -1,
+            "evidence": [
+              {
+                "group": "ACTION_DOWNLOAD_OR_SHOW",
+                "kind": "REQUIRED",
+                "score": 4
+              }
+            ],
+            "penalties": [
+              {
+                "group": "OBJECT_SUPPORT_CHAT_HISTORY",
+                "kind": "MISSING_REQUIRED_INTENT_SIGNAL",
+                "score": -5
+              }
+            ],
+            "contextBoost": 0,
+            "missing": [
+              "OBJECT_SUPPORT_CHAT_HISTORY"
+            ],
+            "probability": 0.0008349798359774147
+          },
+          {
+            "intent": "SUPPORT_TICKET_STATUS",
+            "rule": "primary",
+            "score": -1,
+            "evidence": [
+              {
+                "group": "ACTION_CHECK_47",
+                "kind": "REQUIRED",
+                "score": 4
+              }
+            ],
+            "penalties": [
+              {
+                "group": "OBJECT_SUPPORT_TICKET_STATUS",
+                "kind": "MISSING_REQUIRED_INTENT_SIGNAL",
+                "score": -5
+              }
+            ],
+            "contextBoost": 0,
+            "missing": [
+              "OBJECT_SUPPORT_TICKET_STATUS"
+            ],
+            "probability": 0.0008349798359774147
+          },
+          {
+            "intent": "TAX_ESTIMATE",
+            "rule": "primary",
+            "score": -1,
+            "evidence": [
+              {
+                "group": "ACTION_CALCULATE_OR_CHECK_OR_SHOW",
+                "kind": "REQUIRED",
+                "score": 4
+              }
+            ],
+            "penalties": [
+              {
+                "group": "OBJECT_TAX_ESTIMATE",
+                "kind": "MISSING_REQUIRED_INTENT_SIGNAL",
+                "score": -5
+              }
+            ],
+            "contextBoost": 0,
+            "missing": [
+              "OBJECT_TAX_ESTIMATE"
+            ],
+            "probability": 0.0008349798359774147
+          },
+          {
+            "intent": "TAX_INCLUSION",
+            "rule": "primary",
+            "score": -1,
+            "evidence": [
+              {
+                "group": "ACTION_CHECK_47",
+                "kind": "REQUIRED",
+                "score": 4
+              }
+            ],
+            "penalties": [
+              {
+                "group": "OBJECT_TAX_INCLUSION",
+                "kind": "MISSING_REQUIRED_INTENT_SIGNAL",
+                "score": -5
+              }
+            ],
+            "contextBoost": 0,
+            "missing": [
+              "OBJECT_TAX_INCLUSION"
+            ],
+            "probability": 0.0008349798359774147
+          },
+          {
+            "intent": "UNIT_PRICE",
+            "rule": "primary",
+            "score": -1,
+            "evidence": [
+              {
+                "group": "ACTION_CHECK_47",
+                "kind": "REQUIRED",
+                "score": 4
+              }
+            ],
+            "penalties": [
+              {
+                "group": "OBJECT_UNIT_PRICE",
+                "kind": "MISSING_REQUIRED_INTENT_SIGNAL",
+                "score": -5
+              }
+            ],
+            "contextBoost": 0,
+            "missing": [
+              "OBJECT_UNIT_PRICE"
+            ],
+            "probability": 0.0008349798359774147
+          },
+          {
+            "intent": "VEHICLE_FITMENT",
+            "rule": "primary",
+            "score": -1,
+            "evidence": [
+              {
+                "group": "ACTION_INDUSTRY_INFORMATION",
+                "kind": "REQUIRED",
+                "score": 4
+              }
+            ],
+            "penalties": [
+              {
+                "group": "OBJECT_VEHICLE_FITMENT",
+                "kind": "MISSING_REQUIRED_INTENT_SIGNAL",
+                "score": -5
+              }
+            ],
+            "contextBoost": 0,
+            "missing": [
+              "OBJECT_VEHICLE_FITMENT"
+            ],
+            "probability": 0.0008349798359774147
+          },
+          {
+            "intent": "VIEW_CART",
+            "rule": "primary",
+            "score": -1,
+            "evidence": [
+              {
+                "group": "ACTION_VIEW",
+                "kind": "REQUIRED",
+                "score": 4
+              }
+            ],
+            "penalties": [
+              {
+                "group": "OBJECT_CART",
+                "kind": "MISSING_REQUIRED_INTENT_SIGNAL",
+                "score": -5
+              }
+            ],
+            "contextBoost": 0,
+            "missing": [
+              "OBJECT_CART"
+            ],
+            "probability": 0.0008349798359774147
+          },
+          {
+            "intent": "VIEW_DELIVERY_SLOTS",
+            "rule": "primary",
+            "score": -1,
+            "evidence": [
+              {
+                "group": "ACTION_SHOW",
+                "kind": "REQUIRED",
+                "score": 4
+              }
+            ],
+            "penalties": [
+              {
+                "group": "OBJECT_DELIVERY_SLOTS",
+                "kind": "MISSING_REQUIRED_INTENT_SIGNAL",
+                "score": -5
+              }
+            ],
+            "contextBoost": 0,
+            "missing": [
+              "OBJECT_DELIVERY_SLOTS"
+            ],
+            "probability": 0.0008349798359774147
+          },
+          {
+            "intent": "VIEW_WISHLIST",
+            "rule": "primary",
+            "score": -1,
+            "evidence": [
+              {
+                "group": "ACTION_VIEW",
+                "kind": "REQUIRED",
+                "score": 4
+              }
+            ],
+            "penalties": [
+              {
+                "group": "OBJECT_WISHLIST",
+                "kind": "MISSING_REQUIRED_INTENT_SIGNAL",
+                "score": -5
+              }
+            ],
+            "contextBoost": 0,
+            "missing": [
+              "OBJECT_WISHLIST"
+            ],
+            "probability": 0.0008349798359774147
+          },
+          {
+            "intent": "CREATE_ORDER",
+            "rule": "order-recency",
+            "score": -16,
+            "evidence": [],
+            "penalties": [
+              {
+                "group": "ACTION_SHOW_74",
+                "kind": "CONTRADICTION",
+                "score": -6
+              },
+              {
+                "group": "ORDER_RECENCY",
+                "kind": "MISSING_REQUIRED_INTENT_SIGNAL",
+                "score": -5
+              },
+              {
+                "group": "OBJECT_ORDER",
+                "kind": "MISSING_REQUIRED_INTENT_SIGNAL",
+                "score": -5
+              }
+            ],
+            "contextBoost": 0,
+            "missing": [
+              "ORDER_RECENCY",
+              "OBJECT_ORDER"
+            ],
+            "probability": 4.618142966677097e-07
+          }
+        ]
+      },
+      "latencyMs": 4.448,
+      "primaryIntent": "PRODUCT_SEARCH"
+    }
+  },
+  {
+    "name": "compound",
+    "text": "add two apples and one milk then checkout",
+    "context": {},
+    "response": {
+      "status": "RESOLVED",
+      "message": "Understood. Your request has been structured for review; no commerce action has been executed.",
+      "text": "add two apples and one milk then checkout",
+      "normalizedText": "add two apples and one milk then checkout",
+      "intent": "START_CHECKOUT",
+      "confidence": 0.95,
+      "confidenceLevel": "HIGH",
+      "entities": {
+        "items": [
+          {
+            "quantity": 2,
+            "productText": "apples"
+          },
+          {
+            "quantity": 1,
+            "productText": "milk"
+          }
+        ],
+        "line_items": [
+          {
+            "description": "apples",
+            "quantity": 2
+          },
+          {
+            "description": "milk",
+            "quantity": 1
+          }
+        ]
+      },
+      "matchedSemanticGroups": [
+        "ACTION_APPLY",
+        "ACTION_ADD",
+        "ACTION_ADD_60",
+        "ACTION_ADD_OR_WRITE",
+        "ACTION_ADD_OR_CHANGE",
+        "ACTION_ADD_OR_SELECT",
+        "ACTION_REQUEST_OR_ADD",
+        "ACTION_ADD_OR_INCLUDE",
+        "ACTION_ADD_OR_CHECK",
+        "QUANTITY_REFERENCE",
+        "REFERENCE_IT",
+        "PRODUCT_REFERENCE_CONCEPT",
+        "ALLERGEN_CONCEPT",
+        "OBJECT_CHECKOUT"
+      ],
+      "evidence": [
+        {
+          "group": "ACTION_ADD_60",
+          "kind": "REQUIRED",
+          "score": 4
+        }
+      ],
+      "negativeEvidence": [
+        {
+          "group": "OBJECT_ADDRESS_BOOK_ENTRY",
+          "kind": "MISSING_REQUIRED_INTENT_SIGNAL",
+          "score": -5
+        }
+      ],
+      "context": {
+        "input": {},
+        "next": {
+          "selectedItems": [
+            {
+              "quantity": 2,
+              "productText": "apples"
+            },
+            {
+              "quantity": 1,
+              "productText": "milk"
+            }
+          ],
+          "previousIntent": "START_CHECKOUT"
+        }
+      },
+      "alternatives": [
+        {
+          "intent": "ACCOUNT_ADDRESS_ADD",
+          "rule": "primary",
+          "score": -1,
+          "evidence": [
+            {
+              "group": "ACTION_ADD_60",
+              "kind": "REQUIRED",
+              "score": 4
+            }
+          ],
+          "penalties": [
+            {
+              "group": "OBJECT_ADDRESS_BOOK_ENTRY",
+              "kind": "MISSING_REQUIRED_INTENT_SIGNAL",
+              "score": -5
+            }
+          ],
+          "contextBoost": 0,
+          "missing": [
+            "OBJECT_ADDRESS_BOOK_ENTRY"
+          ],
+          "probability": 0.1249913586541406
+        },
+        {
+          "intent": "ADD_TO_CART",
+          "rule": "primary",
+          "score": -1,
+          "evidence": [
+            {
+              "group": "ACTION_ADD",
+              "kind": "REQUIRED",
+              "score": 4
+            }
+          ],
+          "penalties": [
+            {
+              "group": "OBJECT_CART",
+              "kind": "MISSING_REQUIRED_INTENT_SIGNAL",
+              "score": -5
+            }
+          ],
+          "contextBoost": 0,
+          "missing": [
+            "OBJECT_CART"
+          ],
+          "probability": 0.1249913586541406
+        },
+        {
+          "intent": "ADD_TO_WISHLIST",
+          "rule": "primary",
+          "score": -1,
+          "evidence": [
+            {
+              "group": "ACTION_ADD_60",
+              "kind": "REQUIRED",
+              "score": 4
+            }
+          ],
+          "penalties": [
+            {
+              "group": "OBJECT_WISHLIST",
+              "kind": "MISSING_REQUIRED_INTENT_SIGNAL",
+              "score": -5
+            }
+          ],
+          "contextBoost": 0,
+          "missing": [
+            "OBJECT_WISHLIST"
+          ],
+          "probability": 0.1249913586541406
+        }
+      ],
+      "requiresConfirmation": true,
+      "debug": {
+        "score": -1,
+        "probability": 0.1249913586541406,
+        "confidence": 0,
+        "scoreMargin": 0,
+        "probabilityMargin": 0,
+        "evidenceStrength": 0,
+        "separationConfidence": 0,
+        "config": {
+          "weights": {
+            "required": 4,
+            "relationship": 5,
+            "optional": 1,
+            "generic": 0.25,
+            "context": 3
+          },
+          "penalties": {
+            "contradiction": 6,
+            "negatedAction": 8,
+            "missingRequired": 5
+          },
+          "temperature": 2,
+          "minScore": 6,
+          "minConfidence": 0.7,
+          "minScoreMargin": 2,
+          "minProbabilityMargin": 0.15,
+          "targetStrongScore": 12,
+          "targetMargin": 5
+        },
+        "tokens": [
+          "add",
+          "two",
+          "apples",
+          "and",
+          "one",
+          "milk",
+          "then",
+          "checkout"
+        ],
+        "matchedPhrases": [
+          {
+            "group": "ACTION_APPLY",
+            "phrase": "add",
+            "start": 0,
+            "end": 1,
+            "negated": false,
+            "fuzzy": false
+          },
+          {
+            "group": "ACTION_ADD",
+            "phrase": "add",
+            "start": 0,
+            "end": 1,
+            "negated": false,
+            "fuzzy": false
+          },
+          {
+            "group": "ACTION_ADD_60",
+            "phrase": "add",
+            "start": 0,
+            "end": 1,
+            "negated": false,
+            "fuzzy": false
+          },
+          {
+            "group": "ACTION_ADD_OR_WRITE",
+            "phrase": "add",
+            "start": 0,
+            "end": 1,
+            "negated": false,
+            "fuzzy": false
+          },
+          {
+            "group": "ACTION_ADD_OR_CHANGE",
+            "phrase": "add",
+            "start": 0,
+            "end": 1,
+            "negated": false,
+            "fuzzy": false
+          },
+          {
+            "group": "ACTION_ADD_OR_SELECT",
+            "phrase": "add",
+            "start": 0,
+            "end": 1,
+            "negated": false,
+            "fuzzy": false
+          },
+          {
+            "group": "ACTION_REQUEST_OR_ADD",
+            "phrase": "add",
+            "start": 0,
+            "end": 1,
+            "negated": false,
+            "fuzzy": false
+          },
+          {
+            "group": "ACTION_ADD_OR_INCLUDE",
+            "phrase": "add",
+            "start": 0,
+            "end": 1,
+            "negated": false,
+            "fuzzy": false
+          },
+          {
+            "group": "ACTION_ADD_OR_CHECK",
+            "phrase": "add",
+            "start": 0,
+            "end": 1,
+            "negated": false,
+            "fuzzy": false
+          },
+          {
+            "group": "QUANTITY_REFERENCE",
+            "phrase": "two",
+            "start": 1,
+            "end": 2,
+            "negated": false,
+            "fuzzy": false
+          },
+          {
+            "group": "REFERENCE_IT",
+            "phrase": "one",
+            "start": 4,
+            "end": 5,
+            "negated": false,
+            "fuzzy": false
+          },
+          {
+            "group": "PRODUCT_REFERENCE_CONCEPT",
+            "phrase": "one",
+            "start": 4,
+            "end": 5,
+            "negated": false,
+            "fuzzy": false
+          },
+          {
+            "group": "ALLERGEN_CONCEPT",
+            "phrase": "milk",
+            "start": 5,
+            "end": 6,
+            "negated": false,
+            "fuzzy": false
+          },
+          {
+            "group": "OBJECT_CHECKOUT",
+            "phrase": "checkout",
+            "start": 7,
+            "end": 8,
+            "negated": false,
+            "fuzzy": false
+          }
+        ],
+        "suppressedPrefixes": [],
+        "actionFrames": [],
+        "contextualFrames": [],
+        "candidates": [
+          {
+            "intent": "ACCOUNT_ADDRESS_ADD",
+            "rule": "primary",
+            "score": -1,
+            "evidence": [
+              {
+                "group": "ACTION_ADD_60",
+                "kind": "REQUIRED",
+                "score": 4
+              }
+            ],
+            "penalties": [
+              {
+                "group": "OBJECT_ADDRESS_BOOK_ENTRY",
+                "kind": "MISSING_REQUIRED_INTENT_SIGNAL",
+                "score": -5
+              }
+            ],
+            "contextBoost": 0,
+            "missing": [
+              "OBJECT_ADDRESS_BOOK_ENTRY"
+            ],
+            "probability": 0.1249913586541406
+          },
+          {
+            "intent": "ADD_TO_CART",
+            "rule": "primary",
+            "score": -1,
+            "evidence": [
+              {
+                "group": "ACTION_ADD",
+                "kind": "REQUIRED",
+                "score": 4
+              }
+            ],
+            "penalties": [
+              {
+                "group": "OBJECT_CART",
+                "kind": "MISSING_REQUIRED_INTENT_SIGNAL",
+                "score": -5
+              }
+            ],
+            "contextBoost": 0,
+            "missing": [
+              "OBJECT_CART"
+            ],
+            "probability": 0.1249913586541406
+          },
+          {
+            "intent": "ADD_TO_WISHLIST",
+            "rule": "primary",
+            "score": -1,
+            "evidence": [
+              {
+                "group": "ACTION_ADD_60",
+                "kind": "REQUIRED",
+                "score": 4
+              }
+            ],
+            "penalties": [
+              {
+                "group": "OBJECT_WISHLIST",
+                "kind": "MISSING_REQUIRED_INTENT_SIGNAL",
+                "score": -5
+              }
+            ],
+            "contextBoost": 0,
+            "missing": [
+              "OBJECT_WISHLIST"
+            ],
+            "probability": 0.1249913586541406
+          },
+          {
+            "intent": "APPLY_COUPON",
+            "rule": "primary",
+            "score": -1,
+            "evidence": [
+              {
+                "group": "ACTION_APPLY",
+                "kind": "REQUIRED",
+                "score": 4
+              }
+            ],
+            "penalties": [
+              {
+                "group": "OBJECT_COUPON",
+                "kind": "MISSING_REQUIRED_INTENT_SIGNAL",
+                "score": -5
+              }
+            ],
+            "contextBoost": 0,
+            "missing": [
+              "OBJECT_COUPON"
+            ],
+            "probability": 0.1249913586541406
+          },
+          {
+            "intent": "CHECKOUT_GIFT_MESSAGE",
+            "rule": "primary",
+            "score": -1,
+            "evidence": [
+              {
+                "group": "ACTION_ADD_OR_WRITE",
+                "kind": "REQUIRED",
+                "score": 4
+              }
+            ],
+            "penalties": [
+              {
+                "group": "OBJECT_GIFT_MESSAGE",
+                "kind": "MISSING_REQUIRED_INTENT_SIGNAL",
+                "score": -5
+              }
+            ],
+            "contextBoost": 0,
+            "missing": [
+              "OBJECT_GIFT_MESSAGE"
+            ],
+            "probability": 0.1249913586541406
+          },
+          {
+            "intent": "CONTINUE_CHECKOUT",
+            "rule": "primary",
+            "score": -1,
+            "evidence": [
+              {
+                "group": "OBJECT_CHECKOUT",
+                "kind": "REQUIRED",
+                "score": 4
+              }
+            ],
+            "penalties": [
+              {
+                "group": "ACTION_CONTINUE",
+                "kind": "MISSING_REQUIRED_INTENT_SIGNAL",
+                "score": -5
+              }
+            ],
+            "contextBoost": 0,
+            "missing": [
+              "ACTION_CONTINUE"
+            ],
+            "probability": 0.1249913586541406
+          },
+          {
+            "intent": "DELIVERY_INSTRUCTIONS",
+            "rule": "primary",
+            "score": -1,
+            "evidence": [
+              {
+                "group": "ACTION_ADD_OR_CHANGE",
+                "kind": "REQUIRED",
+                "score": 4
+              }
+            ],
+            "penalties": [
+              {
+                "group": "OBJECT_DELIVERY_INSTRUCTIONS",
+                "kind": "MISSING_REQUIRED_INTENT_SIGNAL",
+                "score": -5
+              }
+            ],
+            "contextBoost": 0,
+            "missing": [
+              "OBJECT_DELIVERY_INSTRUCTIONS"
+            ],
+            "probability": 0.1249913586541406
+          },
+          {
+            "intent": "START_CHECKOUT",
+            "rule": "primary",
+            "score": -1,
+            "evidence": [
+              {
+                "group": "OBJECT_CHECKOUT",
+                "kind": "REQUIRED",
+                "score": 4
+              }
+            ],
+            "penalties": [
+              {
+                "group": "ACTION_START",
+                "kind": "MISSING_REQUIRED_INTENT_SIGNAL",
+                "score": -5
+              }
+            ],
+            "contextBoost": 0,
+            "missing": [
+              "ACTION_START"
+            ],
+            "probability": 0.1249913586541406
+          },
+          {
+            "intent": "REMOVE_FROM_CART",
+            "rule": "primary",
+            "score": -16,
+            "evidence": [],
+            "penalties": [
+              {
+                "group": "ACTION_ADD",
+                "kind": "CONTRADICTION",
+                "score": -6
+              },
+              {
+                "group": "ACTION_REMOVE",
+                "kind": "MISSING_REQUIRED_INTENT_SIGNAL",
+                "score": -5
+              },
+              {
+                "group": "OBJECT_CART",
+                "kind": "MISSING_REQUIRED_INTENT_SIGNAL",
+                "score": -5
+              }
+            ],
+            "contextBoost": 0,
+            "missing": [
+              "ACTION_REMOVE",
+              "OBJECT_CART"
+            ],
+            "probability": 6.913076687514733e-05
+          }
+        ]
+      },
+      "latencyMs": 2.222,
+      "missing": [],
+      "requestType": "COMPOUND",
+      "requestedIntents": [
+        "ADD_TO_CART",
+        "START_CHECKOUT"
+      ],
+      "fulfillment": {
+        "status": "NOT_EXECUTED",
+        "needsClarification": false,
+        "unresolvedSlots": [
+          {
+            "slot": "items[0].product_ids",
+            "reason": "CATALOG_MATCHING_REQUIRED"
+          },
+          {
+            "slot": "items[1].product_ids",
+            "reason": "CATALOG_MATCHING_REQUIRED"
+          }
+        ]
+      },
+      "primaryIntent": "START_CHECKOUT",
+      "operations": [
+        "ADD_ITEM",
+        "START_CHECKOUT"
+      ],
+      "actions": [
+        {
+          "id": "action1",
+          "intent": "ADD_TO_CART",
+          "clauseId": "clause1",
+          "operation": "ADD_ITEM",
+          "itemIndexes": [
+            0,
+            1
+          ]
+        },
+        {
+          "id": "action2",
+          "intent": "START_CHECKOUT",
+          "clauseId": "clause2",
+          "operation": "START_CHECKOUT"
+        }
+      ],
+      "clauses": [
+        {
+          "id": "clause1",
+          "text": "add two apples and one milk",
+          "start": 0,
+          "end": 27,
+          "intent": "ADD_TO_CART",
+          "connector": "start",
+          "negated": false
+        },
+        {
+          "id": "clause2",
+          "text": "checkout",
+          "start": 33,
+          "end": 41,
+          "intent": "START_CHECKOUT",
+          "connector": "then",
+          "negated": false
+        }
+      ],
+      "references": [],
+      "relationships": [
+        {
+          "from": "action1",
+          "relation": "uses",
+          "to": "item1"
+        },
+        {
+          "from": "action1",
+          "relation": "uses",
+          "to": "item2"
+        },
+        {
+          "from": "action1",
+          "relation": "precedes",
+          "to": "action2"
+        }
+      ],
+      "slots": [],
+      "graph": {
+        "nodes": [
+          {
+            "id": "request",
+            "kind": "REQUEST"
+          },
+          {
+            "id": "clause1",
+            "kind": "CLAUSE",
+            "value": {
+              "intent": "ADD_TO_CART",
+              "connector": "start",
+              "negated": false,
+              "text": "add two apples and one milk"
+            }
+          },
+          {
+            "id": "clause2",
+            "kind": "CLAUSE",
+            "value": {
+              "intent": "START_CHECKOUT",
+              "connector": "then",
+              "negated": false,
+              "text": "checkout"
+            }
+          },
+          {
+            "id": "action1",
+            "kind": "ACTION",
+            "clauseId": "clause1",
+            "value": {
+              "intent": "ADD_TO_CART",
+              "operation": "ADD_ITEM",
+              "itemIndexes": [
+                0,
+                1
+              ]
+            }
+          },
+          {
+            "id": "action2",
+            "kind": "ACTION",
+            "clauseId": "clause2",
+            "value": {
+              "intent": "START_CHECKOUT",
+              "operation": "START_CHECKOUT",
+              "itemIndexes": []
+            }
+          },
+          {
+            "id": "item1",
+            "kind": "ITEM",
+            "value": {
+              "quantity": 2,
+              "productText": "apples"
+            }
+          },
+          {
+            "id": "quantity1",
+            "kind": "QUANTITY",
+            "value": {
+              "value": 2
+            }
+          },
+          {
+            "id": "item2",
+            "kind": "ITEM",
+            "value": {
+              "quantity": 1,
+              "productText": "milk"
+            }
+          },
+          {
+            "id": "quantity2",
+            "kind": "QUANTITY",
+            "value": {
+              "value": 1
+            }
+          }
+        ],
+        "edges": [
+          {
+            "from": "clause1",
+            "to": "action1",
+            "relation": "PERFORMS",
+            "ruleCode": "CLAUSE_PERFORMS_ACTION"
+          },
+          {
+            "from": "clause2",
+            "to": "action2",
+            "relation": "PERFORMS",
+            "ruleCode": "CLAUSE_PERFORMS_ACTION"
+          },
+          {
+            "from": "item1",
+            "to": "quantity1",
+            "relation": "HAS_QUANTITY",
+            "ruleCode": "ITEM_HAS_QUANTITY"
+          },
+          {
+            "from": "item2",
+            "to": "quantity2",
+            "relation": "HAS_QUANTITY",
+            "ruleCode": "ITEM_HAS_QUANTITY"
+          },
+          {
+            "from": "action1",
+            "to": "item1",
+            "relation": "TARGETS",
+            "ruleCode": "ACTION_TARGETS_ITEM"
+          },
+          {
+            "from": "action1",
+            "to": "item2",
+            "relation": "TARGETS",
+            "ruleCode": "ACTION_TARGETS_ITEM"
+          },
+          {
+            "from": "action1",
+            "to": "action2",
+            "relation": "SEQUENCE_NEXT",
+            "ruleCode": "ACTION_SEQUENCE"
+          }
+        ],
+        "constraints": [
+          "quantity1",
+          "quantity2"
+        ],
+        "truncated": false
+      },
+      "ambiguities": []
+    }
+  },
+  {
+    "name": "needs_context",
+    "text": "pls add two product to cart",
+    "context": {},
+    "response": {
+      "status": "NEEDS_CONTEXT",
+      "message": "Which product or items do you mean?",
+      "missing": [
+        "items[0].productText"
+      ],
+      "text": "pls add two product to cart",
+      "normalizedText": "pls add two product to cart",
+      "intent": "ADD_TO_CART",
+      "confidence": 0.994,
+      "confidenceLevel": "HIGH",
+      "entities": {
+        "quantity": 2,
+        "destination": "cart",
+        "productText": "product",
+        "items": [
+          {
+            "quantity": 2,
+            "reference": "UNSPECIFIED"
+          }
+        ]
+      },
+      "fulfillment": {
+        "status": "NOT_EXECUTED",
+        "needsClarification": true,
+        "unresolvedSlots": [
+          {
+            "slot": "items[0].product_ids",
+            "reason": "CATALOG_MATCHING_REQUIRED"
+          }
+        ]
+      },
+      "matchedSemanticGroups": [
+        "ACTION_APPLY",
+        "ACTION_ADD",
+        "ACTION_ADD_60",
+        "ACTION_ADD_OR_WRITE",
+        "ACTION_ADD_OR_CHANGE",
+        "ACTION_ADD_OR_SELECT",
+        "ACTION_REQUEST_OR_ADD",
+        "ACTION_ADD_OR_INCLUDE",
+        "ACTION_ADD_OR_CHECK",
+        "QUANTITY_REFERENCE",
+        "OBJECT_PRODUCT",
+        "OBJECT_PRODUCT_136",
+        "COMPLAINT_TOPIC",
+        "PURCHASE_OBJECT",
+        "OBJECT_CART"
+      ],
+      "evidence": [
+        {
+          "group": "ACTION_ADD",
+          "kind": "REQUIRED",
+          "score": 4
+        },
+        {
+          "group": "OBJECT_CART",
+          "kind": "REQUIRED",
+          "score": 4
+        },
+        {
+          "group": "cart-add",
+          "kind": "RELATIONSHIP",
+          "score": 5
+        },
+        {
+          "group": "REQUEST_MARKER",
+          "kind": "GENERIC",
+          "score": 0.25
+        }
+      ],
+      "negativeEvidence": [],
+      "context": {
+        "input": {},
+        "next": {
+          "pendingRequest": "pls add two product to cart",
+          "previousIntent": "ADD_TO_CART"
+        }
+      },
+      "alternatives": [
+        {
+          "intent": "ACCOUNT_ADDRESS_ADD",
+          "rule": "primary",
+          "score": -0.75,
+          "evidence": [
+            {
+              "group": "ACTION_ADD_60",
+              "kind": "REQUIRED",
+              "score": 4
+            },
+            {
+              "group": "REQUEST_MARKER",
+              "kind": "GENERIC",
+              "score": 0.25
+            }
+          ],
+          "penalties": [
+            {
+              "group": "OBJECT_ADDRESS_BOOK_ENTRY",
+              "kind": "MISSING_REQUIRED_INTENT_SIGNAL",
+              "score": -5
+            }
+          ],
+          "contextBoost": 0,
+          "missing": [
+            "OBJECT_ADDRESS_BOOK_ENTRY"
+          ],
+          "probability": 0.0009060164390303911
+        },
+        {
+          "intent": "APPLY_COUPON",
+          "rule": "primary",
+          "score": -0.75,
+          "evidence": [
+            {
+              "group": "ACTION_APPLY",
+              "kind": "REQUIRED",
+              "score": 4
+            },
+            {
+              "group": "REQUEST_MARKER",
+              "kind": "GENERIC",
+              "score": 0.25
+            }
+          ],
+          "penalties": [
+            {
+              "group": "OBJECT_COUPON",
+              "kind": "MISSING_REQUIRED_INTENT_SIGNAL",
+              "score": -5
+            }
+          ],
+          "contextBoost": 0,
+          "missing": [
+            "OBJECT_COUPON"
+          ],
+          "probability": 0.0009060164390303911
+        },
+        {
+          "intent": "CHECKOUT_GIFT_MESSAGE",
+          "rule": "primary",
+          "score": -0.75,
+          "evidence": [
+            {
+              "group": "ACTION_ADD_OR_WRITE",
+              "kind": "REQUIRED",
+              "score": 4
+            },
+            {
+              "group": "REQUEST_MARKER",
+              "kind": "GENERIC",
+              "score": 0.25
+            }
+          ],
+          "penalties": [
+            {
+              "group": "OBJECT_GIFT_MESSAGE",
+              "kind": "MISSING_REQUIRED_INTENT_SIGNAL",
+              "score": -5
+            }
+          ],
+          "contextBoost": 0,
+          "missing": [
+            "OBJECT_GIFT_MESSAGE"
+          ],
+          "probability": 0.0009060164390303911
+        }
+      ],
+      "requiresConfirmation": true,
+      "debug": {
+        "score": 13.25,
+        "probability": 0.9935676691220027,
+        "confidence": 0.9935676691220027,
+        "scoreMargin": 14,
+        "probabilityMargin": 0.9926616526829722,
+        "evidenceStrength": 1,
+        "separationConfidence": 1,
+        "config": {
+          "weights": {
+            "required": 4,
+            "relationship": 5,
+            "optional": 1,
+            "generic": 0.25,
+            "context": 3
+          },
+          "penalties": {
+            "contradiction": 6,
+            "negatedAction": 8,
+            "missingRequired": 5
+          },
+          "temperature": 2,
+          "minScore": 6,
+          "minConfidence": 0.7,
+          "minScoreMargin": 2,
+          "minProbabilityMargin": 0.15,
+          "targetStrongScore": 12,
+          "targetMargin": 5
+        },
+        "tokens": [
+          "pls",
+          "add",
+          "two",
+          "product",
+          "to",
+          "cart"
+        ],
+        "matchedPhrases": [
+          {
+            "group": "ACTION_APPLY",
+            "phrase": "add",
+            "start": 1,
+            "end": 2,
+            "negated": false,
+            "fuzzy": false
+          },
+          {
+            "group": "ACTION_ADD",
+            "phrase": "add",
+            "start": 1,
+            "end": 2,
+            "negated": false,
+            "fuzzy": false
+          },
+          {
+            "group": "ACTION_ADD_60",
+            "phrase": "add",
+            "start": 1,
+            "end": 2,
+            "negated": false,
+            "fuzzy": false
+          },
+          {
+            "group": "ACTION_ADD_OR_WRITE",
+            "phrase": "add",
+            "start": 1,
+            "end": 2,
+            "negated": false,
+            "fuzzy": false
+          },
+          {
+            "group": "ACTION_ADD_OR_CHANGE",
+            "phrase": "add",
+            "start": 1,
+            "end": 2,
+            "negated": false,
+            "fuzzy": false
+          },
+          {
+            "group": "ACTION_ADD_OR_SELECT",
+            "phrase": "add",
+            "start": 1,
+            "end": 2,
+            "negated": false,
+            "fuzzy": false
+          },
+          {
+            "group": "ACTION_REQUEST_OR_ADD",
+            "phrase": "add",
+            "start": 1,
+            "end": 2,
+            "negated": false,
+            "fuzzy": false
+          },
+          {
+            "group": "ACTION_ADD_OR_INCLUDE",
+            "phrase": "add",
+            "start": 1,
+            "end": 2,
+            "negated": false,
+            "fuzzy": false
+          },
+          {
+            "group": "ACTION_ADD_OR_CHECK",
+            "phrase": "add",
+            "start": 1,
+            "end": 2,
+            "negated": false,
+            "fuzzy": false
+          },
+          {
+            "group": "QUANTITY_REFERENCE",
+            "phrase": "two",
+            "start": 2,
+            "end": 3,
+            "negated": false,
+            "fuzzy": false
+          },
+          {
+            "group": "OBJECT_PRODUCT",
+            "phrase": "product",
+            "start": 3,
+            "end": 4,
+            "negated": false,
+            "fuzzy": false
+          },
+          {
+            "group": "OBJECT_PRODUCT_136",
+            "phrase": "product",
+            "start": 3,
+            "end": 4,
+            "negated": false,
+            "fuzzy": false
+          },
+          {
+            "group": "COMPLAINT_TOPIC",
+            "phrase": "product",
+            "start": 3,
+            "end": 4,
+            "negated": false,
+            "fuzzy": false
+          },
+          {
+            "group": "PURCHASE_OBJECT",
+            "phrase": "product",
+            "start": 3,
+            "end": 4,
+            "negated": false,
+            "fuzzy": false
+          },
+          {
+            "group": "OBJECT_CART",
+            "phrase": "cart",
+            "start": 5,
+            "end": 6,
+            "negated": false,
+            "fuzzy": false
+          }
+        ],
+        "suppressedPrefixes": [],
+        "actionFrames": [
+          {
+            "instructional": false,
+            "code": "cart-add",
+            "intent": "ADD_TO_CART",
+            "action": "add",
+            "start": 1,
+            "end": 6,
+            "target": "cart",
+            "description": "product",
+            "negated": false,
+            "entities": {
+              "destination": "cart",
+              "quantity": 2
+            },
+            "selectionRequired": true
+          }
+        ],
+        "contextualFrames": [],
+        "candidates": [
+          {
+            "intent": "ADD_TO_CART",
+            "rule": "primary",
+            "score": 13.25,
+            "evidence": [
+              {
+                "group": "ACTION_ADD",
+                "kind": "REQUIRED",
+                "score": 4
+              },
+              {
+                "group": "OBJECT_CART",
+                "kind": "REQUIRED",
+                "score": 4
+              },
+              {
+                "group": "cart-add",
+                "kind": "RELATIONSHIP",
+                "score": 5
+              },
+              {
+                "group": "REQUEST_MARKER",
+                "kind": "GENERIC",
+                "score": 0.25
+              }
+            ],
+            "penalties": [],
+            "contextBoost": 0,
+            "missing": [],
+            "probability": 0.9935676691220027
+          },
+          {
+            "intent": "ACCOUNT_ADDRESS_ADD",
+            "rule": "primary",
+            "score": -0.75,
+            "evidence": [
+              {
+                "group": "ACTION_ADD_60",
+                "kind": "REQUIRED",
+                "score": 4
+              },
+              {
+                "group": "REQUEST_MARKER",
+                "kind": "GENERIC",
+                "score": 0.25
+              }
+            ],
+            "penalties": [
+              {
+                "group": "OBJECT_ADDRESS_BOOK_ENTRY",
+                "kind": "MISSING_REQUIRED_INTENT_SIGNAL",
+                "score": -5
+              }
+            ],
+            "contextBoost": 0,
+            "missing": [
+              "OBJECT_ADDRESS_BOOK_ENTRY"
+            ],
+            "probability": 0.0009060164390303911
+          },
+          {
+            "intent": "APPLY_COUPON",
+            "rule": "primary",
+            "score": -0.75,
+            "evidence": [
+              {
+                "group": "ACTION_APPLY",
+                "kind": "REQUIRED",
+                "score": 4
+              },
+              {
+                "group": "REQUEST_MARKER",
+                "kind": "GENERIC",
+                "score": 0.25
+              }
+            ],
+            "penalties": [
+              {
+                "group": "OBJECT_COUPON",
+                "kind": "MISSING_REQUIRED_INTENT_SIGNAL",
+                "score": -5
+              }
+            ],
+            "contextBoost": 0,
+            "missing": [
+              "OBJECT_COUPON"
+            ],
+            "probability": 0.0009060164390303911
+          },
+          {
+            "intent": "CHECKOUT_GIFT_MESSAGE",
+            "rule": "primary",
+            "score": -0.75,
+            "evidence": [
+              {
+                "group": "ACTION_ADD_OR_WRITE",
+                "kind": "REQUIRED",
+                "score": 4
+              },
+              {
+                "group": "REQUEST_MARKER",
+                "kind": "GENERIC",
+                "score": 0.25
+              }
+            ],
+            "penalties": [
+              {
+                "group": "OBJECT_GIFT_MESSAGE",
+                "kind": "MISSING_REQUIRED_INTENT_SIGNAL",
+                "score": -5
+              }
+            ],
+            "contextBoost": 0,
+            "missing": [
+              "OBJECT_GIFT_MESSAGE"
+            ],
+            "probability": 0.0009060164390303911
+          },
+          {
+            "intent": "CLEAR_CART",
+            "rule": "primary",
+            "score": -0.75,
+            "evidence": [
+              {
+                "group": "OBJECT_CART",
+                "kind": "REQUIRED",
+                "score": 4
+              },
+              {
+                "group": "REQUEST_MARKER",
+                "kind": "GENERIC",
+                "score": 0.25
+              }
+            ],
+            "penalties": [
+              {
+                "group": "ACTION_CLEAR",
+                "kind": "MISSING_REQUIRED_INTENT_SIGNAL",
+                "score": -5
+              }
+            ],
+            "contextBoost": 0,
+            "missing": [
+              "ACTION_CLEAR"
+            ],
+            "probability": 0.0009060164390303911
+          },
+          {
+            "intent": "DELIVERY_INSTRUCTIONS",
+            "rule": "primary",
+            "score": -0.75,
+            "evidence": [
+              {
+                "group": "ACTION_ADD_OR_CHANGE",
+                "kind": "REQUIRED",
+                "score": 4
+              },
+              {
+                "group": "REQUEST_MARKER",
+                "kind": "GENERIC",
+                "score": 0.25
+              }
+            ],
+            "penalties": [
+              {
+                "group": "OBJECT_DELIVERY_INSTRUCTIONS",
+                "kind": "MISSING_REQUIRED_INTENT_SIGNAL",
+                "score": -5
+              }
+            ],
+            "contextBoost": 0,
+            "missing": [
+              "OBJECT_DELIVERY_INSTRUCTIONS"
+            ],
+            "probability": 0.0009060164390303911
+          },
+          {
+            "intent": "OPTIMIZE_CART",
+            "rule": "primary",
+            "score": -0.75,
+            "evidence": [
+              {
+                "group": "OBJECT_CART",
+                "kind": "REQUIRED",
+                "score": 4
+              },
+              {
+                "group": "REQUEST_MARKER",
+                "kind": "GENERIC",
+                "score": 0.25
+              }
+            ],
+            "penalties": [
+              {
+                "group": "ACTION_OPTIMIZE",
+                "kind": "MISSING_REQUIRED_INTENT_SIGNAL",
+                "score": -5
+              }
+            ],
+            "contextBoost": 0,
+            "missing": [
+              "ACTION_OPTIMIZE"
+            ],
+            "probability": 0.0009060164390303911
+          },
+          {
+            "intent": "VIEW_CART",
+            "rule": "primary",
+            "score": -0.75,
+            "evidence": [
+              {
+                "group": "OBJECT_CART",
+                "kind": "REQUIRED",
+                "score": 4
+              },
+              {
+                "group": "REQUEST_MARKER",
+                "kind": "GENERIC",
+                "score": 0.25
+              }
+            ],
+            "penalties": [
+              {
+                "group": "ACTION_VIEW",
+                "kind": "MISSING_REQUIRED_INTENT_SIGNAL",
+                "score": -5
+              }
+            ],
+            "contextBoost": 0,
+            "missing": [
+              "ACTION_VIEW"
+            ],
+            "probability": 0.0009060164390303911
+          },
+          {
+            "intent": "ADD_TO_WISHLIST",
+            "rule": "primary",
+            "score": -6.75,
+            "evidence": [
+              {
+                "group": "ACTION_ADD_60",
+                "kind": "REQUIRED",
+                "score": 4
+              },
+              {
+                "group": "REQUEST_MARKER",
+                "kind": "GENERIC",
+                "score": 0.25
+              }
+            ],
+            "penalties": [
+              {
+                "group": "OBJECT_WISHLIST",
+                "kind": "MISSING_REQUIRED_INTENT_SIGNAL",
+                "score": -5
+              },
+              {
+                "group": "cart-add",
+                "kind": "CONTRADICTORY_DESTINATION",
+                "score": -6
+              }
+            ],
+            "contextBoost": 0,
+            "missing": [
+              "OBJECT_WISHLIST"
+            ],
+            "probability": 4.5107902392414706e-05
+          },
+          {
+            "intent": "REMOVE_FROM_CART",
+            "rule": "primary",
+            "score": -6.75,
+            "evidence": [
+              {
+                "group": "OBJECT_CART",
+                "kind": "REQUIRED",
+                "score": 4
+              },
+              {
+                "group": "REQUEST_MARKER",
+                "kind": "GENERIC",
+                "score": 0.25
+              }
+            ],
+            "penalties": [
+              {
+                "group": "ACTION_ADD",
+                "kind": "CONTRADICTION",
+                "score": -6
+              },
+              {
+                "group": "ACTION_REMOVE",
+                "kind": "MISSING_REQUIRED_INTENT_SIGNAL",
+                "score": -5
+              }
+            ],
+            "contextBoost": 0,
+            "missing": [
+              "ACTION_REMOVE"
+            ],
+            "probability": 4.5107902392414706e-05
+          }
+        ]
+      },
+      "latencyMs": 2.33,
+      "primaryIntent": "ADD_TO_CART",
+      "operations": [
+        "ADD_ITEM"
+      ],
+      "actions": [
+        {
+          "id": "action1",
+          "intent": "ADD_TO_CART",
+          "clauseId": "clause1",
+          "operation": "ADD_ITEM",
+          "itemIndexes": [
+            0
+          ]
+        }
+      ],
+      "clauses": [
+        {
+          "id": "clause1",
+          "text": "add two product to cart",
+          "start": 4,
+          "end": 27,
+          "intent": "ADD_TO_CART",
+          "connector": "start",
+          "negated": false
+        }
+      ],
+      "references": [
+        {
+          "expression": "UNSPECIFIED",
+          "kind": "product",
+          "resolved": false,
+          "state": "REFERENCE_PENDING"
+        }
+      ],
+      "relationships": [
+        {
+          "from": "action1",
+          "relation": "uses",
+          "to": "item1"
+        }
+      ],
+      "slots": [
+        {
+          "code": "PRODUCT_TEXT",
+          "state": "REFERENCE_PENDING",
+          "requirement": "REQUIRED",
+          "value": [],
+          "candidates": [],
+          "confidence": 0,
+          "requiresAuthorizationLookup": false
+        },
+        {
+          "code": "QUANTITY",
+          "state": "RESOLVED",
+          "requirement": "OPTIONAL",
+          "source": "utterance",
+          "value": [
+            2
+          ],
+          "candidates": [],
+          "confidence": 1,
+          "requiresAuthorizationLookup": false
+        }
+      ],
+      "graph": {
+        "nodes": [
+          {
+            "id": "request",
+            "kind": "REQUEST"
+          },
+          {
+            "id": "clause1",
+            "kind": "CLAUSE",
+            "value": {
+              "intent": "ADD_TO_CART",
+              "connector": "start",
+              "negated": false,
+              "text": "add two product to cart"
+            }
+          },
+          {
+            "id": "action1",
+            "kind": "ACTION",
+            "clauseId": "clause1",
+            "value": {
+              "intent": "ADD_TO_CART",
+              "operation": "ADD_ITEM",
+              "itemIndexes": [
+                0
+              ]
+            }
+          },
+          {
+            "id": "item1",
+            "kind": "ITEM",
+            "value": {
+              "quantity": 2,
+              "reference": "UNSPECIFIED"
+            }
+          },
+          {
+            "id": "quantity1",
+            "kind": "QUANTITY",
+            "value": {
+              "value": 2
+            }
+          },
+          {
+            "id": "slot:PRODUCT_TEXT",
+            "kind": "SLOT",
+            "value": {
+              "code": "PRODUCT_TEXT",
+              "state": "REFERENCE_PENDING",
+              "requirement": "REQUIRED",
+              "value": []
+            }
+          },
+          {
+            "id": "slot:QUANTITY",
+            "kind": "SLOT",
+            "value": {
+              "code": "QUANTITY",
+              "state": "RESOLVED",
+              "requirement": "OPTIONAL",
+              "value": [
+                2
+              ]
+            }
+          },
+          {
+            "id": "reference1",
+            "kind": "REFERENCE",
+            "value": {
+              "expression": "UNSPECIFIED",
+              "kind": "product",
+              "resolved": false,
+              "state": "REFERENCE_PENDING"
+            }
+          }
+        ],
+        "edges": [
+          {
+            "from": "clause1",
+            "to": "action1",
+            "relation": "PERFORMS",
+            "ruleCode": "CLAUSE_PERFORMS_ACTION"
+          },
+          {
+            "from": "item1",
+            "to": "quantity1",
+            "relation": "HAS_QUANTITY",
+            "ruleCode": "ITEM_HAS_QUANTITY"
+          },
+          {
+            "from": "action1",
+            "to": "slot:PRODUCT_TEXT",
+            "relation": "REQUIRES_SLOT"
+          },
+          {
+            "from": "action1",
+            "to": "slot:QUANTITY",
+            "relation": "REQUIRES_SLOT"
+          },
+          {
+            "from": "action1",
+            "to": "item1",
+            "relation": "TARGETS",
+            "ruleCode": "ACTION_TARGETS_ITEM"
+          }
+        ],
+        "constraints": [
+          "quantity1",
+          "slot:PRODUCT_TEXT"
+        ],
+        "truncated": false
+      },
+      "ambiguities": [],
+      "clarificationQuestion": "Which product would you like to add?"
+    }
+  },
+  {
+    "name": "address_reference",
+    "text": "create an order for two apples and deliver it there",
+    "context": {},
+    "response": {
+      "status": "NEEDS_CONTEXT",
+      "message": "Which delivery address do you mean?",
+      "missing": [
+        "delivery.addressReference"
+      ],
+      "text": "create an order for two apples and deliver it there",
+      "normalizedText": "create an order for two apples and deliver it there",
+      "intent": "CREATE_ORDER",
+      "confidence": 0.995,
+      "confidenceLevel": "HIGH",
+      "entities": {
+        "category": "apple",
+        "items": [
+          {
+            "quantity": 2,
+            "productText": "apples"
+          }
+        ],
+        "delivery": {}
+      },
+      "matchedSemanticGroups": [
+        "ACTION_CREATE",
+        "ACTION_CREATE_117",
+        "ACTION_CREATE_120",
+        "ACTION_PLACE_OR_CREATE",
+        "ACTION_CREATE_OR_ENABLE",
+        "ACTION_CREATE_OR_REGISTER",
+        "ACTION_REQUEST_OR_CREATE",
+        "OBJECT_ORDER",
+        "OBJECT_ORDER_76",
+        "OBJECT_ORDER_79",
+        "COMPLAINT_TOPIC",
+        "OBJECT_ORDER_DC0B7549",
+        "PURCHASE_OBJECT",
+        "COMPLAINT_COMMERCE_CONTEXT",
+        "ACTION_PURCHASE",
+        "QUANTITY_REFERENCE",
+        "REFERENCE_IT",
+        "REFERENCE_PRONOUN_SINGULAR",
+        "REFERENCE_LOCATION"
+      ],
+      "evidence": [
+        {
+          "group": "ACTION_CREATE",
+          "kind": "REQUIRED",
+          "score": 4
+        },
+        {
+          "group": "OBJECT_ORDER",
+          "kind": "REQUIRED",
+          "score": 4
+        },
+        {
+          "group": "ACTION_CREATE+OBJECT_ORDER",
+          "kind": "RELATIONSHIP",
+          "score": 5
+        }
+      ],
+      "negativeEvidence": [],
+      "context": {
+        "input": {},
+        "next": {
+          "pendingRequest": "create an order for two apples and deliver it there",
+          "selectedItems": [
+            {
+              "quantity": 2,
+              "productText": "apples"
+            }
+          ],
+          "previousIntent": "CREATE_ORDER"
+        }
+      },
+      "alternatives": [
+        {
+          "intent": "ACCOUNT_CREATE",
+          "rule": "primary",
+          "score": -1,
+          "evidence": [
+            {
+              "group": "ACTION_CREATE_OR_REGISTER",
+              "kind": "REQUIRED",
+              "score": 4
+            }
+          ],
+          "penalties": [
+            {
+              "group": "OBJECT_CUSTOMER_ACCOUNT",
+              "kind": "MISSING_REQUIRED_INTENT_SIGNAL",
+              "score": -5
+            }
+          ],
+          "contextBoost": 0,
+          "missing": [
+            "OBJECT_CUSTOMER_ACCOUNT"
+          ],
+          "probability": 0.0009068789937160394
+        },
+        {
+          "intent": "CREATE_SUPPORT_REQUEST",
+          "rule": "primary",
+          "score": -1,
+          "evidence": [
+            {
+              "group": "ACTION_CREATE_120",
+              "kind": "REQUIRED",
+              "score": 4
+            }
+          ],
+          "penalties": [
+            {
+              "group": "OBJECT_SUPPORT_REQUEST",
+              "kind": "MISSING_REQUIRED_INTENT_SIGNAL",
+              "score": -5
+            }
+          ],
+          "contextBoost": 0,
+          "missing": [
+            "OBJECT_SUPPORT_REQUEST"
+          ],
+          "probability": 0.0009068789937160394
+        },
+        {
+          "intent": "ORDER_DETAILS",
+          "rule": "primary",
+          "score": -1,
+          "evidence": [
+            {
+              "group": "OBJECT_ORDER",
+              "kind": "REQUIRED",
+              "score": 4
+            }
+          ],
+          "penalties": [
+            {
+              "group": "ACTION_SHOW_74",
+              "kind": "MISSING_REQUIRED_INTENT_SIGNAL",
+              "score": -5
+            }
+          ],
+          "contextBoost": 0,
+          "missing": [
+            "ACTION_SHOW_74"
+          ],
+          "probability": 0.0009068789937160394
+        }
+      ],
+      "requiresConfirmation": true,
+      "debug": {
+        "score": 13,
+        "probability": 0.9945135751912425,
+        "confidence": 0.9945135751912425,
+        "scoreMargin": 14,
+        "probabilityMargin": 0.9936066961975265,
+        "evidenceStrength": 1,
+        "separationConfidence": 1,
+        "config": {
+          "weights": {
+            "required": 4,
+            "relationship": 5,
+            "optional": 1,
+            "generic": 0.25,
+            "context": 3
+          },
+          "penalties": {
+            "contradiction": 6,
+            "negatedAction": 8,
+            "missingRequired": 5
+          },
+          "temperature": 2,
+          "minScore": 6,
+          "minConfidence": 0.7,
+          "minScoreMargin": 2,
+          "minProbabilityMargin": 0.15,
+          "targetStrongScore": 12,
+          "targetMargin": 5
+        },
+        "tokens": [
+          "create",
+          "an",
+          "order",
+          "for",
+          "two",
+          "apples",
+          "and",
+          "deliver",
+          "it",
+          "there"
+        ],
+        "matchedPhrases": [
+          {
+            "group": "ACTION_CREATE",
+            "phrase": "create",
+            "start": 0,
+            "end": 1,
+            "negated": false,
+            "fuzzy": false
+          },
+          {
+            "group": "ACTION_CREATE_117",
+            "phrase": "create",
+            "start": 0,
+            "end": 1,
+            "negated": false,
+            "fuzzy": false
+          },
+          {
+            "group": "ACTION_CREATE_120",
+            "phrase": "create",
+            "start": 0,
+            "end": 1,
+            "negated": false,
+            "fuzzy": false
+          },
+          {
+            "group": "ACTION_PLACE_OR_CREATE",
+            "phrase": "create",
+            "start": 0,
+            "end": 1,
+            "negated": false,
+            "fuzzy": false
+          },
+          {
+            "group": "ACTION_CREATE_OR_ENABLE",
+            "phrase": "create",
+            "start": 0,
+            "end": 1,
+            "negated": false,
+            "fuzzy": false
+          },
+          {
+            "group": "ACTION_CREATE_OR_REGISTER",
+            "phrase": "create",
+            "start": 0,
+            "end": 1,
+            "negated": false,
+            "fuzzy": false
+          },
+          {
+            "group": "ACTION_REQUEST_OR_CREATE",
+            "phrase": "create",
+            "start": 0,
+            "end": 1,
+            "negated": false,
+            "fuzzy": false
+          },
+          {
+            "group": "OBJECT_ORDER",
+            "phrase": "order",
+            "start": 2,
+            "end": 3,
+            "negated": false,
+            "fuzzy": false
+          },
+          {
+            "group": "OBJECT_ORDER_76",
+            "phrase": "order",
+            "start": 2,
+            "end": 3,
+            "negated": false,
+            "fuzzy": false
+          },
+          {
+            "group": "OBJECT_ORDER_79",
+            "phrase": "order",
+            "start": 2,
+            "end": 3,
+            "negated": false,
+            "fuzzy": false
+          },
+          {
+            "group": "COMPLAINT_TOPIC",
+            "phrase": "order",
+            "start": 2,
+            "end": 3,
+            "negated": false,
+            "fuzzy": false
+          },
+          {
+            "group": "OBJECT_ORDER_DC0B7549",
+            "phrase": "order",
+            "start": 2,
+            "end": 3,
+            "negated": false,
+            "fuzzy": false
+          },
+          {
+            "group": "PURCHASE_OBJECT",
+            "phrase": "order",
+            "start": 2,
+            "end": 3,
+            "negated": false,
+            "fuzzy": false
+          },
+          {
+            "group": "COMPLAINT_COMMERCE_CONTEXT",
+            "phrase": "order",
+            "start": 2,
+            "end": 3,
+            "negated": false,
+            "fuzzy": false
+          },
+          {
+            "group": "ACTION_PURCHASE",
+            "phrase": "order",
+            "start": 2,
+            "end": 3,
+            "negated": false,
+            "fuzzy": false
+          },
+          {
+            "group": "QUANTITY_REFERENCE",
+            "phrase": "two",
+            "start": 4,
+            "end": 5,
+            "negated": false,
+            "fuzzy": false
+          },
+          {
+            "group": "REFERENCE_IT",
+            "phrase": "it",
+            "start": 8,
+            "end": 9,
+            "negated": false,
+            "fuzzy": false
+          },
+          {
+            "group": "REFERENCE_PRONOUN_SINGULAR",
+            "phrase": "it",
+            "start": 8,
+            "end": 9,
+            "negated": false,
+            "fuzzy": false
+          },
+          {
+            "group": "REFERENCE_LOCATION",
+            "phrase": "there",
+            "start": 9,
+            "end": 10,
+            "negated": false,
+            "fuzzy": false
+          }
+        ],
+        "suppressedPrefixes": [],
+        "actionFrames": [],
+        "contextualFrames": [],
+        "candidates": [
+          {
+            "intent": "CREATE_ORDER",
+            "rule": "primary",
+            "score": 13,
+            "evidence": [
+              {
+                "group": "ACTION_CREATE",
+                "kind": "REQUIRED",
+                "score": 4
+              },
+              {
+                "group": "OBJECT_ORDER",
+                "kind": "REQUIRED",
+                "score": 4
+              },
+              {
+                "group": "ACTION_CREATE+OBJECT_ORDER",
+                "kind": "RELATIONSHIP",
+                "score": 5
+              }
+            ],
+            "penalties": [],
+            "contextBoost": 0,
+            "missing": [],
+            "probability": 0.9945135751912425
+          },
+          {
+            "intent": "ACCOUNT_CREATE",
+            "rule": "primary",
+            "score": -1,
+            "evidence": [
+              {
+                "group": "ACTION_CREATE_OR_REGISTER",
+                "kind": "REQUIRED",
+                "score": 4
+              }
+            ],
+            "penalties": [
+              {
+                "group": "OBJECT_CUSTOMER_ACCOUNT",
+                "kind": "MISSING_REQUIRED_INTENT_SIGNAL",
+                "score": -5
+              }
+            ],
+            "contextBoost": 0,
+            "missing": [
+              "OBJECT_CUSTOMER_ACCOUNT"
+            ],
+            "probability": 0.0009068789937160394
+          },
+          {
+            "intent": "CREATE_SUPPORT_REQUEST",
+            "rule": "primary",
+            "score": -1,
+            "evidence": [
+              {
+                "group": "ACTION_CREATE_120",
+                "kind": "REQUIRED",
+                "score": 4
+              }
+            ],
+            "penalties": [
+              {
+                "group": "OBJECT_SUPPORT_REQUEST",
+                "kind": "MISSING_REQUIRED_INTENT_SIGNAL",
+                "score": -5
+              }
+            ],
+            "contextBoost": 0,
+            "missing": [
+              "OBJECT_SUPPORT_REQUEST"
+            ],
+            "probability": 0.0009068789937160394
+          },
+          {
+            "intent": "ORDER_DETAILS",
+            "rule": "primary",
+            "score": -1,
+            "evidence": [
+              {
+                "group": "OBJECT_ORDER",
+                "kind": "REQUIRED",
+                "score": 4
+              }
+            ],
+            "penalties": [
+              {
+                "group": "ACTION_SHOW_74",
+                "kind": "MISSING_REQUIRED_INTENT_SIGNAL",
+                "score": -5
+              }
+            ],
+            "contextBoost": 0,
+            "missing": [
+              "ACTION_SHOW_74"
+            ],
+            "probability": 0.0009068789937160394
+          },
+          {
+            "intent": "REORDER",
+            "rule": "primary",
+            "score": -1,
+            "evidence": [
+              {
+                "group": "OBJECT_ORDER_79",
+                "kind": "REQUIRED",
+                "score": 4
+              }
+            ],
+            "penalties": [
+              {
+                "group": "ACTION_REORDER",
+                "kind": "MISSING_REQUIRED_INTENT_SIGNAL",
+                "score": -5
+              }
+            ],
+            "contextBoost": 0,
+            "missing": [
+              "ACTION_REORDER"
+            ],
+            "probability": 0.0009068789937160394
+          },
+          {
+            "intent": "SELECT_ORDER",
+            "rule": "primary",
+            "score": -1,
+            "evidence": [
+              {
+                "group": "OBJECT_ORDER",
+                "kind": "REQUIRED",
+                "score": 4
+              }
+            ],
+            "penalties": [
+              {
+                "group": "ACTION_SELECT_104",
+                "kind": "MISSING_REQUIRED_INTENT_SIGNAL",
+                "score": -5
+              }
+            ],
+            "contextBoost": 0,
+            "missing": [
+              "ACTION_SELECT_104"
+            ],
+            "probability": 0.0009068789937160394
+          },
+          {
+            "intent": "TRACK_ORDER",
+            "rule": "primary",
+            "score": -1,
+            "evidence": [
+              {
+                "group": "OBJECT_ORDER_76",
+                "kind": "REQUIRED",
+                "score": 4
+              }
+            ],
+            "penalties": [
+              {
+                "group": "ACTION_TRACK",
+                "kind": "MISSING_REQUIRED_INTENT_SIGNAL",
+                "score": -5
+              }
+            ],
+            "contextBoost": 0,
+            "missing": [
+              "ACTION_TRACK"
+            ],
+            "probability": 0.0009068789937160394
+          },
+          {
+            "intent": "CANCEL_ORDER",
+            "rule": "primary",
+            "score": -7,
+            "evidence": [
+              {
+                "group": "OBJECT_ORDER",
+                "kind": "REQUIRED",
+                "score": 4
+              }
+            ],
+            "penalties": [
+              {
+                "group": "ACTION_CREATE",
+                "kind": "CONTRADICTION",
+                "score": -6
+              },
+              {
+                "group": "ACTION_CANCEL",
+                "kind": "MISSING_REQUIRED_INTENT_SIGNAL",
+                "score": -5
+              }
+            ],
+            "contextBoost": 0,
+            "missing": [
+              "ACTION_CANCEL"
+            ],
+            "probability": 4.5150846461520105e-05
+          }
+        ]
+      },
+      "latencyMs": 1.927,
+      "requestType": "COMPOUND",
+      "requestedIntents": [
+        "CREATE_ORDER",
+        "SET_DELIVERY_ADDRESS"
+      ],
+      "fulfillment": {
+        "status": "NOT_EXECUTED",
+        "needsClarification": true,
+        "unresolvedSlots": [
+          {
+            "slot": "items[0].product_ids",
+            "reason": "CATALOG_MATCHING_REQUIRED"
+          }
+        ]
+      },
+      "primaryIntent": "CREATE_ORDER",
+      "operations": [
+        "ADD_ITEM",
+        "SET_DELIVERY_ADDRESS",
+        "CREATE_ORDER"
+      ],
+      "actions": [
+        {
+          "id": "action1",
+          "intent": "ADD_TO_CART",
+          "clauseId": "clause1",
+          "operation": "ADD_ITEM",
+          "itemIndexes": [
+            0
+          ]
+        },
+        {
+          "id": "action3",
+          "intent": "SET_DELIVERY_ADDRESS",
+          "clauseId": "clause2",
+          "operation": "SET_DELIVERY_ADDRESS"
+        },
+        {
+          "id": "action2",
+          "intent": "CREATE_ORDER",
+          "clauseId": "clause1",
+          "operation": "CREATE_ORDER"
+        }
+      ],
+      "clauses": [
+        {
+          "id": "clause1",
+          "text": "create an order for two apples",
+          "start": 0,
+          "end": 30,
+          "intent": "CREATE_ORDER",
+          "connector": "start",
+          "negated": false
+        },
+        {
+          "id": "clause2",
+          "text": "deliver it there",
+          "start": 35,
+          "end": 51,
+          "intent": "SET_DELIVERY_ADDRESS",
+          "connector": "and",
+          "negated": false
+        }
+      ],
+      "references": [
+        {
+          "expression": "THERE",
+          "kind": "address",
+          "resolved": false,
+          "state": "REFERENCE_PENDING",
+          "selectionStrategy": "SAVED_REFERENCE"
+        },
+        {
+          "expression": "IT",
+          "kind": "order",
+          "resolved": true,
+          "target": "request.items"
+        }
+      ],
+      "relationships": [
+        {
+          "from": "action1",
+          "relation": "uses",
+          "to": "item1"
+        },
+        {
+          "from": "action3",
+          "relation": "uses",
+          "to": "delivery"
+        },
+        {
+          "from": "action3",
+          "relation": "refers_to",
+          "to": "request.items"
+        },
+        {
+          "from": "action1",
+          "relation": "precedes",
+          "to": "action3"
+        },
+        {
+          "from": "action3",
+          "relation": "precedes",
+          "to": "action2"
+        },
+        {
+          "from": "action3",
+          "relation": "modifies",
+          "to": "action2"
+        }
+      ],
+      "slots": [
+        {
+          "code": "ITEMS",
+          "state": "RESOLVED",
+          "requirement": "REQUIRED",
+          "source": "utterance",
+          "value": [
+            {
+              "quantity": 2,
+              "productText": "apples"
+            }
+          ],
+          "candidates": [],
+          "confidence": 1,
+          "requiresAuthorizationLookup": false
+        },
+        {
+          "code": "PRODUCT_TEXT",
+          "state": "RESOLVED",
+          "requirement": "REQUIRED",
+          "source": "utterance",
+          "value": [
+            "apples"
+          ],
+          "candidates": [],
+          "confidence": 1,
+          "requiresAuthorizationLookup": false
+        },
+        {
+          "code": "QUANTITY",
+          "state": "RESOLVED",
+          "requirement": "OPTIONAL",
+          "source": "utterance",
+          "value": [
+            2
+          ],
+          "candidates": [],
+          "confidence": 1,
+          "requiresAuthorizationLookup": false
+        },
+        {
+          "code": "DELIVERY_ADDRESS",
+          "state": "REFERENCE_PENDING",
+          "requirement": "CONTEXTUAL",
+          "source": "unresolved_reference",
+          "candidates": [],
+          "confidence": 0,
+          "requiresAuthorizationLookup": true
+        },
+        {
+          "code": "ORDER_REFERENCE",
+          "state": "MISSING",
+          "requirement": "CONTEXTUAL",
+          "candidates": [],
+          "confidence": 0,
+          "requiresAuthorizationLookup": false
+        }
+      ],
+      "graph": {
+        "nodes": [
+          {
+            "id": "request",
+            "kind": "REQUEST"
+          },
+          {
+            "id": "clause1",
+            "kind": "CLAUSE",
+            "value": {
+              "intent": "CREATE_ORDER",
+              "connector": "start",
+              "negated": false,
+              "text": "create an order for two apples"
+            }
+          },
+          {
+            "id": "clause2",
+            "kind": "CLAUSE",
+            "value": {
+              "intent": "SET_DELIVERY_ADDRESS",
+              "connector": "and",
+              "negated": false,
+              "text": "deliver it there"
+            }
+          },
+          {
+            "id": "action1",
+            "kind": "ACTION",
+            "clauseId": "clause1",
+            "value": {
+              "intent": "ADD_TO_CART",
+              "operation": "ADD_ITEM",
+              "itemIndexes": [
+                0
+              ]
+            }
+          },
+          {
+            "id": "action3",
+            "kind": "ACTION",
+            "clauseId": "clause2",
+            "value": {
+              "intent": "SET_DELIVERY_ADDRESS",
+              "operation": "SET_DELIVERY_ADDRESS",
+              "itemIndexes": []
+            }
+          },
+          {
+            "id": "action2",
+            "kind": "ACTION",
+            "clauseId": "clause1",
+            "value": {
+              "intent": "CREATE_ORDER",
+              "operation": "CREATE_ORDER",
+              "itemIndexes": []
+            }
+          },
+          {
+            "id": "item1",
+            "kind": "ITEM",
+            "value": {
+              "quantity": 2,
+              "productText": "apples"
+            }
+          },
+          {
+            "id": "quantity1",
+            "kind": "QUANTITY",
+            "value": {
+              "value": 2
+            }
+          },
+          {
+            "id": "delivery",
+            "kind": "DELIVERY"
+          },
+          {
+            "id": "result-set:request.items",
+            "kind": "RESULT_SET",
+            "value": {
+              "source": "request.items"
+            }
+          },
+          {
+            "id": "slot:ITEMS",
+            "kind": "SLOT",
+            "value": {
+              "code": "ITEMS",
+              "state": "RESOLVED",
+              "requirement": "REQUIRED",
+              "value": [
+                {
+                  "quantity": 2,
+                  "productText": "apples"
+                }
+              ]
+            }
+          },
+          {
+            "id": "slot:PRODUCT_TEXT",
+            "kind": "SLOT",
+            "value": {
+              "code": "PRODUCT_TEXT",
+              "state": "RESOLVED",
+              "requirement": "REQUIRED",
+              "value": [
+                "apples"
+              ]
+            }
+          },
+          {
+            "id": "slot:QUANTITY",
+            "kind": "SLOT",
+            "value": {
+              "code": "QUANTITY",
+              "state": "RESOLVED",
+              "requirement": "OPTIONAL",
+              "value": [
+                2
+              ]
+            }
+          },
+          {
+            "id": "slot:DELIVERY_ADDRESS",
+            "kind": "SLOT",
+            "value": {
+              "code": "DELIVERY_ADDRESS",
+              "state": "REFERENCE_PENDING",
+              "requirement": "CONTEXTUAL"
+            }
+          },
+          {
+            "id": "slot:ORDER_REFERENCE",
+            "kind": "SLOT",
+            "value": {
+              "code": "ORDER_REFERENCE",
+              "state": "MISSING",
+              "requirement": "CONTEXTUAL"
+            }
+          },
+          {
+            "id": "reference1",
+            "kind": "REFERENCE",
+            "value": {
+              "expression": "THERE",
+              "kind": "address",
+              "resolved": false,
+              "state": "REFERENCE_PENDING",
+              "selectionStrategy": "SAVED_REFERENCE"
+            }
+          },
+          {
+            "id": "reference2",
+            "kind": "REFERENCE",
+            "value": {
+              "expression": "IT",
+              "kind": "order",
+              "resolved": true,
+              "target": "request.items"
+            }
+          }
+        ],
+        "edges": [
+          {
+            "from": "clause1",
+            "to": "action1",
+            "relation": "PERFORMS",
+            "ruleCode": "CLAUSE_PERFORMS_ACTION"
+          },
+          {
+            "from": "clause2",
+            "to": "action3",
+            "relation": "PERFORMS",
+            "ruleCode": "CLAUSE_PERFORMS_ACTION"
+          },
+          {
+            "from": "clause1",
+            "to": "action2",
+            "relation": "PERFORMS",
+            "ruleCode": "CLAUSE_PERFORMS_ACTION"
+          },
+          {
+            "from": "item1",
+            "to": "quantity1",
+            "relation": "HAS_QUANTITY",
+            "ruleCode": "ITEM_HAS_QUANTITY"
+          },
+          {
+            "from": "action2",
+            "to": "slot:ITEMS",
+            "relation": "REQUIRES_SLOT"
+          },
+          {
+            "from": "action2",
+            "to": "slot:PRODUCT_TEXT",
+            "relation": "REQUIRES_SLOT"
+          },
+          {
+            "from": "action2",
+            "to": "slot:QUANTITY",
+            "relation": "REQUIRES_SLOT"
+          },
+          {
+            "from": "action2",
+            "to": "slot:DELIVERY_ADDRESS",
+            "relation": "REQUIRES_SLOT"
+          },
+          {
+            "from": "action2",
+            "to": "slot:ORDER_REFERENCE",
+            "relation": "REQUIRES_SLOT"
+          },
+          {
+            "from": "reference2",
+            "to": "result-set:request.items",
+            "relation": "RESOLVES_TO"
+          },
+          {
+            "from": "action1",
+            "to": "item1",
+            "relation": "TARGETS",
+            "ruleCode": "ACTION_TARGETS_ITEM"
+          },
+          {
+            "from": "action3",
+            "to": "delivery",
+            "relation": "USES_FULFILLMENT",
+            "ruleCode": "ACTION_USES_DELIVERY"
+          },
+          {
+            "from": "action3",
+            "to": "result-set:request.items",
+            "relation": "REFERS_TO"
+          },
+          {
+            "from": "action1",
+            "to": "action3",
+            "relation": "SEQUENCE_NEXT",
+            "ruleCode": "ACTION_SEQUENCE"
+          },
+          {
+            "from": "action3",
+            "to": "action2",
+            "relation": "SEQUENCE_NEXT",
+            "ruleCode": "ACTION_SEQUENCE"
+          },
+          {
+            "from": "action3",
+            "to": "action2",
+            "relation": "MODIFIES",
+            "ruleCode": "ACTION_MODIFIES_TARGET"
+          }
+        ],
+        "constraints": [
+          "quantity1",
+          "slot:DELIVERY_ADDRESS",
+          "slot:ORDER_REFERENCE"
+        ],
+        "truncated": false
+      },
+      "ambiguities": [],
+      "clarificationQuestion": "Which delivery address should I use?"
+    }
+  },
+  {
+    "name": "ambiguous",
+    "text": "find apple",
+    "context": {},
+    "response": {
+      "status": "AMBIGUOUS",
+      "message": "Please clarify apple: brand Apple or category apple.",
+      "text": "find apple",
+      "normalizedText": "find apple",
+      "intent": null,
+      "confidence": 0,
+      "confidenceLevel": "AMBIGUOUS",
+      "entities": {
+        "category": "apple",
+        "productText": "apple",
+        "items": [
+          {
+            "productText": "apple"
+          }
+        ]
+      },
+      "matchedSemanticGroups": [
+        "ACTION_SEARCH",
+        "ACTION_FIND",
+        "ACTION_WHERE_109",
+        "ACTION_SHOW_OR_FIND",
+        "ACTION_REPORT_OR_FIND"
+      ],
+      "evidence": [
+        {
+          "group": "ACTION_SEARCH",
+          "kind": "REQUIRED",
+          "score": 4
+        },
+        {
+          "group": "PRODUCT_ARGUMENT",
+          "kind": "REQUIRED",
+          "score": 4
+        },
+        {
+          "group": "ACTION_SEARCH",
+          "kind": "RELATIONSHIP",
+          "score": 5
+        }
+      ],
+      "negativeEvidence": [],
+      "context": {
+        "input": {},
+        "next": {
+          "previousIntent": "PRODUCT_SEARCH",
+          "states": [
+            "PRODUCT_RESULTS_VISIBLE"
+          ],
+          "selectedItems": [
+            {
+              "productText": "apple"
+            }
+          ]
+        }
+      },
+      "alternatives": [
+        {
+          "intent": "FIND_PICKUP_LOCATION",
+          "rule": "primary",
+          "score": -1,
+          "evidence": [
+            {
+              "group": "ACTION_FIND",
+              "kind": "REQUIRED",
+              "score": 4
+            }
+          ],
+          "penalties": [
+            {
+              "group": "OBJECT_PICKUP_LOCATIONS",
+              "kind": "MISSING_REQUIRED_INTENT_SIGNAL",
+              "score": -5
+            }
+          ],
+          "contextBoost": 0,
+          "missing": [
+            "OBJECT_PICKUP_LOCATIONS"
+          ],
+          "probability": 0.0009069199419190899
+        },
+        {
+          "intent": "ORDER_MISSING",
+          "rule": "primary",
+          "score": -1,
+          "evidence": [
+            {
+              "group": "ACTION_REPORT_OR_FIND",
+              "kind": "REQUIRED",
+              "score": 4
+            }
+          ],
+          "penalties": [
+            {
+              "group": "OBJECT_MISSING_ORDER",
+              "kind": "MISSING_REQUIRED_INTENT_SIGNAL",
+              "score": -5
+            }
+          ],
+          "contextBoost": 0,
+          "missing": [
+            "OBJECT_MISSING_ORDER"
+          ],
+          "probability": 0.0009069199419190899
+        },
+        {
+          "intent": "PRODUCT_BARCODE",
+          "rule": "primary",
+          "score": -1,
+          "evidence": [
+            {
+              "group": "ACTION_SHOW_OR_FIND",
+              "kind": "REQUIRED",
+              "score": 4
+            }
+          ],
+          "penalties": [
+            {
+              "group": "OBJECT_BARCODE",
+              "kind": "MISSING_REQUIRED_INTENT_SIGNAL",
+              "score": -5
+            }
+          ],
+          "contextBoost": 0,
+          "missing": [
+            "OBJECT_BARCODE"
+          ],
+          "probability": 0.0009069199419190899
+        }
+      ],
+      "requiresConfirmation": false,
+      "debug": {
+        "score": 13,
+        "probability": 0.9945584803484857,
+        "confidence": 0.9945584803484857,
+        "scoreMargin": 14,
+        "probabilityMargin": 0.9936515604065667,
+        "evidenceStrength": 1,
+        "separationConfidence": 1,
+        "config": {
+          "weights": {
+            "required": 4,
+            "relationship": 5,
+            "optional": 1,
+            "generic": 0.25,
+            "context": 3
+          },
+          "penalties": {
+            "contradiction": 6,
+            "negatedAction": 8,
+            "missingRequired": 5
+          },
+          "temperature": 2,
+          "minScore": 6,
+          "minConfidence": 0.7,
+          "minScoreMargin": 2,
+          "minProbabilityMargin": 0.15,
+          "targetStrongScore": 12,
+          "targetMargin": 5
+        },
+        "tokens": [
+          "find",
+          "apple"
+        ],
+        "matchedPhrases": [
+          {
+            "group": "ACTION_SEARCH",
+            "phrase": "find",
+            "start": 0,
+            "end": 1,
+            "negated": false,
+            "fuzzy": false
+          },
+          {
+            "group": "ACTION_FIND",
+            "phrase": "find",
+            "start": 0,
+            "end": 1,
+            "negated": false,
+            "fuzzy": false
+          },
+          {
+            "group": "ACTION_WHERE_109",
+            "phrase": "find",
+            "start": 0,
+            "end": 1,
+            "negated": false,
+            "fuzzy": false
+          },
+          {
+            "group": "ACTION_SHOW_OR_FIND",
+            "phrase": "find",
+            "start": 0,
+            "end": 1,
+            "negated": false,
+            "fuzzy": false
+          },
+          {
+            "group": "ACTION_REPORT_OR_FIND",
+            "phrase": "find",
+            "start": 0,
+            "end": 1,
+            "negated": false,
+            "fuzzy": false
+          }
+        ],
+        "suppressedPrefixes": [],
+        "actionFrames": [],
+        "contextualFrames": [],
+        "candidates": [
+          {
+            "intent": "PRODUCT_SEARCH",
+            "rule": "primary",
+            "score": 13,
+            "evidence": [
+              {
+                "group": "ACTION_SEARCH",
+                "kind": "REQUIRED",
+                "score": 4
+              },
+              {
+                "group": "PRODUCT_ARGUMENT",
+                "kind": "REQUIRED",
+                "score": 4
+              },
+              {
+                "group": "ACTION_SEARCH",
+                "kind": "RELATIONSHIP",
+                "score": 5
+              }
+            ],
+            "penalties": [],
+            "contextBoost": 0,
+            "missing": [],
+            "probability": 0.9945584803484857
+          },
+          {
+            "intent": "FIND_PICKUP_LOCATION",
+            "rule": "primary",
+            "score": -1,
+            "evidence": [
+              {
+                "group": "ACTION_FIND",
+                "kind": "REQUIRED",
+                "score": 4
+              }
+            ],
+            "penalties": [
+              {
+                "group": "OBJECT_PICKUP_LOCATIONS",
+                "kind": "MISSING_REQUIRED_INTENT_SIGNAL",
+                "score": -5
+              }
+            ],
+            "contextBoost": 0,
+            "missing": [
+              "OBJECT_PICKUP_LOCATIONS"
+            ],
+            "probability": 0.0009069199419190899
+          },
+          {
+            "intent": "ORDER_MISSING",
+            "rule": "primary",
+            "score": -1,
+            "evidence": [
+              {
+                "group": "ACTION_REPORT_OR_FIND",
+                "kind": "REQUIRED",
+                "score": 4
+              }
+            ],
+            "penalties": [
+              {
+                "group": "OBJECT_MISSING_ORDER",
+                "kind": "MISSING_REQUIRED_INTENT_SIGNAL",
+                "score": -5
+              }
+            ],
+            "contextBoost": 0,
+            "missing": [
+              "OBJECT_MISSING_ORDER"
+            ],
+            "probability": 0.0009069199419190899
+          },
+          {
+            "intent": "PRODUCT_BARCODE",
+            "rule": "primary",
+            "score": -1,
+            "evidence": [
+              {
+                "group": "ACTION_SHOW_OR_FIND",
+                "kind": "REQUIRED",
+                "score": 4
+              }
+            ],
+            "penalties": [
+              {
+                "group": "OBJECT_BARCODE",
+                "kind": "MISSING_REQUIRED_INTENT_SIGNAL",
+                "score": -5
+              }
+            ],
+            "contextBoost": 0,
+            "missing": [
+              "OBJECT_BARCODE"
+            ],
+            "probability": 0.0009069199419190899
+          },
+          {
+            "intent": "PRODUCT_MODEL_NUMBER",
+            "rule": "primary",
+            "score": -1,
+            "evidence": [
+              {
+                "group": "ACTION_SHOW_OR_FIND",
+                "kind": "REQUIRED",
+                "score": 4
+              }
+            ],
+            "penalties": [
+              {
+                "group": "OBJECT_MODEL_NUMBER",
+                "kind": "MISSING_REQUIRED_INTENT_SIGNAL",
+                "score": -5
+              }
+            ],
+            "contextBoost": 0,
+            "missing": [
+              "OBJECT_MODEL_NUMBER"
+            ],
+            "probability": 0.0009069199419190899
+          },
+          {
+            "intent": "PRODUCT_SPARE_PARTS",
+            "rule": "primary",
+            "score": -1,
+            "evidence": [
+              {
+                "group": "ACTION_SHOW_OR_FIND",
+                "kind": "REQUIRED",
+                "score": 4
+              }
+            ],
+            "penalties": [
+              {
+                "group": "OBJECT_SPARE_PARTS",
+                "kind": "MISSING_REQUIRED_INTENT_SIGNAL",
+                "score": -5
+              }
+            ],
+            "contextBoost": 0,
+            "missing": [
+              "OBJECT_SPARE_PARTS"
+            ],
+            "probability": 0.0009069199419190899
+          },
+          {
+            "intent": "STORE_LOCATION",
+            "rule": "primary",
+            "score": -1,
+            "evidence": [
+              {
+                "group": "ACTION_WHERE_109",
+                "kind": "REQUIRED",
+                "score": 4
+              }
+            ],
+            "penalties": [
+              {
+                "group": "OBJECT_STORE_LOCATION",
+                "kind": "MISSING_REQUIRED_INTENT_SIGNAL",
+                "score": -5
+              }
+            ],
+            "contextBoost": 0,
+            "missing": [
+              "OBJECT_STORE_LOCATION"
+            ],
+            "probability": 0.0009069199419190899
+          }
+        ]
+      },
+      "latencyMs": 1.614,
+      "missing": [],
+      "fulfillment": {
+        "status": "NOT_EXECUTED",
+        "needsClarification": true,
+        "unresolvedSlots": [
+          {
+            "slot": "items[0].product_ids",
+            "reason": "CATALOG_MATCHING_REQUIRED"
+          }
+        ]
+      },
+      "primaryIntent": null,
+      "operations": [
+        "SEARCH_PRODUCTS"
+      ],
+      "actions": [
+        {
+          "id": "action1",
+          "intent": "PRODUCT_SEARCH",
+          "clauseId": "clause1",
+          "operation": "SEARCH_PRODUCTS",
+          "itemIndexes": [
+            0
+          ]
+        }
+      ],
+      "clauses": [
+        {
+          "id": "clause1",
+          "text": "find apple",
+          "start": 0,
+          "end": 10,
+          "intent": "PRODUCT_SEARCH",
+          "connector": "start",
+          "negated": false
+        }
+      ],
+      "references": [],
+      "relationships": [
+        {
+          "from": "action1",
+          "relation": "uses",
+          "to": "item1"
+        }
+      ],
+      "slots": [
+        {
+          "code": "PRODUCT_TEXT",
+          "state": "RESOLVED",
+          "requirement": "REQUIRED",
+          "source": "utterance",
+          "value": [
+            "apple"
+          ],
+          "candidates": [],
+          "confidence": 1,
+          "requiresAuthorizationLookup": false
+        }
+      ],
+      "graph": {
+        "nodes": [
+          {
+            "id": "request",
+            "kind": "REQUEST"
+          },
+          {
+            "id": "clause1",
+            "kind": "CLAUSE",
+            "value": {
+              "intent": "PRODUCT_SEARCH",
+              "connector": "start",
+              "negated": false,
+              "text": "find apple"
+            }
+          },
+          {
+            "id": "action1",
+            "kind": "ACTION",
+            "clauseId": "clause1",
+            "value": {
+              "intent": "PRODUCT_SEARCH",
+              "operation": "SEARCH_PRODUCTS",
+              "itemIndexes": [
+                0
+              ]
+            }
+          },
+          {
+            "id": "item1",
+            "kind": "ITEM",
+            "value": {
+              "productText": "apple"
+            }
+          },
+          {
+            "id": "slot:PRODUCT_TEXT",
+            "kind": "SLOT",
+            "value": {
+              "code": "PRODUCT_TEXT",
+              "state": "RESOLVED",
+              "requirement": "REQUIRED",
+              "value": [
+                "apple"
+              ]
+            }
+          },
+          {
+            "id": "ambiguity1",
+            "kind": "AMBIGUITY",
+            "value": {
+              "span": "apple",
+              "clarificationRequired": true
+            }
+          },
+          {
+            "id": "ambiguity1:candidate1",
+            "kind": "AMBIGUITY_CANDIDATE",
+            "value": {
+              "kind": "BRAND",
+              "value": "Apple",
+              "industry": "CORE",
+              "score": 0.5
+            }
+          },
+          {
+            "id": "ambiguity1:candidate2",
+            "kind": "AMBIGUITY_CANDIDATE",
+            "value": {
+              "kind": "CATEGORY",
+              "value": "apple",
+              "industry": "GROCERY",
+              "score": 0.5
+            }
+          }
+        ],
+        "edges": [
+          {
+            "from": "clause1",
+            "to": "action1",
+            "relation": "PERFORMS",
+            "ruleCode": "CLAUSE_PERFORMS_ACTION"
+          },
+          {
+            "from": "action1",
+            "to": "slot:PRODUCT_TEXT",
+            "relation": "REQUIRES_SLOT"
+          },
+          {
+            "from": "ambiguity1",
+            "to": "ambiguity1:candidate1",
+            "relation": "HAS_CANDIDATE"
+          },
+          {
+            "from": "ambiguity1",
+            "to": "ambiguity1:candidate2",
+            "relation": "HAS_CANDIDATE"
+          },
+          {
+            "from": "action1",
+            "to": "item1",
+            "relation": "TARGETS",
+            "ruleCode": "ACTION_TARGETS_ITEM"
+          }
+        ],
+        "constraints": [
+          "ambiguity1"
+        ],
+        "truncated": false
+      },
+      "ambiguities": [
+        {
+          "span": "apple",
+          "candidates": [
+            {
+              "kind": "BRAND",
+              "value": "Apple",
+              "industry": "CORE",
+              "score": 0.5
+            },
+            {
+              "kind": "CATEGORY",
+              "value": "apple",
+              "industry": "GROCERY",
+              "score": 0.5
+            }
+          ],
+          "clarificationRequired": true
+        }
+      ]
+    }
+  },
+  {
+    "name": "unknown",
+    "text": "purple elephants",
+    "context": {},
+    "response": {
+      "status": "UNKNOWN",
+      "message": "I couldn\u2019t understand that request. Try \u201cfind apples\u201d or \u201cshow my cart\u201d.",
+      "text": "purple elephants",
+      "normalizedText": "purple elephants",
+      "intent": null,
+      "confidence": 0,
+      "confidenceLevel": "LOW",
+      "entities": {
+        "color": "purple"
+      },
+      "matchedSemanticGroups": [
+        "COLOR_PURPLE"
+      ],
+      "evidence": [],
+      "negativeEvidence": [],
+      "context": {
+        "input": {},
+        "next": {}
+      },
+      "alternatives": [],
+      "requiresConfirmation": false,
+      "debug": {
+        "score": 0,
+        "probability": 0,
+        "confidence": 0,
+        "scoreMargin": 0,
+        "probabilityMargin": 0,
+        "evidenceStrength": 0,
+        "separationConfidence": 0,
+        "config": {
+          "weights": {
+            "required": 4,
+            "relationship": 5,
+            "optional": 1,
+            "generic": 0.25,
+            "context": 3
+          },
+          "penalties": {
+            "contradiction": 6,
+            "negatedAction": 8,
+            "missingRequired": 5
+          },
+          "temperature": 2,
+          "minScore": 6,
+          "minConfidence": 0.7,
+          "minScoreMargin": 2,
+          "minProbabilityMargin": 0.15,
+          "targetStrongScore": 12,
+          "targetMargin": 5
+        },
+        "tokens": [
+          "purple",
+          "elephants"
+        ],
+        "matchedPhrases": [
+          {
+            "group": "COLOR_PURPLE",
+            "phrase": "purple",
+            "start": 0,
+            "end": 1,
+            "negated": false,
+            "fuzzy": false
+          }
+        ],
+        "suppressedPrefixes": [],
+        "actionFrames": [],
+        "contextualFrames": [],
+        "candidates": []
+      },
+      "latencyMs": 0.967,
+      "primaryIntent": null
+    }
+  },
+  {
+    "name": "context_followup",
+    "text": "fish",
+    "context": {
+      "pendingRequest": "pls add two product to cart",
+      "previousIntent": "ADD_TO_CART"
+    },
+    "response": {
+      "status": "RESOLVED",
+      "message": "Understood. Your request has been structured for review; no commerce action has been executed.",
+      "text": "fish",
+      "normalizedText": "fish",
+      "intent": "ADD_TO_CART",
+      "confidence": 0.95,
+      "confidenceLevel": "HIGH",
+      "entities": {
+        "category": "seafood",
+        "items": [
+          {
+            "quantity": 2,
+            "productText": "fish"
+          }
+        ]
+      },
+      "matchedSemanticGroups": [],
+      "evidence": [],
+      "negativeEvidence": [],
+      "context": {
+        "input": {
+          "pendingRequest": "pls add two product to cart",
+          "previousIntent": "ADD_TO_CART"
+        },
+        "next": {
+          "previousIntent": "ADD_TO_CART",
+          "selectedItems": [
+            {
+              "quantity": 2,
+              "productText": "fish"
+            }
+          ]
+        }
+      },
+      "alternatives": [],
+      "requiresConfirmation": true,
+      "debug": {
+        "score": 0,
+        "probability": 0,
+        "confidence": 0,
+        "scoreMargin": 0,
+        "probabilityMargin": 0,
+        "evidenceStrength": 0,
+        "separationConfidence": 0,
+        "config": {
+          "weights": {
+            "required": 4,
+            "relationship": 5,
+            "optional": 1,
+            "generic": 0.25,
+            "context": 3
+          },
+          "penalties": {
+            "contradiction": 6,
+            "negatedAction": 8,
+            "missingRequired": 5
+          },
+          "temperature": 2,
+          "minScore": 6,
+          "minConfidence": 0.7,
+          "minScoreMargin": 2,
+          "minProbabilityMargin": 0.15,
+          "targetStrongScore": 12,
+          "targetMargin": 5
+        },
+        "tokens": [
+          "fish"
+        ],
+        "matchedPhrases": [],
+        "suppressedPrefixes": [],
+        "actionFrames": [],
+        "contextualFrames": [],
+        "candidates": []
+      },
+      "latencyMs": 0.876,
+      "missing": [],
+      "fulfillment": {
+        "status": "NOT_EXECUTED",
+        "needsClarification": false,
+        "unresolvedSlots": [
+          {
+            "slot": "items[0].product_ids",
+            "reason": "CATALOG_MATCHING_REQUIRED"
+          }
+        ]
+      },
+      "primaryIntent": "ADD_TO_CART",
+      "operations": [
+        "ADD_ITEM"
+      ],
+      "actions": [
+        {
+          "id": "action1",
+          "intent": "ADD_TO_CART",
+          "clauseId": "clause1",
+          "operation": "ADD_ITEM",
+          "itemIndexes": [
+            0
+          ]
+        }
+      ],
+      "clauses": [
+        {
+          "id": "clause1",
+          "text": "add two fish to cart",
+          "start": 4,
+          "end": 24,
+          "intent": "ADD_TO_CART",
+          "connector": "start",
+          "negated": false
+        }
+      ],
+      "references": [],
+      "relationships": [
+        {
+          "from": "action1",
+          "relation": "uses",
+          "to": "item1"
+        }
+      ],
+      "slots": [
+        {
+          "code": "PRODUCT_TEXT",
+          "state": "RESOLVED",
+          "requirement": "REQUIRED",
+          "source": "utterance",
+          "value": [
+            "fish"
+          ],
+          "candidates": [],
+          "confidence": 1,
+          "requiresAuthorizationLookup": false
+        },
+        {
+          "code": "QUANTITY",
+          "state": "RESOLVED",
+          "requirement": "OPTIONAL",
+          "source": "utterance",
+          "value": [
+            2
+          ],
+          "candidates": [],
+          "confidence": 1,
+          "requiresAuthorizationLookup": false
+        }
+      ],
+      "graph": {
+        "nodes": [
+          {
+            "id": "request",
+            "kind": "REQUEST"
+          },
+          {
+            "id": "clause1",
+            "kind": "CLAUSE",
+            "value": {
+              "intent": "ADD_TO_CART",
+              "connector": "start",
+              "negated": false,
+              "text": "add two fish to cart"
+            }
+          },
+          {
+            "id": "action1",
+            "kind": "ACTION",
+            "clauseId": "clause1",
+            "value": {
+              "intent": "ADD_TO_CART",
+              "operation": "ADD_ITEM",
+              "itemIndexes": [
+                0
+              ]
+            }
+          },
+          {
+            "id": "item1",
+            "kind": "ITEM",
+            "value": {
+              "quantity": 2,
+              "productText": "fish"
+            }
+          },
+          {
+            "id": "quantity1",
+            "kind": "QUANTITY",
+            "value": {
+              "value": 2
+            }
+          },
+          {
+            "id": "slot:PRODUCT_TEXT",
+            "kind": "SLOT",
+            "value": {
+              "code": "PRODUCT_TEXT",
+              "state": "RESOLVED",
+              "requirement": "REQUIRED",
+              "value": [
+                "fish"
+              ]
+            }
+          },
+          {
+            "id": "slot:QUANTITY",
+            "kind": "SLOT",
+            "value": {
+              "code": "QUANTITY",
+              "state": "RESOLVED",
+              "requirement": "OPTIONAL",
+              "value": [
+                2
+              ]
+            }
+          }
+        ],
+        "edges": [
+          {
+            "from": "clause1",
+            "to": "action1",
+            "relation": "PERFORMS",
+            "ruleCode": "CLAUSE_PERFORMS_ACTION"
+          },
+          {
+            "from": "item1",
+            "to": "quantity1",
+            "relation": "HAS_QUANTITY",
+            "ruleCode": "ITEM_HAS_QUANTITY"
+          },
+          {
+            "from": "action1",
+            "to": "slot:PRODUCT_TEXT",
+            "relation": "REQUIRES_SLOT"
+          },
+          {
+            "from": "action1",
+            "to": "slot:QUANTITY",
+            "relation": "REQUIRES_SLOT"
+          },
+          {
+            "from": "action1",
+            "to": "item1",
+            "relation": "TARGETS",
+            "ruleCode": "ACTION_TARGETS_ITEM"
+          }
+        ],
+        "constraints": [
+          "quantity1"
+        ],
+        "truncated": false
+      },
+      "ambiguities": []
+    }
+  }
+]

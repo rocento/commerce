@@ -1,0 +1,134 @@
+{
+  "schema_version": 1,
+  "country": {
+    "code": "SA",
+    "name": "Saudi Arabia",
+    "name_ar": "المملكة العربية السعودية"
+  },
+  "state_label": "Region",
+  "states": [
+    {
+      "code": "11",
+      "name": "'Asir Region",
+      "name_ar": "ئاسىر ئۆلكىسى",
+      "geonames_id": "108179",
+      "city_count": 1237,
+      "sha256": "9a605d18b0b5e85e0f469650f4f3f5453095cd4da5c51881736b9929d4f40a88"
+    },
+    {
+      "code": "02",
+      "name": "Al Bahah Region",
+      "name_ar": "الباحة",
+      "geonames_id": "109954",
+      "city_count": 147,
+      "sha256": "9f7daa205d68098b529a44836e3297d184427269e9fea7f817735ec9e3c76a34"
+    },
+    {
+      "code": "20",
+      "name": "Al Jawf Region",
+      "name_ar": "الجوف",
+      "geonames_id": "109470",
+      "city_count": 110,
+      "sha256": "775539b1206a45997c3763227484bcfd9975fb2a4f9f238f59f8052f5f3b7fc6"
+    },
+    {
+      "code": "08",
+      "name": "Al-Qassim Region",
+      "name_ar": "القصيم",
+      "geonames_id": "108933",
+      "city_count": 327,
+      "sha256": "9d03f13b96cdab864936a028bf8f731660ca30a4de8de188d531d83bccc3d285"
+    },
+    {
+      "code": "06",
+      "name": "Eastern Province",
+      "name_ar": "d khtyځ symh",
+      "geonames_id": "108241",
+      "city_count": 222,
+      "sha256": "787c3909510f8275e39263886cecb8c77cfbedf46fb4dc429181534d7d9527b6"
+    },
+    {
+      "code": "13",
+      "name": "Ha'il Region",
+      "name_ar": "د حائل سیمه",
+      "geonames_id": "106280",
+      "city_count": 172,
+      "sha256": "79ffb0bd126e4ca6b07cfc4d496acfc8c1da6dba644d60a3addd30a0bbd57d66"
+    },
+    {
+      "code": "17",
+      "name": "Jazan Region",
+      "name_ar": "جازان",
+      "geonames_id": "105298",
+      "city_count": 244,
+      "sha256": "1077c805db8ff8bc5b4321f1cf7a26b8c2b04a6e13ae6cb94a294d7507deb6b5"
+    },
+    {
+      "code": "14",
+      "name": "Mecca Region",
+      "name_ar": "d mkې symh",
+      "geonames_id": "104514",
+      "city_count": 614,
+      "sha256": "3128ebffd6ac830227d95acab51d623cbb2e46a71513cfcf973868da98af390d"
+    },
+    {
+      "code": "05",
+      "name": "Medina Region",
+      "name_ar": "d mdynې symh",
+      "geonames_id": "109224",
+      "city_count": 249,
+      "sha256": "e1c6b732d0cd5d38f864d6e31b849d6902bc8ac53da5837581e5e55c005a97d4"
+    },
+    {
+      "code": "16",
+      "name": "Najran Region",
+      "name_ar": "استان نجران",
+      "geonames_id": "103628",
+      "city_count": 158,
+      "sha256": "6d92a0022d9ee395f2a79867758744f7ac6ffd531c901a3954d3f5f704e77181"
+    },
+    {
+      "code": "15",
+      "name": "Northern Borders Region",
+      "name_ar": "الحدود الشمالية",
+      "geonames_id": "109579",
+      "city_count": 45,
+      "sha256": "ad32c9e22f6ac294c02bd6c8b94c0721bb4d937d82a203f330e039e87d3782e3"
+    },
+    {
+      "code": "10",
+      "name": "Riyadh Region",
+      "name_ar": "استان ریاض",
+      "geonames_id": "108411",
+      "city_count": 807,
+      "sha256": "4d5eb744a074921743c7be424d0e389824f71904f86dbc6dc5744ef8454d1f48"
+    },
+    {
+      "code": "19",
+      "name": "Tabuk Region",
+      "name_ar": "استان تبوک",
+      "geonames_id": "101627",
+      "city_count": 69,
+      "sha256": "5d5d26d2adf0c53476e6b3a9dd757cd329eea489785fe4aff790b85a6c5cac34"
+    }
+  ],
+  "source": "https://download.geonames.org/export/dump/SA.zip",
+  "attribution": "GeoNames",
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "source_sha256": "ccc7f44fedcc948939bec7255b1b78f497cf2f20dd135a22fdd5e9d93ba39d24",
+  "source_latest_record_date": "2026-09-25",
+  "feature_codes": [
+    "PPL",
+    "PPLA",
+    "PPLA2",
+    "PPLA3",
+    "PPLA4",
+    "PPLC",
+    "PPLL",
+    "PPLX"
+  ],
+  "city_count": 4401,
+  "excluded": {
+    "unassigned_adm1": 668
+  }
+}

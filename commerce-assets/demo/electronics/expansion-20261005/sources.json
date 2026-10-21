@@ -1,0 +1,222 @@
+[
+  {
+    "sku": "DEMO-ELE-BRAND-021",
+    "specification_source": "https://support.apple.com/en-us/111850",
+    "image_url": "https://cdsassets.apple.com/live/SZLF0YNV/images/sp/111850_iphone-14_1.png",
+    "image": "electronics/expansion-20261005/021.webp",
+    "rights": "Official manufacturer-owned product imagery; not represented as openly licensed.",
+    "width": 916,
+    "height": 646,
+    "bytes": 54160,
+    "sha256": "19762379197f7bcaf58ed434645fd7e7f9af7f1abdf3b55df0bdbaab303df39a"
+  },
+  {
+    "sku": "DEMO-ELE-BRAND-022",
+    "specification_source": "https://support.apple.com/en-us/111854",
+    "image_url": "https://cdsassets.apple.com/live/SZLF0YNV/images/sp/111850_iphone-14_1.png",
+    "image": "electronics/expansion-20261005/022.webp",
+    "rights": "Official manufacturer-owned product imagery; not represented as openly licensed.",
+    "width": 916,
+    "height": 646,
+    "bytes": 54160,
+    "sha256": "19762379197f7bcaf58ed434645fd7e7f9af7f1abdf3b55df0bdbaab303df39a"
+  },
+  {
+    "sku": "DEMO-ELE-BRAND-023",
+    "specification_source": "https://support.apple.com/en-us/111866",
+    "image_url": "https://cdsassets.apple.com/live/SZLF0YNV/images/sp/111866_sp867-iphone-se-3gen.png",
+    "image": "electronics/expansion-20261005/023.webp",
+    "rights": "Official manufacturer-owned product imagery; not represented as openly licensed.",
+    "width": 462,
+    "height": 438,
+    "bytes": 12284,
+    "sha256": "50df893ea37325f8b866c8e35250798c5262a492ab7226ac2b9f8c1dd225cc17"
+  },
+  {
+    "sku": "DEMO-ELE-BRAND-024",
+    "specification_source": "https://support.apple.com/en-us/111840",
+    "image_url": "https://cdsassets.apple.com/live/SZLF0YNV/images/sp/111840_sp884-ipad-10gen-960.png",
+    "image": "electronics/expansion-20261005/024.webp",
+    "rights": "Official manufacturer-owned product imagery; not represented as openly licensed.",
+    "width": 960,
+    "height": 791,
+    "bytes": 34570,
+    "sha256": "e87eedc6e2bc043b35468710244d98d27a0a5dbdc9c6ccf84f92d45ccfa77ff3"
+  },
+  {
+    "sku": "DEMO-ELE-BRAND-025",
+    "specification_source": "https://support.apple.com/en-us/111886",
+    "image_url": "https://cdsassets.apple.com/live/SZLF0YNV/images/sp/111886_sp850-ipad-mini-6gen-480.png",
+    "image": "electronics/expansion-20261005/025.webp",
+    "rights": "Official manufacturer-owned product imagery; not represented as openly licensed.",
+    "width": 480,
+    "height": 480,
+    "bytes": 19726,
+    "sha256": "4f408bccf5c9c9076d975313588b16a7f7a95f5a82f08ad211ac0ef6bfdc15e7"
+  },
+  {
+    "sku": "DEMO-ELE-BRAND-026",
+    "specification_source": "https://support.apple.com/en-us/111867",
+    "image_url": "https://cdsassets.apple.com/live/SZLF0YNV/images/sp/111867_SP869-2022-macbook-air-m2-colors.png",
+    "image": "electronics/expansion-20261005/026.webp",
+    "rights": "Official manufacturer-owned product imagery; not represented as openly licensed.",
+    "width": 940,
+    "height": 294,
+    "bytes": 13448,
+    "sha256": "b2caa25d67e3e71a290a1ed4c4133144ac4fcfbd1e651465dd3d746c78004925"
+  },
+  {
+    "sku": "DEMO-ELE-BRAND-027",
+    "specification_source": "https://support.apple.com/en-us/111837",
+    "image_url": "https://cdsassets.apple.com/live/SZLF0YNV/images/sp/111837_mac-mini-2023-m2-pro.png",
+    "image": "electronics/expansion-20261005/027.webp",
+    "rights": "Official manufacturer-owned product imagery; not represented as openly licensed.",
+    "width": 960,
+    "height": 330,
+    "bytes": 20528,
+    "sha256": "d58006132b369cb4c9df82821468d96451e78d4bf57745f92284d4b577c5da40"
+  },
+  {
+    "sku": "DEMO-ELE-BRAND-028",
+    "specification_source": "https://support.apple.com/en-us/111839",
+    "image_url": "https://cdsassets.apple.com/live/SZLF0YNV/images/sp/111839_apple-tv-4k-3gen.png",
+    "image": "electronics/expansion-20261005/028.webp",
+    "rights": "Official manufacturer-owned product imagery; not represented as openly licensed.",
+    "width": 960,
+    "height": 960,
+    "bytes": 38998,
+    "sha256": "2607dc1fe745d33141a4cb6c36d318b8e6d2c3b09818bef245cb2b18fb0ac5c3"
+  },
+  {
+    "sku": "DEMO-ELE-BRAND-029",
+    "specification_source": "https://www.logitech.com/en-us/shop/p/lift-vertical-ergonomic-mouse",
+    "image_url": "https://resource.logitech.com/w_1200,f_png/d_transparent.gif/content/dam/logitech/en/products/mice/lift-vertical-ergonomic-mouse/2026-update/gallery/off-white/lift-mouse-top-angle-offwhite-gallery-1.png",
+    "image": "electronics/expansion-20261005/029.webp",
+    "rights": "Official manufacturer-owned product imagery; not represented as openly licensed.",
+    "width": 1200,
+    "height": 1037,
+    "bytes": 34930,
+    "sha256": "3c38626c89ba62ba52784445543f64aa435663361fe23350cd859614ea34bd8b"
+  },
+  {
+    "sku": "DEMO-ELE-BRAND-030",
+    "specification_source": "https://www.logitech.com/en-us/shop/p/mx-mechanical-mini",
+    "image_url": "https://resource.logitech.com/w_1200,f_png/d_transparent.gif/content/dam/logitech/en/products/keyboards/mx-mechanical/gallery/mx-mechanical-mini/mx-mechanical-mini-keyboard-3qtr-graphite-us.png",
+    "image": "electronics/expansion-20261005/030.webp",
+    "rights": "Official manufacturer-owned product imagery; not represented as openly licensed.",
+    "width": 1200,
+    "height": 600,
+    "bytes": 39386,
+    "sha256": "0f0030a4f6a697566e40cec676da9849e9cdbd20d5ab40afa680cd445dc34e0a"
+  },
+  {
+    "sku": "DEMO-ELE-BRAND-031",
+    "specification_source": "https://www.sony.com/electronics/support/wireless-headphones-bluetooth-headphones/wh-ch720n/specifications",
+    "image_url": "https://sony.scene7.com/is/image/sonyglobalsolutions/wh-ch720_Primary_image?fmt=png-alpha&wid=1000",
+    "image": "electronics/expansion-20261005/031.webp",
+    "rights": "Official manufacturer-owned product imagery; not represented as openly licensed.",
+    "width": 1000,
+    "height": 1000,
+    "bytes": 43240,
+    "sha256": "58fb8556906ae5004adc5aac82975c99b5e318b97e84322029a6390f0d849114"
+  },
+  {
+    "sku": "DEMO-ELE-BRAND-032",
+    "specification_source": "https://support.apple.com/en-us/111863",
+    "image_url": "https://cdsassets.apple.com/live/SZLF0YNV/images/sp/111863_airpods-3rdgen-2.png",
+    "image": "electronics/expansion-20261005/032.webp",
+    "rights": "Official manufacturer-owned product imagery; not represented as openly licensed.",
+    "width": 338,
+    "height": 480,
+    "bytes": 12934,
+    "sha256": "6dee46ee25df382feacad955d90fdc8ce1563d7aeabcf74fb5083f0d24118803"
+  },
+  {
+    "sku": "DEMO-ELE-BRAND-033",
+    "specification_source": "https://www.logitech.com/en-us/shop/p/mx-master-3s",
+    "image_url": "https://resource.logitech.com/w_1200,f_png/d_transparent.gif/content/dam/logitech/en/products/mice/mx-master-3s/2025-update/mx-master-3s-bluetooth-edition-top-view-black-new-1.png",
+    "image": "electronics/expansion-20261005/033.webp",
+    "rights": "Official manufacturer-owned product imagery; not represented as openly licensed.",
+    "width": 1200,
+    "height": 1037,
+    "bytes": 29184,
+    "sha256": "967025a34fbd6e9b1851dd05e4db18f25657553319a3b42cb8c1905afe39ce46"
+  },
+  {
+    "sku": "DEMO-ELE-BRAND-034",
+    "specification_source": "https://www.logitech.com/en-us/shop/p/mx-anywhere-3s",
+    "image_url": "https://resource.logitech.com/w_1200,f_png/d_transparent.gif/content/dam/logitech/en/products/mice/mx-anywhere-3s/product-gallery/black/mx-anywhere-3s-mouse-3qtr-front-black.png",
+    "image": "electronics/expansion-20261005/034.webp",
+    "rights": "Official manufacturer-owned product imagery; not represented as openly licensed.",
+    "width": 1200,
+    "height": 1031,
+    "bytes": 35504,
+    "sha256": "f540ec222cda9a879cbd58784a828233a5e67a1c4d34909aba1df7e4a13ede92"
+  },
+  {
+    "sku": "DEMO-ELE-BRAND-035",
+    "specification_source": "https://www.logitech.com/en-us/shop/p/mx-keys-mini",
+    "image_url": "https://resource.logitech.com/w_1200,f_png/d_transparent.gif/content/dam/logitech/en/products/keyboards/mx-keys-mini/gallery/us/mx-keys-mini-3q-tilted-graphite-us.png",
+    "image": "electronics/expansion-20261005/035.webp",
+    "rights": "Official manufacturer-owned product imagery; not represented as openly licensed.",
+    "width": 1200,
+    "height": 1031,
+    "bytes": 86902,
+    "sha256": "f099dcb69d9018ea789af2bbcd7a42d86d583cb6f3997aff025d6e52c5ec95e9"
+  },
+  {
+    "sku": "DEMO-ELE-BRAND-036",
+    "specification_source": "https://www.logitech.com/en-us/shop/p/c920s-pro-hd-webcam",
+    "image_url": "https://resource.logitech.com/w_1200,f_png/d_transparent.gif/content/dam/logitech/en/products/webcams/c920s/gallery/c920s-gallery-1.png",
+    "image": "electronics/expansion-20261005/036.webp",
+    "rights": "Official manufacturer-owned product imagery; not represented as openly licensed.",
+    "width": 1200,
+    "height": 1031,
+    "bytes": 66606,
+    "sha256": "6fa553b45a2a7a9ac3d218342209f651ef161777879d355cca042a101fbd6dc3"
+  },
+  {
+    "sku": "DEMO-ELE-BRAND-037",
+    "specification_source": "https://www.canon-europe.com/cameras/eos-r50/specifications/",
+    "image_url": "https://cdn.media.amplience.net/i/canon/eos-r50-product-gallery-1_04bf105c085941eb92f64e05e2066cb7?w=1000&fmt=png",
+    "image": "electronics/expansion-20261005/037.webp",
+    "rights": "Official manufacturer-owned product imagery; not represented as openly licensed.",
+    "width": 1000,
+    "height": 1000,
+    "bytes": 64442,
+    "sha256": "d8233f0b6427ea7456a9830831d07b16a1dc9a6a93016fd40daab4150063de9b"
+  },
+  {
+    "sku": "DEMO-ELE-BRAND-038",
+    "specification_source": "https://www.canon-europe.com/cameras/eos-r10/specifications/",
+    "image_url": "https://cdn.media.amplience.net/i/canon/canon_eos-r10_product_gallery_2_024878a80e5a4ddf8761d1f3cfc94d7b?w=1000&fmt=png",
+    "image": "electronics/expansion-20261005/038.webp",
+    "rights": "Official manufacturer-owned product imagery; not represented as openly licensed.",
+    "width": 1000,
+    "height": 1000,
+    "bytes": 42182,
+    "sha256": "51e9a9bec86a931cebf1a5411968be14db9ec75ece759908fadd0de9550509eb"
+  },
+  {
+    "sku": "DEMO-ELE-BRAND-039",
+    "specification_source": "https://www.samsung.com/in/business/smartphones/galaxy-s/galaxy-s24-sm-s921bzkcins/",
+    "image_url": "https://images.samsung.com/is/image/samsung/p6pim/in/2401/gallery/in-galaxy-s24-492654-sm-s921bzkcins-539572763?$2052_1641_PNG$",
+    "image": "electronics/expansion-20261005/039.webp",
+    "rights": "Official manufacturer-owned product imagery; not represented as openly licensed.",
+    "width": 2052,
+    "height": 1641,
+    "bytes": 31382,
+    "sha256": "7b3ef79eb152ea82f477bba64f3e0807ce1d7a719ed8262aadf9d5459f4f0bf8"
+  },
+  {
+    "sku": "DEMO-ELE-BRAND-040",
+    "specification_source": "https://www.samsung.com/iran/smartphones/galaxy-s/galaxy-s24-ultra-titanium-gray-256gb-sm-s928bztcmea/",
+    "image_url": "https://images.samsung.com/is/image/samsung/p6pim/iran/2401/gallery/iran-galaxy-s24-s928-sm-s928bztcmea-539413499?$1164_776_PNG$",
+    "image": "electronics/expansion-20261005/040.webp",
+    "rights": "Official manufacturer-owned product imagery; not represented as openly licensed.",
+    "width": 1164,
+    "height": 776,
+    "bytes": 39176,
+    "sha256": "1a513adca81889df795a7d5293b987f7539cec45f0aaad7d5d0164991e80cc5a"
+  }
+]

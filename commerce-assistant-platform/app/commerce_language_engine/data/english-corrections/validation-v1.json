@@ -1,0 +1,129 @@
+{
+  "version": 1,
+  "cohort": "validation-v1",
+  "limitations": "Rules frozen before these authored cohorts were executed. These are synthetic cohorts, not independent customer data. Families disjoint within this evaluation only; historical development tests are not a clean training partition.",
+  "cases": [
+    {
+      "text": "serach milk under 12.50 USD",
+      "intent": "PRODUCT_SEARCH",
+      "status": "RESOLVED",
+      "edits": [
+        [
+          "serach",
+          "search"
+        ]
+      ],
+      "family": "transposed-read-head",
+      "protected": [
+        "milk under 12.50 USD"
+      ],
+      "price": 12.5
+    },
+    {
+      "text": "serach AB-012",
+      "intent": "PRODUCT_SEARCH",
+      "status": "RESOLVED",
+      "edits": [
+        [
+          "serach",
+          "search"
+        ]
+      ],
+      "family": "transposed-read-head",
+      "protected": [
+        "AB-012"
+      ]
+    },
+    {
+      "text": "serach APL shoes",
+      "intent": "PRODUCT_SEARCH",
+      "status": "RESOLVED",
+      "edits": [
+        [
+          "serach",
+          "search"
+        ]
+      ],
+      "family": "transposed-read-head",
+      "protected": [
+        "APL shoes"
+      ]
+    },
+    {
+      "text": "serach organic tea",
+      "intent": "PRODUCT_SEARCH",
+      "status": "RESOLVED",
+      "edits": [
+        [
+          "serach",
+          "search"
+        ]
+      ],
+      "family": "transposed-read-head",
+      "protected": [
+        "organic tea"
+      ]
+    },
+    {
+      "text": "browes milk under 12.50 USD",
+      "intent": "PRODUCT_SEARCH",
+      "status": "RESOLVED",
+      "edits": [
+        [
+          "browes",
+          "browse"
+        ]
+      ],
+      "family": "transposed-read-head",
+      "protected": [
+        "milk under 12.50 USD"
+      ],
+      "price": 12.5
+    },
+    {
+      "text": "browes AB-012",
+      "intent": "PRODUCT_SEARCH",
+      "status": "RESOLVED",
+      "edits": [
+        [
+          "browes",
+          "browse"
+        ]
+      ],
+      "family": "transposed-read-head",
+      "protected": [
+        "AB-012"
+      ]
+    },
+    {
+      "text": "browes APL shoes",
+      "intent": "PRODUCT_SEARCH",
+      "status": "RESOLVED",
+      "edits": [
+        [
+          "browes",
+          "browse"
+        ]
+      ],
+      "family": "transposed-read-head",
+      "protected": [
+        "APL shoes"
+      ]
+    },
+    {
+      "text": "browes organic tea",
+      "intent": "PRODUCT_SEARCH",
+      "status": "RESOLVED",
+      "edits": [
+        [
+          "browes",
+          "browse"
+        ]
+      ],
+      "family": "transposed-read-head",
+      "protected": [
+        "organic tea"
+      ]
+    }
+  ]
+}

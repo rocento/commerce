@@ -1,0 +1,17 @@
+{
+  "scope": "Synthetic neutral provider through the real runtime and in-process ASGI; no real network, database or vendor. Full DB persistence/ownership regressions run separately in agent-evals.",
+  "requests": 337,
+  "accepted": 85,
+  "busy": 252,
+  "max_provider_concurrency": 4,
+  "request_p95_seconds": 0.05622595800014096,
+  "retained_tracemalloc_bytes": 133427,
+  "peak_tracemalloc_bytes": 3351037,
+  "deadline_seconds": 0.15487025000038557,
+  "thresholds": {
+    "max_concurrency": 4,
+    "retained_bytes": 5000000,
+    "deadline_seconds": 1
+  },
+  "passed": true
+}

@@ -1,0 +1,326 @@
+{
+  "version": "1",
+  "status": "passed",
+  "paired_case_regressions": [],
+  "candidate_failures": [],
+  "incomplete_cases": [],
+  "safety_failures": [],
+  "threshold_errors": [],
+  "segments": {
+    "journey:comparison": {
+      "baseline": {
+        "passed": 1,
+        "executed": 1,
+        "total": 1,
+        "quarantined": 0,
+        "not_run": 0,
+        "pass_fraction": 1.0,
+        "wilson_95": [
+          0.20654931437723745,
+          1
+        ],
+        "safety_failures": 0,
+        "p95_ms": 1409,
+        "provider_calls_per_passed_scenario": 1.0,
+        "cost_micros_per_passed_scenario": 439.0
+      },
+      "candidate": {
+        "passed": 1,
+        "executed": 1,
+        "total": 1,
+        "quarantined": 0,
+        "not_run": 0,
+        "pass_fraction": 1.0,
+        "wilson_95": [
+          0.20654931437723745,
+          1
+        ],
+        "safety_failures": 0,
+        "p95_ms": 1249,
+        "provider_calls_per_passed_scenario": 1.0,
+        "cost_micros_per_passed_scenario": 503.0
+      },
+      "delta": 0.0
+    },
+    "journey:discovery": {
+      "baseline": {
+        "passed": 1,
+        "executed": 2,
+        "total": 2,
+        "quarantined": 0,
+        "not_run": 0,
+        "pass_fraction": 0.5,
+        "wilson_95": [
+          0.09453120573423074,
+          0.9054687942657693
+        ],
+        "safety_failures": 0,
+        "p95_ms": 2367,
+        "provider_calls_per_passed_scenario": 2.0,
+        "cost_micros_per_passed_scenario": 870.0
+      },
+      "candidate": {
+        "passed": 2,
+        "executed": 2,
+        "total": 2,
+        "quarantined": 0,
+        "not_run": 0,
+        "pass_fraction": 1.0,
+        "wilson_95": [
+          0.34238022750665303,
+          1
+        ],
+        "safety_failures": 0,
+        "p95_ms": 3473,
+        "provider_calls_per_passed_scenario": 1.0,
+        "cost_micros_per_passed_scenario": 499.5
+      },
+      "delta": 0.5
+    },
+    "journey:gift": {
+      "baseline": {
+        "passed": 0,
+        "executed": 1,
+        "total": 1,
+        "quarantined": 0,
+        "not_run": 0,
+        "pass_fraction": 0.0,
+        "wilson_95": [
+          0,
+          0.7934506856227626
+        ],
+        "safety_failures": 0,
+        "p95_ms": 1491,
+        "provider_calls_per_passed_scenario": null,
+        "cost_micros_per_passed_scenario": null
+      },
+      "candidate": {
+        "passed": 1,
+        "executed": 1,
+        "total": 1,
+        "quarantined": 0,
+        "not_run": 0,
+        "pass_fraction": 1.0,
+        "wilson_95": [
+          0.20654931437723745,
+          1
+        ],
+        "safety_failures": 0,
+        "p95_ms": 1578,
+        "provider_calls_per_passed_scenario": 1.0,
+        "cost_micros_per_passed_scenario": 495.0
+      },
+      "delta": 1.0
+    },
+    "language:en": {
+      "baseline": {
+        "passed": 2,
+        "executed": 4,
+        "total": 4,
+        "quarantined": 0,
+        "not_run": 0,
+        "pass_fraction": 0.5,
+        "wilson_95": [
+          0.15003898915214947,
+          0.8499610108478506
+        ],
+        "safety_failures": 0,
+        "p95_ms": 2367,
+        "provider_calls_per_passed_scenario": 2.0,
+        "cost_micros_per_passed_scenario": 870.5
+      },
+      "candidate": {
+        "passed": 4,
+        "executed": 4,
+        "total": 4,
+        "quarantined": 0,
+        "not_run": 0,
+        "pass_fraction": 1.0,
+        "wilson_95": [
+          0.5101091635454027,
+          1
+        ],
+        "safety_failures": 0,
+        "p95_ms": 3473,
+        "provider_calls_per_passed_scenario": 1.0,
+        "cost_micros_per_passed_scenario": 499.25
+      },
+      "delta": 0.5
+    },
+    "store:grocery": {
+      "baseline": {
+        "passed": 2,
+        "executed": 4,
+        "total": 4,
+        "quarantined": 0,
+        "not_run": 0,
+        "pass_fraction": 0.5,
+        "wilson_95": [
+          0.15003898915214947,
+          0.8499610108478506
+        ],
+        "safety_failures": 0,
+        "p95_ms": 2367,
+        "provider_calls_per_passed_scenario": 2.0,
+        "cost_micros_per_passed_scenario": 870.5
+      },
+      "candidate": {
+        "passed": 4,
+        "executed": 4,
+        "total": 4,
+        "quarantined": 0,
+        "not_run": 0,
+        "pass_fraction": 1.0,
+        "wilson_95": [
+          0.5101091635454027,
+          1
+        ],
+        "safety_failures": 0,
+        "p95_ms": 3473,
+        "provider_calls_per_passed_scenario": 1.0,
+        "cost_micros_per_passed_scenario": 499.25
+      },
+      "delta": 0.5
+    },
+    "store_language:grocery:en": {
+      "baseline": {
+        "passed": 2,
+        "executed": 4,
+        "total": 4,
+        "quarantined": 0,
+        "not_run": 0,
+        "pass_fraction": 0.5,
+        "wilson_95": [
+          0.15003898915214947,
+          0.8499610108478506
+        ],
+        "safety_failures": 0,
+        "p95_ms": 2367,
+        "provider_calls_per_passed_scenario": 2.0,
+        "cost_micros_per_passed_scenario": 870.5
+      },
+      "candidate": {
+        "passed": 4,
+        "executed": 4,
+        "total": 4,
+        "quarantined": 0,
+        "not_run": 0,
+        "pass_fraction": 1.0,
+        "wilson_95": [
+          0.5101091635454027,
+          1
+        ],
+        "safety_failures": 0,
+        "p95_ms": 3473,
+        "provider_calls_per_passed_scenario": 1.0,
+        "cost_micros_per_passed_scenario": 499.25
+      },
+      "delta": 0.5
+    },
+    "suite:catalog_grounded": {
+      "baseline": {
+        "passed": 0,
+        "executed": 1,
+        "total": 1,
+        "quarantined": 0,
+        "not_run": 0,
+        "pass_fraction": 0.0,
+        "wilson_95": [
+          0,
+          0.7934506856227626
+        ],
+        "safety_failures": 0,
+        "p95_ms": 2367,
+        "provider_calls_per_passed_scenario": null,
+        "cost_micros_per_passed_scenario": null
+      },
+      "candidate": {
+        "passed": 1,
+        "executed": 1,
+        "total": 1,
+        "quarantined": 0,
+        "not_run": 0,
+        "pass_fraction": 1.0,
+        "wilson_95": [
+          0.20654931437723745,
+          1
+        ],
+        "safety_failures": 0,
+        "p95_ms": 1363,
+        "provider_calls_per_passed_scenario": 1.0,
+        "cost_micros_per_passed_scenario": 492.0
+      },
+      "delta": 1.0
+    },
+    "suite:conversation": {
+      "baseline": {
+        "passed": 1,
+        "executed": 1,
+        "total": 1,
+        "quarantined": 0,
+        "not_run": 0,
+        "pass_fraction": 1.0,
+        "wilson_95": [
+          0.20654931437723745,
+          1
+        ],
+        "safety_failures": 0,
+        "p95_ms": 1810,
+        "provider_calls_per_passed_scenario": 1.0,
+        "cost_micros_per_passed_scenario": 441.0
+      },
+      "candidate": {
+        "passed": 1,
+        "executed": 1,
+        "total": 1,
+        "quarantined": 0,
+        "not_run": 0,
+        "pass_fraction": 1.0,
+        "wilson_95": [
+          0.20654931437723745,
+          1
+        ],
+        "safety_failures": 0,
+        "p95_ms": 3473,
+        "provider_calls_per_passed_scenario": 1.0,
+        "cost_micros_per_passed_scenario": 507.0
+      },
+      "delta": 0.0
+    },
+    "suite:journey": {
+      "baseline": {
+        "passed": 1,
+        "executed": 2,
+        "total": 2,
+        "quarantined": 0,
+        "not_run": 0,
+        "pass_fraction": 0.5,
+        "wilson_95": [
+          0.09453120573423074,
+          0.9054687942657693
+        ],
+        "safety_failures": 0,
+        "p95_ms": 1491,
+        "provider_calls_per_passed_scenario": 2.0,
+        "cost_micros_per_passed_scenario": 871.0
+      },
+      "candidate": {
+        "passed": 2,
+        "executed": 2,
+        "total": 2,
+        "quarantined": 0,
+        "not_run": 0,
+        "pass_fraction": 1.0,
+        "wilson_95": [
+          0.34238022750665303,
+          1
+        ],
+        "safety_failures": 0,
+        "p95_ms": 1578,
+        "provider_calls_per_passed_scenario": 1.0,
+        "cost_micros_per_passed_scenario": 499.0
+      },
+      "delta": 0.5
+    }
+  }
+}

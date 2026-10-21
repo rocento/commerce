@@ -1,0 +1,11 @@
+{
+  "provenance": "Five authored synthetic checks targeting observed classifier failures and two positive filter controls. The denial, condition and joke cases are also explicit prompt examples; this measures regression behavior, not independent customer accuracy.",
+  "example_ids": ["apples-budget-1", "dinner-purpose-1", "basket-view-discovery-1"],
+  "cases": [
+    {"id":"negated-desire","message":"I do not want apple","status":"CLARIFY","intent":null},
+    {"id":"conditional-write","message":"If apples cost less than $7, add two to my cart","status":"CLARIFY","intent":null},
+    {"id":"joking","message":"I was only kidding about ordering apples","status":"CONVERSATION","intent":"CONVERSATION_JOKE"},
+    {"id":"named-product-price","message":"Find Granny Smith apples under $9.25","status":"INTERPRETED","intent":"PRODUCT_SEARCH","literal":"Granny Smith apples"},
+    {"id":"positive-exclusion","message":"Show me cereal without added sugar","status":"INTERPRETED","intent":"PRODUCT_SEARCH","literal":"cereal","required_phrases":["without added sugar"],"expected_validated_status":"NEEDS_CONTEXT","validation_reason":"The current deterministic engine cannot verify this free-text exclusion. Preserve the search meaning, then clarify without silently dropping the filter."}
+  ]
+}

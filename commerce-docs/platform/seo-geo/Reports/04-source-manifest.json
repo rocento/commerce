@@ -1,0 +1,186 @@
+{
+  "stage": "04",
+  "scope": "merchant platform canonical URLs and slug lifecycle",
+  "files": [
+    {
+      "path": "SEO-GEO/Docs/canonical-policy.md",
+      "sha256": "00db6a53414bb5181cf9b505b64f8d53b5ec94971c9473a5983488bf2997f559"
+    },
+    {
+      "path": "SEO-GEO/Docs/http-status-policy.md",
+      "sha256": "0cc0712f99031c9d56a0730aa280c115f7bcc630c3aa6aa89a0e60b440a18ce8"
+    },
+    {
+      "path": "SEO-GEO/Docs/public-commerce-contract.md",
+      "sha256": "479b2d41b53012a3e12ed0eb5e2dec43e6c54108f8c1a42fb4ced187565cb734"
+    },
+    {
+      "path": "SEO-GEO/Docs/slug-and-redirect-policy.md",
+      "sha256": "44cdcad92a74a645b67fd81606a20b932e6cecc1e12f116ac07893d116837d45"
+    },
+    {
+      "path": "SEO-GEO/Reports/04-canonical-urls-slugs-and-redirects.md",
+      "sha256": "96737f3e1e9a1055bd2a5f56f3bfe1de3aae849662589b1cd453f1afc5f5ff18"
+    },
+    {
+      "path": "SEO-GEO/Reports/04-existing-source-delta.patch",
+      "sha256": "ecac484b5bc89efbe189542b728dd5bac7d163022238dbffeb4b79fd0f8f5355"
+    },
+    {
+      "path": "SEO-GEO/Tests/stage04/.gitattributes",
+      "sha256": "f22d517aa82abe0ef547befa8cbd37b18e8b4d37b527f875bec7993dcec98218"
+    },
+    {
+      "path": "SEO-GEO/Tests/stage04/README.md",
+      "sha256": "9076cc35534e579dd6620902330bdcba14386a05e41436ee3e6626d9ca3f7dd3"
+    },
+    {
+      "path": "SEO-GEO/Tests/stage04/api-regression-validation.log",
+      "sha256": "09dcce61a92665273afdf432d80e1129473d277f6b2322095a5e4d8e5b1cfb6b"
+    },
+    {
+      "path": "SEO-GEO/Tests/stage04/canonical-identities.json",
+      "sha256": "7ef725a6760bf33cc9ff1f35284c816019a8362774f36cf3f31a311698d90f2b"
+    },
+    {
+      "path": "SEO-GEO/Tests/stage04/canonical-pagination-200.http",
+      "sha256": "d13d9574d1575968627a5443581788a1e5876d030ff05142021690fc5e1e0945"
+    },
+    {
+      "path": "SEO-GEO/Tests/stage04/canonical-product-200.http",
+      "sha256": "bf3e8a78986bd9a48b8b437583b514d99c9f1dea63d4d49bf7576404700ea4a0"
+    },
+    {
+      "path": "SEO-GEO/Tests/stage04/categories-fruit.http",
+      "sha256": "673ae668e4fec7b114da949a49e68e05deb1757a1a7a77fef49da3a8dd61c078"
+    },
+    {
+      "path": "SEO-GEO/Tests/stage04/clippy-validation.log",
+      "sha256": "deb6cb4a6c3e79707fe01a80013f10f53ed028864b8a94992b33872d11736be8"
+    },
+    {
+      "path": "SEO-GEO/Tests/stage04/frontend-validation.log",
+      "sha256": "b3cdf2d06ff228f9e563c893571e3913a3ca23eb7218983d409b2b600bb050dc"
+    },
+    {
+      "path": "SEO-GEO/Tests/stage04/history-first-301.http",
+      "sha256": "a7f1066f0d61bb6cc11d322955e1f07027494f16915b09db4e97305a3de076ee"
+    },
+    {
+      "path": "SEO-GEO/Tests/stage04/history-previous-301.http",
+      "sha256": "a7f1066f0d61bb6cc11d322955e1f07027494f16915b09db4e97305a3de076ee"
+    },
+    {
+      "path": "SEO-GEO/Tests/stage04/home.http",
+      "sha256": "55493dd8cfda13bf71b90b8d66c2a4389284e6ad7c0836b9e7315c4526fb46a6"
+    },
+    {
+      "path": "SEO-GEO/Tests/stage04/http-validation.log",
+      "sha256": "a5be42e32a7b04af19d7d0148a4d3fd9e2cd7aa11a887fe930b89a15d6adb1d4"
+    },
+    {
+      "path": "SEO-GEO/Tests/stage04/legacy-id-301.http",
+      "sha256": "a7f1066f0d61bb6cc11d322955e1f07027494f16915b09db4e97305a3de076ee"
+    },
+    {
+      "path": "SEO-GEO/Tests/stage04/node-validation.log",
+      "sha256": "6bc62698a3ead6100e99cef10464d49671ac8b161a1f436c27f70ab16cceb83b"
+    },
+    {
+      "path": "SEO-GEO/Tests/stage04/normalized-history-301.http",
+      "sha256": "a7f1066f0d61bb6cc11d322955e1f07027494f16915b09db4e97305a3de076ee"
+    },
+    {
+      "path": "SEO-GEO/Tests/stage04/pages-about.http",
+      "sha256": "f5dac6b732d1a011d03361c9deef6278635b47b74cd168a6e5423fe9f8171431"
+    },
+    {
+      "path": "SEO-GEO/Tests/stage04/product-desktop.png",
+      "sha256": "f927b2eb63c5212c05f634bf632e279bd7c071bb8838e31ba63cc8ed990650a7"
+    },
+    {
+      "path": "SEO-GEO/Tests/stage04/product-mobile.png",
+      "sha256": "71896c1f79ad8d14daeedaaf82f16492280343ef8a323d98992132365c4e5863"
+    },
+    {
+      "path": "SEO-GEO/Tests/stage04/products-apples.http",
+      "sha256": "0a4f8c349190317088e255b31dc2e5413e0bd2ef88c7808b027a4ef39cb00bc6"
+    },
+    {
+      "path": "SEO-GEO/Tests/stage04/renamed-301.http",
+      "sha256": "fcdccd2bba337832da89e6f05635f4512db52801b5c34e1c2c03079fe34ee9a0"
+    },
+    {
+      "path": "SEO-GEO/Tests/stage04/retired-410.http",
+      "sha256": "5402e174e668981614db98ee227c017d0a3d490761e1d7d5d26c7cc6ac71204d"
+    },
+    {
+      "path": "SEO-GEO/Tests/stage04/tenant-b-canonical-200.http",
+      "sha256": "f422d441b9ef09b86ea316c61ca99b1a153ae813ee89c8c1aa2cac16fdd7c1fc"
+    },
+    {
+      "path": "SEO-GEO/Tests/stage04/unknown-404.http",
+      "sha256": "461be40ea89fafdf57b30da49ead33c618c789026bd58a5b9cb8ab3dd88ad357"
+    },
+    {
+      "path": "SEO-GEO/Tests/stage04/unsupported-sort-404.http",
+      "sha256": "cb7fe372d5ca7dff41c1bca6f6f7fc42042814353db0f5d4640c6079c25f8bbd"
+    },
+    {
+      "path": "backend/crates/api-gateway/src/public_commerce/canonical.rs",
+      "sha256": "b1ff5335661e900b0afff193474b2f724a127fc5cfae32205a31be2e32d222ce"
+    },
+    {
+      "path": "backend/crates/api-gateway/src/public_commerce/mod.rs",
+      "sha256": "b2a55e7d4afa7b187cb66d6131dd86580797dfd71566cb352afced50632ce3d7"
+    },
+    {
+      "path": "backend/crates/api-gateway/src/public_commerce/snapshot.rs",
+      "sha256": "03429ceebb7e5eae682041cbab73a7748f36bb22f91e88904b2916522c2f6552"
+    },
+    {
+      "path": "backend/crates/api-gateway/tests/publication_rendering.rs",
+      "sha256": "ebc7c368603cca71160ecd65879863842915908d732ca163f5ac5381258a429e"
+    },
+    {
+      "path": "backend/crates/domain-catalog/src/lib.rs",
+      "sha256": "2f10de72cd708ae199ec9d8a70f833e65b7de54253569307f801328eb4c06071"
+    },
+    {
+      "path": "backend/migrations/20260921110000_publication_slug_history.sql",
+      "sha256": "2e882860f532f3eaae463dab3fa7395d193cc39bce64ebd339f13df367d92e0b"
+    },
+    {
+      "path": "frontend/apps/storefront/server/publication-checks.mjs",
+      "sha256": "ef0b3fafa7abee38ee5652bfa930c95f1ece4bc76ebd6c2da4fc33784f2e9118"
+    },
+    {
+      "path": "frontend/apps/storefront/server/publication.mjs",
+      "sha256": "f22cabebbf2cb1630e078af55b73568369b77a642b5c2c336738d04ae8f11e4b"
+    },
+    {
+      "path": "frontend/apps/storefront/server/url-policy-checks.mjs",
+      "sha256": "6450723a80e8af6e50fc958d9e7a4db036262875cd0324bca9801f1eebbd0ad2"
+    },
+    {
+      "path": "frontend/apps/storefront/server/url-policy.mjs",
+      "sha256": "85f1ddf38cdba76f1e74257b555ad7a145ec4d17ad5514ee55b7f0f0ae206135"
+    },
+    {
+      "path": "frontend/apps/storefront/src/public/page.tsx",
+      "sha256": "fe17f760fd3abf087f0c6e51aed197a22f19a6fe40c1cca7d68c7c9963999d5d"
+    },
+    {
+      "path": "frontend/apps/storefront/src/public/types.ts",
+      "sha256": "6eb16d19907b5cc57aa648f394ef68546ad35e8dddcbba92d8d5ee92721b2360"
+    },
+    {
+      "path": "frontend/e2e/publication-check.mjs",
+      "sha256": "392893cf38d372b0f52986b717db33112563ce856bd320f55c0ba6b26715fcf9"
+    }
+  ],
+  "excluded_concurrent_generated_files": [
+    "backend/openapi.json",
+    "frontend/packages/api-client/src/schema.d.ts"
+  ]
+}

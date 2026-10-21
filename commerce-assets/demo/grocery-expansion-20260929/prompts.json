@@ -1,0 +1,85 @@
+{
+  "tool": "Built-in image_gen",
+  "prompts": [
+    {
+      "slug": "blueberries",
+      "prompt": "Create one square grocery ecommerce product photograph: fresh blueberries in a small neat mound. Pure white seamless background, centered object with generous clean margin, soft studio lighting and subtle contact shadow, realistic appetizing detail, consistent catalog photography. No branding, no text, no watermark, no collage. This is a standalone product image for blueberries."
+    },
+    {
+      "slug": "kiwi",
+      "prompt": "Create one square grocery ecommerce product photograph: three whole kiwi fruits and one kiwi cut in half. Pure white seamless background, centered object with generous clean margin, soft studio lighting and subtle contact shadow, realistic appetizing detail, consistent catalog photography. No branding, no text, no watermark, no collage. This is a standalone product image for kiwi."
+    },
+    {
+      "slug": "pomegranate",
+      "prompt": "Create one square grocery ecommerce product photograph: two pomegranates, one split showing ruby seeds. Pure white seamless background, centered object with generous clean margin, soft studio lighting and subtle contact shadow, realistic appetizing detail, consistent catalog photography. No branding, no text, no watermark, no collage. This is a standalone product image for pomegranate."
+    },
+    {
+      "slug": "peaches",
+      "prompt": "Create one square grocery ecommerce product photograph: three ripe peaches and one peach half. Pure white seamless background, centered object with generous clean margin, soft studio lighting and subtle contact shadow, realistic appetizing detail, consistent catalog photography. No branding, no text, no watermark, no collage. This is a standalone product image for peaches."
+    },
+    {
+      "slug": "spinach",
+      "prompt": "Create one square grocery ecommerce product photograph: a fresh bunch of spinach leaves. Pure white seamless background, centered object with generous clean margin, soft studio lighting and subtle contact shadow, realistic appetizing detail, consistent catalog photography. No branding, no text, no watermark, no collage. This is a standalone product image for spinach."
+    },
+    {
+      "slug": "green-beans",
+      "prompt": "Create one square grocery ecommerce product photograph: a neat pile of fresh green beans. Pure white seamless background, centered object with generous clean margin, soft studio lighting and subtle contact shadow, realistic appetizing detail, consistent catalog photography. No branding, no text, no watermark, no collage. This is a standalone product image for green-beans."
+    },
+    {
+      "slug": "sweet-potatoes",
+      "prompt": "Create one square grocery ecommerce product photograph: three whole sweet potatoes and one cut half. Pure white seamless background, centered object with generous clean margin, soft studio lighting and subtle contact shadow, realistic appetizing detail, consistent catalog photography. No branding, no text, no watermark, no collage. This is a standalone product image for sweet-potatoes."
+    },
+    {
+      "slug": "lettuce",
+      "prompt": "Create one square grocery ecommerce product photograph: one fresh romaine lettuce head. Pure white seamless background, centered object with generous clean margin, soft studio lighting and subtle contact shadow, realistic appetizing detail, consistent catalog photography. No branding, no text, no watermark, no collage. This is a standalone product image for lettuce."
+    },
+    {
+      "slug": "mozzarella",
+      "prompt": "Create one square grocery ecommerce product photograph: two fresh mozzarella balls, one sliced, on a small plain white dish. Pure white seamless background, centered object with generous clean margin, soft studio lighting and subtle contact shadow, realistic appetizing detail, consistent catalog photography. No branding, no text, no watermark, no collage. This is a standalone product image for mozzarella."
+    },
+    {
+      "slug": "cream-cheese",
+      "prompt": "Create one square grocery ecommerce product photograph: plain cream cheese in a small unbranded white tub with its lid beside it. Pure white seamless background, centered object with generous clean margin, soft studio lighting and subtle contact shadow, realistic appetizing detail, consistent catalog photography. No branding, no text, no watermark, no collage. This is a standalone product image for cream-cheese."
+    },
+    {
+      "slug": "bagels",
+      "prompt": "Create one square grocery ecommerce product photograph: four plain sesame bagels. Pure white seamless background, centered object with generous clean margin, soft studio lighting and subtle contact shadow, realistic appetizing detail, consistent catalog photography. No branding, no text, no watermark, no collage. This is a standalone product image for bagels."
+    },
+    {
+      "slug": "oat-bread",
+      "prompt": "Create one square grocery ecommerce product photograph: one sliced oat-topped bread loaf. Pure white seamless background, centered object with generous clean margin, soft studio lighting and subtle contact shadow, realistic appetizing detail, consistent catalog photography. No branding, no text, no watermark, no collage. This is a standalone product image for oat-bread."
+    },
+    {
+      "slug": "rolled-oats",
+      "prompt": "Create one square grocery ecommerce product photograph: rolled oats in a clear unbranded pouch with a few flakes beside it. Pure white seamless background, centered object with generous clean margin, soft studio lighting and subtle contact shadow, realistic appetizing detail, consistent catalog photography. No branding, no text, no watermark, no collage. This is a standalone product image for rolled-oats."
+    },
+    {
+      "slug": "couscous",
+      "prompt": "Create one square grocery ecommerce product photograph: dry couscous in a clear unbranded pouch with a small mound beside it. Pure white seamless background, centered object with generous clean margin, soft studio lighting and subtle contact shadow, realistic appetizing detail, consistent catalog photography. No branding, no text, no watermark, no collage. This is a standalone product image for couscous."
+    },
+    {
+      "slug": "tuna",
+      "prompt": "Create one square grocery ecommerce product photograph: an open unbranded tin of tuna chunks in olive oil. Pure white seamless background, centered object with generous clean margin, soft studio lighting and subtle contact shadow, realistic appetizing detail, consistent catalog photography. No branding, no text, no watermark, no collage. This is a standalone product image for tuna."
+    },
+    {
+      "slug": "chicken-drumsticks",
+      "prompt": "Create one square grocery ecommerce product photograph: four raw chicken drumsticks neatly arranged on a plain white tray. Pure white seamless background, centered object with generous clean margin, soft studio lighting and subtle contact shadow, realistic appetizing detail, consistent catalog photography. No branding, no text, no watermark, no collage. This is a standalone product image for chicken-drumsticks."
+    },
+    {
+      "slug": "ground-beef",
+      "prompt": "Create one square grocery ecommerce product photograph: fresh raw ground beef in a neat mound on a plain white tray. Pure white seamless background, centered object with generous clean margin, soft studio lighting and subtle contact shadow, realistic appetizing detail, consistent catalog photography. No branding, no text, no watermark, no collage. This is a standalone product image for ground-beef."
+    },
+    {
+      "slug": "shrimp",
+      "prompt": "Create one square grocery ecommerce product photograph: fresh peeled raw shrimp neatly arranged on a small white tray. Pure white seamless background, centered object with generous clean margin, soft studio lighting and subtle contact shadow, realistic appetizing detail, consistent catalog photography. No branding, no text, no watermark, no collage. This is a standalone product image for shrimp."
+    },
+    {
+      "slug": "dried-apricots",
+      "prompt": "Create one square grocery ecommerce product photograph: a small pile of dried apricots. Pure white seamless background, centered object with generous clean margin, soft studio lighting and subtle contact shadow, realistic appetizing detail, consistent catalog photography. No branding, no text, no watermark, no collage. This is a standalone product image for dried-apricots."
+    },
+    {
+      "slug": "hazelnuts",
+      "prompt": "Create one square grocery ecommerce product photograph: a small pile of shelled hazelnuts with two whole shells beside them. Pure white seamless background, centered object with generous clean margin, soft studio lighting and subtle contact shadow, realistic appetizing detail, consistent catalog photography. No branding, no text, no watermark, no collage. This is a standalone product image for hazelnuts."
+    }
+  ]
+}

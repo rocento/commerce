@@ -1,0 +1,40 @@
+services:
+  shared-ai-postgres:
+    image: rocento-ai-postgres:shared
+    build:
+      context: ../../commerce-ops/deploy/assistant
+      dockerfile: Dockerfile.shared-store
+    environment:
+      POSTGRES_USER: ai_owner
+      POSTGRES_DB: assistant
+      POSTGRES_PASSWORD_FILE: /run/secrets/admin-password
+    volumes:
+      - shared-ai-data:/var/lib/postgresql/data
+      - ../../commerce-ops/deploy/ec2/shared-ai/admin-password:/run/secrets/admin-password:ro
+    ports: ["127.0.0.1:15432:5432"]
+    networks: [access, grocery, jewelry, electronics, pharmacy]
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ai_owner -d assistant"]
+      interval: 5s
+      timeout: 3s
+      retries: 12
+    mem_limit: 1g
+    cpus: 2
+    pids_limit: 128
+networks:
+  access: {}
+  grocery:
+    external: true
+    name: rocento-grocery_assistant-private
+  jewelry:
+    external: true
+    name: rocento-jewelry_assistant-private
+  electronics:
+    external: true
+    name: rocento-electronics_assistant-private
+  pharmacy:
+    external: true
+    name: rocento-pharmacy_assistant-private
+volumes:
+  shared-ai-data:

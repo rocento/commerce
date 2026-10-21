@@ -1,0 +1,203 @@
+{
+  "DEMO-ELE-BRAND-001": {
+    "url": "https://cdsassets.apple.com/live/SZLF0YNV/images/sp/111872_iphone13-colors-480.png",
+    "source": "https://support.apple.com/en-us/111872",
+    "model": "iPhone 13",
+    "file": "electronics/official/001.png",
+    "width": 472,
+    "height": 288,
+    "sha256": "bdad53b93e3a00850cded1b5b655dda5f551fb33003f42d75c6db92c4f0dacf9",
+    "rights": "Manufacturer-owned product imagery; sourced from official product/support/press pages. Not Creative Commons or public domain."
+  },
+  "DEMO-ELE-BRAND-002": {
+    "url": "https://cdsassets.apple.com/live/7WUAS350/images/tech-specs/iphone_15_hero.png",
+    "source": "https://support.apple.com/en-mide/111831",
+    "model": "iPhone 15",
+    "file": "electronics/official/002.png",
+    "width": 1000,
+    "height": 1000,
+    "sha256": "34580254d9f89c699c970108cf684aac8a76df6b36265d535f2d68fd9eda618b",
+    "rights": "Manufacturer-owned product imagery; sourced from official product/support/press pages. Not Creative Commons or public domain."
+  },
+  "DEMO-ELE-BRAND-003": {
+    "url": "https://images.samsung.com/is/image/samsung/p6pim/au/2302/gallery/au-galaxy-s23-s911-sm-s911bzkaats-thumb-534840400?$650_519_PNG$",
+    "source": "https://www.samsung.com/au/smartphones/galaxy-s/galaxy-s23-phantom-black-128gb-sm-s911bzkaats/",
+    "model": "Galaxy S23",
+    "file": "electronics/official/003.png",
+    "width": 650,
+    "height": 519,
+    "sha256": "1772e907d336513d5e7910e7b766b2d5716378b855e5fcf9498831440d36f057",
+    "rights": "Manufacturer-owned product imagery; sourced from official product/support/press pages. Not Creative Commons or public domain."
+  },
+  "DEMO-ELE-BRAND-004": {
+    "url": "https://images.samsung.com/is/image/samsung/p6pim/au/2302/gallery/au-galaxy-s23-s911-sm-s911bzkaats-thumb-534840400?$650_519_PNG$",
+    "source": "https://www.samsung.com/au/smartphones/galaxy-s/galaxy-s23-phantom-black-128gb-sm-s911bzkaats/",
+    "model": "Galaxy S23",
+    "file": "electronics/official/003.png",
+    "width": 650,
+    "height": 519,
+    "sha256": "1772e907d336513d5e7910e7b766b2d5716378b855e5fcf9498831440d36f057",
+    "rights": "Manufacturer-owned product imagery; sourced from official product/support/press pages. Not Creative Commons or public domain."
+  },
+  "DEMO-ELE-BRAND-005": {
+    "model": "Pixel 7",
+    "source": "https://partnermarketinghub.withgoogle.com/brands/google-pixel/pixel-7/overview/",
+    "url": "https://dam.goo.orangelogicdam.com/Assets/V2/8GF3eSEGJKI2mtVHeM4ENDfCtAufIr6JmYEPKvW75c7NjYyV1cSjcRjOsRGiArDXTvyVd1HbEA2F4ggwlonXan8esG63gvvE_zuNLUZmrZ4-/7wo_VSLIp9XiiM4k/wsaqCoZcWol6qiGB/GO4FEPK.jpg",
+    "file": "electronics/official/005.jpg",
+    "width": 1200,
+    "height": 900,
+    "sha256": "4f9184791c3bc7dcaa3c695c838e5046c9895772c2180af3d1deebe5b3079c85",
+    "rights": "Manufacturer-owned product imagery; sourced from official product/support/press pages. Not Creative Commons or public domain."
+  },
+  "DEMO-ELE-BRAND-006": {
+    "model": "OnePlus 9 Pro",
+    "source": "https://www.oneplus.com/us/9-pro/specs",
+    "url": "https://oasis.opstatics.com/content/dam/oasis/page/2021/9-series/spec-image/9-pro/Morning%20mist-gallery.png",
+    "file": "electronics/official/006.png",
+    "width": 1040,
+    "height": 1040,
+    "sha256": "281b4b7afccaaf8f192205b4bb1a1b1347f43339cff70b11af3a4705d1e44e32",
+    "rights": "Manufacturer-owned product imagery; sourced from official product/support/press pages. Not Creative Commons or public domain."
+  },
+  "DEMO-ELE-BRAND-007": {
+    "url": "https://i01.appmifile.com/webfile/globalimg/products/pc/mi11/specs-01.png",
+    "source": "https://www.mi.com/global/product/mi-11/specs/",
+    "model": "Mi 11",
+    "file": "electronics/official/007.png",
+    "width": 1051,
+    "height": 661,
+    "sha256": "879fee914ad31f4b4d262e7278d5db7317dbcd87ca250b4ff407668ce099a7b7",
+    "rights": "Manufacturer-owned product imagery; sourced from official product/support/press pages. Not Creative Commons or public domain."
+  },
+  "DEMO-ELE-BRAND-008": {
+    "url": "https://cdsassets.apple.com/live/SZLF0YNV/images/sp/111883_macbookair.png",
+    "source": "https://support.apple.com/en-ie/111883",
+    "model": "MacBook Air M1 (2020)",
+    "file": "electronics/official/008.png",
+    "width": 942,
+    "height": 598,
+    "sha256": "1e092fd8d0195f031019b2bd31c4795fc5bdad4204c7aef14107abda4cfb5186",
+    "rights": "Manufacturer-owned product imagery; sourced from official product/support/press pages. Not Creative Commons or public domain."
+  },
+  "DEMO-ELE-BRAND-009": {
+    "url": "https://cdsassets.apple.com/live/SZLF0YNV/images/sp/111883_macbookair.png",
+    "source": "https://support.apple.com/en-ie/111883",
+    "model": "MacBook Air M1 (2020)",
+    "file": "electronics/official/008.png",
+    "width": 942,
+    "height": 598,
+    "sha256": "1e092fd8d0195f031019b2bd31c4795fc5bdad4204c7aef14107abda4cfb5186",
+    "rights": "Manufacturer-owned product imagery; sourced from official product/support/press pages. Not Creative Commons or public domain."
+  },
+  "DEMO-ELE-BRAND-010": {
+    "model": "ThinkPad X1 Carbon (1st Gen)",
+    "source": "https://psref.lenovo.com/syspool/Sys/PDF/withdrawnbook/ThinkPad_X1_Carbon_1st_Gen.pdf",
+    "url": "https://psref.lenovo.com/syspool/Sys/PDF/withdrawnbook/ThinkPad_X1_Carbon_1st_Gen.pdf",
+    "file": "electronics/official/010.jpg",
+    "extraction": "Original embedded JPEG Im5 on page 1; no image edits",
+    "width": 1200,
+    "height": 958,
+    "sha256": "615242da20b2f1af625c28a86dfb815cbacf8508fc393981104a7725da95f2b8",
+    "rights": "Manufacturer-owned product imagery; sourced from official product/support/press pages. Not Creative Commons or public domain."
+  },
+  "DEMO-ELE-BRAND-011": {
+    "model": "Sony WH-1000XM3",
+    "source": "https://helpguide.sony.net/mdr/wh1000xm3/v1/en/index.html",
+    "url": "https://helpguide.sony.net/mdr/wh1000xm3/v1/en/contents/image/Top_image_WH-1000XM3.png",
+    "file": "electronics/official/011.png",
+    "width": 672,
+    "height": 424,
+    "sha256": "95782ca4ee0889409bc423c7164e7f0cf45d877ee8f733fa620cb67ca8ee9c5b",
+    "rights": "Manufacturer-owned product imagery; sourced from official product/support/press pages. Not Creative Commons or public domain."
+  },
+  "DEMO-ELE-BRAND-012": {
+    "url": "https://assets.bosecreative.com/transform/f8218e6d-5ea9-4458-9827-9396b1de9c75/789564-0010?io=width:1000,height:1000,transform:fit",
+    "source": "https://www.bose.com/p/quietcomfort-35-wireless-headphones-ii/QC35II-HEADPHONEARN-BLK-WW.html",
+    "model": "QuietComfort 35 II",
+    "file": "electronics/official/012.jpg",
+    "width": 1000,
+    "height": 600,
+    "sha256": "a44bccf345c7006e02e01b593b142e89fe03ed6428e2a1cceec8920dbd86ca33",
+    "rights": "Manufacturer-owned product imagery; sourced from official product/support/press pages. Not Creative Commons or public domain."
+  },
+  "DEMO-ELE-BRAND-013": {
+    "url": "https://cdsassets.apple.com/live/SZLF0YNV/images/sp/111861_airpods_pro_case__eqmrrx2cfpkm_large.png",
+    "source": "https://support.apple.com/en-us/111861",
+    "model": "AirPods Pro (1st Gen)",
+    "file": "electronics/official/013.png",
+    "width": 422,
+    "height": 359,
+    "sha256": "ae2e12c55b5d407ae1a998ab070a475c182315129e542eae14d92d518647c910",
+    "rights": "Manufacturer-owned product imagery; sourced from official product/support/press pages. Not Creative Commons or public domain."
+  },
+  "DEMO-ELE-BRAND-014": {
+    "url": "https://assets.nintendo.com/image/upload/ncom/My%20Nintendo%20Store/EN-US/Hardware/nintendo-switch-neon-blue-neon-red-joy-con-117972/117972-nintendo-switch-neon-blue-neon-red-package-front-1200x675",
+    "source": "https://www.nintendo.com/us/gaming-systems/switch/system/",
+    "model": "Switch",
+    "file": "electronics/official/014.jpg",
+    "width": 1200,
+    "height": 675,
+    "sha256": "3275c87c7fee0f64fb63826d552227900450478d6e9ece2da94372c4a1a75eb2",
+    "rights": "Manufacturer-owned product imagery; sourced from official product/support/press pages. Not Creative Commons or public domain."
+  },
+  "DEMO-ELE-BRAND-015": {
+    "url": "https://assets.nintendo.com/image/upload/ncom/en_US/products/hardware/nintendo-switch-lite-turquoise/110663-nintendo-switch-lite-turquoise-package-1200x675",
+    "source": "https://www.nintendo.com/us/gaming-systems/switch/lite/",
+    "model": "Switch Lite",
+    "file": "electronics/official/015.jpg",
+    "width": 1200,
+    "height": 675,
+    "sha256": "66094cbfe6e0bfdf6a51be118480e55f02c06ff22f54c3017a215e60f523acbf",
+    "rights": "Manufacturer-owned product imagery; sourced from official product/support/press pages. Not Creative Commons or public domain."
+  },
+  "DEMO-ELE-BRAND-016": {
+    "model": "PlayStation 5 (2020)",
+    "source": "https://blog.playstation.com/2020/06/11/ps5-showcase-recap-everything-you-need-to-know/",
+    "url": "https://live.staticflickr.com/65535/49996480982_870d841ea6_k.jpg",
+    "file": "electronics/official/016.jpg",
+    "width": 2048,
+    "height": 1365,
+    "sha256": "ef18aa75cd76ab4735ead1205fc579f8ecfbc2e6c5970b5c695d1fbc5c7b1b7a",
+    "rights": "Manufacturer-owned product imagery; sourced from official product/support/press pages. Not Creative Commons or public domain."
+  },
+  "DEMO-ELE-BRAND-017": {
+    "url": "https://cms-assets.xboxservices.com/assets/bc/40/bc40fdf3-85a6-4c36-af92-dca2d36fc7e5.png?n=642227_Hero-Gallery-0_A1_857x676.png",
+    "source": "https://www.xbox.com/en-us/consoles/xbox-series-x",
+    "model": "Xbox Series X",
+    "file": "electronics/official/017.png",
+    "width": 857,
+    "height": 676,
+    "sha256": "1c32ca86ae234043208b160f1c6bbe2be7c3a12259e6eafdf6525949b6d18388",
+    "rights": "Manufacturer-owned product imagery; sourced from official product/support/press pages. Not Creative Commons or public domain."
+  },
+  "DEMO-ELE-BRAND-018": {
+    "url": "https://cms-assets.xboxservices.com/assets/bf/b0/bfb06f23-4c87-4c58-b4d9-ed25d3a739b9.png?n=389964_Hero-Gallery-0_A1_857x676.png",
+    "source": "https://www.xbox.com/en-us/consoles/xbox-series-s",
+    "model": "Xbox Series S",
+    "file": "electronics/official/018.png",
+    "width": 857,
+    "height": 676,
+    "sha256": "7d192a156ff1522884398783e2963c031c857ba78455c990941c4b88db740fa9",
+    "rights": "Manufacturer-owned product imagery; sourced from official product/support/press pages. Not Creative Commons or public domain."
+  },
+  "DEMO-ELE-BRAND-019": {
+    "url": "https://asia.canon/media/image/2020/07/04/862a1f43feed4fab85897aee45b6324c_R5_Front_BODY.png",
+    "source": "https://asia.canon/en/consumer/eos-r5/body/specification",
+    "model": "EOS R5 (Body)",
+    "file": "electronics/official/019.png",
+    "width": 362,
+    "height": 320,
+    "sha256": "71e7f92ddbd8cfd1cdb1f5ba2a2efc62a62d1171689327dfd8127ad2215b9612",
+    "rights": "Manufacturer-owned product imagery; sourced from official product/support/press pages. Not Creative Commons or public domain."
+  },
+  "DEMO-ELE-BRAND-020": {
+    "url": "https://images.contentstack.io/v3/assets/blt0e5ec1de4817c440/blt75100fa627cadad4/65e662c86e9e66275f66bd67/Z6_front.jpg?width=1000",
+    "source": "https://www.nikonusa.com/press-room/nikon-introduces-the-new-nikon",
+    "model": "Z 6 (Body)",
+    "file": "electronics/official/020.jpg",
+    "width": 1000,
+    "height": 750,
+    "sha256": "8c4ce5bfb679fe0c06d6a541ea3415937362bb0377a638e7f701e10a297c1435",
+    "rights": "Manufacturer-owned product imagery; sourced from official product/support/press pages. Not Creative Commons or public domain."
+  }
+}

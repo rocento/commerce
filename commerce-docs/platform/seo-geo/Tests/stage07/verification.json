@@ -1,0 +1,34 @@
+{
+  "date": "2026-09-21",
+  "discovery_integration": {
+    "passed": 4,
+    "capacity_separate": true
+  },
+  "existing_publication_integration": {
+    "rendering": 7,
+    "policy": 3,
+    "media": 2
+  },
+  "rust_public_commerce_units": 12,
+  "node_server_checks": 19,
+  "official_xsd_documents": 7,
+  "frontend_vitest": {
+    "files": 22,
+    "passed": 117
+  },
+  "build_client_ssr_seal": "exit 0",
+  "typescript_admin_storefront": "exit 0",
+  "eslint_changed_admin_files": "exit 0",
+  "clippy_lib_tests": "exit 0",
+  "capacity": {
+    "index_bytes": 286394,
+    "index_entries": 2003,
+    "index_plus_three_partitions_ms": 688,
+    "products": 2000000,
+    "sample_partition_sizes": [
+      1000,
+      1000,
+      1000
+    ]
+  }
+}

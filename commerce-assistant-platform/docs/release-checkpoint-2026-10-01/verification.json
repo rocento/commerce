@@ -1,0 +1,38 @@
+{
+  "date": "2026-10-01",
+  "snapshot": "/private/tmp/commerce-release-20261001-34Lhz0",
+  "python": {
+    "passed": 3452,
+    "skipped": 10,
+    "warnings": 33
+  },
+  "node": {
+    "passed": 399,
+    "failed": 0
+  },
+  "replay": {
+    "passed": 88,
+    "excluded": 11,
+    "comparison": "passed"
+  },
+  "frontend_unit": {
+    "passed": 23
+  },
+  "browser": {
+    "passed": 92,
+    "desktop": 46,
+    "mobile": 46,
+    "api_mode": "mocked",
+    "browser": "Chromium"
+  },
+  "architecture": "passed",
+  "ruff_changed_python": "passed",
+  "deployment": false,
+  "live_provider_calls": false,
+  "baseline_replacement": false,
+  "current_checkout_evaluation": {
+    "passed": 58,
+    "warnings": 2,
+    "runner_sha256": "e292d3265b000f27c99a1dbce66ac2d9dbba086a1fe925923a8e776016c6a886"
+  }
+}

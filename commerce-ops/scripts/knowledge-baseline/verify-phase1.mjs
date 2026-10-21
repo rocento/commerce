@@ -1,0 +1,38 @@
+import assert from 'node:assert/strict';
+import {readFileSync,writeFileSync} from 'node:fs';
+import {join,resolve} from 'node:path';
+import {fileURLToPath,pathToFileURL} from 'node:url';
+import {sha256} from './lib.mjs';
+import {knowledgeHash} from '../../commerce-assistant-platform/app/commerce_language_engine/src/language-knowledge.ts';
+import {runtimeSha256} from '../../commerce-assistant-platform/app/commerce_language_engine/src/runtime-identity.ts';
+const root=resolve(fileURLToPath(new URL('../../',import.meta.url))),out=join(root,'output/enterprise-knowledge-phase1-20261010'),baseline=join(root,'output/enterprise-knowledge-phase0-20261010');
+const read=path=>JSON.parse(readFileSync(path,'utf8'));
+const snapshot=read(join(out,'snapshot-manifest.json'));
+for(const [path,hash] of Object.entries(snapshot.files)){
+ assert.equal(sha256(readFileSync(join(out,'engine',path))),hash,'Frozen candidate changed: '+path);
+ if(path!=='data/compiled.json')assert.equal(sha256(readFileSync(join(root,'commerce-assistant-platform/app/commerce_language_engine',path))),hash,'Current source differs from evaluated candidate: '+path);
+}
+const frozen=read(join(baseline,'snapshot-manifest.json'));
+for(const source of frozen.sources)assert.equal(sha256(readFileSync(join(root,source.path))),source.sha256,'Historical source changed');
+for(const [path,hash] of Object.entries(frozen.engineFiles))assert.equal(sha256(readFileSync(join(baseline,'engine',path))),hash,'Phase 0 snapshot changed');
+const approved=read(join(baseline,'benchmark-approved.json'));assert.equal(approved.executed,false);
+const replay=read(join(out,'offline-language-replay.json')),before=read(join(baseline,'offline-language-replay.json'));
+assert.equal(replay.provenance.csvSha256,before.provenance.csvSha256);assert.equal(replay.provenance.rubricSha256,before.provenance.rubricSha256);
+assert.equal(replay.summary.conversations,4000);assert.equal(replay.summary.turns,4675);assert.equal(replay.comparison.regressedChecks,0);
+const entityChanges=replay.rows.filter((r,i)=>knowledgeHash(r.entities)!==knowledgeHash(before.rows[i].entities)).length;assert.equal(entityChanges,0);
+const perf=read(join(out,'local-performance.json')),prior=read(join(baseline,'local-performance.json'));
+for(const k of ['node','platform','arch','cpu','logicalCpus'])assert.equal(perf.environment[k],prior.environment[k]);
+const p95Ratio=perf.latency.p95Ms/prior.latency.p95Ms,rssRatio=perf.memory.processMaxRssKiB/prior.memory.processMaxRssKiB;
+assert.ok(p95Ratio<=1.2,'p95 regression requires investigation');assert.ok(rssRatio<=1.2,'RSS regression requires investigation');
+const candidate=read(join(out,'candidate.json')),pack=read(join(root,'commerce-assistant-platform/app/commerce_language_engine/data/knowledge/shopping-en-governed-v1.json'));
+assert.equal(knowledgeHash(candidate.languageKnowledge),knowledgeHash(pack));
+const {corpus:_corpus,generationFingerprint:_claimed,...content}=candidate;assert.equal(candidate.generationFingerprint,knowledgeHash(content));
+assert.equal(replay.provenance.generationFingerprint,candidate.generationFingerprint);assert.equal(perf.identity.fingerprint,candidate.generationFingerprint);
+const runtime=await runtimeSha256(pathToFileURL(join(out,'engine/')));assert.equal(perf.identity.runtimeSha256,runtime);
+const local=read(join(out,'local-state.json'));assert.equal(local.candidate.fingerprint,candidate.generationFingerprint);assert.equal(local.candidate.packSha256,knowledgeHash(pack));assert.equal(local.activated,false);assert.equal(local.recordContentVerified,true);
+const tests=readFileSync(join(out,'all-tests-with-db.log'),'utf8');assert.match(tests,/ℹ fail 0/);assert.match(tests,/ℹ skipped 0/);assert.equal(Number(tests.match(/ℹ tests (\d+)/)?.[1]),688);
+assert.match(readFileSync(join(out,'governance-tests.log'),'utf8'),/ℹ pass 9/);
+assert.match(readFileSync(join(out,'database-tests.log'),'utf8'),/ℹ pass 20/);
+const artifacts=['snapshot-manifest.json','candidate.json','import-plan.json','local-candidate.json','local-state.json','example-explanation.json','offline-language-replay.json','local-performance.json','all-tests-with-db.log','governance-tests.log','database-tests.log','typecheck.log'];
+const report={verifiedAt:new Date().toISOString(),passed:true,runtimeSha256:runtime,fingerprint:candidate.generationFingerprint,packSha256:knowledgeHash(pack),checks:{sourceSnapshotMatches:true,phase0InputsPreserved:true,heldOutExecuted:false,fullSuitePassed:688,focusedSuitePassed:9,disposableDatabaseSuitePassed:20,regressedChecks:replay.comparison.regressedChecks,improvedChecks:replay.comparison.improvedChecks,changedEntityRows:entityChanges,p95ChangePercent:100*(p95Ratio-1),peakRssChangePercent:100*(rssRatio-1),localCandidateContentVerified:true,localCandidateActivated:false},artifacts:Object.fromEntries(artifacts.map(name=>[name,sha256(readFileSync(join(out,name)))]))};
+writeFileSync(join(out,'verification.json'),JSON.stringify(report,null,2)+'\n');console.log(JSON.stringify(report.checks,null,2));

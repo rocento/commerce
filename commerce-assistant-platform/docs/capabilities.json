@@ -1,0 +1,1726 @@
+{
+  "schema_version": 1,
+  "scope": "English chat source exposure; not deployed enablement or successful execution",
+  "conditions": [
+    "Gateway authentication and scope checks always apply.",
+    "Capability inputs are branch-dependent, not an all-of authorization list.",
+    "Status, confidence, missing slots and complete-request checks precede dispatch.",
+    "Registry-only implementations are not proof of live chat exposure."
+  ],
+  "source_sha256": {
+    "commerce-assistant-platform/app/commerce_action_engine/actions/__init__.py": "1e08980f81a51e51ba4dfd1924c5590a342e5906b305eb157d5f0eeddaf6e0b1",
+    "commerce-assistant-platform/app/commerce_action_engine/actions/catalog/__init__.py": "0c49e386cb6f514eac26bc7773158ceeef210dbe02054b114f8bde6082f44ac8",
+    "commerce-assistant-platform/app/commerce_action_engine/actions/catalog/bestsellers.py": "d065751f5e04e1bd6139b56abab208759292a8d92ce5a6569da06f9106f4af64",
+    "commerce-assistant-platform/app/commerce_action_engine/actions/catalog/bindings.py": "9a2b1eab7e6170d648b99b39e285baa142b410abad53a3a8db469f62ec9b7eda",
+    "commerce-assistant-platform/app/commerce_action_engine/actions/catalog/cache.py": "2e685fc93dac63a36427d34cd7df947bc7afa008ee93afffe2ba2295541fabe9",
+    "commerce-assistant-platform/app/commerce_action_engine/actions/catalog/comparison.py": "9079acdee82a78e4066901f3072efb81f297ac7096a9afc7256793c87441d129",
+    "commerce-assistant-platform/app/commerce_action_engine/actions/catalog/contracts.py": "3f8ef8a84befc9f4f2a55099eaa8c3e761be57c71bff819e3c6c1305b81c1f9b",
+    "commerce-assistant-platform/app/commerce_action_engine/actions/catalog/discounts.py": "9d06ff0754dc89106a584482e86e050355a39378eb990900df128c081f315418",
+    "commerce-assistant-platform/app/commerce_action_engine/actions/catalog/discovery.py": "3ebdfe438a5a663bd874eb3ebfb3bcf11da6f315697b239c4515783469c163c8",
+    "commerce-assistant-platform/app/commerce_action_engine/actions/catalog/followups.py": "468b369ebd4155e7bbad64e0f32c053c8edefcbbf95ba21194c6b149eb338c54",
+    "commerce-assistant-platform/app/commerce_action_engine/actions/catalog/ports.py": "482e9ab2914d2792be184dcd8c238792fa06924c480e9c07c3ef78685f81d92b",
+    "commerce-assistant-platform/app/commerce_action_engine/actions/catalog/product_facts.py": "0db7ddb2c761c1e14860484b7d1ab8ec2e4a7bc83c89b0f0b8db6f2cfc6b5b0c",
+    "commerce-assistant-platform/app/commerce_action_engine/actions/catalog/references.py": "8ef184508e8dda21948fff1395025f5b5772881c0ea48a4528a89413b353952e",
+    "commerce-assistant-platform/app/commerce_action_engine/actions/catalog/tools.py": "8af0b38c1a5c154189908c4f63552bf1b13a513a2d77f855ac85184b1e81e795",
+    "commerce-assistant-platform/app/commerce_action_engine/actions/catalog/workflow.py": "073e8f42254aba07996f642d770f2a80607e8b8f3c5448b901c0380fb2d6843e",
+    "commerce-assistant-platform/app/commerce_action_engine/actions/customer/__init__.py": "e899474fa1c46f0c1f622ae394b3956ff6babf7e76b539786d98864c4c0992d5",
+    "commerce-assistant-platform/app/commerce_action_engine/actions/customer/cart_to_wishlist.py": "1beaa4be3156e48d547ebc9534a47fbe180188adc7531eca4c65ccb10ad40622",
+    "commerce-assistant-platform/app/commerce_action_engine/actions/customer/reads.py": "e0d07cefb279a1e8b37ffcdd88a70cc73505f2a4dc9b8a199870a35fdacaf61f",
+    "commerce-assistant-platform/app/commerce_action_engine/actions/customer/transfers.py": "5abe16c558a6e7a2edb69103520f2d05c58c39add48313c205ad977414824f50",
+    "commerce-assistant-platform/app/commerce_action_engine/actions/customer/wishlist_removal.py": "22691e6768906e2bd958697b02e20b883f534108412e42989fa7757389d239b2",
+    "commerce-assistant-platform/app/commerce_action_engine/actions/customer/wishlist_transfer.py": "69b8ab5b5846ab6527775a45ce9be54c78b4034ca815aa291beba6c81ada8924",
+    "commerce-assistant-platform/app/commerce_action_engine/actions/domain_evidence/__init__.py": "8154dd189033817cbe4a93f21f47e908dd7b148e361fe66cc0c2d50d9bab9173",
+    "commerce-assistant-platform/app/commerce_action_engine/actions/domain_evidence/assessment.py": "5b86b1cdc00f31d7f0eb4782d9ed715ceace3e8bf9d3f9656fad1a7144b6d39b",
+    "commerce-assistant-platform/app/commerce_action_engine/actions/domain_evidence/contracts.py": "ce143ef6594fb245c98735ad90e5518ef40394b0cfde02d5ae14b8871ab46b83",
+    "commerce-assistant-platform/app/commerce_action_engine/actions/orders/__init__.py": "090653176e98a39927755c6322509d0b3037aea1585c55229de82d2604fbb611",
+    "commerce-assistant-platform/app/commerce_action_engine/actions/orders/reads.py": "c6e0c304abb8e95df88418879a2d421fc2232f5de8e12597da1d21fd5a19f2a5",
+    "commerce-assistant-platform/app/commerce_action_engine/actions/orders/reorder.py": "26d6e765f2f8dfe07b32c6fe0b2257a9d81a49479c26a7a92a30e9aab0fe90c5",
+    "commerce-assistant-platform/app/commerce_action_engine/actions/policy.py": "a38485f92ed45f3045c30fb3bcf5702a456835dd4620a403ad09dbbff6056d56",
+    "commerce-assistant-platform/app/commerce_action_engine/actions/registry.py": "ed6e219c34bc40c6356845a8895ca86c3f83e05c5047a214d36462ea22d1cdc9",
+    "commerce-assistant-platform/app/commerce_action_engine/actions/shopping/__init__.py": "12165207d48e39c6b9f813ae8e2dea7027960dba96ef08d8719f3dbb3ac5925e",
+    "commerce-assistant-platform/app/commerce_action_engine/actions/shopping/basket_ports.py": "053403c26965bbb085ac1a660746c50214d3d9ddd60357c8e8707c10c88ff606",
+    "commerce-assistant-platform/app/commerce_action_engine/actions/shopping/basket_workflow.py": "30b283eb04d874a22f0777f2afba85399c12007c447e4220e8b4465db58725b9",
+    "commerce-assistant-platform/app/commerce_action_engine/actions/shopping/baskets.py": "87a4bb13ce168475bdac239125b3ec0ebfc23534036717659f333d167bfb3c10",
+    "commerce-assistant-platform/app/commerce_action_engine/actions/shopping/cart.py": "246f8451b28291e49a67330a8309be85df9517e23db56503dc5d27020f865306",
+    "commerce-assistant-platform/app/commerce_action_engine/actions/shopping/cart_admission.py": "b97630ee93bcb031b0db7654a1fcc1de454f9fce8abdffef07ed6b5810d9975b",
+    "commerce-assistant-platform/app/commerce_action_engine/actions/shopping/cart_read.py": "dc3ba1b7ca816ca6acea1d397818ae1554feae723d1bbffa8cd1149f62f46613",
+    "commerce-assistant-platform/app/commerce_action_engine/actions/shopping/cart_removal.py": "34a3e56253917d99fd7e5629a7540d8b38c442894ae7bc7a0aac29fae951f65a",
+    "commerce-assistant-platform/app/commerce_action_engine/actions/shopping/compound.py": "793bd69d8d9e05791089ea9af85f42b49590f84e5ed572ccbadfe1479c50b5e8",
+    "commerce-assistant-platform/app/commerce_action_engine/actions/shopping/constraints.py": "d7e983121734ecd5ee92d48778fe10eb8d2ea6cf7b196ac8d85763340473e2a1",
+    "commerce-assistant-platform/app/commerce_action_engine/actions/shopping/context.py": "12d5f328621fe7198f4e4ba9f90779db366956d33fc5d5e81adef3f0ae4f0bb6",
+    "commerce-assistant-platform/app/commerce_action_engine/actions/shopping/continuation.py": "016f1b4fb9ffd78a7940214bd2e16366dcdd59b9c8fb8dec626afe2e88e5930e",
+    "commerce-assistant-platform/app/commerce_action_engine/actions/shopping/contracts.py": "872a0436f634f534c1dedb3cdb9258ac12a4eb8020827e5d0115dd9d718cefd8",
+    "commerce-assistant-platform/app/commerce_action_engine/actions/shopping/evidence.py": "78c84d6b82f3e603753eb44944ba9839b74cc32bfc749149eccc32ee45a0f66f",
+    "commerce-assistant-platform/app/commerce_action_engine/actions/shopping/gifts.py": "9bb0f7a536cb1fe71ecbf18bb26bd11184357ba52adf355c55cdaf5bb637cf0b",
+    "commerce-assistant-platform/app/commerce_action_engine/actions/shopping/grounding.py": "ef46e1ec3e25e36b043e3096c782ea78b0322b94308ce613d64a48d3054c705f",
+    "commerce-assistant-platform/app/commerce_action_engine/actions/shopping/literal_identity.py": "ac2aedd7ce39ed86f70fc93adebc9b3783c3c18908778b8ce4c7d7ba4e4c6d0b",
+    "commerce-assistant-platform/app/commerce_action_engine/actions/shopping/meaning.py": "992e66664665106cbd9dfe7d3700254892f12bba4509e8f55eb2aeeace2ba441",
+    "commerce-assistant-platform/app/commerce_action_engine/actions/shopping/personalization.py": "2b8f63da041650960fc7efc7afff7a36a30b88a1241dd150f6c6a5708f8508de",
+    "commerce-assistant-platform/app/commerce_action_engine/actions/shopping/pricing.py": "56fac280d87ce3f5261f64aea564cfa719eaf82eab9a4ee3f4287de1e086957f",
+    "commerce-assistant-platform/app/commerce_action_engine/actions/shopping/quantity_language.py": "6a6f6524b3b5e8a79703cab6584cf65fa117cd6274453ed1e0720eec91cc0bd8",
+    "commerce-assistant-platform/app/commerce_action_engine/actions/shopping/recommendations.py": "d3ab60074284deb7ddf353d552914975f22f4ddcebebad061d7d7098f346d1f5",
+    "commerce-assistant-platform/app/commerce_action_engine/actions/shopping/reorder.py": "60067a0a75a023adbd54e51b28a02e311765302128e3fee2fa9974fe28e7dc5a",
+    "commerce-assistant-platform/app/commerce_action_engine/actions/shopping/selection.py": "017aed72b9d0df0daf52620f054510058b766dc567c57760ab74320a001d753f",
+    "commerce-assistant-platform/app/commerce_action_engine/actions/support/__init__.py": "b4b0b3b846ca8f88ffe96f6ecb9f4baf757cc8484222825c1c31ac220f031efe",
+    "commerce-assistant-platform/app/commerce_action_engine/actions/support/reads.py": "929a4de0e3f4ede91bba1f0a15a9b2650e55ae2026eda4a46f6aa0cb3e673ade",
+    "commerce-assistant-platform/app/commerce_action_engine/actions/support/writes.py": "6d446a0c95e6a9532e8b3a23254a7e29e06e38eb7250dfee96b1e3af3d0de44b",
+    "commerce-assistant-platform/app/commerce_action_engine/adapters/cart.py": "7d26a5e930650ddc4a1174d7d6ed9b484c0439b1ec14577eebb48c7d257894b0",
+    "commerce-assistant-platform/app/commerce_action_engine/adapters/catalog.py": "8e6d5277630acb6c85bac86622b719fa3ef4ecb8077199308751d28734916ffa",
+    "commerce-assistant-platform/app/commerce_action_engine/adapters/commerce.py": "f0cddc9d72d88a42baf7f4de026c02444f20005d87cdb3d7a9e8287ae42d01ef",
+    "commerce-assistant-platform/app/commerce_action_engine/adapters/delivery.py": "461ac8617b12e7568e8311e880c7c4ef4e9c4cdeade602aa4b7bcf3cc6399440",
+    "commerce-assistant-platform/app/commerce_action_engine/adapters/http_response.py": "83aec470e8f32314042a0a6e12ec0a17767539450b1bdc98c1df32c72dcb87e1",
+    "commerce-assistant-platform/app/commerce_action_engine/adapters/memory.py": "cdd3ad0ccfff100d8a42304092b0d984b091a97959461147dd57f29c42da51b8",
+    "commerce-assistant-platform/app/commerce_action_engine/adapters/orders.py": "a6fd714820a06cd327073eb2f8e3acf220f4794ff9db6b2ccde261b887a9ab38",
+    "commerce-assistant-platform/app/commerce_action_engine/adapters/planned_commerce.py": "7354e11a17e4e8702accd4f56f7008a2751b096ca99f89bc9e4f7506504512de",
+    "commerce-assistant-platform/app/commerce_action_engine/adapters/runtime_knowledge.py": "f4e9ec0ff50d6fc844e5bee664cd34b41904252559f849f8ce8b4a07a70409f1",
+    "commerce-assistant-platform/app/commerce_action_engine/adapters/shopper_catalog.py": "5fb89415ac046afc0c0b9aba2ffc14dc0a2a798b0102d3627fa7369d61cc5f72",
+    "commerce-assistant-platform/app/commerce_action_engine/adapters/support.py": "74fdd4a2536c66e18581da320720c5cfb955168ad1bd4f81cedebfd724d36644",
+    "commerce-assistant-platform/app/commerce_action_engine/adapters/wishlist.py": "121c1ec0ce84cd1fe146de41bba5b1f8055a542db5155c08c5638cae53659cc2",
+    "commerce-assistant-platform/app/commerce_action_engine/application/baskets.py": "e23595be335c4d2080ee71f07dcacc0746bb25cbd6ba871e941c30a0cb17166d",
+    "commerce-assistant-platform/app/commerce_action_engine/application/bootstrap.py": "05b1e9e57c6aa96096f0ff87bdd343e501dd0421e992fc288c0ed94ea80cb705",
+    "commerce-assistant-platform/app/commerce_action_engine/application/catalog.py": "7e95e7c152f4657ea6b15968026fefee76802e9bc2dba979b26d21ff265c24cb",
+    "commerce-assistant-platform/app/commerce_action_engine/application/compound_coordinator.py": "7768f28f2eaaed29018ed76c3fb0b5d0e95e3931b6aca2e8328bd8e60ddfbcf9",
+    "commerce-assistant-platform/app/commerce_action_engine/application/handle_turn.py": "ba866241e24e3fa3fb89a5d3dac3343b6ea4cb8a57bc6998ce4184150d7ab4c4",
+    "commerce-assistant-platform/app/commerce_action_engine/application/handler_dispatch.py": "c8424b10d15eb1c0412aa4596de63277936325f04d3adee09389a6712bb7a2a2",
+    "commerce-assistant-platform/app/commerce_action_engine/application/handlers/bestsellers.py": "9b5d139c19906d9bca7e8dcdf8627123779c17200fc2a1a130432491375b2797",
+    "commerce-assistant-platform/app/commerce_action_engine/application/handlers/cart.py": "e13a1336d3f81cd875463d0adc33eb86ed8ca77cf0268301524221697e24ba3d",
+    "commerce-assistant-platform/app/commerce_action_engine/application/handlers/cart_read.py": "17d7283a74aab0ad37f8ccb07314ed65267df07f8955ecb8f705b5ec84421d95",
+    "commerce-assistant-platform/app/commerce_action_engine/application/handlers/comparison.py": "ecf6e0faf5825f14d3520b347eaba9b80ac457336a92d6bf53f1596d2cce7c1d",
+    "commerce-assistant-platform/app/commerce_action_engine/application/handlers/compound.py": "c894fee68eaaf6eb08c399d6f4914b3412dbb8fa6c6087239cb003735d3998ed",
+    "commerce-assistant-platform/app/commerce_action_engine/application/handlers/customer.py": "491b64916328aad9ef491571bcfca16703465f74d47c4cbefe720e133e849941",
+    "commerce-assistant-platform/app/commerce_action_engine/application/handlers/delivery.py": "307eafd121fcce067a9782ee6da305619297adffe8569f6e5611e8f1486d9af5",
+    "commerce-assistant-platform/app/commerce_action_engine/application/handlers/discounts.py": "9f0483d0f023b5aa9635e2f314d298d66aa6d80b402a9c963d2879d3c937cfd1",
+    "commerce-assistant-platform/app/commerce_action_engine/application/handlers/orders.py": "5386591f9598a91297cbaad1e1ffb6f82cb2959a1136a278a02e78a6ba3e7fe8",
+    "commerce-assistant-platform/app/commerce_action_engine/application/handlers/product_facts.py": "4f347e278d7a90a1816cfc2f39d650a7ceeeb32b1e001ec0bf516dbe6022329e",
+    "commerce-assistant-platform/app/commerce_action_engine/application/handlers/reorder.py": "138b7f67dad4b7fab112b6b6932633eb28ba10b61797f13803e9d80d45947ff8",
+    "commerce-assistant-platform/app/commerce_action_engine/application/handlers/support.py": "5d152f888b949b0a5b04ff9f220d14572f52d6eb0f3e758fd72da433a2d006d4",
+    "commerce-assistant-platform/app/commerce_action_engine/application/handlers/wishlist_transfer.py": "20423775182b7707eca7604875579093085a6100c1f492200eaba422bb1a5448",
+    "commerce-assistant-platform/app/commerce_action_engine/application/interpretation.py": "8516f7f697f694fbf04d45329fedf3224b4dfa00c0de657e228b85e6a37d23ce",
+    "commerce-assistant-platform/app/commerce_action_engine/application/persistence.py": "aa205df67c62529da807ffdfc2938b905b988c14c0821791796dbb15b0cad28c",
+    "commerce-assistant-platform/app/commerce_action_engine/application/persistence_binding.py": "e87f566a7a2fce7d62748b809a2dc0eb0253e73553b27ecf7dbed327a06cd9a0",
+    "commerce-assistant-platform/app/commerce_action_engine/application/shopping.py": "c30f421d15f102c1b6df376ffb7a389b8e5f20d0c136c4f633773f6b54edfc78",
+    "commerce-assistant-platform/app/commerce_action_engine/application/shopping_continuation.py": "f03cc1c6251818828c99c5bb9d00af9668285ec19f22cce219a42bd2a13739fb",
+    "commerce-assistant-platform/app/commerce_action_engine/application/shopping_flow/__init__.py": "d8aef9bf610cfcc8e0edee048073ac393124b2bb11a6fb3ba89f208da310c107",
+    "commerce-assistant-platform/app/commerce_action_engine/application/shopping_flow/catalog.py": "a6a07df0b76ca779abcef040fc4f85ffb66cc5a7b5e44e2164622ff54b581817",
+    "commerce-assistant-platform/app/commerce_action_engine/application/shopping_flow/contracts.py": "1547e391d16307b6b2680c6adece9f8558daa41efa47f9614073aacb463c661b",
+    "commerce-assistant-platform/app/commerce_action_engine/application/shopping_flow/domain.py": "c5e8f0ea95718397acef4ac3a5a8937d619a639f4bd49ac9a55c3f7f28ee134e",
+    "commerce-assistant-platform/app/commerce_action_engine/application/shopping_flow/grounding.py": "3d338c9292a40e0c359c78b9994057f79ef8d95e2080d8ff165470f9742ba4b9",
+    "commerce-assistant-platform/app/commerce_action_engine/application/shopping_flow/preparation.py": "7c99f785b87d8d391d53f442f9fde6538b67bdf9005bb95427a02e4f0a31c2c9",
+    "commerce-assistant-platform/app/commerce_action_engine/application/shopping_flow/presentation.py": "44b8cc1913aed78e7baa9548df2acc36752f827b48fc0e968db7bd1bdf2ba584",
+    "commerce-assistant-platform/app/commerce_action_engine/application/shopping_flow/references.py": "e1bd14c74f1367daeee4eddd0f6201c973964c29760b88dbd5335f8831adc3a4",
+    "commerce-assistant-platform/app/commerce_action_engine/application/shopping_flow/retrieval.py": "1147d4949f92b454bd12fbc5e301b0799a6e8c9595b91650473d2cfa867190b5",
+    "commerce-assistant-platform/app/commerce_action_engine/application/shopping_presentation.py": "f8e6a576873a9217602972a7dddac58605d2048956507a821172d7521f7f8bbd",
+    "commerce-assistant-platform/app/commerce_action_engine/application/turn_dependencies.py": "5f5af3f0b7057b14eebd372724155f0c9dc029dd68ac5793f5145cca00341087",
+    "commerce-assistant-platform/app/commerce_action_engine/execution/language/gate.py": "c9ef6626c3ba2eb5f9704f0d4408123699e454cdb5e3ca72dabb53be66022b26",
+    "commerce-assistant-platform/app/commerce_action_engine/execution/language/handoffs.py": "161ec834584ff3469a3119ec8bac0da3785473398a362c9a43b93ca5440b28ea",
+    "commerce-assistant-platform/app/commerce_action_engine/execution/language/routing.py": "931e629cce7b0180db34ab92fa87ec1752eef1c3a678c09245d603ff4b53d985",
+    "commerce-assistant-platform/app/commerce_action_engine/execution/planning/compound.py": "a5ee0a2d59e3937c4b1969f78bdc1242ebdf3fc4cf9eb7c81c439c57cd89c05e",
+    "commerce-assistant-platform/app/commerce_action_engine/execution/planning/compound_execution.py": "a0d606f42fedf58485235cf153f2634dced828990c7b5ac2b682735ddaae6174",
+    "commerce-assistant-platform/app/commerce_action_engine/execution/planning/compound_review.py": "15c6c6abf2a70eeeea795f3f00ebe51bd0d754683395cfe71674fe853f7bc4fa",
+    "commerce-assistant-platform/app/commerce_action_engine/execution/planning/runtime.py": "a6b506a0833454db74853a332fcfc5725434e4e8edb6a021f7cdca2d95d6bf00",
+    "commerce-assistant-platform/app/commerce_language_engine/src/contextual-language.ts": "cd7b70cf13d9bc6a18f58a824d45733d90c2ccd15d164a1e531cd33b4d73eb76",
+    "commerce-assistant-platform/app/commerce_language_engine/src/rocento-capabilities.ts": "8b25aa321e071c7db22c91c604eae0c7c9cb95e762c87bbd0ae493597a662f74",
+    "commerce-assistant-platform/app/commerce_orchestration_engine/journeys/compound/__init__.py": "fbbaa906155afbc030defb13eb4a0c4d0ecf6489cce860d02a15f39f595b490f",
+    "commerce-assistant-platform/app/commerce_orchestration_engine/journeys/compound/execution.py": "4bd27363db4da574000594ea38efca9e17447ca9ae0ac97e6814b8309792cd80",
+    "commerce-assistant-platform/app/commerce_orchestration_engine/journeys/compound/ports.py": "23235925778e0f62cc5ba4bb78a02b9e646e8275279749061d2de2cce4ea7335",
+    "commerce-assistant-platform/app/commerce_orchestration_engine/journeys/compound/recovery.py": "0f9f17cd1b41e11ce355178217670b7e1e2026a17a9a3477eb6cf57dd5f4c69b",
+    "commerce-assistant-platform/app/commerce_orchestration_engine/journeys/compound/result.py": "b5fe01710b12f5c822d0967fa27a09c4861f2d1689884983adafda33e7e805c2",
+    "commerce-assistant-platform/app/commerce_orchestration_engine/journeys/compound/service.py": "03f4691a002ab2e2856a353ed1ace204473fe226ad0eb0161882d452fc040b03"
+  },
+  "baseline_count": 181,
+  "route_counts": {
+    "cart": 3,
+    "cart_action": 9,
+    "comparison": 1,
+    "comparison_clear": 1,
+    "context": 14,
+    "guided_action": 1,
+    "handoff": 111,
+    "locations": 4,
+    "order": 7,
+    "product_fact": 17,
+    "reorder": 1,
+    "search": 7,
+    "support": 1,
+    "support_detail": 1,
+    "wishlist": 1,
+    "wishlist_remove": 1,
+    "wishlist_to_cart": 1
+  },
+  "workflows": {
+    "search": {
+      "outcome": "read",
+      "implementation": "app.commerce_action_engine.application.shopping:shopping_answer",
+      "capability_inputs_by_branch": [
+        "catalog_capability"
+      ],
+      "behavior": "Catalog discovery with validated constraints and selection."
+    },
+    "product_fact": {
+      "outcome": "read",
+      "implementation": "app.commerce_action_engine.application.handlers.product_facts:product_fact_events",
+      "capability_inputs_by_branch": [
+        "catalog_capability"
+      ],
+      "behavior": "Exact product identity and current authoritative facts; missing facts stay unknown."
+    },
+    "comparison": {
+      "outcome": "read",
+      "implementation": "app.commerce_action_engine.application.handlers.comparison:comparison_events",
+      "capability_inputs_by_branch": [
+        "catalog_capability"
+      ],
+      "behavior": "Compare verified products; ambiguous identities require selection."
+    },
+    "comparison_clear": {
+      "outcome": "browser_action",
+      "implementation": "app.commerce_action_engine.application.handlers.comparison:comparison_events",
+      "capability_inputs_by_branch": [],
+      "behavior": "Clear browser comparison state; no commerce mutation."
+    },
+    "cart": {
+      "outcome": "read",
+      "implementation": "app.commerce_action_engine.application.handlers.cart_read:cart_read_events",
+      "capability_inputs_by_branch": [
+        "cart_capability"
+      ],
+      "behavior": "Read the authenticated cart."
+    },
+    "cart_action": {
+      "outcome": "conditional_write",
+      "implementation": "app.commerce_action_engine.application.handlers.cart:cart_events",
+      "capability_inputs_by_branch": [
+        "cart_capability",
+        "catalog_capability",
+        "cart_write_capability",
+        "wishlist_write_capability"
+      ],
+      "behavior": "Supported cart/wishlist commands; checkout intents only guide checkout."
+    },
+    "wishlist": {
+      "outcome": "read",
+      "implementation": "app.commerce_action_engine.application.handlers.customer:wishlist_events",
+      "capability_inputs_by_branch": [
+        "wishlist_capability",
+        "catalog_capability"
+      ],
+      "behavior": "Read owned saved products."
+    },
+    "wishlist_remove": {
+      "outcome": "conditional_write",
+      "implementation": "app.commerce_action_engine.application.handlers.customer:wishlist_events",
+      "capability_inputs_by_branch": [
+        "wishlist_capability",
+        "wishlist_write_capability",
+        "catalog_capability"
+      ],
+      "behavior": "Remove an exact owned item or explicitly all saved items (up to 100); ambiguous requests need selection."
+    },
+    "wishlist_to_cart": {
+      "outcome": "conditional_write",
+      "implementation": "app.commerce_action_engine.application.handlers.wishlist_transfer:wishlist_transfer_events",
+      "capability_inputs_by_branch": [
+        "wishlist_capability",
+        "catalog_capability",
+        "wishlist_cart_transfer_capability"
+      ],
+      "behavior": "Scoped transfer with authoritative outcomes; source and destination are preserved."
+    },
+    "order": {
+      "outcome": "read_or_guide",
+      "implementation": "app.commerce_action_engine.application.handlers.orders:order_events",
+      "capability_inputs_by_branch": [
+        "capability"
+      ],
+      "behavior": "Read owned orders; issue intents may provide guidance."
+    },
+    "reorder": {
+      "outcome": "read_or_guide",
+      "implementation": "app.commerce_action_engine.application.handlers.reorder:reorder_events",
+      "capability_inputs_by_branch": [
+        "capability"
+      ],
+      "behavior": "Read owned order and hand off for review/checkout; no order write from chat."
+    },
+    "locations": {
+      "outcome": "read_or_guide",
+      "implementation": "app.commerce_action_engine.application.handlers.customer:location_events",
+      "capability_inputs_by_branch": [
+        "locations_capability"
+      ],
+      "behavior": "Saved-address reads or form/control guidance; no automatic address mutation."
+    },
+    "support": {
+      "outcome": "read_or_guide",
+      "implementation": "app.commerce_action_engine.application.handlers.support:support_events",
+      "capability_inputs_by_branch": [
+        "support_capability"
+      ],
+      "behavior": "Read owned tickets; changes remain guided."
+    },
+    "support_detail": {
+      "outcome": "read",
+      "implementation": "app.commerce_action_engine.application.handlers.support:support_detail_events",
+      "capability_inputs_by_branch": [
+        "support_capability"
+      ],
+      "behavior": "Read owned ticket history."
+    },
+    "shipment": {
+      "outcome": "read",
+      "implementation": "app.commerce_action_engine.application.handlers.orders:shipment_events",
+      "capability_inputs_by_branch": [
+        "capability"
+      ],
+      "behavior": "Read owned shipment status."
+    },
+    "delivery": {
+      "outcome": "read",
+      "implementation": "app.commerce_action_engine.application.handlers.delivery:delivery_events",
+      "capability_inputs_by_branch": [
+        "catalog_capability"
+      ],
+      "behavior": "Read scoped delivery availability."
+    },
+    "bestsellers": {
+      "outcome": "read",
+      "implementation": "app.commerce_action_engine.application.handlers.bestsellers:bestseller_events",
+      "capability_inputs_by_branch": [
+        "catalog_capability"
+      ],
+      "behavior": "Read authoritative completed-order sales ranking for an allowed period."
+    },
+    "discounts": {
+      "outcome": "read",
+      "implementation": "app.commerce_action_engine.application.handlers.discounts:discount_events",
+      "capability_inputs_by_branch": [
+        "catalog_capability"
+      ],
+      "behavior": "Read current discount recommendations."
+    },
+    "handoff": {
+      "outcome": "handoff",
+      "implementation": "app.commerce_action_engine.application.handle_turn:HandleTurn.run",
+      "capability_inputs_by_branch": [],
+      "behavior": "Storefront handoff; no automatic execution."
+    },
+    "context": {
+      "outcome": "clarification",
+      "implementation": "app.commerce_action_engine.application.handle_turn:HandleTurn.run",
+      "capability_inputs_by_branch": [],
+      "behavior": "Request a complete instruction or explicit context control."
+    },
+    "guided_action": {
+      "outcome": "guided",
+      "implementation": "app.commerce_action_engine.application.handle_turn:HandleTurn.run",
+      "capability_inputs_by_branch": [],
+      "behavior": "Guide review in the customer workflow; no direct mutation."
+    }
+  },
+  "baseline": [
+    {
+      "intent": "ACCOUNT_ADDRESS_ADD",
+      "entities": {},
+      "route": "locations",
+      "outcome": "guided",
+      "behavior": "Open address-entry form; no automatic address creation."
+    },
+    {
+      "intent": "ACCOUNT_ADDRESS_DEFAULT",
+      "entities": {},
+      "route": "locations",
+      "outcome": "read_or_guide",
+      "behavior": "Saved-address reads or form/control guidance; no automatic address mutation."
+    },
+    {
+      "intent": "ACCOUNT_ADDRESS_LIST",
+      "entities": {},
+      "route": "locations",
+      "outcome": "read_or_guide",
+      "behavior": "Saved-address reads or form/control guidance; no automatic address mutation."
+    },
+    {
+      "intent": "ACCOUNT_ADDRESS_REMOVE",
+      "entities": {},
+      "route": "locations",
+      "outcome": "read_or_guide",
+      "behavior": "Saved-address reads or form/control guidance; no automatic address mutation."
+    },
+    {
+      "intent": "ACCOUNT_CREATE",
+      "entities": {},
+      "route": "handoff",
+      "outcome": "handoff",
+      "behavior": "Storefront handoff to `/register`; no automatic execution."
+    },
+    {
+      "intent": "ACCOUNT_PASSWORD_RESET",
+      "entities": {},
+      "route": "handoff",
+      "outcome": "handoff",
+      "behavior": "Storefront handoff to `/forgot-password`; no automatic execution."
+    },
+    {
+      "intent": "ADD_TO_CART",
+      "entities": {},
+      "route": "cart_action",
+      "outcome": "conditional_write",
+      "behavior": "Supported cart/wishlist commands; checkout intents only guide checkout."
+    },
+    {
+      "intent": "ADD_TO_WISHLIST",
+      "entities": {},
+      "route": "cart_action",
+      "outcome": "conditional_write",
+      "behavior": "Supported cart/wishlist commands; checkout intents only guide checkout."
+    },
+    {
+      "intent": "AFFIRM",
+      "entities": {},
+      "route": "context",
+      "outcome": "clarification",
+      "behavior": "Request a complete instruction or explicit context control."
+    },
+    {
+      "intent": "APPLY_COUPON",
+      "entities": {},
+      "route": "handoff",
+      "outcome": "handoff",
+      "behavior": "Storefront handoff to `/cart`; no automatic execution."
+    },
+    {
+      "intent": "BULK_DISCOUNT",
+      "entities": {},
+      "route": "handoff",
+      "outcome": "handoff",
+      "behavior": "Storefront handoff to `/support`; no automatic execution."
+    },
+    {
+      "intent": "BUNDLE_PRICE",
+      "entities": {},
+      "route": "handoff",
+      "outcome": "handoff",
+      "behavior": "Storefront handoff to `/search`; no automatic execution."
+    },
+    {
+      "intent": "CANCEL_ORDER",
+      "entities": {},
+      "route": "guided_action",
+      "outcome": "guided",
+      "behavior": "Guide review in the customer workflow; no direct mutation."
+    },
+    {
+      "intent": "CART_ITEM_COUNT",
+      "entities": {},
+      "route": "cart",
+      "outcome": "read",
+      "behavior": "Read the authenticated cart."
+    },
+    {
+      "intent": "CART_ITEM_REPLACE",
+      "entities": {},
+      "route": "handoff",
+      "outcome": "handoff",
+      "behavior": "Storefront handoff to `/cart`; no automatic execution."
+    },
+    {
+      "intent": "CART_MOVE_FROM_WISHLIST",
+      "entities": {},
+      "route": "wishlist_to_cart",
+      "outcome": "conditional_write",
+      "behavior": "Scoped transfer with authoritative outcomes; source and destination are preserved."
+    },
+    {
+      "intent": "CART_MOVE_TO_WISHLIST",
+      "entities": {},
+      "route": "cart_action",
+      "outcome": "conditional_write",
+      "behavior": "Supported cart/wishlist commands; checkout intents only guide checkout."
+    },
+    {
+      "intent": "CART_TOTAL",
+      "entities": {},
+      "route": "cart",
+      "outcome": "read",
+      "behavior": "Read the authenticated cart."
+    },
+    {
+      "intent": "CASE_PACK_QUANTITY",
+      "entities": {},
+      "route": "handoff",
+      "outcome": "handoff",
+      "behavior": "Storefront handoff to `/search`; no automatic execution."
+    },
+    {
+      "intent": "CHANGE_ADDRESS",
+      "entities": {},
+      "route": "handoff",
+      "outcome": "handoff",
+      "behavior": "Storefront handoff to `/checkout`; no automatic execution."
+    },
+    {
+      "intent": "CHANGE_DELIVERY_SLOT",
+      "entities": {},
+      "route": "handoff",
+      "outcome": "handoff",
+      "behavior": "Storefront handoff to `/checkout`; no automatic execution."
+    },
+    {
+      "intent": "CHECKOUT_GIFT_MESSAGE",
+      "entities": {},
+      "route": "handoff",
+      "outcome": "handoff",
+      "behavior": "Storefront handoff to `/checkout`; no automatic execution."
+    },
+    {
+      "intent": "CHECKOUT_TOTAL",
+      "entities": {},
+      "route": "handoff",
+      "outcome": "handoff",
+      "behavior": "Storefront handoff to `/checkout`; no automatic execution."
+    },
+    {
+      "intent": "CHECK_DELIVERY",
+      "entities": {},
+      "route": "handoff",
+      "outcome": "handoff",
+      "behavior": "Storefront handoff to `/delivery-location`; no automatic execution."
+    },
+    {
+      "intent": "CHECK_PICKUP",
+      "entities": {},
+      "route": "handoff",
+      "outcome": "handoff",
+      "behavior": "Storefront handoff to `/support`; no automatic execution."
+    },
+    {
+      "intent": "CHECK_PRICE",
+      "entities": {},
+      "route": "product_fact",
+      "outcome": "read",
+      "behavior": "Exact product identity and current authoritative facts; missing facts stay unknown."
+    },
+    {
+      "intent": "CHECK_PROMOTION",
+      "entities": {},
+      "route": "handoff",
+      "outcome": "handoff",
+      "behavior": "Storefront handoff to `/support`; no automatic execution."
+    },
+    {
+      "intent": "CHECK_STOCK",
+      "entities": {},
+      "route": "product_fact",
+      "outcome": "read",
+      "behavior": "Exact product identity and current authoritative facts; missing facts stay unknown."
+    },
+    {
+      "intent": "CHECK_STORE_STOCK",
+      "entities": {},
+      "route": "handoff",
+      "outcome": "handoff",
+      "behavior": "Storefront handoff to `/search`; no automatic execution."
+    },
+    {
+      "intent": "CHECK_VARIANT_STOCK",
+      "entities": {},
+      "route": "handoff",
+      "outcome": "handoff",
+      "behavior": "Storefront handoff to `/search`; no automatic execution."
+    },
+    {
+      "intent": "CLARIFY",
+      "entities": {},
+      "route": "context",
+      "outcome": "clarification",
+      "behavior": "Request a complete instruction or explicit context control."
+    },
+    {
+      "intent": "CLEAR_CART",
+      "entities": {},
+      "route": "cart_action",
+      "outcome": "conditional_write",
+      "behavior": "Supported cart/wishlist commands; checkout intents only guide checkout."
+    },
+    {
+      "intent": "CLEAR_COMPARISON",
+      "entities": {},
+      "route": "comparison_clear",
+      "outcome": "browser_action",
+      "behavior": "Clear browser comparison state; no commerce mutation."
+    },
+    {
+      "intent": "COMPARE_BRANDS",
+      "entities": {},
+      "route": "handoff",
+      "outcome": "handoff",
+      "behavior": "Storefront handoff to `/search`; no automatic execution."
+    },
+    {
+      "intent": "COMPARE_FEATURES",
+      "entities": {},
+      "route": "handoff",
+      "outcome": "handoff",
+      "behavior": "Storefront handoff to `/search`; no automatic execution."
+    },
+    {
+      "intent": "COMPARE_PRICE",
+      "entities": {},
+      "route": "handoff",
+      "outcome": "handoff",
+      "behavior": "Storefront handoff to `/search`; no automatic execution."
+    },
+    {
+      "intent": "COMPARE_SIZE",
+      "entities": {},
+      "route": "handoff",
+      "outcome": "handoff",
+      "behavior": "Storefront handoff to `/search`; no automatic execution."
+    },
+    {
+      "intent": "COMPARE_VARIANTS",
+      "entities": {},
+      "route": "handoff",
+      "outcome": "handoff",
+      "behavior": "Storefront handoff to `/search`; no automatic execution."
+    },
+    {
+      "intent": "COMPLAINT",
+      "entities": {},
+      "route": "handoff",
+      "outcome": "handoff",
+      "behavior": "Storefront handoff to `/support`; no automatic execution."
+    },
+    {
+      "intent": "CONTACT_SUPPORT",
+      "entities": {},
+      "route": "handoff",
+      "outcome": "handoff",
+      "behavior": "Storefront handoff to `/support`; no automatic execution."
+    },
+    {
+      "intent": "CONTINUE",
+      "entities": {},
+      "route": "context",
+      "outcome": "clarification",
+      "behavior": "Request a complete instruction or explicit context control."
+    },
+    {
+      "intent": "CONTINUE_CHECKOUT",
+      "entities": {},
+      "route": "cart_action",
+      "outcome": "guided",
+      "behavior": "Review cart and continue to checkout; no order is placed."
+    },
+    {
+      "intent": "COUPON_COMBINATION",
+      "entities": {},
+      "route": "handoff",
+      "outcome": "handoff",
+      "behavior": "Storefront handoff to `/support`; no automatic execution."
+    },
+    {
+      "intent": "COUPON_EXPIRY",
+      "entities": {},
+      "route": "handoff",
+      "outcome": "handoff",
+      "behavior": "Storefront handoff to `/support`; no automatic execution."
+    },
+    {
+      "intent": "COUPON_TERMS",
+      "entities": {},
+      "route": "handoff",
+      "outcome": "handoff",
+      "behavior": "Storefront handoff to `/support`; no automatic execution."
+    },
+    {
+      "intent": "CREATE_ORDER",
+      "entities": {},
+      "route": "cart_action",
+      "outcome": "guided",
+      "behavior": "Review cart and continue to checkout; no order is placed."
+    },
+    {
+      "intent": "CREATE_SUPPORT_REQUEST",
+      "entities": {},
+      "route": "handoff",
+      "outcome": "handoff",
+      "behavior": "Storefront handoff to `/support`; no automatic execution."
+    },
+    {
+      "intent": "CURRENCY_OPTIONS",
+      "entities": {},
+      "route": "handoff",
+      "outcome": "handoff",
+      "behavior": "Storefront handoff to `/support`; no automatic execution."
+    },
+    {
+      "intent": "DELIVERY_AREA",
+      "entities": {},
+      "route": "handoff",
+      "outcome": "handoff",
+      "behavior": "Storefront handoff to `/delivery-location`; no automatic execution."
+    },
+    {
+      "intent": "DELIVERY_CARRIER",
+      "entities": {},
+      "route": "handoff",
+      "outcome": "handoff",
+      "behavior": "Storefront handoff to `/account/orders`; no automatic execution."
+    },
+    {
+      "intent": "DELIVERY_COST",
+      "entities": {},
+      "route": "handoff",
+      "outcome": "handoff",
+      "behavior": "Storefront handoff to `/checkout`; no automatic execution."
+    },
+    {
+      "intent": "DELIVERY_DATE",
+      "entities": {},
+      "route": "handoff",
+      "outcome": "handoff",
+      "behavior": "Storefront handoff to `/checkout`; no automatic execution."
+    },
+    {
+      "intent": "DELIVERY_DELAY",
+      "entities": {},
+      "route": "handoff",
+      "outcome": "handoff",
+      "behavior": "Storefront handoff to `/account/orders`; no automatic execution."
+    },
+    {
+      "intent": "DELIVERY_FAILED_ATTEMPT",
+      "entities": {},
+      "route": "handoff",
+      "outcome": "handoff",
+      "behavior": "Storefront handoff to `/account/orders`; no automatic execution."
+    },
+    {
+      "intent": "DELIVERY_INSTRUCTIONS",
+      "entities": {},
+      "route": "handoff",
+      "outcome": "handoff",
+      "behavior": "Storefront handoff to `/checkout`; no automatic execution."
+    },
+    {
+      "intent": "DELIVERY_TIME",
+      "entities": {},
+      "route": "handoff",
+      "outcome": "handoff",
+      "behavior": "Storefront handoff to `/checkout`; no automatic execution."
+    },
+    {
+      "intent": "DELIVERY_TRACKING_LINK",
+      "entities": {},
+      "route": "handoff",
+      "outcome": "handoff",
+      "behavior": "Storefront handoff to `/account/orders`; no automatic execution."
+    },
+    {
+      "intent": "DENY",
+      "entities": {},
+      "route": "context",
+      "outcome": "clarification",
+      "behavior": "Request a complete instruction or explicit context control."
+    },
+    {
+      "intent": "EMPLOYEE_DISCOUNT",
+      "entities": {},
+      "route": "handoff",
+      "outcome": "handoff",
+      "behavior": "Storefront handoff to `/support`; no automatic execution."
+    },
+    {
+      "intent": "FIND_PICKUP_LOCATION",
+      "entities": {},
+      "route": "handoff",
+      "outcome": "handoff",
+      "behavior": "Storefront handoff to `/support`; no automatic execution."
+    },
+    {
+      "intent": "FIRMWARE_VERSION",
+      "entities": {},
+      "route": "handoff",
+      "outcome": "handoff",
+      "behavior": "Storefront handoff to `/search`; no automatic execution."
+    },
+    {
+      "intent": "FOOTWEAR_WIDTH",
+      "entities": {},
+      "route": "handoff",
+      "outcome": "handoff",
+      "behavior": "Storefront handoff to `/search`; no automatic execution."
+    },
+    {
+      "intent": "FRAGRANCE_NOTES",
+      "entities": {},
+      "route": "handoff",
+      "outcome": "handoff",
+      "behavior": "Storefront handoff to `/search`; no automatic execution."
+    },
+    {
+      "intent": "GO_BACK",
+      "entities": {},
+      "route": "context",
+      "outcome": "clarification",
+      "behavior": "Request a complete instruction or explicit context control."
+    },
+    {
+      "intent": "MEMBER_PRICE",
+      "entities": {},
+      "route": "handoff",
+      "outcome": "handoff",
+      "behavior": "Storefront handoff to `/support`; no automatic execution."
+    },
+    {
+      "intent": "NEAREST_STORE",
+      "entities": {},
+      "route": "handoff",
+      "outcome": "handoff",
+      "behavior": "Storefront handoff to `/support`; no automatic execution."
+    },
+    {
+      "intent": "OPTIMIZE_CART",
+      "entities": {},
+      "route": "handoff",
+      "outcome": "handoff",
+      "behavior": "Storefront handoff to `/cart`; no automatic execution."
+    },
+    {
+      "intent": "ORDER_CANCEL_ELIGIBILITY",
+      "entities": {},
+      "route": "order",
+      "outcome": "read_or_guide",
+      "behavior": "Read owned orders; issue intents may provide guidance."
+    },
+    {
+      "intent": "ORDER_CANCEL_STATUS",
+      "entities": {},
+      "route": "order",
+      "outcome": "read_or_guide",
+      "behavior": "Read owned orders; issue intents may provide guidance."
+    },
+    {
+      "intent": "ORDER_DAMAGED",
+      "entities": {},
+      "route": "order",
+      "outcome": "read_or_guide",
+      "behavior": "Read owned orders; issue intents may provide guidance."
+    },
+    {
+      "intent": "ORDER_DETAILS",
+      "entities": {},
+      "route": "order",
+      "outcome": "read_or_guide",
+      "behavior": "Read owned orders; issue intents may provide guidance."
+    },
+    {
+      "intent": "ORDER_DUPLICATE",
+      "entities": {},
+      "route": "handoff",
+      "outcome": "handoff",
+      "behavior": "Storefront handoff to `/support`; no automatic execution."
+    },
+    {
+      "intent": "ORDER_HISTORY",
+      "entities": {},
+      "route": "order",
+      "outcome": "read_or_guide",
+      "behavior": "Read owned orders; issue intents may provide guidance."
+    },
+    {
+      "intent": "ORDER_MISSING",
+      "entities": {},
+      "route": "handoff",
+      "outcome": "handoff",
+      "behavior": "Storefront handoff to `/support`; no automatic execution."
+    },
+    {
+      "intent": "ORDER_MISSING_ITEM",
+      "entities": {},
+      "route": "handoff",
+      "outcome": "handoff",
+      "behavior": "Storefront handoff to `/support`; no automatic execution."
+    },
+    {
+      "intent": "ORDER_SPLIT_QUERY",
+      "entities": {},
+      "route": "handoff",
+      "outcome": "handoff",
+      "behavior": "Storefront handoff to `/account/orders`; no automatic execution."
+    },
+    {
+      "intent": "ORDER_WRONG_ITEM",
+      "entities": {},
+      "route": "order",
+      "outcome": "read_or_guide",
+      "behavior": "Read owned orders; issue intents may provide guidance."
+    },
+    {
+      "intent": "PAYMENT_CASH_ON_DELIVERY",
+      "entities": {},
+      "route": "handoff",
+      "outcome": "handoff",
+      "behavior": "Storefront handoff to `/checkout`; no automatic execution."
+    },
+    {
+      "intent": "PAYMENT_METHODS",
+      "entities": {},
+      "route": "handoff",
+      "outcome": "handoff",
+      "behavior": "Storefront handoff to `/checkout`; no automatic execution."
+    },
+    {
+      "intent": "PAYMENT_STATUS",
+      "entities": {},
+      "route": "handoff",
+      "outcome": "handoff",
+      "behavior": "Storefront handoff to `/account/orders`; no automatic execution."
+    },
+    {
+      "intent": "PICKUP_READY",
+      "entities": {},
+      "route": "handoff",
+      "outcome": "handoff",
+      "behavior": "Storefront handoff to `/account/orders`; no automatic execution."
+    },
+    {
+      "intent": "PICKUP_STATUS",
+      "entities": {},
+      "route": "handoff",
+      "outcome": "handoff",
+      "behavior": "Storefront handoff to `/account/orders`; no automatic execution."
+    },
+    {
+      "intent": "PICKUP_TIME",
+      "entities": {},
+      "route": "handoff",
+      "outcome": "handoff",
+      "behavior": "Storefront handoff to `/support`; no automatic execution."
+    },
+    {
+      "intent": "PRESCRIPTION_REQUIREMENT",
+      "entities": {},
+      "route": "handoff",
+      "outcome": "handoff",
+      "behavior": "Storefront handoff to `/search`; no automatic execution."
+    },
+    {
+      "intent": "PRICE_RANGE",
+      "entities": {},
+      "route": "handoff",
+      "outcome": "handoff",
+      "behavior": "Storefront handoff to `/search`; no automatic execution."
+    },
+    {
+      "intent": "PRODUCT_ACCESSORIES",
+      "entities": {},
+      "route": "handoff",
+      "outcome": "handoff",
+      "behavior": "Storefront handoff to `/search`; no automatic execution."
+    },
+    {
+      "intent": "PRODUCT_ALLERGENS",
+      "entities": {},
+      "route": "product_fact",
+      "outcome": "read",
+      "behavior": "Exact product identity and current authoritative facts; missing facts stay unknown."
+    },
+    {
+      "intent": "PRODUCT_ALTERNATIVE",
+      "entities": {},
+      "route": "handoff",
+      "outcome": "handoff",
+      "behavior": "Storefront handoff to `/search`; no automatic execution."
+    },
+    {
+      "intent": "PRODUCT_ASSEMBLY",
+      "entities": {},
+      "route": "handoff",
+      "outcome": "handoff",
+      "behavior": "Storefront handoff to `/search`; no automatic execution."
+    },
+    {
+      "intent": "PRODUCT_ATTRIBUTE",
+      "entities": {},
+      "route": "handoff",
+      "outcome": "handoff",
+      "behavior": "Storefront handoff to `/search`; no automatic execution."
+    },
+    {
+      "intent": "PRODUCT_AUTHENTICITY",
+      "entities": {},
+      "route": "handoff",
+      "outcome": "handoff",
+      "behavior": "Storefront handoff to `/search`; no automatic execution."
+    },
+    {
+      "intent": "PRODUCT_BARCODE",
+      "entities": {},
+      "route": "handoff",
+      "outcome": "handoff",
+      "behavior": "Storefront handoff to `/search`; no automatic execution."
+    },
+    {
+      "intent": "PRODUCT_BATTERY_LIFE",
+      "entities": {},
+      "route": "handoff",
+      "outcome": "handoff",
+      "behavior": "Storefront handoff to `/search`; no automatic execution."
+    },
+    {
+      "intent": "PRODUCT_BESTSELLERS",
+      "entities": {},
+      "route": "handoff",
+      "outcome": "handoff",
+      "behavior": "Storefront handoff to `/search`; no automatic execution."
+    },
+    {
+      "intent": "PRODUCT_CARE",
+      "entities": {},
+      "route": "product_fact",
+      "outcome": "read",
+      "behavior": "Exact product identity and current authoritative facts; missing facts stay unknown."
+    },
+    {
+      "intent": "PRODUCT_CERTIFICATION",
+      "entities": {},
+      "route": "product_fact",
+      "outcome": "read",
+      "behavior": "Exact product identity and current authoritative facts; missing facts stay unknown."
+    },
+    {
+      "intent": "PRODUCT_CHARGING",
+      "entities": {},
+      "route": "handoff",
+      "outcome": "handoff",
+      "behavior": "Storefront handoff to `/search`; no automatic execution."
+    },
+    {
+      "intent": "PRODUCT_COMPARE",
+      "entities": {},
+      "route": "comparison",
+      "outcome": "read",
+      "behavior": "Compare verified products; ambiguous identities require selection."
+    },
+    {
+      "intent": "PRODUCT_COMPATIBILITY",
+      "entities": {},
+      "route": "handoff",
+      "outcome": "handoff",
+      "behavior": "Storefront handoff to `/search`; no automatic execution."
+    },
+    {
+      "intent": "PRODUCT_CONNECTIVITY",
+      "entities": {},
+      "route": "handoff",
+      "outcome": "handoff",
+      "behavior": "Storefront handoff to `/search`; no automatic execution."
+    },
+    {
+      "intent": "PRODUCT_DETAILS",
+      "entities": {},
+      "route": "product_fact",
+      "outcome": "read",
+      "behavior": "Exact product identity and current authoritative facts; missing facts stay unknown."
+    },
+    {
+      "intent": "PRODUCT_DIMENSIONS",
+      "entities": {},
+      "route": "product_fact",
+      "outcome": "read",
+      "behavior": "Exact product identity and current authoritative facts; missing facts stay unknown."
+    },
+    {
+      "intent": "PRODUCT_ENERGY_RATING",
+      "entities": {},
+      "route": "handoff",
+      "outcome": "handoff",
+      "behavior": "Storefront handoff to `/search`; no automatic execution."
+    },
+    {
+      "intent": "PRODUCT_EXPIRY",
+      "entities": {},
+      "route": "handoff",
+      "outcome": "handoff",
+      "behavior": "Storefront handoff to `/search`; no automatic execution."
+    },
+    {
+      "intent": "PRODUCT_FABRIC_COMPOSITION",
+      "entities": {},
+      "route": "handoff",
+      "outcome": "handoff",
+      "behavior": "Storefront handoff to `/search`; no automatic execution."
+    },
+    {
+      "intent": "PRODUCT_FIT",
+      "entities": {},
+      "route": "handoff",
+      "outcome": "handoff",
+      "behavior": "Storefront handoff to `/search`; no automatic execution."
+    },
+    {
+      "intent": "PRODUCT_GEMSTONE",
+      "entities": {},
+      "route": "product_fact",
+      "outcome": "read",
+      "behavior": "Exact product identity and current authoritative facts; missing facts stay unknown."
+    },
+    {
+      "intent": "PRODUCT_HARVEST_DATE",
+      "entities": {},
+      "route": "handoff",
+      "outcome": "handoff",
+      "behavior": "Storefront handoff to `/search`; no automatic execution."
+    },
+    {
+      "intent": "PRODUCT_INGREDIENTS",
+      "entities": {},
+      "route": "product_fact",
+      "outcome": "read",
+      "behavior": "Exact product identity and current authoritative facts; missing facts stay unknown."
+    },
+    {
+      "intent": "PRODUCT_INSTALLATION",
+      "entities": {},
+      "route": "handoff",
+      "outcome": "handoff",
+      "behavior": "Storefront handoff to `/search`; no automatic execution."
+    },
+    {
+      "intent": "PRODUCT_MATERIAL",
+      "entities": {},
+      "route": "product_fact",
+      "outcome": "read",
+      "behavior": "Exact product identity and current authoritative facts; missing facts stay unknown."
+    },
+    {
+      "intent": "PRODUCT_METAL_PURITY",
+      "entities": {},
+      "route": "product_fact",
+      "outcome": "read",
+      "behavior": "Exact product identity and current authoritative facts; missing facts stay unknown."
+    },
+    {
+      "intent": "PRODUCT_MODEL_NUMBER",
+      "entities": {},
+      "route": "handoff",
+      "outcome": "handoff",
+      "behavior": "Storefront handoff to `/search`; no automatic execution."
+    },
+    {
+      "intent": "PRODUCT_NETWORK_SUPPORT",
+      "entities": {},
+      "route": "handoff",
+      "outcome": "handoff",
+      "behavior": "Storefront handoff to `/search`; no automatic execution."
+    },
+    {
+      "intent": "PRODUCT_NET_WEIGHT",
+      "entities": {},
+      "route": "product_fact",
+      "outcome": "read",
+      "behavior": "Exact product identity and current authoritative facts; missing facts stay unknown."
+    },
+    {
+      "intent": "PRODUCT_NEW_ARRIVALS",
+      "entities": {},
+      "route": "handoff",
+      "outcome": "handoff",
+      "behavior": "Storefront handoff to `/search`; no automatic execution."
+    },
+    {
+      "intent": "PRODUCT_NUTRITION",
+      "entities": {},
+      "route": "search",
+      "outcome": "read",
+      "behavior": "Catalog discovery with validated constraints and selection."
+    },
+    {
+      "intent": "PRODUCT_OPERATING_SYSTEM",
+      "entities": {},
+      "route": "handoff",
+      "outcome": "handoff",
+      "behavior": "Storefront handoff to `/search`; no automatic execution."
+    },
+    {
+      "intent": "PRODUCT_ORIGIN",
+      "entities": {},
+      "route": "product_fact",
+      "outcome": "read",
+      "behavior": "Exact product identity and current authoritative facts; missing facts stay unknown."
+    },
+    {
+      "intent": "PRODUCT_PACK_CONTENTS",
+      "entities": {},
+      "route": "handoff",
+      "outcome": "handoff",
+      "behavior": "Storefront handoff to `/search`; no automatic execution."
+    },
+    {
+      "intent": "PRODUCT_PHOTOS",
+      "entities": {},
+      "route": "search",
+      "outcome": "read",
+      "behavior": "Catalog discovery with validated constraints and selection."
+    },
+    {
+      "intent": "PRODUCT_PROCESSOR",
+      "entities": {},
+      "route": "handoff",
+      "outcome": "handoff",
+      "behavior": "Storefront handoff to `/search`; no automatic execution."
+    },
+    {
+      "intent": "PRODUCT_RATING",
+      "entities": {},
+      "route": "search",
+      "outcome": "read",
+      "behavior": "Catalog discovery with validated constraints and selection."
+    },
+    {
+      "intent": "PRODUCT_RECOMMEND",
+      "entities": {},
+      "route": "search",
+      "outcome": "read",
+      "behavior": "Catalog discovery with validated constraints and selection."
+    },
+    {
+      "intent": "PRODUCT_RESOLUTION",
+      "entities": {},
+      "route": "handoff",
+      "outcome": "handoff",
+      "behavior": "Storefront handoff to `/search`; no automatic execution."
+    },
+    {
+      "intent": "PRODUCT_REVIEWS",
+      "entities": {},
+      "route": "search",
+      "outcome": "read",
+      "behavior": "Catalog discovery with validated constraints and selection."
+    },
+    {
+      "intent": "PRODUCT_RIPENESS",
+      "entities": {},
+      "route": "handoff",
+      "outcome": "handoff",
+      "behavior": "Storefront handoff to `/search`; no automatic execution."
+    },
+    {
+      "intent": "PRODUCT_SAFETY",
+      "entities": {},
+      "route": "handoff",
+      "outcome": "handoff",
+      "behavior": "Storefront handoff to `/search`; no automatic execution."
+    },
+    {
+      "intent": "PRODUCT_SEARCH",
+      "entities": {},
+      "route": "search",
+      "outcome": "read",
+      "behavior": "Catalog discovery with validated constraints and selection."
+    },
+    {
+      "intent": "PRODUCT_SERVING_SIZE",
+      "entities": {},
+      "route": "product_fact",
+      "outcome": "read",
+      "behavior": "Exact product identity and current authoritative facts; missing facts stay unknown."
+    },
+    {
+      "intent": "PRODUCT_SHELF_LIFE",
+      "entities": {},
+      "route": "product_fact",
+      "outcome": "read",
+      "behavior": "Exact product identity and current authoritative facts; missing facts stay unknown."
+    },
+    {
+      "intent": "PRODUCT_SIMILAR",
+      "entities": {},
+      "route": "handoff",
+      "outcome": "handoff",
+      "behavior": "Storefront handoff to `/search`; no automatic execution."
+    },
+    {
+      "intent": "PRODUCT_SIZE_GUIDE",
+      "entities": {},
+      "route": "search",
+      "outcome": "read",
+      "behavior": "Catalog discovery with validated constraints and selection."
+    },
+    {
+      "intent": "PRODUCT_SPARE_PARTS",
+      "entities": {},
+      "route": "handoff",
+      "outcome": "handoff",
+      "behavior": "Storefront handoff to `/search`; no automatic execution."
+    },
+    {
+      "intent": "PRODUCT_STORAGE",
+      "entities": {},
+      "route": "product_fact",
+      "outcome": "read",
+      "behavior": "Exact product identity and current authoritative facts; missing facts stay unknown."
+    },
+    {
+      "intent": "PRODUCT_STORAGE_CAPACITY",
+      "entities": {},
+      "route": "handoff",
+      "outcome": "handoff",
+      "behavior": "Storefront handoff to `/search`; no automatic execution."
+    },
+    {
+      "intent": "PRODUCT_TRENDING",
+      "entities": {},
+      "route": "handoff",
+      "outcome": "handoff",
+      "behavior": "Storefront handoff to `/search`; no automatic execution."
+    },
+    {
+      "intent": "PRODUCT_USAGE",
+      "entities": {},
+      "route": "handoff",
+      "outcome": "handoff",
+      "behavior": "Storefront handoff to `/search`; no automatic execution."
+    },
+    {
+      "intent": "PRODUCT_VARIANTS",
+      "entities": {},
+      "route": "handoff",
+      "outcome": "handoff",
+      "behavior": "Storefront handoff to `/search`; no automatic execution."
+    },
+    {
+      "intent": "PRODUCT_WARRANTY",
+      "entities": {},
+      "route": "product_fact",
+      "outcome": "read",
+      "behavior": "Exact product identity and current authoritative facts; missing facts stay unknown."
+    },
+    {
+      "intent": "PRODUCT_WATER_RESISTANCE",
+      "entities": {},
+      "route": "handoff",
+      "outcome": "handoff",
+      "behavior": "Storefront handoff to `/search`; no automatic execution."
+    },
+    {
+      "intent": "PROMOTION_ELIGIBILITY",
+      "entities": {},
+      "route": "handoff",
+      "outcome": "handoff",
+      "behavior": "Storefront handoff to `/support`; no automatic execution."
+    },
+    {
+      "intent": "REFUND_STATUS",
+      "entities": {},
+      "route": "handoff",
+      "outcome": "handoff",
+      "behavior": "Storefront handoff to `/account/orders`; no automatic execution."
+    },
+    {
+      "intent": "REFURBISHED_GRADE",
+      "entities": {},
+      "route": "handoff",
+      "outcome": "handoff",
+      "behavior": "Storefront handoff to `/search`; no automatic execution."
+    },
+    {
+      "intent": "REMOVE_COUPON",
+      "entities": {},
+      "route": "handoff",
+      "outcome": "handoff",
+      "behavior": "Storefront handoff to `/cart`; no automatic execution."
+    },
+    {
+      "intent": "REMOVE_FROM_CART",
+      "entities": {},
+      "route": "cart_action",
+      "outcome": "conditional_write",
+      "behavior": "Supported cart/wishlist commands; checkout intents only guide checkout."
+    },
+    {
+      "intent": "REMOVE_FROM_WISHLIST",
+      "entities": {},
+      "route": "wishlist_remove",
+      "outcome": "conditional_write",
+      "behavior": "Remove an exact owned item or explicitly all saved items (up to 100); ambiguous requests need selection."
+    },
+    {
+      "intent": "REORDER",
+      "entities": {},
+      "route": "reorder",
+      "outcome": "read_or_guide",
+      "behavior": "Read owned order and hand off for review/checkout; no order write from chat."
+    },
+    {
+      "intent": "REPEAT",
+      "entities": {},
+      "route": "context",
+      "outcome": "clarification",
+      "behavior": "Request a complete instruction or explicit context control."
+    },
+    {
+      "intent": "REPEAT_PREVIOUS_ACTION",
+      "entities": {},
+      "route": "context",
+      "outcome": "clarification",
+      "behavior": "Request a complete instruction or explicit context control."
+    },
+    {
+      "intent": "RETURN_POLICY",
+      "entities": {},
+      "route": "handoff",
+      "outcome": "handoff",
+      "behavior": "Storefront handoff to `/support`; no automatic execution."
+    },
+    {
+      "intent": "SAFETY_DATA_SHEET",
+      "entities": {},
+      "route": "handoff",
+      "outcome": "handoff",
+      "behavior": "Storefront handoff to `/search`; no automatic execution."
+    },
+    {
+      "intent": "SALE_END_DATE",
+      "entities": {},
+      "route": "handoff",
+      "outcome": "handoff",
+      "behavior": "Storefront handoff to `/support`; no automatic execution."
+    },
+    {
+      "intent": "SELECT_DELIVERY_METHOD",
+      "entities": {},
+      "route": "handoff",
+      "outcome": "handoff",
+      "behavior": "Storefront handoff to `/checkout`; no automatic execution."
+    },
+    {
+      "intent": "SELECT_DELIVERY_SLOT",
+      "entities": {},
+      "route": "handoff",
+      "outcome": "handoff",
+      "behavior": "Storefront handoff to `/checkout`; no automatic execution."
+    },
+    {
+      "intent": "SELECT_FIRST",
+      "entities": {},
+      "route": "context",
+      "outcome": "clarification",
+      "behavior": "Request a complete instruction or explicit context control."
+    },
+    {
+      "intent": "SELECT_LAST",
+      "entities": {},
+      "route": "context",
+      "outcome": "clarification",
+      "behavior": "Request a complete instruction or explicit context control."
+    },
+    {
+      "intent": "SELECT_ORDER",
+      "entities": {},
+      "route": "context",
+      "outcome": "clarification",
+      "behavior": "Request a complete instruction or explicit context control."
+    },
+    {
+      "intent": "SELECT_PAYMENT",
+      "entities": {},
+      "route": "handoff",
+      "outcome": "handoff",
+      "behavior": "Storefront handoff to `/checkout`; no automatic execution."
+    },
+    {
+      "intent": "SELECT_PICKUP_LOCATION",
+      "entities": {},
+      "route": "handoff",
+      "outcome": "handoff",
+      "behavior": "Storefront handoff to `/checkout`; no automatic execution."
+    },
+    {
+      "intent": "SELECT_PRODUCT",
+      "entities": {},
+      "route": "context",
+      "outcome": "clarification",
+      "behavior": "Request a complete instruction or explicit context control."
+    },
+    {
+      "intent": "SELECT_SECOND",
+      "entities": {},
+      "route": "context",
+      "outcome": "clarification",
+      "behavior": "Request a complete instruction or explicit context control."
+    },
+    {
+      "intent": "SELECT_VARIANT",
+      "entities": {},
+      "route": "context",
+      "outcome": "clarification",
+      "behavior": "Request a complete instruction or explicit context control."
+    },
+    {
+      "intent": "SERVICE_AREA",
+      "entities": {},
+      "route": "handoff",
+      "outcome": "handoff",
+      "behavior": "Storefront handoff to `/support`; no automatic execution."
+    },
+    {
+      "intent": "SHOW_MORE",
+      "entities": {},
+      "route": "context",
+      "outcome": "clarification",
+      "behavior": "Request a complete instruction or explicit context control."
+    },
+    {
+      "intent": "SKIN_TYPE_SUITABILITY",
+      "entities": {},
+      "route": "handoff",
+      "outcome": "handoff",
+      "behavior": "Storefront handoff to `/search`; no automatic execution."
+    },
+    {
+      "intent": "START_CHECKOUT",
+      "entities": {},
+      "route": "cart_action",
+      "outcome": "guided",
+      "behavior": "Review cart and continue to checkout; no order is placed."
+    },
+    {
+      "intent": "STORE_HOURS",
+      "entities": {},
+      "route": "handoff",
+      "outcome": "handoff",
+      "behavior": "Storefront handoff to `/support`; no automatic execution."
+    },
+    {
+      "intent": "STORE_LOCATION",
+      "entities": {},
+      "route": "handoff",
+      "outcome": "handoff",
+      "behavior": "Storefront handoff to `/support`; no automatic execution."
+    },
+    {
+      "intent": "STUDENT_DISCOUNT",
+      "entities": {},
+      "route": "handoff",
+      "outcome": "handoff",
+      "behavior": "Storefront handoff to `/support`; no automatic execution."
+    },
+    {
+      "intent": "SUPPORT_CHAT_HISTORY",
+      "entities": {},
+      "route": "support_detail",
+      "outcome": "read",
+      "behavior": "Read owned ticket history."
+    },
+    {
+      "intent": "SUPPORT_TICKET_STATUS",
+      "entities": {},
+      "route": "support",
+      "outcome": "read_or_guide",
+      "behavior": "Read owned tickets; changes remain guided."
+    },
+    {
+      "intent": "TAX_ESTIMATE",
+      "entities": {},
+      "route": "handoff",
+      "outcome": "handoff",
+      "behavior": "Storefront handoff to `/checkout`; no automatic execution."
+    },
+    {
+      "intent": "TAX_INCLUSION",
+      "entities": {},
+      "route": "handoff",
+      "outcome": "handoff",
+      "behavior": "Storefront handoff to `/checkout`; no automatic execution."
+    },
+    {
+      "intent": "TRACK_ORDER",
+      "entities": {},
+      "route": "order",
+      "outcome": "read_or_guide",
+      "behavior": "Read owned orders; issue intents may provide guidance."
+    },
+    {
+      "intent": "UNIT_PRICE",
+      "entities": {},
+      "route": "handoff",
+      "outcome": "handoff",
+      "behavior": "Storefront handoff to `/search`; no automatic execution."
+    },
+    {
+      "intent": "UPDATE_CART_QUANTITY",
+      "entities": {},
+      "route": "cart_action",
+      "outcome": "conditional_write",
+      "behavior": "Supported cart/wishlist commands; checkout intents only guide checkout."
+    },
+    {
+      "intent": "VEHICLE_FITMENT",
+      "entities": {},
+      "route": "handoff",
+      "outcome": "handoff",
+      "behavior": "Storefront handoff to `/search`; no automatic execution."
+    },
+    {
+      "intent": "VIEW_CART",
+      "entities": {},
+      "route": "cart",
+      "outcome": "read",
+      "behavior": "Read the authenticated cart."
+    },
+    {
+      "intent": "VIEW_DELIVERY_SLOTS",
+      "entities": {},
+      "route": "handoff",
+      "outcome": "handoff",
+      "behavior": "Storefront handoff to `/checkout`; no automatic execution."
+    },
+    {
+      "intent": "VIEW_WISHLIST",
+      "entities": {},
+      "route": "wishlist",
+      "outcome": "read",
+      "behavior": "Read owned saved products."
+    }
+  ],
+  "entity_dependent": [
+    {
+      "intent": "PRODUCT_RECOMMEND",
+      "entities": {
+        "salesPeriod": "today"
+      },
+      "route": "bestsellers",
+      "outcome": "read",
+      "behavior": "Read authoritative completed-order sales ranking for an allowed period."
+    },
+    {
+      "intent": "PRODUCT_RECOMMEND",
+      "entities": {
+        "salesPeriod": "last_week"
+      },
+      "route": "bestsellers",
+      "outcome": "read",
+      "behavior": "Read authoritative completed-order sales ranking for an allowed period."
+    },
+    {
+      "intent": "PRODUCT_RECOMMEND",
+      "entities": {
+        "salesPeriod": "last_month"
+      },
+      "route": "bestsellers",
+      "outcome": "read",
+      "behavior": "Read authoritative completed-order sales ranking for an allowed period."
+    },
+    {
+      "intent": "PRODUCT_RECOMMEND",
+      "entities": {
+        "salesPeriod": "last_year"
+      },
+      "route": "bestsellers",
+      "outcome": "read",
+      "behavior": "Read authoritative completed-order sales ranking for an allowed period."
+    },
+    {
+      "intent": "PRODUCT_BESTSELLERS",
+      "entities": {
+        "salesPeriod": "today"
+      },
+      "route": "bestsellers",
+      "outcome": "read",
+      "behavior": "Read authoritative completed-order sales ranking for an allowed period."
+    },
+    {
+      "intent": "PRODUCT_BESTSELLERS",
+      "entities": {
+        "salesPeriod": "last_week"
+      },
+      "route": "bestsellers",
+      "outcome": "read",
+      "behavior": "Read authoritative completed-order sales ranking for an allowed period."
+    },
+    {
+      "intent": "PRODUCT_BESTSELLERS",
+      "entities": {
+        "salesPeriod": "last_month"
+      },
+      "route": "bestsellers",
+      "outcome": "read",
+      "behavior": "Read authoritative completed-order sales ranking for an allowed period."
+    },
+    {
+      "intent": "PRODUCT_BESTSELLERS",
+      "entities": {
+        "salesPeriod": "last_year"
+      },
+      "route": "bestsellers",
+      "outcome": "read",
+      "behavior": "Read authoritative completed-order sales ranking for an allowed period."
+    },
+    {
+      "intent": "PRODUCT_RECOMMEND",
+      "entities": {
+        "discountRanking": true
+      },
+      "route": "discounts",
+      "outcome": "read",
+      "behavior": "Read current discount recommendations."
+    }
+  ],
+  "supplemental_routes": [
+    {
+      "intent": "DELIVERY_STATUS",
+      "entities": {},
+      "route": "delivery",
+      "outcome": "read",
+      "behavior": "Read scoped delivery availability."
+    },
+    {
+      "intent": "SHIPMENT_TRACKING",
+      "entities": {},
+      "route": "shipment",
+      "outcome": "read",
+      "behavior": "Read owned shipment status."
+    },
+    {
+      "intent": "ORDER_SHIPMENT_STATUS",
+      "entities": {},
+      "route": "shipment",
+      "outcome": "read",
+      "behavior": "Read owned shipment status."
+    }
+  ],
+  "context_workflows": {
+    "compound_pair": {
+      "outcome": "conditional_write",
+      "composition": [
+        "ADD_TO_CART",
+        "ADD_TO_WISHLIST"
+      ],
+      "ai_flags": [
+        "commerce_planning",
+        "compound_execution"
+      ],
+      "gateway_flag": "ASSISTANT_COMPOUND_WRITES_ENABLED",
+      "capability_inputs": [
+        "catalog_capability",
+        "compound_read_capability",
+        "compound_write_capability"
+      ],
+      "conditions": "Fresh full interpretation, revision persistence, product facts and serial receipts; recovery never dispatches successors."
+    },
+    "support_ticket": {
+      "outcome": "conditional_write",
+      "input": "API-validated ticket form context",
+      "capability_inputs": [
+        "capability"
+      ],
+      "implementation": "app.commerce_action_engine.application.handlers.support:support_create_events"
+    }
+  },
+  "not_exposed_by_chat": [
+    "app.commerce_action_engine.adapters.reorder:execute"
+  ]
+}

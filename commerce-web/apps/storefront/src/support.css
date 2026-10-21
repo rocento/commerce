@@ -1,0 +1,274 @@
+.support-page,
+.support-intake {
+  padding-top: 34px;
+  padding-bottom: 56px;
+}
+.support-heading {
+  max-width: 780px;
+  margin-bottom: 24px;
+}
+.support-heading h1 {
+  font-size: 38px;
+  margin: 10px 0;
+}
+.support-heading p {
+  color: #66716a;
+  line-height: 1.7;
+}
+.support-form {
+  width: 100%;
+}
+.support-intake {
+  width: min(100%, 560px);
+  margin-inline: auto;
+  padding-block: 56px 80px;
+}
+.support-intake .support-heading {
+  text-align: center;
+  margin-bottom: 32px;
+}
+.store-shell .support-intake .support-heading h1 {
+  font-size: 28px;
+  font-weight: 400;
+  line-height: 1.3;
+  letter-spacing: 0;
+}
+.support-intake .support-form fieldset {
+  border: 0;
+  padding: 0;
+  margin: 0;
+  min-width: 0;
+  gap: 22px;
+}
+.store-shell .support-intake .support-form :is(input, select, textarea) {
+  border: 1px solid #c7ccc9;
+  border-radius: 0;
+  background: transparent;
+  min-height: 48px;
+  font: inherit;
+  color: inherit;
+}
+.support-intake .support-form textarea {
+  resize: vertical;
+}
+.support-intake .support-form :is(input, select, textarea):focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 3px;
+}
+.support-intake .support-form label {
+  color: inherit;
+}
+.support-message-count {
+  font-size: 12px;
+  text-align:end;
+  color: #66716a;
+}
+.store-shell .support-intake .support-actions button {
+  width: 100%;
+  min-height: 48px;
+  border-radius: 0;
+  margin-top: 24px;
+}
+.support-existing {
+  text-align: center;
+  font-size: 14px;
+  margin-top: 24px;
+}
+.support-existing a,
+.support-order-context a {
+  color: inherit;
+  text-underline-offset: 3px;
+}
+.support-form-head,
+.support-list-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+}
+.support-form-head h2 {
+  margin: 0;
+}
+.support-form-head span,
+.support-summary-strip span,
+.support-ticket-row small {
+  color: #758075;
+  font-size: 12px;
+}
+.support-form fieldset,
+.support-reply {
+  display: grid;
+  gap: 16px;
+}
+.support-form label,
+.support-reply label {
+  display: grid;
+  gap: 7px;
+  font-size: 13px;
+  color: #435243;
+}
+.support-form input,
+.support-form select,
+.support-form textarea,
+.support-reply textarea {
+  width: 100%;
+  border: 1px solid #d7ded4;
+  border-radius: 7px;
+  padding: 11px 12px;
+  background: #fff;
+}
+.support-contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+.support-actions {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+.support-actions p {
+  margin: 0;
+  color: #758075;
+  font-size: 13px;
+}
+.support-confirmation {
+  max-width: 980px;
+  padding: 40px 0 56px;
+}
+.support-confirmation-actions {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.support-confirmation-actions .primary-link {
+  border: 0;
+  cursor: pointer;
+  font: inherit;
+}
+.support-confirmation-actions .primary-link.secondary {
+  background: #eef3f6;
+  color: #31445a;
+}
+.support-summary-strip {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+  margin: 22px 0;
+}
+.support-summary-strip article {
+  min-height: 84px;
+  display: grid;
+  align-content: center;
+  gap: 8px;
+  background: #fff;
+  border: 1px solid #e0e5dc;
+  border-radius: 8px;
+  padding: 16px;
+}
+.support-badge {
+  width: fit-content;
+  display: inline-flex;
+  align-items: center;
+  min-height: 28px;
+  padding: 4px 10px;
+  border-radius: 5px;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.support-badge.success {
+  background: #e7f5ee;
+  color: #206c49;
+  border: 1px solid #bfdfcd;
+}
+.support-badge.pending {
+  background: #fff5dd;
+  color: #856314;
+  border: 1px solid #edd692;
+}
+.support-badge.danger {
+  background: #ffedeb;
+  color: #a8453d;
+  border: 1px solid #efc0bb;
+}
+.support-ticket-list {
+  display: grid;
+  gap: 10px;
+}
+.support-ticket-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  background: #fff;
+  border: 1px solid #e0e5dc;
+  border-radius: 8px;
+  padding: 17px 18px;
+  text-decoration: none;
+}
+.support-ticket-row > span {
+  min-width: 0;
+  display: grid;
+  gap: 5px;
+}
+.support-ticket-row strong {
+  color: #263a2d;
+  overflow-wrap: anywhere;
+}
+.support-detail {
+  max-width: 1040px;
+}
+.support-thread {
+  display: grid;
+  gap: 12px;
+  margin: 24px 0;
+}
+.support-message {
+  background: #fff;
+  border: 1px solid #e0e5dc;
+  border-radius: 8px;
+  padding: 16px 18px;
+}
+.support-message.admin {
+  border-inline-start: 3px solid #315f45;
+}
+.support-message.customer {
+  border-inline-start: 3px solid #71966c;
+}
+.support-message.assistant_summary {
+  border-inline-start: 3px solid #6d7fb7;
+}
+.support-message header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  color: #354736;
+}
+.support-message time {
+  color: #758075;
+  font-size: 12px;
+}
+.support-message p {
+  white-space: pre-wrap;
+  margin-bottom: 0;
+}
+@media (max-width: 700px) {
+  .support-heading h1 {
+    font-size: 30px;
+  }
+  .support-contact-grid,
+  .support-summary-strip {
+    grid-template-columns: 1fr;
+  }
+  .support-form-head,
+  .support-list-head,
+  .support-ticket-row,
+  .support-message header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}

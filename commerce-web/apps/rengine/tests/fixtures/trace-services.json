@@ -1,0 +1,323 @@
+{
+  "version": 2,
+  "request_id": "10000000-0000-4000-8000-000000000001",
+  "redacted": true,
+  "truncated": false,
+  "events": [
+    {
+      "stage": "customer_request",
+      "data": {
+        "message": "Find fruit under 20 USD in stock",
+        "_journey": {
+          "eventId": "event-1",
+          "spanId": null,
+          "parentSpanId": null,
+          "atMs": 0,
+          "clockDomain": "python-perf-counter",
+          "service": "assistant-python"
+        }
+      }
+    },
+    {
+      "stage": "intent_retrieval",
+      "data": {
+        "status": "retrieved",
+        "examples": [
+          {
+            "example": {
+              "id": "fruit-search",
+              "utterance": "find fruit"
+            }
+          }
+        ],
+        "example_refs": [
+          {
+            "source_id": "source-fixture",
+            "revision": 1,
+            "chunk_id": "chunk-fixture",
+            "example_id": "fruit-search"
+          }
+        ],
+        "_journey": {
+          "eventId": "event-2",
+          "spanId": "span-1",
+          "parentSpanId": null,
+          "atMs": 1,
+          "clockDomain": "python-perf-counter",
+          "service": "assistant-python"
+        }
+      }
+    },
+    {
+      "stage": "language_model_request",
+      "data": {
+        "included_example_refs": [
+          {
+            "source_id": "source-fixture",
+            "revision": 1,
+            "chunk_id": "chunk-fixture",
+            "example_id": "fruit-search"
+          }
+        ],
+        "_journey": {
+          "eventId": "event-3",
+          "spanId": "span-1",
+          "atMs": 2,
+          "clockDomain": "python-perf-counter",
+          "service": "assistant-python"
+        }
+      }
+    },
+    {
+      "stage": "provider_wire_payload",
+      "data": {
+        "model": "fixture-model",
+        "_journey": {
+          "eventId": "event-4",
+          "spanId": "span-2",
+          "parentSpanId": "span-1",
+          "atMs": 3,
+          "clockDomain": "python-perf-counter",
+          "service": "assistant-python"
+        }
+      }
+    },
+    {
+      "stage": "provider_attempt",
+      "data": {
+        "attempt_id": "span-2",
+        "provider": "openai_responses",
+        "mode": "generate",
+        "requested_model": "fixture-model",
+        "model": "fixture-model-snapshot",
+        "outcome": "completed",
+        "adapter_validation": "accepted",
+        "input_tokens": 10,
+        "output_tokens": 2,
+        "prompt_fingerprint": "fixture-prompt-fingerprint",
+        "_journey": {
+          "eventId": "event-5",
+          "spanId": "span-2",
+          "parentSpanId": "span-1",
+          "startMs": 4,
+          "atMs": 24,
+          "durationMs": 20,
+          "clockDomain": "python-perf-counter",
+          "service": "assistant-python"
+        }
+      }
+    },
+    {
+      "stage": "catalog_filter",
+      "data": {
+        "products_before": 12,
+        "products_after": 0,
+        "checks": [
+          "Price requirement (lte)",
+          "Stock requirement (eq)"
+        ],
+        "check_steps": [
+          {
+            "check": "Price requirement (lte)",
+            "before": 12,
+            "after": 3,
+            "rejection_reason": "requirement_unverified_or_unmet",
+            "effect": "ordered_verification_results"
+          },
+          {
+            "check": "Stock requirement (eq)",
+            "before": 3,
+            "after": 0,
+            "rejection_reason": "requirement_unverified_or_unmet",
+            "effect": "ordered_verification_results"
+          }
+        ],
+        "_journey": {
+          "eventId": "event-6",
+          "spanId": "span-1",
+          "atMs": 28,
+          "clockDomain": "python-perf-counter",
+          "service": "assistant-python"
+        }
+      }
+    },
+    {
+      "stage": "python_function",
+      "data": {
+        "function": "resolve",
+        "callId": 1,
+        "outcome": "returned",
+        "_journey": {
+          "eventId": "event-7",
+          "spanId": "span-1",
+          "parentSpanId": "20000000-0000-4000-8000-000000000001",
+          "startMs": 0,
+          "atMs": 29,
+          "durationMs": 29,
+          "clockDomain": "python-perf-counter",
+          "service": "assistant-python",
+          "parentService": "api-gateway"
+        }
+      }
+    },
+    {
+      "stage": "final_result",
+      "data": {
+        "outcome": "completed",
+        "answer": "Would you like to adjust the stock requirement?",
+        "language_gate": {
+          "intent": "PRODUCT_SEARCH",
+          "status": "NEEDS_CONTEXT"
+        },
+        "completion": {
+          "version": 1,
+          "status": "clarification",
+          "request_completed": true,
+          "task_completed": false,
+          "evidence": null,
+          "intent": "PRODUCT_SEARCH"
+        },
+        "measurements": {
+          "version": 1,
+          "clock_domain": "python-turn-monotonic",
+          "trace_id": "10000000-0000-4000-8000-000000000001",
+          "unit": "ms",
+          "request_duration_ms": 31,
+          "duration_boundary": "turn_start_to_lease_closed",
+          "first_text_ms": 27,
+          "first_text_boundary": "server_text_event_created"
+        },
+        "provider_totals": {
+          "version": 1,
+          "scope": "openai_responses_dispatch",
+          "attempts": 1,
+          "completed": 1,
+          "input_tokens": 10,
+          "output_tokens": 2,
+          "usage_complete": true
+        },
+        "_journey": {
+          "eventId": "event-8",
+          "spanId": null,
+          "parentSpanId": null,
+          "atMs": 30,
+          "clockDomain": "python-perf-counter",
+          "service": "assistant-python"
+        }
+      }
+    },
+    {
+      "stage": "service_span",
+      "data": {
+        "operation": "assistant dispatch",
+        "outcome": "dispatched",
+        "_journey": {
+          "traceId": "10000000-0000-4000-8000-000000000001",
+          "eventId": "event-9",
+          "spanId": "20000000-0000-4000-8000-000000000001",
+          "parentSpanId": null,
+          "parentService": null,
+          "service": "api-gateway",
+          "clockDomain": null,
+          "clockId": null,
+          "startMs": null,
+          "atMs": null,
+          "durationMs": null
+        },
+        "completion": "not_captured"
+      }
+    },
+    {
+      "stage": "http_boundary",
+      "data": {
+        "operation": "resolve",
+        "outcome": "received",
+        "peer_service": "language-engine",
+        "remote_evidence": "recorded",
+        "_journey": {
+          "traceId": "10000000-0000-4000-8000-000000000001",
+          "eventId": "event-10",
+          "spanId": "span-3",
+          "parentSpanId": "span-1",
+          "parentService": null,
+          "service": "assistant-python",
+          "clockDomain": "python-perf-counter",
+          "clockId": null,
+          "startMs": 2,
+          "atMs": 2,
+          "durationMs": 10
+        },
+        "http_status": 200
+      }
+    },
+    {
+      "stage": "service_span",
+      "data": {
+        "operation": "resolve",
+        "outcome": "completed",
+        "_journey": {
+          "traceId": "10000000-0000-4000-8000-000000000001",
+          "eventId": "event-11",
+          "spanId": "20000000-0000-4000-8000-000000000002",
+          "parentSpanId": "span-3",
+          "parentService": "assistant-python",
+          "service": "language-engine",
+          "clockDomain": "remote-handler",
+          "clockId": "20000000-0000-4000-8000-000000000002",
+          "startMs": 0,
+          "atMs": 0,
+          "durationMs": 5
+        },
+        "http_status": 200,
+        "timing_scope": "remote_handler",
+        "alignment": "unavailable"
+      }
+    },
+    {
+      "stage": "http_boundary",
+      "data": {
+        "operation": "catalog.search_products",
+        "outcome": "received",
+        "peer_service": "api-gateway",
+        "remote_evidence": "recorded",
+        "_journey": {
+          "traceId": "10000000-0000-4000-8000-000000000001",
+          "eventId": "event-12",
+          "spanId": "span-4",
+          "parentSpanId": "span-1",
+          "parentService": null,
+          "service": "assistant-python",
+          "clockDomain": "python-perf-counter",
+          "clockId": null,
+          "startMs": 20,
+          "atMs": 20,
+          "durationMs": 10
+        },
+        "http_status": 200
+      }
+    },
+    {
+      "stage": "service_span",
+      "data": {
+        "operation": "catalog.search_products",
+        "outcome": "completed",
+        "_journey": {
+          "traceId": "10000000-0000-4000-8000-000000000001",
+          "eventId": "event-13",
+          "spanId": "20000000-0000-4000-8000-000000000003",
+          "parentSpanId": "span-4",
+          "parentService": "assistant-python",
+          "service": "api-gateway",
+          "clockDomain": "remote-handler",
+          "clockId": "20000000-0000-4000-8000-000000000003",
+          "startMs": 0,
+          "atMs": 0,
+          "durationMs": 8
+        },
+        "http_status": 200,
+        "timing_scope": "remote_handler",
+        "alignment": "unavailable"
+      }
+    }
+  ]
+}

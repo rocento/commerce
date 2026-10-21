@@ -1,0 +1,101 @@
+{
+  "corpus_sha256": "b02346a899c74e71178f7e135bd9a99cfc02728bb73307379bf4646baa35841e",
+  "conversations": 100000,
+  "turns": 112500,
+  "fixed_cases_by_family": {
+    "conversational_search": 2755,
+    "typos": 6250
+  },
+  "semantic_regressions": 0,
+  "changed_families": {
+    "conversational_search": 2755,
+    "typos": 6250
+  },
+  "changed_non_target_cases": [],
+  "before": {
+    "passed": 72245,
+    "failed": 21505,
+    "review": 6250
+  },
+  "after": {
+    "passed": 81250,
+    "failed": 12500,
+    "review": 6250
+  },
+  "routes_before": {
+    "search": 16554,
+    "fallback": 27755,
+    "cart_action": 25000,
+    "wishlist_to_cart": 6250,
+    "clarify": 19800,
+    "guided_action": 12500,
+    "unmapped": 4641
+  },
+  "routes_after": {
+    "search": 25559,
+    "cart_action": 25000,
+    "wishlist_to_cart": 6250,
+    "fallback": 18750,
+    "clarify": 19800,
+    "guided_action": 12500,
+    "unmapped": 4641
+  },
+  "examples": [
+    {
+      "id": "756303549810c5a64bbb",
+      "message": "I was hoping to buy hats under $270",
+      "before": "UNKNOWN",
+      "after": "RESOLVED",
+      "route": "search"
+    },
+    {
+      "id": "18c2dc3914e9d8f31d9b",
+      "message": "please looking fr moisturizer under $670",
+      "before": "UNKNOWN",
+      "after": "RESOLVED",
+      "route": "search"
+    },
+    {
+      "id": "786911f911f30b3e95a9",
+      "message": "I need mugs under $560",
+      "before": "UNKNOWN",
+      "after": "RESOLVED",
+      "route": "search"
+    },
+    {
+      "id": "a07f296761ef4dcd81a7",
+      "message": "would you fnd headphones under $670",
+      "before": "UNKNOWN",
+      "after": "RESOLVED",
+      "route": "search"
+    },
+    {
+      "id": "2a7a103af4db8ce4871d",
+      "message": "can you looking fr dates under $545",
+      "before": "UNKNOWN",
+      "after": "RESOLVED",
+      "route": "search"
+    }
+  ],
+  "files_changed_after_measured_snapshot": [
+    "ai-service/app/commerce_action_engine/execution/language/compatibility.py",
+    "ai-service/app/commerce_action_engine/execution/language/gate.py",
+    "ai-service/app/commerce_language_engine/src/engine.ts",
+    "ai-service/app/commerce_language_engine/src/types.ts"
+  ],
+  "paid_llm_calls": 0,
+  "node_focused_tests_passed": 75,
+  "python_tests_passed": 60,
+  "node_full_suite": {
+    "passed": 179,
+    "preexisting_failures": 4
+  },
+  "baseline_run": "artifacts/shopping-evals/english-before-2026-09-23",
+  "candidate_run": "artifacts/shopping-evals/english-accepted-2026-09-23",
+  "current_workspace_targeted_recheck": {
+    "cases": 9005,
+    "passed": 9005,
+    "routes_search": 9005,
+    "new_node_tests_passed": 14
+  }
+}

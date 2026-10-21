@@ -1,0 +1,37 @@
+{
+  "note": "Hashes identify Stage 02 commit content, not concurrent working-tree changes. Shared generated files are staged from isolated copies containing only this stage additions; current working-tree files are preserved. Application baseline was untracked.",
+  "files": {
+    "backend/crates/api-gateway/openapi/discoverability_contract.py": {
+      "before": "d91cc32c5c168ad851e2fc004a6f57492df394d256fe1ee81ebcc668040fe01f",
+      "stage02_commit": "91f2ad4d57c562db799b1b4f9b8931d93db82eb97437a455e78504c31ba231fe"
+    },
+    "backend/crates/api-gateway/src/discoverability.rs": {
+      "before": "18139c5aee9f2a722168b6fca2a1cbeb9d20a7a2178546e0b4df6ddc2dc1c239",
+      "stage02_commit": "894b4f1a9ec1be07327ddee3f19bbeb8c67e9b0b4dc176bc18c2bc2ea1c84e87"
+    },
+    "backend/crates/api-gateway/src/lib.rs": {
+      "before": "e54126247d27642bc9ad51d8571f967e10a0277464d546bed8af3a1bc349180d",
+      "stage02_commit": "8e92f010ecab7bf1c44429b10c54b1ef0235a00d4432044addfcd245ec47fa20"
+    },
+    "backend/crates/api-gateway/src/main.rs": {
+      "before": "f47ec6679a8ddbf32fb54752449cd430e0eac62a0c8acdb40b99efb9f0bc3d1d",
+      "stage02_commit": "1ca5fa3059aeb4b4e31e73b6fc143439257abcf7e6fb5ad8f753a3a07b9285cf"
+    },
+    "backend/openapi.json": {
+      "before": "b84cf93432d9e8ecc6218d1ee2916e755d220d0e85a29654df947ba7f6fef8df",
+      "stage02_commit": "82e15aa387802cc373aaecbbdba432114b4b65f9059fd88a2649b19278a59e56"
+    },
+    "frontend/apps/admin/src/discoverability-settings.tsx": {
+      "before": "2f7a4a40915026b3e2bb7a64a067ed0ea90be1e2e6779e52601ddfbeb49305a4",
+      "stage02_commit": "b00704ed56e5ef847937b5395126cd6f59679151c56c2f4507e42f58f070c601"
+    },
+    "frontend/packages/api-client/src/discoverability.ts": {
+      "before": "558f6363185699f19b141ab4d629d725332cfd7f6f6578c84fd1e9c75091f535",
+      "stage02_commit": "6c80324aa68dd053010cbe4af06a77a55443f760734fe3c4e5df2fc3db0d93a4"
+    },
+    "frontend/packages/api-client/src/schema.d.ts": {
+      "before": "5bfafd9491236eff80d0b82e33602f1ac9492c00dd67a137c704cbed40b6bb01",
+      "stage02_commit": "94b63e1881294ed9777d75c098e333c752c31de42cc7dc0132af34aef6a4300d"
+    }
+  }
+}

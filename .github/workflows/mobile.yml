@@ -1,0 +1,167 @@
+name: Native mobile
+on:
+  push:
+    paths: ['commerce-mobile-apps/**', 'commerce-api/rocento-api/crates/domain-mobile/contract/**', '.github/workflows/mobile.yml']
+  pull_request:
+    paths: ['commerce-mobile-apps/**', 'commerce-api/rocento-api/crates/domain-mobile/contract/**', '.github/workflows/mobile.yml']
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  react-native:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    env:
+      CI: '1'
+      EXPO_NO_TELEMETRY: '1'
+    defaults:
+      run:
+        working-directory: commerce-mobile-apps/react-native
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+          cache: npm
+          cache-dependency-path: commerce-mobile-apps/react-native/package-lock.json
+      - run: npm ci
+      - run: npm run catalog:check
+      - run: npm run typecheck
+      - run: npm test
+      - run: npm run test:dependencies
+      - run: npm run audit:dependencies
+      - run: python3 ../tools/check_boundaries.py
+      - run: python3 -m unittest discover -s ../tools/tests -p 'test_boundaries.py' -v
+      - run: npm run bundle
+      - run: npx playwright install --with-deps chromium --only-shell
+      - run: npm run test:ui
+      - run: npm run test:live-ui
+      - run: npm run test:checkout-ui
+      - run: npm run test:discovery-ui
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: react-native-preview-results
+          path: |
+            commerce-mobile-apps/react-native/dist
+            commerce-mobile-apps/react-native/test-results
+  ios:
+    runs-on: macos-15
+    timeout-minutes: 45
+    strategy:
+      matrix:
+        merchant: [Market, Boutique, Rocento, RocentoStudio, Electronics, ElectronicsStudio, Jewelry, JewelryStudio, Pharmacy, PharmacyStudio]
+    steps:
+      - uses: actions/checkout@v4
+      - run: python3 commerce-mobile-apps/tools/generate_contract.py --check
+      - run: python3 commerce-mobile-apps/tools/check_boundaries.py
+      - run: python3 -m unittest discover -s commerce-mobile-apps/tools/tests -v
+      - run: swift test --package-path commerce-mobile-apps/ios/RocentoCore
+      - run: swift test --package-path commerce-mobile-apps/ios/RocentoAppBuilder
+      - name: Select an available iPhone simulator
+        run: |
+          xcrun simctl list devices available --json > /tmp/mobile-simulators.json
+          python3 - <<'PY' >> "$GITHUB_ENV"
+          import json, subprocess
+          devices = json.load(open('/tmp/mobile-simulators.json'))['devices']
+          phones = [d for group in devices.values() for d in group if d['name'].startswith('iPhone') and d['isAvailable']]
+          assert phones, 'Install an iOS simulator runtime before running mobile tests'
+          if phones[0]['state'] != 'Booted':
+              subprocess.run(['xcrun', 'simctl', 'boot', phones[0]['udid']], check=True)
+          print('MOBILE_SIMULATOR=' + phones[0]['udid'])
+          PY
+      - name: Build and verify signing before running native UI tests
+        run: |
+          python3 commerce-mobile-apps/tools/build_ios_simulator.py \
+            --scheme '${{ matrix.merchant }}' --simulator "$MOBILE_SIMULATOR" \
+            --output "$RUNNER_TEMP/mobile-ios" --build-for-testing
+          xcodebuild -project commerce-mobile-apps/ios/RocentoMobile.xcodeproj \
+            -scheme '${{ matrix.merchant }}' \
+            -destination "platform=iOS Simulator,id=$MOBILE_SIMULATOR" \
+            -derivedDataPath "$RUNNER_TEMP/mobile-ios/DerivedData" \
+            -resultBundlePath 'commerce-mobile-apps/ios/${{ matrix.merchant }}.xcresult' \
+            test-without-building
+      - name: Verify signed Keychain continuity across legacy alias and canonical app updates
+        if: matrix.merchant == 'RocentoStudio'
+        run: |
+          python3 commerce-mobile-apps/tools/build_ios_simulator.py \
+            --scheme Rocento --simulator "$MOBILE_SIMULATOR" \
+            --output "$RUNNER_TEMP/mobile-ios-standalone" --build-for-testing
+          python3 commerce-mobile-apps/tools/test_ios_keychain_upgrade.py \
+            --simulator "$MOBILE_SIMULATOR" --studio "$RUNNER_TEMP/mobile-ios" \
+            --standalone "$RUNNER_TEMP/mobile-ios-standalone" \
+            --output "$RUNNER_TEMP/keychain-upgrade-results"
+      - name: Verify published Release excludes draft preview
+        if: matrix.merchant == 'Rocento'
+        run: |
+          xcodebuild -project commerce-mobile-apps/ios/RocentoMobile.xcodeproj -scheme Rocento \
+            -configuration Release -destination 'generic/platform=iOS Simulator' \
+            -derivedDataPath "$RUNNER_TEMP/mobile-ios-release" CODE_SIGNING_ALLOWED=NO build
+          python3 commerce-mobile-apps/tools/check_boundaries.py \
+            --ios-published-app "$RUNNER_TEMP/mobile-ios-release/Build/Products/Release-iphonesimulator/Rocento.app"
+      - name: Verify standalone iOS binary excludes builder
+        if: matrix.merchant == 'Market' || matrix.merchant == 'Boutique'
+        run: >-
+          python3 commerce-mobile-apps/tools/check_boundaries.py
+          --ios-app '${{ runner.temp }}/mobile-ios/DerivedData/Build/Products/Debug-iphonesimulator/${{ matrix.merchant }}.app'
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: ios-${{ matrix.merchant }}-results
+          path: |
+            commerce-mobile-apps/ios/*.xcresult
+            ${{ runner.temp }}/mobile-ios/signing-check.json
+            ${{ runner.temp }}/keychain-upgrade-results
+  android:
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '21'
+      - uses: android-actions/setup-android@v3
+      - uses: gradle/actions/setup-gradle@v4
+      - run: sdkmanager 'platforms;android-37.1' 'build-tools;36.0.0'
+      - run: python3 -m unittest discover -s commerce-mobile-apps/tools/tests -v
+      - run: python3 commerce-mobile-apps/tools/generate_contract.py --check
+      - run: python3 commerce-mobile-apps/tools/check_boundaries.py
+      - name: Test, lint and build native variants
+        run: >-
+          commerce-mobile-apps/android/gradlew -p commerce-mobile-apps/android
+          :core:testDebugUnitTest
+          lintMarketDebug lintBoutiqueDebug lintRocentoDebug
+          assembleMarketDebug assembleBoutiqueDebug assembleRocentoDebug
+      - name: Verify standalone APK excludes builder
+        run: >-
+          python3 commerce-mobile-apps/tools/check_boundaries.py
+          --android-apk commerce-mobile-apps/android/app/build/outputs/apk/rocento/debug/app-rocento-debug.apk
+      - name: Verify optional builder integration
+        run: >-
+          commerce-mobile-apps/android/gradlew -p commerce-mobile-apps/android -PappBuilder=true
+          :app-builder:testDebugUnitTest :app:assembleRocentoDebug :app:assembleRocentoDebugAndroidTest
+      - name: Enable emulator acceleration
+        run: |
+          echo 'KERNEL=="kvm", GROUP="kvm", MODE="0666", OPTIONS+="static_node=kvm"' | sudo tee /etc/udev/rules.d/99-kvm4all.rules
+          sudo udevadm control --reload-rules
+          sudo udevadm trigger --name-match=kvm
+      - name: Run native UI tests with the pre-install signing gate
+        uses: reactivecircus/android-emulator-runner@v2
+        with:
+          api-level: '37.0'
+          arch: x86_64
+          target: google_apis
+          disable-animations: true
+          script: commerce-mobile-apps/android/gradlew -p commerce-mobile-apps/android connectedMarketDebugAndroidTest connectedBoutiqueDebugAndroidTest connectedRocentoDebugAndroidTest
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: android-native-results
+          path: |
+            commerce-mobile-apps/android/core/build/reports
+            commerce-mobile-apps/android/app-builder/build/reports
+            commerce-mobile-apps/android/app/build/reports
+            commerce-mobile-apps/android/app/build/outputs/androidTest-results
+            commerce-mobile-apps/android/app/build/outputs/apk
+            commerce-mobile-apps/android/app/build/reports/signing

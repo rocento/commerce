@@ -1,0 +1,12 @@
+# Local opt-in only. Production connections use SSH to the private database.
+# Append after compose.assistant.yaml; this preserves the existing ai-data volume.
+services:
+  ai-postgres:
+    image: ${DBEAVER_AI_POSTGRES_IMAGE:-rocento-ai-postgres:release}
+    networks: [assistant-private, assistant-dbeaver]
+    ports:
+      - "127.0.0.1:15432:5432"
+networks:
+  # Docker Desktop cannot publish a port on an internal-only network.
+  assistant-dbeaver:
+    driver: bridge

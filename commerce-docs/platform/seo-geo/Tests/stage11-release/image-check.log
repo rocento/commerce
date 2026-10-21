@@ -1,0 +1,64 @@
+    Updating crates.io index
+     Locking 4 packages to latest compatible versions
+      Adding glob v0.3.4
+      Adding jobserver v0.1.35
+      Adding libwebp-sys v0.9.6
+      Adding webp v0.3.1
+ Downloading crates ...
+  Downloaded jobserver v0.1.35
+  Downloaded glob v0.3.4
+  Downloaded webp v0.3.1
+  Downloaded libwebp-sys v0.9.6
+   Compiling jobserver v0.1.35
+   Compiling glob v0.3.4
+   Compiling cc v1.4.5
+   Compiling ring v0.17.14
+   Compiling libwebp-sys v0.9.6
+   Compiling rustls v0.23.44
+   Compiling rustls v0.21.12
+   Compiling rustls-webpki v0.103.15
+    Checking jsonwebtoken v9.3.1
+    Checking rustls-webpki v0.101.7
+    Checking sct v0.7.1
+    Checking tokio-rustls v0.24.1
+    Checking hyper-rustls v0.24.2
+    Checking webp v0.3.1
+    Checking tokio-rustls v0.26.5
+    Checking sqlx-core v0.8.6
+    Checking attohttpc v0.28.5
+    Checking async-nats v0.42.0
+    Checking hyper-rustls v0.27.9
+    Checking lettre v0.11.23
+    Checking aws-creds v0.37.0
+    Checking reqwest v0.12.28
+    Checking rust-s3 v0.35.1
+    Checking opentelemetry-http v0.31.0
+    Checking sqlx-postgres v0.8.6
+    Checking opentelemetry-otlp v0.31.1
+    Checking infra-observability v0.1.0 (/Users/momar/Documents/commerce-ai/backend/crates/infra-observability)
+    Checking infra-media v0.1.0 (/Users/momar/Documents/commerce-ai/backend/crates/infra-media)
+   Compiling sqlx-macros-core v0.8.6
+   Compiling sqlx-macros v0.8.6
+    Checking sqlx v0.8.6
+    Checking infra-events v0.1.0 (/Users/momar/Documents/commerce-ai/backend/crates/infra-events)
+    Checking infra-auth v0.1.0 (/Users/momar/Documents/commerce-ai/backend/crates/infra-auth)
+    Checking infra-db v0.1.0 (/Users/momar/Documents/commerce-ai/backend/crates/infra-db)
+    Checking domain-inventory v0.1.0 (/Users/momar/Documents/commerce-ai/backend/crates/domain-inventory)
+    Checking domain-admin-iam v0.1.0 (/Users/momar/Documents/commerce-ai/backend/crates/domain-admin-iam)
+    Checking domain-attributes v0.1.0 (/Users/momar/Documents/commerce-ai/backend/crates/domain-attributes)
+    Checking domain-payments v0.1.0 (/Users/momar/Documents/commerce-ai/backend/crates/domain-payments)
+    Checking domain-theme v0.1.0 (/Users/momar/Documents/commerce-ai/backend/crates/domain-theme)
+    Checking domain-fulfillment v0.1.0 (/Users/momar/Documents/commerce-ai/backend/crates/domain-fulfillment)
+    Checking domain-tax v0.1.0 (/Users/momar/Documents/commerce-ai/backend/crates/domain-tax)
+    Checking domain-cms v0.1.0 (/Users/momar/Documents/commerce-ai/backend/crates/domain-cms)
+    Checking domain-reviews v0.1.0 (/Users/momar/Documents/commerce-ai/backend/crates/domain-reviews)
+    Checking domain-catalog v0.1.0 (/Users/momar/Documents/commerce-ai/backend/crates/domain-catalog)
+    Checking domain-customers v0.1.0 (/Users/momar/Documents/commerce-ai/backend/crates/domain-customers)
+    Checking domain-pricing-promotions v0.1.0 (/Users/momar/Documents/commerce-ai/backend/crates/domain-pricing-promotions)
+    Checking domain-orders v0.1.0 (/Users/momar/Documents/commerce-ai/backend/crates/domain-orders)
+    Checking domain-support v0.1.0 (/Users/momar/Documents/commerce-ai/backend/crates/domain-support)
+    Checking domain-search-client v0.1.0 (/Users/momar/Documents/commerce-ai/backend/crates/domain-search-client)
+    Checking domain-admin-operations v0.1.0 (/Users/momar/Documents/commerce-ai/backend/crates/domain-admin-operations)
+    Checking domain-cart-checkout v0.1.0 (/Users/momar/Documents/commerce-ai/backend/crates/domain-cart-checkout)
+    Checking api-gateway v0.1.0 (/Users/momar/Documents/commerce-ai/backend/crates/api-gateway)
+    Finished `dev` profile [unoptimized + debuginfo] target(s) in 23.91s

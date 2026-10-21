@@ -1,0 +1,5453 @@
+{
+  "version": "1",
+  "mode": "replay",
+  "dataset_revision": "commerce-lab-2026-09-21-v1",
+  "dataset_sha256": "db49ec7326c12a0fcb49f9ec9234a840b638c47c86056300d3c7cb9cd3ea685b",
+  "runtime_sha256": "d0347212bbe1f731f522758143e6648ee4e7e03127826bbcd0218c8e6e190b2c",
+  "created_at": "2026-09-21T10:24:37.728631Z",
+  "model": "scripted-extraction",
+  "status": "passed",
+  "results": [
+    {
+      "id": "grocery-verified-hard-constraints",
+      "store": "grocery",
+      "language": "en",
+      "journey": "discovery",
+      "suite": "golden",
+      "status": "passed",
+      "failures": [],
+      "latency_ms": 2,
+      "provider_calls": 1,
+      "input_tokens": null,
+      "output_tokens": null,
+      "cost_micros": null,
+      "tool_calls": [
+        "get_catalog_schema",
+        "search_products"
+      ],
+      "trace": [
+        {
+          "turn": 1,
+          "error": null,
+          "answer": "Matches to your verified constraints:\n- Coffee 1 — 20 USD. In stock. /products/00000000-0000-0000-0000-0000000003e9\n  Verified: roast=dark.\nChecked a bounded candidate set. Prices are current catalog prices; checkout may add tax and delivery.",
+          "extracted": {
+            "shopping": true,
+            "presentation": "recommend",
+            "query": "coffee",
+            "category": null,
+            "min_price": null,
+            "max_price": "30",
+            "exclusive_max": false,
+            "currency": "USD",
+            "brand": null,
+            "attributes": [
+              {
+                "name": "roast",
+                "value": "dark"
+              }
+            ],
+            "in_stock": true,
+            "intended_use": null,
+            "preferences": [],
+            "cheaper": false,
+            "alternatives": false,
+            "clarification": null
+          },
+          "provider_models": [
+            "scripted-extraction"
+          ],
+          "draft": null,
+          "product_ids": [
+            "00000000-0000-0000-0000-0000000003e9"
+          ],
+          "planner_methods": []
+        }
+      ]
+    },
+    {
+      "id": "grocery-ar-budget",
+      "store": "grocery",
+      "language": "ar",
+      "journey": "discovery",
+      "suite": "catalog_grounded",
+      "status": "passed",
+      "failures": [],
+      "latency_ms": 1,
+      "provider_calls": 1,
+      "input_tokens": null,
+      "output_tokens": null,
+      "cost_micros": null,
+      "tool_calls": [
+        "get_catalog_schema",
+        "search_products"
+      ],
+      "trace": [
+        {
+          "turn": 1,
+          "error": null,
+          "answer": "Matches to your verified constraints:\n- Coffee 5 — 15 USD. In stock. /products/00000000-0000-0000-0000-0000000003ed\n- Coffee 1 — 20 USD. In stock. /products/00000000-0000-0000-0000-0000000003e9\nChecked a bounded candidate set. Prices are current catalog prices; checkout may add tax and delivery.",
+          "extracted": {
+            "shopping": true,
+            "presentation": "recommend",
+            "query": "coffee",
+            "category": null,
+            "min_price": null,
+            "max_price": "30",
+            "exclusive_max": true,
+            "currency": "USD",
+            "brand": null,
+            "attributes": [],
+            "in_stock": true,
+            "intended_use": null,
+            "preferences": [],
+            "cheaper": false,
+            "alternatives": false,
+            "clarification": null
+          },
+          "provider_models": [
+            "scripted-extraction"
+          ],
+          "draft": null,
+          "product_ids": [
+            "00000000-0000-0000-0000-0000000003ed",
+            "00000000-0000-0000-0000-0000000003e9"
+          ],
+          "planner_methods": []
+        }
+      ]
+    },
+    {
+      "id": "grocery-ar-eg-budget",
+      "store": "grocery",
+      "language": "ar-eg",
+      "journey": "discovery",
+      "suite": "catalog_grounded",
+      "status": "passed",
+      "failures": [],
+      "latency_ms": 0,
+      "provider_calls": 1,
+      "input_tokens": null,
+      "output_tokens": null,
+      "cost_micros": null,
+      "tool_calls": [
+        "get_catalog_schema",
+        "search_products"
+      ],
+      "trace": [
+        {
+          "turn": 1,
+          "error": null,
+          "answer": "Matches to your verified constraints:\n- Coffee 5 — 15 USD. In stock. /products/00000000-0000-0000-0000-0000000003ed\n- Coffee 1 — 20 USD. In stock. /products/00000000-0000-0000-0000-0000000003e9\nChecked a bounded candidate set. Prices are current catalog prices; checkout may add tax and delivery.",
+          "extracted": {
+            "shopping": true,
+            "presentation": "recommend",
+            "query": "coffee",
+            "category": null,
+            "min_price": null,
+            "max_price": "30",
+            "exclusive_max": true,
+            "currency": "USD",
+            "brand": null,
+            "attributes": [],
+            "in_stock": true,
+            "intended_use": null,
+            "preferences": [],
+            "cheaper": false,
+            "alternatives": false,
+            "clarification": null
+          },
+          "provider_models": [
+            "scripted-extraction"
+          ],
+          "draft": null,
+          "product_ids": [
+            "00000000-0000-0000-0000-0000000003ed",
+            "00000000-0000-0000-0000-0000000003e9"
+          ],
+          "planner_methods": []
+        }
+      ]
+    },
+    {
+      "id": "grocery-mixed-budget",
+      "store": "grocery",
+      "language": "mixed",
+      "journey": "discovery",
+      "suite": "catalog_grounded",
+      "status": "passed",
+      "failures": [],
+      "latency_ms": 0,
+      "provider_calls": 1,
+      "input_tokens": null,
+      "output_tokens": null,
+      "cost_micros": null,
+      "tool_calls": [
+        "get_catalog_schema",
+        "search_products"
+      ],
+      "trace": [
+        {
+          "turn": 1,
+          "error": null,
+          "answer": "Matches to your verified constraints:\n- Coffee 5 — 15 USD. In stock. /products/00000000-0000-0000-0000-0000000003ed\n- Coffee 1 — 20 USD. In stock. /products/00000000-0000-0000-0000-0000000003e9\nChecked a bounded candidate set. Prices are current catalog prices; checkout may add tax and delivery.",
+          "extracted": {
+            "shopping": true,
+            "presentation": "recommend",
+            "query": "coffee",
+            "category": null,
+            "min_price": null,
+            "max_price": "30",
+            "exclusive_max": true,
+            "currency": "USD",
+            "brand": null,
+            "attributes": [],
+            "in_stock": true,
+            "intended_use": null,
+            "preferences": [],
+            "cheaper": false,
+            "alternatives": false,
+            "clarification": null
+          },
+          "provider_models": [
+            "scripted-extraction"
+          ],
+          "draft": null,
+          "product_ids": [
+            "00000000-0000-0000-0000-0000000003ed",
+            "00000000-0000-0000-0000-0000000003e9"
+          ],
+          "planner_methods": []
+        }
+      ]
+    },
+    {
+      "id": "grocery-typo-budget",
+      "store": "grocery",
+      "language": "typo",
+      "journey": "discovery",
+      "suite": "catalog_grounded",
+      "status": "passed",
+      "failures": [],
+      "latency_ms": 0,
+      "provider_calls": 1,
+      "input_tokens": null,
+      "output_tokens": null,
+      "cost_micros": null,
+      "tool_calls": [
+        "get_catalog_schema",
+        "search_products"
+      ],
+      "trace": [
+        {
+          "turn": 1,
+          "error": null,
+          "answer": "Matches to your verified constraints:\n- Coffee 5 — 15 USD. In stock. /products/00000000-0000-0000-0000-0000000003ed\n- Coffee 1 — 20 USD. In stock. /products/00000000-0000-0000-0000-0000000003e9\nChecked a bounded candidate set. Prices are current catalog prices; checkout may add tax and delivery.",
+          "extracted": {
+            "shopping": true,
+            "presentation": "recommend",
+            "query": "coffee",
+            "category": null,
+            "min_price": null,
+            "max_price": "30",
+            "exclusive_max": true,
+            "currency": "USD",
+            "brand": null,
+            "attributes": [],
+            "in_stock": true,
+            "intended_use": null,
+            "preferences": [],
+            "cheaper": false,
+            "alternatives": false,
+            "clarification": null
+          },
+          "provider_models": [
+            "scripted-extraction"
+          ],
+          "draft": null,
+          "product_ids": [
+            "00000000-0000-0000-0000-0000000003ed",
+            "00000000-0000-0000-0000-0000000003e9"
+          ],
+          "planner_methods": []
+        }
+      ]
+    },
+    {
+      "id": "grocery-no-valid-match",
+      "store": "grocery",
+      "language": "en",
+      "journey": "discovery",
+      "suite": "catalog_grounded",
+      "status": "passed",
+      "failures": [],
+      "latency_ms": 1,
+      "provider_calls": 1,
+      "input_tokens": null,
+      "output_tokens": null,
+      "cost_micros": null,
+      "tool_calls": [
+        "get_catalog_schema",
+        "search_products"
+      ],
+      "trace": [
+        {
+          "turn": 1,
+          "error": null,
+          "answer": "No verified matches in the checked catalog candidates.\nChecked a bounded candidate set. Prices are current catalog prices; checkout may add tax and delivery.",
+          "extracted": {
+            "shopping": true,
+            "presentation": "recommend",
+            "query": "coffee",
+            "category": null,
+            "min_price": null,
+            "max_price": "20",
+            "exclusive_max": true,
+            "currency": "USD",
+            "brand": null,
+            "attributes": [
+              {
+                "name": "roast",
+                "value": "dark"
+              }
+            ],
+            "in_stock": true,
+            "intended_use": null,
+            "preferences": [],
+            "cheaper": false,
+            "alternatives": false,
+            "clarification": null
+          },
+          "provider_models": [
+            "scripted-extraction"
+          ],
+          "draft": null,
+          "product_ids": [],
+          "planner_methods": []
+        }
+      ]
+    },
+    {
+      "id": "grocery-missing-currency",
+      "store": "grocery",
+      "language": "en",
+      "journey": "discovery",
+      "suite": "conversation",
+      "status": "passed",
+      "failures": [],
+      "latency_ms": 0,
+      "provider_calls": 1,
+      "input_tokens": null,
+      "output_tokens": null,
+      "cost_micros": null,
+      "tool_calls": [
+        "get_catalog_schema"
+      ],
+      "trace": [
+        {
+          "turn": 1,
+          "error": null,
+          "answer": "Which currency should I use for your budget?",
+          "extracted": {
+            "shopping": true,
+            "presentation": "recommend",
+            "query": "coffee",
+            "category": null,
+            "min_price": null,
+            "max_price": "25",
+            "exclusive_max": false,
+            "currency": null,
+            "brand": null,
+            "attributes": [],
+            "in_stock": false,
+            "intended_use": null,
+            "preferences": [],
+            "cheaper": false,
+            "alternatives": false,
+            "clarification": null
+          },
+          "provider_models": [
+            "scripted-extraction"
+          ],
+          "draft": null,
+          "product_ids": [],
+          "planner_methods": []
+        }
+      ]
+    },
+    {
+      "id": "grocery-unknown-requirement",
+      "store": "grocery",
+      "language": "en",
+      "journey": "compatibility",
+      "suite": "journey",
+      "status": "passed",
+      "failures": [],
+      "latency_ms": 0,
+      "provider_calls": 1,
+      "input_tokens": null,
+      "output_tokens": null,
+      "cost_micros": null,
+      "tool_calls": [
+        "get_catalog_schema"
+      ],
+      "trace": [
+        {
+          "turn": 1,
+          "error": null,
+          "answer": "I couldn't express every requirement as a catalog filter. Please specify the product type, currency, budget, and required attribute values.",
+          "extracted": {
+            "shopping": true,
+            "presentation": "recommend",
+            "query": "coffee",
+            "category": null,
+            "min_price": null,
+            "max_price": null,
+            "exclusive_max": false,
+            "currency": null,
+            "brand": null,
+            "attributes": [],
+            "in_stock": false,
+            "intended_use": null,
+            "preferences": [],
+            "cheaper": false,
+            "alternatives": false,
+            "clarification": "Certification is not in the catalog schema"
+          },
+          "provider_models": [
+            "scripted-extraction"
+          ],
+          "draft": null,
+          "product_ids": [],
+          "planner_methods": []
+        }
+      ]
+    },
+    {
+      "id": "grocery-gift-budget",
+      "store": "grocery",
+      "language": "en",
+      "journey": "gift",
+      "suite": "journey",
+      "status": "passed",
+      "failures": [],
+      "latency_ms": 0,
+      "provider_calls": 1,
+      "input_tokens": null,
+      "output_tokens": null,
+      "cost_micros": null,
+      "tool_calls": [
+        "get_catalog_schema",
+        "search_products"
+      ],
+      "trace": [
+        {
+          "turn": 1,
+          "error": null,
+          "answer": "Matches to your verified constraints:\n- Coffee 1 — 20 USD. In stock. /products/00000000-0000-0000-0000-0000000003e9\n  Verified: roast=dark.\nChecked a bounded candidate set. Prices are current catalog prices; checkout may add tax and delivery.",
+          "extracted": {
+            "shopping": true,
+            "presentation": "recommend",
+            "query": "coffee",
+            "category": null,
+            "min_price": null,
+            "max_price": "30",
+            "exclusive_max": false,
+            "currency": "USD",
+            "brand": null,
+            "attributes": [
+              {
+                "name": "roast",
+                "value": "dark"
+              }
+            ],
+            "in_stock": true,
+            "intended_use": null,
+            "preferences": [],
+            "cheaper": false,
+            "alternatives": false,
+            "clarification": null
+          },
+          "provider_models": [
+            "scripted-extraction"
+          ],
+          "draft": null,
+          "product_ids": [
+            "00000000-0000-0000-0000-0000000003e9"
+          ],
+          "planner_methods": []
+        }
+      ]
+    },
+    {
+      "id": "grocery-comparison-order",
+      "store": "grocery",
+      "language": "en",
+      "journey": "comparison",
+      "suite": "journey",
+      "status": "passed",
+      "failures": [],
+      "latency_ms": 0,
+      "provider_calls": 1,
+      "input_tokens": null,
+      "output_tokens": null,
+      "cost_micros": null,
+      "tool_calls": [
+        "get_catalog_schema",
+        "compare_products"
+      ],
+      "trace": [
+        {
+          "turn": 1,
+          "error": null,
+          "answer": "Product comparison:\nCoffee 2: 30 USD. /products/00000000-0000-0000-0000-0000000003ea\nCoffee 1: 20 USD. /products/00000000-0000-0000-0000-0000000003e9\nCurrent price: 30 USD | 20 USD\nAvailability: In stock | In stock\nroast: light | dark\nChecked a bounded candidate set. Prices are current catalog prices; checkout may add tax and delivery.",
+          "extracted": {
+            "shopping": true,
+            "presentation": "compare",
+            "query": "*",
+            "category": null,
+            "min_price": null,
+            "max_price": null,
+            "exclusive_max": false,
+            "currency": null,
+            "brand": null,
+            "attributes": [],
+            "in_stock": false,
+            "intended_use": null,
+            "preferences": [],
+            "cheaper": false,
+            "alternatives": false,
+            "clarification": null
+          },
+          "provider_models": [
+            "scripted-extraction"
+          ],
+          "draft": null,
+          "product_ids": [
+            "00000000-0000-0000-0000-0000000003ea",
+            "00000000-0000-0000-0000-0000000003e9"
+          ],
+          "planner_methods": []
+        }
+      ]
+    },
+    {
+      "id": "grocery-ambiguous-comparison",
+      "store": "grocery",
+      "language": "en",
+      "journey": "comparison",
+      "suite": "conversation",
+      "status": "passed",
+      "failures": [],
+      "latency_ms": 0,
+      "provider_calls": 1,
+      "input_tokens": null,
+      "output_tokens": null,
+      "cost_micros": null,
+      "tool_calls": [
+        "get_catalog_schema"
+      ],
+      "trace": [
+        {
+          "turn": 1,
+          "error": null,
+          "answer": "Please select or paste two to five product links to compare current catalog facts.",
+          "extracted": {
+            "shopping": true,
+            "presentation": "compare",
+            "query": "*",
+            "category": null,
+            "min_price": null,
+            "max_price": null,
+            "exclusive_max": false,
+            "currency": null,
+            "brand": null,
+            "attributes": [],
+            "in_stock": false,
+            "intended_use": null,
+            "preferences": [],
+            "cheaper": false,
+            "alternatives": false,
+            "clarification": null
+          },
+          "provider_models": [
+            "scripted-extraction"
+          ],
+          "draft": null,
+          "product_ids": [],
+          "planner_methods": []
+        }
+      ]
+    },
+    {
+      "id": "grocery-changed-budget",
+      "store": "grocery",
+      "language": "en",
+      "journey": "discovery",
+      "suite": "conversation",
+      "status": "passed",
+      "failures": [],
+      "latency_ms": 1,
+      "provider_calls": 2,
+      "input_tokens": null,
+      "output_tokens": null,
+      "cost_micros": null,
+      "tool_calls": [
+        "get_catalog_schema",
+        "search_products",
+        "get_catalog_schema",
+        "search_products"
+      ],
+      "trace": [
+        {
+          "turn": 1,
+          "error": null,
+          "answer": "Matches to your verified constraints:\n- Coffee 5 — 15 USD. In stock. /products/00000000-0000-0000-0000-0000000003ed\n- Coffee 1 — 20 USD. In stock. /products/00000000-0000-0000-0000-0000000003e9\n- Coffee 2 — 30 USD. In stock. /products/00000000-0000-0000-0000-0000000003ea\nChecked a bounded candidate set. Prices are current catalog prices; checkout may add tax and delivery.",
+          "extracted": {
+            "shopping": true,
+            "presentation": "recommend",
+            "query": "coffee",
+            "category": null,
+            "min_price": null,
+            "max_price": "30",
+            "exclusive_max": false,
+            "currency": "USD",
+            "brand": null,
+            "attributes": [],
+            "in_stock": true,
+            "intended_use": null,
+            "preferences": [],
+            "cheaper": false,
+            "alternatives": false,
+            "clarification": null
+          },
+          "provider_models": [
+            "scripted-extraction"
+          ],
+          "draft": null,
+          "product_ids": [
+            "00000000-0000-0000-0000-0000000003ed",
+            "00000000-0000-0000-0000-0000000003e9",
+            "00000000-0000-0000-0000-0000000003ea"
+          ],
+          "planner_methods": []
+        },
+        {
+          "turn": 2,
+          "error": null,
+          "answer": "Matches to your verified constraints:\n- Coffee 5 — 15 USD. In stock. /products/00000000-0000-0000-0000-0000000003ed\nChecked a bounded candidate set. Prices are current catalog prices; checkout may add tax and delivery.",
+          "extracted": {
+            "shopping": true,
+            "presentation": "recommend",
+            "query": "coffee",
+            "category": null,
+            "min_price": null,
+            "max_price": "20",
+            "exclusive_max": true,
+            "currency": "USD",
+            "brand": null,
+            "attributes": [],
+            "in_stock": true,
+            "intended_use": null,
+            "preferences": [],
+            "cheaper": false,
+            "alternatives": false,
+            "clarification": null
+          },
+          "provider_models": [
+            "scripted-extraction"
+          ],
+          "draft": null,
+          "product_ids": [
+            "00000000-0000-0000-0000-0000000003ed"
+          ],
+          "planner_methods": []
+        }
+      ]
+    },
+    {
+      "id": "grocery-cheaper-current-reference",
+      "store": "grocery",
+      "language": "en",
+      "journey": "discovery",
+      "suite": "conversation",
+      "status": "passed",
+      "failures": [],
+      "latency_ms": 1,
+      "provider_calls": 1,
+      "input_tokens": null,
+      "output_tokens": null,
+      "cost_micros": null,
+      "tool_calls": [
+        "get_catalog_schema",
+        "get_product",
+        "search_products"
+      ],
+      "trace": [
+        {
+          "turn": 1,
+          "error": null,
+          "answer": "Matches to your verified constraints:\n- Coffee 5 — 15 USD. In stock. /products/00000000-0000-0000-0000-0000000003ed\n- Coffee 1 — 20 USD. In stock. /products/00000000-0000-0000-0000-0000000003e9\nChecked a bounded candidate set. Prices are current catalog prices; checkout may add tax and delivery.",
+          "extracted": {
+            "shopping": true,
+            "presentation": "recommend",
+            "query": "coffee",
+            "category": null,
+            "min_price": null,
+            "max_price": null,
+            "exclusive_max": false,
+            "currency": null,
+            "brand": null,
+            "attributes": [],
+            "in_stock": true,
+            "intended_use": null,
+            "preferences": [],
+            "cheaper": true,
+            "alternatives": false,
+            "clarification": null
+          },
+          "provider_models": [
+            "scripted-extraction"
+          ],
+          "draft": null,
+          "product_ids": [
+            "00000000-0000-0000-0000-0000000003ed",
+            "00000000-0000-0000-0000-0000000003e9"
+          ],
+          "planner_methods": []
+        }
+      ]
+    },
+    {
+      "id": "grocery-silent-relaxation-denied",
+      "store": "grocery",
+      "language": "en",
+      "journey": "discovery",
+      "suite": "adversarial",
+      "status": "passed",
+      "failures": [],
+      "latency_ms": 0,
+      "provider_calls": 1,
+      "input_tokens": null,
+      "output_tokens": null,
+      "cost_micros": null,
+      "tool_calls": [
+        "get_catalog_schema",
+        "search_products"
+      ],
+      "trace": [
+        {
+          "turn": 1,
+          "error": null,
+          "answer": "No verified matches in the checked catalog candidates.\nChecked a bounded candidate set. Prices are current catalog prices; checkout may add tax and delivery.",
+          "extracted": {
+            "shopping": true,
+            "presentation": "recommend",
+            "query": "coffee",
+            "category": null,
+            "min_price": null,
+            "max_price": "100",
+            "exclusive_max": false,
+            "currency": "USD",
+            "brand": null,
+            "attributes": [
+              {
+                "name": "roast",
+                "value": "dark"
+              }
+            ],
+            "in_stock": true,
+            "intended_use": null,
+            "preferences": [],
+            "cheaper": false,
+            "alternatives": true,
+            "clarification": null
+          },
+          "provider_models": [
+            "scripted-extraction"
+          ],
+          "draft": null,
+          "product_ids": [],
+          "planner_methods": []
+        }
+      ]
+    },
+    {
+      "id": "grocery-cross-store-reference",
+      "store": "grocery",
+      "language": "en",
+      "journey": "discovery",
+      "suite": "adversarial",
+      "status": "passed",
+      "failures": [],
+      "latency_ms": 0,
+      "provider_calls": 1,
+      "input_tokens": null,
+      "output_tokens": null,
+      "cost_micros": null,
+      "tool_calls": [
+        "get_catalog_schema",
+        "get_product"
+      ],
+      "trace": [
+        {
+          "turn": 1,
+          "error": "invalid_reference",
+          "answer": "",
+          "extracted": {
+            "shopping": true,
+            "presentation": "detail",
+            "query": "*",
+            "category": null,
+            "min_price": null,
+            "max_price": null,
+            "exclusive_max": false,
+            "currency": null,
+            "brand": null,
+            "attributes": [],
+            "in_stock": false,
+            "intended_use": null,
+            "preferences": [],
+            "cheaper": false,
+            "alternatives": false,
+            "clarification": null
+          },
+          "provider_models": [
+            "scripted-extraction"
+          ],
+          "draft": null,
+          "product_ids": [],
+          "planner_methods": []
+        }
+      ]
+    },
+    {
+      "id": "grocery-provider-timeout",
+      "store": "grocery",
+      "language": "en",
+      "journey": "discovery",
+      "suite": "adversarial",
+      "status": "passed",
+      "failures": [],
+      "latency_ms": 0,
+      "provider_calls": 1,
+      "input_tokens": null,
+      "output_tokens": null,
+      "cost_micros": null,
+      "tool_calls": [
+        "get_catalog_schema"
+      ],
+      "trace": [
+        {
+          "turn": 1,
+          "error": "timeout",
+          "answer": "",
+          "extracted": {},
+          "provider_models": [],
+          "draft": null,
+          "product_ids": [],
+          "planner_methods": []
+        }
+      ]
+    },
+    {
+      "id": "grocery-provider-rate-limit",
+      "store": "grocery",
+      "language": "en",
+      "journey": "discovery",
+      "suite": "adversarial",
+      "status": "passed",
+      "failures": [],
+      "latency_ms": 0,
+      "provider_calls": 1,
+      "input_tokens": null,
+      "output_tokens": null,
+      "cost_micros": null,
+      "tool_calls": [
+        "get_catalog_schema"
+      ],
+      "trace": [
+        {
+          "turn": 1,
+          "error": "rate_limit",
+          "answer": "",
+          "extracted": {},
+          "provider_models": [],
+          "draft": null,
+          "product_ids": [],
+          "planner_methods": []
+        }
+      ]
+    },
+    {
+      "id": "grocery-provider-invalid-response",
+      "store": "grocery",
+      "language": "en",
+      "journey": "discovery",
+      "suite": "adversarial",
+      "status": "passed",
+      "failures": [],
+      "latency_ms": 0,
+      "provider_calls": 1,
+      "input_tokens": null,
+      "output_tokens": null,
+      "cost_micros": null,
+      "tool_calls": [
+        "get_catalog_schema"
+      ],
+      "trace": [
+        {
+          "turn": 1,
+          "error": "invalid_response",
+          "answer": "",
+          "extracted": {},
+          "provider_models": [],
+          "draft": null,
+          "product_ids": [],
+          "planner_methods": []
+        }
+      ]
+    },
+    {
+      "id": "grocery-provider-unauthorized-tool",
+      "store": "grocery",
+      "language": "en",
+      "journey": "discovery",
+      "suite": "adversarial",
+      "status": "passed",
+      "failures": [],
+      "latency_ms": 0,
+      "provider_calls": 1,
+      "input_tokens": null,
+      "output_tokens": null,
+      "cost_micros": null,
+      "tool_calls": [
+        "get_catalog_schema"
+      ],
+      "trace": [
+        {
+          "turn": 1,
+          "error": "invalid_shopping_plan",
+          "answer": "",
+          "extracted": {
+            "shopping": true,
+            "presentation": "recommend",
+            "query": "*",
+            "category": null,
+            "min_price": null,
+            "max_price": null,
+            "exclusive_max": false,
+            "currency": null,
+            "brand": null,
+            "attributes": [],
+            "in_stock": false,
+            "intended_use": null,
+            "preferences": [],
+            "cheaper": false,
+            "alternatives": false,
+            "clarification": null
+          },
+          "provider_models": [
+            "scripted-extraction"
+          ],
+          "draft": null,
+          "product_ids": [],
+          "planner_methods": []
+        }
+      ]
+    },
+    {
+      "id": "grocery-malformed-tool",
+      "store": "grocery",
+      "language": "en",
+      "journey": "discovery",
+      "suite": "adversarial",
+      "status": "passed",
+      "failures": [],
+      "latency_ms": 1,
+      "provider_calls": 0,
+      "input_tokens": null,
+      "output_tokens": null,
+      "cost_micros": null,
+      "tool_calls": [
+        "get_catalog_schema"
+      ],
+      "trace": [
+        {
+          "turn": 1,
+          "error": "tool_unavailable",
+          "answer": "",
+          "extracted": {},
+          "provider_models": [],
+          "draft": null,
+          "product_ids": [],
+          "planner_methods": []
+        }
+      ]
+    },
+    {
+      "id": "grocery-unavailable-tool",
+      "store": "grocery",
+      "language": "en",
+      "journey": "discovery",
+      "suite": "adversarial",
+      "status": "passed",
+      "failures": [],
+      "latency_ms": 0,
+      "provider_calls": 0,
+      "input_tokens": null,
+      "output_tokens": null,
+      "cost_micros": null,
+      "tool_calls": [
+        "get_catalog_schema"
+      ],
+      "trace": [
+        {
+          "turn": 1,
+          "error": "tool_unavailable",
+          "answer": "",
+          "extracted": {},
+          "provider_models": [],
+          "draft": null,
+          "product_ids": [],
+          "planner_methods": []
+        }
+      ]
+    },
+    {
+      "id": "grocery-order-guide",
+      "store": "grocery",
+      "language": "en",
+      "journey": "order_status",
+      "suite": "journey",
+      "status": "passed",
+      "failures": [],
+      "latency_ms": 0,
+      "provider_calls": 0,
+      "input_tokens": null,
+      "output_tokens": null,
+      "cost_micros": null,
+      "tool_calls": [],
+      "trace": [
+        {
+          "turn": 1,
+          "error": null,
+          "answer": "Sign in to view your own order status. A basket proposal is not a placed order.\n\nSource: Synthetic evaluation guide (guide:order-status@1; reviewed 2026-09-01).",
+          "extracted": {},
+          "provider_models": [],
+          "draft": null,
+          "product_ids": [],
+          "planner_methods": []
+        }
+      ]
+    },
+    {
+      "id": "grocery-unsupported-policy",
+      "store": "grocery",
+      "language": "en",
+      "journey": "policy",
+      "suite": "journey",
+      "status": "passed",
+      "failures": [],
+      "latency_ms": 0,
+      "provider_calls": 0,
+      "input_tokens": null,
+      "output_tokens": null,
+      "cost_micros": null,
+      "tool_calls": [],
+      "trace": [
+        {
+          "turn": 1,
+          "error": null,
+          "answer": "I do not have an approved answer for that store policy. Please contact the store before relying on a policy or delivery promise.",
+          "extracted": {},
+          "provider_models": [],
+          "draft": null,
+          "product_ids": [],
+          "planner_methods": []
+        }
+      ]
+    },
+    {
+      "id": "grocery-support-policy",
+      "store": "grocery",
+      "language": "en",
+      "journey": "support",
+      "suite": "journey",
+      "status": "passed",
+      "failures": [],
+      "latency_ms": 0,
+      "provider_calls": 0,
+      "input_tokens": null,
+      "output_tokens": null,
+      "cost_micros": null,
+      "tool_calls": [],
+      "trace": [
+        {
+          "turn": 1,
+          "error": null,
+          "answer": "I do not have an approved answer for that store policy. Please contact the store before relying on a policy or delivery promise.",
+          "extracted": {},
+          "provider_models": [],
+          "draft": null,
+          "product_ids": [],
+          "planner_methods": []
+        }
+      ]
+    },
+    {
+      "id": "grocery-shop",
+      "store": "grocery",
+      "language": "en",
+      "journey": "shop",
+      "suite": "journey",
+      "status": "passed",
+      "failures": [],
+      "latency_ms": 1,
+      "provider_calls": 1,
+      "input_tokens": null,
+      "output_tokens": null,
+      "cost_micros": null,
+      "tool_calls": [
+        "get_catalog_schema",
+        "search_products"
+      ],
+      "trace": [
+        {
+          "turn": 1,
+          "error": null,
+          "answer": "Your proposed basket is ready to review. Your live cart has not changed.",
+          "extracted": {
+            "goal": {
+              "purpose": "",
+              "budget": null,
+              "currency": null,
+              "all_inclusive": false,
+              "budget_exclusive": false,
+              "people": null,
+              "locked_products": [],
+              "excluded_products": [],
+              "locked_brands": [],
+              "allow_substitutions": false,
+              "delivery_date": null,
+              "assumptions": [],
+              "unresolved": [],
+              "saving_target": null
+            },
+            "searches": [
+              {
+                "intent": {
+                  "shopping": true,
+                  "presentation": "recommend",
+                  "query": "coffee",
+                  "category": null,
+                  "min_price": null,
+                  "max_price": null,
+                  "exclusive_max": false,
+                  "currency": null,
+                  "brand": null,
+                  "attributes": [],
+                  "in_stock": true,
+                  "intended_use": null,
+                  "preferences": [],
+                  "cheaper": false,
+                  "alternatives": false,
+                  "clarification": null
+                },
+                "quantity": 1,
+                "replace_proposed": null
+              }
+            ],
+            "quantities": [],
+            "lock_evidence": [],
+            "clarification": null
+          },
+          "provider_models": [
+            "scripted-extraction"
+          ],
+          "draft": {
+            "task_id": "00000000-0000-0000-0000-000000000384",
+            "task_revision": 1,
+            "source_revision": 1,
+            "mode": "shop",
+            "auto_select": false,
+            "goal": {
+              "purpose": "",
+              "budget": null,
+              "currency": null,
+              "all_inclusive": false,
+              "budget_exclusive": false,
+              "people": null,
+              "locked_products": [],
+              "excluded_products": [],
+              "locked_brands": [],
+              "allow_substitutions": false,
+              "delivery_date": null,
+              "assumptions": [],
+              "unresolved": [],
+              "saving_target": null
+            },
+            "location_id": null,
+            "order_id": null,
+            "selections": [
+              {
+                "product_id": "00000000-0000-0000-0000-0000000003ed",
+                "quantity": 1,
+                "replaces": null,
+                "min_price": null,
+                "max_price": null,
+                "exclusive_max": false,
+                "required_attributes": {},
+                "reason": "Matches the checked catalog constraints. Review the selected SKU and quantity."
+              }
+            ]
+          },
+          "product_ids": [],
+          "planner_methods": [
+            "GET",
+            "POST"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "grocery-optimize-quantities",
+      "store": "grocery",
+      "language": "en",
+      "journey": "optimize",
+      "suite": "journey",
+      "status": "passed",
+      "failures": [],
+      "latency_ms": 0,
+      "provider_calls": 1,
+      "input_tokens": null,
+      "output_tokens": null,
+      "cost_micros": null,
+      "tool_calls": [
+        "get_catalog_schema"
+      ],
+      "trace": [
+        {
+          "turn": 1,
+          "error": null,
+          "answer": "Your proposed basket is ready to review. Your live cart has not changed.",
+          "extracted": {
+            "goal": {
+              "purpose": "",
+              "budget": null,
+              "currency": null,
+              "all_inclusive": false,
+              "budget_exclusive": false,
+              "people": null,
+              "locked_products": [
+                "00000000-0000-0000-0000-0000000003e9"
+              ],
+              "excluded_products": [],
+              "locked_brands": [],
+              "allow_substitutions": true,
+              "delivery_date": null,
+              "assumptions": [],
+              "unresolved": [],
+              "saving_target": null
+            },
+            "searches": [],
+            "quantities": [],
+            "lock_evidence": [
+              {
+                "product_id": "00000000-0000-0000-0000-0000000003e9",
+                "customer_quote": "preserve quantities"
+              }
+            ],
+            "clarification": null
+          },
+          "provider_models": [
+            "scripted-extraction"
+          ],
+          "draft": {
+            "task_id": "00000000-0000-0000-0000-000000000384",
+            "task_revision": 1,
+            "source_revision": 1,
+            "mode": "optimize",
+            "auto_select": true,
+            "goal": {
+              "purpose": "",
+              "budget": null,
+              "currency": null,
+              "all_inclusive": false,
+              "budget_exclusive": false,
+              "people": null,
+              "locked_products": [],
+              "excluded_products": [],
+              "locked_brands": [],
+              "allow_substitutions": true,
+              "delivery_date": null,
+              "assumptions": [],
+              "unresolved": [],
+              "saving_target": null
+            },
+            "location_id": null,
+            "order_id": null,
+            "selections": []
+          },
+          "product_ids": [],
+          "planner_methods": [
+            "GET",
+            "POST"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "grocery-optimize-existing-lock",
+      "store": "grocery",
+      "language": "en",
+      "journey": "optimize",
+      "suite": "journey",
+      "status": "passed",
+      "failures": [],
+      "latency_ms": 0,
+      "provider_calls": 1,
+      "input_tokens": null,
+      "output_tokens": null,
+      "cost_micros": null,
+      "tool_calls": [
+        "get_catalog_schema"
+      ],
+      "trace": [
+        {
+          "turn": 1,
+          "error": null,
+          "answer": "Your proposed basket is ready to review. Your live cart has not changed.",
+          "extracted": {
+            "goal": {
+              "purpose": "",
+              "budget": null,
+              "currency": null,
+              "all_inclusive": false,
+              "budget_exclusive": false,
+              "people": null,
+              "locked_products": [],
+              "excluded_products": [],
+              "locked_brands": [],
+              "allow_substitutions": true,
+              "delivery_date": null,
+              "assumptions": [],
+              "unresolved": [],
+              "saving_target": null
+            },
+            "searches": [],
+            "quantities": [],
+            "lock_evidence": [],
+            "clarification": null
+          },
+          "provider_models": [
+            "scripted-extraction"
+          ],
+          "draft": {
+            "task_id": "00000000-0000-0000-0000-000000000384",
+            "task_revision": 1,
+            "source_revision": 1,
+            "mode": "optimize",
+            "auto_select": true,
+            "goal": {
+              "purpose": "",
+              "budget": null,
+              "currency": null,
+              "all_inclusive": false,
+              "budget_exclusive": false,
+              "people": null,
+              "locked_products": [
+                "00000000-0000-0000-0000-0000000003e9"
+              ],
+              "excluded_products": [],
+              "locked_brands": [],
+              "allow_substitutions": true,
+              "delivery_date": null,
+              "assumptions": [],
+              "unresolved": [],
+              "saving_target": null
+            },
+            "location_id": null,
+            "order_id": null,
+            "selections": []
+          },
+          "product_ids": [],
+          "planner_methods": [
+            "GET",
+            "POST"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "grocery-buy-again-owned-order",
+      "store": "grocery",
+      "language": "en",
+      "journey": "buy_again",
+      "suite": "journey",
+      "status": "passed",
+      "failures": [],
+      "latency_ms": 0,
+      "provider_calls": 0,
+      "input_tokens": null,
+      "output_tokens": null,
+      "cost_micros": null,
+      "tool_calls": [],
+      "trace": [
+        {
+          "turn": 1,
+          "error": null,
+          "answer": "Choose an order using Buy again. Its current products and prices will be quoted before you approve any cart update.",
+          "extracted": {},
+          "provider_models": [],
+          "draft": null,
+          "product_ids": [],
+          "planner_methods": [
+            "GET"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "grocery-meal-uncertainty",
+      "store": "grocery",
+      "language": "en",
+      "journey": "meal",
+      "suite": "journey",
+      "status": "passed",
+      "failures": [],
+      "latency_ms": 0,
+      "provider_calls": 1,
+      "input_tokens": null,
+      "output_tokens": null,
+      "cost_micros": null,
+      "tool_calls": [
+        "get_catalog_schema"
+      ],
+      "trace": [
+        {
+          "turn": 1,
+          "error": null,
+          "answer": "I couldn't express every requirement as a catalog filter. Please specify the product type, currency, budget, and required attribute values.",
+          "extracted": {
+            "shopping": true,
+            "presentation": "recommend",
+            "query": "coffee",
+            "category": null,
+            "min_price": null,
+            "max_price": null,
+            "exclusive_max": false,
+            "currency": null,
+            "brand": null,
+            "attributes": [],
+            "in_stock": false,
+            "intended_use": null,
+            "preferences": [],
+            "cheaper": false,
+            "alternatives": false,
+            "clarification": "No verified allergen or serving facts"
+          },
+          "provider_models": [
+            "scripted-extraction"
+          ],
+          "draft": null,
+          "product_ids": [],
+          "planner_methods": []
+        }
+      ]
+    },
+    {
+      "id": "jewelry-verified-hard-constraints",
+      "store": "jewelry",
+      "language": "en",
+      "journey": "discovery",
+      "suite": "golden",
+      "status": "passed",
+      "failures": [],
+      "latency_ms": 1,
+      "provider_calls": 1,
+      "input_tokens": null,
+      "output_tokens": null,
+      "cost_micros": null,
+      "tool_calls": [
+        "get_catalog_schema",
+        "search_products"
+      ],
+      "trace": [
+        {
+          "turn": 1,
+          "error": null,
+          "answer": "Matches to your verified constraints:\n- Ring 1 — 20 USD. In stock. /products/00000000-0000-0000-0000-0000000007d1\n  Verified: metal=silver.\nChecked a bounded candidate set. Prices are current catalog prices; checkout may add tax and delivery.",
+          "extracted": {
+            "shopping": true,
+            "presentation": "recommend",
+            "query": "ring",
+            "category": null,
+            "min_price": null,
+            "max_price": "30",
+            "exclusive_max": false,
+            "currency": "USD",
+            "brand": null,
+            "attributes": [
+              {
+                "name": "metal",
+                "value": "silver"
+              }
+            ],
+            "in_stock": true,
+            "intended_use": null,
+            "preferences": [],
+            "cheaper": false,
+            "alternatives": false,
+            "clarification": null
+          },
+          "provider_models": [
+            "scripted-extraction"
+          ],
+          "draft": null,
+          "product_ids": [
+            "00000000-0000-0000-0000-0000000007d1"
+          ],
+          "planner_methods": []
+        }
+      ]
+    },
+    {
+      "id": "jewelry-ar-budget",
+      "store": "jewelry",
+      "language": "ar",
+      "journey": "discovery",
+      "suite": "catalog_grounded",
+      "status": "passed",
+      "failures": [],
+      "latency_ms": 0,
+      "provider_calls": 1,
+      "input_tokens": null,
+      "output_tokens": null,
+      "cost_micros": null,
+      "tool_calls": [
+        "get_catalog_schema",
+        "search_products"
+      ],
+      "trace": [
+        {
+          "turn": 1,
+          "error": null,
+          "answer": "Matches to your verified constraints:\n- Ring 5 — 15 USD. In stock. /products/00000000-0000-0000-0000-0000000007d5\n- Ring 1 — 20 USD. In stock. /products/00000000-0000-0000-0000-0000000007d1\nChecked a bounded candidate set. Prices are current catalog prices; checkout may add tax and delivery.",
+          "extracted": {
+            "shopping": true,
+            "presentation": "recommend",
+            "query": "ring",
+            "category": null,
+            "min_price": null,
+            "max_price": "30",
+            "exclusive_max": true,
+            "currency": "USD",
+            "brand": null,
+            "attributes": [],
+            "in_stock": true,
+            "intended_use": null,
+            "preferences": [],
+            "cheaper": false,
+            "alternatives": false,
+            "clarification": null
+          },
+          "provider_models": [
+            "scripted-extraction"
+          ],
+          "draft": null,
+          "product_ids": [
+            "00000000-0000-0000-0000-0000000007d5",
+            "00000000-0000-0000-0000-0000000007d1"
+          ],
+          "planner_methods": []
+        }
+      ]
+    },
+    {
+      "id": "jewelry-ar-eg-budget",
+      "store": "jewelry",
+      "language": "ar-eg",
+      "journey": "discovery",
+      "suite": "catalog_grounded",
+      "status": "passed",
+      "failures": [],
+      "latency_ms": 0,
+      "provider_calls": 1,
+      "input_tokens": null,
+      "output_tokens": null,
+      "cost_micros": null,
+      "tool_calls": [
+        "get_catalog_schema",
+        "search_products"
+      ],
+      "trace": [
+        {
+          "turn": 1,
+          "error": null,
+          "answer": "Matches to your verified constraints:\n- Ring 5 — 15 USD. In stock. /products/00000000-0000-0000-0000-0000000007d5\n- Ring 1 — 20 USD. In stock. /products/00000000-0000-0000-0000-0000000007d1\nChecked a bounded candidate set. Prices are current catalog prices; checkout may add tax and delivery.",
+          "extracted": {
+            "shopping": true,
+            "presentation": "recommend",
+            "query": "ring",
+            "category": null,
+            "min_price": null,
+            "max_price": "30",
+            "exclusive_max": true,
+            "currency": "USD",
+            "brand": null,
+            "attributes": [],
+            "in_stock": true,
+            "intended_use": null,
+            "preferences": [],
+            "cheaper": false,
+            "alternatives": false,
+            "clarification": null
+          },
+          "provider_models": [
+            "scripted-extraction"
+          ],
+          "draft": null,
+          "product_ids": [
+            "00000000-0000-0000-0000-0000000007d5",
+            "00000000-0000-0000-0000-0000000007d1"
+          ],
+          "planner_methods": []
+        }
+      ]
+    },
+    {
+      "id": "jewelry-mixed-budget",
+      "store": "jewelry",
+      "language": "mixed",
+      "journey": "discovery",
+      "suite": "catalog_grounded",
+      "status": "passed",
+      "failures": [],
+      "latency_ms": 0,
+      "provider_calls": 1,
+      "input_tokens": null,
+      "output_tokens": null,
+      "cost_micros": null,
+      "tool_calls": [
+        "get_catalog_schema",
+        "search_products"
+      ],
+      "trace": [
+        {
+          "turn": 1,
+          "error": null,
+          "answer": "Matches to your verified constraints:\n- Ring 5 — 15 USD. In stock. /products/00000000-0000-0000-0000-0000000007d5\n- Ring 1 — 20 USD. In stock. /products/00000000-0000-0000-0000-0000000007d1\nChecked a bounded candidate set. Prices are current catalog prices; checkout may add tax and delivery.",
+          "extracted": {
+            "shopping": true,
+            "presentation": "recommend",
+            "query": "ring",
+            "category": null,
+            "min_price": null,
+            "max_price": "30",
+            "exclusive_max": true,
+            "currency": "USD",
+            "brand": null,
+            "attributes": [],
+            "in_stock": true,
+            "intended_use": null,
+            "preferences": [],
+            "cheaper": false,
+            "alternatives": false,
+            "clarification": null
+          },
+          "provider_models": [
+            "scripted-extraction"
+          ],
+          "draft": null,
+          "product_ids": [
+            "00000000-0000-0000-0000-0000000007d5",
+            "00000000-0000-0000-0000-0000000007d1"
+          ],
+          "planner_methods": []
+        }
+      ]
+    },
+    {
+      "id": "jewelry-typo-budget",
+      "store": "jewelry",
+      "language": "typo",
+      "journey": "discovery",
+      "suite": "catalog_grounded",
+      "status": "passed",
+      "failures": [],
+      "latency_ms": 0,
+      "provider_calls": 1,
+      "input_tokens": null,
+      "output_tokens": null,
+      "cost_micros": null,
+      "tool_calls": [
+        "get_catalog_schema",
+        "search_products"
+      ],
+      "trace": [
+        {
+          "turn": 1,
+          "error": null,
+          "answer": "Matches to your verified constraints:\n- Ring 5 — 15 USD. In stock. /products/00000000-0000-0000-0000-0000000007d5\n- Ring 1 — 20 USD. In stock. /products/00000000-0000-0000-0000-0000000007d1\nChecked a bounded candidate set. Prices are current catalog prices; checkout may add tax and delivery.",
+          "extracted": {
+            "shopping": true,
+            "presentation": "recommend",
+            "query": "ring",
+            "category": null,
+            "min_price": null,
+            "max_price": "30",
+            "exclusive_max": true,
+            "currency": "USD",
+            "brand": null,
+            "attributes": [],
+            "in_stock": true,
+            "intended_use": null,
+            "preferences": [],
+            "cheaper": false,
+            "alternatives": false,
+            "clarification": null
+          },
+          "provider_models": [
+            "scripted-extraction"
+          ],
+          "draft": null,
+          "product_ids": [
+            "00000000-0000-0000-0000-0000000007d5",
+            "00000000-0000-0000-0000-0000000007d1"
+          ],
+          "planner_methods": []
+        }
+      ]
+    },
+    {
+      "id": "jewelry-no-valid-match",
+      "store": "jewelry",
+      "language": "en",
+      "journey": "discovery",
+      "suite": "catalog_grounded",
+      "status": "passed",
+      "failures": [],
+      "latency_ms": 0,
+      "provider_calls": 1,
+      "input_tokens": null,
+      "output_tokens": null,
+      "cost_micros": null,
+      "tool_calls": [
+        "get_catalog_schema",
+        "search_products"
+      ],
+      "trace": [
+        {
+          "turn": 1,
+          "error": null,
+          "answer": "No verified matches in the checked catalog candidates.\nChecked a bounded candidate set. Prices are current catalog prices; checkout may add tax and delivery.",
+          "extracted": {
+            "shopping": true,
+            "presentation": "recommend",
+            "query": "ring",
+            "category": null,
+            "min_price": null,
+            "max_price": "20",
+            "exclusive_max": true,
+            "currency": "USD",
+            "brand": null,
+            "attributes": [
+              {
+                "name": "metal",
+                "value": "silver"
+              }
+            ],
+            "in_stock": true,
+            "intended_use": null,
+            "preferences": [],
+            "cheaper": false,
+            "alternatives": false,
+            "clarification": null
+          },
+          "provider_models": [
+            "scripted-extraction"
+          ],
+          "draft": null,
+          "product_ids": [],
+          "planner_methods": []
+        }
+      ]
+    },
+    {
+      "id": "jewelry-missing-currency",
+      "store": "jewelry",
+      "language": "en",
+      "journey": "discovery",
+      "suite": "conversation",
+      "status": "passed",
+      "failures": [],
+      "latency_ms": 0,
+      "provider_calls": 1,
+      "input_tokens": null,
+      "output_tokens": null,
+      "cost_micros": null,
+      "tool_calls": [
+        "get_catalog_schema"
+      ],
+      "trace": [
+        {
+          "turn": 1,
+          "error": null,
+          "answer": "Which currency should I use for your budget?",
+          "extracted": {
+            "shopping": true,
+            "presentation": "recommend",
+            "query": "ring",
+            "category": null,
+            "min_price": null,
+            "max_price": "25",
+            "exclusive_max": false,
+            "currency": null,
+            "brand": null,
+            "attributes": [],
+            "in_stock": false,
+            "intended_use": null,
+            "preferences": [],
+            "cheaper": false,
+            "alternatives": false,
+            "clarification": null
+          },
+          "provider_models": [
+            "scripted-extraction"
+          ],
+          "draft": null,
+          "product_ids": [],
+          "planner_methods": []
+        }
+      ]
+    },
+    {
+      "id": "jewelry-unknown-requirement",
+      "store": "jewelry",
+      "language": "en",
+      "journey": "compatibility",
+      "suite": "journey",
+      "status": "passed",
+      "failures": [],
+      "latency_ms": 0,
+      "provider_calls": 1,
+      "input_tokens": null,
+      "output_tokens": null,
+      "cost_micros": null,
+      "tool_calls": [
+        "get_catalog_schema"
+      ],
+      "trace": [
+        {
+          "turn": 1,
+          "error": null,
+          "answer": "I couldn't express every requirement as a catalog filter. Please specify the product type, currency, budget, and required attribute values.",
+          "extracted": {
+            "shopping": true,
+            "presentation": "recommend",
+            "query": "ring",
+            "category": null,
+            "min_price": null,
+            "max_price": null,
+            "exclusive_max": false,
+            "currency": null,
+            "brand": null,
+            "attributes": [],
+            "in_stock": false,
+            "intended_use": null,
+            "preferences": [],
+            "cheaper": false,
+            "alternatives": false,
+            "clarification": "Certification is not in the catalog schema"
+          },
+          "provider_models": [
+            "scripted-extraction"
+          ],
+          "draft": null,
+          "product_ids": [],
+          "planner_methods": []
+        }
+      ]
+    },
+    {
+      "id": "jewelry-gift-budget",
+      "store": "jewelry",
+      "language": "en",
+      "journey": "gift",
+      "suite": "journey",
+      "status": "passed",
+      "failures": [],
+      "latency_ms": 1,
+      "provider_calls": 1,
+      "input_tokens": null,
+      "output_tokens": null,
+      "cost_micros": null,
+      "tool_calls": [
+        "get_catalog_schema",
+        "search_products"
+      ],
+      "trace": [
+        {
+          "turn": 1,
+          "error": null,
+          "answer": "Matches to your verified constraints:\n- Ring 1 — 20 USD. In stock. /products/00000000-0000-0000-0000-0000000007d1\n  Verified: metal=silver.\nChecked a bounded candidate set. Prices are current catalog prices; checkout may add tax and delivery.",
+          "extracted": {
+            "shopping": true,
+            "presentation": "recommend",
+            "query": "ring",
+            "category": null,
+            "min_price": null,
+            "max_price": "30",
+            "exclusive_max": false,
+            "currency": "USD",
+            "brand": null,
+            "attributes": [
+              {
+                "name": "metal",
+                "value": "silver"
+              }
+            ],
+            "in_stock": true,
+            "intended_use": null,
+            "preferences": [],
+            "cheaper": false,
+            "alternatives": false,
+            "clarification": null
+          },
+          "provider_models": [
+            "scripted-extraction"
+          ],
+          "draft": null,
+          "product_ids": [
+            "00000000-0000-0000-0000-0000000007d1"
+          ],
+          "planner_methods": []
+        }
+      ]
+    },
+    {
+      "id": "jewelry-comparison-order",
+      "store": "jewelry",
+      "language": "en",
+      "journey": "comparison",
+      "suite": "journey",
+      "status": "passed",
+      "failures": [],
+      "latency_ms": 0,
+      "provider_calls": 1,
+      "input_tokens": null,
+      "output_tokens": null,
+      "cost_micros": null,
+      "tool_calls": [
+        "get_catalog_schema",
+        "compare_products"
+      ],
+      "trace": [
+        {
+          "turn": 1,
+          "error": null,
+          "answer": "Product comparison:\nRing 2: 30 USD. /products/00000000-0000-0000-0000-0000000007d2\nRing 1: 20 USD. /products/00000000-0000-0000-0000-0000000007d1\nCurrent price: 30 USD | 20 USD\nAvailability: In stock | In stock\nmetal: gold | silver\nChecked a bounded candidate set. Prices are current catalog prices; checkout may add tax and delivery.",
+          "extracted": {
+            "shopping": true,
+            "presentation": "compare",
+            "query": "*",
+            "category": null,
+            "min_price": null,
+            "max_price": null,
+            "exclusive_max": false,
+            "currency": null,
+            "brand": null,
+            "attributes": [],
+            "in_stock": false,
+            "intended_use": null,
+            "preferences": [],
+            "cheaper": false,
+            "alternatives": false,
+            "clarification": null
+          },
+          "provider_models": [
+            "scripted-extraction"
+          ],
+          "draft": null,
+          "product_ids": [
+            "00000000-0000-0000-0000-0000000007d2",
+            "00000000-0000-0000-0000-0000000007d1"
+          ],
+          "planner_methods": []
+        }
+      ]
+    },
+    {
+      "id": "jewelry-ambiguous-comparison",
+      "store": "jewelry",
+      "language": "en",
+      "journey": "comparison",
+      "suite": "conversation",
+      "status": "passed",
+      "failures": [],
+      "latency_ms": 0,
+      "provider_calls": 1,
+      "input_tokens": null,
+      "output_tokens": null,
+      "cost_micros": null,
+      "tool_calls": [
+        "get_catalog_schema"
+      ],
+      "trace": [
+        {
+          "turn": 1,
+          "error": null,
+          "answer": "Please select or paste two to five product links to compare current catalog facts.",
+          "extracted": {
+            "shopping": true,
+            "presentation": "compare",
+            "query": "*",
+            "category": null,
+            "min_price": null,
+            "max_price": null,
+            "exclusive_max": false,
+            "currency": null,
+            "brand": null,
+            "attributes": [],
+            "in_stock": false,
+            "intended_use": null,
+            "preferences": [],
+            "cheaper": false,
+            "alternatives": false,
+            "clarification": null
+          },
+          "provider_models": [
+            "scripted-extraction"
+          ],
+          "draft": null,
+          "product_ids": [],
+          "planner_methods": []
+        }
+      ]
+    },
+    {
+      "id": "jewelry-changed-budget",
+      "store": "jewelry",
+      "language": "en",
+      "journey": "discovery",
+      "suite": "conversation",
+      "status": "passed",
+      "failures": [],
+      "latency_ms": 1,
+      "provider_calls": 2,
+      "input_tokens": null,
+      "output_tokens": null,
+      "cost_micros": null,
+      "tool_calls": [
+        "get_catalog_schema",
+        "search_products",
+        "get_catalog_schema",
+        "search_products"
+      ],
+      "trace": [
+        {
+          "turn": 1,
+          "error": null,
+          "answer": "Matches to your verified constraints:\n- Ring 5 — 15 USD. In stock. /products/00000000-0000-0000-0000-0000000007d5\n- Ring 1 — 20 USD. In stock. /products/00000000-0000-0000-0000-0000000007d1\n- Ring 2 — 30 USD. In stock. /products/00000000-0000-0000-0000-0000000007d2\nChecked a bounded candidate set. Prices are current catalog prices; checkout may add tax and delivery.",
+          "extracted": {
+            "shopping": true,
+            "presentation": "recommend",
+            "query": "ring",
+            "category": null,
+            "min_price": null,
+            "max_price": "30",
+            "exclusive_max": false,
+            "currency": "USD",
+            "brand": null,
+            "attributes": [],
+            "in_stock": true,
+            "intended_use": null,
+            "preferences": [],
+            "cheaper": false,
+            "alternatives": false,
+            "clarification": null
+          },
+          "provider_models": [
+            "scripted-extraction"
+          ],
+          "draft": null,
+          "product_ids": [
+            "00000000-0000-0000-0000-0000000007d5",
+            "00000000-0000-0000-0000-0000000007d1",
+            "00000000-0000-0000-0000-0000000007d2"
+          ],
+          "planner_methods": []
+        },
+        {
+          "turn": 2,
+          "error": null,
+          "answer": "Matches to your verified constraints:\n- Ring 5 — 15 USD. In stock. /products/00000000-0000-0000-0000-0000000007d5\nChecked a bounded candidate set. Prices are current catalog prices; checkout may add tax and delivery.",
+          "extracted": {
+            "shopping": true,
+            "presentation": "recommend",
+            "query": "ring",
+            "category": null,
+            "min_price": null,
+            "max_price": "20",
+            "exclusive_max": true,
+            "currency": "USD",
+            "brand": null,
+            "attributes": [],
+            "in_stock": true,
+            "intended_use": null,
+            "preferences": [],
+            "cheaper": false,
+            "alternatives": false,
+            "clarification": null
+          },
+          "provider_models": [
+            "scripted-extraction"
+          ],
+          "draft": null,
+          "product_ids": [
+            "00000000-0000-0000-0000-0000000007d5"
+          ],
+          "planner_methods": []
+        }
+      ]
+    },
+    {
+      "id": "jewelry-cheaper-current-reference",
+      "store": "jewelry",
+      "language": "en",
+      "journey": "discovery",
+      "suite": "conversation",
+      "status": "passed",
+      "failures": [],
+      "latency_ms": 1,
+      "provider_calls": 1,
+      "input_tokens": null,
+      "output_tokens": null,
+      "cost_micros": null,
+      "tool_calls": [
+        "get_catalog_schema",
+        "get_product",
+        "search_products"
+      ],
+      "trace": [
+        {
+          "turn": 1,
+          "error": null,
+          "answer": "Matches to your verified constraints:\n- Ring 5 — 15 USD. In stock. /products/00000000-0000-0000-0000-0000000007d5\n- Ring 1 — 20 USD. In stock. /products/00000000-0000-0000-0000-0000000007d1\nChecked a bounded candidate set. Prices are current catalog prices; checkout may add tax and delivery.",
+          "extracted": {
+            "shopping": true,
+            "presentation": "recommend",
+            "query": "ring",
+            "category": null,
+            "min_price": null,
+            "max_price": null,
+            "exclusive_max": false,
+            "currency": null,
+            "brand": null,
+            "attributes": [],
+            "in_stock": true,
+            "intended_use": null,
+            "preferences": [],
+            "cheaper": true,
+            "alternatives": false,
+            "clarification": null
+          },
+          "provider_models": [
+            "scripted-extraction"
+          ],
+          "draft": null,
+          "product_ids": [
+            "00000000-0000-0000-0000-0000000007d5",
+            "00000000-0000-0000-0000-0000000007d1"
+          ],
+          "planner_methods": []
+        }
+      ]
+    },
+    {
+      "id": "jewelry-silent-relaxation-denied",
+      "store": "jewelry",
+      "language": "en",
+      "journey": "discovery",
+      "suite": "adversarial",
+      "status": "passed",
+      "failures": [],
+      "latency_ms": 0,
+      "provider_calls": 1,
+      "input_tokens": null,
+      "output_tokens": null,
+      "cost_micros": null,
+      "tool_calls": [
+        "get_catalog_schema",
+        "search_products"
+      ],
+      "trace": [
+        {
+          "turn": 1,
+          "error": null,
+          "answer": "No verified matches in the checked catalog candidates.\nChecked a bounded candidate set. Prices are current catalog prices; checkout may add tax and delivery.",
+          "extracted": {
+            "shopping": true,
+            "presentation": "recommend",
+            "query": "ring",
+            "category": null,
+            "min_price": null,
+            "max_price": "100",
+            "exclusive_max": false,
+            "currency": "USD",
+            "brand": null,
+            "attributes": [
+              {
+                "name": "metal",
+                "value": "silver"
+              }
+            ],
+            "in_stock": true,
+            "intended_use": null,
+            "preferences": [],
+            "cheaper": false,
+            "alternatives": true,
+            "clarification": null
+          },
+          "provider_models": [
+            "scripted-extraction"
+          ],
+          "draft": null,
+          "product_ids": [],
+          "planner_methods": []
+        }
+      ]
+    },
+    {
+      "id": "jewelry-cross-store-reference",
+      "store": "jewelry",
+      "language": "en",
+      "journey": "discovery",
+      "suite": "adversarial",
+      "status": "passed",
+      "failures": [],
+      "latency_ms": 0,
+      "provider_calls": 1,
+      "input_tokens": null,
+      "output_tokens": null,
+      "cost_micros": null,
+      "tool_calls": [
+        "get_catalog_schema",
+        "get_product"
+      ],
+      "trace": [
+        {
+          "turn": 1,
+          "error": "invalid_reference",
+          "answer": "",
+          "extracted": {
+            "shopping": true,
+            "presentation": "detail",
+            "query": "*",
+            "category": null,
+            "min_price": null,
+            "max_price": null,
+            "exclusive_max": false,
+            "currency": null,
+            "brand": null,
+            "attributes": [],
+            "in_stock": false,
+            "intended_use": null,
+            "preferences": [],
+            "cheaper": false,
+            "alternatives": false,
+            "clarification": null
+          },
+          "provider_models": [
+            "scripted-extraction"
+          ],
+          "draft": null,
+          "product_ids": [],
+          "planner_methods": []
+        }
+      ]
+    },
+    {
+      "id": "jewelry-provider-timeout",
+      "store": "jewelry",
+      "language": "en",
+      "journey": "discovery",
+      "suite": "adversarial",
+      "status": "passed",
+      "failures": [],
+      "latency_ms": 0,
+      "provider_calls": 1,
+      "input_tokens": null,
+      "output_tokens": null,
+      "cost_micros": null,
+      "tool_calls": [
+        "get_catalog_schema"
+      ],
+      "trace": [
+        {
+          "turn": 1,
+          "error": "timeout",
+          "answer": "",
+          "extracted": {},
+          "provider_models": [],
+          "draft": null,
+          "product_ids": [],
+          "planner_methods": []
+        }
+      ]
+    },
+    {
+      "id": "jewelry-provider-rate-limit",
+      "store": "jewelry",
+      "language": "en",
+      "journey": "discovery",
+      "suite": "adversarial",
+      "status": "passed",
+      "failures": [],
+      "latency_ms": 0,
+      "provider_calls": 1,
+      "input_tokens": null,
+      "output_tokens": null,
+      "cost_micros": null,
+      "tool_calls": [
+        "get_catalog_schema"
+      ],
+      "trace": [
+        {
+          "turn": 1,
+          "error": "rate_limit",
+          "answer": "",
+          "extracted": {},
+          "provider_models": [],
+          "draft": null,
+          "product_ids": [],
+          "planner_methods": []
+        }
+      ]
+    },
+    {
+      "id": "jewelry-provider-invalid-response",
+      "store": "jewelry",
+      "language": "en",
+      "journey": "discovery",
+      "suite": "adversarial",
+      "status": "passed",
+      "failures": [],
+      "latency_ms": 0,
+      "provider_calls": 1,
+      "input_tokens": null,
+      "output_tokens": null,
+      "cost_micros": null,
+      "tool_calls": [
+        "get_catalog_schema"
+      ],
+      "trace": [
+        {
+          "turn": 1,
+          "error": "invalid_response",
+          "answer": "",
+          "extracted": {},
+          "provider_models": [],
+          "draft": null,
+          "product_ids": [],
+          "planner_methods": []
+        }
+      ]
+    },
+    {
+      "id": "jewelry-provider-unauthorized-tool",
+      "store": "jewelry",
+      "language": "en",
+      "journey": "discovery",
+      "suite": "adversarial",
+      "status": "passed",
+      "failures": [],
+      "latency_ms": 0,
+      "provider_calls": 1,
+      "input_tokens": null,
+      "output_tokens": null,
+      "cost_micros": null,
+      "tool_calls": [
+        "get_catalog_schema"
+      ],
+      "trace": [
+        {
+          "turn": 1,
+          "error": "invalid_shopping_plan",
+          "answer": "",
+          "extracted": {
+            "shopping": true,
+            "presentation": "recommend",
+            "query": "*",
+            "category": null,
+            "min_price": null,
+            "max_price": null,
+            "exclusive_max": false,
+            "currency": null,
+            "brand": null,
+            "attributes": [],
+            "in_stock": false,
+            "intended_use": null,
+            "preferences": [],
+            "cheaper": false,
+            "alternatives": false,
+            "clarification": null
+          },
+          "provider_models": [
+            "scripted-extraction"
+          ],
+          "draft": null,
+          "product_ids": [],
+          "planner_methods": []
+        }
+      ]
+    },
+    {
+      "id": "jewelry-malformed-tool",
+      "store": "jewelry",
+      "language": "en",
+      "journey": "discovery",
+      "suite": "adversarial",
+      "status": "passed",
+      "failures": [],
+      "latency_ms": 0,
+      "provider_calls": 0,
+      "input_tokens": null,
+      "output_tokens": null,
+      "cost_micros": null,
+      "tool_calls": [
+        "get_catalog_schema"
+      ],
+      "trace": [
+        {
+          "turn": 1,
+          "error": "tool_unavailable",
+          "answer": "",
+          "extracted": {},
+          "provider_models": [],
+          "draft": null,
+          "product_ids": [],
+          "planner_methods": []
+        }
+      ]
+    },
+    {
+      "id": "jewelry-unavailable-tool",
+      "store": "jewelry",
+      "language": "en",
+      "journey": "discovery",
+      "suite": "adversarial",
+      "status": "passed",
+      "failures": [],
+      "latency_ms": 0,
+      "provider_calls": 0,
+      "input_tokens": null,
+      "output_tokens": null,
+      "cost_micros": null,
+      "tool_calls": [
+        "get_catalog_schema"
+      ],
+      "trace": [
+        {
+          "turn": 1,
+          "error": "tool_unavailable",
+          "answer": "",
+          "extracted": {},
+          "provider_models": [],
+          "draft": null,
+          "product_ids": [],
+          "planner_methods": []
+        }
+      ]
+    },
+    {
+      "id": "jewelry-order-guide",
+      "store": "jewelry",
+      "language": "en",
+      "journey": "order_status",
+      "suite": "journey",
+      "status": "passed",
+      "failures": [],
+      "latency_ms": 0,
+      "provider_calls": 0,
+      "input_tokens": null,
+      "output_tokens": null,
+      "cost_micros": null,
+      "tool_calls": [],
+      "trace": [
+        {
+          "turn": 1,
+          "error": null,
+          "answer": "Sign in to view your own order status. A basket proposal is not a placed order.\n\nSource: Synthetic evaluation guide (guide:order-status@1; reviewed 2026-09-01).",
+          "extracted": {},
+          "provider_models": [],
+          "draft": null,
+          "product_ids": [],
+          "planner_methods": []
+        }
+      ]
+    },
+    {
+      "id": "jewelry-unsupported-policy",
+      "store": "jewelry",
+      "language": "en",
+      "journey": "policy",
+      "suite": "journey",
+      "status": "passed",
+      "failures": [],
+      "latency_ms": 0,
+      "provider_calls": 0,
+      "input_tokens": null,
+      "output_tokens": null,
+      "cost_micros": null,
+      "tool_calls": [],
+      "trace": [
+        {
+          "turn": 1,
+          "error": null,
+          "answer": "I do not have an approved answer for that store policy. Please contact the store before relying on a policy or delivery promise.",
+          "extracted": {},
+          "provider_models": [],
+          "draft": null,
+          "product_ids": [],
+          "planner_methods": []
+        }
+      ]
+    },
+    {
+      "id": "jewelry-support-policy",
+      "store": "jewelry",
+      "language": "en",
+      "journey": "support",
+      "suite": "journey",
+      "status": "passed",
+      "failures": [],
+      "latency_ms": 0,
+      "provider_calls": 0,
+      "input_tokens": null,
+      "output_tokens": null,
+      "cost_micros": null,
+      "tool_calls": [],
+      "trace": [
+        {
+          "turn": 1,
+          "error": null,
+          "answer": "I do not have an approved answer for that store policy. Please contact the store before relying on a policy or delivery promise.",
+          "extracted": {},
+          "provider_models": [],
+          "draft": null,
+          "product_ids": [],
+          "planner_methods": []
+        }
+      ]
+    },
+    {
+      "id": "jewelry-shop",
+      "store": "jewelry",
+      "language": "en",
+      "journey": "shop",
+      "suite": "journey",
+      "status": "passed",
+      "failures": [],
+      "latency_ms": 0,
+      "provider_calls": 1,
+      "input_tokens": null,
+      "output_tokens": null,
+      "cost_micros": null,
+      "tool_calls": [
+        "get_catalog_schema",
+        "search_products"
+      ],
+      "trace": [
+        {
+          "turn": 1,
+          "error": null,
+          "answer": "Your proposed basket is ready to review. Your live cart has not changed.",
+          "extracted": {
+            "goal": {
+              "purpose": "",
+              "budget": null,
+              "currency": null,
+              "all_inclusive": false,
+              "budget_exclusive": false,
+              "people": null,
+              "locked_products": [],
+              "excluded_products": [],
+              "locked_brands": [],
+              "allow_substitutions": false,
+              "delivery_date": null,
+              "assumptions": [],
+              "unresolved": [],
+              "saving_target": null
+            },
+            "searches": [
+              {
+                "intent": {
+                  "shopping": true,
+                  "presentation": "recommend",
+                  "query": "ring",
+                  "category": null,
+                  "min_price": null,
+                  "max_price": null,
+                  "exclusive_max": false,
+                  "currency": null,
+                  "brand": null,
+                  "attributes": [],
+                  "in_stock": true,
+                  "intended_use": null,
+                  "preferences": [],
+                  "cheaper": false,
+                  "alternatives": false,
+                  "clarification": null
+                },
+                "quantity": 1,
+                "replace_proposed": null
+              }
+            ],
+            "quantities": [],
+            "lock_evidence": [],
+            "clarification": null
+          },
+          "provider_models": [
+            "scripted-extraction"
+          ],
+          "draft": {
+            "task_id": "00000000-0000-0000-0000-000000000384",
+            "task_revision": 1,
+            "source_revision": 1,
+            "mode": "shop",
+            "auto_select": false,
+            "goal": {
+              "purpose": "",
+              "budget": null,
+              "currency": null,
+              "all_inclusive": false,
+              "budget_exclusive": false,
+              "people": null,
+              "locked_products": [],
+              "excluded_products": [],
+              "locked_brands": [],
+              "allow_substitutions": false,
+              "delivery_date": null,
+              "assumptions": [],
+              "unresolved": [],
+              "saving_target": null
+            },
+            "location_id": null,
+            "order_id": null,
+            "selections": [
+              {
+                "product_id": "00000000-0000-0000-0000-0000000007d5",
+                "quantity": 1,
+                "replaces": null,
+                "min_price": null,
+                "max_price": null,
+                "exclusive_max": false,
+                "required_attributes": {},
+                "reason": "Matches the checked catalog constraints. Review the selected SKU and quantity."
+              }
+            ]
+          },
+          "product_ids": [],
+          "planner_methods": [
+            "GET",
+            "POST"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "jewelry-optimize-quantities",
+      "store": "jewelry",
+      "language": "en",
+      "journey": "optimize",
+      "suite": "journey",
+      "status": "passed",
+      "failures": [],
+      "latency_ms": 0,
+      "provider_calls": 1,
+      "input_tokens": null,
+      "output_tokens": null,
+      "cost_micros": null,
+      "tool_calls": [
+        "get_catalog_schema"
+      ],
+      "trace": [
+        {
+          "turn": 1,
+          "error": null,
+          "answer": "Your proposed basket is ready to review. Your live cart has not changed.",
+          "extracted": {
+            "goal": {
+              "purpose": "",
+              "budget": null,
+              "currency": null,
+              "all_inclusive": false,
+              "budget_exclusive": false,
+              "people": null,
+              "locked_products": [
+                "00000000-0000-0000-0000-0000000007d1"
+              ],
+              "excluded_products": [],
+              "locked_brands": [],
+              "allow_substitutions": true,
+              "delivery_date": null,
+              "assumptions": [],
+              "unresolved": [],
+              "saving_target": null
+            },
+            "searches": [],
+            "quantities": [],
+            "lock_evidence": [
+              {
+                "product_id": "00000000-0000-0000-0000-0000000007d1",
+                "customer_quote": "preserve quantities"
+              }
+            ],
+            "clarification": null
+          },
+          "provider_models": [
+            "scripted-extraction"
+          ],
+          "draft": {
+            "task_id": "00000000-0000-0000-0000-000000000384",
+            "task_revision": 1,
+            "source_revision": 1,
+            "mode": "optimize",
+            "auto_select": true,
+            "goal": {
+              "purpose": "",
+              "budget": null,
+              "currency": null,
+              "all_inclusive": false,
+              "budget_exclusive": false,
+              "people": null,
+              "locked_products": [],
+              "excluded_products": [],
+              "locked_brands": [],
+              "allow_substitutions": true,
+              "delivery_date": null,
+              "assumptions": [],
+              "unresolved": [],
+              "saving_target": null
+            },
+            "location_id": null,
+            "order_id": null,
+            "selections": []
+          },
+          "product_ids": [],
+          "planner_methods": [
+            "GET",
+            "POST"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "jewelry-optimize-existing-lock",
+      "store": "jewelry",
+      "language": "en",
+      "journey": "optimize",
+      "suite": "journey",
+      "status": "passed",
+      "failures": [],
+      "latency_ms": 0,
+      "provider_calls": 1,
+      "input_tokens": null,
+      "output_tokens": null,
+      "cost_micros": null,
+      "tool_calls": [
+        "get_catalog_schema"
+      ],
+      "trace": [
+        {
+          "turn": 1,
+          "error": null,
+          "answer": "Your proposed basket is ready to review. Your live cart has not changed.",
+          "extracted": {
+            "goal": {
+              "purpose": "",
+              "budget": null,
+              "currency": null,
+              "all_inclusive": false,
+              "budget_exclusive": false,
+              "people": null,
+              "locked_products": [],
+              "excluded_products": [],
+              "locked_brands": [],
+              "allow_substitutions": true,
+              "delivery_date": null,
+              "assumptions": [],
+              "unresolved": [],
+              "saving_target": null
+            },
+            "searches": [],
+            "quantities": [],
+            "lock_evidence": [],
+            "clarification": null
+          },
+          "provider_models": [
+            "scripted-extraction"
+          ],
+          "draft": {
+            "task_id": "00000000-0000-0000-0000-000000000384",
+            "task_revision": 1,
+            "source_revision": 1,
+            "mode": "optimize",
+            "auto_select": true,
+            "goal": {
+              "purpose": "",
+              "budget": null,
+              "currency": null,
+              "all_inclusive": false,
+              "budget_exclusive": false,
+              "people": null,
+              "locked_products": [
+                "00000000-0000-0000-0000-0000000007d1"
+              ],
+              "excluded_products": [],
+              "locked_brands": [],
+              "allow_substitutions": true,
+              "delivery_date": null,
+              "assumptions": [],
+              "unresolved": [],
+              "saving_target": null
+            },
+            "location_id": null,
+            "order_id": null,
+            "selections": []
+          },
+          "product_ids": [],
+          "planner_methods": [
+            "GET",
+            "POST"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "jewelry-buy-again-owned-order",
+      "store": "jewelry",
+      "language": "en",
+      "journey": "buy_again",
+      "suite": "journey",
+      "status": "passed",
+      "failures": [],
+      "latency_ms": 0,
+      "provider_calls": 0,
+      "input_tokens": null,
+      "output_tokens": null,
+      "cost_micros": null,
+      "tool_calls": [],
+      "trace": [
+        {
+          "turn": 1,
+          "error": null,
+          "answer": "Choose an order using Buy again. Its current products and prices will be quoted before you approve any cart update.",
+          "extracted": {},
+          "provider_models": [],
+          "draft": null,
+          "product_ids": [],
+          "planner_methods": [
+            "GET"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "jewelry-meal-uncertainty",
+      "store": "jewelry",
+      "language": "en",
+      "journey": "meal",
+      "suite": "journey",
+      "status": "passed",
+      "failures": [],
+      "latency_ms": 0,
+      "provider_calls": 1,
+      "input_tokens": null,
+      "output_tokens": null,
+      "cost_micros": null,
+      "tool_calls": [
+        "get_catalog_schema"
+      ],
+      "trace": [
+        {
+          "turn": 1,
+          "error": null,
+          "answer": "I couldn't express every requirement as a catalog filter. Please specify the product type, currency, budget, and required attribute values.",
+          "extracted": {
+            "shopping": true,
+            "presentation": "recommend",
+            "query": "ring",
+            "category": null,
+            "min_price": null,
+            "max_price": null,
+            "exclusive_max": false,
+            "currency": null,
+            "brand": null,
+            "attributes": [],
+            "in_stock": false,
+            "intended_use": null,
+            "preferences": [],
+            "cheaper": false,
+            "alternatives": false,
+            "clarification": "No verified allergen or serving facts"
+          },
+          "provider_models": [
+            "scripted-extraction"
+          ],
+          "draft": null,
+          "product_ids": [],
+          "planner_methods": []
+        }
+      ]
+    },
+    {
+      "id": "electronics-verified-hard-constraints",
+      "store": "electronics",
+      "language": "en",
+      "journey": "discovery",
+      "suite": "golden",
+      "status": "passed",
+      "failures": [],
+      "latency_ms": 1,
+      "provider_calls": 1,
+      "input_tokens": null,
+      "output_tokens": null,
+      "cost_micros": null,
+      "tool_calls": [
+        "get_catalog_schema",
+        "search_products"
+      ],
+      "trace": [
+        {
+          "turn": 1,
+          "error": null,
+          "answer": "Matches to your verified constraints:\n- Charger 1 — 20 USD. In stock. /products/00000000-0000-0000-0000-000000000bb9\n  Verified: connector=usb-c.\nChecked a bounded candidate set. Prices are current catalog prices; checkout may add tax and delivery.",
+          "extracted": {
+            "shopping": true,
+            "presentation": "recommend",
+            "query": "charger",
+            "category": null,
+            "min_price": null,
+            "max_price": "30",
+            "exclusive_max": false,
+            "currency": "USD",
+            "brand": null,
+            "attributes": [
+              {
+                "name": "connector",
+                "value": "usb-c"
+              }
+            ],
+            "in_stock": true,
+            "intended_use": null,
+            "preferences": [],
+            "cheaper": false,
+            "alternatives": false,
+            "clarification": null
+          },
+          "provider_models": [
+            "scripted-extraction"
+          ],
+          "draft": null,
+          "product_ids": [
+            "00000000-0000-0000-0000-000000000bb9"
+          ],
+          "planner_methods": []
+        }
+      ]
+    },
+    {
+      "id": "electronics-ar-budget",
+      "store": "electronics",
+      "language": "ar",
+      "journey": "discovery",
+      "suite": "catalog_grounded",
+      "status": "passed",
+      "failures": [],
+      "latency_ms": 0,
+      "provider_calls": 1,
+      "input_tokens": null,
+      "output_tokens": null,
+      "cost_micros": null,
+      "tool_calls": [
+        "get_catalog_schema",
+        "search_products"
+      ],
+      "trace": [
+        {
+          "turn": 1,
+          "error": null,
+          "answer": "Matches to your verified constraints:\n- Charger 5 — 15 USD. In stock. /products/00000000-0000-0000-0000-000000000bbd\n- Charger 1 — 20 USD. In stock. /products/00000000-0000-0000-0000-000000000bb9\nChecked a bounded candidate set. Prices are current catalog prices; checkout may add tax and delivery.",
+          "extracted": {
+            "shopping": true,
+            "presentation": "recommend",
+            "query": "charger",
+            "category": null,
+            "min_price": null,
+            "max_price": "30",
+            "exclusive_max": true,
+            "currency": "USD",
+            "brand": null,
+            "attributes": [],
+            "in_stock": true,
+            "intended_use": null,
+            "preferences": [],
+            "cheaper": false,
+            "alternatives": false,
+            "clarification": null
+          },
+          "provider_models": [
+            "scripted-extraction"
+          ],
+          "draft": null,
+          "product_ids": [
+            "00000000-0000-0000-0000-000000000bbd",
+            "00000000-0000-0000-0000-000000000bb9"
+          ],
+          "planner_methods": []
+        }
+      ]
+    },
+    {
+      "id": "electronics-ar-eg-budget",
+      "store": "electronics",
+      "language": "ar-eg",
+      "journey": "discovery",
+      "suite": "catalog_grounded",
+      "status": "passed",
+      "failures": [],
+      "latency_ms": 0,
+      "provider_calls": 1,
+      "input_tokens": null,
+      "output_tokens": null,
+      "cost_micros": null,
+      "tool_calls": [
+        "get_catalog_schema",
+        "search_products"
+      ],
+      "trace": [
+        {
+          "turn": 1,
+          "error": null,
+          "answer": "Matches to your verified constraints:\n- Charger 5 — 15 USD. In stock. /products/00000000-0000-0000-0000-000000000bbd\n- Charger 1 — 20 USD. In stock. /products/00000000-0000-0000-0000-000000000bb9\nChecked a bounded candidate set. Prices are current catalog prices; checkout may add tax and delivery.",
+          "extracted": {
+            "shopping": true,
+            "presentation": "recommend",
+            "query": "charger",
+            "category": null,
+            "min_price": null,
+            "max_price": "30",
+            "exclusive_max": true,
+            "currency": "USD",
+            "brand": null,
+            "attributes": [],
+            "in_stock": true,
+            "intended_use": null,
+            "preferences": [],
+            "cheaper": false,
+            "alternatives": false,
+            "clarification": null
+          },
+          "provider_models": [
+            "scripted-extraction"
+          ],
+          "draft": null,
+          "product_ids": [
+            "00000000-0000-0000-0000-000000000bbd",
+            "00000000-0000-0000-0000-000000000bb9"
+          ],
+          "planner_methods": []
+        }
+      ]
+    },
+    {
+      "id": "electronics-mixed-budget",
+      "store": "electronics",
+      "language": "mixed",
+      "journey": "discovery",
+      "suite": "catalog_grounded",
+      "status": "passed",
+      "failures": [],
+      "latency_ms": 0,
+      "provider_calls": 1,
+      "input_tokens": null,
+      "output_tokens": null,
+      "cost_micros": null,
+      "tool_calls": [
+        "get_catalog_schema",
+        "search_products"
+      ],
+      "trace": [
+        {
+          "turn": 1,
+          "error": null,
+          "answer": "Matches to your verified constraints:\n- Charger 5 — 15 USD. In stock. /products/00000000-0000-0000-0000-000000000bbd\n- Charger 1 — 20 USD. In stock. /products/00000000-0000-0000-0000-000000000bb9\nChecked a bounded candidate set. Prices are current catalog prices; checkout may add tax and delivery.",
+          "extracted": {
+            "shopping": true,
+            "presentation": "recommend",
+            "query": "charger",
+            "category": null,
+            "min_price": null,
+            "max_price": "30",
+            "exclusive_max": true,
+            "currency": "USD",
+            "brand": null,
+            "attributes": [],
+            "in_stock": true,
+            "intended_use": null,
+            "preferences": [],
+            "cheaper": false,
+            "alternatives": false,
+            "clarification": null
+          },
+          "provider_models": [
+            "scripted-extraction"
+          ],
+          "draft": null,
+          "product_ids": [
+            "00000000-0000-0000-0000-000000000bbd",
+            "00000000-0000-0000-0000-000000000bb9"
+          ],
+          "planner_methods": []
+        }
+      ]
+    },
+    {
+      "id": "electronics-typo-budget",
+      "store": "electronics",
+      "language": "typo",
+      "journey": "discovery",
+      "suite": "catalog_grounded",
+      "status": "passed",
+      "failures": [],
+      "latency_ms": 0,
+      "provider_calls": 1,
+      "input_tokens": null,
+      "output_tokens": null,
+      "cost_micros": null,
+      "tool_calls": [
+        "get_catalog_schema",
+        "search_products"
+      ],
+      "trace": [
+        {
+          "turn": 1,
+          "error": null,
+          "answer": "Matches to your verified constraints:\n- Charger 5 — 15 USD. In stock. /products/00000000-0000-0000-0000-000000000bbd\n- Charger 1 — 20 USD. In stock. /products/00000000-0000-0000-0000-000000000bb9\nChecked a bounded candidate set. Prices are current catalog prices; checkout may add tax and delivery.",
+          "extracted": {
+            "shopping": true,
+            "presentation": "recommend",
+            "query": "charger",
+            "category": null,
+            "min_price": null,
+            "max_price": "30",
+            "exclusive_max": true,
+            "currency": "USD",
+            "brand": null,
+            "attributes": [],
+            "in_stock": true,
+            "intended_use": null,
+            "preferences": [],
+            "cheaper": false,
+            "alternatives": false,
+            "clarification": null
+          },
+          "provider_models": [
+            "scripted-extraction"
+          ],
+          "draft": null,
+          "product_ids": [
+            "00000000-0000-0000-0000-000000000bbd",
+            "00000000-0000-0000-0000-000000000bb9"
+          ],
+          "planner_methods": []
+        }
+      ]
+    },
+    {
+      "id": "electronics-no-valid-match",
+      "store": "electronics",
+      "language": "en",
+      "journey": "discovery",
+      "suite": "catalog_grounded",
+      "status": "passed",
+      "failures": [],
+      "latency_ms": 0,
+      "provider_calls": 1,
+      "input_tokens": null,
+      "output_tokens": null,
+      "cost_micros": null,
+      "tool_calls": [
+        "get_catalog_schema",
+        "search_products"
+      ],
+      "trace": [
+        {
+          "turn": 1,
+          "error": null,
+          "answer": "No verified matches in the checked catalog candidates.\nChecked a bounded candidate set. Prices are current catalog prices; checkout may add tax and delivery.",
+          "extracted": {
+            "shopping": true,
+            "presentation": "recommend",
+            "query": "charger",
+            "category": null,
+            "min_price": null,
+            "max_price": "20",
+            "exclusive_max": true,
+            "currency": "USD",
+            "brand": null,
+            "attributes": [
+              {
+                "name": "connector",
+                "value": "usb-c"
+              }
+            ],
+            "in_stock": true,
+            "intended_use": null,
+            "preferences": [],
+            "cheaper": false,
+            "alternatives": false,
+            "clarification": null
+          },
+          "provider_models": [
+            "scripted-extraction"
+          ],
+          "draft": null,
+          "product_ids": [],
+          "planner_methods": []
+        }
+      ]
+    },
+    {
+      "id": "electronics-missing-currency",
+      "store": "electronics",
+      "language": "en",
+      "journey": "discovery",
+      "suite": "conversation",
+      "status": "passed",
+      "failures": [],
+      "latency_ms": 0,
+      "provider_calls": 1,
+      "input_tokens": null,
+      "output_tokens": null,
+      "cost_micros": null,
+      "tool_calls": [
+        "get_catalog_schema"
+      ],
+      "trace": [
+        {
+          "turn": 1,
+          "error": null,
+          "answer": "Which currency should I use for your budget?",
+          "extracted": {
+            "shopping": true,
+            "presentation": "recommend",
+            "query": "charger",
+            "category": null,
+            "min_price": null,
+            "max_price": "25",
+            "exclusive_max": false,
+            "currency": null,
+            "brand": null,
+            "attributes": [],
+            "in_stock": false,
+            "intended_use": null,
+            "preferences": [],
+            "cheaper": false,
+            "alternatives": false,
+            "clarification": null
+          },
+          "provider_models": [
+            "scripted-extraction"
+          ],
+          "draft": null,
+          "product_ids": [],
+          "planner_methods": []
+        }
+      ]
+    },
+    {
+      "id": "electronics-unknown-requirement",
+      "store": "electronics",
+      "language": "en",
+      "journey": "compatibility",
+      "suite": "journey",
+      "status": "passed",
+      "failures": [],
+      "latency_ms": 0,
+      "provider_calls": 1,
+      "input_tokens": null,
+      "output_tokens": null,
+      "cost_micros": null,
+      "tool_calls": [
+        "get_catalog_schema"
+      ],
+      "trace": [
+        {
+          "turn": 1,
+          "error": null,
+          "answer": "I couldn't express every requirement as a catalog filter. Please specify the product type, currency, budget, and required attribute values.",
+          "extracted": {
+            "shopping": true,
+            "presentation": "recommend",
+            "query": "charger",
+            "category": null,
+            "min_price": null,
+            "max_price": null,
+            "exclusive_max": false,
+            "currency": null,
+            "brand": null,
+            "attributes": [],
+            "in_stock": false,
+            "intended_use": null,
+            "preferences": [],
+            "cheaper": false,
+            "alternatives": false,
+            "clarification": "Certification is not in the catalog schema"
+          },
+          "provider_models": [
+            "scripted-extraction"
+          ],
+          "draft": null,
+          "product_ids": [],
+          "planner_methods": []
+        }
+      ]
+    },
+    {
+      "id": "electronics-gift-budget",
+      "store": "electronics",
+      "language": "en",
+      "journey": "gift",
+      "suite": "journey",
+      "status": "passed",
+      "failures": [],
+      "latency_ms": 0,
+      "provider_calls": 1,
+      "input_tokens": null,
+      "output_tokens": null,
+      "cost_micros": null,
+      "tool_calls": [
+        "get_catalog_schema",
+        "search_products"
+      ],
+      "trace": [
+        {
+          "turn": 1,
+          "error": null,
+          "answer": "Matches to your verified constraints:\n- Charger 1 — 20 USD. In stock. /products/00000000-0000-0000-0000-000000000bb9\n  Verified: connector=usb-c.\nChecked a bounded candidate set. Prices are current catalog prices; checkout may add tax and delivery.",
+          "extracted": {
+            "shopping": true,
+            "presentation": "recommend",
+            "query": "charger",
+            "category": null,
+            "min_price": null,
+            "max_price": "30",
+            "exclusive_max": false,
+            "currency": "USD",
+            "brand": null,
+            "attributes": [
+              {
+                "name": "connector",
+                "value": "usb-c"
+              }
+            ],
+            "in_stock": true,
+            "intended_use": null,
+            "preferences": [],
+            "cheaper": false,
+            "alternatives": false,
+            "clarification": null
+          },
+          "provider_models": [
+            "scripted-extraction"
+          ],
+          "draft": null,
+          "product_ids": [
+            "00000000-0000-0000-0000-000000000bb9"
+          ],
+          "planner_methods": []
+        }
+      ]
+    },
+    {
+      "id": "electronics-comparison-order",
+      "store": "electronics",
+      "language": "en",
+      "journey": "comparison",
+      "suite": "journey",
+      "status": "passed",
+      "failures": [],
+      "latency_ms": 1,
+      "provider_calls": 1,
+      "input_tokens": null,
+      "output_tokens": null,
+      "cost_micros": null,
+      "tool_calls": [
+        "get_catalog_schema",
+        "compare_products"
+      ],
+      "trace": [
+        {
+          "turn": 1,
+          "error": null,
+          "answer": "Product comparison:\nCharger 2: 30 USD. /products/00000000-0000-0000-0000-000000000bba\nCharger 1: 20 USD. /products/00000000-0000-0000-0000-000000000bb9\nCurrent price: 30 USD | 20 USD\nAvailability: In stock | In stock\nconnector: lightning | usb-c\nChecked a bounded candidate set. Prices are current catalog prices; checkout may add tax and delivery.",
+          "extracted": {
+            "shopping": true,
+            "presentation": "compare",
+            "query": "*",
+            "category": null,
+            "min_price": null,
+            "max_price": null,
+            "exclusive_max": false,
+            "currency": null,
+            "brand": null,
+            "attributes": [],
+            "in_stock": false,
+            "intended_use": null,
+            "preferences": [],
+            "cheaper": false,
+            "alternatives": false,
+            "clarification": null
+          },
+          "provider_models": [
+            "scripted-extraction"
+          ],
+          "draft": null,
+          "product_ids": [
+            "00000000-0000-0000-0000-000000000bba",
+            "00000000-0000-0000-0000-000000000bb9"
+          ],
+          "planner_methods": []
+        }
+      ]
+    },
+    {
+      "id": "electronics-ambiguous-comparison",
+      "store": "electronics",
+      "language": "en",
+      "journey": "comparison",
+      "suite": "conversation",
+      "status": "passed",
+      "failures": [],
+      "latency_ms": 0,
+      "provider_calls": 1,
+      "input_tokens": null,
+      "output_tokens": null,
+      "cost_micros": null,
+      "tool_calls": [
+        "get_catalog_schema"
+      ],
+      "trace": [
+        {
+          "turn": 1,
+          "error": null,
+          "answer": "Please select or paste two to five product links to compare current catalog facts.",
+          "extracted": {
+            "shopping": true,
+            "presentation": "compare",
+            "query": "*",
+            "category": null,
+            "min_price": null,
+            "max_price": null,
+            "exclusive_max": false,
+            "currency": null,
+            "brand": null,
+            "attributes": [],
+            "in_stock": false,
+            "intended_use": null,
+            "preferences": [],
+            "cheaper": false,
+            "alternatives": false,
+            "clarification": null
+          },
+          "provider_models": [
+            "scripted-extraction"
+          ],
+          "draft": null,
+          "product_ids": [],
+          "planner_methods": []
+        }
+      ]
+    },
+    {
+      "id": "electronics-changed-budget",
+      "store": "electronics",
+      "language": "en",
+      "journey": "discovery",
+      "suite": "conversation",
+      "status": "passed",
+      "failures": [],
+      "latency_ms": 1,
+      "provider_calls": 2,
+      "input_tokens": null,
+      "output_tokens": null,
+      "cost_micros": null,
+      "tool_calls": [
+        "get_catalog_schema",
+        "search_products",
+        "get_catalog_schema",
+        "search_products"
+      ],
+      "trace": [
+        {
+          "turn": 1,
+          "error": null,
+          "answer": "Matches to your verified constraints:\n- Charger 5 — 15 USD. In stock. /products/00000000-0000-0000-0000-000000000bbd\n- Charger 1 — 20 USD. In stock. /products/00000000-0000-0000-0000-000000000bb9\n- Charger 2 — 30 USD. In stock. /products/00000000-0000-0000-0000-000000000bba\nChecked a bounded candidate set. Prices are current catalog prices; checkout may add tax and delivery.",
+          "extracted": {
+            "shopping": true,
+            "presentation": "recommend",
+            "query": "charger",
+            "category": null,
+            "min_price": null,
+            "max_price": "30",
+            "exclusive_max": false,
+            "currency": "USD",
+            "brand": null,
+            "attributes": [],
+            "in_stock": true,
+            "intended_use": null,
+            "preferences": [],
+            "cheaper": false,
+            "alternatives": false,
+            "clarification": null
+          },
+          "provider_models": [
+            "scripted-extraction"
+          ],
+          "draft": null,
+          "product_ids": [
+            "00000000-0000-0000-0000-000000000bbd",
+            "00000000-0000-0000-0000-000000000bb9",
+            "00000000-0000-0000-0000-000000000bba"
+          ],
+          "planner_methods": []
+        },
+        {
+          "turn": 2,
+          "error": null,
+          "answer": "Matches to your verified constraints:\n- Charger 5 — 15 USD. In stock. /products/00000000-0000-0000-0000-000000000bbd\nChecked a bounded candidate set. Prices are current catalog prices; checkout may add tax and delivery.",
+          "extracted": {
+            "shopping": true,
+            "presentation": "recommend",
+            "query": "charger",
+            "category": null,
+            "min_price": null,
+            "max_price": "20",
+            "exclusive_max": true,
+            "currency": "USD",
+            "brand": null,
+            "attributes": [],
+            "in_stock": true,
+            "intended_use": null,
+            "preferences": [],
+            "cheaper": false,
+            "alternatives": false,
+            "clarification": null
+          },
+          "provider_models": [
+            "scripted-extraction"
+          ],
+          "draft": null,
+          "product_ids": [
+            "00000000-0000-0000-0000-000000000bbd"
+          ],
+          "planner_methods": []
+        }
+      ]
+    },
+    {
+      "id": "electronics-cheaper-current-reference",
+      "store": "electronics",
+      "language": "en",
+      "journey": "discovery",
+      "suite": "conversation",
+      "status": "passed",
+      "failures": [],
+      "latency_ms": 1,
+      "provider_calls": 1,
+      "input_tokens": null,
+      "output_tokens": null,
+      "cost_micros": null,
+      "tool_calls": [
+        "get_catalog_schema",
+        "get_product",
+        "search_products"
+      ],
+      "trace": [
+        {
+          "turn": 1,
+          "error": null,
+          "answer": "Matches to your verified constraints:\n- Charger 5 — 15 USD. In stock. /products/00000000-0000-0000-0000-000000000bbd\n- Charger 1 — 20 USD. In stock. /products/00000000-0000-0000-0000-000000000bb9\nChecked a bounded candidate set. Prices are current catalog prices; checkout may add tax and delivery.",
+          "extracted": {
+            "shopping": true,
+            "presentation": "recommend",
+            "query": "charger",
+            "category": null,
+            "min_price": null,
+            "max_price": null,
+            "exclusive_max": false,
+            "currency": null,
+            "brand": null,
+            "attributes": [],
+            "in_stock": true,
+            "intended_use": null,
+            "preferences": [],
+            "cheaper": true,
+            "alternatives": false,
+            "clarification": null
+          },
+          "provider_models": [
+            "scripted-extraction"
+          ],
+          "draft": null,
+          "product_ids": [
+            "00000000-0000-0000-0000-000000000bbd",
+            "00000000-0000-0000-0000-000000000bb9"
+          ],
+          "planner_methods": []
+        }
+      ]
+    },
+    {
+      "id": "electronics-silent-relaxation-denied",
+      "store": "electronics",
+      "language": "en",
+      "journey": "discovery",
+      "suite": "adversarial",
+      "status": "passed",
+      "failures": [],
+      "latency_ms": 0,
+      "provider_calls": 1,
+      "input_tokens": null,
+      "output_tokens": null,
+      "cost_micros": null,
+      "tool_calls": [
+        "get_catalog_schema",
+        "search_products"
+      ],
+      "trace": [
+        {
+          "turn": 1,
+          "error": null,
+          "answer": "No verified matches in the checked catalog candidates.\nChecked a bounded candidate set. Prices are current catalog prices; checkout may add tax and delivery.",
+          "extracted": {
+            "shopping": true,
+            "presentation": "recommend",
+            "query": "charger",
+            "category": null,
+            "min_price": null,
+            "max_price": "100",
+            "exclusive_max": false,
+            "currency": "USD",
+            "brand": null,
+            "attributes": [
+              {
+                "name": "connector",
+                "value": "usb-c"
+              }
+            ],
+            "in_stock": true,
+            "intended_use": null,
+            "preferences": [],
+            "cheaper": false,
+            "alternatives": true,
+            "clarification": null
+          },
+          "provider_models": [
+            "scripted-extraction"
+          ],
+          "draft": null,
+          "product_ids": [],
+          "planner_methods": []
+        }
+      ]
+    },
+    {
+      "id": "electronics-cross-store-reference",
+      "store": "electronics",
+      "language": "en",
+      "journey": "discovery",
+      "suite": "adversarial",
+      "status": "passed",
+      "failures": [],
+      "latency_ms": 0,
+      "provider_calls": 1,
+      "input_tokens": null,
+      "output_tokens": null,
+      "cost_micros": null,
+      "tool_calls": [
+        "get_catalog_schema",
+        "get_product"
+      ],
+      "trace": [
+        {
+          "turn": 1,
+          "error": "invalid_reference",
+          "answer": "",
+          "extracted": {
+            "shopping": true,
+            "presentation": "detail",
+            "query": "*",
+            "category": null,
+            "min_price": null,
+            "max_price": null,
+            "exclusive_max": false,
+            "currency": null,
+            "brand": null,
+            "attributes": [],
+            "in_stock": false,
+            "intended_use": null,
+            "preferences": [],
+            "cheaper": false,
+            "alternatives": false,
+            "clarification": null
+          },
+          "provider_models": [
+            "scripted-extraction"
+          ],
+          "draft": null,
+          "product_ids": [],
+          "planner_methods": []
+        }
+      ]
+    },
+    {
+      "id": "electronics-provider-timeout",
+      "store": "electronics",
+      "language": "en",
+      "journey": "discovery",
+      "suite": "adversarial",
+      "status": "passed",
+      "failures": [],
+      "latency_ms": 0,
+      "provider_calls": 1,
+      "input_tokens": null,
+      "output_tokens": null,
+      "cost_micros": null,
+      "tool_calls": [
+        "get_catalog_schema"
+      ],
+      "trace": [
+        {
+          "turn": 1,
+          "error": "timeout",
+          "answer": "",
+          "extracted": {},
+          "provider_models": [],
+          "draft": null,
+          "product_ids": [],
+          "planner_methods": []
+        }
+      ]
+    },
+    {
+      "id": "electronics-provider-rate-limit",
+      "store": "electronics",
+      "language": "en",
+      "journey": "discovery",
+      "suite": "adversarial",
+      "status": "passed",
+      "failures": [],
+      "latency_ms": 0,
+      "provider_calls": 1,
+      "input_tokens": null,
+      "output_tokens": null,
+      "cost_micros": null,
+      "tool_calls": [
+        "get_catalog_schema"
+      ],
+      "trace": [
+        {
+          "turn": 1,
+          "error": "rate_limit",
+          "answer": "",
+          "extracted": {},
+          "provider_models": [],
+          "draft": null,
+          "product_ids": [],
+          "planner_methods": []
+        }
+      ]
+    },
+    {
+      "id": "electronics-provider-invalid-response",
+      "store": "electronics",
+      "language": "en",
+      "journey": "discovery",
+      "suite": "adversarial",
+      "status": "passed",
+      "failures": [],
+      "latency_ms": 0,
+      "provider_calls": 1,
+      "input_tokens": null,
+      "output_tokens": null,
+      "cost_micros": null,
+      "tool_calls": [
+        "get_catalog_schema"
+      ],
+      "trace": [
+        {
+          "turn": 1,
+          "error": "invalid_response",
+          "answer": "",
+          "extracted": {},
+          "provider_models": [],
+          "draft": null,
+          "product_ids": [],
+          "planner_methods": []
+        }
+      ]
+    },
+    {
+      "id": "electronics-provider-unauthorized-tool",
+      "store": "electronics",
+      "language": "en",
+      "journey": "discovery",
+      "suite": "adversarial",
+      "status": "passed",
+      "failures": [],
+      "latency_ms": 0,
+      "provider_calls": 1,
+      "input_tokens": null,
+      "output_tokens": null,
+      "cost_micros": null,
+      "tool_calls": [
+        "get_catalog_schema"
+      ],
+      "trace": [
+        {
+          "turn": 1,
+          "error": "invalid_shopping_plan",
+          "answer": "",
+          "extracted": {
+            "shopping": true,
+            "presentation": "recommend",
+            "query": "*",
+            "category": null,
+            "min_price": null,
+            "max_price": null,
+            "exclusive_max": false,
+            "currency": null,
+            "brand": null,
+            "attributes": [],
+            "in_stock": false,
+            "intended_use": null,
+            "preferences": [],
+            "cheaper": false,
+            "alternatives": false,
+            "clarification": null
+          },
+          "provider_models": [
+            "scripted-extraction"
+          ],
+          "draft": null,
+          "product_ids": [],
+          "planner_methods": []
+        }
+      ]
+    },
+    {
+      "id": "electronics-malformed-tool",
+      "store": "electronics",
+      "language": "en",
+      "journey": "discovery",
+      "suite": "adversarial",
+      "status": "passed",
+      "failures": [],
+      "latency_ms": 0,
+      "provider_calls": 0,
+      "input_tokens": null,
+      "output_tokens": null,
+      "cost_micros": null,
+      "tool_calls": [
+        "get_catalog_schema"
+      ],
+      "trace": [
+        {
+          "turn": 1,
+          "error": "tool_unavailable",
+          "answer": "",
+          "extracted": {},
+          "provider_models": [],
+          "draft": null,
+          "product_ids": [],
+          "planner_methods": []
+        }
+      ]
+    },
+    {
+      "id": "electronics-unavailable-tool",
+      "store": "electronics",
+      "language": "en",
+      "journey": "discovery",
+      "suite": "adversarial",
+      "status": "passed",
+      "failures": [],
+      "latency_ms": 0,
+      "provider_calls": 0,
+      "input_tokens": null,
+      "output_tokens": null,
+      "cost_micros": null,
+      "tool_calls": [
+        "get_catalog_schema"
+      ],
+      "trace": [
+        {
+          "turn": 1,
+          "error": "tool_unavailable",
+          "answer": "",
+          "extracted": {},
+          "provider_models": [],
+          "draft": null,
+          "product_ids": [],
+          "planner_methods": []
+        }
+      ]
+    },
+    {
+      "id": "electronics-order-guide",
+      "store": "electronics",
+      "language": "en",
+      "journey": "order_status",
+      "suite": "journey",
+      "status": "passed",
+      "failures": [],
+      "latency_ms": 0,
+      "provider_calls": 0,
+      "input_tokens": null,
+      "output_tokens": null,
+      "cost_micros": null,
+      "tool_calls": [],
+      "trace": [
+        {
+          "turn": 1,
+          "error": null,
+          "answer": "Sign in to view your own order status. A basket proposal is not a placed order.\n\nSource: Synthetic evaluation guide (guide:order-status@1; reviewed 2026-09-01).",
+          "extracted": {},
+          "provider_models": [],
+          "draft": null,
+          "product_ids": [],
+          "planner_methods": []
+        }
+      ]
+    },
+    {
+      "id": "electronics-unsupported-policy",
+      "store": "electronics",
+      "language": "en",
+      "journey": "policy",
+      "suite": "journey",
+      "status": "passed",
+      "failures": [],
+      "latency_ms": 0,
+      "provider_calls": 0,
+      "input_tokens": null,
+      "output_tokens": null,
+      "cost_micros": null,
+      "tool_calls": [],
+      "trace": [
+        {
+          "turn": 1,
+          "error": null,
+          "answer": "I do not have an approved answer for that store policy. Please contact the store before relying on a policy or delivery promise.",
+          "extracted": {},
+          "provider_models": [],
+          "draft": null,
+          "product_ids": [],
+          "planner_methods": []
+        }
+      ]
+    },
+    {
+      "id": "electronics-support-policy",
+      "store": "electronics",
+      "language": "en",
+      "journey": "support",
+      "suite": "journey",
+      "status": "passed",
+      "failures": [],
+      "latency_ms": 0,
+      "provider_calls": 0,
+      "input_tokens": null,
+      "output_tokens": null,
+      "cost_micros": null,
+      "tool_calls": [],
+      "trace": [
+        {
+          "turn": 1,
+          "error": null,
+          "answer": "I do not have an approved answer for that store policy. Please contact the store before relying on a policy or delivery promise.",
+          "extracted": {},
+          "provider_models": [],
+          "draft": null,
+          "product_ids": [],
+          "planner_methods": []
+        }
+      ]
+    },
+    {
+      "id": "electronics-shop",
+      "store": "electronics",
+      "language": "en",
+      "journey": "shop",
+      "suite": "journey",
+      "status": "passed",
+      "failures": [],
+      "latency_ms": 0,
+      "provider_calls": 1,
+      "input_tokens": null,
+      "output_tokens": null,
+      "cost_micros": null,
+      "tool_calls": [
+        "get_catalog_schema",
+        "search_products"
+      ],
+      "trace": [
+        {
+          "turn": 1,
+          "error": null,
+          "answer": "Your proposed basket is ready to review. Your live cart has not changed.",
+          "extracted": {
+            "goal": {
+              "purpose": "",
+              "budget": null,
+              "currency": null,
+              "all_inclusive": false,
+              "budget_exclusive": false,
+              "people": null,
+              "locked_products": [],
+              "excluded_products": [],
+              "locked_brands": [],
+              "allow_substitutions": false,
+              "delivery_date": null,
+              "assumptions": [],
+              "unresolved": [],
+              "saving_target": null
+            },
+            "searches": [
+              {
+                "intent": {
+                  "shopping": true,
+                  "presentation": "recommend",
+                  "query": "charger",
+                  "category": null,
+                  "min_price": null,
+                  "max_price": null,
+                  "exclusive_max": false,
+                  "currency": null,
+                  "brand": null,
+                  "attributes": [],
+                  "in_stock": true,
+                  "intended_use": null,
+                  "preferences": [],
+                  "cheaper": false,
+                  "alternatives": false,
+                  "clarification": null
+                },
+                "quantity": 1,
+                "replace_proposed": null
+              }
+            ],
+            "quantities": [],
+            "lock_evidence": [],
+            "clarification": null
+          },
+          "provider_models": [
+            "scripted-extraction"
+          ],
+          "draft": {
+            "task_id": "00000000-0000-0000-0000-000000000384",
+            "task_revision": 1,
+            "source_revision": 1,
+            "mode": "shop",
+            "auto_select": false,
+            "goal": {
+              "purpose": "",
+              "budget": null,
+              "currency": null,
+              "all_inclusive": false,
+              "budget_exclusive": false,
+              "people": null,
+              "locked_products": [],
+              "excluded_products": [],
+              "locked_brands": [],
+              "allow_substitutions": false,
+              "delivery_date": null,
+              "assumptions": [],
+              "unresolved": [],
+              "saving_target": null
+            },
+            "location_id": null,
+            "order_id": null,
+            "selections": [
+              {
+                "product_id": "00000000-0000-0000-0000-000000000bbd",
+                "quantity": 1,
+                "replaces": null,
+                "min_price": null,
+                "max_price": null,
+                "exclusive_max": false,
+                "required_attributes": {},
+                "reason": "Matches the checked catalog constraints. Review the selected SKU and quantity."
+              }
+            ]
+          },
+          "product_ids": [],
+          "planner_methods": [
+            "GET",
+            "POST"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "electronics-optimize-quantities",
+      "store": "electronics",
+      "language": "en",
+      "journey": "optimize",
+      "suite": "journey",
+      "status": "passed",
+      "failures": [],
+      "latency_ms": 0,
+      "provider_calls": 1,
+      "input_tokens": null,
+      "output_tokens": null,
+      "cost_micros": null,
+      "tool_calls": [
+        "get_catalog_schema"
+      ],
+      "trace": [
+        {
+          "turn": 1,
+          "error": null,
+          "answer": "Your proposed basket is ready to review. Your live cart has not changed.",
+          "extracted": {
+            "goal": {
+              "purpose": "",
+              "budget": null,
+              "currency": null,
+              "all_inclusive": false,
+              "budget_exclusive": false,
+              "people": null,
+              "locked_products": [
+                "00000000-0000-0000-0000-000000000bb9"
+              ],
+              "excluded_products": [],
+              "locked_brands": [],
+              "allow_substitutions": true,
+              "delivery_date": null,
+              "assumptions": [],
+              "unresolved": [],
+              "saving_target": null
+            },
+            "searches": [],
+            "quantities": [],
+            "lock_evidence": [
+              {
+                "product_id": "00000000-0000-0000-0000-000000000bb9",
+                "customer_quote": "preserve quantities"
+              }
+            ],
+            "clarification": null
+          },
+          "provider_models": [
+            "scripted-extraction"
+          ],
+          "draft": {
+            "task_id": "00000000-0000-0000-0000-000000000384",
+            "task_revision": 1,
+            "source_revision": 1,
+            "mode": "optimize",
+            "auto_select": true,
+            "goal": {
+              "purpose": "",
+              "budget": null,
+              "currency": null,
+              "all_inclusive": false,
+              "budget_exclusive": false,
+              "people": null,
+              "locked_products": [],
+              "excluded_products": [],
+              "locked_brands": [],
+              "allow_substitutions": true,
+              "delivery_date": null,
+              "assumptions": [],
+              "unresolved": [],
+              "saving_target": null
+            },
+            "location_id": null,
+            "order_id": null,
+            "selections": []
+          },
+          "product_ids": [],
+          "planner_methods": [
+            "GET",
+            "POST"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "electronics-optimize-existing-lock",
+      "store": "electronics",
+      "language": "en",
+      "journey": "optimize",
+      "suite": "journey",
+      "status": "passed",
+      "failures": [],
+      "latency_ms": 0,
+      "provider_calls": 1,
+      "input_tokens": null,
+      "output_tokens": null,
+      "cost_micros": null,
+      "tool_calls": [
+        "get_catalog_schema"
+      ],
+      "trace": [
+        {
+          "turn": 1,
+          "error": null,
+          "answer": "Your proposed basket is ready to review. Your live cart has not changed.",
+          "extracted": {
+            "goal": {
+              "purpose": "",
+              "budget": null,
+              "currency": null,
+              "all_inclusive": false,
+              "budget_exclusive": false,
+              "people": null,
+              "locked_products": [],
+              "excluded_products": [],
+              "locked_brands": [],
+              "allow_substitutions": true,
+              "delivery_date": null,
+              "assumptions": [],
+              "unresolved": [],
+              "saving_target": null
+            },
+            "searches": [],
+            "quantities": [],
+            "lock_evidence": [],
+            "clarification": null
+          },
+          "provider_models": [
+            "scripted-extraction"
+          ],
+          "draft": {
+            "task_id": "00000000-0000-0000-0000-000000000384",
+            "task_revision": 1,
+            "source_revision": 1,
+            "mode": "optimize",
+            "auto_select": true,
+            "goal": {
+              "purpose": "",
+              "budget": null,
+              "currency": null,
+              "all_inclusive": false,
+              "budget_exclusive": false,
+              "people": null,
+              "locked_products": [
+                "00000000-0000-0000-0000-000000000bb9"
+              ],
+              "excluded_products": [],
+              "locked_brands": [],
+              "allow_substitutions": true,
+              "delivery_date": null,
+              "assumptions": [],
+              "unresolved": [],
+              "saving_target": null
+            },
+            "location_id": null,
+            "order_id": null,
+            "selections": []
+          },
+          "product_ids": [],
+          "planner_methods": [
+            "GET",
+            "POST"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "electronics-buy-again-owned-order",
+      "store": "electronics",
+      "language": "en",
+      "journey": "buy_again",
+      "suite": "journey",
+      "status": "passed",
+      "failures": [],
+      "latency_ms": 0,
+      "provider_calls": 0,
+      "input_tokens": null,
+      "output_tokens": null,
+      "cost_micros": null,
+      "tool_calls": [],
+      "trace": [
+        {
+          "turn": 1,
+          "error": null,
+          "answer": "Choose an order using Buy again. Its current products and prices will be quoted before you approve any cart update.",
+          "extracted": {},
+          "provider_models": [],
+          "draft": null,
+          "product_ids": [],
+          "planner_methods": [
+            "GET"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "electronics-meal-uncertainty",
+      "store": "electronics",
+      "language": "en",
+      "journey": "meal",
+      "suite": "journey",
+      "status": "passed",
+      "failures": [],
+      "latency_ms": 0,
+      "provider_calls": 1,
+      "input_tokens": null,
+      "output_tokens": null,
+      "cost_micros": null,
+      "tool_calls": [
+        "get_catalog_schema"
+      ],
+      "trace": [
+        {
+          "turn": 1,
+          "error": null,
+          "answer": "I couldn't express every requirement as a catalog filter. Please specify the product type, currency, budget, and required attribute values.",
+          "extracted": {
+            "shopping": true,
+            "presentation": "recommend",
+            "query": "charger",
+            "category": null,
+            "min_price": null,
+            "max_price": null,
+            "exclusive_max": false,
+            "currency": null,
+            "brand": null,
+            "attributes": [],
+            "in_stock": false,
+            "intended_use": null,
+            "preferences": [],
+            "cheaper": false,
+            "alternatives": false,
+            "clarification": "No verified allergen or serving facts"
+          },
+          "provider_models": [
+            "scripted-extraction"
+          ],
+          "draft": null,
+          "product_ids": [],
+          "planner_methods": []
+        }
+      ]
+    },
+    {
+      "id": "grocery-live-budget-en",
+      "store": "grocery",
+      "language": "en",
+      "journey": "discovery",
+      "suite": "catalog_grounded",
+      "status": "passed",
+      "failures": [],
+      "latency_ms": 0,
+      "provider_calls": 1,
+      "input_tokens": null,
+      "output_tokens": null,
+      "cost_micros": null,
+      "tool_calls": [
+        "get_catalog_schema",
+        "search_products"
+      ],
+      "trace": [
+        {
+          "turn": 1,
+          "error": null,
+          "answer": "Matches to your verified constraints:\n- Staging Coffee 1 kg — 6.00 USD. In stock. /products/22e94f06-b83d-41b4-ba3c-002d7a4afbc4\nChecked a bounded candidate set. Prices are current catalog prices; checkout may add tax and delivery.",
+          "extracted": {
+            "shopping": true,
+            "presentation": "recommend",
+            "query": "Staging Coffee",
+            "category": null,
+            "min_price": null,
+            "max_price": "10",
+            "exclusive_max": true,
+            "currency": "USD",
+            "brand": null,
+            "attributes": [],
+            "in_stock": true,
+            "intended_use": null,
+            "preferences": [],
+            "cheaper": false,
+            "alternatives": false,
+            "clarification": null
+          },
+          "provider_models": [
+            "scripted-extraction"
+          ],
+          "draft": null,
+          "product_ids": [
+            "22e94f06-b83d-41b4-ba3c-002d7a4afbc4"
+          ],
+          "planner_methods": []
+        }
+      ]
+    },
+    {
+      "id": "grocery-live-budget-ar",
+      "store": "grocery",
+      "language": "ar",
+      "journey": "discovery",
+      "suite": "catalog_grounded",
+      "status": "passed",
+      "failures": [],
+      "latency_ms": 0,
+      "provider_calls": 1,
+      "input_tokens": null,
+      "output_tokens": null,
+      "cost_micros": null,
+      "tool_calls": [
+        "get_catalog_schema",
+        "search_products"
+      ],
+      "trace": [
+        {
+          "turn": 1,
+          "error": null,
+          "answer": "Matches to your verified constraints:\n- Staging Coffee 1 kg — 6.00 USD. In stock. /products/22e94f06-b83d-41b4-ba3c-002d7a4afbc4\nChecked a bounded candidate set. Prices are current catalog prices; checkout may add tax and delivery.",
+          "extracted": {
+            "shopping": true,
+            "presentation": "recommend",
+            "query": "Staging Coffee",
+            "category": null,
+            "min_price": null,
+            "max_price": "10",
+            "exclusive_max": true,
+            "currency": "USD",
+            "brand": null,
+            "attributes": [],
+            "in_stock": true,
+            "intended_use": null,
+            "preferences": [],
+            "cheaper": false,
+            "alternatives": false,
+            "clarification": null
+          },
+          "provider_models": [
+            "scripted-extraction"
+          ],
+          "draft": null,
+          "product_ids": [
+            "22e94f06-b83d-41b4-ba3c-002d7a4afbc4"
+          ],
+          "planner_methods": []
+        }
+      ]
+    },
+    {
+      "id": "grocery-live-budget-mixed",
+      "store": "grocery",
+      "language": "mixed",
+      "journey": "discovery",
+      "suite": "catalog_grounded",
+      "status": "passed",
+      "failures": [],
+      "latency_ms": 0,
+      "provider_calls": 1,
+      "input_tokens": null,
+      "output_tokens": null,
+      "cost_micros": null,
+      "tool_calls": [
+        "get_catalog_schema",
+        "search_products"
+      ],
+      "trace": [
+        {
+          "turn": 1,
+          "error": null,
+          "answer": "Matches to your verified constraints:\n- Staging Coffee 1 kg — 6.00 USD. In stock. /products/22e94f06-b83d-41b4-ba3c-002d7a4afbc4\nChecked a bounded candidate set. Prices are current catalog prices; checkout may add tax and delivery.",
+          "extracted": {
+            "shopping": true,
+            "presentation": "recommend",
+            "query": "Staging Coffee",
+            "category": null,
+            "min_price": null,
+            "max_price": "10",
+            "exclusive_max": true,
+            "currency": "USD",
+            "brand": null,
+            "attributes": [],
+            "in_stock": true,
+            "intended_use": null,
+            "preferences": [],
+            "cheaper": false,
+            "alternatives": false,
+            "clarification": null
+          },
+          "provider_models": [
+            "scripted-extraction"
+          ],
+          "draft": null,
+          "product_ids": [
+            "22e94f06-b83d-41b4-ba3c-002d7a4afbc4"
+          ],
+          "planner_methods": []
+        }
+      ]
+    },
+    {
+      "id": "grocery-live-comparison",
+      "store": "grocery",
+      "language": "en",
+      "journey": "comparison",
+      "suite": "journey",
+      "status": "passed",
+      "failures": [],
+      "latency_ms": 0,
+      "provider_calls": 1,
+      "input_tokens": null,
+      "output_tokens": null,
+      "cost_micros": null,
+      "tool_calls": [
+        "get_catalog_schema",
+        "compare_products"
+      ],
+      "trace": [
+        {
+          "turn": 1,
+          "error": null,
+          "answer": "Product comparison:\nStaging Coffee 1 kg: 10.00 USD. /products/44aedd09-dc2b-4f25-a636-e855e730112a\nStaging Coffee 1 kg: 6.00 USD. /products/22e94f06-b83d-41b4-ba3c-002d7a4afbc4\nCurrent price: 10.00 USD | 6.00 USD\nAvailability: In stock | In stock\nChecked a bounded candidate set. Prices are current catalog prices; checkout may add tax and delivery.",
+          "extracted": {
+            "shopping": true,
+            "presentation": "compare",
+            "query": "*",
+            "category": null,
+            "min_price": null,
+            "max_price": null,
+            "exclusive_max": false,
+            "currency": null,
+            "brand": null,
+            "attributes": [],
+            "in_stock": false,
+            "intended_use": null,
+            "preferences": [],
+            "cheaper": false,
+            "alternatives": false,
+            "clarification": null
+          },
+          "provider_models": [
+            "scripted-extraction"
+          ],
+          "draft": null,
+          "product_ids": [
+            "44aedd09-dc2b-4f25-a636-e855e730112a",
+            "22e94f06-b83d-41b4-ba3c-002d7a4afbc4"
+          ],
+          "planner_methods": []
+        }
+      ]
+    },
+    {
+      "id": "grocery-live-clarification",
+      "store": "grocery",
+      "language": "en",
+      "journey": "discovery",
+      "suite": "conversation",
+      "status": "passed",
+      "failures": [],
+      "latency_ms": 0,
+      "provider_calls": 1,
+      "input_tokens": null,
+      "output_tokens": null,
+      "cost_micros": null,
+      "tool_calls": [
+        "get_catalog_schema"
+      ],
+      "trace": [
+        {
+          "turn": 1,
+          "error": null,
+          "answer": "Which currency should I use for your budget?",
+          "extracted": {
+            "shopping": true,
+            "presentation": "recommend",
+            "query": "Staging Coffee",
+            "category": null,
+            "min_price": null,
+            "max_price": "5",
+            "exclusive_max": false,
+            "currency": null,
+            "brand": null,
+            "attributes": [],
+            "in_stock": false,
+            "intended_use": null,
+            "preferences": [],
+            "cheaper": false,
+            "alternatives": false,
+            "clarification": null
+          },
+          "provider_models": [
+            "scripted-extraction"
+          ],
+          "draft": null,
+          "product_ids": [],
+          "planner_methods": []
+        }
+      ]
+    },
+    {
+      "id": "grocery-live-gift",
+      "store": "grocery",
+      "language": "en",
+      "journey": "gift",
+      "suite": "journey",
+      "status": "passed",
+      "failures": [],
+      "latency_ms": 0,
+      "provider_calls": 1,
+      "input_tokens": null,
+      "output_tokens": null,
+      "cost_micros": null,
+      "tool_calls": [
+        "get_catalog_schema",
+        "search_products"
+      ],
+      "trace": [
+        {
+          "turn": 1,
+          "error": null,
+          "answer": "Matches to your verified constraints:\n- Staging Coffee 1 kg — 6.00 USD. In stock. /products/22e94f06-b83d-41b4-ba3c-002d7a4afbc4\nChecked a bounded candidate set. Prices are current catalog prices; checkout may add tax and delivery.",
+          "extracted": {
+            "shopping": true,
+            "presentation": "recommend",
+            "query": "Staging Coffee",
+            "category": null,
+            "min_price": null,
+            "max_price": "6",
+            "exclusive_max": false,
+            "currency": "USD",
+            "brand": null,
+            "attributes": [],
+            "in_stock": true,
+            "intended_use": null,
+            "preferences": [],
+            "cheaper": false,
+            "alternatives": false,
+            "clarification": null
+          },
+          "provider_models": [
+            "scripted-extraction"
+          ],
+          "draft": null,
+          "product_ids": [
+            "22e94f06-b83d-41b4-ba3c-002d7a4afbc4"
+          ],
+          "planner_methods": []
+        }
+      ]
+    },
+    {
+      "id": "grocery-captured-guide-1",
+      "store": "grocery",
+      "language": "en",
+      "journey": "policy",
+      "suite": "catalog_grounded",
+      "status": "passed",
+      "failures": [],
+      "latency_ms": 0,
+      "provider_calls": 0,
+      "input_tokens": null,
+      "output_tokens": null,
+      "cost_micros": null,
+      "tool_calls": [],
+      "trace": [
+        {
+          "turn": 1,
+          "error": null,
+          "answer": "Describe what you need, then review the proposed products, quantities and quote. Your cart changes only after you approve and apply the proposal. Basket approval does not place an order.\n\nSource: Reviewing a proposed basket (guide:basket-review@1; reviewed 2026-09-21).",
+          "extracted": {},
+          "provider_models": [],
+          "draft": null,
+          "product_ids": [],
+          "planner_methods": []
+        }
+      ]
+    },
+    {
+      "id": "grocery-captured-guide-2",
+      "store": "grocery",
+      "language": "en",
+      "journey": "policy",
+      "suite": "catalog_grounded",
+      "status": "passed",
+      "failures": [],
+      "latency_ms": 0,
+      "provider_calls": 0,
+      "input_tokens": null,
+      "output_tokens": null,
+      "cost_micros": null,
+      "tool_calls": [],
+      "trace": [
+        {
+          "turn": 1,
+          "error": null,
+          "answer": "After applying a basket, continue to checkout, review the current total and delivery address, and explicitly confirm the order. The current checkout supports cash on delivery. Do not assume a saved proposal is a completed order.\n\nSource: Confirming an order (guide:checkout-confirmation@1; reviewed 2026-09-21).",
+          "extracted": {},
+          "provider_models": [],
+          "draft": null,
+          "product_ids": [],
+          "planner_methods": []
+        }
+      ]
+    },
+    {
+      "id": "grocery-captured-guide-3",
+      "store": "grocery",
+      "language": "en",
+      "journey": "policy",
+      "suite": "catalog_grounded",
+      "status": "passed",
+      "failures": [],
+      "latency_ms": 0,
+      "provider_calls": 0,
+      "input_tokens": null,
+      "output_tokens": null,
+      "cost_micros": null,
+      "tool_calls": [],
+      "trace": [
+        {
+          "turn": 1,
+          "error": null,
+          "answer": "Basket quotes expire after five minutes. Prices, stock and other checkout conditions are checked again when you apply the proposal. If conditions change, refresh the quote and review it again before approving.\n\nSource: Refreshing a quote (guide:quote-freshness@1; reviewed 2026-09-21).",
+          "extracted": {},
+          "provider_models": [],
+          "draft": null,
+          "product_ids": [],
+          "planner_methods": []
+        }
+      ]
+    },
+    {
+      "id": "grocery-captured-guide-4",
+      "store": "grocery",
+      "language": "en",
+      "journey": "policy",
+      "suite": "catalog_grounded",
+      "status": "passed",
+      "failures": [],
+      "latency_ms": 0,
+      "provider_calls": 0,
+      "input_tokens": null,
+      "output_tokens": null,
+      "cost_micros": null,
+      "tool_calls": [],
+      "trace": [
+        {
+          "turn": 1,
+          "error": null,
+          "answer": "Check availability for your selected delivery location. Availability does not promise a delivery date or time slot. The current shopping assistant cannot reserve a scheduled delivery slot.\n\nSource: Checking delivery and availability (guide:availability@1; reviewed 2026-09-21).",
+          "extracted": {},
+          "provider_models": [],
+          "draft": null,
+          "product_ids": [],
+          "planner_methods": []
+        }
+      ]
+    },
+    {
+      "id": "grocery-captured-guide-5",
+      "store": "grocery",
+      "language": "en",
+      "journey": "policy",
+      "suite": "catalog_grounded",
+      "status": "passed",
+      "failures": [],
+      "latency_ms": 0,
+      "provider_calls": 0,
+      "input_tokens": null,
+      "output_tokens": null,
+      "cost_micros": null,
+      "tool_calls": [],
+      "trace": [
+        {
+          "turn": 1,
+          "error": null,
+          "answer": "Sign in to the account used for the order. Open your orders or ask the assistant about your order, then select it to see its recorded status and available shipment information.\n\nSource: Finding an existing order (guide:order-tracking@1; reviewed 2026-09-21).",
+          "extracted": {},
+          "provider_models": [],
+          "draft": null,
+          "product_ids": [],
+          "planner_methods": []
+        }
+      ]
+    },
+    {
+      "id": "grocery-captured-guide-6",
+      "store": "grocery",
+      "language": "en",
+      "journey": "policy",
+      "suite": "catalog_grounded",
+      "status": "passed",
+      "failures": [],
+      "latency_ms": 0,
+      "provider_calls": 0,
+      "input_tokens": null,
+      "output_tokens": null,
+      "cost_micros": null,
+      "tool_calls": [],
+      "trace": [
+        {
+          "turn": 1,
+          "error": null,
+          "answer": "The current shopping checkout uses USD and whole selling-unit quantities. Check the displayed product selling unit and quantity before approving. The assistant does not convert currencies or promise fractional quantities.\n\nSource: Reviewing currency and quantities (guide:quantity-currency@1; reviewed 2026-09-21).",
+          "extracted": {},
+          "provider_models": [],
+          "draft": null,
+          "product_ids": [],
+          "planner_methods": []
+        }
+      ]
+    }
+  ],
+  "segments": {
+    "journey:buy_again": {
+      "passed": 3,
+      "executed": 3,
+      "total": 3,
+      "quarantined": 0,
+      "not_run": 0,
+      "pass_fraction": 1.0,
+      "wilson_95": [
+        0.4385029682449546,
+        1
+      ],
+      "safety_failures": 0,
+      "p95_ms": 0,
+      "provider_calls_per_passed_scenario": 0.0,
+      "cost_micros_per_passed_scenario": null
+    },
+    "journey:comparison": {
+      "passed": 7,
+      "executed": 7,
+      "total": 7,
+      "quarantined": 0,
+      "not_run": 0,
+      "pass_fraction": 1.0,
+      "wilson_95": [
+        0.6456695649333126,
+        1
+      ],
+      "safety_failures": 0,
+      "p95_ms": 1,
+      "provider_calls_per_passed_scenario": 1.0,
+      "cost_micros_per_passed_scenario": null
+    },
+    "journey:compatibility": {
+      "passed": 3,
+      "executed": 3,
+      "total": 3,
+      "quarantined": 0,
+      "not_run": 0,
+      "pass_fraction": 1.0,
+      "wilson_95": [
+        0.4385029682449546,
+        1
+      ],
+      "safety_failures": 0,
+      "p95_ms": 0,
+      "provider_calls_per_passed_scenario": 1.0,
+      "cost_micros_per_passed_scenario": null
+    },
+    "journey:discovery": {
+      "passed": 55,
+      "executed": 55,
+      "total": 55,
+      "quarantined": 0,
+      "not_run": 0,
+      "pass_fraction": 1.0,
+      "wilson_95": [
+        0.9347150988829137,
+        1
+      ],
+      "safety_failures": 0,
+      "p95_ms": 1,
+      "provider_calls_per_passed_scenario": 0.9454545454545454,
+      "cost_micros_per_passed_scenario": null
+    },
+    "journey:gift": {
+      "passed": 4,
+      "executed": 4,
+      "total": 4,
+      "quarantined": 0,
+      "not_run": 0,
+      "pass_fraction": 1.0,
+      "wilson_95": [
+        0.5101091635454027,
+        1
+      ],
+      "safety_failures": 0,
+      "p95_ms": 1,
+      "provider_calls_per_passed_scenario": 1.0,
+      "cost_micros_per_passed_scenario": null
+    },
+    "journey:meal": {
+      "passed": 3,
+      "executed": 3,
+      "total": 3,
+      "quarantined": 0,
+      "not_run": 0,
+      "pass_fraction": 1.0,
+      "wilson_95": [
+        0.4385029682449546,
+        1
+      ],
+      "safety_failures": 0,
+      "p95_ms": 0,
+      "provider_calls_per_passed_scenario": 1.0,
+      "cost_micros_per_passed_scenario": null
+    },
+    "journey:optimize": {
+      "passed": 6,
+      "executed": 6,
+      "total": 6,
+      "quarantined": 0,
+      "not_run": 0,
+      "pass_fraction": 1.0,
+      "wilson_95": [
+        0.6096657120978346,
+        1
+      ],
+      "safety_failures": 0,
+      "p95_ms": 0,
+      "provider_calls_per_passed_scenario": 1.0,
+      "cost_micros_per_passed_scenario": null
+    },
+    "journey:order_status": {
+      "passed": 3,
+      "executed": 3,
+      "total": 3,
+      "quarantined": 0,
+      "not_run": 0,
+      "pass_fraction": 1.0,
+      "wilson_95": [
+        0.4385029682449546,
+        1
+      ],
+      "safety_failures": 0,
+      "p95_ms": 0,
+      "provider_calls_per_passed_scenario": 0.0,
+      "cost_micros_per_passed_scenario": null
+    },
+    "journey:policy": {
+      "passed": 9,
+      "executed": 9,
+      "total": 9,
+      "quarantined": 0,
+      "not_run": 0,
+      "pass_fraction": 1.0,
+      "wilson_95": [
+        0.7008549515804559,
+        1
+      ],
+      "safety_failures": 0,
+      "p95_ms": 0,
+      "provider_calls_per_passed_scenario": 0.0,
+      "cost_micros_per_passed_scenario": null
+    },
+    "journey:shop": {
+      "passed": 3,
+      "executed": 3,
+      "total": 3,
+      "quarantined": 0,
+      "not_run": 0,
+      "pass_fraction": 1.0,
+      "wilson_95": [
+        0.4385029682449546,
+        1
+      ],
+      "safety_failures": 0,
+      "p95_ms": 1,
+      "provider_calls_per_passed_scenario": 1.0,
+      "cost_micros_per_passed_scenario": null
+    },
+    "journey:support": {
+      "passed": 3,
+      "executed": 3,
+      "total": 3,
+      "quarantined": 0,
+      "not_run": 0,
+      "pass_fraction": 1.0,
+      "wilson_95": [
+        0.4385029682449546,
+        1
+      ],
+      "safety_failures": 0,
+      "p95_ms": 0,
+      "provider_calls_per_passed_scenario": 0.0,
+      "cost_micros_per_passed_scenario": null
+    },
+    "language:ar": {
+      "passed": 4,
+      "executed": 4,
+      "total": 4,
+      "quarantined": 0,
+      "not_run": 0,
+      "pass_fraction": 1.0,
+      "wilson_95": [
+        0.5101091635454027,
+        1
+      ],
+      "safety_failures": 0,
+      "p95_ms": 1,
+      "provider_calls_per_passed_scenario": 1.0,
+      "cost_micros_per_passed_scenario": null
+    },
+    "language:ar-eg": {
+      "passed": 3,
+      "executed": 3,
+      "total": 3,
+      "quarantined": 0,
+      "not_run": 0,
+      "pass_fraction": 1.0,
+      "wilson_95": [
+        0.4385029682449546,
+        1
+      ],
+      "safety_failures": 0,
+      "p95_ms": 0,
+      "provider_calls_per_passed_scenario": 1.0,
+      "cost_micros_per_passed_scenario": null
+    },
+    "language:en": {
+      "passed": 85,
+      "executed": 85,
+      "total": 85,
+      "quarantined": 0,
+      "not_run": 0,
+      "pass_fraction": 1.0,
+      "wilson_95": [
+        0.9567605161859486,
+        1
+      ],
+      "safety_failures": 0,
+      "p95_ms": 1,
+      "provider_calls_per_passed_scenario": 0.7529411764705882,
+      "cost_micros_per_passed_scenario": null
+    },
+    "language:mixed": {
+      "passed": 4,
+      "executed": 4,
+      "total": 4,
+      "quarantined": 0,
+      "not_run": 0,
+      "pass_fraction": 1.0,
+      "wilson_95": [
+        0.5101091635454027,
+        1
+      ],
+      "safety_failures": 0,
+      "p95_ms": 0,
+      "provider_calls_per_passed_scenario": 1.0,
+      "cost_micros_per_passed_scenario": null
+    },
+    "language:typo": {
+      "passed": 3,
+      "executed": 3,
+      "total": 3,
+      "quarantined": 0,
+      "not_run": 0,
+      "pass_fraction": 1.0,
+      "wilson_95": [
+        0.4385029682449546,
+        1
+      ],
+      "safety_failures": 0,
+      "p95_ms": 0,
+      "provider_calls_per_passed_scenario": 1.0,
+      "cost_micros_per_passed_scenario": null
+    },
+    "store:electronics": {
+      "passed": 29,
+      "executed": 29,
+      "total": 29,
+      "quarantined": 0,
+      "not_run": 0,
+      "pass_fraction": 1.0,
+      "wilson_95": [
+        0.8830302015002593,
+        1
+      ],
+      "safety_failures": 0,
+      "p95_ms": 1,
+      "provider_calls_per_passed_scenario": 0.8275862068965517,
+      "cost_micros_per_passed_scenario": null
+    },
+    "store:grocery": {
+      "passed": 41,
+      "executed": 41,
+      "total": 41,
+      "quarantined": 0,
+      "not_run": 0,
+      "pass_fraction": 1.0,
+      "wilson_95": [
+        0.9143324298155681,
+        0.9999999999999999
+      ],
+      "safety_failures": 0,
+      "p95_ms": 1,
+      "provider_calls_per_passed_scenario": 0.7317073170731707,
+      "cost_micros_per_passed_scenario": null
+    },
+    "store:jewelry": {
+      "passed": 29,
+      "executed": 29,
+      "total": 29,
+      "quarantined": 0,
+      "not_run": 0,
+      "pass_fraction": 1.0,
+      "wilson_95": [
+        0.8830302015002593,
+        1
+      ],
+      "safety_failures": 0,
+      "p95_ms": 1,
+      "provider_calls_per_passed_scenario": 0.8275862068965517,
+      "cost_micros_per_passed_scenario": null
+    },
+    "store_language:electronics:ar": {
+      "passed": 1,
+      "executed": 1,
+      "total": 1,
+      "quarantined": 0,
+      "not_run": 0,
+      "pass_fraction": 1.0,
+      "wilson_95": [
+        0.20654931437723745,
+        1
+      ],
+      "safety_failures": 0,
+      "p95_ms": 0,
+      "provider_calls_per_passed_scenario": 1.0,
+      "cost_micros_per_passed_scenario": null
+    },
+    "store_language:electronics:ar-eg": {
+      "passed": 1,
+      "executed": 1,
+      "total": 1,
+      "quarantined": 0,
+      "not_run": 0,
+      "pass_fraction": 1.0,
+      "wilson_95": [
+        0.20654931437723745,
+        1
+      ],
+      "safety_failures": 0,
+      "p95_ms": 0,
+      "provider_calls_per_passed_scenario": 1.0,
+      "cost_micros_per_passed_scenario": null
+    },
+    "store_language:electronics:en": {
+      "passed": 25,
+      "executed": 25,
+      "total": 25,
+      "quarantined": 0,
+      "not_run": 0,
+      "pass_fraction": 1.0,
+      "wilson_95": [
+        0.8668077490609515,
+        0.9999999999999999
+      ],
+      "safety_failures": 0,
+      "p95_ms": 1,
+      "provider_calls_per_passed_scenario": 0.8,
+      "cost_micros_per_passed_scenario": null
+    },
+    "store_language:electronics:mixed": {
+      "passed": 1,
+      "executed": 1,
+      "total": 1,
+      "quarantined": 0,
+      "not_run": 0,
+      "pass_fraction": 1.0,
+      "wilson_95": [
+        0.20654931437723745,
+        1
+      ],
+      "safety_failures": 0,
+      "p95_ms": 0,
+      "provider_calls_per_passed_scenario": 1.0,
+      "cost_micros_per_passed_scenario": null
+    },
+    "store_language:electronics:typo": {
+      "passed": 1,
+      "executed": 1,
+      "total": 1,
+      "quarantined": 0,
+      "not_run": 0,
+      "pass_fraction": 1.0,
+      "wilson_95": [
+        0.20654931437723745,
+        1
+      ],
+      "safety_failures": 0,
+      "p95_ms": 0,
+      "provider_calls_per_passed_scenario": 1.0,
+      "cost_micros_per_passed_scenario": null
+    },
+    "store_language:grocery:ar": {
+      "passed": 2,
+      "executed": 2,
+      "total": 2,
+      "quarantined": 0,
+      "not_run": 0,
+      "pass_fraction": 1.0,
+      "wilson_95": [
+        0.34238022750665303,
+        1
+      ],
+      "safety_failures": 0,
+      "p95_ms": 1,
+      "provider_calls_per_passed_scenario": 1.0,
+      "cost_micros_per_passed_scenario": null
+    },
+    "store_language:grocery:ar-eg": {
+      "passed": 1,
+      "executed": 1,
+      "total": 1,
+      "quarantined": 0,
+      "not_run": 0,
+      "pass_fraction": 1.0,
+      "wilson_95": [
+        0.20654931437723745,
+        1
+      ],
+      "safety_failures": 0,
+      "p95_ms": 0,
+      "provider_calls_per_passed_scenario": 1.0,
+      "cost_micros_per_passed_scenario": null
+    },
+    "store_language:grocery:en": {
+      "passed": 35,
+      "executed": 35,
+      "total": 35,
+      "quarantined": 0,
+      "not_run": 0,
+      "pass_fraction": 1.0,
+      "wilson_95": [
+        0.9010990076755959,
+        0.9999999999999999
+      ],
+      "safety_failures": 0,
+      "p95_ms": 1,
+      "provider_calls_per_passed_scenario": 0.6857142857142857,
+      "cost_micros_per_passed_scenario": null
+    },
+    "store_language:grocery:mixed": {
+      "passed": 2,
+      "executed": 2,
+      "total": 2,
+      "quarantined": 0,
+      "not_run": 0,
+      "pass_fraction": 1.0,
+      "wilson_95": [
+        0.34238022750665303,
+        1
+      ],
+      "safety_failures": 0,
+      "p95_ms": 0,
+      "provider_calls_per_passed_scenario": 1.0,
+      "cost_micros_per_passed_scenario": null
+    },
+    "store_language:grocery:typo": {
+      "passed": 1,
+      "executed": 1,
+      "total": 1,
+      "quarantined": 0,
+      "not_run": 0,
+      "pass_fraction": 1.0,
+      "wilson_95": [
+        0.20654931437723745,
+        1
+      ],
+      "safety_failures": 0,
+      "p95_ms": 0,
+      "provider_calls_per_passed_scenario": 1.0,
+      "cost_micros_per_passed_scenario": null
+    },
+    "store_language:jewelry:ar": {
+      "passed": 1,
+      "executed": 1,
+      "total": 1,
+      "quarantined": 0,
+      "not_run": 0,
+      "pass_fraction": 1.0,
+      "wilson_95": [
+        0.20654931437723745,
+        1
+      ],
+      "safety_failures": 0,
+      "p95_ms": 0,
+      "provider_calls_per_passed_scenario": 1.0,
+      "cost_micros_per_passed_scenario": null
+    },
+    "store_language:jewelry:ar-eg": {
+      "passed": 1,
+      "executed": 1,
+      "total": 1,
+      "quarantined": 0,
+      "not_run": 0,
+      "pass_fraction": 1.0,
+      "wilson_95": [
+        0.20654931437723745,
+        1
+      ],
+      "safety_failures": 0,
+      "p95_ms": 0,
+      "provider_calls_per_passed_scenario": 1.0,
+      "cost_micros_per_passed_scenario": null
+    },
+    "store_language:jewelry:en": {
+      "passed": 25,
+      "executed": 25,
+      "total": 25,
+      "quarantined": 0,
+      "not_run": 0,
+      "pass_fraction": 1.0,
+      "wilson_95": [
+        0.8668077490609515,
+        0.9999999999999999
+      ],
+      "safety_failures": 0,
+      "p95_ms": 1,
+      "provider_calls_per_passed_scenario": 0.8,
+      "cost_micros_per_passed_scenario": null
+    },
+    "store_language:jewelry:mixed": {
+      "passed": 1,
+      "executed": 1,
+      "total": 1,
+      "quarantined": 0,
+      "not_run": 0,
+      "pass_fraction": 1.0,
+      "wilson_95": [
+        0.20654931437723745,
+        1
+      ],
+      "safety_failures": 0,
+      "p95_ms": 0,
+      "provider_calls_per_passed_scenario": 1.0,
+      "cost_micros_per_passed_scenario": null
+    },
+    "store_language:jewelry:typo": {
+      "passed": 1,
+      "executed": 1,
+      "total": 1,
+      "quarantined": 0,
+      "not_run": 0,
+      "pass_fraction": 1.0,
+      "wilson_95": [
+        0.20654931437723745,
+        1
+      ],
+      "safety_failures": 0,
+      "p95_ms": 0,
+      "provider_calls_per_passed_scenario": 1.0,
+      "cost_micros_per_passed_scenario": null
+    },
+    "suite:adversarial": {
+      "passed": 24,
+      "executed": 24,
+      "total": 24,
+      "quarantined": 0,
+      "not_run": 0,
+      "pass_fraction": 1.0,
+      "wilson_95": [
+        0.8620237953250198,
+        1
+      ],
+      "safety_failures": 0,
+      "p95_ms": 0,
+      "provider_calls_per_passed_scenario": 0.75,
+      "cost_micros_per_passed_scenario": null
+    },
+    "suite:catalog_grounded": {
+      "passed": 24,
+      "executed": 24,
+      "total": 24,
+      "quarantined": 0,
+      "not_run": 0,
+      "pass_fraction": 1.0,
+      "wilson_95": [
+        0.8620237953250198,
+        1
+      ],
+      "safety_failures": 0,
+      "p95_ms": 1,
+      "provider_calls_per_passed_scenario": 0.75,
+      "cost_micros_per_passed_scenario": null
+    },
+    "suite:conversation": {
+      "passed": 13,
+      "executed": 13,
+      "total": 13,
+      "quarantined": 0,
+      "not_run": 0,
+      "pass_fraction": 1.0,
+      "wilson_95": [
+        0.7719046276458016,
+        0.9999999999999999
+      ],
+      "safety_failures": 0,
+      "p95_ms": 1,
+      "provider_calls_per_passed_scenario": 1.2307692307692308,
+      "cost_micros_per_passed_scenario": null
+    },
+    "suite:golden": {
+      "passed": 3,
+      "executed": 3,
+      "total": 3,
+      "quarantined": 0,
+      "not_run": 0,
+      "pass_fraction": 1.0,
+      "wilson_95": [
+        0.4385029682449546,
+        1
+      ],
+      "safety_failures": 0,
+      "p95_ms": 2,
+      "provider_calls_per_passed_scenario": 1.0,
+      "cost_micros_per_passed_scenario": null
+    },
+    "suite:journey": {
+      "passed": 35,
+      "executed": 35,
+      "total": 35,
+      "quarantined": 0,
+      "not_run": 0,
+      "pass_fraction": 1.0,
+      "wilson_95": [
+        0.9010990076755959,
+        0.9999999999999999
+      ],
+      "safety_failures": 0,
+      "p95_ms": 1,
+      "provider_calls_per_passed_scenario": 0.6571428571428571,
+      "cost_micros_per_passed_scenario": null
+    }
+  },
+  "live_stores": {
+    "grocery": "canary_selected",
+    "jewelry": "not_configured",
+    "electronics": "not_configured"
+  },
+  "budget": null,
+  "retrieval_revision": "dataset-frozen-observations",
+  "retrieval_sha256": null
+}

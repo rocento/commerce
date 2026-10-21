@@ -1,0 +1,77 @@
+........................................................................ [  2%]
+........................................................................ [  4%]
+...........s............................................................ [  6%]
+........................................................................ [  8%]
+........................................................................ [ 10%]
+........................................................................ [ 12%]
+........................................................................ [ 14%]
+........................................................................ [ 16%]
+........................................................................ [ 18%]
+........................................................................ [ 20%]
+........................................................................ [ 22%]
+..............................s......................................... [ 24%]
+........................................................................ [ 27%]
+.....................s.................................................. [ 29%]
+.................ss....................s................................ [ 31%]
+................................s....................................... [ 33%]
+........................................................................ [ 35%]
+........................................................................ [ 37%]
+........................................................................ [ 39%]
+........................................................................ [ 41%]
+........................................................................ [ 43%]
+........................................................................ [ 45%]
+........................................................................ [ 47%]
+........................................................................ [ 49%]
+........................................................................ [ 52%]
+........................................................................ [ 54%]
+........................................................................ [ 56%]
+........................................................................ [ 58%]
+........................................................................ [ 60%]
+........................................................................ [ 62%]
+........................................................................ [ 64%]
+.s...................................................................... [ 66%]
+........................................................................ [ 68%]
+...................................................s.................... [ 70%]
+........................................................................ [ 72%]
+........................................................................ [ 74%]
+........................................................................ [ 77%]
+....................................................F.F................. [ 79%]
+........................................................................ [ 81%]
+..........s............................................................. [ 83%]
+........................................................................ [ 85%]
+........................................................................ [ 87%]
+........................................................................ [ 89%]
+..........................................................F............. [ 91%]
+........................................................................ [ 93%]
+........................................................................ [ 95%]
+........................................................................ [ 97%]
+........................................................................ [ 99%]
+...                                                                      [100%]
+=================================== FAILURES ===================================
+_ test_provider_imports_do_not_load_commerce_or_persistence[from app.commerce_resolution_engine.providers import ChatModel, EmbeddingModel, UnconfiguredModel, OpenAIProvider, strict_schema] _
+tests/test_provider_import_boundary.py:30: in test_provider_imports_do_not_load_commerce_or_persistence
+    sys.executable,
+/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/subprocess.py:577: in run
+    raise CalledProcessError(retcode, process.args,
+E   subprocess.CalledProcessError: Command '['/Users/momar/Documents/commerce-ai/ai-service/.venv/bin/python', '-c', "from app.commerce_resolution_engine.providers import ChatModel, EmbeddingModel, UnconfiguredModel, OpenAIProvider, strict_schema\nimport sys\nfor name in sys.modules:\n    assert not name.startswith(('app.commerce_action_engine', 'app.commerce_resolution_engine.runtime', 'psycopg', 'pypdf')), name\n"]' returned non-zero exit status 1.
+----------------------------- Captured stderr call -----------------------------
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+    from app.commerce_resolution_engine.providers import ChatModel, EmbeddingModel, UnconfiguredModel, OpenAIProvider, strict_schema
+ImportError: cannot import name 'ChatModel' from 'app.commerce_resolution_engine.providers' (/Users/momar/Documents/commerce-ai/ai-service/app/commerce_resolution_engine/providers/__init__.py)
+________ test_runtime_chat_bridge_forwards_text_and_closes_inner_stream ________
+tests/test_provider_import_boundary.py:55: in test_runtime_chat_bridge_forwards_text_and_closes_inner_stream
+    ???
+E   ModuleNotFoundError: No module named 'app.commerce_action_engine.application.runtime_chat'
+___ test_english_scope_is_explicit_and_cannot_hide_missing_english_evidence ____
+tests/test_shopping_intent_regressions.py:234: in test_english_scope_is_explicit_and_cannot_hide_missing_english_evidence
+    compare(baseline, offline, thresholds_after_baseline(baseline))["status"]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+evals/lab/scoring.py:169: in compare
+    raise ValueError(
+E   ValueError: Comparison requires the same dataset, execution mode and explicit scope
+=========================== short test summary info ============================
+FAILED tests/test_provider_import_boundary.py::test_provider_imports_do_not_load_commerce_or_persistence[from app.commerce_resolution_engine.providers import ChatModel, EmbeddingModel, UnconfiguredModel, OpenAIProvider, strict_schema]
+FAILED tests/test_provider_import_boundary.py::test_runtime_chat_bridge_forwards_text_and_closes_inner_stream
+FAILED tests/test_shopping_intent_regressions.py::test_english_scope_is_explicit_and_cannot_hide_missing_english_evidence
+3 failed, 3446 passed, 10 skipped, 33 warnings in 156.41s (0:02:36)

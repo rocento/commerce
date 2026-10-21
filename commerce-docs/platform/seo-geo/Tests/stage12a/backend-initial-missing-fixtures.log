@@ -1,0 +1,56 @@
+ Network rocento-publication-stage12a_default Creating
+ Network rocento-publication-stage12a_default Creating
+ Network rocento-publication-stage12a_default Created
+ Network rocento-publication-stage12a_default Created
+ Container rocento-publication-stage12a-postgres-1 Creating
+ Container rocento-publication-stage12a-postgres-1 Created
+ Container rocento-publication-stage12a-postgres-1 Starting
+ Container rocento-publication-stage12a-postgres-1 Started
+ Container rocento-publication-stage12a-postgres-1 Waiting
+ Container rocento-publication-stage12a-postgres-1 Healthy
+ Container rocento-publication-stage12a-verify-run-38010b45b88d Creating
+ Container rocento-publication-stage12a-verify-run-38010b45b88d Created
+   Compiling infra-auth v0.1.0 (/workspace/backend/crates/infra-auth)
+   Compiling infra-events v0.1.0 (/workspace/backend/crates/infra-events)
+   Compiling infra-db v0.1.0 (/workspace/backend/crates/infra-db)
+   Compiling infra-observability v0.1.0 (/workspace/backend/crates/infra-observability)
+   Compiling infra-media v0.1.0 (/workspace/backend/crates/infra-media)
+   Compiling shared-kernel v0.1.0 (/workspace/backend/crates/shared-kernel)
+   Compiling domain-admin-iam v0.1.0 (/workspace/backend/crates/domain-admin-iam)
+   Compiling domain-inventory v0.1.0 (/workspace/backend/crates/domain-inventory)
+   Compiling domain-attributes v0.1.0 (/workspace/backend/crates/domain-attributes)
+   Compiling domain-payments v0.1.0 (/workspace/backend/crates/domain-payments)
+   Compiling domain-theme v0.1.0 (/workspace/backend/crates/domain-theme)
+   Compiling domain-catalog v0.1.0 (/workspace/backend/crates/domain-catalog)
+   Compiling domain-fulfillment v0.1.0 (/workspace/backend/crates/domain-fulfillment)
+   Compiling domain-customers v0.1.0 (/workspace/backend/crates/domain-customers)
+   Compiling domain-orders v0.1.0 (/workspace/backend/crates/domain-orders)
+   Compiling domain-pricing-promotions v0.1.0 (/workspace/backend/crates/domain-pricing-promotions)
+   Compiling domain-tax v0.1.0 (/workspace/backend/crates/domain-tax)
+   Compiling domain-cms v0.1.0 (/workspace/backend/crates/domain-cms)
+   Compiling domain-reviews v0.1.0 (/workspace/backend/crates/domain-reviews)
+   Compiling domain-cart-checkout v0.1.0 (/workspace/backend/crates/domain-cart-checkout)
+   Compiling domain-support v0.1.0 (/workspace/backend/crates/domain-support)
+   Compiling domain-admin-operations v0.1.0 (/workspace/backend/crates/domain-admin-operations)
+   Compiling domain-search-client v0.1.0 (/workspace/backend/crates/domain-search-client)
+   Compiling api-gateway v0.1.0 (/workspace/backend/crates/api-gateway)
+error: couldn't read `crates/api-gateway/tests/fixtures/assistant-private.pem`: No such file or directory (os error 2)
+    --> crates/api-gateway/tests/orders.rs:1026:53
+     |
+1026 |               jsonwebtoken::EncodingKey::from_rsa_pem(include_bytes!(
+     |  _____________________________________________________^
+1027 | |                 "fixtures/assistant-private.pem"
+1028 | |             ))
+     | |_____________^
+
+error: couldn't read `crates/api-gateway/tests/fixtures/assistant-public.pem`: No such file or directory (os error 2)
+    --> crates/api-gateway/tests/orders.rs:1032:53
+     |
+1032 |               jsonwebtoken::DecodingKey::from_rsa_pem(include_bytes!(
+     |  _____________________________________________________^
+1033 | |                 "fixtures/assistant-public.pem"
+1034 | |             ))
+     | |_____________^
+
+error: could not compile `api-gateway` (test "orders") due to 2 previous errors
+warning: build failed, waiting for other jobs to finish...

@@ -1,0 +1,49 @@
+{
+  "milestone": "M01",
+  "status": "in_progress",
+  "exit_gate": "fail",
+  "browser_suite": {
+    "browser_run": "m01-final",
+    "passed": 6,
+    "failed": 1,
+    "optimize_cart": "fail",
+    "shop_for_me": "pass",
+    "buy_again": "pass",
+    "lost_committed_responses": "pass",
+    "saved_proposal_interruption": "pass",
+    "admin_readiness_and_journey": "pass",
+    "pilot_exact_guides_and_unknown": "pass",
+    "ai_crash_drill": {
+      "ai_killed_during_active_shopping_stream": true,
+      "bounded_interruption_seconds": 0.17,
+      "stream_event_types": [
+        "progress",
+        "progress"
+      ],
+      "checkout_quote_available_during_ai_outage": true,
+      "commerce_and_saved_proposals_preserved_across_restarts": true,
+      "provider_checks_after_restart": 4
+    },
+    "provider_schema_rich_card": {
+      "status": "pass",
+      "checked_at": "2026-09-21T09:11:39.974963Z",
+      "configuration_revision": "9943435af7124eacb7f5c56e9372d8c77034b26483b04bf963a2f861a4fbf221",
+      "request_reference": "a612542d-c513-433a-ab3f-bc412ed2aab6",
+      "message": "Live catalog tools, provider schemas and a catalog-grounded rich card passed. Full shopping journeys require separate acceptance.",
+      "duration_ms": 1928,
+      "input_tokens": 1125,
+      "output_tokens": 34
+    },
+    "receipt_survives_restart": true
+  },
+  "known_defect": {
+    "request": "Find cheaper equivalent coffee for my current cart. I allow substitutions, keep the exact quantities and selling units. Budget scope is merchandise only, in USD.",
+    "expected": "Preserve quantity and selling unit, allow a verified cheaper equivalent. No product identity lock was requested.",
+    "observed": {
+      "allow_substitutions": true,
+      "locked_products_count": 1,
+      "selections_count": 0
+    },
+    "effect": "No verified replacement; Rust rejects applying the empty proposal."
+  }
+}

@@ -1,0 +1,21 @@
+ Container rocento-publication-stage12a-postgres-1 Running
+ Container rocento-publication-stage12a-postgres-1 Waiting
+ Container rocento-publication-stage12a-postgres-1 Healthy
+ Container rocento-publication-stage12a-verify-run-d2ca75aed706 Creating
+ Container rocento-publication-stage12a-verify-run-d2ca75aed706 Created
+   Compiling api-gateway v0.1.0 (/workspace/backend/crates/api-gateway)
+    Finished `release` profile [optimized] target(s) in 6.37s
+     Running tests/publication_rendering.rs (/target/release/deps/publication_rendering-2f5975df4a4f56e4)
+
+running 9 tests
+test built_renderer_real_http_status_content_freshness_and_isolation ... ok
+test canonical_lifecycle_single_hop_and_query_policy ... ok
+test feed_freshness_real_html_jsonld_sitemap_pipeline ... ok
+test generated_slugs_unicode_collisions_and_deleted_categories ... ok
+test merchant_entity_policies_guides_comparisons_and_revocation ... ok
+test metadata_raw_html_semantics_and_revisioned_admin_preview ... ok
+test migration_backfills_legacy_rows_and_rejects_ambiguous_ownership ... ok
+test structured_data_matches_public_facts_across_industries_and_pricing ... ok
+test structured_variants_are_visible_independently_canonical_and_parent_scoped ... ok
+
+test result: ok. 9 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 4.42s

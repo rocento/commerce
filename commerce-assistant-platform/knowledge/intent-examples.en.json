@@ -1,0 +1,62 @@
+[
+  {
+    "id": "search-colloquial-budget",
+    "intent": "PRODUCT_SEARCH",
+    "utterance": "Could ya rustle up apples below 20?",
+    "canonical_text": "show me apples below 20"
+  },
+  {
+    "id": "search-colloquial-colour",
+    "intent": "PRODUCT_SEARCH",
+    "utterance": "Can ya rustle up red apples below 20?",
+    "canonical_text": "show me red apples below 20"
+  },
+  {
+    "id": "cart-peek",
+    "intent": "VIEW_CART",
+    "utterance": "Let me peek at what's waiting in my basket",
+    "canonical_text": "show my cart"
+  },
+  {
+    "id": "cart-total",
+    "intent": "CART_TOTAL",
+    "utterance": "What's the damage for everything sitting in my basket?",
+    "canonical_text": "what is my cart total"
+  },
+  {
+    "id": "orders-history",
+    "intent": "ORDER_HISTORY",
+    "utterance": "I'd like a look back at the stuff I've ordered",
+    "canonical_text": "show my order history"
+  },
+  {
+    "id": "wishlist-peek",
+    "intent": "VIEW_WISHLIST",
+    "utterance": "Let me have a peek at the things I saved for later",
+    "canonical_text": "show my wishlist"
+  },
+  {
+    "id": "addresses-saved-places",
+    "intent": "ACCOUNT_ADDRESS_LIST",
+    "utterance": "Let me see the delivery places saved on my account",
+    "canonical_text": "show my saved addresses"
+  },
+  {
+    "id": "addresses-list-shortcut",
+    "intent": "ACCOUNT_ADDRESS_LIST",
+    "utterance": "List my addresses here in the conversation",
+    "canonical_text": "show my saved addresses"
+  },
+  {
+    "id": "orders-list-shortcut",
+    "intent": "ORDER_HISTORY",
+    "utterance": "Show my orders here in the chat",
+    "canonical_text": "show my order history"
+  },
+  {
+    "id": "cart-card-view",
+    "intent": "VIEW_CART",
+    "utterance": "Show everything in my basket as product cards",
+    "canonical_text": "show my cart"
+  }
+]

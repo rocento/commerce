@@ -1,0 +1,11 @@
+   Compiling api-gateway v0.1.0 (/Users/momar/Documents/commerce-ai/backend/crates/api-gateway)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 3.26s
+     Running tests/publication_hardening.rs (target/debug/deps/publication_hardening-e6de479740948ab0)
+
+running 4 tests
+test measured_large_catalog ... ignored, explicit synthetic Stage 11 baseline; needs built renderer and isolated database
+test admin_authorization_audit_and_fixed_probe_target ... ok
+test complete_tenant_matrix_xss_privacy_and_background_restart ... ok
+test database_timeout_and_recovery ... ok
+
+test result: ok. 3 passed; 0 failed; 1 ignored; 0 measured; 0 filtered out; finished in 4.17s

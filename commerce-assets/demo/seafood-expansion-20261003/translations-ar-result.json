@@ -1,0 +1,175 @@
+{
+  "verified_arabic_products": 7,
+  "products": [
+    {
+      "id": "37736eea-2d04-49be-9bc8-2c1ba17a7257",
+      "sku": "GRO-SEAFOOD-20261003-001",
+      "name": "فيليه سمك القد ٥٠٠ جم",
+      "status": "reviewed",
+      "translated_fields": 5
+    },
+    {
+      "id": "4b678116-71c5-4872-bc18-e3b58b0bb208",
+      "sku": "GRO-SEAFOOD-20261003-002",
+      "name": "فيليه سمك البلطي ٥٠٠ جم",
+      "status": "reviewed",
+      "translated_fields": 5
+    },
+    {
+      "id": "b97c3e9b-8b0d-4565-aaba-b0fb2ceab588",
+      "sku": "GRO-SEAFOOD-20261003-003",
+      "name": "سمك القاروص الكامل ٦٠٠ جم",
+      "status": "reviewed",
+      "translated_fields": 5
+    },
+    {
+      "id": "9b702e26-fc6d-4aa0-89cc-63d0d31f7741",
+      "sku": "GRO-SEAFOOD-20261003-004",
+      "name": "فيليه سمك الماكريل ٥٠٠ جم",
+      "status": "reviewed",
+      "translated_fields": 5
+    },
+    {
+      "id": "4afd3db5-79a0-4b38-aa4e-d1a053db762d",
+      "sku": "GRO-SEAFOOD-20261003-005",
+      "name": "سمك السردين الكامل ٥٠٠ جم",
+      "status": "reviewed",
+      "translated_fields": 5
+    },
+    {
+      "id": "3201c39d-6115-4752-9d0c-c8f076c3dd1a",
+      "sku": "GRO-SEAFOOD-20261003-006",
+      "name": "حلقات الحبار ٥٠٠ جم",
+      "status": "reviewed",
+      "translated_fields": 5
+    },
+    {
+      "id": "52761900-b41f-4b93-90cb-2ffe7dc10b66",
+      "sku": "GRO-SEAFOOD-20261003-007",
+      "name": "بلح البحر الكامل ١ كجم",
+      "status": "reviewed",
+      "translated_fields": 5
+    }
+  ],
+  "before": [
+    {
+      "entity_id": "37736eea-2d04-49be-9bc8-2c1ba17a7257",
+      "name": "Cod Fillets 500g",
+      "source": {
+        "__label.attribute.meta_description": "Meta description",
+        "__label.attribute.meta_title": "Meta title",
+        "__label.attribute.short_description": "Short description",
+        "attribute.meta_description": "Skinless cod fillets with mild white flesh. Shop the 500g pack at Rocento Grocery.",
+        "attribute.meta_title": "Cod Fillets 500g | Rocento Grocery",
+        "attribute.short_description": "Skinless cod fillets with mild white flesh. 500g pack. Contains fish.",
+        "description": "Skinless cod fillets with mild white flesh. Pack size: 500g. Contains fish. Keep refrigerated and cook thoroughly before serving. Illustrative demo product photography.",
+        "name": "Cod Fillets 500g"
+      },
+      "fields": {},
+      "revision": 0,
+      "status": "missing"
+    },
+    {
+      "entity_id": "4b678116-71c5-4872-bc18-e3b58b0bb208",
+      "name": "Tilapia Fillets 500g",
+      "source": {
+        "__label.attribute.meta_description": "Meta description",
+        "__label.attribute.meta_title": "Meta title",
+        "__label.attribute.short_description": "Short description",
+        "attribute.meta_description": "Skinless tilapia fillets for everyday fish meals. Shop the 500g pack at Rocento Grocery.",
+        "attribute.meta_title": "Tilapia Fillets 500g | Rocento Grocery",
+        "attribute.short_description": "Skinless tilapia fillets for everyday fish meals. 500g pack. Contains fish.",
+        "description": "Skinless tilapia fillets for everyday fish meals. Pack size: 500g. Contains fish. Keep refrigerated and cook thoroughly before serving. Illustrative demo product photography.",
+        "name": "Tilapia Fillets 500g"
+      },
+      "fields": {},
+      "revision": 0,
+      "status": "missing"
+    },
+    {
+      "entity_id": "b97c3e9b-8b0d-4565-aaba-b0fb2ceab588",
+      "name": "Whole Sea Bass 600g",
+      "source": {
+        "__label.attribute.meta_description": "Meta description",
+        "__label.attribute.meta_title": "Meta title",
+        "__label.attribute.short_description": "Short description",
+        "attribute.meta_description": "Whole sea bass, sold with bones, head and skin. Shop the 600g pack at Rocento Grocery.",
+        "attribute.meta_title": "Whole Sea Bass 600g | Rocento Grocery",
+        "attribute.short_description": "Whole sea bass, sold with bones, head and skin. 600g pack. Contains fish.",
+        "description": "Whole sea bass, sold with bones, head and skin. Pack size: 600g. Contains fish. Keep refrigerated and cook thoroughly before serving. Illustrative demo product photography.",
+        "name": "Whole Sea Bass 600g"
+      },
+      "fields": {},
+      "revision": 0,
+      "status": "missing"
+    },
+    {
+      "entity_id": "9b702e26-fc6d-4aa0-89cc-63d0d31f7741",
+      "name": "Mackerel Fillets 500g",
+      "source": {
+        "__label.attribute.meta_description": "Meta description",
+        "__label.attribute.meta_title": "Meta title",
+        "__label.attribute.short_description": "Short description",
+        "attribute.meta_description": "Skin-on mackerel fillets with a rich flavor. Shop the 500g pack at Rocento Grocery.",
+        "attribute.meta_title": "Mackerel Fillets 500g | Rocento Grocery",
+        "attribute.short_description": "Skin-on mackerel fillets with a rich flavor. 500g pack. Contains fish.",
+        "description": "Skin-on mackerel fillets with a rich flavor. Pack size: 500g. Contains fish. Keep refrigerated and cook thoroughly before serving. Illustrative demo product photography.",
+        "name": "Mackerel Fillets 500g"
+      },
+      "fields": {},
+      "revision": 0,
+      "status": "missing"
+    },
+    {
+      "entity_id": "4afd3db5-79a0-4b38-aa4e-d1a053db762d",
+      "name": "Whole Sardines 500g",
+      "source": {
+        "__label.attribute.meta_description": "Meta description",
+        "__label.attribute.meta_title": "Meta title",
+        "__label.attribute.short_description": "Short description",
+        "attribute.meta_description": "Whole sardines, sold with bones, heads and skin. Shop the 500g pack at Rocento Grocery.",
+        "attribute.meta_title": "Whole Sardines 500g | Rocento Grocery",
+        "attribute.short_description": "Whole sardines, sold with bones, heads and skin. 500g pack. Contains fish.",
+        "description": "Whole sardines, sold with bones, heads and skin. Pack size: 500g. Contains fish. Keep refrigerated and cook thoroughly before serving. Illustrative demo product photography.",
+        "name": "Whole Sardines 500g"
+      },
+      "fields": {},
+      "revision": 0,
+      "status": "missing"
+    },
+    {
+      "entity_id": "3201c39d-6115-4752-9d0c-c8f076c3dd1a",
+      "name": "Squid Rings 500g",
+      "source": {
+        "__label.attribute.meta_description": "Meta description",
+        "__label.attribute.meta_title": "Meta title",
+        "__label.attribute.short_description": "Short description",
+        "attribute.meta_description": "Raw cleaned squid rings for seafood pasta and stir-fries. Shop the 500g pack at Rocento Grocery.",
+        "attribute.meta_title": "Squid Rings 500g | Rocento Grocery",
+        "attribute.short_description": "Raw cleaned squid rings for seafood pasta and stir-fries. 500g pack. Contains molluscs.",
+        "description": "Raw cleaned squid rings for seafood pasta and stir-fries. Pack size: 500g. Contains molluscs. Keep refrigerated and cook thoroughly before serving. Illustrative demo product photography.",
+        "name": "Squid Rings 500g"
+      },
+      "fields": {},
+      "revision": 0,
+      "status": "missing"
+    },
+    {
+      "entity_id": "52761900-b41f-4b93-90cb-2ffe7dc10b66",
+      "name": "Whole Mussels 1kg",
+      "source": {
+        "__label.attribute.meta_description": "Meta description",
+        "__label.attribute.meta_title": "Meta title",
+        "__label.attribute.short_description": "Short description",
+        "attribute.meta_description": "Raw shell-on mussels for seafood soups and pasta. Shop the 1kg pack at Rocento Grocery.",
+        "attribute.meta_title": "Whole Mussels 1kg | Rocento Grocery",
+        "attribute.short_description": "Raw shell-on mussels for seafood soups and pasta. 1kg pack. Contains molluscs.",
+        "description": "Raw shell-on mussels for seafood soups and pasta. Pack size: 1kg. Contains molluscs. Keep refrigerated and cook thoroughly before serving. Illustrative demo product photography.",
+        "name": "Whole Mussels 1kg"
+      },
+      "fields": {},
+      "revision": 0,
+      "status": "missing"
+    }
+  ]
+}

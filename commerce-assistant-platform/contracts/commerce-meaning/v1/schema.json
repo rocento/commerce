@@ -1,0 +1,904 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:rocento:commerce-meaning:1.0",
+  "$defs": {
+    "ActorContext": {
+      "additionalProperties": false,
+      "description": "Only the trusted gateway/composition root may construct this context.",
+      "properties": {
+        "schema_version": {
+          "const": "1.0",
+          "default": "1.0",
+          "title": "Schema Version",
+          "type": "string"
+        },
+        "tenant_id": {
+          "pattern": "^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$",
+          "title": "Tenant Id",
+          "type": "string"
+        },
+        "store_id": {
+          "pattern": "^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$",
+          "title": "Store Id",
+          "type": "string"
+        },
+        "actor_id": {
+          "anyOf": [
+            {
+              "pattern": "^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Actor Id"
+        },
+        "principal_id": {
+          "anyOf": [
+            {
+              "pattern": "^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Principal Id"
+        },
+        "session_id": {
+          "pattern": "^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$",
+          "title": "Session Id",
+          "type": "string"
+        },
+        "request_id": {
+          "pattern": "^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$",
+          "title": "Request Id",
+          "type": "string"
+        },
+        "channel": {
+          "enum": [
+            "storefront",
+            "admin",
+            "evaluation"
+          ],
+          "title": "Channel",
+          "type": "string"
+        },
+        "scopes": {
+          "default": [],
+          "items": {
+            "pattern": "^[a-z][a-z0-9_.:/-]{0,119}$",
+            "type": "string"
+          },
+          "maxItems": 32,
+          "title": "Scopes",
+          "type": "array"
+        }
+      },
+      "required": [
+        "tenant_id",
+        "store_id",
+        "session_id",
+        "request_id",
+        "channel"
+      ],
+      "title": "ActorContext",
+      "type": "object"
+    },
+    "AssessedStep": {
+      "additionalProperties": false,
+      "properties": {
+        "schema_version": {
+          "const": "1.0",
+          "default": "1.0",
+          "title": "Schema Version",
+          "type": "string"
+        },
+        "id": {
+          "pattern": "^[a-z][a-z0-9_.:/-]{0,119}$",
+          "title": "Id",
+          "type": "string"
+        },
+        "action": {
+          "enum": [
+            "catalog_read",
+            "recommend",
+            "answer",
+            "personalize",
+            "preference_save",
+            "cart_apply",
+            "order_submit",
+            "payment",
+            "refund",
+            "account_change"
+          ],
+          "title": "Action",
+          "type": "string"
+        },
+        "policy": {
+          "$ref": "#/$defs/PolicyDecision"
+        }
+      },
+      "required": [
+        "id",
+        "action",
+        "policy"
+      ],
+      "title": "AssessedStep",
+      "type": "object"
+    },
+    "Clarification": {
+      "additionalProperties": false,
+      "properties": {
+        "schema_version": {
+          "const": "1.0",
+          "default": "1.0",
+          "title": "Schema Version",
+          "type": "string"
+        },
+        "required": {
+          "title": "Required",
+          "type": "boolean"
+        },
+        "reason": {
+          "enum": [
+            "safety",
+            "feasibility",
+            "hard_constraint",
+            "material_benefit",
+            "reversible_assumption"
+          ],
+          "title": "Reason",
+          "type": "string"
+        },
+        "fields": {
+          "default": [],
+          "items": {
+            "pattern": "^[a-z][a-z0-9_.:/-]{0,119}$",
+            "type": "string"
+          },
+          "title": "Fields",
+          "type": "array"
+        }
+      },
+      "required": [
+        "required",
+        "reason"
+      ],
+      "title": "Clarification",
+      "type": "object"
+    },
+    "Conflict": {
+      "additionalProperties": false,
+      "properties": {
+        "schema_version": {
+          "const": "1.0",
+          "default": "1.0",
+          "title": "Schema Version",
+          "type": "string"
+        },
+        "field": {
+          "pattern": "^[a-z][a-z0-9_.:/-]{0,119}$",
+          "title": "Field",
+          "type": "string"
+        },
+        "scope": {
+          "title": "Scope",
+          "type": "string"
+        },
+        "code": {
+          "enum": [
+            "contradiction",
+            "unit_mismatch",
+            "unknown_fact",
+            "stale_fact"
+          ],
+          "title": "Code",
+          "type": "string"
+        },
+        "requirement_indexes": {
+          "items": {
+            "type": "integer"
+          },
+          "title": "Requirement Indexes",
+          "type": "array"
+        }
+      },
+      "required": [
+        "field",
+        "scope",
+        "code",
+        "requirement_indexes"
+      ],
+      "title": "Conflict",
+      "type": "object"
+    },
+    "ConstraintFrame": {
+      "additionalProperties": false,
+      "properties": {
+        "schema_version": {
+          "const": "1.0",
+          "default": "1.0",
+          "title": "Schema Version",
+          "type": "string"
+        },
+        "requirements": {
+          "default": [],
+          "items": {
+            "$ref": "#/$defs/Requirement"
+          },
+          "maxItems": 100,
+          "title": "Requirements",
+          "type": "array"
+        },
+        "conflicts": {
+          "default": [],
+          "items": {
+            "$ref": "#/$defs/Conflict"
+          },
+          "maxItems": 100,
+          "title": "Conflicts",
+          "type": "array"
+        }
+      },
+      "title": "ConstraintFrame",
+      "type": "object"
+    },
+    "Freshness": {
+      "additionalProperties": false,
+      "properties": {
+        "schema_version": {
+          "const": "1.0",
+          "default": "1.0",
+          "title": "Schema Version",
+          "type": "string"
+        },
+        "observed_at": {
+          "maximum": 253402300799,
+          "minimum": 0,
+          "title": "Observed At",
+          "type": "integer"
+        },
+        "expires_at": {
+          "maximum": 253402300799,
+          "minimum": 0,
+          "title": "Expires At",
+          "type": "integer"
+        },
+        "revalidate_before_action": {
+          "default": true,
+          "title": "Revalidate Before Action",
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "observed_at",
+        "expires_at"
+      ],
+      "title": "Freshness",
+      "type": "object"
+    },
+    "IntentCandidate": {
+      "additionalProperties": false,
+      "properties": {
+        "schema_version": {
+          "const": "1.0",
+          "default": "1.0",
+          "title": "Schema Version",
+          "type": "string"
+        },
+        "name": {
+          "pattern": "^[a-z][a-z0-9_.:/-]{0,119}$",
+          "title": "Name",
+          "type": "string"
+        },
+        "confidence": {
+          "maximum": 1,
+          "minimum": 0,
+          "title": "Confidence",
+          "type": "number"
+        },
+        "evidence": {
+          "items": {
+            "$ref": "#/$defs/Span"
+          },
+          "title": "Evidence",
+          "type": "array"
+        },
+        "language": {
+          "enum": [
+            "en",
+            "und"
+          ],
+          "title": "Language",
+          "type": "string"
+        },
+        "missing": {
+          "default": [],
+          "items": {
+            "pattern": "^[a-z][a-z0-9_.:/-]{0,119}$",
+            "type": "string"
+          },
+          "title": "Missing",
+          "type": "array"
+        },
+        "ambiguity": {
+          "default": [],
+          "items": {
+            "pattern": "^[a-z][a-z0-9_.:/-]{0,119}$",
+            "type": "string"
+          },
+          "title": "Ambiguity",
+          "type": "array"
+        }
+      },
+      "required": [
+        "name",
+        "confidence",
+        "evidence",
+        "language"
+      ],
+      "title": "IntentCandidate",
+      "type": "object"
+    },
+    "IntentFrame": {
+      "additionalProperties": false,
+      "properties": {
+        "schema_version": {
+          "const": "1.0",
+          "default": "1.0",
+          "title": "Schema Version",
+          "type": "string"
+        },
+        "candidates": {
+          "items": {
+            "$ref": "#/$defs/IntentCandidate"
+          },
+          "title": "Candidates",
+          "type": "array"
+        },
+        "route": {
+          "anyOf": [
+            {
+              "pattern": "^[a-z][a-z0-9_.:/-]{0,119}$",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Route"
+        },
+        "compound": {
+          "default": false,
+          "title": "Compound",
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "candidates"
+      ],
+      "title": "IntentFrame",
+      "type": "object"
+    },
+    "PolicyDecision": {
+      "additionalProperties": false,
+      "properties": {
+        "schema_version": {
+          "const": "1.0",
+          "default": "1.0",
+          "title": "Schema Version",
+          "type": "string"
+        },
+        "policy": {
+          "const": "commerce/default",
+          "default": "commerce/default",
+          "title": "Policy",
+          "type": "string"
+        },
+        "version": {
+          "const": "1.0.0",
+          "default": "1.0.0",
+          "title": "Version",
+          "type": "string"
+        },
+        "outcome": {
+          "enum": [
+            "allow",
+            "deny",
+            "require_confirmation",
+            "require_authentication",
+            "require_step_up",
+            "redact"
+          ],
+          "title": "Outcome",
+          "type": "string"
+        },
+        "reason": {
+          "pattern": "^[a-z][a-z0-9_.:/-]{0,119}$",
+          "title": "Reason",
+          "type": "string"
+        },
+        "facts": {
+          "items": {
+            "$ref": "#/$defs/PolicyFact"
+          },
+          "title": "Facts",
+          "type": "array"
+        },
+        "actor": {
+          "$ref": "#/$defs/ActorContext"
+        },
+        "action": {
+          "enum": [
+            "catalog_read",
+            "recommend",
+            "answer",
+            "personalize",
+            "preference_save",
+            "cart_apply",
+            "order_submit",
+            "payment",
+            "refund",
+            "account_change"
+          ],
+          "title": "Action",
+          "type": "string"
+        },
+        "risk": {
+          "$ref": "#/$defs/Risk"
+        },
+        "confirmation": {
+          "enum": [
+            "none",
+            "undo",
+            "explicit_intent",
+            "fresh_confirmation",
+            "step_up"
+          ],
+          "title": "Confirmation",
+          "type": "string"
+        },
+        "expires_at": {
+          "maximum": 253402300799,
+          "minimum": 0,
+          "title": "Expires At",
+          "type": "integer"
+        },
+        "audit_ref": {
+          "maxLength": 200,
+          "minLength": 1,
+          "title": "Audit Ref",
+          "type": "string"
+        }
+      },
+      "required": [
+        "outcome",
+        "reason",
+        "facts",
+        "actor",
+        "action",
+        "risk",
+        "confirmation",
+        "expires_at",
+        "audit_ref"
+      ],
+      "title": "PolicyDecision",
+      "type": "object"
+    },
+    "PolicyFact": {
+      "additionalProperties": false,
+      "properties": {
+        "schema_version": {
+          "const": "1.0",
+          "default": "1.0",
+          "title": "Schema Version",
+          "type": "string"
+        },
+        "name": {
+          "pattern": "^[a-z][a-z0-9_.:/-]{0,119}$",
+          "title": "Name",
+          "type": "string"
+        },
+        "value": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "boolean"
+            },
+            {
+              "type": "integer"
+            }
+          ],
+          "title": "Value"
+        }
+      },
+      "required": [
+        "name",
+        "value"
+      ],
+      "title": "PolicyFact",
+      "type": "object"
+    },
+    "PolicyFacts": {
+      "additionalProperties": false,
+      "description": "Only composition roots may supply these; never validate a model/tool text as facts.",
+      "properties": {
+        "schema_version": {
+          "const": "1.0",
+          "default": "1.0",
+          "title": "Schema Version",
+          "type": "string"
+        },
+        "context": {
+          "$ref": "#/$defs/ActorContext"
+        },
+        "action": {
+          "enum": [
+            "catalog_read",
+            "recommend",
+            "answer",
+            "personalize",
+            "preference_save",
+            "cart_apply",
+            "order_submit",
+            "payment",
+            "refund",
+            "account_change"
+          ],
+          "title": "Action",
+          "type": "string"
+        },
+        "resource_tenant": {
+          "title": "Resource Tenant",
+          "type": "string"
+        },
+        "resource_store": {
+          "title": "Resource Store",
+          "type": "string"
+        },
+        "available": {
+          "title": "Available",
+          "type": "boolean"
+        },
+        "authorized": {
+          "title": "Authorized",
+          "type": "boolean"
+        },
+        "evidence_verified": {
+          "title": "Evidence Verified",
+          "type": "boolean"
+        },
+        "fresh_until": {
+          "maximum": 253402300799,
+          "minimum": 0,
+          "title": "Fresh Until",
+          "type": "integer"
+        },
+        "restricted": {
+          "default": false,
+          "title": "Restricted",
+          "type": "boolean"
+        },
+        "age_location_category_allowed": {
+          "default": true,
+          "title": "Age Location Category Allowed",
+          "type": "boolean"
+        },
+        "personal_data": {
+          "default": false,
+          "title": "Personal Data",
+          "type": "boolean"
+        },
+        "consent": {
+          "default": false,
+          "title": "Consent",
+          "type": "boolean"
+        },
+        "ranking_allowed": {
+          "default": true,
+          "title": "Ranking Allowed",
+          "type": "boolean"
+        },
+        "citations_verified": {
+          "default": true,
+          "title": "Citations Verified",
+          "type": "boolean"
+        },
+        "explicit_intent": {
+          "default": false,
+          "title": "Explicit Intent",
+          "type": "boolean"
+        },
+        "confirmation_until": {
+          "default": 0,
+          "maximum": 253402300799,
+          "minimum": 0,
+          "title": "Confirmation Until",
+          "type": "integer"
+        },
+        "authentication_until": {
+          "default": 0,
+          "maximum": 253402300799,
+          "minimum": 0,
+          "title": "Authentication Until",
+          "type": "integer"
+        },
+        "step_up_until": {
+          "default": 0,
+          "maximum": 253402300799,
+          "minimum": 0,
+          "title": "Step Up Until",
+          "type": "integer"
+        },
+        "undo_available": {
+          "default": false,
+          "title": "Undo Available",
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "context",
+        "action",
+        "resource_tenant",
+        "resource_store",
+        "available",
+        "authorized",
+        "evidence_verified",
+        "fresh_until"
+      ],
+      "title": "PolicyFacts",
+      "type": "object"
+    },
+    "Requirement": {
+      "additionalProperties": false,
+      "properties": {
+        "schema_version": {
+          "const": "1.0",
+          "default": "1.0",
+          "title": "Schema Version",
+          "type": "string"
+        },
+        "field": {
+          "pattern": "^[a-z][a-z0-9_.:/-]{0,119}$",
+          "title": "Field",
+          "type": "string"
+        },
+        "operator": {
+          "enum": [
+            "eq",
+            "neq",
+            "lt",
+            "lte",
+            "gt",
+            "gte",
+            "in",
+            "not_in",
+            "required",
+            "forbidden",
+            "compatible"
+          ],
+          "title": "Operator",
+          "type": "string"
+        },
+        "value": {
+          "$ref": "#/$defs/Value"
+        },
+        "strength": {
+          "enum": [
+            "hard",
+            "soft",
+            "inferred"
+          ],
+          "title": "Strength",
+          "type": "string"
+        },
+        "source": {
+          "enum": [
+            "current_customer",
+            "session",
+            "durable_goal",
+            "explicit_preference",
+            "observed_behavior",
+            "merchant_policy",
+            "industry_policy",
+            "system_safety",
+            "model"
+          ],
+          "title": "Source",
+          "type": "string"
+        },
+        "scope": {
+          "default": "product",
+          "enum": [
+            "product",
+            "basket",
+            "delivery",
+            "action",
+            "goal"
+          ],
+          "title": "Scope",
+          "type": "string"
+        },
+        "confidence": {
+          "maximum": 1,
+          "minimum": 0,
+          "title": "Confidence",
+          "type": "number"
+        },
+        "evidence": {
+          "default": [],
+          "items": {
+            "$ref": "#/$defs/Span"
+          },
+          "maxItems": 10,
+          "title": "Evidence",
+          "type": "array"
+        },
+        "freshness": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/Freshness"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        }
+      },
+      "required": [
+        "field",
+        "operator",
+        "value",
+        "strength",
+        "source",
+        "confidence"
+      ],
+      "title": "Requirement",
+      "type": "object"
+    },
+    "Risk": {
+      "enum": [
+        "R0",
+        "R1",
+        "R2",
+        "R3",
+        "R4"
+      ],
+      "title": "Risk",
+      "type": "string"
+    },
+    "Span": {
+      "additionalProperties": false,
+      "properties": {
+        "schema_version": {
+          "const": "1.0",
+          "default": "1.0",
+          "title": "Schema Version",
+          "type": "string"
+        },
+        "turn": {
+          "minimum": 0,
+          "title": "Turn",
+          "type": "integer"
+        },
+        "start": {
+          "minimum": 0,
+          "title": "Start",
+          "type": "integer"
+        },
+        "end": {
+          "minimum": 1,
+          "title": "End",
+          "type": "integer"
+        }
+      },
+      "required": [
+        "turn",
+        "start",
+        "end"
+      ],
+      "title": "Span",
+      "type": "object"
+    },
+    "Value": {
+      "additionalProperties": false,
+      "properties": {
+        "schema_version": {
+          "const": "1.0",
+          "default": "1.0",
+          "title": "Schema Version",
+          "type": "string"
+        },
+        "kind": {
+          "enum": [
+            "text",
+            "number",
+            "money",
+            "quantity",
+            "time",
+            "set",
+            "boolean",
+            "reference"
+          ],
+          "title": "Kind",
+          "type": "string"
+        },
+        "text": {
+          "anyOf": [
+            {
+              "maxLength": 200,
+              "minLength": 1,
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Text"
+        },
+        "number": {
+          "anyOf": [
+            {
+              "pattern": "^-?\\d{1,18}(\\.\\d{1,6})?$",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Number"
+        },
+        "unit": {
+          "anyOf": [
+            {
+              "maxLength": 30,
+              "minLength": 1,
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Unit"
+        },
+        "items": {
+          "default": [],
+          "items": {
+            "type": "string"
+          },
+          "maxItems": 30,
+          "title": "Items",
+          "type": "array"
+        },
+        "boolean": {
+          "anyOf": [
+            {
+              "type": "boolean"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Boolean"
+        }
+      },
+      "required": [
+        "kind"
+      ],
+      "title": "Value",
+      "type": "object"
+    }
+  }
+}

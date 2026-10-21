@@ -1,0 +1,184 @@
+{
+  "original_frontend_workspace_drift": [
+    "frontend/apps/storefront/src/main.tsx",
+    "frontend/apps/storefront/src/mobile-navigation.css"
+  ],
+  "shared_frontend_source_drift": [],
+  "installed_dependency_metadata_drift": [],
+  "status": "Verified",
+  "scope": "source-copy identity, artifact seal and historical report inventory; not a live release gate",
+  "candidate_files": 1354,
+  "missing": [],
+  "changed": [],
+  "reports": [
+    {
+      "path": "SEO-GEO/Reports/00-program-contract.md",
+      "sha256": "5a3ba391fe0bcc13d372a946699bca3b37f33e5a97ee89816fc1d56e4d7e44da"
+    },
+    {
+      "path": "SEO-GEO/Reports/01-assessment-and-target-architecture.md",
+      "sha256": "cebe161892dba188e77b2b6c38b1f1bfd2053fd5e42d5e619b0e3c4baa640504"
+    },
+    {
+      "path": "SEO-GEO/Reports/02-effective-indexing-and-domain-policy.md",
+      "sha256": "04b148cdc6695811c8e08020ce9b5d395040ef66ef5cec86d4b017a79560eaeb"
+    },
+    {
+      "path": "SEO-GEO/Reports/02-validation-follow-up.md",
+      "sha256": "3a5645b144530005ad27167ee18945e1a1f397bdca7fa375da5208687b8e8062"
+    },
+    {
+      "path": "SEO-GEO/Reports/03-server-visible-rendering-and-http-status.md",
+      "sha256": "35c60e9cb724ae89f30ab7b0bb95b8299b41c73e421006c9c675733b1a28e2ff"
+    },
+    {
+      "path": "SEO-GEO/Reports/04-canonical-urls-slugs-and-redirects.md",
+      "sha256": "96737f3e1e9a1055bd2a5f56f3bfe1de3aae849662589b1cd453f1afc5f5ff18"
+    },
+    {
+      "path": "SEO-GEO/Reports/05-metadata-on-page-links-and-images.md",
+      "sha256": "c5f7a12874f7ead2eed1aab943ad5f0d8e760c74ba7d0ee16dba922193eed987"
+    },
+    {
+      "path": "SEO-GEO/Reports/06-structured-data-and-product-facts.md",
+      "sha256": "f97b325f53465a173761bcbe5e469f642ae1a0a1700b93797e35b1586e989a19"
+    },
+    {
+      "path": "SEO-GEO/Reports/07-robots-sitemaps-and-crawler-policy.md",
+      "sha256": "99b3955fe8dd1388908fe5ed06bc6edd77d8ceb9cb0542fa895f2e0133be5520"
+    },
+    {
+      "path": "SEO-GEO/Reports/08-merchant-entity-content-and-geo.md",
+      "sha256": "fd2dbb7eabdb789973438bac91a4b64de40f736f820fe9d48ef4ffc01852da95"
+    },
+    {
+      "path": "SEO-GEO/Reports/09-product-feeds-and-freshness.md",
+      "sha256": "2bb652550a88a56dd8feb1b40f506f0e5ef1ab200eb80c5fdb7e5edabb0739a9"
+    },
+    {
+      "path": "SEO-GEO/Reports/10-attribution-health-and-observability.md",
+      "sha256": "18b9f3ac15b0815835fe01572b156aa03d55e72d25a07c616cd8d578bc1e546a"
+    },
+    {
+      "path": "SEO-GEO/Reports/11-performance-security-and-tenant-isolation.md",
+      "sha256": "cbd25aa1551a641d27fbc5a63a56fe1cc2c796c1e912a0c01f1ce4af9f97a794"
+    },
+    {
+      "path": "SEO-GEO/Reports/11-release-blocker-resolution.md",
+      "sha256": "83504e317cf912dfad69a398ee0a004cbef90f188af2c8ba39c795ca06be7ce1"
+    },
+    {
+      "path": "SEO-GEO/Reports/11-resume-checkpoint.md",
+      "sha256": "8f2d95d53919fef870087c4dbaf0a5662e7cea628df52d7fb6b45e039721ac8c"
+    }
+  ],
+  "artifact_sha256": {
+    "frontend/apps/storefront/dist/assets/app-Qv0zV02v.css": "83185cd580baa22a126934e5da198587dc0bef68a8ae5df3c7b4bf808f2e7194",
+    "frontend/apps/storefront/dist/assets/app-adiWcsIE.js": "3e8952bfb55002e684ffc3c6331819cbf10662e63c0237f70017025400c7b33b",
+    "frontend/apps/storefront/dist/assets/index-B6hmi5LU.js": "e435b2bb7f88934000c21b2a99e5e7edb52d338d0bfd16c12e9ef1e9d9de770b",
+    "frontend/apps/storefront/dist/assets/public-C1vZajYR.css": "d6e32cdb608e38745475336d62f66c1788624a0288d6fe74dbf8667d58b1c53b",
+    "frontend/apps/storefront/dist/assets/public-DLd7XMQf.js": "3ffe8212ae01c056e644d5701e9229e28823c7d780244effed64719db4f3a44e",
+    "frontend/apps/storefront/dist/assets/search-CPvyeCUU.js": "223bf19ba370c5db113e6c6ead92ae74aa50eb734c97dd7cbb70b77004014487",
+    "frontend/apps/storefront/dist/assets/search-DrvJueiD.css": "6280b0c3ef973af1c992480b307402b6dffc7df5f8a0443073f847be5188944b",
+    "frontend/apps/storefront/dist/assets/search-widget-BWSjOg6Q.js": "47d88c505b1e53eaa24ad807a633bb32697b48e7b275dbac69696c7e61e9ea1e",
+    "frontend/apps/storefront/dist/assets/style-Lsyhwrys.css": "d73062391d1d0b1ad8fcdc45b2be985a37e02e6bd197a50b9c4b932b4638bc53",
+    "frontend/apps/storefront/dist/assets/style-s0HsvZ_P.js": "1fe7a03661668572bbceb09419b84426e7db3aaef619e3080f44cf6951c312a5",
+    "frontend/apps/storefront/dist/assets/theme-default-BP_4Ao9p.png": "673f4e4a4988e7626d3895d29b8f19bda5422fad53a6dbb94c0b61ef3631587b",
+    "frontend/apps/storefront/dist/brand/apple-touch-icon.png": "56ed4f838e2cd9ac10112a8813f5fda04e7a5ee4236ac9f57a1cca200554bf9c",
+    "frontend/apps/storefront/dist/brand/favicon-32.png": "9c62bb83779ebcaca13e5d205b5efe3246c52c0718f08ff28ba8998db1c58f1d",
+    "frontend/apps/storefront/dist/brand/icon-192.png": "49edc938462cae489648292718e121881d637c9a362217086be771feed2be4ab",
+    "frontend/apps/storefront/dist/brand/icon-512.png": "deb9f16b2667ef7e24b4c921b2fec747812e8aabc689d3b79f2577f22fbfad2c",
+    "frontend/apps/storefront/dist/brand/recento-icon.png": "d0093ef238d22b249920e0a71a0f9af93c8226fe610af429e301ce9d9fc8912f",
+    "frontend/apps/storefront/dist/brand/recento-logo.png": "ea70d7b75bf2d3f51db67443c1beec7425069da73a099f3c3746f3b19bbab37a",
+    "frontend/apps/storefront/dist/brand/rocento-logo.png": "306301f5fbcfb4b5e1629d97b8a0a87bd82b6d0a44e9110eb7cd13a8c2d66228",
+    "frontend/apps/storefront/dist/data/delivery/README.md": "e69385c34a6e28d8e3f3c89cff5c745d3577e5149c1709b25e830c7384b508f8",
+    "frontend/apps/storefront/dist/data/delivery/eg/01.json": "fd7127eccb430320a647427a16957641d954e49c10001124e64cfc676ae6108c",
+    "frontend/apps/storefront/dist/data/delivery/eg/02.json": "e8d146a47c5e349fbb752b37746460389f28608ef6e11fba9f9fc6eb627041a6",
+    "frontend/apps/storefront/dist/data/delivery/eg/03.json": "1788b6ac5875ba83b2059ed763c80a54dddae16b8995b780c7635f9ab43be8dc",
+    "frontend/apps/storefront/dist/data/delivery/eg/04.json": "ef7ca50b56a480a84ea6b1c8c2a02369ed413f45335d2aa20abd6a134bfdde56",
+    "frontend/apps/storefront/dist/data/delivery/eg/05.json": "6076689ca2e547cb16eb1694b111d665a09b5ccecce886e4ee96d626aeba2252",
+    "frontend/apps/storefront/dist/data/delivery/eg/06.json": "4414be2304eff435b4596360b4e5a6ef82c6dac2140bc61ba99076fd23991267",
+    "frontend/apps/storefront/dist/data/delivery/eg/07.json": "a9d1b85b2b1677ea15867d681eacbabf0c19a5ae1fc09966d17e538d33008414",
+    "frontend/apps/storefront/dist/data/delivery/eg/08.json": "ab357b42f7a152bc10e936a4bbfca26bb531b25482149f6a8f26b79ba41f8b78",
+    "frontend/apps/storefront/dist/data/delivery/eg/09.json": "58a0288c4303d133b46842e547632a3982f28a59d3b32120379b8b4657e72827",
+    "frontend/apps/storefront/dist/data/delivery/eg/10.json": "f39f5a739bb23ecefbf223edace0dce88c5e6f1177b63f06f6342fa46b23d76d",
+    "frontend/apps/storefront/dist/data/delivery/eg/11.json": "d1aba4012b42a3682e78a846ada27e667d788c8eb956daacee4b4a5de2927852",
+    "frontend/apps/storefront/dist/data/delivery/eg/12.json": "bcbf166e9a38ae06ea55d7140895fe0712c7f5dbf11f8185c3357d11e3a41f4d",
+    "frontend/apps/storefront/dist/data/delivery/eg/13.json": "f157336283095f47244138d45e41196c047775bfc103ad45dd0c3792935f00ba",
+    "frontend/apps/storefront/dist/data/delivery/eg/14.json": "7acb83653ff9d6790d83c050231a6d86f05a2ac393b6c00fc8259725b1d60bfe",
+    "frontend/apps/storefront/dist/data/delivery/eg/15.json": "9eaa7db2eecfed365832c83385864cd68708c96c7ed212d70cf75e874df84377",
+    "frontend/apps/storefront/dist/data/delivery/eg/16.json": "c4e391a25fb9cad7d655117ba924f7917f060caf8ffa82a2bc800178a2dfa55d",
+    "frontend/apps/storefront/dist/data/delivery/eg/17.json": "556cac38f0849bd1f68fb511457b2f686d80748068dc816111a93f70843d69b8",
+    "frontend/apps/storefront/dist/data/delivery/eg/18.json": "c71f24be79b79e33b75e464a46167674b51e64f1f0816be1d47e2f6483144f48",
+    "frontend/apps/storefront/dist/data/delivery/eg/19.json": "d27d84e11aa97605ede40dc269b3d9d9ead45b07a60008d3b35c5c6d6dfd3dbb",
+    "frontend/apps/storefront/dist/data/delivery/eg/20.json": "12fab3b22b6007149c5f7260564ccdc8e9a1dfee3334db241cb50bb4b1fcf70e",
+    "frontend/apps/storefront/dist/data/delivery/eg/21.json": "fc738679c6cba9dc363c6e7dc6094473d947a95bd3f0f43bd7295924bdf48489",
+    "frontend/apps/storefront/dist/data/delivery/eg/22.json": "433ad7e382f7060b32e76f03acaf217020f4ffaa1747570a477182c29900e8e3",
+    "frontend/apps/storefront/dist/data/delivery/eg/23.json": "29a26ef1ca0706f6755079b5037abb003c2d138d5560d7a2716a7887e02a011a",
+    "frontend/apps/storefront/dist/data/delivery/eg/24.json": "9ed76a404c10f3799535ca4ca06d7543c0ef715c3ae372d293b807b55fd7a7e7",
+    "frontend/apps/storefront/dist/data/delivery/eg/26.json": "d1d19c8e02664a4f3f8b4c840a351490b7d71b643fd151ab7151e63c1798142e",
+    "frontend/apps/storefront/dist/data/delivery/eg/27.json": "9667fd3a932f3604d1d6b2fc21e52e6ab2f2ded53bb0628e626e78c50f925755",
+    "frontend/apps/storefront/dist/data/delivery/eg/28.json": "d64fe12b20ac4b6f4ce8963b43c2abcdbc326e8e1495c270d93dc05fd56f1d11",
+    "frontend/apps/storefront/dist/data/delivery/eg/index.json": "94e6bded9132616c92093ed2191667f2dc53761b7b421efa84a34b8e4e1efd0d",
+    "frontend/apps/storefront/dist/fonts/README.md": "18df3e78aec42e5ce4ec9a582511c7022191262da9e25a38630b14d1d37d4ab0",
+    "frontend/apps/storefront/dist/fonts/bodoni-moda-OFL.txt": "931dfe2e0cd3c9443295f5c1d754b8a8403bf060df50c1d5900267ade83d0046",
+    "frontend/apps/storefront/dist/fonts/jost-OFL.txt": "1af3438a4d5f0ed2bdbc5751a5a67ebf6d537334161184b7fbb68503ef0ea0c5",
+    "frontend/apps/storefront/dist/index.html": "7b1cc723484c26cd78ce6d492305eb3a350bb6adb4f22b2582e8c396adf912a9",
+    "frontend/apps/storefront/dist/public.html": "5e65c228cf9407375c51adcd84debb46e411e2dc63d75286bd553dd165fc9ae8",
+    "frontend/apps/storefront/dist/publication-build.json": "0ade2e02a148f52711525f5bc32fe345e17a05fbee57d3d38e77d3ed8a204294",
+    "frontend/apps/storefront/dist-server/assets/search-widget-B3Id1F7W.js": "9322e81d5ae3325cae8901b106091287459f6df3a8a27922a6b9d31a22154ae2",
+    "frontend/apps/storefront/dist-server/brand/apple-touch-icon.png": "56ed4f838e2cd9ac10112a8813f5fda04e7a5ee4236ac9f57a1cca200554bf9c",
+    "frontend/apps/storefront/dist-server/brand/favicon-32.png": "9c62bb83779ebcaca13e5d205b5efe3246c52c0718f08ff28ba8998db1c58f1d",
+    "frontend/apps/storefront/dist-server/brand/icon-192.png": "49edc938462cae489648292718e121881d637c9a362217086be771feed2be4ab",
+    "frontend/apps/storefront/dist-server/brand/icon-512.png": "deb9f16b2667ef7e24b4c921b2fec747812e8aabc689d3b79f2577f22fbfad2c",
+    "frontend/apps/storefront/dist-server/brand/recento-icon.png": "d0093ef238d22b249920e0a71a0f9af93c8226fe610af429e301ce9d9fc8912f",
+    "frontend/apps/storefront/dist-server/brand/recento-logo.png": "ea70d7b75bf2d3f51db67443c1beec7425069da73a099f3c3746f3b19bbab37a",
+    "frontend/apps/storefront/dist-server/brand/rocento-logo.png": "306301f5fbcfb4b5e1629d97b8a0a87bd82b6d0a44e9110eb7cd13a8c2d66228",
+    "frontend/apps/storefront/dist-server/data/delivery/README.md": "e69385c34a6e28d8e3f3c89cff5c745d3577e5149c1709b25e830c7384b508f8",
+    "frontend/apps/storefront/dist-server/data/delivery/eg/01.json": "fd7127eccb430320a647427a16957641d954e49c10001124e64cfc676ae6108c",
+    "frontend/apps/storefront/dist-server/data/delivery/eg/02.json": "e8d146a47c5e349fbb752b37746460389f28608ef6e11fba9f9fc6eb627041a6",
+    "frontend/apps/storefront/dist-server/data/delivery/eg/03.json": "1788b6ac5875ba83b2059ed763c80a54dddae16b8995b780c7635f9ab43be8dc",
+    "frontend/apps/storefront/dist-server/data/delivery/eg/04.json": "ef7ca50b56a480a84ea6b1c8c2a02369ed413f45335d2aa20abd6a134bfdde56",
+    "frontend/apps/storefront/dist-server/data/delivery/eg/05.json": "6076689ca2e547cb16eb1694b111d665a09b5ccecce886e4ee96d626aeba2252",
+    "frontend/apps/storefront/dist-server/data/delivery/eg/06.json": "4414be2304eff435b4596360b4e5a6ef82c6dac2140bc61ba99076fd23991267",
+    "frontend/apps/storefront/dist-server/data/delivery/eg/07.json": "a9d1b85b2b1677ea15867d681eacbabf0c19a5ae1fc09966d17e538d33008414",
+    "frontend/apps/storefront/dist-server/data/delivery/eg/08.json": "ab357b42f7a152bc10e936a4bbfca26bb531b25482149f6a8f26b79ba41f8b78",
+    "frontend/apps/storefront/dist-server/data/delivery/eg/09.json": "58a0288c4303d133b46842e547632a3982f28a59d3b32120379b8b4657e72827",
+    "frontend/apps/storefront/dist-server/data/delivery/eg/10.json": "f39f5a739bb23ecefbf223edace0dce88c5e6f1177b63f06f6342fa46b23d76d",
+    "frontend/apps/storefront/dist-server/data/delivery/eg/11.json": "d1aba4012b42a3682e78a846ada27e667d788c8eb956daacee4b4a5de2927852",
+    "frontend/apps/storefront/dist-server/data/delivery/eg/12.json": "bcbf166e9a38ae06ea55d7140895fe0712c7f5dbf11f8185c3357d11e3a41f4d",
+    "frontend/apps/storefront/dist-server/data/delivery/eg/13.json": "f157336283095f47244138d45e41196c047775bfc103ad45dd0c3792935f00ba",
+    "frontend/apps/storefront/dist-server/data/delivery/eg/14.json": "7acb83653ff9d6790d83c050231a6d86f05a2ac393b6c00fc8259725b1d60bfe",
+    "frontend/apps/storefront/dist-server/data/delivery/eg/15.json": "9eaa7db2eecfed365832c83385864cd68708c96c7ed212d70cf75e874df84377",
+    "frontend/apps/storefront/dist-server/data/delivery/eg/16.json": "c4e391a25fb9cad7d655117ba924f7917f060caf8ffa82a2bc800178a2dfa55d",
+    "frontend/apps/storefront/dist-server/data/delivery/eg/17.json": "556cac38f0849bd1f68fb511457b2f686d80748068dc816111a93f70843d69b8",
+    "frontend/apps/storefront/dist-server/data/delivery/eg/18.json": "c71f24be79b79e33b75e464a46167674b51e64f1f0816be1d47e2f6483144f48",
+    "frontend/apps/storefront/dist-server/data/delivery/eg/19.json": "d27d84e11aa97605ede40dc269b3d9d9ead45b07a60008d3b35c5c6d6dfd3dbb",
+    "frontend/apps/storefront/dist-server/data/delivery/eg/20.json": "12fab3b22b6007149c5f7260564ccdc8e9a1dfee3334db241cb50bb4b1fcf70e",
+    "frontend/apps/storefront/dist-server/data/delivery/eg/21.json": "fc738679c6cba9dc363c6e7dc6094473d947a95bd3f0f43bd7295924bdf48489",
+    "frontend/apps/storefront/dist-server/data/delivery/eg/22.json": "433ad7e382f7060b32e76f03acaf217020f4ffaa1747570a477182c29900e8e3",
+    "frontend/apps/storefront/dist-server/data/delivery/eg/23.json": "29a26ef1ca0706f6755079b5037abb003c2d138d5560d7a2716a7887e02a011a",
+    "frontend/apps/storefront/dist-server/data/delivery/eg/24.json": "9ed76a404c10f3799535ca4ca06d7543c0ef715c3ae372d293b807b55fd7a7e7",
+    "frontend/apps/storefront/dist-server/data/delivery/eg/26.json": "d1d19c8e02664a4f3f8b4c840a351490b7d71b643fd151ab7151e63c1798142e",
+    "frontend/apps/storefront/dist-server/data/delivery/eg/27.json": "9667fd3a932f3604d1d6b2fc21e52e6ab2f2ded53bb0628e626e78c50f925755",
+    "frontend/apps/storefront/dist-server/data/delivery/eg/28.json": "d64fe12b20ac4b6f4ce8963b43c2abcdbc326e8e1495c270d93dc05fd56f1d11",
+    "frontend/apps/storefront/dist-server/data/delivery/eg/index.json": "94e6bded9132616c92093ed2191667f2dc53761b7b421efa84a34b8e4e1efd0d",
+    "frontend/apps/storefront/dist-server/entry-public-server.js": "b7cf3062fe4739eb69d01eb673d4003dbcd6ff592813b2a852695ddb76af448d",
+    "frontend/apps/storefront/dist-server/fonts/README.md": "18df3e78aec42e5ce4ec9a582511c7022191262da9e25a38630b14d1d37d4ab0",
+    "frontend/apps/storefront/dist-server/fonts/bodoni-moda-OFL.txt": "931dfe2e0cd3c9443295f5c1d754b8a8403bf060df50c1d5900267ade83d0046",
+    "frontend/apps/storefront/dist-server/fonts/jost-OFL.txt": "1af3438a4d5f0ed2bdbc5751a5a67ebf6d537334161184b7fbb68503ef0ea0c5",
+    "frontend/apps/admin/dist/assets/index-BSEWk27t.js": "ce7f2461e3192f27c54723b3572ed61ad82c672312c86aa1b328b3b23aad1fb7",
+    "frontend/apps/admin/dist/assets/index-Cu610sNZ.css": "3837ce92d6d0fe90b0d91b18cbc4a18df1fc723ccfc739255e7bc766366a6e34",
+    "frontend/apps/admin/dist/brand/apple-touch-icon.png": "56ed4f838e2cd9ac10112a8813f5fda04e7a5ee4236ac9f57a1cca200554bf9c",
+    "frontend/apps/admin/dist/brand/favicon-32.png": "9c62bb83779ebcaca13e5d205b5efe3246c52c0718f08ff28ba8998db1c58f1d",
+    "frontend/apps/admin/dist/brand/icon-192.png": "49edc938462cae489648292718e121881d637c9a362217086be771feed2be4ab",
+    "frontend/apps/admin/dist/brand/icon-512.png": "deb9f16b2667ef7e24b4c921b2fec747812e8aabc689d3b79f2577f22fbfad2c",
+    "frontend/apps/admin/dist/brand/recento-icon.png": "d0093ef238d22b249920e0a71a0f9af93c8226fe610af429e301ce9d9fc8912f",
+    "frontend/apps/admin/dist/brand/recento-logo.png": "ea70d7b75bf2d3f51db67443c1beec7425069da73a099f3c3746f3b19bbab37a",
+    "frontend/apps/admin/dist/brand/rocento-logo.png": "306301f5fbcfb4b5e1629d97b8a0a87bd82b6d0a44e9110eb7cd13a8c2d66228",
+    "frontend/apps/admin/dist/index.html": "4762a7b2bd535d82ab4d03ef5e327b17657383bb6291a57c5d846eb657cb64d9",
+    "frontend/apps/admin/dist/journey/emerald-pendant-necklace.png": "dcc5eb89739030935a8b8eb7b36bcae114ffdebff49f7ac4512a9e89357c6a14",
+    "frontend/apps/admin/dist/journey/gold-chain-necklace.png": "c5520d022b1fdda105c3ca51b776e2a9b32be37b2729df97b4159148bd551d67",
+    "frontend/apps/admin/dist/journey/gold-hoop-earrings.png": "4d34414cfb4508f84ff0ab96ff3413b35173272b0706125b57a200fe026f460e"
+  }
+}

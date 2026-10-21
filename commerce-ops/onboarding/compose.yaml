@@ -1,0 +1,27 @@
+name: rocento-control-local
+services:
+  postgres:
+    image: postgres:17-alpine
+    environment:
+      POSTGRES_USER: rocento
+      POSTGRES_PASSWORD: local-only
+      POSTGRES_DB: rocento
+    ports: ['127.0.0.1:5439:5432']
+    volumes: ['postgres-data:/var/lib/postgresql/data']
+    healthcheck:
+      test: ['CMD-SHELL', 'pg_isready -U rocento']
+      interval: 5s
+      retries: 10
+  nats:
+    image: nats:2.11-alpine
+    command: ['-js','-sd','/data']
+    ports: ['127.0.0.1:4229:4222']
+    volumes: ['nats-data:/data']
+  registry:
+    image: registry:2
+    ports: ['127.0.0.1:5009:5000']
+    volumes: ['registry-data:/var/lib/registry']
+volumes:
+  postgres-data:
+  nats-data:
+  registry-data:

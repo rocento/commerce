@@ -1,0 +1,108 @@
+{
+  "product_count": 10,
+  "products": [
+    {
+      "id": "27beca42-ef55-48c9-a6db-2c7a9d563489",
+      "name": "Boneless Chicken Thighs 500g",
+      "english": true,
+      "arabic": true,
+      "in_stock": true,
+      "image": true,
+      "attributes": true
+    },
+    {
+      "id": "c5950703-73e8-4696-8372-3a2b72dcbf49",
+      "name": "Chicken Wings 1kg",
+      "english": true,
+      "arabic": true,
+      "in_stock": true,
+      "image": true,
+      "attributes": true
+    },
+    {
+      "id": "b316ee89-9f27-4248-b485-862017995372",
+      "name": "Whole Chicken 2kg",
+      "english": true,
+      "arabic": true,
+      "in_stock": true,
+      "image": true,
+      "attributes": true
+    },
+    {
+      "id": "b7b6737e-7349-48da-9217-0b3c92d16f7d",
+      "name": "Turkey Breast Fillets 500g",
+      "english": true,
+      "arabic": true,
+      "in_stock": true,
+      "image": true,
+      "attributes": true
+    },
+    {
+      "id": "a4ccbb29-3a4a-4b08-9956-61b23f4b9a1b",
+      "name": "Turkey Mince 500g",
+      "english": true,
+      "arabic": true,
+      "in_stock": true,
+      "image": true,
+      "attributes": true
+    },
+    {
+      "id": "703eac81-bfda-4c22-8882-dd1ae5ab58e1",
+      "name": "Duck Breast Fillets 500g",
+      "english": true,
+      "arabic": true,
+      "in_stock": true,
+      "image": true,
+      "attributes": true
+    },
+    {
+      "id": "c8e04d30-0eb9-4a77-9b9a-fd395ede3801",
+      "name": "Beef Stew Cubes 1kg",
+      "english": true,
+      "arabic": true,
+      "in_stock": true,
+      "image": true,
+      "attributes": true
+    },
+    {
+      "id": "5b60ca38-08ff-48d3-ac88-fee4fd168830",
+      "name": "Beef Short Ribs 1kg",
+      "english": true,
+      "arabic": true,
+      "in_stock": true,
+      "image": true,
+      "attributes": true
+    },
+    {
+      "id": "fdc4ae09-bff6-4f7b-a4a4-d25184eed18e",
+      "name": "Lamb Shanks 1kg",
+      "english": true,
+      "arabic": true,
+      "in_stock": true,
+      "image": true,
+      "attributes": true
+    },
+    {
+      "id": "2eeb9f5e-c941-4828-9176-662be06e65c1",
+      "name": "Lamb Mince 500g",
+      "english": true,
+      "arabic": true,
+      "in_stock": true,
+      "image": true,
+      "attributes": true
+    }
+  ],
+  "category": [
+    {
+      "locale": "en",
+      "ten_new_products_visible": true,
+      "ten_photos_loaded": true
+    },
+    {
+      "locale": "ar",
+      "ten_new_products_visible": true,
+      "ten_photos_loaded": true
+    }
+  ],
+  "arabic_product_page": true
+}

@@ -1,0 +1,372 @@
+{
+  "products": [
+    {
+      "sku": "GRO-BAKERY-20261003-001",
+      "slug": "grocery-sourdough-bread-500g",
+      "name": "Sourdough Bread 500g",
+      "price": "5.50",
+      "currency": "USD",
+      "unit": "pack",
+      "category": "grocery-bakery",
+      "image": "sourdough.png",
+      "initial_quantity": 30,
+      "description": "A rustic sourdough loaf with a crisp crust for sandwiches and soups. Pack size: 500g. Ready to eat. Store in a cool, dry place in a closed container. This is an illustrative demo catalog item; ingredient and allergen details are not supplied.",
+      "attributes": {
+        "grocery-pack-size": "500g",
+        "grocery_group": [
+          "bakery"
+        ],
+        "ingredient_role": [
+          "base",
+          "side"
+        ],
+        "meal_occasion": [
+          "breakfast",
+          "lunch",
+          "dinner"
+        ],
+        "preparation_method": [
+          "no_cook"
+        ],
+        "dish_type": [
+          "sandwiches",
+          "soups"
+        ],
+        "meal_occasion_breakfast_priority": "bread",
+        "short_description": "A rustic sourdough loaf with a crisp crust for sandwiches and soups. Pack size: 500g.",
+        "meta_title": "Sourdough Bread 500g | Rocento Grocery",
+        "meta_description": "A rustic sourdough loaf with a crisp crust for sandwiches and soups. Shop at Rocento Grocery."
+      }
+    },
+    {
+      "sku": "GRO-BAKERY-20261003-002",
+      "slug": "grocery-french-baguettes-3-pack",
+      "name": "French Baguettes 3 Pack",
+      "price": "4.50",
+      "currency": "USD",
+      "unit": "pack",
+      "category": "grocery-bakery",
+      "image": "baguettes.png",
+      "initial_quantity": 30,
+      "description": "Three crisp French baguettes for sandwiches or serving alongside meals. Pack size: 3 Pack. Ready to eat. Store in a cool, dry place in a closed container. This is an illustrative demo catalog item; ingredient and allergen details are not supplied.",
+      "attributes": {
+        "grocery-pack-size": "3 Pack",
+        "grocery_group": [
+          "bakery"
+        ],
+        "ingredient_role": [
+          "base",
+          "side"
+        ],
+        "meal_occasion": [
+          "breakfast",
+          "lunch",
+          "dinner"
+        ],
+        "preparation_method": [
+          "no_cook"
+        ],
+        "dish_type": [
+          "sandwiches",
+          "soups"
+        ],
+        "meal_occasion_breakfast_priority": "bread",
+        "short_description": "Three crisp French baguettes for sandwiches or serving alongside meals. Pack size: 3 Pack.",
+        "meta_title": "French Baguettes 3 Pack | Rocento Grocery",
+        "meta_description": "Three crisp French baguettes for sandwiches or serving alongside meals. Shop at Rocento Grocery."
+      }
+    },
+    {
+      "sku": "GRO-BAKERY-20261003-003",
+      "slug": "grocery-ciabatta-rolls-3-pack",
+      "name": "Ciabatta Rolls 3 Pack",
+      "price": "4.00",
+      "currency": "USD",
+      "unit": "pack",
+      "category": "grocery-bakery",
+      "image": "ciabatta.png",
+      "initial_quantity": 30,
+      "description": "Three ciabatta rolls with a flour-dusted crust for filled sandwiches. Pack size: 3 Pack. Ready to eat. Store in a cool, dry place in a closed container. This is an illustrative demo catalog item; ingredient and allergen details are not supplied.",
+      "attributes": {
+        "grocery-pack-size": "3 Pack",
+        "grocery_group": [
+          "bakery"
+        ],
+        "ingredient_role": [
+          "base",
+          "side"
+        ],
+        "meal_occasion": [
+          "breakfast",
+          "lunch",
+          "dinner"
+        ],
+        "preparation_method": [
+          "no_cook"
+        ],
+        "dish_type": [
+          "sandwiches",
+          "soups"
+        ],
+        "meal_occasion_breakfast_priority": "bread",
+        "short_description": "Three ciabatta rolls with a flour-dusted crust for filled sandwiches. Pack size: 3 Pack.",
+        "meta_title": "Ciabatta Rolls 3 Pack | Rocento Grocery",
+        "meta_description": "Three ciabatta rolls with a flour-dusted crust for filled sandwiches. Shop at Rocento Grocery."
+      }
+    },
+    {
+      "sku": "GRO-BAKERY-20261003-004",
+      "slug": "grocery-rosemary-focaccia-500g",
+      "name": "Rosemary Focaccia 500g",
+      "price": "6.00",
+      "currency": "USD",
+      "unit": "pack",
+      "category": "grocery-bakery",
+      "image": "focaccia.png",
+      "initial_quantity": 30,
+      "description": "Rosemary focaccia with a dimpled crust for sandwiches or sharing with soup. Pack size: 500g. Ready to eat. Store in a cool, dry place in a closed container. This is an illustrative demo catalog item; ingredient and allergen details are not supplied.",
+      "attributes": {
+        "grocery-pack-size": "500g",
+        "grocery_group": [
+          "bakery"
+        ],
+        "ingredient_role": [
+          "base",
+          "side"
+        ],
+        "meal_occasion": [
+          "breakfast",
+          "lunch",
+          "dinner"
+        ],
+        "preparation_method": [
+          "no_cook"
+        ],
+        "dish_type": [
+          "sandwiches",
+          "soups"
+        ],
+        "meal_occasion_breakfast_priority": "bread",
+        "short_description": "Rosemary focaccia with a dimpled crust for sandwiches or sharing with soup. Pack size: 500g.",
+        "meta_title": "Rosemary Focaccia 500g | Rocento Grocery",
+        "meta_description": "Rosemary focaccia with a dimpled crust for sandwiches or sharing with soup. Shop at Rocento Grocery."
+      }
+    },
+    {
+      "sku": "GRO-BAKERY-20261003-005",
+      "slug": "grocery-brioche-burger-buns-6-pack",
+      "name": "Brioche Burger Buns 6 Pack",
+      "price": "5.00",
+      "currency": "USD",
+      "unit": "pack",
+      "category": "grocery-bakery",
+      "image": "brioche.png",
+      "initial_quantity": 30,
+      "description": "Six soft brioche buns for burgers and breakfast sandwiches. Pack size: 6 Pack. Ready to eat. Store in a cool, dry place in a closed container. This is an illustrative demo catalog item; ingredient and allergen details are not supplied.",
+      "attributes": {
+        "grocery-pack-size": "6 Pack",
+        "grocery_group": [
+          "bakery"
+        ],
+        "ingredient_role": [
+          "base",
+          "side"
+        ],
+        "meal_occasion": [
+          "breakfast",
+          "lunch",
+          "dinner"
+        ],
+        "preparation_method": [
+          "no_cook"
+        ],
+        "dish_type": [
+          "sandwiches",
+          "soups"
+        ],
+        "meal_occasion_breakfast_priority": "bread",
+        "short_description": "Six soft brioche buns for burgers and breakfast sandwiches. Pack size: 6 Pack.",
+        "meta_title": "Brioche Burger Buns 6 Pack | Rocento Grocery",
+        "meta_description": "Six soft brioche buns for burgers and breakfast sandwiches. Shop at Rocento Grocery."
+      }
+    },
+    {
+      "sku": "GRO-BAKERY-20261003-006",
+      "slug": "grocery-soft-pretzels-3-pack",
+      "name": "Soft Pretzels 3 Pack",
+      "price": "3.75",
+      "currency": "USD",
+      "unit": "pack",
+      "category": "grocery-bakery",
+      "image": "pretzels.png",
+      "initial_quantity": 30,
+      "description": "Three soft baked pretzels with a golden crust for snacks. Pack size: 3 Pack. Ready to eat. Store in a cool, dry place in a closed container. This is an illustrative demo catalog item; ingredient and allergen details are not supplied.",
+      "attributes": {
+        "grocery-pack-size": "3 Pack",
+        "grocery_group": [
+          "bakery"
+        ],
+        "ingredient_role": [
+          "main_ingredient"
+        ],
+        "meal_occasion": [
+          "snack",
+          "dessert"
+        ],
+        "preparation_method": [
+          "no_cook"
+        ],
+        "dish_type": [
+          "desserts"
+        ],
+        "meal_occasion_breakfast_priority": "addition",
+        "short_description": "Three soft baked pretzels with a golden crust for snacks. Pack size: 3 Pack.",
+        "meta_title": "Soft Pretzels 3 Pack | Rocento Grocery",
+        "meta_description": "Three soft baked pretzels with a golden crust for snacks. Shop at Rocento Grocery."
+      }
+    },
+    {
+      "sku": "GRO-BAKERY-20261003-007",
+      "slug": "grocery-english-muffins-6-pack",
+      "name": "English Muffins 6 Pack",
+      "price": "4.25",
+      "currency": "USD",
+      "unit": "pack",
+      "category": "grocery-bakery",
+      "image": "english-muffins.png",
+      "initial_quantity": 30,
+      "description": "Six plain English muffins for breakfast sandwiches or serving with spreads. Pack size: 6 Pack. Ready to eat. Store in a cool, dry place in a closed container. This is an illustrative demo catalog item; ingredient and allergen details are not supplied.",
+      "attributes": {
+        "grocery-pack-size": "6 Pack",
+        "grocery_group": [
+          "bakery"
+        ],
+        "ingredient_role": [
+          "base",
+          "side"
+        ],
+        "meal_occasion": [
+          "breakfast",
+          "lunch",
+          "dinner"
+        ],
+        "preparation_method": [
+          "no_cook"
+        ],
+        "dish_type": [
+          "sandwiches",
+          "soups"
+        ],
+        "meal_occasion_breakfast_priority": "bread",
+        "short_description": "Six plain English muffins for breakfast sandwiches or serving with spreads. Pack size: 6 Pack.",
+        "meta_title": "English Muffins 6 Pack | Rocento Grocery",
+        "meta_description": "Six plain English muffins for breakfast sandwiches or serving with spreads. Shop at Rocento Grocery."
+      }
+    },
+    {
+      "sku": "GRO-BAKERY-20261003-008",
+      "slug": "grocery-cinnamon-rolls-6-pack",
+      "name": "Cinnamon Rolls 6 Pack",
+      "price": "6.50",
+      "currency": "USD",
+      "unit": "pack",
+      "category": "grocery-bakery",
+      "image": "cinnamon-rolls.png",
+      "initial_quantity": 30,
+      "description": "Six baked cinnamon rolls with a light icing drizzle for sweet snacks and desserts. Pack size: 6 Pack. Ready to eat. Store in a cool, dry place in a closed container. This is an illustrative demo catalog item; ingredient and allergen details are not supplied.",
+      "attributes": {
+        "grocery-pack-size": "6 Pack",
+        "grocery_group": [
+          "bakery"
+        ],
+        "ingredient_role": [
+          "main_ingredient"
+        ],
+        "meal_occasion": [
+          "snack",
+          "dessert"
+        ],
+        "preparation_method": [
+          "no_cook"
+        ],
+        "dish_type": [
+          "desserts"
+        ],
+        "meal_occasion_breakfast_priority": "addition",
+        "short_description": "Six baked cinnamon rolls with a light icing drizzle for sweet snacks and desserts. Pack size: 6 Pack.",
+        "meta_title": "Cinnamon Rolls 6 Pack | Rocento Grocery",
+        "meta_description": "Six baked cinnamon rolls with a light icing drizzle for sweet snacks and desserts. Shop at Rocento Grocery."
+      }
+    },
+    {
+      "sku": "GRO-BAKERY-20261003-009",
+      "slug": "grocery-chocolate-chip-muffins-6-pack",
+      "name": "Chocolate Chip Muffins 6 Pack",
+      "price": "7.00",
+      "currency": "USD",
+      "unit": "pack",
+      "category": "grocery-bakery",
+      "image": "chocolate-muffins.png",
+      "initial_quantity": 30,
+      "description": "Six chocolate chip muffins for sweet snacks and desserts. Pack size: 6 Pack. Ready to eat. Store in a cool, dry place in a closed container. This is an illustrative demo catalog item; ingredient and allergen details are not supplied.",
+      "attributes": {
+        "grocery-pack-size": "6 Pack",
+        "grocery_group": [
+          "bakery"
+        ],
+        "ingredient_role": [
+          "main_ingredient"
+        ],
+        "meal_occasion": [
+          "snack",
+          "dessert"
+        ],
+        "preparation_method": [
+          "no_cook"
+        ],
+        "dish_type": [
+          "desserts"
+        ],
+        "meal_occasion_breakfast_priority": "addition",
+        "short_description": "Six chocolate chip muffins for sweet snacks and desserts. Pack size: 6 Pack.",
+        "meta_title": "Chocolate Chip Muffins 6 Pack | Rocento Grocery",
+        "meta_description": "Six chocolate chip muffins for sweet snacks and desserts. Shop at Rocento Grocery."
+      }
+    },
+    {
+      "sku": "GRO-BAKERY-20261003-010",
+      "slug": "grocery-apple-turnovers-3-pack",
+      "name": "Apple Turnovers 3 Pack",
+      "price": "5.25",
+      "currency": "USD",
+      "unit": "pack",
+      "category": "grocery-bakery",
+      "image": "apple-turnovers.png",
+      "initial_quantity": 30,
+      "description": "Three golden pastries with apple filling for sweet snacks and desserts. Pack size: 3 Pack. Ready to eat. Store in a cool, dry place in a closed container. This is an illustrative demo catalog item; ingredient and allergen details are not supplied.",
+      "attributes": {
+        "grocery-pack-size": "3 Pack",
+        "grocery_group": [
+          "bakery"
+        ],
+        "ingredient_role": [
+          "main_ingredient"
+        ],
+        "meal_occasion": [
+          "snack",
+          "dessert"
+        ],
+        "preparation_method": [
+          "no_cook"
+        ],
+        "dish_type": [
+          "desserts"
+        ],
+        "meal_occasion_breakfast_priority": "addition",
+        "short_description": "Three golden pastries with apple filling for sweet snacks and desserts. Pack size: 3 Pack.",
+        "meta_title": "Apple Turnovers 3 Pack | Rocento Grocery",
+        "meta_description": "Three golden pastries with apple filling for sweet snacks and desserts. Shop at Rocento Grocery."
+      }
+    }
+  ]
+}

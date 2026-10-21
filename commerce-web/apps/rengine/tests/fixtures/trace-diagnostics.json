@@ -1,0 +1,26 @@
+{
+  "completedWithoutProof": {"version":1,"redacted":true,"request_id":"fixture-completed","events":[
+    {"stage":"customer_request","data":{"message":"Find fruit under 200 EGP","_journey":{"atMs":0}}},
+    {"stage":"initial_language_result","data":{"intent":"PRODUCT_SEARCH","status":"RESOLVED","requested_actions":[{"intent":"PRODUCT_SEARCH"}],"_journey":{"atMs":2}}},
+    {"stage":"python_function","data":{"function":"ShoppingCatalog.call","callId":1,"outcome":"returned","details":{"operation":"search_products","criteria":{"query":"fruit","max_price":200},"products_returned":12},"_journey":{"startMs":3,"atMs":14,"durationMs":11}}},
+    {"stage":"catalog_filter","data":{"products_before":12,"products_after":0,"checks":["price","stock"],"_journey":{"atMs":15}}},
+    {"stage":"final_result","data":{"outcome":"completed","answer":"Here are some products.","completion_evidence":"read_result","language_gate":{"intent":"PRODUCT_SEARCH","status":"RESOLVED"},"_journey":{"atMs":18}}}
+  ]},
+  "clarification": {"version":1,"events":[{"stage":"final_result","data":{"outcome":"completed","route_reason":"language_engine_clarify","language_gate":{"status":"AMBIGUOUS","intent":"PRODUCT_SEARCH"}}}]},
+  "denied": {"version":1,"events":[{"stage":"final_result","data":{"outcome":"denied","route_reason":"access_denied","completion_evidence":"action_receipt"}}]},
+  "modelRecovery": {"version":1,"truncated":true,"redacted":true,"events":[
+    {"stage":"intent_retrieval","data":{"status":"empty","examples":[]}},
+    {"stage":"language_model_request","data":{"max_output_tokens":2048,"messages":[{"role":"user","content":"Find apples"}]}},
+    {"stage":"provider_wire_payload","data":{"model":"fixture-model"}},
+    {"stage":"provider_invalid_response","data":{"code":"schema_mismatch"}},
+    {"stage":"language_model_response","data":{"model":"fixture-model","input_tokens":100,"output_tokens":0,"finish_reason":"stop"}},
+    {"stage":"language_model_response","data":{"model":"fixture-model","output_tokens":12,"finish_reason":"stop"}},
+    {"stage":"final_result","data":{"outcome":"completed","language_fallback":{"initial_status":"UNKNOWN","outcome":"unconfigured"}}}
+  ]},
+  "legacy": {"events":[{"stage":"python_function","data":{"function":"CommerceTools.change_cart","outcome":"returned"}},{"stage":"final_result","data":{"answer":"Added to your cart!"}}]},
+  "failed": {"events":[{"stage":"python_function","data":{"function":"ShoppingCatalog.call","outcome":"error"}},{"stage":"final_result","data":{"outcome":"unavailable"}}]},
+  "concurrent": {"version":1,"events":[
+    {"stage":"python_function","data":{"callId":2,"function":"ShoppingCatalog.call","outcome":"returned","details":{"operation":"search_products","criteria":{"query":"apples"},"products_returned":2},"_journey":{"startMs":5,"atMs":15,"durationMs":10}}},
+    {"stage":"python_function","data":{"callId":1,"function":"ShoppingCatalog.call","outcome":"returned","details":{"operation":"search_products","criteria":{"query":"pears"},"products_returned":3},"_journey":{"startMs":1,"atMs":20,"durationMs":19}}}
+  ]}
+}

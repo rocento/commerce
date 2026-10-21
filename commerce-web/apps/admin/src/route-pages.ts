@@ -1,0 +1,61 @@
+import { lazy } from "react";
+
+export const Configuration = lazy(() => import("./configuration").then(module => ({ default: module.Configuration })));
+export const CapacitySettings = lazy(() => import("./capacity-settings").then(module => ({ default: module.CapacitySettings })));
+
+export const MarketsSettings = lazy(() => import("./markets").then(module => ({ default: module.MarketsSettings })));
+export const StorefrontLanguages = lazy(() => import("./languages").then(module => ({ default: module.StorefrontLanguages })));
+export const MegamenuAdmin = lazy(() => import("./megamenu").then(module => ({ default: module.MegamenuAdmin })));
+export const Guide = lazy(() => import("./guide").then(module => ({ default: module.Guide })));
+export const FulfillmentSettings = lazy(() => import("./fulfillment-settings").then(module => ({ default: module.FulfillmentSettings })));
+export const CapacityScheduling = lazy(() => import("./capacity").then(module => ({ default: module.CapacityScheduling })));
+export const Roles = lazy(() => import("./roles").then(module => ({ default: module.Roles })));
+export const AuditLog = lazy(() => import("./audit-log").then(module => ({ default: module.AuditLog })));
+export const CategoryManagement = lazy(() => import("./category-management").then(module => ({ default: module.CategoryManagement })));
+export const IndustrySettings = lazy(() => import("./catalog-industry").then(module => ({ default: module.IndustrySettings })));
+export const CatalogEnrichment = lazy(() => import("./catalog-enrichment").then(module => ({ default: module.CatalogEnrichment })));
+export const AssistantSettings = lazy(() => import("./assistant-settings").then(module => ({ default: module.AssistantSettings })));
+export const DiscoverabilitySettings = lazy(() => import("./discoverability-settings").then(module => ({ default: module.DiscoverabilitySettings })));
+export const MerchantAssistant = lazy(() => import("./merchant-assistant").then(module => ({ default: module.MerchantAssistant })));
+export const AiReports = lazy(() => import("./ai-reports").then(module => ({ default: module.AiReports })));
+export const DeliveryAreas = lazy(() => import("./delivery-areas").then(module => ({ default: module.DeliveryAreas })));
+export const ContentAdmin = lazy(() => import("./content").then(module => ({ default: module.ContentAdmin })));
+export const ThemesAdmin = lazy(() => import("./themes").then(module => ({ default: module.ThemesAdmin })));
+export const Reviews = lazy(() => import("./reviews").then(module => ({ default: module.Reviews })));
+export const Reports = lazy(() => import("./reports").then(module => ({ default: module.Reports })));
+export const SupportTickets = lazy(() => import("./support").then(module => ({ default: module.SupportTickets })));
+export const Promotions = lazy(() => import("./promotions").then(module => ({ default: module.Promotions })));
+export const PromotionEditorPage = lazy(() => import("./promotions").then(module => ({ default: module.PromotionEditorPage })));
+export const DeliveryFee = lazy(() => import("./fulfillment").then(module => ({ default: module.DeliveryFee })));
+export const TaxRules = lazy(() => import("./fulfillment").then(module => ({ default: module.TaxRules })));
+export const AdminOrders = lazy(() => import("./orders").then(module => ({ default: module.AdminOrders })));
+export const OrderGeography = lazy(() => import("./order-geo").then(module => ({ default: module.OrderGeography })));
+export const Customers = lazy(() => import("./customers").then(module => ({ default: module.Customers })));
+export const CustomerAttributes = lazy(() => import("./customer-segments").then(module => ({ default: module.CustomerAttributes })));
+export const CustomerSegments = lazy(() => import("./customer-segments").then(module => ({ default: module.CustomerSegments })));
+export const Inventory = lazy(() => import("./inventory").then(module => ({ default: module.Inventory })));
+export const Replenishment = lazy(() => import("./replenishment").then(module => ({ default: module.Replenishment })));
+export const ReplenishmentPolicyPage = lazy(() => import("./replenishment").then(module => ({ default: module.ReplenishmentPolicyPage })));
+export const SourceEditor = lazy(() => import("./msi").then(module => ({ default: module.SourceEditor })));
+export const Sources = lazy(() => import("./msi").then(module => ({ default: module.Sources })));
+export const StockEditor = lazy(() => import("./msi").then(module => ({ default: module.StockEditor })));
+export const Stocks = lazy(() => import("./msi").then(module => ({ default: module.Stocks })));
+export const Catalog = lazy(() => import("./catalog").then(module => ({ default: module.Catalog })));
+export const ProductEditorPage = lazy(() => import("./catalog").then(module => ({ default: module.ProductEditorPage })));
+export const LegacyAttributeEditorPage = lazy(() => import("./catalog").then(module => ({ default: module.LegacyAttributeEditorPage })));
+export const AttributeDefinitions = lazy(() => import("./attributes").then(module => ({ default: module.AttributeDefinitions })));
+export const AttributeDefinitionEditorPage = lazy(() => import("./attributes").then(module => ({ default: module.AttributeDefinitionEditorPage })));
+export const AttributeSetEditorPage = lazy(() => import("./attributes").then(module => ({ default: module.AttributeSetEditorPage })));
+export const ImportCenter = lazy(() => import("./import-center").then(module => ({ default: module.ImportCenter })));
+export const ExportCenter = lazy(() => import("./export-center").then(module => ({ default: module.ExportCenter })));
+export const CustomerJourney = lazy(() => import("./customer-journey").then(module => ({ default: module.CustomerJourney })));
+export const MarketingNotifications = lazy(() => import("./marketing-notifications").then(module => ({ default: module.MarketingNotifications })));
+export const Users = lazy(() => import("./users").then(module => ({ default: module.Users })));
+
+export const ApiReference = lazy(() => import("./api-reference").then(module => ({ default: module.ApiReference })));
+export const EmailTemplates = lazy(() => import("./email-templates").then(module => ({ default: module.EmailTemplates })));
+
+export const CatalogGeography = lazy(() => import("./catalog-geo").then(module => ({ default: module.CatalogGeography })));
+export const CustomerGeography = lazy(() => import("./customer-geo").then(module => ({ default: module.CustomerGeography })));
+
+export const OrderStatuses = lazy(() => import("./order-statuses").then(module => ({ default: module.OrderStatuses })));

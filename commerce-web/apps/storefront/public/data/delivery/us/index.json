@@ -1,0 +1,438 @@
+{
+  "schema_version": 1,
+  "country": {
+    "code": "US",
+    "name": "United States",
+    "name_ar": "الولايات المتحدة"
+  },
+  "state_label": "State / District",
+  "states": [
+    {
+      "code": "AL",
+      "name": "Alabama",
+      "name_ar": "",
+      "geonames_id": "4829764",
+      "city_count": 6312,
+      "sha256": "90f3d5322d89e6199202142a7f84b3d33269652dc73b790ca63e5d0a17410e22"
+    },
+    {
+      "code": "AK",
+      "name": "Alaska",
+      "name_ar": "",
+      "geonames_id": "5879092",
+      "city_count": 854,
+      "sha256": "0a8c7866cd566cc38d68f8aa3cba496a46324f0e53a2b67b63a720362e7db49b"
+    },
+    {
+      "code": "AZ",
+      "name": "Arizona",
+      "name_ar": "",
+      "geonames_id": "5551752",
+      "city_count": 2428,
+      "sha256": "01e5c25506edabeb2b416b1b0473683f5e0bb2ffff0f0d1f1a1eb4e227ba63aa"
+    },
+    {
+      "code": "AR",
+      "name": "Arkansas",
+      "name_ar": "",
+      "geonames_id": "4099753",
+      "city_count": 3703,
+      "sha256": "e682262dd8d96c817ab0ff8d1282bc668a42823ae08a9a5553fc3ce98970ed07"
+    },
+    {
+      "code": "CA",
+      "name": "California",
+      "name_ar": "",
+      "geonames_id": "5332921",
+      "city_count": 6854,
+      "sha256": "1cdad738684154d0abc7ed7f30aebbf474b2e45d8d2aa05fadc731bd1608bbef"
+    },
+    {
+      "code": "CO",
+      "name": "Colorado",
+      "name_ar": "",
+      "geonames_id": "5417618",
+      "city_count": 1836,
+      "sha256": "e3e21cb4f8f1f81d6ee26c55404223610f9b7b87c27ad0671e28a1e0226fde3d"
+    },
+    {
+      "code": "CT",
+      "name": "Connecticut",
+      "name_ar": "",
+      "geonames_id": "4831725",
+      "city_count": 1049,
+      "sha256": "46e16f96d743eaf152bcdb8b2d0ac30c8e4116a5a1bf3ec857bd6b2573b45ef0"
+    },
+    {
+      "code": "DE",
+      "name": "Delaware",
+      "name_ar": "",
+      "geonames_id": "4142224",
+      "city_count": 1797,
+      "sha256": "da2fab31e9e07022b431dde013605d737097f162d434489df521c7ebf56a476d"
+    },
+    {
+      "code": "DC",
+      "name": "District of Columbia",
+      "name_ar": "",
+      "geonames_id": "4138106",
+      "city_count": 169,
+      "sha256": "7c6cf8d1302a4b17dac8110f78ccfda9b45d0a67b6c381099e89c75e63da7e45"
+    },
+    {
+      "code": "FL",
+      "name": "Florida",
+      "name_ar": "",
+      "geonames_id": "4155751",
+      "city_count": 8875,
+      "sha256": "b7d9d22050e9afd47999e6b2397192ce173b0877ced8d92eff06b0d34a8c5050"
+    },
+    {
+      "code": "GA",
+      "name": "Georgia",
+      "name_ar": "",
+      "geonames_id": "4197000",
+      "city_count": 7116,
+      "sha256": "0c7411d70f01ab42df782e68492fa523adc8874e7ea5085c4822aaea69353cda"
+    },
+    {
+      "code": "HI",
+      "name": "Hawaii",
+      "name_ar": "",
+      "geonames_id": "5855797",
+      "city_count": 548,
+      "sha256": "fdd975a1d9772e2de054e4117da74aaef4d17dab241d3cbf9bb710cc605fdd17"
+    },
+    {
+      "code": "ID",
+      "name": "Idaho",
+      "name_ar": "",
+      "geonames_id": "5596512",
+      "city_count": 1238,
+      "sha256": "b7b58729cd81e8e490dbea0573494bb267ce6a135f8cff3db3de9d4da97ea531"
+    },
+    {
+      "code": "IL",
+      "name": "Illinois",
+      "name_ar": "",
+      "geonames_id": "4896861",
+      "city_count": 5012,
+      "sha256": "6f105858b1cb032588f8e7dfae485683877e6d8e6ef86f39b9c82282570d8683"
+    },
+    {
+      "code": "IN",
+      "name": "Indiana",
+      "name_ar": "",
+      "geonames_id": "4921868",
+      "city_count": 3644,
+      "sha256": "7cf615b1a88b677220ff446ae81ddf5a97fa78e2eb5e89c8060841bc52a0983d"
+    },
+    {
+      "code": "IA",
+      "name": "Iowa",
+      "name_ar": "",
+      "geonames_id": "4862182",
+      "city_count": 2363,
+      "sha256": "6b43c4736dcbd475401d43e2c94809c0ba810b063ad5baa2ebc4cde6637cbb60"
+    },
+    {
+      "code": "KS",
+      "name": "Kansas",
+      "name_ar": "",
+      "geonames_id": "4273857",
+      "city_count": 1992,
+      "sha256": "b19a8d2c2aacc3ce180a02a9b65c855b7ff3236bfb45acd5033a54de50e7849e"
+    },
+    {
+      "code": "KY",
+      "name": "Kentucky",
+      "name_ar": "",
+      "geonames_id": "6254925",
+      "city_count": 4791,
+      "sha256": "f0345754197a8043655f1354aa1ec971ce303385a53614e428c2dd4dbe66f729"
+    },
+    {
+      "code": "LA",
+      "name": "Louisiana",
+      "name_ar": "",
+      "geonames_id": "4331987",
+      "city_count": 4075,
+      "sha256": "a501eb6434732504abdee1a6c8615a8767d87102d4534ed9312181e8998bce19"
+    },
+    {
+      "code": "ME",
+      "name": "Maine",
+      "name_ar": "",
+      "geonames_id": "4971068",
+      "city_count": 2126,
+      "sha256": "9da3d2424c0440ee672c072de2358b766744240a206f76a215f10982dbd9e4ea"
+    },
+    {
+      "code": "MD",
+      "name": "Maryland",
+      "name_ar": "",
+      "geonames_id": "4361885",
+      "city_count": 8819,
+      "sha256": "c027052ddd98ac28c9939eda5160bb501f4a4903e303f2ab49af497cc067ef4c"
+    },
+    {
+      "code": "MA",
+      "name": "Massachusetts",
+      "name_ar": "",
+      "geonames_id": "6254926",
+      "city_count": 2308,
+      "sha256": "8b7e08a66737c11d21f9a40ce728bcb1bf817b5cef3d60d0ac8409e10ec24f5b"
+    },
+    {
+      "code": "MI",
+      "name": "Michigan",
+      "name_ar": "",
+      "geonames_id": "5001836",
+      "city_count": 3622,
+      "sha256": "2a8d859bff40fe5204d8c6c5b71764feed6d9e6028de5b5cde59e1d25ecb9e2a"
+    },
+    {
+      "code": "MN",
+      "name": "Minnesota",
+      "name_ar": "",
+      "geonames_id": "5037779",
+      "city_count": 2550,
+      "sha256": "8bcf556d53ba1fdf89b8ddcc44dd87c945b2cb14bc17c42c5213a90708332444"
+    },
+    {
+      "code": "MS",
+      "name": "Mississippi",
+      "name_ar": "",
+      "geonames_id": "4436296",
+      "city_count": 3309,
+      "sha256": "31eeba2b11f98565f49ed0f4884651494f4f84fdff1dc518a8b0f97708794193"
+    },
+    {
+      "code": "MO",
+      "name": "Missouri",
+      "name_ar": "",
+      "geonames_id": "4398678",
+      "city_count": 4202,
+      "sha256": "05c2e83209503721c7de310e8dd999c82bd94248b7f338fd461a8337bcf6023a"
+    },
+    {
+      "code": "MT",
+      "name": "Montana",
+      "name_ar": "",
+      "geonames_id": "5667009",
+      "city_count": 1657,
+      "sha256": "59965bb790d4b6798ca9e2f2ba4249844007e014146573b54044840e85168867"
+    },
+    {
+      "code": "NE",
+      "name": "Nebraska",
+      "name_ar": "",
+      "geonames_id": "5073708",
+      "city_count": 1181,
+      "sha256": "9a5cebbbaff169f19ca33e4a94b02ab2bc9f388bf08a9b84fe8ca004cc0aadba"
+    },
+    {
+      "code": "NV",
+      "name": "Nevada",
+      "name_ar": "",
+      "geonames_id": "5509151",
+      "city_count": 658,
+      "sha256": "f1d939c48cfcb8aebe67a26795bc2e0b0112750a1f6652a1dcd16e4c1e1749da"
+    },
+    {
+      "code": "NH",
+      "name": "New Hampshire",
+      "name_ar": "",
+      "geonames_id": "5090174",
+      "city_count": 1000,
+      "sha256": "72fb28c0d7c4ce423e09334f090d6be361822e04e364d72c282d653290e8ff05"
+    },
+    {
+      "code": "NJ",
+      "name": "New Jersey",
+      "name_ar": "",
+      "geonames_id": "5101760",
+      "city_count": 2660,
+      "sha256": "309093b12de4e6437ea388c4f1e2f1e4a0044a677f3960db762ea5ddb204d742"
+    },
+    {
+      "code": "NM",
+      "name": "New Mexico",
+      "name_ar": "",
+      "geonames_id": "5481136",
+      "city_count": 1638,
+      "sha256": "4b5d08a0ef766dbfe551ff3728dc0b67504ddf58e6cf53ba9e52bc0526614418"
+    },
+    {
+      "code": "NY",
+      "name": "New York",
+      "name_ar": "",
+      "geonames_id": "5128638",
+      "city_count": 7515,
+      "sha256": "53892814066b17797af571c4c16d540c26b23956ae936f6b737c8ce5b35fdb7c"
+    },
+    {
+      "code": "NC",
+      "name": "North Carolina",
+      "name_ar": "",
+      "geonames_id": "4482348",
+      "city_count": 6954,
+      "sha256": "02d95c3a3283fd6f998e5abde0f16ecae623dcd5d4c9bf941a258c6c95d8ffc5"
+    },
+    {
+      "code": "ND",
+      "name": "North Dakota",
+      "name_ar": "",
+      "geonames_id": "5690763",
+      "city_count": 894,
+      "sha256": "2e3daacff42d0189adca37f6c7f2d6ffe62546761f1d309a27e90ee2f94b688d"
+    },
+    {
+      "code": "OH",
+      "name": "Ohio",
+      "name_ar": "",
+      "geonames_id": "5165418",
+      "city_count": 7484,
+      "sha256": "aacf0a017b3612a472deaf200c4d15b91329550260353aa504fa14b3988dd23b"
+    },
+    {
+      "code": "OK",
+      "name": "Oklahoma",
+      "name_ar": "",
+      "geonames_id": "4544379",
+      "city_count": 1929,
+      "sha256": "25f1b9cc3a9304061dea53a433d7752405f1cb0a24f5af184dff1599df45cf85"
+    },
+    {
+      "code": "OR",
+      "name": "Oregon",
+      "name_ar": "",
+      "geonames_id": "5744337",
+      "city_count": 1381,
+      "sha256": "06158ef391cc1b4c224cb2f5fd78a7fe6065b8b19bde788d6e90a1e76dbb4e30"
+    },
+    {
+      "code": "PA",
+      "name": "Pennsylvania",
+      "name_ar": "",
+      "geonames_id": "6254927",
+      "city_count": 10735,
+      "sha256": "942603febcf472f289c6dc83e6d2b33dbad613db1744e868235837d1ab4ae54f"
+    },
+    {
+      "code": "RI",
+      "name": "Rhode Island",
+      "name_ar": "",
+      "geonames_id": "5224323",
+      "city_count": 394,
+      "sha256": "036dced9da2fe44c37e2648af3471aefe5b345556718cd4da041abf5544397ca"
+    },
+    {
+      "code": "SC",
+      "name": "South Carolina",
+      "name_ar": "",
+      "geonames_id": "4597040",
+      "city_count": 4793,
+      "sha256": "60023c57b3701e9f59211fdf6aeeb1df2326ffe34b36a63a9413a31501ff9c13"
+    },
+    {
+      "code": "SD",
+      "name": "South Dakota",
+      "name_ar": "",
+      "geonames_id": "5769223",
+      "city_count": 966,
+      "sha256": "156821e7d2a69077b077a3a4f92be4be8fad8737ed48334c0384f1119587d301"
+    },
+    {
+      "code": "TN",
+      "name": "Tennessee",
+      "name_ar": "",
+      "geonames_id": "4662168",
+      "city_count": 6759,
+      "sha256": "a4081fcdb76d0a39c9d788d7ad51ec47d887d71ae15cb5a92d304d01e766b0c7"
+    },
+    {
+      "code": "TX",
+      "name": "Texas",
+      "name_ar": "",
+      "geonames_id": "4736286",
+      "city_count": 9590,
+      "sha256": "b39646510142f9e0323bda413c12815272954a032612b89be9605e0b5477834c"
+    },
+    {
+      "code": "UT",
+      "name": "Utah",
+      "name_ar": "",
+      "geonames_id": "5549030",
+      "city_count": 4244,
+      "sha256": "d780619bc7bc4e2a88a69ffd90364d111ae93110a01a2d5925cb7bba87f8f1d0"
+    },
+    {
+      "code": "VT",
+      "name": "Vermont",
+      "name_ar": "",
+      "geonames_id": "5242283",
+      "city_count": 886,
+      "sha256": "c31920fe7646ffa0486b4441c1320be1c044a3d7bc2661d4fb4787709dbd4d9a"
+    },
+    {
+      "code": "VA",
+      "name": "Virginia",
+      "name_ar": "",
+      "geonames_id": "6254928",
+      "city_count": 8731,
+      "sha256": "1af4f41f88d445369c74f7dc71e5baee9a9474510e68aea935275fc64ca83480"
+    },
+    {
+      "code": "WA",
+      "name": "Washington",
+      "name_ar": "",
+      "geonames_id": "5815135",
+      "city_count": 3240,
+      "sha256": "568c3d33f2a1d0a781055029bcae02ec7d2f387e1bf4fd012bb705d0449d4e1c"
+    },
+    {
+      "code": "WV",
+      "name": "West Virginia",
+      "name_ar": "",
+      "geonames_id": "4826850",
+      "city_count": 3924,
+      "sha256": "bcf352a1575f37f6cb683d262d1c88070f78ab217257b9d4620ef8a9937abf8e"
+    },
+    {
+      "code": "WI",
+      "name": "Wisconsin",
+      "name_ar": "",
+      "geonames_id": "5279468",
+      "city_count": 2553,
+      "sha256": "ea9276dcb8d2bdeafe26badb1a56eed74b14fe1e1a8029fb749f026072d6bf73"
+    },
+    {
+      "code": "WY",
+      "name": "Wyoming",
+      "name_ar": "",
+      "geonames_id": "5843591",
+      "city_count": 578,
+      "sha256": "a17660d288afc6576eeae8f4c1c45d66e69fcc750bf1cfdfa25479cb9b32d2ca"
+    }
+  ],
+  "source": "https://download.geonames.org/export/dump/US.zip",
+  "attribution": "GeoNames",
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "source_sha256": "6c50c2ff9a05621ede11753bbe888d2e5c12d15f27d22e24780eba7df57c4da9",
+  "source_latest_record_date": "2026-09-25",
+  "feature_codes": [
+    "PPL",
+    "PPLA",
+    "PPLA2",
+    "PPLA3",
+    "PPLA4",
+    "PPLC",
+    "PPLL",
+    "PPLX"
+  ],
+  "city_count": 183936,
+  "excluded": {
+    "unassigned_adm1": 15
+  }
+}

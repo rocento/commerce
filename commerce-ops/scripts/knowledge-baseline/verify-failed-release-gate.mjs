@@ -1,0 +1,53 @@
+/** Bind the already measured failure to its exact immutable candidate and prove promotion rejects it in a disposable DB. */
+import assert from 'node:assert/strict';
+import {readFile,writeFile} from 'node:fs/promises';
+import {createRequire} from 'node:module';
+import {randomBytes,createHash} from 'node:crypto';
+import {gunzipSync} from 'node:zlib';
+import {importBaselineRelease,bootstrapRelease,stageRelease,currentReleaseId,recordReleaseEvaluation,promoteRelease,releaseContentHashes} from '../../commerce-assistant-platform/app/commerce_language_engine/src/release-lifecycle.ts';
+import {decodeReleaseBundle,RELEASE_CONTRACT_VERSION} from '../../commerce-assistant-platform/app/commerce_language_engine/scripts/deployment-release.ts';
+import {runtimeSha256} from '../../commerce-assistant-platform/app/commerce_language_engine/src/runtime-identity.ts';
+const root=new URL('../../',import.meta.url),engine=new URL('commerce-assistant-platform/app/commerce_language_engine/',root),out=new URL('output/enterprise-knowledge-release-prep-20261010/',root);
+const pg=createRequire(new URL('package.json',engine))('pg');
+const candidate=decodeReleaseBundle(await readFile(new URL('candidate-data/deployment-release.json.gz',out))).payload;
+const baseline=decodeReleaseBundle(await readFile(new URL('rollback-data/deployment-release.json.gz',out))).payload;
+assert.equal(candidate.format,2);assert.equal(baseline.format,2);
+const evaluationBytes=await readFile(new URL('initial-archived-corpus.json',out)),evaluation=JSON.parse(evaluationBytes);
+assert.equal(evaluation.passed,false);assert.equal(evaluation.runtimeStable,true);assert.ok(evaluation.failureCount>0);
+assert.equal(evaluation.runtimeSha256,candidate.identity.runtimeSha256);
+assert.equal(await runtimeSha256(new URL('engine/',out)),evaluation.runtimeSha256);
+const frozen=JSON.parse(await readFile(new URL('engine/data/compiled.json',out),'utf8'));
+const corpus=await readFile(new URL(evaluation.sourceCorpus,out));
+assert.equal(createHash('sha256').update(corpus).digest('hex'),candidate.identity.corpusSha256);
+assert.equal(releaseContentHashes(frozen,Buffer.from(candidate.corpusArchive,'base64')).artifactSha256,candidate.identity.artifactSha256);
+assert.equal(evaluation.count,candidate.corpus.length);
+assert.equal(gunzipSync(Buffer.from(candidate.corpusArchive,'base64')).toString(),corpus.toString());
+const connection=new URL(process.env.PHASE3_TEST_DATABASE_URL??'');assert.equal(connection.hostname,'127.0.0.1');assert.equal(connection.port,'57433');assert.equal(connection.pathname,'/postgres');
+const database='release_failed_gate_'+randomBytes(8).toString('hex'),url=new URL(connection);url.pathname='/'+database;
+const admin=new pg.Client({connectionString:connection.href});await admin.connect();
+let created=false,client;
+const report={scope:'Disposable local rejection check using actual measured failed report; no duplicate full evaluation',candidateIdentity:candidate.identity,evaluationSource:'initial-archived-corpus.json',evaluationSourceSha256:createHash('sha256').update(evaluationBytes).digest('hex'),failureCount:evaluation.failureCount,passed:false,labelsChanged:false,productionChanged:false};
+try{
+ await admin.query(`CREATE DATABASE "${database}"`);created=true;process.env.DATABASE_URL=url.href;
+ const db=await import('../../commerce-assistant-platform/app/commerce_language_engine/src/database.ts');await db.migrate();await db.closeDb();
+ client=new pg.Client({connectionString:url.href});await client.connect();
+ await importBaselineRelease(client,{...baseline.identity,dictionary:baseline.artifact,corpus:baseline.corpus,corpusArchive:Buffer.from(baseline.corpusArchive,'base64'),manifest:baseline.manifest});
+ await bootstrapRelease(client,{releaseId:baseline.identity.releaseId,actor:'failed-gate-rehearsal',reason:'Captured production base in disposable database'});
+ await stageRelease(client,{dictionary:{...candidate.artifact,corpus:[]},corpus:candidate.corpus,corpusArchive:Buffer.from(candidate.corpusArchive,'base64'),baseReleaseId:candidate.identity.baseReleaseId,releaseId:candidate.identity.releaseId,source:'failed-gate-rehearsal',manifest:candidate.manifest});
+ const evaluationId=await recordReleaseEvaluation(client,{...candidate.identity,rubricVersion:evaluation.rubricVersion,contractVersion:String(RELEASE_CONTRACT_VERSION),passed:false,report:{...evaluation,evidenceSource:'Measured frozen-candidate archived evaluation; release ID bound after verifying exact artifact, corpus and runtime hashes',sourceReportSha256:report.evaluationSourceSha256}});
+ report.disposableEvaluationId=evaluationId;
+ await assert.rejects(promoteRelease(client,{releaseId:candidate.identity.releaseId,evaluationId,expectedActiveReleaseId:baseline.identity.releaseId,runtimeSha256:candidate.identity.runtimeSha256,rubricVersion:evaluation.rubricVersion,contractVersion:String(RELEASE_CONTRACT_VERSION),actor:'failed-gate-rehearsal',reason:'Verify actual failing evidence cannot promote'}),/Promotion requires passing evaluation/);
+ assert.equal(await currentReleaseId(client),baseline.identity.releaseId);
+ assert.equal((await client.query("SELECT count(*) FROM release.activations WHERE operation='promotion'")).rows[0].count,'0');
+ report.failedEvidenceRecorded=true;report.promotionRejected=true;report.activeBaselineUnchanged=true;
+}finally{
+ if(client)await client.end();if(created)await admin.query(`DROP DATABASE "${database}" WITH (FORCE)`);await admin.end();
+ report.cleanedUp=true;report.completedAt=new Date().toISOString();await writeFile(new URL('failed-gate-promotion-check.json',out),JSON.stringify(report,null,2)+'\n',{flag:'wx'});
+}
+const rehearsal=JSON.parse(await readFile(new URL('release-rehearsal.json',out),'utf8'));
+rehearsal.status='blocked_by_exact_archived_corpus';
+rehearsal.evaluation={source:'initial-archived-corpus.json',passed:false,count:evaluation.count,failureCount:evaluation.failureCount,wireFailureCount:evaluation.wireFailureCount,runtimeSha256:evaluation.runtimeSha256,sourceReportSha256:report.evaluationSourceSha256};
+rehearsal.promotion={performed:false,rejectionVerified:true,evidence:'failed-gate-promotion-check.json',reason:'Actual failed evaluation cannot promote the exact candidate'};
+rehearsal.rollback={performed:false,artifactsVerified:true,reason:'Candidate was never promoted; exact candidate promotion and rollback were not exercised'};
+await writeFile(new URL('release-rehearsal.json',out),JSON.stringify(rehearsal,null,2)+'\n');
+console.log(JSON.stringify(report));

@@ -1,0 +1,47 @@
+[
+  {
+    "name": "produce",
+    "id": "d3d03c49-c514-40fc-b251-cc6bf3b71901",
+    "width": 640,
+    "height": 960,
+    "bytes": 317535,
+    "sourceBytes": 2449381,
+    "sha256": "087e4b90f388b1595757a5a2fcd7d257be5f8dfab43846ec614fed33f1217a8c"
+  },
+  {
+    "name": "breakfast",
+    "id": "d3d03c49-c514-40fc-b251-cc6bf3b71902",
+    "width": 1080,
+    "height": 360,
+    "bytes": 219332,
+    "sourceBytes": 2570114,
+    "sha256": "8bee2a69b983f918b95d11434dbb082a9bcf633467ae91a7263a8cef077ed528"
+  },
+  {
+    "name": "apples",
+    "id": "d3d03c49-c514-40fc-b251-cc6bf3b71903",
+    "width": 640,
+    "height": 640,
+    "bytes": 133794,
+    "sourceBytes": 1218807,
+    "sha256": "03a9185e82f6fd8130285ec6ce070561edc4b7191ecebb5c9e771661bd5265ce"
+  },
+  {
+    "name": "pantry",
+    "id": "d3d03c49-c514-40fc-b251-cc6bf3b71904",
+    "width": 640,
+    "height": 960,
+    "bytes": 367030,
+    "sourceBytes": 2728880,
+    "sha256": "de368699944a5f2bd41731cc7e4c07d6674a9acdeaeac826f28d56fddcd9a3ee"
+  },
+  {
+    "name": "greens",
+    "id": "d3d03c49-c514-40fc-b251-cc6bf3b71905",
+    "width": 640,
+    "height": 960,
+    "bytes": 329108,
+    "sourceBytes": 2650432,
+    "sha256": "e2fe42abc6fe3c8851eec08cccffee8985fd998c6a3aa36724d58e7e62e2d9ae"
+  }
+]

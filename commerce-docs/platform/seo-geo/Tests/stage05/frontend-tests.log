@@ -1,0 +1,31 @@
+
+ RUN  v3.2.7 /Users/momar/Documents/commerce-ai/frontend
+
+ ✓ apps/admin/src/permission-model.test.ts (5 tests) 3ms
+ ✓ apps/admin/src/category-tree.test.ts (5 tests) 8ms
+ ✓ apps/admin/src/effective-indexing-status.test.tsx (6 tests) 4ms
+ ✓ apps/storefront/src/assistant-markdown.test.tsx (13 tests) 10ms
+ ✓ packages/api-client/src/demo-presets.test.ts (7 tests) 6ms
+ ✓ packages/api-client/src/themes.test.ts (10 tests) 8ms
+ ✓ packages/api-client/src/assistant.test.ts (16 tests) 10ms
+ ✓ apps/storefront/src/theme-grid.test.ts (3 tests) 3ms
+ ✓ apps/storefront/src/theme-preview.test.ts (5 tests) 6ms
+ ✓ apps/admin/src/merchant-questions.test.ts (2 tests) 2ms
+ ✓ apps/storefront/src/checkout-logic.test.ts (4 tests) 25ms
+ ✓ apps/admin/src/merchant-assistant.test.tsx (1 test) 25ms
+ ✓ apps/storefront/src/locations-logic.test.ts (5 tests) 2ms
+ ✓ packages/api-client/src/index.test.ts (3 tests) 4ms
+ ✓ apps/admin/src/order-geo-logic.test.ts (3 tests) 2ms
+ ✓ apps/admin/src/msi-logic.test.ts (5 tests) 4ms
+ ✓ apps/storefront/src/delivery-geography.test.ts (2 tests) 374ms
+   ✓ Egypt delivery directory > has all 27 governorates, valid coordinates, unique places, and nonempty dependent city lists  372ms
+ ✓ apps/storefront/src/assistant-state.test.ts (4 tests) 3ms
+ ✓ packages/api-client/src/merchant.test.ts (2 tests) 2ms
+ ✓ apps/admin/src/delivery-geometry.test.ts (4 tests) 2ms
+ ✓ apps/storefront/src/support-logic.test.ts (6 tests) 2ms
+ ✓ apps/storefront/src/assistant-rich.test.tsx (5 tests) 8ms
+
+ Test Files  22 passed (22)
+      Tests  116 passed (116)
+   Start at  10:21:51
+   Duration  730ms (transform 676ms, setup 0ms, collect 2.87s, tests 514ms, environment 2ms, prepare 874ms)
