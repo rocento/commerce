@@ -48,6 +48,6 @@ must be assigned to an eligible delivery area or be the default pool to fulfill 
 
 Demo preset seeding creates a dedicated `demo-global` source/pool and resets every
 active demo product to 1,000 units in that source. Regional source quantities remain
-separate. For an existing isolated demo, run `commerce-ops/scripts/seed-demo-storefront.py <preset>
+separate. For an existing isolated demo, run `commerce-ops/scripts/demo/seed-demo-storefront.py <preset>
 --apply --global-stock-only --api-base <target> --credentials <file>` after commerce-ops/deploying
 the global-stock migration and API. A rerun skips already-correct assignments.

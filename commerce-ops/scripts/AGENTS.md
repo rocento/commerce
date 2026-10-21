@@ -18,12 +18,12 @@ to find its service owner. Commands normally start at the repository root.
 - `maintenance/` owns inventory, cleanup, repair and maintenance SQL.
 - EC2 workstation launchers live in `../deploy/aws-deploy/`; server commands live
   in `../deploy/ec2/server/`. Call server commands directly; no `ec2-*` wrappers remain here.
-- `knowledge-baseline/`, `shopping_eval/`, `recommendation_eval/` and `staging/`
-  retain their existing focused tools and fixtures.
-- [entrypoints.json](entrypoints.json) maps old command paths to their canonical
-  owners and records moved data files. Root commands are compatibility wrappers.
-  Add new commands to their purpose folder; do not create more root wrappers
-  unless an existing caller needs one.
+- `knowledge-baseline/`, `shopping_eval/` and `recommendation_eval/` retain
+  focused evaluation tools and fixtures. There is no `staging/` command folder.
+- [entrypoints.json](entrypoints.json) inventories legacy root command paths and
+  maps them to canonical owners. Keep compatibility wrappers only while callers
+  still need them; use canonical paths in all maintained code, CI and runbooks.
+  Add new commands to their purpose folder.
 - `tests/` contains command and deployment regression tests. Service tests remain
   with their owning service.
 
@@ -34,8 +34,9 @@ Preserve CLI arguments, exit codes and any imported functions used by callers.
 When moving code, inspect `__file__` root discovery, sibling imports, `runpy` or
 `importlib` loaders, scratch-copy fixtures and explicit deployment file lists.
 Commands streamed through stdin must send the canonical source and must not
-depend on checkout-relative imports. Ship canonical owners alongside wrappers
-in partial uploads. Include both in any source fingerprint that covers them.
+depend on checkout-relative imports. Partial uploads and source fingerprints
+should include canonical owners; include wrappers only when a legacy caller
+still uses them.
 
 Run focused tests from the repository root:
 

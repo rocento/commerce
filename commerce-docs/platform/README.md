@@ -31,4 +31,4 @@ Start with [the repository quickstart](../../commerce-api/README.md) or the [ser
 - [Documentation and cleanup policy](reference/workspace-cleanup.md)
 - [Historical evidence catalog](evidence/README.md)
 
-Keep service behavior in its owning guide and link to it here. Run `python3 commerce-ops/scripts/check-documentation.py` after changing documentation.
+Keep service behavior in its owning guide and link to it here. Run `python3 commerce-ops/scripts/checks/check-documentation.py` after changing documentation.

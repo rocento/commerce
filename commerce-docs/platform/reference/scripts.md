@@ -26,9 +26,10 @@ codes and Python imports; edit the grouped owner. Moved SQL/JSON inputs use thei
 new paths, listed separately in the manifest. New commands belong in their
 purpose folder.
 
-Existing `commerce-ops/scripts/knowledge-baseline/`, `commerce-ops/scripts/shopping_eval/`,
-`commerce-ops/scripts/recommendation_eval/` and `commerce-ops/scripts/staging/` keep their focused tools and
-fixtures. Application-owned scripts remain with their service.
+Existing `commerce-ops/scripts/knowledge-baseline/`, `commerce-ops/scripts/shopping_eval/`
+and `commerce-ops/scripts/recommendation_eval/` keep their focused tools and
+fixtures. There is no staging-server command folder here. Application-owned
+scripts remain with their service.
 
 ## Release readiness
 

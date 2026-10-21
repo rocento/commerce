@@ -1,6 +1,6 @@
 # Rocento onboarding API
 
-Standalone Rust service for customer accounts, server-synced onboarding drafts, and temporary domain reservations. It is maintained separately from the customer and staff interfaces in [`../../commerce-web/apps/onboarding`](../../commerce-web/apps/onboarding) and [`../../commerce-web/apps/onboarding-staff`](../../commerce-web/apps/onboarding-staff). See the [onboarding guide](../../commerce-docs/onboarding/README.md) for the complete project layout.
+Standalone Rust service for customer accounts, server-synced onboarding drafts, and temporary domain reservations. It is maintained separately from the customer and staff interfaces in [`../../commerce-web/apps/onboarding`](../../commerce-web/apps/onboarding) and [`../../commerce-web/apps/onboarding-ops`](../../commerce-web/apps/onboarding-ops). See the [onboarding guide](../../commerce-docs/onboarding/README.md) for the complete project layout.
 
 The Rust crate is at this module's root. Routes, account security, draft and reservation logic, database setup, mail delivery, and domain rules are kept in separate files under `src/`. PostgreSQL schema and seed data live under `database/`.
 

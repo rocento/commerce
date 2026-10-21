@@ -5,7 +5,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[3]
 spec = importlib.util.spec_from_file_location(
-    "advanced", ROOT / "commerce-ops/scripts/advanced-assistant-attributes.py"
+    "advanced", ROOT / "commerce-ops/scripts/demo/advanced-assistant-attributes.py"
 )
 advanced = importlib.util.module_from_spec(spec)
 spec.loader.exec_module(advanced)

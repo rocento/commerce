@@ -99,9 +99,7 @@ def main():
         files += [
             ROOT / p
             for p in [
-                "commerce-ops/scripts/domain-evidence.py",
                 "commerce-ops/scripts/evaluation/domain-evidence.py",
-                "commerce-ops/scripts/conversations-setup.py",
                 "commerce-ops/scripts/local/conversations-setup.py",
                 "commerce-ops/deploy/assistant/shared-tenants.sql",
                 "commerce-ops/deploy/assistant/init-store.sh",

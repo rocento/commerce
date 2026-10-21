@@ -49,7 +49,7 @@ def package(output, profile):
     output.mkdir(parents=True, exist_ok=False, mode=0o700)
     source = baseline.source_manifest()
     baseline.write_json(output / 'source-manifest.json', source)
-    subprocess.run(['python3', str(baseline.ROOT / 'commerce-ops/scripts/check-rust-architecture.py')], check=True)
+    subprocess.run(['python3', str(baseline.ROOT / 'commerce-ops/scripts/checks/check-rust-architecture.py')], check=True)
     build = ['cargo', '+1.94.0', 'build', '--manifest-path', str(baseline.ROOT / 'commerce-api/rocento-api/Cargo.toml'),
              '--locked', '-p', 'api-gateway']
     for name in BINARIES:

@@ -12,7 +12,7 @@ Commands below run from `commerce-web/`, using its pinned pnpm workspace.
   The corporate site lives in `commerce-corporate-site/`. Read each project
   guide before editing it.
 - Customer onboarding and its locked staff shell live in
-  `apps/onboarding/` and `apps/onboarding-staff/`. Its API and database live in
+  `apps/onboarding/` and `apps/onboarding-ops/`. Its API and database live in
   `../commerce-api/onboard-api/`. Onboarding browser checks live in
   `e2e/onboarding/` and use `playwright.onboarding.config.ts`.
 - `packages/api-client` owns shared frontend API access and generated types;

@@ -67,16 +67,17 @@ rsync -a --dry-run --out-format='commerce-api/rocento-api/migrations/%n' "$ROOT/
         if operation == 'ai':
             roots = ['commerce-ops/deploy/ec2/server/ec2-deploy-ai.sh', 'commerce-ops/deploy/ec2/server/ec2-compose.sh',
                      'commerce-ops/deploy/ec2/server/ec2-shared-ai-upgrade.sh',
+                     'commerce-ops/deploy/ec2/server/repository-root.sh',
                      'commerce-ops/deploy/assistant/shared-tenants.sql', 'commerce-ops/deploy/assistant/shared-language-tenants.sql',
                      'commerce-ops/deploy/ec2/shared-ai-consumer.yaml']
             if service != 'language':
                 roots += ['commerce-assistant-platform/Dockerfile', 'commerce-assistant-platform/.dockerignore', 'commerce-assistant-platform/requirements.lock',
                           'commerce-assistant-platform/app', 'commerce-assistant-platform/knowledge', 'commerce-assistant-platform/migrations',
                           'commerce-ops/compose/compose.assistant-admin.yaml', 'commerce-ops/compose/compose.assistant-provider.yaml',
-                          'commerce-ops/scripts/conversations-setup.py', 'commerce-ops/scripts/local/conversations-setup.py',
-                          'commerce-ops/scripts/agentic-preflight.py', 'commerce-ops/scripts/release/agentic-preflight.py']
+                          'commerce-ops/scripts/local/conversations-setup.py',
+                          'commerce-ops/scripts/release/agentic-preflight.py']
                 for name in ('generate_openapi.py', 'generate_assistant_models.py', 'generate_assistant_validator.py'):
-                    roots += ['commerce-ops/scripts/' + name, 'commerce-ops/scripts/contracts/' + name]
+                    roots.append('commerce-ops/scripts/contracts/' + name)
             if service != 'ai':
                 language = 'commerce-assistant-platform/app/commerce_language_engine/'
                 roots += [language + name for name in ('Dockerfile', '.dockerignore', 'package.json',

@@ -5,7 +5,7 @@ from pathlib import Path
 import unittest
 
 ROOT = Path(__file__).resolve().parents[3]
-SPEC = importlib.util.spec_from_file_location('api_documentation', ROOT / 'commerce-ops/scripts/check_api_documentation.py')
+SPEC = importlib.util.spec_from_file_location('api_documentation', ROOT / 'commerce-ops/scripts/checks/check_api_documentation.py')
 CHECK = importlib.util.module_from_spec(SPEC)
 SPEC.loader.exec_module(CHECK)
 

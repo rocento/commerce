@@ -51,7 +51,7 @@ Validate every exported route, metadata record, anchor and related link with the
 
 `/docs/api/` provides the API overview and a Swagger UI reference. The reference is a preview of selected storefront and customer operations; it does not promise a stable third-party API or self-service integration credentials. Keep that scope explicit when changing the copy. [Backend API maintenance](../backend/api.md) owns the contract publication policy and authentication guidance.
 
-The viewer uses the pinned `swagger-ui-dist` version `5.33.1` with local JavaScript and CSS. Its specification is the reviewed artifact at `public/docs/api/openapi.json`, generated from an explicit allowlist by `commerce-ops/scripts/generate_public_openapi.py`. Never point the viewer at the complete backend contract or accept a specification URL from the page query string. Do not add CDN assets, remote validators, persistent authorization or a production “Try it out” button. The read-only reference must not collect credentials or execute API operations.
+The viewer uses the pinned `swagger-ui-dist` version `5.33.1` with local JavaScript and CSS. Its specification is the reviewed artifact at `public/docs/api/openapi.json`, generated from an explicit allowlist by `commerce-ops/scripts/contracts/generate_public_openapi.py`. Never point the viewer at the complete backend contract or accept a specification URL from the page query string. Do not add CDN assets, remote validators, persistent authorization or a production “Try it out” button. The read-only reference must not collect credentials or execute API operations.
 
 The embedded `/docs/api/reference/` viewer has a separate restrictive content security policy at managed ingress. Documentation responses also receive MIME-sniffing, framing, referrer and permissions restrictions. The main Next page and the isolated viewer need separate policies because the static Next export uses inline bootstrap scripts. Header rules live in `commerce-ops/deploy/ec2/configure.py`; static preview validates output and behavior but does not reproduce production HTTP headers.
 
@@ -59,8 +59,8 @@ Regenerate the public contract deliberately before building after an API change:
 
 ```sh
 # From the repository root:
-python3 commerce-ops/scripts/generate_public_openapi.py
-python3 commerce-ops/scripts/generate_public_openapi.py --check
+python3 commerce-ops/scripts/contracts/generate_public_openapi.py
+python3 commerce-ops/scripts/contracts/generate_public_openapi.py --check
 python3 -m unittest discover -s commerce-ops/scripts/tests -p 'test_public_openapi.py'
 
 # From commerce-web:

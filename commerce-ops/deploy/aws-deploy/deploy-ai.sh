@@ -71,9 +71,9 @@ files=(commerce-ops/scripts/release/deployment_gate.py commerce-ops/scripts/rele
   commerce-ops/deploy/ec2/shared-ai-consumer.yaml)
 if [[ $SERVICE != language ]]; then
   files+=(commerce-assistant-platform/Dockerfile commerce-assistant-platform/.dockerignore commerce-assistant-platform/requirements.lock commerce-assistant-platform/app/ commerce-assistant-platform/knowledge/
-    commerce-assistant-platform/migrations/ commerce-ops/scripts/conversations-setup.py commerce-ops/scripts/local/conversations-setup.py
+    commerce-assistant-platform/migrations/ commerce-ops/scripts/local/conversations-setup.py
     commerce-ops/compose/compose.assistant-admin.yaml commerce-ops/compose/compose.assistant-provider.yaml
-    commerce-ops/scripts/agentic-preflight.py commerce-ops/scripts/release/agentic-preflight.py commerce-ops/scripts/generate_openapi.py commerce-ops/scripts/generate_assistant_models.py commerce-ops/scripts/generate_assistant_validator.py
+    commerce-ops/scripts/release/agentic-preflight.py commerce-ops/scripts/contracts/generate_openapi.py commerce-ops/scripts/contracts/generate_assistant_models.py commerce-ops/scripts/contracts/generate_assistant_validator.py
     commerce-ops/scripts/contracts/generate_openapi.py commerce-ops/scripts/contracts/generate_assistant_models.py commerce-ops/scripts/contracts/generate_assistant_validator.py)
 fi
 cd "$ROOT"

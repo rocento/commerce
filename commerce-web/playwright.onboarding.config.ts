@@ -10,7 +10,7 @@ export default defineConfig({
       reuseExistingServer: !process.env.CI,
     },
     {
-      command: "pnpm dev:onboarding-staff",
+      command: "pnpm dev:onboarding-ops",
       url: "http://127.0.0.1:3101",
       reuseExistingServer: !process.env.CI,
     },

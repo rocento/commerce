@@ -282,7 +282,7 @@ verify_configuration() {
 
 migration_preflight() {
   STAGE=migration-history-preflight
-  python3 "$ROOT/commerce-ops/scripts/check-migration-history.py"
+  python3 "$ROOT/commerce-ops/scripts/checks/check-migration-history.py"
   local store container history_table
   for store in grocery jewelry electronics pharmacy; do
     container=$(compose "$store" ps --all --quiet postgres)
@@ -297,7 +297,7 @@ migration_preflight() {
     fi
     compose "$store" exec -T postgres psql -X -U commerce -d commerce -v ON_ERROR_STOP=1 -Atqc \
       "SELECT version, encode(checksum, 'hex'), success FROM public._sqlx_migrations ORDER BY version" > "$WORK/$store-migrations.txt"
-    python3 "$ROOT/commerce-ops/scripts/check-migration-history.py" --history "$WORK/$store-migrations.txt"
+    python3 "$ROOT/commerce-ops/scripts/checks/check-migration-history.py" --history "$WORK/$store-migrations.txt"
     ok "$store applied migration history matches this release"
   done
 }
@@ -310,7 +310,7 @@ verify_release_migrations() {
   for store in grocery jewelry electronics pharmacy; do
     compose "$store" exec -T postgres psql -X -U commerce -d commerce -v ON_ERROR_STOP=1 -Atqc \
       "SELECT version, encode(checksum, 'hex'), success FROM public._sqlx_migrations ORDER BY version" > "$WORK/$store-release-migrations.txt"
-    python3 "$ROOT/commerce-ops/scripts/check-migration-history.py" --history "$WORK/$store-release-migrations.txt" --require-all
+    python3 "$ROOT/commerce-ops/scripts/checks/check-migration-history.py" --history "$WORK/$store-release-migrations.txt" --require-all
     ok "$store release migrations applied and verified (including megamenu translations)"
   done
 }
@@ -377,7 +377,7 @@ start_store_preserving_ai() {
   # Use the running image's immutable ID, never a possibly stale :release tag.
   # Verify gateway contracts while leaving AI code, databases and services alone.
   docker run --rm --network none --entrypoint python -v "$ROOT:/release:ro" "$image" \
-    /release/commerce-ops/scripts/agentic-preflight.py --installed-contracts-only /app/app
+    /release/commerce-ops/scripts/release/agentic-preflight.py --installed-contracts-only /app/app
   local infrastructure=(postgres engagement-postgres clickhouse nats meilisearch minio)
   local applications=(api-gateway export-worker engagement-worker analytics-worker)
   compose "$store" up -d --no-build --no-deps --wait --wait-timeout 300 "${infrastructure[@]}"
@@ -429,10 +429,10 @@ start_store() {
   fi
   [[ -n $assistant_database ]] || fail "$store AI database container is missing; application services were not replaced."
   STAGE="${store}-assistant-migrations"
-  python3 "$ROOT/commerce-ops/scripts/conversations-setup.py" --container "$assistant_database"
+  python3 "$ROOT/commerce-ops/scripts/local/conversations-setup.py" --container "$assistant_database"
   STAGE="${store}-start"
   # Validate release contracts and the installed AI code before starting new services.
-  compose "$store" run --rm --no-deps --entrypoint python -v "$ROOT:/release:ro" ai-service /release/commerce-ops/scripts/agentic-preflight.py --installed-app /app/app
+  compose "$store" run --rm --no-deps --entrypoint python -v "$ROOT:/release:ro" ai-service /release/commerce-ops/scripts/release/agentic-preflight.py --installed-app /app/app
   compose "$store" run --rm --no-deps --entrypoint python ai-service -c 'from app.main import app'
   STAGE="${store}-engagement-database"
   compose "$store" up -d --no-deps --no-build --wait --wait-timeout 120 engagement-postgres
@@ -620,5 +620,5 @@ fi
 publish_nginx
 info 'Demo seeding is separate: sudo bash deploy/ec2/server/ec2-seed-demo.sh --store all'
 public_health
-python3 "$ROOT/commerce-ops/scripts/cleanup-demo-backend-images.py"
+python3 "$ROOT/commerce-ops/scripts/maintenance/cleanup-demo-backend-images.py"
 summary

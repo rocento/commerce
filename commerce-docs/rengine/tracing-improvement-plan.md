@@ -27,7 +27,7 @@ The original M3 Waterfall/side-inspector design is historical. Current source us
 1. Profile full-turn capture CPU under the actual container CPU limit. Separate time before `done`, after `done`, report persistence, health-probe CPU and throttling. The last slow captured request spent only 14.8 ms after `done`; local report-save p95 was approximately 10 ms. Asynchronous persistence alone is not an established fix.
 2. Freeze a bounded producer change and exact source, runtime, release/artifact identities. Reinspect the active knowledge release and coordinate a matching producer baseline before another canary.
 3. Preserve behavior under capture off, nested/concurrent spans, cancellation, failed calls, truncation, tenant checks, redaction and audited export. Parent identity and clock domains must remain explicit; missing timing or usage stays unknown.
-4. Run affected suites and the [rollout checker](../../commerce-ops/scripts/check-trace-rollout.mjs) against a redacted complete v2 report. Functional pass and performance pass are separate gates.
+4. Run affected suites and the [rollout checker](../../commerce-ops/scripts/checks/check-trace-rollout.mjs) against a redacted complete v2 report. Functional pass and performance pass are separate gates.
 5. Run an authorized one-demo canary with quota headroom and the unchanged numeric gate. Keep retained readers and restore producer images/settings if it fails; do not retry an unchanged candidate repeatedly.
 6. Expand to the remaining demos only after the first candidate meets every gate and has a reviewed recovery path. Record each lifecycle result separately in [history](history/README.md).
 

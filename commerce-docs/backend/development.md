@@ -45,7 +45,7 @@ Authentication retention deletes expired sessions/challenges and obsolete rate-l
 
 ## Checks
 
-Run `python3 commerce-ops/scripts/check-rust-architecture.py` and `python3 -m unittest commerce-ops/scripts.tests.test_rust_architecture` from the repository root before backend changes. The [module-boundary policy](architecture.md#enforced-rust-module-boundaries) is enforced in CI; adding a crate or dependency requires an explicit ownership review.
+Run `python3 commerce-ops/scripts/checks/check-rust-architecture.py` and `python3 -m unittest commerce-ops/scripts.tests.test_rust_architecture` from the repository root before backend changes. The [module-boundary policy](architecture.md#enforced-rust-module-boundaries) is enforced in CI; adding a crate or dependency requires an explicit ownership review.
 
 From `commerce-api`:
 
@@ -58,7 +58,7 @@ cargo test --workspace --locked -- --test-threads=2
 
 Database-backed tests need the intended isolated PostgreSQL `DATABASE_URL` with required migrations. Use focused gateway suites first, for example `cargo test -p api-gateway --test catalog --locked`, `--test branch_setup`, `--test fulfillment_admin`, `--test markets`, `--test languages` or `--test themes`. Search stock batching is covered by `--test search_stock`; cached readiness and worker failures by `--test readiness`, with task supervision unit checks at `--lib workers::tests`. Database-free or skipped integration tests do not establish transaction behavior.
 
-From the repository root, `python3 commerce-ops/scripts/check-migration-history.py` checks version uniqueness/history, and `python3 commerce-ops/scripts/check-documentation.py` checks documentation destinations. Inspect script options before applying migration upgrades or seed data. Local unit tests are not proof of live provider, storage, edge or customer acceptance.
+From the repository root, `python3 commerce-ops/scripts/checks/check-migration-history.py` checks version uniqueness/history, and `python3 commerce-ops/scripts/checks/check-documentation.py` checks documentation destinations. Inspect script options before applying migration upgrades or seed data. Local unit tests are not proof of live provider, storage, edge or customer acceptance.
 
 The Phase 3 expiry regression suite is `cargo test --locked -p api-gateway --test reservation_expiry -- --test-threads=4`. Use an isolated PostgreSQL database for its fixtures. It covers backlog bounds, refresh deduplication, transactional event preservation, live area reads while cleanup is pending, scoped renewal/removal, last-unit concurrency and wishlist receipt replay. `infra-observability` unit tests verify fixed timing labels/outcomes and metric compatibility; `infra-db` tests exercise actual pool contention, ownership and acquisition timeout classification.
 

@@ -10,7 +10,7 @@ from unittest.mock import patch
 
 ROOT = Path(__file__).resolve().parents[3]
 spec = importlib.util.spec_from_file_location(
-    "unify_ai", ROOT / "commerce-ops/scripts/unify-ai-databases.py"
+    "unify_ai", ROOT / "commerce-ops/scripts/maintenance/unify-ai-databases.py"
 )
 migration = importlib.util.module_from_spec(spec)
 spec.loader.exec_module(migration)

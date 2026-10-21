@@ -69,14 +69,16 @@ def source_manifest():
             path = Path(directory) / name
             if path.suffix in ('.rs', '.sql', '.toml', '.lock', '.json'):
                 files[str(path.relative_to(ROOT))] = hashlib.sha256(path.read_bytes()).hexdigest()
-    for name in ('commerce-ops/compose/compose.yaml', 'commerce-ops/scripts/commerce_reliability.py',
-                 'commerce-ops/scripts/commerce-reliability.py', 'commerce-ops/scripts/commerce_release.py', 'commerce-ops/scripts/commerce-release.py',
-                 'commerce-ops/scripts/commerce_image.py', 'commerce-api/rocento-api/Dockerfile', 'commerce-api/rocento-api/.dockerignore',
-                 'commerce-ops/scripts/system-qa-http.py', 'commerce-ops/scripts/m14_support.py',
-                 'commerce-ops/scripts/release/commerce_reliability.py', 'commerce-ops/scripts/release/commerce-reliability.py',
-                 'commerce-ops/scripts/release/commerce_release.py', 'commerce-ops/scripts/release/commerce-release.py',
-                 'commerce-ops/scripts/release/commerce_image.py', 'commerce-ops/scripts/release/system-qa-http.py',
-                 'commerce-ops/scripts/release/m14_support.py'):
+    for name in ('commerce-ops/compose/compose.yaml',
+                 'commerce-ops/scripts/release/commerce_reliability.py',
+                 'commerce-ops/scripts/release/commerce-reliability.py',
+                 'commerce-ops/scripts/release/commerce_release.py',
+                 'commerce-ops/scripts/release/commerce-release.py',
+                 'commerce-ops/scripts/release/commerce_image.py',
+                 'commerce-ops/scripts/release/system-qa-http.py',
+                 'commerce-ops/scripts/release/m14_support.py',
+                 'commerce-api/rocento-api/Dockerfile',
+                 'commerce-api/rocento-api/.dockerignore'):
         files[name] = hashlib.sha256((ROOT / name).read_bytes()).hexdigest()
     digest = hashlib.sha256(json.dumps(files, sort_keys=True).encode()).hexdigest()
     return {'sha256': digest, 'files': files}
@@ -264,7 +266,7 @@ class BaselineStack(Stack):
 
 
 def load_qa():
-    spec = importlib.util.spec_from_file_location('baseline_http_qa', ROOT / 'commerce-ops/scripts/system-qa-http.py')
+    spec = importlib.util.spec_from_file_location('baseline_http_qa', ROOT / 'commerce-ops/scripts/release/system-qa-http.py')
     module = importlib.util.module_from_spec(spec)
     spec.loader.exec_module(module)
     return module

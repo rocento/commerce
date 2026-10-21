@@ -13,8 +13,8 @@ The data credits GeoNames contributors under [CC BY 4.0](https://creativecommons
 To refresh a snapshot, use the source URL from its manifest, keep archives outside the repository and run the importer on a working copy:
 
 ```sh
-python3 commerce-ops/scripts/import-delivery-locations.py SA /path/to/SA.zip
-python3 commerce-ops/scripts/import-egypt-locations.py /path/to/EG.zip
+python3 commerce-ops/scripts/demo/import-delivery-locations.py SA /path/to/SA.zip
+python3 commerce-ops/scripts/demo/import-egypt-locations.py /path/to/EG.zip
 python3 -m unittest discover -s commerce-ops/scripts/tests -p 'test_delivery_locations.py'
 ```
 
@@ -34,7 +34,7 @@ For a local, read-only design preview, build the storefront and run from the rep
 cd commerce-web/apps/storefront
 node ../../node_modules/vite/bin/vite.js build
 cd ../../..
-node commerce-ops/scripts/preview-demo-storefront.mjs pharmacy
+node commerce-ops/scripts/demo/preview-demo-storefront.mjs pharmacy
 ```
 
 Open `http://127.0.0.1:5473`. The preview serves the real storefront UI with local preset data; accounts, checkout and persistence require an installed backend. An optional port and build directory can follow the preset argument. Set `NEXT_PUBLIC_PHARMACY_DEMO_URL` in the corporate website environment to enable its demo link, then rebuild the website. Use the localhost URL only for local development.
@@ -43,9 +43,9 @@ For the full demo, [compose.pharmacy.yaml](../../commerce-ops/compose/compose.ph
 
 ```sh
 docker compose -p commerce-pharmacy -f commerce-ops/compose/compose.yaml -f commerce-ops/compose/compose.pharmacy.yaml up -d --build
-python3 commerce-ops/scripts/seed-demo-storefront.py pharmacy
+python3 commerce-ops/scripts/demo/seed-demo-storefront.py pharmacy
 # After the new installation and its admin credentials are ready:
-python3 commerce-ops/scripts/seed-demo-storefront.py pharmacy --apply --publish --complete --api-base http://127.0.0.1:60080 --credentials /path/to/pharmacy-admin-credentials.txt
+python3 commerce-ops/scripts/demo/seed-demo-storefront.py pharmacy --apply --publish --complete --api-base http://127.0.0.1:60080 --credentials /path/to/pharmacy-admin-credentials.txt
 ```
 
 The seed supports reruns, global demo inventory, and the existing optional Egypt delivery enrichment. Never point this preset at another demo's API: catalogs require separate installations. Live pharmacy operation, regulated inventory and prescription workflows are outside this illustrative catalog.

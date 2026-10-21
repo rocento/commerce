@@ -34,7 +34,7 @@ when storage is configured. `AI_INTENT_TRACKING_ENABLED=false` disables database
 capture; rengine still lists existing turn metrics. The per-demo **Enable tracing / Disable tracing**
 control also disables detailed capture, including optional local-file capture. Run AI migration `008_assistant_tracking.sql`
 before activating the updated service. Fresh-store initialization and
-`commerce-ops/scripts/conversations-setup.py --container AI_POSTGRES_CONTAINER` include it.
+`commerce-ops/scripts/local/conversations-setup.py --container AI_POSTGRES_CONTAINER` include it.
 The standard EC2 AI deployment migration step uses that same script.
 
 Access requires `assistant.tracking.read`; JSON export additionally requires
@@ -65,11 +65,11 @@ input/output tokens and accepted/clarified outcomes on the same held-out request
 when evaluating token savings and classification quality; prompt character counts
 are a size comparison, not a token-usage measurement.
 
-The local paired classification canary is `commerce-ops/scripts/classification-canary.py`.
+The local paired classification canary is `commerce-ops/scripts/evaluation/classification-canary.py`.
 Its default dry run makes no API calls:
 
 ```sh
-commerce-assistant-platform/.venv/bin/python commerce-ops/scripts/classification-canary.py \
+commerce-assistant-platform/.venv/bin/python commerce-ops/scripts/evaluation/classification-canary.py \
   --output output/intent-debug/classification-canary-dry-run.json
 ```
 
@@ -148,7 +148,7 @@ Never pass `DATABASE_URL`, `AUTH_SECRET`, `POSTGRES_PASSWORD`, `S3_SECRET_KEY`, 
 
 ## Persistence and language releases
 
-[AI migrations 001–007](../../commerce-assistant-platform/migrations) cover base storage, deployment boundaries, knowledge, conversations, indexes, request revisions and compound plans. [Conversation setup](../../commerce-ops/scripts/conversations-setup.py) and existing deployment tooling own provisioning. Language dictionary database migrations and authoritative Rust receipts have separate ownership.
+[AI migrations 001–007](../../commerce-assistant-platform/migrations) cover base storage, deployment boundaries, knowledge, conversations, indexes, request revisions and compound plans. [Conversation setup](../../commerce-ops/scripts/local/conversations-setup.py) and existing deployment tooling own provisioning. Language dictionary database migrations and authoritative Rust receipts have separate ownership.
 
 Node `HOST` and `PORT` select its binding. `ENABLE_DURABLE_SESSIONS=true` enables session routes only when a trusted tenant resolver and database are supplied. `PENDING_SESSION_TTL_SECONDS` defaults to 1800. Session cleanup runs every five minutes.
 

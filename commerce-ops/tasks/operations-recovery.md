@@ -11,6 +11,11 @@ guides. Preserve `/opt/rocento/deploy/ec2/setup.lock`, generated deployment
 configuration, service data volumes, and secrets. Repository cleanup or source
 reorganization is not a production recovery action.
 
+Database backup, WAL archiving, restore, and standby procedures are maintained
+in `commerce-ops/deploy/durability/` and documented in the
+[durability runbook](../../commerce-docs/platform/operations/durability.md).
+Keep these recovery controls available when simplifying operations tooling.
+
 For local stack issues, use the [local development guide](local-development.md)
 and its `commerce-ai` Compose project. For onboarding API development issues,
 use the [onboarding guide](onboarding.md) and its isolated local dependency

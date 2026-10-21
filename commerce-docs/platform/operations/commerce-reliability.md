@@ -50,7 +50,7 @@ Requirements: local Unix-socket Docker context with Compose, Rust 1.94.0, Python
 From the repository root:
 
 ```sh
-python3 commerce-ops/scripts/commerce-reliability.py --analytics-faults --async-faults --concurrency 1,4,8 --iterations 5
+python3 commerce-ops/scripts/release/commerce-reliability.py --analytics-faults --async-faults --concurrency 1,4,8 --iterations 5
 ```
 
 It builds the native debug gateway, analytics-worker, seed-admin and sync-reports binaries, starts six isolated Docker providers with fresh credentials and loopback ports, creates synthetic data, waits for authoritative `/ready`, runs the existing HTTP acceptance suite, then measures the requested concurrency levels and reporting interference. Each worker performs five sequential journeys by default: product read, cart snapshot, add one item, quote, place order. Each shopper has its own product to measure unrelated-cart concurrency. The acceptance suite separately races customers for the same remaining stock and concurrently replays a checkout key.
@@ -58,7 +58,7 @@ It builds the native debug gateway, analytics-worker, seed-admin and sync-report
 For optimized measurements on a controlled host:
 
 ```sh
-python3 commerce-ops/scripts/commerce-reliability.py --profile release --concurrency 1,4,8 --iterations 20
+python3 commerce-ops/scripts/release/commerce-reliability.py --profile release --concurrency 1,4,8 --iterations 20
 ```
 
 This is a closed-loop workload: concurrency is fixed and clients wait for responses. It does not model an open arrival rate or demonstrate maximum sustainable throughput. Levels are exploratory, not claims about normal/peak production traffic. Fixtures are intentionally small. Authentication setup is outside the timed workload, and there is no browser, TLS/ingress, real email, AI, or payment-provider traffic. Native gateway resource use is not container-limited; provider resource limits and host/Docker resources are recorded. Debug measurements are development/correctness evidence only.
@@ -89,7 +89,7 @@ There is deliberately no new universal latency SLA. Compare results only for mat
 ```sh
 python3 -m unittest commerce-ops/scripts.tests.test_commerce_reliability
 cargo +1.94.0 test --manifest-path commerce-api/rocento-api/Cargo.toml --locked -p api-gateway --lib reliability::tests
-python3 commerce-ops/scripts/check-documentation.py
+python3 commerce-ops/scripts/checks/check-documentation.py
 ```
 
 The Rust SQLx tests require an isolated migrated PostgreSQL test database and a role allowed to create disposable test databases. They check pending-only sampling and explicit failure/staleness behavior. The manual **Commerce reliability baseline** workflow runs the complete harness and uploads only the sanitized report, source manifest, timings and metrics. Existing recovery and checkout integration suites remain the broader correctness coverage.
@@ -118,7 +118,7 @@ Use `--sql-profile` with the isolated runner to enable `pg_stat_statements` only
 
 SQL statistics include concurrent workers and nested PostgreSQL function statements. Timings measure database execution, including applicable server-side waits; they exclude network transit and Rust processing. They cannot be summed as exclusive per-request latency because nested statements overlap. Compare request percentiles, completed purchases, invariant checks and exact candidate manifests alongside query counts. Use the same concurrency, iterations, profile and resources for both candidates, and distinguish debug development measurements from production capacity claims.
 
-Example: `python3 commerce-ops/scripts/commerce-reliability.py --sql-profile --concurrency 1,4,8 --iterations 30`. Do not run comparison workloads concurrently with one another or with Rust test builds. The current cart-market optimization combines three provenance reads into one statement inside the existing transaction, preserving market/revision/currency checks and explicit missing-setting errors. It adds no application cache or pool-size increase.
+Example: `python3 commerce-ops/scripts/release/commerce-reliability.py --sql-profile --concurrency 1,4,8 --iterations 30`. Do not run comparison workloads concurrently with one another or with Rust test builds. The current cart-market optimization combines three provenance reads into one statement inside the existing transaction, preserving market/revision/currency checks and explicit missing-setting errors. It adds no application cache or pool-size increase.
 
 ### Step 5 development comparison
 
@@ -138,8 +138,8 @@ The eight-shopper stage made 1,920 market-context calls: 5,760 statements before
 Step 6 packages exact native binaries once, then verifies those copies without rebuilding. Run:
 
 ```sh
-python3 commerce-ops/scripts/commerce-release.py package --output .local/commerce-release/candidate --profile release
-python3 commerce-ops/scripts/commerce-release.py verify --candidate .local/commerce-release/candidate
+python3 commerce-ops/scripts/release/commerce-release.py package --output .local/commerce-release/candidate --profile release
+python3 commerce-ops/scripts/release/commerce-release.py verify --candidate .local/commerce-release/candidate
 ```
 
 The output directory must be new. Packaging runs the Rust architecture gate, builds with Rust 1.94.0 and `--locked`, and records the Git revision, source-file digest (including uncommitted Rust changes), migration hashes, host platform, profile and SHA-256 of the gateway, analytics worker, engagement worker, admin seeder and report refresh executable. Read-only executable copies prevent later Cargo builds from replacing the tested binaries. These are local integrity records, not signatures or Docker image digests. Do not use a Git revision alone to identify a dirty-worktree build.
@@ -156,8 +156,8 @@ This gate covers native commerce, analytics and engagement processes with dispos
 The image gate uses the existing `commerce-api/rocento-api/Dockerfile`, including its release build, all eight packaged executables and non-root runtime user. It freezes the backend context before building so unrelated workspace edits during compilation cannot change the image inputs. Context-file hashes include the Dockerfile and lockfile; no target directory or environment files are copied.
 
 ```sh
-python3 commerce-ops/scripts/commerce-release.py build-image --output .local/commerce-release/image-candidate
-python3 commerce-ops/scripts/commerce-release.py verify-image --candidate .local/commerce-release/image-candidate
+python3 commerce-ops/scripts/release/commerce-release.py build-image --output .local/commerce-release/image-candidate
+python3 commerce-ops/scripts/release/commerce-release.py verify-image --candidate .local/commerce-release/image-candidate
 ```
 
 The build records `release-image.json` with the immutable local image ID, available registry digests, architecture, source fingerprint, Git revision and executable hashes. A locally built image normally has no registry digest until published: its `sha256:` image ID is a local content identity, not a registry manifest digest. The gate runs by that ID with `pull_policy: never`, so moving a tag cannot replace the candidate. It checks source labels, non-root user and executable hashes before and after verification.

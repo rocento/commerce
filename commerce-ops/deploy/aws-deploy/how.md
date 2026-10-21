@@ -213,7 +213,7 @@ bash commerce-ops/deploy/aws-deploy/deploy.sh
 The launcher now includes the gateway's recent log when Compose startup fails.
 The repair was checked on disposable PostgreSQL for both an upgrade with an
 existing reservation and a fresh installation through all 55 current migrations.
-Reproduce that check with `python3 commerce-ops/scripts/check-capacity-migration-upgrade.py`;
+Reproduce that check with `python3 commerce-ops/scripts/checks/check-capacity-migration-upgrade.py`;
 `python3 -m unittest commerce-ops/scripts.tests.test_capacity_migration_history` protects the
 original migration checksum. These local checks do not establish EC2 recovery;
 a successful deployment and its readiness checks establish that separately.
@@ -245,7 +245,7 @@ Before building or replacing any application containers, `ec2-up.sh` now
 rejects duplicate migration versions and compares all applied migration
 checksums for all three existing stores. Missing, changed or unsuccessful
 applied migrations stop deployment. A new PostgreSQL installation without
-migration history is handled separately. `commerce-ops/scripts/check-migration-history.py`
+migration history is handled separately. `commerce-ops/scripts/checks/check-migration-history.py`
 also runs standalone for local inventory checks or a saved read-only history.
 
 Use the normal `bash commerce-ops/deploy/aws-deploy/deploy.sh` command from this updated checkout.

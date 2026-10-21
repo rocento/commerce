@@ -58,10 +58,10 @@ From the repository root, with Rust 1.94 and a disposable PostgreSQL database wh
 cargo +1.94.0 test --manifest-path commerce-api/rocento-api/Cargo.toml --locked -p domain-mobile --lib
 DATABASE_URL=postgres://USER:PASSWORD@127.0.0.1:PORT/TEST_DB cargo +1.94.0 test --manifest-path commerce-api/rocento-api/Cargo.toml --locked -p api-gateway --test commerce-mobile-apps -- --test-threads=1
 cargo +1.94.0 clippy --manifest-path commerce-api/rocento-api/Cargo.toml --locked -p domain-mobile --all-targets -- -D warnings
-python3 commerce-ops/scripts/generate_openapi.py
+python3 commerce-ops/scripts/contracts/generate_openapi.py
 python3 -m unittest commerce-ops/scripts.tests.test_mobile_contract commerce-ops/scripts.tests.test_openapi_contract
-python3 commerce-ops/scripts/check-migration-history.py
-python3 commerce-ops/scripts/check-documentation.py
+python3 commerce-ops/scripts/checks/check-migration-history.py
+python3 commerce-ops/scripts/checks/check-documentation.py
 ```
 
 Install the existing [OpenAPI test dependencies](../../commerce-ops/scripts/tests/requirements-openapi.txt) in a virtual environment before Python checks. Generate frontend API types with the command in [API contracts](api.md). CI runs mobile domain/integration tests through the Rust workspace and the Python fixture suite through the frontend contract job. Local checks establish contract and database behavior only; CI and real-device review remain required before production.

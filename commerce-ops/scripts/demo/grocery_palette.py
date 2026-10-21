@@ -36,7 +36,7 @@ def sync(client, apply=False):
     # Existing demo QA may add products/categories. Require the complete Grocery
     # fingerprint, but do not mistake those additions for a different installation.
     skus = {p['sku'] for p in products}
-    # commerce-ops/scripts/seed-catalog.py created the original local Grocery demo with these
+    # commerce-ops/scripts/demo/seed-catalog.py created the original local Grocery demo with these
     # stable identifiers, before the newer 50-product preset was introduced.
     legacy = {'DEMO-APL-001', 'DEMO-BAN-001', 'DEMO-BRD-001'}
     grocery = {p['sku'] for p in preset['products']}.issubset(skus) or legacy.issubset(skus)

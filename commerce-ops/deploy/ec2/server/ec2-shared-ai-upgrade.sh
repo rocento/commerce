@@ -7,7 +7,7 @@ SERVICE=${1:-all}
 DATABASE=rocento-ai-shared-ai-postgres-1
 [[ -s "$ROOT/deploy/ec2/shared-ai/language-owner.env" ]] || { echo 'Shared AI operator credentials missing' >&2; exit 1; }
 if [[ $SERVICE != language ]]; then
-  python3 "$ROOT/commerce-ops/scripts/conversations-setup.py" --container "$DATABASE"
+  python3 "$ROOT/commerce-ops/scripts/local/conversations-setup.py" --container "$DATABASE"
 fi
 if [[ $SERVICE != ai ]]; then
   docker run --rm --network rocento-grocery_assistant-private \

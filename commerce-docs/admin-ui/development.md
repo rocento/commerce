@@ -45,7 +45,7 @@ The explicit bestseller seed creates an uncollected COD obligation alongside eac
 
 ## Feature-specific checks
 
-For component changes, run matching Vitest files, admin typecheck and focused browser checks when interaction/layout changes. Exercise read/write role separation, stale revisions, direct URLs, loading/error/empty states, keyboard navigation and narrow viewports. Shared API or contract changes also need client tests and the corresponding backend suites. Documentation-only changes use `python3 commerce-ops/scripts/check-documentation.py` from the repository root.
+For component changes, run matching Vitest files, admin typecheck and focused browser checks when interaction/layout changes. Exercise read/write role separation, stale revisions, direct URLs, loading/error/empty states, keyboard navigation and narrow viewports. Shared API or contract changes also need client tests and the corresponding backend suites. Documentation-only changes use `python3 commerce-ops/scripts/checks/check-documentation.py` from the repository root.
 
 Email template checks use `pnpm exec playwright test --config playwright.email-templates.config.ts` (synthetic API fixtures on an isolated dev server), plus the `email-template-model.test.ts` and `email-templates.test.ts` Vitest files. The matching database-backed gateway suites are `cargo test --locked -p api-gateway --test email_templates --test notifications -- --test-threads=2` against an isolated PostgreSQL database. The delivery suite captures local HTTP inbox requests; it does not send to an external mail provider.
 

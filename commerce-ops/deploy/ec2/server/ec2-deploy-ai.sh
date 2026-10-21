@@ -80,13 +80,9 @@ if [[ -n $SOURCE ]]; then
       "$SOURCE/commerce-assistant-platform/app/" "$ROOT/commerce-assistant-platform/app/"
     rsync -a --delete "$SOURCE/commerce-assistant-platform/knowledge/" "$ROOT/commerce-assistant-platform/knowledge/"
     rsync -a "$SOURCE/commerce-assistant-platform/migrations/" "$ROOT/commerce-assistant-platform/migrations/"
-    install -m 644 "$SOURCE/commerce-ops/scripts/conversations-setup.py" "$ROOT/commerce-ops/scripts/conversations-setup.py"
     install -D -m 644 "$SOURCE/commerce-ops/scripts/local/conversations-setup.py" "$ROOT/commerce-ops/scripts/local/conversations-setup.py"
     install -D -m 644 "$SOURCE/commerce-ops/scripts/release/agentic-preflight.py" "$ROOT/commerce-ops/scripts/release/agentic-preflight.py"
     for file in Dockerfile .dockerignore requirements.lock; do install -m 644 "$SOURCE/commerce-assistant-platform/$file" "$ROOT/commerce-assistant-platform/$file"; done
-    for file in agentic-preflight.py generate_openapi.py generate_assistant_models.py generate_assistant_validator.py; do
-      install -m 644 "$SOURCE/commerce-ops/scripts/$file" "$ROOT/commerce-ops/scripts/$file"
-    done
     for file in generate_openapi.py generate_assistant_models.py generate_assistant_validator.py; do
       install -D -m 644 "$SOURCE/commerce-ops/scripts/contracts/$file" "$ROOT/commerce-ops/scripts/contracts/$file"
     done
@@ -118,10 +114,10 @@ deploy_store() {
   if [[ $SERVICE != language ]]; then
     STAGE="$store-assistant-migrations"
     if [[ ! -f "$ROOT/deploy/ec2/$store-shared-ai.env" ]]; then
-      python3 "$ROOT/commerce-ops/scripts/conversations-setup.py" --container "$(compose "$store" ps -q ai-postgres)"
+      python3 "$ROOT/commerce-ops/scripts/local/conversations-setup.py" --container "$(compose "$store" ps -q ai-postgres)"
     fi
     STAGE="$store-preflight"
-    compose "$store" run --rm --no-deps --entrypoint python -v "$ROOT:/release:ro" ai-service /release/commerce-ops/scripts/agentic-preflight.py --installed-app /app/app
+    compose "$store" run --rm --no-deps --entrypoint python -v "$ROOT:/release:ro" ai-service /release/commerce-ops/scripts/release/agentic-preflight.py --installed-app /app/app
     compose "$store" run --rm --no-deps --entrypoint python ai-service -c 'from app.main import app'
   fi
   if [[ $SERVICE != ai ]]; then

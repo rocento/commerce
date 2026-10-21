@@ -77,7 +77,7 @@ def main():
     )
     checks = [
         ("python", service, [str(PYTHON), "-m", "pytest", *tests, "-q"]),
-        ("architecture", ROOT, [str(PYTHON), "commerce-ops/scripts/check-ai-architecture.py"]),
+        ("architecture", ROOT, [str(PYTHON), "commerce-ops/scripts/checks/check-ai-architecture.py"]),
         (
             "release-tests",
             ROOT,
@@ -96,7 +96,7 @@ def main():
             ROOT,
             [
                 str(PYTHON),
-                "commerce-ops/scripts/semantic-recovery-eval.py",
+                "commerce-ops/scripts/evaluation/semantic-recovery-eval.py",
                 "--output",
                 str(args.output.resolve() / "holdout.json"),
             ],
@@ -106,7 +106,7 @@ def main():
             ROOT,
             [
                 str(PYTHON),
-                "commerce-ops/scripts/english-plan-baseline.py",
+                "commerce-ops/scripts/evaluation/english-plan-baseline.py",
                 "--output",
                 str(args.output.resolve() / "baseline.json"),
                 "--compare",

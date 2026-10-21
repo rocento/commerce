@@ -5,7 +5,7 @@
 | [`commerce-api/README.md`](../../../commerce-api/README.md) | Platform quickstart and overview |
 | [`commerce-ops/README.md`](../../../commerce-ops/README.md) | Task routing for local work, onboarding development, platform deployment and operations |
 | [Agent routing guide](../../../commerce-api/rocento-api/AGENTS.md) | Task ownership, scoped instructions and verification entry points |
-| `commerce-api/` | Independent Rust packages: the production commerce API and onboarding API, each with its own manifest and lockfile |
+| `commerce-api/` | Main and onboarding Rust packages with separate manifests and locks, plus the Python health dashboard API and sampler |
 | `commerce-web/` | Storefront, merchant admin, Mobile App Studio, rengine and shared packages |
 | `commerce-corporate-site/` | Standalone marketing and API documentation website |
 | `commerce-mobile-apps/` | Native app source, optional Studio adapters, platform standards and build tools |

@@ -135,7 +135,7 @@ importers:
         specifier: ~5.9.3
         version: 5.9.3
 
-  apps/onboarding-staff:
+  apps/onboarding-ops:
     dependencies:
       next:
         specifier: ^16.0.0

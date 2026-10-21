@@ -31,7 +31,7 @@ These are capability and report-version statements, not a claim that production 
 4. Export the report through the audited action. From the repository root validate the redacted file:
 
    ```sh
-   node commerce-ops/scripts/check-trace-rollout.mjs /absolute/path/to/redacted-export.json
+   node commerce-ops/scripts/checks/check-trace-rollout.mjs /absolute/path/to/redacted-export.json
    ```
 
    The checker requires complete v2 terminal evidence and gateway→Python plus language/catalog remote-handler links with valid independent clocks. A request that skipped one of those boundaries does not satisfy this canary. It prints counts/errors rather than report payloads.

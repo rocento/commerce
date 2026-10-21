@@ -17,6 +17,6 @@ All native changes must follow [AGENTS.md](AGENTS.md), the applicable [iOS](ios/
 From the repository root, verify documentation changes with:
 
 ```sh
-python3 commerce-ops/scripts/check-documentation.py
+python3 commerce-ops/scripts/checks/check-documentation.py
 python3 commerce-mobile-apps/tools/check_boundaries.py
 ```

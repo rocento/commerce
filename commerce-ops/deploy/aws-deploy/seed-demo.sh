@@ -15,10 +15,8 @@ DELIVERY_AREAS="$ROOT/commerce-demo/egypt-delivery-areas.json"
 SEED_FILES=(
   commerce-ops/deploy/ec2/server/ec2-seed-demo.sh
   commerce-ops/deploy/ec2/server/repository-root.sh
-  commerce-ops/scripts/seed-demo-storefront.py commerce-ops/scripts/demo_presets.py
   commerce-ops/scripts/demo/seed-demo-storefront.py commerce-ops/scripts/demo/demo_presets.py
   commerce-ops/scripts/demo/sync-grocery-palette.py commerce-ops/scripts/demo/grocery_palette.py
-  commerce-ops/scripts/sync-grocery-palette.py commerce-ops/scripts/grocery_palette.py
   commerce-assets/demo/demo_seed.py commerce-assets/demo/seed-category-images.py commerce-assets/demo/seed-delivery-areas.py
 )
 UPLOAD=
@@ -75,7 +73,7 @@ for store in "${STORES[@]}"; do
   fi
   if (( ! DELIVERY_ONLY )); then
     command -v python3 >/dev/null || fail 'Python 3 is required to validate demo seed assets.'
-    python3 "$ROOT/commerce-ops/scripts/seed-demo-storefront.py" "$store" >/dev/null
+    python3 "$ROOT/commerce-ops/scripts/demo/seed-demo-storefront.py" "$store" >/dev/null
   fi
 done
 if (( ! DELIVERY_ONLY )) && [[ $STORE == all || $STORE == jewelry ]]; then

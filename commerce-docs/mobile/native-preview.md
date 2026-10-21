@@ -45,7 +45,7 @@ The recorded 2026-10-14 deployment enables Kotlin and React Native Android at ap
 
 Use a disposable Postgres database named `commerce_native_preview`, bound to localhost. Run `cargo run -p api-gateway --example native_preview_fixture --offline` from `commerce-api/rocento-api`, with `DATABASE_URL` and `PREVIEW_FIXTURE_STATE` pointing to a private temporary JSON file. This fixture refuses non-loopback or differently named databases; it seeds synthetic data only. Its state file contains a temporary test admin cookie: do not publish it.
 
-Run the mobile-admin Vite server with `API_PROXY_TARGET=http://127.0.0.1:18094`. Run `commerce-ops/scripts/native-preview-local-proxy.py --cert <local-test-cert> --key <local-test-key> --offline-marker <temporary-marker-path>` to expose only the native preview routes over loopback HTTPS on port 18443. The certificate must cover localhost and be trusted by the selected simulator. Keep its private key outside the repository.
+Run the mobile-admin Vite server with `API_PROXY_TARGET=http://127.0.0.1:18094`. Run `commerce-ops/scripts/local/native-preview-local-proxy.py --cert <local-test-cert> --key <local-test-key> --offline-marker <temporary-marker-path>` to expose only the native preview routes over loopback HTTPS on port 18443. The certificate must cover localhost and be trusted by the selected simulator. Keep its private key outside the repository.
 
 Build and install using the existing signing gate:
 

@@ -56,7 +56,7 @@ From the repository root on the workstation, set `RENGINE_SSH_KEY`, `RENGINE_SSH
 
 ```sh
 ssh -i "$RENGINE_SSH_KEY" -o BatchMode=yes "$RENGINE_SSH_USER@$RENGINE_SSH_HOST" \
-  'sudo python3 - --journey' < commerce-ops/scripts/check-rengine.py
+  'sudo python3 - --journey' < commerce-ops/scripts/checks/check-rengine.py
 ```
 
 The script reads protected administrator credentials on the server, never prints them, and signs out afterward. It checks each demo’s readiness, a language request, an explicitly scored one-case benchmark, trace-list access and a guest assistant request. The guest request can incur normal provider usage. It performs no authenticated shopper or order mutation.

@@ -4,7 +4,7 @@ Inspected 21 October 2026. This workspace initially contained only the 16 archit
 
 Read-only inspection found the existing project at `/Users/momar/Documents/commerce-ai`. The user confirmed https://github.com/rocento/rocento (private, default branch `main`); its demo source was read through authenticated GitHub API and matches the local catalog. The adjacent checkout has no `origin` remote and contains unrelated edits, so it is treated only as a read-only discovery source, not as an approved release. Its `frontend/apps/website/lib/site.ts` lists pharmacy, jewelry, grocery and electronics; `demo-presets/<category>/theme.json` contains their configuration. Website preview artwork is in the onboarding app's public assets. Its `.env.example` leaves demo destinations empty: URLs and approved digests remain unverified and are not invented here. The main commerce gateway is the Rust workspace in `commerce-api/rocento-api`; the onboarding control-plane API is a separate Rust package in this module and does not replace or share the commerce gateway.
 
-The customer onboarding Next.js app and local staff lock screen live at `../../../commerce-web/apps/onboarding` and `../../../commerce-web/apps/onboarding-staff`, inside the existing pnpm frontend workspace. This module contains the control-plane API and database.
+The customer onboarding Next.js app and local staff lock screen live at `../../../commerce-web/apps/onboarding` and `../../../commerce-web/apps/onboarding-ops`, inside the existing pnpm frontend workspace. This module contains the control-plane API and database.
 
 ## Components and trust boundaries
 
@@ -24,7 +24,7 @@ The local customer account, email-link verification/reset, server-synced draft, 
 
 ## Delivered foundation
 
-- Next.js customer wizard in `../../../commerce-web/apps/onboarding` and staff lock screen in `../../../commerce-web/apps/onboarding-staff`. Anonymous drafts stay in the browser; signed-in customer drafts sync to the account.
+- Next.js customer wizard in `../../../commerce-web/apps/onboarding` and staff lock screen in `../../../commerce-web/apps/onboarding-ops`. Anonymous drafts stay in the browser; signed-in customer drafts sync to the account.
 - Customer account registration, login, email verification, password reset, rate-limited single-use challenges, encrypted local mail delivery queue, hashed opaque sessions, and host-only HttpOnly cookie proxy. This is a local account implementation, not a production identity-provider integration.
 - Customer draft now synchronizes with an authenticated account using optimistic version numbers. A verified customer can atomically reserve both branded hostnames for 24 hours; checkout and provisioning remain disabled.
 - Expired reservations now reconcile every 10 seconds and on draft/slug reads. Only tenants still in `SLUG_RESERVED` are released; the tenant and domains remain as history, the draft can reserve again with a new version, and an audit/outbox event records release. Partial unique indexes keep active names exclusive while allowing expired names to be reused.

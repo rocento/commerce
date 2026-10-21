@@ -102,7 +102,7 @@ def test_shared_wire_fixture(fixture):
 
 def test_schema_generation_is_current():
     subprocess.run(
-        [sys.executable, str(ROOT / "commerce-ops/scripts/generate_core_contracts.py"), "--check"],
+        [sys.executable, str(ROOT / "commerce-ops/scripts/contracts/generate_core_contracts.py"), "--check"],
         check=True,
         capture_output=True,
     )

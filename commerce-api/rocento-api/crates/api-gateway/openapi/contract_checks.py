@@ -63,7 +63,7 @@ def router_operations(source):
     import importlib.util
     from pathlib import Path
     root = Path(__file__).resolve().parents[4]
-    spec = importlib.util.spec_from_file_location('api_documentation_scanner', root / 'commerce-ops/scripts/check_api_documentation.py')
+    spec = importlib.util.spec_from_file_location('api_documentation_scanner', root / 'commerce-ops/scripts/checks/check_api_documentation.py')
     scanner = importlib.util.module_from_spec(spec)
     spec.loader.exec_module(scanner)
     operations = set()

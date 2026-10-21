@@ -6,7 +6,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[3]
 spec = importlib.util.spec_from_file_location(
-    "seed", ROOT / "commerce-ops/scripts/seed-grocery-recommendation-attributes.py"
+    "seed", ROOT / "commerce-ops/scripts/demo/seed-grocery-recommendation-attributes.py"
 )
 seed = importlib.util.module_from_spec(spec)
 spec.loader.exec_module(seed)

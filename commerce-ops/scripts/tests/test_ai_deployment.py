@@ -53,7 +53,7 @@ if name=='ssh' and 'sudo bash' in sys.argv[-1] and os.environ['REMOTE_FAILURE']=
         self.assertIn('commerce-assistant-platform/app/', uploads[0])
         self.assertIn('commerce-assistant-platform/knowledge/', uploads[0])
         self.assertIn('commerce-assistant-platform/migrations/', uploads[0])
-        self.assertIn('commerce-ops/scripts/conversations-setup.py', uploads[0])
+        self.assertIn('commerce-ops/scripts/local/conversations-setup.py', uploads[0])
         self.assertIn('commerce-ops/compose/compose.assistant-admin.yaml', uploads[0])
         self.assertIn('commerce-ops/compose/compose.assistant-provider.yaml', uploads[0])
         for name in ('ec2-deploy-ai.sh', 'ec2-compose.sh', 'ec2-shared-ai-upgrade.sh'):

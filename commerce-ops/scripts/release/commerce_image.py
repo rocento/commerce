@@ -47,7 +47,7 @@ def build_image(output):
     source_hash = hashlib.sha256(json.dumps(files, sort_keys=True).encode()).hexdigest()
     baseline.write_json(output / 'image-source-manifest.json', {'sha256': source_hash, 'files': files})
     revision = baseline.command(['git', 'rev-parse', 'HEAD']).decode().strip()
-    subprocess.run(['python3', str(baseline.ROOT / 'commerce-ops/scripts/check-rust-architecture.py'),
+    subprocess.run(['python3', str(baseline.ROOT / 'commerce-ops/scripts/checks/check-rust-architecture.py'),
                     '--manifest-path', str(context / 'Cargo.toml'), '--policy', str(context / 'architecture-policy.json')], check=True)
     with (output / 'image-build.log').open('wb') as log:
         subprocess.run(['docker', 'build', '--pull', '--progress=plain', '--iidfile', str(output / 'image-id'),

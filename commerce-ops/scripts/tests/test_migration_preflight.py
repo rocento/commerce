@@ -7,7 +7,7 @@ import tempfile
 import unittest
 
 ROOT = Path(__file__).resolve().parents[3]
-spec = importlib.util.spec_from_file_location('migration_check', ROOT / 'commerce-ops/scripts/check-migration-history.py')
+spec = importlib.util.spec_from_file_location('migration_check', ROOT / 'commerce-ops/scripts/checks/check-migration-history.py')
 checker = importlib.util.module_from_spec(spec)
 spec.loader.exec_module(checker)
 

@@ -7,7 +7,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[3]
 spec = importlib.util.spec_from_file_location(
-    "jewelry_seed", ROOT / "commerce-ops/scripts/expand-jewelry-catalog.py"
+    "jewelry_seed", ROOT / "commerce-ops/scripts/demo/expand-jewelry-catalog.py"
 )
 seed = importlib.util.module_from_spec(spec)
 spec.loader.exec_module(seed)

@@ -19,7 +19,7 @@ The browser-local preview and customer/staff interfaces are documented in the
 
 - API, schema, and migration binary: `commerce-api/onboard-api/`
 - Customer onboarding interface: `commerce-web/apps/onboarding/`
-- Staff interface: `commerce-web/apps/onboarding-staff/`
+- Staff interface: `commerce-web/apps/onboarding-ops/`
 - Local dependencies only: `commerce-ops/onboarding/`
 
 Payment, DNS changes, approved theme releases, staff operations, and store

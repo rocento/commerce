@@ -13,7 +13,7 @@ Each demo authenticates as `ai_runtime_<store>` for assistant state and `languag
 
 `ai_runtime` and `ai_language_runtime` are non-login privilege roles. Language consumers read dictionary tables and can manage only their tenant's pending sessions. They cannot migrate schemas or activate releases. The shared startup path checks every packaged migration checksum and the exact active artifact before accepting traffic; an outdated image fails instead of downgrading the dictionary.
 
-The assistant's legacy singleton `deployment` row is retained for compatibility with existing migration/readiness checks. Authorization in shared mode uses `assistant.tenant_logins` and `assistant.login_tenant()`, not that singleton row. Always run assistant upgrades through `commerce-ops/scripts/conversations-setup.py`, which reapplies shared policies in the same transaction when the login registry exists.
+The assistant's legacy singleton `deployment` row is retained for compatibility with existing migration/readiness checks. Authorization in shared mode uses `assistant.tenant_logins` and `assistant.login_tenant()`, not that singleton row. Always run assistant upgrades through `commerce-ops/scripts/local/conversations-setup.py`, which reapplies shared policies in the same transaction when the login registry exists.
 
 Knowledge publishing uses a separate per-tenant `ai_knowledge_writer_<store>` identity. Provision its login, password and registry mapping explicitly for an authorized operator; runtime accounts retain read-only knowledge access.
 
@@ -33,7 +33,7 @@ docker exec rocento-ai-shared-ai-postgres-1 psql -U ai_owner -d assistant \
 
 ## Migration and recovery
 
-The operator-only `commerce-ops/scripts/unify-ai-databases.py` has three explicit stages and holds the existing deployment lock:
+The operator-only `commerce-ops/scripts/maintenance/unify-ai-databases.py` has three explicit stages and holds the existing deployment lock:
 
 1. `prepare`: preserve all eight source databases in restricted server-side backups; restore into the new shared server; compare every assistant row to restored backups; verify the active language artifact and tenant isolation. Consumers keep using the original databases.
 2. `cutover`: stop assistant ingress, drain/stop both engines, repeat the backup and verified copy, enable consumer routing, start the engines and verify readiness. Ingress resumes only after successful checks. Before this commit point, failure restores routing to the original databases. After traffic resumes, rollback requires preserving/reconciling new shared writes; never replace the shared database with an older snapshot.

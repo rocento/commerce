@@ -8,7 +8,7 @@ from unittest.mock import patch
 
 ROOT = Path(__file__).resolve().parents[3]
 spec = importlib.util.spec_from_file_location(
-    "preflight", ROOT / "commerce-ops/scripts/agentic-preflight.py"
+    "preflight", ROOT / "commerce-ops/scripts/release/agentic-preflight.py"
 )
 preflight = importlib.util.module_from_spec(spec)
 spec.loader.exec_module(preflight)

@@ -23,7 +23,7 @@ python3 commerce-ops/scripts/checks/smoke.py
 | Meilisearch | http://localhost:7700 |
 | MinIO / console | http://localhost:9000 / http://localhost:9001 |
 
-For a new database, `python3 commerce-ops/scripts/bootstrap-admin.py` creates the first administrator and saves local credentials in `.local/admin-credentials.txt`. Use the existing credentials on an initialized installation. Storefront customers register separately through `/register`.
+For a new database, `python3 commerce-ops/scripts/local/bootstrap-admin.py` creates the first administrator and saves local credentials in `.local/admin-credentials.txt`. Use the existing credentials on an initialized installation. Storefront customers register separately through `/register`.
 
 The gateway's `/health` checks liveness; `/ready` checks PostgreSQL/schema readiness and returns 503 in database-free mode. Compose waits on `/ready`. Search, media, analytics and assistant availability need their own checks.
 
@@ -67,7 +67,7 @@ docker compose -p commerce-jewelry -f commerce-ops/compose/compose.yaml -f comme
 
 Ports bind to loopback. Use separate browser profiles for demo admin sessions, or `localhost` for Grocery and `127.0.0.1` for one other demo: cookies are shared across ports on a hostname. These overlays alone do not configure a separate assistant installation.
 
-Normal startup does not require reseeding. Inspect the preset without writes using `python3 commerce-ops/scripts/seed-demo-storefront.py jewelry`. See [assets and demos](../../frontend/assets-and-demos.md) for initialization, explicit `--apply --publish` seeding, inventory and delivery prerequisites. Always use the intended demo's API and administrator credentials.
+Normal startup does not require reseeding. Inspect the preset without writes using `python3 commerce-ops/scripts/demo/seed-demo-storefront.py jewelry`. See [assets and demos](../../frontend/assets-and-demos.md) for initialization, explicit `--apply --publish` seeding, inventory and delivery prerequisites. Always use the intended demo's API and administrator credentials.
 
 ## Native development and website
 
@@ -88,6 +88,6 @@ Run only one server per port. See [website configuration](../../frontend/website
 
 ## Status and shutdown
 
-Use `bash commerce-ops/scripts/local-compose.sh --assistant ps`, `logs --tail 100`, or `stop` for the full stack. Include `--profile diagnostics` to expose the optional AI health proxy on port 8000. `stop` preserves containers and data; `down` removes containers/networks but preserves named volumes. Adding `-v` deletes stored data.
+Use `bash commerce-ops/scripts/local/local-compose.sh --assistant ps`, `logs --tail 100`, or `stop` for the full stack. Include `--profile diagnostics` to expose the optional AI health proxy on port 8000. `stop` preserves containers and data; `down` removes containers/networks but preserves named volumes. Adding `-v` deletes stored data.
 
 If a page fails to open, inspect the matching project's service status and logs. Rebuild after source changes. Avoid binding native Vite and Compose frontends to the same ports. Assistant readiness failures require checking both language release readiness and Python configuration.

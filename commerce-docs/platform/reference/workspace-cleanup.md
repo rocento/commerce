@@ -31,7 +31,7 @@ When moving a guide, update repository incoming links and preserve useful old he
 From the repository root:
 
 ```sh
-python3 commerce-ops/scripts/check-documentation.py
+python3 commerce-ops/scripts/checks/check-documentation.py
 python3 -m unittest discover -s commerce-ops/scripts/tests -p test_documentation.py
 python3 -m unittest discover -s commerce-ops/scripts/tests -p test_output_inventory.py
 ```
@@ -41,13 +41,13 @@ The checker validates maintained documentation links, Markdown heading anchors, 
 Maintained Markdown must not link directly into `commerce-output`, `commerce-artifacts` or `.local/`, even when those targets exist on one workstation. Link to the [evidence catalog](../evidence/README.md) and retain the exact historical payload path as inline code. The catalog contains metadata, not credentials or raw customer data. Default checks validate catalog structure without requiring local payloads. On the workstation holding the evidence, also run:
 
 ```sh
-python3 commerce-ops/scripts/check-documentation.py --check-local-evidence
+python3 commerce-ops/scripts/checks/check-documentation.py --check-local-evidence
 ```
 
 ## File cleanup
 
 - Remove a superseded guide after moving useful content to its current owner and updating incoming links.
-- Run `python3 commerce-ops/scripts/check-documentation.py`; CI checks maintained Markdown and the checker's regression tests.
+- Run `python3 commerce-ops/scripts/checks/check-documentation.py`; CI checks maintained Markdown and the checker's regression tests.
 - Before removing code, check imports, dynamic loading, command entry points, generated contracts, fixtures and operational callers. A `legacy` name alone does not establish dead code.
 - Preserve applied database migrations and compatibility needed by existing records or installations.
 - Keep credentials, database state and unique evidence in their protected locations. `.local`, `commerce-artifacts` and `commerce-output` are not disposable solely because of their names.
@@ -65,7 +65,7 @@ The run owner records purpose, exact source/candidate identity (including a patc
 Inventory metadata without reading file contents or changing outputs, from the repository root:
 
 ```sh
-python3 commerce-ops/scripts/inventory-outputs.py > /tmp/commerce-output-inventory.json
+python3 commerce-ops/scripts/maintenance/inventory-outputs.py > /tmp/commerce-output-inventory.json
 ```
 
 The inventory reports logical file bytes, skipped symlinks, top-level metadata candidates and nested output directories. It is a snapshot; active jobs can change during scanning. It does not detect every semantic dependency or choose deletion candidates. Inspect source and run references before changing a path. Snapshot builders should use reviewed source allowlists and exclude nested outputs unless deliberately declared as inputs.

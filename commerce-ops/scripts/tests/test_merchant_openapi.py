@@ -6,7 +6,7 @@ from pathlib import Path
 import unittest
 
 ROOT = Path(__file__).resolve().parents[3]
-SPEC = importlib.util.spec_from_file_location("merchant_openapi", ROOT / "commerce-ops/scripts/generate_merchant_openapi.py")
+SPEC = importlib.util.spec_from_file_location("merchant_openapi", ROOT / "commerce-ops/scripts/contracts/generate_merchant_openapi.py")
 MERCHANT = importlib.util.module_from_spec(SPEC)
 SPEC.loader.exec_module(MERCHANT)
 

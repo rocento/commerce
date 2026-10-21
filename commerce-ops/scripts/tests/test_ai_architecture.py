@@ -5,7 +5,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[3]
 spec = importlib.util.spec_from_file_location(
-    "architecture", ROOT / "commerce-ops/scripts/check-ai-architecture.py"
+    "architecture", ROOT / "commerce-ops/scripts/checks/check-ai-architecture.py"
 )
 architecture = importlib.util.module_from_spec(spec)
 spec.loader.exec_module(architecture)

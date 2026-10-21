@@ -252,7 +252,7 @@ class PresetTests(unittest.TestCase):
                 self.assertEqual(len(api.writes), writes)
 
     def test_complete_seed_reuses_one_login_for_all_steps_and_logs_out_on_failure(self):
-        spec = importlib.util.spec_from_file_location('complete_seed_cli', ROOT / 'commerce-ops/scripts/seed-demo-storefront.py')
+        spec = importlib.util.spec_from_file_location('complete_seed_cli', ROOT / 'commerce-ops/scripts/demo/seed-demo-storefront.py')
         cli = importlib.util.module_from_spec(spec)
         spec.loader.exec_module(cli)
         for store, fail_delivery in (('grocery', False), ('jewelry', False), ('grocery', True)):
@@ -288,7 +288,7 @@ class PresetTests(unittest.TestCase):
                 self.assertEqual(auth, ['/v1/admin/auth/login', '/v1/admin/auth/logout'])
 
     def test_complete_seed_does_not_retry_rate_limited_login(self):
-        spec = importlib.util.spec_from_file_location('limited_seed_cli', ROOT / 'commerce-ops/scripts/seed-demo-storefront.py')
+        spec = importlib.util.spec_from_file_location('limited_seed_cli', ROOT / 'commerce-ops/scripts/demo/seed-demo-storefront.py')
         cli = importlib.util.module_from_spec(spec)
         spec.loader.exec_module(cli)
         client = Mock()
@@ -509,7 +509,7 @@ class PresetTests(unittest.TestCase):
         self.assertEqual(api.writes, [])
 
     def test_cli_apply_and_verify_preserve_existing_theme(self):
-        spec = importlib.util.spec_from_file_location('storefront_seed_cli', ROOT / 'commerce-ops/scripts/seed-demo-storefront.py')
+        spec = importlib.util.spec_from_file_location('storefront_seed_cli', ROOT / 'commerce-ops/scripts/demo/seed-demo-storefront.py')
         cli = importlib.util.module_from_spec(spec)
         spec.loader.exec_module(cli)
         api = MemoryAPI()
@@ -534,7 +534,7 @@ class PresetTests(unittest.TestCase):
         self.assertFalse(any('/themes' in path for _, path in api.writes))
 
     def test_palette_cli_skips_targeting_without_palette_writes(self):
-        spec = importlib.util.spec_from_file_location('palette_seed_cli', ROOT / 'commerce-ops/scripts/sync-grocery-palette.py')
+        spec = importlib.util.spec_from_file_location('palette_seed_cli', ROOT / 'commerce-ops/scripts/demo/sync-grocery-palette.py')
         cli = importlib.util.module_from_spec(spec)
         spec.loader.exec_module(cli)
         from unittest.mock import Mock

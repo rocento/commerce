@@ -78,10 +78,10 @@ Use the following checks after changing authoring, contracts or ingress. Dated r
 
 ```sh
 python3 commerce-mobile-apps/tools/generate_contract.py --check
-python3 commerce-ops/scripts/generate_openapi.py
-python3 commerce-ops/scripts/generate_public_openapi.py --check
-python3 commerce-ops/scripts/generate_merchant_openapi.py --check
-python3 commerce-ops/scripts/check_api_documentation.py --check
+python3 commerce-ops/scripts/contracts/generate_openapi.py
+python3 commerce-ops/scripts/contracts/generate_public_openapi.py --check
+python3 commerce-ops/scripts/contracts/generate_merchant_openapi.py --check
+python3 commerce-ops/scripts/checks/check_api_documentation.py --check
 python3 -m unittest commerce-ops/scripts.tests.test_mobile_contract commerce-ops/scripts.tests.test_mobile_studio_ingress commerce-ops/scripts.tests.test_ec2_deployment
 MOBILE_STUDIO_INGRESS_TESTS=1 python3 -m unittest commerce-ops/scripts.tests.test_mobile_studio_ingress
 DATABASE_URL=postgres://USER:PASSWORD@127.0.0.1:PORT/TEST_DB cargo +1.94.0 test --manifest-path commerce-api/rocento-api/Cargo.toml --locked -p api-gateway --test commerce-mobile-apps -- --test-threads=1

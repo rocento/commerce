@@ -150,7 +150,7 @@ bootstrap_and_seed() {
     if [[ $store == grocery && ${DEMO_ADMIN_ENFORCE:-0} == 1 ]]; then
       options+=(--sync-palette)
     fi
-    python3 "$ROOT/commerce-ops/scripts/seed-demo-storefront.py" "$store" "${options[@]}" --api-base "https://$host.$DOMAIN/api"
+    python3 "$ROOT/commerce-ops/scripts/demo/seed-demo-storefront.py" "$store" "${options[@]}" --api-base "https://$host.$DOMAIN/api"
     ok "$store demo refreshed and verified"
     touch "$ROOT/deploy/ec2/$store.seeded"
     unset DEMO_ADMIN_EMAIL DEMO_ADMIN_PASSWORD DEMO_SSL_CA_FILE

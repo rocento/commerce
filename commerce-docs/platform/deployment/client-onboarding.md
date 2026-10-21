@@ -42,7 +42,7 @@ docker compose -p CLIENT exec -T api-gateway install-catalog-data \
 
 The same binary also runs outside Docker using the target client's `DATABASE_URL`. Do not put connection credentials in command-line arguments or onboarding reports. The command exits nonzero on migration errors, conflicting definitions, unknown industries, stale concurrent configuration or an attempted industry switch.
 
-Bootstrap the first administrator using the existing `seed-admin` command in that same client deployment. Prefer `BOOTSTRAP_ADMIN_PASSWORD` from the deployment's secret mechanism. The local `commerce-ops/scripts/bootstrap-admin.py` convenience wrapper targets the default local Compose project; do not use it unchanged for a different client's deployment.
+Bootstrap the first administrator using the existing `seed-admin` command in that same client deployment. Prefer `BOOTSTRAP_ADMIN_PASSWORD` from the deployment's secret mechanism. The local `commerce-ops/scripts/local/bootstrap-admin.py` convenience wrapper targets the default local Compose project; do not use it unchanged for a different client's deployment.
 
 ## Reruns, customization and upgrades
 

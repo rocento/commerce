@@ -10,7 +10,7 @@ pnpm dev:storefront
 
 Start `pnpm dev:admin` in a second terminal. Storefront binds port 5173 and admin port 5174, both with strict port selection and `/health` liveness handlers. They proxy `/api` to `http://localhost:8080`; `API_PROXY_TARGET` and `API_PROXY_ORIGIN` configure that development proxy. The corporate website uses `pnpm dev:website` on 127.0.0.1:5180.
 
-The customer onboarding app and locked staff shell live in `apps/onboarding/` and `apps/onboarding-staff/`. Start them with `pnpm dev:onboarding` (127.0.0.1:3100) and `pnpm dev:onboarding-staff` (127.0.0.1:3101). The separate Rust API and database live in `commerce-api/onboard-api/`; see the [onboarding guide](../onboarding/README.md). Use `pnpm typecheck:onboarding`, `pnpm build:onboarding`, and `pnpm test:onboarding` for targeted checks.
+The customer onboarding app and locked staff shell live in `apps/onboarding/` and `apps/onboarding-ops/`. Start them with `pnpm dev:onboarding` (127.0.0.1:3100) and `pnpm dev:onboarding-ops` (127.0.0.1:3101). The separate Rust API and database live in `commerce-api/onboard-api/`; see the [onboarding guide](../onboarding/README.md). Use `pnpm typecheck:onboarding`, `pnpm build:onboarding`, and `pnpm test:onboarding` for targeted checks.
 
 A running UI does not supply the database, authenticated users, stock or media services. Use [platform local setup](../platform/operations/local-setup.md) for the full stack and [backend setup](../backend/development.md) for its environment.
 
@@ -32,7 +32,7 @@ Browser suites include `test:admin`, `test:admin:regression`, `test:storefront:s
 
 Public renderer checks are local Node scripts under `apps/storefront/server`, including publication, URL policy, metadata, structured data, hardening, health, compression and PWA checks. Run `node` with the corresponding `*-checks.mjs` filename. Browser publication fixtures and deployment gates remain under [publication harnesses](../platform/seo-geo/Tests); their old Markdown guides were replaced by [publication](publication.md).
 
-Check documentation destinations from the repository root with `python3 commerce-ops/scripts/check-documentation.py`. It covers the consolidated service sections and shared `commerce-docs/platform`.
+Check documentation destinations from the repository root with `python3 commerce-ops/scripts/checks/check-documentation.py`. It covers the consolidated service sections and shared `commerce-docs/platform`.
 
 ## Cleanup and maintenance
 
@@ -42,6 +42,6 @@ Browser TypeScript validation covers every `e2e/**/*.ts` suite and every Playwri
 
 Category sections share one `GET /v1/catalog/category-availability` request per delivery context. The backend counts all categories before the frontend ranks them and applies section display limits. Query keys include delivery context and category IDs, responses stay fresh for 30 seconds, and requests use the query cancellation signal. Direct search providers batch up to 100 zero-hit searches per request; delegated search providers preserve their existing search contract with four concurrent requests. See [catalog behavior](../backend/catalog-and-markets.md) for count and stock semantics.
 
-Keep public brand images unless their configured theme URLs and `commerce-ops/scripts/sync-brand-assets.py` are updated together. Before consolidating Playwright configurations, preserve each suite's fixture, authentication, port and backend requirements. Shared typography still has global element selectors; further scoping should be paired with visual checks across admin, storefront and public rendering.
+Keep public brand images unless their configured theme URLs and `commerce-ops/scripts/generation/sync-brand-assets.py` are updated together. Before consolidating Playwright configurations, preserve each suite's fixture, authentication, port and backend requirements. Shared typography still has global element selectors; further scoping should be paired with visual checks across admin, storefront and public rendering.
 
 Keep cleanup validation records tied to the exact candidate and environment. Mocked browser results do not establish live backend or production acceptance.

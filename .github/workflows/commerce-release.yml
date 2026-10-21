@@ -10,8 +10,8 @@ on:
       - 'commerce-ops/scripts/checks/**'
       - 'commerce-ops/scripts/tests/test_commerce*'
       - 'commerce-ops/scripts/tests/test_rust_architecture.py'
-      - 'commerce-ops/scripts/m14_support.py'
-      - 'commerce-ops/scripts/system-qa-http.py'
+      - 'commerce-ops/scripts/release/m14_support.py'
+      - 'commerce-ops/scripts/release/system-qa-http.py'
       - 'commerce-ops/scripts/check*architecture*'
       - '.github/workflows/commerce-release.yml'
 permissions:

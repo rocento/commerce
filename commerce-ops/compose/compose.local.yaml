@@ -11,7 +11,7 @@ services:
   commerce-language-engine:
     restart: unless-stopped
     environment:
-      DATABASE_URL: ${LOCAL_LANGUAGE_DATABASE_URL:?Run commerce-ops/scripts/local-assistant-setup.py first}
+      DATABASE_URL: ${LOCAL_LANGUAGE_DATABASE_URL:?Run commerce-ops/scripts/local/local-assistant-setup.py first}
       CLE_SHARED_DATABASE: "true"
       LANGUAGE_ENGINE_ADMIN_DATABASE: postgres
     depends_on: !override

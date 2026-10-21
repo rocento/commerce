@@ -9,8 +9,8 @@ import tarfile
 import unittest
 
 ROOT = Path(__file__).resolve().parents[3]
-SEED_FILES = ('commerce-ops/deploy/ec2/server/ec2-seed-demo.sh', 'commerce-ops/scripts/seed-demo-storefront.py', 'commerce-ops/scripts/demo_presets.py',
-              'commerce-ops/scripts/sync-grocery-palette.py', 'commerce-ops/scripts/grocery_palette.py',
+SEED_FILES = ('commerce-ops/deploy/ec2/server/ec2-seed-demo.sh', 'commerce-ops/scripts/demo/seed-demo-storefront.py', 'commerce-ops/scripts/demo/demo_presets.py',
+              'commerce-ops/scripts/demo/sync-grocery-palette.py', 'commerce-ops/scripts/demo/grocery_palette.py',
               'commerce-ops/scripts/demo/seed-demo-storefront.py', 'commerce-ops/scripts/demo/demo_presets.py',
               'commerce-ops/scripts/demo/sync-grocery-palette.py', 'commerce-ops/scripts/demo/grocery_palette.py',
               'commerce-assets/demo/demo_seed.py', 'commerce-assets/demo/seed-category-images.py', 'commerce-assets/demo/seed-delivery-areas.py')

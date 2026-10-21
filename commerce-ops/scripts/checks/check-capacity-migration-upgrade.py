@@ -1,6 +1,6 @@
 """Rehearse the deployed capacity schema upgrade in disposable local PostgreSQL.
 
-Run: python3 commerce-ops/scripts/check-capacity-migration-upgrade.py
+Run: python3 commerce-ops/scripts/checks/check-capacity-migration-upgrade.py
 Requires local Docker and the postgres:16-bookworm image. Creates and removes
 only its randomly named test container; never reads store configuration/data.
 """

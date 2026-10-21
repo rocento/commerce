@@ -23,9 +23,9 @@ cleanup() {
   fi
 }
 trap cleanup EXIT
-COPYFILE_DISABLE=1 tar --no-xattrs -czf "$BUNDLE" -C "$ROOT" commerce-ops/scripts/update-grocery-catalog.py commerce-ops/scripts/demo/update-grocery-catalog.py commerce-assets/demo/grocery-expansion-20260929
+COPYFILE_DISABLE=1 tar --no-xattrs -czf "$BUNDLE" -C "$ROOT" commerce-ops/scripts/demo/update-grocery-catalog.py commerce-assets/demo/grocery-expansion-20260929
 REMOTE=$(ssh "${SSH_OPTIONS[@]}" "$HOST" 'mktemp -d /tmp/rocento-grocery.XXXXXX')
 [[ $REMOTE =~ ^/tmp/rocento-grocery\.[a-zA-Z0-9]+$ ]] || { echo 'Unexpected remote temporary directory' >&2; exit 1; }
 scp "${SSH_OPTIONS[@]}" "$BUNDLE" "$HOST:$REMOTE/catalog.tar.gz"
 ssh "${SSH_OPTIONS[@]}" "$HOST" \
-  "tar -xzf '$REMOTE/catalog.tar.gz' -C '$REMOTE' && cd /opt/rocento && sudo python3 '$REMOTE/commerce-ops/scripts/update-grocery-catalog.py' --root /opt/rocento --assets '$REMOTE/commerce-assets/demo/grocery-expansion-20260929' --phase '$PHASE' $MODE"
+  "tar -xzf '$REMOTE/catalog.tar.gz' -C '$REMOTE' && cd /opt/rocento && sudo python3 '$REMOTE/commerce-ops/scripts/demo/update-grocery-catalog.py' --root /opt/rocento --assets '$REMOTE/commerce-assets/demo/grocery-expansion-20260929' --phase '$PHASE' $MODE"

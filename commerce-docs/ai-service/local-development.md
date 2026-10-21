@@ -29,9 +29,9 @@ Node defaults to `127.0.0.1:3000` when no `HOST`/`PORT` override is provided. It
 From the repository root:
 
 ```sh
-python3 commerce-ops/scripts/check-ai-architecture.py
+python3 commerce-ops/scripts/checks/check-ai-architecture.py
 python3 -m unittest discover -s commerce-ops/scripts/tests -p test_ai_architecture.py
-commerce-assistant-platform/.venv/bin/python commerce-ops/scripts/generate_ai_capabilities.py --check
+commerce-assistant-platform/.venv/bin/python commerce-ops/scripts/generation/generate_ai_capabilities.py --check
 commerce-assistant-platform/.venv/bin/python -m pytest commerce-assistant-platform/tests/test_intent_dispatch.py commerce-assistant-platform/tests/test_reasoning_admission.py commerce-assistant-platform/tests/test_live_interpretation.py commerce-assistant-platform/tests/test_compound_admission.py -q
 ```
 

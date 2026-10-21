@@ -6,7 +6,7 @@ own generated illustrative photo, nine existing attribute values, description,
 pack size, and 30 initial demo units at each primary enabled stock source.
 
 `manifest.json` is the exact requested catalog payload. The runner is
-`commerce-ops/scripts/add-seafood-products-20261003.py`; preview by default and `--apply` to
+`commerce-ops/scripts/demo/history/add-seafood-products-20261003.py`; preview by default and `--apply` to
 create. Run on the production server from `/opt/rocento`, passing the uploaded
 asset directory with `--assets`. It uses existing server-side credentials,
 verified origin HTTPS, the deployment lock, identity and option preflight checks,

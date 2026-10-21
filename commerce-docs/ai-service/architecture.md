@@ -49,4 +49,4 @@ Catalog discovery evaluates at most forty candidates after variant expansion and
 
 Start with [the code map](code-map.md) and inspect the owning domain and its public interface. Keep provider integration separate from deterministic commerce logic. Put logic in its domain, avoid generic root modules and dumping-ground utility files, and prefer package public APIs over deep imports. Preserve wire contracts unless the requested change explicitly includes them. Update these guides when ownership or behavior changes and run focused checks plus architecture enforcement.
 
-These rules replace the removed source-folder contributor guide. [The architecture checker](../../commerce-ops/scripts/check-ai-architecture.py) enforces import boundaries independently of documentation.
+These rules replace the removed source-folder contributor guide. [The architecture checker](../../commerce-ops/scripts/checks/check-ai-architecture.py) enforces import boundaries independently of documentation.

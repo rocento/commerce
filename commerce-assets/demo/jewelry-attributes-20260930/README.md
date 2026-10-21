@@ -9,4 +9,4 @@ Reviewed additions derived from existing product titles. These supplement the ex
 
 Unspecified dimensions stay unknown. Motifs/designs are semantic catalog classifications; length and size reflect declared catalog values, not physical measurements or certification.
 
-Apply through `commerce-ops/scripts/seed-grocery-recommendation-attributes.py --store jewelry --manifest commerce-assets/demo/jewelry-attributes-20260930/manifest.json`. Preview is default; `--apply` writes only reviewed missing attributes with conflict checks, backup and preservation verification.
+Apply through `commerce-ops/scripts/demo/seed-grocery-recommendation-attributes.py --store jewelry --manifest commerce-assets/demo/jewelry-attributes-20260930/manifest.json`. Preview is default; `--apply` writes only reviewed missing attributes with conflict checks, backup and preservation verification.

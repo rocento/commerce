@@ -40,8 +40,8 @@ Key files:
 
 ## Verification Scripts
 
-- `commerce-ops/scripts/m14-durability.py`
-- `commerce-ops/scripts/m14-recovery.py`
-- `commerce-ops/scripts/m14-shutdown.py`
-- `commerce-ops/scripts/m14-checkout.py`
-- `commerce-ops/scripts/m14-unit.py`
+- `commerce-ops/scripts/release/m14-durability.py`
+- `commerce-ops/scripts/release/m14-recovery.py`
+- `commerce-ops/scripts/release/m14-shutdown.py`
+- `commerce-ops/scripts/release/m14-checkout.py`
+- `commerce-ops/scripts/release/m14-unit.py`
