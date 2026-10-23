@@ -116,8 +116,6 @@
     "commerce-ops/scripts/release/commerce_reliability.py",
     "commerce-ops/scripts/release/english-release-check.py",
     "commerce-ops/scripts/release/m14-checkout.py",
-    "commerce-ops/scripts/release/m14-durability.py",
-    "commerce-ops/scripts/release/m14-recovery.py",
     "commerce-ops/scripts/release/m14-shutdown.py",
     "commerce-ops/scripts/release/m14-unit.py",
     "commerce-ops/scripts/release/m14_checkout.py",

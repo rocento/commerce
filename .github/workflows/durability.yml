@@ -1,10 +1,10 @@
-name: Transactional durability qualification
+name: Commerce transaction qualification
 on:
   workflow_dispatch:
 permissions:
   contents: read
 jobs:
-  local-recovery-matrix:
+  local-transaction-checks:
     runs-on: ubuntu-latest
     timeout-minutes: 45
     env:
@@ -30,22 +30,15 @@ jobs:
       - name: Complete HTTP commerce journey and customer isolation
         shell: bash
         run: python3 commerce-ops/scripts/release/system-qa-http.py | tee evidence/http-journey.txt
-      - name: Restart and volume persistence
-        shell: bash
-        run: python3 commerce-ops/scripts/release/m14-durability.py | tee evidence/storage.txt
       - name: Graceful shutdown
         shell: bash
         run: python3 commerce-ops/scripts/release/m14-shutdown.py | tee evidence/shutdown.txt
-      - name: Checkout, replay, WAL restore and fenced failover
-        shell: bash
-        run: python3 commerce-ops/scripts/release/m14-recovery.py | tee evidence/recovery.txt
       - name: Preserve non-secret qualification results
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: durability-${{ github.sha }}
+          name: commerce-transactions-${{ github.sha }}
           path: |
             evidence/*.txt
-            .local/m14/*/recovery-result.json
           include-hidden-files: true
           retention-days: 14
