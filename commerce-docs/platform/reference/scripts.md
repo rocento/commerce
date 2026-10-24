@@ -26,11 +26,11 @@ command and data paths. Run commands from their purpose folders; there are no
 root-level forwarding scripts. New commands belong in their purpose folder.
 
 `commerce-ops/scripts/knowledge-baseline/` contains phase-bound evidence tools;
-`commerce-ops/tools/shopping_eval/` supports the active shopping evaluator;
-and `commerce-ops/tools/recommendation_eval/` owns the fixed recommendation
+`commerce-ops/tools/evaluation/shopping_eval/` supports the active shopping evaluator;
+and `commerce-ops/tools/evaluation/recommendation_eval/` owns the fixed recommendation
 pipeline. Their [folder guides](../../../commerce-ops/scripts/knowledge-baseline/README.md),
-[shopping package guide](../../../commerce-ops/tools/shopping_eval/README.md), and
-[recommendation pipeline guide](../../../commerce-ops/tools/recommendation_eval/README.md)
+[shopping package guide](../../../commerce-ops/tools/evaluation/shopping_eval/README.md), and
+[recommendation pipeline guide](../../../commerce-ops/tools/evaluation/recommendation_eval/README.md)
 explain ownership and retention. There is no staging-server command folder here.
 Application-owned scripts remain with their service.
 

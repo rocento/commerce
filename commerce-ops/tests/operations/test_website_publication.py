@@ -9,7 +9,7 @@ from unittest.mock import patch
 
 
 ROOT = Path(__file__).resolve().parents[3]
-spec = importlib.util.spec_from_file_location('website_publication', ROOT / 'commerce-ops/deploy/ec2/server/ec2-publish-website.py')
+spec = importlib.util.spec_from_file_location('website_publication', ROOT / 'commerce-ops/cloud/host/publish_website.py')
 publication = importlib.util.module_from_spec(spec)
 spec.loader.exec_module(publication)
 

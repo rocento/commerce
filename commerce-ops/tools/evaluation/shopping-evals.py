@@ -8,7 +8,7 @@ No API keys, paid model calls, HTTP requests, database writes or checkout action
 # Keep existing sibling-module imports available to direct and compatibility callers.
 import sys as _sys
 from pathlib import Path as _Path
-_sys.path.insert(0, str(_Path(__file__).resolve().parents[3] / "commerce-ops/tools"))
+_sys.path.insert(0, str(_Path(__file__).resolve().parents[3] / "commerce-ops/tools/evaluation"))
 
 
 import argparse
@@ -29,7 +29,7 @@ from shopping_eval import corpus_v2
 from shopping_eval.corpus import VERSION, generate
 
 ROOT = Path(__file__).resolve().parents[3]
-WORKER = ROOT / "commerce-ops/tools/shopping_eval/engine-worker.mjs"
+WORKER = ROOT / "commerce-ops/tools/evaluation/shopping_eval/engine-worker.mjs"
 
 
 def write_json(path, value):

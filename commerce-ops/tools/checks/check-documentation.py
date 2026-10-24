@@ -31,6 +31,7 @@ ADDITIONAL_GUIDES = (
     'commerce-ops/local/platform/README.md',
     'commerce-ops/local/preview/README.md',
     'commerce-ops/scripts/README.md',
+    'commerce-ops/scripts/knowledge-baseline/README.md',
     'commerce-ops/tools/checks/README.md',
     'commerce-ops/tools/contracts/README.md',
     'commerce-ops/workflows/demo/README.md',

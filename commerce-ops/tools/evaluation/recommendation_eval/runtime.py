@@ -9,7 +9,7 @@ from decimal import Decimal
 from pathlib import Path
 from uuid import uuid4
 
-ROOT=Path(__file__).resolve().parents[3]
+ROOT=Path(__file__).resolve().parents[4]
 sys.path[:0]=[str(ROOT/'commerce-assistant-platform'),str(ROOT/'commerce-assistant-platform/tests')]
 import importlib
 

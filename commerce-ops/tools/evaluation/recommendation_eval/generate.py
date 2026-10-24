@@ -1,7 +1,7 @@
 """Fixed synthetic English recommendation corpus with independent semantic expectations."""
 import hashlib,json
 from pathlib import Path
-ROOT=Path(__file__).resolve().parents[3]
+ROOT=Path(__file__).resolve().parents[4]
 OUT=ROOT/'commerce-docs/platform/qa/recommendations-1000/cases.jsonl'
 rows=[]
 def add(kind,text,**expected):

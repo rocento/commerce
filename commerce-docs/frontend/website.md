@@ -53,7 +53,7 @@ Validate every exported route, metadata record, anchor and related link with the
 
 The viewer uses the pinned `swagger-ui-dist` version `5.33.1` with local JavaScript and CSS. Its specification is the reviewed artifact at `public/docs/api/openapi.json`, generated from an explicit allowlist by `commerce-ops/tools/contracts/generate_public_openapi.py`. Never point the viewer at the complete backend contract or accept a specification URL from the page query string. Do not add CDN assets, remote validators, persistent authorization or a production “Try it out” button. The read-only reference must not collect credentials or execute API operations.
 
-The embedded `/docs/api/reference/` viewer has a separate restrictive content security policy at managed ingress. Documentation responses also receive MIME-sniffing, framing, referrer and permissions restrictions. The main Next page and the isolated viewer need separate policies because the static Next export uses inline bootstrap scripts. Header rules live in `commerce-ops/deploy/ec2/configure.py`; static preview validates output and behavior but does not reproduce production HTTP headers.
+The embedded `/docs/api/reference/` viewer has a separate restrictive content security policy at managed ingress. Documentation responses also receive MIME-sniffing, framing, referrer and permissions restrictions. The main Next page and the isolated viewer need separate policies because the static Next export uses inline bootstrap scripts. Header rules live in `commerce-ops/cloud/host/render_config.py`; static preview validates output and behavior but does not reproduce production HTTP headers.
 
 Regenerate the public contract deliberately before building after an API change:
 
@@ -77,10 +77,10 @@ API_DOCS_BASE_URL=http://127.0.0.1:5180 node scripts/test-api-docs.mjs
 
 These checks require the workspace Playwright Chromium browser. They verify local-only read requests, disabled credential/execution controls, blocked specification URL overrides, the viewer's inline-script CSP and narrow-screen layout. The frontend CI job installs Chromium and runs this browser check against its static website export, alongside the authenticated merchant viewer regression. Production HTTP header checks remain part of release verification.
 
-Only publish a verified static export. The scoped `commerce-ops/deploy/ec2/server/ec2-publish-website.py` command updates the corporate website release and documentation ingress rules without rebuilding the commerce applications. It validates Nginx and supports rollback on publication failure. Stage the script and `commerce-ops/deploy/ec2/configure.py` with their repository-relative layout intact on the deployment host, then inspect the proposed release:
+Only publish a verified static export. The scoped `commerce-ops/cloud/host/publish_website.py` command updates the corporate website release and documentation ingress rules without rebuilding the commerce applications. It validates Nginx and reports publication failures. Stage the script and `commerce-ops/cloud/host/render_config.py` with their repository-relative layout intact on the deployment host, then inspect the proposed release:
 
 ```sh
-sudo python3 commerce-ops/deploy/ec2/server/ec2-publish-website.py --source /absolute/staged/export --root /opt/rocento --domain rocento.com --dry-run
+sudo python3 commerce-ops/cloud/host/publish_website.py --source /absolute/staged/export --root /opt/rocento --domain rocento.com --dry-run
 ```
 
 After the dry run succeeds, the same command without `--dry-run` publishes the staged export under the normal deployment access controls. Verify the public page, local viewer assets, response headers and blocked `/api/openapi.json` paths after release; the publisher's origin probes do not replace verification through the public Cloudflare edge. Public reference changes can use the website-only release. Changes to the protected merchant endpoint require a tested gateway release; its admin viewer also requires the corresponding admin build. Keep those builds isolated from unrelated in-progress work.

@@ -44,8 +44,8 @@ dated batch results without maintaining separate `PHASE-*` reports.
   [AWS](cloud/providers/aws/README.md)/[GCP](cloud/providers/gcp/README.md) adapters.
 - [`services/`](services/README.md) groups operations-owned service runtimes and
   their installation assets; application-owned APIs remain with their services.
-- [`deploy/`](deploy/README.md) contains remaining deployment assets and compatibility
-  entry points being classified for migration.
+- [`deploy/`](deploy/README.md) contains classified host bootstrap/reference assets and compatibility
+  entry points; canonical implementations live with their documented owners.
 - [`tasks/`](tasks/README.md) routes common work to the owning guide and command.
 - [`bin/ops`](bin/ops), [`commands.json`](commands.json), and
   [`config/`](config/README.md) provide the command interface and safe

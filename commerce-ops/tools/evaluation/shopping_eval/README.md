@@ -1,6 +1,6 @@
 # Shopping evaluation support package
 
-This package supports the canonical [shopping evaluation command](../evaluation/shopping-evals.py).
+This package supports the canonical [shopping evaluation command](../shopping-evals.py).
 It is actively imported by that runner and by assistant-platform regression
 checks.
 

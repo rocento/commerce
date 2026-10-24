@@ -8,7 +8,7 @@ import time
 from collections import Counter
 from pathlib import Path
 
-ROOT=Path(__file__).resolve().parents[3]
+ROOT=Path(__file__).resolve().parents[4]
 sys.path[:0]=[str(ROOT/'commerce-assistant-platform'),str(ROOT/'commerce-assistant-platform/tests')]
 from app.commerce_action_engine.application.context import TurnContext
 from app.commerce_action_engine.application.interpretation import (
@@ -56,7 +56,7 @@ def evaluate(case,raw):
 def main():
  parser=argparse.ArgumentParser();parser.add_argument('--label',required=True);args=parser.parse_args()
  folder=ROOT/'commerce-docs/platform/qa/recommendations-1000';cases=[json.loads(s) for s in (folder/'cases.jsonl').read_text().splitlines()]
- output=subprocess.run(['node',str(ROOT/'commerce-ops/tools/shopping_eval/engine-worker.mjs'),str(folder/'cases.jsonl')],check=True,capture_output=True,text=True)
+ output=subprocess.run(['node',str(ROOT/'commerce-ops/tools/evaluation/shopping_eval/engine-worker.mjs'),str(folder/'cases.jsonl')],check=True,capture_output=True,text=True)
  (folder/(args.label+'-raw.jsonl')).write_text(output.stdout)
  raw=[json.loads(s) for s in output.stdout.splitlines()];results=[evaluate(case,row['turns'][-1]['result']) for case,row in zip(cases,raw,strict=True)]
  (folder/(args.label+'-results.json')).write_text(json.dumps(results,indent=2)+'\n')

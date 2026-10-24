@@ -24,8 +24,8 @@ to find its service owner. Commands normally start at the repository root.
 - `../workflows/maintenance/` owns inventory, cleanup, repair and maintenance SQL.
 - EC2 workstation launchers live in `../cloud/providers/aws/`; server commands live
   in `../deploy/ec2/server/`. Call server commands directly; no `ec2-*` wrappers remain here.
-- `knowledge-baseline/` retains phase-bound evidence harnesses; `../tools/shopping_eval/`
-  supports the active shopping evaluator; `../tools/recommendation_eval/` owns a separate
+- `knowledge-baseline/` retains phase-bound evidence harnesses; `../tools/evaluation/shopping_eval/`
+  supports the active shopping evaluator; `../tools/evaluation/recommendation_eval/` owns a separate
   fixed-corpus pipeline. Read each folder README before changing its artifacts.
   There is no `staging/` command folder.
 - [entrypoints.json](../config/entrypoints.json) inventories canonical command and data

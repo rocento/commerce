@@ -16,6 +16,7 @@ until callers and installed services are migrated together.
 | Run a store's Docker Compose command | `ec2-compose.sh` | Compatibility command for `cloud/host/compose.sh`; used by diagnostics, seeding, and service tools |
 | Deploy selected AI services | `ec2-deploy-ai.sh` | Compatibility entry point to `cloud/host/deploy-ai.sh`; requires an existing installation |
 | Deploy rengine | `ec2-deploy-rengine.sh` | Compatibility command for `cloud/host/deploy-rengine.sh`; uses the existing deployment configuration |
+| Publish the corporate website | `ec2-publish-website.py` | Compatibility command for `cloud/host/publish_website.py`; requires a verified export |
 | Seed demo stores | `ec2-seed-demo.sh` | Compatibility command for `cloud/host/seed-demo.sh`; separate from release activation |
 | Inspect the current installation | `ec2-status.sh`, `ec2-doctor.sh` | Compatibility entry points to the canonical read-only commands in `cloud/host/`; see [diagnostics](../../../tasks/diagnostics.md) |
 

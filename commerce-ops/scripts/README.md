@@ -1,43 +1,30 @@
-# Operations commands
+# Legacy script paths and historical harnesses
 
-Compatibility boundary: do not add new command implementations here. Use the
-canonical `local/`, `cloud/`, `services/`, `workflows/` or `tools/` owner.
-Retained historical harnesses, installed adapters and deployment assets keep
-their documented ownership until their consumers migrate.
+This directory retains compatibility paths and historical evidence tooling.
+New command implementations belong under `local/`, `cloud/`, `services/`,
+`workflows/` or `tools/`. Start with the [task menu](../README.md#start-by-task)
+and [command interface](../COMMANDS.md) for current operations.
 
-Run commands from the repository root. Start with a [task guide](../README.md#start-by-task)
-for a complete workflow, or use the [command reference](../../commerce-docs/platform/reference/scripts.md)
-to find a specific command.
+## Retained contents
 
-| Folder | Purpose |
+| Contents | Purpose |
 | --- | --- |
-| [`../local/`](../local/README.md) | Local stack startup, credentials, storage initialization, onboarding dependencies, and preview helpers |
-| [`local/`](local/README.md) | Compatibility links for workstation and service helpers |
-| [`../tools/checks/`](../tools/checks/README.md) | Architecture, documentation, migration, and integration checks |
-| [`../tools/contracts/`](../tools/contracts/README.md) | API and shared contract generation and synchronization |
-| [`../tools/generation/`](../tools/generation/README.md) | Capability documentation, brand assets, and image preparation |
-| [`../tools/evaluation/`](../tools/evaluation/README.md) | Assistant evaluation and performance commands |
-| [`../workflows/release/`](../workflows/release/README.md) | Candidate artifacts, release gates, and transaction qualification |
-| [`../workflows/demo/`](../workflows/demo/README.md) | Demo catalog seeds, storefront configuration, and previews |
-| [`../workflows/maintenance/`](../workflows/maintenance/README.md) | Inventory, cleanup, repair, and database maintenance |
-| [`../tests/operations/`](../tests/operations/README.md) | Command and deployment regression tests |
+| `checks`, `contracts`, `generation`, `evaluation` | Compatibility links to development tools |
+| `demo`, `maintenance`, `release` | Compatibility links to workflow implementations |
+| `shopping_eval`, `recommendation_eval` | Direct links to packages under `tools/evaluation/` |
+| [local/](local/README.md) | Compatibility links to workstation and service helpers |
+| `tests` | Compatibility link to operations regression tests |
+| `entrypoints.json` | Compatibility link to the [canonical inventory](../config/entrypoints.json) |
+| [knowledge-baseline/](knowledge-baseline/README.md) | Retained historical source with original evidence dependencies |
 
-[Shopping support](../tools/shopping_eval/README.md),
-[recommendation evaluation](../tools/recommendation_eval/README.md), and
-[knowledge evidence tools](knowledge-baseline/README.md) have their own guides.
+## Ownership and changes
 
-## Local assistant setup
+Register public routes in [commands.json](../commands.json) and canonical
+executable/data paths in [config/entrypoints.json](../config/entrypoints.json).
+Update callers, CI, upload lists and the owning guide together. See
+[AGENTS.md](AGENTS.md) for editing and verification rules.
 
-- `python3 commerce-ops/local/platform/create-assistant-credentials.py` creates missing local credentials.
-- `python3 commerce-ops/local/platform/initialize-assistant-storage.py` creates credentials as needed, initializes storage, applies migrations, and writes local runtime configuration.
-
-Follow the [local setup guide](../../commerce-docs/platform/operations/local-setup.md)
-for required images and service startup order.
-
-## Adding or moving commands
-
-Keep each implementation in its purpose folder and register public commands in
-`entrypoints.json`. Update callers, CI, upload lists, and documentation in the
-same change. Python entry scripts may delegate to importable modules; shared
-logic belongs in those modules. Read [AGENTS.md](AGENTS.md) for editing and
-verification instructions.
+Keep compatibility links until their callers migrate. Preserve historical
+harness bytes and evidence; use `tools/evaluation/` for new evaluations.
+For local assistant preparation, follow [local platform ownership](../local/platform/README.md)
+and its linked setup procedure.

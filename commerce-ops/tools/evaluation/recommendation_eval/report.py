@@ -2,7 +2,7 @@
 import html,json,hashlib,re
 from collections import Counter
 from pathlib import Path
-ROOT=Path(__file__).resolve().parents[3];folder=ROOT/'commerce-docs/platform/qa/recommendations-1000'
+ROOT=Path(__file__).resolve().parents[4];folder=ROOT/'commerce-docs/platform/qa/recommendations-1000'
 cases=[json.loads(l) for l in (folder/'cases.jsonl').read_text().splitlines()]
 read=lambda name:json.loads((folder/name).read_text())
 baseline=read('baseline-results.json');final=read('candidate-results.json');runtime=read('runtime-results.json')

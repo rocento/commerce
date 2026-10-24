@@ -774,3 +774,96 @@ two test-only corrections. No production commands ran.
 Required documentation and caller changes are included with their moves so the
 refactor commit is usable independently. Unrelated onboarding application/CI
 changes and other unstaged application edits are excluded.
+
+
+## 28. Evaluation folder consolidation — 2026-10-24
+
+Grouped the shopping and recommendation support packages beneath
+`tools/evaluation/`, beside their command entrypoints. Kept importable Python
+package names unchanged. Updated worker imports, recommendation root discovery,
+shopping command imports, application test caller, CI filters and guides.
+The earlier sibling-package choice is superseded by this single-owner layout.
+
+Old tools package paths remain direct compatibility symlinks; older scripts
+aliases point straight to the new owners without chaining. Managed uploads
+exclude the aliases and include canonical evaluation sources. Runtime data and
+retained evaluation artifacts did not move or regenerate.
+
+Validation: 37 evaluation/command/deployment-layout tests and 242 subtests passed.
+The extended real-rsync boundary fixture passed. Python compilation, Node syntax,
+documentation links and diff whitespace checks passed. No production or retained
+evidence-writing commands ran. This new organization batch is not yet committed.
+
+
+## 29. Remaining deployment file ownership — 2026-10-24
+
+Audited regular files under `deploy/`. Moved the remaining substantive website
+publication command to `cloud/host/publish_website.py`, beside the configuration
+renderer it imports. Kept the installed EC2 name as a forwarding adapter.
+Updated the command inventory, managed-source inclusion, publication and layout
+tests, host command guides and frontend publication procedure. Removed the
+stale documentation promise of automatic publication rollback; runtime behavior
+was not changed.
+
+The deploy guide now classifies retained adapters, root-discovery support, host
+bootstrap template, symlinks and provisioning/reference guides. These files have
+explicit compatibility or installed-layout responsibilities rather than being
+unclassified application code. No runtime paths or generated host state moved.
+
+Validation: 29 publication/layout/activation tests and 243 subtests passed, plus
+the extended real-rsync inclusion check. Documentation passed 213 files and
+1,287 local links; diff whitespace checks passed. This batch is uncommitted and
+no production operation ran.
+
+
+## 30. Historical harness organization — 2026-10-24
+
+Completed the knowledge-baseline file index, including corpus repair and frozen
+candidate validation files omitted from the previous classification. Declared
+the directory a retained historical source location; new evaluations belong in
+`tools/evaluation/`. Added its README to maintained documentation checks.
+
+Kept the flat source layout after identifying historical sibling imports, old
+repository-depth assumptions and source-hash verification. Moving or repairing
+these scripts requires a separately identified reproducibility migration. All
+35 non-README files were verified byte-for-byte unchanged.
+
+The existing Node utility test cannot load because its expected phase-0
+benchmark-candidate JSON is absent; it also depends on benchmark-approved JSON.
+Recorded this limitation instead of rewriting evidence or claiming a pass.
+Documentation checks passed 214 files and 1,288 local links; diff whitespace
+checks passed. No historical harness outputs or production state changed.
+
+
+## 31. Naming and folder-guide cleanup — 2026-10-24
+
+Audited active cloud/local/tools/workflow command filenames: none use uppercase
+or spaces. Kept published command names, Python import names, historical phase
+identities and installed adapters. Clarified command-wrapper versus module
+naming instead of making cosmetic interface changes.
+
+Replaced the duplicate scripts task menu and local setup instructions with a
+compatibility inventory. Its entries point to canonical owners and distinguish
+the public route catalog from the implementation inventory. Kept credential
+setup ownership in the local platform guide and corrected the workflow guide's
+stale claim that checks/generators belong under scripts. No executable changed
+in this documentation batch.
+
+Validation: documentation checks passed 214 files and 1,280 local links;
+`git diff --check` passed. The new folder-organization batches remain uncommitted.
+
+
+## 32. Combined organization review — 2026-10-24
+
+Reviewed evaluation nesting, scoped website publication ownership, historical
+harness indexing and folder-guide cleanup together. Exported the staged index
+with the committed onboarding name, excluding the separate application rename.
+Supplied the existing generated language dictionary only in the test export.
+
+All 74 affected evaluation, layout, transport, website publication and source
+activation tests passed, with 243 subtests. Staged documentation passed 213 files
+and 1,274 links; Rust/AI architecture and index whitespace checks passed.
+Confirmed the publisher's only implementation edit is its policy-module path;
+all retained historical harness code remains byte-for-byte unchanged. Historical
+benchmark fixtures are still unavailable, so that original utility suite is
+not claimed as passing. No production operation or evidence regeneration ran.

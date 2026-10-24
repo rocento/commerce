@@ -126,7 +126,8 @@
     "commerce-ops/cloud/host/compose.sh",
     "commerce-ops/cloud/seed-demo.sh",
     "commerce-ops/cloud/providers/aws/seed-demo.sh",
-    "commerce-ops/cloud/providers/gcp/seed-demo.sh"
+    "commerce-ops/cloud/providers/gcp/seed-demo.sh",
+    "commerce-ops/cloud/host/publish_website.py"
   ],
   "data": [
     "commerce-ops/tools/checks/api_documentation_policy.json",

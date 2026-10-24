@@ -2,7 +2,7 @@
 
 These commands prepare releases, seed demo data, and perform maintenance.
 Provider access and host lifecycle remain under `cloud/`; local startup stays
-under `local/`; development checks and generators remain under `scripts/`.
+under `local/`; development checks, generators and evaluations live under `tools/`.
 
 | Owner | Operator procedure |
 | --- | --- |

@@ -2,8 +2,8 @@
 import {createInterface} from 'node:readline';
 import {createReadStream} from 'node:fs';
 import {once} from 'node:events';
-import {loadRuntime} from '../../../commerce-assistant-platform/app/commerce_language_engine/src/runtime.ts';
-import {resolve} from '../../../commerce-assistant-platform/app/commerce_language_engine/src/engine.ts';
+import {loadRuntime} from '../../../../commerce-assistant-platform/app/commerce_language_engine/src/runtime.ts';
+import {resolve} from '../../../../commerce-assistant-platform/app/commerce_language_engine/src/engine.ts';
 
 const compiled = await loadRuntime();
 const lines = createInterface({input: createReadStream(process.argv[2]), crlfDelay: Infinity});

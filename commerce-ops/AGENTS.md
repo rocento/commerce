@@ -63,3 +63,10 @@ importable Python modules, and the owning language's conventions elsewhere.
 Name commands for their action and domain. Preserve public CLI arguments and
 installed filenames until all consumers migrate; do not rename systemd units,
 Compose identities, or runtime data paths merely for source consistency.
+
+For Python, distinguish executable wrappers from importable modules: a
+`check-domain.py` command may delegate to `check_domain.py`. Do not rename
+importable packages to kebab-case or rename published commands merely to match
+module spelling. Historical phase filenames and installed `ec2-*` adapters
+retain their documented identities. Folder guides own local boundaries, not
+copies of the root task menu or step-by-step procedures from task guides.

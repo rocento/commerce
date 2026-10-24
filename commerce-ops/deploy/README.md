@@ -98,3 +98,20 @@ operations.
 
 For the full workflow, see [AWS deployment commands](../cloud/providers/aws/README.md),
 [GCP deployment commands](../cloud/providers/gcp/README.md), and [EC2 host provisioning](ec2/README.md).
+
+## Remaining file classification
+
+| Files | Role and retention reason |
+| --- | --- |
+| `aws-deploy/*.sh`, `gcp-deploy/deploy.sh` | Compatibility launchers; canonical provider commands live under `cloud/providers/` |
+| `ec2/server/ec2-*`, `ec2/server/cleanup.py` | Installed compatibility adapters; canonical host implementations live under `cloud/host/` |
+| `ec2/server/repository-root.sh` | Shared path discovery for the installed adapters; keep beside its consumers |
+| `ec2/build-frontend.sh`, `ec2/publication.py`, `ec2/configure.py` | Compatibility adapters or links to release/configuration owners |
+| `ec2/bootstrap.env.example` | Host-bootstrap template with installed paths; distinct from workstation provider templates |
+| Service, Compose and shared-library symlinks | Retained source interfaces; direct targets identify canonical owners |
+| `README.md`, agent guides and EC2/server guides | Ownership, provisioning and installed-interface documentation |
+
+Website publication now lives in `cloud/host/publish_website.py`; its former
+server file is an adapter. No further substantive deployment implementation
+was identified in this directory during the file-ownership audit. Do not remove
+installed adapters solely because their canonical implementation has moved.

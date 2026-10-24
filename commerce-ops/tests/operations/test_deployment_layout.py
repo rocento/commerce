@@ -39,7 +39,7 @@ class DeploymentLayoutTests(unittest.TestCase):
             (sys.executable, 'commerce-ops/deploy/ec2/server/ec2-check.py', 'commerce-ops/cloud/host/check.py'),
             (sys.executable, 'commerce-ops/deploy/ec2/server/ec2-deploy-job.py', 'commerce-ops/cloud/host/deployment_job.py'),
             (sys.executable, 'commerce-ops/deploy/ec2/server/ec2-preserve-ai.py', 'commerce-ops/cloud/host/preserve_ai.py'),
-            (sys.executable, 'commerce-ops/deploy/ec2/server/ec2-publish-website.py', 'commerce-ops/deploy/ec2/server/ec2-publish-website.py'),
+            (sys.executable, 'commerce-ops/deploy/ec2/server/ec2-publish-website.py', 'commerce-ops/cloud/host/publish_website.py'),
             (sys.executable, 'commerce-ops/deploy/ec2/publication.py', 'commerce-ops/cloud/host/publication.py'),
         ]
         with tempfile.TemporaryDirectory() as directory:

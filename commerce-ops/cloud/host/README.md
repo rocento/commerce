@@ -22,6 +22,7 @@ credentials.
 | `bootstrap.sh` | Reads protected host bootstrap configuration for deployment and seed workflows | `commerce-ops/deploy/ec2/server/ec2-bootstrap.sh` sources this helper |
 | `cleanup.py` | Reclaims disposable caches and inactive managed frontend releases during full deployment | `commerce-ops/deploy/ec2/server/cleanup.py` forwards here |
 | `preserve_ai.py` | Records and verifies running AI container, image, and release identities for `--preserve-ai` | `commerce-ops/deploy/ec2/server/ec2-preserve-ai.py` forwards here |
+| `publish_website.py` | Publishes a verified corporate website export under the host deployment lock | `commerce-ops/deploy/ec2/server/ec2-publish-website.py` forwards here |
 | `publication.py` | Renders the opt-in merchant Nginx configuration | `commerce-ops/deploy/ec2/publication.py` forwards here |
 | `activate-source.sh` | Installs a complete managed upload while holding the existing deployment lock | `commerce-ops/deploy/ec2/server/ec2-activate-source.sh` forwards here |
 | `deployment_job.py` | Starts, runs, monitors, and resumes a detached deployment job | `commerce-ops/deploy/ec2/server/ec2-deploy-job.py` forwards here |
