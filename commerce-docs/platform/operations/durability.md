@@ -4,7 +4,7 @@
 
 The base PostgreSQL container uses a named volume and durable PostgreSQL settings. This protects local data from ordinary container restarts and `docker compose down` without `-v`.
 
-Base settings in `commerce-ops/compose/compose.yaml`:
+Base settings in `commerce-ops/compose/base/compose.yaml`:
 
 - `fsync=on`
 - `synchronous_commit=on`
@@ -12,36 +12,19 @@ Base settings in `commerce-ops/compose/compose.yaml`:
 - `wal_level=replica`
 - `postgres-data` named volume
 
-## Durability Overlay
+## Supported scope
 
-`commerce-ops/compose/compose.durability.yaml` adds:
+The optional backup/restore/standby toolkit, its Compose overlay, and the two
+associated storage/recovery drills have been removed from this checkout.
+There is no repository-managed backup scheduler or restore command in this scope.
+This source change does not uninstall services on existing hosts or remove data.
 
-- `postgres-standby`
-- `postgres-sync`
-- `postgres-backup`
-- WAL archive volume
-- backup volume
-- helper scripts under `commerce-ops/deploy/durability`
+## Retained qualification commands
 
-The overlay is described in `commerce-ops/deploy/durability/README.md`. It is a single-host reference topology.
+- `commerce-ops/workflows/release/gateway-shutdown-check.py`
+- `commerce-ops/workflows/release/checkout_reliability.py`
+- `commerce-ops/workflows/release/isolated-db-regression.py`
 
-## Recovery Scripts
-
-Key files:
-
-- `commerce-ops/deploy/durability/primary.sh`
-- `commerce-ops/deploy/durability/standby.sh`
-- `commerce-ops/deploy/durability/enable-sync.sh`
-- `commerce-ops/deploy/durability/backup.sh`
-- `commerce-ops/deploy/durability/restore.sh`
-- `commerce-ops/deploy/durability/archive-wal.sh`
-- `commerce-ops/deploy/durability/schedule-backups.sh`
-- `commerce-ops/deploy/durability/backup-health.sh`
-
-## Verification Scripts
-
-- `commerce-ops/scripts/release/m14-durability.py`
-- `commerce-ops/scripts/release/m14-recovery.py`
-- `commerce-ops/scripts/release/m14-shutdown.py`
-- `commerce-ops/scripts/release/m14-checkout.py`
-- `commerce-ops/scripts/release/m14-unit.py`
+The manual transaction qualification workflow runs database regressions, the
+HTTP commerce journey, and graceful shutdown checks. It does not certify
+backup restoration or failover.

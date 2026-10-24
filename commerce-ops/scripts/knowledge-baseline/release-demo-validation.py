@@ -79,7 +79,7 @@ class Capture:
         if live:
             program = (ROOT / "commerce-ops/scripts/knowledge-baseline/release-demo-read-bridge.py").read_text()
             self.process = subprocess.Popen([
-                "ssh", "-i", str(ROOT / "commerce-ops/deploy/aws-deploy/rocento.pem"), "-o", "StrictHostKeyChecking=yes",
+                "ssh", "-i", str(ROOT / ".local/commerce-ops/secrets/aws/rocento.pem"), "-o", "StrictHostKeyChecking=yes",
                 "-o", "ConnectTimeout=20", "ubuntu@3.78.102.161", "sudo python3 -u -c " + shlex.quote(program),
             ], stdin=subprocess.PIPE, stdout=subprocess.PIPE, text=True)
 

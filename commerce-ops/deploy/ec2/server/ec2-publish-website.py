@@ -166,37 +166,23 @@ def publish(source, base, nginx_file, domain, runner=run, probe=lambda: None, dr
     if dry_run:
         return {'previous': str(previous), 'nginx_changed': candidate != old_config, 'dry_run': True}
 
-    # An independent copy preserves all store/admin assets and the previous
-    # rollback release. Never write through hard links into the active release.
+    # Build an independent candidate to preserve unchanged store/admin assets.
     release = base / 'releases' / f'release-{secrets.token_hex(4)}'
-    config_changed = False
-    activated = False
-    try:
-        shutil.copytree(previous, release, symlinks=True)
-        shutil.rmtree(release / 'website')
-        shutil.copytree(source, release / 'website')
-        for entry in (release / 'website', *(release / 'website').rglob('*')):
-            entry.chmod(0o755 if entry.is_dir() else 0o644)
-        if candidate != old_config:
-            atomic_write(nginx_file, candidate)
-            config_changed = True
-        runner(['nginx', '-t'])
-        if config_changed:
-            runner(['systemctl', 'reload', 'nginx'])
-        activate(base, release)
-        activated = True
-        probe()
-        return {'release': str(release), 'previous': str(previous), 'nginx_changed': config_changed}
-    except BaseException:
-        if activated:
-            activate(base, previous)
-        if config_changed:
-            atomic_write(nginx_file, old_config)
-            runner(['nginx', '-t'])
-            runner(['systemctl', 'reload', 'nginx'])
-        if release.is_dir() and (base / 'current').resolve() != release.resolve():
-            shutil.rmtree(release)
-        raise
+    config_changed = candidate != old_config
+    shutil.copytree(previous, release, symlinks=True)
+    shutil.rmtree(release / 'website')
+    shutil.copytree(source, release / 'website')
+    for entry in (release / 'website', *(release / 'website').rglob('*')):
+        entry.chmod(0o755 if entry.is_dir() else 0o644)
+    if config_changed:
+        atomic_write(nginx_file, candidate)
+    runner(['nginx', '-t'])
+    if config_changed:
+        runner(['systemctl', 'reload', 'nginx'])
+    activate(base, release)
+    shutil.rmtree(previous)
+    probe()
+    return {'release': str(release), 'nginx_changed': config_changed}
 
 
 def main():
@@ -225,7 +211,7 @@ def main():
         except BlockingIOError:
             parser.error('Another deployment or seed is active. Wait for it to finish.')
         if not args.dry_run:
-            subprocess.run(['python3', str(args.root / 'commerce-ops/scripts/release/deployment_gate.py'),
+            subprocess.run(['python3', str(args.root / 'commerce-ops/workflows/release/deployment_gate.py'),
                             'check', '--source', str(args.source), '--operation', 'website',
                             '--domain', args.domain], check=True)
         result = publish(args.source, Path('/var/www/rocento'),

@@ -36,7 +36,7 @@ The publication build produces client and SSR artifacts and runs `server/seal-bu
 | `PUBLICATION_OBSERVATION_TOKEN` | Private observation secret, never browser configuration |
 | `PUBLICATION_BIND`, `PUBLICATION_PORT`, `PUBLICATION_MAX_INFLIGHT` | Renderer binding and admission |
 
-Gateway publication also needs explicit environment, noindex protection and matching deployment identity. See [backend publication](../backend/publication.md), [Compose overlay](../../commerce-ops/compose/compose.publication.yaml) and [vhost generator](../../commerce-ops/deploy/ec2/publication.py).
+Gateway publication also needs explicit environment, noindex protection and matching deployment identity. See [backend publication](../backend/publication.md), [Compose overlay](../../commerce-ops/compose/components/compose.publication.yaml) and [vhost generator](../../commerce-ops/cloud/host/publication.py).
 
 ## Verification and rollout
 

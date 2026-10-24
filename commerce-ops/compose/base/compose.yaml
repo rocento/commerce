@@ -1,0 +1,218 @@
+name: commerce-ai
+x-health: &health
+  interval: 10s
+  timeout: 5s
+  retries: 12
+  start_period: 30s
+services:
+  postgres:
+    image: postgres:16-bookworm
+    restart: unless-stopped
+    stop_grace_period: 60s
+    command: ["postgres", "-c", "fsync=on", "-c", "synchronous_commit=on", "-c", "full_page_writes=on", "-c", "wal_level=replica"]
+    environment:
+      POSTGRES_DB: ${POSTGRES_DB:-commerce}
+      POSTGRES_USER: ${POSTGRES_USER:-commerce}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?Copy .env.example to .env}
+    ports: ["127.0.0.1:5432:5432"]
+    volumes: ["postgres-data:/var/lib/postgresql/data"]
+    healthcheck:
+      <<: *health
+      test: ["CMD-SHELL", "pg_isready -U $$POSTGRES_USER -d $$POSTGRES_DB"]
+  engagement-postgres:
+    image: postgres:16-bookworm
+    restart: unless-stopped
+    stop_grace_period: 60s
+    mem_limit: 512m
+    cpus: 0.5
+    command: ["postgres", "-c", "max_connections=40", "-c", "shared_buffers=128MB", "-c", "statement_timeout=5000"]
+    environment:
+      POSTGRES_DB: engagement
+      POSTGRES_USER: engagement
+      POSTGRES_PASSWORD: ${ENGAGEMENT_POSTGRES_PASSWORD:-${POSTGRES_PASSWORD}}
+    volumes: ["engagement-postgres-data:/var/lib/postgresql/data"]
+    healthcheck:
+      <<: *health
+      test: ["CMD-SHELL", "pg_isready -U $$POSTGRES_USER -d $$POSTGRES_DB"]
+  clickhouse:
+    restart: unless-stopped
+    image: clickhouse/clickhouse-server:25.8
+    environment:
+      CLICKHOUSE_DB: commerce_analytics
+      CLICKHOUSE_USER: ${CLICKHOUSE_USER:-commerce}
+      CLICKHOUSE_PASSWORD: ${CLICKHOUSE_PASSWORD:?Copy .env.example to .env}
+    ports: ["127.0.0.1:8123:8123"]
+    volumes: ["clickhouse-data:/var/lib/clickhouse"]
+    healthcheck:
+      <<: *health
+      test: ["CMD", "wget", "--spider", "-q", "http://localhost:8123/ping"]
+  nats:
+    restart: unless-stopped
+    image: nats:2.11-alpine
+    command: ["-js", "-sd", "/data", "-m", "8222"]
+    ports: ["127.0.0.1:4222:4222", "127.0.0.1:8222:8222"]
+    volumes: ["nats-data:/data"]
+    healthcheck:
+      <<: *health
+      test: ["CMD", "wget", "-q", "-O", "/dev/null", "http://localhost:8222/healthz"]
+  meilisearch:
+    restart: unless-stopped
+    image: getmeili/meilisearch:v1.15
+    environment:
+      MEILI_MASTER_KEY: ${MEILI_MASTER_KEY:?Copy .env.example to .env}
+      MEILI_ENV: development
+      MEILI_NO_ANALYTICS: "true"
+    ports: ["127.0.0.1:7700:7700"]
+    volumes: ["meili-data:/meili_data"]
+    healthcheck:
+      <<: *health
+      test: ["CMD", "curl", "-f", "http://localhost:7700/health"]
+  minio:
+    restart: unless-stopped
+    image: quay.io/minio/minio:RELEASE.2025-04-22T22-12-26Z
+    command: ["server", "/data", "--console-address", ":9001"]
+    environment:
+      MINIO_ROOT_USER: ${MINIO_ROOT_USER:-commerce}
+      MINIO_ROOT_PASSWORD: ${MINIO_ROOT_PASSWORD:?Copy .env.example to .env}
+    ports: ["127.0.0.1:9000:9000", "127.0.0.1:9001:9001"]
+    volumes: ["minio-data:/data"]
+    healthcheck:
+      <<: *health
+      test: ["CMD", "curl", "-f", "http://localhost:9000/minio/health/live"]
+  api-gateway:
+    image: rocento-backend:local
+    restart: unless-stopped
+    stop_grace_period: 45s
+    build: ../../commerce-api/rocento-api
+    environment:
+      DATABASE_URL: postgres://${POSTGRES_USER:-commerce}:${POSTGRES_PASSWORD}@postgres:5432/${POSTGRES_DB:-commerce}
+      ENGAGEMENT_DATABASE_URL: postgres://engagement:${ENGAGEMENT_POSTGRES_PASSWORD:-${POSTGRES_PASSWORD}}@engagement-postgres:5432/engagement
+      RUST_LOG: "${COMMERCE_LOG:-info},local_notifications=info"
+      AUTH_SECRET: ${AUTH_SECRET:?Set AUTH_SECRET in .env}
+      APP_ENV: development
+      NOTIFICATION_MODE: console
+      COOKIE_SECURE: "false"
+      STOREFRONT_URL: http://localhost:5173
+      ALLOWED_ORIGINS: http://localhost:5173,http://localhost:5174,http://127.0.0.1:5173,http://127.0.0.1:5174,http://127.0.0.1:5175,http://localhost:5194,http://127.0.0.1:5194
+      ASSISTANT_TENANT_ID: ${ASSISTANT_TENANT_ID:-91d13451-cb20-44a8-8522-e06534aeae17}
+      NATS_URL: nats://nats:4222
+      RESERVATION_TTL_SECONDS: ${RESERVATION_TTL_SECONDS:-900}
+      MEILI_URL: http://meilisearch:7700
+      MEILI_MASTER_KEY: ${MEILI_MASTER_KEY}
+      S3_ENDPOINT: http://minio:9000
+      S3_ACCESS_KEY: ${MINIO_ROOT_USER:-commerce}
+      S3_SECRET_KEY: ${MINIO_ROOT_PASSWORD}
+      CLICKHOUSE_URL: http://clickhouse:8123
+      CLICKHOUSE_USER: ${CLICKHOUSE_USER:-commerce}
+      CLICKHOUSE_PASSWORD: ${CLICKHOUSE_PASSWORD}
+    ports: ["127.0.0.1:8080:8080"]
+    depends_on:
+      postgres: {condition: service_healthy}
+      engagement-postgres: {condition: service_healthy}
+      minio: {condition: service_healthy}
+      meilisearch: {condition: service_healthy}
+      nats: {condition: service_healthy}
+    healthcheck:
+      <<: *health
+      test: ["CMD", "curl", "-f", "http://localhost:8080/ready"]
+  analytics-worker:
+    image: rocento-backend:local
+    command: ["analytics-worker"]
+    restart: unless-stopped
+    stop_grace_period: 15s
+    mem_limit: 512m
+    cpus: 1
+    pids_limit: 64
+    environment:
+      DATABASE_URL: postgres://${POSTGRES_USER:-commerce}:${POSTGRES_PASSWORD}@postgres:5432/${POSTGRES_DB:-commerce}
+      NATS_URL: nats://nats:4222
+      CLICKHOUSE_URL: http://clickhouse:8123
+      CLICKHOUSE_USER: ${CLICKHOUSE_USER:-commerce}
+      CLICKHOUSE_PASSWORD: ${CLICKHOUSE_PASSWORD}
+      NOTIFICATION_MODE: console
+      REPORTING_INTERVAL_SECONDS: ${REPORTING_INTERVAL_SECONDS:-900}
+    depends_on:
+      api-gateway: {condition: service_healthy}
+      clickhouse: {condition: service_started}
+      nats: {condition: service_started}
+    healthcheck:
+      <<: *health
+      test: ["CMD", "curl", "--max-time", "3", "-f", "http://localhost:8082/ready"]
+  engagement-worker:
+    image: rocento-backend:local
+    command: ["engagement-worker"]
+    restart: unless-stopped
+    stop_grace_period: 30s
+    mem_limit: 256m
+    cpus: 0.5
+    environment:
+      DATABASE_URL: postgres://${POSTGRES_USER:-commerce}:${POSTGRES_PASSWORD}@postgres:5432/${POSTGRES_DB:-commerce}
+      ENGAGEMENT_DATABASE_URL: postgres://engagement:${ENGAGEMENT_POSTGRES_PASSWORD:-${POSTGRES_PASSWORD}}@engagement-postgres:5432/engagement
+      NATS_URL: nats://nats:4222
+      CLICKHOUSE_URL: http://clickhouse:8123
+      CLICKHOUSE_USER: ${CLICKHOUSE_USER:-commerce}
+      CLICKHOUSE_PASSWORD: ${CLICKHOUSE_PASSWORD}
+    depends_on:
+      api-gateway: {condition: service_healthy}
+      engagement-postgres: {condition: service_healthy}
+    healthcheck:
+      <<: *health
+      test: ["CMD", "engagement-worker", "--health"]
+  export-worker:
+    image: rocento-backend:local
+    command: ["export-worker"]
+    restart: unless-stopped
+    mem_limit: 512m
+    cpus: 1
+    environment:
+      EXPORT_MAX_BYTES: ${EXPORT_MAX_BYTES:-21474836480}
+      DATABASE_URL: postgres://${POSTGRES_USER:-commerce}:${POSTGRES_PASSWORD}@postgres:5432/${POSTGRES_DB:-commerce}
+    depends_on:
+      api-gateway: {condition: service_healthy}
+    healthcheck:
+      test: ["CMD", "export-worker", "--health"]
+      interval: 15s
+      timeout: 5s
+      retries: 3
+      start_period: 30s
+  storefront:
+    restart: unless-stopped
+    build:
+      context: ../../commerce-web
+      args: {APP: storefront}
+    environment:
+      API_PROXY_TARGET: http://api-gateway:8080
+      API_PROXY_ORIGIN: http://localhost:5173
+      VITE_MAP_TILE_URL: ${VITE_MAP_TILE_URL:-}
+      VITE_MAP_ATTRIBUTION: ${VITE_MAP_ATTRIBUTION:-}
+    ports: ["127.0.0.1:5173:5173"]
+    depends_on:
+      api-gateway: {condition: service_healthy}
+    healthcheck:
+      <<: *health
+      test: ["CMD", "node", "-e", "fetch('http://localhost:5173/health').then(r=>process.exit(r.ok?0:1)).catch(()=>process.exit(1))"]
+  admin:
+    restart: unless-stopped
+    build:
+      context: ../../commerce-web
+      args: {APP: admin}
+    environment:
+      API_PROXY_TARGET: http://api-gateway:8080
+      API_PROXY_ORIGIN: http://localhost:5174
+    ports: ["127.0.0.1:5174:5174"]
+    depends_on:
+      api-gateway: {condition: service_healthy}
+    healthcheck:
+      <<: *health
+      test: ["CMD", "node", "-e", "fetch('http://localhost:5174/health').then(r=>process.exit(r.ok?0:1)).catch(()=>process.exit(1))"]
+volumes:
+  engagement-postgres-data:
+  postgres-data:
+  clickhouse-data:
+  nats-data:
+  meili-data:
+  minio-data:
+
+networks:
+  assistant-private:
+    internal: true

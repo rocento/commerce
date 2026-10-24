@@ -2,7 +2,7 @@
 
 These synthetic catalog photographs were generated using the built-in imagegen tool and copied
 into this repository. They illustrate demo products, not an actual supplier's packaging or
-inventory. `commerce-ops/scripts/demo/seed-catalog.py` uploads them through the real MinIO-backed API.
+inventory. `commerce-ops/workflows/demo/seed-catalog.py` uploads them through the real MinIO-backed API.
 
 ## Prompts
 

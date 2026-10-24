@@ -30,6 +30,6 @@ Use each service index to find current guides, active plans and history. Start w
 Run these checks from the repository root after documentation changes:
 
 ```sh
-python3 commerce-ops/scripts/checks/check-documentation.py
-python3 -m unittest discover -s commerce-ops/scripts/tests -p test_documentation.py
+python3 commerce-ops/tools/checks/check-documentation.py
+python3 -m unittest discover -s commerce-ops/tests/operations -p test_documentation.py
 ```

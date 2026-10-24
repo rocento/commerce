@@ -1,0 +1,1 @@
+../../local/platform/create-assistant-credentials.py

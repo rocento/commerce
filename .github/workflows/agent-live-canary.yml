@@ -17,7 +17,7 @@ jobs:
     timeout-minutes: 10
     defaults:
       run:
-        working-directory: commerce-ops/scripts
+        working-directory: commerce-ops/tools
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5

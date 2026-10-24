@@ -9,23 +9,47 @@ its implementation.
 
 | Task | Start here | Main owner |
 | --- | --- | --- |
-| Run the commerce platform locally | [Local development](tasks/local-development.md) | `commerce-ops/compose/`, `commerce-ops/scripts/local/` |
+| Run the commerce platform locally | [Local development](tasks/local-development.md) | `commerce-ops/compose/`, `commerce-ops/local/platform/` |
 | Develop customer onboarding | [Onboarding](tasks/onboarding.md) | `commerce-api/onboard-api/`, `commerce-web/apps/onboarding/` |
-| Deploy Rocento platform to production | [Rocento platform deployment](tasks/rocento-platform-deployment.md) | `commerce-ops/deploy/aws-deploy/`, `commerce-ops/deploy/ec2/` |
-| Recover or diagnose operations | [Operations and recovery](tasks/operations-recovery.md) | `commerce-ops/deploy/`, `commerce-ops/scripts/` |
+| Prepare a release candidate | [Release preparation](tasks/release-preparation.md) | `commerce-ops/workflows/release/` |
+| Refresh demo data | [Demo seeding](tasks/demo-seeding.md) | `commerce-ops/cloud/seed-demo.sh`, provider launchers, `commerce-ops/workflows/demo/` |
+| Deploy Rocento platform to production | [Rocento platform deployment](tasks/rocento-platform-deployment.md) | `commerce-ops/cloud/providers/`, `commerce-ops/cloud/host/` |
+| Diagnose a deployed platform | [Diagnostics](tasks/diagnostics.md) | `commerce-ops/cloud/host/` |
+
+## Reading order
+
+Start with the task table above. Use [COMMANDS.md](COMMANDS.md) for command syntax,
+explicit targets, and effects. Provider guides explain access prerequisites;
+task guides own shared procedures. Area READMEs explain source ownership.
+
+For repository refactoring, use the [single current plan](REFACTOR-PLAN.md#current-progress-and-next-priorities).
+Its [Markdown strategy](REFACTOR-PLAN.md#11-markdown-strategy-one-owner-for-each-topic)
+defines documentation ownership; its historical migration record preserves
+dated batch results without maintaining separate `PHASE-*` reports.
 
 ## Directory map
 
 - [`compose/`](compose/README.md) contains the shared Rocento Compose stack and
   overlays. The project identity and existing production runtime paths are
   compatibility boundaries.
-- [`scripts/`](scripts/AGENTS.md) contains reusable local, release, deployment,
-  seed, and repository maintenance commands.
-- [`onboarding/`](onboarding/README.md) contains local infrastructure for the
-  standalone onboarding API. The API and web applications remain owned by their
-  respective service directories.
-- [`deploy/`](deploy/README.md) contains Rocento platform deployment inputs and
-  operator tooling. It is separate from merchant onboarding and provisioning.
+- [`local/`](local/README.md) contains platform launchers, isolated onboarding
+  dependencies, and workstation preview helpers. The API and web applications
+  remain owned by their respective service directories.
+- [`workflows/`](workflows/README.md) contains release, demo and maintenance
+  workflows. [`tools/`](tools/README.md) owns development checks, generators and evaluations;
+  [`tests/operations/`](tests/operations/README.md) owns operations regressions.
+  [`scripts/`](scripts/README.md) retains historical evidence harnesses and compatibility paths.
+  Old workflow paths under scripts are temporary compatibility links.
+- `cloud/` owns [shared host commands](cloud/host/README.md), transport, and
+  [AWS](cloud/providers/aws/README.md)/[GCP](cloud/providers/gcp/README.md) adapters.
+- [`services/`](services/README.md) groups operations-owned service runtimes and
+  their installation assets; application-owned APIs remain with their services.
+- [`deploy/`](deploy/README.md) contains remaining deployment assets and compatibility
+  entry points being classified for migration.
+- [`tasks/`](tasks/README.md) routes common work to the owning guide and command.
+- [`bin/ops`](bin/ops), [`commands.json`](commands.json), and
+  [`config/`](config/README.md) provide the command interface and safe
+  target templates.
 
 ## Working rules
 
@@ -34,6 +58,13 @@ its implementation.
 - Keep secrets, generated state, and host runtime state out of source uploads.
 - Keep deployment operations distinct: a platform release, demo seeding, and
   onboarding feature work have different owners and effects.
-- For a new command, place implementation with its purpose under `scripts/`,
-  then update the script reference and compatibility entrypoint map if needed.
+- For a new command, place implementation with its purpose under `local/`,
+  `cloud/`, `services/`, `workflows/`, or `tools/` owners,
+  then update the script reference and canonical command inventory if needed.
+- Extend the owning guide before creating another Markdown file.
 - Read the nearest `AGENTS.md` before editing a subtree.
+
+Deployment and maintenance commands do not create backups or automatically restore
+previous releases. On failure, inspect the reported stage and correct the current
+state before retrying. Historical evidence is retained separately from executable
+backup and rollback tooling.

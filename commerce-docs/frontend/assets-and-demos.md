@@ -13,9 +13,9 @@ The data credits GeoNames contributors under [CC BY 4.0](https://creativecommons
 To refresh a snapshot, use the source URL from its manifest, keep archives outside the repository and run the importer on a working copy:
 
 ```sh
-python3 commerce-ops/scripts/demo/import-delivery-locations.py SA /path/to/SA.zip
-python3 commerce-ops/scripts/demo/import-egypt-locations.py /path/to/EG.zip
-python3 -m unittest discover -s commerce-ops/scripts/tests -p 'test_delivery_locations.py'
+python3 commerce-ops/workflows/demo/import-delivery-locations.py SA /path/to/SA.zip
+python3 commerce-ops/workflows/demo/import-egypt-locations.py /path/to/EG.zip
+python3 -m unittest discover -s commerce-ops/tests/operations -p 'test_delivery_locations.py'
 ```
 
 The international importer also supports the other bundled international countries. Review source names, counts and exclusions, then deploy each complete manifest/region set together. Do not overwrite an actively served directory during generation. Validate `delivery-geography.test.ts` and the relevant delivery browser suite when selection behavior or data changes.
@@ -34,18 +34,18 @@ For a local, read-only design preview, build the storefront and run from the rep
 cd commerce-web/apps/storefront
 node ../../node_modules/vite/bin/vite.js build
 cd ../../..
-node commerce-ops/scripts/demo/preview-demo-storefront.mjs pharmacy
+node commerce-ops/workflows/demo/preview-demo-storefront.mjs pharmacy
 ```
 
 Open `http://127.0.0.1:5473`. The preview serves the real storefront UI with local preset data; accounts, checkout and persistence require an installed backend. An optional port and build directory can follow the preset argument. Set `NEXT_PUBLIC_PHARMACY_DEMO_URL` in the corporate website environment to enable its demo link, then rebuild the website. Use the localhost URL only for local development.
 
-For the full demo, [compose.pharmacy.yaml](../../commerce-ops/compose/compose.pharmacy.yaml) defines an isolated `commerce-pharmacy` project with storefront port 5473, admin port 5474 and gateway port 60080. Stop the design preview before starting this stack. Configure the required `.env` values, start Docker, and initialize the separate installation and its administrator using the standard setup:
+For the full demo, [compose.pharmacy.yaml](../../commerce-ops/compose/overlays/demos/compose.pharmacy.yaml) defines an isolated `commerce-pharmacy` project with storefront port 5473, admin port 5474 and gateway port 60080. Stop the design preview before starting this stack. Configure the required `.env` values, start Docker, and initialize the separate installation and its administrator using the standard setup:
 
 ```sh
-docker compose -p commerce-pharmacy -f commerce-ops/compose/compose.yaml -f commerce-ops/compose/compose.pharmacy.yaml up -d --build
-python3 commerce-ops/scripts/demo/seed-demo-storefront.py pharmacy
+docker compose --project-directory commerce-ops/compose -p commerce-pharmacy -f commerce-ops/compose/base/compose.yaml -f commerce-ops/compose/overlays/demos/compose.pharmacy.yaml up -d --build
+python3 commerce-ops/workflows/demo/seed-demo-storefront.py pharmacy
 # After the new installation and its admin credentials are ready:
-python3 commerce-ops/scripts/demo/seed-demo-storefront.py pharmacy --apply --publish --complete --api-base http://127.0.0.1:60080 --credentials /path/to/pharmacy-admin-credentials.txt
+python3 commerce-ops/workflows/demo/seed-demo-storefront.py pharmacy --apply --publish --complete --api-base http://127.0.0.1:60080 --credentials /path/to/pharmacy-admin-credentials.txt
 ```
 
 The seed supports reruns, global demo inventory, and the existing optional Egypt delivery enrichment. Never point this preset at another demo's API: catalogs require separate installations. Live pharmacy operation, regulated inventory and prescription workflows are outside this illustrative catalog.

@@ -1,0 +1,1 @@
+../../local/platform/initialize-assistant-storage.py

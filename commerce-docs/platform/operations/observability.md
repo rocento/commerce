@@ -13,7 +13,7 @@ The [commerce reliability baseline](commerce-reliability.md) adds a focused dash
 Use:
 
 ```sh
-docker compose -f commerce-ops/compose/compose.yaml -f commerce-ops/compose/compose.observability.yaml up -d
+docker compose --project-directory commerce-ops/compose -f commerce-ops/compose/base/compose.yaml -f commerce-ops/compose/components/compose.observability.yaml up -d
 ```
 
 The overlay adds:
@@ -35,7 +35,7 @@ Local ports:
 - Alertmanager: `localhost:9093`
 - Grafana: `localhost:3000`
 
-The external Alertmanager template in `commerce-ops/deploy/observability/alertmanager-external.example.yaml` contains placeholders and should only be completed after authorizing real notifications.
+The external Alertmanager template in `commerce-ops/services/observability/alertmanager-external.example.yaml` contains placeholders and should only be completed after authorizing real notifications.
 
 
 ## Assistant outcome report

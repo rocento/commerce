@@ -14,7 +14,7 @@ export ANDROID_HOME="$HOME/Library/Android/sdk"
 java -version
 ```
 
-React Native has independent Node/npm, Expo and generated native projects; follow [its development guide](react-native.md#run-and-build) with the same JDK 21 selection. Deployment workers have their own pinned images in the [native-preview runbooks](../../commerce-ops/deploy/native-preview/README.md).
+React Native has independent Node/npm, Expo and generated native projects; follow [its development guide](react-native.md#run-and-build) with the same JDK 21 selection. Deployment workers have their own pinned images in the [native-preview runbooks](../../commerce-ops/services/native-preview/README.md).
 
 ## Standalone apps and optional App Studio
 

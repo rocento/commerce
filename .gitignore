@@ -60,6 +60,7 @@
 /commerce-ops/deploy/ec2/shared-ai/
 /commerce-ops/deploy/ec2/bootstrap.env
 /commerce-ops/deploy/aws-deploy/bootstrap.env
+/commerce-ops/deploy/aws-deploy/target.env
 /commerce-ops/deploy/aws-deploy/contact.env
 /commerce-ops/deploy/aws-deploy/notifications.env
 /commerce-ops/deploy/aws-deploy/rocento.pem

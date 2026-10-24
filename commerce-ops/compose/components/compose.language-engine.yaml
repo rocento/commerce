@@ -1,0 +1,34 @@
+# Add after compose.yaml and compose.assistant.yaml (and any provider overlays).
+services:
+  commerce-language-engine:
+    restart: unless-stopped
+    image: rocento-language-engine:release
+    build: ../../commerce-assistant-platform/app/commerce_language_engine
+    networks: [assistant-private, default]
+    environment:
+      DATABASE_URL: postgres://${POSTGRES_USER:-commerce}:${POSTGRES_PASSWORD:?Set POSTGRES_PASSWORD}@postgres:5432/commerce_language
+      CLE_ALLOW_LEGACY_BASELINE_TRANSITION: ${CLE_ALLOW_LEGACY_BASELINE_TRANSITION:-false}
+      LANGUAGE_ENGINE_ADMIN_DATABASE: ${POSTGRES_DB:-commerce}
+    depends_on:
+      postgres:
+        condition: service_healthy
+    read_only: true
+    cap_drop: [ALL]
+    security_opt: [no-new-privileges:true]
+    mem_limit: 768m
+    pids_limit: 64
+    healthcheck:
+      # Use the built-in HTTP client to avoid loading fetch for each probe.
+      test: ["CMD", "node", "-e", "require('node:http').get('http://127.0.0.1:3000/api/ready',r=>process.exit(r.statusCode>=200&&r.statusCode<300?0:1)).on('error',()=>process.exit(1)).setTimeout(2000,function(){this.destroy()})"]
+      interval: 10s
+      timeout: 3s
+      retries: 6
+      start_period: 180s
+  ai-service:
+    environment:
+      AI_LANGUAGE_ENGINE_URL: http://commerce-language-engine:3000
+      AI_LANGUAGE_GENERATION_FINGERPRINT: ${AI_LANGUAGE_GENERATION_FINGERPRINT:-}
+      AI_LANGUAGE_RUNTIME_SHA256: ${AI_LANGUAGE_RUNTIME_SHA256:-}
+    depends_on:
+      commerce-language-engine:
+        condition: service_healthy

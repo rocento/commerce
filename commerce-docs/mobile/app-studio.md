@@ -78,16 +78,16 @@ Use the following checks after changing authoring, contracts or ingress. Dated r
 
 ```sh
 python3 commerce-mobile-apps/tools/generate_contract.py --check
-python3 commerce-ops/scripts/contracts/generate_openapi.py
-python3 commerce-ops/scripts/contracts/generate_public_openapi.py --check
-python3 commerce-ops/scripts/contracts/generate_merchant_openapi.py --check
-python3 commerce-ops/scripts/checks/check_api_documentation.py --check
+python3 commerce-ops/tools/contracts/generate_openapi.py
+python3 commerce-ops/tools/contracts/generate_public_openapi.py --check
+python3 commerce-ops/tools/contracts/generate_merchant_openapi.py --check
+python3 commerce-ops/tools/checks/check_api_documentation.py --check
 python3 -m unittest commerce-ops/scripts.tests.test_mobile_contract commerce-ops/scripts.tests.test_mobile_studio_ingress commerce-ops/scripts.tests.test_ec2_deployment
 MOBILE_STUDIO_INGRESS_TESTS=1 python3 -m unittest commerce-ops/scripts.tests.test_mobile_studio_ingress
 DATABASE_URL=postgres://USER:PASSWORD@127.0.0.1:PORT/TEST_DB cargo +1.94.0 test --manifest-path commerce-api/rocento-api/Cargo.toml --locked -p api-gateway --test commerce-mobile-apps -- --test-threads=1
 ```
 
-Install [OpenAPI test dependencies](../../commerce-ops/scripts/tests/requirements-openapi.txt) in a virtual environment first. Docker is required only for opt-in ingress tests; SQLx requires a disposable PostgreSQL user that can create test databases. The main CI workflow includes browser checks and contract-generation drift detection. Native preview, publication and signed-device acceptance remain separate checks.
+Install [OpenAPI test dependencies](../../commerce-ops/tests/operations/requirements-openapi.txt) in a virtual environment first. Docker is required only for opt-in ingress tests; SQLx requires a disposable PostgreSQL user that can create test databases. The main CI workflow includes browser checks and contract-generation drift detection. Native preview, publication and signed-device acceptance remain separate checks.
 
 
 ## Browser security and deployment notes

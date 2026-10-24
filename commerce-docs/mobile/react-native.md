@@ -44,7 +44,7 @@ product recommendations/comparisons, handles clarification, and reviews basket
 proposals before explicit approval. Interrupted responses are never replayed;
 cart and wishlist are refreshed before further actions. Conversations persist
 when reopening the sheet and reset when the customer changes.
-Optional Studio builds now supply all six configurable home section types; the [worker runbook](../../commerce-ops/deploy/native-preview/REACT_NATIVE.md) owns the supported rendering limits.
+Optional Studio builds now supply all six configurable home section types; the [worker runbook](../../commerce-ops/services/native-preview/REACT_NATIVE.md) owns the supported rendering limits.
 
 `npm run test:discovery-ui` checks deals, wishlist and assistant journeys with
 isolated fixtures, including Arabic/narrow layout and interrupted responses.
@@ -204,6 +204,6 @@ State and lifecycle ownership is documented in [architecture](architecture.md), 
 
 The separately selected Studio build receives saved draft updates while running
 as a real iOS or Android app. Local acceptance and the shared Android EC2 deployment
-are recorded in the [mobile history](history/README.md); intermittent Android stalls remain open. See [the React Native worker runbook](../../commerce-ops/deploy/native-preview/REACT_NATIVE.md)
+are recorded in the [mobile history](history/README.md); intermittent Android stalls remain open. See [the React Native worker runbook](../../commerce-ops/services/native-preview/REACT_NATIVE.md)
 for build commands, worker configuration, authentication and current rendering limitations.
 Normal builds keep the standalone entry and do not include the Studio transport.

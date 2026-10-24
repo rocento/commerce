@@ -1,0 +1,293 @@
+#!/usr/bin/env python3
+"""Small workstation entry point for the existing commerce operations commands."""
+
+import argparse
+import ipaddress
+import json
+import os
+from pathlib import Path
+import re
+import shlex
+import subprocess
+import sys
+from urllib.parse import urlsplit
+
+
+ROOT = Path(__file__).resolve().parents[2]
+CATALOG = ROOT / "commerce-ops/commands.json"
+TARGET_NAME = re.compile(r"[a-z][a-z0-9-]*\Z")
+HOST_NAME = re.compile(r"[A-Za-z0-9][A-Za-z0-9.-]*\Z")
+SHA256 = re.compile(r"[0-9a-f]{64}\Z")
+SERVICE_NAME = re.compile(r"[a-z][a-z0-9-]*\Z")
+STORES = ("grocery", "jewelry", "electronics", "pharmacy")
+TARGET_FIELDS = {"PROVIDER", "HOST", "SSH_USER", "SSH_KEY", "PROJECT", "ZONE", "INSTANCE"}
+
+class UsageError(Exception):
+    """An operator-facing configuration or argument error."""
+
+
+def read_target_file(path: Path, allowed: set[str]) -> dict[str, str]:
+    if path.is_symlink() or not path.is_file():
+        raise UsageError(f"target file is missing or is a symlink: {path}")
+    result = {}
+    for number, raw in enumerate(path.read_text().splitlines(), 1):
+        line = raw.strip()
+        if not line or line.startswith("#"):
+            continue
+        if "=" not in line:
+            raise UsageError(f"{path}:{number}: use KEY=value")
+        key, value = line.split("=", 1)
+        if key not in allowed or key in result or not value or value != value.strip():
+            raise UsageError(f"{path}:{number}: unknown, duplicate, or invalid target field {key}")
+        result[key] = value
+    return result
+
+
+def resolve_target(args: argparse.Namespace) -> dict[str, str]:
+    name = args.target
+    if not TARGET_NAME.fullmatch(name):
+        raise UsageError("--target must be a lowercase name using letters, digits, and hyphens")
+    named = ROOT / ".local/commerce-ops/targets" / f"{name}.env"
+    if named.exists() or named.is_symlink():
+        fields = read_target_file(named, TARGET_FIELDS)
+        provider = fields.get("PROVIDER")
+        if provider not in ("aws", "gcp"):
+            raise UsageError(f"{named}: PROVIDER must be aws or gcp")
+        origin = str(named.relative_to(ROOT))
+    else:
+        provider = {"production-aws": "aws", "production-gcp": "gcp"}.get(name)
+        if provider is None:
+            raise UsageError(f"create {named} with PROVIDER=aws or PROVIDER=gcp")
+        fields = {}
+        origin = "scoped environment or command options"
+
+    if fields.get("SSH_USER", "ubuntu") != "ubuntu":
+        raise UsageError("the current host commands require SSH_USER=ubuntu")
+    if provider == "aws" and any(key in fields for key in ("SSH_KEY", "PROJECT", "ZONE", "INSTANCE")):
+        raise UsageError("AWS targets currently accept HOST only; the key stays at .local/commerce-ops/secrets/aws/rocento.pem")
+    environment_host = os.environ.get("ROCENTO_AWS_HOST" if provider == "aws" else "GCLOUD_HOST", "")
+    host = args.host or environment_host or fields.get("HOST", "")
+    if not host or not HOST_NAME.fullmatch(host) or ".." in host or host.endswith("."):
+        raise UsageError("set a valid HOST in the named target, scoped environment, or --host")
+    if provider == "gcp":
+        try:
+            ipaddress.IPv4Address(host)
+        except ipaddress.AddressValueError as error:
+            raise UsageError("GCP requires the VM's direct-origin IPv4 address") from error
+    if provider == "aws":
+        key = ROOT / ".local/commerce-ops/secrets/aws/rocento.pem"
+    else:
+        key_text = os.environ.get("GCLOUD_SSH_KEY") or fields.get("SSH_KEY", "")
+        key = Path(key_text).expanduser() if key_text else None
+        if key is not None and not key.is_absolute():
+            key = ROOT / key
+    return {"name": name, "provider": provider, "host": host, "user": "ubuntu",
+            "key": str(key) if key is not None else "", "origin": origin,
+            "project": os.environ.get("GCLOUD_PROJECT") or fields.get("PROJECT", ""),
+            "zone": os.environ.get("GCLOUD_ZONE") or fields.get("ZONE", ""),
+            "instance": os.environ.get("GCLOUD_INSTANCE") or fields.get("INSTANCE", "")}
+
+
+def run(command: list[str], *, cwd: Path = ROOT, env: dict[str, str] | None = None) -> int:
+    try:
+        return subprocess.run(command, cwd=cwd, env=env, check=False).returncode
+    except OSError as error:
+        raise UsageError(f"cannot start {command[0]}: {error}") from error
+
+
+def repository_path(path: Path) -> Path:
+    return (path if path.is_absolute() else ROOT / path).expanduser().resolve()
+
+
+def show_catalog() -> None:
+    for item in json.loads(CATALOG.read_text())["commands"]:
+        print(f"{item['id']:<25} {item['effect']:<12} {item['location']:<27} {item['runbook']}")
+
+
+def add_target_options(parser: argparse.ArgumentParser) -> None:
+    parser.add_argument("--target", required=True, help="named target, such as production-aws")
+    parser.add_argument("--host", help="explicit host override; highest precedence")
+
+
+def parser() -> argparse.ArgumentParser:
+    top = argparse.ArgumentParser(prog="ops", description=__doc__)
+    groups = top.add_subparsers(dest="group", required=True)
+    groups.add_parser("help", help="show command overview")
+    groups.add_parser("catalog", help="list public commands, effects, and runbooks")
+
+    local = groups.add_parser("local", help="workstation tasks")
+    local_groups = local.add_subparsers(dest="area", required=True)
+    for area in ("platform", "onboarding"):
+        item = local_groups.add_parser(area)
+        item.add_argument("action", choices=("up", "down", "status", "logs"))
+        if area == "platform":
+            item.add_argument("--assistant", action="store_true", help="include local assistant services")
+    assistant = local_groups.add_parser("assistant")
+    assistant.add_argument("action", choices=("setup",))
+    demo = local_groups.add_parser("demo")
+    demo.add_argument("action", choices=("seed",))
+    demo.add_argument("--store", required=True, choices=STORES)
+    demo.add_argument("--apply", action="store_true", help="write to the explicit loopback API")
+    demo.add_argument("--api-base", help="localhost or 127.0.0.1 API URL; required for --apply")
+
+    release = groups.add_parser("release", help="candidate-bound evidence packet")
+    release.add_argument("action", choices=("prepare", "check"))
+    release.add_argument("--candidate", required=True, help="lowercase candidate SHA-256")
+    release.add_argument("--packet", required=True, type=Path)
+    release.add_argument("--environment", required=True)
+    release.add_argument("--owner", help="required for prepare")
+
+    cloud = groups.add_parser("cloud", help="explicit production target tasks")
+    cloud_groups = cloud.add_subparsers(dest="action", required=True)
+    plan = cloud_groups.add_parser("plan", help="offline, read-only upload and evidence outline")
+    add_target_options(plan)
+    plan.add_argument("--candidate", required=True, help="lowercase candidate SHA-256")
+    plan.add_argument("--packet", required=True, type=Path, help="release evidence packet path")
+    deploy = cloud_groups.add_parser("deploy", help="launch the existing production deployment")
+    add_target_options(deploy)
+    deploy.add_argument("--preserve-ai", action="store_true")
+    for action in ("status", "doctor"):
+        add_target_options(cloud_groups.add_parser(action))
+    logs = cloud_groups.add_parser("logs")
+    add_target_options(logs)
+    logs.add_argument("--store", required=True, choices=STORES)
+    logs.add_argument("--service", required=True)
+    logs.add_argument("--tail", type=int, default=100)
+    cloud_demo = cloud_groups.add_parser("demo")
+    cloud_demo.add_argument("subaction", choices=("seed",))
+    add_target_options(cloud_demo)
+    cloud_demo.add_argument("--store", required=True, choices=("all", *STORES))
+    cloud_demo.add_argument("--delivery-only", action="store_true")
+    cloud_demo.add_argument("--expand-coverage", action="store_true")
+    return top
+
+
+def local_command(args: argparse.Namespace) -> int:
+    if args.area == "platform":
+        operation = {"up": ["up", "-d", "--build", "--wait"], "down": ["down"],
+                     "status": ["ps"], "logs": ["logs", "--tail=100"]}[args.action]
+        return run(["bash", str(ROOT / "commerce-ops/local/platform/local-compose.sh"),
+                    *(["--assistant"] if args.assistant else []), *operation])
+    if args.area == "onboarding":
+        operation = {"up": ["up", "-d", "--wait"], "down": ["down"],
+                     "status": ["ps"], "logs": ["logs", "--tail=100"]}[args.action]
+        return run(["docker", "compose", "-f", str(ROOT / "commerce-ops/local/onboarding/compose.yaml"), *operation],
+                   cwd=ROOT / "commerce-api/onboard-api")
+    if args.area == "assistant":
+        return run([sys.executable, str(ROOT / "commerce-ops/local/platform/initialize-assistant-storage.py")])
+    command = [sys.executable, str(ROOT / "commerce-ops/workflows/demo/seed-demo-storefront.py"), args.store]
+    if args.apply:
+        if not args.api_base:
+            raise UsageError("local demo --apply requires --api-base with a loopback URL")
+        url = urlsplit(args.api_base)
+        if url.scheme not in ("http", "https") or url.hostname not in ("localhost", "127.0.0.1"):
+            raise UsageError("local demo --api-base must use localhost or 127.0.0.1")
+        command += ["--apply", "--api-base", args.api_base]
+    elif args.api_base:
+        raise UsageError("--api-base is only used with --apply")
+    return run(command)
+
+
+def release_command(args: argparse.Namespace) -> int:
+    if not SHA256.fullmatch(args.candidate):
+        raise UsageError("--candidate must be a lowercase SHA-256")
+    if args.action == "prepare" and not args.owner:
+        raise UsageError("release prepare requires --owner")
+    command = [sys.executable, str(ROOT / "commerce-ops/workflows/release/release_readiness.py"),
+               "init" if args.action == "prepare" else "check", "--packet", str(args.packet),
+               "--candidate-sha256", args.candidate, "--environment", args.environment]
+    if args.action == "prepare":
+        command += ["--owner", args.owner]
+    return run(command)
+
+
+def cloud_command(args: argparse.Namespace) -> int:
+    target = resolve_target(args)
+    provider, host = target["provider"], target["host"]
+    if args.action == "plan":
+        if not SHA256.fullmatch(args.candidate):
+            raise UsageError("--candidate must be a lowercase SHA-256")
+        packet = repository_path(args.packet)
+        if not packet.is_file():
+            raise UsageError(f"release packet does not exist: {packet}")
+        print(f"Target: {target['name']} ({provider}, {target['user']}@{host})")
+        print(f"Target source: {target['origin']}")
+        print("Operation: full platform deployment; read-only offline plan")
+        print(f"Candidate SHA-256: {args.candidate}")
+        print(f"Evidence packet: {packet}")
+        print("Proposed uploads: filtered application/operations source, separate API migrations, provider bootstrap and origin TLS files")
+        print("Source filter: commerce-ops/cloud/lib/source-filters.sh")
+        print("Release qualification: not checked by this plan; host gate checks the reviewed installation packet")
+        return 0
+    if args.action == "deploy":
+        script = ROOT / f"commerce-ops/cloud/providers/{provider}/deploy.sh"
+        env = dict(os.environ)
+        if provider == "aws":
+            env["ROCENTO_AWS_HOST"] = host
+        else:
+            if not target["key"]:
+                raise UsageError("GCP deployment requires SSH_KEY in the target or GCLOUD_SSH_KEY in the environment")
+            env["ROCENTO_TARGET_RESOLVED"] = "1"
+            env["GCLOUD_HOST"] = host
+            env["GCLOUD_SSH_KEY"] = target["key"]
+            for field in ("project", "zone", "instance"):
+                if target[field]:
+                    env[f"GCLOUD_{field.upper()}"] = target[field]
+        print(f"Operation: cloud deploy; target={target['name']}; provider={provider}; host={host}; scope=platform", flush=True)
+        return run(["bash", str(script), *(["--preserve-ai"] if args.preserve_ai else [])], env=env)
+    if args.action == "demo":
+        if args.expand_coverage and not args.delivery_only:
+            raise UsageError("--expand-coverage requires --delivery-only")
+        env = dict(os.environ)
+        if provider == "aws":
+            env["ROCENTO_AWS_HOST"] = host
+            script = ROOT / "commerce-ops/cloud/providers/aws/seed-demo.sh"
+        else:
+            env["GCLOUD_HOST"] = host
+            env["GCLOUD_SSH_KEY"] = target["key"]
+            script = ROOT / "commerce-ops/cloud/providers/gcp/seed-demo.sh"
+        print(f"Operation: cloud demo seed; target={target['name']}; provider={provider}; host={host}; scope={args.store}", flush=True)
+        return run(["bash", str(script),
+                    "--store", args.store, *(["--delivery-only"] if args.delivery_only else []),
+                    *(["--expand-coverage"] if args.expand_coverage else [])], env=env)
+
+    if not target["key"]:
+        raise UsageError("SSH_KEY is required for GCP diagnostics")
+    key = Path(target["key"])
+    if not key.is_file():
+        raise UsageError(f"SSH key is missing: {key}")
+    if args.action == "logs":
+        if not SERVICE_NAME.fullmatch(args.service) or not 1 <= args.tail <= 1000:
+            raise UsageError("--service must be a service name and --tail must be 1..1000")
+        remote = ("sudo -n bash /opt/rocento/deploy/ec2/server/ec2-compose.sh "
+                  f"{shlex.quote(args.store)} logs --tail={args.tail} {shlex.quote(args.service)}")
+    else:
+        remote = f"sudo -n bash /opt/rocento/deploy/ec2/server/ec2-{args.action}.sh"
+    print(f"Operation: cloud {args.action}; target={target['name']}; provider={provider}; host={host}; scope=platform", flush=True)
+    return run(["ssh", "-i", str(key), "-o", "BatchMode=yes", "-o", "StrictHostKeyChecking=yes",
+                "-o", "ConnectTimeout=20", f"{target['user']}@{host}", remote])
+
+
+def main() -> int:
+    cli = parser()
+    args = cli.parse_args()
+    try:
+        if args.group == "help":
+            cli.print_help()
+            print("\nRun 'ops catalog' for command effects and owning runbooks.")
+            return 0
+        if args.group == "catalog":
+            show_catalog()
+            return 0
+        if args.group == "local":
+            return local_command(args)
+        if args.group == "release":
+            return release_command(args)
+        return cloud_command(args)
+    except (UsageError, OSError, ValueError) as error:
+        print(f"ERROR: {error}", file=sys.stderr)
+        return 2
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())

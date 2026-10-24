@@ -1,0 +1,103 @@
+#!/usr/bin/env bash
+# Shared upload and activation boundary. Excludes also protect receiver files from deletion.
+# Keep the scan inside deployment inputs. Public frontend assets remain included;
+# demo images, docs, local workspaces and generated language research data do not.
+# The language runtime uses the same two packaged inputs as deploy-ai.sh.
+configure_source_filters() {
+  SOURCE_FILTERS=(
+    # Native mobile apps/specifications are not platform deployment inputs.
+    --exclude='/commerce-mobile-apps/' --exclude='/rocento-mobile-specs/'
+    --exclude='__pycache__/' --exclude='*.pyc'
+    --exclude='.venv/' --exclude='.mypy_cache/' --exclude='.pytest_cache/' --exclude='.ruff_cache/'
+    --exclude='.pnpm-store/' --exclude='playwright-report/' --exclude='test-results/' --exclude='*.tsbuildinfo'
+    --exclude='.git/' --exclude='node_modules/' --exclude='target/' --exclude='dist/' --exclude='dist-server/' --exclude='out/' --exclude='.next/'
+    --exclude='.stage*-dist/' --exclude='.stage*-dist-server/' --exclude='.DS_Store'
+    --exclude='/Rocento-Codex/' --exclude='/commerce-api/rocento-api/migrations/' --exclude='.rsync-partial/'
+    --exclude='/commerce-api/onboard-api/'
+    --exclude='.env' --exclude='.env.*' --exclude='.local/' --exclude='artifacts/' --exclude='output/' --exclude='tmp/'
+    --exclude='/commerce-assistant-platform/docs/' --exclude='/commerce-assistant-platform/evals/' --exclude='/commerce-assistant-platform/local/'
+    --exclude='commerce-ops/deploy/ec2/bootstrap.env' --exclude='commerce-ops/deploy/ec2/*.env' --exclude='commerce-ops/deploy/ec2/state/' --exclude='commerce-ops/deploy/ec2/*.seeded' --exclude='commerce-ops/deploy/ec2/setup.lock'
+    --exclude='/commerce-ops/deploy/ec2/public/' --exclude='/commerce-ops/deploy/ec2/shared-ai/'
+    --exclude='/commerce-ops/deploy/ec2/card-details.*/'
+    # Workstation launchers stay local; only the server implementations deploy.
+    --exclude='/commerce-ops/deploy/aws-deploy/' --exclude='/commerce-ops/cloud/providers/'
+    --exclude='/commerce-ops/deploy/gcp-deploy/'
+    --exclude='/commerce-ops/deploy/ec2/common.yaml' --exclude='/commerce-ops/deploy/ec2/grocery.yaml'
+    --exclude='/commerce-ops/deploy/ec2/jewelry.yaml' --exclude='/commerce-ops/deploy/ec2/electronics.yaml' --exclude='/commerce-ops/deploy/ec2/pharmacy.yaml'
+    # Legacy source-path symlinks are operator compatibility only; package the canonical files below.
+    --exclude='/commerce-ops/deploy/ec2/assistant.yaml' --exclude='/commerce-ops/deploy/ec2/shared-ai-consumer.yaml'
+    # Keep only the known top-level Compose compatibility symlinks out of
+    # uploads; a broad wildcard would also protect unrelated stale files on
+    # the receiver from deletion during the managed-source mirror.
+    --exclude='/commerce-ops/compose/compose.yaml'
+    --exclude='/commerce-ops/compose/compose.ai-shared.yaml'
+    --exclude='/commerce-ops/compose/compose.assistant-admin.yaml'
+    --exclude='/commerce-ops/compose/compose.assistant-dbeaver.yaml'
+    --exclude='/commerce-ops/compose/compose.assistant-provider.yaml'
+    --exclude='/commerce-ops/compose/compose.assistant-runtime.yaml'
+    --exclude='/commerce-ops/compose/compose.assistant.yaml'
+    --exclude='/commerce-ops/compose/compose.electronics.yaml'
+    --exclude='/commerce-ops/compose/compose.jewelry.yaml'
+    --exclude='/commerce-ops/compose/compose.language-engine.yaml'
+    --exclude='/commerce-ops/compose/compose.local-resources.yaml'
+    --exclude='/commerce-ops/compose/compose.local-shared-networks.yaml'
+    --exclude='/commerce-ops/compose/compose.local.yaml'
+    --exclude='/commerce-ops/compose/compose.notifications.yaml'
+    --exclude='/commerce-ops/compose/compose.observability.yaml'
+    --exclude='/commerce-ops/compose/compose.pharmacy.yaml'
+    --exclude='/commerce-ops/compose/compose.publication.yaml'
+    --exclude='/commerce-ops/compose/compose.rengine.yaml'
+    --exclude='/commerce-ops/compose/compose.shared-ai-consumer.yaml'
+    --exclude='/commerce-ops/onboarding/'
+    --exclude='/commerce-ops/scripts/local/local-compose.sh' --exclude='/commerce-ops/scripts/local/local-demo-compose.sh'
+    --exclude='/commerce-ops/scripts/local/initialize-assistant-storage.py' --exclude='/commerce-ops/scripts/local/create-assistant-credentials.py'
+    --exclude='/commerce-ops/scripts/local/bootstrap-admin.py' --exclude='/commerce-ops/scripts/local/local-demo-assistants-setup.py'
+    --exclude='/commerce-ops/scripts/local/assistant-save-key.py' --exclude='/commerce-ops/scripts/local/knowledge-setup.py'
+    --exclude='/commerce-ops/scripts/local/agentic-pilot-guides.py' --exclude='/commerce-ops/scripts/local/native-preview-local-proxy.py'
+    --exclude='/commerce-ops/scripts/local/conversations-setup.py' --exclude='/commerce-ops/scripts/local/configure-rengine-connections.py'
+    # Workflow implementations have one owner; old script aliases stay local.
+    --exclude='/commerce-ops/scripts/release' --exclude='/commerce-ops/scripts/demo' --exclude='/commerce-ops/scripts/maintenance'
+    --exclude='/commerce-ops/scripts/checks' --exclude='/commerce-ops/scripts/contracts' --exclude='/commerce-ops/scripts/generation'
+    --exclude='/commerce-ops/scripts/evaluation' --exclude='/commerce-ops/scripts/shopping_eval' --exclude='/commerce-ops/scripts/recommendation_eval'
+    --exclude='/commerce-ops/scripts/tests' --exclude='/commerce-ops/tests/'
+    --include='/commerce-ops/tools/'
+    --include='/commerce-ops/workflows/'
+    --include='/commerce-ops/deploy/ec2/'
+    # Native preview has an independent package, installer and lifecycle.
+    --exclude='/commerce-ops/services/native-preview/'
+    --include='/commerce-ops/services/assistant/'
+    --include='/commerce-ops/services/health-dashboard/' --include='/commerce-ops/services/health-dashboard/***'
+    --include='/commerce-ops/services/observability/' --include='/commerce-ops/services/rengine/'
+    --include='/commerce-ops/services/' --include='/commerce-ops/services/contact/' --include='/commerce-ops/services/contact/***'
+    --exclude='/commerce-ops/deploy/*'
+    --include='/commerce-assistant-platform/app/commerce_language_engine/data/compiled.json'
+    --include='/commerce-assistant-platform/app/commerce_language_engine/data/deployment-release.json.gz'
+    --exclude='/commerce-assistant-platform/app/commerce_language_engine/data/*'
+    --include='/commerce-api/' --include='/commerce-web/' --include='/commerce-assistant-platform/'
+    --include='/commerce-ops/'
+    --include='/commerce-ops/deploy/' --include='/commerce-ops/cloud/' --include='/commerce-ops/cloud/host/'
+    --include='/commerce-ops/cloud/host/render_config.py' --include='/commerce-ops/cloud/host/status.sh' --include='/commerce-ops/cloud/host/doctor.sh'
+    --include='/commerce-ops/cloud/host/deploy-ai.sh' --include='/commerce-ops/cloud/host/shared-ai-upgrade.sh'
+    --include='/commerce-ops/cloud/host/check.py'
+    --include='/commerce-ops/cloud/host/activate-source.sh' --include='/commerce-ops/cloud/host/deployment_job.py'
+    --include='/commerce-ops/cloud/host/deploy.sh'
+    --include='/commerce-ops/cloud/host/deploy-rengine.sh'
+    --include='/commerce-ops/cloud/host/compose.sh'
+    --include='/commerce-ops/cloud/host/seed-demo.sh'
+    --include='/commerce-ops/cloud/host/bootstrap.sh'
+    --include='/commerce-ops/cloud/host/cleanup.py'
+    --include='/commerce-ops/cloud/host/preserve_ai.py'
+    --include='/commerce-ops/cloud/host/publication.py'
+    --include='/commerce-ops/cloud/lib/'
+    --include='/commerce-ops/cloud/lib/source-filters.sh' --include='/commerce-ops/scripts/' --include='/commerce-ops/compose/'
+    --exclude='/*'
+  )
+  if [[ ${PRESERVE_AI:-0} == 1 ]]; then
+    SOURCE_FILTERS=(--exclude='/commerce-assistant-platform/' --exclude='/commerce-ops/services/assistant/'
+      --exclude='/commerce-ops/compose/components/compose.assistant*.yaml' --exclude='/commerce-ops/compose/components/compose.language-engine.yaml' --exclude='/commerce-ops/compose/overlays/cloud/compose.ai-shared.yaml'
+      --exclude='/commerce-ops/compose/components/compose.assistant-runtime.yaml' --exclude='/commerce-ops/compose/components/compose.shared-ai-consumer.yaml'
+      --exclude='/commerce-ops/compose/compose.assistant*.yaml' --exclude='/commerce-ops/compose/compose.language-engine.yaml' --exclude='/commerce-ops/compose/compose.ai-shared.yaml' --exclude='/commerce-ops/compose/compose.shared-ai-consumer.yaml'
+      --exclude='/commerce-ops/deploy/ec2/assistant.yaml' --exclude='/commerce-ops/deploy/ec2/shared-ai-consumer.yaml'
+      "${SOURCE_FILTERS[@]}")
+  fi
+}

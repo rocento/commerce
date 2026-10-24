@@ -1,0 +1,38 @@
+{
+  "version": 1,
+  "commands": [
+    {"id": "local platform up", "implementation": "commerce-ops/local/platform/local-compose.sh", "owner": "local platform", "runtime": "bash, Docker Compose", "location": "workstation", "effect": "local-write", "target": "local platform", "runbook": "commerce-ops/tasks/local-development.md"},
+    {"id": "local platform down", "implementation": "commerce-ops/local/platform/local-compose.sh", "owner": "local platform", "runtime": "bash, Docker Compose", "location": "workstation", "effect": "local-write", "target": "local platform", "runbook": "commerce-ops/tasks/local-development.md"},
+    {"id": "local platform status", "implementation": "commerce-ops/local/platform/local-compose.sh", "owner": "local platform", "runtime": "bash, Docker Compose", "location": "workstation", "effect": "read", "target": "local platform", "runbook": "commerce-ops/tasks/local-development.md"},
+    {"id": "local platform logs", "implementation": "commerce-ops/local/platform/local-compose.sh", "owner": "local platform", "runtime": "bash, Docker Compose", "location": "workstation", "effect": "read", "target": "local platform", "runbook": "commerce-ops/tasks/local-development.md"},
+    {"id": "local onboarding up", "implementation": "commerce-ops/local/onboarding/compose.yaml", "owner": "local onboarding", "runtime": "Docker Compose", "location": "workstation", "effect": "local-write", "target": "local onboarding", "runbook": "commerce-ops/tasks/onboarding.md"},
+    {"id": "local onboarding down", "implementation": "commerce-ops/local/onboarding/compose.yaml", "owner": "local onboarding", "runtime": "Docker Compose", "location": "workstation", "effect": "local-write", "target": "local onboarding", "runbook": "commerce-ops/tasks/onboarding.md"},
+    {"id": "local onboarding status", "implementation": "commerce-ops/local/onboarding/compose.yaml", "owner": "local onboarding", "runtime": "Docker Compose", "location": "workstation", "effect": "read", "target": "local onboarding", "runbook": "commerce-ops/tasks/onboarding.md"},
+    {"id": "local onboarding logs", "implementation": "commerce-ops/local/onboarding/compose.yaml", "owner": "local onboarding", "runtime": "Docker Compose", "location": "workstation", "effect": "read", "target": "local onboarding", "runbook": "commerce-ops/tasks/onboarding.md"},
+    {"id": "local assistant setup", "implementation": "commerce-ops/local/platform/initialize-assistant-storage.py", "owner": "local platform", "runtime": "Python, Docker Compose", "location": "workstation", "effect": "local-write", "target": "local assistant", "runbook": "commerce-ops/tasks/local-development.md"},
+    {"id": "local demo seed", "implementation": "commerce-ops/workflows/demo/seed-demo-storefront.py", "owner": "demo workflow", "runtime": "Python", "location": "workstation", "effect": "local-write", "target": "explicit loopback API for --apply", "runbook": "commerce-ops/tasks/demo-seeding.md"},
+    {"id": "release prepare", "implementation": "commerce-ops/workflows/release/release_readiness.py", "owner": "release workflow", "runtime": "Python", "location": "workstation", "effect": "local-write", "target": "candidate SHA-256 and evidence packet", "runbook": "commerce-ops/tasks/release-preparation.md"},
+    {"id": "release check", "implementation": "commerce-ops/workflows/release/release_readiness.py", "owner": "release workflow", "runtime": "Python", "location": "workstation", "effect": "read", "target": "candidate SHA-256 and evidence packet", "runbook": "commerce-ops/tasks/release-preparation.md"},
+    {"id": "cloud plan", "implementation": "commerce-ops/bin/ops", "owner": "cloud interface", "runtime": "Python", "location": "workstation", "effect": "read", "target": "named cloud target", "runbook": "commerce-ops/tasks/rocento-platform-deployment.md"},
+    {"id": "cloud deploy", "implementation": "commerce-ops/bin/ops", "delegates": ["commerce-ops/cloud/providers/aws/deploy.sh", "commerce-ops/cloud/providers/gcp/deploy.sh"], "owner": "cloud provider", "runtime": "bash, SSH, rsync", "location": "workstation and Ubuntu host", "effect": "remote-write", "target": "named cloud target", "runbook": "commerce-ops/tasks/rocento-platform-deployment.md"},
+    {"id": "cloud status", "implementation": "commerce-ops/cloud/host/status.sh", "owner": "cloud host", "runtime": "SSH, bash", "location": "Ubuntu host", "effect": "read", "target": "named cloud target", "runbook": "commerce-ops/tasks/diagnostics.md"},
+    {"id": "cloud doctor", "implementation": "commerce-ops/cloud/host/doctor.sh", "owner": "cloud host", "runtime": "SSH, bash", "location": "Ubuntu host", "effect": "read", "target": "named cloud target", "runbook": "commerce-ops/tasks/diagnostics.md"},
+    {"id": "cloud logs", "implementation": "commerce-ops/cloud/host/compose.sh", "owner": "cloud host", "runtime": "SSH, bash, Docker Compose", "location": "Ubuntu host", "effect": "read", "target": "named cloud target", "runbook": "commerce-ops/tasks/diagnostics.md"},
+    {"id": "cloud demo seed", "implementation": "commerce-ops/cloud/seed-demo.sh", "delegates": ["commerce-ops/cloud/providers/aws/seed-demo.sh", "commerce-ops/cloud/providers/gcp/seed-demo.sh"], "owner": "demo workflow", "runtime": "bash, SSH", "location": "workstation and Ubuntu host", "effect": "remote-write", "target": "named AWS or GCP target", "runbook": "commerce-ops/tasks/demo-seeding.md"}
+  ],
+  "internal_modules": [
+    "commerce-ops/tools/contracts/assistant_contract.py",
+    "commerce-ops/tools/contracts/reporting_contract.py",
+    "commerce-ops/workflows/demo/catalog_support.py",
+    "commerce-ops/workflows/demo/demo_presets.py",
+    "commerce-ops/workflows/demo/grocery_palette.py",
+    "commerce-ops/workflows/demo/local_database.py",
+    "commerce-ops/workflows/release/commerce_image.py",
+    "commerce-ops/workflows/release/commerce_release.py",
+    "commerce-ops/workflows/release/commerce_reliability.py",
+    "commerce-ops/workflows/release/reliability_support.py",
+    "commerce-ops/cloud/host/check.py",
+    "commerce-ops/cloud/host/deployment_job.py"
+  ],
+  "legacy_inventory": "commerce-ops/config/entrypoints.json"
+}

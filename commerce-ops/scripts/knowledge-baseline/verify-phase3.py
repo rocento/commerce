@@ -101,8 +101,8 @@ def main():
             for p in [
                 "commerce-ops/scripts/evaluation/domain-evidence.py",
                 "commerce-ops/scripts/local/conversations-setup.py",
-                "commerce-ops/deploy/assistant/shared-tenants.sql",
-                "commerce-ops/deploy/assistant/init-store.sh",
+                "commerce-ops/services/assistant/shared-tenants.sql",
+                "commerce-ops/services/assistant/init-store.sh",
                 "commerce-assistant-platform/docs/capabilities.json",
                 "commerce-api/rocento-api/openapi.json",
                 "commerce-assistant-platform/tests/fixtures/enterprise_contracts/public-assistant-v1.json",

@@ -18,11 +18,11 @@ gate; any inventory change requires new evidence and review.
 Create the packet beside that inventory and the sanitized evidence files:
 
 ```sh
-python3 commerce-ops/scripts/release/release_readiness.py init \
+python3 commerce-ops/workflows/release/release_readiness.py init \
   --packet commerce-output/YYYY-MM-DD-release/evidence/readiness.json \
   --candidate-sha256 <inventory-sha256> --environment <installation-id> \
   --owner <release-owner>
-python3 commerce-ops/scripts/release/release_readiness.py check \
+python3 commerce-ops/workflows/release/release_readiness.py check \
   --packet commerce-output/YYYY-MM-DD-release/evidence/readiness.json \
   --candidate-sha256 <inventory-sha256> --environment <installation-id>
 ```
@@ -53,8 +53,6 @@ than suggesting that unit tests ran on production.
 | `tenant-isolation` | Cross-tenant access, delegated scopes, authentication and private/public ingress rejection tests. |
 | `security-review` | Candidate dependency/container/secret scan results, reviewed findings, and resolution of release-blocking vulnerabilities. Record scanner databases and policy; no unsupported claim of certification. |
 | `migration-upgrade` | Upgrade from the supported existing schema on an isolated sanitized copy, checksum validation and compatibility with the planned rollout sequence. Fresh empty databases alone do not qualify. |
-| `backup-restore` | Recent isolated restore exercise, integrity checks, measured recovery time and data-loss window against agreed RTO/RPO; see [durability](durability.md). |
-| `recovery-plan` | Reviewed rollback or forward-recovery procedure, immutable prior artifacts, database compatibility, abort criteria and responsible operator. A plan is not evidence of a rollback rehearsal. |
 | `capacity` | Representative workload, resource limits, latency/error objectives, observed results and headroom. Debug microbenchmarks do not establish production capacity. |
 | `observability` | Alert routing verified, dashboards and freshness signals available, owner/on-call coverage, quantitative abort thresholds and a defined observation window. |
 | `deployment-acceptance` | Controlled installation of the exact artifacts, migration/readiness checks and synthetic critical journeys through real ingress. Include external delivery/provider coverage where enabled. |
@@ -123,13 +121,14 @@ a `:release` tag to another image blocks the gate. The full frontend export live
 in `/etc/rocento/release/frontend`; `commerce-web_files` records every relative file
 and SHA-256. Its copied bytes are checked again before ingress changes. Existing
 `--no-build` is compatible; `--rebuild` is rejected in production. Build/qualify
-artifacts separately with the existing Dockerfiles and frontend build recipe.
+artifacts separately with the existing Dockerfiles and the
+[frontend build recipe](../../../commerce-ops/workflows/release/build-frontend.sh).
 
 Generate a draft inventory from the final prepared source, already qualified
 images, bootstrap file, and complete frontend export:
 
 ```sh
-python3 commerce-ops/scripts/release/deployment_gate.py inventory --operation full   --source . --bootstrap commerce-ops/deploy/aws-deploy/bootstrap.env   --capture-images --frontend /path/to/reviewed-public-export > inventory.json
+python3 commerce-ops/workflows/release/deployment_gate.py inventory --operation full   --source . --bootstrap .local/commerce-ops/secrets/aws/bootstrap.env   --capture-images --frontend /path/to/reviewed-public-export > inventory.json
 ```
 
 For an AI inventory supply `--operation ai --service all --store all`, or the
@@ -176,11 +175,10 @@ The numeric thresholds above are this project's recommended starting point.
 
 ## App Studio stage-limited promotion
 
-For the explicitly user-authorized App Studio stage that defers backups and
- disaster recovery, `commerce-ops/scripts/release/app_studio_stage.py` provides a separate,
- reviewed gateway-and-ingress promotion path. This does not satisfy or weaken the
- full release gate above. It records backup/DR as deferred and capacity as
- unqualified; it does not certify general production readiness.
+The App Studio gateway-and-ingress promotion path in
+`commerce-ops/workflows/release/app_studio_stage.py` has its own reviewed scope.
+It does not satisfy or weaken the full release gate above, and it does not
+certify general production readiness.
 
 The supported scope is deliberately fixed: the grocery gateway serving App
  Studio, the asset route allowlist, and folder migration `20261015150000` on the
@@ -200,11 +198,10 @@ The operator installs the self-contained executable at
  labels inherited from a base image do not establish new gateway provenance.
 
 Required focused reviews cover exact candidate runtime, banner schema, asset
- ownership, migration upgrade, fallback compatibility, security, and activation.
- Check evidence must be fresh, hash-verified and bound to both candidate and
- fallback. Review the actual reports; metadata alone does not establish success.
- A compatible fallback must start after the new migration is applied. Restoring
- an older image lacking that embedded migration is not a valid recovery plan.
+ownership, migration upgrade, security, and activation.
+Check evidence must be fresh, hash-verified and bound to the candidate.
+ The inventory uses policy `app-studio-stage-v3` and omits fallback artifacts.
+ Review the actual reports; metadata alone does not establish success.
 
 `python3 -I /usr/local/lib/rocento/app-studio-stage/app_studio_stage.py snapshot`
  captures state without promotion. `check` validates the installed packet against
@@ -212,8 +209,7 @@ Required focused reviews cover exact candidate runtime, banner schema, asset
  requires 2 GiB free for this prebuilt activation, syntax-checks the minimal
  ingress update, replaces only the gateway, and runs reviewed public acceptance.
  This headroom requirement applies only to the prebuilt narrow operation, not to
- the full deployment's build-space guard. Failed acceptance attempts both
- compatible gateway recovery and prior ingress restoration, then verifies them.
- Keep the operator present for the acceptance and recovery result. Retain the
- output and verify preserved services and public draft behavior; do not publish
+ the full deployment's build-space guard. Failed acceptance stops and leaves
+ the applied gateway and ingress state in place. Inspect the error and current
+ state before retrying. Retain the output and verify preserved services and public draft behavior; do not publish
  a merchant configuration as part of this operation.

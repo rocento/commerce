@@ -14,7 +14,7 @@ jobs:
       - run: node --check commerce-web/apps/rengine/public/app.js
       - run: node --check commerce-web/apps/rengine/public/journey.js
       - run: for script in commerce-ops/deploy/aws-deploy/deploy-rengine.sh commerce-ops/deploy/ec2/server/ec2-deploy-rengine.sh; do bash -n "$script"; done
-      - run: docker compose -f commerce-ops/compose/compose.rengine.yaml config --quiet
+      - run: docker compose --project-directory commerce-ops/compose -f commerce-ops/compose/overlays/cloud/compose.rengine.yaml config --quiet
   documentation:
     runs-on: ubuntu-latest
     defaults:
@@ -25,10 +25,10 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
-      - run: python3 checks/check-documentation.py
-      - run: python3 -m unittest discover -s tests -p test_documentation.py
-      - run: python3 -m unittest discover -s tests -p test_output_inventory.py
-      - run: python3 -m unittest discover -s tests -p test_commerce_reliability.py
+      - run: python3 ../tools/checks/check-documentation.py
+      - run: python3 -m unittest discover -s ../tests/operations -p test_documentation.py
+      - run: python3 -m unittest discover -s ../tests/operations -p test_output_inventory.py
+      - run: python3 -m unittest discover -s ../tests/operations -p test_commerce_reliability.py
   repository-layout:
     runs-on: ubuntu-latest
     timeout-minutes: 10
@@ -42,17 +42,17 @@ jobs:
           python-version: '3.12'
       - name: Verify deployment and native controller entry points
         run: |
-          python3 -m unittest discover -s tests -p 'test_deployment_layout.py'
-          python3 -m unittest discover -s tests -p 'test_native_preview_layout.py'
-          python3 -m unittest discover -s ../deploy/aws-automation -p 'test_*.py'
+          python3 -m unittest discover -s ../tests/operations -p 'test_deployment_layout.py'
+          python3 -m unittest discover -s ../tests/operations -p 'test_native_preview_layout.py'
+          python3 -m unittest discover -s ../services/native-preview/aws-controller -p 'test_*.py'
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
-      - name: Verify grouped scripts and compatibility commands
-        run: python3 -m unittest discover -s tests -p 'test_script_layout.py'
+      - name: Verify canonical scripts and path layout
+        run: python3 -m unittest discover -s ../tests/operations -p 'test_script_layout.py'
       - name: Check canonical deployment shell syntax
         run: |
-          for script in local/*.sh ../deploy/aws-deploy/*.sh ../deploy/ec2/server/*.sh ../deploy/aws-automation/install-services.sh; do
+          for script in ../local/platform/*.sh ../deploy/aws-deploy/*.sh ../deploy/ec2/server/*.sh ../services/native-preview/aws-controller/install-services.sh; do
             bash -n "$script"
           done
   backend:
@@ -115,8 +115,8 @@ jobs:
           workspaces: commerce-api/rocento-api
       - name: Enforce Rust module boundaries
         run: |
-          python3 commerce-ops/scripts/checks/check-rust-architecture.py
-          python3 -m unittest discover -s commerce-ops/scripts/tests -p 'test_rust_architecture.py'
+          python3 commerce-ops/tools/checks/check-rust-architecture.py
+          python3 -m unittest discover -s commerce-ops/tests/operations -p 'test_rust_architecture.py'
       - run: cargo fmt --all -- --check
         working-directory: commerce-api/rocento-api
       - run: cargo clippy --workspace --all-targets --locked -- -D warnings
@@ -145,32 +145,32 @@ jobs:
           cache: pnpm
           cache-dependency-path: commerce-web/pnpm-lock.yaml
       - run: pnpm install --frozen-lockfile
-      - run: python3 ../commerce-ops/scripts/contracts/generate_openapi.py
+      - run: python3 ../commerce-ops/tools/contracts/generate_openapi.py
       - name: Validate full API contract and route coverage
         run: |
-          python3 -m pip install -r ../commerce-ops/scripts/tests/requirements-openapi.txt
-          python3 -m unittest discover -s ../commerce-ops/scripts/tests -p 'test_openapi_contract.py'
-          python3 -m unittest discover -s ../commerce-ops/scripts/tests -p 'test_mobile_contract.py'
+          python3 -m pip install -r ../commerce-ops/tests/operations/requirements-openapi.txt
+          python3 -m unittest discover -s ../commerce-ops/tests/operations -p 'test_openapi_contract.py'
+          python3 -m unittest discover -s ../commerce-ops/tests/operations -p 'test_mobile_contract.py'
       - name: Check reviewed public API contract
-        run: python3 ../commerce-ops/scripts/contracts/generate_public_openapi.py --check
+        run: python3 ../commerce-ops/tools/contracts/generate_public_openapi.py --check
       - name: Check protected API contract and documentation coverage
         run: |
-          python3 ../commerce-ops/scripts/contracts/generate_merchant_openapi.py --check
-          python3 ../commerce-ops/scripts/checks/check_api_documentation.py --check
+          python3 ../commerce-ops/tools/contracts/generate_merchant_openapi.py --check
+          python3 ../commerce-ops/tools/checks/check_api_documentation.py --check
       - name: Test public API publication boundaries
         run: |
-          python3 -m unittest discover -s ../commerce-ops/scripts/tests -p 'test_public_openapi.py'
-          python3 -m unittest discover -s ../commerce-ops/scripts/tests -p 'test_ec2_deployment.py'
-          python3 -m unittest discover -s ../commerce-ops/scripts/tests -p 'test_website_publication.py'
-          python3 -m unittest discover -s ../commerce-ops/scripts/tests -p 'test_merchant_docs_ingress.py'
-          python3 -m unittest discover -s ../commerce-ops/scripts/tests -p 'test_merchant_openapi.py'
-          python3 -m unittest discover -s ../commerce-ops/scripts/tests -p 'test_api_documentation.py'
-          python3 -m unittest discover -s ../commerce-ops/scripts/tests -p 'test_contact*.py'
+          python3 -m unittest discover -s ../commerce-ops/tests/operations -p 'test_public_openapi.py'
+          python3 -m unittest discover -s ../commerce-ops/tests/operations -p 'test_ec2_deployment.py'
+          python3 -m unittest discover -s ../commerce-ops/tests/operations -p 'test_website_publication.py'
+          python3 -m unittest discover -s ../commerce-ops/tests/operations -p 'test_merchant_docs_ingress.py'
+          python3 -m unittest discover -s ../commerce-ops/tests/operations -p 'test_merchant_openapi.py'
+          python3 -m unittest discover -s ../commerce-ops/tests/operations -p 'test_api_documentation.py'
+          python3 -m unittest discover -s ../commerce-ops/tests/operations -p 'test_contact*.py'
       - name: Check canonical mobile dashboard contract
         run: python3 ../commerce-mobile-apps/tools/generate_contract.py --check
       - name: Verify isolated mobile dashboard ingress
-        run: MOBILE_STUDIO_INGRESS_TESTS=1 python3 -m unittest discover -s ../commerce-ops/scripts/tests -p 'test_mobile_studio_ingress.py'
-      - run: node ../commerce-ops/scripts/contracts/sync-theme-contract.mjs --check
+        run: MOBILE_STUDIO_INGRESS_TESTS=1 python3 -m unittest discover -s ../commerce-ops/tests/operations -p 'test_mobile_studio_ingress.py'
+      - run: node ../commerce-ops/tools/contracts/sync-theme-contract.mjs --check
       - run: pnpm generate:api
       - run: git diff --exit-code -- ../commerce-api/rocento-api/openapi.json packages/api-client/src/schema.d.ts
       - run: pnpm lint
@@ -233,32 +233,32 @@ jobs:
         with:
           python-version: '3.12'
       - run: pip install --require-hashes -r requirements-dev.lock
-      - run: python ../commerce-ops/scripts/release/agentic-preflight.py
-      - run: python -m unittest discover -s ../commerce-ops/scripts/tests -p test_agentic_preflight.py
+      - run: python ../commerce-ops/workflows/release/agentic-preflight.py
+      - run: python -m unittest discover -s ../commerce-ops/tests/operations -p test_agentic_preflight.py
       - name: Verify contract generator entry points and output parity
-        run: python -m unittest discover -s ../commerce-ops/scripts/tests -p test_contract_generator_entrypoints.py
+        run: python -m unittest discover -s ../commerce-ops/tests/operations -p test_contract_generator_entrypoints.py
       - name: Enforce workflow dependency boundaries
-        run: python ../commerce-ops/scripts/checks/check-ai-architecture.py
+        run: python ../commerce-ops/tools/checks/check-ai-architecture.py
       - name: Check AI capability manifest and documentation
-        run: python ../commerce-ops/scripts/generation/generate_ai_capabilities.py --check
+        run: python ../commerce-ops/tools/generation/generate_ai_capabilities.py --check
       - name: Test architecture guard
-        run: python -m unittest discover -s ../commerce-ops/scripts/tests -p test_ai_architecture.py
+        run: python -m unittest discover -s ../commerce-ops/tests/operations -p test_ai_architecture.py
       - run: mypy app
       - name: Check language resolution wire contract
-        run: python ../commerce-ops/scripts/contracts/generate_language_resolution_contract.py --check
+        run: python ../commerce-ops/tools/contracts/generate_language_resolution_contract.py --check
       - name: Check assistant generated contracts
         run: |
-          python ../commerce-ops/scripts/contracts/generate_catalog_tool_contract.py
-          python ../commerce-ops/scripts/contracts/generate_openapi.py
-          python ../commerce-ops/scripts/contracts/generate_assistant_models.py
-          python ../commerce-ops/scripts/contracts/generate_assistant_validator.py
+          python ../commerce-ops/tools/contracts/generate_catalog_tool_contract.py
+          python ../commerce-ops/tools/contracts/generate_openapi.py
+          python ../commerce-ops/tools/contracts/generate_assistant_models.py
+          python ../commerce-ops/tools/contracts/generate_assistant_validator.py
           ruff format app/commerce_action_engine/contracts/__init__.py
           git diff --exit-code -- ../commerce-api/rocento-api/crates/api-gateway/openapi/shopper_tools.json app/commerce_action_engine/contracts/__init__.py ../commerce-web/packages/api-client/src/assistant-schemas.ts
       - run: ruff check .
       - run: ruff format --check .
       - run: pytest
       - name: Run bounded assistant load and failure acceptance
-        run: python ../commerce-ops/scripts/evaluation/agent-performance.py
+        run: python ../commerce-ops/tools/evaluation/agent-performance.py
       - run: python -m compileall -q app
   language-engine:
     runs-on: ubuntu-latest
@@ -319,15 +319,15 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - run: cp ../../.env.example .env
-      - run: docker compose config --quiet
-      - run: docker compose up --build --wait --wait-timeout 600
-      - run: python3 ../scripts/checks/smoke.py
-      - run: python3 ../scripts/checks/m1-smoke.py
-      - run: python3 ../scripts/local/bootstrap-admin.py
-      - run: python3 ../scripts/checks/m2-smoke.py
+      - run: docker compose --project-directory . -f base/compose.yaml config --quiet
+      - run: docker compose --project-directory . -f base/compose.yaml up --build --wait --wait-timeout 600
+      - run: python3 ../tools/checks/smoke.py
+      - run: python3 ../tools/checks/customer-authentication-smoke.py
+      - run: python3 ../local/platform/bootstrap-admin.py
+      - run: python3 ../tools/checks/catalog-search-integration.py
       - name: Run M3 cart and short-TTL inventory smoke
         run: |
-          docker compose run -d --name commerce-ai-m3-expiry -p 127.0.0.1:8081:8080 -e RESERVATION_TTL_SECONDS=2 api-gateway
+          docker compose --project-directory . -f base/compose.yaml run -d --name commerce-ai-m3-expiry -p 127.0.0.1:8081:8080 -e RESERVATION_TTL_SECONDS=2 api-gateway
           python3 - <<'PY'
           import time, urllib.request
           for attempt in range(60):
@@ -339,21 +339,21 @@ jobs:
           else:
               raise SystemExit('Short-TTL gateway did not start')
           PY
-          python3 ../scripts/checks/m3-smoke.py --expiry-base http://localhost:8081
+          python3 ../tools/checks/cart-reservation-regression.py --expiry-base http://localhost:8081
       - if: always()
         run: docker rm -f commerce-ai-m3-expiry || true
       - name: Run M4 COD and publisher-crash replay smoke
-        run: python3 ../scripts/checks/m4-smoke.py --replay
+        run: python3 ../tools/checks/cash-on-delivery-replay.py --replay
       - name: Run M5 tax and fulfillment smoke
-        run: python3 ../scripts/checks/m5-smoke.py
+        run: python3 ../tools/checks/checkout-fee-regression.py
       - name: Run M6 pricing and promotions smoke
-        run: python3 ../scripts/checks/m6-smoke.py
+        run: python3 ../tools/checks/promotion-regression.py
       - name: M8 analytics, realistic data and observability
         run: |
-          docker compose -f compose.yaml -f compose.observability.yaml up -d
-          python3 ../scripts/demo/seed-reporting.py --apply-local
-          docker compose exec -T api-gateway sync-reports
-          python3 ../scripts/checks/m8-smoke.py --observability
+          docker compose --project-directory . -f base/compose.yaml -f components/compose.observability.yaml up -d
+          python3 ../workflows/demo/seed-reporting.py --apply-local
+          docker compose --project-directory . -f base/compose.yaml exec -T api-gateway sync-reports
+          python3 ../tools/checks/reporting-observability-smoke.py --observability
       - uses: actions/setup-node@v4
         with:
           node-version: 22
@@ -365,23 +365,23 @@ jobs:
           DATABASE_URL: postgres://commerce:local-commerce-only@127.0.0.1:5432/commerce_language
         run: |
           npm --prefix ../../commerce-assistant-platform/app/commerce_language_engine ci
-          docker compose exec -T postgres createdb -U commerce commerce_language
+          docker compose --project-directory . -f base/compose.yaml exec -T postgres createdb -U commerce commerce_language
           node ../../commerce-assistant-platform/app/commerce_language_engine/scripts/prepare-ci-release.ts \
             --artifact ../../commerce-assistant-platform/app/commerce_language_engine/data/compiled.json \
             --output-dir ../../commerce-assistant-platform/app/commerce_language_engine/data
       - name: Assistant MVP isolation and live flows
         run: |
-          python3 ../scripts/local/assistant-setup.py
-          docker compose -f compose.yaml -f compose.assistant.yaml -f compose.language-engine.yaml up -d --build --wait --wait-timeout 240
-          python3 ../scripts/checks/assistant-isolation.py
-          docker exec -i commerce-ai-ai-service-1 python < ../scripts/checks/assistant-store-check.py
-          python3 ../scripts/checks/assistant-smoke.py --chaos
+          python3 ../local/platform/create-assistant-credentials.py
+          docker compose --project-directory . -f base/compose.yaml -f components/compose.assistant.yaml -f components/compose.language-engine.yaml up -d --build --wait --wait-timeout 240
+          python3 ../tools/checks/assistant-isolation.py
+          docker exec -i commerce-ai-ai-service-1 python < ../tools/checks/assistant-store-check.py
+          python3 ../tools/checks/assistant-smoke.py --chaos
       - name: Run M7 admin, CMS and reviews smoke
-        run: python3 ../scripts/checks/m7-smoke.py
+        run: python3 ../tools/checks/merchant-operations-regression.py
       - name: Run M11 attributes and product types smoke
-        run: python3 ../scripts/checks/m11-smoke.py
+        run: python3 ../tools/checks/catalog-attribute-definition-smoke.py
       - if: always()
-        run: docker compose -f compose.yaml -f compose.assistant.yaml -f compose.language-engine.yaml -f compose.observability.yaml down
+        run: docker compose --project-directory . -f base/compose.yaml -f components/compose.assistant.yaml -f components/compose.language-engine.yaml -f components/compose.observability.yaml down
   improvement-browser:
     runs-on: ubuntu-latest
     env:
@@ -483,9 +483,9 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
-      - run: python3 -m unittest discover -s tests -p 'test_release_readiness.py'
-      - run: python3 -m unittest discover -s tests -p 'test_deployment_gate.py'
-      - run: python3 -m unittest discover -s tests -p 'test_deploy_activation.py'
+      - run: python3 -m unittest discover -s ../tests/operations -p 'test_release_readiness.py'
+      - run: python3 -m unittest discover -s ../tests/operations -p 'test_deployment_gate.py'
+      - run: python3 -m unittest discover -s ../tests/operations -p 'test_deploy_activation.py'
   required-ci:
     name: Required CI
     if: always()

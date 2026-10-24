@@ -2,7 +2,7 @@
 
 The complete private [OpenAPI contract](../../commerce-api/rocento-api/openapi.json) documents the gateway's application operations. Infrastructure and crawler document routes use the deliberate exceptions below. Axum's implicit HEAD handling for GET is not a separately declared operation. Optional feature routers remain in the inventory even when an installation has not enabled their feature.
 
-The [generated inventory](../../commerce-api/rocento-api/api-documentation-inventory.json) records every method/path, owning source file, documentation audience, reference placement and exception. Its `counts` object is the source for current registered, full-contract, public, merchant and audience totals; do not copy those totals into maintained prose. The [review policy](../../commerce-ops/scripts/checks/api_documentation_policy.json) lists exact method/path pairs: adding a route never silently makes it public or silently classifies it as internal.
+The [generated inventory](../../commerce-api/rocento-api/api-documentation-inventory.json) records every method/path, owning source file, documentation audience, reference placement and exception. Its `counts` object is the source for current registered, full-contract, public, merchant and audience totals; do not copy those totals into maintained prose. The [review policy](../../commerce-ops/tools/checks/api_documentation_policy.json) lists exact method/path pairs: adding a route never silently makes it public or silently classifies it as internal.
 
 | Reference | Access and purpose |
 | --- | --- |
@@ -31,10 +31,10 @@ The deployment renderer also has one explicitly inventoried `fallback(shell)` in
 
 ## Keep references complete without publishing new routes by accident
 
-1. Update the owning contract extension and run `python3 commerce-ops/scripts/contracts/generate_openapi.py`.
-2. Review authentication, tenant/customer scope, sensitive schema fields and the intended audience. Update the exact operation and schema allowlists in the [public generator](../../commerce-ops/scripts/contracts/generate_public_openapi.py) or [merchant generator](../../commerce-ops/scripts/contracts/generate_merchant_openapi.py) only when appropriate.
+1. Update the owning contract extension and run `python3 commerce-ops/tools/contracts/generate_openapi.py`.
+2. Review authentication, tenant/customer scope, sensitive schema fields and the intended audience. Update the exact operation and schema allowlists in the [public generator](../../commerce-ops/tools/contracts/generate_public_openapi.py) or [merchant generator](../../commerce-ops/tools/contracts/generate_merchant_openapi.py) only when appropriate.
 3. Add the exact method/path to the reviewed policy. Internal operations still need an accurate full-contract definition; they are not an escape hatch for missing documentation.
-4. Regenerate both projections, then run `python3 commerce-ops/scripts/checks/check_api_documentation.py --write`. This writes the private inventory and its counts only after route coverage, audience policy and all three references agree. Keep private paths explicitly excluded in the public generator as well as classified in the policy.
-5. Run `python3 commerce-ops/scripts/checks/check_api_documentation.py --check` and `python3 -m unittest discover -s commerce-ops/scripts/tests -p 'test_api_documentation.py'` with the public and merchant projection checks in CI.
+4. Regenerate both projections, then run `python3 commerce-ops/tools/checks/check_api_documentation.py --write`. This writes the private inventory and its counts only after route coverage, audience policy and all three references agree. Keep private paths explicitly excluded in the public generator as well as classified in the policy.
+5. Run `python3 commerce-ops/tools/checks/check_api_documentation.py --check` and `python3 -m unittest discover -s commerce-ops/tests/operations -p 'test_api_documentation.py'` with the public and merchant projection checks in CI.
 
 The scanner rejects unknown routes, method changes, removed routes with stale references, unreviewed fallbacks and unsupported router syntax. It handles explicit Axum registrations and local literal path constants; it is a source coverage guard, not a compiler or proof of endpoint authorization. Extending route construction syntax requires extending and testing the scanner before the route can pass. Source coverage does not establish live deployment availability.

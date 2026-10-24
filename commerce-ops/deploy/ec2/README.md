@@ -1,20 +1,23 @@
 # Rocento EC2 deployment
 
-Production promotion requires a reviewed, root-owned release packet and exact
-preverified application images/frontend artifacts. Missing evidence blocks
-source activation and deployment; production no longer rebuilds these artifacts.
-Complete the [release authorization procedure](../../../commerce-docs/platform/operations/release-readiness.md#enforced-production-promotion)
-before invoking the commands below. Build and qualify candidate artifacts separately.
+Complete the [shared production prerequisites](../README.md#before-a-production-deployment)
+before using these host commands.
 
 
 AI service documentation is maintained in [AI service documentation](../../../commerce-docs/ai-service/README.md).
 
-Canonical workstation launchers live in `commerce-ops/deploy/aws-deploy/`; deployment-host
-commands and the EC2 configuration renderer live in `commerce-ops/deploy/ec2/`. On the
-server, `/opt/rocento/deploy/ec2/` remains the protected runtime location for generated
+Canonical workstation launchers live in `commerce-ops/cloud/providers/aws/` and
+`commerce-ops/cloud/providers/gcp/`; deployment-host commands live in
+`commerce-ops/deploy/ec2/server/`, and the configuration renderer lives in
+`commerce-ops/cloud/host/` (with a source compatibility path under
+`commerce-ops/deploy/ec2/`).
+Shared assistant topology lives in `commerce-ops/compose/components/compose.assistant-runtime.yaml`
+and `commerce-ops/compose/components/compose.shared-ai-consumer.yaml`. On the server,
+`/opt/rocento/deploy/ec2/` remains the protected runtime location for generated
 configuration, secrets, state and the deployment lock. Server command files are mirrored
 there for compatibility with existing service operations. Workstation guides and public
-templates live in `commerce-ops/deploy/aws-deploy/`; private configuration remains there. See
+templates live under `commerce-ops/cloud/providers/`; private configuration lives under
+`.local/commerce-ops/`. See
 the [repository command reference](../../../commerce-docs/platform/reference/scripts.md).
 
 The deployment supports Ubuntu 24.04/26.04 on both x86_64 and ARM64/aarch64 EC2 instances. Docker’s official multi-architecture images build and run natively; the scripts never force `linux/amd64`.
@@ -57,7 +60,7 @@ The local upload flags retain their CLI names: `--sync-language-data` verifies a
 
 ## Fast AI and language deployments
 
-Use [the workstation command reference](../aws-deploy/README.md#fast-ai-deployment) for accepted flags and examples. This path requires an existing full deployment. It verifies selected preloaded assistant images, takes the deployment lock and waits for readiness without rebuilding Rust or publishing frontend assets.
+Use [the AWS workstation command reference](../../cloud/providers/aws/README.md#fast-ai-deployment) for accepted flags and examples. This path requires an existing full deployment. It verifies selected preloaded assistant images, takes the deployment lock and waits for readiness without rebuilding Rust or publishing frontend assets.
 
 Use full deployment for gateway/frontend contracts, infrastructure, Compose or ingress changes. A partial deployment checks compatibility with the uploaded gateway contract and does not advance full-deployment fingerprint state.
 
@@ -67,13 +70,13 @@ The corresponding server command is `sudo bash commerce-ops/deploy/ec2/server/ec
 
 Managed API gateways use `AUTH_IP_RATE_LIMIT_MODE=ingress` and remain bound to localhost. Deployment validates and reloads Nginx client-IP authentication limits before replacing gateway containers, then publishes frontend files after backend readiness and migration checks. Authentication attempts allow 20 requests per minute with a burst of 10 per client and hostname; refresh/logout use their existing session and account protections. Nginx accepts `CF-Connecting-IP` only from the verified Cloudflare networks recorded in `configure.py`; review the linked official IP lists when updating ingress configuration.
 
-Check the generated deployment with `python3 -m unittest discover -s commerce-ops/scripts/tests -p test_ec2_deployment.py`. Native ingress regressions use a disposable Docker Nginx fixture: `AUTH_INGRESS_NGINX_TESTS=1 python3 -m unittest discover -s commerce-ops/scripts/tests -p test_auth_ingress.py`.
+Check the generated deployment with `python3 -m unittest discover -s commerce-ops/tests/operations -p test_ec2_deployment.py`. Native ingress regressions use a disposable Docker Nginx fixture: `AUTH_INGRESS_NGINX_TESTS=1 python3 -m unittest discover -s commerce-ops/tests/operations -p test_auth_ingress.py`.
 
 From your local checkout, after deploying the updated scripts once:
 
 ```bash
-bash commerce-ops/deploy/aws-deploy/seed-demo.sh --store all
-bash commerce-ops/deploy/aws-deploy/seed-demo.sh --store grocery
+bash commerce-ops/cloud/providers/aws/seed-demo.sh --store all
+bash commerce-ops/cloud/providers/aws/seed-demo.sh --store grocery
 ```
 
 The local launcher uses the deployment SSH key and runs the seed on EC2 with
@@ -141,25 +144,24 @@ The doctor distinguishes DNS, redirect loops caused by Cloudflare Flexible SSL, 
 
 The deployment provisions private AI services for each store. In admin, open **System → AI Assistant Configuration**, enter the model and API key, enable the assistant, and save. New installations default to off. Saved changes apply to new conversations without a restart; `ASSISTANT_ENABLED` is no longer required. Settings remain accessible while the assistant is off.
 
-Back up each store's `assistant-config` volume, `commerce-ops/deploy/ec2/<store>-assistant.env`, and `commerce-ops/deploy/ec2/assistant/<store>/` credentials alongside its databases. Preserve these files on subsequent deployments. The AI services have no public ports and each store has its own signing identity, AI database, and settings volume.
+Preserve each store's `assistant-config` volume, `commerce-ops/deploy/ec2/<store>-assistant.env`, and `commerce-ops/deploy/ec2/assistant/<store>/` credentials across subsequent deployments. The AI services have no public ports and each store has its own signing identity, AI database, and settings volume.
 
 The project still runs its gateway in its supported demo notification mode (`APP_ENV=development`, `NOTIFICATION_MODE=console`). Production email delivery remains separate application work; do not use this demo deployment for real customer orders until it is implemented and reviewed.
 
 ## First electronics release from an existing two-store installation
 
 Add proxied Cloudflare DNS records `electronics` and `electronics-admin`, pointing to the same EC2 IP. The existing origin certificate must cover these hosts (the wildcard certificate does).
-Set `ELECTRONICS_ADMIN_EMAIL` and a unique `ELECTRONICS_ADMIN_PASSWORD` (12+ characters) in the protected local `commerce-ops/deploy/aws-deploy/bootstrap.env`. Keep its existing values and mode 600.
+Set `ELECTRONICS_ADMIN_EMAIL` and a unique `ELECTRONICS_ADMIN_PASSWORD` (12+ characters) in the protected local `.local/commerce-ops/secrets/aws/bootstrap.env`. Keep its existing values and mode 600.
 
-On your Mac:
+From the repository root on your Mac:
 
 ```bash
-cd /Users/momar/Documents/commerce-ai
-bash commerce-ops/deploy/aws-deploy/deploy.sh
+bash commerce-ops/cloud/providers/aws/deploy.sh
 ```
 
 This uploads source, promotes preverified application images and a reviewed frontend export, starts the isolated electronics demo store, and publishes its storefront and admin routes. It does not seed any store. On EC2, run `sudo bash /opt/rocento/deploy/ec2/server/ec2-seed-demo.sh --store electronics` separately to populate that demo. Grocery and jewelry data are preserved. The main website links to `https://electronics.rocento.com`.
 
-Later releases use `bash commerce-ops/deploy/aws-deploy/deploy.sh`. The old `--skip-seed` option remains a harmless compatibility option; `--seed-demo`, `--seed-electronics`, and deployment seed flags now fail with instructions for the separate seed command.
+Later releases use `bash commerce-ops/cloud/providers/aws/deploy.sh`. The old `--skip-seed` option remains a harmless compatibility option; `--seed-demo`, `--seed-electronics`, and deployment seed flags now fail with instructions for the separate seed command.
 
 ## Separate mobile merchant dashboard
 
@@ -173,7 +175,7 @@ The four production proxies were removed after confirming no published ports, no
 
 ### Private production health dashboard
 
-`https://health.rocento.com` runs independently of the store containers. The frontend lives in `commerce-web/apps/health/`; the authenticated API and Docker health collector live in `commerce-api/health-api/`. Upload those directories and `commerce-ops/deploy/health-dashboard/` to the same paths under `/opt/rocento`, then run `sudo bash /opt/rocento/commerce-ops/deploy/health-dashboard/install.sh`. The installer also accepts the legacy `/opt/rocento/deploy/health-dashboard/` path. Installation holds the deployment lock, validates Nginx, and enables the API plus a one-minute systemd collector timer. Its separate `rocento-health` Nginx virtual host survives normal store configuration generation. Keep these source directories when deploying future repository versions.
+`https://health.rocento.com` runs independently of the store containers. The frontend lives in `commerce-web/apps/health/`; the authenticated API and Docker health collector live in `commerce-api/health-api/`. Upload those directories and `commerce-ops/services/health-dashboard/` to the same paths under `/opt/rocento`, then run `sudo bash /opt/rocento/commerce-ops/services/health-dashboard/install.sh`. The installer also accepts the legacy `/opt/rocento/deploy/health-dashboard/` path. Installation holds the deployment lock, validates Nginx, and enables the API plus a one-minute systemd collector timer. Its separate `rocento-health` Nginx virtual host survives normal store configuration generation. Keep these source directories when deploying future repository versions.
 
 Sign in as `info@rocento.com` with the existing **grocery admin password**. Login and every data request use the live grocery admin authentication service; disabling the account or revoking its session also removes dashboard access. The dashboard does not store passwords or have Docker permissions. Its Secure, HttpOnly, host-only cookie is separate from the admin site's cookie. If grocery authentication is down, authenticated dashboard access is unavailable too.
 
@@ -201,4 +203,4 @@ The health dashboard also checks infrastructure independently of container liven
 - Meilisearch: authenticated metadata, the required products index, indexing failures in the last two minutes, and the oldest queued/processing task over ten minutes.
 - Every checked data volume: persistent mount presence, read-only state, available space and inodes (90% threshold). Shared filesystem usage may appear on multiple volumes.
 
-Infrastructure failures affect store badges, effective container health, and dashboard incidents; unavailable diagnostics show unknown. These probes do not perform write tests, integrity scans, or backup/restore verification. They do not restart services or change the architecture. Alerts remain dashboard-only.
+Infrastructure failures affect store badges, effective container health, and dashboard incidents; unavailable diagnostics show unknown. These probes do not perform write tests or integrity scans. They do not restart services or change the architecture. Alerts remain dashboard-only.

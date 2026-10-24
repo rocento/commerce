@@ -1,0 +1,37 @@
+# Opt-in merchant publication. Never include this overlay for demo/admin services.
+# Use the SAME Compose project and credentials as the intended merchant installation.
+services:
+  api-gateway:
+    environment:
+      PUBLICATION_ENVIRONMENT: production
+      PUBLICATION_INSTALLATION_ID: ${PUBLICATION_INSTALLATION_ID:?Read the installation UUID from its own database first}
+      PUBLICATION_APPROVED_ORIGIN: ${PUBLICATION_APPROVED_ORIGIN:?Set the approved HTTPS merchant origin with trailing slash}
+      PUBLICATION_NOINDEX: ${PUBLICATION_NOINDEX:-true}
+      PUBLICATION_INDEX_PATH: /srv/publication/index.html
+      PUBLICATION_RENDERER_URL: http://publication-renderer:8081/
+      PUBLICATION_OBSERVATION_TOKEN: ${PUBLICATION_OBSERVATION_TOKEN:?Set one random secret of at least 32 characters for gateway and renderer}
+    volumes:
+      - ${PUBLICATION_ARTIFACT_DIR:?Set the absolute built storefront directory}:/srv/publication:ro
+  publication-renderer:
+    # Build artifacts on the same release as the gateway. Node dependencies must be installed.
+    image: node:22-bookworm-slim
+    working_dir: /workspace/frontend/apps/storefront
+    command: ["node", "server/start.mjs"]
+    environment:
+      PUBLICATION_APPROVED_ORIGIN: ${PUBLICATION_APPROVED_ORIGIN:?Set the approved merchant origin}
+      PUBLICATION_INSTALLATION_ID: ${PUBLICATION_INSTALLATION_ID:?Set the installation UUID}
+      NODE_ENV: production
+      PUBLICATION_ARTIFACT_DIR: /srv/publication
+      PUBLICATION_MAX_INFLIGHT: ${PUBLICATION_MAX_INFLIGHT:-32}
+      PUBLICATION_OBSERVATION_TOKEN: ${PUBLICATION_OBSERVATION_TOKEN:?Set the matching private health secret}
+      PUBLICATION_GATEWAY: http://api-gateway:8080/
+      PUBLICATION_BIND: 0.0.0.0
+      PUBLICATION_PORT: 8081
+    ports:
+      - "127.0.0.1:${PUBLICATION_PORT:-8081}:8081"
+    volumes:
+      - ${PUBLICATION_ARTIFACT_DIR:?Set the built storefront directory}:/srv/publication:ro
+      - ${PUBLICATION_WORKSPACE_DIR:?Set the release workspace with built frontend artifacts and installed Node dependencies}:/workspace:ro
+    read_only: true
+    init: true
+    restart: unless-stopped

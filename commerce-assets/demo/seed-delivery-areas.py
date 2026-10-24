@@ -10,7 +10,7 @@ import re
 import sys
 from demo_seed import Client, ROOT
 
-sys.path.insert(0, str(ROOT / 'commerce-ops/scripts'))
+sys.path.insert(0, str(ROOT / 'commerce-ops/workflows/demo'))
 from demo_presets import assert_isolated, list_products, load_preset
 
 PREFIX = 'Egypt demo — '

@@ -26,13 +26,13 @@ jobs:
           cargo test --manifest-path commerce-api/rocento-api/Cargo.toml -p api-gateway --test orders --test cart_inventory --no-run --locked
       - name: Database guard and checkout regressions
         shell: bash
-        run: python3 commerce-ops/scripts/release/m14-unit.py | tee evidence/regressions.txt
+        run: python3 commerce-ops/workflows/release/isolated-db-regression.py | tee evidence/regressions.txt
       - name: Complete HTTP commerce journey and customer isolation
         shell: bash
-        run: python3 commerce-ops/scripts/release/system-qa-http.py | tee evidence/http-journey.txt
+        run: python3 commerce-ops/workflows/release/system-qa-http.py | tee evidence/http-journey.txt
       - name: Graceful shutdown
         shell: bash
-        run: python3 commerce-ops/scripts/release/m14-shutdown.py | tee evidence/shutdown.txt
+        run: python3 commerce-ops/workflows/release/gateway-shutdown-check.py | tee evidence/shutdown.txt
       - name: Preserve non-secret qualification results
         if: always()
         uses: actions/upload-artifact@v4

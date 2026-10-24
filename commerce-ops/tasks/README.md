@@ -1,0 +1,11 @@
+# Operations task guides
+
+Use the [task menu](../README.md#start-by-task) to choose the canonical procedure.
+This directory is the permanent home for local platform, onboarding, release,
+demo seeding, deployment, and diagnostic runbooks. Keep the name `tasks/`.
+
+Use [COMMANDS.md](../COMMANDS.md) for invocation and target rules. A task guide
+owns the shared procedure; provider and service guides explain their specific
+prerequisites. Extend an existing guide before adding another one. Documentation
+ownership and planned merges are recorded in the
+[refactor plan](../REFACTOR-PLAN.md#11-markdown-strategy-one-owner-for-each-topic).

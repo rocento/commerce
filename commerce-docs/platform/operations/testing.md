@@ -13,12 +13,12 @@ Run checks appropriate to the owning service and changed behavior. Current comma
 From the repository root:
 
 ```sh
-python3 commerce-ops/scripts/checks/check-documentation.py
-python3 commerce-ops/scripts/checks/check-migration-history.py
-python3 commerce-ops/scripts/checks/smoke.py
+python3 commerce-ops/tools/checks/check-documentation.py
+python3 commerce-ops/tools/checks/check-migration-history.py
+python3 commerce-ops/tools/checks/smoke.py
 ```
 
-The documentation checker validates links, anchors, structure and owning indexes in maintained guides, including mobile and automation entry points. It rejects links directly into ignored local evidence folders; use the [evidence catalog](../evidence/README.md). Default validation must pass without those payloads. `python3 commerce-ops/scripts/checks/check-documentation.py --check-local-evidence` additionally checks cataloged attachment sizes and hashes on a workstation holding the retained files. CI runs portable checks and regression tests. Migration source preflight does not verify applied database checksums unless the relevant database inspection is supplied. Smoke checks need the matching running stack.
+The documentation checker validates links, anchors, structure and owning indexes in maintained guides, including mobile and automation entry points. It rejects links directly into ignored local evidence folders; use the [evidence catalog](../evidence/README.md). Default validation must pass without those payloads. `python3 commerce-ops/tools/checks/check-documentation.py --check-local-evidence` additionally checks cataloged attachment sizes and hashes on a workstation holding the retained files. CI runs portable checks and regression tests. Migration source preflight does not verify applied database checksums unless the relevant database inspection is supplied. Smoke checks need the matching running stack.
 
 ## Browser and integration environments
 
@@ -42,6 +42,6 @@ Use the [release readiness gate](release-readiness.md) to bind current, reviewed
 | Customer/admin UI | Relevant browser flows against identified backend and role fixtures |
 | Merchant publication | Matching artifacts, bound origin, public-edge/private behavior, storage isolation, feeds and rollback |
 | AI service | Tenant/key, parser fingerprint, scoped capabilities, persistence and provider acceptance as applicable |
-| Deployment | Identified installation, release identity and environment-specific acceptance from the [release runbook](../../../commerce-ops/deploy/aws-deploy/how.md) |
+| Deployment | Identified installation, release identity and environment-specific acceptance from the [release runbook](../../../commerce-ops/tasks/rocento-platform-deployment.md) |
 
 Retained logs, manifests and compressed archives describe their recorded candidates only. Historical Markdown reports, staged prompts and the former Quality source tree were removed; missing attachments are not current verification. Keep useful executable publication harnesses and unique observations. See [cleanup policy](../reference/workspace-cleanup.md) for maintenance boundaries.

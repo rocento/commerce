@@ -50,12 +50,12 @@ def source_manifest():
     files.update((ROOT / "commerce-assistant-platform/tests/fixtures").rglob("*.json"))
     files.update((ROOT / "commerce-assistant-platform/tests/fixtures").rglob("*.jsonl"))
     files.update((ROOT / "commerce-assistant-platform/migrations").glob("*.sql"))
-    files.update((ROOT / "commerce-ops/deploy/assistant").glob("*.sql"))
+    files.update((ROOT / "commerce-ops/services/assistant").glob("*.sql"))
     files.update((ROOT / "commerce-ops/scripts").glob("*.sh"))
     for name in [
         "commerce-api/rocento-api/openapi.json", "commerce-assistant-platform/pyproject.toml",
         "scripts/check-ai-architecture.py", "scripts/generate_ai_capabilities.py",
-        "commerce-assistant-platform/docs/capabilities.json", "commerce-ops/compose/compose.ai-shared.yaml",
+        "commerce-assistant-platform/docs/capabilities.json", "commerce-ops/compose/overlays/cloud/compose.ai-shared.yaml",
         "scripts/knowledge-baseline/validate-release-repair-python.py",
     ]:
         path = ROOT / name

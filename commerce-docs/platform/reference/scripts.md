@@ -3,42 +3,47 @@
 Use this guide to find the canonical implementation of a repository command.
 Commands run from the repository root unless the owning guide says otherwise.
 [Agent instructions](../../../commerce-ops/scripts/AGENTS.md) cover changes to commands and
-command ownership and changes.
+command ownership and verification.
 
 ## Find the implementation
 
 | Folder | Responsibility |
 | --- | --- |
-| `commerce-ops/scripts/local/` | Local setup, Compose launchers and preview helpers |
-| `commerce-ops/scripts/contracts/` | Contract generators, adapters and interface/theme synchronization |
-| `commerce-ops/scripts/generation/` | Capability documentation, brand assets and image optimization |
-| `commerce-ops/scripts/checks/` | Documentation, architecture, migration and smoke checks |
-| `commerce-ops/scripts/evaluation/` | Assistant evaluations and performance runs |
-| `commerce-ops/scripts/release/` | Preflight, release images, reliability and durability checks |
-| `commerce-ops/scripts/demo/` | Reusable seeds, catalog helpers and demo previews |
-| `commerce-ops/scripts/demo/history/` | Retained dated catalog operations |
-| `commerce-ops/scripts/maintenance/` | Output inventory, cleanup, repair and maintenance SQL |
-| `commerce-ops/scripts/tests/` | Command and deployment regression tests |
+| `commerce-ops/local/platform/`, `commerce-ops/local/preview/` | Local setup, Compose launchers and preview helpers |
+| `commerce-ops/scripts/local/` | Compatibility links for workstation and service helpers |
+| `commerce-ops/tools/contracts/` | Contract generators, adapters and interface/theme synchronization |
+| `commerce-ops/tools/generation/` | Capability documentation, brand assets and image optimization |
+| `commerce-ops/tools/checks/` | Documentation, architecture, migration and smoke checks |
+| `commerce-ops/tools/evaluation/` | Assistant evaluations and performance runs |
+| `commerce-ops/workflows/release/` | Preflight, release images, reliability and durability checks |
+| `commerce-ops/workflows/demo/` | Reusable seeds, catalog helpers and demo previews |
+| `commerce-ops/workflows/demo/history/` | Retained dated catalog operations |
+| `commerce-ops/workflows/maintenance/` | Output inventory, cleanup, repair and maintenance SQL |
+| `commerce-ops/tests/operations/` | Command and deployment regression tests |
 
-[The command manifest](../../../commerce-ops/scripts/entrypoints.json) lists canonical
+[The command manifest](../../../commerce-ops/config/entrypoints.json) lists canonical
 command and data paths. Run commands from their purpose folders; there are no
 root-level forwarding scripts. New commands belong in their purpose folder.
 
-Existing `commerce-ops/scripts/knowledge-baseline/`, `commerce-ops/scripts/shopping_eval/`
-and `commerce-ops/scripts/recommendation_eval/` keep their focused tools and
-fixtures. There is no staging-server command folder here. Application-owned
-scripts remain with their service.
+`commerce-ops/scripts/knowledge-baseline/` contains phase-bound evidence tools;
+`commerce-ops/tools/shopping_eval/` supports the active shopping evaluator;
+and `commerce-ops/tools/recommendation_eval/` owns the fixed recommendation
+pipeline. Their [folder guides](../../../commerce-ops/scripts/knowledge-baseline/README.md),
+[shopping package guide](../../../commerce-ops/tools/shopping_eval/README.md), and
+[recommendation pipeline guide](../../../commerce-ops/tools/recommendation_eval/README.md)
+explain ownership and retention. There is no staging-server command folder here.
+Application-owned scripts remain with their service.
 
 ## Release readiness
 
-`python3 commerce-ops/scripts/release/release_readiness.py --help` exposes the candidate-bound
+`python3 commerce-ops/workflows/release/release_readiness.py --help` exposes the candidate-bound
 evidence gate. See [release readiness](../operations/release-readiness.md) for
 required checks, packet metadata, review and promotion boundaries.
 
 ## Contract generation
 
-Canonical generators live in `commerce-ops/scripts/contracts/`. Run generators from `commerce-ops/scripts/contracts/`. Use the AI virtual
-environment where a generator imports Python service models.
+Canonical generators live in `commerce-ops/tools/contracts/`. Use the AI
+virtual environment where a generator imports Python service models.
 
 | Generator | Owning source or generated destination |
 | --- | --- |
@@ -57,10 +62,10 @@ environment where a generator imports Python service models.
 For generators supporting drift checks:
 
 ```sh
-commerce-assistant-platform/.venv/bin/python commerce-ops/scripts/contracts/generate_core_contracts.py --check
-commerce-assistant-platform/.venv/bin/python commerce-ops/scripts/contracts/generate_meaning_contracts.py --check
-commerce-assistant-platform/.venv/bin/python commerce-ops/scripts/contracts/generate_planning_contracts.py --check
-commerce-assistant-platform/.venv/bin/python commerce-ops/scripts/contracts/generate_language_resolution_contract.py --check
+commerce-assistant-platform/.venv/bin/python commerce-ops/tools/contracts/generate_core_contracts.py --check
+commerce-assistant-platform/.venv/bin/python commerce-ops/tools/contracts/generate_meaning_contracts.py --check
+commerce-assistant-platform/.venv/bin/python commerce-ops/tools/contracts/generate_planning_contracts.py --check
+commerce-assistant-platform/.venv/bin/python commerce-ops/tools/contracts/generate_language_resolution_contract.py --check
 ```
 
 Generators without `--check` write their outputs. Use an isolated fixture for
@@ -68,34 +73,34 @@ comparison when the working tree has unrelated generated changes. The release
 preflight checks its selected generators in a temporary tree:
 
 ```sh
-commerce-assistant-platform/.venv/bin/python commerce-ops/scripts/release/agentic-preflight.py
+commerce-assistant-platform/.venv/bin/python commerce-ops/workflows/release/agentic-preflight.py
 ```
 
-`commerce-ops/scripts/generation/generate_ai_capabilities.py` is the source-derived capability and
+`commerce-ops/tools/generation/generate_ai_capabilities.py` is the source-derived capability and
 documentation generator. Native contract generation remains with `commerce-mobile-apps/tools/`.
 
 ## Deployment and native preview
 
-| Canonical location | Responsibility | Compatible entry points |
+| Canonical location | Responsibility | Commands |
 | --- | --- | --- |
-| `commerce-ops/deploy/aws-deploy/` | Workstation launchers | `commerce-ops/deploy/aws-deploy/` commands |
+| `commerce-ops/cloud/providers/aws/`, `commerce-ops/cloud/providers/gcp/` | Cloud workstation launchers | `commerce-ops/bin/ops cloud ...` commands |
 | `commerce-ops/deploy/ec2/server/` | Server deployment, verification, source activation and seeding | `commerce-ops/deploy/ec2/server/ec2-*` commands |
-| `commerce-ops/deploy/aws-automation/` | Android preview lifecycle controller, installer and tests | `commerce-ops/deploy/aws-automation/` commands |
+| `commerce-ops/services/native-preview/aws-controller/` | Android preview lifecycle controller, installer and tests | `commerce-ops/services/native-preview/aws-controller/` commands |
 
-Read [the workstation deployment guide](../../../commerce-ops/deploy/aws-deploy/README.md),
+Read [the workstation deployment guide](../../../commerce-ops/cloud/providers/aws/README.md),
 [EC2 operations](../../../commerce-ops/deploy/ec2/README.md) or
-[native controller operations](../../../commerce-ops/deploy/aws-automation/README.md)
-before running commands with external effects. Private workstation settings and
-keys remain in their existing protected locations; source reorganization does
-not move credentials or installed server paths.
+[native controller operations](../../../commerce-ops/services/native-preview/aws-controller/README.md)
+before running commands with external effects. Private workstation targets and
+keys live under ignored `.local/commerce-ops/targets/` and `secrets/`; installed
+server paths remain unchanged.
 
 ## Local setup and demo data
 
-- `commerce-ops/scripts/local/local-compose.sh`: shared local stack entry point; see [local setup](../operations/local-setup.md).
-- `commerce-ops/scripts/local/local-assistant-setup.py`: local assistant storage/configuration setup.
-- `commerce-ops/scripts/local/bootstrap-admin.py`: create the first local administrator.
-- `commerce-ops/scripts/local/assistant-setup.py`: assistant key/secret setup.
-- `commerce-ops/scripts/demo/seed-catalog.py`, `commerce-ops/scripts/demo/seed-inventory.py`, `commerce-ops/scripts/demo/seed-reporting.py`: reusable demo seed commands.
+- `commerce-ops/local/platform/local-compose.sh`: shared local stack entry point; see [local setup](../operations/local-setup.md).
+- `commerce-ops/local/platform/initialize-assistant-storage.py`: local assistant storage/configuration setup.
+- `commerce-ops/local/platform/bootstrap-admin.py`: create the first local administrator.
+- `commerce-ops/local/platform/create-assistant-credentials.py`: assistant key/secret setup.
+- `commerce-ops/workflows/demo/seed-catalog.py`, `commerce-ops/workflows/demo/seed-inventory.py`, `commerce-ops/workflows/demo/seed-reporting.py`: reusable demo seed commands.
 
 Inspect the selected command's environment and side effects before applying
 seeds. Dated catalog operations are historical task-specific commands; their
@@ -103,22 +108,42 @@ filenames alone do not establish whether an operational caller still needs them.
 
 ## Verification and evaluation
 
-- `commerce-ops/scripts/checks/check-documentation.py`: links, anchors, owning indexes, agent instructions and evidence metadata. `--check-local-evidence` verifies hashes for entries still marked locally available.
-- `commerce-ops/scripts/checks/check-rust-architecture.py`, `commerce-ops/scripts/checks/check-ai-architecture.py`: service dependency and module boundaries.
-- `commerce-ops/scripts/maintenance/inventory-outputs.py`: read-only metadata inventory of retained output locations; it does not choose deletion candidates.
-- `commerce-ops/scripts/maintenance/new-output-run.py PURPOSE`: creates `commerce-output/YYYY-MM-DD-purpose/` with a starter manifest and separate evidence, deliverables and work folders. Fill in the candidate and verification fields for each run.
-- `commerce-ops/scripts/checks/smoke.py`, `commerce-ops/scripts/checks/assistant-smoke.py`, `commerce-ops/scripts/checks/m1-smoke.py` through the retained milestone commands: environment-specific smoke checks.
-- `commerce-ops/scripts/evaluation/agent-evals.py`, `commerce-ops/scripts/evaluation/shopping-evals.py`, `commerce-ops/scripts/evaluation/meaning-evals.py`, `commerce-ops/scripts/evaluation/planning-evals.py`: assistant evaluation entry points.
-- `commerce-ops/scripts/release/m14-checkout.py`, `commerce-ops/scripts/release/m14-durability.py`, `commerce-ops/scripts/release/m14-recovery.py`, `commerce-ops/scripts/release/m14-shutdown.py`, `commerce-ops/scripts/release/m14-unit.py`: durability and recovery checks.
+- `commerce-ops/tools/checks/check-documentation.py`: links, anchors, owning indexes, agent instructions and evidence metadata. `--check-local-evidence` verifies hashes for entries still marked locally available.
+- `commerce-ops/tools/checks/check-rust-architecture.py`, `commerce-ops/tools/checks/check-ai-architecture.py`: service dependency and module boundaries.
+- `commerce-ops/workflows/maintenance/inventory-outputs.py`: read-only metadata inventory of retained output locations; it does not choose deletion candidates.
+- `commerce-ops/workflows/maintenance/new-output-run.py PURPOSE`: creates `commerce-output/YYYY-MM-DD-purpose/` with a starter manifest and separate evidence, deliverables and work folders. Fill in the candidate and verification fields for each run.
+- The focused local checks use behavior-based names:
+
+  | Command | Purpose |
+  | --- | --- |
+  | `customer-authentication-smoke.py` | Signup, verification, login, location and logout |
+  | `catalog-search-integration.py` | Catalog writes, indexing and search filters |
+  | `cart-reservation-regression.py` | Cart ownership and inventory reservation behavior |
+  | `cash-on-delivery-replay.py` | COD lifecycle and publisher-crash replay |
+  | `checkout-fee-regression.py` | Checkout fee and fulfillment regressions |
+  | `promotion-regression.py` | Promotion pricing and checkout behavior |
+  | `merchant-operations-regression.py` | Bulk catalog operations, CMS, reviews and wishlist |
+  | `reporting-observability-smoke.py` | Reporting accuracy, load and observability |
+  | `migration-upgrade-check.py` | Migration and upgrade behavior on disposable PostgreSQL |
+  | `catalog-attribute-definition-smoke.py` | Catalog attributes and product types |
+  | `split-inventory-area-smoke.py` | Split inventory and delivery-area behavior |
+  | `delivery-area-schema-check.py` | Delivery-area schema contract on a disposable database |
+  | `delivery-area-search-integration.py` | Delivery-area search integration with Meilisearch |
+  | `delivery-and-checkout-regressions.py` | Gateway delivery, inventory and checkout regressions |
+- `commerce-ops/workflows/demo/delivery-area-demo.py`: local two-zone delivery-area demo.
+- `commerce-ops/tools/evaluation/agent-evals.py`, `commerce-ops/tools/evaluation/shopping-evals.py`, `commerce-ops/tools/evaluation/meaning-evals.py`, `commerce-ops/tools/evaluation/planning-evals.py`: assistant evaluation entry points.
+- `commerce-ops/tools/evaluation/discovery-relevance-evals.py`: isolated discovery adapter evaluation.
+- `commerce-ops/workflows/release/checkout_reliability.py`: isolated checkout reliability and replay checks.
+- `commerce-ops/workflows/release/gateway-shutdown-check.py`: graceful gateway shutdown check.
+- `commerce-ops/workflows/release/isolated-db-regression.py`: API database regressions against disposable Postgres.
 
 Service guides identify focused suites and their fixtures. Command regression
-tests live in `commerce-ops/scripts/tests/`; run only the relevant tests first. New run output
-uses the [manifest and retention convention](workspace-cleanup.md#retained-evidence).
+tests live in `commerce-ops/tests/operations/`; run only the relevant tests first.
+New run output uses the [manifest and retention convention](workspace-cleanup.md#retained-evidence).
 
-Run `python3 -m unittest discover -s commerce-ops/scripts/tests -p test_script_layout.py` to check compatibility
-commands, local Compose routing, stdin payloads and source fingerprints without
-starting services. Deployment uploads must include grouped implementations as
-well as wrappers. For commands piped into a container or SSH session, send the
-canonical source directly; the receiving environment does not have the wrapper's
-checkout paths. Local Compose keeps the `commerce-ai` project name and its
-existing volumes.
+Run `python3 -m unittest discover -s commerce-ops/tests/operations -p test_script_layout.py` to check
+canonical command paths, local Compose routing, stdin payloads and source
+fingerprints without starting services. Deployment uploads must include each
+command's implementation and required helper files. For commands piped into a
+container or SSH session, send the canonical source directly. Local Compose keeps
+the `commerce-ai` project name and its existing volumes.

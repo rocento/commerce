@@ -32,7 +32,7 @@ Browser suites include `test:admin`, `test:admin:regression`, `test:storefront:s
 
 Public renderer checks are local Node scripts under `apps/storefront/server`, including publication, URL policy, metadata, structured data, hardening, health, compression and PWA checks. Run `node` with the corresponding `*-checks.mjs` filename. Browser publication fixtures and deployment gates remain under [publication harnesses](../platform/seo-geo/Tests); their old Markdown guides were replaced by [publication](publication.md).
 
-Check documentation destinations from the repository root with `python3 commerce-ops/scripts/checks/check-documentation.py`. It covers the consolidated service sections and shared `commerce-docs/platform`.
+Check documentation destinations from the repository root with `python3 commerce-ops/tools/checks/check-documentation.py`. It covers the consolidated service sections and shared `commerce-docs/platform`.
 
 ## Cleanup and maintenance
 
@@ -42,6 +42,6 @@ Browser TypeScript validation covers every `e2e/**/*.ts` suite and every Playwri
 
 Category sections share one `GET /v1/catalog/category-availability` request per delivery context. The backend counts all categories before the frontend ranks them and applies section display limits. Query keys include delivery context and category IDs, responses stay fresh for 30 seconds, and requests use the query cancellation signal. Direct search providers batch up to 100 zero-hit searches per request; delegated search providers preserve their existing search contract with four concurrent requests. See [catalog behavior](../backend/catalog-and-markets.md) for count and stock semantics.
 
-Keep public brand images unless their configured theme URLs and `commerce-ops/scripts/generation/sync-brand-assets.py` are updated together. Before consolidating Playwright configurations, preserve each suite's fixture, authentication, port and backend requirements. Shared typography still has global element selectors; further scoping should be paired with visual checks across admin, storefront and public rendering.
+Keep public brand images unless their configured theme URLs and `commerce-ops/tools/generation/sync-brand-assets.py` are updated together. Before consolidating Playwright configurations, preserve each suite's fixture, authentication, port and backend requirements. Shared typography still has global element selectors; further scoping should be paired with visual checks across admin, storefront and public rendering.
 
 Keep cleanup validation records tied to the exact candidate and environment. Mocked browser results do not establish live backend or production acceptance.
