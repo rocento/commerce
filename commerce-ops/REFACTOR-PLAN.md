@@ -337,3 +337,12 @@ Validation: 22 transport tests and 4 GCP target tests passed (9 subtests).
 Local shell fixtures verified uninitialized cleanup, paths containing spaces,
 and original exit statuses 0, 23 and 255 without SSH. All three changed shell
 files passed syntax checks. No cloud operation or deployment ran.
+
+## Host module review — 2026-10-25
+
+Reviewed full deployment, configuration rendering, website publication and detached
+job control. Retained their current module boundaries: the job runner is copied
+outside the checkout, and the renderer is installed as a standalone file. Recorded
+these packaging constraints in the host owner guide. Further decomposition needs
+a concrete dependency or behavior problem, not a file-length target. No runtime
+code changed in this review; existing unrelated workspace changes remain separate.

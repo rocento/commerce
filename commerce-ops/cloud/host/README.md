@@ -44,3 +44,20 @@ Generated configuration, secrets, state, and the deployment lock remain under
 location, the lock inode, and the existing server command entry points until a
 separate installed-path migration is designed. The old bootstrap helper path
 remains a source-compatible adapter to `bootstrap.sh`.
+
+## Module boundaries
+
+`deployment_job.py` copies itself into the job directory before source activation.
+Keep that copied runner self-contained: sibling imports would require explicitly
+copying their dependencies and verifying execution after the upload is removed.
+Repository discovery stays lazy because the copied runner lives outside the checkout.
+
+`activate-source.sh` installs `render_config.py` as the standalone
+`/opt/rocento/deploy/ec2/configure.py`. Extracting renderer helpers therefore also
+requires updating installation and isolated-host fixtures. Its existing functions
+separate rendering and scoped policy updates without adding installed dependencies.
+
+`deploy.sh` owns the ordered host reconciliation workflow. Keep its release gates,
+configuration, migrations, service readiness and ingress publication order explicit.
+Extract a phase only with its inputs, dependencies and failure behavior accounted
+for; file length alone does not justify changing this execution boundary.
