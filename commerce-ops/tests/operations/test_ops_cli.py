@@ -74,11 +74,11 @@ Path(os.environ['OPS_CALLS']).write_text(json.dumps({'command': sys.argv[0], 'ar
         self.assertEqual(self.calls.read_text().splitlines(),
                          [str(self.root), '--assistant', 'up', '-d', '--build', '--wait'])
         self.fake_command('docker')
-        (self.root / 'commerce-api/onboard-api').mkdir(parents=True)
+        (self.root / 'commerce-api/ops-api').mkdir(parents=True)
         result = self.run_ops('local', 'onboarding', 'status')
         self.assertEqual(result.returncode, 0, result.stderr)
         call = json.loads(self.calls.read_text())
-        self.assertEqual(call['cwd'], str(self.root / 'commerce-api/onboard-api'))
+        self.assertEqual(call['cwd'], str(self.root / 'commerce-api/ops-api'))
         self.assertEqual(call['args'][-1], 'ps')
         self.assertIn(str(self.root / 'commerce-ops/local/onboarding/compose.yaml'), call['args'])
 

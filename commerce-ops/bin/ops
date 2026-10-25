@@ -109,7 +109,7 @@ def local_command(args: argparse.Namespace) -> int:
         operation = {"up": ["up", "-d", "--wait"], "down": ["down"],
                      "status": ["ps"], "logs": ["logs", "--tail=100"]}[args.action]
         return run(["docker", "compose", "-f", str(ROOT / "commerce-ops/local/onboarding/compose.yaml"), *operation],
-                   cwd=ROOT / "commerce-api/onboard-api")
+                   cwd=ROOT / "commerce-api/ops-api")
     if args.area == "assistant":
         return run([sys.executable, str(ROOT / "commerce-ops/local/platform/initialize-assistant-storage.py")])
     command = [sys.executable, str(ROOT / "commerce-ops/workflows/demo/seed-demo-storefront.py"), args.store]

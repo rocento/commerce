@@ -5,8 +5,8 @@ onboarding API. It is development infrastructure, not a production onboarding
 or merchant provisioning package.
 
 The API crate owns its schema, seed file, and migration binary. Follow the
-[API local development guide](../../../commerce-api/onboard-api/README.md) and run
-commands from `commerce-api/onboard-api/`:
+[API local development guide](../../../commerce-api/ops-api/README.md) and run
+commands from `commerce-api/ops-api/`:
 
 ```sh
 docker compose -f ../../commerce-ops/local/onboarding/compose.yaml up -d

@@ -6,8 +6,8 @@ stack; it is not a production onboarding or merchant provisioning deployment.
 
 ## Start the API locally
 
-Follow [`commerce-api/onboard-api/README.md`](../../commerce-api/onboard-api/README.md)
-from the `commerce-api/onboard-api/` directory. It covers the local environment,
+Follow [`commerce-api/ops-api/README.md`](../../commerce-api/ops-api/README.md)
+from the `commerce-api/ops-api/` directory. It covers the local environment,
 isolated PostgreSQL/NATS/registry dependencies, database migration, and API
 startup. Its Compose file is
 [`commerce-ops/local/onboarding/compose.yaml`](../local/onboarding/compose.yaml).
@@ -22,7 +22,7 @@ described in its guide.
 
 ## Ownership
 
-- API, schema, and migration binary: `commerce-api/onboard-api/`
+- API, schema, and migration binary: `commerce-api/ops-api/`
 - Customer onboarding interface: `commerce-web/apps/onboarding/`
 - Staff interface: `commerce-web/apps/onboarding-ops/`
 - Local dependencies only: `commerce-ops/local/onboarding/`

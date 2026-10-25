@@ -13,7 +13,7 @@ configure_source_filters() {
     --exclude='.git/' --exclude='node_modules/' --exclude='target/' --exclude='dist/' --exclude='dist-server/' --exclude='out/' --exclude='.next/'
     --exclude='.stage*-dist/' --exclude='.stage*-dist-server/' --exclude='.DS_Store'
     --exclude='/Rocento-Codex/' --exclude='/commerce-api/rocento-api/migrations/' --exclude='.rsync-partial/'
-    --exclude='/commerce-api/onboard-api/'
+    --exclude='/commerce-api/onboard-api/' --exclude='/commerce-api/ops-api/'
     --exclude='.env' --exclude='.env.*' --exclude='.local/' --exclude='artifacts/' --exclude='output/' --exclude='tmp/'
     --exclude='/commerce-assistant-platform/docs/' --exclude='/commerce-assistant-platform/evals/' --exclude='/commerce-assistant-platform/local/'
     --exclude='commerce-ops/deploy/ec2/bootstrap.env' --exclude='commerce-ops/deploy/ec2/*.env' --exclude='commerce-ops/deploy/ec2/state/' --exclude='commerce-ops/deploy/ec2/*.seeded' --exclude='commerce-ops/deploy/ec2/setup.lock'

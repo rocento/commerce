@@ -2,7 +2,7 @@
 
 Base: `http://127.0.0.1:4100/api/v1`. These are local foundation contracts, not the complete planned v1 API.
 
-The HTTP service is implemented in the standalone Rust crate at this module's root and started with `cargo run --locked` from `commerce-api/onboard-api/`. The matching migration runner is `cargo run --locked --bin migrate`.
+The HTTP service is implemented in the standalone Rust crate at this module's root and started with `cargo run --locked` from `commerce-api/ops-api/`. The matching migration runner is `cargo run --locked --bin migrate`.
 
 | Method | Path | Access | Behavior |
 |---|---|---|---|

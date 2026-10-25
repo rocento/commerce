@@ -93,7 +93,7 @@ No recorded batch establishes production or remote-host acceptance.
 | Batch | Work retained in the canonical layout | Recorded evidence and limits |
 | --- | --- | --- |
 | Baseline (2026-10-22) | Mapped local, onboarding, release, AWS/GCP deployment, demo seed, and host diagnostics entry points. Recorded upload filters, private inputs, generated state, Compose identities, partial-upload consumers, and installed `/opt/rocento/deploy/ec2/` paths. | Initial checkout had 199 status entries. Focused fixture suites recorded 122 passing tests; documentation coverage recorded 200 Markdown files and 1,235 local links. Shell syntax and diff whitespace checks passed. No production command ran. |
-| Local and onboarding | Canonical workstation code moved to `local/platform/`, `local/onboarding/`, and `local/preview/`; service-owned onboarding API/schema stayed in `commerce-api/onboard-api/`. Compatibility links preserve old local, onboarding, and Compose paths. | Resolved Compose JSON was compared for platform, assistant, demo, and isolated onboarding stacks. Recorded suites passed and documentation coverage was 203 files / 1,250 links. No containers or hosts were contacted. |
+| Local and onboarding | Canonical workstation code moved to `local/platform/`, `local/onboarding/`, and `local/preview/`; service-owned onboarding API/schema stayed in `commerce-api/ops-api/`. Compatibility links preserve old local, onboarding, and Compose paths. | Resolved Compose JSON was compared for platform, assistant, demo, and isolated onboarding stacks. Recorded suites passed and documentation coverage was 203 files / 1,250 links. No containers or hosts were contacted. |
 | Compose structure | Definitions were grouped under `compose/base/`, `components/`, and `overlays/{local,cloud,demos}/`. Callers set `--project-directory commerce-ops/compose`; project names, services, volumes, networks, and ports remain stable. | Eight resolved configurations were compared before and after; full and preserve-AI inventories were inspected. No containers started and no remote deployment ran. |
 | Cloud libraries and providers | Shared transport, job, and source-filter helpers moved to `cloud/lib/`; AWS/GCP launchers and guides moved to `cloud/providers/`. Private target and credential inputs moved under ignored `.local/commerce-ops/`; AWS copy-dest and GCP direct-transfer strategies remain distinct. | File modes and normalized target structure were checked without exposing values. No cloud host was contacted and no deployment started. Legacy source paths remain compatibility links. |
 | Service assets: Contact | Contact runtime, unit, and activation script moved from `deploy/contact/` to `services/contact/`; upload filters and the host installer use the service-owned path. | 73 contact, transport, activation, deployment, and release-gate tests passed using local fixtures. The separate contact HTTP fixture could not bind its loopback socket in the restricted test environment. Documentation checks passed at 210 files / 1,268 local links. No host was contacted. |
@@ -346,3 +346,16 @@ outside the checkout, and the renderer is installed as a standalone file. Record
 these packaging constraints in the host owner guide. Further decomposition needs
 a concrete dependency or behavior problem, not a file-length target. No runtime
 code changed in this review; existing unrelated workspace changes remain separate.
+
+## Separate onboarding source rename — 2026-10-25
+
+Reviewed the 22-file move from `commerce-api/onboard-api/` to
+`commerce-api/ops-api/`. Rust source, migrations, Cargo package identity and
+lockfile remain unchanged. Updated CI, local commands and documentation paths;
+both names remain excluded from platform uploads to protect installed copies.
+Unrelated UI and API changes remain outside this batch.
+
+Offline locked Cargo check and test commands succeeded. The crate contains zero
+Rust tests, so this is compilation coverage only. Eleven CLI/upload tests and
+two subtests passed, including real-rsync exclusion and receiver protection.
+No database or deployment operation ran.

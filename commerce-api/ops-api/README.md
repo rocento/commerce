@@ -11,9 +11,9 @@ Requires Rust/Cargo and Docker. From this folder:
 ```sh
 cp .env.example .env
 # Set AUTH_MAIL_KEY in .env to a fresh 64-character hex value from: openssl rand -hex 32
-docker compose -f ../../commerce-ops/onboarding/compose.yaml up -d
+docker compose -f ../../commerce-ops/local/onboarding/compose.yaml up -d
 cargo run --locked --bin migrate
-docker compose -f ../../commerce-ops/onboarding/compose.yaml exec -T postgres psql -U rocento -d rocento < database/local-seed.sql
+docker compose -f ../../commerce-ops/local/onboarding/compose.yaml exec -T postgres psql -U rocento -d rocento < database/local-seed.sql
 cargo run --locked
 ```
 

@@ -10,7 +10,7 @@ pnpm dev:storefront
 
 Start `pnpm dev:admin` in a second terminal. Storefront binds port 5173 and admin port 5174, both with strict port selection and `/health` liveness handlers. They proxy `/api` to `http://localhost:8080`; `API_PROXY_TARGET` and `API_PROXY_ORIGIN` configure that development proxy. The corporate website uses `pnpm dev:website` on 127.0.0.1:5180.
 
-The customer onboarding app and locked staff shell live in `apps/onboarding/` and `apps/onboarding-ops/`. Start them with `pnpm dev:onboarding` (127.0.0.1:3100) and `pnpm dev:onboarding-ops` (127.0.0.1:3101). The separate Rust API and database live in `commerce-api/onboard-api/`; see the [onboarding guide](../onboarding/README.md). Use `pnpm typecheck:onboarding`, `pnpm build:onboarding`, and `pnpm test:onboarding` for targeted checks.
+The customer onboarding app and locked staff shell live in `apps/onboarding/` and `apps/onboarding-ops/`. Start them with `pnpm dev:onboarding` (127.0.0.1:3100) and `pnpm dev:onboarding-ops` (127.0.0.1:3101). The separate Rust API and database live in `commerce-api/ops-api/`; see the [onboarding guide](../onboarding/README.md). Use `pnpm typecheck:onboarding`, `pnpm build:onboarding`, and `pnpm test:onboarding` for targeted checks.
 
 A running UI does not supply the database, authenticated users, stock or media services. Use [platform local setup](../platform/operations/local-setup.md) for the full stack and [backend setup](../backend/development.md) for its environment.
 

@@ -342,6 +342,7 @@ if name=='rsync':
                 'commerce-ops/compose/overlays/cloud/compose.ai-shared.yaml',
             ]
             excluded = [
+                'commerce-api/onboard-api/src/main.rs', 'commerce-api/ops-api/src/main.rs',
                 'commerce-assets/demo/products.png', 'commerce-demo/grocery/theme.json',
                 'commerce-ops/scripts/release/deployment_gate.py',
                 'commerce-ops/scripts/demo/demo_presets.py',
@@ -381,7 +382,7 @@ if name=='rsync':
                 path = source / name
                 path.parent.mkdir(parents=True, exist_ok=True)
                 path.write_text('local fixture')
-            protected = ['deploy/ec2/bootstrap.env', 'deploy/ec2/assistant/grocery/private.pem',
+            protected = ['commerce-api/onboard-api/src/main.rs', 'deploy/ec2/bootstrap.env', 'deploy/ec2/assistant/grocery/private.pem',
                          'deploy/ec2/card-details.ABC123/private.json',
                          'deploy/ec2/state/frontend.sha256', 'uploads/customer.jpg', 'commerce-api/rocento-api/migrations/old.sql']
             for name in protected:

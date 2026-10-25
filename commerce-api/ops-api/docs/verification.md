@@ -1,6 +1,6 @@
 # Rust API migration — 21 October 2026
 
-- The HTTP service runs as a standalone Rust crate at `commerce-api/onboard-api`, with separate modules for routes, accounts, drafts, mail, database setup, shared domain rules, and errors.
+- The HTTP service runs as a standalone Rust crate at `commerce-api/ops-api`, with separate modules for routes, accounts, drafts, mail, database setup, shared domain rules, and errors.
 - `cargo check --manifest-path Cargo.toml --offline`: passed. This is a compile check; the prior NestJS verification records below predate the runtime migration.
 - The Rust service is the sole HTTP API implementation. The earlier TypeScript helpers, NestJS app, and Node API test harness were removed during the runtime move.
 

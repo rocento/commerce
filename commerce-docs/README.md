@@ -19,7 +19,7 @@ The current service guides are consolidated here. Start with the section that ow
 
 Shared platform guides, verification harnesses and retained evidence live in `platform/` within this documentation folder.
 
-Service source lives under the repository root, including `commerce-web` (frontend apps, packages and onboarding interfaces), `commerce-api/rocento-api` (core commerce service), `commerce-api/onboard-api` (standalone onboarding service), `commerce-api/health-api` (health dashboard API and sampler), `commerce-corporate-site`, `commerce-mobile-apps` and `commerce-assistant-platform`. Compose files live in `commerce-ops/compose/` and `commerce-ops/onboarding/`; shared utilities live in `commerce-ops/scripts/`. New service documentation belongs in the corresponding section of this folder. Source-derived behavior and local checks do not establish live production acceptance.
+Service source lives under the repository root, including `commerce-web` (frontend apps, packages and onboarding interfaces), `commerce-api/rocento-api` (core commerce service), `commerce-api/ops-api` (standalone onboarding service), `commerce-api/health-api` (health dashboard API and sampler), `commerce-corporate-site`, `commerce-mobile-apps` and `commerce-assistant-platform`. Compose files live in `commerce-ops/compose/` and `commerce-ops/local/onboarding/`; shared utilities live in `commerce-ops/tools/` and `commerce-ops/workflows/`. New service documentation belongs in the corresponding section of this folder. Source-derived behavior and local checks do not establish live production acceptance.
 
 ## Writing and maintaining documentation
 

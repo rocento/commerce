@@ -10,7 +10,7 @@ its implementation.
 | Task | Start here | Main owner |
 | --- | --- | --- |
 | Run the commerce platform locally | [Local development](tasks/local-development.md) | `commerce-ops/compose/`, `commerce-ops/local/platform/` |
-| Develop customer onboarding | [Onboarding](tasks/onboarding.md) | `commerce-api/onboard-api/`, `commerce-web/apps/onboarding/` |
+| Develop customer onboarding | [Onboarding](tasks/onboarding.md) | `commerce-api/ops-api/`, `commerce-web/apps/onboarding/` |
 | Prepare a release candidate | [Release preparation](tasks/release-preparation.md) | `commerce-ops/workflows/release/` |
 | Refresh demo data | [Demo seeding](tasks/demo-seeding.md) | `commerce-ops/cloud/seed-demo.sh`, provider launchers, `commerce-ops/workflows/demo/` |
 | Deploy Rocento platform to production | [Rocento platform deployment](tasks/rocento-platform-deployment.md) | `commerce-ops/cloud/providers/`, `commerce-ops/cloud/host/` |
