@@ -22,6 +22,9 @@ class OpsCLITests(unittest.TestCase):
         self.ops.parent.mkdir(parents=True)
         shutil.copy2(ROOT / 'commerce-ops/bin/ops', self.ops)
         shutil.copy2(ROOT / 'commerce-ops/commands.json', self.root / 'commerce-ops/commands.json')
+        target_module = self.root / 'commerce-ops/cloud/lib/targets.py'
+        target_module.parent.mkdir(parents=True)
+        shutil.copy2(ROOT / 'commerce-ops/cloud/lib/targets.py', target_module)
         self.calls = self.root / 'calls.txt'
         self.env = {**os.environ, 'OPS_CALLS': str(self.calls)}
 

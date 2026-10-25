@@ -1,6 +1,7 @@
 {
   "version": 2,
   "commands": [
+    "commerce-ops/cloud/lib/targets.py",
     "commerce-ops/tools/checks/assistant-isolation.py",
     "commerce-ops/tools/checks/assistant-smoke.py",
     "commerce-ops/tools/checks/assistant-store-check.py",

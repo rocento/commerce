@@ -310,3 +310,17 @@ Confirmed the publisher's only implementation edit is its policy-module path;
 all retained historical harness code remains byte-for-byte unchanged. Historical
 benchmark fixtures are still unavailable, so that original utility suite is
 not claimed as passing. No production operation or evidence regeneration ran.
+
+## Dispatcher target boundary — 2026-10-25
+
+Extracted named-target parsing and resolution from `bin/ops` into the
+workstation-only `cloud/lib/targets.py`. The dispatcher passes its repository
+root explicitly; command routing, provider precedence, restrictions and messages
+are unchanged. Direct provider shell loaders retain their existing contracts.
+Updated the implementation inventory, configuration guide and isolated CLI fixture.
+The module is not required by host uploads and is not a public command route.
+
+Validation: 19 CLI/layout tests and 159 subtests passed. Both extracted function
+bodies match the previous implementation after root/error-class renaming.
+Documentation checked 214 files and 1,284 links in the working tree. No deployment
+or network operation ran; the separate onboarding rename remains excluded.
