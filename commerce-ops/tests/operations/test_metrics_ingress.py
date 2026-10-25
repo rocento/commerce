@@ -5,7 +5,7 @@ import re
 import unittest
 
 ROOT = Path(__file__).resolve().parents[3]
-spec = importlib.util.spec_from_file_location('metrics_ingress_config', ROOT / 'commerce-ops/deploy/ec2/configure.py')
+spec = importlib.util.spec_from_file_location('metrics_ingress_config', ROOT / 'commerce-ops/cloud/host/render_config.py')
 config = importlib.util.module_from_spec(spec)
 spec.loader.exec_module(config)
 

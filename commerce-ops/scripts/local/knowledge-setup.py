@@ -1,1 +1,0 @@
-../../local/platform/knowledge-setup.py

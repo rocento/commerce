@@ -13,6 +13,6 @@ layout changes. Some integration checks write data: use the documented target.
 Operations regressions live in [tests/operations](../tests/operations/README.md).
 The [command inventory](../config/entrypoints.json) names canonical entry points.
 
-Old paths under `scripts/` are compatibility symlinks. Managed uploads use the
+Old source aliases under `scripts/` have been removed. Managed uploads use the
 canonical tools required by release validation and exclude test suites. Evaluation
 artifacts remain with their existing application and QA owners.

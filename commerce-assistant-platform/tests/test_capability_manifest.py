@@ -9,7 +9,7 @@ import pytest
 
 ROOT = Path(__file__).resolve().parents[2]
 SPEC = importlib.util.spec_from_file_location(
-    "ai_capabilities", ROOT / "commerce-ops/scripts/generation/generate_ai_capabilities.py"
+    "ai_capabilities", ROOT / "commerce-ops/tools/generation/generate_ai_capabilities.py"
 )
 assert SPEC is not None and SPEC.loader is not None
 inventory = importlib.util.module_from_spec(SPEC)

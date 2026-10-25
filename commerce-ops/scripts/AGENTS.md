@@ -15,7 +15,7 @@ to find its service owner. Commands normally start at the repository root.
   interface/theme synchronization.
 - `../tools/generation/` owns capability documentation, brand assets and image generation.
 - `../local/` owns workstation setup, Compose launchers, onboarding dependencies,
-  and local preview helpers. `local/` retains compatibility links; host helpers belong to `../services/`.
+  and local preview helpers. `local/` documents the retired aliases; host helpers belong to `../services/`.
 - `../tools/checks/` owns documentation, architecture, migration and smoke checks.
 - `../tools/evaluation/` owns assistant evaluation and performance entry points.
 - `../workflows/release/` owns preflight, release images, reliability and durability commands.

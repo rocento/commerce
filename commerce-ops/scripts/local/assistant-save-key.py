@@ -1,1 +1,0 @@
-../../local/platform/assistant-save-key.py

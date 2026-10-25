@@ -40,7 +40,7 @@ class NativePreviewLayoutTests(unittest.TestCase):
 
     def test_controller_discovery_works_from_another_directory(self):
         with tempfile.TemporaryDirectory() as directory:
-            for source in (CANONICAL, ROOT / 'commerce-ops/deploy/aws-automation'):
+            for source in (CANONICAL,):
                 with self.subTest(source=source):
                     result = subprocess.run(
                         [sys.executable, '-m', 'unittest', 'discover', '-s', str(source), '-p', 'test_*.py'],
@@ -56,7 +56,7 @@ class NativePreviewLayoutTests(unittest.TestCase):
             base = Path(directory)
             manifest = base / 'artifacts.json'
             manifest.write_text('{}')
-            for index, folder in enumerate(('services/native-preview', 'deploy/native-preview')):
+            for index, folder in enumerate(('services/native-preview',)):
                 archive_path = base / f'worker-{index}.tar.gz'
                 result = subprocess.run([
                     sys.executable, str(ROOT / 'commerce-ops' / folder / 'package.py'),

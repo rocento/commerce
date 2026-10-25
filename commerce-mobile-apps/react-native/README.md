@@ -6,7 +6,7 @@ The [React Native guide](../../commerce-docs/mobile/react-native.md) owns setup,
 
 - [Architecture and feature state](../../commerce-docs/mobile/architecture.md)
 - [Current capabilities and acceptance limits](../../commerce-docs/mobile/README.md)
-- [Native preview](../../commerce-docs/mobile/native-preview.md) and [worker runbook](../../commerce-ops/deploy/native-preview/REACT_NATIVE.md)
+- [Native preview](../../commerce-docs/mobile/native-preview.md) and [worker runbook](../../commerce-ops/services/native-preview/REACT_NATIVE.md)
 - [Contributor requirements](../AGENTS.md), [iOS signing](../ios/SIGNING_AND_KEYCHAIN.md) and [Android signing](../android/SIGNING_AND_KEYSTORE.md)
 
 Dependencies remain independent of the frontend workspace. Run React Native commands from this directory and use the checked build/install scripts described in the guide.

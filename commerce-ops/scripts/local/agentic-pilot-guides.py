@@ -1,1 +1,0 @@
-../../local/platform/agentic-pilot-guides.py

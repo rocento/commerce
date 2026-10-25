@@ -20,8 +20,7 @@ runtime, and document its installer and dependencies alongside that service.
 ## Source and runtime paths
 
 Use `commerce-ops/services/<service>/` in new consumers. The corresponding
-`deploy/` directories are temporary source compatibility symlinks for older
-checkout consumers; they are excluded from managed uploads. Existing host files
+`deploy/` source aliases have been removed. Existing host files
 under those paths remain protected during activation until their installed
 consumers have been audited. Platform service assets are uploaded under `services/`; native preview uses
 its own explicit installation workflow.

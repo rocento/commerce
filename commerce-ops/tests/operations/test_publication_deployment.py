@@ -12,7 +12,7 @@ def load(name, path):
     return module
 
 publication = load('publication', 'commerce-ops/cloud/host/publication.py')
-legacy = load('legacy', 'commerce-ops/deploy/ec2/configure.py')
+renderer = load('renderer', 'commerce-ops/cloud/host/render_config.py')
 
 class PublicationDeploymentTests(unittest.TestCase):
     def test_merchant_html_forwards_policy_and_apis_remain_protected(self):
@@ -27,13 +27,13 @@ class PublicationDeploymentTests(unittest.TestCase):
         self.assertIn('proxy_set_header X-Forwarded-Host ""', config)
 
     def test_admin_defaults_are_preserved(self):
-        config = legacy.nginx('example.test')
+        config = renderer.nginx('example.test')
         for host in ['admin', 'jewelry-admin', 'electronics-admin']:
             section = config.split(f'server_name {host}.example.test;')[1].split('server {')[0]
             self.assertIn('client_max_body_size 25m;\n    add_header X-Robots-Tag "noindex, nofollow" always', section)
 
     def test_all_demo_public_uris_are_indexable_and_internal_fallbacks_stay_private(self):
-        config = legacy.nginx('example.test')
+        config = renderer.nginx('example.test')
         policy = config.split('map $request_uri $rocento_storefront_robots {')[1].split('}')[0]
         self.assertIn('default "noindex, nofollow";', policy)
         import re

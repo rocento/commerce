@@ -6,7 +6,7 @@ The onboarding experience is split by responsibility:
 - The locked staff shell lives in [`commerce-web/apps/onboarding-ops`](../../commerce-web/apps/onboarding-ops/).
 - Browser checks live in [`commerce-web/e2e/onboarding`](../../commerce-web/e2e/onboarding/) and use `playwright.onboarding.config.ts`.
 - The standalone Rust API, PostgreSQL schema and local migration tooling live in [`commerce-api/onboard-api`](../../commerce-api/onboard-api/README.md).
-- The local PostgreSQL, NATS and registry stack lives in [`commerce-ops/onboarding`](../../commerce-ops/onboarding/README.md).
+- The local PostgreSQL, NATS and registry stack lives in [`commerce-ops/local/onboarding`](../../commerce-ops/local/onboarding/README.md).
 
 ## Run the interfaces
 

@@ -19,7 +19,7 @@ code maintained in `commerce-api/`, `commerce-web/`, or
 - `tools/` owns checks, contract generators, asset generators and evaluation tooling.
 - `tests/operations/` owns the operations regression suite; service tests stay
   with their services.
-- `scripts/` retains historical evidence harnesses and compatibility paths; see its
+- `scripts/` retains historical evidence harnesses; see its
   [agent guide](scripts/AGENTS.md).
 - `cloud/` owns provider adapters, shared transport, and canonical host operations.
 - `services/` owns assistant, contact, health-dashboard, observability, rengine and native-preview
@@ -51,10 +51,53 @@ code maintained in `commerce-api/`, `commerce-web/`, or
   Link to existing procedures instead of copying them into folder guides.
 - Provider guides own access/setup differences; shared tasks describe the
   common workflow. State supported AWS/GCP capabilities accurately.
-- Follow the plan's consolidation map. Before removing a document, preserve
-  unique content and update inbound links, catalog paths, and checker coverage.
+- Before removing a document, preserve unique content and update inbound links,
+  heading anchors, catalog paths, and documentation-checker coverage.
 - Keep historical validation claims attached to their original batch; report
   current validation separately.
+
+Keep only `README.md`, `COMMANDS.md`, `AGENTS.md` and the temporary migration
+plan as root Markdown guides. Do not add parallel `docs/`, `runbooks/`, `archive/`,
+`old/` or `misc/` trees. Extend an existing owner before creating a new guide.
+After migration acceptance, retire the plan once its remaining decisions are
+resolved; keep actual evidence in its existing location.
+
+| Owner | Documentation responsibility |
+| --- | --- |
+| Root README | One task menu and concise directory map |
+| COMMANDS | Public invocation, target precedence, effects and supported capabilities |
+| Task guides | Prerequisites, execution location, explicit target, steps, expected result and failure diagnosis |
+| Area READMEs | Ownership, dependencies and file selection; link to shared procedures |
+| Provider guides | Access, VM prerequisites, credential references and provider-specific exceptions |
+| Configuration guide | Template and inventory ownership; link to target precedence |
+| Agent guides | Editing, naming and verification constraints |
+| Temporary plan | Current migration status, compatibility decisions and dated validation limits |
+
+## Dependency and move checks
+
+Local commands must not depend on provider launchers or host-generated files.
+Host commands must not read workstation target files or keys. Providers resolve
+access details; shared libraries own transport and jobs; host commands own locked
+activation and diagnostics. Preserve AWS/GCP transfer and target-validation
+contracts rather than introducing provider-specific decisions into generic helpers.
+
+Keep `bin/ops` a thin dispatcher using argument arrays. Public routes belong in
+`commands.json`; canonical implementation and data paths belong in
+`config/entrypoints.json`. Update both applicable inventories with their callers.
+Do not create empty categories solely to make directory trees symmetrical.
+
+For each source move, update imports, CI filters, build contexts, catalog entries,
+full/partial upload manifests and documentation together. Check affected fixtures:
+transport and job failure behavior, installed wrapper resolution, source exclusion
+boundaries, and Compose resolution with synthetic inputs where relevant. Preserve
+project/service/volume/network identities and the Compose project directory.
+Run affected checks once; broaden when failures or dependency changes justify it.
+Historical pass counts do not validate subsequent changes.
+
+Private workstation state belongs under ignored `.local/commerce-ops/`, generated
+reports under `commerce-output/`, and protected host runtime state under its
+existing installed paths. Preserve permissions and references when relocating
+private inputs. Never put private values in reports, catalogs or test fixtures.
 
 ## Naming
 

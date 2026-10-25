@@ -3,7 +3,7 @@ from pathlib import Path
 import unittest
 
 ROOT = Path(__file__).resolve().parents[3]
-spec = importlib.util.spec_from_file_location('merchant_docs_policy', ROOT / 'commerce-ops/deploy/ec2/configure.py')
+spec = importlib.util.spec_from_file_location('merchant_docs_policy', ROOT / 'commerce-ops/cloud/host/render_config.py')
 policy = importlib.util.module_from_spec(spec)
 spec.loader.exec_module(policy)
 

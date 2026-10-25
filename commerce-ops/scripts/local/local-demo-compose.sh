@@ -1,1 +1,0 @@
-../../local/platform/local-demo-compose.sh

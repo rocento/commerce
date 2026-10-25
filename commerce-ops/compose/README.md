@@ -45,8 +45,7 @@ assistant setup and demo stack entry points.
 | Cloud rengine | `overlays/cloud/compose.rengine.yaml` |
 
 The [local wrappers](../local/platform/) and host composition command set the
-project directory explicitly. Older paths at the top of this folder remain
-symlinks during migration; use the canonical nested paths in new callers.
+project directory explicitly. The old top-level aliases have been removed; use the canonical nested paths.
 
 A Compose move must preserve project names, service names, named volumes,
 networks, published ports, and persistent paths. Resolve the merged config with

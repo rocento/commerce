@@ -86,9 +86,8 @@ Tests mock AWS and do not start or stop an actual instance. The layout tests als
 
 `install-services.sh` is the repeatable controller/tunnel service installer. Upload this folder together: it resolves `controller.py` beside the installer, independently of the working directory. On the intended host it requires root, the existing `/opt/rocento-preview-control` directory, its root-only `controller.env` and tunnel key, and the existing `venv` with `requirements.txt` installed. It does not create credentials or rebuild that environment. It copies the controller and writes the existing service definitions and pinned host identity, then enables and starts the two services. Updating a controller that is already running requires the operator's normal service restart procedure. Existing server runtime paths remain `/opt/rocento-preview-control`.
 
-The old `commerce-ops/deploy/aws-automation/` path is a temporary source
-compatibility symlink. Upload this canonical folder for standalone host
-installation. The retired one-time `activate.py` is not part of the package.
+The old deployment source alias has been removed. Upload this canonical folder
+for standalone host installation. The retired one-time `activate.py` is not part of the package.
 
 ## Deployment verification — 2026-10-14
 

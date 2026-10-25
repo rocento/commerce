@@ -1,1 +1,0 @@
-../cloud/lib/jobs.sh

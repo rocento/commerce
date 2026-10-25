@@ -14,7 +14,7 @@ from urllib.error import HTTPError
 from urllib.robotparser import RobotFileParser
 
 ROOT = Path(__file__).resolve().parents[3]
-spec = importlib.util.spec_from_file_location('ec2_config', ROOT / 'commerce-ops/deploy/ec2/configure.py')
+spec = importlib.util.spec_from_file_location('ec2_config', ROOT / 'commerce-ops/cloud/host/render_config.py')
 config = importlib.util.module_from_spec(spec)
 spec.loader.exec_module(config)
 

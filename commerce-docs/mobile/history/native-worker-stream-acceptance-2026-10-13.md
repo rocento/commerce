@@ -68,6 +68,6 @@ autoscaling, WebRTC video, browser touch input or physical-iPhone acceptance is
 claimed. Worker process/device isolation requires a dedicated host account; it
 is not a per-tenant macOS virtual-machine boundary.
 
-Use the [worker runbook](../../../commerce-ops/deploy/native-preview/README.md) for local setup
+Use the [worker runbook](../../../commerce-ops/services/native-preview/README.md) for local setup
 and later existing-host deployment. Remote completion requires running the worker
 on that remote Mac and verifying its real output inside Apps Builder.

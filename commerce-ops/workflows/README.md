@@ -12,7 +12,5 @@ under `local/`; development checks, generators and evaluations live under `tools
 
 Public commands are registered in [commands.json](../commands.json) and the
 [entry-point inventory](../config/entrypoints.json). Canonical modules and
-sibling helpers travel together in full or partial uploads. Compatibility
-symlinks under `scripts/` support existing checkout consumers but are excluded
-from managed uploads. Installed old files remain protected until callers are
+sibling helpers travel together in full or partial uploads. The old source aliases under `scripts/` have been removed. Installed old files remain protected until callers are
 audited; new host operations use `workflows/` directly.

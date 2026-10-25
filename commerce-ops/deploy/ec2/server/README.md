@@ -33,7 +33,7 @@ helpers in this directory include `repository-root.sh` for path discovery.
 network/readiness checker lives in `cloud/host/check.py`, and `ec2-check.py`
 forwards there.
 `ec2-source-filters.sh` forwards to the
-[shared source filter](../../shared/source-filters.sh) for compatibility with
+[shared source filter](../../../cloud/lib/source-filters.sh) for compatibility with
 installed host paths. Do not invoke helpers as independent release procedures.
 
 Start with the [deployment map](../../README.md), then use the relevant

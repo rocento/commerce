@@ -397,7 +397,7 @@ def test_shared_planning_wire_fixtures_and_generation():
     import sys
 
     root = Path(__file__).resolve().parents[2]
-    generator = root / "commerce-ops/scripts/contracts/generate_planning_contracts.py"
+    generator = root / "commerce-ops/tools/contracts/generate_planning_contracts.py"
     spec = importlib.util.spec_from_file_location("planning_generator", generator)
     module = importlib.util.module_from_spec(spec)
     spec.loader.exec_module(module)

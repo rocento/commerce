@@ -23,9 +23,9 @@ explicit targets, and effects. Provider guides explain access prerequisites;
 task guides own shared procedures. Area READMEs explain source ownership.
 
 For repository refactoring, use the [single current plan](REFACTOR-PLAN.md#current-progress-and-next-priorities).
-Its [Markdown strategy](REFACTOR-PLAN.md#11-markdown-strategy-one-owner-for-each-topic)
-defines documentation ownership; its historical migration record preserves
-dated batch results without maintaining separate `PHASE-*` reports.
+The [editing guide](AGENTS.md#documentation-ownership) defines lasting documentation
+ownership. The plan preserves dated batch results and remaining compatibility
+decisions without separate phase reports.
 
 ## Directory map
 
@@ -38,8 +38,8 @@ dated batch results without maintaining separate `PHASE-*` reports.
 - [`workflows/`](workflows/README.md) contains release, demo and maintenance
   workflows. [`tools/`](tools/README.md) owns development checks, generators and evaluations;
   [`tests/operations/`](tests/operations/README.md) owns operations regressions.
-  [`scripts/`](scripts/README.md) retains historical evidence harnesses and compatibility paths.
-  Old workflow paths under scripts are temporary compatibility links.
+  [`scripts/`](scripts/README.md) retains historical evidence harnesses.
+  Retired workflow aliases have been removed; use the owning paths directly.
 - `cloud/` owns [shared host commands](cloud/host/README.md), transport, and
   [AWS](cloud/providers/aws/README.md)/[GCP](cloud/providers/gcp/README.md) adapters.
 - [`services/`](services/README.md) groups operations-owned service runtimes and

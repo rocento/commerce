@@ -32,10 +32,8 @@ These folders contain configuration or installation inputs consumed by the
 platform deployment. Application implementations stay with their service owners.
 
 Canonical service assets live in [`../services/`](../services/README.md).
-`assistant/`, `health-dashboard/`, `observability/`, and `rengine/` are temporary
-source compatibility symlinks. Contact already uses its canonical service path.
-Native preview and AWS automation are also compatibility symlinks to
-`../services/native-preview/` and its `aws-controller/` subdirectory.
+The old service source aliases have been removed. Native preview and its AWS
+controller also live under `../services/native-preview/`.
 
 Only the paths selected by [`cloud/lib/source-filters.sh`](../cloud/lib/source-filters.sh)
 enter managed source uploads. Update that filter when a service input moves.
@@ -76,7 +74,7 @@ commands use the same locked host activation and release gate.
 The normal AWS launcher stages application source and migrations, then the EC2
 release gate verifies and promotes the reviewed images and frontend export. It
 does not build production artifacts or seed demo data. Its upload boundary is
-defined in `shared/source-filters.sh` and shared with server activation.
+defined in `../cloud/lib/source-filters.sh` and shared with server activation.
 
 Run the provider-specific seed launcher separately when Rocento's demo
 catalogs, themes, or delivery coverage need changes. AWS and GCP launchers call
@@ -85,9 +83,9 @@ data and seeding helpers, then runs them against the existing Rocento
 deployment. It does not upload application source, build images, or restart
 services.
 
-Within `commerce-ops/scripts/`, `release/` contains the canonical release gates,
-`demo/` contains demo seed workflows, and `tests/` contains repository checks.
-Commands run from their purpose folders. `entrypoints.json` lists canonical
+Within `commerce-ops/workflows/`, `release/` contains release gates and `demo/`
+contains demo seed workflows. Regression checks live in `tests/operations/`.
+Commands run from their purpose folders. `config/entrypoints.json` lists canonical
 paths; update callers and that inventory together when moving a command.
 
 On EC2, `/opt/rocento/deploy/ec2/` remains a protected runtime location for
@@ -106,9 +104,8 @@ For the full workflow, see [AWS deployment commands](../cloud/providers/aws/READ
 | `aws-deploy/*.sh`, `gcp-deploy/deploy.sh` | Compatibility launchers; canonical provider commands live under `cloud/providers/` |
 | `ec2/server/ec2-*`, `ec2/server/cleanup.py` | Installed compatibility adapters; canonical host implementations live under `cloud/host/` |
 | `ec2/server/repository-root.sh` | Shared path discovery for the installed adapters; keep beside its consumers |
-| `ec2/build-frontend.sh`, `ec2/publication.py`, `ec2/configure.py` | Compatibility adapters or links to release/configuration owners |
+| `ec2/build-frontend.sh`, `ec2/publication.py` | Compatibility adapters to release/configuration owners |
 | `ec2/bootstrap.env.example` | Host-bootstrap template with installed paths; distinct from workstation provider templates |
-| Service, Compose and shared-library symlinks | Retained source interfaces; direct targets identify canonical owners |
 | `README.md`, agent guides and EC2/server guides | Ownership, provisioning and installed-interface documentation |
 
 Website publication now lives in `cloud/host/publish_website.py`; its former

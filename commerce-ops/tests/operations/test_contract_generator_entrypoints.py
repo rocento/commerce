@@ -44,9 +44,6 @@ def fixture(root):
         ROOT / "commerce-assistant-platform/app", root / "commerce-assistant-platform/app",
         ignore=shutil.ignore_patterns("__pycache__", "commerce_language_engine"),
     )
-    compatibility = root / "commerce-ops/scripts"
-    compatibility.mkdir(parents=True, exist_ok=True)
-    (compatibility / "contracts").symlink_to("../tools/contracts", target_is_directory=True)
     for relative in (
         "commerce-api/rocento-api/theme-contract.json",
         "commerce-assistant-platform/app/commerce_language_engine/seeds/recognition-rules.en.json",
@@ -64,11 +61,11 @@ class ContractGeneratorEntrypointTests(unittest.TestCase):
             root = outside / "checkout"
             fixture(root)
 
-            def run(name, canonical, *arguments):
-                parent = root / ("commerce-ops/tools/contracts" if canonical else "commerce-ops/scripts/contracts")
+            def run(name, outside_checkout, *arguments):
+                parent = root / "commerce-ops/tools/contracts"
                 return subprocess.run(
                     [sys.executable, "-B", str(parent / f"generate_{name}.py"), *arguments],
-                    cwd=outside, capture_output=True, text=True, timeout=60,
+                    cwd=outside if outside_checkout else root, capture_output=True, text=True, timeout=60,
                 )
 
             for name, outputs in GENERATORS.items():
@@ -76,13 +73,13 @@ class ContractGeneratorEntrypointTests(unittest.TestCase):
                     generated = run(name, True)
                     self.assertEqual(generated.returncode, 0, generated.stdout + generated.stderr)
                     expected = {relative: (root / relative).read_bytes() for relative in outputs}
-                    legacy = run(name, False)
-                    self.assertEqual(legacy.returncode, 0, legacy.stdout + legacy.stderr)
+                    generated = run(name, False)
+                    self.assertEqual(generated.returncode, 0, generated.stdout + generated.stderr)
                     self.assertEqual({relative: (root / relative).read_bytes() for relative in outputs}, expected)
                     if name not in CHECKABLE:
                         continue
-                    for canonical in (False, True):
-                        checked = run(name, canonical, "--check")
+                    for outside_checkout in (False, True):
+                        checked = run(name, outside_checkout, "--check")
                         self.assertEqual(checked.returncode, 0, checked.stdout + checked.stderr)
                     changed = root / outputs[0]
                     if name == "comparison_operators":
@@ -92,38 +89,37 @@ class ContractGeneratorEntrypointTests(unittest.TestCase):
                     else:
                         changed.write_text("{}\n")
                     corrupt = changed.read_bytes()
-                    results = [run(name, canonical, "--check") for canonical in (False, True)]
+                    results = [run(name, outside_checkout, "--check") for outside_checkout in (False, True)]
                     self.assertNotEqual(results[0].returncode, 0)
                     self.assertEqual(results[0].returncode, results[1].returncode)
                     self.assertEqual(results[0].stdout, results[1].stdout)
-                    # Assertion-based generators add the forwarding frame to a traceback.
+                    # Compare the reported check failure from both working directories.
                     self.assertEqual(results[0].stderr.splitlines()[-1:], results[1].stderr.splitlines()[-1:])
                     self.assertEqual(changed.read_bytes(), corrupt, "--check must not repair drift")
                     changed.write_bytes(expected[outputs[0]])
 
-    def test_imported_legacy_projection_keeps_mutable_policy_and_sibling_imports(self):
+    def test_imported_projection_keeps_mutable_policy_and_sibling_imports(self):
         source = json.loads((ROOT / "commerce-api/rocento-api/openapi.json").read_text())
         old_path = sys.path.copy()
         try:
-            for canonical in (False, True):
-                directory = ROOT / ("commerce-ops/tools/contracts" if canonical else "commerce-ops/scripts/contracts")
-                modules = {}
-                for audience in ("public", "merchant"):
-                    path = directory / f"generate_{audience}_openapi.py"
-                    spec = importlib.util.spec_from_file_location(f"entrypoint_{audience}_{canonical}", path)
-                    module = importlib.util.module_from_spec(spec)
-                    spec.loader.exec_module(module)
-                    self.assertEqual(module.ROOT, ROOT)
-                    modules[audience] = module
-                public = modules["public"]
-                with patch.object(public, "OPERATIONS", ()):
-                    self.assertEqual(public.build_public_contract(source)["paths"], {})
-                merchant = modules["merchant"]
-                self.assertEqual(merchant.public.ROOT, ROOT)
-                self.assertEqual(
-                    merchant.public.build_public_contract(source),
-                    public.build_public_contract(source),
-                )
+            directory = ROOT / "commerce-ops/tools/contracts"
+            modules = {}
+            for audience in ("public", "merchant"):
+                path = directory / f"generate_{audience}_openapi.py"
+                spec = importlib.util.spec_from_file_location(f"entrypoint_{audience}", path)
+                module = importlib.util.module_from_spec(spec)
+                spec.loader.exec_module(module)
+                self.assertEqual(module.ROOT, ROOT)
+                modules[audience] = module
+            public = modules["public"]
+            with patch.object(public, "OPERATIONS", ()):
+                self.assertEqual(public.build_public_contract(source)["paths"], {})
+            merchant = modules["merchant"]
+            self.assertEqual(merchant.public.ROOT, ROOT)
+            self.assertEqual(
+                merchant.public.build_public_contract(source),
+                public.build_public_contract(source),
+            )
         finally:
             sys.path[:] = old_path
 

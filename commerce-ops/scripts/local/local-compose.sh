@@ -1,1 +1,0 @@
-../../local/platform/local-compose.sh

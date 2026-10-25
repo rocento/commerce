@@ -29,10 +29,8 @@ or lifecycle behavior. Native preview has a separate [service guide](../services
   strategies, and keep protected configuration upload provider-specific.
 - `../cloud/lib/source-filters.sh` owns the managed source boundary for workstation
   uploads, release inventory, and host activation. The old `shared/source-filters.sh`
-  path is a compatibility link; `ec2/server/` contains a wrapper.
-- `../cloud/host/` owns host configuration renderers. `ec2/` keeps the legacy
-  source alias, server templates and protected generated state until the
-  remaining host sources move.
+  source alias has been removed; `ec2/server/` contains a wrapper.
+- `../cloud/host/` owns host configuration renderers. `ec2/` keeps server templates and protected generated state.
   Service implementations and their installation assets belong in
   `../services/<service>/`; keep provider-neutral runtime code out of `deploy/`.
   Private workstation settings live under `.local/commerce-ops/targets/` and
@@ -40,7 +38,7 @@ or lifecycle behavior. Native preview has a separate [service guide](../services
   from Git and source uploads.
 - `../services/native-preview/aws-controller/` owns Android instance/session
   lifecycle control; `../services/native-preview/` owns worker tooling.
-  The former deploy directories are source compatibility symlinks. Preserve installed runtime
+  The former deployment source aliases have been removed. Preserve installed runtime
   paths, systemd names and repeatable installation.
 - Keep the sibling `../compose/` path and Compose project identity stable. Build
   contexts, bind mounts, volumes, source activation and deployment locks depend

@@ -12,16 +12,10 @@ ROOT = Path(__file__).resolve().parents[3]
 
 
 class DeploymentLayoutTests(unittest.TestCase):
-    def test_compatibility_links_resolve_directly_inside_checkout(self):
-        for area in ('scripts', 'deploy', 'compose', 'onboarding'):
-            for link in (ROOT / 'commerce-ops' / area).rglob('*'):
-                if not link.is_symlink():
-                    continue
-                with self.subTest(link=str(link.relative_to(ROOT))):
-                    target = Path(os.path.abspath(link.parent / link.readlink()))
-                    self.assertTrue(target.exists(), 'Broken compatibility link')
-                    self.assertEqual(target, target.resolve(), 'Compatibility link chains through another alias')
-                    self.assertTrue(target.is_relative_to(ROOT), 'Compatibility target leaves checkout')
+    def test_redundant_source_symlinks_are_retired(self):
+        links = [str(path.relative_to(ROOT))
+                 for path in (ROOT / 'commerce-ops').rglob('*') if path.is_symlink()]
+        self.assertEqual(links, [], 'Use canonical owners instead of source aliases')
 
     def test_no_ec2_forwarding_commands_remain(self):
         self.assertEqual(list((ROOT / 'commerce-ops/scripts').glob('ec2-*')), [])

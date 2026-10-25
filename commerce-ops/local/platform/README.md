@@ -12,5 +12,4 @@ the [local setup procedure](../../../commerce-docs/platform/operations/local-set
 and migrations. The other Python files in this folder support local credentials,
 admin bootstrap, knowledge setup, and demo assistant setup.
 
-The `scripts/local/` versions of these names are migration symlinks. New
-callers should use this folder directly.
+The old `scripts/local/` aliases have been removed. Use this folder directly.

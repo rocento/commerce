@@ -71,7 +71,6 @@ class DeployTransportTests(unittest.TestCase):
             shutil.copy2(ROOT/'commerce-ops/cloud/host/deployment_job.py',cloud_host/'deployment_job.py')
             shutil.copy2(ROOT/'commerce-ops/cloud/host/bootstrap.sh',cloud_host/'bootstrap.sh')
             shutil.copytree(ROOT / 'commerce-ops/deploy/ec2/server', root / 'commerce-ops/deploy/ec2/server')
-            shutil.copytree(ROOT / 'commerce-ops/deploy/shared', root / 'commerce-ops/deploy/shared')
             secrets=root/'.local/commerce-ops/secrets/aws'; secrets.mkdir(parents=True)
             for name in ('rocento.pem','rocento-origin.pem','rocento-origin.key'):
                 (secrets/name).write_text('test placeholder')
@@ -321,7 +320,7 @@ if name=='rsync':
                 'commerce-assistant-platform/app/commerce_language_engine/data/compiled.json',
                 'commerce-assistant-platform/app/commerce_language_engine/data/deployment-release.json.gz',
                 'commerce-assistant-platform/app/commerce_language_engine/src/runtime.ts',
-                'commerce-ops/deploy/ec2/configure.py', 'commerce-ops/services/assistant/tools.conf',
+                'commerce-ops/cloud/host/render_config.py', 'commerce-ops/services/assistant/tools.conf',
                 'commerce-ops/deploy/ec2/server/ec2-up.sh', 'commerce-ops/deploy/ec2/server/ec2-source-filters.sh',
                 'commerce-ops/cloud/lib/source-filters.sh',
                 'commerce-ops/deploy/ec2/server/ec2-deploy-job.py', 'commerce-ops/cloud/host/deployment_job.py',

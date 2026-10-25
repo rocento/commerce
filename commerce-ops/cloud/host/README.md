@@ -9,7 +9,7 @@ credentials.
 
 | File | Purpose | Compatibility path |
 | --- | --- | --- |
-| `render_config.py` | Validates the deployment domain and generates protected Compose and Nginx configuration | `commerce-ops/deploy/ec2/configure.py` is a source symlink; activation installs it as `/opt/rocento/deploy/ec2/configure.py` |
+| `render_config.py` | Validates the deployment domain and generates protected Compose and Nginx configuration | Activation installs the canonical source as `/opt/rocento/deploy/ec2/configure.py` |
 | `status.sh` | Read-only service, database, TLS, and public-route status | `commerce-ops/deploy/ec2/server/ec2-status.sh` forwards here |
 | `doctor.sh` | Read-only host, capacity, TLS, DNS, and endpoint diagnostics | `commerce-ops/deploy/ec2/server/ec2-doctor.sh` forwards here |
 | `deploy-ai.sh` | Deploys selected assistant and language services under the shared host lock | `commerce-ops/deploy/ec2/server/ec2-deploy-ai.sh` forwards here |

@@ -81,7 +81,7 @@ allowed editing/navigation keys are supported. Remote capacity, isolation and
 streaming acceptance remain future work.
 
 Reproduce with `commerce-web/e2e/mobile-studio/native-preview-interactive.mjs` and the
-[worker setup](../../../commerce-ops/deploy/native-preview/README.md). The previous PNG pilot
+[worker setup](../../../commerce-ops/services/native-preview/README.md). The previous PNG pilot
 acceptance remains a separate historical record.
 
 ## Streaming draft regression and local setup note

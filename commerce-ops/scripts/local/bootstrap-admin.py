@@ -1,1 +1,0 @@
-../../local/platform/bootstrap-admin.py
