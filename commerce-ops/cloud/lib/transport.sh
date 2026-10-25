@@ -37,6 +37,14 @@ reset_transfer_connection() {
   rm -f -- "$TRANSPORT_DIR/control" || true
 }
 
+# Close the workstation control connection and remove its private socket directory.
+# Callers retain EXIT traps and provider-specific diagnostics.
+close_workstation_transport() {
+  [[ -n ${TRANSPORT_DIR:-} ]] || return 0
+  reset_transfer_connection
+  rm -rf -- "$TRANSPORT_DIR"
+}
+
 # Retry only transport failures. Never retry remote activation or data changes.
 retry_transfer() {
   local attempt status

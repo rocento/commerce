@@ -61,10 +61,7 @@ configure_transport() {
 
 cleanup_transport() {
   local status=$?
-  if [[ -n $TRANSPORT_DIR ]]; then
-    reset_transfer_connection
-    rm -rf -- "$TRANSPORT_DIR"
-  fi
+  close_workstation_transport
   if (( status != 0 )); then
     printf 'ERROR: Deployment stopped during %s (exit %s).\n' "$STAGE" "$status" >&2
     if [[ $STAGE == ssh-connection ]]; then

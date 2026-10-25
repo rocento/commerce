@@ -101,8 +101,7 @@ configure_workstation_transport "$SSH_KEY" -az rocento-gcp-deploy 1 "$DRY_RUN"
 
 cleanup() {
   local status=$?
-  reset_transfer_connection
-  rm -rf -- "$TRANSPORT_DIR"
+  close_workstation_transport
   if (( status != 0 )); then
     printf 'ERROR: Deployment stopped during %s. The production activation gate must pass before live source changes.\n' "$STAGE" >&2
   fi

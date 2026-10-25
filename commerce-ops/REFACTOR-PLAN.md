@@ -324,3 +324,16 @@ Validation: 19 CLI/layout tests and 159 subtests passed. Both extracted function
 bodies match the previous implementation after root/error-class renaming.
 Documentation checked 214 files and 1,284 links in the working tree. No deployment
 or network operation ran; the separate onboarding rename remains excluded.
+
+## Workstation transport lifecycle — 2026-10-25
+
+Moved duplicate SSH control-connection and socket-directory cleanup from AWS/GCP
+launchers into `close_workstation_transport` in the existing transport helper.
+Provider EXIT traps retain their captured status and diagnostic messages. Upload
+strategies, configuration transfer and activation sequencing remain unchanged.
+No new files, public commands or host-upload dependencies were introduced.
+
+Validation: 22 transport tests and 4 GCP target tests passed (9 subtests).
+Local shell fixtures verified uninitialized cleanup, paths containing spaces,
+and original exit statuses 0, 23 and 255 without SSH. All three changed shell
+files passed syntax checks. No cloud operation or deployment ran.
