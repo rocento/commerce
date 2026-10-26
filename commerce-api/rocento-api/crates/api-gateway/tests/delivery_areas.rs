@@ -394,7 +394,7 @@ async fn catalog_product_is_browsable_without_a_delivery_pin(pool: PgPool) {
 }
 
 #[sqlx::test(migrations = "../../migrations")]
-#[ignore = "requires scripts/m13-search-test.py and local Meilisearch"]
+#[ignore = "requires commerce-ops/tools/checks/delivery-area-search-integration.py and local Meilisearch"]
 async fn real_search_stock_facet_and_catalog_area_annotations(pool: PgPool) {
     use axum::{
         body::Body,
