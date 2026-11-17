@@ -451,7 +451,7 @@ export default function Page() {
               <input
                 id="brand"
                 maxLength={100}
-                placeholder="e.g. Tawheed"
+                placeholder="e.g. Rocento"
                 value={draft.brand}
                 disabled={reserved}
                 onChange={(e) =>
@@ -469,7 +469,7 @@ export default function Page() {
                 <input
                   id="slug"
                   maxLength={40}
-                  placeholder="tawheed"
+                  placeholder="rocento"
                   value={draft.slug}
                   disabled={reserved}
                   onChange={(e) => update({ slug: e.target.value })}
@@ -522,10 +522,11 @@ export default function Page() {
                     <span className="radio" />
                   </span>
                   <span className="price">
-                    {p.id === "ENTERPRISE" && <small>from </small>}$
-                    {p.priceMinor / 100}
+                    $
+                    {(p.priceMinor / 100).toLocaleString("en-US")}
                     <small>/mo</small>
                   </span>
+                  <strong>0% Transaction Commission.</strong>
                   <span>
                     {p.id === "ENTERPRISE"
                       ? "A dedicated home for your business."
@@ -584,8 +585,8 @@ export default function Page() {
                 <div>
                   <span>PLAN</span>
                   <strong>
-                    {plan.name} · ${plan.priceMinor / 100}
-                    {plan.id === "ENTERPRISE" ? "+" : ""}/mo (proposed)
+                    {plan.name} · ${(plan.priceMinor / 100).toLocaleString("en-US")}
+                    /mo (proposed)
                   </strong>
                 </div>
                 <div>
