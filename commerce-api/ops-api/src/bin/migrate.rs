@@ -1,10 +1,4 @@
-use std::{
-    env,
-    error::Error,
-    fs,
-    io,
-    path::PathBuf,
-};
+use std::{env, error::Error, fs, io, path::PathBuf};
 
 use sqlx::{postgres::PgPoolOptions, raw_sql, Postgres, Transaction};
 
@@ -65,14 +59,15 @@ async fn apply_migrations(
         let name = path
             .file_name()
             .and_then(|value| value.to_str())
-            .ok_or_else(|| io::Error::new(io::ErrorKind::InvalidData, "invalid migration filename"))?
+            .ok_or_else(|| {
+                io::Error::new(io::ErrorKind::InvalidData, "invalid migration filename")
+            })?
             .to_owned();
-        let already_applied: bool = sqlx::query_scalar(
-            "SELECT EXISTS (SELECT 1 FROM schema_migrations WHERE name = $1)",
-        )
-        .bind(&name)
-        .fetch_one(&mut **transaction)
-        .await?;
+        let already_applied: bool =
+            sqlx::query_scalar("SELECT EXISTS (SELECT 1 FROM schema_migrations WHERE name = $1)")
+                .bind(&name)
+                .fetch_one(&mut **transaction)
+                .await?;
         if already_applied {
             continue;
         }

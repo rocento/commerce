@@ -1,0 +1,31 @@
+# Official MinIO now distributes source; build an explicit upstream release.
+# This candidate still requires the normal security/release review.
+# Go 1.25 is out of security support; keep the reviewed toolchain immutable.
+FROM golang:1.26.11-bookworm@sha256:dc40a13b61304647ed7e5d581d246b86413dfc29d63c6d018310feb93cd98fc0 AS build
+RUN CGO_ENABLED=0 GOMAXPROCS=2 go install -p=2 github.com/minio/minio@RELEASE.2025-10-15T17-29-55Z
+RUN apt-get update && apt-get install -y --no-install-recommends patch && rm -rf /var/lib/apt/lists/*
+# Keep the upstream identity exact; this is a local workaround, not an upstream fix.
+WORKDIR /src/minio
+RUN cp -a /go/pkg/mod/github.com/minio/minio@v0.0.0-20251015172955-9e49d5e7a648/. . && chmod -R u+w .
+COPY minio/unsigned-trailer-denial.patch /tmp/unsigned-trailer-denial.patch
+COPY minio/unsigned-trailer-denial_test.go cmd/rocento_unsigned_trailer_test.go
+COPY minio/unsupported-s3-features.patch /tmp/unsupported-s3-features.patch
+COPY minio/unsupported-s3-features_test.go cmd/rocento_unsupported_s3_features_test.go
+COPY minio/go-network-security.patch /tmp/go-network-security.patch
+COPY minio/dependency-security.patch /tmp/dependency-security.patch
+RUN patch --batch --fuzz=0 -p1 < /tmp/go-network-security.patch \
+    && patch --batch --fuzz=0 -p1 < /tmp/dependency-security.patch \
+    && patch --batch --fuzz=0 -p1 < /tmp/unsigned-trailer-denial.patch \
+    && patch --batch --fuzz=0 -p1 < /tmp/unsupported-s3-features.patch \
+    && GOTOOLCHAIN=local CGO_ENABLED=0 GOMAXPROCS=2 go test -mod=readonly -p=2 ./cmd -run '^TestRocento' -count=1 \
+    && GOTOOLCHAIN=local CGO_ENABLED=0 GOMAXPROCS=2 go test -mod=readonly -p=2 golang.org/x/text/unicode/norm golang.org/x/net/idna \
+    && GOTOOLCHAIN=local CGO_ENABLED=0 GOMAXPROCS=2 go build -mod=readonly -p=2 -o /go/bin/minio .
+FROM scratch
+COPY --from=build /etc/ssl/certs/ca-certificates.crt /etc/ssl/certs/ca-certificates.crt
+COPY --from=build /go/bin/minio /usr/local/bin/minio
+LABEL io.rocento.minio.upstream="RELEASE.2025-10-15T17-29-55Z" \
+      io.rocento.minio.upstream.commit="9e49d5e7a648" \
+      io.rocento.minio.mitigation="reject-unsigned-trailers-replication-and-s3-select"
+EXPOSE 9000
+ENTRYPOINT ["minio"]
+CMD ["server", "/data"]

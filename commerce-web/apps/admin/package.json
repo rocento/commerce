@@ -9,13 +9,13 @@
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1",
-    "@commerce/ui": "workspace:*",
     "@commerce/api-client": "workspace:*",
-    "react-router-dom": "^6.30.3",
+    "@commerce/ui": "workspace:*",
     "@tanstack/react-query": "^5.90.0",
     "leaflet": "1.9.4",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-router-dom": "^7.18.5",
     "swagger-ui-dist": "5.33.1"
   },
   "devDependencies": {

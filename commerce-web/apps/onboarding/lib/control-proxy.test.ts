@@ -144,3 +144,39 @@ test("proxy keeps production customer sessions in secure host-only cookies", asy
     restoreEnv();
   }
 });
+
+test("proxy allows customer payment routes and rejects operator confirmation", async () => {
+  const restoreEnv = setEnv({ NODE_ENV: "development", CUSTOMER_ORIGIN: "http://127.0.0.1:3100", CONTROL_API_URL: "http://127.0.0.1:4100" });
+  const originalFetch = globalThis.fetch;
+  const forwarded: string[] = [];
+  globalThis.fetch = (async (input) => { forwarded.push(String(input)); return Response.json({ items: [] }); }) as typeof fetch;
+  try {
+    const id = "11111111-1111-4111-8111-111111111111";
+    for (const [method, route] of [["GET", "billing/payment-requests"], ["POST", `onboarding/drafts/${id}/payment-request`]]) {
+      const response = await controlProxy(new Request(`http://127.0.0.1:3100/api/control/${route}`, {
+        method, headers: { origin: "http://127.0.0.1:3100", "x-rocento-request": "1", "content-type": "application/json" },
+        body: method === "POST" ? "{}" : undefined,
+      }), route.split("/"));
+      expect(response.status).toBe(200);
+    }
+    const route = `operator/billing/payment-requests/${id}/confirm`;
+    const response = await controlProxy(new Request(`http://127.0.0.1:3100/api/control/${route}`, {
+      method: "POST", headers: { origin: "http://127.0.0.1:3100", "x-rocento-request": "1", "content-type": "application/json" }, body: "{}",
+    }), route.split("/"));
+    expect(response.status).toBe(404);
+    expect(forwarded).toHaveLength(2);
+  } finally { globalThis.fetch = originalFetch; restoreEnv(); }
+});
+
+test("provisioning proxy exposes only customer status reads", async () => {
+  const restoreEnv = setEnv({ NODE_ENV: "development", CUSTOMER_ORIGIN: "http://127.0.0.1:3100" });
+  const originalFetch = globalThis.fetch;
+  let forwarded = 0;
+  globalThis.fetch = (async () => { forwarded++; return Response.json({ status: "BLOCKED" }); }) as typeof fetch;
+  const path = ["stores", "11111111-1111-4111-8111-111111111111", "provisioning"];
+  try {
+    expect((await controlProxy(new Request("http://127.0.0.1:3100/api/control/" + path.join("/")), path)).status).toBe(200);
+    expect((await controlProxy(new Request("http://127.0.0.1:3100/api/control/" + path.join("/"), { method: "POST" }), path)).status).toBe(404);
+    expect(forwarded).toBe(1);
+  } finally { globalThis.fetch = originalFetch; restoreEnv(); }
+});

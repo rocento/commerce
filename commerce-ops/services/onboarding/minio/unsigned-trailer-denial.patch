@@ -1,0 +1,45 @@
+--- a/cmd/auth-handler.go
++++ b/cmd/auth-handler.go
+@@ -612,11 +612,42 @@
+ 	return ok
+ }
+ 
++// hasUnsupportedUnsignedTrailer applies the upstream workaround for
++// CVE-2026-40344 and CVE-2026-41145 before authentication dispatch. Unsigned
++// trailer uploads are disabled; ordinary signed and signed-trailer uploads
++// remain supported. Check every value, including proxy-combined duplicates.
++func hasUnsupportedUnsignedTrailer(r *http.Request) bool {
++	for name, values := range r.Header {
++		if !strings.EqualFold(name, xhttp.AmzContentSha256) {
++			continue
++		}
++		for _, value := range values {
++			for _, token := range strings.Split(value, ",") {
++				if strings.EqualFold(strings.TrimSpace(token), unsignedPayloadTrailer) {
++					return true
++				}
++			}
++		}
++	}
++	return false
++}
++
+ // setAuthMiddleware to validate authorization header for the incoming request.
+ func setAuthMiddleware(h http.Handler) http.Handler {
+ 	// handler for validating incoming authorization headers.
+ 	return http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
+ 		tc, ok := r.Context().Value(mcontext.ContextTraceKey).(*mcontext.TraceCtxt)
++
++		if hasUnsupportedUnsignedTrailer(r) {
++			if ok {
++				tc.FuncName = "handler.Auth"
++				tc.ResponseRecorder.LogErrBody = true
++			}
++			defer logger.AuditLog(r.Context(), w, r, mustGetClaimsFromToken(r))
++			writeErrorResponse(r.Context(), w, errorCodes.ToAPIErr(ErrSignatureVersionNotSupported), r.URL)
++			atomic.AddUint64(&globalHTTPStats.rejectedRequestsAuth, 1)
++			return
++		}
+ 
+ 		aType := getRequestAuthType(r)
+ 		switch aType {

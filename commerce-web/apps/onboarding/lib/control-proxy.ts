@@ -6,7 +6,7 @@ export async function controlProxy(request:Request,path:string[]){
  const origin=new URL(configured).origin;
  if(production&&new URL(origin).protocol!=='https:')return Response.json({code:'AUTH_NOT_CONFIGURED'},{status:503});
  const route=path.join('/'),method=request.method;
- const allowed=(method==='GET'&&['me','onboarding/draft'].includes(route))||(method==='PUT'&&/^onboarding\/drafts\/[a-f0-9-]{36}$/.test(route))||(method==='POST'&&(/^customer\/auth\/(register|login|logout|verify|request-verification|forgot-password|reset-password)$/.test(route)||/^onboarding\/drafts\/[a-f0-9-]{36}\/reserve$/.test(route)));
+ const allowed=(method==='GET'&&(['me','onboarding/draft','billing/payment-requests'].includes(route)||/^stores\/[a-f0-9-]{36}\/provisioning$/.test(route)))||(method==='PUT'&&/^onboarding\/drafts\/[a-f0-9-]{36}$/.test(route))||(method==='POST'&&(/^billing\/payment-requests\/[a-f0-9-]{36}\/redeem$/.test(route)||/^customer\/auth\/(register|login|logout|verify|request-verification|forgot-password|reset-password)$/.test(route)||/^onboarding\/drafts\/[a-f0-9-]{36}\/(reserve|payment-request)$/.test(route)));
  if(!allowed)return Response.json({code:'NOT_FOUND'},{status:404});
  if(method!=='GET'&&(request.headers.get('origin')!==origin||request.headers.get('x-rocento-request')!=='1'))return Response.json({code:'FORBIDDEN'},{status:403});
  const cookieName=production?'__Host-rocento_customer':'rocento_customer';

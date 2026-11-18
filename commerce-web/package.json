@@ -22,7 +22,7 @@
     "lint": "eslint .",
     "typecheck": "pnpm -r typecheck",
     "build": "pnpm -r build",
-    "test": "vitest run",
+    "test": "vitest run && pnpm --filter @rocento/rengine test",
     "generate:api": "openapi-typescript ../commerce-api/rocento-api/openapi.json -o packages/api-client/src/schema.d.ts",
     "test:improvements": "playwright test --config playwright.improvements.config.ts",
     "test:search": "playwright test --config playwright.search.config.ts",

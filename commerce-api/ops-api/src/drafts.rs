@@ -24,7 +24,7 @@ impl Drafts {
             let org_id = Uuid::parse_str(org_id).map_err(|_| ApiError::forbidden("FORBIDDEN"))?;
             sqlx::query(
                 "SELECT t.id,t.org_id FROM onboarding_drafts d JOIN tenants t ON t.id=d.tenant_id \
-                 WHERE t.lifecycle_status='SLUG_RESERVED' AND t.slug_reserved_until<=clock_timestamp() \
+                 WHERE t.management_state='ENABLED' AND t.lifecycle_status='SLUG_RESERVED' AND t.slug_reserved_until<=clock_timestamp() \
                  AND t.org_id=$1 ORDER BY t.id LIMIT 100 FOR UPDATE OF d SKIP LOCKED",
             )
             .bind(org_id)
@@ -33,7 +33,7 @@ impl Drafts {
         } else {
             sqlx::query(
                 "SELECT t.id,t.org_id FROM onboarding_drafts d JOIN tenants t ON t.id=d.tenant_id \
-                 WHERE t.lifecycle_status='SLUG_RESERVED' AND t.slug_reserved_until<=clock_timestamp() \
+                 WHERE t.management_state='ENABLED' AND t.lifecycle_status='SLUG_RESERVED' AND t.slug_reserved_until<=clock_timestamp() \
                  ORDER BY t.id LIMIT 100 FOR UPDATE OF d SKIP LOCKED",
             )
             .fetch_all(&mut *tx)
@@ -48,7 +48,7 @@ impl Drafts {
                 .map_err(|_| ApiError::unavailable())?;
             let updated = sqlx::query(
                 "UPDATE tenants SET lifecycle_status='RESERVATION_EXPIRED' WHERE id=$1 \
-                 AND lifecycle_status='SLUG_RESERVED' AND slug_reserved_until<=clock_timestamp() RETURNING id",
+                 AND management_state='ENABLED' AND lifecycle_status='SLUG_RESERVED' AND slug_reserved_until<=clock_timestamp() RETURNING id",
             )
             .bind(id)
             .fetch_optional(&mut *tx)
@@ -84,6 +84,8 @@ impl Drafts {
             .execute(&mut *tx)
             .await?;
             released += 1;
+            sqlx::query("UPDATE payment_requests SET status='EXPIRED' WHERE tenant_id=$1 AND status='AWAITING_PAYMENT'")
+                .bind(id).execute(&mut *tx).await?;
         }
         tx.commit().await?;
         Ok(released)
@@ -158,7 +160,7 @@ impl Drafts {
             .and_then(Value::as_str)
             .unwrap_or_default();
         if !is_plan(plan)
-            || !matches!(payment, "PADDLE" | "MANUAL_CASH")
+            || !matches!(payment, "ROCENTO" | "PADDLE" | "MANUAL_CASH")
             || (!theme.is_empty() && !is_theme(theme))
         {
             return Err(ApiError::bad("INVALID_INPUT"));
@@ -199,6 +201,15 @@ impl Drafts {
             if current_brand != brand.trim() || current_slug != slug || current_plan != plan {
                 return Err(ApiError::conflict("RESERVATION_LOCKED"));
             }
+            let lifecycle: String =
+                sqlx::query_scalar("SELECT lifecycle_status FROM tenants WHERE id=$1")
+                    .bind(tenant_id)
+                    .fetch_one(&mut *tx)
+                    .await?;
+            let current_theme: Option<String> = current.try_get("theme")?;
+            if lifecycle != "SLUG_RESERVED" && current_theme.as_deref().unwrap_or("") != theme {
+                return Err(ApiError::conflict("RESERVATION_LOCKED"));
+            }
         }
         let updated = sqlx::query(
             "UPDATE onboarding_drafts SET brand=$3,slug=$4,plan=$5,theme=$6,payment=$7, \
@@ -210,7 +221,8 @@ impl Drafts {
         .bind(&slug)
         .bind(plan)
         .bind(if theme.is_empty() { None } else { Some(theme) })
-        .bind(payment)
+        // Old browser drafts can still submit legacy values; persistence is canonical.
+        .bind("ROCENTO")
         .fetch_one(&mut *tx)
         .await?;
         tx.commit().await?;

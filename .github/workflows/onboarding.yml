@@ -6,13 +6,74 @@ defaults:
   run:
     working-directory: commerce-web
 jobs:
+  terraform:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    strategy:
+      matrix:
+        provider: [aws, gcp, hetzner]
+    defaults:
+      run:
+        working-directory: commerce-ops/cloud/controller/merchant-terraform/${{ matrix.provider }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: hashicorp/setup-terraform@v3
+        with:
+          terraform_version: 1.14.0
+          terraform_wrapper: false
+      - run: terraform init -backend=false -input=false -lockfile=readonly
+      - run: terraform validate -no-color
+      - run: terraform test -no-color
+  aws-foundation:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    defaults:
+      run:
+        working-directory: commerce-ops/cloud/providers/aws/merchant-foundation
+    steps:
+      - uses: actions/checkout@v4
+      - uses: hashicorp/setup-terraform@v3
+        with:
+          terraform_version: 1.14.0
+          terraform_wrapper: false
+      - run: terraform fmt -check
+      - run: terraform init -backend=false -input=false -lockfile=readonly
+      - run: terraform validate -no-color
+      - run: terraform test -json -verbose > "$RUNNER_TEMP/aws-foundation-tests.jsonl"
+      - name: Verify rendered IAM allow and deny cases
+        env:
+          AWS_FOUNDATION_PLAN_JSON: ${{ runner.temp }}/aws-foundation-tests.jsonl
+        run: python3 ../../../../tests/operations/test_aws_foundation_policy.py
+  api:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    defaults:
+      run:
+        working-directory: commerce-api/ops-api
+    services:
+      postgres:
+        image: postgres:17-alpine
+        env:
+          POSTGRES_PASSWORD: onboarding-test-only
+          POSTGRES_DB: onboarding_test_admin
+        ports:
+          - 5432/tcp
+        options: >-
+          --health-cmd "pg_isready -U postgres -d onboarding_test_admin"
+          --health-interval 5s
+          --health-timeout 5s
+          --health-retries 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: dtolnay/rust-toolchain@stable
+      - name: Verify account, draft and reservation contracts on PostgreSQL
+        env:
+          ONBOARDING_TEST_DATABASE_URL: postgres://postgres:onboarding-test-only@127.0.0.1:${{ job.services.postgres.ports['5432'] }}/onboarding_test_admin
+        run: cargo test --locked --test foundation -- --ignored
   verify:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - uses: dtolnay/rust-toolchain@stable
-      - name: Check the standalone onboarding API package
-        run: cargo check --locked --manifest-path ../commerce-api/ops-api/Cargo.toml
       - uses: pnpm/action-setup@v4
         with:
           version: 10.32.1
@@ -23,8 +84,20 @@ jobs:
           cache-dependency-path: commerce-web/pnpm-lock.yaml
       - run: pnpm install --frozen-lockfile
       - run: pnpm typecheck:onboarding
-      - run: pnpm typecheck:onboarding-staff
+      - run: pnpm typecheck:onboarding-ops
       - run: pnpm build:onboarding
-      - run: pnpm build:onboarding-staff
+      - run: pnpm build:onboarding-ops
+      - run: pnpm exec vitest run apps/onboarding/lib/control-proxy.test.ts apps/onboarding-ops/lib/staff-proxy.test.ts apps/admin/src/storefront-origin.test.ts
+      - name: Verify merchant executor boundaries
+        working-directory: .
+        run: |
+          python3 -m unittest discover -s commerce-ops/tests/operations -p test_merchant_executor.py
+          python3 -m unittest discover -s commerce-ops/tests/operations -p test_merchant_fleet.py
+          python3 -m unittest discover -s commerce-ops/tests/operations -p 'test_fleet_*.py'
+          MERCHANT_INGRESS_NGINX_TESTS=1 python3 -m unittest discover -s commerce-ops/tests/operations -p test_merchant_ingress.py
+          python3 -m unittest discover -s commerce-ops/tests/operations -p test_merchant_candidate.py
+          python3 -m unittest discover -s commerce-ops/tests/operations -p test_merchant_packaging.py
+          python3 -m unittest discover -s commerce-ops/tests/operations -p test_provisioning_alerts.py
+          python3 -m unittest discover -s commerce-ops/tests/operations -p test_tenant_controls.py
       - run: pnpm exec playwright install --with-deps chromium
       - run: pnpm test:onboarding

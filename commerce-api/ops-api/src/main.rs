@@ -50,6 +50,7 @@ async fn run() -> Result<(), Box<dyn std::error::Error>> {
     };
 
     let state = AppState {
+        billing: rocento_onboard_api::billing::BillingConfig::from_env()?,
         db: db.clone(),
         accounts,
         mailer: mailer.clone(),

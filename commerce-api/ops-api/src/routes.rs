@@ -2,7 +2,7 @@ use std::time::Duration;
 
 use axum::{
     body::Body,
-    extract::{DefaultBodyLimit, Path, State},
+    extract::{DefaultBodyLimit, Path, Query, State},
     http::{header, HeaderMap, Request, StatusCode},
     middleware::{self, Next},
     response::{IntoResponse, Response},
@@ -16,6 +16,7 @@ use uuid::Uuid;
 
 use crate::{
     accounts::{bearer, Accounts},
+    billing,
     domain::{normalize_slug, plans, require_organization, themes, valid_uuid, Principal},
     drafts::Drafts,
     error::{ApiError, ApiResult},
@@ -24,6 +25,15 @@ use crate::{
 
 pub fn router(state: AppState) -> Router {
     Router::new()
+        .route("/api/v1/staff/auth/login", post(staff_login))
+        .route("/api/v1/staff/auth/logout", post(staff_logout))
+        .route("/api/v1/staff/me", get(staff_me))
+        .route("/api/v1/staff/dashboard", get(staff_dashboard))
+        .route("/api/v1/staff/clients", get(staff_clients))
+        .route("/api/v1/staff/stores/{id}", get(staff_store))
+        .route("/api/v1/staff/stores/{id}/control", post(staff_control))
+        .route("/api/v1/staff/stores/{id}/hosting", post(staff_hosting))
+        .route("/api/v1/staff/payments/{id}/confirm", post(staff_confirm))
         .route("/api/v1/health", get(health))
         .route("/api/v1/plans", get(get_plans))
         .route("/api/v1/public/storefront-themes", get(get_themes))
@@ -51,9 +61,78 @@ pub fn router(state: AppState) -> Router {
         .route("/api/v1/slugs/check", post(check_slug))
         .route("/api/v1/stores", get(stores))
         .route("/api/v1/stores/{id}", get(store))
+        .route("/api/v1/stores/{id}/provisioning", get(provisioning_status))
+        .route("/api/v1/billing/payment-requests", get(payment_requests))
+        .route("/api/v1/billing/payment-requests/{id}/redeem", post(redeem_payment))
+        .route(
+            "/api/v1/operator/billing/payment-requests/{id}",
+            get(inspect_payment),
+        )
+        .route(
+            "/api/v1/onboarding/drafts/{id}/payment-request",
+            post(request_payment),
+        )
+        .route(
+            "/api/v1/operator/billing/payment-requests/{id}/confirm",
+            post(confirm_payment),
+        )
         .layer(DefaultBodyLimit::max(16 * 1024))
         .layer(middleware::from_fn_with_state(state.clone(), hardening))
         .with_state(state)
+}
+
+async fn provisioning_status(
+    State(state): State<AppState>,
+    headers: HeaderMap,
+    Path(id): Path<Uuid>,
+) -> ApiResult<Json<Value>> {
+    let customer = principal(&state, authorization(&headers)).await?;
+    Ok(Json(
+        crate::provisioning::status(&state.db, &customer, id).await?,
+    ))
+}
+
+async fn payment_requests(
+    State(state): State<AppState>,
+    headers: HeaderMap,
+) -> ApiResult<Json<Value>> {
+    let customer = principal(&state, authorization(&headers)).await?;
+    Ok(Json(billing::list(&state.db, &customer).await?))
+}
+
+#[derive(serde::Deserialize)]
+#[serde(rename_all="camelCase", deny_unknown_fields)]
+struct PaymentPeriod { #[serde(default="monthly")] service_months: i32 }
+fn monthly() -> i32 { 1 }
+#[derive(serde::Deserialize)]
+#[serde(deny_unknown_fields)]
+struct PaymentCode { code: String }
+async fn redeem_payment(State(state): State<AppState>, headers: HeaderMap, Path(id): Path<Uuid>, Json(body): Json<PaymentCode>) -> ApiResult<Json<Value>> {
+    let customer=principal(&state,authorization(&headers)).await?;
+    Ok(Json(billing::redeem_code(&state.db,&customer,id,&body.code).await?))
+}
+async fn request_payment(State(state): State<AppState>, headers: HeaderMap, Path(id): Path<Uuid>, Json(body): Json<PaymentPeriod>) -> ApiResult<Json<Value>> {
+    let customer=principal(&state,authorization(&headers)).await?;
+    Ok(Json(billing::request_calendar(&state.db,&state.billing,&customer,id,body.service_months).await?))
+}
+
+async fn confirm_payment(
+    State(state): State<AppState>,
+    headers: HeaderMap,
+    Path(id): Path<Uuid>,
+    Json(body): Json<billing::Confirmation>,
+) -> ApiResult<Json<Value>> {
+    let operator = state.billing.operator(authorization(&headers))?;
+    Ok(Json(billing::issue_code(&state.db, operator, id, body).await?))
+}
+
+async fn inspect_payment(
+    State(state): State<AppState>,
+    headers: HeaderMap,
+    Path(id): Path<Uuid>,
+) -> ApiResult<Json<Value>> {
+    state.billing.operator(authorization(&headers))?;
+    Ok(Json(billing::inspect(&state.db, id).await?))
 }
 
 async fn hardening(State(state): State<AppState>, request: Request<Body>, next: Next) -> Response {
@@ -129,6 +208,7 @@ async fn health(State(state): State<AppState>) -> Json<Value> {
         "status":"ok",
         "mode":"onboarding",
         "provisioningEnabled":false,
+        "provisioningJobsEnabled":true,
         "authenticationConfigured":state.accounts.is_some()
     }))
 }
@@ -337,4 +417,86 @@ async fn store(
         "created_at":row.try_get::<chrono::DateTime<chrono::Utc>,_>("created_at").map_err(|_| ApiError::unavailable())?
     });
     Ok(Json(value))
+}
+
+async fn staff_login(
+    State(state): State<AppState>,
+    Json(body): Json<Value>,
+) -> ApiResult<Json<Value>> {
+    Ok(Json(
+        crate::staff::login(&state.db, account(&state)?, &body).await?,
+    ))
+}
+async fn staff_logout(State(state): State<AppState>, headers: HeaderMap) -> ApiResult<Json<Value>> {
+    Ok(Json(
+        crate::staff::logout(&state.db, authorization(&headers)).await?,
+    ))
+}
+async fn staff_me(State(state): State<AppState>, headers: HeaderMap) -> ApiResult<Json<Value>> {
+    Ok(Json(
+        crate::staff::authorize(&state.db, authorization(&headers), false).await?,
+    ))
+}
+async fn staff_dashboard(
+    State(state): State<AppState>,
+    headers: HeaderMap,
+) -> ApiResult<Json<Value>> {
+    crate::staff::authorize(&state.db, authorization(&headers), false).await?;
+    Ok(Json(crate::staff::dashboard(&state.db).await?))
+}
+async fn staff_clients(
+    State(state): State<AppState>,
+    headers: HeaderMap,
+    Query(filter): Query<crate::staff::Filter>,
+) -> ApiResult<Json<Value>> {
+    crate::staff::authorize(&state.db, authorization(&headers), false).await?;
+    Ok(Json(crate::staff::clients(&state.db, filter).await?))
+}
+async fn staff_store(
+    State(state): State<AppState>,
+    headers: HeaderMap,
+    Path(id): Path<Uuid>,
+) -> ApiResult<Json<Value>> {
+    crate::staff::authorize(&state.db, authorization(&headers), false).await?;
+    Ok(Json(crate::staff::store(&state.db, id).await?))
+}
+async fn staff_control(
+    State(state): State<AppState>,
+    headers: HeaderMap,
+    Path(id): Path<Uuid>,
+    Json(body): Json<crate::staff::Control>,
+) -> ApiResult<Json<Value>> {
+    let who = crate::staff::authorize(&state.db, authorization(&headers), true).await?;
+    let actor = Uuid::parse_str(who["id"].as_str().ok_or_else(ApiError::unavailable)?)
+        .map_err(|_| ApiError::unavailable())?;
+    Ok(Json(
+        crate::staff::control(&state.db, actor, id, body).await?,
+    ))
+}
+async fn staff_confirm(
+    State(state): State<AppState>,
+    headers: HeaderMap,
+    Path(id): Path<Uuid>,
+    Json(body): Json<billing::Confirmation>,
+) -> ApiResult<Json<Value>> {
+    let who = crate::staff::authorize(&state.db, authorization(&headers), true).await?;
+    let actor = format!(
+        "staff:{}",
+        who["id"].as_str().ok_or_else(ApiError::unavailable)?
+    );
+    Ok(Json(billing::issue_code(&state.db, &actor, id, body).await?))
+}
+
+async fn staff_hosting(
+    State(state): State<AppState>,
+    headers: HeaderMap,
+    Path(id): Path<Uuid>,
+    Json(body): Json<crate::staff::Hosting>,
+) -> ApiResult<Json<Value>> {
+    let who = crate::staff::authorize(&state.db, authorization(&headers), true).await?;
+    let actor = Uuid::parse_str(who["id"].as_str().ok_or_else(ApiError::unavailable)?)
+        .map_err(|_| ApiError::unavailable())?;
+    Ok(Json(
+        crate::staff::hosting(&state.db, actor, id, body).await?,
+    ))
 }

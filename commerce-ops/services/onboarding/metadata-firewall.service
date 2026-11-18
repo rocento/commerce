@@ -1,0 +1,12 @@
+[Unit]
+Description=Block merchant containers from cloud metadata before Docker starts
+Before=docker.service
+After=local-fs.target
+
+[Service]
+Type=oneshot
+ExecStart=/usr/sbin/nft -f /etc/rocento/metadata-firewall.nft
+RemainAfterExit=yes
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,9 @@
+# Independent of Docker's chains; loaded before Docker on every boot.
+table inet rocento_metadata {
+  chain forward {
+    type filter hook forward priority -300; policy accept;
+    ip daddr 169.254.0.0/16 drop
+    ip6 daddr fd00:ec2::254 drop
+    ip6 daddr fe80::/10 drop
+  }
+}

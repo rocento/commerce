@@ -1,0 +1,8 @@
+[Unit]
+Description=Process staff store-control requests
+[Timer]
+OnBootSec=10
+OnUnitActiveSec=5
+Unit=rocento-tenant-controls.service
+[Install]
+WantedBy=timers.target

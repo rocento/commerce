@@ -3,7 +3,7 @@
 The onboarding experience is split by responsibility:
 
 - The customer wizard lives in [`commerce-web/apps/onboarding`](../../commerce-web/apps/onboarding/).
-- The locked staff shell lives in [`commerce-web/apps/onboarding-ops`](../../commerce-web/apps/onboarding-ops/).
+- The staff operations dashboard lives in [`commerce-web/apps/onboarding-ops`](../../commerce-web/apps/onboarding-ops/).
 - Browser checks live in [`commerce-web/e2e/onboarding`](../../commerce-web/e2e/onboarding/) and use `playwright.onboarding.config.ts`.
 - The standalone Rust API, PostgreSQL schema and local migration tooling live in [`commerce-api/ops-api`](../../commerce-api/ops-api/README.md).
 - The local PostgreSQL, NATS and registry stack lives in [`commerce-ops/local/onboarding`](../../commerce-ops/local/onboarding/README.md).
@@ -18,7 +18,7 @@ pnpm dev:onboarding
 pnpm dev:onboarding-ops
 ```
 
-The customer wizard uses port 3100 and the staff shell uses port 3101. The wizard's anonymous draft preview works without the API. Account registration and server-synced drafts require the API and database; follow the [API local development instructions](../../commerce-api/ops-api/README.md).
+The customer wizard uses port 3100 and the staff dashboard uses port 3101. The wizard's anonymous draft preview works without the API. Account registration and server-synced drafts require the API and database; follow the [API local development instructions](../../commerce-api/ops-api/README.md).
 
 ## Verify
 
@@ -32,4 +32,7 @@ pnpm build:onboarding-ops
 pnpm test:onboarding
 ```
 
-The browser checks save the customer desktop and mobile previews to [`assets/`](assets/).
+The browser checks save screenshots in their Playwright test output; retained
+reference previews remain in [`assets/`](assets/). The Rocento payment browser
+scenario uses mocked API responses; PostgreSQL-backed billing verification and
+operator setup are documented in the [API billing guide](../../commerce-api/ops-api/README.md#rocento-offline-billing).

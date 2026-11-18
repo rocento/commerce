@@ -92,10 +92,10 @@ pub fn valid_uuid(value: &str) -> bool {
 
 pub fn plans() -> Value {
     json!([
-        {"id":"STARTER","name":"Starter","priceMinor":2900,"maxTenants":3,"currency":"USD","pricingStatus":"PROPOSED"},
-        {"id":"LAUNCH","name":"Launch","priceMinor":7900,"maxTenants":3,"currency":"USD","pricingStatus":"PROPOSED"},
-        {"id":"GROWTH","name":"Growth","priceMinor":30000,"maxTenants":3,"currency":"USD","pricingStatus":"PROPOSED"},
-        {"id":"ENTERPRISE","name":"Enterprise","priceMinor":250000,"maxTenants":1,"currency":"USD","pricingStatus":"PROPOSED"}
+        {"id":"STARTER","name":"Starter","priceMinor":2900,"maxTenants":3,"currency":"USD","pricingStatus":"APPROVED"},
+        {"id":"LAUNCH","name":"Launch","priceMinor":7900,"maxTenants":3,"currency":"USD","pricingStatus":"APPROVED"},
+        {"id":"GROWTH","name":"Growth","priceMinor":30000,"maxTenants":3,"currency":"USD","pricingStatus":"APPROVED"},
+        {"id":"ENTERPRISE","name":"Enterprise","priceMinor":250000,"maxTenants":1,"currency":"USD","pricingStatus":"APPROVED"}
     ])
 }
 

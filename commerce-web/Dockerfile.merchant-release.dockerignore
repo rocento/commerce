@@ -1,0 +1,15 @@
+**/.git
+**/target
+**/node_modules
+**/.next
+**/.turbo
+**/.cache
+**/__pycache__
+**/dist
+**/dist-server
+**/test-results
+**/playwright-report
+**/.env*
+**/.DS_Store
+**/*.log
+**/*.pyc

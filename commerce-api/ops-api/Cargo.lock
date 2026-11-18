@@ -1268,6 +1268,7 @@ dependencies = [
  "subtle",
  "thiserror",
  "tokio",
+ "tower",
  "tracing",
  "tracing-subscriber",
  "url",

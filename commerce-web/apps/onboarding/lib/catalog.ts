@@ -32,4 +32,4 @@ export const plans = [
   { id: "LAUNCH", name: "Launch", priceMinor: 7900, maxTenants: 3 },
   { id: "GROWTH", name: "Growth", priceMinor: 30000, maxTenants: 3 },
   { id: "ENTERPRISE", name: "Enterprise", priceMinor: 250000, maxTenants: 1 },
-].map((plan) => ({ ...plan, currency: "USD", pricingStatus: "PROPOSED" }));
+].map((plan) => ({ ...plan, currency: "USD", pricingStatus: "APPROVED" }));

@@ -1,10 +1,14 @@
 pub mod accounts;
+pub mod billing;
 pub mod database;
 pub mod domain;
 pub mod drafts;
 pub mod error;
 pub mod mail;
+pub mod provisioning;
+pub mod provisioning_executor;
 pub mod routes;
+pub mod staff;
 
 use std::sync::{Arc, Mutex};
 use std::time::Instant;
@@ -16,6 +20,7 @@ use crate::mail::Mailer;
 
 #[derive(Clone)]
 pub struct AppState {
+    pub billing: billing::BillingConfig,
     pub db: PgPool,
     pub accounts: Option<Accounts>,
     pub mailer: Option<Mailer>,

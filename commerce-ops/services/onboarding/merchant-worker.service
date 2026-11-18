@@ -1,0 +1,23 @@
+[Unit]
+Description=Rocento merchant provisioning worker
+After=docker.service network-online.target
+Requires=docker.service
+
+[Service]
+User=rocento-provisioner
+Group=rocento-provisioner
+EnvironmentFile=/opt/rocento-onboarding/config/worker.env
+ExecStart=/usr/local/bin/rocento-provisioning-worker
+Restart=on-failure
+RestartSec=5
+WorkingDirectory=/
+UMask=0077
+PrivateTmp=true
+ProtectHome=true
+# The fixed sudo executor needs privilege elevation. Do not grant Docker access
+# or general sudo privileges to this worker account.
+TimeoutStopSec=170
+KillSignal=SIGINT
+
+[Install]
+WantedBy=multi-user.target
