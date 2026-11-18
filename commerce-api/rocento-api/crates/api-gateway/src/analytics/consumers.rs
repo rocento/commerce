@@ -86,16 +86,7 @@ impl Client {
         // Never delete the durable or reset its cursor/unacknowledged deliveries.
         let consumer = stream.create_consumer(projection.config()).await?;
         loop {
-            let mut incoming = consumer
-                .fetch()
-                .max_messages(BATCH_SIZE)
-                .expires(Duration::from_millis(250))
-                .messages()
-                .await?;
-            let mut messages = Vec::with_capacity(BATCH_SIZE);
-            while let Some(message) = incoming.next().await {
-                messages.push(message?);
-            }
+            let messages = read_batch(&consumer).await?;
             if messages.is_empty() {
                 continue;
             }
@@ -233,6 +224,24 @@ impl Client {
         receipt.commit().await?;
         Ok(())
     }
+}
+
+async fn read_batch(
+    consumer: &async_nats::jetstream::consumer::PullConsumer,
+) -> Result<Vec<async_nats::jetstream::Message>, Failure> {
+    // fetch() uses no_wait even with an expiry. batch() collects later arrivals
+    // until this bounded window ends or the delivery limit is reached.
+    let mut incoming = consumer
+        .batch()
+        .max_messages(BATCH_SIZE)
+        .expires(Duration::from_millis(250))
+        .messages()
+        .await?;
+    let mut messages = Vec::with_capacity(BATCH_SIZE);
+    while let Some(message) = incoming.next().await {
+        messages.push(message?);
+    }
+    Ok(messages)
 }
 
 fn identifier(value: &serde_json::Value, key: &str) -> Option<Uuid> {
