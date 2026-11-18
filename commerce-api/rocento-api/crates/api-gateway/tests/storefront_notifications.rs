@@ -1573,9 +1573,11 @@ async fn isolated_browser_queue_and_failed_target_never_fall_back_to_commerce(po
     api_gateway::customer_journey::enqueue_browser(&f.state, &headers, event())
         .await
         .unwrap();
-    assert!(api_gateway::engagement::process_one(&target, None)
-        .await
-        .unwrap());
+    assert!(
+        api_gateway::engagement::process_one_with_commerce(&target, &pool, None)
+            .await
+            .unwrap()
+    );
     let source_count: i64 =
         sqlx::query_scalar("SELECT count(*) FROM customers.journey_events WHERE id=$1")
             .bind(id)

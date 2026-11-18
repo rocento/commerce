@@ -22,8 +22,8 @@ pub async fn fixture(
             .await
             .unwrap();
     sqlx::query("UPDATE cms.discoverability_settings SET site_name=$1,enabled=true,indexing_enabled=true,canonical_url=$2").bind(format!("Merchant {host}")).bind(format!("https://{host}/")).execute(pool).await.unwrap();
-    let root =
-        std::path::Path::new(env!("CARGO_MANIFEST_DIR")).join("../../../../commerce-web/apps/storefront");
+    let root = std::path::Path::new(env!("CARGO_MANIFEST_DIR"))
+        .join("../../../../commerce-web/apps/storefront");
     let security = Security::new(
         "publication-secret".repeat(4),
         format!("https://{host}"),

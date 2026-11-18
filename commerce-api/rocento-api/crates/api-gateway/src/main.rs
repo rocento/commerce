@@ -1,6 +1,11 @@
 #[tokio::main]
 async fn main() -> Result<(), Box<dyn std::error::Error>> {
     let config = api_gateway::config::StartupConfig::from_environment()?;
+    let _meta_vault = std::env::var("META_CREDENTIAL_KEY")
+        .ok()
+        .filter(|s| !s.is_empty())
+        .map(|s| infra_auth::secrets::Vault::from_hex(&s))
+        .transpose()?;
     let request_budget = api_gateway::request_budget::Budget::from_environment()?;
     infra_auth::password::configure(config.password_hash)?;
     let mailpit = config
@@ -200,7 +205,16 @@ async fn main() -> Result<(), Box<dyn std::error::Error>> {
                 deployment: publication.clone(),
             }),
         );
+        let google = api_gateway::google::App::new(identity.clone(), publication.clone())?;
+        workers.spawn(
+            "google-merchant",
+            api_gateway::google::worker(google.clone()),
+        );
+        router = router.merge(api_gateway::google::router(google));
+        let meta = api_gateway::meta::App::new(identity.clone(), publication.clone())?;
+        workers.spawn("meta-integrations", api_gateway::meta::worker(meta.clone()));
         router = router
+            .merge(api_gateway::meta::router(meta))
             .merge(api_gateway::identity::router(identity.clone()))
             .merge(api_gateway::account_deletion::router(identity.clone()))
             .merge(api_gateway::api_reference::router(identity.clone()))

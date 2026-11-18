@@ -35708,6 +35708,27 @@
         },
         "additionalProperties": true
       },
+      "MetaConsent": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "whatsapp",
+          "conversions",
+          "phone"
+        ],
+        "properties": {
+          "whatsapp": {
+            "type": "boolean"
+          },
+          "conversions": {
+            "type": "boolean"
+          },
+          "phone": {
+            "type": "string",
+            "maxLength": 16
+          }
+        }
+      },
       "MoveMediaInput": {
         "type": "object",
         "properties": {
@@ -38580,6 +38601,9 @@
           "idempotency_key": {
             "type": "string",
             "format": "uuid"
+          },
+          "meta_consent": {
+            "$ref": "#/components/schemas/MetaConsent"
           }
         },
         "required": [

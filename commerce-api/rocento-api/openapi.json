@@ -37487,6 +37487,985 @@
           }
         ]
       }
+    },
+    "/v1/admin/integrations/google": {
+      "get": {
+        "operationId": "get_v1_admin_integrations_google",
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GoogleConnections"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "Request failed",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "503": {
+            "description": "Application admission is saturated or the pre-response handler deadline elapsed. Database admission or lock/statement budgets may also be exhausted. The gateway returns Retry-After: 3 for these overload responses. A timeout does not prove a mutation was rolled back; retain the operation's idempotency key and reconcile its receipt/state before retrying. Streaming responses have endpoint-specific limits after their headers are sent.",
+            "headers": {
+              "Retry-After": {
+                "description": "Retry delay in seconds.",
+                "schema": {
+                  "type": "integer",
+                  "enum": [
+                    3
+                  ]
+                }
+              }
+            },
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "adminSession": []
+          }
+        ]
+      }
+    },
+    "/v1/admin/integrations/google/{service}": {
+      "put": {
+        "operationId": "put_v1_admin_integrations_google_service",
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GoogleConnections"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "Request failed",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "503": {
+            "description": "Application admission is saturated or the pre-response handler deadline elapsed. Database admission or lock/statement budgets may also be exhausted. The gateway returns Retry-After: 3 for these overload responses. A timeout does not prove a mutation was rolled back; retain the operation's idempotency key and reconcile its receipt/state before retrying. Streaming responses have endpoint-specific limits after their headers are sent.",
+            "headers": {
+              "Retry-After": {
+                "description": "Retry delay in seconds.",
+                "schema": {
+                  "type": "integer",
+                  "enum": [
+                    3
+                  ]
+                }
+              }
+            },
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GoogleInput"
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "in": "header",
+            "name": "X-Commerce-Request",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "enum": [
+                "1"
+              ]
+            }
+          },
+          {
+            "name": "service",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "enum": [
+                "merchant",
+                "ga4",
+                "maps"
+              ]
+            }
+          }
+        ],
+        "security": [
+          {
+            "adminSession": []
+          }
+        ]
+      }
+    },
+    "/v1/admin/integrations/google/{service}/disconnect": {
+      "post": {
+        "operationId": "post_v1_admin_integrations_google_service_disconnect",
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GoogleConnections"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "Request failed",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "503": {
+            "description": "Application admission is saturated or the pre-response handler deadline elapsed. Database admission or lock/statement budgets may also be exhausted. The gateway returns Retry-After: 3 for these overload responses. A timeout does not prove a mutation was rolled back; retain the operation's idempotency key and reconcile its receipt/state before retrying. Streaming responses have endpoint-specific limits after their headers are sent.",
+            "headers": {
+              "Retry-After": {
+                "description": "Retry delay in seconds.",
+                "schema": {
+                  "type": "integer",
+                  "enum": [
+                    3
+                  ]
+                }
+              }
+            },
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GoogleRevision"
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "in": "header",
+            "name": "X-Commerce-Request",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "enum": [
+                "1"
+              ]
+            }
+          },
+          {
+            "name": "service",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "enum": [
+                "merchant",
+                "ga4",
+                "maps"
+              ]
+            }
+          }
+        ],
+        "security": [
+          {
+            "adminSession": []
+          }
+        ]
+      }
+    },
+    "/v1/admin/integrations/google/{service}/test": {
+      "post": {
+        "operationId": "post_v1_admin_integrations_google_service_test",
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GoogleResult"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "Request failed",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "503": {
+            "description": "Application admission is saturated or the pre-response handler deadline elapsed. Database admission or lock/statement budgets may also be exhausted. The gateway returns Retry-After: 3 for these overload responses. A timeout does not prove a mutation was rolled back; retain the operation's idempotency key and reconcile its receipt/state before retrying. Streaming responses have endpoint-specific limits after their headers are sent.",
+            "headers": {
+              "Retry-After": {
+                "description": "Retry delay in seconds.",
+                "schema": {
+                  "type": "integer",
+                  "enum": [
+                    3
+                  ]
+                }
+              }
+            },
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GoogleRevision"
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "in": "header",
+            "name": "X-Commerce-Request",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "enum": [
+                "1"
+              ]
+            }
+          },
+          {
+            "name": "service",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "enum": [
+                "merchant",
+                "ga4",
+                "maps"
+              ]
+            }
+          }
+        ],
+        "security": [
+          {
+            "adminSession": []
+          }
+        ]
+      }
+    },
+    "/v1/admin/integrations/google/merchant/sync": {
+      "post": {
+        "operationId": "post_v1_admin_integrations_google_merchant_sync",
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GoogleResult"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "Request failed",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "503": {
+            "description": "Application admission is saturated or the pre-response handler deadline elapsed. Database admission or lock/statement budgets may also be exhausted. The gateway returns Retry-After: 3 for these overload responses. A timeout does not prove a mutation was rolled back; retain the operation's idempotency key and reconcile its receipt/state before retrying. Streaming responses have endpoint-specific limits after their headers are sent.",
+            "headers": {
+              "Retry-After": {
+                "description": "Retry delay in seconds.",
+                "schema": {
+                  "type": "integer",
+                  "enum": [
+                    3
+                  ]
+                }
+              }
+            },
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GoogleRevision"
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "in": "header",
+            "name": "X-Commerce-Request",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "enum": [
+                "1"
+              ]
+            }
+          }
+        ],
+        "security": [
+          {
+            "adminSession": []
+          }
+        ]
+      }
+    },
+    "/v1/integrations/google/public": {
+      "get": {
+        "operationId": "get_v1_integrations_google_public",
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GooglePublic"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "Request failed",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "503": {
+            "description": "Application admission is saturated or the pre-response handler deadline elapsed. Database admission or lock/statement budgets may also be exhausted. The gateway returns Retry-After: 3 for these overload responses. A timeout does not prove a mutation was rolled back; retain the operation's idempotency key and reconcile its receipt/state before retrying. Streaming responses have endpoint-specific limits after their headers are sent.",
+            "headers": {
+              "Retry-After": {
+                "description": "Retry delay in seconds.",
+                "schema": {
+                  "type": "integer",
+                  "enum": [
+                    3
+                  ]
+                }
+              }
+            },
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/admin/integrations/meta": {
+      "get": {
+        "operationId": "get_v1_admin_integrations_meta",
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/MetaSettings"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "Request failed",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "503": {
+            "description": "Application admission is saturated or the pre-response handler deadline elapsed. Database admission or lock/statement budgets may also be exhausted. The gateway returns Retry-After: 3 for these overload responses. A timeout does not prove a mutation was rolled back; retain the operation's idempotency key and reconcile its receipt/state before retrying. Streaming responses have endpoint-specific limits after their headers are sent.",
+            "headers": {
+              "Retry-After": {
+                "description": "Retry delay in seconds.",
+                "schema": {
+                  "type": "integer",
+                  "enum": [
+                    3
+                  ]
+                }
+              }
+            },
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "adminSession": []
+          }
+        ]
+      },
+      "put": {
+        "operationId": "put_v1_admin_integrations_meta",
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/MetaSettings"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "Request failed",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "503": {
+            "description": "Application admission is saturated or the pre-response handler deadline elapsed. Database admission or lock/statement budgets may also be exhausted. The gateway returns Retry-After: 3 for these overload responses. A timeout does not prove a mutation was rolled back; retain the operation's idempotency key and reconcile its receipt/state before retrying. Streaming responses have endpoint-specific limits after their headers are sent.",
+            "headers": {
+              "Retry-After": {
+                "description": "Retry delay in seconds.",
+                "schema": {
+                  "type": "integer",
+                  "enum": [
+                    3
+                  ]
+                }
+              }
+            },
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/MetaInput"
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "in": "header",
+            "name": "X-Commerce-Request",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "enum": [
+                "1"
+              ]
+            }
+          }
+        ],
+        "security": [
+          {
+            "adminSession": []
+          }
+        ]
+      }
+    },
+    "/v1/admin/integrations/meta/test/{kind}": {
+      "post": {
+        "operationId": "post_v1_admin_integrations_meta_test_kind",
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/MetaTestResult"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "Request failed",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "503": {
+            "description": "Application admission is saturated or the pre-response handler deadline elapsed. Database admission or lock/statement budgets may also be exhausted. The gateway returns Retry-After: 3 for these overload responses. A timeout does not prove a mutation was rolled back; retain the operation's idempotency key and reconcile its receipt/state before retrying. Streaming responses have endpoint-specific limits after their headers are sent.",
+            "headers": {
+              "Retry-After": {
+                "description": "Retry delay in seconds.",
+                "schema": {
+                  "type": "integer",
+                  "enum": [
+                    3
+                  ]
+                }
+              }
+            },
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "kind",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "enum": [
+                "whatsapp",
+                "catalog",
+                "conversions"
+              ]
+            }
+          }
+        ],
+        "security": [
+          {
+            "adminSession": []
+          }
+        ]
+      }
+    },
+    "/v1/admin/integrations/meta/whatsapp/test": {
+      "post": {
+        "operationId": "post_v1_admin_integrations_meta_whatsapp_test",
+        "responses": {
+          "202": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/MetaQueued"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "Request failed",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "503": {
+            "description": "Application admission is saturated or the pre-response handler deadline elapsed. Database admission or lock/statement budgets may also be exhausted. The gateway returns Retry-After: 3 for these overload responses. A timeout does not prove a mutation was rolled back; retain the operation's idempotency key and reconcile its receipt/state before retrying. Streaming responses have endpoint-specific limits after their headers are sent.",
+            "headers": {
+              "Retry-After": {
+                "description": "Retry delay in seconds.",
+                "schema": {
+                  "type": "integer",
+                  "enum": [
+                    3
+                  ]
+                }
+              }
+            },
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/MetaTestMessage"
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "in": "header",
+            "name": "X-Commerce-Request",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "enum": [
+                "1"
+              ]
+            }
+          }
+        ],
+        "security": [
+          {
+            "adminSession": []
+          }
+        ]
+      }
+    },
+    "/v1/admin/integrations/meta/jobs": {
+      "get": {
+        "operationId": "get_v1_admin_integrations_meta_jobs",
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/MetaJob"
+                  }
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "Request failed",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "503": {
+            "description": "Application admission is saturated or the pre-response handler deadline elapsed. Database admission or lock/statement budgets may also be exhausted. The gateway returns Retry-After: 3 for these overload responses. A timeout does not prove a mutation was rolled back; retain the operation's idempotency key and reconcile its receipt/state before retrying. Streaming responses have endpoint-specific limits after their headers are sent.",
+            "headers": {
+              "Retry-After": {
+                "description": "Retry delay in seconds.",
+                "schema": {
+                  "type": "integer",
+                  "enum": [
+                    3
+                  ]
+                }
+              }
+            },
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "adminSession": []
+          }
+        ]
+      }
+    },
+    "/v1/integrations/meta/status": {
+      "get": {
+        "operationId": "get_v1_integrations_meta_status",
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/MetaPublicStatus"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "Request failed",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "503": {
+            "description": "Application admission is saturated or the pre-response handler deadline elapsed. Database admission or lock/statement budgets may also be exhausted. The gateway returns Retry-After: 3 for these overload responses. A timeout does not prove a mutation was rolled back; retain the operation's idempotency key and reconcile its receipt/state before retrying. Streaming responses have endpoint-specific limits after their headers are sent.",
+            "headers": {
+              "Retry-After": {
+                "description": "Retry delay in seconds.",
+                "schema": {
+                  "type": "integer",
+                  "enum": [
+                    3
+                  ]
+                }
+              }
+            },
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/integrations/meta/catalog.csv": {
+      "get": {
+        "responses": {
+          "200": {
+            "description": "Complete published simple/variant product feed, capped at 10000 items; requires indexable production installation.",
+            "content": {
+              "text/csv": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Feed or publication disabled"
+          },
+          "429": {
+            "description": "Download limit reached"
+          },
+          "503": {
+            "description": "Application admission is saturated or the pre-response handler deadline elapsed. Database admission or lock/statement budgets may also be exhausted. The gateway returns Retry-After: 3 for these overload responses. A timeout does not prove a mutation was rolled back; retain the operation's idempotency key and reconcile its receipt/state before retrying. Streaming responses have endpoint-specific limits after their headers are sent.",
+            "headers": {
+              "Retry-After": {
+                "description": "Retry delay in seconds.",
+                "schema": {
+                  "type": "integer",
+                  "enum": [
+                    3
+                  ]
+                }
+              }
+            },
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/integrations/meta/webhook": {
+      "get": {
+        "parameters": [
+          {
+            "name": "hub.mode",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "hub.verify_token",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "hub.challenge",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Verified challenge",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Verification failed"
+          },
+          "503": {
+            "description": "Application admission is saturated or the pre-response handler deadline elapsed. Database admission or lock/statement budgets may also be exhausted. The gateway returns Retry-After: 3 for these overload responses. A timeout does not prove a mutation was rolled back; retain the operation's idempotency key and reconcile its receipt/state before retrying. Streaming responses have endpoint-specific limits after their headers are sent.",
+            "headers": {
+              "Retry-After": {
+                "description": "Retry delay in seconds.",
+                "schema": {
+                  "type": "integer",
+                  "enum": [
+                    3
+                  ]
+                }
+              }
+            },
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "parameters": [
+          {
+            "name": "X-Hub-Signature-256",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Signature verified; matching account delivery statuses acknowledged"
+          },
+          "403": {
+            "description": "Invalid signature"
+          },
+          "503": {
+            "description": "Application admission is saturated or the pre-response handler deadline elapsed. Database admission or lock/statement budgets may also be exhausted. The gateway returns Retry-After: 3 for these overload responses. A timeout does not prove a mutation was rolled back; retain the operation's idempotency key and reconcile its receipt/state before retrying. Streaming responses have endpoint-specific limits after their headers are sent.",
+            "headers": {
+              "Retry-After": {
+                "description": "Retry delay in seconds.",
+                "schema": {
+                  "type": "integer",
+                  "enum": [
+                    3
+                  ]
+                }
+              }
+            },
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        }
+      }
     }
   },
   "components": {
@@ -39772,6 +40751,9 @@
           "idempotency_key": {
             "type": "string",
             "format": "uuid"
+          },
+          "meta_consent": {
+            "$ref": "#/components/schemas/MetaConsent"
           }
         },
         "required": [
@@ -66211,6 +67193,466 @@
       "RetainedTransaction": {
         "type": "object",
         "additionalProperties": true
+      },
+      "GoogleConfig": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "account_id": {
+            "type": "string"
+          },
+          "data_source_id": {
+            "type": "string"
+          },
+          "language": {
+            "type": "string"
+          },
+          "feed_label": {
+            "type": "string"
+          },
+          "measurement_id": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "account_id",
+          "data_source_id",
+          "language",
+          "feed_label",
+          "measurement_id"
+        ]
+      },
+      "GoogleConnection": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "service": {
+            "type": "string",
+            "enum": [
+              "merchant",
+              "ga4",
+              "maps"
+            ]
+          },
+          "revision": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "enabled": {
+            "type": "boolean"
+          },
+          "config": {
+            "$ref": "#/components/schemas/GoogleConfig"
+          },
+          "credential_configured": {
+            "type": "boolean"
+          },
+          "editable": {
+            "type": "boolean"
+          },
+          "checked_at": {
+            "type": "string",
+            "nullable": true
+          },
+          "check_code": {
+            "type": "string",
+            "nullable": true
+          },
+          "last_sync_at": {
+            "type": "string",
+            "nullable": true
+          },
+          "sync_code": {
+            "type": "string",
+            "nullable": true
+          },
+          "sync_scanned": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "sync_submitted": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "sync_excluded": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "sync_rejected": {
+            "type": "integer",
+            "format": "int64"
+          }
+        },
+        "required": [
+          "service",
+          "revision",
+          "enabled",
+          "config",
+          "credential_configured",
+          "editable",
+          "checked_at",
+          "check_code",
+          "last_sync_at",
+          "sync_code",
+          "sync_scanned",
+          "sync_submitted",
+          "sync_excluded",
+          "sync_rejected"
+        ]
+      },
+      "GoogleConnections": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/GoogleConnection"
+        }
+      },
+      "GoogleInput": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "expected_revision": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "enabled": {
+            "type": "boolean"
+          },
+          "config": {
+            "$ref": "#/components/schemas/GoogleConfig"
+          },
+          "credential": {
+            "type": "string",
+            "maxLength": 16384,
+            "writeOnly": true,
+            "nullable": true
+          },
+          "clear_credential": {
+            "type": "boolean"
+          }
+        },
+        "required": [
+          "expected_revision",
+          "enabled",
+          "config"
+        ]
+      },
+      "GoogleRevision": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "expected_revision": {
+            "type": "integer",
+            "format": "int64"
+          }
+        },
+        "required": [
+          "expected_revision"
+        ]
+      },
+      "GoogleResult": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "ok": {
+            "type": "boolean"
+          },
+          "code": {
+            "type": "string"
+          },
+          "message": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "ok",
+          "code",
+          "message"
+        ]
+      },
+      "GooglePublic": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "measurement_id": {
+            "type": "string",
+            "nullable": true
+          },
+          "maps_browser_key": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "required": [
+          "measurement_id",
+          "maps_browser_key"
+        ]
+      },
+      "MetaConfig": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "api_version",
+          "waba_id",
+          "phone_number_id",
+          "confirmation_template",
+          "template_language",
+          "catalog_id",
+          "dataset_id",
+          "test_event_code",
+          "whatsapp_enabled",
+          "catalog_enabled",
+          "conversions_enabled"
+        ],
+        "properties": {
+          "api_version": {
+            "type": "string",
+            "maxLength": 100
+          },
+          "waba_id": {
+            "type": "string",
+            "maxLength": 100
+          },
+          "phone_number_id": {
+            "type": "string",
+            "maxLength": 100
+          },
+          "confirmation_template": {
+            "type": "string",
+            "maxLength": 100
+          },
+          "template_language": {
+            "type": "string",
+            "maxLength": 100
+          },
+          "catalog_id": {
+            "type": "string",
+            "maxLength": 100
+          },
+          "dataset_id": {
+            "type": "string",
+            "maxLength": 100
+          },
+          "test_event_code": {
+            "type": "string",
+            "maxLength": 100
+          },
+          "whatsapp_enabled": {
+            "type": "boolean"
+          },
+          "catalog_enabled": {
+            "type": "boolean"
+          },
+          "conversions_enabled": {
+            "type": "boolean"
+          }
+        }
+      },
+      "MetaSettings": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "revision",
+          "config",
+          "configured_secrets",
+          "editable",
+          "last_webhook_at",
+          "last_feed_at"
+        ],
+        "properties": {
+          "revision": {
+            "type": "integer"
+          },
+          "config": {
+            "$ref": "#/components/schemas/MetaConfig"
+          },
+          "configured_secrets": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "editable": {
+            "type": "boolean"
+          },
+          "last_webhook_at": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "last_feed_at": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          }
+        }
+      },
+      "MetaInput": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "expected_revision",
+          "config"
+        ],
+        "properties": {
+          "expected_revision": {
+            "type": "integer"
+          },
+          "config": {
+            "$ref": "#/components/schemas/MetaConfig"
+          },
+          "secrets": {
+            "type": "object",
+            "additionalProperties": {
+              "type": "string",
+              "maxLength": 4096,
+              "writeOnly": true
+            },
+            "writeOnly": true
+          },
+          "clear_secrets": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      },
+      "MetaTestResult": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "ok",
+          "message"
+        ],
+        "properties": {
+          "ok": {
+            "type": "boolean"
+          },
+          "message": {
+            "type": "string"
+          }
+        }
+      },
+      "MetaQueued": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "queued"
+        ],
+        "properties": {
+          "queued": {
+            "type": "boolean"
+          }
+        }
+      },
+      "MetaTestMessage": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "phone",
+          "consent",
+          "request_id"
+        ],
+        "properties": {
+          "phone": {
+            "type": "string"
+          },
+          "consent": {
+            "type": "boolean"
+          },
+          "request_id": {
+            "type": "string",
+            "format": "uuid"
+          }
+        }
+      },
+      "MetaPublicStatus": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "whatsapp",
+          "conversions"
+        ],
+        "properties": {
+          "whatsapp": {
+            "type": "boolean"
+          },
+          "conversions": {
+            "type": "boolean"
+          }
+        }
+      },
+      "MetaConsent": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "whatsapp",
+          "conversions",
+          "phone"
+        ],
+        "properties": {
+          "whatsapp": {
+            "type": "boolean"
+          },
+          "conversions": {
+            "type": "boolean"
+          },
+          "phone": {
+            "type": "string",
+            "maxLength": 16
+          }
+        }
+      },
+      "MetaJob": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "id",
+          "kind",
+          "status",
+          "attempts",
+          "created_at",
+          "delivery_status",
+          "error_code"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "kind": {
+            "type": "string",
+            "enum": [
+              "whatsapp",
+              "conversions"
+            ]
+          },
+          "status": {
+            "type": "string",
+            "enum": [
+              "pending",
+              "accepted",
+              "failed",
+              "unknown",
+              "cancelled"
+            ]
+          },
+          "attempts": {
+            "type": "integer"
+          },
+          "created_at": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "delivery_status": {
+            "type": "string",
+            "nullable": true
+          },
+          "error_code": {
+            "type": "string",
+            "nullable": true
+          }
+        }
       }
     },
     "securitySchemes": {

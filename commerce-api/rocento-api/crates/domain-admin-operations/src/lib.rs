@@ -1,5 +1,7 @@
 //! Atomic merchandising batches, CSV round trips and per-admin saved catalog filters.
 pub mod csv_cells;
+pub mod google;
+pub mod meta;
 use csv_cells::{escape, unescape};
 use domain_catalog::{Product, ProductInput, Service as Catalog};
 use infra_auth::{Error, Result};

@@ -49,12 +49,14 @@ async fn upgrade_preserves_published_and_default_catalog(pool: PgPool) {
         .await
         .unwrap();
     let published = snapshot(&pool).await;
-    let preflight = include_str!("../../../../scripts/maintenance/market-language-preflight.sql")
-        .split("BEGIN READ ONLY;")
-        .nth(1)
-        .unwrap()
-        .trim()
-        .trim_end_matches("COMMIT;");
+    let preflight = include_str!(
+        "../../../../../commerce-ops/workflows/maintenance/market-language-preflight.sql"
+    )
+    .split("BEGIN READ ONLY;")
+    .nth(1)
+    .unwrap()
+    .trim()
+    .trim_end_matches("COMMIT;");
     let checks: Vec<(String, i64)> = sqlx::query_as(preflight).fetch_all(&pool).await.unwrap();
     assert!(checks.iter().all(|(_, count)| *count == 0), "{checks:?}");
     infra_db::migrate(&pool).await.unwrap();

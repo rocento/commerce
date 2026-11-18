@@ -4,7 +4,12 @@ use serde::{Deserialize, Serialize};
 use sqlx::{FromRow, PgPool};
 use uuid::Uuid;
 pub const PERMISSIONS: &[&str] = &[
+    "integrations.google.read",
+    "integrations.google.write",
     "api.docs.read",
+    "integrations.meta.read",
+    "integrations.meta.write",
+    "integrations.meta.send",
     "fulfillment.settings.view",
     "fulfillment.settings.manage",
     "fulfillment.pickup.manage",

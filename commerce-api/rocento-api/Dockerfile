@@ -2,7 +2,7 @@ FROM rust:1.94-bookworm AS build
 WORKDIR /app
 COPY . .
 RUN cargo build --release --locked -p api-gateway --bins
-FROM debian:bookworm-slim
+FROM ubuntu:24.04@sha256:73b999393d07f2bf65a40373778a44dc9a6d54ad7718d29247d8ff9413c4d6a8
 RUN apt-get update && apt-get upgrade -y && apt-get install -y --no-install-recommends ca-certificates curl && rm -rf /var/lib/apt/lists/*
 COPY --from=build /app/target/release/api-gateway /usr/local/bin/api-gateway
 COPY --from=build /app/target/release/seed-admin /usr/local/bin/seed-admin

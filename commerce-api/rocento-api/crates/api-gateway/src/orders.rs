@@ -68,6 +68,8 @@ struct QuoteInput {
 #[derive(Deserialize)]
 #[serde(deny_unknown_fields)]
 struct PlaceInput {
+    #[serde(default)]
+    meta_consent: domain_admin_operations::meta::Consent,
     quote_id: Uuid,
     idempotency_key: Uuid,
 }
@@ -89,6 +91,9 @@ async fn place(
     Json(i): Json<PlaceInput>,
 ) -> Result<Json<domain_orders::Detail>> {
     let c = a.customers.require_verified(identity::bearer(&h)?).await?;
+    crate::meta::service(a.admins.pool.clone())?
+        .record_consent(c.id, i.quote_id, i.meta_consent)
+        .await?;
     Ok(Json(
         a.cart.place(c.id, i.quote_id, i.idempotency_key).await?,
     ))

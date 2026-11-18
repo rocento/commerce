@@ -22,8 +22,8 @@ async fn fixture(
             .await
             .unwrap();
     sqlx::query("UPDATE cms.discoverability_settings SET site_name=$1,enabled=true,indexing_enabled=true,canonical_url=$2").bind(format!("Merchant {host}")).bind(format!("https://{host}/")).execute(pool).await.unwrap();
-    let root =
-        std::path::Path::new(env!("CARGO_MANIFEST_DIR")).join("../../../../commerce-web/apps/storefront");
+    let root = std::path::Path::new(env!("CARGO_MANIFEST_DIR"))
+        .join("../../../../commerce-web/apps/storefront");
     let security = Security::new(
         "publication-secret".repeat(4),
         format!("https://{host}"),
@@ -273,7 +273,9 @@ async fn built_renderer_real_http_status_content_freshness_and_isolation(pool: P
     if std::env::var_os("PUBLICATION_BROWSER_CHECK").is_some() {
         let result = tokio::process::Command::new("node")
             .arg("e2e/publication-check.mjs")
-            .current_dir(std::path::Path::new(env!("CARGO_MANIFEST_DIR")).join("../../../../commerce-web"))
+            .current_dir(
+                std::path::Path::new(env!("CARGO_MANIFEST_DIR")).join("../../../../commerce-web"),
+            )
             .env("PUBLICATION_TEST_URL", &base)
             .env("PUBLICATION_TEST_GATEWAY", &gateway)
             .output()

@@ -451,12 +451,9 @@ async fn removed_raw_contract_uses_real_unbound_discovery_fallback_without_affec
     assert_eq!(status, StatusCode::OK);
     assert_private(&headers);
     let contract: Value = serde_json::from_slice(&body).unwrap();
-    let count: usize = contract["paths"]
-        .as_object()
-        .unwrap()
-        .values()
-        .map(|methods| methods.as_object().unwrap().len())
-        .sum();
-    assert_eq!(count, 277);
+    assert_eq!(
+        contract,
+        serde_json::from_str::<Value>(include_str!("../../../merchant-openapi.json")).unwrap()
+    );
     assert!(contract["paths"]["/openapi.json"].is_null());
 }

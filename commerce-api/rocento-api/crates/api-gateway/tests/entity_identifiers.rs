@@ -79,8 +79,9 @@ async fn reference_facts(pool: &PgPool) -> Vec<Value> {
 }
 
 async fn assert_identifier_schema(pool: &PgPool) {
+    // Views project existing identifiers; only base tables own identity sequences.
     let actual: Vec<String> = sqlx::query_scalar(
-        "SELECT table_schema||'.'||table_name FROM information_schema.columns WHERE column_name='entity_id' AND data_type='bigint' AND table_schema NOT IN ('pg_catalog','information_schema') AND table_name NOT IN ('storefront_products','storefront_categories') ORDER BY 1",
+        "SELECT c.table_schema||'.'||c.table_name FROM information_schema.columns c JOIN information_schema.tables t USING (table_catalog,table_schema,table_name) WHERE c.column_name='entity_id' AND c.data_type='bigint' AND t.table_type='BASE TABLE' AND c.table_schema NOT IN ('pg_catalog','information_schema') ORDER BY 1",
     )
     .fetch_all(pool)
     .await
