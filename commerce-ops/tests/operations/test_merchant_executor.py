@@ -1,4 +1,5 @@
 import importlib.util
+import hashlib
 import json
 from pathlib import Path
 import tempfile
@@ -19,6 +20,44 @@ spec.loader.exec_module(m)
 
 
 class MerchantExecutorTests(unittest.TestCase):
+    def test_starter_assets_and_categories_resolve_and_resume_without_reupload(self):
+        with tempfile.TemporaryDirectory() as temporary:
+            directory = Path(temporary)
+            release = directory / 'release'
+            (release / 'artifacts/themes').mkdir(parents=True)
+            asset = release / 'artifacts/theme-assets/jewelry/ring.png'
+            asset.parent.mkdir(parents=True)
+            asset.write_bytes(b'fixture-png')
+            checksum = hashlib.sha256(asset.read_bytes()).hexdigest()
+            dependencies = {'assets': ['jewelry/ring.png'], 'categories': {'rings': {'slug': 'rings', 'name': 'Rings'}}}
+            name = 'themes/jewelry.dependencies.json'
+            (release / 'artifacts' / name).write_text(json.dumps(dependencies))
+            inventory = {'files': {name: 'fixture', 'theme-assets/jewelry/ring.png': checksum}}
+            category_id, media_id = str(uuid.uuid4()), str(uuid.uuid4())
+            categories = []
+            uploads = []
+            def api(method, path, body=None, **kwargs):
+                if method == 'GET': return categories
+                if path.endswith('/categories'):
+                    categories.append(dict(body, id=category_id))
+                    return categories[-1]
+                self.assertEqual(path, '/v1/admin/catalog/media')
+                self.assertIn(b'fixture-png', body)
+                self.assertTrue(kwargs['content_type'].startswith('multipart/form-data; boundary='))
+                uploads.append(body)
+                return {'id': media_id}
+            configuration = {'image': 'asset:jewelry/ring.png', 'category': 'category:rings', 'href': 'category-link:rings'}
+            with patch.object(m, 'trusted', side_effect=lambda path: path):
+                first = m.resolve_starter_theme(directory, release, inventory, 'jewelry', configuration, api)
+                second = m.resolve_starter_theme(directory, release, inventory, 'jewelry', configuration, api)
+                self.assertEqual(first, {'image': media_id, 'category': category_id, 'href': '/categories/' + category_id})
+                self.assertEqual(first, second)
+                self.assertEqual(len(uploads), 1)
+                self.assertEqual(len(categories), 1)
+                asset.write_bytes(b'changed')
+                with self.assertRaisesRegex(ValueError, 'STARTER_ASSET_CHANGED'):
+                    m.resolve_starter_theme(directory, release, inventory, 'jewelry', configuration, api)
+
     def setUp(self):
         self.job = dict(id=str(uuid.uuid4()), tenantId=str(uuid.uuid4()), paymentRequestId=str(uuid.uuid4()),
                         leaseToken=str(uuid.uuid4()), themeId='grocery', step='RELEASE', releaseVersion='grocery-v1',

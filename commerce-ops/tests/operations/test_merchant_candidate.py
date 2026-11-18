@@ -26,6 +26,26 @@ executor = module('candidate_executor', '../../cloud/host/merchant_executor.py')
 
 
 class MerchantCandidateSourceTests(unittest.TestCase):
+    def test_real_demo_theme_dependencies_are_complete_and_safe(self):
+        counts = {'grocery': 0, 'jewelry': 3, 'electronics': 3, 'pharmacy': 2}
+        for theme, count in counts.items():
+            dependencies = prepare.theme_dependencies(ROOT, theme)
+            self.assertEqual(len(dependencies['assets']), count)
+            for asset in dependencies['assets']:
+                self.assertLessEqual((ROOT / 'commerce-assets/demo' / asset).stat().st_size, 5 * 1024 * 1024)
+            if count:
+                self.assertTrue(dependencies['categories'])
+
+    def test_theme_assets_cannot_escape_demo_directory(self):
+        with tempfile.TemporaryDirectory() as temporary:
+            source = Path(temporary)
+            directory = source / 'commerce-demo/jewelry'
+            directory.mkdir(parents=True)
+            for reference in ('asset:../../secret.png', 'asset:pharmacy/hero.png'):
+                (directory / 'theme.json').write_text(json.dumps({'image': reference}))
+                with self.assertRaisesRegex(ValueError, 'Unsafe'):
+                    prepare.theme_dependencies(source, 'jewelry')
+
     def test_hashes_dirty_sources_and_excludes_private_generated_files(self):
         with tempfile.TemporaryDirectory() as temp:
             source = Path(temp)

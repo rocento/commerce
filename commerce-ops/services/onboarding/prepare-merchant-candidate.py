@@ -61,6 +61,31 @@ def canonical(value):
     return (json.dumps(value, sort_keys=True, indent=2) + '\n').encode()
 
 
+def theme_dependencies(source, theme):
+    configuration = json.loads((source / 'commerce-demo' / theme / 'theme.json').read_text())
+    assets, categories = set(), set()
+    def visit(value):
+        if isinstance(value, dict):
+            for item in value.values(): visit(item)
+        elif isinstance(value, list):
+            for item in value: visit(item)
+        elif isinstance(value, str):
+            if value.startswith('asset:'): assets.add(value[6:])
+            elif value.startswith(('category:', 'category-link:')): categories.add(value.split(':', 1)[1])
+    visit(configuration)
+    for asset in assets:
+        if not re.fullmatch(re.escape(theme) + r'/[a-zA-Z0-9_-]+\.(png|jpg|jpeg|webp)', asset):
+            raise ValueError('Unsafe theme asset reference')
+        digest(source / 'commerce-assets/demo' / asset)
+    definitions = {}
+    if categories:
+        preset = json.loads((source / 'commerce-demo' / theme / 'preset.json').read_text())
+        definitions = {row['slug']: {'slug': row['slug'], 'name': row['name']} for row in preset['categories'] if row['slug'] in categories}
+        if set(definitions) != categories:
+            raise ValueError('Unknown theme category reference')
+    return {'assets': sorted(assets), 'categories': definitions}
+
+
 def source_files(source, roots):
     files = {}
     for relative in roots:
@@ -94,8 +119,17 @@ def source_manifest(source, revision):
         components[name] = {'sha256': hashlib.sha256(canonical(files)).hexdigest(), 'files': files}
     tools = {name: digest(source / path) for name, path in TOOL_SOURCES.items()}
     themes = {theme: digest(source / 'commerce-demo' / theme / 'theme.json') for theme in THEMES}
+    inputs = {}
+    for theme in THEMES:
+        dependencies = theme_dependencies(source, theme)
+        if dependencies['categories']:
+            path = 'commerce-demo/' + theme + '/preset.json'
+            inputs[path] = digest(source / path)
+        for asset in dependencies['assets']:
+            path = 'commerce-assets/demo/' + asset
+            inputs[path] = digest(source / path)
     return {'schemaVersion': 1, 'revision': revision, 'components': components,
-            'tools': tools, 'themes': themes,
+            'tools': tools, 'themes': themes, 'themeInputs': inputs,
             'scope': 'Selected build inputs including uncommitted changes; no claim of a clean checkout'}
 
 
@@ -217,6 +251,12 @@ def main(argv=None):
         (artifacts / 'themes').mkdir()
         for theme in THEMES:
             shutil.copyfile(source / 'commerce-demo' / theme / 'theme.json', artifacts / 'themes' / (theme + '.json'))
+            dependencies = theme_dependencies(source, theme)
+            (artifacts / 'themes' / (theme + '.dependencies.json')).write_bytes(canonical(dependencies))
+            for asset in dependencies['assets']:
+                destination = artifacts / 'theme-assets' / asset
+                destination.parent.mkdir(parents=True, exist_ok=True)
+                shutil.copyfile(source / 'commerce-assets/demo' / asset, destination)
         if any(path.is_symlink() for path in artifacts.rglob('*')):
             raise SystemExit('Candidate artifacts contain symlinks')
         files = {str(p.relative_to(artifacts)): digest(p) for p in sorted(artifacts.rglob('*')) if p.is_file()}

@@ -213,6 +213,10 @@ The installer neither approves a theme nor changes the existing confirmed paymen
 New candidates use inventory schema 2 and include Grocery, Jewelry, Electronics
 and Pharmacy in one immutable release. Each theme is inventoried under
 `artifacts/themes/<theme>.json`, and the source manifest hashes all four originals.
+The candidate also includes each theme's referenced raster images and category
+definitions. Bootstrap imports those images and creates missing referenced
+categories before publishing the starter layout; its media receipts avoid
+re-uploading images when setup resumes. This does not seed sample products.
 All four control-plane theme rows can reference the same reviewed version and
 inventory digest, allowing the fleet's existing pinned release to serve any of
 these store types. No migration automatically approves those rows.

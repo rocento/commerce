@@ -482,12 +482,12 @@ def fetch_json(url):
 
 def api_client(binding, password):
     cookie = ''
-    def call(method, path, body=None):
+    def call(method, path, body=None, content_type='application/json'):
         nonlocal cookie
         request = urllib.request.Request(
             'http://127.0.0.1:' + str(binding['gatewayPort']) + path,
-            data=json.dumps(body).encode() if body is not None else None, method=method,
-            headers={'Content-Type': 'application/json', 'X-Commerce-Request': '1',
+            data=body if isinstance(body, bytes) else json.dumps(body).encode() if body is not None else None, method=method,
+            headers={'Content-Type': content_type, 'X-Commerce-Request': '1',
                      'Origin': 'https://' + binding['adminHost'], 'Cookie': cookie})
         with urllib.request.urlopen(request, timeout=bounded_timeout(10)) as response:
             if response.headers.get('Set-Cookie'):
@@ -497,6 +497,54 @@ def api_client(binding, password):
             return json.loads(raw) if raw else None
     call('POST', '/v1/admin/auth/login', {'email': binding['adminEmail'], 'password': password})
     return call
+
+
+def resolve_starter_theme(directory, release, inventory, selected_theme, configuration, call):
+    """Import only the images and categories required by the chosen starter layout."""
+    dependency_name = 'themes/' + selected_theme + '.dependencies.json'
+    if dependency_name not in inventory.get('files', {}):
+        return configuration  # Legacy releases contain a self-contained configuration.
+    dependencies = read_json(release / 'artifacts' / dependency_name)
+    categories = {}
+    if dependencies['categories']:
+        categories = {row['slug']: row for row in call('GET', '/v1/catalog/categories')}
+        for slug, definition in dependencies['categories'].items():
+            if slug not in categories:
+                categories[slug] = call('POST', '/v1/admin/catalog/categories', dict(definition, parent_id=None))
+    cache_path = directory / 'starter-media.json'
+    media = read_json(cache_path) if cache_path.exists() else {}
+    resolved = {}
+    for asset in dependencies['assets']:
+        if not re.fullmatch(re.escape(selected_theme) + r'/[a-zA-Z0-9_-]+\.(png|jpg|jpeg|webp)', asset):
+            raise ValueError('INVALID_STARTER_ASSET')
+        artifact = 'theme-assets/' + asset
+        path = release / 'artifacts' / artifact
+        checksum = inventory['files'][artifact]
+        if sha(path) != checksum:
+            raise ValueError('STARTER_ASSET_CHANGED')
+        if checksum not in media:
+            payload = trusted(path).read_bytes()
+            if len(payload) > 5 * 1024 * 1024:
+                raise ValueError('STARTER_ASSET_TOO_LARGE')
+            boundary = 'rocento-' + uuid.uuid4().hex
+            filename = Path(asset).name
+            alt = Path(asset).stem.replace('-', ' ') + ' — illustrative demo image'
+            body = (f'--{boundary}\r\nContent-Disposition: form-data; name="alt"\r\n\r\n{alt}\r\n'
+                    f'--{boundary}\r\nContent-Disposition: form-data; name="file"; filename="{filename}"\r\n'
+                    'Content-Type: application/octet-stream\r\n\r\n').encode() + payload + f'\r\n--{boundary}--\r\n'.encode()
+            uploaded = call('POST', '/v1/admin/catalog/media', body, content_type='multipart/form-data; boundary=' + boundary)
+            media[checksum] = str(uuid.UUID(uploaded['id']))
+            atomic_json(cache_path, media)
+        resolved[asset] = media[checksum]
+    def resolve(value):
+        if isinstance(value, dict): return {key: resolve(item) for key, item in value.items()}
+        if isinstance(value, list): return [resolve(item) for item in value]
+        if isinstance(value, str):
+            if value.startswith('asset:'): return resolved[value[6:]]
+            if value.startswith('category:'): return categories[value[9:]]['id']
+            if value.startswith('category-link:'): return '/categories/' + categories[value[14:]]['id']
+        return value
+    return resolve(configuration)
 
 
 def prepare_credentials(directory):
@@ -546,6 +594,7 @@ def bootstrap(directory, binding, release):
             theme = call('POST', '/v1/admin/themes', {'name': name, 'owner_channel': 'storefront'})
         config = read_json(configuration_path)
         if not theme.get('published_version'):
+            config = resolve_starter_theme(directory, release, inventory, selected_theme, config, call)
             if theme['revision'] == 1:
                 theme = call('PUT', '/v1/admin/themes/' + theme['id'], {'expected_revision': theme['revision'], 'configuration': config})
             elif theme.get('configuration') != config:
