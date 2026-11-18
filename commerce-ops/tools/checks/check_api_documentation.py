@@ -20,7 +20,7 @@ import re
 
 ROOT = Path(__file__).resolve().parents[3]
 POLICY = ROOT / 'commerce-ops/tools/checks/api_documentation_policy.json'
-INVENTORY = ROOT / 'commerce-api/api-documentation-inventory.json'
+INVENTORY = ROOT / 'commerce-api/rocento-api/api-documentation-inventory.json'
 METHODS = {'get', 'post', 'put', 'patch', 'delete', 'head', 'options', 'trace'}
 
 

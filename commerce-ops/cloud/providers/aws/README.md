@@ -250,3 +250,166 @@ After deployment, submit a test enquiry and confirm it arrives in the mailbox;
 SMTP acceptance alone does not prove inbox placement.
 
 First electronics release: add Cloudflare `electronics` and `electronics-admin` records pointing at the existing EC2 server and set `ELECTRONICS_ADMIN_EMAIL` / `ELECTRONICS_ADMIN_PASSWORD` in the protected `.local/commerce-ops/secrets/aws/bootstrap.env`. Run `bash commerce-ops/cloud/providers/aws/deploy.sh`, then separately on EC2 run `sudo bash /opt/rocento/deploy/ec2/server/ec2-seed-demo.sh --store electronics`.
+
+## Merchant onboarding AWS foundation (prepared, not deployed)
+
+[`merchant-foundation/`](merchant-foundation/) is a separate Terraform root owned
+by AWS operations and run from a trusted operator workstation. It prepares an
+S3 state bucket, a dedicated merchant security group, and an EC2 launch template.
+It does not create instances, attach IAM policies, install services, or enable
+onboarding. The existing per-host Terraform root remains the VM owner; see the
+[merchant fleet guide](../../../services/onboarding/README.md#merchant-fleet-aws-google-cloud-and-hetzner).
+
+The required inputs are in
+[`terraform.tfvars.example`](merchant-foundation/terraform.tfvars.example).
+Copy it to ignored `.local/commerce-ops/` and fill in the account, existing VPC and
+public subnet, stable controller IPv4 `/32`, reviewed Cloudflare proxy CIDRs,
+globally unique bucket name, and a pinned **official Canonical Ubuntu 24.04 AMI**.
+The foundation queries Canonical account `099720109477` (commercial AWS), requires
+an available public Noble image, and checks architecture and disk compatibility.
+The `t4g.xlarge` profile provides 4 vCPUs and 16 GiB for up to three clients; Terraform rejects other CPU/memory sizes,
+incompatible architectures, private/unavailable images, inherited extra disks, and
+root snapshots larger than the requested disk. Confirm the subnet route table has Internet Gateway access,
+available addresses, compatible NACLs, instance-type availability, and quota
+before applying. This root does not modify existing network infrastructure.
+
+Security defaults:
+
+- Private, versioned state with SSE-S3 encryption, bucket-owner enforcement,
+  all four public-access blocks and a TLS-only bucket policy. No expiry rules
+  delete recovery history. Bucket, security group and template have Terraform
+  `prevent_destroy`; this is not protection against out-of-band administrators.
+- SSH only from the controller IP; HTTPS only from the supplied reviewed proxy
+  allowlist. Port 80 and database ports are closed. IPv6 is not configured.
+  Refresh the allowlist from [Cloudflare's published ranges](https://www.cloudflare.com/ips/)
+  before a real plan. Outbound IPv4 is allowed for package/registry pulls, DNS,
+  SMTP and application dependencies; the host runtime blocks container access
+  to instance metadata.
+- Encrypted gp3 root disk, IMDSv2 with hop limit 1, termination protection,
+  shutdown behavior `stop`, no IAM instance profile or EC2 key pair. Per-host
+  cloud-init supplies the unique pinned SSH identity and forced command.
+- Launch template versions are not automatically made default. Copy the explicit
+  numeric version from the output into the fleet profile after review; existing
+  host bindings remain pinned.
+
+### Scoped controller permissions
+
+[`provisioning-policy.tf`](merchant-foundation/provisioning-policy.tf) renders
+`provisioning_policy_json`, binding permissions to the selected account/region,
+AMI, template, instance type, subnet, security group and AWS state prefix.
+It grants region-limited EC2 discovery, constrained `RunInstances`, creation-time
+instance tagging, and attribute reads limited to tagged merchant hosts.
+Termination protection is set in `RunInstances`; no permission to modify existing
+instances is needed by the pinned provider in this creation-only workflow.
+It grants state read/write and lock read/write/delete, but not state deletion.
+No IAM administration, `PassRole`, instance termination, security-group edits,
+launch-template edits, bucket administration, or KMS decrypt is granted. This
+configuration deliberately uses SSE-S3 and default EBS encryption; a customer
+managed EBS key requires separately reviewed KMS permissions before launch.
+
+Use a dedicated provisioning identity or review all policies already attached
+to the controller role before attaching the output. An allow policy is **not a
+permissions boundary**: other policies can grant additional access. Instance-attribute
+reads cover UUID-tagged merchant instances in this account/region, not a
+particular host UUID. IAM wildcard tag patterns check the tag shape; canonical
+UUID validation and identity matching remain controller responsibilities. Template version selection
+and the maximum **three customers per host** remain enforced by the controller;
+IAM cannot enforce those limits. `maxHosts=2` in the disabled output is a separate
+initial fleet limit, not the customer-per-host limit or an AWS billing cap.
+The controller must not have foundation/bootstrap credentials.
+
+The policy follows AWS's [launch-template permission examples](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ExamplePolicies_EC2.html)
+and HashiCorp's [S3 state/lock permissions](https://developer.hashicorp.com/terraform/language/backend/s3).
+Mock tests validate configuration and policy structure; they do not prove real
+AWS authorization. Before enabling provisioning, validate the rendered policy
+with IAM Access Analyzer and IAM simulation, then an authorized EC2 `DryRun`
+using the exact template version, tags and cloud-init overrides. Check negative
+cases (other AMI/subnet/security group/type, missing tags, unencrypted disk,
+IMDSv1, template bypass, termination and state deletion). `DryRun` cannot prove
+capacity, boot success, full Terraform post-launch permissions or recovery.
+
+### State bootstrap and later activation
+
+The foundation initially uses a local backend because its S3 bucket does not yet
+exist. **For a future authorized bootstrap**, initialize with an absolute backend
+`path` under ignored `.local/commerce-ops/` and a restrictive `umask 077`; keep an
+encrypted backup and allow one operator at a time. Do not run a real plan or
+apply from this preparation task. Bootstrap credentials belong to the operator,
+not the fleet role. Later, migrate foundation state with `terraform init
+-migrate-state` after changing its backend to S3, using a separate key such as
+`foundation/aws/terraform.tfstate`, `encrypt=true` and `use_lockfile=true`.
+Verify migration and recovery before removing the protected local backup.
+The controller's generated policy cannot read or write this foundation prefix.
+
+After a separately approved foundation apply, export `terraform output -raw
+provisioning_policy_json` for review and attachment, and `terraform output -json
+fleet_config_fragment` for merging into the private fleet configuration. The
+fragment intentionally retains `enabled=false`; preserve SSH and Cloudflare
+settings when merging. All per-host state uses S3 native locking and distinct
+`<keyPrefix>/aws/<hostUUID>.tfstate` keys. Use only Terraform's default workspace.
+
+Remaining live gates are bucket-name availability, account/region and subnet
+verification, image/release approval, rendered IAM validation, remote-state
+read/write/lock contention and version recovery, and one explicitly approved
+canary VM. The canary must verify complete Terraform create/read permissions,
+boot, metadata isolation, SSH attestation, TLS, SMTP, application health, three
+merchant reservations, fourth-merchant allocation to another host, restart
+reconciliation and ambiguous-create recovery. Cleanup requires an operator;
+the provisioning role intentionally cannot terminate instances.
+
+### Offline verification
+
+These commands download/use the pinned provider and run mocked plans only. They
+do not use AWS credentials or initialize an S3 backend:
+
+```sh
+terraform -chdir=commerce-ops/cloud/providers/aws/merchant-foundation init -backend=false -input=false -lockfile=readonly
+terraform -chdir=commerce-ops/cloud/providers/aws/merchant-foundation fmt -check
+terraform -chdir=commerce-ops/cloud/providers/aws/merchant-foundation validate
+terraform -chdir=commerce-ops/cloud/providers/aws/merchant-foundation test -json -verbose > /tmp/aws-foundation-tests.jsonl
+AWS_FOUNDATION_PLAN_JSON=/tmp/aws-foundation-tests.jsonl python3 commerce-ops/tests/operations/test_aws_foundation_policy.py
+```
+
+CI runs the same checks in the onboarding workflow. Tests cover bucket safety,
+network ingress, node defaults, policy action/resource boundaries, lock-only
+deletion, disabled/pinned outputs, and rejected public ingress, missing AMI,
+wildcard state scope, wrong VPC, insufficient RAM and mismatched architecture.
+
+Review verification (2026-11-12): the pinned AWS provider's
+[`aws_instance` create/read implementation](https://github.com/hashicorp/terraform-provider-aws/blob/v6.40.0/internal/service/ec2/ec2_instance.go)
+was checked against the creation-only module. Existing-instance mutation
+permissions were removed; `DescribeInstanceAttribute`, which can expose user
+data, was separated from broad discovery and restricted to tagged merchant
+resources using AWS's [resource-level authorization support](https://docs.aws.amazon.com/service-authorization/latest/reference/list_ec2.html).
+The local policy evaluator intentionally supports only the emitted IAM operators;
+it checks rendered-policy allow/deny cases, not AWS context-key availability or
+other attached policies. Terraform mock plans cover 31 scenarios including ARM64
+and x86, minimum memory and snapshot boundaries, malformed/wildcard inputs,
+public/pending/incompatible AMIs, extra disks and excessive ingress rules. The
+rendered policy has an output precondition enforcing IAM's managed-policy size
+limit, including actual input lengths. Terraform's default-workspace backend may
+log denied listing of `env:/`; version 1.14 tolerates that denial and uses the
+default workspace, so no unrelated workspace listing permission is granted.
+
+## Ubuntu base image and GitHub CI releases
+
+Custom merchant AMI baking is replaced by the [pinned release procedure](../../../services/onboarding/README.md#prepare-ubuntu-and-pinned-ci-releases-before-enabling).
+Select the exact regional Ubuntu 24.04 server image ID from Canonical and record it
+in `merchant_ami_id`; do not select a moving image at each onboarding request.
+See [Canonical image discovery](https://ubuntu.com/aws/docs/aws-how-to/instances/find-ubuntu-images/).
+Terraform owns the launch template and VM. Cloud-init installs the runtime;
+the controller downloads the reviewed private GitHub release by numeric asset ID
+and SHA-256 and transfers it over pinned SSH. The existing release evidence,
+metadata firewall, host identity, saved-plan and recovery checks remain mandatory.
+
+Use a new numeric launch-template version and release profile for new hosts.
+Existing hosts, old Terraform bindings, volumes and snapshots are not replaced or
+deleted automatically. Keep old artifacts for recovery until explicit retirement.
+The former `merchant-image-build.example.json` is historical evidence only and is
+not an onboarding prerequisite. No builder or AMI creation is part of this flow.
+
+Before enabling the fleet timer, qualify a disposable Ubuntu host through package
+installation, private release transfer, architecture and image-ID checks, metadata
+isolation, TLS/SMTP preparation, capacity checks and public merchant health checks.
+A local test pass does not establish live provider acceptance. Preserve state and
+bootstrap intent on failures; reconcile uncertain outcomes without replaying apply.
