@@ -204,11 +204,10 @@ impl Service {
     }
     pub async fn authenticate(&self, token: &str) -> Result<Customer> {
         let c = self.security.decode(token)?;
-        let valid:bool=sqlx::query_scalar("SELECT EXISTS(SELECT 1 FROM customers.sessions WHERE id=$1 AND customer_id=$2 AND expires_at>now())").bind(c.sid).bind(c.sub).fetch_one(&self.pool).await?;
-        if !valid {
-            return Err(Error::Unauthorized);
-        }
-        self.customer(c.sub).await
+        // Read current session and customer authority together without caching it
+        // or entering the shared connection queue twice for the same request.
+        sqlx::query_as("SELECT c.id,c.entity_id,c.email,c.mobile_number,c.primary_identifier,c.verified,c.created_at FROM customers.sessions s JOIN customers.customers c ON c.id=s.customer_id WHERE s.id=$1 AND s.customer_id=$2 AND s.expires_at>now() AND c.deletion_requested_at IS NULL")
+            .bind(c.sid).bind(c.sub).fetch_optional(&self.pool).await?.ok_or(Error::Unauthorized)
     }
     /// Reusable server-side gate for checkout in M4; never trust JWT verification claims.
     pub async fn require_verified(&self, token: &str) -> Result<Customer> {

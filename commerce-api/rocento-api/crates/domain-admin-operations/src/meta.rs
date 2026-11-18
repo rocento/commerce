@@ -229,6 +229,14 @@ pub struct Consent {
     pub whatsapp: bool,
     pub phone: String,
 }
+#[derive(sqlx::FromRow)]
+struct ConsentPreflight {
+    placed: bool,
+    revision: Option<i64>,
+    config: Option<serde_json::Value>,
+    owns_quote: bool,
+    installation_id: Option<Uuid>,
+}
 impl Service {
     pub async fn record_consent(
         &self,
@@ -236,22 +244,23 @@ impl Service {
         quote: Uuid,
         consent: Consent,
     ) -> Result<()> {
-        // Optional settings must never prevent replaying an already committed checkout.
-        let placed: bool = sqlx::query_scalar(
-            "SELECT EXISTS(SELECT 1 FROM orders.orders WHERE quote_id=$1 AND customer_id=$2)",
+        // Keep one connection through admission. Optional fields stay undecoded
+        // until the committed-order bypass and the original validation order.
+        let mut connection = self.pool.acquire().await?;
+        let preflight: ConsentPreflight = sqlx::query_as(
+            "SELECT EXISTS(SELECT 1 FROM orders.orders WHERE quote_id=$1 AND customer_id=$2) AS placed,m.revision,m.config,EXISTS(SELECT 1 FROM cart_checkout.quotes WHERE id=$1 AND customer_id=$2) AS owns_quote,p.installation_id FROM (SELECT 1) anchor LEFT JOIN platform.meta_settings m ON m.singleton LEFT JOIN platform.publication_installation p ON p.singleton AND $3",
         )
         .bind(quote)
         .bind(customer)
-        .fetch_one(&self.pool)
+        .bind(consent.whatsapp)
+        .fetch_one(&mut *connection)
         .await?;
-        if placed {
+        if preflight.placed {
             return Ok(());
         }
         // Ordinary checkout must not depend on decrypting optional provider credentials.
-        let (revision, raw): (i64, serde_json::Value) =
-            sqlx::query_as("SELECT revision,config FROM platform.meta_settings WHERE singleton")
-                .fetch_one(&self.pool)
-                .await?;
+        let revision = preflight.revision.ok_or(sqlx::Error::RowNotFound)?;
+        let raw = preflight.config.ok_or(sqlx::Error::RowNotFound)?;
         let config: Config = serde_json::from_value(raw).map_err(|_| Error::Internal)?;
         if ((consent.conversions || consent.whatsapp) && self.vault.is_none())
             || (consent.conversions && !config.conversions_enabled)
@@ -272,21 +281,22 @@ impl Service {
             ));
         }
         let phone = if consent.whatsapp {
-            Some(self.seal(consent.phone.as_bytes()).await?)
+            let installation = preflight.installation_id.ok_or(sqlx::Error::RowNotFound)?;
+            // self.seal() obtains its context through the pool; doing that while
+            // holding this connection would deadlock a one-connection pool.
+            Some(
+                self.vault
+                    .as_ref()
+                    .ok_or(Error::Internal)?
+                    .seal(&format!("meta:{installation}"), consent.phone.as_bytes())?,
+            )
         } else {
             None
         };
-        let exists: bool = sqlx::query_scalar(
-            "SELECT EXISTS(SELECT 1 FROM cart_checkout.quotes WHERE id=$1 AND customer_id=$2)",
-        )
-        .bind(quote)
-        .bind(customer)
-        .fetch_one(&self.pool)
-        .await?;
-        if !exists {
+        if !preflight.owns_quote {
             return Err(Error::NotFound);
         }
-        sqlx::query("INSERT INTO platform.meta_checkout_consent(quote_id,customer_id,conversions,whatsapp,phone_ciphertext,settings_revision) SELECT $1,$2,$3,$4,$5,$6 WHERE NOT EXISTS(SELECT 1 FROM orders.orders WHERE quote_id=$1) ON CONFLICT(quote_id) DO UPDATE SET conversions=platform.meta_checkout_consent.conversions AND excluded.conversions,whatsapp=platform.meta_checkout_consent.whatsapp AND excluded.whatsapp WHERE platform.meta_checkout_consent.processed_at IS NULL AND NOT EXISTS(SELECT 1 FROM orders.orders WHERE quote_id=$1)").bind(quote).bind(customer).bind(consent.conversions).bind(consent.whatsapp).bind(phone).bind(revision).execute(&self.pool).await?;
+        sqlx::query("INSERT INTO platform.meta_checkout_consent(quote_id,customer_id,conversions,whatsapp,phone_ciphertext,settings_revision) SELECT $1,$2,$3,$4,$5,$6 WHERE NOT EXISTS(SELECT 1 FROM orders.orders WHERE quote_id=$1) ON CONFLICT(quote_id) DO UPDATE SET conversions=platform.meta_checkout_consent.conversions AND excluded.conversions,whatsapp=platform.meta_checkout_consent.whatsapp AND excluded.whatsapp WHERE platform.meta_checkout_consent.processed_at IS NULL AND NOT EXISTS(SELECT 1 FROM orders.orders WHERE quote_id=$1)").bind(quote).bind(customer).bind(consent.conversions).bind(consent.whatsapp).bind(phone).bind(revision).execute(&mut *connection).await?;
         Ok(())
     }
 }
