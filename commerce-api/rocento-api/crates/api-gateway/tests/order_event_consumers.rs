@@ -73,6 +73,7 @@ struct ClickHouse {
     client: Client,
     available: Arc<AtomicBool>,
     requests: Arc<AtomicUsize>,
+    fail_on_request: Arc<AtomicUsize>,
     rows: Arc<Mutex<Vec<Value>>>,
     server: tokio::task::JoinHandle<()>,
 }
@@ -81,23 +82,29 @@ impl ClickHouse {
     async fn start(available: bool) -> Self {
         let available = Arc::new(AtomicBool::new(available));
         let requests = Arc::new(AtomicUsize::new(0));
+        let fail_on_request = Arc::new(AtomicUsize::new(0));
         let rows = Arc::new(Mutex::new(Vec::new()));
         let route = {
             let available = available.clone();
             let requests = requests.clone();
+            let fail_on_request = fail_on_request.clone();
             let rows = rows.clone();
             post(move |body: String| {
                 let available = available.clone();
                 let requests = requests.clone();
+                let fail_on_request = fail_on_request.clone();
                 let rows = rows.clone();
                 async move {
-                    requests.fetch_add(1, Ordering::SeqCst);
-                    if !available.load(Ordering::SeqCst) {
+                    let request = requests.fetch_add(1, Ordering::SeqCst) + 1;
+                    if !available.load(Ordering::SeqCst)
+                        || request == fail_on_request.load(Ordering::SeqCst)
+                    {
                         return StatusCode::SERVICE_UNAVAILABLE;
                     }
-                    rows.lock()
-                        .unwrap()
-                        .push(serde_json::from_str(&body).unwrap());
+                    rows.lock().unwrap().extend(
+                        body.lines()
+                            .map(|row| serde_json::from_str::<Value>(row).unwrap()),
+                    );
                     StatusCode::OK
                 }
             })
@@ -113,10 +120,166 @@ impl ClickHouse {
             client: Client::new(format!("http://{address}"), "test".into(), "test".into()),
             available,
             requests,
+            fail_on_request,
             rows,
             server,
         }
     }
+}
+
+fn batch_event(customer: Uuid) -> EventEnvelope {
+    EventEnvelope {
+        id: Uuid::new_v4().to_string(),
+        event_type: "order.placed".into(),
+        schema_version: 1,
+        payload: json!({"order_id":Uuid::new_v4(),"customer_id":customer,
+            "number":1,"total":"12.00","currency":"USD","item_count":1}),
+    }
+}
+
+#[sqlx::test(migrations = "../../migrations")]
+async fn analytics_batch_rolls_back_all_receipts_then_replays_once_concurrently(pool: PgPool) {
+    let clickhouse = ClickHouse::start(false).await;
+    let events: Vec<_> = (0..10).map(|_| batch_event(Uuid::new_v4())).collect();
+    assert!(clickhouse
+        .client
+        .record_orders(&pool, &events)
+        .await
+        .is_err());
+    for event in &events {
+        assert!(!receipt(&pool, ANALYTICS, event).await);
+    }
+    clickhouse.available.store(true, Ordering::SeqCst);
+    let reversed: Vec<EventEnvelope> =
+        serde_json::from_value(json!(events.iter().rev().collect::<Vec<_>>())).unwrap();
+    let (a, b) = tokio::time::timeout(Duration::from_secs(5), async {
+        tokio::join!(
+            clickhouse.client.record_orders(&pool, &events),
+            clickhouse.client.record_orders(&pool, &reversed)
+        )
+    })
+    .await
+    .expect("overlapping reversed receipt batches must not deadlock");
+    a.unwrap();
+    b.unwrap();
+    for event in &events {
+        assert!(receipt(&pool, ANALYTICS, event).await);
+        assert!(!receipt(&pool, CONFIRMATIONS, event).await);
+    }
+    assert_eq!(clickhouse.requests.load(Ordering::SeqCst), 2);
+    assert_eq!(clickhouse.rows.lock().unwrap().len(), 10);
+}
+
+#[sqlx::test(migrations = "../../migrations")]
+async fn analytics_batch_keeps_legacy_and_erased_customer_filtering(pool: PgPool) {
+    let clickhouse = ClickHouse::start(true).await;
+    let erased_customer = Uuid::new_v4();
+    // Synthetic policy/request fixtures retain the real schema constraints.
+    let admin = Uuid::new_v4();
+    let policy = Uuid::new_v4();
+    let merchant = Uuid::new_v4();
+    sqlx::query("INSERT INTO admin_iam.admin_users(id,email,name,password_hash,role_id) VALUES($1,'privacy@example.test','Fixture','unused','00000000-0000-0000-0000-000000000001')")
+        .bind(admin).execute(&pool).await.unwrap();
+    sqlx::query("INSERT INTO customers.retention_policies(id,merchant_id,legal_entity,jurisdictions,financial_days,retain_contact,retain_address,approved_by) VALUES($1,$2,'Fixture',ARRAY['Fixture'],0,false,false,$3)")
+        .bind(policy).bind(merchant).bind(admin).execute(&pool).await.unwrap();
+    sqlx::query("INSERT INTO customers.deletion_requests(id,merchant_id,customer_id,policy_id,receipt_hash,state,commerce_erased_at) VALUES($1,$2,$3,$4,'fixture','complete',clock_timestamp())")
+        .bind(Uuid::new_v4()).bind(merchant).bind(erased_customer).bind(policy)
+        .execute(&pool).await.unwrap();
+    let events = vec![
+        batch_event(Uuid::new_v4()),
+        batch_event(erased_customer),
+        batch_event(Uuid::new_v4()),
+    ];
+    sqlx::query("INSERT INTO platform.consumer_receipts(consumer_name,event_id) VALUES($1,$2)")
+        .bind(LEGACY)
+        .bind(event_id(&events[0]))
+        .execute(&pool)
+        .await
+        .unwrap();
+    clickhouse
+        .client
+        .record_orders(&pool, &events)
+        .await
+        .unwrap();
+    assert!(receipt(&pool, ANALYTICS, &events[0]).await);
+    assert!(!receipt(&pool, ANALYTICS, &events[1]).await);
+    assert!(receipt(&pool, ANALYTICS, &events[2]).await);
+    assert_eq!(clickhouse.rows.lock().unwrap().len(), 1);
+    assert_eq!(clickhouse.rows.lock().unwrap()[0]["id"], events[2].id);
+}
+
+#[sqlx::test(migrations = "../../migrations")]
+async fn cart_batch_filters_erasure_and_retries_partial_writes_with_stable_ids(pool: PgPool) {
+    let clickhouse = ClickHouse::start(true).await;
+    let erased_cart = Uuid::new_v4();
+    sqlx::query("INSERT INTO customers.erased_carts(id) VALUES($1)")
+        .bind(erased_cart)
+        .execute(&pool)
+        .await
+        .unwrap();
+    let events: Vec<_> = [Uuid::new_v4(), erased_cart, Uuid::new_v4()]
+        .into_iter()
+        .map(|cart| EventEnvelope {
+            id: Uuid::new_v4().to_string(),
+            event_type: "cart.item_added".into(),
+            schema_version: 1,
+            payload: json!({"cart_id":cart,"product_id":Uuid::new_v4(),"quantity":1}),
+        })
+        .collect();
+    clickhouse.fail_on_request.store(2, Ordering::SeqCst);
+    assert!(clickhouse
+        .client
+        .record_cart_batch(&pool, &events)
+        .await
+        .is_err());
+    assert_eq!(clickhouse.rows.lock().unwrap().len(), 2);
+    clickhouse
+        .client
+        .record_cart_batch(&pool, &events)
+        .await
+        .unwrap();
+    let rows = clickhouse.rows.lock().unwrap();
+    assert_eq!(clickhouse.requests.load(Ordering::SeqCst), 4);
+    assert_eq!(rows.len(), 6); // first funnel block, replayed funnel block, then added block
+    assert!(rows.iter().all(|row| row["cart_id"] != json!(erased_cart)));
+    for event in [&events[0], &events[2]] {
+        assert_eq!(rows.iter().filter(|row| row["id"] == event.id).count(), 3);
+    }
+}
+
+#[sqlx::test(migrations = "../../migrations")]
+async fn cart_projection_waits_for_inflight_erasure_before_writing(pool: PgPool) {
+    let clickhouse = ClickHouse::start(true).await;
+    let cart = Uuid::new_v4();
+    let mut deletion = pool.begin().await.unwrap();
+    sqlx::query("SELECT pg_advisory_xact_lock(88008)")
+        .execute(&mut *deletion)
+        .await
+        .unwrap();
+    sqlx::query("INSERT INTO customers.erased_carts(id) VALUES($1)")
+        .bind(cart)
+        .execute(&mut *deletion)
+        .await
+        .unwrap();
+    let events = vec![EventEnvelope {
+        id: Uuid::new_v4().to_string(),
+        event_type: "cart.item_added".into(),
+        schema_version: 1,
+        payload: json!({"cart_id":cart,"product_id":Uuid::new_v4(),"quantity":1}),
+    }];
+    let work = clickhouse.client.record_cart_batch(&pool, &events);
+    tokio::pin!(work);
+    tokio::select! {
+        result = &mut work => panic!("projection escaped the erasure barrier: {result:?}"),
+        _ = tokio::time::sleep(Duration::from_millis(50)) => {}
+    }
+    assert_eq!(clickhouse.requests.load(Ordering::SeqCst), 0);
+    deletion.commit().await.unwrap();
+    tokio::time::timeout(Duration::from_secs(2), work)
+        .await
+        .unwrap()
+        .unwrap();
+    assert_eq!(clickhouse.requests.load(Ordering::SeqCst), 0);
 }
 
 impl Drop for ClickHouse {
