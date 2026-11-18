@@ -80,6 +80,7 @@ test("Rocento offline payment shows unavailable, awaiting and confirmed states",
     if (path.endsWith("/me")) return route.fulfill({ json: { id: "fixture-user", email: "fixture@example.test", verified: true, orgId: "fixture-org" } });
     if (path.endsWith("/onboarding/draft")) return route.fulfill({ json: draft });
     if (route.request().method() === "PUT") return route.fulfill({ json: { ...draft, version: ++draft.version } });
+    if (path.endsWith("/provisioning")) return route.fulfill({ json: { lifecycleStatus: confirmed ? "QUEUED" : "SLUG_RESERVED", status: null, step: null, reason: null } });
     if (path.endsWith("/billing/payment-requests")) return route.fulfill({ json: { items: requested ? [{ ...payment, status: confirmed ? "CONFIRMED" : "AWAITING_PAYMENT" }] : [] } });
     if (path.endsWith("/redeem")) {
       if (route.request().postDataJSON().code !== "012345") return route.fulfill({ status: 400, json: { code: "INVALID_PAYMENT_CODE" } });
@@ -94,8 +95,6 @@ test("Rocento offline payment shows unavailable, awaiting and confirmed states",
     return route.fulfill({ status: 404, json: { code: "NOT_FOUND" } });
   });
   await page.goto("http://127.0.0.1:3100");
-  await expect(page.getByLabel("Brand name")).toHaveValue("Fixture shop");
-  for (let step = 0; step < 3; step++) await page.getByRole("button", { name: "Continue" }).click();
   const panel = page.getByRole("region", { name: "Rocento payment" });
   await expect(panel.getByRole("heading", { name: "Payment method: Rocento" })).toBeVisible();
   await panel.getByRole("button", { name: "Request Rocento payment" }).click();
@@ -113,8 +112,6 @@ test("Rocento offline payment shows unavailable, awaiting and confirmed states",
   await panel.getByRole("button", { name: "Confirm payment code" }).click();
   await expect(panel.getByRole("status")).toContainText("Payment confirmed. Store setup is pending.");
   await page.reload();
-  await expect(page.getByLabel("Brand name")).toHaveValue("Fixture shop");
-  for (let step = 0; step < 3; step++) await page.getByRole("button", { name: "Continue" }).click();
   await expect(panel.getByRole("status")).toContainText("Payment confirmed");
   await page.setViewportSize({ width: 390, height: 844 });
   expect(await page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth)).toBe(true);
