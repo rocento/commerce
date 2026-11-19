@@ -279,7 +279,31 @@ impl Service {
     }
     #[tracing::instrument(skip_all, name = "checkout.place")]
     pub async fn place(&self, customer: Uuid, quote_id: Uuid, key: Uuid) -> Result<Detail> {
-        let mut tx = domain_inventory::begin_cart(&self.pool, Some(customer), "", &[]).await?;
+        let tx = domain_inventory::begin_cart(&self.pool, Some(customer), "", &[]).await?;
+        self.place_in_transaction(tx, customer, quote_id, key).await
+    }
+
+    /// Consent has already committed on this connection before order placement.
+    #[tracing::instrument(skip_all, name = "checkout.place")]
+    pub async fn place_with_connection(
+        &self,
+        connection: sqlx::pool::PoolConnection<sqlx::Postgres>,
+        customer: Uuid,
+        quote_id: Uuid,
+        key: Uuid,
+    ) -> Result<Detail> {
+        let tx = domain_inventory::begin_cart_with_connection(connection, Some(customer), "", &[])
+            .await?;
+        self.place_in_transaction(tx, customer, quote_id, key).await
+    }
+
+    async fn place_in_transaction(
+        &self,
+        mut tx: domain_inventory::Tx<'_>,
+        customer: Uuid,
+        quote_id: Uuid,
+        key: Uuid,
+    ) -> Result<Detail> {
         let timer = infra_observability::OperationTimer::new(
             infra_observability::Operation::InventoryTransaction,
         );

@@ -50,7 +50,37 @@ pub async fn begin_cart<'a>(
     guest: &str,
     additional_products: &[Uuid],
 ) -> Result<Tx<'a>> {
-    let mut tx = infra_db::begin_transaction(pool).await?;
+    lock_cart(
+        infra_db::begin_transaction(pool).await?,
+        customer,
+        guest,
+        additional_products,
+    )
+    .await
+}
+
+/// Transfer the request's connection into the transaction without reacquiring.
+pub async fn begin_cart_with_connection(
+    connection: sqlx::pool::PoolConnection<Postgres>,
+    customer: Option<Uuid>,
+    guest: &str,
+    additional_products: &[Uuid],
+) -> Result<Tx<'static>> {
+    lock_cart(
+        Transaction::begin(connection, None).await?,
+        customer,
+        guest,
+        additional_products,
+    )
+    .await
+}
+
+async fn lock_cart<'a>(
+    mut tx: Tx<'a>,
+    customer: Option<Uuid>,
+    guest: &str,
+    additional_products: &[Uuid],
+) -> Result<Tx<'a>> {
     budgets(&mut tx).await?;
     let timer =
         infra_observability::OperationTimer::new(infra_observability::Operation::InventoryLockWait);

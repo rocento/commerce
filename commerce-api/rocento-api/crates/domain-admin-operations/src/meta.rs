@@ -244,9 +244,21 @@ impl Service {
         quote: Uuid,
         consent: Consent,
     ) -> Result<()> {
-        // Keep one connection through admission. Optional fields stay undecoded
-        // until the committed-order bypass and the original validation order.
         let mut connection = self.pool.acquire().await?;
+        self.record_consent_on(&mut connection, customer, quote, consent)
+            .await
+    }
+    /// The checkout caller supplies an autocommit connection so this receipt
+    /// remains durable even if the later order transaction fails.
+    pub async fn record_consent_on(
+        &self,
+        connection: &mut sqlx::PgConnection,
+        customer: Uuid,
+        quote: Uuid,
+        consent: Consent,
+    ) -> Result<()> {
+        // Optional fields stay undecoded until the committed-order bypass and
+        // the original validation order. No nested acquisition is needed.
         let preflight: ConsentPreflight = sqlx::query_as(
             "SELECT EXISTS(SELECT 1 FROM orders.orders WHERE quote_id=$1 AND customer_id=$2) AS placed,m.revision,m.config,EXISTS(SELECT 1 FROM cart_checkout.quotes WHERE id=$1 AND customer_id=$2) AS owns_quote,p.installation_id FROM (SELECT 1) anchor LEFT JOIN platform.meta_settings m ON m.singleton LEFT JOIN platform.publication_installation p ON p.singleton AND $3",
         )
