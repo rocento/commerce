@@ -413,3 +413,107 @@ async fn foreign_quote_and_mismatched_idempotency_are_rejected(pool: PgPool) {
     );
     limited.close().await;
 }
+
+#[sqlx::test(migrations = "../../migrations")]
+async fn order_insert_preserves_gift_market_status_and_durable_receipts(pool: PgPool) {
+    let f = setup(pool.clone()).await;
+    let (router, limited, _) = route(&f).await;
+    sqlx::raw_sql("CREATE TABLE orders.test_insert_observations(order_id uuid,operation text,gift text,market jsonb); CREATE FUNCTION orders.test_observe_insert() RETURNS trigger LANGUAGE plpgsql AS $$ BEGIN INSERT INTO orders.test_insert_observations VALUES(NEW.id,TG_OP,NEW.gift_message,NEW.market_context); RETURN NEW; END $$; CREATE TRIGGER test_observe_insert AFTER INSERT OR UPDATE ON orders.orders FOR EACH ROW EXECUTE FUNCTION orders.test_observe_insert();").execute(&pool).await.unwrap();
+    for gift in [None, Some("Happy birthday — مرحباً".to_owned())] {
+        f.app
+            .cart
+            .set(Some(f.customer), "", f.product.clone(), 2, false)
+            .await
+            .unwrap();
+        let quote = f
+            .app
+            .cart
+            .quote_with_gift(f.customer, f.location, gift.clone())
+            .await
+            .unwrap();
+        let expected_market = json!(quote.snapshot.market);
+        let key = Uuid::new_v4();
+        let first = request(&router, &f.token, quote.id, key).await;
+        assert_eq!(first.0, 200, "{:?}", first.1);
+        assert_eq!(request(&router, &f.token, quote.id, key).await, first);
+        let id: Uuid = serde_json::from_value(first.1["order"]["id"].clone()).unwrap();
+        let stored:(Option<String>,Option<Value>,i64,bool)=sqlx::query_as("SELECT gift_message,market_context,status_revision,status_code=(SELECT code FROM orders.status_definitions WHERE state='placed' AND is_default) FROM orders.orders WHERE id=$1").bind(id).fetch_one(&pool).await.unwrap();
+        assert_eq!(
+            stored,
+            (gift.clone(), Some(expected_market.clone()), 1, true)
+        );
+        let observed: Vec<(String, Option<String>, Option<Value>)> = sqlx::query_as(
+            "SELECT operation,gift,market FROM orders.test_insert_observations WHERE order_id=$1",
+        )
+        .bind(id)
+        .fetch_all(&pool)
+        .await
+        .unwrap();
+        assert_eq!(
+            observed,
+            vec![("INSERT".into(), gift, Some(expected_market))]
+        );
+        let receipts:Value=sqlx::query_scalar("SELECT jsonb_build_object('history',(SELECT count(*) FROM orders.order_status_history WHERE order_id=$1),'events',(SELECT count(*) FROM platform.outbox WHERE event_type='order.placed' AND payload->>'order_id'=$1::text),'allocations',(SELECT sum(quantity) FROM inventory.order_allocations WHERE order_id=$1),'payments',(SELECT count(*) FROM payments.payment_transactions p JOIN orders.orders o ON o.id=p.order_id WHERE o.id=$1 AND p.amount_due=o.total AND p.currency=o.currency))").bind(id).fetch_one(&pool).await.unwrap();
+        assert_eq!(
+            receipts,
+            json!({"history":1,"events":1,"allocations":2,"payments":1})
+        );
+        // Historical SQL NULL is a persisted receipt shape, never a new checkout input.
+        sqlx::query("UPDATE orders.orders SET market_context=NULL WHERE id=$1")
+            .bind(id)
+            .execute(&pool)
+            .await
+            .unwrap();
+        let replay = request(&router, &f.token, quote.id, key).await;
+        assert_eq!(replay.0, 200);
+        assert!(replay.1["order"]["market_context"].is_null());
+        assert_eq!(replay.1["order"]["id"], first.1["order"]["id"]);
+        assert!(sqlx::query_scalar::<_, bool>(
+            "SELECT market_context IS NULL FROM orders.orders WHERE id=$1"
+        )
+        .bind(id)
+        .fetch_one(&pool)
+        .await
+        .unwrap());
+    }
+    limited.close().await;
+}
+
+#[sqlx::test(migrations = "../../migrations")]
+async fn direct_placement_keeps_deleted_owner_guard(pool: PgPool) {
+    let f = setup(pool.clone()).await;
+    let quote = f
+        .app
+        .cart
+        .quote_with_gift(f.customer, f.location, Some("Do not place".into()))
+        .await
+        .unwrap();
+    sqlx::query("UPDATE customers.customers SET deletion_requested_at=now() WHERE id=$1")
+        .bind(f.customer)
+        .execute(&pool)
+        .await
+        .unwrap();
+    assert!(f
+        .app
+        .cart
+        .place(f.customer, quote.id, Uuid::new_v4())
+        .await
+        .is_err());
+    assert_eq!(
+        sqlx::query_scalar::<_, i64>("SELECT count(*) FROM orders.orders")
+            .fetch_one(&pool)
+            .await
+            .unwrap(),
+        0
+    );
+    assert_eq!(
+        f.app
+            .cart
+            .inventory
+            .stock(f.product.id)
+            .await
+            .unwrap()
+            .on_hand,
+        10
+    );
+}

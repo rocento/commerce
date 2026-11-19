@@ -375,17 +375,7 @@ impl Service {
             ));
         }
         let id = Uuid::new_v4();
-        sqlx::query("INSERT INTO orders.orders(id,customer_id,quote_id,idempotency_key,status,location,contact,subtotal,delivery_fee,total,currency,tax_amount,tax_snapshot,discount_amount,discount_snapshot,coupon_code) VALUES($1,$2,$3,$4,'placed',$5,$6,$7,$8,$9,$10,$11,$12,$13,$14,$15)").bind(id).bind(customer).bind(quote_id).bind(key).bind(&snapshot.location).bind(&snapshot.contact).bind(snapshot.subtotal).bind(snapshot.delivery_fee).bind(snapshot.total).bind(&snapshot.currency).bind(snapshot.tax_amount).bind(json!(snapshot.tax_snapshot)).bind(snapshot.discount_amount).bind(json!(snapshot.discount_snapshot)).bind(&snapshot.coupon_code).execute(&mut **tx).await?;
-        sqlx::query("UPDATE orders.orders SET gift_message=$2 WHERE id=$1")
-            .bind(id)
-            .bind(&snapshot.gift_message)
-            .execute(&mut **tx)
-            .await?;
-        sqlx::query("UPDATE orders.orders SET market_context=$2 WHERE id=$1")
-            .bind(id)
-            .bind(json!(snapshot.market))
-            .execute(&mut **tx)
-            .await?;
+        sqlx::query("INSERT INTO orders.orders(id,customer_id,quote_id,idempotency_key,status,location,contact,subtotal,delivery_fee,total,currency,tax_amount,tax_snapshot,discount_amount,discount_snapshot,coupon_code,gift_message,market_context) VALUES($1,$2,$3,$4,'placed',$5,$6,$7,$8,$9,$10,$11,$12,$13,$14,$15,$16,$17)").bind(id).bind(customer).bind(quote_id).bind(key).bind(&snapshot.location).bind(&snapshot.contact).bind(snapshot.subtotal).bind(snapshot.delivery_fee).bind(snapshot.total).bind(&snapshot.currency).bind(snapshot.tax_amount).bind(json!(snapshot.tax_snapshot)).bind(snapshot.discount_amount).bind(json!(snapshot.discount_snapshot)).bind(&snapshot.coupon_code).bind(&snapshot.gift_message).bind(json!(snapshot.market)).execute(&mut **tx).await?;
         for item in &snapshot.items {
             let allocations =
                 Inventory::consume_reserved(tx, cart, item.product_id, item.quantity).await?;

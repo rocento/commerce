@@ -55,6 +55,12 @@ async fn rank_selected(
         .execute(&mut *tx)
         .await?;
     let context = AssessmentContext::load(&mut tx, customer).await?;
+    // Only catalog adjustments contribute to an offer. Keep the same policy
+    // snapshot and await commit even when no candidate can produce savings.
+    if !context.rules.iter().any(|rule| rule.scope == "catalog") {
+        tx.commit().await?;
+        return Ok(Vec::new());
+    }
     let mut after: Option<Uuid> = None;
     let mut offers = Vec::new();
     loop {
@@ -62,6 +68,7 @@ async fn rank_selected(
         if candidates.is_empty() {
             break;
         }
+        let final_page = candidates.len() < 200;
         after = candidates.last().map(|p| p.id);
         for p in candidates {
             let result = context.assess(
@@ -90,6 +97,11 @@ async fn rank_selected(
                     discount_percent: savings / p.price * Decimal::from(100),
                 });
             }
+        }
+        // The repeatable-read snapshot and transaction-time filters cannot
+        // gain another candidate after a partially filled page.
+        if final_page {
+            break;
         }
     }
     offers.sort_by(|a, b| {
