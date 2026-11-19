@@ -11,6 +11,10 @@ async fn main() -> Result<(), Box<dyn std::error::Error>> {
     }
     let pool = infra_db::connect(&database).await?;
     infra_db::migrate(&pool).await?;
+    // Make notification subjects independent of historical migration branding.
+    sqlx::query("UPDATE cms.discoverability_settings SET site_name = 'Isolated Browser Store'")
+        .execute(&pool)
+        .await?;
     let mut security = infra_auth::Security::new(
         "isolated-browser-fixture-secret-at-least-32".into(),
         "http://localhost:5173".into(),

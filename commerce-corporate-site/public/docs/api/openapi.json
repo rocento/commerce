@@ -9691,6 +9691,24 @@
         ],
         "additionalProperties": false
       },
+      "MetaConsent": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "whatsapp": {
+            "type": "boolean",
+            "description": "Defaults to false when omitted."
+          },
+          "conversions": {
+            "type": "boolean",
+            "description": "Defaults to false when omitted."
+          },
+          "phone": {
+            "type": "string",
+            "description": "Defaults to an empty string when omitted. For new WhatsApp consent, use + followed by 8 to 15 ASCII digits, with a nonzero first digit. Ignored when whatsapp is false. Replaying an already placed owned order preserves its existing consent receipt."
+          }
+        }
+      },
       "Navigation": {
         "type": "object",
         "properties": {
@@ -10341,6 +10359,9 @@
           "idempotency_key": {
             "type": "string",
             "format": "uuid"
+          },
+          "meta_consent": {
+            "$ref": "#/components/schemas/MetaConsent"
           }
         },
         "required": [

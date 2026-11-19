@@ -67585,21 +67585,18 @@
       "MetaConsent": {
         "type": "object",
         "additionalProperties": false,
-        "required": [
-          "whatsapp",
-          "conversions",
-          "phone"
-        ],
         "properties": {
           "whatsapp": {
-            "type": "boolean"
+            "type": "boolean",
+            "description": "Defaults to false when omitted."
           },
           "conversions": {
-            "type": "boolean"
+            "type": "boolean",
+            "description": "Defaults to false when omitted."
           },
           "phone": {
             "type": "string",
-            "maxLength": 16
+            "description": "Defaults to an empty string when omitted. For new WhatsApp consent, use + followed by 8 to 15 ASCII digits, with a nonzero first digit. Ignored when whatsapp is false. Replaying an already placed owned order preserves its existing consent receipt."
           }
         }
       },

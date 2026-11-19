@@ -316,6 +316,39 @@ impl Service {
 #[cfg(test)]
 mod tests {
     use super::*;
+    use serde_json::{json, Value};
+    #[test]
+    fn consent_contract_matches_deserialization_defaults() {
+        let contract: Value = serde_json::from_str(include_str!("../../../openapi.json")).unwrap();
+        let schema = &contract["components"]["schemas"]["MetaConsent"];
+        assert!(schema.get("required").is_none());
+        assert_eq!(schema["additionalProperties"], false);
+        let defaults = json!({"whatsapp": false, "conversions": false, "phone": ""});
+        for value in [
+            json!({}),
+            json!({"whatsapp": false}),
+            json!({"conversions": true}),
+            json!({"phone": "ignored long phone without WhatsApp"}),
+        ] {
+            let consent: Consent = serde_json::from_value(value.clone()).unwrap();
+            let actual = serde_json::to_value(consent).unwrap();
+            for field in ["whatsapp", "conversions", "phone"] {
+                assert_eq!(&actual[field], value.get(field).unwrap_or(&defaults[field]));
+            }
+        }
+        for value in [
+            json!({"unknown": false}),
+            json!({"phone": null}),
+            json!({"whatsapp": null}),
+            json!({"conversions": null}),
+            json!({"whatsapp": "false"}),
+            json!({"phone": 123}),
+            json!(null),
+        ] {
+            assert!(serde_json::from_value::<Consent>(value).is_err());
+        }
+    }
+
     #[test]
     fn enabling_requires_its_own_assets_and_secrets() {
         let mut c = Config {

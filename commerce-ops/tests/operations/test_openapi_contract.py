@@ -26,6 +26,19 @@ class OpenApiContractTests(unittest.TestCase):
     def validator(self, schema, contract=None):
         return OAS30Validator(schema, resolver=RefResolver.from_schema(contract or self.full), format_checker=OAS30Validator.FORMAT_CHECKER)
 
+    def test_consent_defaults_and_input_boundary(self):
+        for contract in [self.full, self.public, self.merchant]:
+            schema = contract['components']['schemas']['MetaConsent']
+            validator = self.validator(schema, contract)
+            for value in [{}, {'whatsapp': False}, {'conversions': True}, {'phone': 'ignored long phone without WhatsApp'}]:
+                self.assertTrue(validator.is_valid(value), value)
+            for value in [{'unknown': False}, {'phone': None}, {'whatsapp': None}, {'conversions': None}, {'whatsapp': 'false'}, {'phone': 123}, None]:
+                self.assertFalse(validator.is_valid(value), value)
+            for name in ['whatsapp', 'conversions']:
+                self.assertIn('Defaults to false when omitted', schema['properties'][name]['description'])
+            self.assertIn('Defaults to an empty string when omitted', schema['properties']['phone']['description'])
+            self.assertNotIn('meta_consent', contract['components']['schemas']['PlaceInput']['required'])
+
     def test_documents_conform_to_openapi_30(self):
         for contract in [self.full, self.public, self.merchant]:
             with self.subTest(title=contract['info']['title']):

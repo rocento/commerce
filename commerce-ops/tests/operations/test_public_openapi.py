@@ -42,6 +42,16 @@ class PublicOpenApiTests(unittest.TestCase):
         self.assertNotIn("agentProof", contract["components"]["securitySchemes"])
         self.assertNotIn("Admin", contract["components"]["schemas"])
 
+    def test_consent_publication_does_not_publish_private_meta_configuration(self):
+        contract = PUBLIC.build_public_contract(self.source)
+        schemas = contract['components']['schemas']
+        self.assertIn('MetaConsent', schemas)
+        self.assertTrue({'MetaInput', 'MetaSettings', 'MetaConfig', 'MetaJob'}.isdisjoint(schemas))
+        source = copy.deepcopy(self.source)
+        source['components']['schemas']['MetaConsent']['properties']['private'] = {'$ref': '#/components/schemas/MetaInput'}
+        with self.assertRaisesRegex(ValueError, 'Schema dependency needs publication review: MetaInput'):
+            PUBLIC.build_public_contract(source)
+
     def test_schema_dependencies_are_closed_and_exactly_reachable(self):
         contract = PUBLIC.build_public_contract(self.source)
         schemas = contract["components"]["schemas"]

@@ -14,7 +14,13 @@ def extend(schemas, endpoint, paths):
     schemas['MetaQueued']=obj({'queued':boolean})
     schemas['MetaTestMessage']=obj({'phone':text,'consent':boolean,'request_id':{'type':'string','format':'uuid'}})
     schemas['MetaPublicStatus']=obj({'whatsapp':boolean,'conversions':boolean})
-    schemas['MetaConsent']=obj({'whatsapp':boolean,'conversions':boolean,'phone':{'type':'string','maxLength':16}})
+    schemas['MetaConsent']=obj({
+        'whatsapp':{'type':'boolean','description':'Defaults to false when omitted.'},
+        'conversions':{'type':'boolean','description':'Defaults to false when omitted.'},
+        'phone':{'type':'string','description':'Defaults to an empty string when omitted. For new WhatsApp consent, use + followed by 8 to 15 ASCII digits, with a nonzero first digit. Ignored when whatsapp is false. Replaying an already placed owned order preserves its existing consent receipt.'},
+    }, ['whatsapp','conversions','phone'])
+    # OpenAPI 3.0 requires a nonempty required array; all consent fields default.
+    schemas['MetaConsent'].pop('required')
     schemas['PlaceInput']['properties']['meta_consent']=ref('MetaConsent')
     schemas['MetaJob']=obj({'id':{'type':'string','format':'uuid'},'kind':{'type':'string','enum':['whatsapp','conversions']},'status':{'type':'string','enum':['pending','accepted','failed','unknown','cancelled']},'attempts':{'type':'integer'},'created_at':{'type':'string','format':'date-time'},'delivery_status':{'type':'string','nullable':True},'error_code':{'type':'string','nullable':True}})
     endpoint('/v1/admin/integrations/meta','get','MetaSettings',auth='adminSession')

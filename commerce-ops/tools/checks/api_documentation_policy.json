@@ -568,6 +568,42 @@
         "POST /v1/admin/account-deletions/{id}/hold",
         "GET /v1/admin/account-deletions/{id}/records"
       ]
+    },
+    {
+      "audience": "first-party-provider-configuration",
+      "reason": "First-party storefront provider status/configuration, excluded from published references. Documentation classification does not restrict network access.",
+      "references": [],
+      "operations": [
+        "GET /v1/integrations/google/public",
+        "GET /v1/integrations/meta/status"
+      ]
+    },
+    {
+      "audience": "provider-protocol",
+      "reason": "Provider feed and webhook protocol, excluded from published application references; runtime publication/signature checks remain authoritative.",
+      "references": [],
+      "operations": [
+        "GET /v1/integrations/meta/catalog.csv",
+        "GET /v1/integrations/meta/webhook",
+        "POST /v1/integrations/meta/webhook"
+      ]
+    },
+    {
+      "audience": "first-party-provider-administration",
+      "reason": "First-party merchant provider setup and credential operations, excluded from published references; existing administrator permissions remain required.",
+      "references": [],
+      "operations": [
+        "GET /v1/admin/integrations/google",
+        "GET /v1/admin/integrations/meta",
+        "GET /v1/admin/integrations/meta/jobs",
+        "POST /v1/admin/integrations/google/merchant/sync",
+        "POST /v1/admin/integrations/google/{service}/disconnect",
+        "POST /v1/admin/integrations/google/{service}/test",
+        "POST /v1/admin/integrations/meta/test/{kind}",
+        "POST /v1/admin/integrations/meta/whatsapp/test",
+        "PUT /v1/admin/integrations/google/{service}",
+        "PUT /v1/admin/integrations/meta"
+      ]
     }
   ],
   "fallbacks": {

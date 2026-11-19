@@ -5555,6 +5555,436 @@ export interface paths {
         patch?: never;
         trace?: never;
     };
+    "/v1/customer/deletion-policy": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        get: operations["get_v1_customer_deletion-policy"];
+        put?: never;
+        post?: never;
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
+    "/v1/customer/account-deletion": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        get?: never;
+        put?: never;
+        post: operations["post_v1_customer_account-deletion"];
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
+    "/v1/customer/account-deletion/status": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        get?: never;
+        put?: never;
+        post: operations["post_v1_customer_account-deletion_status"];
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
+    "/v1/admin/customer-retention": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        get: operations["get_v1_admin_customer-retention"];
+        put: operations["put_v1_admin_customer-retention"];
+        post?: never;
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
+    "/v1/admin/account-deletions/{id}/hold": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        get?: never;
+        put?: never;
+        post: operations["post_v1_admin_account-deletions_id_hold"];
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
+    "/v1/admin/account-deletions/{id}/records": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        get: operations["get_v1_admin_account-deletions_id_records"];
+        put?: never;
+        post?: never;
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
+    "/v1/admin/integrations/google": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        get: operations["get_v1_admin_integrations_google"];
+        put?: never;
+        post?: never;
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
+    "/v1/admin/integrations/google/{service}": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        get?: never;
+        put: operations["put_v1_admin_integrations_google_service"];
+        post?: never;
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
+    "/v1/admin/integrations/google/{service}/disconnect": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        get?: never;
+        put?: never;
+        post: operations["post_v1_admin_integrations_google_service_disconnect"];
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
+    "/v1/admin/integrations/google/{service}/test": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        get?: never;
+        put?: never;
+        post: operations["post_v1_admin_integrations_google_service_test"];
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
+    "/v1/admin/integrations/google/merchant/sync": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        get?: never;
+        put?: never;
+        post: operations["post_v1_admin_integrations_google_merchant_sync"];
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
+    "/v1/integrations/google/public": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        get: operations["get_v1_integrations_google_public"];
+        put?: never;
+        post?: never;
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
+    "/v1/admin/integrations/meta": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        get: operations["get_v1_admin_integrations_meta"];
+        put: operations["put_v1_admin_integrations_meta"];
+        post?: never;
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
+    "/v1/admin/integrations/meta/test/{kind}": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        get?: never;
+        put?: never;
+        post: operations["post_v1_admin_integrations_meta_test_kind"];
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
+    "/v1/admin/integrations/meta/whatsapp/test": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        get?: never;
+        put?: never;
+        post: operations["post_v1_admin_integrations_meta_whatsapp_test"];
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
+    "/v1/admin/integrations/meta/jobs": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        get: operations["get_v1_admin_integrations_meta_jobs"];
+        put?: never;
+        post?: never;
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
+    "/v1/integrations/meta/status": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        get: operations["get_v1_integrations_meta_status"];
+        put?: never;
+        post?: never;
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
+    "/v1/integrations/meta/catalog.csv": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        get: {
+            parameters: {
+                query?: never;
+                header?: never;
+                path?: never;
+                cookie?: never;
+            };
+            requestBody?: never;
+            responses: {
+                /** @description Complete published simple/variant product feed, capped at 10000 items; requires indexable production installation. */
+                200: {
+                    headers: {
+                        [name: string]: unknown;
+                    };
+                    content: {
+                        "text/csv": string;
+                    };
+                };
+                /** @description Feed or publication disabled */
+                404: {
+                    headers: {
+                        [name: string]: unknown;
+                    };
+                    content?: never;
+                };
+                /** @description Download limit reached */
+                429: {
+                    headers: {
+                        [name: string]: unknown;
+                    };
+                    content?: never;
+                };
+                /** @description Application admission is saturated or the pre-response handler deadline elapsed. Database admission or lock/statement budgets may also be exhausted. The gateway returns Retry-After: 3 for these overload responses. A timeout does not prove a mutation was rolled back; retain the operation's idempotency key and reconcile its receipt/state before retrying. Streaming responses have endpoint-specific limits after their headers are sent. */
+                503: {
+                    headers: {
+                        /** @description Retry delay in seconds. */
+                        "Retry-After"?: 3;
+                        [name: string]: unknown;
+                    };
+                    content: {
+                        "application/json": components["schemas"]["Error"];
+                    };
+                };
+            };
+        };
+        put?: never;
+        post?: never;
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
+    "/v1/integrations/meta/webhook": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        get: {
+            parameters: {
+                query: {
+                    "hub.mode": string;
+                    "hub.verify_token": string;
+                    "hub.challenge": string;
+                };
+                header?: never;
+                path?: never;
+                cookie?: never;
+            };
+            requestBody?: never;
+            responses: {
+                /** @description Verified challenge */
+                200: {
+                    headers: {
+                        [name: string]: unknown;
+                    };
+                    content: {
+                        "text/plain": string;
+                    };
+                };
+                /** @description Verification failed */
+                403: {
+                    headers: {
+                        [name: string]: unknown;
+                    };
+                    content?: never;
+                };
+                /** @description Application admission is saturated or the pre-response handler deadline elapsed. Database admission or lock/statement budgets may also be exhausted. The gateway returns Retry-After: 3 for these overload responses. A timeout does not prove a mutation was rolled back; retain the operation's idempotency key and reconcile its receipt/state before retrying. Streaming responses have endpoint-specific limits after their headers are sent. */
+                503: {
+                    headers: {
+                        /** @description Retry delay in seconds. */
+                        "Retry-After"?: 3;
+                        [name: string]: unknown;
+                    };
+                    content: {
+                        "application/json": components["schemas"]["Error"];
+                    };
+                };
+            };
+        };
+        put?: never;
+        post: {
+            parameters: {
+                query?: never;
+                header: {
+                    "X-Hub-Signature-256": string;
+                };
+                path?: never;
+                cookie?: never;
+            };
+            requestBody: {
+                content: {
+                    "application/json": Record<string, never>;
+                };
+            };
+            responses: {
+                /** @description Signature verified; matching account delivery statuses acknowledged */
+                200: {
+                    headers: {
+                        [name: string]: unknown;
+                    };
+                    content?: never;
+                };
+                /** @description Invalid signature */
+                403: {
+                    headers: {
+                        [name: string]: unknown;
+                    };
+                    content?: never;
+                };
+                /** @description Application admission is saturated or the pre-response handler deadline elapsed. Database admission or lock/statement budgets may also be exhausted. The gateway returns Retry-After: 3 for these overload responses. A timeout does not prove a mutation was rolled back; retain the operation's idempotency key and reconcile its receipt/state before retrying. Streaming responses have endpoint-specific limits after their headers are sent. */
+                503: {
+                    headers: {
+                        /** @description Retry delay in seconds. */
+                        "Retry-After"?: 3;
+                        [name: string]: unknown;
+                    };
+                    content: {
+                        "application/json": components["schemas"]["Error"];
+                    };
+                };
+            };
+        };
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
 }
 export type webhooks = Record<string, never>;
 export interface components {
@@ -6209,6 +6639,7 @@ export interface components {
             quote_id: string;
             /** Format: uuid */
             idempotency_key: string;
+            meta_consent?: components["schemas"]["MetaConsent"];
         };
         Order: {
             /** Format: uuid */
@@ -12620,6 +13051,187 @@ export interface components {
         RelationshipAttribute: {
             attribute_code: string;
             label: string;
+        };
+        RetentionPolicyInput: {
+            legal_entity: string;
+            jurisdictions: string[];
+            financial_days: number;
+            retain_contact: boolean;
+            retain_address: boolean;
+        };
+        RetentionPolicy: {
+            legal_entity: string;
+            jurisdictions: string[];
+            financial_days: number;
+            retain_contact: boolean;
+            retain_address: boolean;
+            /** Format: uuid */
+            id: string;
+            /** Format: uuid */
+            merchant_id: string;
+            /** Format: uuid */
+            approved_by: string;
+            /** Format: date-time */
+            approved_at: string;
+            active: boolean;
+        };
+        DeletionReceipt: {
+            /** Format: uuid */
+            request_id: string;
+            receipt_token: string;
+        };
+        DeletionRequest: {
+            /** Format: uuid */
+            request_id: string;
+            receipt_token: string;
+            /** Format: uuid */
+            policy_id: string;
+            password: string;
+            confirm: boolean;
+        };
+        DeletionStatus: {
+            /** Format: uuid */
+            id: string;
+            /** @enum {string} */
+            state: "requested" | "waiting" | "processing" | "failed" | "complete";
+            waiting_reason: string | null;
+            /** Format: date-time */
+            requested_at: string;
+            /** Format: date-time */
+            completed_at: string | null;
+            /** Format: date-time */
+            retained_until: string | null;
+        };
+        DeletionHold: {
+            /** Format: date-time */
+            until: string | null;
+            reason: string;
+        };
+        DeletionSaved: {
+            saved: boolean;
+        };
+        RetainedTransaction: {
+            [key: string]: unknown;
+        };
+        GoogleConfig: {
+            account_id: string;
+            data_source_id: string;
+            language: string;
+            feed_label: string;
+            measurement_id: string;
+        };
+        GoogleConnection: {
+            /** @enum {string} */
+            service: "merchant" | "ga4" | "maps";
+            /** Format: int64 */
+            revision: number;
+            enabled: boolean;
+            config: components["schemas"]["GoogleConfig"];
+            credential_configured: boolean;
+            editable: boolean;
+            checked_at: string | null;
+            check_code: string | null;
+            last_sync_at: string | null;
+            sync_code: string | null;
+            /** Format: int64 */
+            sync_scanned: number;
+            /** Format: int64 */
+            sync_submitted: number;
+            /** Format: int64 */
+            sync_excluded: number;
+            /** Format: int64 */
+            sync_rejected: number;
+        };
+        GoogleConnections: components["schemas"]["GoogleConnection"][];
+        GoogleInput: {
+            /** Format: int64 */
+            expected_revision: number;
+            enabled: boolean;
+            config: components["schemas"]["GoogleConfig"];
+            credential?: string | null;
+            clear_credential?: boolean;
+        };
+        GoogleRevision: {
+            /** Format: int64 */
+            expected_revision: number;
+        };
+        GoogleResult: {
+            ok: boolean;
+            code: string;
+            message: string;
+        };
+        GooglePublic: {
+            measurement_id: string | null;
+            maps_browser_key: string | null;
+        };
+        MetaConfig: {
+            api_version: string;
+            waba_id: string;
+            phone_number_id: string;
+            confirmation_template: string;
+            template_language: string;
+            catalog_id: string;
+            dataset_id: string;
+            test_event_code: string;
+            whatsapp_enabled: boolean;
+            catalog_enabled: boolean;
+            conversions_enabled: boolean;
+        };
+        MetaSettings: {
+            revision: number;
+            config: components["schemas"]["MetaConfig"];
+            configured_secrets: string[];
+            editable: boolean;
+            /** Format: date-time */
+            last_webhook_at: string | null;
+            /** Format: date-time */
+            last_feed_at: string | null;
+        };
+        MetaInput: {
+            expected_revision: number;
+            config: components["schemas"]["MetaConfig"];
+            secrets?: {
+                [key: string]: string;
+            };
+            clear_secrets?: string[];
+        };
+        MetaTestResult: {
+            ok: boolean;
+            message: string;
+        };
+        MetaQueued: {
+            queued: boolean;
+        };
+        MetaTestMessage: {
+            phone: string;
+            consent: boolean;
+            /** Format: uuid */
+            request_id: string;
+        };
+        MetaPublicStatus: {
+            whatsapp: boolean;
+            conversions: boolean;
+        };
+        MetaConsent: {
+            /** @description Defaults to false when omitted. */
+            whatsapp?: boolean;
+            /** @description Defaults to false when omitted. */
+            conversions?: boolean;
+            /** @description Defaults to an empty string when omitted. For new WhatsApp consent, use + followed by 8 to 15 ASCII digits, with a nonzero first digit. Ignored when whatsapp is false. Replaying an already placed owned order preserves its existing consent receipt. */
+            phone?: string;
+        };
+        MetaJob: {
+            /** Format: uuid */
+            id: string;
+            /** @enum {string} */
+            kind: "whatsapp" | "conversions";
+            /** @enum {string} */
+            status: "pending" | "accepted" | "failed" | "unknown" | "cancelled";
+            attempts: number;
+            /** Format: date-time */
+            created_at: string;
+            delivery_status: string | null;
+            error_code: string | null;
         };
     };
     responses: never;
@@ -35576,6 +36188,838 @@ export interface operations {
                 };
                 content: {
                     "application/json": components["schemas"]["Product"][];
+                };
+            };
+            /** @description Application admission is saturated or the pre-response handler deadline elapsed. Database admission or lock/statement budgets may also be exhausted. The gateway returns Retry-After: 3 for these overload responses. A timeout does not prove a mutation was rolled back; retain the operation's idempotency key and reconcile its receipt/state before retrying. Streaming responses have endpoint-specific limits after their headers are sent. */
+            503: {
+                headers: {
+                    /** @description Retry delay in seconds. */
+                    "Retry-After"?: 3;
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["Error"];
+                };
+            };
+            /** @description Request failed */
+            default: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["Error"];
+                };
+            };
+        };
+    };
+    "get_v1_customer_deletion-policy": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        requestBody?: never;
+        responses: {
+            /** @description Success */
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["RetentionPolicy"] | (never | null);
+                };
+            };
+            /** @description Application admission is saturated or the pre-response handler deadline elapsed. Database admission or lock/statement budgets may also be exhausted. The gateway returns Retry-After: 3 for these overload responses. A timeout does not prove a mutation was rolled back; retain the operation's idempotency key and reconcile its receipt/state before retrying. Streaming responses have endpoint-specific limits after their headers are sent. */
+            503: {
+                headers: {
+                    /** @description Retry delay in seconds. */
+                    "Retry-After"?: 3;
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["Error"];
+                };
+            };
+            /** @description Request failed */
+            default: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["Error"];
+                };
+            };
+        };
+    };
+    "post_v1_customer_account-deletion": {
+        parameters: {
+            query?: never;
+            header: {
+                "X-Commerce-Request": "1";
+            };
+            path?: never;
+            cookie?: never;
+        };
+        requestBody: {
+            content: {
+                "application/json": components["schemas"]["DeletionRequest"];
+            };
+        };
+        responses: {
+            /** @description Success */
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["DeletionStatus"];
+                };
+            };
+            /** @description Application admission is saturated or the pre-response handler deadline elapsed. Database admission or lock/statement budgets may also be exhausted. The gateway returns Retry-After: 3 for these overload responses. A timeout does not prove a mutation was rolled back; retain the operation's idempotency key and reconcile its receipt/state before retrying. Streaming responses have endpoint-specific limits after their headers are sent. */
+            503: {
+                headers: {
+                    /** @description Retry delay in seconds. */
+                    "Retry-After"?: 3;
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["Error"];
+                };
+            };
+            /** @description Request failed */
+            default: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["Error"];
+                };
+            };
+        };
+    };
+    "post_v1_customer_account-deletion_status": {
+        parameters: {
+            query?: never;
+            header: {
+                "X-Commerce-Request": "1";
+            };
+            path?: never;
+            cookie?: never;
+        };
+        requestBody: {
+            content: {
+                "application/json": components["schemas"]["DeletionReceipt"];
+            };
+        };
+        responses: {
+            /** @description Success */
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["DeletionStatus"];
+                };
+            };
+            /** @description Application admission is saturated or the pre-response handler deadline elapsed. Database admission or lock/statement budgets may also be exhausted. The gateway returns Retry-After: 3 for these overload responses. A timeout does not prove a mutation was rolled back; retain the operation's idempotency key and reconcile its receipt/state before retrying. Streaming responses have endpoint-specific limits after their headers are sent. */
+            503: {
+                headers: {
+                    /** @description Retry delay in seconds. */
+                    "Retry-After"?: 3;
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["Error"];
+                };
+            };
+            /** @description Request failed */
+            default: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["Error"];
+                };
+            };
+        };
+    };
+    "get_v1_admin_customer-retention": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        requestBody?: never;
+        responses: {
+            /** @description Success */
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["RetentionPolicy"] | (never | null);
+                };
+            };
+            /** @description Application admission is saturated or the pre-response handler deadline elapsed. Database admission or lock/statement budgets may also be exhausted. The gateway returns Retry-After: 3 for these overload responses. A timeout does not prove a mutation was rolled back; retain the operation's idempotency key and reconcile its receipt/state before retrying. Streaming responses have endpoint-specific limits after their headers are sent. */
+            503: {
+                headers: {
+                    /** @description Retry delay in seconds. */
+                    "Retry-After"?: 3;
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["Error"];
+                };
+            };
+            /** @description Request failed */
+            default: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["Error"];
+                };
+            };
+        };
+    };
+    "put_v1_admin_customer-retention": {
+        parameters: {
+            query?: never;
+            header: {
+                "X-Commerce-Request": "1";
+            };
+            path?: never;
+            cookie?: never;
+        };
+        requestBody: {
+            content: {
+                "application/json": components["schemas"]["RetentionPolicyInput"];
+            };
+        };
+        responses: {
+            /** @description Success */
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["RetentionPolicy"];
+                };
+            };
+            /** @description Application admission is saturated or the pre-response handler deadline elapsed. Database admission or lock/statement budgets may also be exhausted. The gateway returns Retry-After: 3 for these overload responses. A timeout does not prove a mutation was rolled back; retain the operation's idempotency key and reconcile its receipt/state before retrying. Streaming responses have endpoint-specific limits after their headers are sent. */
+            503: {
+                headers: {
+                    /** @description Retry delay in seconds. */
+                    "Retry-After"?: 3;
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["Error"];
+                };
+            };
+            /** @description Request failed */
+            default: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["Error"];
+                };
+            };
+        };
+    };
+    "post_v1_admin_account-deletions_id_hold": {
+        parameters: {
+            query?: never;
+            header: {
+                "X-Commerce-Request": "1";
+            };
+            path: {
+                id: string;
+            };
+            cookie?: never;
+        };
+        requestBody: {
+            content: {
+                "application/json": components["schemas"]["DeletionHold"];
+            };
+        };
+        responses: {
+            /** @description Success */
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["DeletionSaved"];
+                };
+            };
+            /** @description Application admission is saturated or the pre-response handler deadline elapsed. Database admission or lock/statement budgets may also be exhausted. The gateway returns Retry-After: 3 for these overload responses. A timeout does not prove a mutation was rolled back; retain the operation's idempotency key and reconcile its receipt/state before retrying. Streaming responses have endpoint-specific limits after their headers are sent. */
+            503: {
+                headers: {
+                    /** @description Retry delay in seconds. */
+                    "Retry-After"?: 3;
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["Error"];
+                };
+            };
+            /** @description Request failed */
+            default: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["Error"];
+                };
+            };
+        };
+    };
+    "get_v1_admin_account-deletions_id_records": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path: {
+                id: string;
+            };
+            cookie?: never;
+        };
+        requestBody?: never;
+        responses: {
+            /** @description Success */
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["RetainedTransaction"][];
+                };
+            };
+            /** @description Application admission is saturated or the pre-response handler deadline elapsed. Database admission or lock/statement budgets may also be exhausted. The gateway returns Retry-After: 3 for these overload responses. A timeout does not prove a mutation was rolled back; retain the operation's idempotency key and reconcile its receipt/state before retrying. Streaming responses have endpoint-specific limits after their headers are sent. */
+            503: {
+                headers: {
+                    /** @description Retry delay in seconds. */
+                    "Retry-After"?: 3;
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["Error"];
+                };
+            };
+            /** @description Request failed */
+            default: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["Error"];
+                };
+            };
+        };
+    };
+    get_v1_admin_integrations_google: {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        requestBody?: never;
+        responses: {
+            /** @description Success */
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["GoogleConnections"];
+                };
+            };
+            /** @description Application admission is saturated or the pre-response handler deadline elapsed. Database admission or lock/statement budgets may also be exhausted. The gateway returns Retry-After: 3 for these overload responses. A timeout does not prove a mutation was rolled back; retain the operation's idempotency key and reconcile its receipt/state before retrying. Streaming responses have endpoint-specific limits after their headers are sent. */
+            503: {
+                headers: {
+                    /** @description Retry delay in seconds. */
+                    "Retry-After"?: 3;
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["Error"];
+                };
+            };
+            /** @description Request failed */
+            default: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["Error"];
+                };
+            };
+        };
+    };
+    put_v1_admin_integrations_google_service: {
+        parameters: {
+            query?: never;
+            header: {
+                "X-Commerce-Request": "1";
+            };
+            path: {
+                service: "merchant" | "ga4" | "maps";
+            };
+            cookie?: never;
+        };
+        requestBody: {
+            content: {
+                "application/json": components["schemas"]["GoogleInput"];
+            };
+        };
+        responses: {
+            /** @description Success */
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["GoogleConnections"];
+                };
+            };
+            /** @description Application admission is saturated or the pre-response handler deadline elapsed. Database admission or lock/statement budgets may also be exhausted. The gateway returns Retry-After: 3 for these overload responses. A timeout does not prove a mutation was rolled back; retain the operation's idempotency key and reconcile its receipt/state before retrying. Streaming responses have endpoint-specific limits after their headers are sent. */
+            503: {
+                headers: {
+                    /** @description Retry delay in seconds. */
+                    "Retry-After"?: 3;
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["Error"];
+                };
+            };
+            /** @description Request failed */
+            default: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["Error"];
+                };
+            };
+        };
+    };
+    post_v1_admin_integrations_google_service_disconnect: {
+        parameters: {
+            query?: never;
+            header: {
+                "X-Commerce-Request": "1";
+            };
+            path: {
+                service: "merchant" | "ga4" | "maps";
+            };
+            cookie?: never;
+        };
+        requestBody: {
+            content: {
+                "application/json": components["schemas"]["GoogleRevision"];
+            };
+        };
+        responses: {
+            /** @description Success */
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["GoogleConnections"];
+                };
+            };
+            /** @description Application admission is saturated or the pre-response handler deadline elapsed. Database admission or lock/statement budgets may also be exhausted. The gateway returns Retry-After: 3 for these overload responses. A timeout does not prove a mutation was rolled back; retain the operation's idempotency key and reconcile its receipt/state before retrying. Streaming responses have endpoint-specific limits after their headers are sent. */
+            503: {
+                headers: {
+                    /** @description Retry delay in seconds. */
+                    "Retry-After"?: 3;
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["Error"];
+                };
+            };
+            /** @description Request failed */
+            default: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["Error"];
+                };
+            };
+        };
+    };
+    post_v1_admin_integrations_google_service_test: {
+        parameters: {
+            query?: never;
+            header: {
+                "X-Commerce-Request": "1";
+            };
+            path: {
+                service: "merchant" | "ga4" | "maps";
+            };
+            cookie?: never;
+        };
+        requestBody: {
+            content: {
+                "application/json": components["schemas"]["GoogleRevision"];
+            };
+        };
+        responses: {
+            /** @description Success */
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["GoogleResult"];
+                };
+            };
+            /** @description Application admission is saturated or the pre-response handler deadline elapsed. Database admission or lock/statement budgets may also be exhausted. The gateway returns Retry-After: 3 for these overload responses. A timeout does not prove a mutation was rolled back; retain the operation's idempotency key and reconcile its receipt/state before retrying. Streaming responses have endpoint-specific limits after their headers are sent. */
+            503: {
+                headers: {
+                    /** @description Retry delay in seconds. */
+                    "Retry-After"?: 3;
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["Error"];
+                };
+            };
+            /** @description Request failed */
+            default: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["Error"];
+                };
+            };
+        };
+    };
+    post_v1_admin_integrations_google_merchant_sync: {
+        parameters: {
+            query?: never;
+            header: {
+                "X-Commerce-Request": "1";
+            };
+            path?: never;
+            cookie?: never;
+        };
+        requestBody: {
+            content: {
+                "application/json": components["schemas"]["GoogleRevision"];
+            };
+        };
+        responses: {
+            /** @description Success */
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["GoogleResult"];
+                };
+            };
+            /** @description Application admission is saturated or the pre-response handler deadline elapsed. Database admission or lock/statement budgets may also be exhausted. The gateway returns Retry-After: 3 for these overload responses. A timeout does not prove a mutation was rolled back; retain the operation's idempotency key and reconcile its receipt/state before retrying. Streaming responses have endpoint-specific limits after their headers are sent. */
+            503: {
+                headers: {
+                    /** @description Retry delay in seconds. */
+                    "Retry-After"?: 3;
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["Error"];
+                };
+            };
+            /** @description Request failed */
+            default: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["Error"];
+                };
+            };
+        };
+    };
+    get_v1_integrations_google_public: {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        requestBody?: never;
+        responses: {
+            /** @description Success */
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["GooglePublic"];
+                };
+            };
+            /** @description Application admission is saturated or the pre-response handler deadline elapsed. Database admission or lock/statement budgets may also be exhausted. The gateway returns Retry-After: 3 for these overload responses. A timeout does not prove a mutation was rolled back; retain the operation's idempotency key and reconcile its receipt/state before retrying. Streaming responses have endpoint-specific limits after their headers are sent. */
+            503: {
+                headers: {
+                    /** @description Retry delay in seconds. */
+                    "Retry-After"?: 3;
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["Error"];
+                };
+            };
+            /** @description Request failed */
+            default: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["Error"];
+                };
+            };
+        };
+    };
+    get_v1_admin_integrations_meta: {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        requestBody?: never;
+        responses: {
+            /** @description Success */
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["MetaSettings"];
+                };
+            };
+            /** @description Application admission is saturated or the pre-response handler deadline elapsed. Database admission or lock/statement budgets may also be exhausted. The gateway returns Retry-After: 3 for these overload responses. A timeout does not prove a mutation was rolled back; retain the operation's idempotency key and reconcile its receipt/state before retrying. Streaming responses have endpoint-specific limits after their headers are sent. */
+            503: {
+                headers: {
+                    /** @description Retry delay in seconds. */
+                    "Retry-After"?: 3;
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["Error"];
+                };
+            };
+            /** @description Request failed */
+            default: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["Error"];
+                };
+            };
+        };
+    };
+    put_v1_admin_integrations_meta: {
+        parameters: {
+            query?: never;
+            header: {
+                "X-Commerce-Request": "1";
+            };
+            path?: never;
+            cookie?: never;
+        };
+        requestBody: {
+            content: {
+                "application/json": components["schemas"]["MetaInput"];
+            };
+        };
+        responses: {
+            /** @description Success */
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["MetaSettings"];
+                };
+            };
+            /** @description Application admission is saturated or the pre-response handler deadline elapsed. Database admission or lock/statement budgets may also be exhausted. The gateway returns Retry-After: 3 for these overload responses. A timeout does not prove a mutation was rolled back; retain the operation's idempotency key and reconcile its receipt/state before retrying. Streaming responses have endpoint-specific limits after their headers are sent. */
+            503: {
+                headers: {
+                    /** @description Retry delay in seconds. */
+                    "Retry-After"?: 3;
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["Error"];
+                };
+            };
+            /** @description Request failed */
+            default: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["Error"];
+                };
+            };
+        };
+    };
+    post_v1_admin_integrations_meta_test_kind: {
+        parameters: {
+            query?: never;
+            header?: never;
+            path: {
+                kind: "whatsapp" | "catalog" | "conversions";
+            };
+            cookie?: never;
+        };
+        requestBody?: never;
+        responses: {
+            /** @description Success */
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["MetaTestResult"];
+                };
+            };
+            /** @description Application admission is saturated or the pre-response handler deadline elapsed. Database admission or lock/statement budgets may also be exhausted. The gateway returns Retry-After: 3 for these overload responses. A timeout does not prove a mutation was rolled back; retain the operation's idempotency key and reconcile its receipt/state before retrying. Streaming responses have endpoint-specific limits after their headers are sent. */
+            503: {
+                headers: {
+                    /** @description Retry delay in seconds. */
+                    "Retry-After"?: 3;
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["Error"];
+                };
+            };
+            /** @description Request failed */
+            default: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["Error"];
+                };
+            };
+        };
+    };
+    post_v1_admin_integrations_meta_whatsapp_test: {
+        parameters: {
+            query?: never;
+            header: {
+                "X-Commerce-Request": "1";
+            };
+            path?: never;
+            cookie?: never;
+        };
+        requestBody: {
+            content: {
+                "application/json": components["schemas"]["MetaTestMessage"];
+            };
+        };
+        responses: {
+            /** @description Success */
+            202: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["MetaQueued"];
+                };
+            };
+            /** @description Application admission is saturated or the pre-response handler deadline elapsed. Database admission or lock/statement budgets may also be exhausted. The gateway returns Retry-After: 3 for these overload responses. A timeout does not prove a mutation was rolled back; retain the operation's idempotency key and reconcile its receipt/state before retrying. Streaming responses have endpoint-specific limits after their headers are sent. */
+            503: {
+                headers: {
+                    /** @description Retry delay in seconds. */
+                    "Retry-After"?: 3;
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["Error"];
+                };
+            };
+            /** @description Request failed */
+            default: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["Error"];
+                };
+            };
+        };
+    };
+    get_v1_admin_integrations_meta_jobs: {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        requestBody?: never;
+        responses: {
+            /** @description Success */
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["MetaJob"][];
+                };
+            };
+            /** @description Application admission is saturated or the pre-response handler deadline elapsed. Database admission or lock/statement budgets may also be exhausted. The gateway returns Retry-After: 3 for these overload responses. A timeout does not prove a mutation was rolled back; retain the operation's idempotency key and reconcile its receipt/state before retrying. Streaming responses have endpoint-specific limits after their headers are sent. */
+            503: {
+                headers: {
+                    /** @description Retry delay in seconds. */
+                    "Retry-After"?: 3;
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["Error"];
+                };
+            };
+            /** @description Request failed */
+            default: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["Error"];
+                };
+            };
+        };
+    };
+    get_v1_integrations_meta_status: {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        requestBody?: never;
+        responses: {
+            /** @description Success */
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["MetaPublicStatus"];
                 };
             };
             /** @description Application admission is saturated or the pre-response handler deadline elapsed. Database admission or lock/statement budgets may also be exhausted. The gateway returns Retry-After: 3 for these overload responses. A timeout does not prove a mutation was rolled back; retain the operation's idempotency key and reconcile its receipt/state before retrying. Streaming responses have endpoint-specific limits after their headers are sent. */

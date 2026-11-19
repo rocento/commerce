@@ -7,18 +7,19 @@
     "public_operations": 77,
     "merchant_operations": 314,
     "audiences": {
+      "first-party-provider-administration": 10,
+      "first-party-provider-configuration": 2,
       "internal-account-lifecycle": 7,
       "internal-agent-delegation": 2,
       "internal-assistant-administration": 23,
       "internal-first-party-assistant": 27,
       "internal-first-party-mobile": 2,
-      "internal-google-integrations": 6,
-      "internal-meta-integrations": 9,
       "internal-mobile-foundation": 44,
       "internal-publication": 1,
       "internal-service-tools": 22,
       "merchant-administration": 237,
       "operations": 3,
+      "provider-protocol": 3,
       "public-storefront": 77,
       "publication-discovery": 4
     }
@@ -1951,12 +1952,10 @@
       "sources": [
         "commerce-api/rocento-api/crates/api-gateway/src/google/mod.rs"
       ],
-      "audience": "internal-google-integrations",
-      "references": [
-        "internal"
-      ],
+      "audience": "first-party-provider-administration",
+      "references": [],
       "full_contract": true,
-      "reason": "First-party Google settings require integrations.google.read/write permissions and admin sessions; sync and test operations also require write permission. The storefront projection exposes only enabled GA4 measurement IDs and intentionally public Maps browser keys, never Merchant service-account credentials. These installation controls remain internal contracts."
+      "reason": "First-party merchant provider setup and credential operations, excluded from published references; existing administrator permissions remain required."
     },
     {
       "method": "POST",
@@ -1964,12 +1963,10 @@
       "sources": [
         "commerce-api/rocento-api/crates/api-gateway/src/google/mod.rs"
       ],
-      "audience": "internal-google-integrations",
-      "references": [
-        "internal"
-      ],
+      "audience": "first-party-provider-administration",
+      "references": [],
       "full_contract": true,
-      "reason": "First-party Google settings require integrations.google.read/write permissions and admin sessions; sync and test operations also require write permission. The storefront projection exposes only enabled GA4 measurement IDs and intentionally public Maps browser keys, never Merchant service-account credentials. These installation controls remain internal contracts."
+      "reason": "First-party merchant provider setup and credential operations, excluded from published references; existing administrator permissions remain required."
     },
     {
       "method": "PUT",
@@ -1977,12 +1974,10 @@
       "sources": [
         "commerce-api/rocento-api/crates/api-gateway/src/google/mod.rs"
       ],
-      "audience": "internal-google-integrations",
-      "references": [
-        "internal"
-      ],
+      "audience": "first-party-provider-administration",
+      "references": [],
       "full_contract": true,
-      "reason": "First-party Google settings require integrations.google.read/write permissions and admin sessions; sync and test operations also require write permission. The storefront projection exposes only enabled GA4 measurement IDs and intentionally public Maps browser keys, never Merchant service-account credentials. These installation controls remain internal contracts."
+      "reason": "First-party merchant provider setup and credential operations, excluded from published references; existing administrator permissions remain required."
     },
     {
       "method": "POST",
@@ -1990,12 +1985,10 @@
       "sources": [
         "commerce-api/rocento-api/crates/api-gateway/src/google/mod.rs"
       ],
-      "audience": "internal-google-integrations",
-      "references": [
-        "internal"
-      ],
+      "audience": "first-party-provider-administration",
+      "references": [],
       "full_contract": true,
-      "reason": "First-party Google settings require integrations.google.read/write permissions and admin sessions; sync and test operations also require write permission. The storefront projection exposes only enabled GA4 measurement IDs and intentionally public Maps browser keys, never Merchant service-account credentials. These installation controls remain internal contracts."
+      "reason": "First-party merchant provider setup and credential operations, excluded from published references; existing administrator permissions remain required."
     },
     {
       "method": "POST",
@@ -2003,12 +1996,10 @@
       "sources": [
         "commerce-api/rocento-api/crates/api-gateway/src/google/mod.rs"
       ],
-      "audience": "internal-google-integrations",
-      "references": [
-        "internal"
-      ],
+      "audience": "first-party-provider-administration",
+      "references": [],
       "full_contract": true,
-      "reason": "First-party Google settings require integrations.google.read/write permissions and admin sessions; sync and test operations also require write permission. The storefront projection exposes only enabled GA4 measurement IDs and intentionally public Maps browser keys, never Merchant service-account credentials. These installation controls remain internal contracts."
+      "reason": "First-party merchant provider setup and credential operations, excluded from published references; existing administrator permissions remain required."
     },
     {
       "method": "GET",
@@ -2016,12 +2007,10 @@
       "sources": [
         "commerce-api/rocento-api/crates/api-gateway/src/meta.rs"
       ],
-      "audience": "internal-meta-integrations",
-      "references": [
-        "internal"
-      ],
+      "audience": "first-party-provider-administration",
+      "references": [],
       "full_contract": true,
-      "reason": "First-party installation settings require Meta read/write/send permissions; public status exposes only enablement, catalog requires production publication, and webhooks verify Meta signatures. Credential entry and provider callbacks remain repository-only contracts."
+      "reason": "First-party merchant provider setup and credential operations, excluded from published references; existing administrator permissions remain required."
     },
     {
       "method": "PUT",
@@ -2029,12 +2018,10 @@
       "sources": [
         "commerce-api/rocento-api/crates/api-gateway/src/meta.rs"
       ],
-      "audience": "internal-meta-integrations",
-      "references": [
-        "internal"
-      ],
+      "audience": "first-party-provider-administration",
+      "references": [],
       "full_contract": true,
-      "reason": "First-party installation settings require Meta read/write/send permissions; public status exposes only enablement, catalog requires production publication, and webhooks verify Meta signatures. Credential entry and provider callbacks remain repository-only contracts."
+      "reason": "First-party merchant provider setup and credential operations, excluded from published references; existing administrator permissions remain required."
     },
     {
       "method": "GET",
@@ -2042,12 +2029,10 @@
       "sources": [
         "commerce-api/rocento-api/crates/api-gateway/src/meta.rs"
       ],
-      "audience": "internal-meta-integrations",
-      "references": [
-        "internal"
-      ],
+      "audience": "first-party-provider-administration",
+      "references": [],
       "full_contract": true,
-      "reason": "First-party installation settings require Meta read/write/send permissions; public status exposes only enablement, catalog requires production publication, and webhooks verify Meta signatures. Credential entry and provider callbacks remain repository-only contracts."
+      "reason": "First-party merchant provider setup and credential operations, excluded from published references; existing administrator permissions remain required."
     },
     {
       "method": "POST",
@@ -2055,12 +2040,10 @@
       "sources": [
         "commerce-api/rocento-api/crates/api-gateway/src/meta.rs"
       ],
-      "audience": "internal-meta-integrations",
-      "references": [
-        "internal"
-      ],
+      "audience": "first-party-provider-administration",
+      "references": [],
       "full_contract": true,
-      "reason": "First-party installation settings require Meta read/write/send permissions; public status exposes only enablement, catalog requires production publication, and webhooks verify Meta signatures. Credential entry and provider callbacks remain repository-only contracts."
+      "reason": "First-party merchant provider setup and credential operations, excluded from published references; existing administrator permissions remain required."
     },
     {
       "method": "POST",
@@ -2068,12 +2051,10 @@
       "sources": [
         "commerce-api/rocento-api/crates/api-gateway/src/meta.rs"
       ],
-      "audience": "internal-meta-integrations",
-      "references": [
-        "internal"
-      ],
+      "audience": "first-party-provider-administration",
+      "references": [],
       "full_contract": true,
-      "reason": "First-party installation settings require Meta read/write/send permissions; public status exposes only enablement, catalog requires production publication, and webhooks verify Meta signatures. Credential entry and provider callbacks remain repository-only contracts."
+      "reason": "First-party merchant provider setup and credential operations, excluded from published references; existing administrator permissions remain required."
     },
     {
       "method": "GET",
@@ -5276,12 +5257,10 @@
       "sources": [
         "commerce-api/rocento-api/crates/api-gateway/src/google/mod.rs"
       ],
-      "audience": "internal-google-integrations",
-      "references": [
-        "internal"
-      ],
+      "audience": "first-party-provider-configuration",
+      "references": [],
       "full_contract": true,
-      "reason": "First-party Google settings require integrations.google.read/write permissions and admin sessions; sync and test operations also require write permission. The storefront projection exposes only enabled GA4 measurement IDs and intentionally public Maps browser keys, never Merchant service-account credentials. These installation controls remain internal contracts."
+      "reason": "First-party storefront provider status/configuration, excluded from published references. Documentation classification does not restrict network access."
     },
     {
       "method": "GET",
@@ -5289,12 +5268,10 @@
       "sources": [
         "commerce-api/rocento-api/crates/api-gateway/src/meta.rs"
       ],
-      "audience": "internal-meta-integrations",
-      "references": [
-        "internal"
-      ],
+      "audience": "provider-protocol",
+      "references": [],
       "full_contract": true,
-      "reason": "First-party installation settings require Meta read/write/send permissions; public status exposes only enablement, catalog requires production publication, and webhooks verify Meta signatures. Credential entry and provider callbacks remain repository-only contracts."
+      "reason": "Provider feed and webhook protocol, excluded from published application references; runtime publication/signature checks remain authoritative."
     },
     {
       "method": "GET",
@@ -5302,12 +5279,10 @@
       "sources": [
         "commerce-api/rocento-api/crates/api-gateway/src/meta.rs"
       ],
-      "audience": "internal-meta-integrations",
-      "references": [
-        "internal"
-      ],
+      "audience": "first-party-provider-configuration",
+      "references": [],
       "full_contract": true,
-      "reason": "First-party installation settings require Meta read/write/send permissions; public status exposes only enablement, catalog requires production publication, and webhooks verify Meta signatures. Credential entry and provider callbacks remain repository-only contracts."
+      "reason": "First-party storefront provider status/configuration, excluded from published references. Documentation classification does not restrict network access."
     },
     {
       "method": "GET",
@@ -5315,12 +5290,10 @@
       "sources": [
         "commerce-api/rocento-api/crates/api-gateway/src/meta.rs"
       ],
-      "audience": "internal-meta-integrations",
-      "references": [
-        "internal"
-      ],
+      "audience": "provider-protocol",
+      "references": [],
       "full_contract": true,
-      "reason": "First-party installation settings require Meta read/write/send permissions; public status exposes only enablement, catalog requires production publication, and webhooks verify Meta signatures. Credential entry and provider callbacks remain repository-only contracts."
+      "reason": "Provider feed and webhook protocol, excluded from published application references; runtime publication/signature checks remain authoritative."
     },
     {
       "method": "POST",
@@ -5328,12 +5301,10 @@
       "sources": [
         "commerce-api/rocento-api/crates/api-gateway/src/meta.rs"
       ],
-      "audience": "internal-meta-integrations",
-      "references": [
-        "internal"
-      ],
+      "audience": "provider-protocol",
+      "references": [],
       "full_contract": true,
-      "reason": "First-party installation settings require Meta read/write/send permissions; public status exposes only enablement, catalog requires production publication, and webhooks verify Meta signatures. Credential entry and provider callbacks remain repository-only contracts."
+      "reason": "Provider feed and webhook protocol, excluded from published application references; runtime publication/signature checks remain authoritative."
     },
     {
       "method": "GET",

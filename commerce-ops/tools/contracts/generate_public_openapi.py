@@ -108,6 +108,11 @@ PRIVATE_PATH_PREFIXES = (
     "/v1/cart/trust",
 )
 PRIVATE_PATHS = frozenset({
+    # Nonpublished first-party/provider protocols; this is not a network-access policy.
+    "/v1/integrations/google/public",
+    "/v1/integrations/meta/status",
+    "/v1/integrations/meta/catalog.csv",
+    "/v1/integrations/meta/webhook",
     # Native account lifecycle uses a secret receipt protocol, not the published integration API.
     "/v1/customer/deletion-policy",
     "/v1/customer/account-deletion",
@@ -167,7 +172,7 @@ CategoryAvailability ChallengeRequest CheckoutMarket CheckoutQuote CheckoutSnaps
 CouponInput Credentials CurrentMarket Customer CustomerProfile DeliverySlot
 DeliveryStatus Dispatch Error FulfillmentLocation FulfillmentPlan IdList Location
 LocationGeography LocationInput ManualRefund MarketFacts Order OrderContact
-OrderDetail OrderHistory OrderItem OrderStatusDisplay OwnReview Payment PlaceInput Product ProductFamily
+OrderDetail OrderHistory OrderItem OrderStatusDisplay OwnReview Payment PlaceInput MetaConsent Product ProductFamily
 ProductLink ProductStructure ProfileInput PublicReview PublicStorefrontLanguages
 QuoteInput Reset Review ReviewInput ScheduledDelivery ScheduledOrderDelivery
 SearchResults SellingRule Shipment ShipmentItem Status StorefrontLanguage TaxAssessment
