@@ -30,7 +30,7 @@ Attribution admits only allowlisted claims before supported redirects. Health pr
 
 ## Release checks
 
-Configure `PUBLICATION_ENVIRONMENT`, `PUBLICATION_INSTALLATION_ID`, `PUBLICATION_APPROVED_ORIGIN`, `PUBLICATION_NOINDEX`, matching artifact mounts, private renderer/gateway addresses and observation secret for the identified merchant installation. [Compose publication](../../commerce-ops/compose/compose.publication.yaml) and [EC2 publication tooling](../../commerce-ops/deploy/ec2/publication.py) implement the deployment surface.
+Configure `PUBLICATION_ENVIRONMENT`, `PUBLICATION_INSTALLATION_ID`, `PUBLICATION_APPROVED_ORIGIN`, `PUBLICATION_NOINDEX`, matching artifact mounts, private renderer/gateway addresses and observation secret for the identified merchant installation. [Compose publication](../../commerce-ops/compose/components/compose.publication.yaml) and [host publication tooling](../../commerce-ops/cloud/host/publication.py) implement the deployment surface.
 
 Preserved reproduction/deployment code is in [publication tests](../platform/seo-geo/Tests); Markdown reports were removed, while code, manifests and non-Markdown evidence remain. Gateway suites include publication rendering, policy, metadata, discovery, feeds, measurement, release, hardening and migration upgrade.
 

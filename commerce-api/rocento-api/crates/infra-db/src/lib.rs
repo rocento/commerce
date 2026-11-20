@@ -1,7 +1,7 @@
 use infra_observability::{
     record_db_pool_snapshot, DbPoolSnapshot, Operation, OperationResult, OperationTimer,
 };
-use sqlx::{postgres::PgPoolOptions, PgPool, Postgres, Transaction};
+use sqlx::{pool::PoolConnection, postgres::PgPoolOptions, PgPool, Postgres, Transaction};
 use std::time::Duration;
 
 fn pool_limits(
@@ -58,9 +58,7 @@ pub fn pool_snapshot(pool: &PgPool) -> DbPoolSnapshot {
 
 /// Measures SQLx acquisition latency, including connection checks/opening,
 /// separately from the subsequent database BEGIN round trip.
-pub async fn begin_transaction(
-    pool: &PgPool,
-) -> Result<Transaction<'static, Postgres>, sqlx::Error> {
+pub async fn acquire_connection(pool: &PgPool) -> Result<PoolConnection<Postgres>, sqlx::Error> {
     let timer = OperationTimer::new(Operation::DbPoolAcquire);
     let acquired = pool.acquire().await;
     timer.finish(match &acquired {
@@ -69,9 +67,15 @@ pub async fn begin_transaction(
         Err(_) => OperationResult::Error,
     });
     record_db_pool_snapshot(pool_snapshot(pool));
+    acquired
+}
+
+pub async fn begin_transaction(
+    pool: &PgPool,
+) -> Result<Transaction<'static, Postgres>, sqlx::Error> {
     // SQLx 0.8.6 uses this same owned-connection constructor in Pool::begin.
     // Keeping ownership in Transaction preserves automatic rollback/release.
-    Transaction::begin(acquired?, None).await
+    Transaction::begin(acquire_connection(pool).await?, None).await
 }
 
 pub async fn migrate(pool: &PgPool) -> Result<(), sqlx::migrate::MigrateError> {

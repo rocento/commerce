@@ -4,7 +4,7 @@ mod availability;
 mod expiry;
 mod locking;
 pub use expiry::EXPIRY_BATCH_SIZE;
-pub use locking::{begin_cart, begin_order};
+pub use locking::{begin_cart, begin_cart_with_connection, begin_order};
 pub mod msi;
 use chrono::{DateTime, Utc};
 use infra_auth::{Error, Result};

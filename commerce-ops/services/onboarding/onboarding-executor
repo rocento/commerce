@@ -1,0 +1,4 @@
+#!/bin/sh
+# Installed root-owned at /usr/local/lib/rocento/onboarding-executor.
+# No command-line arguments are forwarded; validated JSON is read from stdin.
+exec /usr/bin/sudo -n /usr/local/lib/rocento/merchant-executor.py

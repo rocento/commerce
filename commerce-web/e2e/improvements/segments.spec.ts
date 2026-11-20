@@ -68,14 +68,14 @@ test('registration and password reset arrive in the local inbox and tokens work 
     }).toBe(true);
     return (await request.get(`${inbox}/api/v1/message/${id}`)).json();
   }
-  const verification = await message('Verify your Commerce account');
+  const verification = await message('Verify your Isolated Browser Store account');
   const verifyLink = verification.Text.match(/http:\/\/[^\s]+/)[0];
   const token = new URL(verifyLink).searchParams.get('token');
   const verified = await request.post('/api/v1/customer/auth/verify', {headers,data:{identifier:email,token}});
   expect(verified.ok()).toBe(true);
   const reset = await request.post('/api/v1/customer/auth/forgot-password', {headers,data:{identifier:email}});
   expect(reset.ok()).toBe(true);
-  const resetMail = await message('Reset your Commerce password');
+  const resetMail = await message('Reset your Isolated Browser Store password');
   const resetToken = new URL(resetMail.Text.match(/http:\/\/[^\s]+/)[0]).searchParams.get('token');
   const data = {identifier:email,token:resetToken,password:'A replacement test password!'};
   expect((await request.post('/api/v1/customer/auth/reset-password',{headers,data})).ok()).toBe(true);

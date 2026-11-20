@@ -4,15 +4,17 @@ on:
   pull_request:
     paths:
       - 'commerce-api/**'
-      - 'commerce-ops/compose/compose.yaml'
-      - 'commerce-ops/scripts/commerce*'
-      - 'commerce-ops/scripts/release/**'
-      - 'commerce-ops/scripts/checks/**'
-      - 'commerce-ops/scripts/tests/test_commerce*'
-      - 'commerce-ops/scripts/tests/test_rust_architecture.py'
-      - 'commerce-ops/scripts/release/m14_support.py'
-      - 'commerce-ops/scripts/release/system-qa-http.py'
-      - 'commerce-ops/scripts/check*architecture*'
+      - 'commerce-ops/compose/**'
+      - 'commerce-ops/tools/contracts/**'
+      - 'commerce-ops/tools/checks/check-rust-architecture.py'
+      - 'commerce-ops/workflows/release/**'
+      - 'commerce-ops/tools/checks/**'
+      - 'commerce-ops/tests/operations/test_commerce*'
+      - 'commerce-ops/tests/operations/test_rust_architecture.py'
+      - 'commerce-ops/workflows/release/reliability_support.py'
+      - 'commerce-ops/workflows/release/checkout_reliability.py'
+      - 'commerce-ops/workflows/release/system-qa-http.py'
+      - 'commerce-ops/tools/checks/check*architecture*'
       - '.github/workflows/commerce-release.yml'
 permissions:
   contents: read
@@ -33,14 +35,14 @@ jobs:
           workspaces: commerce-api/rocento-api
       - name: Verify release tooling
         run: |
-          python3 -m unittest discover -s commerce-ops/scripts/tests -p 'test_commerce_image.py'
-          python3 -m unittest discover -s commerce-ops/scripts/tests -p 'test_commerce_release.py'
-          python3 -m unittest discover -s commerce-ops/scripts/tests -p 'test_commerce_reliability.py'
-          python3 -m unittest discover -s commerce-ops/scripts/tests -p 'test_rust_architecture.py'
+          python3 -m unittest discover -s commerce-ops/tests/operations -p 'test_commerce_image.py'
+          python3 -m unittest discover -s commerce-ops/tests/operations -p 'test_commerce_release.py'
+          python3 -m unittest discover -s commerce-ops/tests/operations -p 'test_commerce_reliability.py'
+          python3 -m unittest discover -s commerce-ops/tests/operations -p 'test_rust_architecture.py'
       - name: Build frozen release image
-        run: python3 commerce-ops/scripts/release/commerce-release.py build-image --output .local/commerce-release/candidate
+        run: python3 commerce-ops/workflows/release/commerce-release.py build-image --output .local/commerce-release/candidate
       - name: Verify exact image on disposable providers
-        run: python3 commerce-ops/scripts/release/commerce-release.py verify-image --candidate .local/commerce-release/candidate
+        run: python3 commerce-ops/workflows/release/commerce-release.py verify-image --candidate .local/commerce-release/candidate
       - uses: actions/upload-artifact@v4
         if: always()
         with:

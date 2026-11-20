@@ -101,6 +101,7 @@ pub mod assistant_settings;
 pub mod assistant_trace;
 pub mod assistant_tracking;
 pub mod discoverability;
+pub mod meta;
 
 pub mod public_commerce;
 
@@ -121,3 +122,5 @@ pub mod order_push;
 #[cfg(test)]
 #[path = "../tests/support/signing.rs"]
 pub(crate) mod test_signing;
+
+pub mod google;

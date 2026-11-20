@@ -13,7 +13,7 @@ node commerce-web/apps/rengine/server.mjs
 
 Open http://127.0.0.1:3190. `HOST` defaults to loopback, `PORT` to 3190 and `RENGINE_ORIGIN` to that HTTP origin. Configure each demo using `RENGINE_<STORE>_GATEWAY`, `RENGINE_<STORE>_LANGUAGE` and `RENGINE_<STORE>_ASSISTANT`. Names are uppercase, for example `RENGINE_GROCERY_LANGUAGE=http://127.0.0.1:3187`. Local default language ports 3187/3287/3387/3487 and assistant ports 8000–8003 are development placeholders: override them for the services actually running.
 
-The production [Compose service](../../commerce-ops/compose/compose.rengine.yaml) joins the four assistant-private networks, the four commerce networks for gateway access, and its own edge network for host ingress, and binds its HTTP listener only to `127.0.0.1:3190`. It runs unprivileged with a read-only application filesystem and one writable encrypted-connection data directory, memory/CPU/PID limits, no added capabilities and no database credentials. [Nginx](../../commerce-ops/deploy/rengine/nginx.conf) supplies TLS, same-host routing and login throttling.
+The production [Compose service](../../commerce-ops/compose/overlays/cloud/compose.rengine.yaml) joins the four assistant-private networks, the four commerce networks for gateway access, and its own edge network for host ingress, and binds its HTTP listener only to `127.0.0.1:3190`. It runs unprivileged with a read-only application filesystem and one writable encrypted-connection data directory, memory/CPU/PID limits, no added capabilities and no database credentials. [Nginx](../../commerce-ops/services/rengine/nginx.conf) supplies TLS, same-host routing and login throttling.
 
 ## Verification
 
@@ -21,7 +21,7 @@ The production [Compose service](../../commerce-ops/compose/compose.rengine.yaml
 node --test commerce-web/apps/rengine/tests/*.test.mjs
 node --check commerce-web/apps/rengine/public/app.js
 bash -n commerce-ops/deploy/aws-deploy/deploy-rengine.sh commerce-ops/deploy/ec2/server/ec2-deploy-rengine.sh
-docker compose -f commerce-ops/compose/compose.rengine.yaml config --quiet
+docker compose --project-directory commerce-ops/compose -f commerce-ops/compose/overlays/cloud/compose.rengine.yaml config --quiet
 # Uses the existing commerce-web Playwright installation and Chromium:
 node commerce-web/apps/rengine/tests/browser.mjs
 node commerce-web/apps/rengine/tests/sidebar-browser.mjs
@@ -34,7 +34,7 @@ Automated server tests cover authorization, demo isolation, permission revocatio
 The Cloudflare record `commerce-rengine` points to the current Rocento host and uses the existing wildcard origin certificate. Deploy from the repository root:
 
 ```sh
-bash commerce-ops/deploy/aws-deploy/deploy-rengine.sh
+bash commerce-ops/cloud/providers/aws/deploy-rengine.sh
 ```
 
 This uploads only rengine source, its Compose file, its dedicated Nginx site and its deployment script. The server uses the existing deployment lock, preserves the prior image/source/site, builds the service, waits for health, validates Nginx and reloads it. Failure restores the prior service image/site when available. Backups live under `/var/backups/rocento/rengine/`. The dedicated Nginx site survives normal commerce site regeneration. Full uploads also retain rengine source; deploy the service separately after changing it.
@@ -43,8 +43,8 @@ On the server:
 
 ```sh
 cd /opt/rocento
-docker compose -f commerce-ops/compose/compose.rengine.yaml ps
-docker compose -f commerce-ops/compose/compose.rengine.yaml logs --tail 100
+docker compose --project-directory commerce-ops/compose -f commerce-ops/compose/overlays/cloud/compose.rengine.yaml ps
+docker compose --project-directory commerce-ops/compose -f commerce-ops/compose/overlays/cloud/compose.rengine.yaml logs --tail 100
 curl --fail http://127.0.0.1:3190/health
 ```
 
@@ -56,7 +56,7 @@ From the repository root on the workstation, set `RENGINE_SSH_KEY`, `RENGINE_SSH
 
 ```sh
 ssh -i "$RENGINE_SSH_KEY" -o BatchMode=yes "$RENGINE_SSH_USER@$RENGINE_SSH_HOST" \
-  'sudo python3 - --journey' < commerce-ops/scripts/checks/check-rengine.py
+  'sudo python3 - --journey' < commerce-ops/tools/checks/check-rengine.py
 ```
 
 The script reads protected administrator credentials on the server, never prints them, and signs out afterward. It checks each demo’s readiness, a language request, an explicitly scored one-case benchmark, trace-list access and a guest assistant request. The guest request can incur normal provider usage. It performs no authenticated shopper or order mutation.

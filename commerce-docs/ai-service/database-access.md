@@ -1,6 +1,6 @@
 # DBeaver database access
 
-Connect to the shared AI databases for inspection. The current local topology is defined by [local setup](../platform/operations/local-setup.md#assistant-and-optional-services), [compose.local.yaml](../../commerce-ops/compose/compose.local.yaml) and [the initializer](../../commerce-ops/scripts/local/local-assistant-setup.py). Both `assistant` and `commerce_language` use the local `ai-postgres` service. Production also keeps these two databases together; commerce databases remain separate.
+Connect to the shared AI databases for inspection. The current local topology is defined by [local setup](../platform/operations/local-setup.md#assistant-and-optional-services), [compose.local.yaml](../../commerce-ops/compose/overlays/local/compose.local.yaml) and [the initializer](../../commerce-ops/local/platform/initialize-assistant-storage.py). Both `assistant` and `commerce_language` use the local `ai-postgres` service. Production also keeps these two databases together; commerce databases remain separate.
 
 Reviewed against source on 2026-10-14. The earlier production connection check was recorded on 2026-10-09; these instructions do not certify that a host or password is unchanged.
 
@@ -46,15 +46,15 @@ ssh -i "$AI_DB_SSH_KEY" -o StrictHostKeyChecking=yes \
 
 ## Enable the local inspection port
 
-The [DBeaver overlay](../../commerce-ops/compose/compose.assistant-dbeaver.yaml) publishes `127.0.0.1:15432` and adds the Docker Desktop bridge while retaining the `ai-data` volume. After the standard local setup has created `commerce-ai-ai-postgres-1`, run from the repository root:
+The [DBeaver overlay](../../commerce-ops/compose/overlays/local/compose.assistant-dbeaver.yaml) publishes `127.0.0.1:15432` and adds the Docker Desktop bridge while retaining the `ai-data` volume. After the standard local setup has created `commerce-ai-ai-postgres-1`, run from the repository root:
 
 ```sh
 DBEAVER_AI_POSTGRES_IMAGE="$(docker inspect --format '{{.Config.Image}}' commerce-ai-ai-postgres-1)" \
-  bash commerce-ops/scripts/local/local-compose.sh --assistant -f commerce-ops/compose/compose.assistant-dbeaver.yaml \
+  bash commerce-ops/local/platform/local-compose.sh --assistant -f commerce-ops/compose/overlays/local/compose.assistant-dbeaver.yaml \
   up -d --no-deps --no-build --pull never ai-postgres
 ```
 
-This explicitly reuses the existing local database image. Retain the DBeaver overlay and selected image when recreating that service if inspection access is still needed. Normal application startup and migrations remain owned by [local setup](../platform/operations/local-setup.md). Production uses [compose.ai-shared.yaml](../../commerce-ops/compose/compose.ai-shared.yaml) with SSH access.
+This explicitly reuses the existing local database image. Retain the DBeaver overlay and selected image when recreating that service if inspection access is still needed. Normal application startup and migrations remain owned by [local setup](../platform/operations/local-setup.md). Production uses [compose.ai-shared.yaml](../../commerce-ops/compose/overlays/cloud/compose.ai-shared.yaml) with SSH access.
 
 ## Tables to inspect
 

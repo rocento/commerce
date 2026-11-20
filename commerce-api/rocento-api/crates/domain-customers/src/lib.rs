@@ -12,6 +12,12 @@ pub struct Service {
     pub pool: PgPool,
     pub security: Security,
 }
+/// Signature, issuer, audience and expiry validated for this request.
+/// Private fields prevent callers from manufacturing session authority; live
+/// customer/session state must still be checked on the database connection.
+pub struct SessionToken {
+    claims: infra_auth::Claims,
+}
 #[derive(Serialize, FromRow)]
 pub struct Customer {
     pub entity_id: i64,
@@ -202,13 +208,37 @@ impl Service {
         }
         Ok(())
     }
+    pub fn decode_access_token(&self, token: &str) -> Result<SessionToken> {
+        Ok(SessionToken {
+            claims: self.security.decode(token)?,
+        })
+    }
     pub async fn authenticate(&self, token: &str) -> Result<Customer> {
-        let c = self.security.decode(token)?;
-        let valid:bool=sqlx::query_scalar("SELECT EXISTS(SELECT 1 FROM customers.sessions WHERE id=$1 AND customer_id=$2 AND expires_at>now())").bind(c.sid).bind(c.sub).fetch_one(&self.pool).await?;
-        if !valid {
-            return Err(Error::Unauthorized);
+        // Invalid JWTs are rejected before entering the connection queue.
+        let token = self.decode_access_token(token)?;
+        let mut connection = self.pool.acquire().await?;
+        self.customer_for_token_on(&mut connection, &token).await
+    }
+    async fn customer_for_token_on(
+        &self,
+        connection: &mut sqlx::PgConnection,
+        token: &SessionToken,
+    ) -> Result<Customer> {
+        let c = &token.claims;
+        sqlx::query_as("SELECT c.id,c.entity_id,c.email,c.mobile_number,c.primary_identifier,c.verified,c.created_at FROM customers.sessions s JOIN customers.customers c ON c.id=s.customer_id WHERE s.id=$1 AND s.customer_id=$2 AND s.expires_at>now() AND c.deletion_requested_at IS NULL")
+            .bind(c.sid).bind(c.sub).fetch_optional(connection).await?.ok_or(Error::Unauthorized)
+    }
+    /// Check live authority using this request's already acquired connection.
+    pub async fn require_verified_on(
+        &self,
+        connection: &mut sqlx::PgConnection,
+        token: &SessionToken,
+    ) -> Result<Customer> {
+        let c = self.customer_for_token_on(connection, token).await?;
+        if !c.verified {
+            return Err(Error::Forbidden);
         }
-        self.customer(c.sub).await
+        Ok(c)
     }
     /// Reusable server-side gate for checkout in M4; never trust JWT verification claims.
     pub async fn require_verified(&self, token: &str) -> Result<Customer> {

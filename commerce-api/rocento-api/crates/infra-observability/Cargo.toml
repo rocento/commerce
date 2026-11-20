@@ -7,10 +7,10 @@ license.workspace = true
 [dependencies]
 tracing-subscriber.workspace = true
 tracing.workspace = true
-opentelemetry = "0.31"
-opentelemetry_sdk = "0.31"
-opentelemetry-otlp = { version = "0.31", default-features = false, features = ["trace", "http-proto", "reqwest-blocking-client"] }
-tracing-opentelemetry = "0.32"
+opentelemetry = "0.32"
+opentelemetry_sdk = "0.32.1"
+opentelemetry-otlp = { version = "0.32", default-features = false, features = ["trace", "http-proto", "reqwest-blocking-client"] }
+tracing-opentelemetry = "0.33"
 axum.workspace = true
 serde_json.workspace = true
 reqwest.workspace = true

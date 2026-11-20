@@ -1,0 +1,73 @@
+{
+  "terraform": {
+    "required_version": ">= 1.10.0, < 2.0.0",
+    "required_providers": {
+      "aws": {
+        "source": "hashicorp/aws",
+        "version": "6.40.0"
+      }
+    },
+    "backend": {
+      "s3": {}
+    }
+  },
+  "variable": {
+    "host_id": {
+      "type": "string",
+      "validation": {
+        "condition": "${can(regex(\"^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$\", var.host_id))}",
+        "error_message": "The host identity must be a canonical UUID."
+      }
+    },
+    "cloud_init": {
+      "type": "string",
+      "sensitive": true,
+      "validation": {
+        "condition": "${startswith(var.cloud_init, \"#cloud-config\\n\")}",
+        "error_message": "Cloud-init must use the cloud-config format."
+      }
+    },
+    "profile": {
+      "type": "object({ region = string, launchTemplateId = string, launchTemplateVersion = string })",
+      "validation": {
+        "condition": "${can(regex(\"^lt-[a-f0-9]{8,32}$\", var.profile.launchTemplateId)) && can(regex(\"^[1-9][0-9]*$\", var.profile.launchTemplateVersion))}",
+        "error_message": "AWS requires a pinned launch template ID and numeric version."
+      }
+    },
+    "instance_name": {
+      "type": "string",
+      "validation": {
+        "condition": "${can(regex(\"^merchent-[a-z0-9][a-z0-9-]{1,38}[a-z0-9]$\", var.instance_name))}",
+        "error_message": "Use merchent- followed by the store subdomain."
+      }
+    }
+  },
+  "provider": {
+    "aws": {
+      "region": "${var.profile.region}"
+    }
+  },
+  "resource": {
+    "aws_instance": {
+      "merchant": {
+        "lifecycle": {
+          "prevent_destroy": true
+        },
+        "launch_template": {
+          "id": "${var.profile.launchTemplateId}",
+          "version": "${var.profile.launchTemplateVersion}"
+        },
+        "user_data_base64": "${base64encode(var.cloud_init)}",
+        "metadata_options": {
+          "http_tokens": "required",
+          "http_put_response_hop_limit": 1
+        },
+        "tags": {
+          "Name": "${var.instance_name}",
+          "rocento-host": "${var.host_id}"
+        },
+        "disable_api_termination": true
+      }
+    }
+  }
+}

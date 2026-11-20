@@ -56,7 +56,8 @@ async fn fixture_at(
                     .transpose()
                     .unwrap()
                     .unwrap_or_else(|| {
-                        include_str!("../../../../../commerce-web/apps/storefront/index.html").into()
+                        include_str!("../../../../../commerce-web/apps/storefront/index.html")
+                            .into()
                     }),
             ),
         },

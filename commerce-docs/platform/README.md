@@ -15,9 +15,9 @@ Start with [the repository quickstart](../../commerce-api/README.md) or the [ser
 ## Deployment and onboarding
 
 - [EC2 and Cloudflare setup](deployment/aws-ec2-cloudflare.md)
-- [Google Cloud Compute Engine deployment](../../commerce-ops/deploy/gcp-deploy/README.md)
+- [Google Cloud Compute Engine deployment](../../commerce-ops/cloud/providers/gcp/README.md)
 - [Client catalog installation](deployment/client-onboarding.md)
-- [Production release runbook](../../commerce-ops/deploy/aws-deploy/how.md)
+- [Production release runbook](../../commerce-ops/tasks/rocento-platform-deployment.md)
 - [Deployment configuration](../../commerce-ops/deploy/ec2/README.md)
 - [Shared AI database operations](../ai-service/shared-database-operations.md)
 - [Language release lifecycle](../ai-service/language-release-upgrade.md)
@@ -31,4 +31,4 @@ Start with [the repository quickstart](../../commerce-api/README.md) or the [ser
 - [Documentation and cleanup policy](reference/workspace-cleanup.md)
 - [Historical evidence catalog](evidence/README.md)
 
-Keep service behavior in its owning guide and link to it here. Run `python3 commerce-ops/scripts/checks/check-documentation.py` after changing documentation.
+Keep service behavior in its owning guide and link to it here. Run `python3 commerce-ops/tools/checks/check-documentation.py` after changing documentation.

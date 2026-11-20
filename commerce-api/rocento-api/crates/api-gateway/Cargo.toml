@@ -61,7 +61,7 @@ http-body-util = "0.1"
 
 
 [dependencies.zip]
-version = "2"
+version = "9.0.5"
 default-features = false
 
 [dependencies.csv]

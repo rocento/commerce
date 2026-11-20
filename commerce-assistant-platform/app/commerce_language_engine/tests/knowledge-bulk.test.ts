@@ -90,7 +90,7 @@ test('real PostgreSQL upload resumes, fails closed and recovers candidate commit
   });
   await t.test('runtime role cannot read or write upload staging after tenant policy reapply',async()=>{
    await client!.query("DO $$ BEGIN IF NOT EXISTS(SELECT FROM pg_roles WHERE rolname='ai_language_runtime') THEN CREATE ROLE ai_language_runtime NOLOGIN; END IF; END $$");
-   const policy=await readFile(new URL('../../../../deploy/assistant/shared-language-tenants.sql',import.meta.url),'utf8');
+   const policy=await readFile(new URL('../../../../commerce-ops/services/assistant/shared-language-tenants.sql',import.meta.url),'utf8');
    await client!.query(policy);await client!.query(policy);
    for(const table of ['bulk_imports','bulk_chunks','bulk_concepts']){
     const r=(await client!.query("SELECT has_table_privilege('ai_language_runtime',$1,'SELECT') AS r,has_table_privilege('ai_language_runtime',$1,'INSERT') AS w",['knowledge.'+table])).rows[0];assert.deepEqual(r,{r:false,w:false});

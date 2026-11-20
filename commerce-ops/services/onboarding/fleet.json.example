@@ -1,0 +1,67 @@
+{
+  "reconcileConcurrency": 4,
+  "enabled": false,
+  "sshPrivateKey": "/etc/rocento/merchant-provisioning/fleet_ed25519",
+  "sshPublicKey": "/etc/rocento/merchant-provisioning/fleet_ed25519.pub",
+  "cloudflare": {
+    "zoneId": "REPLACE_WITH_ROCENTO_ZONE_ID",
+    "tokenFile": "/etc/rocento/merchant-provisioning/cloudflare.token"
+  },
+  "providers": {
+    "aws": {
+      "maxHosts": 2,
+      "minMemoryGiB": 16,
+      "environment": "aws-onboarding-test",
+      "region": "REPLACE_REGION",
+      "launchTemplateId": "REPLACE_LAUNCH_TEMPLATE_ID",
+      "launchTemplateVersion": "1",
+      "release": {
+        "repository": "rocento/commerce-onboarding",
+        "assetId": 0,
+        "sha256": "REPLACE_BUNDLE_SHA256",
+        "revision": "REPLACE_FULL_GIT_COMMIT",
+        "inventoryDigest": "sha256:REPLACE_APPROVED_INVENTORY_SHA256"
+      }
+    },
+    "gcp": {
+      "maxHosts": 2,
+      "minMemoryGiB": 16,
+      "environment": "gcp-onboarding-test",
+      "project": "REPLACE_PROJECT",
+      "zone": "REPLACE_ZONE",
+      "instanceTemplate": "https://www.googleapis.com/compute/v1/projects/REPLACE_PROJECT/global/instanceTemplates/REPLACE_IMMUTABLE_TEMPLATE",
+      "release": {
+        "repository": "rocento/commerce-onboarding",
+        "assetId": 0,
+        "sha256": "REPLACE_BUNDLE_SHA256",
+        "revision": "REPLACE_FULL_GIT_COMMIT",
+        "inventoryDigest": "sha256:REPLACE_APPROVED_INVENTORY_SHA256"
+      }
+    },
+    "hetzner": {
+      "maxHosts": 2,
+      "minMemoryGiB": 16,
+      "environment": "hetzner-onboarding-test",
+      "serverType": "REPLACE_SERVER_TYPE",
+      "image": 0,
+      "location": "REPLACE_LOCATION",
+      "firewalls": [
+        0
+      ],
+      "tokenFile": "/etc/rocento/merchant-provisioning/hetzner.token",
+      "release": {
+        "repository": "rocento/commerce-onboarding",
+        "assetId": 0,
+        "sha256": "REPLACE_BUNDLE_SHA256",
+        "revision": "REPLACE_FULL_GIT_COMMIT",
+        "inventoryDigest": "sha256:REPLACE_APPROVED_INVENTORY_SHA256"
+      }
+    }
+  },
+  "terraform": {
+    "bucket": "replace-private-terraform-state-bucket",
+    "region": "REPLACE_STATE_REGION",
+    "keyPrefix": "merchant-fleet/onboarding-test"
+  },
+  "githubTokenFile": "/etc/rocento/merchant-provisioning/github.token"
+}

@@ -5,17 +5,19 @@ on:
     paths:
       - 'commerce-assistant-platform/**'
       - 'commerce-api/**'
-      - 'commerce-ops/scripts/evaluation/agent-evals.py'
-      - 'commerce-ops/scripts/contracts/**'
-      - 'commerce-ops/scripts/evaluation/**'
-      - 'commerce-ops/scripts/tests/test_contract_generator_entrypoints.py'
-      - 'commerce-ops/scripts/tests/test_agent_evals.py'
-      - 'commerce-ops/scripts/contracts/generate_core_contracts.py'
-      - 'commerce-ops/scripts/contracts/generate_meaning_contracts.py'
-      - 'commerce-ops/scripts/contracts/generate_planning_contracts.py'
-      - 'commerce-ops/scripts/evaluation/planning-evals.py'
+      - 'commerce-ops/tools/evaluation/agent-evals.py'
+      - 'commerce-ops/tools/contracts/**'
+      - 'commerce-ops/tools/evaluation/**'
+      - 'commerce-ops/tools/evaluation/shopping_eval/**'
+      - 'commerce-ops/tools/evaluation/recommendation_eval/**'
+      - 'commerce-ops/tests/operations/test_contract_generator_entrypoints.py'
+      - 'commerce-ops/tests/operations/test_agent_evals.py'
+      - 'commerce-ops/tools/contracts/generate_core_contracts.py'
+      - 'commerce-ops/tools/contracts/generate_meaning_contracts.py'
+      - 'commerce-ops/tools/contracts/generate_planning_contracts.py'
+      - 'commerce-ops/tools/evaluation/planning-evals.py'
       - 'commerce-assistant-platform/contracts/commerce-planning/**'
-      - 'commerce-ops/scripts/evaluation/meaning-evals.py'
+      - 'commerce-ops/tools/evaluation/meaning-evals.py'
       - 'commerce-assistant-platform/contracts/commerce-meaning/**'
       - 'commerce-api/rocento-api/crates/commerce-core-contracts/contract/**'
       - 'commerce-web/packages/api-client/src/commerce-core*'
@@ -29,7 +31,7 @@ jobs:
     timeout-minutes: 25
     defaults:
       run:
-        working-directory: commerce-ops/scripts
+        working-directory: commerce-ops/tools
     services:
       postgres:
         image: pgvector/pgvector:pg16

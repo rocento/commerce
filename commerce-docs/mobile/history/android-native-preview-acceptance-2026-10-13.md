@@ -74,4 +74,4 @@ changed. This host is not ready to run the inspected Android emulator worker.
 Provision/configure a compatible accelerated worker separately, then perform the
 same acceptance remotely before enabling it at apps.rocento.com. Local acceptance
 does not demonstrate remote capacity, latency or isolation. See the
-[Android setup and release gates](../../../commerce-ops/deploy/native-preview/ANDROID.md).
+[Android setup and release gates](../../../commerce-ops/services/native-preview/ANDROID.md).

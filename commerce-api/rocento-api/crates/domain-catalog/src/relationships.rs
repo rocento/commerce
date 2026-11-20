@@ -115,11 +115,11 @@ impl Conditions {
                         .parse::<Uuid>()
                         .map_err(|_| invalid("Category must be a UUID"))?;
                 }
-                Field::ProductType => {
-                    if !["simple", "configurable", "bundle", "grouped"].contains(&c.value.as_str())
-                    {
-                        return Err(invalid("Invalid product type"));
-                    }
+                Field::ProductType
+                    if !["simple", "configurable", "bundle", "grouped"]
+                        .contains(&c.value.as_str()) =>
+                {
+                    return Err(invalid("Invalid product type"));
                 }
                 _ => {}
             }
@@ -434,6 +434,28 @@ mod tests {
         assert!(r.validate().is_err());
         r.target.conditions[0].field = Field::Price;
         assert!(r.validate().is_err());
+    }
+    #[test]
+    fn product_type_operands_preserve_exact_allowlist() {
+        let mut r = input();
+        r.target.conditions.push(Condition {
+            field: Field::ProductType,
+            operator: Operator::Eq,
+            value: String::new(),
+            attribute_code: None,
+        });
+        for (value, valid) in [
+            ("simple", true),
+            ("configurable", true),
+            ("bundle", true),
+            ("grouped", true),
+            ("", false),
+            ("Simple", false),
+            ("virtual", false),
+        ] {
+            r.target.conditions[0].value = value.into();
+            assert_eq!(r.validate().is_ok(), valid, "{value}");
+        }
     }
     #[test]
     fn values_are_bound() {

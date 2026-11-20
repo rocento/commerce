@@ -1,0 +1,72 @@
+{
+  "terraform": {
+    "required_version": ">= 1.10.0, < 2.0.0",
+    "required_providers": {
+      "hcloud": {
+        "source": "hetznercloud/hcloud",
+        "version": "1.60.1"
+      }
+    },
+    "backend": {
+      "s3": {}
+    }
+  },
+  "variable": {
+    "host_id": {
+      "type": "string",
+      "validation": {
+        "condition": "${can(regex(\"^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$\", var.host_id))}",
+        "error_message": "The host identity must be a canonical UUID."
+      }
+    },
+    "cloud_init": {
+      "type": "string",
+      "sensitive": true,
+      "validation": {
+        "condition": "${startswith(var.cloud_init, \"#cloud-config\\n\")}",
+        "error_message": "Cloud-init must use the cloud-config format."
+      }
+    },
+    "profile": {
+      "type": "object({ serverType = string, image = number, location = string, firewalls = list(number) })",
+      "validation": {
+        "condition": "${var.profile.image > 0 && floor(var.profile.image) == var.profile.image && length(var.profile.firewalls) > 0 && alltrue([for id in var.profile.firewalls : id > 0 && floor(id) == id])}",
+        "error_message": "Hetzner requires positive integer snapshot and firewall IDs."
+      }
+    },
+    "instance_name": {
+      "type": "string",
+      "validation": {
+        "condition": "${can(regex(\"^merchent-[a-z0-9][a-z0-9-]{1,38}[a-z0-9]$\", var.instance_name))}",
+        "error_message": "Use merchent- followed by the store subdomain."
+      }
+    }
+  },
+  "provider": {
+    "hcloud": {}
+  },
+  "resource": {
+    "hcloud_server": {
+      "merchant": {
+        "lifecycle": {
+          "prevent_destroy": true
+        },
+        "name": "${var.instance_name}",
+        "server_type": "${var.profile.serverType}",
+        "image": "${tostring(var.profile.image)}",
+        "location": "${var.profile.location}",
+        "user_data": "${var.cloud_init}",
+        "firewall_ids": "${var.profile.firewalls}",
+        "labels": {
+          "rocento-host": "${var.host_id}"
+        },
+        "public_net": {
+          "ipv4_enabled": true,
+          "ipv6_enabled": false
+        },
+        "delete_protection": true,
+        "rebuild_protection": true
+      }
+    }
+  }
+}

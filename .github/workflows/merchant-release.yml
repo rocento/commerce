@@ -1,0 +1,41 @@
+name: Build merchant release candidate
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  build:
+    strategy:
+      matrix:
+        include:
+          - runner: ubuntu-24.04
+            architecture: amd64
+          - runner: ubuntu-24.04-arm
+            architecture: arm64
+    runs-on: ${{ matrix.runner }}
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v4
+      - name: Record source before building
+        run: python3 commerce-ops/services/onboarding/prepare-merchant-candidate.py --source "$PWD" --source-revision "$GITHUB_SHA" --write-source-manifest "$RUNNER_TEMP/source.json"
+      - name: Build application images and fetch runtime dependencies
+        shell: bash
+        run: |
+          set -euo pipefail
+          api=$(jq -r .components.api.sha256 "$RUNNER_TEMP/source.json")
+          web=$(jq -r .components.web.sha256 "$RUNNER_TEMP/source.json")
+          minio=$(jq -r .components.minio.sha256 "$RUNNER_TEMP/source.json")
+          docker build --label "io.rocento.source.sha256=$api" -t rocento-merchant-api:candidate-20261112 commerce-api/rocento-api
+          docker build --label "io.rocento.source.sha256=$web" -t rocento-merchant-web:candidate-20261112 -f commerce-web/Dockerfile.merchant-release commerce-web
+          docker build --label "io.rocento.source.sha256=$minio" -t rocento-minio:candidate-20251015 -f commerce-ops/services/onboarding/Dockerfile.minio commerce-ops/services/onboarding
+          for image in postgres:16-bookworm nats:2.11-alpine getmeili/meilisearch:v1.15 clickhouse/clickhouse-server:25.8; do docker pull "$image"; done
+      - name: Prepare unapproved candidate and immutable bundle
+        run: |
+          python3 commerce-ops/services/onboarding/prepare-merchant-candidate.py --source "$PWD" --source-manifest "$RUNNER_TEMP/source.json" --output-directory "$RUNNER_TEMP/candidate"
+          docker builder prune --all --force
+          python3 commerce-ops/services/onboarding/package-merchant-release.py --candidate --release "$RUNNER_TEMP/candidate" --environment aws-onboarding-test --output "$RUNNER_TEMP/bundle"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: merchant-candidate-${{ github.sha }}-${{ matrix.architecture }}
+          path: ${{ runner.temp }}/bundle/
+          retention-days: 30

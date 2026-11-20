@@ -841,7 +841,7 @@ def test_actual_node_resolution_bypasses_extraction_for_four_demo_subjective_req
             + "\n"
         )
     process = subprocess.run(
-        [node, str(root / "commerce-ops/scripts/shopping_eval/engine-worker.mjs"), str(inputs)],
+        [node, str(root / "commerce-ops/tools/evaluation/shopping_eval/engine-worker.mjs"), str(inputs)],
         cwd=root,
         text=True,
         capture_output=True,

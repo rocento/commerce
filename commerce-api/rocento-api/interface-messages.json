@@ -8765,6 +8765,46 @@
       "ar": {
         "other": "إغلاق العرض"
       }
+    },
+    {
+      "key": "checkout.meta_preferences",
+      "group": "checkout",
+      "en": {
+        "other": "Optional communication and measurement"
+      },
+      "ar": {
+        "other": "خيارات التواصل وقياس الأداء"
+      }
+    },
+    {
+      "key": "checkout.meta_whatsapp",
+      "group": "checkout",
+      "en": {
+        "other": "Send this order’s confirmation to me on WhatsApp."
+      },
+      "ar": {
+        "other": "أرسل لي تأكيد هذا الطلب عبر واتساب."
+      }
+    },
+    {
+      "key": "checkout.meta_phone",
+      "group": "checkout",
+      "en": {
+        "other": "WhatsApp number with country code"
+      },
+      "ar": {
+        "other": "رقم واتساب مع رمز الدولة"
+      }
+    },
+    {
+      "key": "checkout.meta_measurement",
+      "group": "checkout",
+      "en": {
+        "other": "Share this purchase, its value, and hashed account and contact details with Meta to measure advertising performance."
+      },
+      "ar": {
+        "other": "أوافق على مشاركة عملية الشراء وقيمتها ومعرّفات الحساب وبيانات التواصل بعد تحويلها إلى بصمات رقمية مع ميتا لقياس أداء الإعلانات."
+      }
     }
   ]
 }

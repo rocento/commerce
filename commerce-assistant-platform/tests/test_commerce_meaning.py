@@ -554,7 +554,7 @@ def test_meaning_wire_fixtures_and_generation():
     from pathlib import Path
 
     root = Path(__file__).resolve().parents[2]
-    generator = root / "commerce-ops/scripts/contracts/generate_meaning_contracts.py"
+    generator = root / "commerce-ops/tools/contracts/generate_meaning_contracts.py"
     spec = importlib.util.spec_from_file_location("meaning_generator", generator)
     module = importlib.util.module_from_spec(spec)
     spec.loader.exec_module(module)

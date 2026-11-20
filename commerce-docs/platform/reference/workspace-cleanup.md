@@ -31,9 +31,9 @@ When moving a guide, update repository incoming links and preserve useful old he
 From the repository root:
 
 ```sh
-python3 commerce-ops/scripts/checks/check-documentation.py
-python3 -m unittest discover -s commerce-ops/scripts/tests -p test_documentation.py
-python3 -m unittest discover -s commerce-ops/scripts/tests -p test_output_inventory.py
+python3 commerce-ops/tools/checks/check-documentation.py
+python3 -m unittest discover -s commerce-ops/tests/operations -p test_documentation.py
+python3 -m unittest discover -s commerce-ops/tests/operations -p test_output_inventory.py
 ```
 
 The checker validates maintained documentation links, Markdown heading anchors, guide structure and owning indexes. Coverage includes mobile specs and the explicitly listed mobile/automation entry points. Source-adjacent provenance, agent instructions, platform standards and font licenses retain their formats but their links are checked. Generated workspaces, dependencies and historical evidence copies under `commerce-output` and `commerce-artifacts` are excluded. CI runs portable checks and their regression suites.
@@ -41,13 +41,13 @@ The checker validates maintained documentation links, Markdown heading anchors, 
 Maintained Markdown must not link directly into `commerce-output`, `commerce-artifacts` or `.local/`, even when those targets exist on one workstation. Link to the [evidence catalog](../evidence/README.md) and retain the exact historical payload path as inline code. The catalog contains metadata, not credentials or raw customer data. Default checks validate catalog structure without requiring local payloads. On the workstation holding the evidence, also run:
 
 ```sh
-python3 commerce-ops/scripts/checks/check-documentation.py --check-local-evidence
+python3 commerce-ops/tools/checks/check-documentation.py --check-local-evidence
 ```
 
 ## File cleanup
 
 - Remove a superseded guide after moving useful content to its current owner and updating incoming links.
-- Run `python3 commerce-ops/scripts/checks/check-documentation.py`; CI checks maintained Markdown and the checker's regression tests.
+- Run `python3 commerce-ops/tools/checks/check-documentation.py`; CI checks maintained Markdown and the checker's regression tests.
 - Before removing code, check imports, dynamic loading, command entry points, generated contracts, fixtures and operational callers. A `legacy` name alone does not establish dead code.
 - Preserve applied database migrations and compatibility needed by existing records or installations.
 - Keep credentials, database state and unique evidence in their protected locations. `.local`, `commerce-artifacts` and `commerce-output` are not disposable solely because of their names.
@@ -58,14 +58,14 @@ python3 commerce-ops/scripts/checks/check-documentation.py --check-local-evidenc
 
 Logs, manifests and archives describe their recorded candidates and environments. They do not establish current release readiness; use [testing and verification](../operations/testing.md).
 
-Create each new run in `commerce-output/YYYY-MM-DD-purpose/` with `manifest.json`, `evidence/`, `deliverables/` and `work/`. From the repository root, run `python3 commerce-ops/scripts/maintenance/new-output-run.py PURPOSE` to create this structure. Fill in the manifest's owner, exact candidate identity and verification details before treating its results as evidence. Legacy scripts with hard-coded output paths require their inputs to be regenerated or their output destinations updated before reuse.
+Create each new run in `commerce-output/YYYY-MM-DD-purpose/` with `manifest.json`, `evidence/`, `deliverables/` and `work/`. From the repository root, run `python3 commerce-ops/workflows/maintenance/new-output-run.py PURPOSE` to create this structure. Fill in the manifest's owner, exact candidate identity and verification details before treating its results as evidence. Legacy scripts with hard-coded output paths require their inputs to be regenerated or their output destinations updated before reuse.
 
 The run owner records purpose, exact source/candidate identity (including a patch hash when dirty), commands, environment, status, verification limits, retained file hashes, dependencies, consumers, archive location and retention decision. Replace template placeholders before treating a manifest as evidence. `files` entries record relative paths, byte sizes and SHA-256 hashes. `depends_on` and `consumed_by` identify run paths or maintained scripts. Use `active`, `complete`, `failed` or `superseded` for run status. Retention is `retain`, `archive` or `regenerable`; an empty archive location means no durable copy is registered. Do not infer completion or deletion eligibility from an old date or filename.
 
 Inventory metadata without reading file contents or changing outputs, from the repository root:
 
 ```sh
-python3 commerce-ops/scripts/maintenance/inventory-outputs.py > /tmp/commerce-output-inventory.json
+python3 commerce-ops/workflows/maintenance/inventory-outputs.py > /tmp/commerce-output-inventory.json
 ```
 
 The inventory reports logical file bytes, skipped symlinks, top-level metadata candidates and nested output directories. It is a snapshot; active jobs can change during scanning. It does not detect every semantic dependency or choose deletion candidates. Inspect source and run references before changing a path. Snapshot builders should use reviewed source allowlists and exclude nested outputs unless deliberately declared as inputs.

@@ -7,4 +7,4 @@ license.workspace = true
 [dependencies]
 tokio.workspace = true
 tracing.workspace = true
-rust-s3 = { version = "0.35", default-features = false, features = ["tokio-rustls-tls"] }
+rust-s3 = { version = "0.37.2", default-features = false, features = ["tokio-rustls-tls"] }

@@ -1,0 +1,40 @@
+name: Publish reviewed merchant release
+on:
+  workflow_dispatch:
+    inputs:
+      inventory_digest:
+        description: Approved inventory SHA-256, without prefix
+        required: true
+      environment:
+        description: Existing readiness packet environment
+        required: true
+        default: aws-onboarding-test
+permissions:
+  contents: write
+jobs:
+  publish:
+    # Dedicated qualification runner with CI candidate images and reviewed packet.
+    # Never attach this runner to untrusted pull-request workflows.
+    runs-on: [self-hosted, merchant-release]
+    environment: merchant-release
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - name: Package verified release
+        env:
+          INVENTORY: ${{ inputs.inventory_digest }}
+          RELEASE_ENVIRONMENT: ${{ inputs.environment }}
+        run: |
+          [[ "$INVENTORY" =~ ^[a-f0-9]{64}$ ]]
+          [[ "$RELEASE_ENVIRONMENT" =~ ^[a-z0-9-]{1,80}$ ]]
+          python3 commerce-ops/services/onboarding/package-merchant-release.py --release "/etc/rocento/merchant-provisioning/releases/$INVENTORY" --environment "$RELEASE_ENVIRONMENT" --output "$RUNNER_TEMP/publish-$GITHUB_RUN_ID-$GITHUB_RUN_ATTEMPT"
+      - name: Publish pinned private assets
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+          INVENTORY: ${{ inputs.inventory_digest }}
+        run: |
+          tag="merchant-$INVENTORY-$GITHUB_RUN_ID-$GITHUB_RUN_ATTEMPT"
+          directory="$RUNNER_TEMP/publish-$GITHUB_RUN_ID-$GITHUB_RUN_ATTEMPT"
+          gh release create "$tag" --target "$GITHUB_SHA" --title "$tag" --notes "Reviewed merchant release. Fleet configuration must pin asset ID, bundle SHA-256, source revision and inventory digest." "$directory/merchant-release.tar.gz" "$directory/release-pin.json"
+          gh release view "$tag" --json assets,url

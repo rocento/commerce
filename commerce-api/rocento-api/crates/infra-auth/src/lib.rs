@@ -2,6 +2,7 @@
 pub mod notifications;
 pub mod password;
 pub mod retention;
+pub mod secrets;
 use chrono::Utc;
 pub use password::{hash_password, verify_password};
 use rand::{distributions::Alphanumeric, Rng};

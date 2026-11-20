@@ -7,12 +7,25 @@ code maintained in `commerce-api/`, `commerce-web/`, or
 
 ## Ownership boundaries
 
-- `compose/` owns shared local and Rocento service definitions.
-- `scripts/` owns reusable operator and developer commands; see its
+- `compose/base/` owns shared services and persistent identities;
+  `compose/components/` owns optional reusable services; and
+  `compose/overlays/` owns local, cloud, and demo-specific settings.
+  Commands selecting nested Compose files must set the Compose project directory
+  to `commerce-ops/compose` so build contexts and mounts keep resolving.
+- `local/` owns workstation launchers, setup, onboarding dependencies, and
+  preview helpers.
+- `workflows/` owns release, demo and maintenance procedures implemented in code.
+  Read its agent guide before moving command dependencies.
+- `tools/` owns checks, contract generators, asset generators and evaluation tooling.
+- `tests/operations/` owns the operations regression suite; service tests stay
+  with their services.
+- `scripts/` retains historical evidence harnesses; see its
   [agent guide](scripts/AGENTS.md).
-- `onboarding/` owns only local dependencies for onboarding API development.
-- `deploy/` owns Rocento platform deployment tooling and inputs; see its
-  [agent guide](deploy/AGENTS.md).
+- `cloud/` owns provider adapters, shared transport, and canonical host operations.
+- `services/` owns assistant, contact, health-dashboard, observability, rengine and native-preview
+  installation/configuration assets. Keep application runtimes with their apps.
+- `deploy/` contains remaining deployment assets and compatibility paths; see its
+  [agent guide](deploy/AGENTS.md) before changing those boundaries.
 - `tasks/` explains workflows and links to canonical code. Keep procedures
   concise and avoid duplicating implementation details that drift.
 
@@ -27,3 +40,76 @@ code maintained in `commerce-api/`, `commerce-web/`, or
   separate workflows with separate approvals and owners.
 - Update CI path filters and partial upload manifests when moving owned files.
 - Do not run production deployment commands while doing repository refactoring.
+
+## Documentation ownership
+
+- `README.md` owns task routing; `COMMANDS.md` owns invocation and target rules;
+  `tasks/` owns operator procedures. Keep the existing `tasks/` name.
+- `REFACTOR-PLAN.md` owns migration status and the next steps. Update it instead
+  of creating a new phase report or progress Markdown file.
+- Create an area README only for a distinct ownership or dependency boundary.
+  Link to existing procedures instead of copying them into folder guides.
+- Provider guides own access/setup differences; shared tasks describe the
+  common workflow. State supported AWS/GCP capabilities accurately.
+- Before removing a document, preserve unique content and update inbound links,
+  heading anchors, catalog paths, and documentation-checker coverage.
+- Keep historical validation claims attached to their original batch; report
+  current validation separately.
+
+Keep only `README.md`, `COMMANDS.md`, `AGENTS.md` and the temporary migration
+plan as root Markdown guides. Do not add parallel `docs/`, `runbooks/`, `archive/`,
+`old/` or `misc/` trees. Extend an existing owner before creating a new guide.
+After migration acceptance, retire the plan once its remaining decisions are
+resolved; keep actual evidence in its existing location.
+
+| Owner | Documentation responsibility |
+| --- | --- |
+| Root README | One task menu and concise directory map |
+| COMMANDS | Public invocation, target precedence, effects and supported capabilities |
+| Task guides | Prerequisites, execution location, explicit target, steps, expected result and failure diagnosis |
+| Area READMEs | Ownership, dependencies and file selection; link to shared procedures |
+| Provider guides | Access, VM prerequisites, credential references and provider-specific exceptions |
+| Configuration guide | Template and inventory ownership; link to target precedence |
+| Agent guides | Editing, naming and verification constraints |
+| Temporary plan | Current migration status, compatibility decisions and dated validation limits |
+
+## Dependency and move checks
+
+Local commands must not depend on provider launchers or host-generated files.
+Host commands must not read workstation target files or keys. Providers resolve
+access details; shared libraries own transport and jobs; host commands own locked
+activation and diagnostics. Preserve AWS/GCP transfer and target-validation
+contracts rather than introducing provider-specific decisions into generic helpers.
+
+Keep `bin/ops` a thin dispatcher using argument arrays. Public routes belong in
+`commands.json`; canonical implementation and data paths belong in
+`config/entrypoints.json`. Update both applicable inventories with their callers.
+Do not create empty categories solely to make directory trees symmetrical.
+
+For each source move, update imports, CI filters, build contexts, catalog entries,
+full/partial upload manifests and documentation together. Check affected fixtures:
+transport and job failure behavior, installed wrapper resolution, source exclusion
+boundaries, and Compose resolution with synthetic inputs where relevant. Preserve
+project/service/volume/network identities and the Compose project directory.
+Run affected checks once; broaden when failures or dependency changes justify it.
+Historical pass counts do not validate subsequent changes.
+
+Private workstation state belongs under ignored `.local/commerce-ops/`, generated
+reports under `commerce-output/`, and protected host runtime state under its
+existing installed paths. Preserve permissions and references when relocating
+private inputs. Never put private values in reports, catalogs or test fixtures.
+
+## Naming
+
+Use lowercase kebab-case for folders and shell commands, snake_case for
+importable Python modules, and the owning language's conventions elsewhere.
+Name commands for their action and domain. Preserve public CLI arguments and
+installed filenames until all consumers migrate; do not rename systemd units,
+Compose identities, or runtime data paths merely for source consistency.
+
+For Python, distinguish executable wrappers from importable modules: a
+`check-domain.py` command may delegate to `check_domain.py`. Do not rename
+importable packages to kebab-case or rename published commands merely to match
+module spelling. Historical phase filenames and installed `ec2-*` adapters
+retain their documented identities. Folder guides own local boundaries, not
+copies of the root task menu or step-by-step procedures from task guides.

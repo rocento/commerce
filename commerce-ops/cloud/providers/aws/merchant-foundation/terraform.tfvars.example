@@ -1,0 +1,14 @@
+# Copy into ignored .local/commerce-ops/; never put credentials in tfvars.
+account_id             = "REPLACE_ACCOUNT_ID"
+region                 = "eu-central-1"
+environment            = "aws-onboarding-test"
+vpc_id                 = "REPLACE_EXISTING_VPC"
+subnet_id              = "REPLACE_EXISTING_PUBLIC_SUBNET"
+controller_ssh_cidr     = "REPLACE_CONTROLLER_IPV4/32"
+merchant_ami_id         = "REPLACE_CANONICAL_UBUNTU_2404_AMI"
+instance_type          = "t4g.xlarge" # Proposed ARM64 / 4 vCPUs / 16 GiB; requires approved matching release.
+state_bucket_name      = "REPLACE_GLOBALLY_UNIQUE_BUCKET_NAME"
+state_key_prefix       = "merchant-fleet/onboarding-test"
+root_volume_gib        = 100
+# Fill from https://www.cloudflare.com/ips-v4 after review; empty fails closed.
+https_proxy_ipv4_cidrs  = []

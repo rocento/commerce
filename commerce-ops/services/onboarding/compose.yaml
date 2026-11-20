@@ -1,0 +1,57 @@
+# Dedicated Linux test stack; runtime secrets stay outside the source tree.
+name: rocento-onboarding-test
+services:
+  postgres:
+    image: postgres:17-bookworm
+    restart: unless-stopped
+    env_file: /opt/rocento-onboarding/config/postgres.env
+    ports: ["127.0.0.1:5439:5432"]
+    volumes: ["database:/var/lib/postgresql/data"]
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U onboarding -d onboarding"]
+      interval: 5s
+      timeout: 3s
+      retries: 20
+  api:
+    image: rocento-onboarding-api:test
+    build: ../../../commerce-api/ops-api
+    restart: unless-stopped
+    network_mode: host
+    env_file: /opt/rocento-onboarding/config/api.env
+    depends_on:
+      postgres:
+        condition: service_healthy
+  provisioning-worker:
+    profiles: ["container-worker"]
+    image: rocento-onboarding-api:test
+    command: ["provisioning-worker"]
+    restart: unless-stopped
+    network_mode: host
+    env_file: /opt/rocento-onboarding/config/worker.env
+    depends_on:
+      postgres:
+        condition: service_healthy
+    # No Docker socket, cloud credentials, or unreviewed host executable is mounted.
+    # Jobs remain blocked until a reviewed deployment executor is installed.
+  web:
+    image: rocento-onboarding-web:test
+    build:
+      context: ../../../commerce-web
+      dockerfile: apps/onboarding/Dockerfile
+    restart: unless-stopped
+    network_mode: host
+    environment:
+      CUSTOMER_ORIGIN: https://onboarding.rocento.com
+      CONTROL_API_URL: http://127.0.0.1:4100
+  ops:
+    image: rocento-onboarding-ops:test
+    build:
+      context: ../../../commerce-web
+      dockerfile: apps/onboarding-ops/Dockerfile
+    restart: unless-stopped
+    network_mode: host
+    environment:
+      STAFF_ORIGIN: https://ops.rocento.com
+      CONTROL_API_URL: http://127.0.0.1:4100
+volumes:
+  database:

@@ -67,7 +67,7 @@ test('cleanup and reviewed feedback/evaluation workflow on PostgreSQL',{skip:!ur
   });
   await t.test('shared grants exclude customer feedback and reviewed case contents',async()=>{
    await db.query(`DO $$ BEGIN IF NOT EXISTS(SELECT 1 FROM pg_roles WHERE rolname='ai_language_runtime') THEN CREATE ROLE ai_language_runtime NOLOGIN; END IF; END $$`);
-   await db.query(await readFile(new URL('../../../../deploy/assistant/shared-language-tenants.sql',import.meta.url),'utf8'));
+   await db.query(await readFile(new URL('../../../../commerce-ops/services/assistant/shared-language-tenants.sql',import.meta.url),'utf8'));
    const grants=(await db.query("SELECT has_table_privilege('ai_language_runtime','resolution.feedback','SELECT') AS feedback,has_table_privilege('ai_language_runtime','evaluation.cases','SELECT') AS cases,has_table_privilege('ai_language_runtime','release.production_status','SELECT') AS status")).rows[0];assert.deepEqual(grants,{feedback:false,cases:false,status:true});
   });
  }finally{await c?.end();await admin.query(`DROP DATABASE IF EXISTS "${name}" WITH (FORCE)`);await admin.end();}

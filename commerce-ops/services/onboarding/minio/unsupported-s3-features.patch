@@ -1,0 +1,44 @@
+--- a/cmd/auth-handler.go
++++ b/cmd/auth-handler.go
+@@ -632,6 +632,23 @@
+ 	return false
+ }
+ 
++// hasUnsupportedS3Feature disables S3 Select and replication metadata for this
++// single-store media service. These features are not part of its S3 contract.
++// Applying the upstream CVE-2026-39414 and CVE-2026-34204 workarounds here
++// protects direct S3 access as well as requests passing through a proxy.
++func hasUnsupportedS3Feature(r *http.Request) bool {
++	if r.URL.Query().Has("select") {
++		return true
++	}
++	for name := range r.Header {
++		if strings.HasPrefix(strings.ToLower(name), "x-minio-replication-") ||
++			strings.EqualFold(name, "X-Minio-Source-Replication-Request") {
++			return true
++		}
++	}
++	return false
++}
++
+ // setAuthMiddleware to validate authorization header for the incoming request.
+ func setAuthMiddleware(h http.Handler) http.Handler {
+ 	// handler for validating incoming authorization headers.
+@@ -645,6 +662,17 @@
+ 			}
+ 			defer logger.AuditLog(r.Context(), w, r, mustGetClaimsFromToken(r))
+ 			writeErrorResponse(r.Context(), w, errorCodes.ToAPIErr(ErrSignatureVersionNotSupported), r.URL)
++			atomic.AddUint64(&globalHTTPStats.rejectedRequestsAuth, 1)
++			return
++		}
++
++		if hasUnsupportedS3Feature(r) {
++			if ok {
++				tc.FuncName = "handler.Auth"
++				tc.ResponseRecorder.LogErrBody = true
++			}
++			defer logger.AuditLog(r.Context(), w, r, mustGetClaimsFromToken(r))
++			writeErrorResponse(r.Context(), w, errorCodes.ToAPIErr(ErrNotImplemented), r.URL)
+ 			atomic.AddUint64(&globalHTTPStats.rejectedRequestsAuth, 1)
+ 			return
+ 		}

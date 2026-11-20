@@ -1,0 +1,1 @@
+rocento-provisioner ALL=(root) NOPASSWD: /usr/local/lib/rocento/merchant-executor.py ""

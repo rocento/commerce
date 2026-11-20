@@ -1,0 +1,13 @@
+[Unit]
+Description=Reconcile merchant servers across AWS, Google Cloud and Hetzner
+After=docker.service network-online.target
+Requires=docker.service
+
+[Service]
+Type=oneshot
+User=root
+UMask=0077
+ExecStart=/usr/bin/python3 /usr/local/lib/rocento/merchant_fleet.py
+TimeoutStartSec=1500
+# Cloud SDK credentials are installed for this root service on the controller.
+# No cloud credential is copied into merchant VM images or merchant containers.

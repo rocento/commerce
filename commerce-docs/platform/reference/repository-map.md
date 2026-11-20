@@ -12,17 +12,18 @@
 | `commerce-assistant-platform/` | Python assistant and Node language runtime; meaning, planning and language-resolution assets live in its `contracts/` folder |
 | [commerce-docs](../../README.md) | Consolidated AI, frontend, admin UI and backend service guides |
 | [Mobile documentation](../../mobile/README.md) | Canonical native development, App Studio, capabilities, plans and dated history |
-| `commerce-ops/scripts/` | Agent guide, [entry-point manifest](../../../commerce-ops/scripts/entrypoints.json), canonical grouped implementations |
-| `commerce-ops/scripts/contracts/`, `commerce-ops/scripts/generation/` | Contract generation/adapters and capability/asset generation |
-| `commerce-ops/scripts/local/` | Local setup and Compose launchers |
-| `commerce-ops/scripts/checks/`, `commerce-ops/scripts/evaluation/`, `commerce-ops/scripts/release/` | Repository checks, assistant evaluations and release/durability tooling |
-| `commerce-ops/scripts/demo/`, `commerce-ops/scripts/maintenance/` | Demo helpers and maintenance operations; dated demo commands live in `demo/history/` |
-| `commerce-ops/scripts/tests/` | Command and deployment regression tests |
-| `commerce-ops/deploy/` | [Deployment entry point](../../../commerce-ops/deploy/README.md), service deployment and native preview worker tooling |
-| `commerce-ops/deploy/aws-deploy/`, `commerce-ops/deploy/ec2/` | Workstation launchers, EC2 server commands, renderers, templates and protected generated configuration/state |
-| `commerce-ops/deploy/aws-automation/` | Android preview lifecycle service, IAM policies, installer and mocked tests |
+| `commerce-ops/scripts/` | Historical evidence harnesses and compatibility paths |
+| `commerce-ops/tools/contracts/`, `commerce-ops/tools/generation/` | Contract generation/adapters and capability/asset generation |
+| `commerce-ops/local/` | Local platform launchers, onboarding dependencies and preview helpers |
+| `commerce-ops/scripts/local/` | Compatibility links for workstation and service helpers |
+| `commerce-ops/tools/checks/`, `commerce-ops/tools/evaluation/`, `commerce-ops/workflows/release/` | Repository checks, assistant evaluations and release/durability tooling |
+| `commerce-ops/workflows/demo/`, `commerce-ops/workflows/maintenance/` | Demo helpers and maintenance operations; dated demo commands live in `demo/history/` |
+| `commerce-ops/tests/operations/` | Command and deployment regression tests |
+| `commerce-ops/deploy/` | [Deployment entry point](../../../commerce-ops/deploy/README.md), retained deployment assets and installed compatibility adapters |
+| `commerce-ops/cloud/providers/`, `commerce-ops/cloud/lib/`, `commerce-ops/deploy/ec2/` | Provider launchers and shared cloud helpers; EC2 server commands, renderers, templates and protected generated configuration/state. Private targets, credentials, and bootstrap/TLS settings live under ignored `.local/commerce-ops/`. |
+| `commerce-ops/services/native-preview/aws-controller/` | Android preview lifecycle service, IAM policies, installer and mocked tests |
 | `commerce-ops/compose/` | Application Compose files and optional service overlays |
-| `commerce-ops/onboarding/` | Local dependencies for onboarding API development |
+| `commerce-ops/local/onboarding/` | Local dependencies for onboarding API development |
 | `commerce-ops/tasks/` | Entry guides for local development, onboarding, deployment and recovery |
 | `commerce-assets/`, `commerce-demo/` | Application/demo assets and presets |
 | `commerce-docs/ai-service/history/` | Historical implementation and publication reports |
@@ -42,3 +43,6 @@ When moving another command family, update root discovery, imports, scratch-copy
 fixtures, CI and deployment source lists before retiring old paths. Compose
 files live in `commerce-ops/compose/`; service code and installed runtime paths retain
 their declared locations. See the [command reference](scripts.md) for current entry points.
+
+The canonical [implementation inventory](../../../commerce-ops/config/entrypoints.json)
+lives under `commerce-ops/config/`; service assets live under `commerce-ops/services/`.

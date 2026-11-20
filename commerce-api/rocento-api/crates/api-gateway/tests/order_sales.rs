@@ -54,12 +54,32 @@ async fn get(app: &Router, path: &str, cookie: &str) -> (u16, Value) {
 const COOKIE: &str = "admin_session=geo-session";
 
 #[sqlx::test(migrations = "../../migrations")]
-async fn sales_page_reads_real_bestseller_seed_without_fabricating_payments(pool: PgPool) {
+async fn sales_page_reads_real_bestseller_seed_without_collecting_or_mutating_payments(
+    pool: PgPool,
+) {
     sqlx::raw_sql("INSERT INTO catalog.categories(id,name,slug) VALUES(md5('geo-category')::uuid,'Geo','geo'); INSERT INTO catalog.products(id,sku,slug,name,description,price,currency,unit,category_id,active,in_stock) SELECT md5('geo-product-'||g)::uuid,'GEO-'||g,'geo-'||g,'Product '||g,'Test',10,'USD','each',md5('geo-category')::uuid,true,true FROM generate_series(1,8) g;").execute(&pool).await.unwrap();
-    sqlx::raw_sql(include_str!("../../../../../commerce-assets/demo/seed-bestsellers.sql"))
-        .execute(&pool)
-        .await
-        .unwrap();
+    sqlx::raw_sql(include_str!(
+        "../../../../../commerce-assets/demo/seed-bestsellers.sql"
+    ))
+    .execute(&pool)
+    .await
+    .unwrap();
+    // The demo seed creates COD obligations, never payment collection. A sales
+    // read must preserve every payment field and must not add transactions.
+    let before: Vec<Value> = sqlx::query_scalar(
+        "SELECT to_jsonb(p) FROM payments.payment_transactions p ORDER BY order_id",
+    )
+    .fetch_all(&pool)
+    .await
+    .unwrap();
+    assert_eq!(before.len(), 8);
+    let uncollected: bool = sqlx::query_scalar(
+        "SELECT bool_and(p.method='cod' AND p.collected_at IS NULL AND p.collected_by IS NULL AND p.amount_due=o.total AND p.currency=o.currency) FROM payments.payment_transactions p JOIN orders.orders o ON o.id=p.order_id",
+    )
+    .fetch_one(&pool)
+    .await
+    .unwrap();
+    assert!(uncollected);
     let app = app(&pool, vec!["orders.read"]).await;
     let (status, body) = get(&app, "/v1/admin/orders/sales?offset=0", COOKIE).await;
     assert_eq!(status, 200, "{body}");
@@ -74,12 +94,15 @@ async fn sales_page_reads_real_bestseller_seed_without_fabricating_payments(pool
     assert!(rows
         .iter()
         .all(|row| row.get("payment").is_none() && row["items"][0]["price"] == "10.00"));
+    let after: Vec<Value> = sqlx::query_scalar(
+        "SELECT to_jsonb(p) FROM payments.payment_transactions p ORDER BY order_id",
+    )
+    .fetch_all(&pool)
+    .await
+    .unwrap();
     assert_eq!(
-        sqlx::query_scalar::<_, i64>("SELECT count(*) FROM payments.payment_transactions")
-            .fetch_one(&pool)
-            .await
-            .unwrap(),
-        0
+        after, before,
+        "Sales reads must not change payment obligations"
     );
 }
 

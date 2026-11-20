@@ -68,6 +68,8 @@ struct QuoteInput {
 #[derive(Deserialize)]
 #[serde(deny_unknown_fields)]
 struct PlaceInput {
+    #[serde(default)]
+    meta_consent: domain_admin_operations::meta::Consent,
     quote_id: Uuid,
     idempotency_key: Uuid,
 }
@@ -88,9 +90,19 @@ async fn place(
     h: HeaderMap,
     Json(i): Json<PlaceInput>,
 ) -> Result<Json<domain_orders::Detail>> {
-    let c = a.customers.require_verified(identity::bearer(&h)?).await?;
+    let token = a.customers.decode_access_token(identity::bearer(&h)?)?;
+    let mut connection = infra_db::acquire_connection(&a.customers.pool).await?;
+    let c = a
+        .customers
+        .require_verified_on(&mut connection, &token)
+        .await?;
+    crate::meta::service(a.admins.pool.clone())?
+        .record_consent_on(&mut connection, c.id, i.quote_id, i.meta_consent)
+        .await?;
     Ok(Json(
-        a.cart.place(c.id, i.quote_id, i.idempotency_key).await?,
+        a.cart
+            .place_with_connection(connection, c.id, i.quote_id, i.idempotency_key)
+            .await?,
     ))
 }
 #[derive(Deserialize)]

@@ -271,7 +271,7 @@ def test_generated_schema_and_node_types_match_python_source():
     subprocess.run(
         [
             sys.executable,
-            str(ROOT / "commerce-ops/scripts/contracts/generate_language_resolution_contract.py"),
+            str(ROOT / "commerce-ops/tools/contracts/generate_language_resolution_contract.py"),
             "--check",
         ],
         cwd=ROOT,

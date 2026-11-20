@@ -7,6 +7,14 @@ use std::sync::{
 };
 use uuid::Uuid;
 
+// try_update is unstable on the production Rust 1.94 toolchain.
+#[allow(deprecated, reason = "Retain compatibility with production Rust 1.94")]
+fn consume_failure(failures: &AtomicUsize) -> bool {
+    failures
+        .fetch_update(Ordering::SeqCst, Ordering::SeqCst, |n| n.checked_sub(1))
+        .is_ok()
+}
+
 #[derive(Default)]
 struct Inbox {
     messages: Mutex<Vec<Notification>>,
@@ -17,11 +25,7 @@ impl Transport for Inbox {
     fn send<'a>(&'a self, id: Uuid, notification: &'a Notification) -> Delivery<'a> {
         Box::pin(async move {
             self.attempted_ids.lock().unwrap().push(id);
-            if self
-                .failures
-                .fetch_update(Ordering::SeqCst, Ordering::SeqCst, |n| n.checked_sub(1))
-                .is_ok()
-            {
+            if consume_failure(&self.failures) {
                 return Err("provider_unavailable");
             }
             self.messages.lock().unwrap().push(notification.clone());
@@ -355,11 +359,7 @@ async fn capture_mail(
     axum::Json(message): axum::Json<serde_json::Value>,
 ) -> axum::http::StatusCode {
     inbox.messages.lock().unwrap().push(message);
-    if inbox
-        .failures
-        .fetch_update(Ordering::SeqCst, Ordering::SeqCst, |n| n.checked_sub(1))
-        .is_ok()
-    {
+    if consume_failure(&inbox.failures) {
         axum::http::StatusCode::SERVICE_UNAVAILABLE
     } else {
         axum::http::StatusCode::OK

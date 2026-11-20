@@ -95,7 +95,7 @@ def test_generated_typescript_contract_is_current():
     subprocess.run(
         [
             sys.executable,
-            str(root / "commerce-ops/scripts/contracts/generate_comparison_operators.py"),
+            str(root / "commerce-ops/tools/contracts/generate_comparison_operators.py"),
             "--check",
         ],
         cwd=root,

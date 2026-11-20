@@ -25,9 +25,9 @@ separate dependency environments.
 For Python boundary changes, run from the repository root:
 
 ```sh
-python3 commerce-ops/scripts/checks/check-ai-architecture.py
-python3 -m unittest discover -s commerce-ops/scripts/tests -p test_ai_architecture.py
-commerce-assistant-platform/.venv/bin/python commerce-ops/scripts/generation/generate_ai_capabilities.py --check
+python3 commerce-ops/tools/checks/check-ai-architecture.py
+python3 -m unittest discover -s commerce-ops/tests/operations -p test_ai_architecture.py
+commerce-assistant-platform/.venv/bin/python commerce-ops/tools/generation/generate_ai_capabilities.py --check
 ```
 
 Run focused `tests/` suites from `commerce-assistant-platform/` with `.venv/bin/python -m pytest`.

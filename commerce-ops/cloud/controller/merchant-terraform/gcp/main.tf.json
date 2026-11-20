@@ -1,0 +1,71 @@
+{
+  "terraform": {
+    "required_version": ">= 1.10.0, < 2.0.0",
+    "required_providers": {
+      "google": {
+        "source": "hashicorp/google",
+        "version": "7.22.0"
+      }
+    },
+    "backend": {
+      "s3": {}
+    }
+  },
+  "variable": {
+    "host_id": {
+      "type": "string",
+      "validation": {
+        "condition": "${can(regex(\"^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$\", var.host_id))}",
+        "error_message": "The host identity must be a canonical UUID."
+      }
+    },
+    "cloud_init": {
+      "type": "string",
+      "sensitive": true,
+      "validation": {
+        "condition": "${startswith(var.cloud_init, \"#cloud-config\\n\")}",
+        "error_message": "Cloud-init must use the cloud-config format."
+      }
+    },
+    "profile": {
+      "type": "object({ project = string, zone = string, instanceTemplate = string })",
+      "validation": {
+        "condition": "${can(regex(\"^https://(www|compute)\\\\.googleapis\\\\.com/compute/v1/projects/[a-z0-9-]+/(global|regions/[a-z0-9-]+)/instanceTemplates/[a-z0-9-]+$\", var.profile.instanceTemplate))}",
+        "error_message": "Google requires a complete instance template URL."
+      }
+    },
+    "instance_name": {
+      "type": "string",
+      "validation": {
+        "condition": "${can(regex(\"^merchent-[a-z0-9][a-z0-9-]{1,38}[a-z0-9]$\", var.instance_name))}",
+        "error_message": "Use merchent- followed by the store subdomain."
+      }
+    }
+  },
+  "provider": {
+    "google": {
+      "project": "${var.profile.project}",
+      "zone": "${var.profile.zone}"
+    }
+  },
+  "resource": {
+    "google_compute_instance_from_template": {
+      "merchant": {
+        "lifecycle": {
+          "prevent_destroy": true
+        },
+        "name": "${var.instance_name}",
+        "source_instance_template": "${var.profile.instanceTemplate}",
+        "labels": {
+          "rocento-host": "${var.host_id}"
+        },
+        "metadata": {
+          "user-data": "${var.cloud_init}",
+          "block-project-ssh-keys": "true",
+          "enable-oslogin": "FALSE"
+        },
+        "deletion_protection": true
+      }
+    }
+  }
+}

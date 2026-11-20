@@ -50,6 +50,11 @@ export function message(error: unknown) {
         RESERVATION_EXPIRED:
           "This reservation has expired. Contact support before continuing.",
         UNAUTHENTICATED: "Your session has expired. Sign in again.",
+        INVALID_PAYMENT_CODE: "The code is incorrect or has not been issued yet. Check the six-digit code sent by Rocento.",
+        PAYMENT_CODE_LOCKED: "Too many incorrect attempts. Ask Rocento for a new code.",
+        PAYMENT_NOT_CONFIGURED: "Rocento payment instructions are not ready yet. Please contact Rocento before paying.",
+        RESERVATION_REQUIRED: "Reserve your store address before requesting payment.",
+        PAYMENT_EXPIRED: "This payment request has expired. Contact Rocento if you already paid.",
       } as Record<string, string>
     )[code] ??
     "The service is unavailable. Your changes have not been saved; please try again."

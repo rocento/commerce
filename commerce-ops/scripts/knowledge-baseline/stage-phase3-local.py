@@ -55,7 +55,7 @@ async def main():
                         )
                     )
                 await conn.execute(
-                    (ROOT / "commerce-ops/deploy/assistant/shared-tenants.sql").read_text()
+                    (ROOT / "commerce-ops/services/assistant/shared-tenants.sql").read_text()
                 )
         out = ROOT / "output/enterprise-knowledge-phase3-20261010"
         pack = DomainPack.model_validate_json((out / "candidate.json").read_text())

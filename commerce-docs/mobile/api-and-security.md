@@ -14,7 +14,7 @@ Published `/v1/mobile/config` loading supports compatibility validation, conditi
 
 `/v1/mobile/preview/{session}`, `/ack` and `/assets/{asset}` serve authorized draft snapshots, revision/checksum acknowledgements and owned assets. Preview capabilities are hashed on the server and held only in native memory. Requests check tenant/environment, issuer access, expiry and revocation. Draft data never overwrites the published cache.
 
-Worker-start/frame proxy routes connect Studio to the implemented `commerce-ops/deploy/native-preview` pilot. The gateway routes authorized frame/video, bounded input and lifecycle requests by stored platform/implementation to configured workers. Local iOS and Android workers exist; 2026-10-14 records establish the shared Android EC2 pilot. Hosted iOS and broader reliability acceptance remain open. See [native preview](native-preview.md).
+Worker-start/frame proxy routes connect Studio to the implemented `commerce-ops/services/native-preview` pilot. The gateway routes authorized frame/video, bounded input and lifecycle requests by stored platform/implementation to configured workers. Local iOS and Android workers exist; 2026-10-14 records establish the shared Android EC2 pilot. Hosted iOS and broader reliability acceptance remain open. See [native preview](native-preview.md).
 
 ## Persistence and trust
 

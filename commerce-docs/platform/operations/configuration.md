@@ -9,7 +9,7 @@ Copy `.env.example` to a new local `.env` for Compose setup; review and preserve
 | Admin UI / previews | [Admin settings](../../admin-ui/content-and-settings.md) |
 | AI identity, models, budgets and persistence | [AI configuration](../../ai-service/configuration.md) |
 | Public merchant identity / renderer | [Backend publication](../../backend/publication.md), [renderer](../../frontend/publication.md) |
-| Hosted mail | [SMTP setup](../../../commerce-ops/deploy/aws-deploy/SMTP.md) |
+| Hosted mail | [SMTP setup](../../../commerce-ops/cloud/providers/aws/SMTP.md) |
 
 ## Optional overlays
 

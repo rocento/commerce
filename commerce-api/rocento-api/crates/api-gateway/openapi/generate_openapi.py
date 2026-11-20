@@ -309,6 +309,10 @@ from relationships_contract import extend as extend_relationships
 extend_relationships(schemas, endpoint, paths)
 from account_deletion_contract import extend as extend_account_deletion
 extend_account_deletion(schemas, endpoint, paths)
+from google_contract import extend as extend_google
+extend_google(schemas, endpoint, paths)
+from meta_contract import extend as extend_meta
+extend_meta(schemas, endpoint, paths)
 from admission_contract import extend as extend_admission
 extend_admission(paths)
 # Catalog reads are anonymous by default, but credentials personalize offers.

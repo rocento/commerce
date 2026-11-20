@@ -35,12 +35,12 @@ async def initialize(conn):
         await conn.execute(
             path.read_text().replace(":'tenant_id'::uuid", f"'{TENANT}'::uuid")
         )
-    await conn.execute((ROOT / "commerce-ops/deploy/assistant/shared-tenants.sql").read_text())
+    await conn.execute((ROOT / "commerce-ops/services/assistant/shared-tenants.sql").read_text())
     # Both ordinary reruns and shared reapplication retain isolation and grants.
     await conn.execute(
         (ROOT / "commerce-assistant-platform/migrations/011_domain_evidence.sql").read_text()
     )
-    await conn.execute((ROOT / "commerce-ops/deploy/assistant/shared-tenants.sql").read_text())
+    await conn.execute((ROOT / "commerce-ops/services/assistant/shared-tenants.sql").read_text())
 
 
 def test_shared_database_staging_tenant_isolation_immutability_revocation_and_rollback():

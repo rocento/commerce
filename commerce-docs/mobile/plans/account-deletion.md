@@ -32,7 +32,7 @@ Engagement erasure removes live journey/marketing/inbox data and writes a tombst
 
 ## Rollout requirements and limits
 
-Apply commerce and engagement migrations, assistant migration `012_account_deletion.sql`, and the assistant ingress route before releasing the native app. Shared assistant deployments must reapply `commerce-ops/deploy/assistant/shared-tenants.sql` in the same migration transaction, following the existing shared-database procedure. Configure approved merchant retention rules before enabling deletion.
+Apply commerce and engagement migrations, assistant migration `012_account_deletion.sql`, and the assistant ingress route before releasing the native app. Shared assistant deployments must reapply `commerce-ops/services/assistant/shared-tenants.sql` in the same migration transaction, following the existing shared-database procedure. Configure approved merchant retention rules before enabling deletion.
 
 The worker uses existing assistant signing and ClickHouse settings. Missing assistant configuration fails closed. Only an installation that has **never stored assistant customer data** may explicitly set `ACCOUNT_DELETION_ASSISTANT_MODE=never-used`; turning chat off does not qualify. Monitor pending/failed requests and `next_attempt_at` in `customers.deletion_requests`, plus overdue rows in `customers.retained_transactions`. Process health alone does not establish deletion progress.
 

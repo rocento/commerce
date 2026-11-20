@@ -56,7 +56,7 @@ node rengine/server.mjs
 
 Open http://127.0.0.1:3190. `HOST` defaults to loopback, `PORT` to 3190 and `RENGINE_ORIGIN` to that HTTP origin. Configure each demo using `RENGINE_<STORE>_GATEWAY`, `RENGINE_<STORE>_LANGUAGE` and `RENGINE_<STORE>_ASSISTANT`. Names are uppercase, for example `RENGINE_GROCERY_LANGUAGE=http://127.0.0.1:3187`. Local default language ports 3187/3287/3387/3487 and assistant ports 8000–8003 are development placeholders: override them for the services actually running.
 
-The production [Compose service](../../../commerce-ops/compose/compose.rengine.yaml) joins the four assistant-private networks, the four commerce networks for gateway access, and its own edge network for host ingress, and binds its HTTP listener only to `127.0.0.1:3190`. It runs unprivileged with a read-only application filesystem and one writable encrypted-connection data directory, memory/CPU/PID limits, no added capabilities and no database credentials. [Nginx](../../../commerce-ops/deploy/rengine/nginx.conf) supplies TLS, same-host routing and login throttling.
+The production [Compose service](../../../commerce-ops/compose/overlays/cloud/compose.rengine.yaml) joins the four assistant-private networks, the four commerce networks for gateway access, and its own edge network for host ingress, and binds its HTTP listener only to `127.0.0.1:3190`. It runs unprivileged with a read-only application filesystem and one writable encrypted-connection data directory, memory/CPU/PID limits, no added capabilities and no database credentials. [Nginx](../../../commerce-ops/services/rengine/nginx.conf) supplies TLS, same-host routing and login throttling.
 
 ## Verification
 
@@ -64,7 +64,7 @@ The production [Compose service](../../../commerce-ops/compose/compose.rengine.y
 node --test rengine/tests/*.test.mjs
 node --check rengine/public/app.js
 bash -n deploy/aws-deploy/deploy-rengine.sh scripts/ec2-deploy-rengine.sh
-docker compose -f commerce-ops/compose/compose.rengine.yaml config --quiet
+docker compose --project-directory commerce-ops/compose -f commerce-ops/compose/overlays/cloud/compose.rengine.yaml config --quiet
 # Uses the existing frontend Playwright installation and Chromium:
 node rengine/tests/browser.mjs
 node rengine/tests/sidebar-browser.mjs
@@ -96,8 +96,8 @@ On the server:
 
 ```sh
 cd /opt/rocento
-docker compose -f commerce-ops/compose/compose.rengine.yaml ps
-docker compose -f commerce-ops/compose/compose.rengine.yaml logs --tail 100
+docker compose --project-directory commerce-ops/compose -f commerce-ops/compose/overlays/cloud/compose.rengine.yaml ps
+docker compose --project-directory commerce-ops/compose -f commerce-ops/compose/overlays/cloud/compose.rengine.yaml logs --tail 100
 curl --fail http://127.0.0.1:3190/health
 ```
 

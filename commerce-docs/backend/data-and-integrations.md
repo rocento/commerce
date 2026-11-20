@@ -24,10 +24,10 @@ Order analytics keeps the `order-facts-v1` durable cursor but uses `order-analyt
 
 Content is structured plain text with an explicit variable allowlist, byte limits, single-line subjects and HTML escaping. Template authors cannot supply executable markup or change the authentication action destination. Required commerce details are protected. Preview uses synthetic data and does not send mail or read customer records. The worker chooses the published content when first preparing a queued email, then pins the rendered message in the sensitive job payload so subsequent committed retries do not pick up later publications. Normal terminal/expired-job scrubbing clears that payload. Existing challenge expiry, retry bounds, delivery timeouts and queue locking remain in effect.
 
-Use the configured `NOTIFICATION_MODE`, `MAILPIT_URL` and `NOTIFICATION_FROM` with a matching environment; production identity safeguards are checked during startup. [SMTP deployment notes](../../commerce-ops/deploy/aws-deploy/SMTP.md) own hosted mail setup.
+Use the configured `NOTIFICATION_MODE`, `MAILPIT_URL` and `NOTIFICATION_FROM` with a matching environment; production identity safeguards are checked during startup. [SMTP deployment notes](../../commerce-ops/cloud/providers/aws/SMTP.md) own hosted mail setup.
 
 ## Backup and rollback
 
-Shared [durability operations](../platform/operations/durability.md) and [durability deployment](../../commerce-ops/deploy/durability/README.md) own base backups, WAL and restore procedures. A source rollback is not a database restore. Preserve additive schema, orders, audit/outbox/consumer state and publication journals when rolling back binaries. Validate restored state and authoritative readiness before calling the installation recovered.
+The [durability scope](../platform/operations/durability.md) describes base database settings and retained qualification checks; the optional backup and restore toolkit has been retired. A source rollback is not a database restore. Preserve additive schema, orders, audit/outbox/consumer state and publication journals when rolling back binaries. Validate restored state and authoritative readiness before calling the installation recovered.
 
 Run migrations, imports, seeds and destructive failure exercises only against their identified intended environment. This documentation rewrite did not change data or verify a deployed backup/restore process.

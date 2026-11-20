@@ -1,10 +1,15 @@
 use serde_json::Value;
 
+// Integration tests compile this shared module as separate crates and use
+// different subsets of its helpers. Keep these allowances test-helper scoped.
+#[allow(dead_code)]
 mod signing;
+#[allow(unused_imports)]
 pub use signing::{assistant_private_key, assistant_public_key};
 
 /// Runtime shape checks. Python OpenAPI validators in CI own dialect/format
 /// validation; this helper must still respect OpenAPI 3.0 reference semantics.
+#[allow(dead_code)]
 pub fn validate_shape(value: &Value, schema: &Value, contract: &Value) {
     if let Err(error) = check_shape(value, schema, contract) {
         panic!("response violates contract: {error}");

@@ -98,7 +98,7 @@ Apply migration `20261005090000_product_visit_notifications.sql` and deploy gate
 
 The live prepared coupon `TOMATO10` is 10% off the whole merchandise subtotal, without product/category restrictions, for guests and registered customers. It excludes delivery and tax; existing checkout discount rules still apply. It is a shared coupon, not a generated single-use code. The notification is once per guest cookie or customer account, not once per human across browsers.
 
-After the new deployment completes, run `bash commerce-ops/deploy/aws-deploy/activate-grocery-visitor-offer.sh`. It checks the actual running API, activates the existing coupon, and publishes the product-specific notification for Tomatoes 1kg (`bc0cbb1d-8b21-45e2-8047-b5ac807260f3`) for seven days. Coupon and notification expire together. A mode-600 server-side request snapshot makes retries idempotent; reruns preserve expiry and withdrawals rather than silently renewing. The old manual journey draft is unused. This command does not seed or redeploy services. `--prepare` only updates the inactive coupon scope and sends nothing.
+After the new deployment completes, run `bash commerce-ops/cloud/providers/aws/activate-grocery-visitor-offer.sh`. It checks the actual running API, activates the existing coupon, and publishes the product-specific notification for Tomatoes 1kg (`bc0cbb1d-8b21-45e2-8047-b5ac807260f3`) for seven days. Coupon and notification expire together. A mode-600 server-side request snapshot makes retries idempotent; reruns preserve expiry and withdrawals rather than silently renewing. The old manual journey draft is unused. This command does not seed or redeploy services. `--prepare` only updates the inactive coupon scope and sends nothing.
 
 ## Database isolation
 

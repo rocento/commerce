@@ -1,0 +1,10 @@
+[Unit]
+Description=Prepare requested merchant servers
+
+[Timer]
+OnBootSec=30
+OnUnitInactiveSec=15
+Unit=rocento-merchant-fleet.service
+
+[Install]
+WantedBy=timers.target

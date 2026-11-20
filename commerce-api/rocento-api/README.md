@@ -2,7 +2,7 @@
 
 This directory is the Rust workspace for Rocento's API gateway, commerce domain
 crates, persistence migrations and generated API contracts. The main service is
-built from this directory by [`compose.yaml`](../../commerce-ops/compose/compose.yaml).
+built from this directory by [`compose.yaml`](../../commerce-ops/compose/base/compose.yaml).
 
 ## Start here
 

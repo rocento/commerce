@@ -1,0 +1,10 @@
+[Unit]
+Description=Monitor Rocento provisioning failures
+
+[Timer]
+OnBootSec=60
+OnUnitActiveSec=60
+Unit=rocento-provisioning-alerts.service
+
+[Install]
+WantedBy=timers.target

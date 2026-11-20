@@ -2,11 +2,13 @@
   "version": 1,
   "scope": "Explicit gateway registrations, including optional feature routers. GET also supports Axum implicit HEAD; generated HEAD is not a separate declared operation. Source coverage does not establish runtime authorization or deployment availability.",
   "counts": {
-    "registered_operations": 449,
-    "full_contract_operations": 443,
+    "registered_operations": 464,
+    "full_contract_operations": 458,
     "public_operations": 77,
     "merchant_operations": 314,
     "audiences": {
+      "first-party-provider-administration": 10,
+      "first-party-provider-configuration": 2,
       "internal-account-lifecycle": 7,
       "internal-agent-delegation": 2,
       "internal-assistant-administration": 23,
@@ -17,6 +19,7 @@
       "internal-service-tools": 22,
       "merchant-administration": 237,
       "operations": 3,
+      "provider-protocol": 3,
       "public-storefront": 77,
       "publication-discovery": 4
     }
@@ -1942,6 +1945,116 @@
       ],
       "full_contract": true,
       "reason": "Reviewed merchant application reference; reading requires an authenticated installation administrator with api.docs.read, and API execution retains its own permissions."
+    },
+    {
+      "method": "GET",
+      "path": "/v1/admin/integrations/google",
+      "sources": [
+        "commerce-api/rocento-api/crates/api-gateway/src/google/mod.rs"
+      ],
+      "audience": "first-party-provider-administration",
+      "references": [],
+      "full_contract": true,
+      "reason": "First-party merchant provider setup and credential operations, excluded from published references; existing administrator permissions remain required."
+    },
+    {
+      "method": "POST",
+      "path": "/v1/admin/integrations/google/merchant/sync",
+      "sources": [
+        "commerce-api/rocento-api/crates/api-gateway/src/google/mod.rs"
+      ],
+      "audience": "first-party-provider-administration",
+      "references": [],
+      "full_contract": true,
+      "reason": "First-party merchant provider setup and credential operations, excluded from published references; existing administrator permissions remain required."
+    },
+    {
+      "method": "PUT",
+      "path": "/v1/admin/integrations/google/{service}",
+      "sources": [
+        "commerce-api/rocento-api/crates/api-gateway/src/google/mod.rs"
+      ],
+      "audience": "first-party-provider-administration",
+      "references": [],
+      "full_contract": true,
+      "reason": "First-party merchant provider setup and credential operations, excluded from published references; existing administrator permissions remain required."
+    },
+    {
+      "method": "POST",
+      "path": "/v1/admin/integrations/google/{service}/disconnect",
+      "sources": [
+        "commerce-api/rocento-api/crates/api-gateway/src/google/mod.rs"
+      ],
+      "audience": "first-party-provider-administration",
+      "references": [],
+      "full_contract": true,
+      "reason": "First-party merchant provider setup and credential operations, excluded from published references; existing administrator permissions remain required."
+    },
+    {
+      "method": "POST",
+      "path": "/v1/admin/integrations/google/{service}/test",
+      "sources": [
+        "commerce-api/rocento-api/crates/api-gateway/src/google/mod.rs"
+      ],
+      "audience": "first-party-provider-administration",
+      "references": [],
+      "full_contract": true,
+      "reason": "First-party merchant provider setup and credential operations, excluded from published references; existing administrator permissions remain required."
+    },
+    {
+      "method": "GET",
+      "path": "/v1/admin/integrations/meta",
+      "sources": [
+        "commerce-api/rocento-api/crates/api-gateway/src/meta.rs"
+      ],
+      "audience": "first-party-provider-administration",
+      "references": [],
+      "full_contract": true,
+      "reason": "First-party merchant provider setup and credential operations, excluded from published references; existing administrator permissions remain required."
+    },
+    {
+      "method": "PUT",
+      "path": "/v1/admin/integrations/meta",
+      "sources": [
+        "commerce-api/rocento-api/crates/api-gateway/src/meta.rs"
+      ],
+      "audience": "first-party-provider-administration",
+      "references": [],
+      "full_contract": true,
+      "reason": "First-party merchant provider setup and credential operations, excluded from published references; existing administrator permissions remain required."
+    },
+    {
+      "method": "GET",
+      "path": "/v1/admin/integrations/meta/jobs",
+      "sources": [
+        "commerce-api/rocento-api/crates/api-gateway/src/meta.rs"
+      ],
+      "audience": "first-party-provider-administration",
+      "references": [],
+      "full_contract": true,
+      "reason": "First-party merchant provider setup and credential operations, excluded from published references; existing administrator permissions remain required."
+    },
+    {
+      "method": "POST",
+      "path": "/v1/admin/integrations/meta/test/{kind}",
+      "sources": [
+        "commerce-api/rocento-api/crates/api-gateway/src/meta.rs"
+      ],
+      "audience": "first-party-provider-administration",
+      "references": [],
+      "full_contract": true,
+      "reason": "First-party merchant provider setup and credential operations, excluded from published references; existing administrator permissions remain required."
+    },
+    {
+      "method": "POST",
+      "path": "/v1/admin/integrations/meta/whatsapp/test",
+      "sources": [
+        "commerce-api/rocento-api/crates/api-gateway/src/meta.rs"
+      ],
+      "audience": "first-party-provider-administration",
+      "references": [],
+      "full_contract": true,
+      "reason": "First-party merchant provider setup and credential operations, excluded from published references; existing administrator permissions remain required."
     },
     {
       "method": "GET",
@@ -5137,6 +5250,61 @@
       ],
       "full_contract": true,
       "reason": "Reviewed customer/storefront application contract; endpoint authentication and customer ownership rules remain required."
+    },
+    {
+      "method": "GET",
+      "path": "/v1/integrations/google/public",
+      "sources": [
+        "commerce-api/rocento-api/crates/api-gateway/src/google/mod.rs"
+      ],
+      "audience": "first-party-provider-configuration",
+      "references": [],
+      "full_contract": true,
+      "reason": "First-party storefront provider status/configuration, excluded from published references. Documentation classification does not restrict network access."
+    },
+    {
+      "method": "GET",
+      "path": "/v1/integrations/meta/catalog.csv",
+      "sources": [
+        "commerce-api/rocento-api/crates/api-gateway/src/meta.rs"
+      ],
+      "audience": "provider-protocol",
+      "references": [],
+      "full_contract": true,
+      "reason": "Provider feed and webhook protocol, excluded from published application references; runtime publication/signature checks remain authoritative."
+    },
+    {
+      "method": "GET",
+      "path": "/v1/integrations/meta/status",
+      "sources": [
+        "commerce-api/rocento-api/crates/api-gateway/src/meta.rs"
+      ],
+      "audience": "first-party-provider-configuration",
+      "references": [],
+      "full_contract": true,
+      "reason": "First-party storefront provider status/configuration, excluded from published references. Documentation classification does not restrict network access."
+    },
+    {
+      "method": "GET",
+      "path": "/v1/integrations/meta/webhook",
+      "sources": [
+        "commerce-api/rocento-api/crates/api-gateway/src/meta.rs"
+      ],
+      "audience": "provider-protocol",
+      "references": [],
+      "full_contract": true,
+      "reason": "Provider feed and webhook protocol, excluded from published application references; runtime publication/signature checks remain authoritative."
+    },
+    {
+      "method": "POST",
+      "path": "/v1/integrations/meta/webhook",
+      "sources": [
+        "commerce-api/rocento-api/crates/api-gateway/src/meta.rs"
+      ],
+      "audience": "provider-protocol",
+      "references": [],
+      "full_contract": true,
+      "reason": "Provider feed and webhook protocol, excluded from published application references; runtime publication/signature checks remain authoritative."
     },
     {
       "method": "GET",

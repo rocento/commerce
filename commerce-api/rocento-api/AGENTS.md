@@ -13,7 +13,7 @@ domain. Commands below start at the repository root.
 - Preserve applied migrations in `migrations/` and `engagement-migrations/`.
   Schema changes need a new migration and the relevant upgrade checks.
 - Gateway OpenAPI sources live in `crates/api-gateway/openapi/`. Repository
-generation commands live in `../../commerce-ops/scripts/contracts/`; frontend API types derive
+generation commands live in `../../commerce-ops/tools/contracts/`; frontend API types derive
   from the resulting `openapi.json`.
 
 ## Verification
@@ -21,8 +21,8 @@ generation commands live in `../../commerce-ops/scripts/contracts/`; frontend AP
 For dependency or module changes:
 
 ```sh
-python3 commerce-ops/scripts/checks/check-rust-architecture.py
-python3 -m unittest discover -s commerce-ops/scripts/tests -p 'test_rust_architecture.py'
+python3 commerce-ops/tools/checks/check-rust-architecture.py
+python3 -m unittest discover -s commerce-ops/tests/operations -p 'test_rust_architecture.py'
 ```
 
 Run formatting and the affected crate/test first, from `commerce-api/rocento-api/`:

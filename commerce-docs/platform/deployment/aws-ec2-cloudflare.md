@@ -1,6 +1,6 @@
 # EC2 and Cloudflare deployment
 
-Use [deployment commands](../../../commerce-ops/deploy/aws-deploy/README.md) from the workstation and [EC2 provisioning](../../../commerce-ops/deploy/ec2/README.md) on the server. The deployment scripts own generated Compose, Nginx and frontend release configuration; maintain those sources instead of copying a second manual deployment recipe.
+Use [deployment commands](../../../commerce-ops/cloud/providers/aws/README.md) from the workstation and [EC2 provisioning](../../../commerce-ops/deploy/ec2/README.md) on the server. The deployment scripts own generated Compose, Nginx and frontend release configuration; maintain those sources instead of copying a second manual deployment recipe.
 
 ## Topology
 
@@ -22,12 +22,12 @@ Each store has its own commerce installation, credentials and persistent volumes
 2. Keep SSH restricted to administrative access and backend/database ports private. Nginx owns public HTTP/HTTPS ingress.
 3. Configure the apex, `www`, and all eight store/admin DNS records. Preserve existing mail and verification records.
 4. Configure Cloudflare **Full (strict)** and an origin certificate covering the apex and required subdomains. Keep its private key and bootstrap credentials outside Git.
-5. Prepare the protected bootstrap configuration and run the deployment tooling. Configure customer mail through [SMTP setup](../../../commerce-ops/deploy/aws-deploy/SMTP.md).
+5. Prepare the protected bootstrap configuration and run the deployment tooling. Configure customer mail through [SMTP setup](../../../commerce-ops/cloud/providers/aws/SMTP.md).
 6. Prepare and explicitly promote the matching language release using [the release lifecycle](../../ai-service/language-release-upgrade.md). Runtime startup verifies the active release; restarting a service does not publish a dictionary.
 
 ## Application data and seeding
 
-Deploying source does not copy workstation databases or uploaded media. Deployment preserves existing volumes and does not seed catalogs. Use `bash commerce-ops/deploy/aws-deploy/seed-demo.sh --store pharmacy` (or the intended store) only when initializing or updating that managed demo. `--store all` includes all four stores. See [assets and demos](../../frontend/assets-and-demos.md) and [client onboarding](client-onboarding.md) for catalog, inventory and delivery requirements.
+Deploying source does not copy workstation databases or uploaded media. Deployment preserves existing volumes and does not seed catalogs. Use `bash commerce-ops/cloud/providers/aws/seed-demo.sh --store pharmacy` (or the intended store) only when initializing or updating that managed demo. `--store all` includes all four stores. See [assets and demos](../../frontend/assets-and-demos.md) and [client onboarding](client-onboarding.md) for catalog, inventory and delivery requirements.
 
 ## Verification and recovery
 
@@ -35,4 +35,4 @@ Use `commerce-ops/deploy/ec2/server/ec2-status.sh`, `commerce-ops/deploy/ec2/ser
 
 Keep application-consistent backups off the instance and rehearse restoration separately. Database dumps alone do not preserve uploaded media, other service data, configuration or TLS keys. Never prune production volumes as source cleanup. See [durability and recovery](../operations/durability.md) and [shared AI recovery](../../ai-service/shared-database-operations.md).
 
-Keep the previous source/images and frontend release for rollback. Database migrations and language release promotion have their own recovery procedures; reverting an image does not undo them. [The release runbook](../../../commerce-ops/deploy/aws-deploy/how.md) covers migration history checks and managed cleanup behavior.
+Keep the previous source/images and frontend release for rollback. Database migrations and language release promotion have their own recovery procedures; reverting an image does not undo them. [The release runbook](../../../commerce-ops/tasks/diagnostics.md) covers migration history checks and managed cleanup behavior.

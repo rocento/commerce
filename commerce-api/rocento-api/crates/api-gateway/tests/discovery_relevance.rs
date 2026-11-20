@@ -1,4 +1,4 @@
-//! Run with scripts/m07-discovery-evals.py: real Meilisearch + disposable PostgreSQL.
+//! Run with commerce-ops/tools/evaluation/discovery-relevance-evals.py: real Meilisearch + disposable PostgreSQL.
 mod support;
 
 use api_gateway::{assistant, identity};
@@ -36,7 +36,8 @@ async fn english_relevance_against_real_meilisearch(pool: PgPool) {
     };
     let catalog = domain_catalog::Service { pool: pool.clone() };
     let client = domain_search_client::Client::new(
-        std::env::var("M07_MEILI_URL").expect("Run scripts/m07-discovery-evals.py"),
+        std::env::var("M07_MEILI_URL")
+            .expect("Run commerce-ops/tools/evaluation/discovery-relevance-evals.py"),
         "m07-disposable-key-only".into(),
     );
     client.initialize().await.unwrap();
