@@ -351,6 +351,7 @@ pub async fn prepare_orders(a: &App) -> Result<(), Error> {
         .await?;
     let s = a.service.status_on(&mut tx).await?;
     let rows:Vec<ConsentOrder>=sqlx::query_as("SELECT c.quote_id,o.id,c.customer_id,c.conversions,c.whatsapp,c.phone_ciphertext,c.settings_revision FROM platform.meta_checkout_consent c JOIN orders.orders o ON o.quote_id=c.quote_id AND o.customer_id=c.customer_id WHERE c.processed_at IS NULL ORDER BY c.created_at LIMIT 10 FOR UPDATE OF c SKIP LOCKED").fetch_all(&mut *tx).await?;
+    let mut processed = Vec::with_capacity(rows.len());
     for (quote, id, customer, conversion, whatsapp, phone, revision) in rows {
         if revision == s.revision && (conversion || whatsapp) {
             let order = domain_orders::Service {
@@ -425,7 +426,14 @@ pub async fn prepare_orders(a: &App) -> Result<(), Error> {
                 }
             }
         }
-        sqlx::query("UPDATE platform.meta_checkout_consent SET processed_at=now(),phone_ciphertext=NULL WHERE quote_id=$1").bind(quote).execute(&mut *tx).await?;
+        processed.push(quote);
+    }
+    if !processed.is_empty() {
+        // All selected receipts remain locked until this transaction commits.
+        sqlx::query("UPDATE platform.meta_checkout_consent SET processed_at=now(),phone_ciphertext=NULL WHERE quote_id=ANY($1)")
+            .bind(&processed)
+            .execute(&mut *tx)
+            .await?;
     }
     tx.commit().await?;
     Ok(())

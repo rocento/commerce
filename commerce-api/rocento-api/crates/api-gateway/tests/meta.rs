@@ -487,3 +487,87 @@ async fn default_consent_is_processed_with_one_connection(pool: PgPool) {
     assert_eq!(jobs, 0);
     single.close().await;
 }
+
+async fn pending_receipts(pool: &PgPool, count: usize) -> Vec<Uuid> {
+    let (customer, first, _) = order_fixture(pool).await;
+    let mut quotes = vec![first];
+    for _ in 1..count {
+        let quote = Uuid::new_v4();
+        sqlx::query("INSERT INTO cart_checkout.quotes(id,customer_id,cart_id,location_id,snapshot,expires_at) VALUES($1,$2,gen_random_uuid(),gen_random_uuid(),'{}',now()+interval '1 hour')")
+            .bind(quote).bind(customer).execute(pool).await.unwrap();
+        quotes.push(quote);
+    }
+    for (index, quote) in quotes.iter().enumerate() {
+        sqlx::query("INSERT INTO platform.meta_checkout_consent(quote_id,customer_id,settings_revision,conversions,whatsapp,phone_ciphertext,created_at) VALUES($1,$2,0,false,false,'fixture'::bytea,now()-make_interval(secs=>$3))")
+            .bind(quote).bind(customer).bind((count-index) as f64).execute(pool).await.unwrap();
+        // The last receipt deliberately has no committed order.
+        if index + 1 < count {
+            place(pool, customer, *quote, Uuid::new_v4()).await;
+        }
+    }
+    quotes
+}
+
+#[sqlx::test(migrations = "../../migrations")]
+async fn receipt_batch_preserves_limit_locked_rows_and_unplaced_orders(pool: PgPool) {
+    let (a, _) = fixture(pool.clone(), vec!["*"]).await;
+    let quotes = pending_receipts(&pool, 14).await;
+    let mut locked = pool.begin().await.unwrap();
+    sqlx::query("SELECT quote_id FROM platform.meta_checkout_consent WHERE quote_id=$1 FOR UPDATE")
+        .bind(quotes[0])
+        .execute(&mut *locked)
+        .await
+        .unwrap();
+    tokio::time::timeout(std::time::Duration::from_secs(2), meta::prepare_orders(&a))
+        .await
+        .unwrap()
+        .unwrap();
+    let processed: Vec<Uuid> = sqlx::query_scalar(
+        "SELECT quote_id FROM platform.meta_checkout_consent WHERE processed_at IS NOT NULL",
+    )
+    .fetch_all(&pool)
+    .await
+    .unwrap();
+    assert_eq!(processed.len(), 10);
+    assert!(processed.iter().all(|q| quotes[1..11].contains(q)));
+    let cleared: i64 = sqlx::query_scalar("SELECT count(*) FROM platform.meta_checkout_consent WHERE processed_at IS NOT NULL AND phone_ciphertext IS NULL")
+        .fetch_one(&pool).await.unwrap();
+    assert_eq!(cleared, 10);
+    locked.rollback().await.unwrap();
+    let (first, second) = tokio::join!(meta::prepare_orders(&a), meta::prepare_orders(&a));
+    first.unwrap();
+    second.unwrap();
+    let (processed, uncleared): (i64, i64) = sqlx::query_as("SELECT count(*) FILTER(WHERE processed_at IS NOT NULL),count(*) FILTER(WHERE processed_at IS NULL AND phone_ciphertext IS NOT NULL) FROM platform.meta_checkout_consent")
+        .fetch_one(&pool).await.unwrap();
+    assert_eq!((processed, uncleared), (13, 1));
+    let unplaced: bool = sqlx::query_scalar(
+        "SELECT processed_at IS NULL FROM platform.meta_checkout_consent WHERE quote_id=$1",
+    )
+    .bind(quotes[13])
+    .fetch_one(&pool)
+    .await
+    .unwrap();
+    assert!(unplaced);
+}
+
+#[sqlx::test(migrations = "../../migrations")]
+async fn receipt_batch_failure_rolls_back_every_receipt_and_can_retry(pool: PgPool) {
+    let (a, _) = fixture(pool.clone(), vec!["*"]).await;
+    let quotes = pending_receipts(&pool, 7).await;
+    let function = format!("CREATE FUNCTION platform.reject_receipt_fixture() RETURNS trigger LANGUAGE plpgsql AS $$ BEGIN IF NEW.quote_id='{}'::uuid THEN RAISE EXCEPTION 'fixture rejection'; END IF; RETURN NEW; END $$", quotes[4]);
+    sqlx::query(&function).execute(&pool).await.unwrap();
+    sqlx::query("CREATE TRIGGER reject_receipt_fixture BEFORE UPDATE ON platform.meta_checkout_consent FOR EACH ROW EXECUTE FUNCTION platform.reject_receipt_fixture()")
+        .execute(&pool).await.unwrap();
+    assert!(meta::prepare_orders(&a).await.is_err());
+    let untouched: i64 = sqlx::query_scalar("SELECT count(*) FROM platform.meta_checkout_consent WHERE processed_at IS NULL AND phone_ciphertext IS NOT NULL")
+        .fetch_one(&pool).await.unwrap();
+    assert_eq!(untouched, 7);
+    sqlx::query("DROP TRIGGER reject_receipt_fixture ON platform.meta_checkout_consent")
+        .execute(&pool)
+        .await
+        .unwrap();
+    meta::prepare_orders(&a).await.unwrap();
+    let processed: i64 = sqlx::query_scalar("SELECT count(*) FROM platform.meta_checkout_consent WHERE processed_at IS NOT NULL AND phone_ciphertext IS NULL")
+        .fetch_one(&pool).await.unwrap();
+    assert_eq!(processed, 6);
+}
