@@ -326,7 +326,10 @@ async fn enqueue(
     payload: Value,
 ) -> Result<(), Error> {
     let bytes = s
-        .seal(&serde_json::to_vec(&payload).map_err(|_| Error::Internal)?)
+        .seal_on(
+            tx,
+            &serde_json::to_vec(&payload).map_err(|_| Error::Internal)?,
+        )
         .await?;
     sqlx::query("INSERT INTO platform.meta_jobs(id,kind,dedupe_key,settings_revision,payload) VALUES($1,$2,$3,$4,$5) ON CONFLICT(dedupe_key) DO NOTHING").bind(Uuid::new_v4()).bind(kind).bind(key).bind(revision).bind(bytes).execute(&mut **tx).await?;
     Ok(())
@@ -346,7 +349,7 @@ pub async fn prepare_orders(a: &App) -> Result<(), Error> {
     sqlx::query("SELECT singleton FROM platform.meta_settings FOR SHARE")
         .execute(&mut *tx)
         .await?;
-    let s = a.service.status().await?;
+    let s = a.service.status_on(&mut tx).await?;
     let rows:Vec<ConsentOrder>=sqlx::query_as("SELECT c.quote_id,o.id,c.customer_id,c.conversions,c.whatsapp,c.phone_ciphertext,c.settings_revision FROM platform.meta_checkout_consent c JOIN orders.orders o ON o.quote_id=c.quote_id AND o.customer_id=c.customer_id WHERE c.processed_at IS NULL ORDER BY c.created_at LIMIT 10 FOR UPDATE OF c SKIP LOCKED").fetch_all(&mut *tx).await?;
     for (quote, id, customer, conversion, whatsapp, phone, revision) in rows {
         if revision == s.revision && (conversion || whatsapp) {
@@ -360,7 +363,7 @@ pub async fn prepare_orders(a: &App) -> Result<(), Error> {
             {
                 if conversion && s.config.conversions_enabled {
                     let event_id = format!("purchase:{id}");
-                    let mut payload = json!({"data":[{"event_name":"Purchase","event_time":order.order.created_at.timestamp(),"event_id":event_id,"action_source":"website","user_data":{"external_id":[infra_auth::digest(&format!("{}:{customer}",a.service.context().await?))]},"custom_data":{"currency":order.order.currency,"value":order.order.total.to_string().parse::<serde_json::Number>().map_err(|_|Error::Internal)?,"order_id":id,"content_type":"product","content_ids":order.items.iter().map(|i|i.product_id.to_string()).collect::<Vec<_>>()}}]});
+                    let mut payload = json!({"data":[{"event_name":"Purchase","event_time":order.order.created_at.timestamp(),"event_id":event_id,"action_source":"website","user_data":{"external_id":[infra_auth::digest(&format!("{}:{customer}",a.service.context_on(&mut tx).await?))]},"custom_data":{"currency":order.order.currency,"value":order.order.total.to_string().parse::<serde_json::Number>().map_err(|_|Error::Internal)?,"order_id":id,"content_type":"product","content_ids":order.items.iter().map(|i|i.product_id.to_string()).collect::<Vec<_>>()}}]});
                     if let Some(email) = order.order.contact["email"]
                         .as_str()
                         .filter(|s| !s.trim().is_empty())
@@ -401,7 +404,7 @@ pub async fn prepare_orders(a: &App) -> Result<(), Error> {
                 }
                 if whatsapp && s.config.whatsapp_enabled {
                     if let Some(phone) = phone {
-                        let phone = String::from_utf8(a.service.open(&phone).await?)
+                        let phone = String::from_utf8(a.service.open_on(&mut tx, &phone).await?)
                             .map_err(|_| Error::Internal)?;
                         enqueue(
                             &a.service,
@@ -437,7 +440,7 @@ pub async fn deliver_one(a: &App) -> Result<bool, Error> {
     let Some((id, kind, revision, bytes, attempts, created)) = job else {
         return Ok(false);
     };
-    let s = a.service.status().await?;
+    let s = a.service.status_on(&mut tx).await?;
     if revision != s.revision
         || (kind == "whatsapp" && !s.config.whatsapp_enabled)
         || (kind == "conversions" && !s.config.conversions_enabled)
@@ -447,9 +450,9 @@ pub async fn deliver_one(a: &App) -> Result<bool, Error> {
         tx.commit().await?;
         return Ok(true);
     }
-    let payload: Value =
-        serde_json::from_slice(&a.service.open(&bytes).await?).map_err(|_| Error::Internal)?;
-    let secrets = a.service.credentials().await?;
+    let payload: Value = serde_json::from_slice(&a.service.open_on(&mut tx, &bytes).await?)
+        .map_err(|_| Error::Internal)?;
+    let secrets = a.service.credentials_on(&mut tx).await?;
     let (asset, key) = asset(&s.config, &kind)?;
     let token = secrets.get(key).ok_or(Error::Internal)?;
     // WhatsApp has no provider idempotency guarantee. Commit a one-attempt claim first;

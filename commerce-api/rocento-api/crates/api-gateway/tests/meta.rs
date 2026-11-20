@@ -415,3 +415,75 @@ async fn signed_delivery_webhook_is_account_scoped_and_replay_safe(pool: PgPool)
         .unwrap();
     assert_eq!(response.status(), 403);
 }
+
+#[sqlx::test(migrations = "../../migrations")]
+async fn settings_and_idle_workers_do_not_require_a_second_connection(pool: PgPool) {
+    let single = sqlx::postgres::PgPoolOptions::new()
+        .max_connections(1)
+        .acquire_timeout(std::time::Duration::from_millis(500))
+        .connect_with((*pool.connect_options()).clone())
+        .await
+        .unwrap();
+    let (a, actor) = fixture(single.clone(), vec!["*"]).await;
+    // Save holds FOR UPDATE while loading and encrypting credentials.
+    let saved = a.service.save(actor, input(0)).await.unwrap();
+    assert_eq!(saved.revision, 1);
+    assert_eq!(saved.configured_secrets.len(), 5);
+    // Both worker entry points keep their settings lock on this only connection.
+    meta::prepare_orders(&a).await.unwrap();
+    assert!(!meta::deliver_one(&a).await.unwrap());
+    let mut tx = single.begin().await.unwrap();
+    let status = a.service.status_on(&mut tx).await.unwrap();
+    assert_eq!(status.revision, 1);
+    let encrypted = a
+        .service
+        .seal_on(&mut tx, b"private fixture")
+        .await
+        .unwrap();
+    assert_eq!(
+        a.service.open_on(&mut tx, &encrypted).await.unwrap(),
+        b"private fixture"
+    );
+    assert_eq!(a.service.credentials_on(&mut tx).await.unwrap().len(), 5);
+    tx.rollback().await.unwrap();
+    // A stale job exercises delivery's status read without contacting a provider.
+    sqlx::query("INSERT INTO platform.meta_jobs(id,kind,dedupe_key,settings_revision,payload) VALUES($1,'conversions','single-connection-stale',0,$2)")
+        .bind(Uuid::new_v4()).bind(encrypted).execute(&single).await.unwrap();
+    assert!(meta::deliver_one(&a).await.unwrap());
+    let (state, payload): (String, Vec<u8>) = sqlx::query_as(
+        "SELECT status,payload FROM platform.meta_jobs WHERE dedupe_key='single-connection-stale'",
+    )
+    .fetch_one(&single)
+    .await
+    .unwrap();
+    assert_eq!(state, "cancelled");
+    assert!(payload.is_empty());
+    single.close().await;
+}
+
+#[sqlx::test(migrations = "../../migrations")]
+async fn default_consent_is_processed_with_one_connection(pool: PgPool) {
+    let single = sqlx::postgres::PgPoolOptions::new()
+        .max_connections(1)
+        .acquire_timeout(std::time::Duration::from_millis(500))
+        .connect_with((*pool.connect_options()).clone())
+        .await
+        .unwrap();
+    let (a, _) = fixture(single.clone(), vec!["*"]).await;
+    let (customer, quote, order) = order_fixture(&single).await;
+    a.service
+        .record_consent(customer, quote, Consent::default())
+        .await
+        .unwrap();
+    place(&single, customer, quote, order).await;
+    meta::prepare_orders(&a).await.unwrap();
+    meta::prepare_orders(&a).await.unwrap();
+    let processed: bool = sqlx::query_scalar("SELECT processed_at IS NOT NULL AND phone_ciphertext IS NULL FROM platform.meta_checkout_consent WHERE quote_id=$1").bind(quote).fetch_one(&single).await.unwrap();
+    assert!(processed);
+    let jobs: i64 = sqlx::query_scalar("SELECT count(*) FROM platform.meta_jobs")
+        .fetch_one(&single)
+        .await
+        .unwrap();
+    assert_eq!(jobs, 0);
+    single.close().await;
+}

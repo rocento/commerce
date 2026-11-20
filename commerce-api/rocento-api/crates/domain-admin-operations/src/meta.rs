@@ -128,9 +128,13 @@ impl Config {
 }
 impl Service {
     pub async fn context(&self) -> Result<String> {
+        let mut connection = self.pool.acquire().await?;
+        self.context_on(&mut connection).await
+    }
+    pub async fn context_on(&self, connection: &mut sqlx::PgConnection) -> Result<String> {
         let id: Uuid =
             sqlx::query_scalar("SELECT installation_id FROM platform.publication_installation")
-                .fetch_one(&self.pool)
+                .fetch_one(&mut *connection)
                 .await?;
         Ok(format!("meta:{id}"))
     }
@@ -142,30 +146,64 @@ impl Service {
             ))?
             .seal(&self.context().await?, value)
     }
+    pub async fn seal_on(
+        &self,
+        connection: &mut sqlx::PgConnection,
+        value: &[u8],
+    ) -> Result<Vec<u8>> {
+        self.vault
+            .as_ref()
+            .ok_or(Error::Invalid(
+                "Meta credential storage is not configured on this server".into(),
+            ))?
+            .seal(&self.context_on(connection).await?, value)
+    }
     pub async fn open(&self, value: &[u8]) -> Result<Vec<u8>> {
         self.vault
             .as_ref()
             .ok_or(Error::Internal)?
             .open(&self.context().await?, value)
     }
+    pub async fn open_on(
+        &self,
+        connection: &mut sqlx::PgConnection,
+        value: &[u8],
+    ) -> Result<Vec<u8>> {
+        self.vault
+            .as_ref()
+            .ok_or(Error::Internal)?
+            .open(&self.context_on(connection).await?, value)
+    }
     pub async fn credentials(&self) -> Result<BTreeMap<String, String>> {
+        let mut connection = self.pool.acquire().await?;
+        self.credentials_on(&mut connection).await
+    }
+    pub async fn credentials_on(
+        &self,
+        connection: &mut sqlx::PgConnection,
+    ) -> Result<BTreeMap<String, String>> {
         let bytes: Option<Vec<u8>> =
             sqlx::query_scalar("SELECT credentials FROM platform.meta_settings WHERE singleton")
-                .fetch_one(&self.pool)
+                .fetch_one(&mut *connection)
                 .await?;
         match bytes {
-            Some(b) => serde_json::from_slice(&self.open(&b).await?).map_err(|_| Error::Internal),
+            Some(b) => serde_json::from_slice(&self.open_on(connection, &b).await?)
+                .map_err(|_| Error::Internal),
             None => Ok(BTreeMap::new()),
         }
     }
     pub async fn status(&self) -> Result<Status> {
-        let (revision, config, last_webhook_at, last_feed_at): (i64,serde_json::Value,Option<chrono::DateTime<chrono::Utc>>,Option<chrono::DateTime<chrono::Utc>>)=sqlx::query_as("SELECT revision,config,last_webhook_at,last_feed_at FROM platform.meta_settings WHERE singleton").fetch_one(&self.pool).await?;
+        let mut connection = self.pool.acquire().await?;
+        self.status_on(&mut connection).await
+    }
+    pub async fn status_on(&self, connection: &mut sqlx::PgConnection) -> Result<Status> {
+        let (revision, config, last_webhook_at, last_feed_at): (i64,serde_json::Value,Option<chrono::DateTime<chrono::Utc>>,Option<chrono::DateTime<chrono::Utc>>)=sqlx::query_as("SELECT revision,config,last_webhook_at,last_feed_at FROM platform.meta_settings WHERE singleton").fetch_one(&mut *connection).await?;
         // Never expose ciphertext, provider responses or a credential suffix.
         Ok(Status {
             revision,
             config: serde_json::from_value(config).map_err(|_| Error::Internal)?,
             configured_secrets: if self.vault.is_some() {
-                self.credentials().await?.into_keys().collect()
+                self.credentials_on(connection).await?.into_keys().collect()
             } else {
                 vec![]
             },
@@ -184,7 +222,7 @@ impl Service {
         if revision != input.expected_revision {
             return Err(Error::Conflict);
         }
-        let mut secrets = self.credentials().await?;
+        let mut secrets = self.credentials_on(&mut tx).await?;
         for name in &input.clear_secrets {
             if !SECRET_NAMES.contains(&name.as_str()) {
                 return Err(Error::Invalid("Unknown credential field".into()));
@@ -205,7 +243,10 @@ impl Service {
         }
         input.config.validate(&secrets)?;
         let encrypted = self
-            .seal(&serde_json::to_vec(&secrets).map_err(|_| Error::Internal)?)
+            .seal_on(
+                &mut tx,
+                &serde_json::to_vec(&secrets).map_err(|_| Error::Internal)?,
+            )
             .await?;
         sqlx::query("UPDATE platform.meta_settings SET revision=revision+1,config=$1,credentials=$2,updated_at=now() WHERE singleton").bind(serde_json::to_value(input.config).map_err(|_|Error::Internal)?).bind(encrypted).execute(&mut *tx).await?;
         // Configuration changes must not redirect queued customer data to a different business.
